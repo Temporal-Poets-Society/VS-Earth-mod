@@ -45,7 +45,7 @@ Remove Earth Terrain Data and Earth Water Data from Earth 2.0's dependencies. Le
 > contracts. Earth's ore maps (real deposits at their real size) are an experimental choice on the Earth tab; the
 > default ores are vanilla's.
 
-Check the "New in 2.0" list against the README's version notes at release; drop anything a later candidate changed.
+Check the "New in 2.0" list against the 2.0.0 entry in [CHANGELOG.md](../CHANGELOG.md) at release.
 
 ## The old data-pack pages
 
