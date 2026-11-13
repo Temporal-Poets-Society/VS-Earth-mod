@@ -1,0 +1,154 @@
+name,code,v2_ring1,v2_status,v3_ring1,v3_status,group
+Chuquicamata,Cu,0.95,present,0.95,present,asserted
+Escondida,Cu,0.95,present,0.95,present,asserted
+Grasberg,Cu,0.95,present,0.95,present,asserted
+Grasberg Au,Au,0.95,present,0.95,present,asserted
+Bingham Canyon,Cu,0.95,present,0.95,present,asserted
+Olympic Dam,Cu,0.95,present,0.95,present,asserted
+Olympic Dam U,U,0.95,present,0.95,present,asserted
+Norilsk,Ni,0.85,present,0.85,present,asserted
+Norilsk PGE,Pt,0.95,present,0.95,present,asserted
+Sudbury,Ni,0.95,present,0.95,present,asserted
+Bushveld Rustenburg,Pt,0.95,present,0.95,present,asserted
+Bushveld Steelpoort,Cr,0.95,present,0.95,present,asserted
+Great Dyke,Cr,0.95,present,0.95,present,asserted
+Kiruna,Fe,0.95,present,0.95,present,asserted
+Pilbara Mt Whaleback,Fe,0.95,present,0.95,present,asserted
+Carajas,Fe,0.95,present,0.95,present,asserted
+Witwatersrand,Au,0.95,present,0.95,present,asserted
+Kalgoorlie,Au,0.95,present,0.95,present,asserted
+Muruntau,Au,0.95,present,0.95,present,asserted
+Broken Hill,Pb,0.95,present,0.95,present,asserted
+Red Dog,Zn,0.95,present,0.95,present,asserted
+Mount Isa,Pb,0.95,present,0.95,present,asserted
+Potosi Cerro Rico,Ag,0.95,present,0.95,present,asserted
+Cornwall,Sn,0.95,present,0.95,present,asserted
+Bangka,Sn,0.85,present,0.85,present,asserted
+Gejiu,Sn,0.75,present,0.75,present,asserted
+Kolwezi (Katanga),Cu,0.95,present,0.95,present,asserted
+Chingola (Zambian Copperbelt),Cu,0.95,present,0.95,present,asserted
+Lubin (Kupferschiefer),Cu,0.95,present,0.95,present,asserted
+Mansfeld (Kupferschiefer),Cu,0.85,present,0.85,present,asserted
+Almaden,Hg,0.95,present,0.95,present,asserted
+Freiberg (Erzgebirge),Ag,0.75,present,0.75,present,asserted
+Altenberg (Erzgebirge),Sn,0.95,present,0.95,present,asserted
+Jachymov (Erzgebirge),U,0.6,present,0.85,present,asserted
+Falun,Cu,0.85,present,0.85,present,asserted
+Rio Tinto,Cu,0.95,present,0.95,present,asserted
+Saskatchewan potash (Esterhazy),K,0.95,present,0.95,present,asserted
+Saskatoon potash belt,K,0.95,present,0.95,present,asserted
+Saskatoon halite (sylvite parent),NaCl,0.95,present,0.95,present,asserted
+Stassfurt (Zechstein) K,K,0.85,present,0.85,present,asserted
+Stassfurt (Zechstein) NaCl,NaCl,0.85,present,0.85,present,asserted
+Gorleben salt dome NaCl,NaCl,0.85,present,0.85,present,asserted
+Gorleben salt dome K,K,0.85,present,0.85,present,asserted
+Upper Silesia coal,C_coal,0.85,present,0.85,present,asserted
+Ruhr coal,C_coal,0.85,present,0.85,present,asserted
+Appalachian coal (WV),C_coal,0.8,present,0.8,present,asserted
+Powder River coal,C_coal,0.8,present,0.8,present,asserted
+Kuzbass coal,C_coal,0.55,present,0.55,present,asserted
+Donbas coal,C_coal,0.85,present,0.85,present,asserted
+Karaganda coal,C_coal,0.85,present,0.85,present,asserted
+Pechora coal (Vorkuta),C_coal,0.55,present,0.55,present,asserted
+Bowen Basin coal,C_coal,0.85,present,0.85,present,asserted
+Kimberley,diamond,0.95,present,0.95,present,asserted
+Mirny (Mir pipe),diamond,0.95,present,0.95,present,asserted
+Muzo emeralds,emerald,0.95,present,0.95,present,asserted
+Sar-e-Sang lapis,lapis,0.95,present,0.95,present,asserted
+Guinea bauxite (Sangaredi),Al,0.95,present,0.95,present,asserted
+Jamaica bauxite,Al,0.95,present,0.95,present,asserted
+Weipa bauxite,Al,0.95,present,0.95,present,asserted
+Khouribga phosphate,P,0.95,present,0.95,present,asserted
+Atacama nitrates (Maria Elena),N,0.85,present,0.85,present,asserted
+Kirka borates,B,0.95,present,0.95,present,asserted
+Bigadic borates,B,0.95,present,0.95,present,asserted
+Las Cuevas fluorite (MX),F,0.95,present,0.95,present,asserted
+Dayu tungsten (Jiangxi),W,0.95,present,0.95,present,asserted
+Panasqueira,W,0.85,present,0.85,present,asserted
+Climax,Mo,0.95,present,0.95,present,asserted
+McArthur River U (Athabasca),U,0.85,present,0.85,present,asserted
+"Kivu tin belt (DRC, corrected Major Deposits record)",Sn,0.95,present,0.95,present,asserted
+Jinchuan Ni-Cu,Cu,0.95,present,0.95,present,asserted
+Pomalaa Ni laterite,Ni,0.95,present,0.95,present,asserted
+Tarnobrzeg native sulfur,S,0.95,present,0.95,present,asserted
+East Kalimantan coal,C_coal,0.51,present,0.51,present,asserted
+Quang Ninh coal (VN),C_coal,0.85,present,0.85,present,asserted
+Hwange coal (ZW),C_coal,0.85,present,0.85,present,asserted
+Zonguldak coal (TR),C_coal,0.85,present,0.85,present,asserted
+Asturias coal (ES),C_coal,0.85,present,0.85,present,asserted
+Witbank coal (ZA),C_coal,0.85,present,0.85,present,asserted
+Vasyugan mire (PEATMAP),peat,0.82,present,0.82,present,asserted
+Irish midland bogs (peat),peat,0.44,weak,0.44,weak,asserted
+Central Kalimantan peat (PEATMAP),peat,0.79,present,0.79,present,asserted
+Tavan Tolgoi coal (MN),C_coal,0.0,missing,0.85,present,former gap (asserted since v3)
+Moatize coal (MZ),C_coal,0.0,missing,0.85,present,former gap (asserted since v3)
+Nord-Pas-de-Calais coal (FR),C_coal,0.0,missing,0.75,present,former gap (asserted since v3)
+"Inkai U (Chu-Sarysu, KZ)",U,0.0,missing,0.85,present,former gap (asserted since v3)
+Sicily native sulfur,S,0.0,missing,0.85,present,former gap (asserted since v3)
+San Rafael Sn (PE),Sn,0.95,present,0.95,present,reported
+Pitinga Sn (BR),Sn,0.95,present,0.95,present,reported
+Bisie Sn (DRC),Sn,0.95,present,0.95,present,reported
+Renison Sn (AU),Sn,0.85,present,0.85,present,reported
+Dachang Sn (CN),Sn,0.95,present,0.95,present,reported
+Rondonia Sn (BR),Sn,0.95,present,0.95,present,reported
+Jos Plateau Sn (NG),Sn,0.95,present,0.95,present,reported
+Neves-Corvo Cu,Cu,0.85,present,0.85,present,reported
+Kidd Creek Cu,Cu,0.95,present,0.95,present,reported
+Aitik Cu,Cu,0.95,present,0.95,present,reported
+Udokan Cu,Cu,0.95,present,0.95,present,reported
+Kamoa-Kakula Cu,Cu,0.95,present,0.95,present,reported
+Dzhezkazgan Cu,Cu,0.95,present,0.95,present,reported
+Almalyk Cu,Cu,0.95,present,0.95,present,reported
+Bor Cu (RS),Cu,0.95,present,0.95,present,reported
+Aynak Cu (AF),Cu,0.95,present,0.95,present,reported
+Dexing Cu (CN),Cu,0.95,present,0.95,present,reported
+Obuasi Au (GH),Au,0.95,present,0.95,present,reported
+Sadiola Au (ML),Au,0.85,present,0.85,present,reported
+Geita Au (TZ),Au,0.95,present,0.95,present,reported
+Kibali Au (DRC),Au,0.4,weak,0.85,present,reported
+Sukhoi Log Au,Au,0.95,present,0.95,present,reported
+Olimpiada Au,Au,0.95,present,0.95,present,reported
+Natalka Au,Au,0.95,present,0.95,present,reported
+Kumtor Au,Au,0.95,present,0.95,present,reported
+Yanacocha Au,Au,0.95,present,0.95,present,reported
+Lihir Au,Au,0.85,present,0.85,present,reported
+Voiseys Bay Ni,Ni,0.95,present,0.95,present,reported
+Jinchuan Ni,Ni,0.95,present,0.95,present,reported
+New Caledonia Ni,Ni,0.95,present,0.95,present,reported
+Sorowako Ni,Ni,0.95,present,0.95,present,reported
+Simandou Fe,Fe,0.95,present,0.95,present,reported
+KMA Kursk Fe,Fe,0.85,present,0.85,present,reported
+Kryvyi Rih Fe,Fe,0.95,present,0.95,present,reported
+Quadrilatero Ferrifero Fe,Fe,0.95,present,0.95,present,reported
+Mesabi Fe,Fe,0.95,present,0.95,present,reported
+Wanshan Hg (CN),Hg,0.6,present,0.85,present,reported
+Moanda Mn (GA),Mn,0.95,present,0.95,present,reported
+Sukinda Cr (IN),Cr,0.95,present,0.95,present,reported
+Rossing U (NA),U,0.95,present,0.95,present,reported
+Arlit U (NE),U,0.95,present,0.95,present,reported
+Ranger U (AU),U,0.95,present,0.95,present,reported
+Cerrejon coal (CO),C_coal,0.85,present,0.85,present,reported
+Ostrava coal (CZ),C_coal,0.85,present,0.85,present,reported
+Hudson Bay Lowlands peat,peat,0.85,present,0.85,present,reported
+Finland peat (Ostrobothnia),peat,0.78,present,0.78,present,reported
+Belarus Polesie peat,peat,0.51,present,0.51,present,reported
+Riga gypsum (Skaistkalne),gypsum,0.85,present,0.85,present,reported
+Mogok ruby (MM),corundum,0.0,missing,0.85,present,best-guess spot (reported)
+Ratnapura spinel (LK),spinel,0.0,missing,0.85,present,best-guess spot (reported)
+Ilakaka sapphire (MG),corundum,0.85,present,0.85,present,best-guess spot (reported)
+Ouro Preto topaz (BR),topaz,0.3,weak,0.75,present,best-guess spot (reported)
+Murzinka topaz (RU),topaz,0.0,missing,0.75,present,best-guess spot (reported)
+Shigar aquamarine (PK),beryl,0.0,missing,0.75,present,best-guess spot (reported)
+Alto Ligonha tourmaline (MZ),tourmaline,0.0,missing,0.7,present,best-guess spot (reported)
+Merelani tsavorite (TZ),garnet,0.0,missing,0.75,present,best-guess spot (reported)
+Swat emerald (PK),emerald,0.95,present,0.95,present,best-guess spot (reported)
+Aheim olivine (NO),olivine,0.95,present,0.95,present,best-guess spot (reported)
+Tolfa alunite (IT),alum,0.0,missing,0.75,present,best-guess spot (reported)
+Flor de los Andes lapis (CL),lapis,0.0,missing,0.6,present,best-guess spot (reported)
+Kibali Au (DRC),Au,0.4,weak,0.85,present,best-guess spot (reported)
+Cigar Lake U (CA),U,0.25,weak,0.85,present,best-guess spot (reported)
+Schlema U (DE),U,0.4,weak,0.85,present,best-guess spot (reported)
+Freiberg Pb (DE),Pb,0.0,missing,0.75,present,best-guess spot (reported)
+Ekibastuz coal (KZ),C_coal,0.85,present,0.85,present,best-guess spot (reported)
+Jharia coal (IN),C_coal,0.37,weak,0.85,present,best-guess spot (reported)
+Zabargad peridot (EG),olivine,0.0,missing,0.0,missing,known gap

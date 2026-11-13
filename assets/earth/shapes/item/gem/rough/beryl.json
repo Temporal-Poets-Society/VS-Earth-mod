@@ -1,0 +1,1098 @@
+{
+ "editor": {
+  "allAngles": true,
+  "singleTexture": false
+ },
+ "textureWidth": 16,
+ "textureHeight": 16,
+ "textures": {
+  "gem": "earth:item/gem/rough/beryl"
+ },
+ "elements": [
+  {
+   "name": "origin",
+   "from": [
+    6.978,
+    -0.082,
+    6.854
+   ],
+   "to": [
+    6.978,
+    -0.082,
+    6.854
+   ],
+   "rotationOrigin": [
+    8.0,
+    0.0,
+    8.0
+   ],
+   "faces": {
+    "north": {
+     "texture": "#gem",
+     "uv": [
+      0,
+      0,
+      1,
+      1
+     ],
+     "enabled": false
+    },
+    "east": {
+     "texture": "#gem",
+     "uv": [
+      0,
+      0,
+      1,
+      1
+     ],
+     "enabled": false
+    },
+    "south": {
+     "texture": "#gem",
+     "uv": [
+      0,
+      0,
+      1,
+      1
+     ],
+     "enabled": false
+    },
+    "west": {
+     "texture": "#gem",
+     "uv": [
+      0,
+      0,
+      1,
+      1
+     ],
+     "enabled": false
+    },
+    "up": {
+     "texture": "#gem",
+     "uv": [
+      0,
+      0,
+      1,
+      1
+     ],
+     "enabled": false
+    },
+    "down": {
+     "texture": "#gem",
+     "uv": [
+      0,
+      0,
+      1,
+      1
+     ],
+     "enabled": false
+    }
+   },
+   "children": [
+    {
+     "name": "Main",
+     "from": [
+      0.992,
+      0.42,
+      0.992
+     ],
+     "to": [
+      0.992,
+      0.42,
+      0.992
+     ],
+     "rotationOrigin": [
+      0.992,
+      0.42,
+      0.992
+     ],
+     "faces": {
+      "north": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      },
+      "east": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      },
+      "south": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      },
+      "west": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      },
+      "up": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      },
+      "down": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      }
+     },
+     "children": [
+      {
+       "name": "Main0",
+       "from": [
+        -0.362,
+        0.0,
+        -0.628
+       ],
+       "to": [
+        0.362,
+        2.06,
+        0.628
+       ],
+       "rotationOrigin": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "faces": {
+        "north": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.789,
+          2.375,
+          16
+         ]
+        },
+        "south": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.789,
+          2.375,
+          16
+         ]
+        },
+        "east": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.789,
+          4.114,
+          16
+         ]
+        },
+        "west": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.789,
+          4.114,
+          16
+         ]
+        },
+        "up": {
+         "texture": "#gem",
+         "uv": [
+          10.812,
+          1.943,
+          13.188,
+          6.057
+         ]
+        },
+        "down": {
+         "texture": "#gem",
+         "uv": [
+          10.812,
+          9.943,
+          13.188,
+          14.057
+         ]
+        }
+       },
+       "rotationY": 8
+      },
+      {
+       "name": "Main1",
+       "from": [
+        -0.362,
+        0.003,
+        -0.628
+       ],
+       "to": [
+        0.362,
+        2.057,
+        0.628
+       ],
+       "rotationOrigin": [
+        0.0,
+        0.003,
+        0.0
+       ],
+       "faces": {
+        "north": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.811,
+          2.375,
+          15.977
+         ]
+        },
+        "south": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.811,
+          2.375,
+          15.977
+         ]
+        },
+        "east": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.811,
+          4.114,
+          15.977
+         ]
+        },
+        "west": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.811,
+          4.114,
+          15.977
+         ]
+        },
+        "up": {
+         "texture": "#gem",
+         "uv": [
+          10.812,
+          1.943,
+          13.188,
+          6.057
+         ]
+        },
+        "down": {
+         "texture": "#gem",
+         "uv": [
+          10.812,
+          9.943,
+          13.188,
+          14.057
+         ]
+        }
+       },
+       "rotationY": 68
+      },
+      {
+       "name": "Main2",
+       "from": [
+        -0.362,
+        0.006,
+        -0.628
+       ],
+       "to": [
+        0.362,
+        2.054,
+        0.628
+       ],
+       "rotationOrigin": [
+        0.0,
+        0.006,
+        0.0
+       ],
+       "faces": {
+        "north": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.834,
+          2.375,
+          15.955
+         ]
+        },
+        "south": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.834,
+          2.375,
+          15.955
+         ]
+        },
+        "east": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.834,
+          4.114,
+          15.955
+         ]
+        },
+        "west": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.834,
+          4.114,
+          15.955
+         ]
+        },
+        "up": {
+         "texture": "#gem",
+         "uv": [
+          10.812,
+          1.943,
+          13.188,
+          6.057
+         ]
+        },
+        "down": {
+         "texture": "#gem",
+         "uv": [
+          10.812,
+          9.943,
+          13.188,
+          14.057
+         ]
+        }
+       },
+       "rotationY": 128
+      },
+      {
+       "name": "MainCap00",
+       "from": [
+        -0.505,
+        2.06,
+        -0.505
+       ],
+       "to": [
+        0.505,
+        2.167,
+        0.505
+       ],
+       "rotationOrigin": [
+        0.0,
+        2.06,
+        0.0
+       ],
+       "faces": {
+        "north": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0,
+          3.311,
+          0.789
+         ]
+        },
+        "south": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0,
+          3.311,
+          0.789
+         ]
+        },
+        "east": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0,
+          3.311,
+          0.789
+         ]
+        },
+        "west": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0,
+          3.311,
+          0.789
+         ]
+        },
+        "up": {
+         "texture": "#gem",
+         "uv": [
+          10.345,
+          2.345,
+          13.655,
+          5.655
+         ]
+        },
+        "down": {
+         "texture": "#gem",
+         "uv": [
+          10.345,
+          10.345,
+          13.655,
+          13.655
+         ],
+         "enabled": false
+        }
+       },
+       "rotationY": 23
+      },
+      {
+       "name": "MainCap01",
+       "from": [
+        -0.505,
+        2.063,
+        -0.505
+       ],
+       "to": [
+        0.505,
+        2.164,
+        0.505
+       ],
+       "rotationOrigin": [
+        0.0,
+        2.063,
+        0.0
+       ],
+       "faces": {
+        "north": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.023,
+          3.311,
+          0.766
+         ]
+        },
+        "south": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.023,
+          3.311,
+          0.766
+         ]
+        },
+        "east": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.023,
+          3.311,
+          0.766
+         ]
+        },
+        "west": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.023,
+          3.311,
+          0.766
+         ]
+        },
+        "up": {
+         "texture": "#gem",
+         "uv": [
+          10.345,
+          2.345,
+          13.655,
+          5.655
+         ]
+        },
+        "down": {
+         "texture": "#gem",
+         "uv": [
+          10.345,
+          10.345,
+          13.655,
+          13.655
+         ],
+         "enabled": false
+        }
+       },
+       "rotationY": 68
+      }
+     ],
+     "rotationZ": -9.0
+    },
+    {
+     "name": "Side",
+     "from": [
+      1.946,
+      0.191,
+      0.572
+     ],
+     "to": [
+      1.946,
+      0.191,
+      0.572
+     ],
+     "rotationOrigin": [
+      1.946,
+      0.191,
+      0.572
+     ],
+     "faces": {
+      "north": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      },
+      "east": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      },
+      "south": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      },
+      "west": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      },
+      "up": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      },
+      "down": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      }
+     },
+     "children": [
+      {
+       "name": "Side0",
+       "from": [
+        -0.21,
+        0.0,
+        -0.363
+       ],
+       "to": [
+        0.21,
+        1.297,
+        0.363
+       ],
+       "rotationOrigin": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "faces": {
+        "north": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0,
+          1.375,
+          16
+         ]
+        },
+        "south": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0,
+          1.375,
+          16
+         ]
+        },
+        "east": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0,
+          2.382,
+          16
+         ]
+        },
+        "west": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0,
+          2.382,
+          16
+         ]
+        },
+        "up": {
+         "texture": "#gem",
+         "uv": [
+          11.312,
+          2.809,
+          12.688,
+          5.191
+         ]
+        },
+        "down": {
+         "texture": "#gem",
+         "uv": [
+          11.312,
+          10.809,
+          12.688,
+          13.191
+         ]
+        }
+       },
+       "rotationY": -20
+      },
+      {
+       "name": "Side1",
+       "from": [
+        -0.21,
+        0.003,
+        -0.363
+       ],
+       "to": [
+        0.21,
+        1.294,
+        0.363
+       ],
+       "rotationOrigin": [
+        0.0,
+        0.003,
+        0.0
+       ],
+       "faces": {
+        "north": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.038,
+          1.375,
+          15.962
+         ]
+        },
+        "south": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.038,
+          1.375,
+          15.962
+         ]
+        },
+        "east": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.038,
+          2.382,
+          15.962
+         ]
+        },
+        "west": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.038,
+          2.382,
+          15.962
+         ]
+        },
+        "up": {
+         "texture": "#gem",
+         "uv": [
+          11.312,
+          2.809,
+          12.688,
+          5.191
+         ]
+        },
+        "down": {
+         "texture": "#gem",
+         "uv": [
+          11.312,
+          10.809,
+          12.688,
+          13.191
+         ]
+        }
+       },
+       "rotationY": 40
+      },
+      {
+       "name": "Side2",
+       "from": [
+        -0.21,
+        0.006,
+        -0.363
+       ],
+       "to": [
+        0.21,
+        1.291,
+        0.363
+       ],
+       "rotationOrigin": [
+        0.0,
+        0.006,
+        0.0
+       ],
+       "faces": {
+        "north": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.075,
+          1.375,
+          15.925
+         ]
+        },
+        "south": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.075,
+          1.375,
+          15.925
+         ]
+        },
+        "east": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.075,
+          2.382,
+          15.925
+         ]
+        },
+        "west": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.075,
+          2.382,
+          15.925
+         ]
+        },
+        "up": {
+         "texture": "#gem",
+         "uv": [
+          11.312,
+          2.809,
+          12.688,
+          5.191
+         ]
+        },
+        "down": {
+         "texture": "#gem",
+         "uv": [
+          11.312,
+          10.809,
+          12.688,
+          13.191
+         ]
+        }
+       },
+       "rotationY": 100
+      }
+     ],
+     "rotationZ": 16.0
+    },
+    {
+     "name": "Shard",
+     "from": [
+      0.267,
+      0.153,
+      1.45
+     ],
+     "to": [
+      0.267,
+      0.153,
+      1.45
+     ],
+     "rotationOrigin": [
+      0.267,
+      0.153,
+      1.45
+     ],
+     "faces": {
+      "north": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      },
+      "east": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      },
+      "south": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      },
+      "west": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      },
+      "up": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      },
+      "down": {
+       "texture": "#gem",
+       "uv": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "enabled": false
+      }
+     },
+     "children": [
+      {
+       "name": "Shard0",
+       "from": [
+        -0.259,
+        0.0,
+        -0.259
+       ],
+       "to": [
+        0.259,
+        0.916,
+        0.259
+       ],
+       "rotationOrigin": [
+        0.0,
+        0.0,
+        0.0
+       ],
+       "faces": {
+        "north": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0,
+          1.7,
+          16
+         ]
+        },
+        "south": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0,
+          1.7,
+          16
+         ]
+        },
+        "east": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0,
+          1.7,
+          16
+         ]
+        },
+        "west": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0,
+          1.7,
+          16
+         ]
+        },
+        "up": {
+         "texture": "#gem",
+         "uv": [
+          11.15,
+          3.15,
+          12.85,
+          4.85
+         ]
+        },
+        "down": {
+         "texture": "#gem",
+         "uv": [
+          11.15,
+          11.15,
+          12.85,
+          12.85
+         ]
+        }
+       },
+       "rotationY": 35
+      },
+      {
+       "name": "Shard1",
+       "from": [
+        -0.259,
+        0.003,
+        -0.259
+       ],
+       "to": [
+        0.259,
+        0.912,
+        0.259
+       ],
+       "rotationOrigin": [
+        0.0,
+        0.003,
+        0.0
+       ],
+       "faces": {
+        "north": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.053,
+          1.7,
+          15.947
+         ]
+        },
+        "south": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.053,
+          1.7,
+          15.947
+         ]
+        },
+        "east": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.053,
+          1.7,
+          15.947
+         ]
+        },
+        "west": {
+         "texture": "#gem",
+         "uv": [
+          0,
+          0.053,
+          1.7,
+          15.947
+         ]
+        },
+        "up": {
+         "texture": "#gem",
+         "uv": [
+          11.15,
+          3.15,
+          12.85,
+          4.85
+         ]
+        },
+        "down": {
+         "texture": "#gem",
+         "uv": [
+          11.15,
+          11.15,
+          12.85,
+          12.85
+         ]
+        }
+       },
+       "rotationY": 80
+      }
+     ],
+     "rotationX": -11.27,
+     "rotationY": -0.4,
+     "rotationZ": 4.08
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+  "source_point_counts": {
+    "coal_dep": 266,
+    "coal_pt": 180
+  },
+  "points_total": 446,
+  "confirmed_unique_deposits": null,
+  "rank_join_status": "withheld pending full relational table schema review",
+  "basin_lines_status": "Partial raw shape without attributes; not exported or drawn",
+  "reuse": "Coal-layer metadata Use_Constraints=None. Do not redistribute ESRI coastline/country layers from the parent project; those were not acquired."
+}

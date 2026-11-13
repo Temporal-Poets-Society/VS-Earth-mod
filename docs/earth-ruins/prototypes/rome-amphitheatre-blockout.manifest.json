@@ -1,0 +1,41 @@
+{
+  "modelId": "rome-amphitheatre-blockout",
+  "title": "Rome / amphitheatre scale study",
+  "status": "blockout",
+  "architectureProfile": "earth-ruins-half-v1",
+  "blocksPerMetre": 0.5,
+  "sizeXYZ": [
+    94,
+    25,
+    78
+  ],
+  "groundY": 1,
+  "referenceEnvelopeMetresXYZ": [
+    188,
+    48,
+    156
+  ],
+  "dimensionEvidence": "rough planning envelope; not a survey or approved replica",
+  "axisConvention": "+X east; +Y up; +Z south; local north -Z",
+  "placement": "manual-empty-test-area",
+  "historicalCutoffCE": 1500,
+  "worldgenEnabled": false,
+  "inGameValidated": false,
+  "palette": {
+    "0": "game:air",
+    "1": "game:stonebricks-limestone",
+    "2": "game:stonebricks-granite",
+    "3": "game:stonebricks-travertine"
+  },
+  "notes": [
+    "Colosseum-sized rough envelope; exact plan and dimension sources remain to be reviewed.",
+    "Simplified elliptical arcades and seating with designed missing south-east upper fabric.",
+    "64 simplified arcade sectors are a modelling study, not a reconstruction of the historical bay count.",
+    "Hypogeum, accessible upper stairs, accurate order details and final ruin treatment are pending."
+  ],
+  "voxelCountsByCode": {
+    "game:air": 112040,
+    "game:stonebricks-travertine": 32260
+  },
+  "schematicSha256": "81824486b7c6d58691836a70620addcceb0534bd24595ba9a4c9729ef226bf96"
+}

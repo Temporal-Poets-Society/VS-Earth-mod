@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Earth · ore generation preview</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f3ef;color:#192d30;font:16px/1.5 system-ui,sans-serif}main{max-width:1250px;margin:auto;padding:30px}h1{font-size:34px;margin:0}h2{font-size:22px}.eyebrow{letter-spacing:.14em;font-size:12px;color:#446569}p{max-width:1000px}.panel{background:white;border:1px solid #ccd4cf;border-radius:10px;padding:20px;margin:18px 0}.controls{display:flex;gap:16px;flex-wrap:wrap;align-items:end}label{display:grid;font-size:13px;gap:5px}select,input,button{font:inherit;padding:8px;border:1px solid #a6b8b0;border-radius:5px;background:white;color:#192d30}input[type=number]{width:105px}button{cursor:pointer;background:#e2eee8}canvas{display:block;width:100%;aspect-ratio:2;image-rendering:auto;background:#e7ecec}#hover{min-height:3em;font-size:14px;margin-top:10px}#legend{height:14px;background:linear-gradient(90deg,#000004,#51127c,#b73779,#fc8961,#fcfdbf);margin-top:8px}.ends{display:flex;justify-content:space-between;font-size:12px}small,.muted{color:#4c6161}a{color:#0b626e}.stat{font-size:15px;padding:12px;background:#edf4ee;border-radius:4px}details{margin-top:15px}img{width:100%}pre{overflow:auto;font-size:12px}#error{color:#9a2700}@media(max-width:700px){main{padding:16px}h1{font-size:26px}}
+</style>
+<main>
+<div class="eyebrow">EARTH MAP · EDITABLE GENERATION MODEL</div>
+<h1>Resources that make regions different</h1>
+<p>These are the exact 44 grids used by Earth: 42 resources plus peat and clay. Recorded deposits, mines, occurrences and reviewed formations provide positive evidence, weighted by evidence tier (major-deposit compilations highest, single unverified occurrences lowest). Low-weight host-rock and climate priors fill the potential plane where geology is favourable but no survey data exist, and the game adds a small background chance everywhere else.</p>
+<div class="panel">
+<div class="controls">
+<label>Resource<select id="resource"></select></label>
+<label>View<select id="mode"><option value="heat">Accessible evidence weight</option><option value="observed">Recorded / formation evidence</option><option value="potential">Assessed tracts and host-rock/climate priors</option><option value="deep">Evidence with reported burial</option><option value="chance">Relative attempt multiplier</option></select></label>
+<label>Depth below surface<input id="depth" type="number" value="100" min="0" max="10000" step="10"></label>
+<label>Metres per block<input id="scale" type="number" value="5" min="0.1" max="100" step="0.5"></label>
+</div>
+<div class="controls" style="margin:16px 0">
+<label>Background<input id="background" type="number" value="0.08" min="0" max="1" step="0.01"></label>
+<label>Hotspot<input id="hotspot" type="number" value="1" min="0" max="1" step="0.05"></label>
+<label>Frequency<input id="frequency" type="number" value="0.4" min="0" max="10" step="0.1"></label>
+<label>Concentration<input id="concentration" type="number" value="0.85" min="0" max="1" step="0.05"></label>
+<label>Quality bias<input id="quality" type="number" value="0" min="-1" max="1" step="0.1"></label>
+<button id="reset">Reset</button><button id="export">Download tuning JSON</button>
+</div>
+<h2 id="mapTitle">Loading grids…</h2>
+<canvas id="map" width="720" height="360" aria-label="Global resource evidence map"></canvas>
+<div id="legend"></div><div class="ends"><span>0 · unknown evidence / no boost</span><span id="maximum">1 · strongest included evidence</span></div>
+<div id="hover" role="status">Move over the map to inspect a cell. Coordinates are latitude and longitude.</div>
+<div id="stats" class="stat"></div><p id="error"></p>
+<small>Map covers 90°N–90°S and 180°W–180°E. Ocean background is only a visual guide; buried resources can occur offshore. Actual placement checks the local host block and generation conditions.</small>
+</div>
+<div class="panel">
+<h2>What the colours mean</h2>
+<p>Evidence weight is an authored suitability score, not a measured probability or reserve estimate. The attempt view shows <code>frequency × [background + (hotspot − background) × evidence]</code> before native abundance, local texture, host, climate and depth checks. It is not the chance that each block contains ore.</p>
+<p>Concentration controls the fraction of eligible deposit blocks filled. Quality bias changes poor/medium/rich/bountiful selection where the provider supplies those grades. Rich background deposits remain possible, but are less common. Surface starter deposits use their separate frequency setting.</p>
+<p>Reported minimum burial only boosts attempts at the corresponding depth. Most records have no depth data; those records do not establish shallow accessibility. The default 5 metres per block is a configurable gameplay conversion, independent of the horizontal map scale.</p>
+<p>Maximum combination avoids rewarding duplicate records. Survey-density normalisation lowers the weight of incidental records where the USGS MRDS database is very dense (mostly the United States) and widens the influence of lone records where surveys are sparse, but it cannot eliminate survey bias. Blank areas mean unknown; they do not mean geological absence. Mineral-specific hosts still come from the installed provider; a commodity map does not prove every mapped occurrence has that mineral form.</p>
+<p>0.5° resolution and tiered point-influence radii (25–75 km) are deliberate gameplay generalisations. Static maps use a depth of 100 blocks. Tungsten and gypsum evidence is included, but the tested vanilla / Geology Additions combination has no usable block adapter for them.</p>
+<p><a href="../remaining-ores-2026-09-29/index.html">Evidence atlas and coverage audit</a> · <a href="bake-manifest.json">Input hashes and exclusions</a> · <a href="../../regional-ores-implementation.md">Implementation and configuration</a> · <a id="static" href="maps/Cu.png">Static map</a></p>
+<details><summary>Editing and save behaviour</summary><p>The controls only change this preview. Downloaded JSON is a configuration fragment for <code>earthmap.json</code>; merge it with existing settings. Change source data and rebuild with <code>tools/bake_ore_heatmaps.py</code> to update geography. Existing saves retain settings and a data fingerprint. An explicit upgrade affects future generation; already generated chunks and cached ore maps are not rewritten.</p><pre id="identity"></pre></details>
+</div>
+<div class="panel"><h2>Rock contacts across chunk boundaries</h2><p>The catalogue is sampled through a coherent world-coordinate distortion. Neighbouring profiles meet in irregular lobes across a bounded transition zone; the full stratigraphic column remains coherent. A chunk boundary does not reset the pattern. Individual blocks still have one rock type.</p><img src="geology-contacts.png" alt="Before and after comparison of a straight catalogue boundary and irregular rock contacts"><small>Actual catalogue sample with synthetic game-scale layers. This is a sampler comparison, not an in-game screenshot.</small></div>
+</main>
+<script id="data" type="application/json">__PAYLOAD__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('data').textContent), $=id=>document.getElementById(id), N=720*360;
+const canvas=$('map'), ctx=canvas.getContext('2d'), cache=new Map();let ocean,active,values,token=0;
+const fields={background:'BackgroundChance',hotspot:'HotspotChance',frequency:'FrequencyMultiplier',concentration:'Concentration',quality:'QualityBias',scale:'MetresPerBlock'};
+function num(id){const el=$(id),v=Number(el.value);return Math.max(Number(el.min),Math.min(Number(el.max),Number.isFinite(v)?v:0));}
+async function unzip(b64){const bytes=Uint8Array.from(atob(b64),c=>c.charCodeAt(0));return new Uint8Array(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer());}
+function evidence(i){const depth=active.raw[3*N+2*i]|active.raw[3*N+2*i+1]<<8;return {observed:active.raw[i]/255,potential:active.raw[N+i]/255,deep:active.raw[2*N+i]/255,depth};}
+function heat(e){return Math.max(e.observed,e.potential,num('depth')*num('scale')>=e.depth?e.deep:0);}
+function attempt(h){return num('frequency')*(num('background')+(num('hotspot')-num('background'))*h);}
+async function render(){if(num('hotspot')<num('background'))$('hotspot').value=num('background');const stamp=++token,key=$('resource').value;let layer=cache.get(key);if(!layer){const source=data.runtime.layers.find(l=>l.code===key);layer={...source,raw:await unzip(source.data)};cache.set(key,layer);}if(stamp!==token)return;active=layer;
+ const mode=$('mode').value,im=ctx.createImageData(720,360);values=new Float64Array(N);let positive=0;
+ const maximum=mode==='chance'?Math.max(num('frequency')*Math.max(num('background'),num('hotspot')),0.001):1;
+ for(let i=0;i<N;i++){const e=evidence(i),h=heat(e);let v=mode==='heat'?h:mode==='chance'?attempt(h):e[mode];values[i]=v;if(h>0)positive++;
+ let color=v>0?data.colors[Math.min(255,Math.max(0,Math.round(v/maximum*255)))]:ocean[i]?[242,247,249]:[216,226,219];im.data.set([...color,255],i*4);}
+ ctx.putImageData(im,0,0);$('mapTitle').textContent=layer.label+' · '+$('mode').selectedOptions[0].textContent;
+ $('maximum').textContent=mode==='chance'?maximum.toFixed(3)+' × native attempts':'1 · strongest included evidence';
+ $('stats').textContent='Default geometry: radius ×'+data.defaults.RadiusMultiplier+', thickness ×'+data.defaults.ThicknessMultiplier+'. Current eligible-block fill: '+(num('concentration')*100).toFixed(0)+'%. Background attempt multiplier: '+attempt(0).toFixed(3)+'×; strongest hotspot: '+attempt(1).toFixed(3)+'×. '+positive.toLocaleString()+' positive evidence cells at this depth.';
+ $('static').href='maps/'+key+'.png';$('identity').textContent=data.runtime.datasetId+'\nRuntime SHA-256: '+data.sha256;
+}
+canvas.addEventListener('pointermove',ev=>{if(!active)return;const r=canvas.getBoundingClientRect(),x=Math.min(719,Math.max(0,Math.floor((ev.clientX-r.left)/r.width*720))),y=Math.min(359,Math.max(0,Math.floor((ev.clientY-r.top)/r.height*360))),i=y*720+x,e=evidence(i),h=heat(e),power=Math.min(5,Math.max(.3,2.8-2*h-1.5*num('quality'))),rich=1-Math.pow(.5,1/power);
+ $('hover').textContent=(90-(y+.5)/2).toFixed(2)+'°, '+(-180+(x+.5)/2).toFixed(2)+'° · recorded '+e.observed.toFixed(3)+', potential '+e.potential.toFixed(3)+', deep '+e.deep.toFixed(3)+(e.deep>0?' at ≥'+e.depth+' m':'')+' · attempts '+attempt(h).toFixed(3)+'× · rich/bountiful share '+(rich*100).toFixed(1)+'% of graded deposits (four-grade example).';});
+function reset(){for(const [id,key] of Object.entries(fields))$(id).value=data.defaults[key];$('depth').value=100;render().catch(fail);}
+function fail(e){$('error').textContent='Preview could not load: '+e.message+'. Use the static PNG maps if this browser lacks gzip decompression.';}
+for(const l of [...data.runtime.layers].sort((a,b)=>a.label.localeCompare(b.label))){const o=document.createElement('option');o.value=l.code;o.textContent=l.label+' ('+l.code+')';$('resource').append(o);}$('resource').value='Cu';
+for(const el of document.querySelectorAll('select,input'))el.addEventListener('input',()=>render().catch(fail));$('reset').onclick=reset;
+$('export').onclick=()=>{const ores={...data.defaults};for(const [id,key] of Object.entries(fields))ores[key]=num(id);const a=document.createElement('a'),url=URL.createObjectURL(new Blob([JSON.stringify({Ores:ores},null,2)],{type:'application/json'}));a.href=url;a.download='earth-ore-tuning.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+(async()=>{ocean=await unzip(data.ocean);reset();})().catch(fail);
+</script></html>

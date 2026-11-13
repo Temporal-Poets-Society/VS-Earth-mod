@@ -1,0 +1,20 @@
+[
+  {"op": "add", "file": "game:blocktypes/wood/pan.json", "path": "/attributes/panningDrops/@earth:placer-.*-gold", "value": [
+    {"type": "item", "code": "game:nugget-nativegold", "chance": {"avg": 0.6, "var": 0}},
+    {"type": "item", "code": "game:stone-granite", "chance": {"avg": 0.2, "var": 0}},
+    {"type": "item", "code": "game:nugget-nativecopper", "chance": {"avg": 0.05, "var": 0}},
+    {"type": "item", "code": "game:ore-quartz", "chance": {"avg": 0.05, "var": 0}}
+  ]},
+  {"op": "add", "file": "game:blocktypes/wood/pan.json", "path": "/attributes/panningDrops/@earth:placer-.*-tin", "value": [
+    {"type": "item", "code": "game:nugget-cassiterite", "chance": {"avg": 0.7, "var": 0}},
+    {"type": "item", "code": "game:stone-granite", "chance": {"avg": 0.2, "var": 0}},
+    {"type": "item", "code": "game:ore-quartz", "chance": {"avg": 0.05, "var": 0}}
+  ]},
+  {"op": "add", "file": "game:blocktypes/wood/pan.json", "path": "/attributes/panningDrops/@earth:placer-.*-platinum", "value": [
+    {"type": "item", "code": "earth:nugget-nativeplatinum", "chance": {"avg": 0.5, "var": 0}},
+    {"type": "item", "code": "game:nugget-chromite", "chance": {"avg": 0.15, "var": 0}},
+    {"type": "item", "code": "game:nugget-magnetite", "chance": {"avg": 0.1, "var": 0}},
+    {"type": "item", "code": "game:nugget-nativegold", "chance": {"avg": 0.05, "var": 0}},
+    {"type": "item", "code": "game:stone-peridotite", "chance": {"avg": 0.2, "var": 0}}
+  ]}
+]

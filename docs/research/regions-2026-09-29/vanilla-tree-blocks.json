@@ -1,0 +1,52 @@
+[
+  {
+    "generator": "norwaymaple",
+    "path": "C:\\Users\\andri\\AppData\\Roaming\\Vintagestory\\assets\\survival\\worldgen\\treegen\\norwaymaple.json",
+    "sha256": "79A9319B7073572AE1F51DAA8B38CFE578B81BB07ACD365A30A274C19B7CB0D6",
+    "blockCodes": [
+      "logBlockCode: \"log-grown-maple-ud\",",
+      "leavesBlockCode: \"leaves-grown-maple\",",
+      "leavesBranchyBlockCode: \"leavesbranchy-grown-maple\","
+    ]
+  },
+  {
+    "generator": "sugarmaple",
+    "path": "C:\\Users\\andri\\AppData\\Roaming\\Vintagestory\\assets\\survival\\worldgen\\treegen\\sugarmaple.json",
+    "sha256": "25D838DB55C1EC51739DA28BBBD135FC2E3A116B9022E314124100941FF49E78",
+    "blockCodes": [
+      "logBlockCode: \"log-grown-maple-ud\",",
+      "leavesBlockCode: \"leaves-grown-maple\",",
+      "leavesBranchyBlockCode: \"leavesbranchy-grown-maple\","
+    ]
+  },
+  {
+    "generator": "japanesemaple",
+    "path": "C:\\Users\\andri\\AppData\\Roaming\\Vintagestory\\assets\\survival\\worldgen\\treegen\\japanesemaple.json",
+    "sha256": "6EC3CBAA1E0C1877AE0C1CA87D10554C1CE42A633212A2F1529223A09CE9E888",
+    "blockCodes": [
+      "logBlockCode: \"log-grown-maple-ud\",",
+      "leavesBlockCode: \"leaves-grown-maple\",",
+      "leavesBranchyBlockCode: \"leavesbranchy-grown-maple\","
+    ]
+  },
+  {
+    "generator": "crimsonkingmaple",
+    "path": "C:\\Users\\andri\\AppData\\Roaming\\Vintagestory\\assets\\survival\\worldgen\\treegen\\crimsonkingmaple.json",
+    "sha256": "CC973AC3C66FCE03B0931F958123A03FA078556666E3A10D1CB6E3B3C6AA6ADE",
+    "blockCodes": [
+      "logBlockCode: \"log-grown-maple-ud\",",
+      "leavesBlockCode: \"leaves-grown-crimsonkingmaple\",",
+      "leavesBranchyBlockCode: \"leavesbranchy-grown-crimsonkingmaple\","
+    ]
+  },
+  {
+    "generator": "baldcypress",
+    "path": "C:\\Users\\andri\\AppData\\Roaming\\Vintagestory\\assets\\survival\\worldgen\\treegen\\baldcypress.json",
+    "sha256": "957D7AAAE5ED14A371D6CE9B6D53CEE853BD9513F59AD0CFAF265D628CB72ACA",
+    "blockCodes": [
+      "logBlockCode: \"log-grown-baldcypress-ud\",",
+      "leavesBlockCode: \"leaves-grown-baldcypress\",",
+      "leavesBranchyBlockCode: \"leavesbranchy-grown-baldcypress\","
+    ]
+  }
+]

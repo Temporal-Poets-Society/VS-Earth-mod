@@ -1,0 +1,13 @@
+Earth layout: 562.7 blocks per degree east-west (198 m per block at the equator), 568.4 north-south (stretch 1.01), latitudes shown ±90°, seam gutter 2240 blocks, world centre at 10.8°E.
+  70.49,-79.56       river cols    1369  levels  164..168  ramp cols    277  steps ok   68 bare   0 2+   0  river/lake   0  walls    0  lake walls   0 curtain  13  depth 2:167 3:69 4:82 5:167 6:867 8:1 9:1 10:15
+  43.08,-79.08       river cols    8491  levels  180..195  ramp cols   1513  steps ok  243 bare   0 2+  29  river/lake  46  walls    0  lake walls   0 curtain  33  depth 2:1109 3:635 4:458 5:410 6:418 7:448 8:3571 9:893 10:45 11:49 12:44 13:411
+  50.53,-127.01      river cols    1390  levels  164..187  ramp cols    367  steps ok   52 bare   0 2+   2  river/lake  12  walls    0  lake walls   0 curtain  12  depth 2:194 3:136 4:112 5:104 6:575 7:17 8:16 9:18 10:11 11:15 12:12 13:23 14:157
+  47.18,8.41         river cols    4636  levels  215..225  ramp cols    874  steps ok  182 bare   0 2+   0  river/lake  32  walls    0  lake walls   0 curtain  16  depth 1:32 2:684 3:471 4:360 5:434 6:2655
+  56.82,-68.94       river cols   12889  levels  179..185  ramp cols   1291  steps ok  236 bare   0 2+  20  river/lake   0  walls    0  lake walls   0 curtain   0  depth 1:18 2:1178 3:930 4:724 5:763 6:3150 7:6126
+  67.31,32.50        river cols    3878  levels  164..188  ramp cols   1189  steps ok  241 bare   0 2+   9  river/lake   4  walls    0  lake walls   0 curtain   5  depth 2:375 3:388 4:264 5:789 6:2001 7:2 8:1 9:9 10:49
+  60.18,-158.77      river cols     553  levels  183..201  ramp cols    242  steps ok   39 bare   0 2+   0  river/lake   0  walls    0  lake walls   0 curtain   3  depth 1:98 2:358 3:97
+  54.50,-8.18        river cols    2091  levels  164..176  ramp cols    822  steps ok  134 bare   0 2+  35  river/lake   0  walls    0  lake walls   0 curtain   0  depth 2:175 3:194 4:120 5:174 6:1428
+  60.53,17.41        river cols    1297  levels  164..174  ramp cols    581  steps ok  115 bare   0 2+   0  river/lake  12  walls    0  lake walls   0 curtain  15  depth 2:119 3:100 4:80 5:83 6:140 7:718 8:8 9:49
+  69.08,33.22        river cols    2317  levels  164..167  ramp cols    268  steps ok   61 bare   0 2+   0  river/lake   0  walls    0  lake walls   0 curtain   0  depth 2:269 3:223 4:167 5:189 6:1469
+  51.16,-78.85       river cols    8067  levels  164..173  ramp cols   1584  steps ok  349 bare   0 2+  33  river/lake   0  walls    0  lake walls   0 curtain   0  depth 1:73 2:1136 3:626 4:459 5:468 6:2132 7:3173
+  64.05,-99.46       river cols    3172  levels  186..191  ramp cols    232  steps ok   20 bare   0 2+   4  river/lake   9  walls    0  lake walls   0 curtain  15  depth 2:272 3:231 4:187 5:215 6:546 7:1721

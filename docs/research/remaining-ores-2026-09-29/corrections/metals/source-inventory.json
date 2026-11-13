@@ -1,0 +1,245 @@
+[
+  {
+    "id": "usgs_pp1802_2017",
+    "title": "USGS Critical mineral resources of the United States: spatial data",
+    "url": "https://mrdata.usgs.gov/pp1802/",
+    "related_url": "https://doi.org/10.5066/F7GH9GQR",
+    "application": "Acquired: full global KML and WFS; 2125 features, all commodities retained",
+    "rights": "USGS public data; preserve attribution and regional-scale use constraints in metadata.",
+    "source_date": "2017; extracted2026-09-29"
+  },
+  {
+    "id": "pp1802_metadata",
+    "title": "USGS PP1802 data metadata",
+    "url": "https://mrdata.usgs.gov/pp1802/metadata/pp1802.xml",
+    "related_url": "",
+    "application": "Acquired; warns against spatial analyses below regional scale",
+    "rights": "Source metadata retained in raw/",
+    "source_date": "2017"
+  },
+  {
+    "id": "ga_aimr",
+    "title": "Geoscience Australia identified mineral resources service",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer",
+    "related_url": "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+    "application": "Acquired:16 metal layers;3205 points including deposits and producing mines",
+    "rights": "Creative Commons Attribution4.0; Commonwealth of Australia (Geoscience Australia)2026. Changes: selected layers, converted to WGS84 GeoJSON, normalized fields; originals retained.",
+    "source_date": "Service copyright2026; record source AIMR2025"
+  },
+  {
+    "id": "mcs2026",
+    "title": "USGS Mineral Commodity Summaries2026",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf",
+    "related_url": "https://pubs.usgs.gov/publication/mcs2026",
+    "application": "Acquired PDF/text; country production/reserve alarms only, not spatial orebody evidence",
+    "rights": "USGS public publication; country facts paraphrased; do not treat a refinery as a local mine.",
+    "source_date": "2026 tables largely describing2025 estimates"
+  },
+  {
+    "id": "mcs2026_data",
+    "title": "USGS MCS2026 data release",
+    "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+    "related_url": "https://doi.org/10.5066/P1WKQ63T",
+    "application": "Reviewed source/rights; spatial footprints not supplied",
+    "rights": "Official release CC0",
+    "source_date": "2026"
+  },
+  {
+    "id": "usgs_existing_global",
+    "title": "USGS major mineral deposits of the world",
+    "url": "https://mrdata.usgs.gov/major-deposits/",
+    "related_url": "",
+    "application": "Existing package imported; sampled named provinces compared to point witnesses",
+    "rights": "Original citations and metadata in existing package; no new global-completeness claim",
+    "source_date": "Existing source snapshot"
+  },
+  {
+    "id": "usgs_vms",
+    "title": "USGS volcanogenic massive-sulfide deposits",
+    "url": "https://mrdata.usgs.gov/vms/",
+    "related_url": "",
+    "application": "Existing package; exact Boliden record640 supplies coordinate for reviewed Bi join",
+    "rights": "USGS coordinate retained unchanged; no new orebody footprint",
+    "source_date": "Existing source snapshot"
+  },
+  {
+    "id": "nui_phao_usgs",
+    "title": "USGS PP1802 chapterG, Fluorine",
+    "url": "https://pubs.usgs.gov/publication/pp1802G",
+    "related_url": "",
+    "application": "Reviewed named W-F-Bi-Cu-Au occurrence; coordinates come separately from exact PP1802 point588",
+    "rights": "Paraphrased geological fact; underlying coordinate record cited",
+    "source_date": "2017"
+  },
+  {
+    "id": "sgu_c438",
+    "title": "SGU C438: Boliden ore mineralogy",
+    "url": "https://resource.sgu.se/produkter/c/c438-rapport.pdf",
+    "related_url": "",
+    "application": "Primary mine study; Table42 names bismuth minerals",
+    "rights": "Facts only; no source figure/text redistribution",
+    "source_date": "Historical SGU study"
+  },
+  {
+    "id": "sgu_c651",
+    "title": "SGU C651: The Boliden sulphide deposit",
+    "url": "https://resource.sgu.se/dokument/publikation/c/c651rapport/c651-rapport.pdf",
+    "related_url": "",
+    "application": "Primary mine study section7.1.10 describes Bi tellurides and collected mineral material",
+    "rights": "Facts only; no source figure/text redistribution",
+    "source_date": "Historical SGU study"
+  },
+  {
+    "id": "bgs_bismuth",
+    "title": "BGS geological availability of bismuth research",
+    "url": "https://www.bgs.ac.uk/news/geological-supply-of-bismuth-is-greater-than-previously-understood/",
+    "related_url": "",
+    "application": "Primary researcher summary: geological Bi is broader than primary commodity mining statistics",
+    "rights": "Research context, not acquired spatial inventory",
+    "source_date": "2022"
+  },
+  {
+    "id": "iaea_udepo",
+    "title": "IAEA World Distribution of Uranium and Thorium Deposits",
+    "url": "https://infcis.iaea.org/UTHDEPO/Deposits",
+    "related_url": "https://infcis.iaea.org/UTHDEPO",
+    "application": "Reviewed; priority global complement NOT acquired spatially",
+    "rights": "IAEA rights require review before bulk redistribution; resource estimates can be historical or low-cutoff, not always modern reserves",
+    "source_date": "Live inventory reviewed2026-09-29"
+  },
+  {
+    "id": "iaea_types",
+    "title": "IAEA global uranium deposit classification/inventory",
+    "url": "https://www-pub.iaea.org/MTCD/publications/PDF/TE1843_web.pdf",
+    "related_url": "",
+    "application": "Reviewed primary global inventory: Kirovograd/Lagoa Real metasomatites, Chu-Sarysu roll-front, unconventional sources",
+    "rights": "Paraphrased facts only; no spatial redistribution",
+    "source_date": "Inventory describes end2015 database"
+  },
+  {
+    "id": "iaea_kazakhstan",
+    "title": "IAEA TECDOC1425: Kazakhstan uranium technical contribution",
+    "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/te_1425_web.pdf",
+    "related_url": "",
+    "application": "Primary map and deposit account documents Chu-Sarysu/Syr-Darya; pp96ff",
+    "rights": "Facts only; need original georeferenced records for map repair",
+    "source_date": "Historical technical publication"
+  },
+  {
+    "id": "iaea_lagoa",
+    "title": "UERJ primary Lagoa Real/Cachoeira research at IAEA URAM2014",
+    "url": "https://conferences.iaea.org/event/44/contributions/7944/",
+    "related_url": "",
+    "application": "Primary geological abstract confirms albitite-hosted uranium; point geometry not acquired",
+    "rights": "Facts paraphrased",
+    "source_date": "2014"
+  },
+  {
+    "id": "iaea_world",
+    "title": "IAEA World Uranium",
+    "url": "https://www-pub.iaea.org/MTCD/publications/PDF/WOR_URA_web.pdf",
+    "related_url": "",
+    "application": "Country exploration history includes Kizylkum sandstone and Boztau black-shale deposits",
+    "rights": "Facts only; no inferred polygon",
+    "source_date": "Historical global review"
+  },
+  {
+    "id": "iaea_yuzhnoye",
+    "title": "IAEA historical Yuzhnoye uranium deposit record",
+    "url": "https://www-pub.iaea.org/MTCD/publications/PDF/TE_1629_CD/Deposits/652.html",
+    "related_url": "",
+    "application": "Ukraine dormant deposit, zero production; example of real resources outside mine filters",
+    "rights": "Facts only; historical status not asserted current",
+    "source_date": "Historical2003-2007 database record"
+  },
+  {
+    "id": "gsp_metallogeny",
+    "title": "Geological Survey of Pakistan, Metallogeny and Mineral Deposits of Pakistan",
+    "url": "https://gsp.gov.pk/wp-content/uploads/2026/02/Matellogeny-and-Mineral-Deposits-of-Pakistan-Kazmi-and-Abbas.pdf",
+    "related_url": "",
+    "application": "Metallic Minerals chapter documents Krinj/Partsan/Qila Abdullah Sb showings, quartz-stibnite veins and intermittent mining",
+    "rights": "Primary national-survey facts only; occurrence coordinates not acquired",
+    "source_date": "Historical book; current hosting is not study date"
+  },
+  {
+    "id": "pulganbar",
+    "title": "Clarence Valley Council, Copmanhurst Shire thematic history",
+    "url": "https://www.clarence.nsw.gov.au/files/assets/public/community/files/heritage/thematic_history_copmanhurst.pdf",
+    "related_url": "",
+    "application": "Commissioned2004 study pp45-46 describes local mercury extraction ending1916",
+    "rights": "Paraphrased facts; smelter point would not establish orebody location",
+    "source_date": "2004"
+  },
+  {
+    "id": "lu2024",
+    "title": "Dmitrijs Vorobjovs, Staicele and Garsene crystalline-basement iron ore thesis",
+    "url": "https://dspace.lu.lv/items/f9bf4048-f4d6-48fa-a19f-fe0c605bbfbe",
+    "related_url": "",
+    "application": "Primary analytical study of LVGMC drill cores; public abstract only. Full thesis restricted and not obtained.",
+    "rights": "Facts paraphrased; no restricted file requested or copied",
+    "source_date": "2024"
+  },
+  {
+    "id": "lu2026",
+    "title": "Stinkulis and others: metal potential of deeply buried Latvian basement",
+    "url": "https://konference84.lu.lv/fileadmin/user_upload/lu_portal/84konference/LU-84_konf-tezes_2026_.pdf#page=595",
+    "related_url": "",
+    "application": "Primary core/geophysical research abstract, printed and physical page595; ongoing research and limited assays",
+    "rights": "Facts paraphrased; oxide assay basis retained, no reserve conversion",
+    "source_date": "2026"
+  },
+  {
+    "id": "lu_depth",
+    "title": "Olgerts Nikodemus, Latvian physical geography",
+    "url": "https://priede.bf.lu.lv/LatvijasDaba/ainava/",
+    "related_url": "",
+    "application": "Academic teaching account: Staicele688m, Garsene945m; secondary depth source, not original borehole log",
+    "rights": "Facts paraphrased; old economic assessment is not current feasibility",
+    "source_date": "Undated historical teaching page"
+  },
+  {
+    "id": "bgs_cornwall",
+    "title": "BGS Cornwall geological memoir",
+    "url": "https://webapps.bgs.ac.uk/memoirs/docs/B01737.html",
+    "related_url": "",
+    "application": "Historical Cu/Sn systems, workings and geological source context; existing Cu/Sn package",
+    "rights": "Primary geological-survey context, not new spatial export",
+    "source_date": "Historical memoir"
+  },
+  {
+    "id": "gsc_tin_w",
+    "title": "GSC World Tin and Tungsten deposits, OF7688",
+    "url": "https://doi.org/10.4095/295581",
+    "related_url": "",
+    "application": "Priority global historical/occurrence complement; NOT acquired. Existing package records download failure.",
+    "rights": "Crown copyright/redistribution terms need verification",
+    "source_date": "2014 publication; much underlying information earlier"
+  },
+  {
+    "id": "ga_potential",
+    "title": "Geoscience Australia mineral potential mapping",
+    "url": "https://www.eftf.ga.gov.au/mineral-potential-mapping",
+    "related_url": "",
+    "application": "Priority prospective-geology complement; not imported here and not a universal commodity layer",
+    "rights": "Review individual map metadata/licenses before use",
+    "source_date": "Current source discovery"
+  },
+  {
+    "id": "bgs_historical_stats",
+    "title": "BGS world mineral statistics archive",
+    "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/world-mineral-statistics-archive/",
+    "related_url": "",
+    "application": "Historical national alarms; production tables do not locate ore and miss earlier periods",
+    "rights": "Reference only; not acquired spatial data",
+    "source_date": "Historical time series"
+  },
+  {
+    "id": "root_afghanistan",
+    "title": "USGS Afghanistan2002 mineral inventory (root correction)",
+    "url": "https://pubs.usgs.gov/of/2002/0110/",
+    "related_url": "",
+    "application": "Root additional-evidence.geojson includes722 accepted non-starred records; metallic subsets included in this audit",
+    "rights": "Root preserves original publisher-restricted starred exclusions",
+    "source_date": "2002"
+  }
+]

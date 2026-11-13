@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Fuji",
+    "continent": "Asia",
+    "latitude": 35.36,
+    "longitude": 138.73
+  },
+  {
+    "name": "Everest",
+    "continent": "Asia",
+    "latitude": 27.99,
+    "longitude": 86.93
+  },
+  {
+    "name": "Mont Blanc",
+    "continent": "Europe",
+    "latitude": 45.83,
+    "longitude": 6.86
+  },
+  {
+    "name": "Elbrus",
+    "continent": "Europe",
+    "latitude": 43.355,
+    "longitude": 42.439
+  },
+  {
+    "name": "Kilimanjaro",
+    "continent": "Africa",
+    "latitude": -3.067,
+    "longitude": 37.355
+  },
+  {
+    "name": "Denali",
+    "continent": "North America",
+    "latitude": 63.069,
+    "longitude": -151.006
+  },
+  {
+    "name": "Aconcagua",
+    "continent": "South America",
+    "latitude": -32.653,
+    "longitude": -70.011
+  },
+  {
+    "name": "Kosciuszko",
+    "continent": "Australia",
+    "latitude": -36.456,
+    "longitude": 148.264
+  },
+  {
+    "name": "Puncak Jaya",
+    "continent": "Oceania",
+    "latitude": -4.078,
+    "longitude": 137.158
+  },
+  {
+    "name": "Vinson",
+    "continent": "Antarctica",
+    "latitude": -78.525,
+    "longitude": -85.617
+  },
+  {
+    "name": "St Helena",
+    "continent": "Island control",
+    "latitude": -15.97,
+    "longitude": -5.71
+  },
+  {
+    "name": "Santorini",
+    "continent": "Island control",
+    "latitude": 36.4,
+    "longitude": 25.4
+  },
+  {
+    "name": "Addis Ababa",
+    "continent": "Warm highland control",
+    "latitude": 9.03,
+    "longitude": 38.74
+  },
+  {
+    "name": "Riga",
+    "continent": "Lowland control",
+    "latitude": 56.95,
+    "longitude": 24.1
+  }
+]

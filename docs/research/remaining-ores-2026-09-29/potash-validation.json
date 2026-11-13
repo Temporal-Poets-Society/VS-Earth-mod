@@ -1,0 +1,43 @@
+{
+  "PotashTracts": {
+    "source_features": 84,
+    "invalid_geometry_source_fids": [
+      33,
+      54,
+      58,
+      62,
+      80,
+      81,
+      82
+    ],
+    "types": {
+      "stratabound potash-bearing salt": 35,
+      "halokinetic potash-bearing salt": 22,
+      "mixed stratabound potash-bearing salt and halokinetic potash-bearing salt": 14,
+      "potash-bearing brine": 11,
+      "halokinetic potash-bearing salt, potash-bearing brine": 1,
+      "evaporite": 1
+    },
+    "coordinate_crs": "EPSG:4326"
+  },
+  "PotashDeps": {
+    "source_features": 981,
+    "invalid_geometry_source_fids": [],
+    "types": {
+      "structure": 121,
+      "mineral occurrence": 346,
+      "drill hole": 42,
+      "lease/concession/permit area": 58,
+      "mine": 224,
+      "area": 98,
+      "deposit": 46,
+      "basin": 16,
+      "grouped mines/occurrences": 18,
+      "structure, grouped mines/occurrences": 1,
+      "brine": 3,
+      "mine(?)": 4,
+      "mineral occurrence, structure": 4
+    },
+    "coordinate_crs": "EPSG:4326"
+  }
+}

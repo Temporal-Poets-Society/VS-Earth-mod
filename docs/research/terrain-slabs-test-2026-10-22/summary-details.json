@@ -1,0 +1,428 @@
+{
+ "rhine_falls": {
+  "aquatic_plants_out_of_water": [
+   0,
+   0
+  ],
+  "aquatic_plants_total": [
+   1127,
+   1428
+  ],
+  "fluid_change_cheb_dist_to_fall": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1
+  ],
+  "fluid_changes": 3,
+  "fluid_changes_near_solid_change": 1,
+  "fall_cells": [
+   47,
+   46
+  ],
+  "slabs_beside_flowing_water": 4,
+  "slabs_under_flowing_water": 1,
+  "snowlayer_on_slab": 0,
+  "snowlayer_on_full": 0,
+  "terrain_edges_left_full": {},
+  "terrain_edges_slabbed": 1914
+ },
+ "niagara_falls": {
+  "aquatic_plants_out_of_water": [
+   0,
+   0
+  ],
+  "aquatic_plants_total": [
+   1466,
+   4503
+  ],
+  "fluid_change_cheb_dist_to_fall": [
+   1,
+   11,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   17
+  ],
+  "fluid_changes": 29,
+  "fluid_changes_near_solid_change": 24,
+  "fall_cells": [
+   430,
+   433
+  ],
+  "slabs_beside_flowing_water": 37,
+  "slabs_under_flowing_water": 6,
+  "snowlayer_on_slab": 0,
+  "snowlayer_on_full": 0,
+  "terrain_edges_left_full": {
+   "game:forestfloor-7": 22,
+   "game:forestfloor-6": 7,
+   "game:forestfloor-2": 2,
+   "game:forestfloor-5": 2,
+   "game:soil-low-normal": 2,
+   "game:forestfloor-3": 1
+  },
+  "terrain_edges_slabbed": 849
+ },
+ "victoria_falls": {
+  "aquatic_plants_out_of_water": [
+   0,
+   0
+  ],
+  "aquatic_plants_total": [
+   1720,
+   1754
+  ],
+  "fluid_changes": 0,
+  "fluid_changes_near_solid_change": 0,
+  "fall_cells": [
+   269,
+   269
+  ],
+  "slabs_beside_flowing_water": 10,
+  "slabs_under_flowing_water": 2,
+  "snowlayer_on_slab": 0,
+  "snowlayer_on_full": 0,
+  "terrain_edges_left_full": {},
+  "terrain_edges_slabbed": 355
+ },
+ "lake_bracciano": {
+  "aquatic_plants_out_of_water": [
+   0,
+   0
+  ],
+  "aquatic_plants_total": [
+   675,
+   736
+  ],
+  "fluid_change_cheb_dist_to_fall": [
+   8,
+   18,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   25
+  ],
+  "fluid_changes": 51,
+  "fluid_changes_near_solid_change": 34,
+  "fall_cells": [
+   43,
+   41
+  ],
+  "slabs_beside_flowing_water": 15,
+  "slabs_under_flowing_water": 7,
+  "snowlayer_on_slab": 0,
+  "snowlayer_on_full": 0,
+  "terrain_edges_left_full": {
+   "game:soil-low-normal": 15,
+   "game:rock-rhyolite": 6
+  },
+  "terrain_edges_slabbed": 2860
+ },
+ "lake_geneva_north": {
+  "aquatic_plants_out_of_water": [
+   0,
+   0
+  ],
+  "aquatic_plants_total": [
+   2623,
+   975
+  ],
+  "fluid_change_cheb_dist_to_fall": [
+   1,
+   5,
+   5,
+   1
+  ],
+  "fluid_changes": 12,
+  "fluid_changes_near_solid_change": 11,
+  "fall_cells": [
+   6,
+   8
+  ],
+  "slabs_beside_flowing_water": 4,
+  "slabs_under_flowing_water": 3,
+  "snowlayer_on_slab": 0,
+  "snowlayer_on_full": 0,
+  "terrain_edges_left_full": {
+   "game:forestfloor-7": 4,
+   "game:forestfloor-6": 2,
+   "game:forestfloor-2": 1,
+   "game:forestfloor-3": 1,
+   "game:forestfloor-5": 1
+  },
+  "terrain_edges_slabbed": 2427
+ },
+ "lisbon_coast": {
+  "aquatic_plants_out_of_water": [
+   0,
+   0
+  ],
+  "aquatic_plants_total": [
+   2660,
+   2598
+  ],
+  "fluid_changes": 0,
+  "fluid_changes_near_solid_change": 0,
+  "fall_cells": [
+   3,
+   3
+  ],
+  "slabs_beside_flowing_water": 0,
+  "slabs_under_flowing_water": 0,
+  "snowlayer_on_slab": 0,
+  "snowlayer_on_full": 0,
+  "terrain_edges_left_full": {},
+  "terrain_edges_slabbed": 2983
+ },
+ "dutch_coast": {
+  "aquatic_plants_out_of_water": [
+   0,
+   0
+  ],
+  "aquatic_plants_total": [
+   8474,
+   7875
+  ],
+  "fluid_changes": 0,
+  "fluid_changes_near_solid_change": 0,
+  "fall_cells": [
+   0,
+   0
+  ],
+  "slabs_beside_flowing_water": 0,
+  "slabs_under_flowing_water": 0,
+  "snowlayer_on_slab": 0,
+  "snowlayer_on_full": 0,
+  "terrain_edges_left_full": {
+   "game:rock-claystone": 4,
+   "game:soil-low-normal": 1
+  },
+  "terrain_edges_slabbed": 315
+ },
+ "dover_cliffs": {
+  "aquatic_plants_out_of_water": [
+   0,
+   0
+  ],
+  "aquatic_plants_total": [
+   9803,
+   9522
+  ],
+  "fluid_changes": 0,
+  "fluid_changes_near_solid_change": 0,
+  "fall_cells": [
+   7,
+   7
+  ],
+  "slabs_beside_flowing_water": 0,
+  "slabs_under_flowing_water": 0,
+  "snowlayer_on_slab": 0,
+  "snowlayer_on_full": 0,
+  "terrain_edges_left_full": {
+   "game:soil-low-normal": 3,
+   "game:rock-chalk": 2
+  },
+  "terrain_edges_slabbed": 1135
+ },
+ "mont_blanc": {
+  "aquatic_plants_out_of_water": [
+   0,
+   0
+  ],
+  "aquatic_plants_total": [
+   0,
+   0
+  ],
+  "fluid_change_cheb_dist_to_fall": [
+   2,
+   7,
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   13
+  ],
+  "fluid_changes": 24,
+  "fluid_changes_near_solid_change": 23,
+  "fall_cells": [
+   31,
+   33
+  ],
+  "slabs_beside_flowing_water": 8,
+  "slabs_under_flowing_water": 4,
+  "snowlayer_on_slab": 6,
+  "snowlayer_on_full": 16,
+  "terrain_edges_left_full": {
+   "game:soil-medium-normal": 1
+  },
+  "terrain_edges_slabbed": 4841
+ },
+ "aconcagua": {
+  "aquatic_plants_out_of_water": [
+   0,
+   0
+  ],
+  "aquatic_plants_total": [
+   0,
+   0
+  ],
+  "fluid_change_cheb_dist_to_fall": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2
+  ],
+  "fluid_changes": 2,
+  "fluid_changes_near_solid_change": 2,
+  "fall_cells": [
+   6,
+   8
+  ],
+  "slabs_beside_flowing_water": 2,
+  "slabs_under_flowing_water": 2,
+  "snowlayer_on_slab": 0,
+  "snowlayer_on_full": 0,
+  "terrain_edges_left_full": {
+   "game:soil-low-normal": 4,
+   "game:rock-andesite": 3,
+   "game:rock-shale": 2
+  },
+  "terrain_edges_slabbed": 2567
+ },
+ "bog_of_allen": {
+  "aquatic_plants_out_of_water": [
+   0,
+   0
+  ],
+  "aquatic_plants_total": [
+   0,
+   0
+  ],
+  "fluid_changes": 0,
+  "fluid_changes_near_solid_change": 0,
+  "fall_cells": [
+   4,
+   4
+  ],
+  "slabs_beside_flowing_water": 0,
+  "slabs_under_flowing_water": 0,
+  "snowlayer_on_slab": 0,
+  "snowlayer_on_full": 0,
+  "terrain_edges_left_full": {
+   "game:soil-low-normal": 4,
+   "game:rock-sandstone": 2,
+   "game:forestfloor-7": 1
+  },
+  "terrain_edges_slabbed": 808
+ },
+ "teici_bog": {
+  "aquatic_plants_out_of_water": [
+   0,
+   0
+  ],
+  "aquatic_plants_total": [
+   35,
+   50
+  ],
+  "fluid_changes": 0,
+  "fluid_changes_near_solid_change": 0,
+  "fall_cells": [
+   10,
+   9
+  ],
+  "slabs_beside_flowing_water": 1,
+  "slabs_under_flowing_water": 0,
+  "snowlayer_on_slab": 0,
+  "snowlayer_on_full": 0,
+  "terrain_edges_left_full": {
+   "game:soil-low-normal": 2
+  },
+  "terrain_edges_slabbed": 808
+ },
+ "finland_bogs": {
+  "aquatic_plants_out_of_water": [
+   0,
+   0
+  ],
+  "aquatic_plants_total": [
+   275,
+   429
+  ],
+  "fluid_change_cheb_dist_to_fall": [
+   1,
+   3
+  ],
+  "fluid_changes": 4,
+  "fluid_changes_near_solid_change": 3,
+  "fall_cells": [
+   10,
+   10
+  ],
+  "slabs_beside_flowing_water": 1,
+  "slabs_under_flowing_water": 1,
+  "snowlayer_on_slab": 0,
+  "snowlayer_on_full": 0,
+  "terrain_edges_left_full": {
+   "game:soil-low-normal": 2
+  },
+  "terrain_edges_slabbed": 1287
+ },
+ "daugava_riga": {
+  "aquatic_plants_out_of_water": [
+   0,
+   0
+  ],
+  "aquatic_plants_total": [
+   1380,
+   2385
+  ],
+  "fluid_change_cheb_dist_to_fall": [
+   1,
+   3
+  ],
+  "fluid_changes": 4,
+  "fluid_changes_near_solid_change": 3,
+  "fall_cells": [
+   10,
+   10
+  ],
+  "slabs_beside_flowing_water": 1,
+  "slabs_under_flowing_water": 1,
+  "snowlayer_on_slab": 0,
+  "snowlayer_on_full": 0,
+  "terrain_edges_left_full": {
+   "game:forestfloor-1": 4,
+   "game:forestfloor-2": 4,
+   "game:rock-dolostone": 2
+  },
+  "terrain_edges_slabbed": 381
+ }
+}

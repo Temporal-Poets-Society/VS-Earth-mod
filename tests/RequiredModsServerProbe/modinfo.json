@@ -1,0 +1,4 @@
+{
+  "type": "code", "modid": "earthrequiredmodstest", "name": "Earth required-mod test observer",
+  "version": "0.0.1", "side": "Server", "dependencies": { "game": "1.22.0" }
+}

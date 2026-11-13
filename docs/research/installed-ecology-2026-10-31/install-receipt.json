@@ -1,0 +1,142 @@
+[
+  {
+    "id": "elephantidae",
+    "version": "1.0.20",
+    "file": "elephantidae-1.0.20.zip",
+    "status": "installed",
+    "sha256": "66a15988f69097f6f0ef6d1317aecd6e6f3af2fd512ba30cec07c42d11abcf14"
+  },
+  {
+    "id": "manidae",
+    "version": "1.0.23",
+    "file": "manidae-1.0.23.zip",
+    "status": "installed",
+    "sha256": "016700c755df049d65ec1287d24c30439de4bb20d0108d2dd703333d42bea3ed"
+  },
+  {
+    "id": "rhinocerotidae",
+    "version": "1.0.28",
+    "file": "rhinocerotidae-1.0.28.zip",
+    "status": "installed",
+    "sha256": "db7d7955becd7b59a03d17f48562a8748846f17dd9fdeae4f4d11ba492da9ad0"
+  },
+  {
+    "id": "casuariidae",
+    "version": "1.1.13",
+    "file": "casuariidae-1.1.13.zip",
+    "status": "installed",
+    "sha256": "b11260c19c648fa352e52894c3fe0048f61c2616fdb38e4fbc5fecdf152a467f"
+  },
+  {
+    "id": "sirenia",
+    "version": "1.0.32",
+    "file": "sirenia-1.0.32.zip",
+    "status": "installed",
+    "sha256": "ea8a1c47b33be0ef2114175401f74bbbe3098ce3388425cc0a1e53fbc5fe9e92"
+  },
+  {
+    "id": "machairodontinae",
+    "version": "1.1.13",
+    "file": "machairodontinae-1.1.13.zip",
+    "status": "installed",
+    "sha256": "d6ab10fcb17b8fdb45fc80554859cc9e6578f7d8361783ebb0a9f5001d82a64b"
+  },
+  {
+    "id": "capreolinae",
+    "version": "2.0.18",
+    "file": "capreolinae-2.0.18.zip",
+    "status": "installed",
+    "sha256": "63b6ac1030398490f73d2ed80a18b45503e073e7c441f7559b7e03bb0ded857b"
+  },
+  {
+    "id": "spheniscidae",
+    "version": "1.0.18",
+    "file": "spheniscidae-1.0.18.zip",
+    "status": "installed",
+    "sha256": "70f9d4d102ab2fff6ac3b813f7aed4f9446ce03685adba132fd7f04ddf1de738"
+  },
+  {
+    "id": "caninae",
+    "version": "1.1.9",
+    "file": "caninae-1.1.9.zip",
+    "status": "installed",
+    "sha256": "b4d95237568aded556d486e824f0f37ec7de14970288368f43b84e91c70ebbf2"
+  },
+  {
+    "id": "pantherinae",
+    "version": "1.2.18",
+    "file": "pantherinae-1.2.18.zip",
+    "status": "installed",
+    "sha256": "05fed854c50e9e69ac682fc937317aeb8609e0b514b4098f7446891c6e0402c1"
+  },
+  {
+    "id": "bovinae",
+    "version": "0.3.6",
+    "file": "bovinae-0.3.6.zip",
+    "status": "installed",
+    "sha256": "4be82ffdf2407afd52f985ab37821a4c293d14bcf9c75be9ac1ed44652ed0930"
+  },
+  {
+    "id": "chelonioidea",
+    "version": "1.0.8",
+    "file": "chelonioidea-1.0.8.zip",
+    "status": "installed",
+    "sha256": "a3281c0a924d942224322d13d5182fd568bce01b555485280e9c631ff29242fd"
+  },
+  {
+    "id": "thylacinidae",
+    "version": "0.1.7",
+    "file": "thylacinidae-0.1.7.zip",
+    "status": "installed",
+    "sha256": "885727713f0b8602dadfb7f2641eb41ec886c6115d17771850fa5383df6691a2"
+  },
+  {
+    "id": "iniidae",
+    "version": "0.1.7",
+    "file": "iniidae-0.1.7.zip",
+    "status": "installed",
+    "sha256": "34a02fbfba83c23b014e8fbbd3c009fd5ff693e49d3307f9bf73755a8b3e3cd4"
+  },
+  {
+    "id": "cervinae",
+    "version": "0.1.14",
+    "file": "cervinae-0.1.14.zip",
+    "status": "installed",
+    "sha256": "194da45470e67ff075f8e417c80f2904a722352e6d5562484b4a2da9d60889ac"
+  },
+  {
+    "id": "viverridae",
+    "version": "1.0.10",
+    "file": "viverridae-1.0.10.zip",
+    "status": "installed",
+    "sha256": "bc0b87f08f819fbc8135461194ccc195dfd35a32ce2aae0f8e2064aa5f2f8a36"
+  },
+  {
+    "id": "meiolaniidae",
+    "version": "0.1.11",
+    "file": "meiolaniidae-0.1.11.zip",
+    "status": "installed",
+    "sha256": "6093d82915a412cece4b3cea6e10d2bd56844521c3ddf5edff2ce0bcafeddb99"
+  },
+  {
+    "id": "vombatidae",
+    "version": "0.4.6",
+    "file": "vombatidae-0.4.6.zip",
+    "status": "installed",
+    "sha256": "2a8b63c08821522910c905728863eb3ee4448b01cfe395ff7b7655f447a2db2d"
+  },
+  {
+    "id": "felinae",
+    "version": "0.2.16",
+    "file": "felinae-0.2.16.zip",
+    "status": "installed; older newly installed archive preserved in workspace after fixing its load error",
+    "sha256": "7bd347a71eb599cf17b43e75402ca9fd7d290c30a139c947767e73b30fba70a3"
+  },
+  {
+    "id": "dinornithidae",
+    "version": "1.0.25",
+    "file": "dinornithidae-1.0.25.zip",
+    "status": "installed",
+    "sha256": "605c73117286a87e20f9b5f4a0bf6ab0941d395872d8221159a17badfefcc307"
+  }
+]

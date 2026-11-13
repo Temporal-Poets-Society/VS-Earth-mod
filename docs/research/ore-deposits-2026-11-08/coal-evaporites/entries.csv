@@ -1,0 +1,293 @@
+kind,id,name,layer,codes,age,ageRule0060,country,countryOk,landShareOrOnLand,areaKm2,mt,q,evidenceWeight
+area,coal:great-northern-exposed,Northumberland and Durham coalfield (exposed),C_coal,bituminouscoal,Carboniferous,ok,United Kingdom,True,0.916,2410,3000,C,0.5
+area,coal:great-northern-concealed,Durham coalfield under the Permian (concealed),C_coal,bituminouscoal,Carboniferous,ok,United Kingdom,True,0.709,741,4000,C,0.6
+area,coal:east-pennine-exposed,Yorkshire and Nottinghamshire coalfield (exposed),C_coal,bituminouscoal,Carboniferous,ok,United Kingdom,True,1.0,2332,4000,C,0.529
+area,coal:east-pennine-concealed,Yorkshire and Nottinghamshire coalfield (concealed),C_coal,bituminouscoal,Carboniferous,ok,United Kingdom,True,0.994,7932,16000,C,0.544
+area,coal:south-wales-bituminous,"South Wales coalfield, eastern (bituminous)",C_coal,bituminouscoal,Carboniferous,ok,United Kingdom,True,0.955,1713,8000,C,0.6
+area,coal:south-wales-anthracite,"South Wales coalfield, western (anthracite) and Pembrokeshire",C_coal,anthracite,Carboniferous,ok,United Kingdom,True,0.747,753,5000,C,0.6
+area,coal:midland-valley,"Scottish Midland Valley coalfields (Fife, Lothians, Lanarkshire, Ayrshire)",C_coal,bituminouscoal,Carboniferous,ok,United Kingdom,True,0.947,3855,10000,C,0.567
+area,coal:lancashire,Lancashire and North Wales coalfields,C_coal,bituminouscoal,Carboniferous,ok,United Kingdom,True,0.986,3004,6000,C,0.543
+area,coal:english-midlands,"English Midlands coalfields (Staffordshire, Warwickshire, Leicestershire, Shropshire)",C_coal,bituminouscoal,Carboniferous,ok,United Kingdom,True,1.0,681,8000,C,0.6
+area,coal:dean-somerset,"Forest of Dean, Bristol and Somerset coalfields",C_coal,bituminouscoal,Carboniferous,ok,United Kingdom,True,0.947,1094,1500,C,0.509
+area,coal:cumbria,Cumberland coalfield,C_coal,bituminouscoal,Carboniferous,ok,United Kingdom,True,0.797,387,1500,C,0.6
+area,coal:liege,Liege coal basin (Meuse valley),C_coal,bituminouscoal,Carboniferous,ok,Belgium,True,1.0,396,2000,C,0.6
+area,coal:haine-sambre,"Haine-Sambre basin (Borinage, Centre, Charleroi)",C_coal,bituminouscoal,Carboniferous,ok,Belgium,True,1.0,1094,4000,C,0.598
+area,coal:campine,Campine (Kempen) coal basin (concealed),C_coal,bituminouscoal,Carboniferous,ok,Belgium,True,1.0,1645,6000,C,0.598
+area,coal:nord-pas-de-calais,Nord-Pas-de-Calais coal basin (under the Chalk),C_coal,bituminouscoal,Carboniferous,ok,France,True,1.0,1022,5000,C,0.6
+area,coal:limburg-aachen,"South Limburg and Aachen coalfields (Wurm, Inde)",C_coal,bituminouscoal,Carboniferous,ok,Germany,True,1.001,685,3000,C,0.6
+area,coal:saint-etienne,Saint-Etienne coal basin,C_coal,bituminouscoal,Carboniferous,ok,France,True,1.0,367,1000,C,0.571
+area,coal:lorraine,Lorraine coal basin (concealed continuation of the Saar),C_coal,bituminouscoal,Carboniferous,ok,France,True,1.0,479,4000,C,0.6
+area,coal:asturias,Central Asturian coal basin,C_coal,bituminouscoal,Carboniferous,ok,Spain,True,1.0,951,2000,C,0.548
+area,coal:ruhr-outcrop,Southern Ruhr (outcrop coal of the Ruhr valley),C_coal,bituminouscoal,Carboniferous,ok,Germany,True,1.0,534,3000,C,0.6
+area,coal:ruhr-concealed,Ruhr coalfield under the Cretaceous (to 2000 m),C_coal,bituminouscoal,Carboniferous,ok,Germany,True,1.0,6476,45000,C,0.6
+area,coal:ibbenbueren,Ibbenbueren anthracite (Carboniferous horst),C_coal,anthracite,Carboniferous,ok,Germany,True,1.0,137,800,C,0.6
+area,coal:saar,Saar coalfield (Saarkohlenwald),C_coal,bituminouscoal,Carboniferous,ok,Germany,True,1.0,617,6000,C,0.6
+area,coal:zwickau-lugau,Zwickau and Lugau-Oelsnitz coalfields,C_coal,bituminouscoal,Carboniferous,ok,Germany,True,1.0,225,300,C,0.506
+area,coal:rhenish-lignite,"Rhenish lignite (Ville, Garzweiler, Hambach, Inden)",C_coal,lignite,Neogene,ok,Germany,True,1.0,2275,55000,B,0.7
+area,coal:lusatia,Lusatian lignite (Lausitz),C_coal,lignite,Neogene,ok,Germany,True,1.0,4714,12000,C,0.565
+area,coal:central-german-lignite,"Central German lignite (Leipzig, Halle, Geiseltal, Zeitz)",C_coal,lignite,Paleogene,ok,Germany,True,1.0,4091,10000,C,0.562
+area,coal:north-bohemia,"North Bohemian lignite basins (Most, Sokolov)",C_coal,lignite,Neogene,ok,Czechia,True,1.0,1150,10000,C,0.6
+area,coal:upper-silesia-pl,"Upper Silesian coal basin, Polish part",C_coal,bituminouscoal,Carboniferous,ok,Poland,True,1.0,3409,55000,B,0.7
+area,coal:ostrava-karvina,"Upper Silesian coal basin, Czech part (Ostrava-Karvina)",C_coal,bituminouscoal,Carboniferous,ok,Czechia,True,1.0,786,15000,C,0.6
+area,coal:lublin,Lublin coal basin (concealed),C_coal,bituminouscoal,Carboniferous,ok,Poland,True,1.0,1206,9000,B,0.7
+area,coal:lower-silesia,"Lower Silesian coal basin (Walbrzych, Nowa Ruda)",C_coal,bituminouscoal,Carboniferous,ok,Poland,True,1.0,131,1000,C,0.6
+area,coal:belchatow,Belchatow lignite (central Poland),C_coal,lignite,Neogene,ok,Poland,True,1.0,311,2000,C,0.6
+area,coal:lviv-volyn,Lviv-Volyn coal basin,C_coal,bituminouscoal,Carboniferous,ok,Ukraine,True,0.999,4098,2500,C,0.435
+area,coal:maritsa-east,Maritsa East lignite,C_coal,lignite,Neogene,ok,Bulgaria,True,1.0,1147,2500,C,0.551
+area,coal:kosovo,Kosovo lignite basin,C_coal,lignite,Neogene,ok,Kosovo,True,1.0,1457,12000,B,0.7
+area,coal:kolubara,Kolubara lignite,C_coal,lignite,Neogene,ok,Republic of Serbia,True,1.0,884,3000,C,0.591
+area,coal:ptolemais,Ptolemais-Amyntaio lignite,C_coal,lignite,Neogene,ok,Greece,True,1.0,1505,4000,C,0.569
+area,coal:zonguldak,Zonguldak coal basin,C_coal,bituminouscoal,Carboniferous,ok,Turkey,True,0.999,2065,1500,C,0.451
+area,coal:afsin-elbistan,Afsin-Elbistan lignite,C_coal,lignite,Neogene,ok,Turkey,True,1.0,971,4800,C,0.6
+area,coal:tabas,Tabas coalfield,C_coal,bituminouscoal,Jurassic,ok,Iran,True,1.0,9085,10000,C,0.489
+area,coal:donbas,"Donets basin (Donbas), bituminous part",C_coal,bituminouscoal,Carboniferous,ok,Ukraine,True,1.0,23426,100000,C,0.6
+area,coal:donbas-anthracite,"Donets basin (Donbas), eastern anthracite part",C_coal,anthracite,Carboniferous,ok,Ukraine,True,1.0,18957,40000,C,0.548
+area,coal:moscow-basin,"Moscow brown-coal basin (Tula, Kaluga, Ryazan)",C_coal,lignite,Carboniferous,lignite must be Cenozoic or Mesozoic,Russia,True,1.0,34515,20000,C,0.43
+area,coal:pechora,"Pechora coal basin (Vorkuta, Inta)",C_coal,bituminouscoal,Permian,ok,Russia,True,1.0,30558,340000,C,0.6
+area,coal:kuzbass,Kuznetsk basin (Kuzbass),C_coal,bituminouscoal/anthracite,Permian,ok,Russia,True,1.0,24318,640000,C,0.6
+area,coal:kansk-achinsk,Kansk-Achinsk lignite basin,C_coal,lignite,Jurassic,ok,Russia,True,1.0,47131,600000,C,0.6
+area,coal:irkutsk,Irkutsk coal basin (Cheremkhovo),C_coal,bituminouscoal,Jurassic,ok,Russia,True,1.0,21388,30000,C,0.511
+area,coal:south-yakutia,South Yakutian coal basin (Neryungri),C_coal,bituminouscoal,Jurassic,ok,Russia,True,1.0,14693,40000,C,0.571
+area,coal:tunguska,Tunguska coal basin,C_coal,bituminouscoal,Permian,ok,Russia,True,1.0,1349832,2000000,C,0.516
+area,coal:lena,Lena coal basin,C_coal,lignite,Jurassic,ok,Russia,True,1.0,761655,1600000,C,0.548
+area,coal:karaganda,Karaganda coal basin,C_coal,bituminouscoal,Carboniferous,ok,Kazakhstan,True,1.0,3938,50000,C,0.6
+area,coal:ekibastuz,Ekibastuz coalfield,C_coal,bituminouscoal,Carboniferous,ok,Kazakhstan,True,1.0,865,12000,B,0.7
+area,coal:turgai,"Turgai brown-coal basin (Priozernoye, Kushmurun, Orlovka)",C_coal,lignite,Jurassic,ok,Kazakhstan,True,1.0,45487,60000,C,0.505
+area,coal:shanxi,"Shanxi coal province (Datong, Ningwu, Xishan, Hedong)",C_coal,bituminouscoal,Carboniferous,ok,China,True,1.0,24705,220000,B,0.7
+area,coal:qinshui-anthracite,"Qinshui anthracite (Jincheng, Yangquan)",C_coal,anthracite,Carboniferous,ok,China,True,1.0,7961,50000,C,0.6
+area,coal:ordos,"Ordos basin Jurassic coal (Shendong, Shenfu-Dongsheng)",C_coal,bituminouscoal,Jurassic,ok,China,True,1.0,11675,220000,C,0.6
+area,coal:fushun,Fushun coalfield,C_coal,bituminouscoal,Paleogene,ok,China,True,1.0,184,1500,C,0.6
+area,coal:western-hills,Western Hills of Beijing (Mentougou),C_coal,anthracite,Jurassic,ok,China,True,1.0,2252,2000,C,0.469
+area,coal:henan,"Henan coalfields (Pingdingshan, Hebi, Jiaozuo, Yima)",C_coal,bituminouscoal/anthracite,Permian,ok,China,True,1.0,19616,40000,C,0.545
+area,coal:hebei-kaiping,"Hebei coalfields (Kaiping, Fengfeng, Xingtai)",C_coal,bituminouscoal,Carboniferous,ok,China,True,1.0,13004,20000,C,0.519
+area,coal:shandong,"Shandong coalfields (Zibo, Yanzhou, Zaozhuang)",C_coal,bituminouscoal,Carboniferous,ok,China,True,0.987,16814,30000,C,0.533
+area,coal:huainan-huaibei,Huainan and Huaibei coalfields,C_coal,bituminouscoal,Permian,ok,China,True,1.0,17055,60000,C,0.595
+area,coal:guizhou,"Guizhou coalfields (Liupanshui, Zhina)",C_coal,bituminouscoal/anthracite,Permian,ok,China,True,1.0,21789,60000,C,0.572
+area,coal:heilongjiang,"Heilongjiang coalfields (Hegang, Jixi, Shuangyashan, Qitaihe)",C_coal,bituminouscoal,Cretaceous,ok,China,True,1.0,3474,20000,C,0.6
+area,coal:inner-mongolia-lignite,"Inner Mongolian lignite (Shengli, Huolinhe, Yimin, Baorixile)",C_coal,lignite,Cretaceous,ok,China,True,1.0,6234,150000,C,0.6
+area,coal:xinjiang,"Xinjiang Jurassic coal (Junggar, Turpan-Hami, Ili)",C_coal,bituminouscoal,Jurassic,ok,China,True,1.0,24072,800000,C,0.6
+area,coal:yunnan-lignite,"Yunnan Neogene lignite (Xiaolongtan, Zhaotong)",C_coal,lignite,Neogene,ok,China,True,1.0,12186,15000,C,0.499
+area,coal:damodar,"Damodar valley coalfields (Raniganj, Jharia, Bokaro, Karanpura)",C_coal,bituminouscoal,Permian,ok,India,True,1.0,4664,100000,B,0.7
+area,coal:mahanadi,"Mahanadi coalfields (Talcher, Ib River)",C_coal,bituminouscoal,Permian,ok,India,True,1.0,4102,80000,B,0.7
+area,coal:son-hasdeo,"Son and Hasdeo coalfields (Singrauli, Korba, Mand-Raigarh, Hasdo-Arand, Sohagpur)",C_coal,bituminouscoal,Permian,ok,India,True,1.0,12387,110000,C,0.6
+area,coal:godavari,Pranhita-Godavari coalfields (Singareni),C_coal,bituminouscoal,Permian,ok,India,True,1.0,11176,23000,C,0.546
+area,coal:neyveli,Neyveli lignite,C_coal,lignite,Neogene,ok,India,True,1.0,410,4000,C,0.6
+area,coal:thar,Thar lignite field,C_coal,lignite,Paleogene,ok,Pakistan,True,1.0,10843,175000,B,0.7
+area,coal:tavan-tolgoi,Tavan Tolgoi coalfield,C_coal,bituminouscoal,Permian,ok,Mongolia,True,1.0,2420,7500,B,0.68
+area,coal:east-mongolia-lignite,"East Mongolian lignite basins (Baganuur, Choir-Nyalga, Shivee Ovoo, Aduunchuluun)",C_coal,lignite,Cretaceous,ok,Mongolia,True,1.0,34452,50000,C,0.514
+area,coal:quang-ninh,"Quang Ninh anthracite (Hon Gai, Cam Pha)",C_coal,anthracite,Triassic,ok,Vietnam,True,0.856,2298,10000,C,0.6
+area,coal:pyongan,Pyongan anthracite (South Pyongan; Samcheok),C_coal,anthracite,Permian,ok,North Korea,True,0.992,3568,6000,C,0.527
+area,coal:kyushu,Chikuho and Miike coalfields (Kyushu),C_coal,bituminouscoal,Paleogene,ok,Japan,True,0.947,1344,5000,C,0.6
+area,coal:ishikari,Ishikari coalfield (Hokkaido),C_coal,bituminouscoal,Paleogene,ok,Japan,True,1.0,2842,7000,C,0.562
+area,coal:mae-moh,Mae Moh lignite,C_coal,lignite,Neogene,ok,Thailand,True,1.0,263,1100,B,0.7
+area,coal:kutai,Kutai basin coal (East Kalimantan),C_coal,bituminouscoal,Neogene,ok,Indonesia,True,0.73,32003,50000,C,0.521
+area,coal:barito,Barito basin coal (South Kalimantan),C_coal,bituminouscoal,Paleogene,ok,Indonesia,True,0.969,29873,30000,C,0.48
+area,coal:south-sumatra,South Sumatra basin lignite (Muara Enim),C_coal,lignite,Neogene,ok,Indonesia,True,1.0,35635,50000,C,0.511
+area,coal:bowen,Bowen basin,C_coal,bituminouscoal,Permian,ok,Australia,True,1.0,157215,50000,C,0.376
+area,coal:sydney-gunnedah,"Sydney and Gunnedah basin coalfields (Hunter, Newcastle, Western, Southern, Gunnedah)",C_coal,bituminouscoal,Permian,ok,Australia,True,0.998,69571,70000,C,0.481
+area,coal:surat,Surat basin (Walloon Coal Measures),C_coal,bituminouscoal,Jurassic,ok,Australia,True,1.0,255450,25000,C,0.268
+area,coal:galilee,Galilee basin,C_coal,bituminouscoal,Permian,ok,Australia,True,1.0,248106,30000,C,0.287
+area,coal:latrobe-valley,"Latrobe Valley brown coal (Morwell, Yallourn, Loy Yang)",C_coal,lignite,Neogene,ok,Australia,True,1.0,381,65000,B,0.7
+area,coal:buller,Buller and Greymouth coalfields (West Coast),C_coal,bituminouscoal,Paleogene,ok,New Zealand,True,0.972,1847,1000,C,0.424
+area,coal:witbank-highveld,Witbank and Highveld coalfields,C_coal,bituminouscoal,Permian,ok,South Africa,True,1.0,17062,35000,C,0.546
+area,coal:waterberg,Waterberg coalfield,C_coal,bituminouscoal,Permian,ok,South Africa,True,1.0,4069,75000,C,0.6
+area,coal:kwazulu-natal,"KwaZulu-Natal coalfields (Vryheid, Utrecht, Klip River)",C_coal,bituminouscoal/anthracite,Permian,ok,South Africa,True,1.0,9392,8000,C,0.465
+area,coal:moatize,Moatize coalfield (Tete),C_coal,bituminouscoal,Permian,ok,Mozambique,True,1.0,2902,25000,C,0.6
+area,coal:hwange,Hwange coalfield,C_coal,bituminouscoal,Permian,ok,Zimbabwe,True,1.001,7968,5000,C,0.437
+area,coal:botswana-kalahari,"Botswana Karoo coalfields (Morupule, Mmamabula)",C_coal,bituminouscoal,Permian,ok,Botswana,True,1.0,45220,200000,C,0.6
+area,coal:enugu,Enugu coalfield,C_coal,lignite,Cretaceous,ok,Nigeria,True,1.0,1835,2000,C,0.488
+area,coal:appalachian-north,"Northern Appalachian coal region (Pittsburgh, Upper Freeport)",C_coal,bituminouscoal,Carboniferous,ok,United States of America,True,1.0,90736,120000,C,0.505
+area,coal:appalachian-central,Central Appalachian coal region,C_coal,bituminouscoal,Carboniferous,ok,United States of America,True,1.0,59751,110000,C,0.536
+area,coal:appalachian-south,"Southern Appalachian coal region (Warrior, Cahaba, Coosa, Tennessee)",C_coal,bituminouscoal,Carboniferous,ok,United States of America,True,1.0,33275,40000,C,0.497
+area,coal:pennsylvania-anthracite,Pennsylvania anthracite region,C_coal,anthracite,Carboniferous,ok,United States of America,True,1.0,2150,21000,B,0.7
+area,coal:illinois,Illinois basin,C_coal,bituminouscoal,Carboniferous,ok,United States of America,True,1.0,129723,300000,C,0.556
+area,coal:western-interior,"Western Interior coal region (Iowa, Missouri, Kansas, Oklahoma)",C_coal,bituminouscoal,Carboniferous,ok,United States of America,True,1.0,212554,50000,C,0.348
+area,coal:powder-river,"Powder River basin (Fort Union, Wyodak)",C_coal,lignite,Paleogene,ok,United States of America,True,1.0,52480,970000,B,0.7
+area,coal:fort-union-lignite,Fort Union lignite region (Williston basin),C_coal,lignite,Paleogene,ok,United States of America,True,1.0,166336,300000,C,0.534
+area,coal:green-river-hams-fork,"Green River, Hams Fork and Hanna coal regions",C_coal,bituminouscoal,Cretaceous,ok,United States of America,True,1.0,57553,100000,C,0.53
+area,coal:uinta-piceance,"Uinta region (Book Cliffs, Wasatch Plateau, Piceance)",C_coal,bituminouscoal,Cretaceous,ok,United States of America,True,1.0,46645,80000,C,0.529
+area,coal:san-juan,San Juan basin (Fruitland),C_coal,bituminouscoal,Cretaceous,ok,United States of America,True,1.0,39800,150000,C,0.6
+area,coal:gulf-lignite,"Gulf Coast lignite (Wilcox, Jackson; Texas to Mississippi)",C_coal,lignite,Paleogene,ok,United States of America,True,1.0,352212,100000,C,0.365
+area,coal:alaska-north-slope,"North Slope of Alaska (Nanushuk, Colville)",C_coal,bituminouscoal,Cretaceous,ok,United States of America,True,0.994,51185,2000000,C,0.6
+area,coal:alberta-plains,"Alberta plains coal (Horseshoe Canyon, Paskapoo, Scollard)",C_coal,lignite,Cretaceous,ok,Canada,True,1.0,173767,600000,C,0.593
+area,coal:rocky-foothills,"Rocky Mountain foothills and Elk Valley (Kootenay, Mist Mountain)",C_coal,bituminouscoal,Jurassic,ok,Canada,True,1.0,83840,60000,C,0.449
+area,coal:sydney-nova-scotia,Sydney coalfield (Cape Breton),C_coal,bituminouscoal,Carboniferous,ok,Canada,True,0.598,641,2000,C,0.584
+area,coal:sabinas,Sabinas basin (Coahuila),C_coal,bituminouscoal,Cretaceous,ok,Mexico,True,1.0,6979,3000,C,0.403
+area,coal:cerrejon,Cerrejon coalfield (La Guajira),C_coal,bituminouscoal,Paleogene,ok,Colombia,True,1.0,1601,5000,C,0.584
+area,coal:cesar,"Cesar coalfields (La Loma, Calenturitas, La Jagua)",C_coal,bituminouscoal,Paleogene,ok,Colombia,True,1.0,2731,6000,C,0.552
+area,coal:rio-grande-do-sul,"Parana basin coal of Rio Grande do Sul (Candiota, Leao)",C_coal,bituminouscoal,Permian,ok,Brazil,True,1.0,35013,28000,C,0.46
+area,coal:magallanes,"Magallanes basin lignite (Pecket, Isla Riesco)",C_coal,lignite,Neogene,ok,Chile,True,0.7,6004,5000,C,0.463
+area,coal:svalbard,"Svalbard coal (Longyearbyen, Svea)",C_coal,bituminouscoal,Paleogene,ok,Norway,True,0.939,998,3000,C,0.58
+area,evap:zechstein,"Zechstein basin, bedded salt and potash (Germany, Netherlands, Poland, Denmark)",K,halite/sylvite,Permian,ok,Germany,True,0.997,128421,20000,C,0.31
+area,evap:zechstein-domes,Zechstein salt structures (North German and Polish salt domes and pillows),NaCl,halite,Permian,ok,Germany,True,0.998,32785,,C,0.6
+area,evap:boulby,"Zechstein of North Yorkshire (Boulby potash and polyhalite, Teesside salt)",K,halite/sylvite,Permian,ok,United Kingdom,True,0.994,1546,1500,C,0.477
+area,evap:upper-kama,"Upper Kama potash basin (Verkhnekamskoye; Solikamsk, Berezniki)",K,halite/sylvite,Permian,ok,Russia,True,1.0,3878,20000,C,0.6
+area,evap:elk-point,"Elk Point basin, Prairie Evaporite potash (Saskatchewan)",K,halite/sylvite,Devonian,ok,Canada,True,1.0,184171,150000,C,0.461
+area,evap:pripyat,"Pripyat trough potash (Soligorsk, Starobin)",K,halite/sylvite,Devonian,ok,Belarus,True,1.0,15191,15000,C,0.479
+area,evap:khorat,Khorat and Sakon Nakhon basins (Maha Sarakham Formation),K,halite/sylvite,Cretaceous,ok,Thailand,True,1.0,80349,50000,C,0.437
+area,evap:permian-salado,Delaware basin Salado potash (Carlsbad district),K,halite/sylvite,Permian,ok,United States of America,True,1.0,91152,2000,C,0.15
+area,evap:permian-basin-salt,"Permian basin bedded salt (Kansas to Texas: Wellington, Blaine, Salado)",NaCl,halite,Permian,ok,United States of America,True,1.0,251237,,C,0.6
+area,evap:paradox,Paradox basin salt and potash (Moab),K,halite/sylvite,Carboniferous,ok,United States of America,True,1.0,31206,5000,C,0.313
+area,evap:michigan-salina,"Michigan and Appalachian basins, Salina salt (Detroit, Goderich, Retsof)",NaCl,halite,Silurian,ok,United States of America,True,1.0,164967,,C,0.6
+area,evap:maritimes,"Maritimes basin, Windsor salt and potash (Sussex, Pugwash)",K,halite/sylvite,Carboniferous,ok,Canada,True,0.974,48416,1000,C,0.15
+area,evap:gulf-louann,"Gulf of Mexico basin, Louann salt (mother salt; domes listed separately)",NaCl,halite,Jurassic,ok,United States of America,True,0.996,335331,,C,0.6
+area,evap:pricaspian,Pricaspian (Caspian) depression salt domes,NaCl,halite,Permian,ok,Kazakhstan,True,0.989,463428,,C,0.6
+area,evap:cisuralian,Cisuralian salt (southern Urals foredeep; Sol-Iletsk),NaCl,halite,Permian,ok,Russia,True,1.0,68764,,C,0.6
+area,evap:dnieper-donets,"Dnieper-Donets salt (Soledar, Artemivsk)",NaCl,halite,Permian,ok,Ukraine,True,1.0,63697,,C,0.6
+area,evap:carpathian,"Carpathian foredeep salt and potash (Kalush, Stebnyk)",K,halite/sylvite,Neogene,ok,Ukraine,True,1.0,30957,2500,C,0.251
+area,evap:transylvania,"Transylvanian basin salt (Ocna Mures, Dej, Ocna Sibiului)",NaCl,halite,Neogene,ok,Romania,True,1.0,19024,,C,0.6
+area,evap:south-pyrenean,"South Pyrenean (Catalan) potash basin (Cardona, Suria, Sallent)",K,halite/sylvite,Paleogene,ok,Spain,True,1.0,10098,1500,C,0.306
+area,evap:rhine-graben,"Upper Rhine graben potash (Alsace, Buggingen)",K,halite/sylvite,Paleogene,ok,France,True,1.0,427,500,C,0.494
+area,evap:aquitaine,"Aquitaine Triassic salt structures (Salies-de-Bearn, Dax)",NaCl,halite,Triassic,ok,France,True,0.999,33749,,C,0.6
+area,evap:dead-sea,Dead Sea basin (Sedom Formation; Dead Sea brines),K,halite/sylvite,Neogene,ok,Israel,True,1.0,2515,2000,C,0.459
+area,evap:zagros,Zagros Gachsaran evaporites,NaCl,halite,Neogene,ok,Iran,True,0.998,216989,,C,0.6
+area,evap:hormuz,Hormuz salt diapirs (Persian Gulf),NaCl,halite,Cambrian,ok,Iran,True,0.993,269811,,C,0.6
+area,evap:qom-kavir,Qom and Great Kavir salt (Lower and Upper Red Formations),NaCl,halite,Paleogene,ok,Iran,True,1.0,147977,,C,0.6
+area,evap:east-siberian,"East Siberian Cambrian salt (Angara-Lena, Nepa)",NaCl,halite,Cambrian,ok,Russia,True,1.0,1778704,,C,0.6
+area,evap:amazonas,Amazon basin Nova Olinda salt and potash (Autazes),K,halite/sylvite,Carboniferous,ok,Brazil,True,1.0,227707,3000,C,0.15
+area,evap:sergipe,Sergipe potash (Taquari-Vassouras),K,halite/sylvite,Cretaceous,ok,Brazil,True,0.977,9871,500,C,0.208
+area,evap:neuquen,Neuquen basin potash (Huitrin Formation),K,halite/sylvite,Cretaceous,ok,Argentina,True,1.0,106121,1500,C,0.15
+area,evap:lower-congo,Lower Congo potash (Loeme Formation; Kouilou),K,halite/sylvite,Cretaceous,ok,Republic of the Congo,True,0.99,11043,5000,C,0.408
+area,evap:danakil,Danakil depression salt and potash (Dallol),K,halite/sylvite,Quaternary,ok,Ethiopia,True,1.0,1929,3000,C,0.52
+area,evap:khemisset,Moroccan Meseta Triassic salt (Khemisset potash),K,halite/sylvite,Triassic,ok,Morocco,True,0.998,38789,500,C,0.15
+area,evap:saharan,"Saharan Triassic salt (Algeria, Tunisia, Libya)",NaCl,halite,Triassic,ok,Algeria,True,1.0,524330,,C,0.6
+area,evap:gissar-amudarya,"Gaurdak salt and potash (Gissar, Amu Darya)",K,halite/sylvite,Jurassic,ok,Turkmenistan,True,1.0,66891,2000,C,0.16
+area,evap:lop-nur,Lop Nur potash brines and salt crust (Luobupo),K,earth-saltflat/earth-saltflat-sylvite,Quaternary,ok,China,True,1.0,12191,2000,C,0.315
+area,evap:qarhan,Qarhan salt lake (Qaidam basin),K,earth-saltflat/earth-saltflat-sylvite,Quaternary,ok,China,True,1.0,11869,1000,C,0.254
+area,evap:simao,Simao and Lanping salt (Mengyejing; Yunnan brine wells),NaCl,halite,Cretaceous,ok,China,True,1.0,37823,,C,0.6
+area,evap:zigong,Sichuan basin Triassic brine and salt (Zigong),NaCl,halite,Triassic,ok,China,True,1.0,2073,,C,0.6
+area,evap:salt-range,"Salt Range (Khewra, Warcha, Kalabagh)",NaCl,halite,Cambrian,ok,Pakistan,True,1.0,6074,,C,0.6
+area,evap:cheshire,Cheshire salt field (Northwich Halite),NaCl,halite,Triassic,ok,United Kingdom,True,0.998,1116,,C,0.6
+area,evap:droitwich,Droitwich salt (Worcestershire),NaCl,halite,Triassic,ok,United Kingdom,True,1.0,129,,C,0.6
+area,evap:lorraine-salt,"Lorraine Keuper salt (Dieuze, Vic, Varangeville)",NaCl,halite,Triassic,ok,France,True,1.0,1400,,C,0.6
+area,evap:salins,Salins-les-Bains brine (Jura Triassic salt),NaCl,halite,Triassic,ok,France,True,1.0,127,,C,0.6
+area,evap:muschelkalk-wuerttemberg,"Middle Muschelkalk salt of Wuerttemberg (Heilbronn, Bad Friedrichshall, Schwaebisch Hall)",NaCl,halite,Triassic,ok,Germany,True,1.0,1722,,C,0.6
+area,evap:uyuni,Salar de Uyuni,NaCl,earth-saltflat/earth-saltflat-sylvite,Quaternary,ok,Bolivia,True,1.0,9358,,C,0.6
+area,evap:atacama-salar,Salar de Atacama,K,earth-saltflat/earth-saltflat-sylvite,Quaternary,ok,Chile,True,1.0,3338,500,C,0.307
+area,evap:bonneville,Bonneville Salt Flats and Great Salt Lake Desert,K,earth-saltflat/earth-saltflat-sylvite,Quaternary,ok,United States of America,True,1.0,2014,50,C,0.15
+area,evap:taghaza-taoudenni,Taghaza and Taoudenni rock-salt pans,NaCl,earth-saltflat,Quaternary,ok,Mali,True,1.0,1163,,C,0.6
+area,evap:bilma,"Kawar salt pans (Bilma, Fachi)",NaCl,earth-saltflat,Quaternary,ok,Niger,True,1.0,350,,C,0.6
+area,evap:sambhar,Sambhar Lake,NaCl,earth-saltflat,Quaternary,ok,India,True,1.0,550,,C,0.6
+area,evap:elton-baskunchak,Lakes Elton and Baskunchak,NaCl,earth-saltflat,Quaternary,ok,Russia,True,1.0,526,,C,0.6
+area,evap:tuz-golu,Tuz Golu (Lake Tuz),NaCl,earth-saltflat,Quaternary,ok,Turkey,True,1.0,1723,,C,0.6
+area,evap:chott-djerid,Chott el Djerid,NaCl,earth-saltflat,Quaternary,ok,Tunisia,True,1.0,3390,,C,0.6
+area,evap:lake-eyre,Kati Thanda-Lake Eyre North,NaCl,earth-saltflat,Quaternary,ok,Australia,True,1.0,6942,,C,0.6
+area,gyp:paris-basin,"Paris basin gypsum (Montmartre, Cormeilles, Vaujours)",gypsum,earth-gypsum,Paleogene,ok,France,True,1.0,1256,,B,0.7
+area,gyp:suedharz,Southern Harz Zechstein gypsum belt (Nordhausen to Sangerhausen),gypsum,earth-gypsum,Permian,ok,Germany,True,1.0,712,,B,0.7
+area,gyp:windsor,"Windsor Group gypsum of Nova Scotia (Windsor, Milford, Little Narrows)",gypsum,earth-gypsum,Carboniferous,ok,Canada,True,0.962,2628,,B,0.7
+area,gyp:sorbas,Sorbas and Vera Messinian gypsum (Almeria),gypsum,earth-gypsum,Neogene,ok,Spain,True,0.986,592,,B,0.7
+area,gyp:sivas,Sivas basin gypsum,gypsum,earth-gypsum,Paleogene,ok,Turkey,True,1.0,6866,,C,0.6
+area,gyp:blaine,Blaine Formation gypsum (western Oklahoma),gypsum,earth-gypsum,Permian,ok,United States of America,True,1.0,17458,,C,0.6
+area,gyp:fort-dodge,Fort Dodge gypsum (Iowa),gypsum,earth-gypsum,Jurassic,ok,United States of America,True,1.0,329,,B,0.7
+area,gyp:michigan,"Michigan Formation gypsum (Tawas, Grand Rapids)",gypsum,earth-gypsum,Carboniferous,ok,United States of America,True,1.0,714,,C,0.6
+area,gyp:midlands-alabaster,"Mercia Mudstone gypsum and alabaster (Chellaston, Tutbury, Fauld, East Leake)",gypsum,earth-gypsum,Triassic,ok,United Kingdom,True,1.0,815,,C,0.6
+area,gyp:volterra,Volterra alabaster,gypsum,earth-gypsum,Neogene,ok,Italy,True,1.0,180,,C,0.6
+area,gyp:vena-del-gesso,Vena del Gesso Romagnola,gypsum,earth-gypsum,Neogene,ok,Italy,True,1.0,266,,C,0.6
+area,gyp:salaspils,"Salaspils Formation gypsum near Riga (Saulkalne, Sauriesi)",gypsum,earth-gypsum,Devonian,ok,Latvia,True,1.0,204,,B,0.7
+area,gyp:birzai-pasvalys,Birzai and Pasvalys gypsum karst,gypsum,earth-gypsum,Devonian,ok,Lithuania,True,0.999,1244,,C,0.6
+area,gyp:pinega,Pinega gypsum karst (Arkhangelsk),gypsum,earth-gypsum,Permian,ok,Russia,True,1.0,2127,,C,0.6
+area,sul:tarnobrzeg,"Tarnobrzeg sulfur district (Machow, Jeziorko, Osiek, Grzybow)",S,sulfur,Neogene,ok,Poland,True,1.0,1237,2000,C,0.6
+area,sul:yavoriv-rozdil,Yavoriv and Rozdil sulfur (Carpathian foredeep),S,sulfur,Neogene,ok,Ukraine,True,1.0,541,600,C,0.6
+area,sul:sicily,"Sicilian Messinian evaporite basin: sulfur, gypsum and salt (Caltanissetta, Agrigento, Enna, Realmonte)",S,earth-gypsum/sulfur/halite,Neogene,ok,Italy,True,0.966,6691,300,C,0.6
+area,phos:ouled-abdoun,Ouled Abdoun phosphate basin (Khouribga),P,phosphorite,Paleogene,ok,Morocco,True,1.0,5393,26000,C,0.6
+area,phos:gantour,"Gantour phosphate basin (Youssoufia, Benguerir)",P,phosphorite,Paleogene,ok,Morocco,True,1.0,6327,20000,C,0.6
+area,phos:meskala,Meskala phosphate basin,P,phosphorite,Paleogene,ok,Morocco,True,1.0,1899,4000,C,0.6
+area,phos:bou-craa,Bou Craa phosphate,P,phosphorite,Paleogene,ok,Western Sahara,False,1.0,774,1000,C,0.6
+area,phos:phosphoria,"Phosphoria Formation (Idaho, Utah, Wyoming, Montana)",P,phosphorite,Permian,ok,United States of America,True,1.0,52299,10000,C,0.6
+area,phos:central-florida,"Central Florida phosphate district (Bone Valley, Peace River)",P,phosphorite,Neogene,ok,United States of America,True,1.0,6115,8000,C,0.6
+area,phos:aurora,"Aurora phosphate (Pungo River Formation, North Carolina)",P,phosphorite,Neogene,ok,United States of America,True,0.801,1008,3000,C,0.6
+area,phos:karatau,"Karatau phosphorite basin (Zhanatas, Koksu)",P,phosphorite,Cambrian,ok,Kazakhstan,True,1.0,7928,4000,C,0.6
+area,phos:georgina,"Georgina basin phosphorite (Phosphate Hill, Duchess, Lady Annie)",P,phosphorite,Cambrian,ok,Australia,True,1.0,11259,4000,C,0.6
+area,phos:baltic-obolus,"Baltic Obolus phosphorite (Maardu, Toolse, Rakvere, Kingisepp)",P,phosphorite,Ordovician,ok,Estonia,True,0.803,7569,3700,B,0.7
+area,phos:jordan,"Jordan phosphate (Eshidiya, Al-Hasa)",P,phosphorite,Cretaceous,ok,Jordan,True,1.0,2025,2000,C,0.6
+area,phos:al-jalamid,Al Jalamid phosphate (northern Saudi Arabia),P,phosphorite,Paleogene,ok,Saudi Arabia,True,1.0,2216,1000,C,0.6
+area,phos:gafsa,Gafsa-Metlaoui phosphate basin,P,phosphorite,Paleogene,ok,Tunisia,True,1.0,2654,2500,C,0.6
+area,phos:djebel-onk,Djebel Onk phosphate,P,phosphorite,Paleogene,ok,Algeria,True,1.0,610,2000,C,0.6
+area,phos:abu-tartur,Abu Tartur phosphate (Western Desert),P,phosphorite,Cretaceous,ok,Egypt,True,1.0,892,1000,C,0.6
+area,phos:khneifis,"Palmyrides phosphate (Khneifis, Sharqiyah)",P,phosphorite,Cretaceous,ok,Syria,True,1.0,2447,1700,C,0.6
+area,phos:akashat,Akashat phosphate (western Iraq),P,phosphorite,Paleogene,ok,Iraq,True,1.0,1798,1000,C,0.6
+area,phos:negev,"Negev phosphate (Oron, Zin, Arad)",P,phosphorite,Cretaceous,ok,Israel,True,1.0,636,1000,C,0.6
+area,phos:sechura,Sechura phosphate (Bayovar),P,phosphorite,Neogene,ok,Peru,True,0.975,2449,5000,C,0.6
+area,phos:taiba,Taiba phosphate (Senegal),P,phosphorite,Paleogene,ok,Senegal,True,1.0,476,300,C,0.6
+area,phos:hahotoe,Hahotoe-Kpogame phosphate (Togo),P,phosphorite,Paleogene,ok,Togo,True,1.0,612,300,C,0.6
+area,phos:kunyang,Kunyang phosphorite (Yunnan),P,phosphorite,Cambrian,ok,China,True,1.0,1176,3000,C,0.6
+area,phos:kaiyang,Kaiyang phosphorite (Guizhou),P,phosphorite,Precambrian,ok,China,True,1.0,440,2000,C,0.6
+area,phos:yichang,Yichang phosphorite (Hubei),P,phosphorite,Precambrian,ok,China,True,1.0,1480,2000,C,0.6
+area,phos:lao-cai,Lao Cai apatite-phosphorite belt,P,phosphorite,Cambrian,ok,Vietnam,True,1.0,1539,2500,C,0.6
+area,phos:patos-de-minas,Patos de Minas phosphorite,P,phosphorite,Precambrian,ok,Brazil,True,1.0,1052,400,C,0.6
+deposit,dome:avery-island,Avery Island salt dome,NaCl,halite,Jurassic,ok,United States of America,True,True,,31650,C,
+deposit,dome:weeks-island,Weeks Island salt dome,NaCl,halite,Jurassic,ok,United States of America,True,True,,20154,C,
+deposit,dome:jefferson-island,Jefferson Island salt dome,NaCl,halite,Jurassic,ok,United States of America,True,True,,11222,C,
+deposit,dome:cote-blanche,Cote Blanche salt dome,NaCl,halite,Jurassic,ok,United States of America,True,False,,20154,C,
+deposit,dome:grand-saline,Grand Saline salt dome,NaCl,halite,Jurassic,ok,United States of America,True,True,,18856,C,
+deposit,dome:hockley,Hockley salt dome,NaCl,halite,Jurassic,ok,United States of America,True,True,,49834,C,
+deposit,dome:bryan-mound,Bryan Mound salt dome,NaCl,halite,Jurassic,ok,United States of America,True,True,,16795,C,
+deposit,dome:big-hill,Big Hill salt dome,NaCl,halite,Jurassic,ok,United States of America,True,True,,17177,C,
+deposit,dome:gorleben,Gorleben-Rambow salt dome,NaCl,halite,Permian,ok,Germany,True,True,,88216,C,
+deposit,dome:asse,Asse salt anticline,NaCl,halite,Permian,ok,Germany,True,True,,12893,C,
+deposit,dome:lueneburg,Lueneburg salt dome,NaCl,halite,Permian,ok,Germany,True,True,,20086,C,
+deposit,dome:bad-segeberg,Bad Segeberg salt dome (Kalkberg cap rock),NaCl,halite,Permian,ok,Germany,True,True,,19679,C,
+deposit,dome:stassfurt,Stassfurt salt saddle,NaCl,halite,Permian,ok,Germany,True,True,,28246,C,
+deposit,dome:bernburg,Bernburg salt dome,NaCl,halite,Permian,ok,Germany,True,True,,8143,C,
+deposit,dome:sperenberg,Sperenberg salt dome,NaCl,halite,Permian,ok,Germany,True,True,,19747,C,
+deposit,dome:mors,Mors salt dome,NaCl,halite,Permian,ok,Denmark,True,True,,51912,C,
+deposit,dome:hengelo,Hengelo-Boekelo salt (Twente),NaCl,halite,Triassic,ok,Netherlands,True,True,,8482,C,
+deposit,dome:klodawa,Klodawa salt dome,NaCl,halite,Permian,ok,Poland,True,True,,32911,C,
+deposit,dome:inowroclaw,Inowroclaw salt dome,NaCl,halite,Permian,ok,Poland,True,True,,18703,C,
+deposit,dome:wapno,Wapno salt dome,NaCl,halite,Permian,ok,Poland,True,True,,6531,C,
+deposit,dome:slanic,Slanic Prahova salt massif,NaCl,halite,Neogene,ok,Romania,True,True,,3393,C,
+deposit,dome:solotvyno,Solotvyno salt diapir,NaCl,halite,Neogene,ok,Ukraine,True,True,,5611,C,
+deposit,dome:mount-sodom,Mount Sodom salt diapir,NaCl,halite,Neogene,ok,Israel,True,True,,33929,C,
+deposit,dome:hormuz-island,Hormuz Island salt diapir,NaCl,halite,Cambrian,ok,Iran,True,True,,212058,C,
+deposit,dome:namakdan,Namakdan salt diapir (Qeshm),NaCl,halite,Cambrian,ok,Iran,True,True,,212058,C,
+deposit,dome:djelfa,Rocher de Sel (Djelfa),NaCl,halite,Triassic,ok,Algeria,True,True,,5726,C,
+deposit,dome:cardona,Cardona salt diapir (Muntanya de Sal),NaCl,halite,Paleogene,ok,Spain,True,True,,5726,C,
+deposit,dome:remolinos,Remolinos rock salt (Ebro basin),NaCl,halite,Paleogene,ok,Spain,True,True,,1357,C,
+deposit,dome:hallstatt,Hallstatt salt body (Haselgebirge),NaCl,halite,Permian,ok,Austria,True,True,,2290,C,
+deposit,dome:altaussee,Altaussee salt body (Haselgebirge),NaCl,halite,Permian,ok,Austria,True,True,,2290,C,
+deposit,dome:bad-ischl,Bad Ischl salt body (Haselgebirge),NaCl,halite,Permian,ok,Austria,True,True,,1018,C,
+deposit,dome:duerrnberg,Duerrnberg (Hallein) salt body,NaCl,halite,Permian,ok,Austria,True,True,,2290,C,
+deposit,dome:berchtesgaden,Berchtesgaden salt body,NaCl,halite,Permian,ok,Germany,True,True,,2290,C,
+deposit,dome:bad-reichenhall,Bad Reichenhall brine (Haselgebirge),NaCl,halite,Permian,ok,Germany,True,True,,848,C,
+deposit,dome:hall-in-tirol,Hall in Tirol salt body (Absam),NaCl,halite,Permian,ok,Austria,True,True,,2290,C,
+deposit,salt:wieliczka,Wieliczka salt deposit,NaCl,halite,Neogene,ok,Poland,True,True,,4000,C,
+deposit,salt:bochnia,Bochnia salt deposit,NaCl,halite,Neogene,ok,Poland,True,True,,1000,C,
+deposit,salt:turda,Turda salt deposit,NaCl,halite,Neogene,ok,Romania,True,True,,2000,C,
+deposit,salt:praid,Praid salt diapir,NaCl,halite,Neogene,ok,Romania,True,True,,2000,C,
+deposit,gyp:san-marcos,San Marcos Island gypsum (Baja California Sur),gypsum,earth-gypsum,Neogene,ok,Mexico,True,True,,500,C,
+deposit,gyp:plaster-city,Fish Creek Mountains gypsum (Plaster City quarry),gypsum,earth-gypsum,Neogene,ok,United States of America,True,True,,100,C,
+deposit,gyp:yingcheng,Yingcheng gypsum (Hubei),gypsum,earth-gypsum,Paleogene,ok,China,True,True,,1000,C,
+deposit,gyp:lake-macdonnell,Lake MacDonnell gypsum,gypsum,earth-gypsum,Quaternary,ok,Australia,True,True,,200,C,
+deposit,bor:boron,Boron (Kramer) borate deposit,B,borax/kernite,Neogene,ok,United States of America,True,True,,130,C,
+deposit,bor:searles,Searles Lake borate and potash evaporites,B,borax,Quaternary,ok,United States of America,True,True,,1000,C,
+deposit,bor:furnace-creek,Furnace Creek colemanite (Death Valley),B,borax,Neogene,ok,United States of America,True,True,,20,C,
+deposit,bor:kirka,Kirka borax deposit,B,borax,Neogene,ok,Turkey,True,True,,600,C,
+deposit,bor:bigadic,Bigadic colemanite and ulexite,B,borax,Neogene,ok,Turkey,True,True,,600,C,
+deposit,bor:emet,Emet and Hisarcik colemanite,B,borax,Neogene,ok,Turkey,True,True,,800,C,
+deposit,bor:kestelek,Kestelek colemanite,B,borax,Neogene,ok,Turkey,True,True,,10,C,
+deposit,bor:tincalayu,Tincalayu borax (Salar del Hombre Muerto),B,borax/kernite,Neogene,ok,Argentina,True,True,,30,C,
+deposit,bor:loma-blanca,Loma Blanca borax (Jujuy),B,borax,Neogene,ok,Argentina,True,True,,20,C,
+deposit,bor:surire,Salar de Surire ulexite,B,borax,Quaternary,ok,Chile,True,True,,50,C,
+deposit,bor:ascotan,Salar de Ascotan ulexite,B,borax,Quaternary,ok,Chile,True,True,,30,C,
+deposit,bor:zabuye,Zabuye salt lake borax (Tibet),B,borax,Quaternary,ok,China,True,True,,20,C,
+deposit,sul:boling,Boling salt dome (sulfur cap rock),S,sulfur/halite,Jurassic,ok,United States of America,True,True,,300,C,
+deposit,sul:sulphur-mines,Sulphur Mines salt dome (Calcasieu; first Frasch mine),S,sulfur/halite,Jurassic,ok,United States of America,True,True,,40,C,
+deposit,sul:grand-ecaille,Grand Ecaille salt dome (sulfur cap rock),S,sulfur/halite,Jurassic,ok,United States of America,True,False,,150,C,
+deposit,sul:spindletop,Spindletop salt dome (sulfur cap rock),S,sulfur/halite,Jurassic,ok,United States of America,True,True,,30,C,
+deposit,sul:jaltipan,"Jaltipan salt dome (sulfur cap rock, Isthmus of Tehuantepec)",S,sulfur/halite,Jurassic,ok,Mexico,True,True,,100,C,
+deposit,sul:culberson,Culberson sulfur (Castile Formation),S,sulfur,Permian,ok,United States of America,True,True,,300,C,
+deposit,sul:mishraq,Mishraq sulfur (Fatha Formation),S,sulfur,Neogene,ok,Iraq,True,True,,800,C,
+deposit,sul:gaurdak,Gaurdak sulfur,S,sulfur,Jurassic,ok,Turkmenistan,True,True,,200,C,
+deposit,phos:san-juan-de-la-costa,San Juan de la Costa phosphorite,P,phosphorite,Neogene,ok,Mexico,True,True,,500,C,
+deposit,alum:phocaea,Phocaea alum (Foca),alum,alum,Neogene,ok,Turkey,True,True,,20,C,
+deposit,alum:karahisar,Sebinkarahisar alum (Koloneia),alum,alum,Cretaceous,ok,Turkey,True,True,,20,C,
+deposit,alum:tolfa,Tolfa alunite,alum,alum,Neogene,ok,Italy,True,True,,50,C,
+deposit,alum:vulcano,Vulcano and Lipari alum,alum,alum,Quaternary,ok,Italy,True,True,,2,C,
+deposit,alum:milos,Milos alum,alum,alum,Neogene,ok,Greece,True,True,,5,C,
+deposit,alum:zaglik,Zaglik alunite,alum,alum,Jurassic,ok,Azerbaijan,True,True,,160,C,
+deposit,alum:fanshan,Fanshan alunite (Cangnan),alum,alum,Cretaceous,ok,China,True,True,,200,C,
+deposit,alum:lujiang,Lujiang alunite (Anhui),alum,alum,Cretaceous,ok,China,True,True,,100,C,
+deposit,alum:bulahdelah,Bulahdelah alunite,alum,alum,Carboniferous,ok,Australia,True,True,,5,C,
+deposit,alum:marysvale,Marysvale alunite,alum,alum,Neogene,ok,United States of America,True,True,,5,C,
+deposit,alum:andrarum,Andrarum alum shale,alum,alum,Cambrian,ok,Sweden,True,True,,50,C,
+deposit,alum:whitby,Whitby alum shale (Jurassic Lias),alum,alum,Jurassic,ok,United Kingdom,True,True,,50,C,

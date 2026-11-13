@@ -1,0 +1,10 @@
+{
+ "drop": {},
+ "_why": [
+  "No existing heat-map source is dropped for Au, diamond, corundum, emerald, olivine, garnet, lapis, topaz, tourmaline, beryl, spinel, C_graphite, F, SiO2 or U (precious-gems, decision 0065).",
+  "Test bakes with and without this group's evidence (docs/research/ore-deposits-2026-11-08/precious-gems.md) show the old maps miss deposits outside the US rather than paint wrong places, so the fix is added evidence, not drops.",
+  "MRDS 'Silica' records are kept for SiO2: vanilla quartz also takes sandstone and quartzite hosts, so glass-sand and quartzite districts are real quartz potential.",
+  "MRDS weight is US-heavy for U (0.43 of observed weight) and garnet (0.46) even after survey-density normalisation; that is a bake-settings question sent to the coordinator, not a drop.",
+  "Five usgs_major-deposits records with wrong coordinates (Jiaodong, Kelian, Veladero, Pascua, Berezovsk) are proposed in proposed-coordinate-corrections.csv for the shared coordinate-corrections.csv rather than dropped here."
+ ]
+}

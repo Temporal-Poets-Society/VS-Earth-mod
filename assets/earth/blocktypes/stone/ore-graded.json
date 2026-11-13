@@ -1,0 +1,218 @@
+{
+ "code": "ore",
+ "class": "BlockOre",
+ "blockmaterial": "Ore",
+ "attributes": {
+  "mapColorCode": "land",
+  "propickable": true,
+  "handbook": {
+   "groupBy": [
+    "ore-*-{type}-*"
+   ],
+   "extraSections": [
+    {
+     "title": "earth:handbooktitle-mineral",
+     "text": "earth:handbooktext-mineral-{type}"
+    }
+   ]
+  }
+ },
+ "behaviors": [
+  {
+   "name": "BreakIfFloating"
+  },
+  {
+   "name": "UnstableRock"
+  }
+ ],
+ "variantgroups": [
+  {
+   "code": "grade",
+   "states": [
+    "poor",
+    "medium",
+    "rich",
+    "bountiful"
+   ]
+  },
+  {
+   "code": "type",
+   "states": [
+    "chalcopyrite",
+    "tetrahedrite",
+    "azurite",
+    "cerussite",
+    "vanadinite",
+    "wulfenite",
+    "smithsonite",
+    "hemimorphite",
+    "sperrylite",
+    "wolframite"
+   ]
+  },
+  {
+   "code": "rock",
+   "states": [
+    "andesite",
+    "basalt",
+    "dolostone",
+    "gneiss",
+    "granite",
+    "limestone",
+    "peridotite",
+    "phyllite",
+    "sandstone",
+    "schist",
+    "slate"
+   ]
+  }
+ ],
+ "allowedVariants": [
+  "ore-*-chalcopyrite-granite",
+  "ore-*-chalcopyrite-andesite",
+  "ore-*-chalcopyrite-basalt",
+  "ore-*-chalcopyrite-schist",
+  "ore-*-chalcopyrite-gneiss",
+  "ore-*-tetrahedrite-granite",
+  "ore-*-tetrahedrite-slate",
+  "ore-*-tetrahedrite-phyllite",
+  "ore-*-tetrahedrite-schist",
+  "ore-*-azurite-limestone",
+  "ore-*-azurite-sandstone",
+  "ore-*-azurite-andesite",
+  "ore-*-cerussite-limestone",
+  "ore-*-cerussite-dolostone",
+  "ore-*-cerussite-sandstone",
+  "ore-*-vanadinite-limestone",
+  "ore-*-vanadinite-dolostone",
+  "ore-*-vanadinite-sandstone",
+  "ore-*-wulfenite-limestone",
+  "ore-*-wulfenite-dolostone",
+  "ore-*-wulfenite-sandstone",
+  "ore-*-smithsonite-limestone",
+  "ore-*-smithsonite-dolostone",
+  "ore-*-smithsonite-sandstone",
+  "ore-*-hemimorphite-limestone",
+  "ore-*-hemimorphite-dolostone",
+  "ore-*-hemimorphite-sandstone",
+  "ore-*-sperrylite-peridotite",
+  "ore-*-sperrylite-basalt",
+  "ore-*-wolframite-granite",
+  "ore-*-wolframite-gneiss",
+  "ore-*-wolframite-schist",
+  "ore-*-wolframite-phyllite",
+  "ore-*-wolframite-slate",
+  "ore-*-wolframite-limestone",
+  "ore-*-wolframite-dolostone"
+ ],
+ "creativeinventory": {
+  "general": [
+   "*"
+  ],
+  "terrain": [
+   "*"
+  ]
+ },
+ "storageFlags": 5,
+ "shape": {
+  "base": "game:block/basic/cube"
+ },
+ "drawtype": "cube",
+ "texturesByType": {
+  "*-wolframite-*": {
+   "all": {
+    "base": "game:block/stone/rock/{rock}1",
+    "overlays": [
+     "game:block/stone/ore/wolframite1"
+    ],
+    "alternates": [
+     {
+      "base": "game:block/stone/rock/{rock}1",
+      "overlays": [
+       "game:block/stone/ore/wolframite2"
+      ]
+     },
+     {
+      "base": "game:block/stone/rock/{rock}1",
+      "overlays": [
+       "game:block/stone/ore/wolframite3"
+      ]
+     }
+    ]
+   }
+  },
+  "*": {
+   "all": {
+    "base": "game:block/stone/rock/{rock}1",
+    "overlays": [
+     "earth:block/stone/ore/{type}1"
+    ],
+    "alternates": [
+     {
+      "base": "game:block/stone/rock/{rock}1",
+      "overlays": [
+       "earth:block/stone/ore/{type}2"
+      ]
+     },
+     {
+      "base": "game:block/stone/rock/{rock}1",
+      "overlays": [
+       "earth:block/stone/ore/{type}3"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "replaceable": 100,
+ "resistance": 8,
+ "sounds": {
+  "walk": "game:walk/stone",
+  "byTool": {
+   "Pickaxe": {
+    "hit": "game:block/rock-hit-pickaxe",
+    "break": "game:block/rock-break-pickaxe"
+   }
+  }
+ },
+ "requiredMiningTierByType": {
+  "ore-*-chalcopyrite-*": 2,
+  "ore-*-tetrahedrite-*": 2,
+  "ore-*-azurite-*": 2,
+  "ore-*-cerussite-*": 2,
+  "ore-*-vanadinite-*": 2,
+  "ore-*-wulfenite-*": 2,
+  "ore-*-smithsonite-*": 2,
+  "ore-*-hemimorphite-*": 2,
+  "ore-*-sperrylite-*": 5,
+  "ore-*-wolframite-*": 4
+ },
+ "dropsByType": {
+  "*": [
+   {
+    "type": "item",
+    "code": "earth:ore-{grade}-{type}",
+    "quantity": {
+     "avg": 1.25,
+     "var": 0
+    }
+   }
+  ]
+ },
+ "heldTpIdleAnimation": "holdbothhandslarge",
+ "heldRightReadyAnimation": "heldblockready",
+ "heldTpUseAnimation": "twohandplaceblock",
+ "tpHandTransform": {
+  "translation": {
+   "x": -1.23,
+   "y": -0.91,
+   "z": -0.8
+  },
+  "rotation": {
+   "x": -2,
+   "y": 25,
+   "z": -78
+  },
+  "scale": 0.4
+ }
+}

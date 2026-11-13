@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "purpose": "Initial historical extraction evidence, deliberately nonspatial until district footprints are verified. Never treat an artifact or smelter location as an ore coordinate.",
+  "records": [
+    {
+      "id": "hist:minong", "commodities": ["Cu"], "region": "Minong district, Isle Royale, Lake Superior, United States", "geometry": null,
+      "evidence_kind": "archaeological_mining_and_historical_operation", "period": "Indigenous mining at least 4500 years ago; industrial mining in the nineteenth century",
+      "form": "Native copper; primary bedrock mining. Regional glacial drift copper requires a separate transport footprint.",
+      "source_url": "https://www.nps.gov/isro/learn/news/minong-mine-designated-as-national-historic-landmark.htm",
+      "secondary_source_url": "https://home.nps.gov/articles/000/minong-copper.htm",
+      "grade_note": "NPS historical account describes stamp rock at about 1.5% Cu that was not profitable to stamp and transport at that operation. This is not a universal grade threshold.",
+      "confidence": "Official archaeological/historical account; local footprint not digitized", "source_feature_id": "Minong Copper Mining District NHL", "review_required": "Use public district extent; do not recover redacted archaeological coordinates."
+    },
+    {
+      "id": "hist:penzance", "commodities": ["Cu", "Sn"], "region": "Penzance district, Cornwall, United Kingdom", "geometry": null,
+      "evidence_kind": "geological_survey_historical_extraction_summary", "period": "Bronze Age and later, with distinct later mining phases",
+      "form": "Early alluvial cassiterite; exposed copper lodes reported as probable early copper source",
+      "source_url": "https://webapps.bgs.ac.uk/memoirs/docs/B01737.html", "source_feature_id": "BGS memoir sheets 351 and 358, Economic geology",
+      "confidence": "Survey synthesis; not a dated claim for every mapped lode", "review_required": "Digitize source areas and drainage; keep probable copper source interpretation qualified."
+    },
+    {
+      "id": "hist:gonamena", "commodities": ["Sn"], "region": "Gonamena, Bodmin Moor, Cornwall, United Kingdom", "geometry": null,
+      "evidence_kind": "scheduled_archaeological_extraction_site", "period": "Early post-medieval",
+      "form": "Residual/eluvial cassiterite released by weathering and concentrated with water",
+      "source_url": "https://historicengland.org.uk/listing/the-list/list-entry/1020051", "source_feature_id": "NHLE 1020051",
+      "confidence": "Official heritage record", "review_required": "Import licensed official extent if suitable; do not mark this particular streamwork Bronze Age."
+    },
+    {
+      "id": "hist:timna", "commodities": ["Cu"], "region": "Timna Valley, southern Israel", "geometry": null,
+      "evidence_kind": "excavation_and_mining_research", "period": "Chalcolithic open-pit evidence at Merkavot 1 and later second-millennium BCE extraction",
+      "form": "Copper nodules in valley conglomerate gravels; later shafts and underground extraction",
+      "source_url": "https://www.tau.ac.il/~ebenyose/CTV/mines/index.html", "source_feature_id": "Central Timna Valley Project, Merkavot investigations",
+      "confidence": "Excavator account with dating study; regional outline not digitized", "review_required": "Match geology-source footprint, not only a smelting site; keep distinct technological periods."
+    },
+    {
+      "id": "hist:rooiberg", "commodities": ["Sn"], "region": "Rooiberg and Smelterskop, South Africa", "geometry": null,
+      "evidence_kind": "archaeological_mining_and_smelting_studies", "period": "Mining evidence dated 1400–1640 CE; Smelterskop smelting generally seventeenth–nineteenth centuries",
+      "form": "Evidence discussed for placer cassiterite formerly present, alongside regional primary tin",
+      "source_url": "https://link.springer.com/article/10.1007/s10816-025-09732-6", "secondary_source_url": "https://www.sciencedirect.com/science/article/pii/S0305440310000312",
+      "source_feature_id": "2025 mining archaeology study and Chirikure et al. 2010",
+      "confidence": "Published archaeological interpretation", "review_required": "Do not equate bronze use from 1200 CE with directly dated extraction; reconstruct exhausted placers separately from modern reserves."
+    },
+    {
+      "id": "hist:kestel", "commodities": ["Sn"], "region": "Kestel/Göltepe, south-central Turkey", "geometry": null,
+      "evidence_kind": "excavation_and_experimental_processing_interpretation", "period": "Third millennium BCE, including about 2600 BCE",
+      "form": "Cassiterite processing inferred from ore-dressing equipment, crucibles, slags and experiments",
+      "source_url": "https://www.journals.uchicago.edu/doi/10.2307/505657", "secondary_source_url": "https://doi.org/10.1111/j.1475-4754.1996.tb00777.x",
+      "source_feature_id": "Yener and Vandiver 1993; Earl and Özbal 1996",
+      "confidence": "Excavation-based interpretation; quantitative production and provenance not established here", "review_required": "Review contested scale of production; do not assume this supplied every nearby bronze object."
+    },
+    {
+      "id": "hist:musiston", "commodities": ["Cu", "Sn"], "region": "Mušiston, Tajikistan", "geometry": null,
+      "evidence_kind": "ore_deposit_mining_evidence_and_comparative_slag_analysis", "period": "Slag dated 1900–1400 BCE; ancient mining galleries described",
+      "form": "Oxidized mixed Cu–Sn mineralization; slag comparison supports nearby ore use",
+      "source_url": "https://doi.org/10.1007/s12520-022-01606-2", "secondary_source_url": "https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2023.1224873/full",
+      "source_feature_id": "2022 analytical study; 2023 geological follow-up",
+      "confidence": "Primary geological and archaeological studies; not a global trade attribution", "review_required": "Slag is approximately 4 km from the deposit: keep find point separate from ore source. No Uluburun provenance claim."
+    }
+  ]
+}

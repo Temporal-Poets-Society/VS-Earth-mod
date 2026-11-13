@@ -1,0 +1,390 @@
+{
+ "Cu": {
+  "hotCells": 7174,
+  "hotUnsupported": 2770,
+  "hotUnsupportedByCountry": {
+   "Russia": 1062,
+   "China": 388,
+   "United States of America": 176,
+   "Mongolia": 145,
+   "Canada": 105,
+   "sea/none": 80,
+   "Australia": 74,
+   "Kazakhstan": 60,
+   "Mexico": 42,
+   "South Africa": 41,
+   "Zimbabwe": 40,
+   "Argentina": 40
+  },
+  "bigDepositsMissed": 0,
+  "bigMissedExamples": []
+ },
+ "Sn": {
+  "hotCells": 640,
+  "hotUnsupported": 329,
+  "hotUnsupportedByCountry": {
+   "United States of America": 66,
+   "Brazil": 63,
+   "Russia": 40,
+   "Australia": 26,
+   "Kazakhstan": 12,
+   "China": 12,
+   "Mexico": 12,
+   "Canada": 11,
+   "sea/none": 7,
+   "Zimbabwe": 7,
+   "South Africa": 6,
+   "Kyrgyzstan": 5
+  },
+  "bigDepositsMissed": 6,
+  "bigMissedExamples": [
+   {
+    "name": "Man Maw (Wa State)",
+    "size": "large",
+    "heat": 0.0
+   },
+   {
+    "name": "Dulong",
+    "size": "world-class",
+    "heat": 0.18
+   },
+   {
+    "name": "Yinyan",
+    "size": "large",
+    "heat": 0.2
+   },
+   {
+    "name": "Pravourmiisk",
+    "size": "large",
+    "heat": 0.22
+   },
+   {
+    "name": "Xianghualing",
+    "size": "large",
+    "heat": 0.25
+   },
+   {
+    "name": "Bangka offshore placers",
+    "size": "world-class",
+    "heat": 0.38
+   }
+  ]
+ },
+ "Pb": {
+  "hotCells": 2137,
+  "hotUnsupported": 918,
+  "hotUnsupportedByCountry": {
+   "United States of America": 148,
+   "Russia": 91,
+   "Canada": 79,
+   "Australia": 48,
+   "Mexico": 47,
+   "Argentina": 47,
+   "Kazakhstan": 40,
+   "China": 37,
+   "sea/none": 36,
+   "Peru": 33,
+   "Finland": 17,
+   "Morocco": 16
+  },
+  "bigDepositsMissed": 0,
+  "bigMissedExamples": []
+ },
+ "Zn": {
+  "hotCells": 2308,
+  "hotUnsupported": 651,
+  "hotUnsupportedByCountry": {
+   "United States of America": 104,
+   "Australia": 55,
+   "Mexico": 42,
+   "Argentina": 39,
+   "Canada": 38,
+   "Russia": 30,
+   "sea/none": 29,
+   "Peru": 29,
+   "China": 24,
+   "Morocco": 17,
+   "South Korea": 14,
+   "South Africa": 13
+  },
+  "bigDepositsMissed": 1,
+  "bigMissedExamples": [
+   {
+    "name": "Dulong",
+    "size": "world-class",
+    "heat": 0.0
+   }
+  ]
+ },
+ "Ag": {
+  "hotCells": 2257,
+  "hotUnsupported": 1059,
+  "hotUnsupportedByCountry": {
+   "United States of America": 219,
+   "Canada": 79,
+   "Australia": 73,
+   "sea/none": 60,
+   "Mexico": 54,
+   "Argentina": 42,
+   "Russia": 41,
+   "South Africa": 40,
+   "China": 36,
+   "Peru": 33,
+   "Morocco": 22,
+   "Mongolia": 19
+  },
+  "bigDepositsMissed": 4,
+  "bigMissedExamples": [
+   {
+    "name": "Schwaz (Falkenstein)",
+    "size": "large",
+    "heat": 0.0
+   },
+   {
+    "name": "White Pine",
+    "size": "world-class",
+    "heat": 0.15
+   },
+   {
+    "name": "Dachang (Changpo-Tongkeng)",
+    "size": "large",
+    "heat": 0.29
+   },
+   {
+    "name": "Rudnik",
+    "size": "large",
+    "heat": 0.39
+   }
+  ]
+ },
+ "Bi": {
+  "hotCells": 192,
+  "hotUnsupported": 164,
+  "hotUnsupportedByCountry": {
+   "United States of America": 32,
+   "Canada": 22,
+   "Russia": 21,
+   "Kazakhstan": 16,
+   "Australia": 12,
+   "Japan": 6,
+   "Brazil": 6,
+   "sea/none": 5,
+   "Argentina": 5,
+   "France": 4,
+   "Spain": 4,
+   "China": 4
+  },
+  "bigDepositsMissed": 2,
+  "bigMissedExamples": [
+   {
+    "name": "NICO",
+    "size": "world-class",
+    "heat": 0.0
+   },
+   {
+    "name": "Chorolque",
+    "size": "large",
+    "heat": 0.5
+   }
+  ]
+ },
+ "Hg": {
+  "hotCells": 228,
+  "hotUnsupported": 179,
+  "hotUnsupportedByCountry": {
+   "United States of America": 56,
+   "Japan": 31,
+   "Russia": 23,
+   "Mexico": 19,
+   "sea/none": 17,
+   "China": 9,
+   "Canada": 2,
+   "Tajikistan": 2,
+   "Turkey": 2,
+   "Afghanistan": 2,
+   "Iran": 2,
+   "Philippines": 2
+  },
+  "bigDepositsMissed": 3,
+  "bigMissedExamples": [
+   {
+    "name": "Sulphur Bank",
+    "size": "large",
+    "heat": 0.39
+   },
+   {
+    "name": "McDermitt and Cordero mines",
+    "size": "large",
+    "heat": 0.42
+   },
+   {
+    "name": "Terlingua district (Chisos mine area)",
+    "size": "large",
+    "heat": 0.49
+   }
+  ]
+ },
+ "W": {
+  "hotCells": 525,
+  "hotUnsupported": 307,
+  "hotUnsupportedByCountry": {
+   "United States of America": 60,
+   "Russia": 49,
+   "Kazakhstan": 16,
+   "Canada": 15,
+   "China": 14,
+   "Australia": 14,
+   "Argentina": 14,
+   "South Africa": 11,
+   "Namibia": 10,
+   "Zimbabwe": 9,
+   "Uzbekistan": 8,
+   "Brazil": 8
+  },
+  "bigDepositsMissed": 4,
+  "bigMissedExamples": [
+   {
+    "name": "Zhuxi",
+    "size": "world-class",
+    "heat": 0.0
+   },
+   {
+    "name": "Dahutang (Shimensi, Shiweidong, Dalingshang)",
+    "size": "world-class",
+    "heat": 0.15
+   },
+   {
+    "name": "Sisson (Sisson Brook)",
+    "size": "large",
+    "heat": 0.2
+   },
+   {
+    "name": "Pine Creek",
+    "size": "large",
+    "heat": 0.42
+   }
+  ]
+ },
+ "Mo": {
+  "hotCells": 580,
+  "hotUnsupported": 274,
+  "hotUnsupportedByCountry": {
+   "United States of America": 43,
+   "Australia": 33,
+   "Canada": 31,
+   "sea/none": 25,
+   "Kazakhstan": 20,
+   "Brazil": 10,
+   "Democratic Republic of the Congo": 10,
+   "Argentina": 10,
+   "Greenland": 7,
+   "China": 7,
+   "Uzbekistan": 6,
+   "Finland": 5
+  },
+  "bigDepositsMissed": 26,
+  "bigMissedExamples": [
+   {
+    "name": "Rio Blanco",
+    "size": "large",
+    "heat": 0.0
+   },
+   {
+    "name": "Kale Kafi",
+    "size": "large",
+    "heat": 0.0
+   },
+   {
+    "name": "Zuun Mod",
+    "size": "large",
+    "heat": 0.0
+   },
+   {
+    "name": "Chehugou",
+    "size": "large",
+    "heat": 0.0
+   },
+   {
+    "name": "Agaskyr",
+    "size": "large",
+    "heat": 0.1
+   },
+   {
+    "name": "Chalukou",
+    "size": "world-class",
+    "heat": 0.1
+   },
+   {
+    "name": "Shapinggou",
+    "size": "world-class",
+    "heat": 0.1
+   },
+   {
+    "name": "Mackatica",
+    "size": "large",
+    "heat": 0.1
+   },
+   {
+    "name": "Sisson (Sisson Brook)",
+    "size": "large",
+    "heat": 0.1
+   },
+   {
+    "name": "Inca de Oro",
+    "size": "large",
+    "heat": 0.15
+   },
+   {
+    "name": "Teghout",
+    "size": "large",
+    "heat": 0.15
+   },
+   {
+    "name": "El Salvador",
+    "size": "world-class",
+    "heat": 0.21
+   },
+   {
+    "name": "Los Chancas",
+    "size": "large",
+    "heat": 0.23
+   },
+   {
+    "name": "Cerro Casale",
+    "size": "large",
+    "heat": 0.24
+   },
+   {
+    "name": "Dahutang (Shimensi, Shiweidong, Dalingshang)",
+    "size": "large",
+    "heat": 0.29
+   }
+  ]
+ },
+ "Sb": {
+  "hotCells": 881,
+  "hotUnsupported": 825,
+  "hotUnsupportedByCountry": {
+   "China": 297,
+   "United States of America": 86,
+   "Canada": 73,
+   "Russia": 65,
+   "Australia": 33,
+   "Kazakhstan": 23,
+   "Japan": 22,
+   "Sweden": 21,
+   "sea/none": 17,
+   "Norway": 16,
+   "Bolivia": 15,
+   "Finland": 13
+  },
+  "bigDepositsMissed": 1,
+  "bigMissedExamples": [
+   {
+    "name": "Woxi",
+    "size": "large",
+    "heat": 0.19
+   }
+  ]
+ }
+}

@@ -1,0 +1,29 @@
+Earth floodplain grid (config/floodplains.bin, baked 2026-11-08 by tools/FloodplainBake; decision 0048, soil rules 3)
+
+What it is: the level (m) the natural flood of Earth's dry-season rivers reaches, on a 15 arc-second grid, for arid land
+only. In worlds with ground columns and soil rules 3, arid ground at or below that level keeps its topsoil (the Nile
+valley and delta, Mesopotamia, the Indus plain). It is Earth's own model of a flood, not a measured flood map.
+
+Sources:
+- Copernicus DEM GLO-90 (the Copernicus WorldDEM(TM)-90, COP-DEM_GLO-90-DGED/2022_1), as Earth's GLO-90 worlds keep it
+  (VintagestoryData/ModData/earth/glo90, with the reservoirs of its dam list removed). Used under the "Licence for
+  Copernicus DEM instance COP-DEM-GLO-90-F Global 90m Full, Free & Open".
+  Produced using Copernicus WorldDEM(TM)-90 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided
+  under COPERNICUS by the European Union and ESA; all rights reserved. The organisations in charge of the Copernicus
+  programme by law or by delegation do not incur any liability for any use of the Copernicus WorldDEM(TM)-90.
+- Earth's rivers: HydroRIVERS v1.0 (Lehner, B., Grill G. (2013): Global river hydrography and network routing: baseline
+  data and new approaches to study the world's large river systems. Hydrological Processes, 27(15): 2171-2186; data at
+  www.hydrosheds.org, used under the HydroSHEDS license) as laid onto GLO-90 by Earth (rivers-glo90.bin), with their
+  discharge and the share of it from moist catchments.
+- Earth's climate (the aridity indices, Holdridge's from the temperatures and rain and the Penman-Monteith one of
+  aridity.bin from CHELSA V2.1 BIOCLIM+, that pick which rivers run through dry land), as in Earth's ATTRIBUTION.txt.
+Earth is not endorsed by the Copernicus programme, ESA, DLR, Airbus or the HydroSHEDS authors.
+
+How it was made (tools/FloodplainBake, from the terrain model a new 1:10 GLO-90 world builds with earth-1.0.3-tall.22
+and its data packs): every river course of 10 m3/s or more, with at least 10 m3/s from moist catchments, where it runs
+through land with an aridity index below 0.3 (either index), floods 1.2 x Q^0.3 m (1.5 to 15 m) above its water (its course level or
+GLO-90's lowest point within 3", whichever is higher). The flood falls 0.15 m per km of the way out and covers connected
+land at or below it, on a 7.5" grid whose ground is the lowest GLO-90 point within about 6" (under town and palm
+heights); seas and lakes stop it; it never stands above the top of the river nearest in a straight line, nor covers
+ground more than one flood height below that river's water. Each 15" cell keeps the highest flood among its four 7.5"
+cells, the cells around the flood the same level less one cell's fall; levels are stored in decimetres.

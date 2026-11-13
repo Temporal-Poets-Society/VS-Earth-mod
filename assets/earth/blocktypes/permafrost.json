@@ -1,0 +1,89 @@
+{
+	"code": "permafrost",
+	"variantgroups": [
+		{
+			"code": "type",
+			"states": [
+				"silt",
+				"till",
+				"sand",
+				"gravel",
+				"clay"
+			]
+		}
+	],
+	"attributes": {
+		"handbook": {"extraSections": [{"title": "earth:handbooktitle-geology", "text": "earth:handbooktext-permafrost-{type}"}]},
+		"mapColorCode": "land",
+		"preventsDecay": true
+	},
+	"shape": {
+		"base": "game:block/basic/cube"
+	},
+	"drawtype": "Cube",
+	"creativeinventory": {
+		"general": [
+			"*"
+		],
+		"earthplus": [
+			"*"
+		],
+		"terrain": [
+			"*"
+		]
+	},
+	"blockmaterial": "Soil",
+	"replaceable": 300,
+	"resistanceByType": {
+		"*-silt": 5,
+		"*-till": 7,
+		"*-sand": 4,
+		"*-gravel": 6,
+		"*-clay": 5
+	},
+	"fertility": 0,
+	"textures": {
+		"all": {
+			"base": "earth:block/ground/permafrost-{type}*"
+		}
+	},
+	"soundsByType": {
+		"*-sand": {
+			"place": "game:block/sand",
+			"break": "game:block/sand",
+			"hit": "game:block/sand",
+			"walk": "game:walk/sand"
+		},
+		"*": {
+			"place": "game:block/gravel",
+			"break": "game:block/gravel",
+			"hit": "game:block/gravel",
+			"walk": "game:walk/gravel"
+		}
+	},
+	"drops": [
+		{
+			"type": "block",
+			"code": "earth:permafrost-{type}",
+			"quantity": {
+				"avg": 1
+			}
+		}
+	],
+	"heldTpIdleAnimation": "holdbothhandslarge",
+	"heldRightReadyAnimation": "heldblockready",
+	"heldTpUseAnimation": "twohandplaceblock",
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.23,
+			"y": -0.91,
+			"z": -0.8
+		},
+		"rotation": {
+			"x": -2,
+			"y": 25,
+			"z": -78
+		},
+		"scale": 0.4
+	}
+}

@@ -1,0 +1,106 @@
+diff --git a/src/Core/RiverNetwork.cs b/src/Core/RiverNetwork.cs
+index ec77af2..b2b30e3 100644
+--- a/src/Core/RiverNetwork.cs
++++ b/src/Core/RiverNetwork.cs
+@@ -99,6 +99,9 @@ namespace EarthMap.Core
+         struct Seg
+         {
+             public float X1, Z1, X2, Z2, Q, Len;
++            // Membership in the original 128-block grid is part of query semantics:
++            // Nearest's second pass blends only the segments in that exact cell.
++            public int CellX0, CellX1, CellZ0, CellZ1;
+             /// <summary>Reach index, and the distance along the reach at the segment start.</summary>
+             public int Reach;
+             public float S0;
+@@ -126,6 +129,7 @@ namespace EarthMap.Core
+         double[][] dbgBound;
+         readonly Dictionary<long, int[]> grid = new Dictionary<long, int[]>();
+         const double Cell = 128;
++        readonly int indexSpan;
+         readonly EarthGeometry geo;
+         public int SegmentCount => segs?.Length ?? 0;
+ 
+@@ -136,6 +140,10 @@ namespace EarthMap.Core
+             MinQ = minQ;
+             WidthScale = widthScale;
+             SizeScale = sizeScale > 0 ? sizeScale : 1;
++            // Group complete legacy cells rather than changing their boundaries.
++            // Large worlds otherwise replicate every widened segment into O(scale²)
++            // tiny grid buckets, consuming gigabytes before world generation starts.
++            indexSpan = Math.Max(1, (int)Math.Min(int.MaxValue, Math.Ceiling(SizeScale)));
+             Straighten = Math.Clamp(straighten, 0, 1);
+             StreamMode = streamMode ?? "none";
+             StreamMinQ = Math.Min(streamMinQ, minQ);
+@@ -378,10 +386,14 @@ namespace EarthMap.Core
+             var cells = new Dictionary<long, List<int>>();
+             for (int i = 0; i < segs.Length; i++)
+             {
+-                var s = segs[i];
++                ref var s = ref segs[i];
+                 double reach = Reach(s.Q);
+-                int cx0 = (int)Math.Floor((Math.Min(s.X1, s.X2) - reach) / Cell), cx1 = (int)Math.Floor((Math.Max(s.X1, s.X2) + reach) / Cell);
+-                int cz0 = (int)Math.Floor((Math.Min(s.Z1, s.Z2) - reach) / Cell), cz1 = (int)Math.Floor((Math.Max(s.Z1, s.Z2) + reach) / Cell);
++                s.CellX0 = (int)Math.Floor((Math.Min(s.X1, s.X2) - reach) / Cell);
++                s.CellX1 = (int)Math.Floor((Math.Max(s.X1, s.X2) + reach) / Cell);
++                s.CellZ0 = (int)Math.Floor((Math.Min(s.Z1, s.Z2) - reach) / Cell);
++                s.CellZ1 = (int)Math.Floor((Math.Max(s.Z1, s.Z2) + reach) / Cell);
++                int cx0 = Bucket(s.CellX0), cx1 = Bucket(s.CellX1);
++                int cz0 = Bucket(s.CellZ0), cz1 = Bucket(s.CellZ1);
+                 for (int cz = cz0; cz <= cz1; cz++)
+                 {
+                     for (int cx = cx0; cx <= cx1; cx++)
+@@ -397,6 +409,9 @@ namespace EarthMap.Core
+ 
+         static double Sq(double v) => v * v;
+         static long Key(int cx, int cz) => ((long)cx << 32) | (uint)cz;
++        // C# integer division truncates towards zero, so negative cells need floor division.
++        int Bucket(int cell) => cell / indexSpan - (cell < 0 && cell % indexSpan != 0 ? 1 : 0);
++        static bool InCell(in Seg s, int cx, int cz) => cx >= s.CellX0 && cx <= s.CellX1 && cz >= s.CellZ0 && cz <= s.CellZ1;
+ 
+         /// <summary>Half the water width (blocks).</summary>
+         public double HalfWidth(double q)
+@@ -505,12 +520,14 @@ namespace EarthMap.Core
+             hit = default;
+             if (segs == null || segs.Length == 0) return false;
+             x = geo.WrapX(x);
+-            if (!grid.TryGetValue(Key((int)Math.Floor(x / Cell), (int)Math.Floor(z / Cell)), out var ids)) return false;
++            int cx = (int)Math.Floor(x / Cell), cz = (int)Math.Floor(z / Cell);
++            if (!grid.TryGetValue(Key(Bucket(cx), Bucket(cz)), out var ids)) return false;
+             double best = double.MaxValue, bestD = 0, bestS = 0;
+             int bi = -1;
+             foreach (int i in ids)
+             {
+                 ref readonly var s = ref segs[i];
++                if (!InCell(in s, cx, cz)) continue;
+                 double d = Project(in s, x, z, out double t);
+                 if (d > Reach(s.Q)) continue;
+                 // prefer the bigger river where two influence zones overlap (confluences)
+@@ -532,6 +549,7 @@ namespace EarthMap.Core
+             foreach (int i in ids)
+             {
+                 ref readonly var s = ref segs[i];
++                if (!InCell(in s, cx, cz)) continue;
+                 double offset;
+                 if (s.Reach == b.Reach) offset = 0;
+                 else if (s.Reach == bp.Next) offset = bp.Len;
+@@ -591,14 +609,18 @@ namespace EarthMap.Core
+             double best = double.PositiveInfinity;
+             int cx0 = (int)Math.Floor((x - within) / Cell), cx1 = (int)Math.Floor((x + within) / Cell);
+             int cz0 = (int)Math.Floor((z - within) / Cell), cz1 = (int)Math.Floor((z + within) / Cell);
+-            for (int cz = cz0; cz <= cz1; cz++)
++            // Intersect original fine-cell rectangles: a wider bucket must not add
++            // candidates that the legacy distance window would never have visited.
++            if (cx0 > cx1 || cz0 > cz1) return best;
++            for (int cz = Bucket(cz0); cz <= Bucket(cz1); cz++)
+             {
+-                for (int cx = cx0; cx <= cx1; cx++)
++                for (int cx = Bucket(cx0); cx <= Bucket(cx1); cx++)
+                 {
+                     if (!grid.TryGetValue(Key(cx, cz), out var ids)) continue;
+                     foreach (int i in ids)
+                     {
+                         ref readonly var s = ref segs[i];
++                        if (s.CellX1 < cx0 || s.CellX0 > cx1 || s.CellZ1 < cz0 || s.CellZ0 > cz1) continue;
+                         double d = Project(in s, x, z, out _) - HalfWidth(s.Q);
+                         if (d < best) best = d;
+                     }

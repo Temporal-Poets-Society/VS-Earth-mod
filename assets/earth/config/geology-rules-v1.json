@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "materials": [
+    {"id":"granite","vanilla":"game:rock-granite"},
+    {"id":"basalt","vanilla":"game:rock-basalt"},
+    {"id":"andesite","vanilla":"game:rock-andesite"},
+    {"id":"peridotite","vanilla":"game:rock-peridotite"},
+    {"id":"sandstone","vanilla":"game:rock-sandstone"},
+    {"id":"shale","vanilla":"game:rock-shale"},
+    {"id":"claystone","vanilla":"game:rock-claystone"},
+    {"id":"limestone","vanilla":"game:rock-limestone"},
+    {"id":"conglomerate","vanilla":"game:rock-conglomerate"},
+    {"id":"slate","vanilla":"game:rock-slate"},
+    {"id":"dolostone","vanilla":"game:rock-limestone","provider":"geoaddons","asset":"game:rock-dolostone","note":"Vanilla carbonate-category proxy; not chemical equivalence."},
+    {"id":"gneiss","vanilla":"game:rock-slate","provider":"geoaddons","asset":"game:rock-gneiss","note":"Vanilla metamorphic-category proxy; texture and composition differ."},
+    {"id":"schist","vanilla":"game:rock-phyllite","provider":"geoaddons","asset":"game:rock-schist"},
+    {"id":"gabbro","vanilla":"game:rock-basalt","provider":"geoaddons","asset":"game:rock-gabbro","note":"Vanilla mafic-composition proxy; intrusive texture differs."},
+    {"id":"diorite","vanilla":"game:rock-andesite","provider":"geoaddons","asset":"game:rock-diorite"},
+    {"id":"rhyolite","vanilla":"game:rock-granite","provider":"geoaddons","asset":"game:rock-rhyolite","note":"Vanilla felsic-composition proxy; volcanic texture differs."},
+    {"id":"mudstone","vanilla":"game:rock-claystone","note":"GA mudstone deliberately excluded: its crushing recipe creates bauxite from generic mudstone."}
+  ],
+  "profiles": [
+    {"id":"unknown","label":"Unmapped bedrock: preserve vanilla strata","beds":[],"basement":"granite"},
+    {"id":"covered","label":"Unconsolidated cover; preserve vanilla unmeasured bedrock","beds":[],"basement":"granite"},
+    {"id":"siliciclastic","label":"Siliciclastic sedimentary sequence","beds":[{"material":"sandstone","fraction":0.24},{"material":"shale","fraction":0.13},{"material":"conglomerate","fraction":0.08},{"material":"sandstone","fraction":0.16},{"material":"slate","fraction":0.12}],"basement":"granite"},
+    {"id":"mixed-sedimentary","label":"Mixed sedimentary sequence","beds":[{"material":"shale","fraction":0.18},{"material":"limestone","fraction":0.16},{"material":"sandstone","fraction":0.20},{"material":"mudstone","fraction":0.15}],"basement":"granite"},
+    {"id":"carbonate","label":"Carbonate sedimentary sequence","beds":[{"material":"limestone","fraction":0.32},{"material":"shale","fraction":0.08},{"material":"dolostone","fraction":0.16},{"material":"sandstone","fraction":0.14}],"basement":"granite"},
+    {"id":"mafic-volcanic","label":"Mafic volcanic pile and intrusive root (synthesized)","beds":[{"material":"basalt","fraction":0.45},{"material":"gabbro","fraction":0.32}],"basement":"peridotite"},
+    {"id":"mafic-plutonic","label":"Mafic intrusive body (synthesized)","beds":[{"material":"gabbro","fraction":0.70}],"basement":"peridotite"},
+    {"id":"felsic-volcanic","label":"Felsic volcanic cover and intrusive root (synthesized)","beds":[{"material":"rhyolite","fraction":0.45}],"basement":"granite"},
+    {"id":"intermediate-volcanic","label":"Intermediate volcanic cover and intrusive root (synthesized)","beds":[{"material":"andesite","fraction":0.45},{"material":"diorite","fraction":0.30}],"basement":"granite"},
+    {"id":"felsic-plutonic","label":"Felsic intrusive body and metamorphic country rock (synthesized)","beds":[{"material":"granite","fraction":0.65}],"basement":"gneiss"},
+    {"id":"intermediate-plutonic","label":"Intermediate intrusive body (synthesized)","beds":[{"material":"diorite","fraction":0.65}],"basement":"gneiss"},
+    {"id":"metamorphic","label":"Metamorphic assemblage; grade/composition unresolved","beds":[{"material":"schist","fraction":0.30},{"material":"gneiss","fraction":0.35}],"basement":"granite"},
+    {"id":"evaporitic","label":"Evaporitic basin host sequence; salt mineral identity separately gated","beds":[{"material":"mudstone","fraction":0.20},{"material":"limestone","fraction":0.22},{"material":"dolostone","fraction":0.15},{"material":"sandstone","fraction":0.12}],"basement":"granite"},
+    {"id":"baltic-devonian","label":"Baltic Devonian carbonate/siliciclastic cover over deep crystalline basement (regional approximation)","beds":[{"material":"dolostone","fraction":0.18},{"material":"sandstone","fraction":0.22},{"material":"mudstone","fraction":0.14},{"material":"limestone","fraction":0.15},{"material":"sandstone","fraction":0.12}],"basement":"gneiss"}
+  ],
+  "classes":{"1":"covered","2":"mafic-volcanic","3":"siliciclastic","4":"mafic-plutonic","5":"mixed-sedimentary","6":"carbonate","7":"felsic-volcanic","8":"metamorphic","9":"felsic-plutonic","10":"intermediate-volcanic","12":"unknown","13":"intermediate-plutonic","14":"evaporitic"},
+  "saltSites":[
+    {"id":"wieliczka","lat":49.9791667,"lon":20.0638889,"radiusKm":5,"source":"https://whc.unesco.org/en/list/32/maps/","note":"UNESCO mine coordinate and documented rock salt mining since13thC. Earth-authored 5km influence kernel, NOT a surveyed deposit footprint or heritage boundary. Buried-native-salt attempts only; exact depth unresolved."},
+    {"id":"bochnia","lat":49.9691667,"lon":20.4175,"radiusKm":5,"source":"https://whc.unesco.org/en/list/32/maps/","note":"UNESCO mine coordinate and documented rock salt mining since13thC. Earth-authored 5km influence kernel, NOT a surveyed deposit footprint or heritage boundary. Buried-native-salt attempts only; exact depth unresolved."},
+    {"id":"cardona","lat":41.91574,"lon":1.68526,"radiusKm":5,"source":"https://mrdata.usgs.gov/mrds/show-mrds.php?dep_id=10107475","note":"MRDS record explicitly names halite and Cardona Formation evaporites. Earth-authored 5km influence kernel, NOT mapped extent. Native buried-salt geometry only; exact local depth unresolved."}
+  ],
+  "provinces":[
+    {
+      "id":"baltic-devonian-interior-pilot",
+      "profile":"baltic-devonian",
+      "polygon":[[22.5,56.2],[24.0,55.9],[27.8,56.1],[28.2,57.4],[26.0,57.9],[24.1,57.6],[22.5,56.2]],
+      "source":"https://videscentrs.lvgmc.lv/files/Zemes_dziles/Kopsavilkuma%20p%C4%81rskats%202023%202.pdf",
+      "note":"Author-drawn broad pilot envelope around reviewed Devonian formations, not a geological survey contact. Excludes southwest Permian limestone pilot area. Thicknesses synthesized; actual basement often below accessible game depth. Surface GUM cover remains separate."
+    }
+  ]
+}

@@ -1,0 +1,487 @@
+[
+ {
+  "code": "cerussite",
+  "triesPerChunk": 9.01,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:nugget-cerussite",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "limestone",
+     "dolostone",
+     "sandstone"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-cerussite-{rock}",
+    "name": "grade",
+    "allowedVariants": [
+     "poor",
+     "medium",
+     "rich"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 6,
+    "var": 1.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 2,
+    "var": 1
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 17.0,
+    "var": 13.0
+   },
+   "gradeDistribution": "RandomPlusDepthBonus"
+  }
+ },
+ {
+  "code": "vanadinite",
+  "triesPerChunk": 4.51,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:nugget-vanadinite",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "limestone",
+     "dolostone",
+     "sandstone"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-vanadinite-{rock}",
+    "name": "grade",
+    "allowedVariants": [
+     "poor",
+     "medium",
+     "rich"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 4,
+    "var": 1.0
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 2,
+    "var": 1
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 17.0,
+    "var": 13.0
+   },
+   "gradeDistribution": "RandomPlusDepthBonus"
+  }
+ },
+ {
+  "code": "wulfenite",
+  "triesPerChunk": 4.51,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:nugget-wulfenite",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "limestone",
+     "dolostone",
+     "sandstone"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-wulfenite-{rock}",
+    "name": "grade",
+    "allowedVariants": [
+     "poor",
+     "medium",
+     "rich"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 4,
+    "var": 1.0
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 2,
+    "var": 1
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 17.0,
+    "var": 13.0
+   },
+   "gradeDistribution": "RandomPlusDepthBonus"
+  }
+ },
+ {
+  "code": "smithsonite",
+  "triesPerChunk": 2.67,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:nugget-smithsonite",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "limestone",
+     "dolostone",
+     "sandstone"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-smithsonite-{rock}",
+    "name": "grade",
+    "allowedVariants": [
+     "poor",
+     "medium",
+     "rich"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 6,
+    "var": 1.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 2,
+    "var": 1
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 17.0,
+    "var": 13.0
+   },
+   "gradeDistribution": "RandomPlusDepthBonus"
+  }
+ },
+ {
+  "code": "hemimorphite",
+  "triesPerChunk": 2.67,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:nugget-hemimorphite",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "limestone",
+     "dolostone",
+     "sandstone"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-hemimorphite-{rock}",
+    "name": "grade",
+    "allowedVariants": [
+     "poor",
+     "medium",
+     "rich"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 6,
+    "var": 1.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 2,
+    "var": 1
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 17.0,
+    "var": 13.0
+   },
+   "gradeDistribution": "RandomPlusDepthBonus"
+  }
+ },
+ {
+  "code": "chalcopyrite",
+  "triesPerChunk": 4.92,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:nugget-chalcopyrite",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "granite",
+     "andesite",
+     "basalt",
+     "schist",
+     "gneiss"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-chalcopyrite-{rock}",
+    "name": "grade",
+    "allowedVariants": [
+     "poor",
+     "medium",
+     "rich",
+     "bountiful"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 8,
+    "var": 2.0
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 2,
+    "var": 1
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 47.5,
+    "var": 32.5
+   },
+   "gradeDistribution": "RandomPlusDepthBonus"
+  }
+ },
+ {
+  "code": "azurite",
+  "triesPerChunk": 3.69,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:nugget-azurite",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "limestone",
+     "sandstone",
+     "andesite"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-azurite-{rock}",
+    "name": "grade",
+    "allowedVariants": [
+     "poor",
+     "medium",
+     "rich"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 6,
+    "var": 1.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 2,
+    "var": 1
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 20.0,
+    "var": 15.0
+   },
+   "gradeDistribution": "RandomPlusDepthBonus"
+  }
+ },
+ {
+  "code": "tetrahedrite",
+  "triesPerChunk": 3.69,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:nugget-tetrahedrite",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "granite",
+     "slate",
+     "phyllite",
+     "schist"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-tetrahedrite-{rock}",
+    "name": "grade",
+    "allowedVariants": [
+     "poor",
+     "medium",
+     "rich"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 6,
+    "var": 1.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 2,
+    "var": 1
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 42.5,
+    "var": 27.5
+   },
+   "gradeDistribution": "RandomPlusDepthBonus"
+  }
+ },
+ {
+  "code": "sperrylite",
+  "triesPerChunk": 6.52,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:nugget-sperrylite",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "peridotite",
+     "basalt"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-sperrylite-{rock}",
+    "name": "grade",
+    "allowedVariants": [
+     "poor",
+     "medium"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 4,
+    "var": 1.0
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 2,
+    "var": 1
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 60.0,
+    "var": 30.0
+   },
+   "gradeDistribution": "RandomPlusDepthBonus"
+  }
+ },
+ {
+  "code": "pyrite",
+  "triesPerChunk": 7.42,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:ore-pyrite",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "shale",
+     "slate",
+     "granite",
+     "basalt",
+     "schist"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-pyrite-{rock}"
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 8,
+    "var": 2.0
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 2,
+    "var": 1
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 39.0,
+    "var": 31.0
+   }
+  }
+ },
+ {
+  "code": "wolframite",
+  "triesPerChunk": 0.43,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-nugget-wolframite",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "granite",
+     "gneiss",
+     "schist",
+     "phyllite",
+     "slate",
+     "limestone",
+     "dolostone"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-wolframite-{rock}",
+    "name": "grade",
+    "allowedVariants": [
+     "poor",
+     "medium",
+     "rich"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 7,
+    "var": 1.75
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 2,
+    "var": 1
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 57.5,
+    "var": 27.5
+   },
+   "gradeDistribution": "RandomPlusDepthBonus"
+  }
+ }
+]

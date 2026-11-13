@@ -1,0 +1,189 @@
+[
+  {
+    "file": "raw/fsu-coal_pt.shp",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_pt.shp",
+    "retrieved_utc": "2026-09-29T17:58:08.939760+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_pt.shp",
+    "content_type": "application/vnd.shp",
+    "last_modified": "Wed, 25 Apr 2001 17:30:00 GMT",
+    "status": "acquired",
+    "bytes": 5140,
+    "sha256": "e5dfbbd928c06d3d480ba67bf75849008c42afbd1a365818615be34e84b10821"
+  },
+  {
+    "file": "raw/fsu-coal_pt.dbf",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_pt.dbf",
+    "retrieved_utc": "2026-09-29T17:58:08.939760+00:00",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "raw/fsu-coal_pt.shx",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_pt.shx",
+    "retrieved_utc": "2026-09-29T17:58:08.940757+00:00",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "raw/fsu-coal_pt.prj",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_pt.prj",
+    "retrieved_utc": "2026-09-29T17:58:08.940757+00:00",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "raw/fsu-coal_dep.shp",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_dep.shp",
+    "retrieved_utc": "2026-09-29T17:58:09.746686+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_dep.shp",
+    "content_type": "application/vnd.shp",
+    "last_modified": "Wed, 25 Apr 2001 17:28:56 GMT",
+    "status": "acquired",
+    "bytes": 7548,
+    "sha256": "267d1f561982c164a328c917bbaccbf75734544ab9ae7016f67799a920529b36"
+  },
+  {
+    "file": "raw/fsu-coal_dep.dbf",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_dep.dbf",
+    "retrieved_utc": "2026-09-29T17:58:09.761237+00:00",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "raw/fsu-coal_dep.shx",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_dep.shx",
+    "retrieved_utc": "2026-09-29T17:58:09.766343+00:00",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "raw/fsu-coal_dep.prj",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_dep.prj",
+    "retrieved_utc": "2026-09-29T17:58:09.879663+00:00",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "raw/fsu-coalbnd.shp",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coalbnd.shp",
+    "retrieved_utc": "2026-09-29T17:58:10.486671+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coalbnd.shp",
+    "content_type": "application/vnd.shp",
+    "last_modified": "Fri, 15 Dec 2000 19:35:48 GMT",
+    "status": "acquired",
+    "bytes": 521908,
+    "sha256": "0b5cc648cf7e39357296e4dcadd65680e8f2bb02f3d9fa89cbce6735b54e3d0c"
+  },
+  {
+    "file": "raw/fsu-coalbnd.dbf",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coalbnd.dbf",
+    "retrieved_utc": "2026-09-29T17:58:10.498226+00:00",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "raw/fsu-coalbnd.shx",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coalbnd.shx",
+    "retrieved_utc": "2026-09-29T17:58:10.589591+00:00",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "raw/fsu-coalbnd.prj",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coalbnd.prj",
+    "retrieved_utc": "2026-09-29T17:58:10.726525+00:00",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "raw/fsu-coal_pt-metadata.html",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/metadata/faq/coal_pt.htm",
+    "retrieved_utc": "2026-09-29T17:58:11.235984+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/metadata/faq/coal_pt.htm",
+    "content_type": "text/html",
+    "last_modified": null,
+    "status": "acquired",
+    "bytes": 20620,
+    "sha256": "d71a362926f86fa1200e4d4bf00301e83642111ed88753967167c277a3327bc5"
+  },
+  {
+    "file": "raw/fsu-coal_dep-metadata.html",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/metadata/faq/coal_dep.htm",
+    "retrieved_utc": "2026-09-29T17:58:11.391848+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/metadata/faq/coal_dep.htm",
+    "content_type": "text/html",
+    "last_modified": null,
+    "status": "acquired",
+    "bytes": 21125,
+    "sha256": "77af9a4aa21cd34c16310af655b8d0d0cb1bd4614772a7a721a69c9073a7752d"
+  },
+  {
+    "file": "raw/fsu-coalbnd-metadata.html",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/metadata/faq/coalbnd.htm",
+    "retrieved_utc": "2026-09-29T17:58:11.516718+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/metadata/faq/coalbnd.htm",
+    "content_type": "text/html",
+    "last_modified": null,
+    "status": "acquired",
+    "bytes": 22038,
+    "sha256": "a1f3025607e8b0acd3f0aa1e31f296f078b31b09a8e51733601a8dd76a2e15e7"
+  },
+  {
+    "file": "raw/fsu-coal_pt.gen",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/export/ascii/coal_pt.gen",
+    "retrieved_utc": "2026-09-29T17:58:40.139153+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/export/ascii/coal_pt.gen",
+    "content_type": null,
+    "last_modified": "Fri, 20 Apr 2001 21:46:30 GMT",
+    "status": "acquired",
+    "bytes": 8645,
+    "sha256": "a26709522b9286756511b4f621744363efe2263edc0b96c4dc9f81c6a1aeded6"
+  },
+  {
+    "file": "raw/fsu-coal_pt.csv",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/export/ascii/coal_pt.csv",
+    "retrieved_utc": "2026-09-29T17:58:40.140658+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/export/ascii/coal_pt.csv",
+    "content_type": "text/csv",
+    "last_modified": "Fri, 20 Apr 2001 21:45:48 GMT",
+    "status": "acquired",
+    "bytes": 4176,
+    "sha256": "0090593cbcf43704071c28ee0ff0a54608b135a5cd9da4ce856364c2148fc544"
+  },
+  {
+    "file": "raw/fsu-coal_dep.gen",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/export/ascii/coal_dep.gen",
+    "retrieved_utc": "2026-09-29T17:58:40.140658+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/export/ascii/coal_dep.gen",
+    "content_type": null,
+    "last_modified": "Fri, 20 Apr 2001 20:42:00 GMT",
+    "status": "acquired",
+    "bytes": 12773,
+    "sha256": "ba8b604e46219d16ac7fc79c2d416851074247d43ab3a3fa3d5bc79a63dab5ab"
+  },
+  {
+    "file": "raw/fsu-coal_dep.csv",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/export/ascii/coal_dep.csv",
+    "retrieved_utc": "2026-09-29T17:58:40.141663+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/export/ascii/coal_dep.csv",
+    "content_type": "text/csv",
+    "last_modified": "Mon, 04 Jun 2001 16:44:18 GMT",
+    "status": "acquired",
+    "bytes": 12732,
+    "sha256": "dbb9850ad4d5a483c10809bc8c0c7f0684a4237ebd75522ac69cd1235d7edef5"
+  },
+  {
+    "file": "raw/fsu-coalbnd.gen",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/export/ascii/coalbnd.gen",
+    "retrieved_utc": "2026-09-29T17:58:40.965330+00:00",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "raw/fsu-coalbnd.csv",
+    "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/export/ascii/coalbnd.csv",
+    "retrieved_utc": "2026-09-29T17:58:40.977208+00:00",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

@@ -1,0 +1,86 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- VS 1.22 runs on .NET 10. Building with the .NET 8 SDK works as long as we compile
+         against the installed .NET 10 runtime assemblies instead of the .NET 8 reference pack. -->
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>12</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>EarthMap</AssemblyName>
+    <RootNamespace>EarthMap</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin\$(Configuration)\mod\</OutputPath>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <NoWarn>$(NoWarn);CA1416</NoWarn>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(VINTAGE_STORY)</VintageStoryPath>
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(APPDATA)\Vintagestory</VintageStoryPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="src\**\*.cs" />
+    <!-- decision 0051: the squares Copernicus GLO-90 has tiles for (tools/bake_glo90_tiles.py) -->
+    <EmbeddedResource Include="data\glo90-tiles.bin" LogicalName="EarthMap.glo90-tiles.bin" />
+  </ItemGroup>
+
+  <!-- Compile against the game's own .NET runtime (10.x) so the game DLLs' references line up. -->
+  <PropertyGroup>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <NetCoreRuntimeDir>$([System.IO.Directory]::GetDirectories('$(NetCoreRoot)shared\Microsoft.NETCore.App', '10.*')[0])</NetCoreRuntimeDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(NetCoreRuntimeDir)\System.*.dll" Exclude="$(NetCoreRuntimeDir)\System.Private.*.dll;$(NetCoreRuntimeDir)\System.IO.Compression.Native.dll" Private="false" />
+    <Reference Include="$(NetCoreRuntimeDir)\System.Private.CoreLib.dll" Private="false" />
+    <!-- HttpClient's Uri (decision 0051's tile downloads) -->
+    <Reference Include="$(NetCoreRuntimeDir)\System.Private.Uri.dll" Private="false" />
+    <Reference Include="$(NetCoreRuntimeDir)\netstandard.dll" Private="false" />
+    <Reference Include="$(NetCoreRuntimeDir)\mscorlib.dll" Private="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="VintagestoryAPI"><HintPath>$(VintageStoryPath)\VintagestoryAPI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="VSEssentials"><HintPath>$(VintageStoryPath)\Mods\VSEssentials.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="VSSurvivalMod"><HintPath>$(VintageStoryPath)\Mods\VSSurvivalMod.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>$(VintageStoryPath)\Lib\Newtonsoft.Json.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="protobuf-net"><HintPath>$(VintageStoryPath)\Lib\protobuf-net.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(VintageStoryPath)\Lib\0Harmony.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+  <!-- Decision 0066: Earth is one mod. It carries the code, its assets and the data a client reads (the climate), plus a
+       few small server files; every other data file (terrain, water, the 2' ground sets, wetlands, soil sites,
+       floodplains) is in the server's data store, fetched from the earth-data release (src/Core/EarthDataStore.cs). -->
+  <ItemGroup>
+    <None Include="earthdata\earth.json;earthdata\climate.bin;earthdata\climatefix.bin;earthdata\climatefix2.bin;earthdata\climatefix3.bin;earthdata\temperature.bin;earthdata\rain.bin;earthdata\weather.bin;earthdata\aridity.bin;earthdata\ATTRIBUTION.txt" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="earthdata\reservoirs-v1.json;earthdata\outlets.bin;earthdata\works-1318-2.bin;earthdata\rivers-nonperennial-2.bin" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="modinfo.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="LICENSE" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="worldconfig.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="assets\**\*" Exclude="assets\earth\config\ground\*.egt;assets\earth\config\ground\*.egts;assets\earth\config\wetlands.bin;assets\earth\config\soil-site.bin;assets\earth\config\floodplains.bin" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- Release builds produce one archive, release\earth-<version>.zip, within the Mod DB's 40 MB. Older releases are retained. -->
+  <PropertyGroup>
+    <ModVersion>$([System.Text.RegularExpressions.Regex]::Match($([System.IO.File]::ReadAllText('$(MSBuildProjectDirectory)\modinfo.json')), '"version"\s*:\s*"([^"]+)"').Groups[1].Value)</ModVersion>
+    <!-- The DLL carries the mod version; the assembly identity stays fixed so other mods' references keep binding. -->
+    <Version>$(ModVersion)</Version>
+    <FileVersion>$([System.Text.RegularExpressions.Regex]::Replace('$(ModVersion)', '-.*$', ''))</FileVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <ModId>$([System.Text.RegularExpressions.Regex]::Match($([System.IO.File]::ReadAllText('$(MSBuildProjectDirectory)\modinfo.json')), '"modid"\s*:\s*"([^"]+)"').Groups[1].Value)</ModId>
+    <ReleaseZip>$(MSBuildProjectDirectory)\release\$(ModId)-$(ModVersion).zip</ReleaseZip>
+    <OverwriteMainArgument Condition="'$(OverwriteRelease)' == 'true'">--overwrite-main</OverwriteMainArgument>
+  </PropertyGroup>
+  <!-- A published release zip is never replaced: bump "version" in modinfo.json for a new release, or pass
+       -p:OverwriteRelease=true to rebuild an unpublished one deliberately. -->
+  <!-- Start each release build from an empty output folder so files removed from the mod never linger in the zip. -->
+  <Target Name="CleanModOutput" BeforeTargets="BeforeBuild" Condition="'$(Configuration)' == 'Release'">
+    <RemoveDir Directories="$(OutputPath)" />
+  </Target>
+  <Target Name="PackageMod" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <Error Condition="'$(ModVersion)' == ''" Text="No version found in modinfo.json" />
+    <Error Condition="Exists('$(ReleaseZip)') And '$(OverwriteRelease)' != 'true'" Text="$(ReleaseZip) already exists. Bump the version in modinfo.json, or pass -p:OverwriteRelease=true to replace it on purpose." />
+    <MakeDir Directories="$(MSBuildProjectDirectory)\release" />
+    <Exec Command="python &quot;$([MSBuild]::NormalizePath('$(MSBuildProjectDirectory)', 'tools', 'package-earth.py'))&quot; --input &quot;$([MSBuild]::NormalizeDirectory('$(MSBuildProjectDirectory)', '$(OutputPath)')).&quot; --output &quot;$([MSBuild]::NormalizePath('$(MSBuildProjectDirectory)', 'release'))&quot; $(OverwriteMainArgument)" />
+  </Target>
+
+</Project>

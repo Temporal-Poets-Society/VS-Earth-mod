@@ -1,0 +1,55 @@
+{
+  "limit_bytes": 40000000,
+  "archives": [
+    {
+      "file": "C:\\VS mods\\Earth\\release\\earthmap-0.17.0-pre.16.zip",
+      "bytes": 28490129,
+      "sha256": "f8c34a3788e437db992808c3b8edbbb9f9408c894df0d841c039856b9fe425dc"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\release\\earthterraindata-1.0.0.zip",
+      "bytes": 36424452,
+      "sha256": "1ebdbc0a22a862f4b0b078ce3d48b32f37bd6b150cb9d478f25599f1d33d2001"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\release\\earthwaterdata-1.0.0.zip",
+      "bytes": 31583561,
+      "sha256": "edb78da63307ace1c72b3647039369294a57bdc2e9d7f2815d9e5ff9ea907e57"
+    }
+  ],
+  "date": "2026-10-31",
+  "status": "installed; author confirms working; not published by this chat",
+  "change": "Sea is strongly recommended and optional; terrain/data unchanged from pre.15",
+  "native_without_sea": {
+    "run": "C:\\VS mods\\Earth\\.claude\\worktrees\\codex-earth-playstyle\\testruns\\optional-sea-pre16-20261031\\missing-sea",
+    "result": "PASS",
+    "loaded_mods": "31.10.2026 21:19:15 [Notification] Mods, sorted by dependency: game, cylinderworld, earthterraindata, earthwaterdata, earthrequiredmodstest, creative, survival, hydrology, earthmap",
+    "earth_enabled": true,
+    "river_layout": 10,
+    "river_query": 2,
+    "earth_weather_without_sea": true,
+    "sea_link": "none",
+    "clean_shutdown": true,
+    "errors": 0
+  },
+  "dependency_checks": 35,
+  "changed_main_archive_entries": [
+    "EarthMap.dll",
+    "EarthMap.pdb",
+    "modinfo.json"
+  ],
+  "previous_pre15_and_data_archives_preserved": true,
+  "installation": {
+    "receipt": "C:\\VS mods\\Earth\\docs\\installation-earth-pre16-2026-10-31.json",
+    "installed_at": "2026-10-31 21:40:06 +02:00",
+    "backup_directory": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\Backups\\earthmap-before-pre16-20261031-214006",
+    "gameplay_verification": "author confirmed working",
+    "settings_unchanged": true
+  },
+  "author_feedback": {
+    "date": "2026-10-31",
+    "timezone": "Europe/Riga",
+    "message": "ok it works",
+    "scope": "Author confirms the installed pre.16 build works; detailed coverage was not specified."
+  }
+}

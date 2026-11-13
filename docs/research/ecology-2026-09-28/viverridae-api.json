@@ -1,0 +1,266 @@
+{
+  "mod": {
+    "modid": 3334,
+    "assetid": 19699,
+    "name": "Fauna of the Stone Age: Viverridae Plus",
+    "text": "<p><span style=\"font-weight: 400;\">A collection of small omnivorous mammals from the family Viverridae, along with their cousin the African Palm Civet, these trouble makers will scurry about after dark, adding life to the regions of the subtropics and tropical regions. Some will get into fruit bushes, hen houses and other small farm animals and their ability to climb means fences won&rsquo;t hold them back.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" style=\"width: 2554px; border-spacing: 0px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col width=\"168\" /><col width=\"137\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"355\" /></colgroup>\n<tbody>\n<tr>\n<td style=\"width: 203.461px;\">Common Name</td>\n<td style=\"width: 218.808px;\">Scientific name</td>\n<td style=\"width: 99.8032px;\">Category</td>\n<td style=\"width: 99.4907px;\">Weight</td>\n<td style=\"width: 99.3519px;\">Health</td>\n<td style=\"width: 99.6296px;\">Length</td>\n<td style=\"width: 99.5255px;\">Damage</td>\n<td style=\"width: 99.2708px;\">Temp</td>\n<td style=\"width: 99.8032px;\">Preciptation</td>\n<td style=\"width: 99.4329px;\">Foliage Needs</td>\n<td style=\"width: 99.4445px;\">Altitude</td>\n<td style=\"width: 99.3287px;\">Group Size</td>\n<td style=\"width: 99.3171px;\">Meat Drops</td>\n<td style=\"width: 99.3171px;\">Fat Drops</td>\n<td style=\"width: 99.3171px;\">Hide Drops</td>\n<td style=\"width: 99.3171px;\">Other Drops</td>\n<td style=\"width: 99.6528px;\">Behaviors</td>\n<td style=\"width: 99.3056px;\">Notes</td>\n<td style=\"width: 539.676px;\">Eats</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">African palm civet</td>\n<td style=\"width: 218.808px;\">Nandinia binotata</td>\n<td style=\"width: 99.8032px;\">Nandiniidae</td>\n<td style=\"width: 99.4907px;\">2/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.62B .76T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">19-40</td>\n<td style=\"width: 99.8032px;\">60-100</td>\n<td style=\"width: 99.4329px;\">0.4-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.65</td>\n<td style=\"width: 99.3287px;\">1-3 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Fruit, berry bushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Binturong</td>\n<td style=\"width: 218.808px;\">Arctictis binturong</td>\n<td style=\"width: 99.8032px;\">Viverridae</td>\n<td style=\"width: 99.4907px;\">15/1</td>\n<td style=\"width: 99.3519px;\">6/3</td>\n<td style=\"width: 99.6296px;\">.9B .71T</td>\n<td style=\"width: 99.5255px;\">4t1</td>\n<td style=\"width: 99.2708px;\">17-40</td>\n<td style=\"width: 99.8032px;\">50-100</td>\n<td style=\"width: 99.4329px;\">0.4-1.0</td>\n<td style=\"width: 99.4445px;\">1.1-1.3</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">1-2</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1M</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Small-toothed palm civet</td>\n<td style=\"width: 218.808px;\">Arctogalidia trivirgata</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">2.5/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.53B/.58T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">24-40</td>\n<td style=\"width: 99.8032px;\">65-100</td>\n<td style=\"width: 99.4329px;\">0.5-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.4</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Owston's palm civet</td>\n<td style=\"width: 218.808px;\">Chrotogale owstoni</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">2/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.57B/.43T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">18-26</td>\n<td style=\"width: 99.8032px;\">65-100</td>\n<td style=\"width: 99.4329px;\">0.7-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.3</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">African civet</td>\n<td style=\"width: 218.808px;\">Civettictis civetta</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">13/1</td>\n<td style=\"width: 99.3519px;\">5/3</td>\n<td style=\"width: 99.6296px;\">.84B/47T</td>\n<td style=\"width: 99.5255px;\">4t1</td>\n<td style=\"width: 99.2708px;\">16-40</td>\n<td style=\"width: 99.8032px;\">10-100</td>\n<td style=\"width: 99.4329px;\">0.2-0.7</td>\n<td style=\"width: 99.4445px;\">1.0-1.5</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">1-2</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1M</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">3M step</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Otter civet</td>\n<td style=\"width: 218.808px;\">Cynogale bennettii</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">4/0.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.68B/.2T</td>\n<td style=\"width: 99.5255px;\">2t1</td>\n<td style=\"width: 99.2708px;\">27-40</td>\n<td style=\"width: 99.8032px;\">75-100</td>\n<td style=\"width: 99.4329px;\">0.6-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.05</td>\n<td style=\"width: 99.3287px;\">1-4M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Hose's palm civet</td>\n<td style=\"width: 218.808px;\">Diplogale hosei</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">1.5/0.25</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6296px;\">.54B/.35T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">29-40</td>\n<td style=\"width: 99.8032px;\">85-100</td>\n<td style=\"width: 99.4329px;\">0.6-1.0</td>\n<td style=\"width: 99.4445px;\">1.1-1.3</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, meat, eggs, fish, insects</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Ethiopian genet</td>\n<td style=\"width: 218.808px;\">Genetta abyssinica</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">1.5/0.25</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6296px;\">.5B/.45T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">13-40</td>\n<td style=\"width: 99.8032px;\">5-60</td>\n<td style=\"width: 99.4329px;\">0-0.4</td>\n<td style=\"width: 99.4445px;\">1.0-1.8</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Miombo genet</td>\n<td style=\"width: 218.808px;\">Genetta angolensis</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">1.5/0.25</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6296px;\">.48B/.43T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">18-24</td>\n<td style=\"width: 99.8032px;\">50-75</td>\n<td style=\"width: 99.4329px;\">0.1-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.6</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Bourlon's genet</td>\n<td style=\"width: 218.808px;\">Genetta bourloni</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">1.5/0.25</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6296px;\">.5B/.41T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">25-40</td>\n<td style=\"width: 99.8032px;\">85-100</td>\n<td style=\"width: 99.4329px;\">0.5-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.6</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Crested servaline genet</td>\n<td style=\"width: 218.808px;\">Genetta cristata</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">3/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.55B/.4T</td>\n<td style=\"width: 99.5255px;\">2t1</td>\n<td style=\"width: 99.2708px;\">27-40</td>\n<td style=\"width: 99.8032px;\">80-100</td>\n<td style=\"width: 99.4329px;\">0.3-0.8</td>\n<td style=\"width: 99.4445px;\">1.0-1.3</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Common genet</td>\n<td style=\"width: 218.808px;\">Genetta genetta</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">2/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.55B/.52T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">13-40</td>\n<td style=\"width: 99.8032px;\">10-80</td>\n<td style=\"width: 99.4329px;\">0.3-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.4</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Johnston's genet</td>\n<td style=\"width: 218.808px;\">Genetta johnstoni</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">2/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.55B/.52T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">25-40</td>\n<td style=\"width: 99.8032px;\">85-100</td>\n<td style=\"width: 99.4329px;\">0.5-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.6</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Rusty-spotted genet</td>\n<td style=\"width: 218.808px;\">Genetta maculata</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">2/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.52B/.53T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">15-40</td>\n<td style=\"width: 99.8032px;\">40-100</td>\n<td style=\"width: 99.4329px;\">0.3-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.6</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Pardine genet</td>\n<td style=\"width: 218.808px;\">Genetta pardina</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">3/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.55B/.49T</td>\n<td style=\"width: 99.5255px;\">2t1</td>\n<td style=\"width: 99.2708px;\">23-40</td>\n<td style=\"width: 99.8032px;\">30-100</td>\n<td style=\"width: 99.4329px;\">0.3-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.4</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Aquatic genet</td>\n<td style=\"width: 218.808px;\">Genetta piscivora</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">1.5/0.25</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6296px;\">.49B/.41T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">24-28</td>\n<td style=\"width: 99.8032px;\">65-85</td>\n<td style=\"width: 99.4329px;\">0.7-1.0</td>\n<td style=\"width: 99.4445px;\">1.1-1.5</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Cypriot genet &dagger;</td>\n<td style=\"width: 218.808px;\">Genetta plesictoides</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">2/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.55B/.52T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">15-20</td>\n<td style=\"width: 99.8032px;\">30-65</td>\n<td style=\"width: 99.4329px;\">0-0.7</td>\n<td style=\"width: 99.4445px;\">1.0-1.5</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">King genet</td>\n<td style=\"width: 218.808px;\">Genetta poensis</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">2/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.6B/.5T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">26-40</td>\n<td style=\"width: 99.8032px;\">65-85</td>\n<td style=\"width: 99.4329px;\">0.7-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.4</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Servaline genet</td>\n<td style=\"width: 218.808px;\">Genetta servalina</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">2/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.51B/.46T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">20-28</td>\n<td style=\"width: 99.8032px;\">60-100</td>\n<td style=\"width: 99.4329px;\">0.4-1.0</td>\n<td style=\"width: 99.4445px;\">1.1-1.5</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Hausa genet</td>\n<td style=\"width: 218.808px;\">Genetta thierryi</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">1.5/0.25</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6296px;\">.45B/.41T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">24-40</td>\n<td style=\"width: 99.8032px;\">65-100</td>\n<td style=\"width: 99.4329px;\">0.5-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.5</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Cape genet</td>\n<td style=\"width: 218.808px;\">Genetta tigrina</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">1.5/0.25</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6296px;\">.58B/.46T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">12-18</td>\n<td style=\"width: 99.8032px;\">20-65</td>\n<td style=\"width: 99.4329px;\">0.6-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.4</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Giant forest genet</td>\n<td style=\"width: 218.808px;\">Genetta victoriae</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">3.5/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.6B/.5T</td>\n<td style=\"width: 99.5255px;\">2t1</td>\n<td style=\"width: 99.2708px;\">22-26</td>\n<td style=\"width: 99.8032px;\">65-85</td>\n<td style=\"width: 99.4329px;\">0.4-1.0</td>\n<td style=\"width: 99.4445px;\">1.1-1.6</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Banded palm civet</td>\n<td style=\"width: 218.808px;\">Hemigalus derbyanus</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">2/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.53B/.4T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">26-40</td>\n<td style=\"width: 99.8032px;\">75-100</td>\n<td style=\"width: 99.4329px;\">0.6-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.55</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Sulawesi palm civet</td>\n<td style=\"width: 218.808px;\">\n<div>\n<div>Macrogalidia musschenbroekii</div>\n</div>\n</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">6/.5</td>\n<td style=\"width: 99.3519px;\">4/3</td>\n<td style=\"width: 99.6296px;\">.89B/.64T</td>\n<td style=\"width: 99.5255px;\">3t1</td>\n<td style=\"width: 99.2708px;\">26-40</td>\n<td style=\"width: 99.8032px;\">85-100</td>\n<td style=\"width: 99.4329px;\">0.6-1.0</td>\n<td style=\"width: 99.4445px;\">1.1-1.65</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">1-2</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1M</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Masked palm civet</td>\n<td style=\"width: 218.808px;\">Paguma larvata</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">4/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.6B/.5T</td>\n<td style=\"width: 99.5255px;\">2t1</td>\n<td style=\"width: 99.2708px;\">12-40</td>\n<td style=\"width: 99.8032px;\">30-100</td>\n<td style=\"width: 99.4329px;\">0.5-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.6</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Asian palm civet</td>\n<td style=\"width: 218.808px;\">\n<div>\n<div>Paradoxurus hermaphroditus</div>\n</div>\n</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">4/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.53B/.48T</td>\n<td style=\"width: 99.5255px;\">2t1</td>\n<td style=\"width: 99.2708px;\">18-40</td>\n<td style=\"width: 99.8032px;\">25-100</td>\n<td style=\"width: 99.4329px;\">0.7-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.6</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Brown palm civet</td>\n<td style=\"width: 218.808px;\">Paradoxurus jerdoni</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">4/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.62B/.53T</td>\n<td style=\"width: 99.5255px;\">2t1</td>\n<td style=\"width: 99.2708px;\">26-40</td>\n<td style=\"width: 99.8032px;\">75-100</td>\n<td style=\"width: 99.4329px;\">0.6-1.0</td>\n<td style=\"width: 99.4445px;\">1.1-1.5</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Golden palm civet</td>\n<td style=\"width: 218.808px;\">\n<div>\n<div>Paradoxurus zeylonensis</div>\n</div>\n</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">4/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.58B/.52T</td>\n<td style=\"width: 99.5255px;\">2t1</td>\n<td style=\"width: 99.2708px;\">28-40</td>\n<td style=\"width: 99.8032px;\">75-100</td>\n<td style=\"width: 99.4329px;\">0.6-1.0</td>\n<td style=\"width: 99.4445px;\">1.1-1.5</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">West African oyan</td>\n<td style=\"width: 218.808px;\">Poiana leightoni</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">.7/.1</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6296px;\">.38B/.4T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">24-26</td>\n<td style=\"width: 99.8032px;\">75-100</td>\n<td style=\"width: 99.4329px;\">0.8-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.4</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, meat, eggs, fish, insects</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Central African oyan</td>\n<td style=\"width: 218.808px;\">Poiana richardsonii</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">.7/.1</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6296px;\">.43B/.43T</td>\n<td style=\"width: 99.5255px;\">1t1</td>\n<td style=\"width: 99.2708px;\">22-26</td>\n<td style=\"width: 99.8032px;\">65-100</td>\n<td style=\"width: 99.4329px;\">0.8-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.6</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">Climbing</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, meat, eggs, fish, insects</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Malabar large-spotted civet</td>\n<td style=\"width: 218.808px;\">Viverra civettina</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">6/.5</td>\n<td style=\"width: 99.3519px;\">4/3</td>\n<td style=\"width: 99.6296px;\">.76B/.33T</td>\n<td style=\"width: 99.5255px;\">3t1</td>\n<td style=\"width: 99.2708px;\">24-26</td>\n<td style=\"width: 99.8032px;\">75-100</td>\n<td style=\"width: 99.4329px;\">0.8-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.6</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">1-2</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1M</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">3M step</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Large-spotted civet</td>\n<td style=\"width: 218.808px;\">Viverra megaspila</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">7/.5</td>\n<td style=\"width: 99.3519px;\">4/3</td>\n<td style=\"width: 99.6296px;\">.77B/.39T</td>\n<td style=\"width: 99.5255px;\">3t1</td>\n<td style=\"width: 99.2708px;\">16-28</td>\n<td style=\"width: 99.8032px;\">50-100</td>\n<td style=\"width: 99.4329px;\">0.6-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.1</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">1-2</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1M</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">3M step</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Malayan civet</td>\n<td style=\"width: 218.808px;\">Viverra tangalunga</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">4/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.67B/.35T</td>\n<td style=\"width: 99.5255px;\">2t1</td>\n<td style=\"width: 99.2708px;\">22-40</td>\n<td style=\"width: 99.8032px;\">75-100</td>\n<td style=\"width: 99.4329px;\">0.7-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.4</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">3M step</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Large Indian civet</td>\n<td style=\"width: 218.808px;\">Viverra zibetha</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">8/.5</td>\n<td style=\"width: 99.3519px;\">4/3</td>\n<td style=\"width: 99.6296px;\">.85B/.59T</td>\n<td style=\"width: 99.5255px;\">3t1</td>\n<td style=\"width: 99.2708px;\">10-40</td>\n<td style=\"width: 99.8032px;\">50-100</td>\n<td style=\"width: 99.4329px;\">0.3-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.6</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">1-2</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1M</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">3M step</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n<tr>\n<td style=\"width: 203.461px;\">Small Indian civet</td>\n<td style=\"width: 218.808px;\">Viverricula indica</td>\n<td style=\"width: 99.8032px;\">&nbsp;</td>\n<td style=\"width: 99.4907px;\">3/.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6296px;\">.58B/.43T</td>\n<td style=\"width: 99.5255px;\">2t1</td>\n<td style=\"width: 99.2708px;\">10-40</td>\n<td style=\"width: 99.8032px;\">25-100</td>\n<td style=\"width: 99.4329px;\">0.1-1.0</td>\n<td style=\"width: 99.4445px;\">1.0-1.65</td>\n<td style=\"width: 99.3287px;\">1 M&amp;F</td>\n<td style=\"width: 99.3171px;\">0.5</td>\n<td style=\"width: 99.3171px;\">0</td>\n<td style=\"width: 99.3171px;\">1S</td>\n<td style=\"width: 99.3171px;\">&nbsp;</td>\n<td style=\"width: 99.6528px;\">3M step</td>\n<td style=\"width: 99.3056px;\">&nbsp;</td>\n<td style=\"width: 539.676px;\">Protein, Fruit, meat, eggs, fish, insects, berrybushes</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Most of the civet and genet species can climb on all surfaces, and will attack small farm animals and eat from berry bushes. They can be hunted for a small amount of bush meat and hide.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Features:</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">All species have a unique pelt that can be used to craft hide, and taxidermied full body.</span><span style=\"font-weight: 400;\"><br /></span></p>\n<p><span style=\"font-weight: 400;\">And a big thanks to everyone who gave feedback and assistance!<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong> How do I domesticate the animals in this pack?<br /><br /><strong>A:</strong> Get a male and female adult of a given species within 10 blocks, wait until the female is ready to mate and feed her the sufficient number of portions and the male at least one. Different species require different amounts and can be found in the entity file under the multiply section. Animals can be fed either by dropping items on the ground or by using the large trough. The small trough is not supported at this time due to patching formats. Each species diet can be found in this mod's description or in their entity file under the diet section. After 10 generations, entities stop attacking the player and after 10 generations they will no longer flee the player. Only the mother's generation matters for progressing generations.<br /><br /><br /><strong>Q:</strong> Why so many animal packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain clade file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><br /><strong>Q:</strong> Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> Yes, this mod series is safe to add and remove. Items from this mod that have been placed will be invisible or appear as question blocks if the mod is removed but can be safely broken.<br /><br /></div>\n</div>\n<p><span style=\"font-weight: 400;\"> <br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "viverridae",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_c7c6cbc41947489b5d794bb99a12dcb5.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_c7c6cbc41947489b5d794bb99a12dcb5.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_c7c6cbc41947489b5d794bb99a12dcb5.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 80873,
+    "follows": 863,
+    "trendingpoints": 1,
+    "comments": 36,
+    "side": "both",
+    "type": "mod",
+    "created": "2025-02-16 18:12:13",
+    "lastreleased": "2026-09-28 14:48:45",
+    "lastmodified": "2026-09-28 20:13:22",
+    "tags": [
+      "Crafting",
+      "Furniture",
+      "Creatures"
+    ],
+    "releases": [
+      {
+        "releaseid": 58894,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Viverridae-v1._8a1fdfd3e8cfcfd82c87037678d40d6d.zip?dl=FotSA-Viverridae-v1.0.10.zip",
+        "filename": "FotSA-Viverridae-v1.0.10.zip",
+        "fileid": 125953,
+        "downloads": 94,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "viverridae",
+        "modversion": "1.0.10",
+        "created": "2026-09-28 14:48:45",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Freshwater fish interactions</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Added-Oiled, Raw, Salted hides and associated recipes<br></span><span style=\"font-weight: 400;\">Fixed-Large troughs can’t be used for civet, genet or oyan feeding</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Changed spawn conditions to not allow any amount of artificial light block spawns<br></span><span style=\"font-weight: 400;\">Tweak-Reduced spawn checks to single per species for optimization</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Removed minimum altitude from most spawn conditions</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Refactored AI tasks to the new version</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Reformatted folders to match base game’s folder layout</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Split entity files into adult and babies</span></p>"
+      },
+      {
+        "releaseid": 52938,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Viverridae-v1._89f157fcd310b80a3295a0f4b3bb17fe.zip?dl=FotSA-Viverridae-v1.0.9.zip",
+        "filename": "FotSA-Viverridae-v1.0.9.zip",
+        "fileid": 114672,
+        "downloads": 6200,
+        "tags": [
+          "1.22.6"
+        ],
+        "modidstr": "viverridae",
+        "modversion": "1.0.9",
+        "created": "2026-08-14 16:17:22",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-Change chance and wanderChance to executionChance</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Animal interaction patches</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Note-This is a quick a dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22</span></p>"
+      },
+      {
+        "releaseid": 32124,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Viverridae-v1._78f54920028890d40d25cad4568edf86.zip?dl=FotSA-Viverridae-v1.0.8.zip",
+        "filename": "FotSA-Viverridae-v1.0.8.zip",
+        "fileid": 70693,
+        "downloads": 20047,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "viverridae",
+        "modversion": "1.0.8",
+        "created": "2026-01-07 00:09:22",
+        "changelog": "<p>Updated-1 hide is always dropped from killed animals</p>"
+      },
+      {
+        "releaseid": 28305,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Viverridae-v1._4d0b237e78d21bc77fb6fe3fb7371e98.zip?dl=FotSA-Viverridae-v1.0.7.zip",
+        "filename": "FotSA-Viverridae-v1.0.7.zip",
+        "fileid": 62293,
+        "downloads": 11023,
+        "tags": [
+          "1.21.5",
+          "1.21.6"
+        ],
+        "modidstr": "viverridae",
+        "modversion": "1.0.7",
+        "created": "2025-10-28 21:26:31",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Weighted diet </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Trappable format for 1.21</span></p>"
+      },
+      {
+        "releaseid": 25916,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Viverridae-v1._505627e14af0d18e2de2d2070a0afe83.zip?dl=FotSA-Viverridae-v1.0.6.zip",
+        "filename": "FotSA-Viverridae-v1.0.6.zip",
+        "fileid": 56938,
+        "downloads": 9128,
+        "tags": [
+          "1.21.1",
+          "1.21.2-rc.2",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "viverridae",
+        "modversion": "1.0.6",
+        "created": "2025-09-25 16:21:54",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Removed old Animal interaction patches</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 25664,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Viverridae-v1._e54c216a500288d82bef02882d364a22.zip?dl=FotSA-Viverridae-v1.0.5.zip",
+        "filename": "FotSA-Viverridae-v1.0.5.zip",
+        "fileid": 56492,
+        "downloads": 2406,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "viverridae",
+        "modversion": "1.0.5",
+        "created": "2025-09-21 16:51:37",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added- Creature tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 19502,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Viverridae-v1._2f8e85606e268a02e1e43bd61a929dbd.zip?dl=FotSA-Viverridae-v1.0.4.zip",
+        "filename": "FotSA-Viverridae-v1.0.4.zip",
+        "fileid": 42157,
+        "downloads": 17519,
+        "tags": [
+          "1.20.9",
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "viverridae",
+        "modversion": "1.0.4",
+        "created": "2025-04-30 20:26:53",
+        "changelog": "<p>Added-Devil interactions<br />Added-Mihirung interactions<br />Added-Diprotodon interactions</p>"
+      },
+      {
+        "releaseid": 18526,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Viverridae-v1._d94886129807c4f92157251213035b35.zip?dl=FotSA-Viverridae-v1.0.3.zip",
+        "filename": "FotSA-Viverridae-v1.0.3.zip",
+        "fileid": 40032,
+        "downloads": 4849,
+        "tags": [
+          "1.20.7",
+          "1.20.8"
+        ],
+        "modidstr": "viverridae",
+        "modversion": "1.0.3",
+        "created": "2025-04-05 00:02:48",
+        "changelog": "<p>Added-Worldgen spawn</p>"
+      },
+      {
+        "releaseid": 17347,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Viverridae-v1._66e6c383c5e5f34768e9ddadecad59f6.zip?dl=FotSA-Viverridae-v1.0.2.zip",
+        "filename": "FotSA-Viverridae-v1.0.2.zip",
+        "fileid": 36797,
+        "downloads": 4348,
+        "tags": [
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7"
+        ],
+        "modidstr": "viverridae",
+        "modversion": "1.0.2",
+        "created": "2025-03-10 16:09:39",
+        "changelog": "<p>Added-Thylacoleo Interactions<br />Added- French Translation (Thanks Laerinok!)<br />Fixed-ID and mod name mispelling<br />Fixed-African Civet Biome range<br /><br /></p>"
+      },
+      {
+        "releaseid": 16540,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Viverridae-v1._61469b32745b5594cd13a5a3e57fe437.zip?dl=FotSA-Viverridae-v1.0.1.zip",
+        "filename": "FotSA-Viverridae-v1.0.1.zip",
+        "fileid": 34071,
+        "downloads": 3832,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "viveriidae",
+        "modversion": "1.0.1",
+        "created": "2025-02-19 22:04:12",
+        "changelog": "<p>Fixed-Death animation<br />Fixed-Combat Overhaul hit boxes</p>"
+      },
+      {
+        "releaseid": 16365,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Viverridae-v1._082795dec0ef6946605a4b95ec92bc2a.zip?dl=FotSA-Viverridae-v1.0.0.zip",
+        "filename": "FotSA-Viverridae-v1.0.0.zip",
+        "fileid": 33663,
+        "downloads": 1427,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "viveriidae",
+        "modversion": "1.0.0",
+        "created": "2025-02-16 18:17:10",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 33653,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-02-14_16-44-37_092b4743a7d40a547b3ab4fbded53b47.png",
+        "filename": "2025-02-14_16-44-37.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-02-14_16-44-37_092b4743a7d40a547b3ab4fbded53b47_55_60.png",
+        "created": "2025-02-16 18:16:10"
+      },
+      {
+        "fileid": 33654,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-02-15_13-39-54_882e11b9f867be4cff12476d6e581098.png",
+        "filename": "2025-02-15_13-39-54.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-02-15_13-39-54_882e11b9f867be4cff12476d6e581098_55_60.png",
+        "created": "2025-02-16 18:16:11"
+      },
+      {
+        "fileid": 33655,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-02-15_13-35-20_6322232fd717a50b0f7c673598a88f7e.png",
+        "filename": "2025-02-15_13-35-20.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-02-15_13-35-20_6322232fd717a50b0f7c673598a88f7e_55_60.png",
+        "created": "2025-02-16 18:16:12"
+      },
+      {
+        "fileid": 33656,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-02-15_13-43-29_70c071fd8e976c63ba6f27a7f3832eb8.png",
+        "filename": "2025-02-15_13-43-29.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-02-15_13-43-29_70c071fd8e976c63ba6f27a7f3832eb8_55_60.png",
+        "created": "2025-02-16 18:16:13"
+      },
+      {
+        "fileid": 33657,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-02-15_13-43-14_a4d6720626b4099f6233d07c860161f3.png",
+        "filename": "2025-02-15_13-43-14.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-02-15_13-43-14_a4d6720626b4099f6233d07c860161f3_55_60.png",
+        "created": "2025-02-16 18:16:13"
+      },
+      {
+        "fileid": 33658,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-02-15_13-37-26_85ff604a7487bb52dd658834a6a25332.png",
+        "filename": "2025-02-15_13-37-26.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-02-15_13-37-26_85ff604a7487bb52dd658834a6a25332_55_60.png",
+        "created": "2025-02-16 18:16:13"
+      },
+      {
+        "fileid": 33659,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-02-15_13-44-09_22ed5c2227ffc2a55b7aa7eaa3ee70d5.png",
+        "filename": "2025-02-15_13-44-09.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-02-15_13-44-09_22ed5c2227ffc2a55b7aa7eaa3ee70d5_55_60.png",
+        "created": "2025-02-16 18:16:13"
+      },
+      {
+        "fileid": 33660,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-02-15_13-36-38_d4839e786d82078c912d995aedb9a4cd.png",
+        "filename": "2025-02-15_13-36-38.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-02-15_13-36-38_d4839e786d82078c912d995aedb9a4cd_55_60.png",
+        "created": "2025-02-16 18:16:14"
+      },
+      {
+        "fileid": 33661,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-02-15_13-38-29_aab7fb5ac4fe715c00ceee62b6246047.png",
+        "filename": "2025-02-15_13-38-29.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-02-15_13-38-29_aab7fb5ac4fe715c00ceee62b6246047_55_60.png",
+        "created": "2025-02-16 18:16:15"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

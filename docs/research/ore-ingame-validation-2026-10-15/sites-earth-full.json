@@ -1,0 +1,1185 @@
+[
+{
+"Name": "cornwall-Sn",
+"Kind": "hotspot:Sn",
+"Lat": 50.25,
+"Lon": -5.25,
+"Radius": 3
+},
+{
+"Name": "chuquicamata-Cu",
+"Kind": "hotspot:Cu",
+"Lat": -22.3,
+"Lon": -68.9,
+"Radius": 3
+},
+{
+"Name": "escondida-Cu",
+"Kind": "hotspot:Cu",
+"Lat": -21.8,
+"Lon": -68.75,
+"Radius": 3
+},
+{
+"Name": "pilbara-Fe",
+"Kind": "hotspot:Fe",
+"Lat": -22.25,
+"Lon": 119.0,
+"Radius": 3
+},
+{
+"Name": "ruhr-coal",
+"Kind": "hotspot:C_coal",
+"Lat": 51.75,
+"Lon": 7.25,
+"Radius": 3
+},
+{
+"Name": "kimberley-diamond",
+"Kind": "hotspot:diamond",
+"Lat": -28.75,
+"Lon": 24.75,
+"Radius": 3
+},
+{
+"Name": "witwatersrand-Au",
+"Kind": "hotspot:Au",
+"Lat": -26.2,
+"Lon": 28.0,
+"Radius": 3
+},
+{
+"Name": "pampas",
+"Kind": "background",
+"Lat": -35,
+"Lon": -62,
+"Radius": 3
+},
+{
+"Name": "rubalkhali",
+"Kind": "background",
+"Lat": 20,
+"Lon": 50,
+"Radius": 3
+},
+{
+"Name": "yakutia",
+"Kind": "background",
+"Lat": 66,
+"Lon": 125,
+"Radius": 3
+},
+{
+"Name": "paraguay",
+"Kind": "background",
+"Lat": -22,
+"Lon": -60,
+"Radius": 3
+},
+{
+"Name": "mali",
+"Kind": "background",
+"Lat": 17,
+"Lon": -2,
+"Radius": 3
+},
+{
+"Name": "chad",
+"Kind": "background",
+"Lat": 15,
+"Lon": 19,
+"Radius": 3
+},
+{
+"Name": "amazon",
+"Kind": "background:soil",
+"Lat": -3.5,
+"Lon": -62,
+"Radius": 2
+},
+{
+"Name": "wsiberia",
+"Kind": "background:soil",
+"Lat": 62,
+"Lon": 75,
+"Radius": 2
+},
+{
+"Name": "northsea-shelf",
+"Kind": "ocean:shelf",
+"Lat": 55,
+"Lon": 3,
+"Radius": 2
+},
+{
+"Name": "pacific",
+"Kind": "ocean",
+"Lat": 0,
+"Lon": -140,
+"Radius": 1
+},
+{
+"Name": "atlantic",
+"Kind": "ocean",
+"Lat": 30,
+"Lon": -40,
+"Radius": 1
+},
+{
+"Name": "indian",
+"Kind": "ocean",
+"Lat": -40,
+"Lon": 80,
+"Radius": 1
+},
+{
+"Name": "land000",
+"Kind": "random-land",
+"Lat": -19.21,
+"Lon": 31.507,
+"Radius": 1
+},
+{
+"Name": "land001",
+"Kind": "random-land",
+"Lat": 53.456,
+"Lon": 29.923,
+"Radius": 1
+},
+{
+"Name": "land002",
+"Kind": "random-land",
+"Lat": 45.348,
+"Lon": 127.158,
+"Radius": 1
+},
+{
+"Name": "land003",
+"Kind": "random-land",
+"Lat": -20.81,
+"Lon": 143.956,
+"Radius": 1
+},
+{
+"Name": "land004",
+"Kind": "random-land",
+"Lat": 9.119,
+"Lon": 12.658,
+"Radius": 1
+},
+{
+"Name": "land005",
+"Kind": "random-land",
+"Lat": -3.732,
+"Lon": 139.236,
+"Radius": 1
+},
+{
+"Name": "land006",
+"Kind": "random-land",
+"Lat": 39.082,
+"Lon": 79.537,
+"Radius": 1
+},
+{
+"Name": "land007",
+"Kind": "random-land",
+"Lat": 66.495,
+"Lon": 14.013,
+"Radius": 1
+},
+{
+"Name": "land008",
+"Kind": "random-land",
+"Lat": -5.757,
+"Lon": 139.821,
+"Radius": 1
+},
+{
+"Name": "land009",
+"Kind": "random-land",
+"Lat": 9.741,
+"Lon": 25.613,
+"Radius": 1
+},
+{
+"Name": "land010",
+"Kind": "random-land",
+"Lat": 64.016,
+"Lon": 113.904,
+"Radius": 1
+},
+{
+"Name": "land011",
+"Kind": "random-land",
+"Lat": 69.985,
+"Lon": -113.552,
+"Radius": 1
+},
+{
+"Name": "land012",
+"Kind": "random-land",
+"Lat": -28.843,
+"Lon": 143.631,
+"Radius": 1
+},
+{
+"Name": "land013",
+"Kind": "random-land",
+"Lat": 42.332,
+"Lon": -109.825,
+"Radius": 1
+},
+{
+"Name": "land014",
+"Kind": "random-land",
+"Lat": 39.431,
+"Lon": 56.931,
+"Radius": 1
+},
+{
+"Name": "land015",
+"Kind": "random-land",
+"Lat": 32.699,
+"Lon": -5.218,
+"Radius": 1
+},
+{
+"Name": "land016",
+"Kind": "random-land",
+"Lat": -21.462,
+"Lon": 124.145,
+"Radius": 1
+},
+{
+"Name": "land017",
+"Kind": "random-land",
+"Lat": 29.215,
+"Lon": 33.153,
+"Radius": 1
+},
+{
+"Name": "land018",
+"Kind": "random-land",
+"Lat": -24.824,
+"Lon": 150.04,
+"Radius": 1
+},
+{
+"Name": "land019",
+"Kind": "random-land",
+"Lat": 23.477,
+"Lon": 17.268,
+"Radius": 1
+},
+{
+"Name": "land020",
+"Kind": "random-land",
+"Lat": 43.075,
+"Lon": 0.161,
+"Radius": 1
+},
+{
+"Name": "land021",
+"Kind": "random-land",
+"Lat": -23.088,
+"Lon": 144.593,
+"Radius": 1
+},
+{
+"Name": "land022",
+"Kind": "random-land",
+"Lat": -36.305,
+"Lon": -71.243,
+"Radius": 1
+},
+{
+"Name": "land023",
+"Kind": "random-land",
+"Lat": -11.953,
+"Lon": -70.596,
+"Radius": 1
+},
+{
+"Name": "land024",
+"Kind": "random-land",
+"Lat": -17.418,
+"Lon": 16.998,
+"Radius": 1
+},
+{
+"Name": "land025",
+"Kind": "random-land",
+"Lat": 14.963,
+"Lon": -85.897,
+"Radius": 1
+},
+{
+"Name": "land026",
+"Kind": "random-land",
+"Lat": 18.524,
+"Lon": 9.781,
+"Radius": 1
+},
+{
+"Name": "land027",
+"Kind": "random-land",
+"Lat": 36.518,
+"Lon": 118.589,
+"Radius": 1
+},
+{
+"Name": "land028",
+"Kind": "random-land",
+"Lat": 53.1,
+"Lon": 124.666,
+"Radius": 1
+},
+{
+"Name": "land029",
+"Kind": "random-land",
+"Lat": -9.233,
+"Lon": 24.84,
+"Radius": 1
+},
+{
+"Name": "land030",
+"Kind": "random-land",
+"Lat": -5.028,
+"Lon": -51.737,
+"Radius": 1
+},
+{
+"Name": "land031",
+"Kind": "random-land",
+"Lat": 21.367,
+"Lon": 94.795,
+"Radius": 1
+},
+{
+"Name": "land032",
+"Kind": "random-land",
+"Lat": -7.632,
+"Lon": 143.202,
+"Radius": 1
+},
+{
+"Name": "land033",
+"Kind": "random-land",
+"Lat": 26.758,
+"Lon": -1.464,
+"Radius": 1
+},
+{
+"Name": "land034",
+"Kind": "random-land",
+"Lat": -16.469,
+"Lon": 136.721,
+"Radius": 1
+},
+{
+"Name": "land035",
+"Kind": "random-land",
+"Lat": 27.396,
+"Lon": 91.17,
+"Radius": 1
+},
+{
+"Name": "land036",
+"Kind": "random-land",
+"Lat": -14.182,
+"Lon": -55.767,
+"Radius": 1
+},
+{
+"Name": "land037",
+"Kind": "random-land",
+"Lat": -24.106,
+"Lon": 120.898,
+"Radius": 1
+},
+{
+"Name": "land038",
+"Kind": "random-land",
+"Lat": 60.101,
+"Lon": 70.377,
+"Radius": 1
+},
+{
+"Name": "land039",
+"Kind": "random-land",
+"Lat": -17.556,
+"Lon": -60.438,
+"Radius": 1
+},
+{
+"Name": "land040",
+"Kind": "random-land",
+"Lat": 50.189,
+"Lon": 90.382,
+"Radius": 1
+},
+{
+"Name": "land041",
+"Kind": "random-land",
+"Lat": 66.805,
+"Lon": -66.223,
+"Radius": 1
+},
+{
+"Name": "land042",
+"Kind": "random-land",
+"Lat": 27.171,
+"Lon": 92.931,
+"Radius": 1
+},
+{
+"Name": "land043",
+"Kind": "random-land",
+"Lat": 44.041,
+"Lon": -71.609,
+"Radius": 1
+},
+{
+"Name": "land044",
+"Kind": "random-land",
+"Lat": 48.503,
+"Lon": -66.784,
+"Radius": 1
+},
+{
+"Name": "land045",
+"Kind": "random-land",
+"Lat": 53.427,
+"Lon": 35.035,
+"Radius": 1
+},
+{
+"Name": "land046",
+"Kind": "random-land",
+"Lat": -2.026,
+"Lon": 25.696,
+"Radius": 1
+},
+{
+"Name": "land047",
+"Kind": "random-land",
+"Lat": 43.535,
+"Lon": 91.05,
+"Radius": 1
+},
+{
+"Name": "land048",
+"Kind": "random-land",
+"Lat": -3.529,
+"Lon": 23.116,
+"Radius": 1
+},
+{
+"Name": "land049",
+"Kind": "random-land",
+"Lat": -38.794,
+"Lon": -68.122,
+"Radius": 1
+},
+{
+"Name": "land050",
+"Kind": "random-land",
+"Lat": 69.598,
+"Lon": -107.316,
+"Radius": 1
+},
+{
+"Name": "land051",
+"Kind": "random-land",
+"Lat": 58.366,
+"Lon": -130.504,
+"Radius": 1
+},
+{
+"Name": "land052",
+"Kind": "random-land",
+"Lat": 34.164,
+"Lon": 98.938,
+"Radius": 1
+},
+{
+"Name": "land053",
+"Kind": "random-land",
+"Lat": 58.297,
+"Lon": 83.632,
+"Radius": 1
+},
+{
+"Name": "land054",
+"Kind": "random-land",
+"Lat": 31.613,
+"Lon": -116.042,
+"Radius": 1
+},
+{
+"Name": "land055",
+"Kind": "random-land",
+"Lat": 24.106,
+"Lon": 5.304,
+"Radius": 1
+},
+{
+"Name": "land056",
+"Kind": "random-land",
+"Lat": 51.112,
+"Lon": 26.422,
+"Radius": 1
+},
+{
+"Name": "land057",
+"Kind": "random-land",
+"Lat": 38.828,
+"Lon": -100.438,
+"Radius": 1
+},
+{
+"Name": "land058",
+"Kind": "random-land",
+"Lat": -31.022,
+"Lon": 19.608,
+"Radius": 1
+},
+{
+"Name": "land059",
+"Kind": "random-land",
+"Lat": -5.803,
+"Lon": -72.811,
+"Radius": 1
+},
+{
+"Name": "land060",
+"Kind": "random-land",
+"Lat": 61.806,
+"Lon": 67.879,
+"Radius": 1
+},
+{
+"Name": "land061",
+"Kind": "random-land",
+"Lat": 50.604,
+"Lon": 49.307,
+"Radius": 1
+},
+{
+"Name": "land062",
+"Kind": "random-land",
+"Lat": 62.098,
+"Lon": 148.272,
+"Radius": 1
+},
+{
+"Name": "land063",
+"Kind": "random-land",
+"Lat": 26.795,
+"Lon": 11.151,
+"Radius": 1
+},
+{
+"Name": "land064",
+"Kind": "random-land",
+"Lat": 59.383,
+"Lon": -117.499,
+"Radius": 1
+},
+{
+"Name": "land065",
+"Kind": "random-land",
+"Lat": 28.438,
+"Lon": 56.398,
+"Radius": 1
+},
+{
+"Name": "land066",
+"Kind": "random-land",
+"Lat": -7.316,
+"Lon": -66.204,
+"Radius": 1
+},
+{
+"Name": "land067",
+"Kind": "random-land",
+"Lat": 21.888,
+"Lon": 112.357,
+"Radius": 1
+},
+{
+"Name": "land068",
+"Kind": "random-land",
+"Lat": 3.873,
+"Lon": 19.088,
+"Radius": 1
+},
+{
+"Name": "land069",
+"Kind": "random-land",
+"Lat": 53.773,
+"Lon": -87.784,
+"Radius": 1
+},
+{
+"Name": "land070",
+"Kind": "random-land",
+"Lat": 50.162,
+"Lon": 111.557,
+"Radius": 1
+},
+{
+"Name": "land071",
+"Kind": "random-land",
+"Lat": 17.28,
+"Lon": 102.311,
+"Radius": 1
+},
+{
+"Name": "land072",
+"Kind": "random-land",
+"Lat": 48.324,
+"Lon": 110.794,
+"Radius": 1
+},
+{
+"Name": "land073",
+"Kind": "random-land",
+"Lat": -8.62,
+"Lon": -54.597,
+"Radius": 1
+},
+{
+"Name": "land074",
+"Kind": "random-land",
+"Lat": 34.156,
+"Lon": 118.798,
+"Radius": 1
+},
+{
+"Name": "land075",
+"Kind": "random-land",
+"Lat": 43.7,
+"Lon": 132.141,
+"Radius": 1
+},
+{
+"Name": "land076",
+"Kind": "random-land",
+"Lat": 16.532,
+"Lon": 9.084,
+"Radius": 1
+},
+{
+"Name": "land077",
+"Kind": "random-land",
+"Lat": 20.796,
+"Lon": -12.224,
+"Radius": 1
+},
+{
+"Name": "land078",
+"Kind": "random-land",
+"Lat": 56.092,
+"Lon": -115.061,
+"Radius": 1
+},
+{
+"Name": "land079",
+"Kind": "random-land",
+"Lat": 35.51,
+"Lon": 134.408,
+"Radius": 1
+},
+{
+"Name": "land080",
+"Kind": "random-land",
+"Lat": 47.706,
+"Lon": -119.02,
+"Radius": 1
+},
+{
+"Name": "land081",
+"Kind": "random-land",
+"Lat": 35.997,
+"Lon": 41.379,
+"Radius": 1
+},
+{
+"Name": "land082",
+"Kind": "random-land",
+"Lat": 5.676,
+"Lon": 8.787,
+"Radius": 1
+},
+{
+"Name": "land083",
+"Kind": "random-land",
+"Lat": 16.16,
+"Lon": 80.446,
+"Radius": 1
+},
+{
+"Name": "land084",
+"Kind": "random-land",
+"Lat": -19.159,
+"Lon": 45.344,
+"Radius": 1
+},
+{
+"Name": "land085",
+"Kind": "random-land",
+"Lat": -0.129,
+"Lon": -69.939,
+"Radius": 1
+},
+{
+"Name": "land086",
+"Kind": "random-land",
+"Lat": 36.109,
+"Lon": 42.97,
+"Radius": 1
+},
+{
+"Name": "land087",
+"Kind": "random-land",
+"Lat": -31.59,
+"Lon": -59.804,
+"Radius": 1
+},
+{
+"Name": "land088",
+"Kind": "random-land",
+"Lat": 21.428,
+"Lon": 35.036,
+"Radius": 1
+},
+{
+"Name": "land089",
+"Kind": "random-land",
+"Lat": -10.469,
+"Lon": 37.724,
+"Radius": 1
+},
+{
+"Name": "land090",
+"Kind": "random-land",
+"Lat": 57.898,
+"Lon": 58.323,
+"Radius": 1
+},
+{
+"Name": "land091",
+"Kind": "random-land",
+"Lat": 5.03,
+"Lon": -56.996,
+"Radius": 1
+},
+{
+"Name": "land092",
+"Kind": "random-land",
+"Lat": 4.126,
+"Lon": 38.229,
+"Radius": 1
+},
+{
+"Name": "land093",
+"Kind": "random-land",
+"Lat": 28.076,
+"Lon": -9.008,
+"Radius": 1
+},
+{
+"Name": "land094",
+"Kind": "random-land",
+"Lat": 54.381,
+"Lon": -89.246,
+"Radius": 1
+},
+{
+"Name": "land095",
+"Kind": "random-land",
+"Lat": 0.3,
+"Lon": -69.003,
+"Radius": 1
+},
+{
+"Name": "land096",
+"Kind": "random-land",
+"Lat": -17.708,
+"Lon": 138.873,
+"Radius": 1
+},
+{
+"Name": "land097",
+"Kind": "random-land",
+"Lat": -20.112,
+"Lon": 19.537,
+"Radius": 1
+},
+{
+"Name": "land098",
+"Kind": "random-land",
+"Lat": 0.675,
+"Lon": 25.307,
+"Radius": 1
+},
+{
+"Name": "land099",
+"Kind": "random-land",
+"Lat": 66.054,
+"Lon": 73.837,
+"Radius": 1
+},
+{
+"Name": "land100",
+"Kind": "random-land",
+"Lat": -15.279,
+"Lon": 125.13,
+"Radius": 1
+},
+{
+"Name": "land101",
+"Kind": "random-land",
+"Lat": 54.854,
+"Lon": -102.112,
+"Radius": 1
+},
+{
+"Name": "land102",
+"Kind": "random-land",
+"Lat": 9.969,
+"Lon": -2.934,
+"Radius": 1
+},
+{
+"Name": "land103",
+"Kind": "random-land",
+"Lat": 58.347,
+"Lon": 31.008,
+"Radius": 1
+},
+{
+"Name": "land104",
+"Kind": "random-land",
+"Lat": 38.663,
+"Lon": -110.589,
+"Radius": 1
+},
+{
+"Name": "land105",
+"Kind": "random-land",
+"Lat": 43.451,
+"Lon": 115.389,
+"Radius": 1
+},
+{
+"Name": "land106",
+"Kind": "random-land",
+"Lat": 64.443,
+"Lon": -73.643,
+"Radius": 1
+},
+{
+"Name": "land107",
+"Kind": "random-land",
+"Lat": 15.38,
+"Lon": -61.34,
+"Radius": 1
+},
+{
+"Name": "land108",
+"Kind": "random-land",
+"Lat": 60.581,
+"Lon": 70.44,
+"Radius": 1
+},
+{
+"Name": "land109",
+"Kind": "random-land",
+"Lat": -10.613,
+"Lon": 30.144,
+"Radius": 1
+},
+{
+"Name": "land110",
+"Kind": "random-land",
+"Lat": -21.091,
+"Lon": -53.158,
+"Radius": 1
+},
+{
+"Name": "land111",
+"Kind": "random-land",
+"Lat": 10.111,
+"Lon": 9.43,
+"Radius": 1
+},
+{
+"Name": "land112",
+"Kind": "random-land",
+"Lat": 51.897,
+"Lon": -123.835,
+"Radius": 1
+},
+{
+"Name": "land113",
+"Kind": "random-land",
+"Lat": 8.573,
+"Lon": 27.567,
+"Radius": 1
+},
+{
+"Name": "land114",
+"Kind": "random-land",
+"Lat": 51.307,
+"Lon": 123.932,
+"Radius": 1
+},
+{
+"Name": "land115",
+"Kind": "random-land",
+"Lat": 43.138,
+"Lon": 83.308,
+"Radius": 1
+},
+{
+"Name": "land116",
+"Kind": "random-land",
+"Lat": -24.977,
+"Lon": 24.917,
+"Radius": 1
+},
+{
+"Name": "land117",
+"Kind": "random-land",
+"Lat": 47.852,
+"Lon": 126.332,
+"Radius": 1
+},
+{
+"Name": "land118",
+"Kind": "random-land",
+"Lat": 44.996,
+"Lon": 34.027,
+"Radius": 1
+},
+{
+"Name": "land119",
+"Kind": "random-land",
+"Lat": 50.073,
+"Lon": 109.822,
+"Radius": 1
+},
+{
+"Name": "land120",
+"Kind": "random-land",
+"Lat": 68.709,
+"Lon": 155.597,
+"Radius": 1
+},
+{
+"Name": "land121",
+"Kind": "random-land",
+"Lat": -7.718,
+"Lon": -68.675,
+"Radius": 1
+},
+{
+"Name": "land122",
+"Kind": "random-land",
+"Lat": 61.154,
+"Lon": 102.834,
+"Radius": 1
+},
+{
+"Name": "land123",
+"Kind": "random-land",
+"Lat": 2.325,
+"Lon": 30.032,
+"Radius": 1
+},
+{
+"Name": "land124",
+"Kind": "random-land",
+"Lat": 6.047,
+"Lon": 35.633,
+"Radius": 1
+},
+{
+"Name": "land125",
+"Kind": "random-land",
+"Lat": 62.889,
+"Lon": -102.641,
+"Radius": 1
+},
+{
+"Name": "land126",
+"Kind": "random-land",
+"Lat": 41.232,
+"Lon": 108.218,
+"Radius": 1
+},
+{
+"Name": "land127",
+"Kind": "random-land",
+"Lat": 34.259,
+"Lon": -96.908,
+"Radius": 1
+},
+{
+"Name": "land128",
+"Kind": "random-land",
+"Lat": 21.522,
+"Lon": 5.568,
+"Radius": 1
+},
+{
+"Name": "land129",
+"Kind": "random-land",
+"Lat": 45.725,
+"Lon": -92.807,
+"Radius": 1
+},
+{
+"Name": "land130",
+"Kind": "random-land",
+"Lat": 8.828,
+"Lon": 37.544,
+"Radius": 1
+},
+{
+"Name": "land131",
+"Kind": "random-land",
+"Lat": 69.679,
+"Lon": -97.214,
+"Radius": 1
+},
+{
+"Name": "land132",
+"Kind": "random-land",
+"Lat": 50.345,
+"Lon": 75.473,
+"Radius": 1
+},
+{
+"Name": "land133",
+"Kind": "random-land",
+"Lat": 23.101,
+"Lon": 49.349,
+"Radius": 1
+},
+{
+"Name": "land134",
+"Kind": "random-land",
+"Lat": 27.087,
+"Lon": 90.19,
+"Radius": 1
+},
+{
+"Name": "land135",
+"Kind": "random-land",
+"Lat": -17.408,
+"Lon": 142.985,
+"Radius": 1
+},
+{
+"Name": "land136",
+"Kind": "random-land",
+"Lat": 47.699,
+"Lon": 95.544,
+"Radius": 1
+},
+{
+"Name": "land137",
+"Kind": "random-land",
+"Lat": -7.548,
+"Lon": 16.647,
+"Radius": 1
+},
+{
+"Name": "land138",
+"Kind": "random-land",
+"Lat": 42.398,
+"Lon": -119.708,
+"Radius": 1
+},
+{
+"Name": "land139",
+"Kind": "random-land",
+"Lat": -17.707,
+"Lon": -61.635,
+"Radius": 1
+},
+{
+"Name": "land140",
+"Kind": "random-land",
+"Lat": 24.903,
+"Lon": 117.14,
+"Radius": 1
+},
+{
+"Name": "land141",
+"Kind": "random-land",
+"Lat": 40.993,
+"Lon": -84.698,
+"Radius": 1
+},
+{
+"Name": "land142",
+"Kind": "random-land",
+"Lat": 47.532,
+"Lon": 15.192,
+"Radius": 1
+},
+{
+"Name": "land143",
+"Kind": "random-land",
+"Lat": 36.124,
+"Lon": 65.248,
+"Radius": 1
+},
+{
+"Name": "land144",
+"Kind": "random-land",
+"Lat": 59.193,
+"Lon": 153.776,
+"Radius": 1
+},
+{
+"Name": "land145",
+"Kind": "random-land",
+"Lat": 40.121,
+"Lon": 57.113,
+"Radius": 1
+},
+{
+"Name": "land146",
+"Kind": "random-land",
+"Lat": 55.092,
+"Lon": 80.976,
+"Radius": 1
+},
+{
+"Name": "land147",
+"Kind": "random-land",
+"Lat": -3.019,
+"Lon": 103.157,
+"Radius": 1
+},
+{
+"Name": "land148",
+"Kind": "random-land",
+"Lat": 48.312,
+"Lon": 91.258,
+"Radius": 1
+},
+{
+"Name": "land149",
+"Kind": "random-land",
+"Lat": 15.34,
+"Lon": 29.623,
+"Radius": 1
+}
+]

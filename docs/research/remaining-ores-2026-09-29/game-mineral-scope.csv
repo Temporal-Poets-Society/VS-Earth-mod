@@ -1,0 +1,83 @@
+provider,deposit_code,commodity_layer,source_asset,parent_deposit,natural_deposit_asset_present,evidence_status,runtime_generation_implemented_in_this_package
+vanilla,lignite,C_coal,worldgen/deposits/coal.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,bituminouscoal,C_coal,worldgen/deposits/coal.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,anthracite,C_coal,worldgen/deposits/coal.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,diamond,diamond,worldgen/deposits/gem/diamond.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,emerald,emerald,worldgen/deposits/gem/emerald.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,peridot,olivine,worldgen/deposits/gem/peridot.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,bismuthinite,Bi,worldgen/deposits/metalore/bismuthinite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,surfacecassiterite,Sn,worldgen/deposits/metalore/cassiterite.json,,True,Existing copper/tin package; not altered here,False
+vanilla,cassiterite,Sn,worldgen/deposits/metalore/cassiterite.json,,True,Existing copper/tin package; not altered here,False
+vanilla,cassiterite,Sn,worldgen/deposits/metalore/cassiterite.json,,True,Existing copper/tin package; not altered here,False
+vanilla,chromite,Cr,worldgen/deposits/metalore/chromite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,galena,Pb,worldgen/deposits/metalore/galena.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,silver,Ag,worldgen/deposits/metalore/galena.json,galena,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,ilmenite,Ti,worldgen/deposits/metalore/ilmenite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,limonite,Fe,worldgen/deposits/metalore/iron.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,hematite,Fe,worldgen/deposits/metalore/iron.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,magnetite,Fe,worldgen/deposits/metalore/iron.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,malachite,Cu,worldgen/deposits/metalore/malachite.json,,True,Existing copper/tin package; not altered here,False
+vanilla,surfacecopper,Cu,worldgen/deposits/metalore/nativecopper.json,,True,Existing copper/tin package; not altered here,False
+vanilla,nativecopper,Cu,worldgen/deposits/metalore/nativecopper.json,,True,Existing copper/tin package; not altered here,False
+vanilla,pentlandite,Ni,worldgen/deposits/metalore/pentlandite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,rhodochrosite,Mn,worldgen/deposits/metalore/rhodochrosite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,sphalerite,Zn,worldgen/deposits/metalore/sphalerite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,alum,alum,worldgen/deposits/mineralore/alum.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,borax,B,worldgen/deposits/mineralore/borax.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,cinnabar,Hg,worldgen/deposits/mineralore/cinnabar.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,fluorite,F,worldgen/deposits/mineralore/fluorite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,graphite,C_graphite,worldgen/deposits/mineralore/graphite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,halite,NaCl,worldgen/deposits/mineralore/halite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,sylvite,K,worldgen/deposits/mineralore/halite.json,halite,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,halite,NaCl,worldgen/deposits/mineralore/halite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,sylvite,K,worldgen/deposits/mineralore/halite.json,halite,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,kernite,B,worldgen/deposits/mineralore/kernite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,lapis,lapis,worldgen/deposits/mineralore/lapis.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,olivine,olivine,worldgen/deposits/mineralore/olivine.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,peridot,olivine,worldgen/deposits/mineralore/olivine.json,olivine,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,phosphorite,P,worldgen/deposits/mineralore/phosphorite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,quartz,SiO2,worldgen/deposits/mineralore/quartz.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,gold,Au,worldgen/deposits/mineralore/quartz.json,quartz,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,silver,Ag,worldgen/deposits/mineralore/quartz.json,quartz,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,saltpeter,N,worldgen/deposits/mineralore/saltpeter.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,sulfur,S,worldgen/deposits/mineralore/sulfur.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,berylaquamarine,beryl,assets/game/worldgen/deposits/gem/beryl-aquamarine.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,berylbixbite,beryl,assets/game/worldgen/deposits/gem/beryl-bixbite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,garnetgrossular,garnet,assets/game/worldgen/deposits/gem/ganret-grossular.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,garnetalmandine,garnet,assets/game/worldgen/deposits/gem/garnet-almandine.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,garnetandradite,garnet,assets/game/worldgen/deposits/gem/garnet-andradite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,garnetpyrope,garnet,assets/game/worldgen/deposits/gem/garnet-pyrope.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,garnetspessartine,garnet,assets/game/worldgen/deposits/gem/garnet-spessartine.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,garnetuvarovite,garnet,assets/game/worldgen/deposits/gem/garnet-uvarovite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,corundumruby,corundum,assets/game/worldgen/deposits/gem/ruby.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,corundumsapphire,corundum,assets/game/worldgen/deposits/gem/sapphire.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,spinelred,spinel,assets/game/worldgen/deposits/gem/spinel-red.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,topazamber,topaz,assets/game/worldgen/deposits/gem/topaz-amber.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,topazblue,topaz,assets/game/worldgen/deposits/gem/topaz-blue.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,topazpink,topaz,assets/game/worldgen/deposits/gem/topaz-pink.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,tourmalinerubellite,tourmaline,assets/game/worldgen/deposits/gem/tourmaline-rubellite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,tourmalineschorl,tourmaline,assets/game/worldgen/deposits/gem/tourmaline-schorl.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,tourmalineverdelite,tourmaline,assets/game/worldgen/deposits/gem/tourmaline-verdelite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,tourmalinewatermelon,tourmaline,assets/game/worldgen/deposits/gem/tourmaline-watermelon.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,azurite,Cu,assets/game/worldgen/deposits/metalore/azurite.json,,True,Existing copper/tin package; not altered here,False
+geoaddons_1.4.8,cerussite,Pb,assets/game/worldgen/deposits/metalore/cerussite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,surfacecopper,Cu,assets/game/worldgen/deposits/metalore/chalcocite.json,,True,Existing copper/tin package; not altered here,False
+geoaddons_1.4.8,chalcocite,Cu,assets/game/worldgen/deposits/metalore/chalcocite.json,,True,Existing copper/tin package; not altered here,False
+geoaddons_1.4.8,chalcopyrite,Cu,assets/game/worldgen/deposits/metalore/chalcopyrite.json,,True,Existing copper/tin package; not altered here,False
+geoaddons_1.4.8,franckeite,Pb,assets/game/worldgen/deposits/metalore/franckeite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,freibergite,Ag,assets/game/worldgen/deposits/metalore/freibergite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,hemimorphite,Zn,assets/game/worldgen/deposits/metalore/hemimorphite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,nativeplatinum,Pt,assets/game/worldgen/deposits/metalore/nativeplatinum.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,pyrite,S,assets/game/worldgen/deposits/metalore/pyrite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,smithsonite,Zn,assets/game/worldgen/deposits/metalore/smithsonite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,sperrylite,Pt,assets/game/worldgen/deposits/metalore/sperrylite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,teallite,Pb,assets/game/worldgen/deposits/metalore/teallite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,tetrahedrite,Sb,assets/game/worldgen/deposits/metalore/tetrahedritewithsilver.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,freibergite,Ag,assets/game/worldgen/deposits/metalore/tetrahedritewithsilver.json,tetrahedrite,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,vanadinite,V,assets/game/worldgen/deposits/metalore/vanadinite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,wulfenite,Mo,assets/game/worldgen/deposits/metalore/wulfenite.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,bogironlarge,Fe,assets/game/worldgen/deposits/other/bogiron.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+geoaddons_1.4.8,bogironsmall,Fe,assets/game/worldgen/deposits/other/bogiron.json,,True,Broad commodity evidence exported; exact mineral evidence separate,False
+vanilla,uranium,U,worldproperties/block/ore-graded.json,,False,"Ore variant declared, but no standalone natural deposit JSON found; do not claim active generation",False
+vanilla,wolframite,W,worldproperties/block/ore-graded.json,,False,"Ore variant declared, but no standalone natural deposit JSON found; do not claim active generation",False
+vanilla,corundum,corundum,worldproperties/block/ore-ungraded.json,,False,"Ore variant declared, but no standalone natural deposit JSON found; do not claim active generation",False

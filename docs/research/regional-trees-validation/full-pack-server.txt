@@ -1,0 +1,87 @@
+world 256000 x 102400 x 384, sea level 165
+Spawn: 48.60°N 7.75°E (x=123486 z=23551)
+resonancearchive: 7.37°N 13.77°E (x=127732 z=47009)
+lazaret: 1.95°S 24.25°E (x=135122 z=52308)
+village: 4.38°S 32.90°E (x=141225 z=53694)
+devastationarea: 9.56°N 35.57°E (x=143111 z=45763)
+tobiascave: 7.70°S 35.79°E (x=143265 z=55580)
+treasurehunter: 1.35°N 13.96°E (x=127861 z=50430)
+57,25 at 57.01°N 25.02°E: 9216 columns in 3.3s; terrain height = model in 97.8% (within 2: 99.1%, max diff 8); terrain y min/10%/50%/90%/max 178/183/185/188/189; surface y 178..209; water 0%; top blocks: forestfloor 49%, leaves 36%, leavesbranchy 5%, soil 4%, fern 3%, flower 1%, rock 1%, fruitingbush 0%; image C:\VS mods\Earth\testruns\regional-trees-full-20260929-194546\EarthMap\selftest-57_25.png
+57,25 climate at y=186: game worldgen 5.6 °C, now 8.5 °C (month May), rain 0.54, fertility 0.40, forest 0.75; real yearly mean 5.9 °C at the surface, 5.9 °C at this height, VS rain 138
+57,25 seasons: game January -4.7 °C, July 17.7 °C; real coldest month -5.0 °C, warmest 17.8 °C; summer drought 0.00
+57,25: water seams 0; river ramps placed 0, missing 0; ramp edges 0
+57,25: river columns with something solid in the water: 0
+57,25: tree canopy by wood: pine 50%, birch 32%, alnusglutinosa 11%, taxusbaccata 6%, oak 1%, poplar 1%, aspen 0%
+44,-73 at 44.02°N 73.01°W: 9216 columns in 2.4s; terrain height = model in 99.3% (within 2: 99.7%, max diff 9); terrain y min/10%/50%/90%/max 199/220/228/240/249; surface y 199..263; water 0%; top blocks: soil 48%, leaves 21%, forestfloor 18%, rock 5%, leavesbranchy 2%, sand 2%, flower 1%, fern 1%; image C:\VS mods\Earth\testruns\regional-trees-full-20260929-194546\EarthMap\selftest-44_-73.png
+44,-73 climate at y=235: game worldgen 4.3 °C, now 7.0 °C (month May), rain 0.60, fertility 0.47, forest 0.43; real yearly mean 5.6 °C at the surface, 4.9 °C at this height, VS rain 149
+44,-73 seasons: game January -9.9 °C, July 17.8 °C; real coldest month -9.0 °C, warmest 19.0 °C; summer drought 0.00
+44,-73: water seams 0; river ramps placed 0, missing 0; ramp edges 0
+44,-73: river columns with something solid in the water: 0
+44,-73: tree canopy by wood: pine 61%, maple 23%, abiesbalsamea 6%, piceaglauca 6%, alnusalnobetula 4%, tuja 0%
+-35.7,174 at 35.69°S 174.01°E: 9216 columns in 2.4s; terrain height = model in 99.7% (within 2: 99.9%, max diff 3); terrain y min/10%/50%/90%/max 171/174/180/200/219; surface y 171..238; water 0%; top blocks: leaves 55%, leavesbranchy 33%, forestfloor 7%, rock 2%, log 1%, fern 1%, flower 0%, fruitingbush 0%; image C:\VS mods\Earth\testruns\regional-trees-full-20260929-194546\EarthMap\selftest--35.7_174.png
+-35.7,174 climate at y=189: game worldgen 12.0 °C, now 9.7 °C (month May), rain 0.64, fertility 0.51, forest 0.97; real yearly mean 13.8 °C at the surface, 13.3 °C at this height, VS rain 159
+-35.7,174 seasons: game January 16.9 °C, July 8.1 °C; real coldest month 9.8 °C, warmest 18.2 °C; summer drought 0.00
+-35.7,174: water seams 0; river ramps placed 0, missing 0; ramp edges 0
+-35.7,174: river columns with something solid in the water: 0
+-35.7,174: tree canopy by wood: podocarpustotara 75%, nothofagusmenziesii 14%, dacrydiumcupressinum 11%
+-33.8,18.7 at 33.78°S 18.71°E: 9216 columns in 1.8s; terrain height = model in 100.0% (within 2: 100.0%, max diff 0); terrain y min/10%/50%/90%/max 178/182/186/191/196; surface y 178..196; water 0%; top blocks: sand 51%, soil 32%, flower 15%, looseboulders 0%, bigberrybush 0%, crop 0%, smallberrybush 0%, fruitingbush 0%; image C:\VS mods\Earth\testruns\regional-trees-full-20260929-194546\EarthMap\selftest--33.8_18.7.png
+-33.8,18.7 climate at y=184: game worldgen 16.5 °C, now 13.1 °C (month May), rain 0.30, fertility 0.25, forest 0.07; real yearly mean 16.4 °C at the surface, 16.5 °C at this height, VS rain 79
+-33.8,18.7 seasons: game January 21.6 °C, July 12.4 °C; real coldest month 12.1 °C, warmest 21.0 °C; summer drought 0.84
+-33.8,18.7: water seams 0; river ramps placed 0, missing 0; ramp edges 0
+-33.8,18.7: river columns with something solid in the water: 0
+35.5,137 at 35.52°N 137.02°E: 9216 columns in 4.9s; terrain height = model in 99.8% (within 2: 99.8%, max diff 13); terrain y min/10%/50%/90%/max 176/182/197/211/217; surface y 180..242; water 8%; top blocks: leaves 55%, leavesbranchy 17%, forestfloor 13%, rapidwater 5%, fern 3%, water 2%, log 2%, sand 1%; image C:\VS mods\Earth\testruns\regional-trees-full-20260929-194546\EarthMap\selftest-35.5_137.png
+35.5,137 climate at y=218: game worldgen 12.6 °C, now 16.0 °C (month May), rain 0.75, fertility 0.63, forest 0.80; real yearly mean 15.6 °C at the surface, 14.6 °C at this height, VS rain 182
+35.5,137 seasons: game January 1.2 °C, July 25.1 °C; real coldest month 3.7 °C, warmest 27.9 °C; summer drought 0.00
+35.5,137: water seams 0; river ramps placed 786, missing 0; ramp edges 128
+35.5,137: river columns with something solid in the water: 0
+35.5,137: tree canopy by wood: pine 64%, quercusserrata 23%, birch 7%, maple 5%, oak 0%
+-23.8,133.8 at 23.82°S 133.80°E: 9216 columns in 2.6s; terrain height = model in 100.0% (within 2: 100.0%, max diff 0); terrain y min/10%/50%/90%/max 231/232/233/234/236; surface y 231..240; water 0%; top blocks: sand 97%, silvertorchcactus 1%, looseboulders 1%, chiseledblock 0%, microblock 0%, barrelcactus 0%, flower 0%, cobblestone 0%; image C:\VS mods\Earth\testruns\regional-trees-full-20260929-194546\EarthMap\selftest--23.8_133.8.png
+-23.8,133.8 climate at y=233: game worldgen 21.1 °C, now 15.1 °C (month May), rain 0.19, fertility 0.17, forest 0.00; real yearly mean 21.3 °C at the surface, 21.3 °C at this height, VS rain 48
+-23.8,133.8 seasons: game January 29.7 °C, July 11.9 °C; real coldest month 12.0 °C, warmest 29.3 °C; summer drought 0.04
+-23.8,133.8: water seams 0; river ramps placed 0, missing 0; ramp edges 0
+-23.8,133.8: river columns with something solid in the water: 0
+25.2,-80.6 at 25.17°N 80.59°W: 9216 columns in 1.7s; terrain height = model in 100.0% (within 2: 100.0%, max diff 0); terrain y min/10%/50%/90%/max 159/159/159/165/165; surface y 164..180; water 82%; top blocks: saltwater 82%, forestfloor 9%, leaves 6%, sand 3%, chiseledblock 0%, leavesbranchy 0%, bigberrybush 0%, palisadewall 0%; image C:\VS mods\Earth\testruns\regional-trees-full-20260929-194546\EarthMap\selftest-25.2_-80.6.png
+25.2,-80.6 climate at y=165: game worldgen 24.2 °C, now 24.0 °C (month May), rain 0.60, fertility 0.51, forest 0.81; real yearly mean 24.5 °C at the surface, 24.5 °C at this height, VS rain 152
+25.2,-80.6 seasons: game January 20.4 °C, July 28.0 °C; real coldest month 20.1 °C, warmest 28.1 °C; summer drought 0.00
+25.2,-80.6: water seams 0; river ramps placed 0, missing 0; ramp edges 0
+25.2,-80.6: river columns with something solid in the water: 0
+25.2,-80.6: tree canopy by wood: sycamore 91%, sourwood 9%, birch 0%
+Regional tree selections (self-test only):
+BLT game:alnusglutinosa: 36
+BLT game:aspen: 4
+BLT game:blackpoplar: 5
+BLT game:dwarfbirch: 156
+BLT game:englishoak: 10
+BLT game:oldtaxusbaccata: 2
+BLT game:scotspine: 600
+BLT game:silverbirch: 1000
+BLT game:taxusbaccata: 23
+FLA game:lagunculariaracemosa: 33
+FLA game:lysilomalatisiliquum: 1
+FLA game:sourwood: 183
+FLA game:sycamore: 348
+JAP game:fir: 101
+JAP game:japanesemaple: 63
+JAP game:pinusdensiflora: 152
+JAP game:quercusserrata: 173
+JAP game:silverbirch: 121
+NZN game:dacrydiumcupressinum: 4
+NZN game:dacrydiumcupressinummedium: 32
+NZN game:dacrydiumcupressinumsmall: 16
+NZN game:nothofagusmenziesii: 174
+NZN game:nothofagusmenziesiilarge: 41
+NZN game:podocarpustotara: 104
+NZN game:podocarpustotaralarge: 284
+NZN game:psuedopanaxcrassifolius: 2
+VER game:abiesbalsamea: 32
+VER game:alnusalnobetulashrub: 210
+VER game:crookedtuja: 1
+VER game:fir: 205
+VER game:larixlaricina: 16
+VER game:piceaglauca: 1
+VER game:piceaglaucasmall: 14
+VER game:piceamariana: 2
+VER game:populustremuloides: 14
+VER game:sugarmaple: 1
+VER game:sugarmaplesmall: 325
+VER game:tuja: 1

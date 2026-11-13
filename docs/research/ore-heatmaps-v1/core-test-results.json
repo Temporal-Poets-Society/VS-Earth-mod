@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "checks": 493238,
+  "layers": 44,
+  "defaultTuning": {
+    "BackgroundChance": 0.08,
+    "HotspotChance": 1,
+    "FrequencyMultiplier": 0.4,
+    "RadiusMultiplier": 1.6,
+    "ThicknessMultiplier": 1.25,
+    "Concentration": 0.85,
+    "QualityBias": 0,
+    "DepthMultiplier": 1,
+    "MinDepthBlocks": 0,
+    "MaxDepthBlocks": 0,
+    "MetresPerBlock": 5,
+    "SurfaceFrequencyMultiplier": 1,
+    "BogIronChance": 0.025,
+    "Resources": {}
+  },
+  "simulation": {
+    "n": 100000,
+    "background": 3241,
+    "hot": 32669,
+    "lowRich": 21861,
+    "highRich": 43881,
+    "dense": 85105
+  },
+  "contacts": {
+    "mixedLeft": 5928,
+    "mixedRight": 16041
+  },
+  "parallelQueriesMs": 7
+}

@@ -1,0 +1,36 @@
+Latvia waters, Folk 7 classes by area (11,849 km2 mapped):
+  11. Mud                                   24.8%
+  3. Coarse-grained sediment                19.9%
+  2. Sand                                   19.5%
+  6. No data at this level                  18.1%
+  12. sandy Mud                             11.0%
+  13. muddy Sand                             3.1%
+  4. Mixed sediment                          2.5%
+  5. Rock & boulders                         1.1%
+Estonia waters, Folk 7 classes by area (24,782 km2 mapped):
+  12. sandy Mud                             40.1%
+  11. Mud                                   27.2%
+  4. Mixed sediment                         27.2%
+  5. Rock & boulders                         2.1%
+  2. Sand                                    1.9%
+  3. Coarse-grained sediment                 1.5%
+Lithuania waters, Folk 7 classes by area (5,426 km2 mapped):
+  6. No data at this level                  66.0%
+  2. Sand                                   21.0%
+  5. Rock & boulders                         5.1%
+  4. Mixed sediment                          5.0%
+  3. Coarse-grained sediment                 2.9%
+Sites:
+  Liepaja, 2 km off            12. sandy Mud (Latvia, orig silty mud)
+  Liepaja, 20 km off           unmapped
+  Pape coast                   3. Coarse-grained sediment (Latvia, orig boulders-gravel sed. with gravel and sand)
+  Jurkalne, 3 km off           unmapped
+  Ventspils, 10 km off         2. Sand (Latvia, orig sand)
+  Irbe Strait                  2. Sand (Latvia, orig sand)
+  Gulf of Riga centre          2. Sand (Latvia, orig sand)
+  Riga bay off Jurmala         5. Rock & boulders (Latvia, orig bedrock)
+  Saulkrasti, 2 km off         6. No data at this level (Latvia, orig silt)
+  Gulf of Riga NE, Salacgriva  3. Coarse-grained sediment (Latvia, orig boulders-gravel sed. with gravel and sand)
+  Kolka cape                   2. Sand (Latvia, orig sand)
+  Parnu bay                    12. sandy Mud (Estonia, orig 6_Varved clay; clay)
+  Tallinn bay                  12. sandy Mud (Estonia, orig 2_Recent silt)

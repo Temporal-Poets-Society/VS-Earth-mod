@@ -1,0 +1,565 @@
+{
+  "mod": {
+    "modid": 2019,
+    "assetid": 11363,
+    "name": "Fauna of the Stone Age: Sirenia",
+    "text": "<p><span style=\"font-weight: 400;\">A collection of marine mammals of the order Sirenia, these slow herbivores will swim the coasts and waterways of the world. For those willing to hunt them, they are a tremendous source of meat and fat.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:</span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\" style=\"border-spacing: 0px;\"><colgroup><col width=\"173\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"71\" /><col width=\"50\" /><col width=\"58\" /><col width=\"100\" /><col width=\"60\" /><col width=\"130\" /><col width=\"189\" /><col width=\"192\" /><col width=\"100\" /><col width=\"210\" /><col width=\"100\" /></colgroup>\n<tbody>\n<tr>\n<td style=\"width: 172.998px;\">Common Name</td>\n<td style=\"width: 175.995px;\">Scientific name</td>\n<td style=\"width: 99.9884px;\">Category</td>\n<td style=\"width: 116.366px;\">Weight</td>\n<td style=\"width: 99.9884px;\">Health</td>\n<td style=\"width: 99.9884px;\">Height</td>\n<td style=\"width: 70.9954px;\">Damage</td>\n<td style=\"width: 49.9884px;\">Temp</td>\n<td style=\"width: 57.9977px;\">Precip</td>\n<td style=\"width: 99.9884px;\">Foliage Needs</td>\n<td style=\"width: 59.9884px;\">Altitude</td>\n<td style=\"width: 210.995px;\">Group Size</td>\n<td style=\"width: 188.993px;\">Meat Drops</td>\n<td style=\"width: 191.991px;\">Fat Drops</td>\n<td style=\"width: 99.9884px;\">Hide Drops</td>\n<td style=\"width: 209.988px;\">Diets</td>\n<td style=\"width: 99.9884px;\">Behaviors</td>\n</tr>\n<tr>\n<td style=\"width: 172.998px;\">Dugong</td>\n<td style=\"width: 175.995px;\">Dugong dugon</td>\n<td style=\"width: 99.9884px;\">Sirenia</td>\n<td style=\"width: 116.366px;\">225/275/50</td>\n<td style=\"width: 99.9884px;\">20/22/12</td>\n<td style=\"width: 99.9884px;\">3M L</td>\n<td style=\"width: 70.9954px;\">5/6 t2</td>\n<td style=\"width: 49.9884px;\">18-44</td>\n<td style=\"width: 57.9977px;\">10-100</td>\n<td style=\"width: 99.9884px;\">0-100</td>\n<td style=\"width: 59.9884px;\">0-1.0</td>\n<td style=\"width: 210.995px;\">1-2 M&amp;F, 4-8 M&amp;F&amp;B</td>\n<td style=\"width: 188.993px;\">22+-2, 26+-3, 6+-1</td>\n<td style=\"width: 191.991px;\">11+-1, 13+-1, 3+-1</td>\n<td style=\"width: 99.9884px;\">2H,3H, 2M</td>\n<td style=\"width: 209.988px;\">Crops,Fish, Grass, Vegetables</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n</tr>\n<tr>\n<td style=\"width: 172.998px;\">Steller's Sea Cow &dagger;</td>\n<td style=\"width: 175.995px;\">\n<div>\n<div>Hydrodamalis gigas</div>\n</div>\n</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 116.366px;\">8000/10000/500</td>\n<td style=\"width: 99.9884px;\">190/230/30</td>\n<td style=\"width: 99.9884px;\">8M L</td>\n<td style=\"width: 70.9954px;\">22/26 t4</td>\n<td style=\"width: 49.9884px;\">-15-2</td>\n<td style=\"width: 57.9977px;\">25-60</td>\n<td style=\"width: 99.9884px;\">0-100</td>\n<td style=\"width: 59.9884px;\">0-1.0</td>\n<td style=\"width: 210.995px;\">1-4 M&amp;F, 4-8 M&amp;F&amp;B</td>\n<td style=\"width: 188.993px;\">550+-50, 675+-75,33+-4</td>\n<td style=\"width: 191.991px;\">225+-25, 337+-37,16+-2</td>\n<td style=\"width: 99.9884px;\">18H, 24H, 2H</td>\n<td style=\"width: 209.988px;\">Crops,Fish, Grass, Vegetables</td>\n<td style=\"width: 99.9884px;\">Floats</td>\n</tr>\n<tr>\n<td style=\"width: 172.998px;\">Amazonian Manatee</td>\n<td style=\"width: 175.995px;\">\n<div>\n<div>Trichechus inunguis</div>\n</div>\n</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 116.366px;\">180/240/25</td>\n<td style=\"width: 99.9884px;\">18/21/8</td>\n<td style=\"width: 99.9884px;\">2.5M L</td>\n<td style=\"width: 70.9954px;\">4/5 t2</td>\n<td style=\"width: 49.9884px;\">26-40</td>\n<td style=\"width: 57.9977px;\">60-100</td>\n<td style=\"width: 99.9884px;\">60-100</td>\n<td style=\"width: 59.9884px;\">0-1.0</td>\n<td style=\"width: 210.995px;\">1 M&amp;F, 4-8 M&amp;F&amp;B</td>\n<td style=\"width: 188.993px;\">20+-2, 25+-2, 3+-1</td>\n<td style=\"width: 191.991px;\">10+-1, 12+-1, 1+-1</td>\n<td style=\"width: 99.9884px;\">2H, 1M</td>\n<td style=\"width: 209.988px;\">Crops,Fish, Grass, Vegetables</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n</tr>\n<tr>\n<td style=\"width: 172.998px;\">West Indian Manatee</td>\n<td style=\"width: 175.995px;\">\n<div>\n<div>Trichechus manatus</div>\n</div>\n</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 116.366px;\">500/600/50</td>\n<td style=\"width: 99.9884px;\">30/34/12</td>\n<td style=\"width: 99.9884px;\">3.5M L</td>\n<td style=\"width: 70.9954px;\">7/8 t2</td>\n<td style=\"width: 49.9884px;\">12-40</td>\n<td style=\"width: 57.9977px;\">60-100</td>\n<td style=\"width: 99.9884px;\">0-100</td>\n<td style=\"width: 59.9884px;\">0-1.0</td>\n<td style=\"width: 210.995px;\">1 M&amp;F, 1-12 M&amp;F&amp;B</td>\n<td style=\"width: 188.993px;\">33+-4, 40+-5, 6+-1</td>\n<td style=\"width: 191.991px;\">16+-2, 20+-2, 3+-1</td>\n<td style=\"width: 99.9884px;\">5H, 6H, 2M</td>\n<td style=\"width: 209.988px;\">Crops,Fish, Grass, Vegetables</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n</tr>\n<tr>\n<td style=\"width: 172.998px;\">West African Manatee</td>\n<td style=\"width: 175.995px;\">\n<div>\n<div>Trichechus senegalensis</div>\n</div>\n</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 116.366px;\">320/360/50</td>\n<td style=\"width: 99.9884px;\">24/26/12</td>\n<td style=\"width: 99.9884px;\">3M L</td>\n<td style=\"width: 70.9954px;\">6 t2</td>\n<td style=\"width: 49.9884px;\">28-44</td>\n<td style=\"width: 57.9977px;\">55-100</td>\n<td style=\"width: 99.9884px;\">0-100</td>\n<td style=\"width: 59.9884px;\">0-1.0</td>\n<td style=\"width: 210.995px;\">1-6 M&amp;F&amp;B</td>\n<td style=\"width: 188.993px;\">28+-3, 30+-3, 6+-1</td>\n<td style=\"width: 191.991px;\">14+-1, 15+-1, 3+-1</td>\n<td style=\"width: 99.9884px;\">3H, 2M</td>\n<td style=\"width: 209.988px;\">Crops,Fish, Grass, Vegetables</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Due to their large size, these animals have a high amount of health and a large amount of resources. They rarely attack, but can hit hard if sufficiently agitated.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Features:</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">All species have a unique pelt that can be used to craft hide and taxidermized full body.</span></p>\n<p>&nbsp;</p>\n<p><span style=\"font-weight: 400;\">And a big thanks to everyone who gave feedback and assistance!<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong> Why so many animal packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain clade file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><br /><strong>Q:</strong> Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> Yes, this mod series is safe to add and remove. Items from this mod that have been placed will be invisible or appear as question blocks if the mod is removed but can be safely broken.</div>\n</div>\n<p><span style=\"font-weight: 400;\"> <br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "sirenia",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_a62fdfac238491beaff0916f70f1ac7d.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_a62fdfac238491beaff0916f70f1ac7d.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_a62fdfac238491beaff0916f70f1ac7d.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 179160,
+    "follows": 1311,
+    "trendingpoints": 0,
+    "comments": 92,
+    "side": "both",
+    "type": "mod",
+    "created": "2024-03-15 19:27:04",
+    "lastreleased": "2026-09-23 19:16:37",
+    "lastmodified": "2026-09-28 20:15:55",
+    "tags": [
+      "Crafting",
+      null,
+      "Creatures"
+    ],
+    "releases": [
+      {
+        "releaseid": 58159,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.3_2aa34ad859838a8aa472ff7d1e767f30.zip?dl=FotSA-Sirenia-v1.0.32.zip",
+        "filename": "FotSA-Sirenia-v1.0.32.zip",
+        "fileid": 124639,
+        "downloads": 1366,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.32",
+        "created": "2026-09-23 19:16:37",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Added missing preloaded tags</span></p>"
+      },
+      {
+        "releaseid": 56521,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.3_a170e9ab5d12b5d9c8d5b8f21cb7a3e2.zip?dl=FotSA-Sirenia-v1.0.31.zip",
+        "filename": "FotSA-Sirenia-v1.0.31.zip",
+        "fileid": 121540,
+        "downloads": 2748,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.31",
+        "created": "2026-09-11 15:46:16",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Pelts grouped in handbook</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Salted pelt recipe for Steller&rsquo;s sea cow</span></p>"
+      },
+      {
+        "releaseid": 48467,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.3_7ed007a6ee2801cddafa4a92ac2a00c2.zip?dl=FotSA-Sirenia-v1.0.30.zip",
+        "filename": "FotSA-Sirenia-v1.0.30.zip",
+        "fileid": 105950,
+        "downloads": 16720,
+        "tags": [
+          "1.22.3",
+          "1.22.5",
+          "1.22.7"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.30",
+        "created": "2026-07-08 22:30:44",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Changed case of fleeDurationMs </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of MaxCooldownHours</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of MaxCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of MinCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of soundRange </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of soundRepeatMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted maxcooldown to MaxCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted mincooldown to MinCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted maxFollowTimeSec to maxFollowTime</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted tamingGenerations to maxGeneration</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unneeded mingenerations &amp; maxgenerations</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused DontExecuteIfRecentlyAttacked </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused fleeDurationWhenTargetLost<br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused MaxBlocksChecked</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused min and maxduration from non-Idle tasks</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Sound volume</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused wander range vertical max</span></p>"
+      },
+      {
+        "releaseid": 47184,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.2_42085d8cb018cf5e04df0b13978cb4f8.zip?dl=FotSA-Sirenia-v1.0.29.zip",
+        "filename": "FotSA-Sirenia-v1.0.29.zip",
+        "fileid": 103314,
+        "downloads": 2845,
+        "tags": [
+          "1.22.3"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.29",
+        "created": "2026-06-26 19:02:50",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Broken hide recipes<br />Updated-Changed oiled hide recipe to use rendered fat</span></p>"
+      },
+      {
+        "releaseid": 35930,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.2_d727680473f7cb68eef774a722a97f8a.zip?dl=FotSA-Sirenia-v1.0.28.zip",
+        "filename": "FotSA-Sirenia-v1.0.28.zip",
+        "fileid": 79328,
+        "downloads": 11950,
+        "tags": [
+          "1.22.0-rc.1"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.28",
+        "created": "2026-03-07 16:45:56",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Animals not dropping skins correctly</span></p>"
+      },
+      {
+        "releaseid": 35839,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.2_52d2bbcdaebdaa3c3cc4480363117760.zip?dl=FotSA-Sirenia-v1.0.27.zip",
+        "filename": "FotSA-Sirenia-v1.0.27.zip",
+        "fileid": 79070,
+        "downloads": 1684,
+        "tags": [
+          "1.22.0-pre.4",
+          "1.22.0-pre.5"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.27",
+        "created": "2026-03-06 00:07:19",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Ancient Tools Brain drops (Thanks Whiskey Sunshine!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Entity state tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Freshwater fish interaction</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Oiled, Raw, Salted hides and associated recipes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Reduced spawn checks to single per species for optimization</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Change chance and wanderChance to executionChance</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Refactored AI tasks to the new versions in 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Reformatted folders to match base game&rsquo;s folder layout</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Split entity files into adult and babies</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 32110,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.2_90f8694b6a47624d769247ab170dc2bf.zip?dl=FotSA-Sirenia-v1.0.26.zip",
+        "filename": "FotSA-Sirenia-v1.0.26.zip",
+        "fileid": 70679,
+        "downloads": 22005,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.26",
+        "created": "2026-01-06 21:55:41",
+        "changelog": "<p><span style=\"font-weight: 400;\">Tweak-Meat and fat restored to one entry in drop list for easier config additions<br />Updated-1 hide is always dropped from killed animals<br /></span></p>"
+      },
+      {
+        "releaseid": 28233,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.2_c70e0c936d7c71d40d34ad9f7e635e82.zip?dl=FotSA-Sirenia-v1.0.25.zip",
+        "filename": "FotSA-Sirenia-v1.0.25.zip",
+        "fileid": 62116,
+        "downloads": 15876,
+        "tags": [
+          "1.21.5",
+          "1.21.6"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.25",
+        "created": "2025-10-27 20:47:15",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Weighted diet </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Trappable format for 1.21</span></p>"
+      },
+      {
+        "releaseid": 25910,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.2_d814fd184f27bf2b78075c392dc04c97.zip?dl=FotSA-Sirenia-v1.0.24.zip",
+        "filename": "FotSA-Sirenia-v1.0.24.zip",
+        "fileid": 56933,
+        "downloads": 15169,
+        "tags": [
+          "1.21.1",
+          "1.21.2-rc.2",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.24",
+        "created": "2025-09-25 16:18:07",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Knockback resistance</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 25433,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.2_d2c9d424714d921a0d4ccebc285c0c9d.zip?dl=FotSA-Sirenia-v1.0.23.zip",
+        "filename": "FotSA-Sirenia-v1.0.23.zip",
+        "fileid": 56032,
+        "downloads": 4423,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.23",
+        "created": "2025-09-18 16:37:23",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added- Creature tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Split drop stacks that exceeded 64 units</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 20068,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.2_7e4dec0c5093566919cf229a7e2e9147.zip?dl=FotSA-Sirenia-v1.0.22.zip",
+        "filename": "FotSA-Sirenia-v1.0.22.zip",
+        "fileid": 43497,
+        "downloads": 22458,
+        "tags": [
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.22",
+        "created": "2025-05-15 19:22:49",
+        "changelog": "<p>Tweak-Manatees and dugongs take ten times longer to respawn, meant to offset their high meat yields.</p>"
+      },
+      {
+        "releaseid": 19934,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.2_68f9f5ae6d47a0d8a8e7403631217f4c.zip?dl=FotSA-Sirenia-v1.0.21.zip",
+        "filename": "FotSA-Sirenia-v1.0.21.zip",
+        "fileid": 43196,
+        "downloads": 1354,
+        "tags": [
+          "1.20.10"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.21",
+        "created": "2025-05-12 16:14:35",
+        "changelog": "<p>Tweak-Manatee and Dugongs can now spawn in open water, not just on the bottom of bodies of water</p>"
+      },
+      {
+        "releaseid": 19467,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.2_1a1be4e64a822161571c4331f2ca060c.zip?dl=FotSA-Sirenia-v1.0.20.zip",
+        "filename": "FotSA-Sirenia-v1.0.20.zip",
+        "fileid": 42093,
+        "downloads": 3291,
+        "tags": [
+          "1.20.9",
+          "1.20.10"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.20",
+        "created": "2025-04-29 22:26:52",
+        "changelog": "<p>Added-Diprotodon interactions<br />Added-Cetacea interactions</p>"
+      },
+      {
+        "releaseid": 19126,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.1_22c26adfd3b266fb9cbe491a3cd6fded.zip?dl=FotSA-Sirenia-v1.0.19.zip",
+        "filename": "FotSA-Sirenia-v1.0.19.zip",
+        "fileid": 41369,
+        "downloads": 3318,
+        "tags": [
+          "1.20.7",
+          "1.20.8"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.19",
+        "created": "2025-04-19 17:23:29",
+        "changelog": "<p>Fixed-Worldgen spawn trying to spawn manatees on land</p>"
+      },
+      {
+        "releaseid": 18515,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.1_589306da83b361ede5ec5358c23444e6.zip?dl=FotSA-Sirenia-v1.0.18.zip",
+        "filename": "FotSA-Sirenia-v1.0.18.zip",
+        "fileid": 40013,
+        "downloads": 4403,
+        "tags": [
+          "1.20.7"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.18",
+        "created": "2025-04-04 23:44:40",
+        "changelog": "<p>Added-Worldgen spawn</p>"
+      },
+      {
+        "releaseid": 17523,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.1_6a6e5621b8ce5530730aa2e9655d8682.zip?dl=FotSA-Sirenia-v1.0.17.zip",
+        "filename": "FotSA-Sirenia-v1.0.17.zip",
+        "fileid": 37273,
+        "downloads": 6364,
+        "tags": [
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.17",
+        "created": "2025-03-12 19:10:30",
+        "changelog": "<p>Added-Thylacoleo interactions<br />Tweak-Spawn temperature ranges<br />Tweak-Manatees will try to stay in well lit areas</p>"
+      },
+      {
+        "releaseid": 16227,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.1_2b74591014343f172e874f8e4801e766.zip?dl=FotSA-Sirenia-v1.0.16.zip",
+        "filename": "FotSA-Sirenia-v1.0.16.zip",
+        "fileid": 33366,
+        "downloads": 8182,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.16",
+        "created": "2025-02-14 17:55:06",
+        "changelog": "<p>Fixed-Base game animal patch format updated to 1.20.4</p>"
+      },
+      {
+        "releaseid": 15943,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.1_cc1706d506c8c37f0d58c9099c759a16.zip?dl=FotSA-Sirenia-v1.0.15.zip",
+        "filename": "FotSA-Sirenia-v1.0.15.zip",
+        "fileid": 32803,
+        "downloads": 2539,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.15",
+        "created": "2025-02-09 17:46:35",
+        "changelog": "<p>Fixed-Taxidermy being ground placeable&nbsp;</p>"
+      },
+      {
+        "releaseid": 15310,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.1_550888e812415f540a1801a841113bce.zip?dl=FotSA-Sirenia-v1.0.14.zip",
+        "filename": "FotSA-Sirenia-v1.0.14.zip",
+        "fileid": 31646,
+        "downloads": 4681,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.14",
+        "created": "2025-01-28 00:26:42",
+        "changelog": "<p>Added-Bovine compatibility</p>"
+      },
+      {
+        "releaseid": 14973,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.1_0ee923a51272984f50491f2b3776d997.zip?dl=FotSA-Sirenia-v1.0.13.zip",
+        "filename": "FotSA-Sirenia-v1.0.13.zip",
+        "fileid": 31028,
+        "downloads": 2779,
+        "tags": [
+          "1.20.1",
+          "1.20.3"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.13",
+        "created": "2025-01-22 20:36:30",
+        "changelog": "<p>Tweak-Adjusted meat drops, 50% bushmeat, 50% redmeat</p>"
+      },
+      {
+        "releaseid": 14609,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.1_9cd2c51cc91402f5c8bc755e36d839b7.zip?dl=FotSA-Sirenia-v1.0.12.zip",
+        "filename": "FotSA-Sirenia-v1.0.12.zip",
+        "fileid": 30382,
+        "downloads": 2926,
+        "tags": [
+          "1.20.0",
+          "1.20.1"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.12",
+        "created": "2025-01-17 18:43:08",
+        "changelog": "<p>Added-Elephant compatibility</p>"
+      },
+      {
+        "releaseid": 14125,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.1_ec40757f34739b9ebd0398f073c0180c.zip?dl=FotSA-Sirenia-v1.0.11.zip",
+        "filename": "FotSA-Sirenia-v1.0.11.zip",
+        "fileid": 29436,
+        "downloads": 1818,
+        "tags": [
+          "1.20.0-rc.6",
+          "1.20.0-rc.8",
+          "1.20.0-rc.9"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.11",
+        "created": "2025-01-01 23:48:14",
+        "changelog": "<p>Added-Felinae compatibility<br />Updated-1.20 blending for movement animations</p>"
+      },
+      {
+        "releaseid": 13464,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.1_5872464cb886031cf93adadd7a59ae28.zip?dl=FotSA-Sirenia-v1.0.10.zip",
+        "filename": "FotSA-Sirenia-v1.0.10.zip",
+        "fileid": 28210,
+        "downloads": 2941,
+        "tags": [
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.10",
+        "created": "2024-12-05 21:44:32",
+        "changelog": "<p>Added-Ukrainian translation, thanks Deanbro!<br />Fixed-Combat Overhaul baby hitbox bug<br />Tweak-Combat Overhaul damage resistance</p>"
+      },
+      {
+        "releaseid": 13169,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.9_df255745ccd0aa02c191f6c41ab1c4bf.zip?dl=FotSA-Sirenia-v1.0.9.zip",
+        "filename": "FotSA-Sirenia-v1.0.9.zip",
+        "fileid": 27601,
+        "downloads": 946,
+        "tags": [
+          "1.20.0-pre.0",
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.9",
+        "created": "2024-11-21 18:15:47",
+        "changelog": "<p>Adjusted-Combat Overhaul damage resistances</p>"
+      },
+      {
+        "releaseid": 12675,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.8_8f09ce33b8520fbb16b04cb496733ad3.zip?dl=FotSA-Sirenia-v1.0.8.zip",
+        "filename": "FotSA-Sirenia-v1.0.8.zip",
+        "fileid": 26649,
+        "downloads": 922,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.8",
+        "created": "2024-10-24 19:29:52",
+        "changelog": "<p>Added-Combat Overhaul compatibility (Thanks Maltiez)</p>"
+      },
+      {
+        "releaseid": 12557,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.7_d888b4cb041666529756119821f29b74.zip?dl=FotSA-Sirenia-v1.0.7.zip",
+        "filename": "FotSA-Sirenia-v1.0.7.zip",
+        "fileid": 26342,
+        "downloads": 535,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.7",
+        "created": "2024-10-16 17:15:03",
+        "changelog": "<p>Updated-French translation (Thanks Laerinok)</p>"
+      },
+      {
+        "releaseid": 12366,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.6_cc8f88a785af57231483752bffd04ac1.zip?dl=FotSA-Sirenia-v1.0.6.zip",
+        "filename": "FotSA-Sirenia-v1.0.6.zip",
+        "fileid": 25926,
+        "downloads": 658,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.6",
+        "created": "2024-10-05 17:13:33",
+        "changelog": "<p>Refactored-Taxidermies are now items, should reduce mod's texture impact by 33%<br />Refactored-Pelts are now only items, cuts down on mod size and memory impact. Place pelts on antler mounts or tool racks to get the wallmounted version<br />Updated-Animal patches, powdered item in recipe and various tweaks for 1.20's changes</p>"
+      },
+      {
+        "releaseid": 10714,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.5_d9a7efad3046d33de4f73394ed0d4ebf.zip?dl=FotSA-Sirenia-v1.0.5.zip",
+        "filename": "FotSA-Sirenia-v1.0.5.zip",
+        "fileid": 22315,
+        "downloads": 7700,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.5",
+        "created": "2024-06-07 15:43:30",
+        "changelog": "<p>Fixed-removed a number of errors about patches being server side only<br />Recalculated-meat to weight ratio on animals over 100kg<br />Tweak-adjusted max Y for spawn conditions, they'll no longer spawn in the surface layer of water at sea level but should still spawn on taller world heights</p>"
+      },
+      {
+        "releaseid": 10384,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.4_881b3116a186ff0d96fde1c1435e3593.zip?dl=FotSA-Sirenia-v1.0.4.zip",
+        "filename": "FotSA-Sirenia-v1.0.4.zip",
+        "fileid": 21722,
+        "downloads": 1336,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.4",
+        "created": "2024-05-18 21:17:26",
+        "changelog": "<p>Tweak-Reduced spawn rate considerably<br />Tweak-Added a 50 minimum distance for spawning near player<br />Tweak-Added a maximum light level to prevent manatees spawning near illuminating blocks<br />Tweak-readded spawn cap player scaling set to 0, to make sure it isn't scaling&nbsp;</p>"
+      },
+      {
+        "releaseid": 10036,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.3_07a80c7620080f3297c08a7d55bf59a5.zip?dl=FotSA-Sirenia-v1.0.3.zip",
+        "filename": "FotSA-Sirenia-v1.0.3.zip",
+        "fileid": 21118,
+        "downloads": 1595,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.3",
+        "created": "2024-04-25 23:16:09",
+        "changelog": "<p>Fixed-Pelts dropping both adult and baby version<br />Added-interaction with rhinos</p>"
+      },
+      {
+        "releaseid": 9914,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.2_ab9930e7104bef7668d07f875d9746b5.zip?dl=FotSA-Sirenia-v1.0.2.zip",
+        "filename": "FotSA-Sirenia-v1.0.2.zip",
+        "fileid": 20912,
+        "downloads": 813,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.2",
+        "created": "2024-04-19 16:00:45",
+        "changelog": "<p>Added-Stellar's sea cow now floats near the surface<br />Added-missing diet strings<br />Added-missing killed by strings<br />Fixed-Stellar's sea cow babies not growing up (Thanks Rhoun)</p>"
+      },
+      {
+        "releaseid": 9414,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.1_a10239bd6b2ec32b4f495309269f8741.zip?dl=FotSA-Sirenia-v1.0.1.zip",
+        "filename": "FotSA-Sirenia-v1.0.1.zip",
+        "fileid": 20052,
+        "downloads": 1884,
+        "tags": [
+          "1.19.4",
+          "1.19.5",
+          "1.19.6",
+          "1.19.7"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.1",
+        "created": "2024-03-20 18:37:53",
+        "changelog": "<p>Added-French translation<br />Cleaned up-physics properties of the Steller's sea cow<br />Added- animal weights<br />Added-animal knock back resistance</p>"
+      },
+      {
+        "releaseid": 9344,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.0_f6f71711b4f05370380299a9cd059e51.zip?dl=FotSA-Sirenia-v1.0.0.zip",
+        "filename": "FotSA-Sirenia-v1.0.0.zip",
+        "fileid": 19917,
+        "downloads": 932,
+        "tags": [
+          "1.19.4",
+          "1.19.5-rc.1"
+        ],
+        "modidstr": "sirenia",
+        "modversion": "1.0.0",
+        "created": "2024-03-15 19:28:26",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 19918,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-03-14_11-20-53_bbab8287f89148cf8f1e13f374dfac63.png",
+        "filename": "2024-03-14_11-20-53.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-03-14_11-20-53_bbab8287f89148cf8f1e13f374dfac63_55_60.png",
+        "created": "2024-03-15 19:39:57"
+      },
+      {
+        "fileid": 19919,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-03-14_11-32-46_d04b3e938a02afaf298d87a04e972357.png",
+        "filename": "2024-03-14_11-32-46.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-03-14_11-32-46_d04b3e938a02afaf298d87a04e972357_55_60.png",
+        "created": "2024-03-15 19:39:57"
+      },
+      {
+        "fileid": 19920,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-03-14_11-42-04_d4e7ec472a4309c1b63ac066b5d44fbc.png",
+        "filename": "2024-03-14_11-42-04.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-03-14_11-42-04_d4e7ec472a4309c1b63ac066b5d44fbc_55_60.png",
+        "created": "2024-03-15 19:39:57"
+      },
+      {
+        "fileid": 19921,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-03-14_11-40-41_d1a4157377e90890458e66e22b7f68a0.png",
+        "filename": "2024-03-14_11-40-41.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-03-14_11-40-41_d1a4157377e90890458e66e22b7f68a0_55_60.png",
+        "created": "2024-03-15 19:39:57"
+      },
+      {
+        "fileid": 19922,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-03-14_11-42-40_e13bb2cfa6c7ee39406dd4c42b5a32a9.png",
+        "filename": "2024-03-14_11-42-40.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-03-14_11-42-40_e13bb2cfa6c7ee39406dd4c42b5a32a9_55_60.png",
+        "created": "2024-03-15 19:39:57"
+      },
+      {
+        "fileid": 19923,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-03-14_11-38-39_a4fa0aff47ede1ad9b5b2fa7ddb94d1c.png",
+        "filename": "2024-03-14_11-38-39.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-03-14_11-38-39_a4fa0aff47ede1ad9b5b2fa7ddb94d1c_55_60.png",
+        "created": "2024-03-15 19:39:57"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

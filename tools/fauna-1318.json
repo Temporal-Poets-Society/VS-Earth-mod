@@ -1,0 +1,2498 @@
+{
+ "version": 1,
+ "policy": "Decision 0054: the \"1318\" range of a living mammal is its PHYLACINE 1.2.1 present-natural range minus the regions (TDWG level 3) and boxes [west, south, east, north] where it no longer lived around 1318 (roughly 1250-1400): lost to people before then, or never reached in the Holocene (PHYLACINE is counterfactual). Losses after 1318 are kept. Vanilla domestic animals went feral where people kept them in 1318: range1318Regions replaces the natural range, added1318Regions extends it. Research of 5 November 2026 (web sources per entry; no IUCN Red List pages); confidence per entry.",
+ "taxa": {
+  "Ailuropoda melanoleuca": {
+   "keys": [
+    "game:bear-panda"
+   ],
+   "lost1318Regions": [
+    "VIE"
+   ],
+   "lost1318Envelopes": [
+    [
+     111,
+     20,
+     123,
+     35
+    ],
+    [
+     104,
+     20,
+     111,
+     25
+    ]
+   ],
+   "evidence": "Historical records place pandas in Henan, Hubei, Hunan and Sichuan over the last few thousand years (Wen & He 1981). Gazetteer studies show the big pre-Qing panda losses, but the main collapse outside the present mountains came in the 18th-19th centuries. The southern (Guangxi/Yunnan) lineage died out after the mid-Holocene, and Vietnam has only Pleistocene fossils. Kept for 1318: Hubei, Guizhou, Yunnan, western Hunan and the Henan/Shaanxi mountains. Excluded: the eastern lowlands and Guangdong/Guangxi.",
+   "sources": [
+    "https://link.springer.com/doi/10.1007/s11434-012-5647-4",
+    "https://www.pnas.org/doi/10.1073/pnas.1818019116",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC11939203/"
+   ],
+   "confidence": "low"
+  },
+  "Alces alces": {
+   "keys": [
+    "capreolinae:alcesalces",
+    "game:deer-moose"
+   ],
+   "lost1318Regions": [
+    "DEN",
+    "FRA",
+    "GRB",
+    "HUN",
+    "ITA",
+    "KRY",
+    "NET",
+    "NUN",
+    "SWI",
+    "YUG"
+   ],
+   "lost1318Envelopes": [
+    [
+     5.8,
+     47.2,
+     9.8,
+     55.1
+    ]
+   ],
+   "evidence": "Schmölcke & Zachos 2005: moose vanished from France and England in the Preboreal and from most of Denmark in the Atlantic period; only relicts remained in western Central Europe by the start of the Common Era, while groups in Thuringia, NE of the Elbe and Poland survived into the high/late Middle Ages. Bohemia/Moravia/Austria lost moose c. 15th c.; Transylvania mid-17th c.; Hungary proper had no permanent Holocene population (vagrants only). Moose occupied the US Northeast/Great Lakes/Pennsylvania until 18th-19th-c. extirpation (kept). Nunavut cells are tundra beyond the treeline where moose are recent vagrants. Colorado/Utah kept at low confidence: a 2026 J. Biogeography study (Taylor et al.) argues for archaeological and historic moose in the southern Rockies, but residency c.1318 is unproven.",
+   "sources": [
+    "https://doi.org/10.1016/j.mambio.2005.08.001",
+    "https://leiza.academia.edu/UlrichSchm%C3%B6lcke",
+    "https://library.hungaricana.hu/en/view/VertebrataHungarica_1984_22/?pg=94",
+    "https://en.wikipedia.org/wiki/Moose",
+    "https://www.newswise.com/articles/study-finds-evidence-moose-inhabited-southern-rockies-centuries-before-modern-reintroductions"
+   ],
+   "confidence": "low"
+  },
+  "Arctictis binturong": {
+   "keys": [
+    "viverridae:arctictisbinturong"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Binturong losses in Vietnam and southern China (Guangxi) are modern deforestation and hunting.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Binturong"
+   ],
+   "confidence": "high"
+  },
+  "Axis axis": {
+   "keys": [
+    "game:deer-chital"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Chital were lost from most of Bangladesh in the 20th century and survive only in the Sundarbans; all listed losses are modern.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Chital"
+   ],
+   "confidence": "high"
+  },
+  "Blastocerus dichotomus": {
+   "keys": [
+    "capreolinae:blastocerusdichotomus",
+    "game:deer-marsh"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Marsh deer wetlands range across Brazil, Paraguay, Bolivia, NE Argentina, Uruguay and Peru's Pampas del Heath contracted from 19th-20th-c. hunting, dams and cattle. Brazil Northeast cells less certain.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Marsh_deer"
+   ],
+   "confidence": "medium"
+  },
+  "Boselaphus tragocamelus": {
+   "keys": [
+    "bovinae:boselaphustragocamelus"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Nilgai were widespread on the north Indian plains and in the Bengal/Assam lowlands into the colonial period; the Bangladesh population died out only in the 20th century (c. 1940s). All listed losses post-date 1318.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Nilgai"
+   ],
+   "confidence": "high"
+  },
+  "Bubalus arnee": {
+   "keys": [
+    "bovinae:bubalusarnee"
+   ],
+   "lost1318Regions": [],
+   "lost1318Envelopes": [
+    [
+     97,
+     26,
+     112,
+     34.5
+    ]
+   ],
+   "evidence": "Wild buffalo ranged across South and Southeast Asia in historical times, and there is evidence that wild buffalo lived in southern China within the last millennium; most losses in India and Indochina are 19th-20th century. The Chinese short-horned buffalo of central/northern China (B. mephistopheles) is a different species, gone by c. 1000 BC, so the box drops the Sichuan/Guizhou/Hubei part of CHC; the southern Yunnan part and the single CHS cell are kept. Sri Lankan wild buffalo may be feral domestic stock, but buffalo were living wild there by 1318 either way.",
+   "sources": [
+    "https://press-files.anu.edu.au/downloads/press/p69411/html/ch08s02.html",
+    "https://en.wikipedia.org/wiki/Bubalus_mephistopheles"
+   ],
+   "confidence": "low"
+  },
+  "Bubalus depressicornis": {
+   "keys": [
+    "bovinae:bubalusdepressicornis"
+   ],
+   "lost1318Regions": [],
+   "evidence": "The lowland anoa is endemic to Sulawesi; its range shrank through recent (20th-century) hunting and forest loss, so the lost lowland areas were occupied in 1318.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lowland_anoa"
+   ],
+   "confidence": "high"
+  },
+  "Bubalus mindorensis": {
+   "keys": [
+    "bovinae:bubalusmindorensis"
+   ],
+   "lost1318Regions": [],
+   "evidence": "The tamaraw was found across Mindoro until malaria control and settlement after c. 1900 (and a 1930s rinderpest outbreak) cut it back to a few upland refuges.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tamaraw"
+   ],
+   "confidence": "high"
+  },
+  "Canis lupus": {
+   "keys": [
+    "caninae:canis-lupus",
+    "game:wolf-eurasian"
+   ],
+   "lost1318Regions": [
+    "EGY"
+   ],
+   "evidence": "All European losses are post-1318: England c. late 15th-16th c., Scotland 1680s-1740s, Ireland 1786, Denmark 1813, Netherlands 1869, Sicily 1920s-30s. Egypt west of Suez is the range of the African golden wolf (Canis lupaster), not the grey wolf (grey wolves only in Sinai), so EGY is excluded. Wolves were exterminated in Japan only in the Meiji era (Hokkaido c. 1889, Honshu 1905). Losses in India, Pakistan and the Himalaya are modern persecution and land-use effects. Magadan and Sakhalin wolves are historical, and the single Kuril cell is kept on that basis. Grey wolves occupied essentially all of North America including Mexico (Mexican wolf south to Oaxaca) and Greenland until European-era persecution (eastern US 1700s-1800s, West/Mexico 1900-1970s); no pre-1318 losses in the listed regions.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Wolves_in_Great_Britain",
+    "https://en.wikipedia.org/wiki/African_wolf",
+    "https://en.wikipedia.org/wiki/Japanese_wolf",
+    "https://en.wikipedia.org/wiki/Hokkaido_wolf",
+    "https://en.wikipedia.org/wiki/Wolf",
+    "https://en.wikipedia.org/wiki/Mexican_wolf"
+   ],
+   "confidence": "high"
+  },
+  "Canis lupus arctos": {
+   "keys": [
+    "caninae:canis-lupusarctos"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Arctic wolf in Nunavut and Greenland; Greenland wolves have fluctuated (NE Greenland gone c.1930s, recolonised 1979) but the losses are post-1318.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Arctic_wolf"
+   ],
+   "confidence": "medium"
+  },
+  "Canis lycaon": {
+   "keys": [
+    "caninae:canis-lycaon"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Eastern wolf range in southern Ontario/Quebec lost to 19th-20th-c. settlement.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Eastern_wolf"
+   ],
+   "confidence": "high"
+  },
+  "Canis mesomelas": {
+   "keys": [
+    "caninae:lupulella-mesomelas"
+   ],
+   "lost1318Regions": [
+    "EGY",
+    "ZAM"
+   ],
+   "lost1318Envelopes": [
+    [
+     21.8,
+     10.0,
+     38.7,
+     23.5
+    ]
+   ],
+   "evidence": "The northern population (L. m. schmidti) ranges S Ethiopia, South Sudan, Somalia, Djibouti, Eritrea coast, Kenya; there are no records from Egypt or northern Sudan, where jackals are Canis lupaster. Box removes Sudan north of 10N. Black-backed jackal has a natural, ancient disjunction (~900-1000 km 'Mozambican gap' from Zambia/Zambezi to central Tanzania; lineages diverged >1 Ma), so Zambian gap cells are counterfactual. Zimbabwe, Angola, Mozambique and Ethiopia edge cells lie in or beside the native halves and are kept.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Black-backed_jackal",
+    "https://speciesstatus.sanbi.org/assessment/last-assessment/1969/"
+   ],
+   "confidence": "medium"
+  },
+  "Canis rufus": {
+   "keys": [
+    "caninae:canis-rufus"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Red wolf ranged across the southeastern US north to the Ohio Valley/Pennsylvania and west to central Texas; extirpated 1800s-1980. Northern edge cells (NWJ, MRY, DEL, KAN) are uncertain but plausible.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Red_wolf"
+   ],
+   "confidence": "medium"
+  },
+  "Canis simensis": {
+   "keys": [
+    "caninae:canis-simensis"
+   ],
+   "lost1318Regions": [
+    "ERI",
+    "SOM",
+    "SUD"
+   ],
+   "evidence": "Ethiopian wolf is an Afroalpine endemic of the Ethiopian highlands; there is no evidence it ever occurred in Eritrea (Coetzee 1977) or Sudan. Historic losses (Gojjam, W Shoa, last 1932) are inside Ethiopia. Ethiopian wolf is endemic to Ethiopian afroalpine highlands (3000-4400 m) with no records from Somalia. Ethiopian cells kept: local losses (e.g. Mt Choke, Gojjam, Guna) are 19th-20th c., though the highland agricultural squeeze is ancient.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ethiopian_wolf"
+   ],
+   "confidence": "medium"
+  },
+  "Capra falconeri": {
+   "keys": [
+    "game:goat-markhor"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Markhor declines in Afghanistan, Tajikistan and Uzbekistan are 20th-century hunting losses. Markhor range in Pakistan fragmented through 20th-century hunting; it was present in 1318.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Markhor"
+   ],
+   "confidence": "medium"
+  },
+  "Capra ibex": {
+   "keys": [
+    "game:goat-ibexalp"
+   ],
+   "lost1318Regions": [
+    "HUN"
+   ],
+   "evidence": "Alpine ibex disappeared from most of the Alps in the 16th-19th c. (only Gran Paradiso by c. 1820), so Austrian, French and Italian alpine cells were still occupied in 1318; Hungary has no alpine habitat and no Holocene ibex.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Alpine_ibex"
+   ],
+   "confidence": "high"
+  },
+  "Capra nubiana": {
+   "keys": [
+    "game:goat-ibexnub"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Nubian ibex range loss in Arabia and the Red Sea Hills is 20th-century hunting.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Nubian_ibex"
+   ],
+   "confidence": "medium"
+  },
+  "Capreolus capreolus": {
+   "keys": [
+    "capreolinae:capreoluscapreolus"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Roe deer persisted in the Levant (Mount Carmel/Galilee to c. 1912; Syrian and Lebanese coastal mountains into the 20th century), so these losses are modern.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Roe_deer"
+   ],
+   "confidence": "medium"
+  },
+  "Caracal caracal": {
+   "keys": [
+    "felinae:caracalcaracal"
+   ],
+   "lost1318Regions": [
+    "CNY",
+    "CYP",
+    "KGZ"
+   ],
+   "evidence": "Caracals still inhabit (patchily) all of North Africa, Arabia, the Middle East and southern Central Asia; listed gaps are modern persecution/IUCN-mapping gaps. No native caracals on Cyprus or the Canary Islands. Caracals lived across the dry north and west of India and Pakistan and were trained for coursing from the Delhi Sultanate through the Mughals into the 20th century; their decline is modern. The Central Asian range was the deserts of Turkmenistan, Uzbekistan (Ustyurt, Kyzylkum) and southern Kazakhstan, without a Kyrgyz record, so the single KGZ cell is excluded. Caracal lives in savanna/arid Africa; patchy modern map gaps reflect recent loss or survey gaps, not Holocene absence. DRC cells are probably savanna margins; rainforest-core cells would be counterfactual if present.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Caracal"
+   ],
+   "confidence": "medium"
+  },
+  "Ceratotherium simum": {
+   "keys": [
+    "rhinocerotidae:ceratotheriumsimum"
+   ],
+   "lost1318Regions": [],
+   "evidence": "The northern white rhino ranged across southern Chad, CAR, South Sudan west of the Nile, NE DRC and NW Uganda until 20th-century poaching. Northern white rhino lived in E CAR and NE DRC (last wild in Garamba c.2006-2008). Southern white rhino occurred historically in S Angola. All losses are 19th-20th c.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Northern_white_rhinoceros",
+    "https://pachydermjournal.org/index.php/pachyderm/article/view/311"
+   ],
+   "confidence": "medium"
+  },
+  "Cervus canadensis": {
+   "keys": [
+    "game:deer-elk"
+   ],
+   "lost1318Regions": [
+    "NWT",
+    "RUS",
+    "TCS",
+    "YUK"
+   ],
+   "evidence": "Asian wapiti/maral (Tien Shan, Dzungarian, Altai, S Siberia) and the Bactrian deer of Amu/Syr Darya tugai (which PHYLACINE evidently maps under this species) survived widely until 19th-20th c. hunting and tugai clearance. The Caucasus and lower Volga/Don deer are Cervus elaphus, not canadensis. Altai and Tian Shan maral were hunted out of parts of their range only in the 19th-20th centuries. The PAK and NEP cells correspond to the Kashmir hangul and Tibetan shou (the latter lumped with C. canadensis/elaphus), both historically in the Kashmir and trans-Himalayan valleys with 20th-century declines. Elk ranged over most of the US East to Georgia and the Carolinas (SC gone 1737, Louisiana 1842) and the West until settlement (kept; LOU/MSI/GEO records weaker). Yukon elk are 1950s introductions and NWT lies north of the historic range.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Elk",
+    "https://en.wikipedia.org/wiki/Bactrian_deer",
+    "https://en.wikipedia.org/wiki/Altai_wapiti",
+    "https://en.wikipedia.org/wiki/Kashmir_stag",
+    "https://en.wikipedia.org/wiki/Eastern_elk"
+   ],
+   "confidence": "low"
+  },
+  "Crocuta crocuta": {
+   "keys": [
+    "game:hyena-spotted"
+   ],
+   "lost1318Regions": [
+    "AFG",
+    "ALB",
+    "ALG",
+    "AUT",
+    "BAN",
+    "BGM",
+    "BLR",
+    "BLT",
+    "BUL",
+    "CBD",
+    "CHC",
+    "CHI",
+    "CHM",
+    "CHN",
+    "CHQ",
+    "CHS",
+    "CHT",
+    "CNY",
+    "CYP",
+    "CZE",
+    "DEN",
+    "EAI",
+    "EGY",
+    "EHM",
+    "FIN",
+    "FRA",
+    "GER",
+    "GRB",
+    "GRC",
+    "GST",
+    "HUN",
+    "IND",
+    "IRE",
+    "IRN",
+    "IRQ",
+    "ITA",
+    "KAZ",
+    "KGZ",
+    "KRY",
+    "KUW",
+    "LAO",
+    "LBS",
+    "LBY",
+    "MOR",
+    "MYA",
+    "NCS",
+    "NEP",
+    "NET",
+    "NOR",
+    "OMA",
+    "PAK",
+    "PAL",
+    "POL",
+    "POR",
+    "ROM",
+    "RUC",
+    "RUE",
+    "RUN",
+    "RUS",
+    "RUW",
+    "SAU",
+    "SIC",
+    "SIN",
+    "SPA",
+    "SRL",
+    "SWE",
+    "SWI",
+    "TCS",
+    "THA",
+    "TKM",
+    "TUE",
+    "TUN",
+    "TUR",
+    "TZK",
+    "UKR",
+    "UZB",
+    "VIE",
+    "WHM",
+    "WSA",
+    "YEM",
+    "YUG"
+   ],
+   "lost1318Envelopes": [
+    [
+     -17.5,
+     17.0,
+     38.7,
+     23.5
+    ]
+   ],
+   "evidence": "Eurasian spotted (cave) hyenas died out at the end of the Late Pleistocene; PHYLACINE's Eurasian range is that lumping. There are no historical spotted hyenas in North Africa north of the Sahel, Egypt or Arabia (the hyena there is Hyaena hyaena). Sahelian populations persisted into the 20th c.; the box removes the Sahara north of 17N. Asian Crocuta (cave hyena, C. c. ultima/ussurica) became extinct at the end of the Late Pleistocene; the youngest directly dated Asian fossils are about 20,200 cal BP (NE China). There is no Holocene record of spotted hyenas anywhere in South, East or Southeast Asia, and the only Holocene hyena there is the striped hyena. Spotted hyenas lived across the Cape, Free State, Lesotho lowlands, Namibia, KwaZulu-Natal and West/Central African savannas until 19th-20th-c. persecution.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Spotted_hyena",
+    "https://en.wikipedia.org/wiki/Cave_hyena",
+    "https://openresearch-repository.anu.edu.au/entities/publication/c6c14d19-51a5-4601-98ea-fe96d59b0c45/full",
+    "https://en.wikipedia.org/wiki/Crocuta"
+   ],
+   "confidence": "high"
+  },
+  "Cuon alpinus": {
+   "keys": [
+    "caninae:cuon-alpinus"
+   ],
+   "lost1318Regions": [
+    "ABT",
+    "ALA",
+    "ALB",
+    "ARI",
+    "ARK",
+    "ASK",
+    "AUT",
+    "BGM",
+    "BLR",
+    "BLT",
+    "BLZ",
+    "BRC",
+    "BUL",
+    "CAL",
+    "CNT",
+    "COL",
+    "COS",
+    "CYP",
+    "CZE",
+    "DEL",
+    "DEN",
+    "EAI",
+    "ELS",
+    "FIN",
+    "FLA",
+    "FRA",
+    "GEO",
+    "GER",
+    "GRC",
+    "GUA",
+    "HON",
+    "HUN",
+    "IDA",
+    "ILL",
+    "INI",
+    "IOW",
+    "IRN",
+    "IRQ",
+    "ITA",
+    "KAM",
+    "KAN",
+    "KRY",
+    "KTY",
+    "KUR",
+    "LAB",
+    "LBS",
+    "LOU",
+    "MAG",
+    "MAI",
+    "MAN",
+    "MAS",
+    "MIC",
+    "MIN",
+    "MNT",
+    "MRY",
+    "MSI",
+    "MSO",
+    "MXC",
+    "MXE",
+    "MXG",
+    "MXN",
+    "MXS",
+    "MXT",
+    "NBR",
+    "NCA",
+    "NCS",
+    "NDA",
+    "NEB",
+    "NET",
+    "NEV",
+    "NFL",
+    "NIC",
+    "NOR",
+    "NSC",
+    "NUN",
+    "NWH",
+    "NWJ",
+    "NWM",
+    "NWT",
+    "NWY",
+    "OHI",
+    "OKL",
+    "ONT",
+    "ORE",
+    "PAL",
+    "PAN",
+    "PEI",
+    "PEN",
+    "POL",
+    "POR",
+    "QUE",
+    "RHO",
+    "ROM",
+    "RUC",
+    "RUE",
+    "RUN",
+    "RUS",
+    "RUW",
+    "SAS",
+    "SCA",
+    "SDA",
+    "SIC",
+    "SPA",
+    "SRL",
+    "SWE",
+    "SWI",
+    "TCS",
+    "TEN",
+    "TEX",
+    "TKM",
+    "TUE",
+    "TUR",
+    "UKR",
+    "UTA",
+    "VER",
+    "VRG",
+    "WAS",
+    "WIS",
+    "WSB",
+    "WVA",
+    "WYO",
+    "YUG",
+    "YUK"
+   ],
+   "lost1318Envelopes": [
+    [
+     46.0,
+     40.0,
+     68.0,
+     56.0
+    ],
+    [
+     68.0,
+     46.5,
+     80.0,
+     56.0
+    ],
+    [
+     55.0,
+     37.0,
+     68.5,
+     46.0
+    ],
+    [
+     60.0,
+     29.0,
+     75.0,
+     35.0
+    ],
+    [
+     60.0,
+     35.0,
+     69.0,
+     39.0
+    ],
+    [
+     80,
+     59,
+     115,
+     82
+    ],
+    [
+     105,
+     60,
+     165,
+     78
+    ],
+    [
+     130,
+     56,
+     145,
+     63
+    ]
+   ],
+   "evidence": "Dhole withdrew to its historical Asian range 12-18 ka; European dhole died out at the end of the Würm (possible early-Holocene relict in Iberia only), and there is no evidence of it in the Middle East or North Africa. In 1318 the westernmost populations were the Tien Shan/Pamir/Altai dholes (C. a. hesperius) of SE Kazakhstan, Kyrgyzstan, Tajikistan, E Uzbekistan and NE Afghanistan, lost in the 20th century; boxes remove the Kazakh steppe/desert, W Uzbekistan and S/W Afghanistan. Pallas (1811) gave the northern limit as the Uda (Udskoi Ostrog), upper Lena and Yenisei areas. Heptner records dholes in the Altai, Sayan, Tarbagatai, Tian Shan, Mongolia and Transbaikalia; Korean records run to 1909/1921 and Hainan records 1521-1935. The species was lost from Russia and Central Asia in the 20th century, so those areas are kept, but the boxes drop the Taymyr and Arctic parts of Krasnoyarsk (north of 59N), Yakutia north of 60N and northern Khabarovsk (north of 56N). There is no Holocene record from Kamchatka, Magadan or the Kurils, and in Sri Lanka the dhole is known only as a Pleistocene fossil. Dholes in the Americas are known only from a single contested Late Pleistocene record (San Josecito Cave, NE Mexico); the species was confined to Asia throughout the Holocene. All American regions are counterfactual.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Dhole",
+    "https://en.wikipedia.org/wiki/European_dhole",
+    "https://doi.org/10.1007/s13364-017-0339-8",
+    "https://publikace.nm.cz/file/4220a41c95f23886af43e54b02e00cf4/48119/11_Baryshnikov.pdf"
+   ],
+   "confidence": "medium"
+  },
+  "Dicerorhinus sumatrensis": {
+   "keys": [
+    "rhinocerotidae:dicerorhinussumatrensis"
+   ],
+   "lost1318Regions": [
+    "CHN",
+    "PHI"
+   ],
+   "lost1318Envelopes": [
+    [
+     111,
+     20,
+     123,
+     35
+    ],
+    [
+     104,
+     25,
+     111,
+     35
+    ],
+    [
+     97,
+     30.5,
+     112,
+     34.5
+    ],
+    [
+     108,
+     28,
+     112,
+     30.5
+    ]
+   ],
+   "evidence": "Chinese rhinos retreated south over three millennia. They were in Hunan until the Song and rare by the Song/Yuan in the eastern heartland, but Yunnan paid rhino horn tribute from the 13th century (last killed 1957) and Sichuan had rhinos to the late 17th century. The boxes keep Yunnan, Guizhou, southern Sichuan and western Guangxi and drop north China, the east and Hunan/Hubei. Sumatran rhinos survived in Assam, Bangladesh, Myanmar, Borneo and Malaya into the 20th century. There is no Philippine record.",
+   "sources": [
+    "https://pachydermjournal.org/index.php/pachyderm/article/view/1267",
+    "https://en.wikipedia.org/wiki/Rhinoceroses_in_ancient_China",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6955318"
+   ],
+   "confidence": "medium"
+  },
+  "Diceros bicornis": {
+   "keys": [
+    "rhinocerotidae:dicerosbicornis"
+   ],
+   "lost1318Regions": [
+    "GHA",
+    "GUI",
+    "IVO",
+    "LBR",
+    "MLI",
+    "SEN",
+    "SIE"
+   ],
+   "evidence": "Rookmaaker (2004) confirms the western black rhino's historical range only in SE Niger, NE Nigeria, N Cameroon, S Chad and the CAR/Sudan, with a Togo horn record; Burkina Faso rests on local names, and there are no records for Mali or Senegal. Loss of D. b. longipes is 20th century. Black rhinos lived across eastern and southern Africa, incl. Katanga (DRC) and Rwanda, until the 20th c. In West Africa the western subspecies was restricted to NE Nigeria, N Cameroon, Chad, CAR and SE Niger, plus a single 1941 horn from northern Togo (Rookmaaker 2004; Antoine & Rookmaaker 2013). Ivory Coast, Guinea, Liberia, Sierra Leone and Ghana are counterfactual; Togo and Benin kept at low confidence.",
+   "sources": [
+    "https://rhinoresourcecenter.com/library/references/historical-distribution-of-the-black-rhinoceros-diceros-bicornis-in-west-africa/",
+    "https://en.wikipedia.org/wiki/Black_rhinoceros",
+    "https://pachydermjournal.org/index.php/pachyderm/article/view/311",
+    "https://hal.umontpellier.fr/hal-01922383",
+    "https://en.wikipedia.org/wiki/Western_black_rhinoceros",
+    "https://www.cambridge.org/core/journals/oryx/article/black-rhinoceros-is-brought-back-to-ruanda/980FDEBBC785078A57F5B0FEA4BC2882"
+   ],
+   "confidence": "low"
+  },
+  "Elephas maximus": {
+   "keys": [
+    "elephantidae:elephasmaximus"
+   ],
+   "lost1318Regions": [
+    "BOR",
+    "CHN",
+    "CHT",
+    "CHX",
+    "IRN",
+    "IRQ",
+    "KUW",
+    "LBS",
+    "PAK",
+    "PHI",
+    "WHM"
+   ],
+   "lost1318Envelopes": [
+    [
+     108,
+     25.5,
+     123,
+     35
+    ],
+    [
+     97,
+     25.5,
+     112,
+     34.5
+    ],
+    [
+     68,
+     23,
+     77.5,
+     37
+    ]
+   ],
+   "evidence": "The westernmost Asian elephants (Syrian elephant of Syria/Upper Mesopotamia) were hunted out by c. 100 BC; there are no medieval elephants in Iran, Iraq, Kuwait or Syria-Lebanon. China: elephants had left north China by the Zhou period and by the Song (960-1279) had shrunk to the far south (Guangdong, Guangxi, southern Fujian, southern Yunnan), retreating to Yunnan only under the Ming-Qing. The boxes therefore keep CHS/CHC south of about 25.5N. India: Babur (1520s) placed the western edge of wild elephants at the Kalpi country, so the Indus plain, Punjab and the Thar (PAK, the IND box, WHM) were already empty, while the rest of India and mainland Southeast Asia lost elephants after 1500. Borneo: the elephant is confined to the northeast with a single prehistoric tooth record, so the cells outside today's range are excluded. Philippines: Sulu elephants were at most a royal introduction.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Syrian_elephant",
+    "https://www.jstor.org/stable/j.ctt1nq9mw",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6955318",
+    "https://scroll.in/article/1054424/illustrations-birds-and-animals-of-hindustan-from-the-pages-of-baburnama",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5772424"
+   ],
+   "confidence": "medium"
+  },
+  "Elephas maximus borneensis": {
+   "keys": [
+    "elephantidae:elephasmaximusborneensis"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Bornean elephants are historically known only from northeastern Borneo (Sabah and adjacent North Kalimantan). Whether they are native (genetics: isolated about 300 ka) or introduced via Sulu, there is no evidence they ranged over the rest of Borneo in the Holocene; the only fossil is one tooth from Brunei. Exclude only the 27 cells outside today's range, not the current NE range. Applied as boxes: Borneo outside north-eastern Sabah.",
+   "sources": [
+    "https://journals.plos.org/plosbiology/article/info:doi/10.1371/journal.pbio.0000006",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5772424"
+   ],
+   "confidence": "medium",
+   "lost1318Envelopes": [
+    [
+     108,
+     -4.5,
+     116.3,
+     7.5
+    ],
+    [
+     116.3,
+     -4.5,
+     119.5,
+     4.2
+    ]
+   ]
+  },
+  "Genetta piscivora": {
+   "keys": [
+    "viverridae:genettapiscivora"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Aquatic genet is poorly known from NE DRC; listed cells lie in plausible range, and no evidence of Holocene absence.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Aquatic_genet"
+   ],
+   "confidence": "low"
+  },
+  "Genetta poensis": {
+   "keys": [
+    "viverridae:genettapoensis"
+   ],
+   "lost1318Regions": [],
+   "evidence": "King genet has rare forest records across West/Central Africa incl. Liberia and Cote d'Ivoire; kept.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/King_genet"
+   ],
+   "confidence": "low"
+  },
+  "Helarctos malayanus": {
+   "keys": [
+    "game:bear-sun"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Sun bear range loss in mainland Southeast Asia, Bangladesh and NE India comes from 20th-century deforestation and the bile/pet trade; the bears were present in 1318.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sun_bear"
+   ],
+   "confidence": "high"
+  },
+  "Hippocamelus antisensis": {
+   "keys": [
+    "capreolinae:hippocamelusantisensis",
+    "game:deer-taruca"
+   ],
+   "lost1318Regions": [
+    "ECU"
+   ],
+   "evidence": "Taruca never inhabited Ecuador: records are misidentifications and the Huancabamba depression is its northern limit (Pinto et al. 2016, J. Mammalogy). Peru/Bolivia/Argentina/N Chile losses (Chile formerly to Antofagasta) are later fragmentation.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Taruca",
+    "https://research.usfq.edu.ec/en/publications/archaeology-biogeography-and-mammalogy-do-not-provide-evidence-fo/"
+   ],
+   "confidence": "high"
+  },
+  "Hippocamelus bisulcus": {
+   "keys": [
+    "capreolinae:hippocamelusbisulcus",
+    "game:deer-guemal"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Huemul declined across central-southern Chile and Patagonia after the 1800s (hunting, livestock); present in all listed regions in 1318.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/South_Andean_deer"
+   ],
+   "confidence": "high"
+  },
+  "Hydropotes inermis": {
+   "keys": [
+    "capreolinae:hydropotesinermis",
+    "game:deer-water"
+   ],
+   "lost1318Regions": [],
+   "lost1318Envelopes": [
+    [
+     97,
+     21,
+     109,
+     34.5
+    ]
+   ],
+   "evidence": "Historical texts put water deer across eastern China from Liaoning to Guangdong and in central/southern Korea, roughly 28-42N and east of about 111E. Today's range is under 10% of that, a contraction mostly of the last few centuries, so the eastern lost areas are kept. The box drops the western part of CHC (Sichuan/Yunnan/Guizhou), which lies outside the historical range.",
+   "sources": [
+    "https://www.wildlifeonline.me.uk/animals/article/water-deer-distribution-native-range"
+   ],
+   "confidence": "medium"
+  },
+  "Lasiorhinus krefftii": {
+   "keys": [
+    "vombatidae:lasiorhinuskrefftii"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Northern hairy-nosed wombats survived near Deniliquin/Jerilderie (NSW) and on the Moonie River near St George (QLD) until c.1900-1908, and fossils occur in Victoria. Present in NSW and QLD in 1318; the Victorian border cells are uncertain but kept.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Northern_hairy-nosed_wombat",
+    "https://www.qld.gov.au/environment/plants-animals/conservation/threatened-species/featured-projects/northern-hairy-nosed-wombat"
+   ],
+   "confidence": "medium"
+  },
+  "Lasiorhinus latifrons": {
+   "keys": [
+    "vombatidae:lasiorhinuslatifrons"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Pre-European southern hairy-nosed wombats ranged from the River Murray west across South Australia to the Nullarbor and SE Western Australia; Murray-Darling Depression losses are post-settlement. NW Victoria cells kept at low confidence.",
+   "sources": [
+    "https://hansardsearch.parliament.sa.gov.au/daily/uh/2010-09-14/6",
+    "https://publish.csiro.au/AM/AM15046"
+   ],
+   "confidence": "medium"
+  },
+  "Loxodonta africana": {
+   "keys": [
+    "elephantidae:loxodontaafricana"
+   ],
+   "lost1318Regions": [
+    "ALG",
+    "CNY",
+    "EGY",
+    "LBY",
+    "MOR",
+    "SPA",
+    "TUN",
+    "WSA",
+    "YEM"
+   ],
+   "lost1318Envelopes": [
+    [
+     -17.5,
+     17.0,
+     38.7,
+     23.5
+    ]
+   ],
+   "evidence": "North African (Maghreb) elephants were extinct by late Roman times (c. 4th c. AD) and Egyptian elephants by the predynastic/Old Kingdom period; Spain, Canaries and Yemen never had Holocene African elephants. Sahelian populations (Mauritania, Mali Gourma, Niger, Chad, Sudan, Senegal, Eritrea) survived into the 19th-20th c.; the box removes the Sahara north of 17N. Savanna elephants were extirpated from the Cape (19th c.), Free State, Ethiopian/Somali lowlands and much of West Africa only after 1600; present in all listed regions in 1318. Lesotho and Djibouti edge cells are least certain.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/North_African_elephant",
+    "https://en.wikipedia.org/wiki/African_bush_elephant"
+   ],
+   "confidence": "medium"
+  },
+  "Loxodonta cyclotis": {
+   "keys": [
+    "elephantidae:loxodontacyclotis"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Forest elephant range loss across West/Central Africa is 19th-20th-c. ivory hunting.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/African_forest_elephant"
+   ],
+   "confidence": "high"
+  },
+  "Lycaon pictus": {
+   "keys": [
+    "caninae:lycaon-pictus"
+   ],
+   "lost1318Regions": [
+    "YEM"
+   ],
+   "evidence": "African wild dogs occupied the West African Sahel/Sudan savannas and even Saharan massifs (Ahaggar, Air, Tibesti records) into the 20th century; West African losses are 20th century. Never recorded in Arabia, so Yemen is excluded. African wild dogs occupied almost all of sub-Saharan Africa outside rainforest cores (incl. Bateke savannas of Gabon/Congo, Cape, Lesotho) until 19th-20th-c. persecution; no pre-1318 losses known.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/African_wild_dog"
+   ],
+   "confidence": "medium"
+  },
+  "Lynx canadensis": {
+   "keys": [
+    "felinae:lynxcanadensis"
+   ],
+   "lost1318Regions": [
+    "ARI",
+    "CAL",
+    "CNT",
+    "ILL",
+    "INI",
+    "IOW",
+    "KAN",
+    "KTY",
+    "MRY",
+    "NEB",
+    "NEV",
+    "NWJ",
+    "OHI",
+    "RHO",
+    "SDA",
+    "VRG",
+    "WVA"
+   ],
+   "evidence": "McKelvey et al. (2000) found lynx populations only in the boreal/subalpine forests of the Northeast (Maine to New York, Pennsylvania), the Great Lakes, North Dakota's north, the Rockies (to N Utah/Colorado) and the Cascades/Blue Mts of Washington/Oregon. Iowa, Nebraska, S Dakota, Illinois, Indiana, Ohio, Nevada and Connecticut have only a handful of 19th-20th-c. dispersers from cyclic irruptions. Kansas, Kentucky, Virginia, West Virginia, Maryland, New Jersey, Rhode Island, California and Arizona have no records.",
+   "sources": [
+    "https://research.fs.usda.gov/treesearch/50631",
+    "https://www.fs.usda.gov/rm/pubs/rmrs_gtr030.pdf"
+   ],
+   "confidence": "medium"
+  },
+  "Lynx lynx": {
+   "keys": [
+    "felinae:lynxlynx"
+   ],
+   "lost1318Regions": [
+    "ASS",
+    "CHS",
+    "CYP",
+    "EAI",
+    "GRB",
+    "LBS",
+    "MYA",
+    "SIC",
+    "TKM",
+    "VIE"
+   ],
+   "lost1318Envelopes": [
+    [
+     -9.5,
+     35.9,
+     3.4,
+     41.8
+    ],
+    [
+     -9.6,
+     36.9,
+     -6.1,
+     41.0
+    ],
+    [
+     50.0,
+     37.0,
+     66.0,
+     46.0
+    ],
+    [
+     46.0,
+     43.5,
+     74.0,
+     48.5
+    ],
+    [
+     103.5,
+     21,
+     112,
+     34.5
+    ],
+    [
+     97,
+     21,
+     103.5,
+     26.5
+    ],
+    [
+     80,
+     71.5,
+     115,
+     82
+    ],
+    [
+     105,
+     71.5,
+     165,
+     78
+    ]
+   ],
+   "evidence": "Most continental losses are 17th-20th c. (France/Germany/Alps 19th-early 20th c.); in Iberia the Eurasian lynx survived in the Atlantic north and Pyrenees until the early 19th c. (Clavero & Delibes 2013), while the south was Iberian-lynx range. In Britain the latest dated lynx are early medieval (c. 5th-7th c. AD, Hetherington et al. 2006), so it was gone by 1318. Never native on Sicily, Cyprus or the E Aegean islands; boxes remove the Turan/Kazakh deserts; Turkmenistan and Syria-Lebanon have no reliable records (caracal country). In China the lynx is a northern and western species ('everywhere but SE China'), with no reports from southern China. Lowland Southeast China, Vietnam, Myanmar and Assam are therefore outside its Holocene range, and the CHC boxes keep only the high west Sichuan/NW Yunnan mountains. Losses in northeast and north China, Korea, Mongolia and the Himalaya (Ladakh, Gilgit, Nepal Trans-Himalaya) are 20th century. The Arctic boxes drop the treeless Taymyr and north Yakutian tundra beyond the forest-tundra.",
+   "sources": [
+    "https://link.springer.com/doi/10.1007/s10531-013-0506-4",
+    "https://doi.org/10.1002/jqs.960",
+    "https://www.lifelynx.eu/?p=21",
+    "https://www.catsg.org/living-species-eurasianlynx",
+    "https://journals.rcsi.science/1067-4136/article/view/226499"
+   ],
+   "confidence": "medium"
+  },
+  "Lynx pardinus": {
+   "keys": [
+    "felinae:lynxpardinus"
+   ],
+   "lost1318Regions": [
+    "FRA"
+   ],
+   "evidence": "In 1318 the Iberian lynx occupied most of Mediterranean Iberia (contraction 19th-20th c.); French records are Pleistocene only.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Iberian_lynx",
+    "https://link.springer.com/doi/10.1007/s10531-013-0506-4"
+   ],
+   "confidence": "medium"
+  },
+  "Macrogalidia musschenbroekii": {
+   "keys": [
+    "viverridae:macrogalidiamusschenbroekii"
+   ],
+   "lost1318Regions": [],
+   "evidence": "The Sulawesi palm civet is endemic to Sulawesi; its lowland range loss is recent forest clearance.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sulawesi_palm_civet"
+   ],
+   "confidence": "high"
+  },
+  "Manis javanica": {
+   "keys": [
+    "manidae:javanica"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Sunda pangolin losses are driven by 20th-21st century trade; the pangolin was present across these regions in 1318.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sunda_pangolin"
+   ],
+   "confidence": "high"
+  },
+  "Neofelis diardi": {
+   "keys": [
+    "pantherinae:diardi"
+   ],
+   "lost1318Regions": [
+    "JAW",
+    "PHI"
+   ],
+   "evidence": "On Java the Sunda clouded leopard is known from fossils and is thought to have died out there in the Holocene (Meijaard 2004). Caveat: Cuvier's 1823 type skin was sent by Diard 'from Java', which may be a trade or locality artefact, but it is the only hint of later survival. No living or historical record exists for the Philippines (Palawan). Borneo and Sumatra losses are recent deforestation.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sunda_clouded_leopard",
+    "https://openresearch-repository.anu.edu.au/items/8ec4e3dc-7045-4171-a1eb-083cb062fa76"
+   ],
+   "confidence": "low"
+  },
+  "Neofelis nebulosa": {
+   "keys": [
+    "pantherinae:nebulosa"
+   ],
+   "lost1318Regions": [],
+   "evidence": "The Formosan clouded leopard survived until the late 20th century (declared extinct 2013). South China and Indochina clouded leopards declined with 19th-20th century deforestation, and Medog (SE Tibet) is within the historical range. All listed areas were occupied in 1318.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Clouded_leopard",
+    "https://en.wikipedia.org/wiki/Formosan_clouded_leopard"
+   ],
+   "confidence": "medium"
+  },
+  "Odocoileus hemionus": {
+   "keys": [
+    "capreolinae:odocoileushemionus"
+   ],
+   "lost1318Regions": [
+    "MSO",
+    "NUN",
+    "NWT",
+    "ONT",
+    "WIS",
+    "YUK"
+   ],
+   "evidence": "Mule deer occupied the prairie provinces, Dakotas, western Minnesota/Iowa, Kansas, Texas and NE Mexico until 19th-c. market hunting (kept). Mule deer reach their northern limit in S Yukon today and NWT records are recent northward spread, so NWT/NUN/YUK cells are excluded. Ontario/Wisconsin/Missouri edge cells lie east of the historic range.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mule_deer"
+   ],
+   "confidence": "low"
+  },
+  "Oreamnos americanus": {
+   "keys": [
+    "game:goat-mountain"
+   ],
+   "lost1318Regions": [
+    "COL",
+    "NEV",
+    "NWM",
+    "SDA",
+    "UTA",
+    "WYO"
+   ],
+   "evidence": "Native mountain goat range was SE Alaska, BC, Alberta, Washington, Idaho and Montana. Oregon is kept: a Northwest Science review found archaeological and 19th-c. evidence for the Cascades and NE Oregon. Utah (1967), Colorado (1940s), Nevada, Black Hills (1924) and New Mexico herds are introductions; Wyoming herds came in from introduced stocks.",
+   "sources": [
+    "https://www.fs.usda.gov/database/feis/animals/mammal/oram/all.html",
+    "https://complete.bioone.org/journals/northwest-science/volume-82/issue-4/0029-344X-82.4.286/Evaluating-Historical-Evidence-for-Occurrence-of-Mountain-Goats-in-Oregon/10.3955/0029-344X-82.4.286.full",
+    "https://wgfd.wyo.gov/media/3422/download"
+   ],
+   "confidence": "medium"
+  },
+  "Ovibos moschatus": {
+   "keys": [
+    "game:goat-muskox"
+   ],
+   "lost1318Regions": [
+    "FIN",
+    "KAM",
+    "KHA",
+    "KRA",
+    "KUR",
+    "LAB",
+    "MAG",
+    "NOR",
+    "QUE",
+    "RUN",
+    "SAS",
+    "SWE",
+    "WSB",
+    "YAK"
+   ],
+   "evidence": "Muskoxen vanished from Eurasia in the Holocene (last on Taymyr c. 2.7 ka); Scandinavia and European Russia have no late-Holocene muskox. Modern Norwegian/Swedish animals are 20th-century introductions from Greenland. Muskoxen died out in Siberia in the late Holocene, about 3,000 BP in the Lena delta and about 2,700 BP on Taymyr (radiocarbon), well before 1318. Today's Taymyr/Yakutian herds are 1974+ reintroductions from North America. There is no Holocene record from Kamchatka, Khabarovsk or the Kurils. Muskoxen survived in Alaska and N Yukon until c.1850-1900 and in N Manitoba near Churchill into the 1700s-1800s (kept). No fossil evidence of muskoxen in Quebec-Labrador after the Pleistocene: the Nunavik herd stems from the 1967 introduction and Labrador animals since 1988. The single Saskatchewan cell is taiga south of the historic range.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Muskox",
+    "https://www.spektrum.de/news/fand-pleistozaene-tierwelt-ein-refugium-in-sibirien/788529",
+    "https://openpolar.no/Record/crelsevierbv:10.1006%2Fjasc.2001.0802",
+    "https://cdn-contenu.quebec.ca/cdn-contenu/faune/documents/animaux/fiche-synthese-boeuf_musque-en.pdf",
+    "https://www.canadianfieldnaturalist.ca/index.php/cfn/article/view/398"
+   ],
+   "confidence": "medium"
+  },
+  "Ovis canadensis": {
+   "keys": [
+    "game:sheep-bighorn"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Bighorn sheep (incl. Audubon's bighorn of the Dakotas/Nebraska badlands and desert bighorn of NE/NW Mexico, Texas) declined from 1850-1900 through disease from domestic sheep and hunting.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Bighorn_sheep"
+   ],
+   "confidence": "high"
+  },
+  "Ovis orientalis": {
+   "keys": [
+    "game:sheep-mouflon"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Mouflon/urial range contraction in Anatolia and Central Asia is 19th-20th-century hunting and grazing competition. Urial (Ovis vignei, lumped here) range in Pakistan, Ladakh and Kashmir was reduced by 20th-century hunting and livestock competition.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mouflon",
+    "https://en.wikipedia.org/wiki/Urial"
+   ],
+   "confidence": "medium"
+  },
+  "Ozotoceros bezoarticus": {
+   "keys": [
+    "capreolinae:ozotocerosbezoarticus",
+    "game:deer-pampas"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Pampas deer occupied the pampas and cerrado from Brazil to northern Patagonia (Rio Negro) until 19th-20th-c. hunting and conversion to farmland.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Pampas_deer"
+   ],
+   "confidence": "high"
+  },
+  "Panthera leo": {
+   "keys": [
+    "pantherinae:leo"
+   ],
+   "lost1318Regions": [
+    "ALB",
+    "BUL",
+    "CNY",
+    "CYP",
+    "EAI",
+    "EGY",
+    "GRC",
+    "SPA",
+    "TUE",
+    "WSA",
+    "YUG"
+   ],
+   "lost1318Envelopes": [
+    [
+     -17.5,
+     17.0,
+     38.7,
+     23.5
+    ],
+    [
+     -17.5,
+     23.5,
+     25.0,
+     30.0
+    ],
+    [
+     72,
+     6,
+     89,
+     20
+    ]
+   ],
+   "evidence": "Lions were gone from Greece/the Balkans in Classical antiquity (c. 1st c. AD) and from Egypt's Nile lands many centuries BC. Barbary lions lasted on the Libyan coast to the early 1700s and in the Maghreb to the 1940s-60s; Palestine kept lions until the 13th-early 14th c. (Megiddo, Samaria, coastal forests); Syria/Mesopotamia/Iran to the 19th-20th c.; Arabia to the late 19th c. Boxes remove the Sahara (north of 17N in the Sahel states, south of 30N in the Maghreb/Libya). Asiatic lions ranged from Sindh and Punjab across the Thar and the Ganga plains to Bihar/Jharkhand until the 19th century, with a southern limit near the Narmada (only stray records just south of it), and were reduced to Gir by about 1900. The box drops peninsular India south of 20N, which was never lion range. Lions occupied nearly all of sub-Saharan Africa outside rainforest (incl. the Cape until the 1850s, Bateke savannas of Gabon/Congo, Ethiopia, Somalia, Djibouti) until colonial-era and 20th-c. extirpation.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Barbary_lion",
+    "https://en.wikipedia.org/wiki/Asiatic_lion",
+    "https://www.biblicaltraining.org/library/lion",
+    "https://www.downtoearth.org.in/wildlife-biodiversity/once-upon-a-time-in-india-lions-were-present-from-west-to-east-even-south-of-narmada-study-84691",
+    "https://en.wikipedia.org/wiki/Lion"
+   ],
+   "confidence": "medium"
+  },
+  "Panthera onca": {
+   "keys": [
+    "pantherinae:onca"
+   ],
+   "lost1318Regions": [
+    "CLN",
+    "TRT"
+   ],
+   "evidence": "Jaguars ranged from the US Southwest (incl. Texas, California records) to northern Patagonia (Rio Negro, 19th c.) and Uruguay, with 17th-c. loss in south-central Chile; all lost after 1500 and kept. The Atacama of Chile North is unsuitable desert with no records, and there are no confirmed historic jaguar records from Trinidad.",
+   "sources": [
+    "https://www.revmexmastozoologia.unam.mx/ojs/index.php/rmm/article/view/25/0",
+    "https://cambridge.org/core/services/aop-cambridge-core/content/view/7BE2162442C5ECA5BBD19A17CA4FC49E/S0030605300022547a.pdf/status-of-the-jaguar1987.pdf"
+   ],
+   "confidence": "medium"
+  },
+  "Panthera pardus": {
+   "keys": [
+    "pantherinae:pardus"
+   ],
+   "lost1318Regions": [
+    "ALB",
+    "AUT",
+    "BGM",
+    "BLR",
+    "BLT",
+    "BUL",
+    "CYP",
+    "CZE",
+    "DEN",
+    "EAI",
+    "FIN",
+    "FRA",
+    "GER",
+    "GRB",
+    "GRC",
+    "HUN",
+    "IRE",
+    "ITA",
+    "KRY",
+    "NET",
+    "NOR",
+    "POL",
+    "POR",
+    "ROM",
+    "RUC",
+    "RUE",
+    "RUN",
+    "RUS",
+    "RUW",
+    "SIC",
+    "SPA",
+    "SUM",
+    "SWE",
+    "SWI",
+    "TUE",
+    "UKR",
+    "WSB",
+    "YUG"
+   ],
+   "lost1318Envelopes": [
+    [
+     46.0,
+     40.0,
+     66.0,
+     56.0
+    ],
+    [
+     66.0,
+     44.5,
+     87.0,
+     56.0
+    ]
+   ],
+   "evidence": "Leopards disappeared from Europe at the end of the Pleistocene (latest reliable remains Vraona, Greece; possible Lateglacial/early-Holocene relicts in Iberia/Balkans), and never lived in Holocene Russia north of the Caucasus or in West Siberia. Leopards persisted in North Africa, the Sahara massifs, Arabia, the Levant, Anatolia, the Caucasus and southern Central Asia into the 20th c.; boxes keep only S Kazakhstan's mountains (Karatau/Talas/Tien Shan). Leopards are absent from Sumatra in the Holocene; Pleistocene fossils exist, but the island population probably died out after the Toba eruption (about 74 ka), while the Javan population persists. Leopard losses in China, Korea and the Russian Far East are 19th-20th century, and Indian and Indochinese losses are modern. Kyrgyzstan (a western Tian Shan edge record) is kept with low certainty. Leopards occupied all of sub-Saharan Africa until 20th-c. losses in the Free State, Lesotho and West African farmland.",
+   "sources": [
+    "https://core.ac.uk/download/71059539.pdf",
+    "https://en.wikipedia.org/wiki/List_of_extinct_animals_of_Europe",
+    "https://en.wikipedia.org/wiki/Persian_leopard",
+    "https://www.izw-berlin.de/en/press-release/the-evolution-of-the-javan-leopard-and-the-urgent-need-for-its-conservation.html",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6955318",
+    "https://en.wikipedia.org/wiki/African_leopard"
+   ],
+   "confidence": "high"
+  },
+  "Panthera tigris": {
+   "keys": [
+    "pantherinae:tigris"
+   ],
+   "lost1318Regions": [
+    "ALT",
+    "BOR",
+    "BRY",
+    "IRK",
+    "JAP",
+    "KRA",
+    "KUR",
+    "MON",
+    "PHI",
+    "RUS",
+    "SAK",
+    "SRL",
+    "TVA",
+    "WSB",
+    "YAK"
+   ],
+   "lost1318Envelopes": [
+    [
+     46.0,
+     40.0,
+     58.5,
+     56.0
+    ],
+    [
+     58.5,
+     48.0,
+     80.0,
+     56.0
+    ],
+    [
+     107,
+     48,
+     116.5,
+     59
+    ],
+    [
+     116.5,
+     54,
+     123,
+     59
+    ]
+   ],
+   "evidence": "Caspian tigers held the river/tugai systems of Central Asia, N Iran, Transcaucasus and E Anatolia until 1920s-1970s. Southern Russia (Don basin) had tigers only until the early Middle Ages and West Siberia only marginally, so RUS and WSB are excluded; Iraq has only a vagrant record (Mosul 1887). Boxes remove the W and N Kazakh steppe/desert away from the rivers. Japan's supposed Pleistocene 'tigers' are cave lions (2026 aDNA study), so there was never a Holocene tiger. Borneo's latest tiger bone dates to 10.5-3 ka, Palawan has none after about 12 ka, and Sri Lanka has only Late Pleistocene fossils (about 14-17 ka). In Siberia (Yakutia, Krasnoyarsk, Irkutsk, Buryatia, Tuva, Altai) and Mongolia tigers were only vagrants; the regular range reached SE Transbaikalia (the CTA boxes keep only the SE corner). The Caspian tiger held Xinjiang (Tarim to the 1920s, Manas to the 1960s) and the Chu/Ili; China, Korea, Sindh, India and Bali (LSI, extinct about 1940) losses all post-date 1318.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Caspian_tiger",
+    "https://researchprofiles.ku.dk/en/publications/the-japanese-archipelago-sheltered-cave-lions-not-tigers-during-t/",
+    "https://en.wikipedia.org/wiki/Bornean_tiger",
+    "https://archives1.sundayobserver.lk/node/18410",
+    "https://en.wikipedia.org/wiki/Siberian_tiger"
+   ],
+   "confidence": "medium"
+  },
+  "Phataginus tetradactyla": {
+   "keys": [
+    "manidae:tetradactyla"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Long-tailed pangolin in the forest zone of Ghana/Nigeria; Togo/Benin (Dahomey Gap) cells uncertain but kept.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Long-tailed_pangolin"
+   ],
+   "confidence": "low"
+  },
+  "Poiana leightoni": {
+   "keys": [
+    "viverridae:poianaleightoni"
+   ],
+   "lost1318Regions": [],
+   "evidence": "West African oyan occurs in Upper Guinean forest incl. Cote d'Ivoire; modern map gaps reflect deforestation and survey gaps.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/West_African_oyan"
+   ],
+   "confidence": "low"
+  },
+  "Pseudoryx nghetinhensis": {
+   "keys": [
+    "bovinae:pseudoryxnghetinhensis"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Saola range loss in the Annamites comes from modern snaring and logging; the one lost Lao cell was occupied in 1318.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Saola"
+   ],
+   "confidence": "high"
+  },
+  "Rangifer arcticus (provider taxonomy)": {
+   "keys": [
+    "capreolinae:rangiferarcticus"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Barren-ground caribou herds in Alaska/Yukon fluctuate but occupied these areas throughout the late Holocene.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Reindeer"
+   ],
+   "confidence": "high"
+  },
+  "Rangifer caribou (provider taxonomy)": {
+   "keys": [
+    "capreolinae:rangifercaribou"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Woodland caribou range in southern Ontario/Quebec/BC/prairie provinces receded northward since c.1880-1900 through logging and settlement.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Boreal_woodland_caribou"
+   ],
+   "confidence": "high"
+  },
+  "Rangifer fennicus": {
+   "keys": [
+    "capreolinae:rangiferfennicus"
+   ],
+   "lost1318Regions": [],
+   "lost1318Envelopes": [
+    [
+     30.0,
+     49.0,
+     50.0,
+     54.0
+    ],
+    [
+     44.0,
+     49.0,
+     62.0,
+     53.5
+    ]
+   ],
+   "evidence": "Wild forest reindeer peaked in the 1600s-1700s across eastern Fennoscandia and NW Russia and declined from the 18th c.; in Tatarstan (~55N) they lasted until the 1920s. Boxes remove the forest-steppe/steppe south of ~54N, where they were absent in the late Holocene.",
+   "sources": [
+    "https://cyberleninka.ru/article/n/the-pestretsy-sites-of-the-eneolithic-bronze-and-early-iron-ages-in-the-lower-kama-region-and-their-natural-environment-chapter-5-4000-year-old",
+    "https://en.wikipedia.org/wiki/Reindeer_in_Russia"
+   ],
+   "confidence": "medium"
+  },
+  "Rangifer groenlandicus (provider taxonomy)": {
+   "keys": [
+    "capreolinae:rangifergroenlandicus"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Greenland caribou were hunted by Norse (c.1000-1450) and Thule people; East/NE Greenland populations died out c.1900. Present c.1318.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Reindeer"
+   ],
+   "confidence": "medium"
+  },
+  "Rangifer tarandus": {
+   "keys": [
+    "capreolinae:rangifertarandus",
+    "game:deer-caribou"
+   ],
+   "lost1318Regions": [
+    "BLR",
+    "BLT",
+    "CHX",
+    "CZE",
+    "DEN",
+    "GER",
+    "KAZ",
+    "POL",
+    "ROM",
+    "RUS",
+    "UKR"
+   ],
+   "lost1318Envelopes": [
+    [
+     60.0,
+     50.0,
+     90.0,
+     56.5
+    ],
+    [
+     30.0,
+     49.0,
+     50.0,
+     54.0
+    ],
+    [
+     44.0,
+     49.0,
+     62.0,
+     53.5
+    ],
+    [
+     87,
+     41,
+     120,
+     49.5
+    ],
+    [
+     97,
+     37,
+     126,
+     49
+    ],
+    [
+     119,
+     38,
+     135,
+     49
+    ]
+   ],
+   "evidence": "Wild reindeer were still widespread in Fennoscandia and northern European Russia/West Siberia in 1318 (decline from the 18th c.; Finland's wild forest reindeer gone c. 1900; Tatarstan to the 1920s). In central Europe (Germany, Poland, Czech lands, Denmark, Baltics, Belarus, Ukraine, Romania) and the Kazakh/S Russian steppe reindeer are Late Glacial/early Holocene only. Wild reindeer once ranged through Siberia, the Russian Far East (Sikhote-Alin and Sakhalin included), the Altai-Sayan, northern Mongolia and northern China north of about 50N (the Greater Khingan population at Genhe is the world's southernmost). Losses there are recent overhunting and habitat loss. The boxes drop Mongolia south of 49.5N and Inner Mongolia/Manchuria south of 49N; Xinjiang is excluded (no Holocene record found). Caribou occupied Greenland, Maine, NH, VT, the Adirondacks, the Maritimes incl. PEI and Nova Scotia, the Upper Great Lakes, Minnesota and the Selkirks of Idaho/Washington/Montana until 18th-20th-c. extirpation. North Dakota and New York cells are the weakest.",
+   "sources": [
+    "https://cyberleninka.ru/article/n/the-pestretsy-sites-of-the-eneolithic-bronze-and-early-iron-ages-in-the-lower-kama-region-and-their-natural-environment-chapter-5-4000-year-old",
+    "https://en.wikipedia.org/wiki/Reindeer_in_Russia",
+    "https://en.wikipedia.org/wiki/Reindeer_distribution",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6853604",
+    "https://en.wikipedia.org/wiki/Reindeer",
+    "https://en.wikipedia.org/wiki/Boreal_woodland_caribou"
+   ],
+   "confidence": "medium"
+  },
+  "Rhinoceros sondaicus": {
+   "keys": [
+    "rhinocerotidae:rhinocerossondaicus"
+   ],
+   "lost1318Regions": [
+    "CHT"
+   ],
+   "lost1318Envelopes": [
+    [
+     111,
+     20,
+     123,
+     35
+    ],
+    [
+     104,
+     25,
+     111,
+     35
+    ]
+   ],
+   "evidence": "Javan rhinos survived in Bengal/Sundarbans, Assam, Myanmar, Thailand, Malaya, Sumatra and Indochina into the late 19th-20th century (Vietnam until 2010). In China they follow the same Song-to-Ming southward retreat as other rhinos, so only western Guangxi south of 25N and Yunnan are kept. Tibet is outside any Holocene rhino range.",
+   "sources": [
+    "https://pachydermjournal.org/index.php/pachyderm/article/view/1267",
+    "https://en.wikipedia.org/wiki/Javan_rhinoceros"
+   ],
+   "confidence": "medium"
+  },
+  "Rhinoceros unicornis": {
+   "keys": [
+    "rhinocerotidae:rhinocerosunicornis"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Babur hunted rhinos near Peshawar and on the Indus in 1519-1526, and Mughal-era records place them across the Ganga plain and Terai. The species was lost from Pakistan in the 16th-17th centuries and from most of the Gangetic plain in the 18th-19th, so all listed regions were occupied in 1318.",
+   "sources": [
+    "https://www.downtoearth.org.in/wildlife-biodiversity/world-rhino-day-2024-when-babur-hunted-karg-in-pakistan-north-india"
+   ],
+   "confidence": "high"
+  },
+  "Sarcophilus harrisii": {
+   "keys": [
+    "thylacinidae:sarcophilusharrisii"
+   ],
+   "lost1318Regions": [
+    "NSW",
+    "NTA",
+    "QLD",
+    "SOA",
+    "VIC",
+    "WAU"
+   ],
+   "evidence": "Tasmanian devils died out on mainland Australia c.3,200 BP (3,179-3,227 BP; White et al. 2018, Biology Letters), at the same time as the thylacine. A claimed c.500 BP mainland date is unreliable. Gone from all mainland regions long before 1318.",
+   "sources": [
+    "https://conservationbytes.com/2018/01/17/when-devils-and-thylacines-went-extinct/",
+    "https://www.australiangeographic.com.au/news/2018/01/tassie-devils-and-thylacines-went-extinct-from-the-mainland-at-the-same-time/"
+   ],
+   "confidence": "high"
+  },
+  "Smutsia gigantea": {
+   "keys": [
+    "manidae:gigantea"
+   ],
+   "lost1318Regions": [],
+   "evidence": "One cell in southern Burkina Faso adjoining the Comoé (Ivory Coast) Guinea-savanna population; no evidence of pre-1300 loss. Giant pangolin range loss in Nigeria/Ghana/Cameroon is modern bushmeat hunting. Togo/Benin lie in the Dahomey Gap savanna corridor (dry since c.4,000 BP) where forest pangolins would be confined to gallery/relict forest; kept with low confidence.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Giant_pangolin"
+   ],
+   "confidence": "low"
+  },
+  "Sus scrofa": {
+   "keys": [
+    "game:pig-eurasian"
+   ],
+   "lost1318Regions": [
+    "KUR",
+    "SAK"
+   ],
+   "lost1318Envelopes": [
+    [
+     -17.5,
+     15.0,
+     30.0,
+     29.5
+    ],
+    [
+     33.5,
+     15.0,
+     38.7,
+     29.5
+    ],
+    [
+     139.3,
+     41.3,
+     146,
+     45.7
+    ]
+   ],
+   "evidence": "Native British wild boar were probably extinct by the 13th c. (last secure records Forest of Dean 1251/1260; c. 700 years ago), Irish boar earlier; Finland had no boar between the Mesolithic and 20th-century recolonisation. Denmark lost boar c. 1800 and Egypt c. 1900-1912. Boxes remove the Sahara south of 29.5N except the Nile corridor. Hokkaido lies outside the natural boar range (Blakiston line). Jomon boars there were human introductions from Honshu (ancient DNA) that did not persist; boar was absent by the 1730s and there is no evidence of it in the Satsumon/Ainu period, so the box drops Hokkaido. Sakhalin and the Kurils never had wild boar. Tohoku boars were present until the 18th-20th century (snow, famine-era culls, Meiji hunting), so northern Honshu is kept. Mongolia, Xinjiang (Tarim tugai) and SE Tibet/Qinghai river-valley boars are historical, with recent losses. Britain, Ireland and Finland stay: domestic pigs kept there in 1318 went feral (decision 0054).",
+   "sources": [
+    "https://gwct.org.uk/wildlife/species-of-the-month/2015/june/",
+    "https://en.wikipedia.org/wiki/Wild_boar",
+    "https://bioone.org/journals/Zoological-Science/volume-21/issue-2/zsj.21.219/Prehistoric-Sado-Island-Populations-of-Sus-scrofa-Distinguished-from-Contemporary/10.2108/zsj.21.219.full",
+    "https://www.nabunken.go.jp/english/environmental-wildboar.html"
+   ],
+   "confidence": "low"
+  },
+  "Syncerus caffer": {
+   "keys": [
+    "bovinae:synceruscaffer"
+   ],
+   "lost1318Regions": [],
+   "evidence": "African buffalo occupied the Sudan-Sahel savannas of Chad (incl. the Lake Chad basin) into the 20th century; losses there are modern. No pre-1300 extirpation known. African buffalo losses in the Cape, Free State/Lesotho margins, Namibia, Botswana and West/Central Africa are colonial-era (Cape extirpation 18th-19th c., rinderpest 1890s, 20th-c. hunting); all listed regions occupied c. 1318.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/African_buffalo"
+   ],
+   "confidence": "medium"
+  },
+  "Syncerus caffer nanus": {
+   "keys": [
+    "bovinae:syncerusnanus"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Forest buffalo range loss in Nigeria, Benin, DRC etc. is 20th-century hunting/habitat loss; present in 1318.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/African_forest_buffalo"
+   ],
+   "confidence": "high"
+  },
+  "Tragelaphus derbianus": {
+   "keys": [
+    "bovinae:taurotragusderbianus"
+   ],
+   "lost1318Regions": [
+    "BEN",
+    "CON",
+    "GAB",
+    "GHA",
+    "TOG"
+   ],
+   "evidence": "Western Derby eland ranged across the Sudano-Guinean savanna belt from Senegal to Sudan; contraction to Niokolo-Koba and the Chad/CAR/Sudan core is 19th-20th century. Giant eland lived in a Sudano-Guinean savanna belt from Senegambia to the White Nile; lost from Ivory Coast, E Nigeria, Uganda, Chad in the 20th c. (kept). Purported Ghana/Togo records are not accepted (Grubb et al. 1998), none known from Benin, and Congo/Gabon are forest outside its Holocene range (counterfactual).",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Giant_eland",
+    "https://treatment.plazi.org/id/03F507139965FFDF064CF444F8BAF825/17"
+   ],
+   "confidence": "medium"
+  },
+  "Ursus americanus": {
+   "keys": [
+    "game:bear-black"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Black bears occupied essentially all wooded North America incl. Plains riparian forests, Texas and N Mexico until 19th-20th-c. extirpation.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/American_black_bear"
+   ],
+   "confidence": "high"
+  },
+  "Ursus arctos": {
+   "keys": [
+    "game:bear-brown"
+   ],
+   "lost1318Regions": [
+    "ARK",
+    "CYP",
+    "DEN",
+    "EAI",
+    "EGY",
+    "GRB",
+    "ILL",
+    "INI",
+    "IOW",
+    "IRE",
+    "KUW",
+    "LBY",
+    "MIC",
+    "MSO",
+    "MTN",
+    "MXS",
+    "NET",
+    "ONT",
+    "SAU",
+    "SIC",
+    "SIN",
+    "WIS",
+    "WSA"
+   ],
+   "lost1318Envelopes": [
+    [
+     -17.5,
+     15.0,
+     12.0,
+     31.0
+    ],
+    [
+     50.0,
+     38.3,
+     66.0,
+     46.0
+    ],
+    [
+     -80.0,
+     44.9,
+     -57.0,
+     54.0
+    ],
+    [
+     -95.5,
+     43.4,
+     -89.4,
+     49.5
+    ]
+   ],
+   "evidence": "Britain's bear died out by the early medieval period at the latest (c. 425-594 AD date; O'Regan 2018), Ireland in the Bronze Age, Denmark c. 6.5 ka, Netherlands c. 1000 AD. Atlas bear survived in Morocco/Algeria Atlas to the 1870s and Syrian bear in Palestine/Lebanon to c. 1917, but there are no historical bears in Libya, Egypt, Sinai, Arabia or the Sahara. Boxes remove the Sahara south of 31N and the Turan deserts. Gazetteer-based reconstruction (Teng et al. 2019) finds the brown bear's range in China 'almost stable' until rapid losses in the late 19th-mid 20th century. The Mongolian/Gobi and Himalayan contractions are likewise modern, so all listed regions are kept. The 2 Myanmar cells (far north, next to the Tibetan blue-bear range) are the least certain. Grizzlies ranged the Great Plains (mostly along major rivers), Rockies, California, N Mexico and the Barren Grounds until 1800-1960 (kept). A small Ungava population in N Quebec/Labrador persisted into the 19th-early 20th c. (Okak skull, Moravian pelt records), so northern Quebec and Labrador are kept. There is no Holocene evidence for southern Quebec, Ontario, the Great Lakes states, Iowa/Missouri or Arkansas, nor for SW Mexico. Minnesota is kept only for the western Red River prairie edge.",
+   "sources": [
+    "https://eprints.nottingham.ac.uk/50559",
+    "https://en.wikipedia.org/wiki/Atlas_bear",
+    "https://en.wikipedia.org/wiki/Syrian_brown_bear",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6955318",
+    "https://en.wikipedia.org/wiki/Gobi_bear",
+    "https://en.wikipedia.org/wiki/Ungava_brown_bear",
+    "https://pubs.aina.ucalgary.ca/arctic/Arctic60-1-7.pdf",
+    "https://www.canada.ca/en/environment-climate-change/services/species-risk-public-registry/recovery-strategies/grizzly-bear-prairie-population/chapter-1.html"
+   ],
+   "confidence": "low"
+  },
+  "Viverra civettina": {
+   "keys": [
+    "viverridae:viverracivettina"
+   ],
+   "lost1318Regions": [],
+   "evidence": "The Malabar civet was common along the Malabar coast until the 19th-20th century loss of lowland forest (cashew plantations); it was present in 1318.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Malabar_large-spotted_civet"
+   ],
+   "confidence": "high"
+  },
+  "Viverra megaspila": {
+   "keys": [
+    "viverridae:viverramegaspila"
+   ],
+   "lost1318Regions": [],
+   "evidence": "Large-spotted civet losses across Indochina, Malaya and southern China come from 20th-century snaring and lowland forest loss.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Large-spotted_civet"
+   ],
+   "confidence": "high"
+  },
+  "Viverra zibetha": {
+   "keys": [
+    "viverridae:viverrazibetha"
+   ],
+   "lost1318Regions": [],
+   "evidence": "The large Indian civet was widespread in southern and central China (to southern Shaanxi/Henan) and on Hainan; declines are 20th-century fur hunting and habitat loss.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Large_Indian_civet"
+   ],
+   "confidence": "medium"
+  },
+  "Vulpes velox": {
+   "keys": [
+    "caninae:vulpes-velox"
+   ],
+   "lost1318Regions": [
+    "BRC",
+    "IOW",
+    "MIN"
+   ],
+   "evidence": "Swift fox native range was the short/mixed-grass prairie from S Alberta/Saskatchewan/Manitoba to Texas (decline from 1800s, kept). There are no verified records from Minnesota or Iowa (Sovada & Scheick 1999; one fossil only) and BC is outside the prairie range.",
+   "sources": [
+    "https://www.canadianfieldnaturalist.ca/index.php/cfn/article/view/1004",
+    "https://www.canada.ca/en/environment-climate-change/services/species-risk-public-registry/cosewic-assessments-status-reports/swift-fox-2009/chapter-4.html"
+   ],
+   "confidence": "medium"
+  },
+  "Vulpes vulpes": {
+   "keys": [
+    "caninae:vulpes-vulpes",
+    "game:fox-red"
+   ],
+   "lost1318Regions": [
+    "ALA",
+    "ARK",
+    "DEL",
+    "FLA",
+    "GEO",
+    "KTY",
+    "LOU",
+    "MRY",
+    "MSI",
+    "NCA",
+    "OKL",
+    "SCA",
+    "TEN",
+    "TEX",
+    "VRG",
+    "WVA"
+   ],
+   "lost1318Envelopes": [
+    [
+     -121.0,
+     32.5,
+     -114.1,
+     35.5
+    ],
+    [
+     -124.0,
+     34.5,
+     -121.6,
+     38.2
+    ]
+   ],
+   "evidence": "Red foxes occur throughout Magadan Oblast including the tundra; the single cell is a mapping artefact, not a historical loss. Native American red foxes were boreal/montane in the Holocene; they were absent or rare in the southeastern US and southern Plains until colonial-era/1800s expansion (Statham et al. 2011/2012; Texas foxes stem from 1890s releases), so these states are excluded. Lowland coastal and southern California foxes are 19th-20th-c. introductions (boxes); Sierra Nevada, Sacramento Valley, Rocky Mountain and northern populations are native and kept.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Red_fox",
+    "https://en.wikipedia.org/wiki/American_red_fox",
+    "https://bioone.org/journals/Journal-of-Mammalogy/volume-93/issue-1/11-MAMM-A-033.1/The-origin-of-recently-established-red-fox-populations-in-the/10.1644/11-MAMM-A-033.1.full",
+    "https://repository.lsu.edu/agrnr_pubs/832"
+   ],
+   "confidence": "medium"
+  }
+ },
+ "vanilla": {
+  "chicken": {
+   "range1318Regions": [
+    "AFG",
+    "ALB",
+    "ALG",
+    "ANG",
+    "ASS",
+    "AUT",
+    "BAL",
+    "BAN",
+    "BEN",
+    "BGM",
+    "BIS",
+    "BKN",
+    "BLR",
+    "BLT",
+    "BOR",
+    "BOT",
+    "BUL",
+    "BUR",
+    "CAB",
+    "CAF",
+    "CBD",
+    "CHA",
+    "CHC",
+    "CHH",
+    "CHI",
+    "CHM",
+    "CHN",
+    "CHQ",
+    "CHS",
+    "CHT",
+    "CHX",
+    "CMN",
+    "CNY",
+    "COM",
+    "CON",
+    "COO",
+    "COR",
+    "CPP",
+    "CPV",
+    "CRL",
+    "CYP",
+    "CZE",
+    "DEN",
+    "DJI",
+    "EAI",
+    "EAS",
+    "EGY",
+    "EHM",
+    "EQG",
+    "ERI",
+    "ETH",
+    "FIJ",
+    "FIN",
+    "FOR",
+    "FRA",
+    "GAB",
+    "GAM",
+    "GER",
+    "GGI",
+    "GHA",
+    "GNB",
+    "GRB",
+    "GRC",
+    "GST",
+    "GUI",
+    "HAW",
+    "HUN",
+    "ICE",
+    "IND",
+    "IRE",
+    "IRN",
+    "IRQ",
+    "ITA",
+    "IVO",
+    "JAP",
+    "JAW",
+    "KAZ",
+    "KEN",
+    "KGZ",
+    "KOR",
+    "KRI",
+    "KRY",
+    "KUW",
+    "LAO",
+    "LBR",
+    "LBS",
+    "LBY",
+    "LDV",
+    "LES",
+    "LSI",
+    "MDG",
+    "MDV",
+    "MLI",
+    "MLW",
+    "MLY",
+    "MOL",
+    "MON",
+    "MOR",
+    "MOZ",
+    "MRN",
+    "MRQ",
+    "MTN",
+    "MYA",
+    "NAM",
+    "NAT",
+    "NCB",
+    "NCS",
+    "NEP",
+    "NET",
+    "NGA",
+    "NGR",
+    "NNS",
+    "NOR",
+    "NUE",
+    "NWC",
+    "NWG",
+    "OFS",
+    "OMA",
+    "PAK",
+    "PAL",
+    "PHI",
+    "PIT",
+    "POL",
+    "POR",
+    "PRM",
+    "ROM",
+    "RUC",
+    "RUE",
+    "RUN",
+    "RUS",
+    "RUW",
+    "RWA",
+    "SAM",
+    "SAR",
+    "SAU",
+    "SCI",
+    "SCZ",
+    "SEN",
+    "SIC",
+    "SIE",
+    "SIN",
+    "SOC",
+    "SOL",
+    "SOM",
+    "SPA",
+    "SRL",
+    "SUD",
+    "SUL",
+    "SUM",
+    "SWE",
+    "SWI",
+    "SWZ",
+    "TAI",
+    "TAN",
+    "TCS",
+    "THA",
+    "TKM",
+    "TOG",
+    "TOK",
+    "TON",
+    "TUA",
+    "TUB",
+    "TUE",
+    "TUN",
+    "TUR",
+    "TUV",
+    "TVL",
+    "TZK",
+    "UGA",
+    "UKR",
+    "UZB",
+    "VAN",
+    "VIE",
+    "WAL",
+    "WHM",
+    "WSA",
+    "YEM",
+    "YUG",
+    "ZAI",
+    "ZAM",
+    "ZIM"
+   ],
+   "evidence": "Chickens were kept across the farming Old World by 1318: Europe incl. Iceland and Faroe (Norse), Africa south of the Sahara (Madagascar via East African/Swahili routes, Comoros, Bioko), the Middle East, South, Southeast and East Asia incl. Japan, Ryukyu, Taiwan and Tibet. Lapita/Austronesian voyagers carried them into Oceania: a directly dated chicken bone from the SE Solomons (Nenumbo) is c. 3000 BP; East Polynesian archipelagos (Hawaii, Marquesas, Society, Cook, Easter Island, Tuamotu, Austral, Pitcairn group) received them c. AD 1000-1300; Tonga, Samoa, Niue, Wallis-Futuna, Fiji, Vanuatu, New Caledonia had them. Absent pre-contact in New Zealand, the Chathams, Kermadecs and Norfolk (earliest NZ chicken bones are post-Cook). Excluded: the Americas (El Arenal pre-Columbian Chilean chicken was later attributed to modern-DNA contamination; unproven), Australia, islands uninhabited in 1318 (Azores, Madeira, Cape Verde, St Helena, Mascarenes, Seychelles, Chagos, Bonin etc.), the Andamans, Norse Greenland (no evidence), and the Siberian taiga/steppe-nomad regions east of the Urals where no poultry keeping is attested. Micronesian atolls (Marshall, Gilbert, Nauru) excluded for lack of evidence; Marianas and Carolines included on weak evidence (older Marianas accounts: settlers had no domestic animals 'except, very probably, poultry').",
+   "sources": [
+    "Cosmos, summary of Wood et al. 2016 (earliest NZ chickens are post-contact, brought by Cook): https://cosmosmagazine.com/biology/chickens-brought-to-new-zealand-by-captain-cook",
+    "Harris, Green & Storey 2013, Examining the dispersal of domestic chickens into and around the Pacific (Santa Cruz case study): https://www.summagallicana.it/Volume1/Dispersal_of_domestic_chickens_into_Pacific_October2013.pdf",
+    "The Conversation 2014, Chickens tell tale of human migration across Pacific (Chilean claim and contamination critique): https://theconversation.com/chickens-tell-tale-of-human-migration-across-pacific-24461"
+   ],
+   "confidence": "high for the Old World core, the Polynesian triangle and the NZ/Americas/Australia exclusions; low for Micronesia (MRN, CRL in; MRS, GIL, NRU out), Tuvalu/Tokelau/Pitcairn/Austral (in) and the exact Siberian cut-off"
+  },
+  "sheep-mouflon": {
+   "added1318Regions": [
+    "AFG",
+    "ALB",
+    "ALG",
+    "ALT",
+    "ANG",
+    "ASS",
+    "AUT",
+    "BAL",
+    "BAN",
+    "BEN",
+    "BGM",
+    "BKN",
+    "BLR",
+    "BLT",
+    "BOT",
+    "BRY",
+    "BUL",
+    "BUR",
+    "CAB",
+    "CAF",
+    "CHA",
+    "CHC",
+    "CHI",
+    "CHM",
+    "CHN",
+    "CHQ",
+    "CHS",
+    "CHT",
+    "CHX",
+    "CMN",
+    "CNY",
+    "COM",
+    "CON",
+    "COR",
+    "CPP",
+    "CPV",
+    "CTA",
+    "CYP",
+    "CZE",
+    "DEN",
+    "DJI",
+    "EAI",
+    "EGY",
+    "EHM",
+    "EQG",
+    "ERI",
+    "ETH",
+    "FIN",
+    "FOR",
+    "FRA",
+    "GAB",
+    "GAM",
+    "GER",
+    "GHA",
+    "GNB",
+    "GNL",
+    "GRB",
+    "GRC",
+    "GST",
+    "GUI",
+    "HUN",
+    "ICE",
+    "IND",
+    "IRE",
+    "IRK",
+    "IRN",
+    "IRQ",
+    "ITA",
+    "IVO",
+    "KAZ",
+    "KEN",
+    "KGZ",
+    "KRA",
+    "KRI",
+    "KRY",
+    "KUW",
+    "LBR",
+    "LBS",
+    "LBY",
+    "LES",
+    "MDG",
+    "MLI",
+    "MLW",
+    "MON",
+    "MOR",
+    "MOZ",
+    "MTN",
+    "MYA",
+    "NAM",
+    "NAT",
+    "NCS",
+    "NEP",
+    "NET",
+    "NGA",
+    "NGR",
+    "NOR",
+    "OFS",
+    "OMA",
+    "PAK",
+    "PAL",
+    "POL",
+    "POR",
+    "ROM",
+    "RUC",
+    "RUE",
+    "RUN",
+    "RUS",
+    "RUW",
+    "RWA",
+    "SAR",
+    "SAU",
+    "SEN",
+    "SIC",
+    "SIE",
+    "SIN",
+    "SOC",
+    "SOM",
+    "SPA",
+    "SRL",
+    "SUD",
+    "SWE",
+    "SWI",
+    "SWZ",
+    "TAN",
+    "TCS",
+    "TKM",
+    "TOG",
+    "TUE",
+    "TUN",
+    "TUR",
+    "TVA",
+    "TVL",
+    "TZK",
+    "UGA",
+    "UKR",
+    "UZB",
+    "WHM",
+    "WSA",
+    "WSB",
+    "YEM",
+    "YUG",
+    "ZAI",
+    "ZAM",
+    "ZIM"
+   ],
+   "evidence": "Sheep were herded across Europe incl. Iceland, Faroe (named for sheep) and Norse Greenland (Western Settlement to c.1350, Eastern to c.1450; adult sheep outnumbered goats about 2:1), the Mediterranean islands, North Africa, the Middle East incl. Arabia and Socotra, the Caucasus, Iran, Central Asia, South Asia, northern and central China, Mongolia, Tibet, and the South Siberian steppe/forest-steppe (Altai, Tuva, Minusinsk/Yenisei Kirghiz, Baikal, Tobol-Irtysh). Sub-Saharan Africa: caprines reached southern Africa c. 2000 BP (Leopard Cave, Namibia, c. 2300-2100 cal BP) and fat-tailed sheep were the core Khoekhoe herd animal (Cape, Namibia, Botswana); Bantu agropastoralists kept them through East, Central and Southern Africa; West African Dwarf (Djallonke) sheep in the humid zone. Madagascar: sheep, goats and cattle spread in the south and west c. 1200-700 BP, so present by 1318; Canaries: Guanche sheep; Comoros by Swahili-era trade. Burma (dry zone) included. Excluded: Japan (no sheep husbandry before Meiji, only diplomatic gifts), Korea (sheep 'rarely existed'; Goryeo-era mentions are ambiguous between sheep and goats), Taiwan, Ryukyu, Hainan, mainland SE Asia except Burma, island SE Asia (Javanese/Sumatran thin-tailed sheep have no secure pre-1400 date), the Pacific, Australia, NZ, the Americas, northern Siberia and the Russian Far East, Andamans/Nicobars, Maldives/Laccadives.",
+   "sources": [
+    "Scientific Reports 2020, earliest domesticated caprines in southern Africa (Leopard Cave): https://link.springer.com/10.1038/s41598-020-71374-3",
+    "Hixon et al. 2021 PNAS, Late Holocene spread of pastoralism coincides with endemic megafaunal extinction on Madagascar (press summary): https://www.eurekalert.org/news-releases/923532",
+    "Korea JoongAng Daily, In Korea, attitudes on sheep clouded in a mixed history: https://www.koreajoongangdaily.com/lifestyle/in-korea-attitudes-on-sheep-clouded-in-a-mixed-history/11052841",
+    "Nyegaard 2018, Dairy farmers and seal hunters, Norse Greenland farm O34: https://complete.bioone.org/journals/Journal-of-the-North-Atlantic/volume-2018/issue-37/037.006.3701/Dairy-Farmers-and-Seal-Hunters--Subsistence-on-a-Norse/10.3721/037.006.3701.full"
+   ],
+   "confidence": "high overall; medium for LES/OFS (Lesotho highlands and Free State were mostly San land in 1318, herders on the margins), the KOR/JAP and JAW/SUM exclusions, and humid Central African forest inclusion (CON, GAB, ZAI, CAB, EQG)"
+  },
+  "goat-valais": {
+   "range1318Regions": [
+    "ALB",
+    "AUT",
+    "BAL",
+    "BGM",
+    "BLR",
+    "BLT",
+    "BUL",
+    "COR",
+    "CZE",
+    "DEN",
+    "EAI",
+    "FIN",
+    "FOR",
+    "FRA",
+    "GER",
+    "GNL",
+    "GRB",
+    "GRC",
+    "HUN",
+    "ICE",
+    "IRE",
+    "ITA",
+    "KRI",
+    "KRY",
+    "NET",
+    "NOR",
+    "POL",
+    "POR",
+    "ROM",
+    "RUC",
+    "RUE",
+    "RUN",
+    "RUS",
+    "RUW",
+    "SAR",
+    "SIC",
+    "SPA",
+    "SWE",
+    "SWI",
+    "TUE",
+    "UKR",
+    "YUG"
+   ],
+   "evidence": "Europe incl. the Mediterranean islands, Crimea, European Russia to the Urals, Iceland, Faroe, plus Norse Greenland (a North Atlantic Norse colony). Goats kept in 1318: Goats were kept everywhere sheep were (see sheep-mouflon) and more widely in the humid tropics: all of mainland Southeast Asia and island SE Asia (earliest securely dated SE Asian goats at Sembiran/Pacung, north Bali; Philippine goat lineages via China/Taiwan), Hainan, Korea (native black goat), Bioko (GGI). Excluded: Japan main islands (goats only from the late 19th c.), Ryukyu/Nansei-shoto (goats introduced in the 15th c., after the 1318 window), Taiwan (no indigenous goat keeping), the Pacific incl. New Guinea (no goats before Europeans), Andaman/Nicobar, Maldives/Laccadives (no evidence found), northern Siberia and the Russian Far East, Australia, NZ, the Americas.",
+   "sources": [
+    "NIES Invasive Species of Japan, Capra hircus ('Introduced to Ryukyus in 15C, to mainland since late 19C'): https://www.nies.go.jp/biodiversity/invasive/DB/detail/10290e.html",
+    "PLoS ONE 2020, maternal lineages of island Southeast Asian goats (Bali, Philippines, Indonesia): https://doi.org/10.1371/journal.pone.0241038",
+    "Scientific Reports 2020, earliest domesticated caprines in southern Africa: https://link.springer.com/10.1038/s41598-020-71374-3"
+   ],
+   "confidence": "high for the core; medium for island SE Asian interiors (BOR, SUL, MOL), GGI, FOR, LES/OFS; NNS excluded on a 15th-century date that is borderline"
+  },
+  "goat-angora": {
+   "range1318Regions": [
+    "AFG",
+    "ALT",
+    "BRY",
+    "CHC",
+    "CHH",
+    "CHI",
+    "CHM",
+    "CHN",
+    "CHQ",
+    "CHS",
+    "CHT",
+    "CHX",
+    "CTA",
+    "CYP",
+    "IRK",
+    "IRN",
+    "KAZ",
+    "KGZ",
+    "KOR",
+    "KRA",
+    "MON",
+    "NCS",
+    "TCS",
+    "TKM",
+    "TUR",
+    "TVA",
+    "TZK",
+    "UZB",
+    "WSB"
+   ],
+   "evidence": "Anatolia and Cyprus, North Caucasus and Transcaucasus, Iran, Afghanistan, Central Asia, South Siberian steppe/forest-steppe, Mongolia, Tibet, Xinjiang, Qinghai, all of China incl. Hainan, Korea. Cyprus put here (nearest to Anatolia) rather than with Europe or the Levant. Goats kept in 1318: Goats were kept everywhere sheep were (see sheep-mouflon) and more widely in the humid tropics: all of mainland Southeast Asia and island SE Asia (earliest securely dated SE Asian goats at Sembiran/Pacung, north Bali; Philippine goat lineages via China/Taiwan), Hainan, Korea (native black goat), Bioko (GGI). Excluded: Japan main islands (goats only from the late 19th c.), Ryukyu/Nansei-shoto (goats introduced in the 15th c., after the 1318 window), Taiwan (no indigenous goat keeping), the Pacific incl. New Guinea (no goats before Europeans), Andaman/Nicobar, Maldives/Laccadives (no evidence found), northern Siberia and the Russian Far East, Australia, NZ, the Americas.",
+   "sources": [
+    "NIES Invasive Species of Japan, Capra hircus ('Introduced to Ryukyus in 15C, to mainland since late 19C'): https://www.nies.go.jp/biodiversity/invasive/DB/detail/10290e.html",
+    "PLoS ONE 2020, maternal lineages of island Southeast Asian goats (Bali, Philippines, Indonesia): https://doi.org/10.1371/journal.pone.0241038",
+    "Scientific Reports 2020, earliest domesticated caprines in southern Africa: https://link.springer.com/10.1038/s41598-020-71374-3"
+   ],
+   "confidence": "high for the core; medium for island SE Asian interiors (BOR, SUL, MOL), GGI, FOR, LES/OFS; NNS excluded on a 15th-century date that is borderline"
+  },
+  "goat-nubian": {
+   "range1318Regions": [
+    "ALG",
+    "ANG",
+    "BEN",
+    "BKN",
+    "BOT",
+    "BUR",
+    "CAB",
+    "CAF",
+    "CHA",
+    "CMN",
+    "CNY",
+    "COM",
+    "CON",
+    "CPP",
+    "CPV",
+    "DJI",
+    "EGY",
+    "EQG",
+    "ERI",
+    "ETH",
+    "GAB",
+    "GAM",
+    "GGI",
+    "GHA",
+    "GNB",
+    "GST",
+    "GUI",
+    "IRQ",
+    "IVO",
+    "KEN",
+    "KUW",
+    "LBR",
+    "LBS",
+    "LBY",
+    "LES",
+    "MDG",
+    "MLI",
+    "MLW",
+    "MOR",
+    "MOZ",
+    "MTN",
+    "NAM",
+    "NAT",
+    "NGA",
+    "NGR",
+    "OFS",
+    "OMA",
+    "PAL",
+    "RWA",
+    "SAU",
+    "SEN",
+    "SIE",
+    "SIN",
+    "SOC",
+    "SOM",
+    "SUD",
+    "SWZ",
+    "TAN",
+    "TOG",
+    "TUN",
+    "TVL",
+    "UGA",
+    "WSA",
+    "YEM",
+    "ZAI",
+    "ZAM",
+    "ZIM"
+   ],
+   "evidence": "North Africa incl. the Canaries (Guanche goats were of North African/Berber origin), Sinai, Levant, Iraq and Kuwait, the Arabian peninsula incl. Socotra, all of sub-Saharan Africa, Madagascar, Comoros, Bioko. Iraq put here (Arab Mesopotamia) rather than with Iran. Goats kept in 1318: Goats were kept everywhere sheep were (see sheep-mouflon) and more widely in the humid tropics: all of mainland Southeast Asia and island SE Asia (earliest securely dated SE Asian goats at Sembiran/Pacung, north Bali; Philippine goat lineages via China/Taiwan), Hainan, Korea (native black goat), Bioko (GGI). Excluded: Japan main islands (goats only from the late 19th c.), Ryukyu/Nansei-shoto (goats introduced in the 15th c., after the 1318 window), Taiwan (no indigenous goat keeping), the Pacific incl. New Guinea (no goats before Europeans), Andaman/Nicobar, Maldives/Laccadives (no evidence found), northern Siberia and the Russian Far East, Australia, NZ, the Americas.",
+   "sources": [
+    "NIES Invasive Species of Japan, Capra hircus ('Introduced to Ryukyus in 15C, to mainland since late 19C'): https://www.nies.go.jp/biodiversity/invasive/DB/detail/10290e.html",
+    "PLoS ONE 2020, maternal lineages of island Southeast Asian goats (Bali, Philippines, Indonesia): https://doi.org/10.1371/journal.pone.0241038",
+    "Scientific Reports 2020, earliest domesticated caprines in southern Africa: https://link.springer.com/10.1038/s41598-020-71374-3"
+   ],
+   "confidence": "high for the core; medium for island SE Asian interiors (BOR, SUL, MOL), GGI, FOR, LES/OFS; NNS excluded on a 15th-century date that is borderline"
+  },
+  "goat-sirohi": {
+   "range1318Regions": [
+    "ASS",
+    "BAN",
+    "BOR",
+    "CBD",
+    "EHM",
+    "IND",
+    "JAW",
+    "LAO",
+    "LSI",
+    "MLY",
+    "MOL",
+    "MYA",
+    "NEP",
+    "PAK",
+    "PHI",
+    "SRL",
+    "SUL",
+    "SUM",
+    "THA",
+    "VIE",
+    "WHM"
+   ],
+   "evidence": "Pakistan, India, Nepal, the Himalaya (WHM, EHM), Assam, Bangladesh, Sri Lanka, mainland SE Asia (Burma, Thailand, Laos, Cambodia, Vietnam, Malaya) and island SE Asia (Sumatra, Java, Borneo, Sulawesi, Philippines, Maluku, Lesser Sundas). Goats kept in 1318: Goats were kept everywhere sheep were (see sheep-mouflon) and more widely in the humid tropics: all of mainland Southeast Asia and island SE Asia (earliest securely dated SE Asian goats at Sembiran/Pacung, north Bali; Philippine goat lineages via China/Taiwan), Hainan, Korea (native black goat), Bioko (GGI). Excluded: Japan main islands (goats only from the late 19th c.), Ryukyu/Nansei-shoto (goats introduced in the 15th c., after the 1318 window), Taiwan (no indigenous goat keeping), the Pacific incl. New Guinea (no goats before Europeans), Andaman/Nicobar, Maldives/Laccadives (no evidence found), northern Siberia and the Russian Far East, Australia, NZ, the Americas.",
+   "sources": [
+    "NIES Invasive Species of Japan, Capra hircus ('Introduced to Ryukyus in 15C, to mainland since late 19C'): https://www.nies.go.jp/biodiversity/invasive/DB/detail/10290e.html",
+    "PLoS ONE 2020, maternal lineages of island Southeast Asian goats (Bali, Philippines, Indonesia): https://doi.org/10.1371/journal.pone.0241038",
+    "Scientific Reports 2020, earliest domesticated caprines in southern Africa: https://link.springer.com/10.1038/s41598-020-71374-3"
+   ],
+   "confidence": "high for the core; medium for island SE Asian interiors (BOR, SUL, MOL), GGI, FOR, LES/OFS; NNS excluded on a 15th-century date that is borderline"
+  },
+  "pig-eurasian": {
+   "added1318Regions": [
+    "AND",
+    "BAL",
+    "BIS",
+    "BOR",
+    "CNY",
+    "COO",
+    "COR",
+    "CYP",
+    "EAI",
+    "FIJ",
+    "HAW",
+    "ICE",
+    "KRI",
+    "LSI",
+    "MOL",
+    "MRQ",
+    "NCB",
+    "NWG",
+    "PHI",
+    "SAM",
+    "SAR",
+    "SCI",
+    "SCZ",
+    "SIC",
+    "SOL",
+    "SUL",
+    "TON",
+    "VAN",
+    "WAL"
+   ],
+   "evidence": "Add (domestic/feral pigs in 1318 outside the mainland Eurasian/North African wild boar range; some may already be in the author's natural map): Canaries (Guanches kept pigs); Mediterranean islands where pigs were farmed (Cyprus, Crete, Baleares, East Aegean, Sicily, Sardinia, Corsica; the last three also have ancient feral boar); Iceland (Viking-age pig keeping, declining by the 14th c.; low confidence); Andamans (the Andaman pig is an ancient introduction) and Nicobars (Nicobarese pig husbandry); island SE Asia outside native Sus scrofa (native only on Sumatra, Java, Bali): Borneo, Sulawesi, Philippines, Maluku, Lesser Sundas, where non-Muslim peoples kept domestic Sus scrofa; Oceania where pigs were held in 1318: New Guinea, Bismarcks, Solomons, Santa Cruz, Vanuatu, Fiji, Tonga, Samoa, Wallis-Futuna, Cook Is., Society, Marquesas, Hawaii. Not added: New Zealand and Easter Island (pigs never established), New Caledonia (pigs absent at contact; Cook introduced them), Austral/Tubuai (none when the Bounty mutineers landed pigs), Tuamotu and most atolls, Pitcairn group, Niue, Micronesia incl. the Marianas (pigs absent at contact; prehistoric Fais/Yap pigs had died out), Madagascar (its 'wild pig' is the African bushpig Potamochoerus, not Sus) and sub-Saharan Africa generally (domestic pigs there are overwhelmingly Portuguese-era or later; genetic claims of earlier introductions are unsettled). Wild boar already extinct by 1318: Ireland (gone in prehistory or the early medieval period). Britain: fading but not gone (Scotland by c. 13th c., England c. 1400 or later). Both still count as present by the feral rule, because medieval Irish and English pig keeping (woodland pannage) was intensive. Same for Denmark/Norway/Sweden where domestic pigs were kept. Hence excludeRegions is empty. Check: the Arabian peninsula (SAU, GST, OMA, YEM, KUW, SOC) is outside the natural boar range and had no pig keeping (Islamic), so the natural map should not include it; Egypt had Nile wild boar until c. 1900 plus Coptic pig keeping; Sudan's Nile valley had the Sennar boar (Sus scrofa sennaarensis).",
+   "sources": [
+    "Giovas 2006, No Pig Atoll: island biogeography and the extirpation of a Polynesian domesticate, Asian Perspectives 45(1): https://scholarspace.manoa.hawaii.edu/items/a4d99bfb-0093-4999-bdf1-5e3770b0ea76",
+    "Wikipedia, List of mammals from the British Isles extinct since the Late Pleistocene (boar c. 1400 in Britain; Ireland earlier): https://en.wikipedia.org/wiki/List_of_mammals_from_the_British_Isles_extinct_since_the_Late_Pleistocene",
+    "iScience 2025, Integrated mitogenome and Y chromosome analysis untangles the complex origin of African pigs: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12775879/"
+   ],
+   "confidence": "high for the Oceania core and the Britain/Ireland call; medium for island SE Asia and the Mediterranean islands; low for ICE"
+  },
+  "deer-fallow": {
+   "range1318Regions": [
+    "ALB",
+    "EAI",
+    "FRA",
+    "GRB",
+    "GRC",
+    "IRE",
+    "ITA",
+    "POR",
+    "SAR",
+    "SIC",
+    "SPA",
+    "TUE",
+    "TUR"
+   ],
+   "evidence": "1318 presence: native Anatolia (TUR) and Thrace/Marmara (TUE; Marmara/Aegean populations lasted to c. 1900); Neolithic/Bronze Age island populations on Rhodes, Lesbos, Chios, Samos (EAI); relict mainland Greece (wild in NE Chalkidiki until the 16th c., Acarnania to the 1930s; Corfu, Thasos) and Albania (plentiful at Butrint in the early 19th c.); Roman-era translocated populations persisting in Italy, Sicily and Sardinia (Sardinian herds survived to the 1960s) and Iberia (genetically distinct Iron Age/Roman lineage); medieval park herds: Britain (reintroduced from Anatolia c. 11th c.; widespread in deer parks by 1300), Ireland (Anglo-Norman introduction, peak at 13th-14th c. castle sites), France (12th-c. elite hunting, royal/comital parks). Not included: Bulgaria (native population gone after the 9th-10th c.), Germany, Low Countries, Denmark, Sweden (park introductions 16th-17th c.), Crete and Cyprus (ancient introductions, medieval status unknown), Corsica, Baleares (Roman Mallorca deer were Dama mesopotamica), and the Levant/Iraq/Iran (Persian fallow deer, Dama mesopotamica, a different species).",
+   "sources": [
+    "Baker, Sykes et al. 2024 PNAS, The 10,000-year biocultural history of fallow deer and its implications for conservation policy: https://ore.exeter.ac.uk/repository/handle/10871/135301",
+    "Beglane 2018, Ireland's fallow deer: their historical, archaeological and biomolecular records: https://pure.atu.ie/en/publications/irelands-fallow-deer-their-historical-archaeological-and-biomolec-3/",
+    "Wikipedia, European fallow deer (history and range sections, with citations): https://en.wikipedia.org/wiki/European_fallow_deer"
+   ],
+   "confidence": "high for TUR, EAI, GRB, IRE; medium for TUE, GRC, ALB, ITA, SAR; low for SIC, SPA, POR, FRA (medieval presence plausible but thinly documented)"
+  }
+ },
+ "turdag": {
+  "species": "Capra cylindricornis (East Caucasian tur)",
+  "regions": [
+   "NCS",
+   "TCS"
+  ],
+  "evidence": "Vanilla goat-turdag uses the ibexalp body shape but its own horn shapes (survival/shapes/entity/animal/mammal/hooved/goat/turdag/antlers01-07): smooth horns without the ibex ridge elements, each segment rotated outward with a twist - the thick, smooth, outward-and-back spiralling horn of C. cylindricornis, not the knotted, ibex-like scimitar horn of the West Caucasian tur C. caucasica. 'dag' fits Turkic dag = mountain (Dagestan = 'land of mountains'; the dead item is called 'mountain tur'); Dagestan is the core of the East Caucasian tur's range. Range: eastern Greater Caucasus from the Shkhara massif (Georgia) east to Mt Babadag (Azerbaijan): Kabardino-Balkaria (east), North Ossetia, Ingushetia, Chechnya, Dagestan (NCS) and Georgia/Azerbaijan (TCS). If one Caucasian tur stands for both species, the region list is the same two codes.",
+  "sources": [
+   "Wikipedia, East Caucasian tur: https://en.wikipedia.org/wiki/East_Caucasian_tur",
+   "Weinberg P.I., Capra cylindricornis (Mammalian Species account, pdf hosted by the Alania reserve): https://alaniazapoved.ru/sites/default/files/docs/%D0%92%D0%B5%D0%B9%D0%BD%D0%B1%D0%B5%D1%80%D0%B3%20%D0%9F.%D0%98.-%20Capra%20cylindricornis.pdf"
+  ],
+  "confidence": "high for regions; medium-high for the species identification (inferred from horn geometry and name; vanilla gives no Latin name)"
+ }
+}

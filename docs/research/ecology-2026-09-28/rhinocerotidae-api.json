@@ -1,0 +1,522 @@
+{
+  "mod": {
+    "modid": 2130,
+    "assetid": 12164,
+    "name": "Fauna of the Stone Age: Rhinocerotidae",
+    "text": "<p><span style=\"font-weight: 400;\">A collection of large ungulates from the family Rhinocerotidae, these powerful herbivores will roam the steppe and jungles of your world. Equally a resource and a threat, they are a tremendous source of meat, hide and fat for those able to hunt them.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:</span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" style=\"border-spacing: 0px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col width=\"133\" /><col width=\"157\" /><col width=\"100\" /><col width=\"71\" /><col width=\"117\" /><col width=\"64\" /><col width=\"62\" /><col width=\"58\" /><col width=\"100\" /><col width=\"66\" /><col width=\"130\" /><col width=\"170\" /><col width=\"127\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"272\" /></colgroup>\n<tbody>\n<tr>\n<td style=\"width: 174.988px;\">Common Name</td>\n<td style=\"width: 238.993px;\">Scientific name</td>\n<td style=\"width: 119.988px;\">Weight</td>\n<td style=\"width: 87.9977px;\">Health</td>\n<td style=\"width: 144.988px;\">Height</td>\n<td style=\"width: 63.9931px;\">Damage</td>\n<td style=\"width: 61.9907px;\">Temp</td>\n<td style=\"width: 57.9977px;\">Precip</td>\n<td style=\"width: 99.9884px;\">Foliage Needs</td>\n<td style=\"width: 65.9954px;\">Altitude</td>\n<td style=\"width: 129.988px;\">Group Size</td>\n<td style=\"width: 169.988px;\">Meat Drops</td>\n<td style=\"width: 126.991px;\">Fat Drops</td>\n<td style=\"width: 99.9884px;\">Hide Drops</td>\n<td style=\"width: 99.9884px;\">Other Drops</td>\n<td style=\"width: 99.9884px;\">Behaviors</td>\n<td style=\"width: 271.991px;\">Diet</td>\n</tr>\n<tr>\n<td style=\"width: 174.988px;\">White Rhinoceros</td>\n<td style=\"width: 238.993px;\">Ceratotherium simum</td>\n<td style=\"width: 119.988px;\">2300/1700/200</td>\n<td style=\"width: 87.9977px;\">77/65/19</td>\n<td style=\"width: 144.988px;\">1.86/1.77 shoulder</td>\n<td style=\"width: 63.9931px;\">23/20</td>\n<td style=\"width: 61.9907px;\">16-40</td>\n<td style=\"width: 57.9977px;\">.05-.75</td>\n<td style=\"width: 99.9884px;\">0-.5 forest</td>\n<td style=\"width: 65.9954px;\">1.1-1.7</td>\n<td style=\"width: 129.988px;\">1(M), 2-6(F&amp;B)</td>\n<td style=\"width: 169.988px;\">155+-17, 115+-12, 22+-2</td>\n<td style=\"width: 126.991px;\">31+-3, 23+-2, 5+-1</td>\n<td style=\"width: 99.9884px;\">18 H, 16 H, 2 L</td>\n<td style=\"width: 99.9884px;\">M&amp;F horn</td>\n<td style=\"width: 99.9884px;\">1 Block step</td>\n<td style=\"width: 271.991px;\">\n<div>\n<div>Berrybush, Fruit, Grain, Grass, Nibblecrop, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 174.988px;\">Woolly Rhinoceros</td>\n<td style=\"width: 238.993px;\">Coelodonta antiquitatis &dagger;</td>\n<td style=\"width: 119.988px;\">2000/1500/200</td>\n<td style=\"width: 87.9977px;\">71/61/19</td>\n<td style=\"width: 144.988px;\">1.6/1.45 shoulder</td>\n<td style=\"width: 63.9931px;\">22/20</td>\n<td style=\"width: 61.9907px;\">-15 to 0</td>\n<td style=\"width: 57.9977px;\">.1-.75</td>\n<td style=\"width: 99.9884px;\">0-.5 forest</td>\n<td style=\"width: 65.9954px;\">1.1-1.6</td>\n<td style=\"width: 129.988px;\">1(M), 2-6(F&amp;B)</td>\n<td style=\"width: 169.988px;\">135+-15,100+-12,22+-2</td>\n<td style=\"width: 126.991px;\">27+-3,20+-2,5+-1</td>\n<td style=\"width: 99.9884px;\">18 H, 16 H, 2 L</td>\n<td style=\"width: 99.9884px;\">M&amp;F horn</td>\n<td style=\"width: 99.9884px;\">1 Block step</td>\n<td style=\"width: 271.991px;\">\n<div>\n<div>Berrybush, Fruit, Grain, Grass, Nibblecrop, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 174.988px;\">Sumatran Rhinoceros</td>\n<td style=\"width: 238.993px;\">Dicerorhinus sumatrensis</td>\n<td style=\"width: 119.988px;\">800/600/100</td>\n<td style=\"width: 87.9977px;\">43/35/15</td>\n<td style=\"width: 144.988px;\">1.45/1.12 shoulder</td>\n<td style=\"width: 63.9931px;\">17/16t2</td>\n<td style=\"width: 61.9907px;\">18-42</td>\n<td style=\"width: 57.9977px;\">.55-1.0</td>\n<td style=\"width: 99.9884px;\">.6-1.0 forest</td>\n<td style=\"width: 65.9954px;\">1.1-1.5</td>\n<td style=\"width: 129.988px;\">1(M&amp;F), 2-3(M&amp;F&amp;B)</td>\n<td style=\"width: 169.988px;\">54+-6, 41+-4, 13+-2</td>\n<td style=\"width: 126.991px;\">10+-1, 8+-1, 3+-1</td>\n<td style=\"width: 99.9884px;\">10 H, 8 H, 2 M</td>\n<td style=\"width: 99.9884px;\">M&amp;F horns</td>\n<td style=\"width: 99.9884px;\">1 Block step</td>\n<td style=\"width: 271.991px;\">\n<div>\n<div>Berrybush, Fruit, Grain, Grass, Nibblecrop, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 174.988px;\">Black Rhinoceros</td>\n<td style=\"width: 238.993px;\">Diceros bicornis</td>\n<td style=\"width: 119.988px;\">1400/1100/150</td>\n<td style=\"width: 87.9977px;\">59/53/17</td>\n<td style=\"width: 144.988px;\">1.8/1.7 shoulder</td>\n<td style=\"width: 63.9931px;\">19/18t3</td>\n<td style=\"width: 61.9907px;\">12-40</td>\n<td style=\"width: 57.9977px;\">.05-.75</td>\n<td style=\"width: 99.9884px;\">0-.5 forest</td>\n<td style=\"width: 65.9954px;\">.9-1.6</td>\n<td style=\"width: 129.988px;\">1(M&amp;F), 2(M&amp;F&amp;B)</td>\n<td style=\"width: 169.988px;\">95+-10, 75+-7, 18+-2</td>\n<td style=\"width: 126.991px;\">19+-2, 15+-1, 4+-1</td>\n<td style=\"width: 99.9884px;\">14 H, 12 H, 2 L</td>\n<td style=\"width: 99.9884px;\">M&amp;F horns</td>\n<td style=\"width: 99.9884px;\">1 Block step</td>\n<td style=\"width: 271.991px;\">\n<div>\n<div>Berrybush, Fruit, Grain, Grass, Nibblecrop, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 174.988px;\">Javan Rhinoceros</td>\n<td style=\"width: 238.993px;\">Rhinoceros sondaicus</td>\n<td style=\"width: 119.988px;\">1400/1100/150</td>\n<td style=\"width: 87.9977px;\">59/53/17</td>\n<td style=\"width: 144.988px;\">1.7/1.5 shoulder</td>\n<td style=\"width: 63.9931px;\">19/18t3</td>\n<td style=\"width: 61.9907px;\">24-44</td>\n<td style=\"width: 57.9977px;\">.55-1.0</td>\n<td style=\"width: 99.9884px;\">0-1.0 forest</td>\n<td style=\"width: 65.9954px;\">0.9-1.6</td>\n<td style=\"width: 129.988px;\">1(M&amp;F), 2(M&amp;F&amp;B)</td>\n<td style=\"width: 169.988px;\">95+-10, 75+-7, 18+-2</td>\n<td style=\"width: 126.991px;\">19+-2, 15+-1, 4+-1</td>\n<td style=\"width: 99.9884px;\">14 H, 12 H, 2 L</td>\n<td style=\"width: 99.9884px;\">M horns</td>\n<td style=\"width: 99.9884px;\">1 Block step</td>\n<td style=\"width: 271.991px;\">\n<div>\n<div>Berrybush, Fruit, Grain, Grass, Nibblecrop, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 174.988px;\">Indian Rhinoceros</td>\n<td style=\"width: 238.993px;\">Rhinoceros unicornis</td>\n<td style=\"width: 119.988px;\">2100/1600/200</td>\n<td style=\"width: 87.9977px;\">73/63/19</td>\n<td style=\"width: 144.988px;\">1.86/1.73 shoulder</td>\n<td style=\"width: 63.9931px;\">22/20</td>\n<td style=\"width: 61.9907px;\">18-36</td>\n<td style=\"width: 57.9977px;\">.5-1.0</td>\n<td style=\"width: 99.9884px;\">0-1.0 forest</td>\n<td style=\"width: 65.9954px;\">1.1-1.7</td>\n<td style=\"width: 129.988px;\">1(M), 2-6(F&amp;B)</td>\n<td style=\"width: 169.988px;\">142+-15,108+-12, 22+-2</td>\n<td style=\"width: 126.991px;\">28+-3,21+-2, 5+-1</td>\n<td style=\"width: 99.9884px;\">18 H, 16 H, 2 L</td>\n<td style=\"width: 99.9884px;\">M&amp;F horns</td>\n<td style=\"width: 99.9884px;\">1 Block step</td>\n<td style=\"width: 271.991px;\">\n<div>\n<div>Berrybush, Fruit, Grain, Grass, Nibblecrop, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Due to their large size, these animals have a high amount of health and a large amount of resources, hunting them head on is not recommended. However, falls are especially hazardous to these animals and luring them over cliffs and into pits is an effective way of harming them.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Features:</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">All species have a unique pelt and horns that can be used to craft hide, head mounts and taxidermied full body.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Rhinos can be domesticated over time, though pose a significant threat to the player until they reach generation 3 when they&rsquo;ll no longer attack the player.&nbsp;</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Due to their poor eyesight and skittish nature, rhinos are disturbed by creatures of rot and rust and will lash out at them.&nbsp;</span></p>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Occasionally a fly covered rhino carcass will spawn, blocking rhino spawns in the area. They have a chance to spawn when first arriving in an area or when all rhinos have been killed off from the area, allowing players to locally wipe out rhinos. Destroying the carcass of the respective type will allow more rhinos to spawn again and some carnivores and scavengers may destroy them as well, so if you want rhino spawns prevented in an area protect these carcasses.</span><span style=\"font-weight: 400;\"><br /></span></p>\n<p><span style=\"font-weight: 400;\">And a big thanks to everyone who gave feedback and assistance!<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong> How do I domesticate the animals in this pack?<br /><br /><strong>A:</strong> Get a male and female adult of a given species within 10 blocks, wait until the female is ready to mate and feed her the sufficient number of portions and the male at least one. Different species require different amounts and can be found in the entity file under the multiply section. Animals can be fed either by dropping items on the ground or by using the large trough. The small trough is not supported at this time due to patching formats. Each species diet can be found in this mod's description or in their entity file under the diet section. After 10 generations, entities stop attacking the player and after 10 generations they will no longer flee the player. Only the mother's generation matters for progressing generations.<br /><br /><br /><br /><strong>Q:</strong> Why so many animal packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain clade file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><br /><strong>Q:</strong> Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> Yes, this mod series is safe to add and remove. Items from this mod that have been placed will be invisible or appear as question blocks if the mod is removed but can be safely broken.</div>\n</div>\n<p><span style=\"font-weight: 400;\"> <br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "rhinocerotidae",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_e764ab46d70436f6cda6c074d3a56ab4.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_e764ab46d70436f6cda6c074d3a56ab4.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_e764ab46d70436f6cda6c074d3a56ab4.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 176202,
+    "follows": 1289,
+    "trendingpoints": 0,
+    "comments": 97,
+    "side": "both",
+    "type": "mod",
+    "created": "2024-04-25 22:45:47",
+    "lastreleased": "2026-09-23 19:19:56",
+    "lastmodified": "2026-09-28 20:13:47",
+    "tags": [
+      "Crafting",
+      "Furniture",
+      "Creatures"
+    ],
+    "releases": [
+      {
+        "releaseid": 58161,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_0e538505a971ffa91e0cf1272918ffe5.zip?dl=FotSA-Rhinocerotidae-v1.0.28.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.28.zip",
+        "fileid": 124641,
+        "downloads": 1485,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.28",
+        "created": "2026-09-23 19:19:56",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Combat Overhaul patch errors<br></span><span style=\"font-weight: 400;\">Fixed-Missing center point in carcass</span></p>"
+      },
+      {
+        "releaseid": 56816,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_64824abca3ffa002afe53cb75d02faca.zip?dl=FotSA-Rhinocerotidae-v1.0.27.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.27.zip",
+        "fileid": 122104,
+        "downloads": 2535,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.27",
+        "created": "2026-09-13 17:37:01",
+        "changelog": "<p>Fixed-Rhinos not dropping new raw hide</p>"
+      },
+      {
+        "releaseid": 56523,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_4b8338bf5d4868100eb6b1f602ff145c.zip?dl=FotSA-Rhinocerotidae-v1.0.26.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.26.zip",
+        "fileid": 121542,
+        "downloads": 971,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.26",
+        "created": "2026-09-11 15:48:12",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Added missing preloaded tags</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Alert range</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Made long distance seek target only humanoids</span></p>"
+      },
+      {
+        "releaseid": 56351,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_c42baf891aaba33350e92999f81a7a88.zip?dl=FotSA-Rhinocerotidae-v1.0.25.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.25.zip",
+        "fileid": 121169,
+        "downloads": 700,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.25",
+        "created": "2026-09-09 22:21:44",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Ancient Tools Brain drops (Thanks Whiskey Sunshine!)</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Added-Footstep sounds</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Added-Freshwater fish interaction</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Added-Frost overlay thresholds for cold weather animals</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Added-Horns appear on ui of rhinos</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Added-Oiled, Raw, Salted hides and associated recipes</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Pelts grouped in handbook</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Changed climate conditions of woolly rhino</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Changed spawn conditions to not allow any amount of artificial light block spawns</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Removed minimum altitude from most spawn conditions</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Ai task time frames over midnight</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Changed oiled hide recipe to use rendered fat</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Refactored AI tasks to the new versions</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Reformatted folders to match base game’s folder layout</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Split entity files into adult and babies</span></p>"
+      },
+      {
+        "releaseid": 52917,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_62eb6cd1851ab21355a02de3c3893586.zip?dl=FotSA-Rhinocerotidae-v1.0.24.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.24.zip",
+        "fileid": 114648,
+        "downloads": 7425,
+        "tags": [
+          "1.22.6"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.24",
+        "created": "2026-08-14 15:02:36",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-Change chance and wanderChance to executionChance</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Animal interaction patches</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Note-This is a quick a dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22</span></p>"
+      },
+      {
+        "releaseid": 32112,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_46f7d8642bfeed08b8112db3412a267a.zip?dl=FotSA-Rhinocerotidae-v1.0.23.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.23.zip",
+        "fileid": 70681,
+        "downloads": 31084,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.23",
+        "created": "2026-01-06 22:07:06",
+        "changelog": "<p>Tweak-Meat and fat restored to one entry in drop list for easier config additions<br />Updated-1 hide is always dropped from killed animals</p>"
+      },
+      {
+        "releaseid": 28242,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_1da0c612a8c7fc3fafd59ed967aebc50.zip?dl=FotSA-Rhinocerotidae-v1.0.22.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.22.zip",
+        "fileid": 62137,
+        "downloads": 19132,
+        "tags": [
+          "1.21.5",
+          "1.21.6"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.22",
+        "created": "2025-10-27 22:15:30",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Weighted diet </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Trappable format for 1.21</span></p>"
+      },
+      {
+        "releaseid": 25508,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_d422fe3908ef14eca01fd7b38faab988.zip?dl=FotSA-Rhinocerotidae-v1.0.21.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.21.zip",
+        "fileid": 56187,
+        "downloads": 18383,
+        "tags": [
+          "1.21.1",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.21",
+        "created": "2025-09-19 15:57:35",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added- Creature tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Antler patches format</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Knockback resistance</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Split drop stacks that exceeded 64 units</span></p>"
+      },
+      {
+        "releaseid": 20070,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_d07c5cb09a27ec2f47d9f3d2988a1531.zip?dl=FotSA-Rhinocerotidae-v1.0.20.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.20.zip",
+        "fileid": 43500,
+        "downloads": 26619,
+        "tags": [
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.20",
+        "created": "2025-05-15 19:26:08",
+        "changelog": "<p>Tweak-Rhinos take ten times longer to respawn, meant to offset their high meat yields.</p>"
+      },
+      {
+        "releaseid": 19937,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_c3f352065e4e4872adc491827880c495.zip?dl=FotSA-Rhinocerotidae-v1.0.18.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.18.zip",
+        "fileid": 43199,
+        "downloads": 1403,
+        "tags": [
+          "1.20.10"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.19",
+        "created": "2025-05-12 16:20:44",
+        "changelog": "<p>Tweak-Increased seek entity on aggressive on damage range to 45 meters<br />Tweak-Increased movement speed of seek entity on aggressive on damage by 10%</p>"
+      },
+      {
+        "releaseid": 19469,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_3ab8b4c145cb6998dd663a931eff05ab.zip?dl=FotSA-Rhinocerotidae-v1.0.18.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.18.zip",
+        "fileid": 42096,
+        "downloads": 3624,
+        "tags": [
+          "1.20.9",
+          "1.20.10"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.18",
+        "created": "2025-04-29 23:38:02",
+        "changelog": "<p>Tweak-Entity interactions, should reduce frequency of rhinos picking fights with elephants</p>"
+      },
+      {
+        "releaseid": 18517,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_4ec988d16f573dcd868721467ecfc663.zip?dl=FotSA-Rhinocerotidae-v1.0.17.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.17.zip",
+        "fileid": 40015,
+        "downloads": 7263,
+        "tags": [
+          "1.20.7",
+          "1.20.8"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.17",
+        "created": "2025-04-04 23:47:36",
+        "changelog": "<p>Added-Worldgen spawn<br />Added-Woolandmore drops</p>"
+      },
+      {
+        "releaseid": 17520,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_31fa597d83432558f20c3addf785d402.zip?dl=FotSA-Rhinocerotidae-v1.0.16.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.16.zip",
+        "fileid": 37270,
+        "downloads": 6885,
+        "tags": [
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.16",
+        "created": "2025-03-12 19:04:11",
+        "changelog": "<p>Added-Thylacoleo interactions<br />Tweaked-Spawn temperature ranges</p>"
+      },
+      {
+        "releaseid": 16229,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_12024640e7207f782bb25009615ac2cf.zip?dl=FotSA-Rhinocerotidae-v1.0.15.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.15.zip",
+        "fileid": 33368,
+        "downloads": 9455,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.15",
+        "created": "2025-02-14 17:57:44",
+        "changelog": "<p>Fixed-Base game animal patch format updated to 1.20.4</p>"
+      },
+      {
+        "releaseid": 15945,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_853e9aad9edb48a78b8094b053de555b.zip?dl=FotSA-Rhinocerotidae-v1.0.14.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.14.zip",
+        "fileid": 32805,
+        "downloads": 2747,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.14",
+        "created": "2025-02-09 17:49:50",
+        "changelog": "<p>Tweak-Split seek entity when aggressive on damage and aggressive around entity into two separate tasks.<br />Tweak-Rhinos will seek entities from 28 meters away when injured<br />Tweak-Rhinos will seek entities from 18 meters away to protect babies</p>"
+      },
+      {
+        "releaseid": 15662,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_d40387579e5cd721266c86d80fe55bb8.zip?dl=FotSA-Rhinocerotidae-v1.0.13.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.13.zip",
+        "fileid": 32297,
+        "downloads": 2684,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.13",
+        "created": "2025-02-03 19:30:09",
+        "changelog": "<p>Added-Ukrainian Translation (Thanks Deanbro!)</p>"
+      },
+      {
+        "releaseid": 14975,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_845132b4cb16a1b896e06837bda4cc36.zip?dl=FotSA-Rhinocerotidae-v1.0.12.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.12.zip",
+        "fileid": 31030,
+        "downloads": 5673,
+        "tags": [
+          "1.20.1",
+          "1.20.3"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.12",
+        "created": "2025-01-22 20:38:46",
+        "changelog": "<p>Tweak-Changed bushmeat to redmeat ratio from 3:1 to 1:1</p>\nAdded-Flee behavior to give elephants space"
+      },
+      {
+        "releaseid": 14611,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_f777024c272e6b2b851c47d03c0271b2.zip?dl=FotSA-Rhinocerotidae-v1.0.11.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.11.zip",
+        "fileid": 30384,
+        "downloads": 4201,
+        "tags": [
+          "1.20.0",
+          "1.20.1"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.11",
+        "created": "2025-01-17 18:45:15",
+        "changelog": "<p>Added-Elephant compatibility<br />Added-Bowtorn and Shiver interactions<br />Tweak-Turned 75% of their meat drops to bush meat</p>"
+      },
+      {
+        "releaseid": 14127,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_136578ef767909c692dfb8b9f0ac7e57.zip?dl=FotSA-Rhinocerotidae-v1.0.10.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.10.zip",
+        "fileid": 29438,
+        "downloads": 2204,
+        "tags": [
+          "1.20.0-rc.6",
+          "1.20.0-rc.8",
+          "1.20.0-rc.9"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.10",
+        "created": "2025-01-01 23:49:43",
+        "changelog": "<p>Added-Felinae compatibility<br />Updated-1.20 land entity pathfinding<br />Updated-1.20 blending for movement animations</p>"
+      },
+      {
+        "releaseid": 13467,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_139f615a4f16efbc611e254caf4b86c5.zip?dl=FotSA-Rhinocerotidae-v1.0.9.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.9.zip",
+        "fileid": 28213,
+        "downloads": 3347,
+        "tags": [
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.9",
+        "created": "2024-12-05 21:56:53",
+        "changelog": "<p>Tweak-Combat Overhaul Damage Resistance&nbsp;</p>"
+      },
+      {
+        "releaseid": 13171,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_22f1bf8185b12eefcd4141bc06bf1558.zip?dl=FotSA-Rhinocerotidae-v1.0.8.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.8.zip",
+        "fileid": 27603,
+        "downloads": 1099,
+        "tags": [
+          "1.20.0-pre.0",
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.8",
+        "created": "2024-11-21 18:21:00",
+        "changelog": "<p>Adjusted-Combat Overhaul damage resistance</p>"
+      },
+      {
+        "releaseid": 12987,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_eedd86db5e6fa420b6955686d7bfef37.zip?dl=FotSA-Rhinocerotidae-v1.0.7.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.7.zip",
+        "fileid": 27263,
+        "downloads": 592,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.7",
+        "created": "2024-11-11 22:13:25",
+        "changelog": "<p>Added-Wool and More compatibility, the woolly rhino will now produce brown and black fleece</p>"
+      },
+      {
+        "releaseid": 12677,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_f06eea61af10bb02d188db171a624eed.zip?dl=FotSA-Rhinocerotidae-v1.0.6.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.6.zip",
+        "fileid": 26651,
+        "downloads": 877,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.6",
+        "created": "2024-10-24 19:31:19",
+        "changelog": "<p>Added-Combat Overhaul compatibility (Thanks Maltiez)</p>"
+      },
+      {
+        "releaseid": 12561,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_c211bb2c15ab9d020fae1caa241497ee.zip?dl=FotSA-Rhinocerotidae-v1.0.5.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.5.zip",
+        "fileid": 26348,
+        "downloads": 683,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.5",
+        "created": "2024-10-16 17:59:22",
+        "changelog": "<p>Added-French translation (Thanks Laerinok)</p>"
+      },
+      {
+        "releaseid": 12405,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_2f7b7c65194228cfa570ecf874970e52.zip?dl=FotSA-Rhinocerotidae-v1.0.4.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.4.zip",
+        "fileid": 26013,
+        "downloads": 716,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.4",
+        "created": "2024-10-07 15:50:44",
+        "changelog": "<p>Fixed-Trough diet tags<br />Updated-Animal patches, powdered item in recipe and various tweaks for 1.20's changes</p>"
+      },
+      {
+        "releaseid": 10751,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_2fb490f7b65626e9b6a2456dd6067367.zip?dl=FotSA-Rhinocerotidae-v1.0.3.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.3.zip",
+        "fileid": 22363,
+        "downloads": 9686,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.3",
+        "created": "2024-06-10 00:20:30",
+        "changelog": "<p>Added-ConfigLib entry for average red meat drops and average fat drops<br />Recalculated-meat to weight ratio on animals over 100kg<br />Fixed-Babies only growing up into females</p>"
+      },
+      {
+        "releaseid": 10386,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_3fc150cf1e1470c185d994f91c4cb643.zip?dl=FotSA-Rhinocerotidae-v1.0.2.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.2.zip",
+        "fileid": 21724,
+        "downloads": 1897,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.2",
+        "created": "2024-05-18 22:30:32",
+        "changelog": "<p>Added-Crafting recipe for rhino carcass, placing them will block spawns within render radius<br />Updated-fly covered carcass look<br />Tweak-Reduced spawn rate considerably<br />Tweak-Added a 100 minimum distance for spawning near player<br />Tweak-Added a maximum light level to prevent rhinos spawning near illuminating blocks<br />Tweak-readded spawn cap player scaling set to 0, to make sure it isn't scaling&nbsp;</p>"
+      },
+      {
+        "releaseid": 10196,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_abc5c5887be0f151a6ff97292b5a2ff8.zip?dl=FotSA-Rhinocerotidae-v1.0.1.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.1.zip",
+        "fileid": 21382,
+        "downloads": 1564,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.1",
+        "created": "2024-05-04 18:09:51",
+        "changelog": "<p>Fixed-Adult rhinos not becoming aggressive when guarding babies, will aggro at 28 meters<br />Tweak-decreased turning radius 20 degrees<br />Tweak-increased charge speed when aggressive 66%<br />Tweak-increased charge speed when not yet aggressive 33%<br />Tweak-increased aggitated range from 15 to 17 meters<br />Tweak-increased charge range from 10 to 12meters<br />Tweak-reduced flee distance from 45 to 25 for running from predators, should reduce babies getting separated from mothers<br />Tweak-decreased heath percentage for when adults flee from 60% to 25%<br />Tweak-increase rhino carcass spawn chance by 50% resulting in them blocking rhino spawns more often</p>"
+      },
+      {
+        "releaseid": 10034,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_c24f20eede3c59f7b038d60cf6aedf26.zip?dl=FotSA-Rhinocerotidae-v1.0.0.zip",
+        "filename": "FotSA-Rhinocerotidae-v1.0.0.zip",
+        "fileid": 21116,
+        "downloads": 1269,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "rhinocerotidae",
+        "modversion": "1.0.0",
+        "created": "2024-04-25 22:46:20",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 21106,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-16_13-11-40_9d9fd19732a8f8c68e68ecb0088ded4b.png",
+        "filename": "2024-04-16_13-11-40.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-16_13-11-40_9d9fd19732a8f8c68e68ecb0088ded4b_55_60.png",
+        "created": "2024-04-25 22:43:17"
+      },
+      {
+        "fileid": 21107,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-19_12-51-16_2818d0bbbcb8b0f84466dc817b44d905.png",
+        "filename": "2024-04-19_12-51-16.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-19_12-51-16_2818d0bbbcb8b0f84466dc817b44d905_55_60.png",
+        "created": "2024-04-25 22:43:17"
+      },
+      {
+        "fileid": 21108,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-13_08-23-01_598606dbcce39098d1d16b357f957a2c.png",
+        "filename": "2024-04-13_08-23-01.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-13_08-23-01_598606dbcce39098d1d16b357f957a2c_55_60.png",
+        "created": "2024-04-25 22:43:18"
+      },
+      {
+        "fileid": 21109,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-18_21-41-57_4bff88165707b96768d8ec35f8f6d9c6.png",
+        "filename": "2024-04-18_21-41-57.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-18_21-41-57_4bff88165707b96768d8ec35f8f6d9c6_55_60.png",
+        "created": "2024-04-25 22:43:18"
+      },
+      {
+        "fileid": 21110,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-15_19-40-00_0aed704c1c4dd522e04de80171c609a4.png",
+        "filename": "2024-04-15_19-40-00.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-15_19-40-00_0aed704c1c4dd522e04de80171c609a4_55_60.png",
+        "created": "2024-04-25 22:43:18"
+      },
+      {
+        "fileid": 21111,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-24_19-50-46_c749dedf503663a3bb0648b30aa22a68.png",
+        "filename": "2024-04-24_19-50-46.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-24_19-50-46_c749dedf503663a3bb0648b30aa22a68_55_60.png",
+        "created": "2024-04-25 22:43:18"
+      },
+      {
+        "fileid": 21112,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-22_13-44-50_9300b22013008f559f353f4bdcbce076.png",
+        "filename": "2024-04-22_13-44-50.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-22_13-44-50_9300b22013008f559f353f4bdcbce076_55_60.png",
+        "created": "2024-04-25 22:43:18"
+      },
+      {
+        "fileid": 21114,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-24_20-21-42_008a51573ad83e1fcd03f7d08829e976.png",
+        "filename": "2024-04-24_20-21-42.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-24_20-21-42_008a51573ad83e1fcd03f7d08829e976_55_60.png",
+        "created": "2024-04-25 22:43:20"
+      },
+      {
+        "fileid": 21115,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-24_19-51-54_614b14469cdca2fc36285e7aa85a0a71.png",
+        "filename": "2024-04-24_19-51-54.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-24_19-51-54_614b14469cdca2fc36285e7aa85a0a71_55_60.png",
+        "created": "2024-04-25 22:45:04"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

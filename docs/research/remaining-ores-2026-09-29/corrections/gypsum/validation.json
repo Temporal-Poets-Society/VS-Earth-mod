@@ -1,0 +1,56 @@
+{
+  "reviewed_count": 525,
+  "formation_count": 28753,
+  "by_source": {
+    "latvia_cabinet321_2012": 2,
+    "lvgmc_inspire_licensed_occurrence": 1,
+    "pgi_midas_documented": 18,
+    "pgi_midas_historical": 1,
+    "igme_bdmin": 492,
+    "bgs_report_locality": 11,
+    "drieat_idf_resources": 38,
+    "igme_geode50_gypsum_units": 25541,
+    "lgrb_gkbw_ge3": 3174
+  },
+  "by_mineral_identity": {
+    "gypsum": 26713,
+    "gypsum_or_anhydrite_undifferentiated": 19,
+    "gypsum_and_anhydrite": 1452,
+    "anhydrite": 15,
+    "gypsum_and_anhydrite_often_dissolved": 1079
+  },
+  "invalid_source_geometry_ids": [
+    "lgrb_gkbw_ge3:6418"
+  ],
+  "no_economic_or_operation_status_filter": true,
+  "geode_source_id_count": 25541,
+  "geode_complete_id_match": true,
+  "all_depth_endpoints_unknown_until_reviewed": true,
+  "display_simplification_degrees": 0.005,
+  "projection_operations": {
+    "EPSG:3059": {
+      "accuracy_m": 1.0,
+      "operation": "axis order change (2D) + Inverse of Latvian Transverse Mercator + LKS-92 to WGS 84 (1) + axis order change (2D)"
+    },
+    "EPSG:4258": {
+      "accuracy_m": 1.0,
+      "operation": "axis order change (2D) + ETRS89 to WGS 84 (1) + axis order change (2D)"
+    },
+    "EPSG:27700": {
+      "accuracy_m": -1.0,
+      "operation": "unavailable until proj_trans is called"
+    },
+    "PROJCS[\"RGF93 Lambert 93\",GEOGCS[\"RGF93 geographiques (dms)\",DATUM[\"Reseau_Geodesique_Francais_1993_v1\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6171\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IGNF\",\"RGF93G\"]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",46.5],PARAMETER[\"central_meridian\",3],PARAMETER[\"standard_parallel_1\",44],PARAMETER[\"standard_parallel_2\",49],PARAMETER[\"false_easting\",700000],PARAMETER[\"false_northing\",6600000],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IGNF\",\"LAMB93\"]]": {
+      "accuracy_m": 1.0,
+      "operation": "Inverse of LAMBERT-93 + RGF93G to WGS 84 + axis order change (2D)"
+    },
+    "EPSG:3857": {
+      "accuracy_m": 0.0,
+      "operation": "Inverse of Popular Visualisation Pseudo-Mercator + axis order change (2D)"
+    },
+    "EPSG:25832": {
+      "accuracy_m": 1.0,
+      "operation": "Inverse of UTM zone 32N + ETRS89 to WGS 84 (1) + axis order change (2D)"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+Baltic sites, subsoil-top 15-30 cm (SoilGrids 2.0 means; WRB most probable group):
+  Riga                     Gleysols     SOC 61.1 g/kg, N 3.92 g/kg, pH 6.4, CEC 16.2 cmol/kg, clay 17% -> index 0.71 high
+  Jelgava (Zemgale plain)  Gleysols     SOC 47.5 g/kg, N 4.82 g/kg, pH 6.4, CEC 23.4 cmol/kg, clay 26% -> index 0.88 high
+  Staicele                 Gleysols     SOC 35.4 g/kg, N 3.09 g/kg, pH 5.9, CEC 15.8 cmol/kg, clay 14% -> index 0.68 high
+  Liepaja                  Cambisols    SOC 42.0 g/kg, N 3.37 g/kg, pH 6.5, CEC 16.2 cmol/kg, clay 20% -> index 0.72 high
+  Saldus/Broceni           Gleysols     SOC 40.3 g/kg, N 3.60 g/kg, pH 6.6, CEC 18.2 cmol/kg, clay 21% -> index 0.76 high
+  Daugavpils               Albeluvisols SOC 49.4 g/kg, N 3.74 g/kg, pH 6.3, CEC 17.1 cmol/kg, clay 20% -> index 0.74 high
+  Gulbene (upland)         Albeluvisols SOC 46.6 g/kg, N 2.89 g/kg, pH 6.2, CEC 15.2 cmol/kg, clay 18% -> index 0.70 high
+  Cesis (Gauja)            Podzols      SOC 33.9 g/kg, N 2.38 g/kg, pH 5.5, CEC 14.9 cmol/kg, clay 14% -> index 0.66 high
+  Tallinn                  Gleysols     SOC 42.9 g/kg, N 2.91 g/kg, pH 5.8, CEC 18.4 cmol/kg, clay 22% -> index 0.77 high
+  Tartu                    Luvisols     SOC 29.8 g/kg, N 2.09 g/kg, pH 6.3, CEC 14.6 cmol/kg, clay 12% -> index 0.65 medium
+  Kaunas                   Luvisols     SOC 32.2 g/kg, N 2.24 g/kg, pH 6.4, CEC 15.7 cmol/kg, clay 21% -> index 0.72 high
+  Siauliai                 Luvisols     SOC 39.0 g/kg, N 3.85 g/kg, pH 6.8, CEC 15.6 cmol/kg, clay 18% -> index 0.70 high
+  Pskov                    Luvisols     SOC 50.7 g/kg, N 2.98 g/kg, pH 5.9, CEC 16.9 cmol/kg, clay 17% -> index 0.72 high
+References outside the Baltic (0.2 deg clips):
+  poltava                  Chernozems   SOC 25.0 g/kg, N 3.06 g/kg, pH 6.9, CEC 30.2 cmol/kg, clay 32% -> index 0.94 high
+  kursk                    Chernozems   SOC 36.0 g/kg, N 2.51 g/kg, pH 6.4, CEC 29.9 cmol/kg, clay 30% -> index 1.00 high
+  ardennes                 Cambisols    SOC 28.0 g/kg, N 2.01 g/kg, pH 5.5, CEC 17.3 cmol/kg, clay 26% -> index 0.76 high
+  brittany                 Cambisols    SOC 25.4 g/kg, N 2.90 g/kg, pH 6.0, CEC 25.4 cmol/kg, clay 21% -> index 0.82 high
+  podzolfin                Podzols      SOC 54.7 g/kg, N 2.81 g/kg, pH 5.1, CEC 18.8 cmol/kg, clay 22% -> index 0.62 medium
+  sahara                   Leptosols    SOC  3.3 g/kg, N 1.04 g/kg, pH 8.2, CEC 23.6 cmol/kg, clay 24% -> index 0.55 medium
+Latvia, 92575 cells of 0.01 deg: WRB most probable groups
+  Albeluvisols   29.9%  -> low
+  Gleysols       19.7%  -> low
+  Luvisols       11.1%  -> medium
+  Podzols         9.2%  -> verylow
+  Kastanozems     3.8%  -> high
+  Histosols       3.5%  -> verylow
+  Cambisols       3.1%  -> medium
+  Fluvisols       2.8%  -> medium
+  Durisols        2.6%  -> verylow
+  Calcisols       2.3%  -> medium
+  Ferralsols      2.1%  -> verylow
+  Cryosols        2.0%  -> verylow
+Proposed natural fertility classes: {'verylow': '21%', 'low': '50%', 'medium': '22%', 'high': '6%'}

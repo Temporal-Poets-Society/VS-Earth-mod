@@ -1,0 +1,411 @@
+{
+  "mod": {
+    "modid": 2711,
+    "assetid": 15663,
+    "name": "Fauna of the Stone Age: Spheniscidae",
+    "text": "<p><span style=\"font-weight: 400;\">A collection of aquatic flightless birds of the family </span><span style=\"font-weight: 400;\">Spheniscidae</span><span style=\"font-weight: 400;\">, these birds will add life to the polar, subpolar, temperate and subtropical coastal ecosystems of your world, acting as ambience, food and prey.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:</span><span style=\"font-weight: 400;\"><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">\n<p>Stats</p>\n</div>\n<div class=\"spoiler-text\"><br />\n<table dir=\"ltr\" style=\"width: 1635px; height: 1436px; border-spacing: 0px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col width=\"226\" /><col width=\"164\" /><col width=\"106\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"143\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /></colgroup>\n<tbody>\n<tr>\n<td style=\"width: 175.042px;\">Common Name</td>\n<td style=\"width: 145.24px;\">Scientific name</td>\n<td style=\"width: 89.625px;\">Weight</td>\n<td style=\"width: 80.6042px;\">Health</td>\n<td style=\"width: 80.6042px;\">Height</td>\n<td style=\"width: 85.0625px;\">Damage</td>\n<td style=\"width: 78.3646px;\">Temp</td>\n<td style=\"width: 80.3229px;\">Precip</td>\n<td style=\"width: 82.5521px;\">Foliage Needs</td>\n<td style=\"width: 82.8333px;\">Altitude</td>\n<td style=\"width: 83.3854px;\">Group Size</td>\n<td style=\"width: 108.094px;\">Meat Drops</td>\n<td style=\"width: 79.4792px;\">Fat Drops</td>\n<td style=\"width: 79.4792px;\">Hide Drops</td>\n<td style=\"width: 84.2292px;\">Other Drops</td>\n<td style=\"width: 75.5729px;\">Diet</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Emperor penguin</td>\n<td style=\"width: 145.24px;\">Aptenodytes forsteri</td>\n<td style=\"width: 89.625px;\">45/30/10</td>\n<td style=\"width: 80.6042px;\">11/8/4</td>\n<td style=\"width: 80.6042px;\">1 H</td>\n<td style=\"width: 85.0625px;\">2.5t1</td>\n<td style=\"width: 78.3646px;\">-20 to -6</td>\n<td style=\"width: 80.3229px;\">all</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">6-7/4-5/1</td>\n<td style=\"width: 79.4792px;\">2</td>\n<td style=\"width: 79.4792px;\">1L</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">Fish</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">King penguin</td>\n<td style=\"width: 145.24px;\">Aptenodytes patagonicus</td>\n<td style=\"width: 89.625px;\">12/11/3</td>\n<td style=\"width: 80.6042px;\">5/3</td>\n<td style=\"width: 80.6042px;\">1 H</td>\n<td style=\"width: 85.0625px;\">2t1</td>\n<td style=\"width: 78.3646px;\">-6 to 3</td>\n<td style=\"width: 80.3229px;\">all</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1-2/1</td>\n<td style=\"width: 79.4792px;\">2</td>\n<td style=\"width: 79.4792px;\">1 M</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Southern rockhopper penguin</td>\n<td style=\"width: 145.24px;\">Eudyptes chrysocome</td>\n<td style=\"width: 89.625px;\">3/.5</td>\n<td style=\"width: 80.6042px;\">3/2</td>\n<td style=\"width: 80.6042px;\">.5H</td>\n<td style=\"width: 85.0625px;\">1t1</td>\n<td style=\"width: 78.3646px;\">0-18</td>\n<td style=\"width: 80.3229px;\">all</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Macaroni penguin</td>\n<td style=\"width: 145.24px;\">Eudyptes chrysolophus</td>\n<td style=\"width: 89.625px;\">3/.5</td>\n<td style=\"width: 80.6042px;\">3/2</td>\n<td style=\"width: 80.6042px;\">.55H</td>\n<td style=\"width: 85.0625px;\">1t1</td>\n<td style=\"width: 78.3646px;\">-12-8</td>\n<td style=\"width: 80.3229px;\">all</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Northern rockhopper penguin</td>\n<td style=\"width: 145.24px;\">Eudyptes moseleyi</td>\n<td style=\"width: 89.625px;\">3/.5</td>\n<td style=\"width: 80.6042px;\">3/2</td>\n<td style=\"width: 80.6042px;\">.5H</td>\n<td style=\"width: 85.0625px;\">1t1</td>\n<td style=\"width: 78.3646px;\">-2-16</td>\n<td style=\"width: 80.3229px;\">all</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Fiordland penguin</td>\n<td style=\"width: 145.24px;\">Eudyptes pachyrhynchus</td>\n<td style=\"width: 89.625px;\">3/.5</td>\n<td style=\"width: 80.6042px;\">3/2</td>\n<td style=\"width: 80.6042px;\">.45H</td>\n<td style=\"width: 85.0625px;\">1t1</td>\n<td style=\"width: 78.3646px;\">8-12</td>\n<td style=\"width: 80.3229px;\">60-100</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Snares penguin</td>\n<td style=\"width: 145.24px;\">Eudyptes robustus</td>\n<td style=\"width: 89.625px;\">3/.5</td>\n<td style=\"width: 80.6042px;\">3/2</td>\n<td style=\"width: 80.6042px;\">.5H</td>\n<td style=\"width: 85.0625px;\">1t1</td>\n<td style=\"width: 78.3646px;\">10-12</td>\n<td style=\"width: 80.3229px;\">60-80</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Erect-crested penguin</td>\n<td style=\"width: 145.24px;\">Eudyptes sclateri</td>\n<td style=\"width: 89.625px;\">6/5/1</td>\n<td style=\"width: 80.6042px;\">4/3</td>\n<td style=\"width: 80.6042px;\">.6H</td>\n<td style=\"width: 85.0625px;\">1.5t1</td>\n<td style=\"width: 78.3646px;\">10-16</td>\n<td style=\"width: 80.3229px;\">40-100</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Royal penguin</td>\n<td style=\"width: 145.24px;\">Eudyptes schlegeli</td>\n<td style=\"width: 89.625px;\">6/5/1</td>\n<td style=\"width: 80.6042px;\">4/3</td>\n<td style=\"width: 80.6042px;\">.65H</td>\n<td style=\"width: 85.0625px;\">1.5t1</td>\n<td style=\"width: 78.3646px;\">3-7</td>\n<td style=\"width: 80.3229px;\">.4-.7</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Chatham penguin</td>\n<td style=\"width: 145.24px;\">Eudyptes warhami</td>\n<td style=\"width: 89.625px;\">6/5/1</td>\n<td style=\"width: 80.6042px;\">4/3</td>\n<td style=\"width: 80.6042px;\">.6H</td>\n<td style=\"width: 85.0625px;\">1.5t1</td>\n<td style=\"width: 78.3646px;\">10-15</td>\n<td style=\"width: 80.3229px;\">.6-.8</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Little blue penguin</td>\n<td style=\"width: 145.24px;\">Eudyptula minor</td>\n<td style=\"width: 89.625px;\">1.5/.25</td>\n<td style=\"width: 80.6042px;\">3/2</td>\n<td style=\"width: 80.6042px;\">.3H</td>\n<td style=\"width: 85.0625px;\">1t1</td>\n<td style=\"width: 78.3646px;\">12-16</td>\n<td style=\"width: 80.3229px;\">all</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Australian little blue penguin</td>\n<td style=\"width: 145.24px;\">Eudyptula novaehollandiae</td>\n<td style=\"width: 89.625px;\">1.5/.25</td>\n<td style=\"width: 80.6042px;\">3/2</td>\n<td style=\"width: 80.6042px;\">.3H</td>\n<td style=\"width: 85.0625px;\">1t1</td>\n<td style=\"width: 78.3646px;\">12-24</td>\n<td style=\"width: 80.3229px;\">all</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Yellow-eyed penguin</td>\n<td style=\"width: 145.24px;\">Megadyptes antipodes</td>\n<td style=\"width: 89.625px;\">7/5/1</td>\n<td style=\"width: 80.6042px;\">4/3</td>\n<td style=\"width: 80.6042px;\">.7H</td>\n<td style=\"width: 85.0625px;\">1.5t1</td>\n<td style=\"width: 78.3646px;\">6-10</td>\n<td style=\"width: 80.3229px;\">all</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Ad&eacute;lie penguin</td>\n<td style=\"width: 145.24px;\">Pygoscelis adeliae</td>\n<td style=\"width: 89.625px;\">7/5/1</td>\n<td style=\"width: 80.6042px;\">4/3</td>\n<td style=\"width: 80.6042px;\">.6H</td>\n<td style=\"width: 85.0625px;\">1.5t1</td>\n<td style=\"width: 78.3646px;\">-20 to -6</td>\n<td style=\"width: 80.3229px;\">all</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Chinstrap penguin</td>\n<td style=\"width: 145.24px;\">Pygoscelis antarcticus</td>\n<td style=\"width: 89.625px;\">4/3/.5</td>\n<td style=\"width: 80.6042px;\">3/2</td>\n<td style=\"width: 80.6042px;\">.6H</td>\n<td style=\"width: 85.0625px;\">1t1</td>\n<td style=\"width: 78.3646px;\">-15 to 13</td>\n<td style=\"width: 80.3229px;\">all</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Gentoo penguin</td>\n<td style=\"width: 145.24px;\">Pygoscelis papua</td>\n<td style=\"width: 89.625px;\">7/6/1</td>\n<td style=\"width: 80.6042px;\">4/3</td>\n<td style=\"width: 80.6042px;\">.7H</td>\n<td style=\"width: 85.0625px;\">1.5t1</td>\n<td style=\"width: 78.3646px;\">-10 to 14</td>\n<td style=\"width: 80.3229px;\">all</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">African penguin</td>\n<td style=\"width: 145.24px;\">Spheniscus demersus</td>\n<td style=\"width: 89.625px;\">3/1</td>\n<td style=\"width: 80.6042px;\">3/2</td>\n<td style=\"width: 80.6042px;\">.6H</td>\n<td style=\"width: 85.0625px;\">1t1</td>\n<td style=\"width: 78.3646px;\">13-25</td>\n<td style=\"width: 80.3229px;\">0-50%</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Humboldt penguin</td>\n<td style=\"width: 145.24px;\">Spheniscus humboldti</td>\n<td style=\"width: 89.625px;\">4/1</td>\n<td style=\"width: 80.6042px;\">3/2</td>\n<td style=\"width: 80.6042px;\">.55H</td>\n<td style=\"width: 85.0625px;\">1t1</td>\n<td style=\"width: 78.3646px;\">22-27</td>\n<td style=\"width: 80.3229px;\">0-30%</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Magellanic penguin</td>\n<td style=\"width: 145.24px;\">Spheniscus magellanicus</td>\n<td style=\"width: 89.625px;\">4/1</td>\n<td style=\"width: 80.6042px;\">3/2</td>\n<td style=\"width: 80.6042px;\">.7H</td>\n<td style=\"width: 85.0625px;\">1t1</td>\n<td style=\"width: 78.3646px;\">6-24</td>\n<td style=\"width: 80.3229px;\">all</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n<tr>\n<td style=\"width: 175.042px;\">Galapagos penguin</td>\n<td style=\"width: 145.24px;\">Spheniscus mendiculus</td>\n<td style=\"width: 89.625px;\">4/1</td>\n<td style=\"width: 80.6042px;\">3/2</td>\n<td style=\"width: 80.6042px;\">.5H</td>\n<td style=\"width: 85.0625px;\">1t1</td>\n<td style=\"width: 78.3646px;\">23-27</td>\n<td style=\"width: 80.3229px;\">10-30%</td>\n<td style=\"width: 82.5521px;\">all</td>\n<td style=\"width: 82.8333px;\">1.0-1.1</td>\n<td style=\"width: 83.3854px;\">1-6 M&amp;F, 4-40 M&amp;F&amp;B</td>\n<td style=\"width: 108.094px;\">1</td>\n<td style=\"width: 79.4792px;\">1</td>\n<td style=\"width: 79.4792px;\">1 S</td>\n<td style=\"width: 84.2292px;\">15+-7 feathers</td>\n<td style=\"width: 75.5729px;\">||</td>\n</tr>\n</tbody>\n</table>\n.</div>\n</div>\n<p>&nbsp;</p>\n<p><span style=\"font-weight: 400;\">Features:</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">All species have a unique pelt that can be used to craft hide, feathers and a taxidermied full body. Eggs in this pack can be hit to drop an item form that can be used in recipes, though it will reset their generation count. Eggs must be in entity form to hatch.</span></p>\n<p>&nbsp;</p>\n<p><span style=\"font-weight: 400;\">And a big thanks to everyone who gave feedback and assistance!</span><span style=\"font-weight: 400;\"><br /></span><br /><br />Known Bugs: The water behavior toggle currently isn't working, so penguins will often perform land behaviors in water. As such, they are currently set to head to land immediately after spawning. This will be changed when this base game feature is finalized.<br /><br /></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><span style=\"font-weight: 400;\"><strong>Q:</strong> How do I domesticate the animals in this pack?<br /><br /><strong>A:</strong> Get a male and female adult of a given species within 10 blocks, wait until the female is ready to mate and feed her the sufficient number of portions and the male at least one. Different species require different amounts and can be found in the entity file under the multiply section. Animals can be fed either by dropping items on the ground or by using the large trough. The small trough is not supported at this time due to patching formats. Each species diet can be found in this mod's description or in their entity file under the diet section. After 10 generations, entities stop attacking the player and after 10 generations they will no longer flee the player. Only the mother's generation matters for progressing generations.&nbsp;<br /><br /><br /><br /><strong>Q:</strong> Why so many animal packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain clade file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><br /><strong>Q:</strong> Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> Yes, this mod series is safe to add and remove. Items from this mod that have been placed will be invisible or appear as question blocks if the mod is removed but can be safely broken.</span></div>\n</div>\n<p><br /><span style=\"font-weight: 400;\"><br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "spheniscidae",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_aae973385fbc229dca78e48cc1cae4a0.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_aae973385fbc229dca78e48cc1cae4a0.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_aae973385fbc229dca78e48cc1cae4a0.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 119087,
+    "follows": 1019,
+    "trendingpoints": 1,
+    "comments": 60,
+    "side": "both",
+    "type": "mod",
+    "created": "2024-11-10 02:47:32",
+    "lastreleased": "2026-09-18 23:01:51",
+    "lastmodified": "2026-09-28 20:10:29",
+    "tags": [
+      "Crafting",
+      "Food",
+      "Furniture",
+      "Creatures"
+    ],
+    "releases": [
+      {
+        "releaseid": 57451,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_377df94ace6b4f0338a0ef7f24d38ee9.zip?dl=FotSA-Spheniscidae-v1.0.18.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.18.zip",
+        "fileid": 123324,
+        "downloads": 1739,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.18",
+        "created": "2026-09-18 23:01:51",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Adjusted Frost overlay thresholds for different penguin species</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Added-Ancient Tools Brain drops (Thanks Whiskey Sunshine!)</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Added-Freshwater fish interactions</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Added-Hen Box functionality, birds will now lay eggs in hen boxes and progress generations</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Added-Oiled, Raw, Salted hides and associated recipes<br></span><span style=\"font-weight: 400;\">Fixed-Large troughs can’t be used for penguin feeding</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Reduced spawn checks to single per species for optimization</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Egg meal patch shapes and extra egg slots</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Refactored AI tasks to the new version</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Reformatted folders to match base game’s folder layout</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Split entity files into adult and babies</span></p>"
+      },
+      {
+        "releaseid": 52921,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_320b0f04605cd29507949eaffda76389.zip?dl=FotSA-Spheniscidae-v1.0.17.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.17.zip",
+        "fileid": 114652,
+        "downloads": 7600,
+        "tags": [
+          "1.22.6"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.17",
+        "created": "2026-08-14 15:15:34",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-Change chance and wanderChance to executionChance</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Animal interaction patches</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Note-This is a quick a dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22</span></p>"
+      },
+      {
+        "releaseid": 32117,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_740bfdf53499bdd1e8b6833fe4613bfa.zip?dl=FotSA-Spheniscidae-v1.0.16.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.16.zip",
+        "fileid": 70686,
+        "downloads": 22626,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.16",
+        "created": "2026-01-06 23:12:35",
+        "changelog": "<p>Updated-1 hide is always dropped from killed animals</p>"
+      },
+      {
+        "releaseid": 31626,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_a66d00923f46c7e461363bc7d5576345.zip?dl=FotSA-Spheniscidae-v1.0.15.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.15.zip",
+        "fileid": 69662,
+        "downloads": 2888,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.15",
+        "created": "2025-12-30 17:36:50",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-French Translation (Thanks Laerinok!)</span></p>"
+      },
+      {
+        "releaseid": 28296,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_132e049ee3399c80b00ae32ee9292997.zip?dl=FotSA-Spheniscidae-v1.0.14.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.14.zip",
+        "fileid": 62279,
+        "downloads": 13220,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.14",
+        "created": "2025-10-28 21:02:06",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Weighted diet </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Trappable format for 1.21</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 25914,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_de128d19a097c1bfcb52c014ae7736cc.zip?dl=FotSA-Spheniscidae-v1.0.13.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.13.zip",
+        "fileid": 56936,
+        "downloads": 10932,
+        "tags": [
+          "1.21.1",
+          "1.21.2-rc.2",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.13",
+        "created": "2025-09-25 16:20:26",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Removed nest patches from Biome Compatibility</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 25581,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_c2f75043e2f65dfdc691e0700bc95fd7.zip?dl=FotSA-Spheniscidae-v1.0.12.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.12.zip",
+        "fileid": 56343,
+        "downloads": 3083,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.12",
+        "created": "2025-09-20 16:40:23",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added- Creature tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Meal patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 19494,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_a53da4e76512ddd7f03ce80bcae295b2.zip?dl=FotSA-Spheniscidae-v1.0.11.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.11.zip",
+        "fileid": 42146,
+        "downloads": 22926,
+        "tags": [
+          "1.20.9",
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.11",
+        "created": "2025-04-30 18:45:34",
+        "changelog": "<p>Added-Devil interactions<br />Added-Cetacea interactions</p>"
+      },
+      {
+        "releaseid": 19211,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_3ede9c59259117a0159941aec5c73afe.zip?dl=FotSA-Spheniscidae-v1.0.10.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.10.zip",
+        "fileid": 41534,
+        "downloads": 1573,
+        "tags": [
+          "1.20.9"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.10",
+        "created": "2025-04-22 16:45:06",
+        "changelog": "<p>Fixed-Typo with dead penguin strings</p>"
+      },
+      {
+        "releaseid": 18520,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_4ed1be465e5fb5414b6de278063f0287.zip?dl=FotSA-Spheniscidae-v1.0.9.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.9.zip",
+        "fileid": 40018,
+        "downloads": 4496,
+        "tags": [
+          "1.20.7",
+          "1.20.8"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.9",
+        "created": "2025-04-04 23:51:40",
+        "changelog": "<p>Added-Worldgen spawn</p>"
+      },
+      {
+        "releaseid": 17412,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_a357a59a7cee63e0f32d7cd9d2c47381.zip?dl=FotSA-Spheniscidae-v1.0.8.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.8.zip",
+        "fileid": 37078,
+        "downloads": 5282,
+        "tags": [
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.8",
+        "created": "2025-03-11 19:50:16",
+        "changelog": "<p>Added-Thylacoleo interactions</p>"
+      },
+      {
+        "releaseid": 16564,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_5434536e239d34de08d226726d2d438f.zip?dl=FotSA-Spheniscidae-v1.0.7.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.7.zip",
+        "fileid": 34133,
+        "downloads": 4381,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.7",
+        "created": "2025-02-20 16:35:55",
+        "changelog": "<p>Added-Civet and Genet interactions</p>"
+      },
+      {
+        "releaseid": 16232,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_a986002836e7505982ff88047a9cabe5.zip?dl=FotSA-Spheniscidae-v1.0.6.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.6.zip",
+        "fileid": 33371,
+        "downloads": 2924,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.6",
+        "created": "2025-02-14 18:03:11",
+        "changelog": "<p>Fixed-Base game animal patch format updated to 1.20.4</p>"
+      },
+      {
+        "releaseid": 14977,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_abe10960b2acad7d52e43f989017c64f.zip?dl=FotSA-Spheniscidae-v1.0.5.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.5.zip",
+        "fileid": 31032,
+        "downloads": 5820,
+        "tags": [
+          "1.20.1",
+          "1.20.3"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.5",
+        "created": "2025-01-22 20:42:20",
+        "changelog": "<p>Tweak-Standardized sounds to cap at 60% max audio output</p>"
+      },
+      {
+        "releaseid": 14614,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_88702fc66d0e7cdbd862162321d4edd2.zip?dl=FotSA-Spheniscidae-v1.0.4.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.4.zip",
+        "fileid": 30388,
+        "downloads": 2525,
+        "tags": [
+          "1.20.0",
+          "1.20.1"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.4",
+        "created": "2025-01-17 18:47:49",
+        "changelog": "<p>Added-Elephant compatibility</p>"
+      },
+      {
+        "releaseid": 14130,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_467bd965b995c36dbdc3de4ccda4aa85.zip?dl=FotSA-Spheniscidae-v1.0.3.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.3.zip",
+        "fileid": 29441,
+        "downloads": 1644,
+        "tags": [
+          "1.20.0-rc.6",
+          "1.20.0-rc.8",
+          "1.20.0-rc.9"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.3",
+        "created": "2025-01-01 23:52:25",
+        "changelog": "<p>Added-Felinae compatibility<br />Updated-1.20 blending for movement animations<br />Tweak-Reduced call range for midsized and small penguins</p>"
+      },
+      {
+        "releaseid": 13471,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_c6f4544fe68ac194a65d2593c271dd3e.zip?dl=FotSA-Spheniscidae-v1.0.2.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.2.zip",
+        "fileid": 28217,
+        "downloads": 2177,
+        "tags": [
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.2",
+        "created": "2024-12-05 23:03:46",
+        "changelog": "<p>Fix-Combat Overhaul hitbox bug<br />Tweak-Combat Overhaul damage resistance</p>"
+      },
+      {
+        "releaseid": 13175,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_362b7dd96aaab3ce0285c9a895e9732c.zip?dl=FotSA-Spheniscidae-v1.0.1.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.1.zip",
+        "fileid": 27607,
+        "downloads": 711,
+        "tags": [
+          "1.20.0-pre.0",
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.1",
+        "created": "2024-11-21 19:53:13",
+        "changelog": "<p>Adjusted-Combat Overhaul damage resistance<br />Adjusted-Penguin aggression&nbsp;<br />Added- French Translation (Thanks Laerinok!)<br />Added-Ukrainian Translation (Thanks Deanbro!)</p>"
+      },
+      {
+        "releaseid": 13174,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_8c852eb3d42ef5382092953b7e59c6b6.zip?dl=FotSA-Spheniscidae-v0.9.1.zip",
+        "filename": "FotSA-Spheniscidae-v0.9.1.zip",
+        "fileid": 27606,
+        "downloads": 1408,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "0.9.1",
+        "created": "2024-11-21 19:52:04",
+        "changelog": "<p>Adjusted-Combat Overhaul damage resistance<br />Added- French Translation (Thanks Laerinok!)<br />Added-Ukrainian Translation (Thanks Deanbro!)</p>"
+      },
+      {
+        "releaseid": 12953,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_40d0afc10f31ddbf40e349aff2ace6f5.zip?dl=FotSA-Spheniscidae-v1.0.0.zip",
+        "filename": "FotSA-Spheniscidae-v1.0.0.zip",
+        "fileid": 27184,
+        "downloads": 600,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "1.0.0",
+        "created": "2024-11-10 02:48:52",
+        "changelog": "<p>Launch for 1.20.0 pre version</p>"
+      },
+      {
+        "releaseid": 12952,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_bf12cf016acd496787bb6ffd9b69cea4.zip?dl=FotSA-Spheniscidae-v0.9.0.zip",
+        "filename": "FotSA-Spheniscidae-v0.9.0.zip",
+        "fileid": 27183,
+        "downloads": 533,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "spheniscidae",
+        "modversion": "0.9.0",
+        "created": "2024-11-10 02:48:15",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 27185,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-11-09_06-48-32_224a029772927f515d056fa3e42a0d6a.png",
+        "filename": "2024-11-09_06-48-32.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-11-09_06-48-32_224a029772927f515d056fa3e42a0d6a_55_60.png",
+        "created": "2024-11-10 02:51:19"
+      },
+      {
+        "fileid": 27186,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-11-09_06-49-31_cdd71809a747f73fbade812738a18f10.png",
+        "filename": "2024-11-09_06-49-31.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-11-09_06-49-31_cdd71809a747f73fbade812738a18f10_55_60.png",
+        "created": "2024-11-10 02:51:19"
+      },
+      {
+        "fileid": 27187,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-11-09_06-59-31_8c1d2a6bb976b17dab03b4e9ac796487.png",
+        "filename": "2024-11-09_06-59-31.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-11-09_06-59-31_8c1d2a6bb976b17dab03b4e9ac796487_55_60.png",
+        "created": "2024-11-10 02:51:20"
+      },
+      {
+        "fileid": 27188,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-11-09_07-00-56_dbafa37d28bc5b3be3e618e3e938ab5f.png",
+        "filename": "2024-11-09_07-00-56.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-11-09_07-00-56_dbafa37d28bc5b3be3e618e3e938ab5f_55_60.png",
+        "created": "2024-11-10 02:51:20"
+      },
+      {
+        "fileid": 27189,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-11-09_07-00-14_50bc375fbf7c85e2d513bacb29ba4786.png",
+        "filename": "2024-11-09_07-00-14.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-11-09_07-00-14_50bc375fbf7c85e2d513bacb29ba4786_55_60.png",
+        "created": "2024-11-10 02:51:20"
+      },
+      {
+        "fileid": 27190,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-11-09_07-02-10_adf048e169d50902466311127117fc0c.png",
+        "filename": "2024-11-09_07-02-10.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-11-09_07-02-10_adf048e169d50902466311127117fc0c_55_60.png",
+        "created": "2024-11-10 02:51:20"
+      },
+      {
+        "fileid": 27191,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-11-09_07-09-37_f061b654595a3def6be87c9682ce76df.png",
+        "filename": "2024-11-09_07-09-37.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-11-09_07-09-37_f061b654595a3def6be87c9682ce76df_55_60.png",
+        "created": "2024-11-10 02:51:20"
+      },
+      {
+        "fileid": 27192,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-11-09_07-07-58_e3cfa92f3b5b0a896b869a79e87992ec.png",
+        "filename": "2024-11-09_07-07-58.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-11-09_07-07-58_e3cfa92f3b5b0a896b869a79e87992ec_55_60.png",
+        "created": "2024-11-10 02:51:23"
+      },
+      {
+        "fileid": 27193,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-11-07_10-19-17_ca4e1b9f572606f667dd1252d0bbd97e.png",
+        "filename": "2024-11-07_10-19-17.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-11-07_10-19-17_ca4e1b9f572606f667dd1252d0bbd97e_55_60.png",
+        "created": "2024-11-10 02:51:23"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

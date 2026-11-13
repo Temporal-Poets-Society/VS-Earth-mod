@@ -1,0 +1,232 @@
+<p><strong>Explore the real Earth in Vintage Story.</strong></p>
+
+<p>Earth builds a survival world from real elevation, coastlines, rivers and climate data. Cross familiar continents, follow great river valleys, climb mountain ranges and explore distant islands. Geography shapes the journey: the weather, vegetation, wildlife, rocks and resources change as you travel.</p>
+
+<h2>Geography</h2>
+
+<ul>
+  <li>Real continents, ocean basins, continental shelves, coastlines and islands, adapted to the world's scale.</li>
+  <li>Major rivers along their mapped courses, lakes at their real elevations, rapids and selected great waterfalls.</li>
+  <li>Greenland and Antarctic ice sheets, mapped mountain glaciers and alpine terrain.</li>
+  <li>An east-west wrapping world supplied by the required Cylinder World mod, with polar ice walls at the northern and southern limits.</li>
+</ul>
+
+<p>The terrain combines geographic data with procedural detail. World size controls how much geography fits into each block; elevation is scaled separately to fit the available world height. Additional fine mountain relief focuses on elevations above 3,000 m, with a gradual transition; lower mountains and hills remain represented by the base terrain.</p>
+
+<h2>Restoring natural geography</h2>
+
+<p>Earth aims to remove modern human alterations to the landscape as far as the available data allows. Identified artificial reservoirs and their flooded areas are removed, dammed river levels are adjusted toward the natural valley slope, and selected lakes depleted by modern water diversion, including the Aral Sea, are restored toward earlier extents. Natural lakes remain, including those later regulated by dams.</p>
+
+<p>The land connections at Suez and Panama are intact by default. You can enable simplified canals as optional sailing shortcuts when creating a world.</p>
+
+<h2>Rivers and navigation</h2>
+
+<p>Rivers follow their mapped courses, but their widths and depths are adapted for gameplay. Minimum widths in game blocks keep channels usable on smaller maps; on larger maps, estimated real widths take over wherever they are wider. River mouths and selected narrow passages, including the Bosporus, are widened and deepened to give ships room to sail. Rapids and waterfalls can still interrupt a route.</p>
+
+<h2>A regional survival world</h2>
+
+<p>Trees and shrubs follow botanical regions as well as local climate. Regional substitutes fill gaps where the installed species cannot represent the local forest. Supported Floral Zones ground plants also follow their native ranges; vanilla ground plants retain their climate rules.</p>
+
+<p>Rocks follow global geological maps. Ore distribution uses evidence of real deposits and mining districts, with background deposits in suitable rocks to support survival outside known hotspots. Geological coverage is approximate and varies by region.</p>
+
+<p>Regional animal rules use geographic ranges and habitat checks for vanilla animals and supported optional animal mods. The default natural-range approach represents ranges without human impact, so wildlife can differ from today's distribution. Additional species come from the animal mods you install.</p>
+
+<h2>Climate and weather</h2>
+
+<p>Temperature and rainfall vary with location, season and altitude. Earth weather uses monthly climate data to produce wet and dry seasons, monsoons, prevailing winds, moving rain systems and seasonal storms. Latitude also gives the two hemispheres their opposing seasons.</p>
+
+<h2>Real day and night</h2>
+
+<p>With <strong><a href="https://mods.vintagestory.at/astraearth">Astra Terra for Earth</a></strong>, the day/night cycle follows both latitude and longitude: sunrise, noon and sunset occur at different times as you travel east or west. Latitude and season determine day length, including polar day and night. Use the Earth-compatible fork for longitude-dependent daylight.</p>
+
+<h2>Vanilla story locations</h2>
+
+<p>Earth adapts where vanilla story locations spawn and how their surrounding terrain is generated. Sites can be relocated to suitable ground, their building heights follow the local terrain, and bounded areas are levelled to fit their structures. Their positions and the terrain around them therefore differ from a normal world. The aim is to preserve the game's story and lore while fitting its locations into real geography.</p>
+
+<h2>Starting your world</h2>
+
+<p>Earth is a single mod split into three downloads to fit the Mod DB upload size limit: <strong>Earth</strong>, <strong><a href="https://mods.vintagestory.at/earthterraindata">Earth Terrain Data</a></strong> and <strong><a href="https://mods.vintagestory.at/earthwaterdata">Earth Water Data</a></strong>. <strong>All three parts are required</strong> and use the same release version.</p>
+
+<p>Install all three parts, along with Cylinder World and Hydrology. <strong>Sea is strongly recommended and optional.</strong> Create a <strong>new world</strong> using the <strong>Earth</strong> play style, then open <strong>Customize → Earth</strong> to choose your settings.</p>
+
+<ul>
+  <li><strong>Recommended size:</strong> at least <strong>256,000 blocks wide</strong>, with <strong>512,000 or more preferred</strong> for finer geographic detail. Earth sets the corresponding length automatically.</li>
+  <li><strong>Recommended height:</strong> <strong>512 blocks for the best representation of high mountains</strong>, selected separately on the World generation tab.</li>
+  <li><strong>Starting place:</strong> a random suitable location for your starting climate, one of 36 capital presets, or your own latitude and longitude. A capital preset starts you on nearby dry land.</li>
+</ul>
+
+<h2>Height scaling and configuration</h2>
+
+<p>Horizontal and vertical scales are independent. By default, <strong>logarithmic height scaling</strong> gives lowlands and hills readable relief while compressing high mountains into the available vertical space. The default <strong>log 1000 m</strong> curve balances lowland relief and mountain height. Smaller curve values exaggerate lowlands more; larger values leave more relative height for high mountains. Linear scaling preserves the proportions between real elevations.</p>
+
+<table>
+<thead><tr><th>Mountain heights option</th><th>Effect</th></tr></thead>
+<tbody>
+<tr><td>Log 1000 m</td><td>Default balanced relief</td></tr>
+<tr><td>Log 250 m or log 500 m</td><td>Stronger lowland and hill relief, with more compression of high mountains</td></tr>
+<tr><td>Log 2000 m</td><td>Less lowland exaggeration and more relative height for high mountains</td></tr>
+<tr><td>Linear</td><td>Heights proportional to real elevation</td></tr>
+</tbody>
+</table>
+
+<p>At the default sea level of <strong>110</strong>, a 512-high world has about 400 blocks of vertical space above the sea. The 8,849 m Everest reference elevation maps to block height 510. Individual landforms also depend on the resolution of the terrain data and the procedural detail.</p>
+
+<p>The <strong>Earth</strong> tab also provides these creation choices:</p>
+
+<table>
+<thead><tr><th>Setting</th><th>Default</th><th>Choices</th></tr></thead>
+<tbody>
+<tr><td>Sea level</td><td>110</td><td>110 or 128; a higher sea level leaves less room for mountains</td></tr>
+<tr><td>Summit height correction</td><td>From 3,000 m</td><td>Off, or minimum named summit elevations from 1,000 to 8,000 m; separate from the fine mountain dataset</td></tr>
+<tr><td>Rocks and ores</td><td>Regional geology and ores</td><td>Regional or vanilla rock layers and deposits</td></tr>
+<tr><td>Animals</td><td>Real ranges</td><td>Geographic ranges and habitats, or the game's and animal mods' own spawn rules</td></tr>
+<tr><td>Include extinct animals</td><td>On</td><td>Allow or exclude supported extinct species; the animal packs supply the species</td></tr>
+<tr><td>Weather</td><td>Earth real-climate weather</td><td>Earth or vanilla weather</td></tr>
+<tr><td>Rain frequency</td><td>1 × real climate</td><td>Selected multipliers from off to 3 × the monthly rain chance</td></tr>
+<tr><td>Storm frequency</td><td>1 × real climate</td><td>Selected multipliers from off to 5 × storm frequency</td></tr>
+<tr><td>Suez Canal and Panama Canal</td><td>Off</td><td>Optional navigable sea-level cuts; Panama uses a simplified cut without locks</td></tr>
+</tbody>
+</table>
+
+<p>Other installed suite mods can add settings to the same tab, including seam mist, water flooding, storm waves, wakes, shared charts and exploration by sight. Advanced Earth settings are in <code>VintagestoryData/ModConfig/earth.json</code>.</p>
+
+<p>World-generation choices are saved with the world. Terrain updates generally require a new world to see the complete result; already generated chunks keep their terrain.</p>
+
+<h2>Required mods</h2>
+
+<ul>
+  <li><strong><a href="https://mods.vintagestory.at/earthterraindata">Earth Terrain Data</a></strong> — base elevation, high-mountain detail, named summit heights and glaciers.</li>
+  <li><strong><a href="https://mods.vintagestory.at/earthwaterdata">Earth Water Data</a></strong> — river networks, coastlines, islands, lake overlays and shores.</li>
+  <li><strong><a href="https://mods.vintagestory.at/cylinderworld">Cylinder World</a></strong> — world wrapping and polar limits.</li>
+  <li><strong><a href="https://mods.vintagestory.at/hydrology">Hydrology</a></strong> — river and water mechanics.</li>
+</ul>
+
+<p>Install Earth on both the client and server for multiplayer. Use matching releases of the suite mods and install each companion's own required dependencies. Some linked Mod DB pages are still awaiting publication.</p>
+
+<h2>Strongly recommended suite mods</h2>
+
+<ul>
+  <li><strong><a href="https://mods.vintagestory.at/sea">Sea</a></strong> — waves and water rendering using Earth's wind; pre.13 also adds wave-following vanilla boats and wind-driven vanilla sails. Earth runs its own weather without Sea.</li>
+  <li><strong><a href="https://mods.vintagestory.at/astraearth">Astra Terra for Earth</a></strong> — the real day/night cycle by longitude, astronomy, sky and navigation instruments.</li>
+  <li><strong><a href="https://mods.vintagestory.at/wmap">World Map</a></strong> — charts, navigation and distant terrain.</li>
+</ul>
+
+<h2>Recommended ships</h2>
+
+<ul>
+  <li><strong><a href="https://mods.vintagestory.at/ships">Ships</a></strong> — sailing ships and life aboard. <strong>Early release, with substantial further development planned.</strong></li>
+</ul>
+
+<h2>Optional encounters</h2>
+
+<ul>
+  <li><strong><a href="https://mods.vintagestory.at/seamonsters">Sea Monsters</a></strong> — Kraken encounters at sea; requires Ships and Sea. <strong>Early release, with substantial further development planned.</strong></li>
+</ul>
+
+<h2>Strongly recommended flora</h2>
+
+<p>Install the eight <strong>Floral Zones</strong> packs for vegetation across the world's regions, plus <strong>Wildcraft: Trees and Shrubs</strong> with its required <strong>Herbarium</strong> library:</p>
+
+<ul>
+  <li><a href="https://mods.vintagestory.at/floralzonescaperegion">Floral Zones: Cape Region</a>.</li>
+  <li><a href="https://mods.vintagestory.at/floralzonescaribbeanregion">Floral Zones: Caribbean Region</a>.</li>
+  <li><a href="https://mods.vintagestory.at/floralzonescentralaustralianregion">Floral Zones: Central Australian Region</a>.</li>
+  <li><a href="https://mods.vintagestory.at/floralzonescircumborealregion">Floral Zones: Circumboreal Region</a>.</li>
+  <li><a href="https://mods.vintagestory.at/floralzonescosmopolitanregion">Floral Zones: Cosmopolitan Region</a>.</li>
+  <li><a href="https://mods.vintagestory.at/floralzoneseastasiaticregion">Floral Zones: East Asiatic Region</a>.</li>
+  <li><a href="https://mods.vintagestory.at/floralzonesmediterraneanregion">Floral Zones: Mediterranean Region</a>.</li>
+  <li><a href="https://mods.vintagestory.at/floralzonesneozeylandicregion">Floral Zones: Neozeylandic Region</a>.</li>
+  <li><a href="https://mods.vintagestory.at/wildcrafttree">Wildcraft: Trees and Shrubs</a>.</li>
+  <li><a href="https://mods.vintagestory.at/herbarium">Herbarium</a> — required by Wildcraft: Trees and Shrubs.</li>
+</ul>
+
+<h2>Strongly recommended fauna</h2>
+
+<p>For a richer regional animal world, install the supported <strong>Fauna of the Stone Age</strong> packs below. Earth applies its geographic range and habitat rules to their supported species. Choose provider versions supported by your Earth release.</p>
+
+<ul>
+  <li><a href="https://mods.vintagestory.at/bovinae">Bovinae</a>.</li>
+  <li><a href="https://mods.vintagestory.at/caninae">Caninae</a>.</li>
+  <li><a href="https://mods.vintagestory.at/capreolinae">Capreolinae</a>.</li>
+  <li><a href="https://mods.vintagestory.at/casuariidae">Casuariidae Plus</a>.</li>
+  <li><a href="https://mods.vintagestory.at/cervinae">Cervinae</a>.</li>
+  <li><a href="https://mods.vintagestory.at/chelonioidea">Chelonioidea</a>.</li>
+  <li><a href="https://mods.vintagestory.at/dinornithidae">Dinornithiformes Plus</a>.</li>
+  <li><a href="https://mods.vintagestory.at/elephantidae">Elephantidae</a>.</li>
+  <li><a href="https://mods.vintagestory.at/felinae">Felinae</a>.</li>
+  <li><a href="https://mods.vintagestory.at/iniidae">Iniidae Plus</a>.</li>
+  <li><a href="https://mods.vintagestory.at/machairodontinae">Machairodontinae</a>.</li>
+  <li><a href="https://mods.vintagestory.at/manidae">Manidae</a>.</li>
+  <li><a href="https://mods.vintagestory.at/meiolaniidae">Meiolaniidae</a>.</li>
+  <li><a href="https://mods.vintagestory.at/pantherinae">Pantherinae</a>.</li>
+  <li><a href="https://mods.vintagestory.at/rhinocerotidae">Rhinocerotidae</a>.</li>
+  <li><a href="https://mods.vintagestory.at/sirenia">Sirenia</a>.</li>
+  <li><a href="https://mods.vintagestory.at/spheniscidae">Spheniscidae</a>.</li>
+  <li><a href="https://mods.vintagestory.at/thylacinidae">Thylacinidae Plus</a>.</li>
+  <li><a href="https://mods.vintagestory.at/viverridae">Viverridae Plus</a>.</li>
+  <li><a href="https://mods.vintagestory.at/vombatidae">Vombatidae Plus</a>.</li>
+</ul>
+
+<h2>Strongly recommended terrain smoothing</h2>
+
+<p>Install these two together:</p>
+
+<ul>
+  <li><a href="https://mods.vintagestory.at/terrainslabs">Terrain Slabs</a> — smooths terrain edges into half-block steps.</li>
+  <li><a href="https://mods.vintagestory.at/show/mod/38090">Place On Slabs</a> — Terrain Slabs' required companion, which offsets plants and placed objects on slabs.</li>
+</ul>
+
+<h2>Optional testing tool</h2>
+
+<p><strong>Devkit</strong> helps with performance measurements and diagnostics during testing. Public link coming soon.</p>
+
+<h2>Useful commands</h2>
+
+<ul>
+  <li><code>/earth</code> — latitude, longitude, elevation and climate at your location.</li>
+  <li><code>/earth trees</code>, <code>/earth plants</code>, <code>/earth geology</code>, <code>/earth ores</code>, <code>/earth fauna</code> — inspect local regional rules and data.</li>
+  <li><code>/earth tp &lt;latitude&gt; &lt;longitude&gt;</code> — teleport to geographic coordinates; requires teleport permission.</li>
+  <li><code>/earth map</code> — export a map image; requires server-control permission.</li>
+</ul>
+
+<h2>Development and feedback</h2>
+
+<p>Earth is under active development. Geographic data has finite resolution, some small features cannot be represented at every world size, and optional mod combinations are still being tested.</p>
+
+<p>When reporting a problem, include your Earth, Cylinder World and game versions, world seed, size and height, latitude and longitude, other installed mods, and relevant logs or screenshots.</p>
+
+<h2>Shared roadmap</h2>
+
+<p>Earth and its connected mods have three main goals:</p>
+
+<ul>
+  <li><strong>Educational geography:</strong> make real landscapes, climates, ecosystems and geological regions recognizable, and improve the geographic data and its representation at game scale.</li>
+  <li><strong>Travel and exploration:</strong> make different regions worth visiting through their landscapes, resources and discoveries, supported by navigation, sailing and life aboard a ship.</li>
+  <li><strong>Respect for Vintage Story lore:</strong> stay as close to the established lore as possible while fitting story locations to Earth's geography and developing a connected side story.</li>
+</ul>
+
+<p>Planned content across the companion mods includes:</p>
+
+<ul>
+  <li><strong>Earth Ruins:</strong> historically and geographically placed ruins of buildings that existed by the <strong>Diet of Kings in 1318</strong>, with architecture and ruin states reviewed against the lore and setting.</li>
+  <li><strong>Underground Cities:</strong> explorable shelter cities, authored rooms, entrances, discoveries and regular translocators.</li>
+  <li><strong>The Hansa voyage quest line:</strong> a campaign developed through Voyage and the ship, map and content mods, connecting discoveries, navigation, ship progression and journeys between distant places alongside the vanilla main story.</li>
+</ul>
+
+<p>These are development targets for the connected mods. Earth provides the geography, climate and terrain services that support them; the complete linked campaign is still in development.</p>
+
+<h2>Credits</h2>
+
+<p>Earth uses geographic and environmental data from NOAA ETOPO, NOAA PSL climate datasets, CHELSA, Natural Earth, GSHHG, HydroSHEDS, the Randolph Glacier Inventory, Kew WCVP, TDWG, PHYLACINE, GeoNames and regional geological sources. Full citations and dataset terms accompany the data. Optional content remains credited to its respective mod authors.</p>
+
+<h2>Contact and development</h2>
+
+<p><strong>You can contact me on Discord: ifeelveryunlucky.</strong></p>
+
+<p><strong>Anyone who would like to join forces on development is welcome.</strong> If you're interested in contributing, get in touch!</p>
+
+<h2>AI use and licence</h2>
+
+<p><strong>AI disclaimer:</strong> All code in this mod was created using AI tools. The ideas and design are mine, and I have put extensive work into testing, refining and improving the mod.</p>
+
+<p>Licensed under GPL-3.0.</p>

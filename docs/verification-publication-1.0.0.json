@@ -1,0 +1,100 @@
+{
+  "limit_bytes": 40000000,
+  "archives": [
+    {
+      "file": "C:\\VS mods\\Earth\\release\\earth-1.0.0.zip",
+      "bytes": 28489946,
+      "sha256": "2ff974ef525428d1f811433434f15b6a275f4e1cdb3308362bfbbb4a3bc17531"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\release\\earthterraindata-1.0.0.zip",
+      "bytes": 36424452,
+      "sha256": "1ebdbc0a22a862f4b0b078ce3d48b32f37bd6b150cb9d478f25599f1d33d2001"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\release\\earthwaterdata-1.0.0.zip",
+      "bytes": 31583561,
+      "sha256": "edb78da63307ace1c72b3647039369294a57bdc2e9d7f2815d9e5ff9ea907e57"
+    }
+  ],
+  "date": "2026-10-31",
+  "timezone": "Europe/Riga",
+  "earth_version": "1.0.0",
+  "modid": "earth",
+  "name": "Earth",
+  "status": "installed; author confirms renamed Earth 1.0.0 works; public upload not performed by this chat",
+  "version_scheme": "all three parts use 1.0.0; mismatched future versions are rejected",
+  "total_bytes": 96497959,
+  "previous_identity_archive": "C:\\VS mods\\Earth\\.local\\package-backups\\earthmap-to-earth-identity-20261031\\earthmap-1.0.0.zip",
+  "identity_change": {
+    "old_modid": "earthmap",
+    "new_modid": "earth",
+    "asset_domain": "earth",
+    "playstyle": "earth",
+    "config_file": "ModConfig/earth.json",
+    "save_key": "earth-params",
+    "datum_key": "earth-sealevel",
+    "network_channel": "earth",
+    "save_migration": false,
+    "public_assembly": "EarthMap.dll",
+    "public_api_type": "EarthMap.EarthMapSystem",
+    "parked_mods_excluded": [
+      "Earth Ruins",
+      "Underground Cities"
+    ]
+  },
+  "verification": {
+    "build_warnings": 0,
+    "build_errors": 0,
+    "world_options_and_data_package_checks": 509,
+    "provider_checks": 35,
+    "archive_crc": "all pass",
+    "geographic_payloads": "all byte-identical to prior identity",
+    "asset_content": "all owned asset bytes identical under the renamed domain; game preset labels updated",
+    "renamed_asset_files": 17,
+    "common_entries_changed": [
+      "EarthMap.dll",
+      "EarthMap.pdb",
+      "assets/game/lang/worldconfig-en.json",
+      "modinfo.json",
+      "worldconfig.json"
+    ],
+    "data_archives": "both byte-identical",
+    "new_client_or_multiplayer_run": false,
+    "native_runs": {
+      "minimal": {
+        "run": "C:\\VS mods\\Earth\\.claude\\worktrees\\codex-earth-playstyle\\testruns\\earth-identity-20261031\\valid",
+        "errors_fatals": 0,
+        "reached_run_game": true,
+        "graceful_shutdown": true,
+        "marker": "31.10.2026 23:13:33 [Notification] REQUIREDMODS RUN: earth=True; params=E842A73938AEADA2AE181C79E26A52C89F5725640F2A3AD2FCDE972B68D2BD7B; datum=6E-00-00-00; enabled=True; layout=10; query=2; weather=provider; wind=Earth"
+      },
+      "active_suite": {
+        "run": "C:\\VS mods\\Earth\\.claude\\worktrees\\codex-earth-playstyle\\testruns\\earth-identity-active-suite-20261031\\run",
+        "errors_fatals": 0,
+        "reached_run_game": true,
+        "graceful_shutdown": true,
+        "marker": "31.10.2026 23:16:26 [Notification] REQUIREDMODS RUN: earth=True; params=9DE900C7F08C30C246ABFFEBFC62DB3ABA7B27BBBFEAC5D3F70B31DBEEAB9CF8; datum=6E-00-00-00; enabled=True; layout=10; query=2; weather=provider; wind=Earth",
+        "enabled_mods": 45,
+        "fauna_providers": 20,
+        "fauna_taxon_mappings": 278,
+        "held_taxa": 11,
+        "tree_generators_mapped": "195/195",
+        "inputs": "C:\\VS mods\\Earth\\.claude\\worktrees\\codex-earth-playstyle\\testruns\\earth-identity-active-suite-20261031\\inputs.json"
+      }
+    }
+  },
+  "installation": {
+    "receipt": "C:\\VS mods\\Earth\\docs\\installation-earth-1.0.0-2026-10-31.json",
+    "installed_at": "2026-10-31 23:23:15 +02:00",
+    "old_earthmap_removed": true,
+    "config_action": "copied existing Earth settings to earth.json",
+    "gameplay_verification": "author confirmed working on 2026-11-01"
+  },
+  "author_feedback": {
+    "date": "2026-11-01",
+    "timezone": "Europe/Riga",
+    "message": "ok it works",
+    "scope": "Author confirms the installed renamed Earth 1.0.0 works in gameplay; detailed coverage was not specified."
+  }
+}

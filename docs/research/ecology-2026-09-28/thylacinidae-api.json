@@ -1,0 +1,177 @@
+{
+  "mod": {
+    "modid": 3920,
+    "assetid": 23163,
+    "name": "Fauna of the Stone Age: Thylacinidae Plus",
+    "text": "<p>Currently includes the Tasmanian devil and Queensland devil for commissions, the rest will come at a later date!<br /><br />A collection of small carnivorous mammals from the Order Dasyuromorphia, these small predators are primarily nocturnal, adding life to the temperate, subtropic and tropical regions. Some will get into fruit bushes, hen houses and other small farm animals and their ability to climb means fences won&rsquo;t hold them back.&nbsp;<br /><br />This mod includes:<br /><br /></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" style=\"border-spacing: 0px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col width=\"199\" /><col width=\"166\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"136\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /></colgroup>\n<tbody>\n<tr>\n<td>Common Name</td>\n<td>Scientific name</td>\n<td>Category</td>\n<td>Weight</td>\n<td>Health</td>\n<td>Height</td>\n<td>Damage</td>\n<td>Temp</td>\n<td>Precip</td>\n<td>Foliage Needs</td>\n<td>Altitude</td>\n<td>Group Size</td>\n<td>Meat Drops</td>\n<td>Fat Drops</td>\n<td>Hide Drops</td>\n<td>Diets</td>\n<td>Behaviors</td>\n</tr>\n<tr>\n<td>Tasmanian Devil</td>\n<td>Sarcophilus harrisii</td>\n<td>Dasyuridae</td>\n<td>8/6/1</td>\n<td>4/3</td>\n<td>.91/.71L</td>\n<td>3t1</td>\n<td>10-30</td>\n<td>10-80</td>\n<td>30-100</td>\n<td>1.0-1.4</td>\n<td>1 M&amp;F, 2 F&amp;B</td>\n<td>1+-0.5</td>\n<td>0</td>\n<td>1M</td>\n<td>\n<div>\n<div>eggs, fish, meat, fruit, insects, vegetables</div>\n</div>\n</td>\n<td>2 meter step</td>\n</tr>\n<tr>\n<td>Queensland Devil &dagger;</td>\n<td>Sarcophilus laniarius</td>\n<td>&nbsp;</td>\n<td>12/9/1</td>\n<td>5/3</td>\n<td>1.04/.81L</td>\n<td>4t1</td>\n<td>14-30</td>\n<td>10-80</td>\n<td>20-100</td>\n<td>1.0-1.4</td>\n<td>1 M&amp;F, 2 F&amp;B</td>\n<td>1+-0.5</td>\n<td>0</td>\n<td>1M</td>\n<td>\n<div>\n<div>eggs, fish, meat, fruit, insects, vegetables</div>\n</div>\n</td>\n<td>2 meter step</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p>Features:</p>\n<p><br />Most species have a unique pelt drop as well that can be used to craft hide, taxidermied full body and head mounts.<br /><br />The devils will seek out the spawn blocking carcasses added by the FotSA series over long distances, cleaning those up to resume normal spawning.<br /><br /><br />A big thanks to Endarius_Termina for commissioning the Tasmanian Devil and Queensland Devil!<br />And a big thanks to everyone who gave feedback and assistance!<br /><br /></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong>How do I domesticate the animals in this pack?<strong><br /><br />A:</strong>Get a male and female adult of a given species within 10 blocks, wait until the female is ready to mate and feed her the sufficient number of portions and the male at least one. Different species require different amounts and can be found in the entity file under the multiply section. Animals can be fed either by dropping items on the ground or by using the large trough. The small trough is not supported at this time due to patching formats. Each species diet can be found in this mod's description or in their entity file under the diet section. After 10 generations, entities stop attacking the player and after 10 generations they will no longer flee the player. Only the mother's generation matters for progressing generations.<strong><br /><br />Q:</strong> Why so many animal packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain clade file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><br /><strong>Q:</strong> Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> Yes, this mod series is safe to add and remove. Items from this mod that have been placed will be invisible or appear as question blocks if the mod is removed but can be safely broken.</div>\n</div>\n<p><br /><span style=\"font-weight: 400;\"><br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "thylacinidae",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_4f1e65f1f46e39c627149398efd056cd.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_4f1e65f1f46e39c627149398efd056cd.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_4f1e65f1f46e39c627149398efd056cd.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 55713,
+    "follows": 678,
+    "trendingpoints": 0,
+    "comments": 27,
+    "side": "both",
+    "type": "mod",
+    "created": "2025-04-23 16:36:45",
+    "lastreleased": "2026-08-14 16:46:59",
+    "lastmodified": "2026-09-28 20:18:29",
+    "tags": [
+      "Crafting",
+      "Furniture",
+      "Creatures"
+    ],
+    "releases": [
+      {
+        "releaseid": 52947,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Thylacinidae-v_a7b8c61267c958aedf7b3f539313b4e6.zip?dl=FotSA-Thylacinidae-v0.1.7.zip",
+        "filename": "FotSA-Thylacinidae-v0.1.7.zip",
+        "fileid": 114681,
+        "downloads": 5255,
+        "tags": [
+          "1.22.6"
+        ],
+        "modidstr": "thylacinidae",
+        "modversion": "0.1.7",
+        "created": "2026-08-14 16:46:59",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-Change chance and wanderChance to executionChance</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Animal interaction patches</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Note-This is a quick and dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22</span></p>"
+      },
+      {
+        "releaseid": 32127,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Thylacinidae-v_214e792773e4e5f70c0fc322f6f7799e.zip?dl=FotSA-Thylacinidae-v0.1.6.zip",
+        "filename": "FotSA-Thylacinidae-v0.1.6.zip",
+        "fileid": 70697,
+        "downloads": 17510,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "thylacinidae",
+        "modversion": "0.1.6",
+        "created": "2026-01-07 00:14:31",
+        "changelog": "<p>Updated-1 hide is always dropped from killed animals</p>"
+      },
+      {
+        "releaseid": 28308,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Thylacinidae-v_7a9940c842febd7f758c6c75d386bcf5.zip?dl=FotSA-Thylacinidae-v0.1.5.zip",
+        "filename": "FotSA-Thylacinidae-v0.1.5.zip",
+        "fileid": 62296,
+        "downloads": 9492,
+        "tags": [
+          "1.21.5",
+          "1.21.6"
+        ],
+        "modidstr": "thylacinidae",
+        "modversion": "0.1.5",
+        "created": "2025-10-28 21:28:15",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Weighted diet </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Trappable format for 1.21</span></p>"
+      },
+      {
+        "releaseid": 25805,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Thylacinidae-v_cd509af45a843a1525030a1fed45bdf4.zip?dl=FotSA-Thylacinidae-v0.1.4.zip",
+        "filename": "FotSA-Thylacinidae-v0.1.4.zip",
+        "fileid": 56735,
+        "downloads": 8713,
+        "tags": [
+          "1.21.1",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "thylacinidae",
+        "modversion": "0.1.4",
+        "created": "2025-09-23 15:36:03",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added- Creature tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Ukrainian translation (Thanks Deanbro!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 20072,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Thylacinidae-v_55bb099ec181f8c4299b8947a602f960.zip?dl=FotSA-Thylacinidae-v0.1.3.zip",
+        "filename": "FotSA-Thylacinidae-v0.1.3.zip",
+        "fileid": 43502,
+        "downloads": 11096,
+        "tags": [
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "thylacinidae",
+        "modversion": "0.1.3",
+        "created": "2025-05-15 19:29:58",
+        "changelog": "<p>Fixed-Combat Overhaul Dasyuridae patch</p>"
+      },
+      {
+        "releaseid": 19506,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Thylacinidae-v_a931c65de0a6ddddae34e7f52b4829e7.zip?dl=FotSA-Thylacinidae-v0.1.2.zip",
+        "filename": "FotSA-Thylacinidae-v0.1.2.zip",
+        "fileid": 42160,
+        "downloads": 2104,
+        "tags": [
+          "1.20.9",
+          "1.20.10"
+        ],
+        "modidstr": "thylacinidae",
+        "modversion": "0.1.2",
+        "created": "2025-04-30 20:39:40",
+        "changelog": "<p>Added-Mihirung interactions<br />Added-Diprotodon interactions</p>"
+      },
+      {
+        "releaseid": 19323,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Thylacinidae-v_7a18bc50de0ec492ddbabc4b73ad27f8.zip?dl=FotSA-Thylacinidae-v0.1.1.zip",
+        "filename": "FotSA-Thylacinidae-v0.1.1.zip",
+        "fileid": 41735,
+        "downloads": 914,
+        "tags": [
+          "1.20.9"
+        ],
+        "modidstr": "thylacinidae",
+        "modversion": "0.1.1",
+        "created": "2025-04-25 16:56:23",
+        "changelog": "<p>Added-French Translation (Thanks Laerinok!)</p>"
+      },
+      {
+        "releaseid": 19243,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Thylacinidae-v_992ce57403080d7bc652a2cd80dc4e64.zip?dl=FotSA-Thylacinidae-v0.1.0.zip",
+        "filename": "FotSA-Thylacinidae-v0.1.0.zip",
+        "fileid": 41594,
+        "downloads": 629,
+        "tags": [
+          "1.20.9"
+        ],
+        "modidstr": "thylacinidae",
+        "modversion": "0.1.0",
+        "created": "2025-04-23 16:37:30",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 41591,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-23_08-57-03_95a24450994838b191d7953c7b7f6bdf.png",
+        "filename": "2025-04-23_08-57-03.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-23_08-57-03_95a24450994838b191d7953c7b7f6bdf_55_60.png",
+        "created": "2025-04-23 16:36:41"
+      },
+      {
+        "fileid": 41592,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-23_09-00-18_1ed5fac79e7c600310785e74e1c0947e.png",
+        "filename": "2025-04-23_09-00-18.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-23_09-00-18_1ed5fac79e7c600310785e74e1c0947e_55_60.png",
+        "created": "2025-04-23 16:36:42"
+      },
+      {
+        "fileid": 41593,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-23_09-01-02_165a31b0218a653280dcc0c6d08e1b3e.png",
+        "filename": "2025-04-23_09-01-02.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-23_09-01-02_165a31b0218a653280dcc0c6d08e1b3e_55_60.png",
+        "created": "2025-04-23 16:36:42"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

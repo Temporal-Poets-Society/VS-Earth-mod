@@ -1,0 +1,21 @@
+{
+  "installedAt": "2026-10-31T18:58:39.2153892+02:00",
+  "timezone": "Europe/Riga",
+  "version": "0.17.0-pre.14",
+  "source": "C:\\VS mods\\Earth\\.claude\\worktrees\\codex-earth-playstyle\\release\\earthmap-0.17.0-pre.14.zip",
+  "installedPath": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\Mods\\earthmap-0.17.0-pre.14.zip",
+  "sha256": "C70064522028FE9884727C540D220E97569BA68B3FEC8455B6DF26EC02EDE77E",
+  "backupPath": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\Backups\\earthmap-before-0.17.0-pre.14-20261031-185839",
+  "previousPackages": [
+    {
+      "sha256": "9F0A75B6AE2B7E772E53C8459E2BD76F0E0AAE6AD09CD8D2BD765FDC3B25B41A",
+      "bytes": 145251630,
+      "name": "earthmap-0.17.0-pre.12.zip"
+    }
+  ],
+  "configSha256Before": "D240052367B94AEBB4D6D69A4F063AD0FDC0857B28AC7A171595544353F2602C",
+  "configSha256After": "D240052367B94AEBB4D6D69A4F063AD0FDC0857B28AC7A171595544353F2602C",
+  "preservedEarthPlus": true,
+  "playerSavesAccessed": false,
+  "gameLaunched": false
+}

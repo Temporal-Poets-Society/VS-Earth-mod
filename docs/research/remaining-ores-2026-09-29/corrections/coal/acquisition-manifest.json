@@ -1,0 +1,562 @@
+[
+  {
+    "file": "raw/bgs-coal-page.html",
+    "url": "https://www.bgs.ac.uk/datasets/coal-resources-for-new-technologies/",
+    "retrieved_utc": "2026-09-29T18:42:40.011767+00:00",
+    "final_url": "https://www.bgs.ac.uk/datasets/coal-resources-for-new-technologies/",
+    "content_type": "text/html; charset=UTF-8",
+    "status": "acquired",
+    "bytes": 183725,
+    "sha256": "a81d7f675af975d5b0fbd6ac37d304524c485ac1feef2a0efde7c0d06a99f056"
+  },
+  {
+    "file": "raw/bgs-coal-shape.zip",
+    "url": "https://www.bgs.ac.uk/?wpdmdl=22837",
+    "retrieved_utc": "2026-09-29T18:42:40.011767+00:00",
+    "final_url": "https://www.bgs.ac.uk/?wpdmdl=22837",
+    "content_type": "application/zip",
+    "status": "acquired",
+    "bytes": 9566007,
+    "sha256": "8eee3fb988914f1d6d175b0750c9e9bea69b19504d72b1b1f40caca0df28ecd2"
+  },
+  {
+    "file": "raw/bgs-coal-gpkg.zip",
+    "url": "https://www.bgs.ac.uk/?wpdmdl=41597",
+    "retrieved_utc": "2026-09-29T18:42:40.011767+00:00",
+    "final_url": "https://www.bgs.ac.uk/?wpdmdl=41597",
+    "content_type": "application/zip",
+    "status": "acquired",
+    "bytes": 7806908,
+    "sha256": "4935434629ac34eaf2f8bc3337ad903943727c45eecda7735819516098461a26"
+  },
+  {
+    "file": "raw/pgi-midas-metadata.json",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer?f=pjson",
+    "retrieved_utc": "2026-09-29T18:42:40.275183+00:00",
+    "final_url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer?f=pjson",
+    "content_type": "text/plain; charset=UTF-8",
+    "status": "acquired",
+    "bytes": 4630,
+    "sha256": "4183a74eb08a3b8226e228407c911657be617c5551cf5b33035a762fe5075c6b"
+  },
+  {
+    "file": "raw/pgi-current-layer.json",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/0?f=pjson",
+    "retrieved_utc": "2026-09-29T18:42:40.367766+00:00",
+    "final_url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/0?f=pjson",
+    "content_type": "text/plain; charset=UTF-8",
+    "status": "acquired",
+    "bytes": 7448,
+    "sha256": "87c0ec20d54318055c90017714db9baa8c34098f15c84e7b5c7753088ed79e9d"
+  },
+  {
+    "file": "raw/pgi-archive-layer.json",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/3?f=pjson",
+    "retrieved_utc": "2026-09-29T18:42:40.478010+00:00",
+    "final_url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/3?f=pjson",
+    "content_type": "text/plain; charset=UTF-8",
+    "status": "acquired",
+    "bytes": 7873,
+    "sha256": "e4f5cbd1ab0b71b6180faf4b32cf2644870bbadc9a8e0c047a936f20f502766b"
+  },
+  {
+    "file": "raw/ga-coal-basins-metadata.json",
+    "url": "https://data.gov.au/data/api/3/action/package_show?id=9d5a8d74-a201-42bd-9d49-3c392244be16",
+    "retrieved_utc": "2026-09-29T18:42:40.497655+00:00",
+    "final_url": "https://data.gov.au/data/api/3/action/package_show?id=9d5a8d74-a201-42bd-9d49-3c392244be16",
+    "content_type": "application/json;charset=utf-8",
+    "status": "acquired",
+    "bytes": 9825,
+    "sha256": "b4d5570450caecff501f4ea2e83264d9d7efb72ddbb4b376aba4156972f61cd6"
+  },
+  {
+    "file": "raw/nsw-hunter-metadata.json",
+    "url": "https://data.gov.au/data/api/3/action/package_show?id=f0eb1d62-c7d6-4b96-a9ac-b69901eee3ee",
+    "retrieved_utc": "2026-09-29T18:42:40.711893+00:00",
+    "final_url": "https://data.gov.au/data/api/3/action/package_show?id=f0eb1d62-c7d6-4b96-a9ac-b69901eee3ee",
+    "content_type": "application/json;charset=utf-8",
+    "status": "acquired",
+    "bytes": 4941,
+    "sha256": "b0781adb084d2d25e26a3012bf78d191f1005aab8bb35a963287a8837fb1f178"
+  },
+  {
+    "file": "raw/ga-coal-basins.zip",
+    "url": "https://data.gov.au/data/dataset/7ab94f8d-3b6e-47cf-8946-0a391d9a0c9a/resource/84afb37e-7e9c-4773-ae3e-f88aa5bfa9a2/download/9d5a8d74-a201-42bd-9d49-3c392244be16.zip",
+    "retrieved_utc": "2026-09-29T18:43:51.107910+00:00",
+    "final_url": "https://data.gov.au/data/dataset/7ab94f8d-3b6e-47cf-8946-0a391d9a0c9a/resource/84afb37e-7e9c-4773-ae3e-f88aa5bfa9a2/download/9d5a8d74-a201-42bd-9d49-3c392244be16.zip",
+    "content_type": "application/zip",
+    "status": "acquired",
+    "bytes": 872295,
+    "sha256": "3c14d4b62c8573b668a0a8c192227719c7aee7319529801079d86ab0298194f9"
+  },
+  {
+    "file": "raw/pgi-commodity-codes.json",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/0/query?f=json&where=1%3D1&outFields=SYMBOL_KOPALINY%2CCOMMODITY&returnDistinctValues=true&returnGeometry=false",
+    "retrieved_utc": "2026-09-29T18:43:51.107910+00:00",
+    "final_url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/0/query?f=json&where=1%3D1&outFields=SYMBOL_KOPALINY%2CCOMMODITY&returnDistinctValues=true&returnGeometry=false",
+    "content_type": "application/json; charset=UTF-8",
+    "status": "acquired",
+    "bytes": 7568,
+    "sha256": "7a75d9cb1abacdb423f417334b5bc5f2706d5daf9becaf8b1d3ff7004af0ae92"
+  },
+  {
+    "file": "raw/pgi-data-rights.html",
+    "url": "https://www.pgi.gov.pl/midas/dane-przestrzenne.html",
+    "retrieved_utc": "2026-09-29T18:43:51.108910+00:00",
+    "final_url": "https://www.pgi.gov.pl/midas/dane-przestrzenne.html",
+    "content_type": "text/html",
+    "status": "acquired",
+    "bytes": 212,
+    "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d"
+  },
+  {
+    "file": "raw/pgi-data-attribution.html",
+    "url": "https://www.pgi.gov.pl/aktualnosci/display/11489-nowe-dane-dotyczace-zloz-dostepne-w-internecie.html",
+    "retrieved_utc": "2026-09-29T18:43:51.108910+00:00",
+    "final_url": "https://www.pgi.gov.pl/aktualnosci/display/11489-nowe-dane-dotyczace-zloz-dostepne-w-internecie.html",
+    "content_type": "text/html",
+    "status": "acquired",
+    "bytes": 212,
+    "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d"
+  },
+  {
+    "file": "raw/saxony-coal400.zip",
+    "url": "https://luis.sachsen.de/geologie/download/BRK400_UTM33.zip",
+    "retrieved_utc": "2026-09-29T18:44:33.250096+00:00",
+    "final_url": "https://luis.sachsen.de/geologie/download/BRK400_UTM33.zip",
+    "content_type": "application/x-zip-compressed",
+    "status": "acquired",
+    "bytes": 421891,
+    "sha256": "36841c53cdb3e1ac4a00dc90a257138e316d4f839972ee9e9e10fa516de5e0a3"
+  },
+  {
+    "file": "raw/saxony-lignite50.zip",
+    "url": "https://luis.sachsen.de/geologie/download/Braunkohlefelder_UTM33.zip",
+    "retrieved_utc": "2026-09-29T18:44:33.250096+00:00",
+    "final_url": "https://luis.sachsen.de/geologie/download/Braunkohlefelder_UTM33.zip",
+    "content_type": "application/x-zip-compressed",
+    "status": "acquired",
+    "bytes": 458757,
+    "sha256": "e13b9a87ee5cde8ae863f5b70663573fcb9a56e9c70c148111d92da5bea4a4ed"
+  },
+  {
+    "file": "raw/saxony-page.html",
+    "url": "https://luis.sachsen.de/geologie/rohstoffgeologische-karten.html",
+    "retrieved_utc": "2026-09-29T18:44:33.250096+00:00",
+    "final_url": "https://luis.sachsen.de/geologie/rohstoffgeologische-karten.html",
+    "content_type": "text/html",
+    "status": "acquired",
+    "bytes": 80481,
+    "sha256": "92fbf4fa7e78f81432fc23885e3979b9b1fd287ce97cde8aaeabf1a689a7609f"
+  },
+  {
+    "file": "raw/ga-aimr-coal32-metadata.json",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/32?f=pjson",
+    "retrieved_utc": "2026-09-29T18:44:33.250096+00:00",
+    "final_url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/32?f=pjson",
+    "content_type": "text/plain;charset=UTF-8",
+    "status": "acquired",
+    "bytes": 13526,
+    "sha256": "c21c483dfad665b61995f4e31a46a4704e867c63f34ab6fd2e5ee2dceb00114e"
+  },
+  {
+    "file": "raw/ga-aimr-coal33-metadata.json",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/33?f=pjson",
+    "retrieved_utc": "2026-09-29T18:44:33.250096+00:00",
+    "final_url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/33?f=pjson",
+    "content_type": "text/plain;charset=UTF-8",
+    "status": "acquired",
+    "bytes": 12176,
+    "sha256": "3a79427a844397573fed9aa471427a7183f36bee52067bd8824db456865bbe25"
+  },
+  {
+    "file": "raw/pgi-current-coal.geojson",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/0/query?f=geojson&where=COMMODITY+IN+%28%27hard+coal%27%2C%27brown+coal%27%29&outFields=%2A&returnGeometry=true&outSR=4326&resultRecordCount=1000&orderByFields=OBJECTID",
+    "retrieved_utc": "2026-09-29T18:45:09.544547+00:00",
+    "final_url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/0/query?f=geojson&where=COMMODITY+IN+%28%27hard+coal%27%2C%27brown+coal%27%29&outFields=%2A&returnGeometry=true&outSR=4326&resultRecordCount=1000&orderByFields=OBJECTID",
+    "content_type": "application/geo+json; charset=UTF-8",
+    "status": "acquired",
+    "bytes": 2138793,
+    "sha256": "c29d68c5f99f67273f3fce673dd9a287baf07584e7d571a06731940005e9e061"
+  },
+  {
+    "file": "raw/pgi-current-coal.json",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/0/query?f=json&where=COMMODITY+IN+%28%27hard+coal%27%2C%27brown+coal%27%29&outFields=%2A&returnGeometry=true&outSR=2180&resultRecordCount=1000&orderByFields=OBJECTID",
+    "retrieved_utc": "2026-09-29T18:45:09.545547+00:00",
+    "final_url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/0/query?f=json&where=COMMODITY+IN+%28%27hard+coal%27%2C%27brown+coal%27%29&outFields=%2A&returnGeometry=true&outSR=2180&resultRecordCount=1000&orderByFields=OBJECTID",
+    "content_type": "application/json; charset=UTF-8",
+    "status": "acquired",
+    "bytes": 2119048,
+    "sha256": "38d765b5688f06608e4fb2d533c909fd793a241a1f28ac48006af23ddbab7e46"
+  },
+  {
+    "file": "raw/pgi-current-coal-count.json",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/0/query?f=json&where=COMMODITY+IN+%28%27hard+coal%27%2C%27brown+coal%27%29&returnCountOnly=true",
+    "retrieved_utc": "2026-09-29T18:45:09.545547+00:00",
+    "final_url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/0/query?f=json&where=COMMODITY+IN+%28%27hard+coal%27%2C%27brown+coal%27%29&returnCountOnly=true",
+    "content_type": "application/json; charset=UTF-8",
+    "status": "acquired",
+    "bytes": 13,
+    "sha256": "77c6e346fe35f6e13355a71fe479be6ad44b01916817fbf383f91dbe14200efd"
+  },
+  {
+    "file": "raw/pgi-archive-coal.geojson",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/3/query?f=geojson&where=COMMODITY+IN+%28%27hard+coal%27%2C%27brown+coal%27%29&outFields=%2A&returnGeometry=true&outSR=4326&resultRecordCount=1000&orderByFields=OBJECTID",
+    "retrieved_utc": "2026-09-29T18:45:09.545547+00:00",
+    "final_url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/3/query?f=geojson&where=COMMODITY+IN+%28%27hard+coal%27%2C%27brown+coal%27%29&outFields=%2A&returnGeometry=true&outSR=4326&resultRecordCount=1000&orderByFields=OBJECTID",
+    "content_type": "application/geo+json; charset=UTF-8",
+    "status": "acquired",
+    "bytes": 112352,
+    "sha256": "fbed36799079c9f06b531d1ccdf0ac4fabdccc95240b9a84ce575149a902a993"
+  },
+  {
+    "file": "raw/pgi-archive-coal.json",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/3/query?f=json&where=COMMODITY+IN+%28%27hard+coal%27%2C%27brown+coal%27%29&outFields=%2A&returnGeometry=true&outSR=2180&resultRecordCount=1000&orderByFields=OBJECTID",
+    "retrieved_utc": "2026-09-29T18:45:09.546547+00:00",
+    "final_url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/3/query?f=json&where=COMMODITY+IN+%28%27hard+coal%27%2C%27brown+coal%27%29&outFields=%2A&returnGeometry=true&outSR=2180&resultRecordCount=1000&orderByFields=OBJECTID",
+    "content_type": "application/json; charset=UTF-8",
+    "status": "acquired",
+    "bytes": 113023,
+    "sha256": "32a2e058d90f32369bf4454b4ebc5d4e3c8e4955bfdbcb0ab6b5be86827bc1df"
+  },
+  {
+    "file": "raw/pgi-archive-coal-count.json",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/3/query?f=json&where=COMMODITY+IN+%28%27hard+coal%27%2C%27brown+coal%27%29&returnCountOnly=true",
+    "retrieved_utc": "2026-09-29T18:45:09.915132+00:00",
+    "final_url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/3/query?f=json&where=COMMODITY+IN+%28%27hard+coal%27%2C%27brown+coal%27%29&returnCountOnly=true",
+    "content_type": "application/json; charset=UTF-8",
+    "status": "acquired",
+    "bytes": 12,
+    "sha256": "48270895c6bf4f32f711afaaa3b45131564a9c92240e6ed2400fa43e2c414d7c"
+  },
+  {
+    "file": "raw/ga-aimr-coal32.geojson",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/32/query?f=geojson&where=1%3D1&outFields=%2A&returnGeometry=true&outSR=4326&resultRecordCount=2000",
+    "retrieved_utc": "2026-09-29T18:45:09.994443+00:00",
+    "final_url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/32/query?f=geojson&where=1%3D1&outFields=%2A&returnGeometry=true&outSR=4326&resultRecordCount=2000",
+    "content_type": "application/geo+json;charset=UTF-8",
+    "status": "acquired",
+    "bytes": 164126,
+    "sha256": "3a22db2c4dcfbd7cfb65f0a642b7f1d4d0fa9d78b8f62e7d5f80e29785c7c026"
+  },
+  {
+    "file": "raw/ga-aimr-coal33.geojson",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/33/query?f=geojson&where=1%3D1&outFields=%2A&returnGeometry=true&outSR=4326&resultRecordCount=2000",
+    "retrieved_utc": "2026-09-29T18:45:10.009500+00:00",
+    "final_url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/33/query?f=geojson&where=1%3D1&outFields=%2A&returnGeometry=true&outSR=4326&resultRecordCount=2000",
+    "content_type": "application/geo+json;charset=UTF-8",
+    "status": "acquired",
+    "bytes": 33350,
+    "sha256": "51adbc653b682539160bbf25d3a8598d6b9c2e2c1e49e4414c11f29e8b875838"
+  },
+  {
+    "file": "raw/nrw500-directory.html",
+    "url": "https://www.opengeodata.nrw.de/produkte/geologie/geologie/RK/ISRK500/",
+    "retrieved_utc": "2026-09-29T18:46:23.826687+00:00",
+    "final_url": "https://www.opengeodata.nrw.de/produkte/geologie/geologie/RK/ISRK500/",
+    "content_type": "application/json; charset=utf-8",
+    "status": "acquired",
+    "bytes": 489,
+    "sha256": "68cfa4976653c5da13588b481c83d7c6e709fe3591a57e4c26a067c9d7c839bf"
+  },
+  {
+    "file": "raw/bgs-coal-report.pdf",
+    "url": "https://www.bgs.ac.uk/?wpdmdl=22836",
+    "retrieved_utc": "2026-09-29T18:46:23.827690+00:00",
+    "final_url": "https://www.bgs.ac.uk/?wpdmdl=22836",
+    "content_type": "application/pdf",
+    "status": "acquired",
+    "bytes": 6798116,
+    "sha256": "ecdb28ed07c9c9e521ea6f760ed8865365c5a89d6b19b26cdc3d31e30fd624b3"
+  },
+  {
+    "file": "raw/pgi-wfs-capabilities.xml",
+    "url": "https://geologia.pgi.gov.pl/srv/services/midas/MapServer/WFSServer?service=WFS&request=GetCapabilities",
+    "retrieved_utc": "2026-09-29T18:46:23.827690+00:00",
+    "final_url": "https://geologia.pgi.gov.pl/srv/services/midas/MapServer/WFSServer?service=WFS&request=GetCapabilities",
+    "content_type": "text/xml; charset=UTF-8",
+    "status": "acquired",
+    "bytes": 16401,
+    "sha256": "e9fc699328fdf292d11e41f8c87b381f4fd47ba83ec8592189d1d202ae823177"
+  },
+  {
+    "file": "raw/nrw500-page.html",
+    "url": "https://www.gd.nrw.de/pr_kd_rohstoffkarte-500000.php",
+    "retrieved_utc": "2026-09-29T18:46:56.437720+00:00",
+    "final_url": "https://www.gd.nrw.de/pr_kd_rohstoffkarte-500000.php",
+    "content_type": "text/html; charset=UTF-8",
+    "status": "acquired",
+    "bytes": 51124,
+    "sha256": "c72478fad3ebc3fe41fbb9aed49a50c3e38af919ddbe8588bf1a1a6d9f6b703f"
+  },
+  {
+    "file": "raw/saxony-wfs-capabilities.xml",
+    "url": "https://geodienste.sachsen.de/iwfs_gsz_energiequellen/guest?Service=WFS&Request=GetCapabilities",
+    "retrieved_utc": "2026-09-29T18:46:56.437720+00:00",
+    "final_url": "https://geodienste.sachsen.de/iwfs_gsz_energiequellen/guest?Service=WFS&Request=GetCapabilities",
+    "content_type": "application/xml;charset=utf-8",
+    "status": "acquired",
+    "bytes": 34555,
+    "sha256": "9f7c628e6a3424f21392891b0b43fa6446528e619be3931d5a1d1d6d90653ecb"
+  },
+  {
+    "file": "raw/victoria-coal-metadata.json",
+    "url": "https://discover.data.vic.gov.au/api/3/action/package_show?id=victorian-coal-fields",
+    "retrieved_utc": "2026-09-29T18:46:56.438914+00:00",
+    "final_url": "https://discover.data.vic.gov.au/api/3/action/package_show?id=victorian-coal-fields",
+    "content_type": "application/json;charset=utf-8",
+    "status": "acquired",
+    "bytes": 10390,
+    "sha256": "1d99bc3db6300d5d1b959dfa7cf256b41e3ac100998d6bbaa616793424cc06b8"
+  },
+  {
+    "file": "raw/nsw-coal-metadata.json",
+    "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Minerals/NSW_Mining_Coalfields/MapServer?f=pjson",
+    "retrieved_utc": "2026-09-29T18:46:56.438914+00:00",
+    "final_url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Minerals/NSW_Mining_Coalfields/MapServer?f=pjson",
+    "content_type": "text/plain;charset=UTF-8",
+    "status": "acquired",
+    "bytes": 2094,
+    "sha256": "d2a6b107717ff0db0b41f716dc82f5362c299a5862bab8e78b88de5c9f5c2f1f"
+  },
+  {
+    "file": "raw/nsw-coal-catalogue.json",
+    "url": "https://data.nsw.gov.au/data/api/3/action/package_show?id=nsw-mining-coalfieds",
+    "retrieved_utc": "2026-09-29T18:46:56.439911+00:00",
+    "final_url": "https://data.nsw.gov.au/data/api/3/action/package_show?id=nsw-mining-coalfieds",
+    "content_type": "application/json;charset=utf-8",
+    "status": "acquired",
+    "bytes": 8484,
+    "sha256": "9a9584f074b5687e61c874f87ba80a82d3aca4d9cde8de6f4c6192998a1f72f1"
+  },
+  {
+    "file": "raw/nrw500-gpkg.zip",
+    "url": "https://www.opengeodata.nrw.de/produkte/geologie/geologie/RK/ISRK500/ISRK500_EPSG25832_GeoPackage.zip",
+    "retrieved_utc": "2026-09-29T18:47:52.623194+00:00",
+    "final_url": "https://www.opengeodata.nrw.de/produkte/geologie/geologie/RK/ISRK500/ISRK500_EPSG25832_GeoPackage.zip",
+    "content_type": "application/zip",
+    "status": "acquired",
+    "bytes": 1903773,
+    "sha256": "b9e7b6d238ce0601affed4b19e185421ea15610d46e7101280f9931a64351e5e"
+  },
+  {
+    "file": "raw/nsw-coalfields.geojson",
+    "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Minerals/NSW_Mining_Coalfields/MapServer/0/query?f=geojson&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=true",
+    "retrieved_utc": "2026-09-29T18:47:52.624197+00:00",
+    "final_url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Minerals/NSW_Mining_Coalfields/MapServer/0/query?f=geojson&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=true",
+    "content_type": "application/geo+json;charset=UTF-8",
+    "status": "acquired",
+    "bytes": 348425,
+    "sha256": "cd2e45464a0c765f7f0b01d2b2490eff958dd8bb8432d0d5c5a9b0dd2e065bcd"
+  },
+  {
+    "file": "raw/nsw-coalfields-layer.json",
+    "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Minerals/NSW_Mining_Coalfields/MapServer/0?f=pjson",
+    "retrieved_utc": "2026-09-29T18:47:52.624197+00:00",
+    "final_url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Minerals/NSW_Mining_Coalfields/MapServer/0?f=pjson",
+    "content_type": "text/plain;charset=UTF-8",
+    "status": "acquired",
+    "bytes": 6198,
+    "sha256": "f6f3079cdf81a478ddd176efd0bd82c488abc322a97c40c5b067f996aae3ae1e"
+  },
+  {
+    "file": "raw/victoria-coalfields.geojson",
+    "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Acoalinvflds&outputFormat=application%2Fjson&srsName=EPSG%3A4326",
+    "retrieved_utc": "2026-09-29T18:47:52.625201+00:00",
+    "final_url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=open-data-platform%3Acoalinvflds&outputFormat=application%2Fjson&srsName=EPSG%3A4326",
+    "content_type": "application/json;charset=UTF-8",
+    "status": "acquired",
+    "bytes": 106943,
+    "sha256": "4736d5ef8f546aa742443dbf75537b70834f8bb7f60d4a4294d56a34348e0eaa"
+  },
+  {
+    "file": "raw/victoria-coalfields-schema.xml",
+    "url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&request=DescribeFeatureType&typeName=open-data-platform:coalinvflds",
+    "retrieved_utc": "2026-09-29T18:47:52.625201+00:00",
+    "final_url": "https://opendata.maps.vic.gov.au/geoserver/wfs?service=WFS&request=DescribeFeatureType&typeName=open-data-platform:coalinvflds",
+    "content_type": "application/gml+xml; version=3.2",
+    "status": "acquired",
+    "bytes": 4392,
+    "sha256": "1ddc9cd3ababc33ef5146a14a087ad0f6b4214201272a315a9ed4e02066ba4be"
+  },
+  {
+    "file": "raw/china-coal-page.html",
+    "url": "https://pubs.usgs.gov/of/2014/1219/",
+    "retrieved_utc": "2026-09-29T18:48:50.594464+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2014/1219/",
+    "content_type": "text/html",
+    "status": "acquired",
+    "bytes": 11192,
+    "sha256": "36fbb2429742653e8fae75541ca4cdafe9a319b3163e385811fc376a327c9d73"
+  },
+  {
+    "file": "raw/india-coal-page.html",
+    "url": "https://pubs.usgs.gov/of/2011/1296/",
+    "retrieved_utc": "2026-09-29T18:48:50.595467+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2011/1296/",
+    "content_type": "text/html",
+    "status": "acquired",
+    "bytes": 10323,
+    "sha256": "e1b65845a415410a23177fb7de86804f74cb86a5a17c73aa9e3b856e586057e7"
+  },
+  {
+    "file": "raw/pgi-reuse.html",
+    "url": "https://www.pgi.gov.pl/rejestry-i-bazy-danych-geologicznych/zasady-korzystania-z-isp.html",
+    "retrieved_utc": "2026-09-29T18:48:50.595467+00:00",
+    "final_url": "https://www.pgi.gov.pl/rejestry-i-bazy-danych-geologicznych/zasady-korzystania-z-isp.html",
+    "content_type": "text/html",
+    "status": "acquired",
+    "bytes": 839,
+    "sha256": "2bc7cc15f96635ab577aab8ecade45973a39aafb80e28af9caa40a125363cc23"
+  },
+  {
+    "file": "raw/pgi-midas-source.html",
+    "url": "https://geoportal.pgi.gov.pl/portal/page/portal/midas/zrodlo_danych",
+    "retrieved_utc": "2026-09-29T18:48:50.596526+00:00",
+    "final_url": "https://geoportal.pgi.gov.pl/portal/page/portal/midas/zrodlo_danych",
+    "content_type": "text/html",
+    "status": "acquired",
+    "bytes": 212,
+    "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d"
+  },
+  {
+    "file": "raw/cgs-sa-downloads.html",
+    "url": "https://www.geoscience.org.za/cgs/systems/publications/downloadable-material/",
+    "retrieved_utc": "2026-09-29T18:48:50.597524+00:00",
+    "final_url": "https://www.geoscience.org.za/cgs/systems/publications/downloadable-material/",
+    "content_type": "text/html; charset=UTF-8",
+    "status": "acquired",
+    "bytes": 325299,
+    "sha256": "27e610745b58e69745b9d67765633c424ad56bf3a21e8e60084c86833545534f"
+  },
+  {
+    "file": "raw/china-downloads.html",
+    "url": "https://pubs.usgs.gov/of/2014/1219/downloads/",
+    "retrieved_utc": "2026-09-29T18:49:33.208708+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2014/1219/downloads/",
+    "content_type": "text/html;charset=ISO-8859-1",
+    "status": "acquired",
+    "bytes": 2622,
+    "sha256": "70ee7b53401b8864ce1720eaf7e3f23d2b169bbac50732621cdad52e236a9676"
+  },
+  {
+    "file": "raw/india-downloads.html",
+    "url": "https://pubs.usgs.gov/of/2011/1296/downloads/",
+    "retrieved_utc": "2026-09-29T18:49:33.208708+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2011/1296/downloads/",
+    "content_type": "text/html;charset=ISO-8859-1",
+    "status": "acquired",
+    "bytes": 4093,
+    "sha256": "b436ee20488aac0230a1cdc3fabe1a15072d41b9fb9b6742a0d87339125be283"
+  },
+  {
+    "file": "raw/india-metadata.html",
+    "url": "https://pubs.usgs.gov/of/2011/1296/Metadata/IndiaCoalfields%20Metadata.htm",
+    "retrieved_utc": "2026-09-29T18:49:33.208708+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2011/1296/Metadata/IndiaCoalfields%20Metadata.htm",
+    "content_type": "text/html",
+    "status": "acquired",
+    "bytes": 71484,
+    "sha256": "0d007b8b1c74a6cf14707d2ca7104d104fb995af83c87cf78b8a789e8769da30"
+  },
+  {
+    "file": "raw/china-coal-areas.zip",
+    "url": "https://pubs.usgs.gov/of/2014/1219/downloads/AllChinaCoalMiningAreas.zip",
+    "retrieved_utc": "2026-09-29T18:50:19.724920+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2014/1219/downloads/AllChinaCoalMiningAreas.zip",
+    "content_type": "application/zip",
+    "status": "acquired",
+    "bytes": 12815004,
+    "sha256": "733166e3afa2570e39af2beeff15cd8580fc005c0502aa7ff8f0840f30d942ab"
+  },
+  {
+    "file": "raw/china-metadata-index.html",
+    "url": "https://pubs.usgs.gov/of/2014/1219/downloads/metadata/",
+    "retrieved_utc": "2026-09-29T18:50:19.724920+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2014/1219/downloads/metadata/",
+    "content_type": "text/html;charset=ISO-8859-1",
+    "status": "acquired",
+    "bytes": 1941,
+    "sha256": "3cf7d871327a10d93c36a1ae866ded799b86427d65af7d014d433ce10691fd1a"
+  },
+  {
+    "file": "raw/india-bangladesh-coal.zip",
+    "url": "https://pubs.usgs.gov/of/2011/1296/downloads/IndiaBangladeshOFR.zip",
+    "retrieved_utc": "2026-09-29T18:50:19.725918+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2011/1296/downloads/IndiaBangladeshOFR.zip",
+    "content_type": "application/zip",
+    "status": "acquired",
+    "bytes": 992216,
+    "sha256": "582367c7fa265c561e86a974a171eff8da0d8afc368b85c52405d71e8e3248c3"
+  },
+  {
+    "file": "raw/americas-page.html",
+    "url": "https://pubs.usgs.gov/of/2008/1257/",
+    "retrieved_utc": "2026-09-29T18:50:19.725918+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2008/1257/",
+    "content_type": "text/html",
+    "status": "acquired",
+    "bytes": 12301,
+    "sha256": "86194f52ee3cdc33f502c85b05e1a150044fc357f70cee4c8537d8180027d132"
+  },
+  {
+    "file": "raw/us-coal-page.html",
+    "url": "https://pubs.usgs.gov/of/2012/1205/",
+    "retrieved_utc": "2026-09-29T18:50:19.726919+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2012/1205/",
+    "content_type": "text/html",
+    "status": "acquired",
+    "bytes": 12556,
+    "sha256": "5672cfb0a608b07286514b48d17e9bbbf1f344132ca94d8860d250a74387dadf"
+  },
+  {
+    "file": "raw/americas-coal.zip",
+    "url": "https://pubs.usgs.gov/of/2008/1257/Americas_coal.zip",
+    "retrieved_utc": "2026-09-29T18:50:57.548359+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2008/1257/Americas_coal.zip",
+    "content_type": "application/zip",
+    "status": "acquired",
+    "bytes": 14458140,
+    "sha256": "2fdba82bc0b0918d67cf1134a6366eceac19c55b79af137a5197111672d57963"
+  },
+  {
+    "file": "raw/us-coal2012.zip",
+    "url": "https://pubs.usgs.gov/of/2012/1205/Downloads/GIS.zip",
+    "retrieved_utc": "2026-09-29T18:50:57.549359+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2012/1205/Downloads/GIS.zip",
+    "content_type": "application/zip",
+    "status": "acquired",
+    "bytes": 230322811,
+    "sha256": "e491215d0a937cae48cc5e9a2763ea43c85a4d11c183ec7c5b1ac559d2a585a5"
+  },
+  {
+    "file": "raw/china-coalfields2000.zip",
+    "url": "https://pubs.usgs.gov/of/2000/of00-047/SHP_files/coal_type.ZIP",
+    "retrieved_utc": "2026-09-29T18:50:57.549359+00:00",
+    "final_url": "https://pubs.usgs.gov/of/2000/of00-047/SHP_files/coal_type.ZIP",
+    "content_type": "application/zip",
+    "status": "acquired",
+    "bytes": 95710,
+    "sha256": "69bcb529f3ec663b855d1402681ebf9b3ab156190f330a4e7e79ac7afc7ccf8b"
+  },
+  {
+    "file": "raw/china-coalfields2000-metadata.html",
+    "url": "https://geo-nsdi.er.usgs.gov/metadata/open-file/00-47/coal_type.faq.html",
+    "retrieved_utc": "2026-09-29T18:50:57.550359+00:00",
+    "final_url": "https://geo-nsdi.er.usgs.gov/metadata/open-file/00-47/coal_type.faq.html",
+    "content_type": "text/html",
+    "status": "acquired",
+    "bytes": 29531,
+    "sha256": "6cf2eaa3d2a4b562127d949de85958329aa8aa1b0f617fbb3a68321ae9c290b9"
+  },
+  {
+    "file": "raw/indonesia-coal-distribution.pdf",
+    "url": "https://geologi.esdm.go.id/storage/publikasi/gIY50hqnqkYEtdjToQsEpJrOVBVnNDZa8k0rOUXz.pdf",
+    "retrieved_utc": "2026-09-29T18:50:57.550359+00:00",
+    "final_url": "https://geologi.esdm.go.id/storage/publikasi/gIY50hqnqkYEtdjToQsEpJrOVBVnNDZa8k0rOUXz.pdf",
+    "content_type": "application/pdf",
+    "status": "acquired",
+    "bytes": 5003959,
+    "sha256": "d226491a8436975d5b71a08232ead0fdc379d719f1172b57acee0bf4874daa77"
+  }
+]

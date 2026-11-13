@@ -1,0 +1,12 @@
+provider,taxon,extinct,reason
+manidae,mysteria,False,Cryptic pangolin described from seized scales; its wild native range is unknown.
+capreolinae,bretzianebrascensis,True,Pliocene-early Pleistocene deer outside the late Pleistocene-Holocene policy; no range.
+capreolinae,odocoileuslucasi,True,Fossil deer without a documented late Pleistocene-Holocene range.
+capreolinae,torontoceroshypnogeos,True,"Known from a single antler (Toronto, c. 11 ka); one locality is not a range."
+capreolinae,rangifertarandusdomesticus,False,Domestic reindeer; no wild native range.
+caninae,speothospacivorus,True,Known from the Lagoa Santa caves only; one locality is not a range.
+bovinae,bubalusbrevicornis,True,Chinese Pleistocene buffalo without a documented range.
+bovinae,bubalusmurrensis,True,Interglacial European buffalo (last records c. 120 ka) outside the late Pleistocene-Holocene policy.
+bovinae,syncerusantiquus,True,Scattered pan-African fossil record; no defensible late Pleistocene-Holocene range.
+bovinae,bostaurustaurus,False,Domestic cattle; no wild native range (the wild ancestor is mapped as the aurochs).
+bovinae,bubalusbubalis,False,Domestic water buffalo; no wild native range (the wild species is Bubalus arnee).

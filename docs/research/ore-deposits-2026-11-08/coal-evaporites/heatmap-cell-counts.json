@@ -1,0 +1,146 @@
+{
+ "C_coal": {
+  "before": {
+   "obsCells": 8072,
+   "potCells": 1595,
+   "deepCells": 23,
+   "anyCells": 9246,
+   "cellsAtLeast0.5": 2627
+  },
+  "after": {
+   "obsCells": 9966,
+   "potCells": 1595,
+   "deepCells": 92,
+   "anyCells": 10995,
+   "cellsAtLeast0.5": 4184
+  }
+ },
+ "NaCl": {
+  "before": {
+   "obsCells": 3245,
+   "potCells": 5488,
+   "deepCells": 349,
+   "anyCells": 7139,
+   "cellsAtLeast0.5": 3189
+  },
+  "after": {
+   "obsCells": 3476,
+   "potCells": 5457,
+   "deepCells": 3559,
+   "anyCells": 7157,
+   "cellsAtLeast0.5": 3417
+  }
+ },
+ "K": {
+  "before": {
+   "obsCells": 2085,
+   "potCells": 5488,
+   "deepCells": 349,
+   "anyCells": 6272,
+   "cellsAtLeast0.5": 2900
+  },
+  "after": {
+   "obsCells": 2136,
+   "potCells": 5457,
+   "deepCells": 937,
+   "anyCells": 6242,
+   "cellsAtLeast0.5": 1079
+  }
+ },
+ "gypsum": {
+  "before": {
+   "obsCells": 1695,
+   "potCells": 5488,
+   "deepCells": 0,
+   "anyCells": 6780,
+   "cellsAtLeast0.5": 364
+  },
+  "after": {
+   "obsCells": 1725,
+   "potCells": 5488,
+   "deepCells": 0,
+   "anyCells": 6798,
+   "cellsAtLeast0.5": 374
+  }
+ },
+ "B": {
+  "before": {
+   "obsCells": 582,
+   "potCells": 0,
+   "deepCells": 0,
+   "anyCells": 582,
+   "cellsAtLeast0.5": 116
+  },
+  "after": {
+   "obsCells": 584,
+   "potCells": 0,
+   "deepCells": 0,
+   "anyCells": 584,
+   "cellsAtLeast0.5": 118
+  }
+ },
+ "S": {
+  "before": {
+   "obsCells": 1975,
+   "potCells": 0,
+   "deepCells": 0,
+   "anyCells": 1975,
+   "cellsAtLeast0.5": 324
+  },
+  "after": {
+   "obsCells": 297,
+   "potCells": 0,
+   "deepCells": 10,
+   "anyCells": 303,
+   "cellsAtLeast0.5": 106
+  }
+ },
+ "P": {
+  "before": {
+   "obsCells": 4627,
+   "potCells": 0,
+   "deepCells": 0,
+   "anyCells": 4627,
+   "cellsAtLeast0.5": 1370
+  },
+  "after": {
+   "obsCells": 3989,
+   "potCells": 0,
+   "deepCells": 0,
+   "anyCells": 3989,
+   "cellsAtLeast0.5": 1111
+  }
+ },
+ "N": {
+  "before": {
+   "obsCells": 97,
+   "potCells": 0,
+   "deepCells": 0,
+   "anyCells": 97,
+   "cellsAtLeast0.5": 17
+  },
+  "after": {
+   "obsCells": 103,
+   "potCells": 0,
+   "deepCells": 0,
+   "anyCells": 103,
+   "cellsAtLeast0.5": 25
+  }
+ },
+ "alum": {
+  "before": {
+   "obsCells": 113,
+   "potCells": 0,
+   "deepCells": 0,
+   "anyCells": 113,
+   "cellsAtLeast0.5": 12
+  },
+  "after": {
+   "obsCells": 165,
+   "potCells": 0,
+   "deepCells": 0,
+   "anyCells": 165,
+   "cellsAtLeast0.5": 29
+  }
+ }
+}

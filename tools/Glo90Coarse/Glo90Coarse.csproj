@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- GLO-90 averaged to a coarse grid for Earth's offline default heights (src/Core/CoarseElevation.cs): measure, build, verify.
+       Links only the Core files it needs, so other work on src/Core doesn't break it. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><LangVersion>12</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings><Nullable>disable</Nullable>
+    <ServerGarbageCollection>true</ServerGarbageCollection><ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+    <RollForward>Major</RollForward>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../src/Core/CoarseElevation.cs" Link="Core/CoarseElevation.cs" />
+    <Compile Include="../../src/Core/EarthBinary.cs" Link="Core/EarthBinary.cs" />
+    <Compile Include="../../src/Core/DemTiles.cs" Link="Core/DemTiles.cs" />
+    <Compile Include="../../src/Core/FineElevation.cs" Link="Core/FineElevation.cs" />
+  </ItemGroup>
+</Project>

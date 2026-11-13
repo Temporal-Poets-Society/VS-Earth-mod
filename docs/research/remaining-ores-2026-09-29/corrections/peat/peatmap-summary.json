@@ -1,0 +1,81 @@
+{
+  "source": "PEATMAP (Xu et al. 2018), doi:10.5518/252, CC BY 4.0",
+  "zip_sha256": {
+    "Africa.zip": "2bca16dd7d276478b576f3d2a25e33cea9654b8e37dc43ffa1385e8520f311ed",
+    "Asia.zip": "8767e9ba8250770420cc555250f80b79b67410d00ae13ac629f4fe2ae9b8724e",
+    "Europe.zip": "cfe444a23f191c984fb5869198f73ea1915647027a7e1b6a093edc00fc339441",
+    "North_America.zip": "126e54ec4fcacdebc592e83fa6e098b070235f27362844e5102d40665cbe991e",
+    "Oceania.zip": "f1ee32ccb21ac27491acbd8cc4b34f8bcc7b17952469d8cde40fb3a548362b4f",
+    "South_America.zip": "9ffbc3e0075fe1b67d786d909c2422cae3954779e6b7cc35065f0d660dd443ae"
+  },
+  "layers": {
+    "Africa/AF_Peatland.shp": {
+      "features": 20412,
+      "repaired_parts": 2343
+    },
+    "Asia/EA_Peatland.shp": {
+      "features": 15390,
+      "repaired_parts": 191
+    },
+    "Asia/Histosols_Hokkaido_Mongolia_North Korea.shp": {
+      "features": 23,
+      "repaired_parts": 0
+    },
+    "Asia/NEA_Peatland.shp": {
+      "features": 1,
+      "repaired_parts": 130
+    },
+    "Asia/SEA_Peatland.shp": {
+      "features": 1,
+      "repaired_parts": 2368
+    },
+    "Asia/SIB_Peatland.shp": {
+      "features": 9756,
+      "repaired_parts": 59
+    },
+    "Europe/British Isles Peatland.shp": {
+      "features": 1,
+      "repaired_parts": 518
+    },
+    "Europe/Finland_Peatland.shp": {
+      "features": 145124,
+      "repaired_parts": 179
+    },
+    "Europe/Norway_Peatland.shp": {
+      "features": 3532,
+      "repaired_parts": 18
+    },
+    "Europe/Other_European_Peatland.shp": {
+      "features": 10888,
+      "repaired_parts": 202
+    },
+    "Europe/Sweden_Peatland.shp": {
+      "features": 13121,
+      "repaired_parts": 1
+    },
+    "North America/Canada_Peatland.shp": {
+      "features": 4845,
+      "repaired_parts": 64
+    },
+    "North America/Other_North_American_Peatlands.shp": {
+      "features": 39448,
+      "repaired_parts": 492
+    },
+    "North America/USA_Peatland.shp": {
+      "features": 2234,
+      "repaired_parts": 3
+    },
+    "Oceania/Oceania_Peatland.shp": {
+      "features": 1,
+      "repaired_parts": 65
+    },
+    "South America/SA_Peatland.shp": {
+      "features": 3113,
+      "repaired_parts": 24592
+    }
+  },
+  "cells_with_peat": 19395,
+  "cells_ge_10pct": 6321,
+  "approx_peat_area_million_km2": 4.18,
+  "method": "exact inverse cylindrical-equal-area projection; make_valid; per-cell covered fraction summed and capped at 1"
+}

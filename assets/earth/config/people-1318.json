@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "about": "Where people lived around 1318 (ranges proposal, step 4): every WGSRPD level-3 region but those nobody had settled by then, and no ice-cap climate (warmest month at the ground below minWarmMonth, deg C). Earth generates vanilla's worldgen structures (ruins, trader camps, structure-placed translocators) and villages only there. Interim: the author plans to remake ruins; Earth Ruins would replace this list. Read by EarthMap.Core.PeopleRange with the same fields as fauna-vanilla.json.",
+  "minWarmMonth": 0,
+  "excludedRegions": ["ANT", "SVA", "BOU", "SGE", "SSA", "KEG", "CRZ", "MPE", "HMD", "MAQ",
+    "FAL", "TDC", "STH", "ASC", "AZO", "MDR", "SEL", "CVI", "MAU", "REU", "ROD", "SEY", "CGS", "ALD", "BER", "GAL", "JNF", "OGA", "KZN", "CTM"],
+  "notes": {
+    "never settled before the modern era": "Antarctica (ANT); Svalbard (SVA, found 1596); Bouvet, South Georgia, the South Sandwich, Kerguelen, Crozet, Marion-Prince Edward, Heard-McDonald and Macquarie islands (sighted 1663-1853)",
+    "first settled after 1318": "Falklands (1764; no pre-European settlement known), Tristan da Cunha (1810), St Helena (found 1502), Ascension (1501-1503), Azores (1430s; earlier Norse visits are argued from lake sediments, Raposeiro et al. 2021, but no settlement in 1318), Madeira (1420), Selvagens (never), Cape Verde (1460s), Mauritius (1638), Reunion (1640s), Rodrigues (1691), Seychelles (1770), Chagos (1780s), Aldabra (never permanently), Bermuda (1612), Galapagos (found 1535), Juan Fernandez (found 1574), Ogasawara (1830), Kazan-retto (1889), Chathams (Moriori from about 1500; low confidence)",
+    "kept, settled by 1318": "Kermadecs (Polynesian settlement on Raoul about the 14th century) and Norfolk Island (Polynesian settlement about 1150-1450), though chickens were absent there (fauna-1318.json); Iceland, the Faroes, Greenland (Norse in the southwest, Thule culture in the northwest by about 1200), the Canadian Arctic and Alaska's North Slope (Thule culture), New Zealand (about 1280), Hawaii, Easter Island and Madagascar",
+    "limits": "Regions are whole botanical countries: an uninhabited island inside a settled region (Franz Josef Land, Wrangel Island, Sao Tome inside the Gulf of Guinea islands) is limited only by the climate step."
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "input_counts": {
+    "mrds-copper-tin-occurrences.csv": 47127,
+    "global-copper-assessment-occurrences.csv": 3420,
+    "coverage_correction_Cu": 652,
+    "coverage_correction_Sn": 247
+  },
+  "source_point_counts": {
+    "Cu": 48450,
+    "Sn": 2996
+  },
+  "plotted_presence_cells": {
+    "Cu": 2853,
+    "Sn": 655
+  },
+  "presence_cell_degrees": 1,
+  "plotted_tracts": {
+    "porphyry_tracts": {
+      "shown": 182,
+      "invalid_source_geometry_withheld": 10
+    },
+    "sediment_hosted_tracts": {
+      "shown": 47,
+      "invalid_source_geometry_withheld": 1
+    }
+  },
+  "matplotlib_version": "3.11.2",
+  "numpy_version": "2.5.3",
+  "map_extent": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "semantics": "fixed-strength cell evidence; not unique deposits, country-normalized abundance or spawn probabilities",
+  "inputs": [
+    {
+      "file": "docs\\research\\copper-tin-global-2026-09-29\\normalized\\pCu_tracts-display-only.geojson",
+      "sha256": "b9c6c162254a9df169c3eea1d03874debaeb450456d8a9994011a9cad2d2bbd8"
+    },
+    {
+      "file": "docs\\research\\copper-tin-global-2026-09-29\\normalized\\sedCu_tracts-display-only.geojson",
+      "sha256": "0929085a0297102e30d7b76a3ded3d1014cd70a8ec53c917cc73351ea5536ff8"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\copper-tin-global-2026-09-29\\normalized\\mrds-copper-tin-occurrences.csv",
+      "sha256": "8fa8037a2c5460c518a76bcaf49ec18d8ee478322f0869f366ccd8e2ecd6e04d"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\copper-tin-global-2026-09-29\\normalized\\global-copper-assessment-occurrences.csv",
+      "sha256": "0ae1833710d9cf80d61ac5ab0863d1edc81bf7af3d48737c95c3e2b0992194e0"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\remaining-ores-2026-09-29\\corrections\\overlay-registry.json",
+      "sha256": "5993048d96fdf7eeb5a3f33dd7f945bb515d9356c10657f79744910867042625"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\remaining-ores-2026-09-29\\corrections\\metals\\normalized\\pp1802-global.geojson",
+      "sha256": "8e66b6f28eb9ffa1971b0ce32acf9bbb7ce345d8ec05a14b9333f744f757fe38"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\remaining-ores-2026-09-29\\corrections\\metals\\normalized\\ga-aimr-metals.geojson",
+      "sha256": "5efa79e7ced5470fdf7e76d16b7baba07d70ef67e0644c86d2f3644dbe180673"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\remaining-ores-2026-09-29\\corrections\\metals\\normalized\\reviewed-secondary-metals.geojson",
+      "sha256": "c80fc9a933b1c3054262a607cc9ef0d83ee7e976d742689904163acce4ff2537"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\remaining-ores-2026-09-29\\corrections\\nonmetals\\normalized\\additional-evidence.geojson",
+      "sha256": "7898a2ad8fe249008c52889243a8eb81200bcf33c61643b37a0d1a74a9d7f6d1"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\remaining-ores-2026-09-29\\corrections\\nonmetals\\normalized\\poland-minerals.geojson",
+      "sha256": "91b9fc4285bd3f4728d7a32dc64f709e7a50d11430bdf564125211e095dc91a3"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\remaining-ores-2026-09-29\\corrections\\coal\\normalized\\coal-polygons.geojson",
+      "sha256": "89ce937fef3709fd1d4069e0d9d4964b8fe4f52b4c304bb7b3d5ae7d6a1856d4"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\remaining-ores-2026-09-29\\corrections\\coal\\normalized\\coal-context-polygons.geojson",
+      "sha256": "b6a1d8a757936df9c2f25f094e389a9aaf13b92d29b7b2bef087d04be4635cf1"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\remaining-ores-2026-09-29\\corrections\\coal\\normalized\\coal-supplement-points.geojson",
+      "sha256": "7ec7527816c004ae6c2a244f1add7c78270e3d85bed5c80a9abb6d2b7f859c6e"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\remaining-ores-2026-09-29\\corrections\\coal\\normalized\\nrw-halite.geojson",
+      "sha256": "4c7c6e34c68fd89332cd70e687970c54451ed4c6bb4ec1fe110815b71e5fe392"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\remaining-ores-2026-09-29\\corrections\\gypsum\\normalized\\gypsum-reviewed.geojson",
+      "sha256": "844441c272492b097d9b74577f235148c2c4876457c247ff329f5fb41898ad63"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\remaining-ores-2026-09-29\\corrections\\gypsum\\normalized\\gypsum-permissive-formations-display-only.geojson",
+      "sha256": "484099e715f10cecdb1c3d771cb0832d39e04451ceb7d7298f7befafd06243bf"
+    }
+  ],
+  "output": "C:\\VS mods\\Earth\\docs\\research\\copper-tin-preview-2026-09-29\\copper-tin-evidence-preview.png"
+}

@@ -1,0 +1,6665 @@
+{
+  "game_assets_root": "C:\\Users\\andri\\AppData\\Roaming\\Vintagestory\\assets\\survival",
+  "game_version_reported": "1.22.7",
+  "geoaddons_archive_sha256": "7fb3b63c5f31f6ee73860deb770c37ccae9f05cce5cb99ec43b0fae5d72498df",
+  "assets": [
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/coal.json",
+      "sha256": "807afddcee2cc8f2138a2a59bf153c28c8daf01bef624ffda13e6662871fd320",
+      "bytes": 1928
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/gem/diamond.json",
+      "sha256": "41bb1cde720b630a333b4e02b9f1fcf489d76c99a6936cdef1873837be56df40",
+      "bytes": 633
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/gem/emerald.json",
+      "sha256": "20e48ee26331afe682535c9dc43f193312667ded94c2f4c278c16f122911cc66",
+      "bytes": 605
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/gem/peridot.json",
+      "sha256": "9d0928703e17d56aead1a7473ccc1e972434449a2c0bb525e6dbbdcfed5c97d6",
+      "bytes": 526
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/metalore/bismuthinite.json",
+      "sha256": "ad079d83e4b5a43644270b3dbb15703990d56ba83585e752895aa7d63a3d2eb0",
+      "bytes": 952
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/metalore/cassiterite.json",
+      "sha256": "d5950394b44d4905bedc4c018b992ae1da0e8f50831bf70aab7a62c13e13810b",
+      "bytes": 2417
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/metalore/chromite.json",
+      "sha256": "cea7e2dfe2ee1faefa799270794747b213f827ab114cac187a5567640a9900d2",
+      "bytes": 910
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/metalore/galena.json",
+      "sha256": "0a6a96dd2054ec9d67822b4db108e239a1df756ab44efaccd531c17b2fb0661d",
+      "bytes": 1539
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/metalore/ilmenite.json",
+      "sha256": "4aebec099f48b560c09f22cfe8d8eb360738e62b594f6fef49733c7fac57ebb2",
+      "bytes": 1044
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/metalore/iron.json",
+      "sha256": "a467797309b7063eac5863816e834e42692c6d2c39aa41ed0fe93952c0a31eaf",
+      "bytes": 2458
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/metalore/malachite.json",
+      "sha256": "663cec7f523437683c4b12c095efe85e3b61c68c2508759cc20b18376ac0e5a5",
+      "bytes": 948
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/metalore/nativecopper.json",
+      "sha256": "f4609b07be768a9671ab0da72c2b14e3938e5bbc3026e4abd606b81953cadf96",
+      "bytes": 2554
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/metalore/pentlandite.json",
+      "sha256": "b0638522a63cbcb2ee6fb554cb5c4d70cbf2230a14900652478370701e7fb3aa",
+      "bytes": 837
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/metalore/rhodochrosite.json",
+      "sha256": "7ca67c6e395928022c70a970d8190406daa9f6e24d446c37d87b4c8bb5ba0bfe",
+      "bytes": 1092
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/metalore/sphalerite.json",
+      "sha256": "a7c67087d5f47900a7fcb942660eadfbbb215bee7090ca269febd50714973eda",
+      "bytes": 1378
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/mineralore/alum.json",
+      "sha256": "2e228ea12aa4868321eed9b4f8b58b3d372aa65947e1ad8034b671e87b4a5024",
+      "bytes": 672
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/mineralore/borax.json",
+      "sha256": "07ba7774514d6c56072fc2a57e28f4958ebad62e082ce328347ad01390db611e",
+      "bytes": 578
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/mineralore/cinnabar.json",
+      "sha256": "fe1f08a8db6cac00be6a609667861fdda59126a721cdd6908f5ac52f8b22d49a",
+      "bytes": 575
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/mineralore/fluorite.json",
+      "sha256": "1bca3dd346a67a81147c75bc0a708ac4216819e005adee307c39bc2b192ce3ac",
+      "bytes": 622
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/mineralore/graphite.json",
+      "sha256": "57e94693f38d7fea10a9158b7fbe4c31dcfde792ee71e579e22a39cdb9aecb16",
+      "bytes": 573
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/mineralore/halite.json",
+      "sha256": "74e9bb3c1abe7598fa993f75b82fa081f895adae27f0d483470d02e8e1b40326",
+      "bytes": 1984
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/mineralore/kernite.json",
+      "sha256": "52e079e86712ab5ff8a338eee07199864806219178900bc48e7431999faf206c",
+      "bytes": 618
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/mineralore/lapis.json",
+      "sha256": "8713bccba6733d23d18a5b58e7a6f9597d75a114dd51f16c8a8f5e6e26697077",
+      "bytes": 598
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/mineralore/olivine.json",
+      "sha256": "5cee11a62a424f24c111d1c0dcaf1a104230b31eea1c8dbdffe917b8795d43f7",
+      "bytes": 1009
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/mineralore/phosphorite.json",
+      "sha256": "d6ebeef12adf50d3121369bbcd0a085946185b208527b0e0c9177dac0cb1a421",
+      "bytes": 634
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/mineralore/quartz.json",
+      "sha256": "c2e172c01eee9d9a5b543d5cf3052f590ce5c1aa9c3c09dabc351e79ec17d542",
+      "bytes": 1827
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/mineralore/saltpeter.json",
+      "sha256": "6c0f1364f92d8c6a5d1c9985ae0c9d452efa85a4254d66276248253f535049de",
+      "bytes": 350
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/mineralore/sulfur.json",
+      "sha256": "dd52d181f98029ebb6e470c224a687fca8917b5ebbb3781ed6b943fcbca80c6f",
+      "bytes": 582
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/rock/cracked.json",
+      "sha256": "1c2fcfacd06b8ce0a3ac94707e5039090e8ae88e99802e51ee65f710975f5c71",
+      "bytes": 1180
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/rock/flint.json",
+      "sha256": "1acaf87cb7a7ebba2171a6d407cca6f22d22b6813bc598dbcad9e65625224f3a",
+      "bytes": 1087
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/rock/marble.json",
+      "sha256": "6017d9317b1bf8c25d8dd5455d6df7fd789a53fc256910c48ed15412787af1af",
+      "bytes": 1836
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/rock/obsidian.json",
+      "sha256": "41cb21c7c7f7c05fb8154bac80484c35e2c48bef020f65b805273c23c8c24b7c",
+      "bytes": 443
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/rock/travertine.json",
+      "sha256": "886fb9bff691315f3a66827782c64cd5f8c5cb3efdaf83bd96867dd72f2fccb8",
+      "bytes": 781
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/soil/clay.json",
+      "sha256": "7bd2f7c3616bc34520a31489f0623cb5cbf2376658fddb6bd574fa36d0b871aa",
+      "bytes": 4260
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/soil/gravel.json",
+      "sha256": "1464490bdb14c71d36a600074bea67b402497ab8c6173795856af1a66329418c",
+      "bytes": 397
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/soil/peat.json",
+      "sha256": "95b822dba29da7001651b1334be2bce2d725ee9f4d5ab32cd04e65dbceac7f55",
+      "bytes": 1027
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldgen/deposits/soil/soil.json",
+      "sha256": "1f212e049216416c48589d9218c299bf31a97c191dd95bcd4da324a9b82f8593",
+      "bytes": 1042
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldproperties/block/ore-gem-cut.json",
+      "sha256": "35b6e0f7a297eb9fd49c4d9725d56c328da84b89a59d9662625bb5b41ed7ac44",
+      "bytes": 147
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldproperties/block/ore-gem-rough.json",
+      "sha256": "ba693fb12e1e00d7c2f0b8166b9e76191df1afe37dc713155b9ec3c558bccc61",
+      "bytes": 157
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldproperties/block/ore-graded.json",
+      "sha256": "5c9d042f316056c68b6c36b77af7c7e19d788df6f1ba7dfd755b104c23b1ad4a",
+      "bytes": 730
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldproperties/block/ore-nugget.json",
+      "sha256": "986a2fd192e3217bcf08726aa29ae1528ad33247f332c208c99fbb4ef1026036",
+      "bytes": 670
+    },
+    {
+      "provider": "vanilla",
+      "path": "worldproperties/block/ore-ungraded.json",
+      "sha256": "893bdfd4568fc3f18790dcdbd111770f8e96cb9a65baada9df3af1c290ed5f10",
+      "bytes": 684
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/azurite.json",
+      "sha256": "95c113bdc1104e2801535c7cd1c547b5521ee5aac67676f5e44e53fc61e20232",
+      "bytes": 4634
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/cerussite.json",
+      "sha256": "23f56dfbd590765c9e0c44f35a2bd5b266fe39cc51d39c1ee55d1cba60ed9a34",
+      "bytes": 25323
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/chalcocite.json",
+      "sha256": "41db0dd481ae83fbb610842cc52cda9a179cf2b7ccf47839128711bdcd18541a",
+      "bytes": 16479
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/chalcopyrite.json",
+      "sha256": "18ab00f9dc91a887d914b23c5ff2f567d3587aacc25f251346e426549e5ce957",
+      "bytes": 17406
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/franckeite.json",
+      "sha256": "e871efd2b512f80b60ea05fe5b177a6cab5376d2a83dbded94452385cbf8d87b",
+      "bytes": 14157
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/freibergite.json",
+      "sha256": "947a44d68601fd27f55e73fd89759fd05fbc6a6ea53fde7396fe6772df1f31ea",
+      "bytes": 14623
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/hemimorphite.json",
+      "sha256": "d0d7608b5dc4b6b245f72b8b951b4a9db5e37edb022781c93a32afc63012ca6e",
+      "bytes": 14911
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/nativeplatinum.json",
+      "sha256": "cc3f7050cd5e04931387e4376b339ea96b5c612f1f0fd13fcb342bcb085a5c4e",
+      "bytes": 5884
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/pyrite.json",
+      "sha256": "4bdfd9b518fde82e061253e1ed2047c4a711576cb8c0c03667f0e2988842a922",
+      "bytes": 20903
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/smithsonite.json",
+      "sha256": "cff72277bb073bfe5605ac14e1b2a2ea9d4f9fa11b6b57f4a2c6974a665ee587",
+      "bytes": 16578
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/sperrylite.json",
+      "sha256": "82f52d87748d92a8a5b9cf23deba05e888a6490cd697369fda741dd1390a3b8b",
+      "bytes": 5736
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/stone-bogiron.json",
+      "sha256": "57a69c56f53ccae99428264a9a855bfa65db1247fc561a8f0fb6ae282aac81a4",
+      "bytes": 550
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/teallite.json",
+      "sha256": "47880f068c6eace25561a1fd8eefafb28dca81b7bbdc71b77d4000a20ae84c9a",
+      "bytes": 13973
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/tetrahedrite.json",
+      "sha256": "7a7d86a6c825da4f3f793a455a5828e8920610c8b70f2ac3501816fc8a7587ea",
+      "bytes": 14720
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/vanadinite.json",
+      "sha256": "110d65eafda71d55bcbcb1ee03916dfd5d00c53f3deef84d50dbb06289229708",
+      "bytes": 13897
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/patches/ores/wulfenite.json",
+      "sha256": "bd861104adac396f7f376a3bd38b0499c3807b716419e12caaaaf7a81babaaf7",
+      "bytes": 12129
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/beryl-aquamarine.json",
+      "sha256": "a2dd00e9e5a4fa79ff0e2c57877721396e72e4ae5e36702547c652e6e68a74c5",
+      "bytes": 681
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/beryl-bixbite.json",
+      "sha256": "2a7edcd9ea686aedb1e3e50c4a53e3f41390f6af1726e13f1e188a5150aff98d",
+      "bytes": 674
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/ganret-grossular.json",
+      "sha256": "571ba00fc297bc6276b41725ef30fadfe4e2b7001c1181a77cc510dbc6b9415a",
+      "bytes": 674
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/garnet-almandine.json",
+      "sha256": "bdc718434283c525f423650deb0f174da1d0b64a2dc396869def9798a3f64b9f",
+      "bytes": 676
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/garnet-andradite.json",
+      "sha256": "4ac4d8a5752cbef675497397b31dc132fad64a622dc8b4dfb78e9fdc98d765da",
+      "bytes": 676
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/garnet-pyrope.json",
+      "sha256": "02d55484e2b7b308f4e09815a58b17df75266d50fa35fcb54efdf9c502287a90",
+      "bytes": 665
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/garnet-spessartine.json",
+      "sha256": "f0172b7311c6eeeeecebcf47dd4df3427d82e7a9c0f2ca19c0c89a418dca50ca",
+      "bytes": 680
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/garnet-uvarovite.json",
+      "sha256": "d1523916f615f901fdd4107a5bdb949f24dcfedec44ca7070b139b03d8c3ac3b",
+      "bytes": 674
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/ruby.json",
+      "sha256": "cc0d9030e3970e6aa84a1eb02d85b2282fb8948a27652eb276a65c271400615e",
+      "bytes": 708
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/sapphire.json",
+      "sha256": "cb7dc2486f0c34634b62303b9a2b98a13112db95f28f1eb909b556d4555ffe25",
+      "bytes": 720
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/spinel-red.json",
+      "sha256": "718b610d24385c5236322d7bbc245682eff9bcfdd25b48198c200d4f6cf728c1",
+      "bytes": 660
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/topaz-amber.json",
+      "sha256": "59074d2f0f076b9a0d168c42311ec1db64aa16962ec512ea33cf5656d9143af8",
+      "bytes": 627
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/topaz-blue.json",
+      "sha256": "94bddafd48e8b1c7f09347b1a63dd671770d2032ee62c578bb58a7fc71f853da",
+      "bytes": 624
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/topaz-pink.json",
+      "sha256": "c9db768e7837395543861d6adc3401870acf92ab6beb34cb999be7ef673a8c75",
+      "bytes": 626
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/tourmaline-rubellite.json",
+      "sha256": "6978c96a5a4952bb7fc75449a8d55ee336a1964faddfeeb1129ad78409d0a7a2",
+      "bytes": 675
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/tourmaline-schorl.json",
+      "sha256": "8cd2280fddbd46a04ff0c5d7c23b7ce0a1ddaa3688d3588ca7b284f369101b4a",
+      "bytes": 666
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/tourmaline-verdelite.json",
+      "sha256": "1633c86f088ddabc56805868326caca085cf37e57138bac3c0d51c62a84bac3b",
+      "bytes": 675
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/gem/tourmaline-watermelon.json",
+      "sha256": "3865af477ac84f0ed1e88c28b4b5f447a1a89ed2d2c4c1ad875a3d7fb6b183fe",
+      "bytes": 680
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/metalore/azurite.json",
+      "sha256": "7c391db67d4c26777688d3e31a36a9ede2df8a79d87af7ea3754b9bc9f6a07c4",
+      "bytes": 890
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/metalore/cerussite.json",
+      "sha256": "3497082cce9d09ad801a8b6d6be732ca1b23fd08849e9462bea94be6da41b509",
+      "bytes": 1721
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/metalore/chalcocite.json",
+      "sha256": "6afc08e6711fc7de9031dd6142eebead307437a02fc1f411783b48defd77649f",
+      "bytes": 2660
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/metalore/chalcopyrite.json",
+      "sha256": "7563d0ee45e407851a4839cb2ecdefc2736329ed7eefa237562dcc50bcefdeba",
+      "bytes": 1460
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/metalore/franckeite.json",
+      "sha256": "9cc6fde09e8b37c66e44a182c5cf756f427f8691da0c96b6ffa6756a4fed1547",
+      "bytes": 1336
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/metalore/freibergite.json",
+      "sha256": "baeced5fdd81740b4c8bd0971f162cf4c8fbd8cad789454a7cb16aebdbcb31ac",
+      "bytes": 1311
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/metalore/hemimorphite.json",
+      "sha256": "f0fc100a3b6e43ab05815cdef10e444b953dba8ef9bdeb0934051ffb51221c6e",
+      "bytes": 1274
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/metalore/nativeplatinum.json",
+      "sha256": "1ae1d4eae55f78aead96a492548cf516808dfae5ea1a0118ca23ccefd27af23b",
+      "bytes": 959
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/metalore/pyrite.json",
+      "sha256": "f317af640002daa8f0b3ddb117bf30d054f730caf3a1f9bd3ef663f246285524",
+      "bytes": 1645
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/metalore/smithsonite.json",
+      "sha256": "e298a8ede97259d41bf5f6e943b770d92a2ca3908aa526c6e87a4603e021dcc7",
+      "bytes": 1335
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/metalore/sperrylite.json",
+      "sha256": "15c512be1feb48e853ccb369f053da402118fe44e2830bfa3442dd9048156833",
+      "bytes": 943
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/metalore/teallite.json",
+      "sha256": "d08aa379d0cbcb430607defc6435774a191f732847c604e96340301afc508688",
+      "bytes": 1328
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/metalore/tetrahedritewithsilver.json",
+      "sha256": "c30e7c576a595e550e725968ea4c3c34db3f017b4ce3562ebf0825c506704410",
+      "bytes": 1955
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/metalore/vanadinite.json",
+      "sha256": "f08b497b779777337c605e73aa5db6dcadc340b17bb1ff1a4f8d41c625c49f9f",
+      "bytes": 1278
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/metalore/wulfenite.json",
+      "sha256": "eba47763ecf402ce11d8f153141f2eb9171576a327f320c03d4da21d183221c0",
+      "bytes": 1274
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/other/bogiron.json",
+      "sha256": "c4173ae5fb78ba925b85acd4f37e7eb800c9a39d5b8692aa45a6efbc12b0ddae",
+      "bytes": 915
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "path": "assets/game/worldgen/deposits/rock/decorativestonesgeneration.json",
+      "sha256": "20c76c3ca7d730d84ec5651d63ccc388675d4204efb9ced9601f448bd7bfa5bf",
+      "bytes": 1939
+    },
+    {
+      "provider": "vanilla",
+      "path": "patches/globaldepositspawnrate.json",
+      "sha256": "b8c03f411b34ac4f2554a0cb171517b0905a635aed731d332e62ccda8608ea68",
+      "bytes": 222
+    },
+    {
+      "provider": "vanilla",
+      "path": "patches/surfacecopper.json",
+      "sha256": "6393ea7baeb218e4e6808bf378be9a2c5fdd283344225de5fc7dbdb896452daa",
+      "bytes": 245
+    },
+    {
+      "provider": "vanilla",
+      "path": "patches/surfacetin.json",
+      "sha256": "661dbbd0a1ff30d20ad74c5e88c87b28864396dbc6476d8ad32ecb0ea5a70ca5",
+      "bytes": 242
+    }
+  ],
+  "vanilla_ore_variants": [
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-gem-cut.json",
+      "variant": "diamond"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-gem-cut.json",
+      "variant": "emerald"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-gem-cut.json",
+      "variant": "peridot"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-gem-rough.json",
+      "variant": "diamond"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-gem-rough.json",
+      "variant": "emerald"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-gem-rough.json",
+      "variant": "olivine_peridot"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "nativecopper"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "limonite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "quartz_nativegold"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "galena"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "cassiterite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "chromite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "ilmenite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "sphalerite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "quartz_nativesilver"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "galena_nativesilver"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "bismuthinite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "magnetite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "hematite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "malachite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "pentlandite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "uranium"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "wolframite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-graded.json",
+      "variant": "rhodochrosite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "nativecopper"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "limonite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "nativegold"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "galena"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "cassiterite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "chromite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "ilmenite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "sphalerite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "nativesilver"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "bismuthinite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "magnetite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "hematite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "malachite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "pentlandite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "uranium"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "wolframite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-nugget.json",
+      "variant": "rhodochrosite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "alum"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "lapislazuli"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "corundum"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "anthracite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "borax"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "cinnabar"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "lignite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "bituminouscoal"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "sylvite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "quartz"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "olivine"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "sulfur"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "fluorite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "graphite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "kernite"
+    },
+    {
+      "provider": "vanilla",
+      "asset": "worldproperties/block/ore-ungraded.json",
+      "variant": "phosphorite"
+    }
+  ],
+  "deposits": [
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/coal.json",
+      "code": "lignite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 8,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-lignite-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "limestone",
+          "chert",
+          "conglomerate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.7,
+        "var": 0.22
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 10,
+        "var": 5
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 2,
+        "var": 1.8
+      },
+      "surface_block": {
+        "code": "looseores-lignite-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/coal.json",
+      "code": "bituminouscoal",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 7,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-bituminouscoal-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "limestone",
+          "chert",
+          "conglomerate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.4
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 10,
+        "var": 5
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 2,
+        "var": 1.3
+      },
+      "surface_block": {
+        "code": "looseores-bituminouscoal-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/coal.json",
+      "code": "anthracite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 6,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-anthracite-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "limestone",
+          "chert",
+          "conglomerate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.4
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 8,
+        "var": 5
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1.5,
+        "var": 0.6
+      },
+      "surface_block": {
+        "code": "looseores-anthracite-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/gem/diamond.json",
+      "code": "diamond",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 18,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-diamond-{rock}",
+        "name": "potential",
+        "allowedVariantsByInBlock": {
+          "rock-kimberlite": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "rock-suevite": [
+            "low"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "kimberlite",
+          "suevite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.4
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 2,
+        "var": 1
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/gem/emerald.json",
+      "code": "emerald",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 64,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-emerald-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "basalt",
+          "peridotite",
+          "shale",
+          "limestone",
+          "phyllite",
+          "slate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.13,
+        "var": 0.13
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 1,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/gem/peridot.json",
+      "code": "peridot",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 64,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-olivine_peridot-peridotite",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-peridotite"
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.13,
+        "var": 0.13
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 1,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/bismuthinite.json",
+      "code": "bismuthinite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 16,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-bismuthinite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-andesite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-granite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-basalt": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-peridotite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-phyllite": [
+            "poor",
+            "medium"
+          ],
+          "rock-slate": [
+            "poor",
+            "medium"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "granite",
+          "basalt",
+          "peridotite",
+          "phyllite",
+          "slate"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.4
+      },
+      "radius": {
+        "dist": "triangle",
+        "avg": 4,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/cassiterite.json",
+      "code": "surfacecassiterite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.007,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "ore-poor-cassiterite-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "granite",
+          "basalt",
+          "peridotite",
+          "phyllite",
+          "slate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.95,
+        "var": 0.03
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 3,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": {
+        "code": "looseores-cassiterite-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/cassiterite.json",
+      "code": "cassiterite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 7,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-cassiterite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-andesite": [
+            "poor",
+            "medium"
+          ],
+          "rock-granite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-basalt": [
+            "poor",
+            "medium"
+          ],
+          "rock-peridotite": [
+            "poor",
+            "medium"
+          ],
+          "rock-phyllite": [
+            "poor",
+            "medium"
+          ],
+          "rock-slate": [
+            "poor",
+            "medium"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "granite",
+          "basalt",
+          "peridotite",
+          "phyllite",
+          "slate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.575,
+        "var": 0.175
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 5,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/cassiterite.json",
+      "code": "cassiterite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.1,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-cassiterite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-andesite": [
+            "poor",
+            "medium"
+          ],
+          "rock-granite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-basalt": [
+            "poor",
+            "medium"
+          ],
+          "rock-peridotite": [
+            "poor",
+            "medium"
+          ],
+          "rock-phyllite": [
+            "poor",
+            "medium"
+          ],
+          "rock-slate": [
+            "poor",
+            "medium"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "granite",
+          "basalt",
+          "peridotite",
+          "phyllite",
+          "slate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.3,
+        "var": 0.3
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 12,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/chromite.json",
+      "code": "chromite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 3,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-chromite-{rock}",
+        "method": "randombyparent",
+        "allowedVariantsByInBlock": {
+          "rock-andesite": [
+            "poor",
+            "medium"
+          ],
+          "rock-granite": [
+            "poor",
+            "medium"
+          ],
+          "rock-basalt": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-peridotite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-kimberlite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "granite",
+          "basalt",
+          "peridotite",
+          "kimberlite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.2,
+        "var": 0.2
+      },
+      "radius": {
+        "dist": "invexp",
+        "avg": 5,
+        "var": 10
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/galena.json",
+      "code": "galena",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 40,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-galena-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-claystone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-sandstone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-shale": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-chalk": [
+            "poor",
+            "medium"
+          ],
+          "rock-limestone": [
+            "poor",
+            "medium"
+          ],
+          "rock-chert": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-conglomerate": [
+            "poor",
+            "medium"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "limestone",
+          "chert",
+          "conglomerate"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.5
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 4,
+        "var": 4
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": {
+        "code": "looseores-galena-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/galena.json",
+      "code": "silver",
+      "parent_deposit": "galena",
+      "generator": "childdeposit-pointcloud",
+      "enabled": true,
+      "tries_per_chunk": 4,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-galena_nativesilver-{rock}",
+        "name": "grade",
+        "allowedVariants": [
+          "poor",
+          "medium"
+        ]
+      },
+      "inblock": null,
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 2,
+        "var": 2
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.2,
+        "var": 3
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/ilmenite.json",
+      "code": "ilmenite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 2,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-ilmenite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-andesite": [
+            "poor",
+            "medium"
+          ],
+          "rock-granite": [
+            "poor",
+            "medium"
+          ],
+          "rock-basalt": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-peridotite": [
+            "poor",
+            "medium"
+          ],
+          "rock-kimberlite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-phyllite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-slate": [
+            "poor",
+            "medium",
+            "rich"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "granite",
+          "basalt",
+          "peridotite",
+          "phyllite",
+          "slate"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.4
+      },
+      "radius": {
+        "dist": "invexp",
+        "avg": 6,
+        "var": 10
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/iron.json",
+      "code": "limonite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 0.8,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-limonite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-basalt": [
+            "poor",
+            "medium"
+          ],
+          "rock-shale": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-chert": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "basalt",
+          "shale",
+          "chert"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.4
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 26,
+        "var": 10
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/iron.json",
+      "code": "hematite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 0.5,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-hematite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-granite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-peridotite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-limestone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-phyllite": [
+            "poor",
+            "medium"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "peridotite",
+          "limestone",
+          "phyllite"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.4
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 26,
+        "var": 10
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/iron.json",
+      "code": "magnetite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 0.3,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-magnetite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-andesite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-claystone": [
+            "poor",
+            "medium"
+          ],
+          "rock-chalk": [
+            "poor",
+            "medium"
+          ],
+          "rock-conglomerate": [
+            "poor",
+            "medium"
+          ],
+          "rock-slate": [
+            "poor",
+            "medium"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "claystone",
+          "chalk",
+          "conglomerate",
+          "slate"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.4
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 26,
+        "var": 10
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/malachite.json",
+      "code": "malachite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 10,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-malachite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-limestone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-redmarble": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-greenmarble": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-whitemarble": [
+            "poor",
+            "medium",
+            "rich"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "limestone",
+          "redmarble",
+          "greenmarble",
+          "whitemarble"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.46,
+        "var": 0.48
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 7,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      },
+      "surface_block": {
+        "code": "looseores-malachite-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/nativecopper.json",
+      "code": "surfacecopper",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.2,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "ore-*-nativecopper-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-andesite": [
+            "poor",
+            "medium"
+          ],
+          "rock-granite": [
+            "poor",
+            "medium"
+          ],
+          "rock-basalt": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-peridotite": [
+            "poor",
+            "medium"
+          ],
+          "rock-claystone": [
+            "poor",
+            "medium"
+          ],
+          "rock-sandstone": [
+            "poor",
+            "medium"
+          ],
+          "rock-shale": [
+            "poor",
+            "medium"
+          ],
+          "rock-chalk": [
+            "poor",
+            "medium"
+          ],
+          "rock-chert": [
+            "poor",
+            "medium"
+          ],
+          "rock-conglomerate": [
+            "poor",
+            "medium"
+          ],
+          "rock-phyllite": [
+            "poor",
+            "medium"
+          ],
+          "rock-slate": [
+            "poor",
+            "medium"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "granite",
+          "basalt",
+          "peridotite",
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "chert",
+          "conglomerate",
+          "phyllite",
+          "slate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.965,
+        "var": 0.03
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 4.25,
+        "var": 1
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 1
+      },
+      "surface_block": {
+        "code": "looseores-nativecopper-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/nativecopper.json",
+      "code": "nativecopper",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 25,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-nativecopper-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-andesite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-granite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-basalt": [
+            "poor",
+            "medium",
+            "bountiful"
+          ],
+          "rock-peridotite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-claystone": [
+            "poor",
+            "medium"
+          ],
+          "rock-sandstone": [
+            "poor",
+            "medium"
+          ],
+          "rock-shale": [
+            "poor",
+            "medium"
+          ],
+          "rock-chalk": [
+            "poor",
+            "medium"
+          ],
+          "rock-chert": [
+            "poor",
+            "medium"
+          ],
+          "rock-conglomerate": [
+            "poor",
+            "medium"
+          ],
+          "rock-phyllite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-slate": [
+            "poor",
+            "medium",
+            "rich"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "granite",
+          "basalt",
+          "peridotite",
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "chert",
+          "conglomerate",
+          "phyllite",
+          "slate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.3,
+        "var": 0.3
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 7,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/pentlandite.json",
+      "code": "pentlandite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 5,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-pentlandite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-andesite": [
+            "poor",
+            "medium"
+          ],
+          "rock-granite": [
+            "poor",
+            "medium"
+          ],
+          "rock-basalt": [
+            "poor",
+            "medium"
+          ],
+          "rock-peridotite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "granite",
+          "basalt",
+          "peridotite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.2,
+        "var": 0.2
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 9,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/rhodochrosite.json",
+      "code": "rhodochrosite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 5,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-rhodochrosite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-claystone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-sandstone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-shale": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-chalk": [
+            "poor",
+            "medium"
+          ],
+          "rock-limestone": [
+            "poor",
+            "medium"
+          ],
+          "rock-chert": [
+            "poor",
+            "medium"
+          ],
+          "rock-conglomerate": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-phyllite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-slate": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "limestone",
+          "chert",
+          "conglomerate",
+          "phyllite",
+          "slate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.2,
+        "var": 0.2
+      },
+      "radius": {
+        "dist": "invexp",
+        "avg": 3,
+        "var": 10
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/metalore/sphalerite.json",
+      "code": "sphalerite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 12.5,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-sphalerite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-andesite": [
+            "poor",
+            "medium"
+          ],
+          "rock-granite": [
+            "poor",
+            "medium"
+          ],
+          "rock-basalt": [
+            "poor",
+            "medium"
+          ],
+          "rock-peridotite": [
+            "poor",
+            "medium"
+          ],
+          "rock-claystone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-sandstone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-shale": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-chalk": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-limestone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-chert": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-conglomerate": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-phyllite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-slate": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "granite",
+          "basalt",
+          "peridotite",
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "limestone",
+          "chert",
+          "conglomerate",
+          "phyllite",
+          "slate"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.5
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 4,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/alum.json",
+      "code": "alum",
+      "parent_deposit": null,
+      "generator": "disc-followsurfacebelow",
+      "enabled": true,
+      "tries_per_chunk": 0.2,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-alum-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "limestone",
+          "chert",
+          "conglomerate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "uniform",
+        "avg": 10,
+        "var": 8
+      },
+      "thickness": {
+        "avg": 3.3,
+        "var": 1
+      },
+      "surface_block": {
+        "code": "looseores-alum-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/borax.json",
+      "code": "borax",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 6,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-borax-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "limestone",
+          "chert",
+          "conglomerate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.7,
+        "var": 0.3
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 8,
+        "var": 2
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": {
+        "code": "looseores-borax-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/cinnabar.json",
+      "code": "cinnabar",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 1,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-cinnabar-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "granite",
+          "basalt",
+          "peridotite",
+          "phyllite",
+          "slate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.2,
+        "var": 0.2
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 8,
+        "var": 2
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": {
+        "code": "looseores-cinnabar-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/fluorite.json",
+      "code": "fluorite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 2,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-fluorite-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "limestone",
+          "chert",
+          "conglomerate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.2
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 8,
+        "var": 2
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": {
+        "code": "looseores-fluorite-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/graphite.json",
+      "code": "graphite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 6,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-graphite-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "phyllite",
+          "slate",
+          "whitemarble",
+          "redmarble",
+          "greenmarble"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.4
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 8,
+        "var": 2
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": {
+        "code": "looseores-graphite-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/halite.json",
+      "code": "halite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.3,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "rock-halite"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "limestone",
+          "chert",
+          "conglomerate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.65,
+        "var": 0.2
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 10,
+        "var": 8
+      },
+      "thickness": {
+        "avg": 150,
+        "var": 1
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/halite.json",
+      "code": "sylvite",
+      "parent_deposit": "halite",
+      "generator": "childdeposit-pointcloud",
+      "enabled": true,
+      "tries_per_chunk": 0.3,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "ore-sylvite-halite"
+      },
+      "inblock": null,
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 2,
+        "var": 0
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2,
+        "var": 1
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/halite.json",
+      "code": "halite",
+      "parent_deposit": null,
+      "generator": "disc-followsurfacebelow",
+      "enabled": true,
+      "tries_per_chunk": 0.07,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rock-halite"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "limestone",
+          "chert",
+          "conglomerate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "uniform",
+        "avg": 28,
+        "var": 3
+      },
+      "thickness": {
+        "avg": 3.3,
+        "var": 1
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/halite.json",
+      "code": "sylvite",
+      "parent_deposit": "halite",
+      "generator": "childdeposit-pointcloud",
+      "enabled": true,
+      "tries_per_chunk": 1,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "ore-sylvite-halite"
+      },
+      "inblock": null,
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 3,
+        "var": 2
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2,
+        "var": 1
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/kernite.json",
+      "code": "kernite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 2,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-kernite-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "limestone",
+          "chert",
+          "conglomerate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.2
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 8,
+        "var": 2
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": {
+        "code": "looseores-kernite-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/lapis.json",
+      "code": "lapis",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 5,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-lapislazuli-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "limestone",
+          "whitemarble",
+          "redmarble",
+          "greenmarble"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.4
+      },
+      "radius": {
+        "dist": "invexp",
+        "avg": 2,
+        "var": 10
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": {
+        "code": "looseores-lapislazuli-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/olivine.json",
+      "code": "olivine",
+      "parent_deposit": null,
+      "generator": "disc-anywhere",
+      "enabled": true,
+      "tries_per_chunk": 0.5,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "ore-olivine-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "peridotite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.5
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 32,
+        "var": 32
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.2,
+        "var": 3
+      },
+      "surface_block": {
+        "code": "looseores-olivine-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/olivine.json",
+      "code": "peridot",
+      "parent_deposit": "olivine",
+      "generator": "childdeposit-pointcloud",
+      "enabled": true,
+      "tries_per_chunk": 10,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-olivine_peridot-{rock}",
+        "name": "grade",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": null,
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 2,
+        "var": 2
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.2,
+        "var": 3
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/phosphorite.json",
+      "code": "phosphorite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 2,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-phosphorite-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "limestone",
+          "chert",
+          "conglomerate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.2
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 8,
+        "var": 2
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": {
+        "code": "looseores-phosphorite-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/quartz.json",
+      "code": "quartz",
+      "parent_deposit": null,
+      "generator": "disc-anywhere",
+      "enabled": true,
+      "tries_per_chunk": 0.5,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "ore-quartz-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "chalk",
+          "chert",
+          "conglomerate",
+          "limestone",
+          "claystone",
+          "granite",
+          "sandstone",
+          "shale",
+          "basalt",
+          "peridotite",
+          "phyllite",
+          "slate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.5
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 32,
+        "var": 32
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.2,
+        "var": 3
+      },
+      "surface_block": {
+        "code": "looseores-quartz-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/quartz.json",
+      "code": "gold",
+      "parent_deposit": "quartz",
+      "generator": "childdeposit-pointcloud",
+      "enabled": true,
+      "tries_per_chunk": 6,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-quartz_nativegold-{rock}",
+        "name": "grade",
+        "allowedVariants": [
+          "poor",
+          "medium",
+          "rich",
+          "bountiful"
+        ]
+      },
+      "inblock": null,
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 2,
+        "var": 2
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2,
+        "var": 1
+      },
+      "surface_block": {
+        "code": "looseores-quartz_nativegold-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/quartz.json",
+      "code": "silver",
+      "parent_deposit": "quartz",
+      "generator": "childdeposit-pointcloud",
+      "enabled": true,
+      "tries_per_chunk": 20,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-quartz_nativesilver-{rock}",
+        "name": "grade",
+        "allowedVariants": [
+          "poor",
+          "medium",
+          "rich",
+          "bountiful"
+        ]
+      },
+      "inblock": null,
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 2,
+        "var": 2
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2,
+        "var": 1
+      },
+      "surface_block": {
+        "code": "looseores-quartz_nativesilver-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/saltpeter.json",
+      "code": "saltpeter",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 7,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "saltpeter-d"
+      },
+      "inblock": {
+        "code": "air"
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0,
+        "var": 0.8
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 10,
+        "var": 10
+      },
+      "thickness": {
+        "avg": 7,
+        "var": 3
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/mineralore/sulfur.json",
+      "code": "sulfur",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 15,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-sulfur-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "limestone",
+          "chert",
+          "conglomerate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.6,
+        "var": 0.3
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 8,
+        "var": 2
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": {
+        "code": "looseores-sulfur-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/rock/cracked.json",
+      "code": "crackedrock",
+      "parent_deposit": null,
+      "generator": "disc-anywhere",
+      "enabled": true,
+      "tries_per_chunk": 1,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "crackedrock-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "chalk",
+          "chert",
+          "conglomerate",
+          "limestone",
+          "claystone",
+          "granite",
+          "sandstone",
+          "shale",
+          "basalt",
+          "peridotite",
+          "phyllite",
+          "slate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.5
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 32,
+        "var": 32
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.3,
+        "var": 3
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/rock/cracked.json",
+      "code": "crackedrock",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.5,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "crackedrock-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "andesite",
+          "chalk",
+          "chert",
+          "conglomerate",
+          "limestone",
+          "claystone",
+          "granite",
+          "sandstone",
+          "shale",
+          "basalt",
+          "peridotite",
+          "phyllite",
+          "slate"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.5
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 32,
+        "var": 32
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.3,
+        "var": 3
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/rock/flint.json",
+      "code": "flint",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 1.5,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "ore-flint-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "sandstone",
+          "shale",
+          "claystone",
+          "chalk",
+          "limestone"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.97,
+        "var": 0.03
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 3.5,
+        "var": 2
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 1
+      },
+      "surface_block": {
+        "code": "looseflints-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/rock/flint.json",
+      "code": "flint",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.05,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "ore-flint-{rock}"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "chalk",
+          "limestone"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.97,
+        "var": 0.03
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 7,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 1
+      },
+      "surface_block": {
+        "code": "looseflints-{rock}-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/rock/marble.json",
+      "code": "whitemarble",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.1,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rock-whitemarble"
+      },
+      "inblock": {
+        "code": "rock-phyllite"
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.8
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 24,
+        "var": 12
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2.5,
+        "var": 6
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/rock/marble.json",
+      "code": "whitemarble",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.06,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rock-whitemarble"
+      },
+      "inblock": {
+        "code": "rock-slate"
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.8
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 24,
+        "var": 12
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2.5,
+        "var": 6
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/rock/marble.json",
+      "code": "redmarble",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.03,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rock-redmarble"
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "slate",
+          "phyllite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.8
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 24,
+        "var": 12
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2.5,
+        "var": 6
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/rock/marble.json",
+      "code": "greenmarble",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.02,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rock-greenmarble"
+      },
+      "inblock": {
+        "code": "rock-slate"
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.8
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 24,
+        "var": 12
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2.5,
+        "var": 6
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/rock/marble.json",
+      "code": "greenmarble",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.01,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rock-greenmarble"
+      },
+      "inblock": {
+        "code": "rock-phyllite"
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.8
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 24,
+        "var": 12
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2.5,
+        "var": 6
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/rock/obsidian.json",
+      "code": "rock-obsidian",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 12,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rock-obsidian"
+      },
+      "inblock": {
+        "code": "rock-basalt"
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.8,
+        "var": 0.25
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 5,
+        "var": 2
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": {
+        "code": "loosestones-obsidian-free"
+      }
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/rock/travertine.json",
+      "code": "travertine",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.04,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rock-travertine"
+      },
+      "inblock": {
+        "code": "rock-limestone"
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.8
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 24,
+        "var": 12
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2.5,
+        "var": 6
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/rock/travertine.json",
+      "code": "travertine",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.01,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rock-travertine"
+      },
+      "inblock": {
+        "code": "rock-limestone",
+        "name": "rock",
+        "allowedVariants": [
+          "slate",
+          "phyllite",
+          "limestone"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.8
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 12,
+        "var": 6
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2,
+        "var": 1
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/soil/clay.json",
+      "code": "clay",
+      "parent_deposit": null,
+      "generator": "disc-followsurfacebelow",
+      "enabled": true,
+      "tries_per_chunk": 0.019,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rawclay-red-*",
+        "name": "clayfertcover",
+        "allowedVariantsByInBlock": {
+          "soil-low-none": [
+            "none"
+          ],
+          "soil-medium-none": [
+            "none"
+          ],
+          "soil-low-verysparse": [
+            "verysparse"
+          ],
+          "soil-medium-verysparse": [
+            "verysparse"
+          ],
+          "soil-low-sparse": [
+            "verysparse"
+          ],
+          "soil-medium-sparse": [
+            "verysparse"
+          ],
+          "soil-low-normal": [
+            "verysparse"
+          ],
+          "soil-medium-normal": [
+            "verysparse"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "soil-*",
+        "name": "fertcover",
+        "allowedVariants": [
+          "low-none",
+          "medium-none",
+          "low-verysparse",
+          "medium-verysparse",
+          "low-sparse",
+          "medium-sparse",
+          "low-normal",
+          "medium-normal"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "uniform",
+        "avg": 13,
+        "var": 6
+      },
+      "thickness": {
+        "avg": 3.3,
+        "var": 1
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/soil/clay.json",
+      "code": "clay",
+      "parent_deposit": null,
+      "generator": "disc-followsurfacebelow",
+      "enabled": true,
+      "tries_per_chunk": 0.004,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rawclay-blue-*",
+        "name": "clayfertcover",
+        "allowedVariantsByInBlock": {
+          "soil-low-none": [
+            "none"
+          ],
+          "soil-medium-none": [
+            "none"
+          ],
+          "soil-low-verysparse": [
+            "verysparse"
+          ],
+          "soil-medium-verysparse": [
+            "verysparse"
+          ],
+          "soil-low-sparse": [
+            "verysparse"
+          ],
+          "soil-medium-sparse": [
+            "verysparse"
+          ],
+          "soil-low-normal": [
+            "verysparse"
+          ],
+          "soil-medium-normal": [
+            "verysparse"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "soil-*",
+        "name": "fertcover",
+        "allowedVariants": [
+          "low-none",
+          "medium-none",
+          "low-verysparse",
+          "medium-verysparse",
+          "low-sparse",
+          "medium-sparse",
+          "low-normal",
+          "medium-normal"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "uniform",
+        "avg": 13,
+        "var": 6
+      },
+      "thickness": {
+        "avg": 3.3,
+        "var": 1
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/soil/clay.json",
+      "code": "fireclay",
+      "parent_deposit": null,
+      "generator": "disc-followsurfacebelow",
+      "enabled": true,
+      "tries_per_chunk": 0.004,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rawclay-fire-verysparse"
+      },
+      "inblock": {
+        "code": "*-bauxite",
+        "name": "type",
+        "allowedVariants": [
+          "sand",
+          "gravel"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "uniform",
+        "avg": 4,
+        "var": 2
+      },
+      "thickness": {
+        "avg": 2,
+        "var": 1
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/soil/clay.json",
+      "code": "fireclay",
+      "parent_deposit": null,
+      "generator": "disc-followsurfacebelow",
+      "enabled": true,
+      "tries_per_chunk": 0.0002,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rawclay-fire-verysparse"
+      },
+      "inblock": {
+        "code": "*-bauxite",
+        "name": "type",
+        "allowedVariants": [
+          "sand",
+          "gravel"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "uniform",
+        "avg": 12,
+        "var": 5
+      },
+      "thickness": {
+        "avg": 3.3,
+        "var": 1
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/soil/clay.json",
+      "code": "redclay",
+      "parent_deposit": null,
+      "generator": "disc-followsurfacebelow",
+      "enabled": true,
+      "tries_per_chunk": 0.01,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rawclay-red-verysparse"
+      },
+      "inblock": {
+        "code": "gravel-*"
+      },
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "uniform",
+        "avg": 4,
+        "var": 2
+      },
+      "thickness": {
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/soil/clay.json",
+      "code": "redclay",
+      "parent_deposit": null,
+      "generator": "disc-followsurfacebelow",
+      "enabled": true,
+      "tries_per_chunk": 0.01,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rawclay-red-verysparse"
+      },
+      "inblock": {
+        "code": "soil-*"
+      },
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "uniform",
+        "avg": 4,
+        "var": 2
+      },
+      "thickness": {
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/soil/gravel.json",
+      "code": "gravel",
+      "parent_deposit": null,
+      "generator": "disc-alluvialdeposit",
+      "enabled": true,
+      "tries_per_chunk": 0.03,
+      "with_ore_map": null,
+      "placeblock": null,
+      "inblock": null,
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 15,
+        "var": 5
+      },
+      "thickness": {
+        "avg": 1.5,
+        "var": 0.5
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/soil/peat.json",
+      "code": "peat",
+      "parent_deposit": null,
+      "generator": "disc-followsurfacebelow",
+      "enabled": true,
+      "tries_per_chunk": 0.05,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "peat-*",
+        "name": "peatfertcover",
+        "allowedVariantsByInBlock": {
+          "soil-low-none": [
+            "none"
+          ],
+          "soil-medium-none": [
+            "none"
+          ],
+          "soil-low-verysparse": [
+            "verysparse"
+          ],
+          "soil-medium-verysparse": [
+            "verysparse"
+          ],
+          "soil-low-sparse": [
+            "verysparse"
+          ],
+          "soil-medium-sparse": [
+            "verysparse"
+          ],
+          "soil-low-normal": [
+            "verysparse"
+          ],
+          "soil-medium-normal": [
+            "verysparse"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "soil-*",
+        "name": "fertcover",
+        "allowedVariants": [
+          "low-none",
+          "medium-none",
+          "low-verysparse",
+          "medium-verysparse",
+          "low-sparse",
+          "medium-sparse",
+          "low-normal",
+          "medium-normal"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "uniform",
+        "avg": 13,
+        "var": 6
+      },
+      "thickness": {
+        "avg": 3.3,
+        "var": 1
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "vanilla",
+      "source_asset": "worldgen/deposits/soil/soil.json",
+      "code": "soil",
+      "parent_deposit": null,
+      "generator": "disc-followsurfacebelow",
+      "enabled": true,
+      "tries_per_chunk": 0.025,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "soil-compost-*",
+        "name": "coverage",
+        "allowedVariantsByInBlock": {
+          "soil-low-none": [
+            "none"
+          ],
+          "soil-medium-none": [
+            "none"
+          ],
+          "soil-low-verysparse": [
+            "verysparse"
+          ],
+          "soil-medium-verysparse": [
+            "verysparse"
+          ],
+          "soil-low-sparse": [
+            "sparse"
+          ],
+          "soil-medium-sparse": [
+            "sparse"
+          ],
+          "soil-low-normal": [
+            "normal"
+          ],
+          "soil-medium-normal": [
+            "normal"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "soil-*",
+        "name": "fertcover",
+        "allowedVariants": [
+          "low-none",
+          "medium-none",
+          "low-verysparse",
+          "medium-verysparse",
+          "low-sparse",
+          "medium-sparse",
+          "low-normal",
+          "medium-normal"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 5,
+        "var": 3
+      },
+      "thickness": {
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/beryl-aquamarine.json",
+      "code": "berylaquamarine",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 8,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-berylaquamarine-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "rhyolite",
+          "pumice",
+          "slate",
+          "phyllite",
+          "schist",
+          "gneiss"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.1,
+        "var": 0.1
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 1,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0.5
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/beryl-bixbite.json",
+      "code": "berylbixbite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 0.1,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-berylbixbite-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "rhyolite",
+          "pumice",
+          "slate",
+          "phyllite",
+          "schist",
+          "gneiss"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.1,
+        "var": 0.1
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 1,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0.5
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/ganret-grossular.json",
+      "code": "garnetgrossular",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 16,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-garnetgrossular-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "slate",
+          "phyllite",
+          "schist",
+          "gneiss",
+          "migmatite",
+          "amphibolite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.2
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 2,
+        "var": 1
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 2,
+        "var": 1
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/garnet-almandine.json",
+      "code": "garnetalmandine",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 16,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-garnetalmandine-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "slate",
+          "phyllite",
+          "schist",
+          "gneiss",
+          "migmatite",
+          "amphibolite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.2
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 1,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 4,
+        "var": 2
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/garnet-andradite.json",
+      "code": "garnetandradite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 16,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-garnetandradite-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "slate",
+          "phyllite",
+          "schist",
+          "gneiss",
+          "migmatite",
+          "amphibolite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.2
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 1,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 4,
+        "var": 2
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/garnet-pyrope.json",
+      "code": "garnetpyrope",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 16,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-garnetpyrope-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "slate",
+          "phyllite",
+          "schist",
+          "gneiss",
+          "migmatite",
+          "amphibolite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.2
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 2,
+        "var": 1
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 2,
+        "var": 1
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/garnet-spessartine.json",
+      "code": "garnetspessartine",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 16,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-garnetspessartine-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "slate",
+          "phyllite",
+          "schist",
+          "gneiss",
+          "migmatite",
+          "amphibolite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.2
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 2,
+        "var": 1
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 2,
+        "var": 1
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/garnet-uvarovite.json",
+      "code": "garnetuvarovite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 16,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-garnetuvarovite-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "slate",
+          "phyllite",
+          "schist",
+          "gneiss",
+          "migmatite",
+          "amphibolite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.2
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 2,
+        "var": 1
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 2,
+        "var": 1
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/ruby.json",
+      "code": "corundumruby",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 1,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-corundumruby-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "whitemarble",
+          "redmarble",
+          "greenmarble",
+          "basalt",
+          "gabbro",
+          "peridotite",
+          "phyllite",
+          "slate",
+          "schist",
+          "gneiss"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.13,
+        "var": 0.13
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 1,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/sapphire.json",
+      "code": "corundumsapphire",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 1,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-corundumsapphire-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "whitemarble",
+          "redmarble",
+          "greenmarble",
+          "basalt",
+          "gabbro",
+          "peridotite",
+          "phyllite",
+          "slate",
+          "schist",
+          "gneiss"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.13,
+        "var": 0.13
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 1,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/spinel-red.json",
+      "code": "spinelred",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 2,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-spinelred-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "peridotite",
+          "whitemarble",
+          "redmarble",
+          "greenmarble",
+          "kimberlite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.2,
+        "var": 0.2
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 1,
+        "var": 1
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 2,
+        "var": 0.5
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/topaz-amber.json",
+      "code": "topazamber",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 4,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-topazamber-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "rhyolite",
+          "pumice"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.8,
+        "var": 0.1
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 2,
+        "var": 1
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 2,
+        "var": 1.5
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/topaz-blue.json",
+      "code": "topazblue",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 2,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-topazblue-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "rhyolite",
+          "pumice"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.8,
+        "var": 0.1
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 2,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 2,
+        "var": 1
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/topaz-pink.json",
+      "code": "topazpink",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 1,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-topazpink-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "rhyolite",
+          "pumice"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.8,
+        "var": 0.1
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 2,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0.5
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/tourmaline-rubellite.json",
+      "code": "tourmalinerubellite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 1,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-tourmalinerubellite-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "phyllite",
+          "schist",
+          "gneiss",
+          "migmatite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.1,
+        "var": 0.1
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 1,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 4,
+        "var": 2
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/tourmaline-schorl.json",
+      "code": "tourmalineschorl",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 8,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-tourmalineschorl-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "phyllite",
+          "schist",
+          "gneiss",
+          "migmatite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.1,
+        "var": 0.1
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 1,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 4,
+        "var": 2
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/tourmaline-verdelite.json",
+      "code": "tourmalineverdelite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 2,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-tourmalineverdelite-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "phyllite",
+          "schist",
+          "gneiss",
+          "migmatite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.1,
+        "var": 0.1
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 1,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 4,
+        "var": 2
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/gem/tourmaline-watermelon.json",
+      "code": "tourmalinewatermelon",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 0.1,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-tourmalinewatermelon-{rock}",
+        "name": "potential",
+        "allowedVariants": [
+          "low",
+          "medium",
+          "high"
+        ]
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "granite",
+          "phyllite",
+          "schist",
+          "gneiss",
+          "migmatite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.1,
+        "var": 0.1
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 1,
+        "var": 0.5
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 4,
+        "var": 2
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/azurite.json",
+      "code": "azurite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 10,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-azurite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-limestone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-dolostone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "limestone",
+          "dolostone"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.36
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 7,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      },
+      "surface_block": {
+        "code": "looseores-azurite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/cerussite.json",
+      "code": "cerussite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 22,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-cerussite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-claystone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-sandstone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-shale": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-chalk": [
+            "poor",
+            "medium"
+          ],
+          "rock-limestone": [
+            "poor",
+            "medium"
+          ],
+          "rock-chert": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-conglomerate": [
+            "poor",
+            "medium"
+          ],
+          "rock-andesite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-granite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-basalt": [
+            "poor",
+            "medium"
+          ],
+          "rock-peridotite": [
+            "poor",
+            "medium"
+          ],
+          "rock-rhyolite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-diorite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-gabbro": [
+            "poor",
+            "medium"
+          ],
+          "rock-mudstone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-dolostone": [
+            "poor",
+            "medium"
+          ],
+          "rock-siltstone": [
+            "poor",
+            "medium",
+            "rich"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "claystone",
+          "sandstone",
+          "shale",
+          "chalk",
+          "limestone",
+          "chert",
+          "conglomerate",
+          "andesite",
+          "granite",
+          "basalt",
+          "peridotite",
+          "rhyolite",
+          "diorite",
+          "gabbro",
+          "mudstone",
+          "dolostone",
+          "siltstone"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.4
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 4,
+        "var": 4
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 0
+      },
+      "surface_block": {
+        "code": "looseores-cerussite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/chalcocite.json",
+      "code": "surfacecopper",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.1,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-chalcocite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-limestone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-shale": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-claystone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-sandstone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-chalk": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-chert": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-conglomerate": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-dolostone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-mudstone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-siltstone": [
+            "poor",
+            "medium",
+            "rich"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "limestone",
+          "shale",
+          "claystone",
+          "sandstone",
+          "chalk",
+          "chert",
+          "conglomerate",
+          "mudstone",
+          "siltstone",
+          "dolostone"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.965,
+        "var": 0.03
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 4.25,
+        "var": 1
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 2,
+        "var": 1
+      },
+      "surface_block": {
+        "code": "looseores-chalcocite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/chalcocite.json",
+      "code": "chalcocite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 8,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-chalcocite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-limestone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-shale": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-claystone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-sandstone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-chalk": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-chert": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-conglomerate": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-dolostone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-mudstone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-siltstone": [
+            "poor",
+            "medium",
+            "rich"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "limestone",
+          "shale",
+          "claystone",
+          "sandstone",
+          "chalk",
+          "chert",
+          "conglomerate",
+          "mudstone",
+          "siltstone",
+          "dolostone"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.3
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 7,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 2
+      },
+      "surface_block": {
+        "code": "looseores-chalcocite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/chalcopyrite.json",
+      "code": "chalcopyrite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 8,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-chalcopyrite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-limestone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-dolostone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-chalk": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-rhyolite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-granite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-andesite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-diorite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-basalt": [
+            "poor",
+            "medium"
+          ],
+          "rock-gabbro": [
+            "poor",
+            "medium"
+          ],
+          "rock-phyllite": [
+            "poor",
+            "medium"
+          ],
+          "rock-schist": [
+            "poor"
+          ],
+          "rock-amphibolite": [
+            "poor"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "limestone",
+          "dolostone",
+          "chalk",
+          "rhyolite",
+          "granite",
+          "andesite",
+          "diorite",
+          "basalt",
+          "gabbro",
+          "phyllite",
+          "schist",
+          "amphibolite"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.36
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 7,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      },
+      "surface_block": {
+        "code": "looseores-chalcopyrite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/franckeite.json",
+      "code": "franckeite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 1,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-franckeite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-limestone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-dolostone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-claystone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-mudstone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-sandstone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-shale": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-chert": [
+            "poor",
+            "medium"
+          ],
+          "rock-quartzite": [
+            "poor",
+            "medium"
+          ],
+          "rock-slate": [
+            "poor"
+          ],
+          "rock-amphibolite": [
+            "poor"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "limestone",
+          "dolostone",
+          "claystone",
+          "mudstone",
+          "sandstone",
+          "shale",
+          "chert",
+          "quartzite",
+          "slate",
+          "amphibolite"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.48
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 5,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      },
+      "surface_block": {
+        "code": "looseores-franckeite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/freibergite.json",
+      "code": "freibergite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 2,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-freibergite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-bauxite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-phyllite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-slate": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-redmarble": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-greenmarble": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-whitemarble": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-schist": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-gneiss": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-migmatite": [
+            "poor"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "bauxite",
+          "phyllite",
+          "slate",
+          "redmarble",
+          "greenmarble",
+          "whitemarble",
+          "schist",
+          "gneiss",
+          "migmatite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.5
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 2,
+        "var": 1
+      },
+      "thickness": {
+        "dist": "gaussian",
+        "avg": 1.2,
+        "var": 3
+      },
+      "surface_block": {
+        "code": "looseores-freibergite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/hemimorphite.json",
+      "code": "hemimorphite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 8,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-hemimorphite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-phyllite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-slate": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-gneiss": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-quartzite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-schist": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-redmarble": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-greenmarble": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-whitemarble": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-migmatite": [
+            "poor",
+            "medium"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "phyllite",
+          "slate",
+          "gneiss",
+          "quartzite",
+          "schist",
+          "redmarble",
+          "greenmarble",
+          "whitemarble",
+          "migmatite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.4
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 7,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 2
+      },
+      "surface_block": {
+        "code": "looseores-hemimorphite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/nativeplatinum.json",
+      "code": "nativeplatinum",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.5,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-nativeplatinum-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-gabbro": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-basalt": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-peridotite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "basalt",
+          "gabbro",
+          "peridotite"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.48
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 3,
+        "var": 1
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      },
+      "surface_block": {
+        "code": "looseores-nativeplatinum-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/pyrite.json",
+      "code": "pyrite",
+      "parent_deposit": null,
+      "generator": "disc-followsealevel",
+      "enabled": true,
+      "tries_per_chunk": 3,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-pyrite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-limestone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-dolostone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-chalk": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-rhyolite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-granite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-andesite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-diorite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-basalt": [
+            "poor",
+            "medium"
+          ],
+          "rock-gabbro": [
+            "poor",
+            "medium"
+          ],
+          "rock-phyllite": [
+            "poor",
+            "medium"
+          ],
+          "rock-schist": [
+            "poor"
+          ],
+          "rock-amphibolite": [
+            "poor"
+          ],
+          "rock-claystone": [
+            "poor",
+            "medium"
+          ],
+          "rock-mudstone": [
+            "poor",
+            "medium"
+          ],
+          "rock-quartzite": [
+            "poor",
+            "medium"
+          ],
+          "rock-chert": [
+            "poor",
+            "medium"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "limestone",
+          "dolostone",
+          "chalk",
+          "rhyolite",
+          "granite",
+          "andesite",
+          "diorite",
+          "basalt",
+          "gabbro",
+          "phyllite",
+          "schist",
+          "amphibolite",
+          "claystone",
+          "mudstone",
+          "quartzite",
+          "chert"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.48
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 12,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      },
+      "surface_block": {
+        "code": "looseores-pyrite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/smithsonite.json",
+      "code": "smithsonite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 4,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-smithsonite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-limestone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-shale": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-claystone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-sandstone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-chalk": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-chert": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-conglomerate": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-dolostone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-mudstone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-siltstone": [
+            "poor",
+            "medium",
+            "rich"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "limestone",
+          "shale",
+          "claystone",
+          "sandstone",
+          "chalk",
+          "chert",
+          "conglomerate",
+          "dolostone",
+          "mudstone",
+          "siltstone"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.45,
+        "var": 0.4
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 7,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "uniform",
+        "avg": 1,
+        "var": 2
+      },
+      "surface_block": {
+        "code": "looseores-smithsonite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/sperrylite.json",
+      "code": "sperrylite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.5,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-sperrylite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-gabbro": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-basalt": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-peridotite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "basalt",
+          "gabbro",
+          "peridotite"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.48
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 3,
+        "var": 1
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      },
+      "surface_block": {
+        "code": "looseores-sperrylite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/teallite.json",
+      "code": "teallite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 2,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-teallite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-limestone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-dolostone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-claystone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-mudstone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-sandstone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-shale": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-chert": [
+            "poor",
+            "medium"
+          ],
+          "rock-quartzite": [
+            "poor",
+            "medium"
+          ],
+          "rock-slate": [
+            "poor"
+          ],
+          "rock-amphibolite": [
+            "poor"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "limestone",
+          "dolostone",
+          "claystone",
+          "mudstone",
+          "sandstone",
+          "shale",
+          "chert",
+          "quartzite",
+          "slate",
+          "amphibolite"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.48
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 3,
+        "var": 2
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      },
+      "surface_block": {
+        "code": "looseores-teallite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/tetrahedritewithsilver.json",
+      "code": "tetrahedrite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 7,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-tetrahedrite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-bauxite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-phyllite": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-slate": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-redmarble": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-greenmarble": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-whitemarble": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-schist": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-gneiss": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-migmatite": [
+            "poor"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "bauxite",
+          "phyllite",
+          "slate",
+          "redmarble",
+          "greenmarble",
+          "whitemarble",
+          "schist",
+          "gneiss",
+          "migmatite"
+        ]
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.35
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 4,
+        "var": 6
+      },
+      "thickness": {
+        "dist": "gaussian",
+        "avg": 1.2,
+        "var": 3
+      },
+      "surface_block": {
+        "code": "looseores-tetrahedrite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/tetrahedritewithsilver.json",
+      "code": "freibergite",
+      "parent_deposit": "tetrahedrite",
+      "generator": "childdeposit-pointcloud",
+      "enabled": true,
+      "tries_per_chunk": 40,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-freibergite-{rock}",
+        "name": "grade",
+        "allowedVariants": [
+          "poor",
+          "medium",
+          "rich",
+          "bountiful"
+        ]
+      },
+      "inblock": null,
+      "grade_distribution": null,
+      "y_position": null,
+      "radius": {
+        "dist": "gaussian",
+        "avg": 2,
+        "var": 1
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2,
+        "var": 1
+      },
+      "surface_block": {
+        "code": "looseores-freibergite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/vanadinite.json",
+      "code": "vanadinite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 15,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-vanadinite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-limestone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-dolostone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-claystone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-mudstone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-sandstone": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-shale": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-chert": [
+            "poor",
+            "medium"
+          ],
+          "rock-quartzite": [
+            "poor",
+            "medium"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "limestone",
+          "dolostone",
+          "claystone",
+          "mudstone",
+          "sandstone",
+          "shale",
+          "chert",
+          "quartzite"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.48
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 7,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      },
+      "surface_block": {
+        "code": "looseores-vanadinite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/metalore/wulfenite.json",
+      "code": "wulfenite",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 15,
+      "with_ore_map": true,
+      "placeblock": {
+        "code": "ore-*-wulfenite-{rock}",
+        "name": "grade",
+        "allowedVariantsByInBlock": {
+          "rock-limestone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-dolostone": [
+            "poor",
+            "medium",
+            "rich",
+            "bountiful"
+          ],
+          "rock-chalk": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-granite": [
+            "poor",
+            "medium",
+            "rich"
+          ],
+          "rock-sandstone": [
+            "poor",
+            "medium"
+          ],
+          "rock-quartzite": [
+            "poor",
+            "medium"
+          ],
+          "rock-conglomerate": [
+            "poor",
+            "medium"
+          ],
+          "rock-claystone": [
+            "poor"
+          ],
+          "rock-mudstone": [
+            "poor"
+          ]
+        }
+      },
+      "inblock": {
+        "code": "rock-*",
+        "name": "rock",
+        "allowedVariants": [
+          "limestone",
+          "dolostone",
+          "chalk",
+          "granite",
+          "sandstone",
+          "quartzite",
+          "conglomerate",
+          "claystone",
+          "mudstone"
+        ]
+      },
+      "grade_distribution": "RandomPlusDepthBonus",
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.5,
+        "var": 0.48
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 5,
+        "var": 3
+      },
+      "thickness": {
+        "dist": "stronginvexp",
+        "avg": 1,
+        "var": 2
+      },
+      "surface_block": {
+        "code": "looseores-wulfenite-{rock}-free"
+      }
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/other/bogiron.json",
+      "code": "bogironlarge",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 1,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "bogiron"
+      },
+      "inblock": {
+        "code": "muddygravel"
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.94,
+        "var": 0.05
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 2,
+        "var": 3
+      },
+      "thickness": {
+        "avg": 1.2,
+        "var": 0.3
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/other/bogiron.json",
+      "code": "bogironsmall",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 4,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "bogiron"
+      },
+      "inblock": {
+        "code": "muddygravel"
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.97,
+        "var": 0.03
+      },
+      "radius": {
+        "dist": "uniform",
+        "avg": 2,
+        "var": 1
+      },
+      "thickness": {
+        "avg": 1,
+        "var": 0.2
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/rock/decorativestonesgeneration.json",
+      "code": "jade",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.1,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rock-jade"
+      },
+      "inblock": {
+        "code": "rock-schist"
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.8
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 24,
+        "var": 12
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2.5,
+        "var": 6
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/rock/decorativestonesgeneration.json",
+      "code": "jade",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.1,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rock-jade"
+      },
+      "inblock": {
+        "code": "rock-gneiss"
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.8
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 24,
+        "var": 12
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2.5,
+        "var": 6
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/rock/decorativestonesgeneration.json",
+      "code": "jade",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 0.1,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rock-jade"
+      },
+      "inblock": {
+        "code": "rock-migmatite"
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.8
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 24,
+        "var": 12
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2.5,
+        "var": 6
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/rock/decorativestonesgeneration.json",
+      "code": "jade",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 2,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rock-jade"
+      },
+      "inblock": {
+        "code": "rock-amphibolite"
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.8
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 24,
+        "var": 12
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 2.5,
+        "var": 6
+      },
+      "surface_block": null
+    },
+    {
+      "provider": "geoaddons_1.4.8",
+      "source_asset": "assets/game/worldgen/deposits/rock/decorativestonesgeneration.json",
+      "code": "jasper",
+      "parent_deposit": null,
+      "generator": "disc-followsurface",
+      "enabled": true,
+      "tries_per_chunk": 2,
+      "with_ore_map": null,
+      "placeblock": {
+        "code": "rock-jasper"
+      },
+      "inblock": {
+        "code": "rock-chert"
+      },
+      "grade_distribution": null,
+      "y_position": {
+        "dist": "uniform",
+        "avg": 0.4,
+        "var": 0.8
+      },
+      "radius": {
+        "dist": "gaussian",
+        "avg": 24,
+        "var": 12
+      },
+      "thickness": {
+        "dist": "invexp",
+        "avg": 1.5,
+        "var": 3
+      },
+      "surface_block": null
+    }
+  ],
+  "parse_errors": []
+}

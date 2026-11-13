@@ -1,0 +1,2515 @@
+{
+ "built": "2026-11-08",
+ "catalogueBytes": 1304432,
+ "deposits": 1933,
+ "areas": 94,
+ "byLayer": {
+  "Ag": 56,
+  "Bi": 4,
+  "Cu": 1244,
+  "Hg": 17,
+  "Mo": 23,
+  "Pb": 48,
+  "Sb": 8,
+  "Sn": 56,
+  "W": 26,
+  "Zn": 451
+ },
+ "bySource": {
+  "earth-named-2026": 212,
+  "usgs-sedexmvt-2009": 231,
+  "usgs-vms-2009": 865,
+  "usgs-gcra-pcu": 536,
+  "usgs-gcra-sedcu": 89
+ },
+ "byShape": {
+  "veins": 85,
+  "stock": 593,
+  "lens": 1239,
+  "blanket": 16
+ },
+ "quality": {
+  "B": 141,
+  "C": 162,
+  "A": 1630
+ },
+ "containedMt": {
+  "Pb": 344.3443,
+  "Zn": 799.8786,
+  "Ag": 1.9273,
+  "Sn": 22.5502,
+  "Cu": 2493.1497,
+  "Sb": 3.3815,
+  "Bi": 0.5307,
+  "W": 9.8923,
+  "Mo": 69.4511,
+  "Hg": 0.7887
+ },
+ "containedByCountry": {
+  "Pb": {
+   "Australia": 81.3059,
+   "United States": 40.227,
+   "Canada": 36.3241,
+   "Russia": 32.4395,
+   "China": 26.9453,
+   "Spain": 12.0322,
+   "India": 11.1006,
+   "Mexico": 10.8523,
+   "Kazakhstan": 10.7762,
+   "Poland": 8.8,
+   "Iran": 7.5284,
+   "South Africa": 7.2263,
+   "Peru": 6.3105,
+   "Germany": 5.292,
+   "Morocco": 4.23
+  },
+  "Zn": {
+   "Australia": 134.6435,
+   "Canada": 114.6499,
+   "China": 86.5077,
+   "Russia": 86.2327,
+   "United States": 63.543,
+   "India": 35.8275,
+   "Kazakhstan": 31.5796,
+   "Spain": 28.3045,
+   "Poland": 21.0,
+   "Peru": 20.7433,
+   "Iran": 18.3577,
+   "South Africa": 16.2584,
+   "Mexico": 15.2567,
+   "Ireland": 14.8088,
+   "Germany": 10.245
+  },
+  "Ag": {
+   "United States": 0.236,
+   "Mexico": 0.2284,
+   "Poland": 0.2209,
+   "Chile": 0.2061,
+   "Australia": 0.1779,
+   "Russia": 0.1222,
+   "Canada": 0.1221,
+   "Peru": 0.0956,
+   "China": 0.083,
+   "Bolivia": 0.0643,
+   "Kazakhstan": 0.0418,
+   "Spain": 0.0374,
+   "Germany": 0.0336,
+   "Panama": 0.0271,
+   "Iran": 0.0229
+  },
+  "Sn": {
+   "China": 5.75,
+   "Indonesia": 3.45,
+   "Malaysia": 3.16,
+   "Bolivia": 2.77,
+   "Thailand": 1.2,
+   "Peru": 1.125,
+   "United Kingdom": 0.7919,
+   "DR Congo": 0.657,
+   "Australia": 0.62,
+   "Russia": 0.6,
+   "Germany": 0.478,
+   "Brazil": 0.4546,
+   "Nigeria": 0.45,
+   "Czechia": 0.4025,
+   "Myanmar": 0.265
+  },
+  "Cu": {
+   "Chile": 704.6269,
+   "United States": 384.3684,
+   "Peru": 127.9123,
+   "Democratic Republic of the Congo": 127.4149,
+   "Australia": 96.6776,
+   "Canada": 94.3445,
+   "Zambia": 84.5519,
+   "China": 80.9883,
+   "Poland": 74.6242,
+   "Kazakhstan": 71.5108,
+   "Mexico": 62.7597,
+   "Russia": 54.9758,
+   "Philippines": 54.0716,
+   "Mongolia": 47.4822,
+   "Indonesia": 38.3728
+  },
+  "Sb": {
+   "China": 2.364,
+   "South Africa": 0.375,
+   "Kyrgyzstan": 0.26,
+   "Australia": 0.16,
+   "Russia": 0.08,
+   "Mexico": 0.045,
+   "United States": 0.042,
+   "Canada": 0.035,
+   "Ukraine": 0.011,
+   "Czechia": 0.0095
+  },
+  "Bi": {
+   "China": 0.28,
+   "Canada": 0.0782,
+   "Vietnam": 0.0765,
+   "Bolivia": 0.03,
+   "South Korea": 0.03,
+   "Germany": 0.021,
+   "Uzbekistan": 0.015
+  },
+  "W": {
+   "China": 6.5844,
+   "Canada": 0.7219,
+   "Australia": 0.4424,
+   "Russia": 0.4075,
+   "United Kingdom": 0.3996,
+   "South Korea": 0.3375,
+   "USA": 0.26,
+   "Vietnam": 0.17,
+   "Czechia": 0.154,
+   "Portugal": 0.15,
+   "Austria": 0.075,
+   "Bolivia": 0.07,
+   "Myanmar": 0.07,
+   "Germany": 0.023,
+   "Spain": 0.018
+  },
+  "Mo": {
+   "Chile": 21.7267,
+   "United States": 12.2038,
+   "China": 11.8372,
+   "USA": 5.2765,
+   "Peru": 3.7005,
+   "Canada": 2.3622,
+   "Armenia": 1.8359,
+   "Russian Federation": 1.4643,
+   "Mexico": 1.2833,
+   "Mongolia": 1.0258,
+   "Panama": 0.996,
+   "Argentina": 0.8683,
+   "Iran": 0.755,
+   "Philippines": 0.7004,
+   "Kazakhstan": 0.6675
+  },
+  "Hg": {
+   "Spain": 0.278,
+   "Slovenia": 0.143,
+   "Italy": 0.0896,
+   "United States": 0.0768,
+   "Peru": 0.06,
+   "Ukraine": 0.055,
+   "Kyrgyzstan": 0.0455,
+   "China": 0.024,
+   "Algeria": 0.0108,
+   "Turkey": 0.006
+  }
+ },
+ "tierShareOfTonnage": {
+  "Ag": {
+   "rich": 0.086,
+   "bountiful": 0.0,
+   "medium": 0.07,
+   "poor": 0.843
+  },
+  "Pb": {
+   "poor": 0.367,
+   "null": 0.008,
+   "bountiful": 0.05,
+   "rich": 0.248,
+   "medium": 0.326
+  },
+  "Zn": {
+   "poor": 0.267,
+   "null": 0.006,
+   "medium": 0.484,
+   "rich": 0.222,
+   "bountiful": 0.021
+  },
+  "Au": {
+   "poor": 0.967,
+   "medium": 0.03,
+   "rich": 0.003,
+   "bountiful": 0.0
+  },
+  "Sn": {
+   "poor": 0.978,
+   "rich": 0.011,
+   "bountiful": 0.001,
+   "medium": 0.01
+  },
+  "Sb": {
+   "poor": 0.153,
+   "medium": 0.842,
+   "bountiful": 0.005
+  },
+  "Cu": {
+   "medium": 0.715,
+   "poor": 0.259,
+   "rich": 0.025,
+   "bountiful": 0.001,
+   "null": 0.0
+  },
+  "Bi": {
+   "medium": 0.643,
+   "bountiful": 0.014,
+   "rich": 0.053,
+   "poor": 0.29
+  },
+  "W": {
+   "medium": 0.353,
+   "poor": 0.61,
+   "rich": 0.037
+  },
+  "Mo": {
+   "poor": 0.388,
+   "medium": 0.53,
+   "rich": 0.082
+  },
+  "U": {
+   "poor": 1.0
+  },
+  "Fe": {
+   "rich": 1.0
+  },
+  "Hg": {
+   "bountiful": 0.068,
+   "rich": 0.309,
+   "medium": 0.623
+  },
+  "V": {
+   "rich": 1.0
+  }
+ },
+ "top20ByValue": [
+  {
+   "id": "usgs-gcra-pcu:311",
+   "name": "El Teniente",
+   "country": "Chile",
+   "layer": "Cu",
+   "mt": 20731.0,
+   "grade": 0.62,
+   "unit": "%",
+   "containedMt": 128.532
+  },
+  {
+   "id": "usgs-gcra-pcu:286",
+   "name": "Chuquicamata",
+   "country": "Chile",
+   "layer": "Cu",
+   "mt": 21277.0,
+   "grade": 0.592,
+   "unit": "%",
+   "containedMt": 125.96
+  },
+  {
+   "id": "usgs-gcra-pcu:310",
+   "name": "Los Bronces/Rio Blanco",
+   "country": "Chile",
+   "layer": "Cu",
+   "mt": 16816.0,
+   "grade": 0.601,
+   "unit": "%",
+   "containedMt": 101.064
+  },
+  {
+   "id": "usgs-gcra-pcu:297",
+   "name": "Escondida",
+   "country": "Chile",
+   "layer": "Cu",
+   "mt": 11158.0,
+   "grade": 0.769,
+   "unit": "%",
+   "containedMt": 85.805
+  },
+  {
+   "id": "usgs-gcra-sedcu:10555",
+   "name": "Lubin-Sieroszowice (Kupferschiefer)",
+   "country": "Poland",
+   "layer": "Cu",
+   "mt": 3612.5,
+   "grade": 1.99,
+   "unit": "%",
+   "containedMt": 71.889
+  },
+  {
+   "id": "named:cu-olympic-dam",
+   "name": "Olympic Dam",
+   "country": "Australia",
+   "layer": "Cu",
+   "mt": 10800.0,
+   "grade": 0.6,
+   "unit": "%",
+   "containedMt": 64.8
+  },
+  {
+   "id": "named:kamoa-kakula",
+   "name": "Kamoa-Kakula (Copperbelt)",
+   "country": "Democratic Republic of the Congo",
+   "layer": "Cu",
+   "mt": 2597,
+   "grade": 2.297,
+   "unit": "%",
+   "containedMt": 59.653
+  },
+  {
+   "id": "usgs-gcra-pcu:308",
+   "name": "Los Pelambres",
+   "country": "Chile",
+   "layer": "Cu",
+   "mt": 7458.0,
+   "grade": 0.617,
+   "unit": "%",
+   "containedMt": 46.016
+  },
+  {
+   "id": "usgs-gcra-pcu:8205",
+   "name": "Oyu Tolgoi",
+   "country": "Mongolia",
+   "layer": "Cu",
+   "mt": 3754.56,
+   "grade": 0.98,
+   "unit": "%",
+   "containedMt": 36.795
+  },
+  {
+   "id": "usgs-gcra-pcu:24",
+   "name": "Continental/Butte",
+   "country": "United States",
+   "layer": "Cu",
+   "mt": 5220.0,
+   "grade": 0.673,
+   "unit": "%",
+   "containedMt": 35.131
+  },
+  {
+   "id": "usgs-gcra-pcu:77",
+   "name": "Morenci-Metcalf",
+   "country": "United States",
+   "layer": "Cu",
+   "mt": 6470.0,
+   "grade": 0.524,
+   "unit": "%",
+   "containedMt": 33.903
+  },
+  {
+   "id": "usgs-gcra-pcu:80",
+   "name": "Safford",
+   "country": "United States",
+   "layer": "Cu",
+   "mt": 7260.0,
+   "grade": 0.441,
+   "unit": "%",
+   "containedMt": 32.017
+  },
+  {
+   "id": "usgs-gcra-pcu:4",
+   "name": "Pebble",
+   "country": "United States",
+   "layer": "Cu",
+   "mt": 7510.0,
+   "grade": 0.416,
+   "unit": "%",
+   "containedMt": 31.242
+  },
+  {
+   "id": "usgs-gcra-pcu:178",
+   "name": "Cananea",
+   "country": "Mexico",
+   "layer": "Cu",
+   "mt": 7140.0,
+   "grade": 0.42,
+   "unit": "%",
+   "containedMt": 29.988
+  },
+  {
+   "id": "usgs-gcra-pcu:36",
+   "name": "Bingham",
+   "country": "United States",
+   "layer": "Cu",
+   "mt": 3230.0,
+   "grade": 0.882,
+   "unit": "%",
+   "containedMt": 28.489
+  },
+  {
+   "id": "named:cu-resolution",
+   "name": "Resolution",
+   "country": "United States",
+   "layer": "Cu",
+   "mt": 1787.0,
+   "grade": 1.54,
+   "unit": "%",
+   "containedMt": 27.52
+  },
+  {
+   "id": "named:cu-udokan",
+   "name": "Udokan",
+   "country": "Russia",
+   "layer": "Cu",
+   "mt": 2700.0,
+   "grade": 1.0,
+   "unit": "%",
+   "containedMt": 27.0
+  },
+  {
+   "id": "usgs-gcra-pcu:281",
+   "name": "Collahuasi",
+   "country": "Chile",
+   "layer": "Cu",
+   "mt": 3100.0,
+   "grade": 0.86,
+   "unit": "%",
+   "containedMt": 26.66
+  },
+  {
+   "id": "usgs-gcra-pcu:538",
+   "name": "Grasberg",
+   "country": "Indonesia",
+   "layer": "Cu",
+   "mt": 4000.0,
+   "grade": 0.6,
+   "unit": "%",
+   "containedMt": 24.0
+  },
+  {
+   "id": "usgs-gcra-pcu:411",
+   "name": "Almalyk Group",
+   "country": "Uzbekistan",
+   "layer": "Cu",
+   "mt": 6080.0,
+   "grade": 0.39,
+   "unit": "%",
+   "containedMt": 23.712
+  }
+ ],
+ "checks": {
+  "offLand": [
+   {
+    "id": "usgs-vms-2009:1481",
+    "name": "Miles Cove",
+    "lat": 49.5394,
+    "lon": -55.7906,
+    "country": "Canada"
+   },
+   {
+    "id": "usgs-vms-2009:1007",
+    "name": "Svano",
+    "lat": 61.5017,
+    "lon": 5.0822,
+    "country": "Norway"
+   },
+   {
+    "id": "usgs-vms-2009:741",
+    "name": "Grevdal",
+    "lat": 60.0103,
+    "lon": 5.8833,
+    "country": "Norway"
+   },
+   {
+    "id": "usgs-vms-2009:1042",
+    "name": "Valaheien",
+    "lat": 60.0897,
+    "lon": 5.9969,
+    "country": "Norway"
+   }
+  ],
+  "outsideCountry": [],
+  "ageConflicts": [
+   {
+    "id": "usgs-gcra-pcu:3577",
+    "name": "Tujuh-Bukit",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-sedcu:o1201",
+    "name": "Boleo",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:59",
+    "name": "Sheep Mountain",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:97",
+    "name": "Sunnyside",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:71",
+    "name": "Chilito",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:81",
+    "name": "Sanchez",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:73",
+    "name": "Vekol Hills",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:485",
+    "name": "Botilao",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:500",
+    "name": "Lumbay",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:25",
+    "name": "Bobcat Gulch",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:503",
+    "name": "Ino-Capayang",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:17",
+    "name": "Gold Mountain",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:483",
+    "name": "Kilongolao",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:486",
+    "name": "Hale-Mayabo",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:3197",
+    "name": "Colnic",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:3122",
+    "name": "Valja Strz",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:3112",
+    "name": "Popovo Dere",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-vms-2009:1630",
+    "name": "Karchiginskoe",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:3108",
+    "name": "Karlievo",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:513",
+    "name": "Suguibon",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:57",
+    "name": "Pine Flat",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:58",
+    "name": "Squaw Peak",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:3811",
+    "name": "Kuru Tegerek",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:507",
+    "name": "Balak-5",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-gcra-pcu:10",
+    "name": "Carl Creek",
+    "why": "no age"
+   },
+   {
+    "id": "usgs-sedexmvt-2009:86",
+    "name": "Ganesh Himal",
+    "why": "no age"
+   }
+  ],
+  "shapeLayerConflicts": [],
+  "coordinateRepairs": [
+   {
+    "id": "usgs-gcra-pcu:618",
+    "name": "Constancia",
+    "from": [
+     14.4617,
+     -71.7667
+    ],
+    "to": [
+     -14.4617,
+     -71.7667
+    ],
+    "how": "flip_lat"
+   },
+   {
+    "id": "usgs-sedexmvt-2009:220",
+    "name": "Touissit-Bou Beker",
+    "from": [
+     34.3,
+     -1.48
+    ],
+    "to": [
+     34.46,
+     -1.76
+    ],
+    "how": "reviewed: Touissit-Bou Beker mines lie on the Moroccan side of the border (source point is 25 km east, in Algeria)"
+   },
+   {
+    "id": "usgs-sedexmvt-2009:6",
+    "name": "Allenwood West",
+    "from": [
+     53.29,
+     6.9
+    ],
+    "to": [
+     53.29,
+     -6.9
+    ],
+    "how": "flip_lon"
+   },
+   {
+    "id": "usgs-sedexmvt-2009:187",
+    "name": "Rickardstown",
+    "from": [
+     53.9,
+     6.82
+    ],
+    "to": [
+     53.9,
+     -6.82
+    ],
+    "how": "flip_lon"
+   },
+   {
+    "id": "usgs-sedexmvt-2009:33",
+    "name": "Boston Hill",
+    "from": [
+     53.22,
+     6.94
+    ],
+    "to": [
+     53.22,
+     -6.94
+    ],
+    "how": "flip_lon"
+   },
+   {
+    "id": "usgs-vms-2009:1375",
+    "name": "Chance",
+    "from": [
+     48.7042,
+     81.39
+    ],
+    "to": [
+     48.7042,
+     -81.39
+    ],
+    "how": "flip_lon"
+   },
+   {
+    "id": "usgs-vms-2009:1353",
+    "name": "Copper King",
+    "from": [
+     34.5697,
+     113.2292
+    ],
+    "to": [
+     34.5697,
+     -113.2292
+    ],
+    "how": "flip_lon"
+   }
+  ]
+ },
+ "log": {
+  "porphyry_no_tonnage (heat-map background only)": 1679,
+  "porphyry_no_grade": 1,
+  "sedcu_no_tonnage (heat-map background only)": 1016,
+  "vms_no_tonnage": 222,
+  "sedexmvt_no_grade": 8,
+  "usgs_cross_database_duplicate": 2,
+  "named_q_lowered_to_C (recalled or estimated figure)": 8,
+  "named_duplicate_of_usgs (dropped, history kept)": 11,
+  "usgs_entry_inside_larger_named_district (replaced)": 3,
+  "owned by precious-gems (left out)": 4,
+  "gold share added": 810,
+  "uranium share added": 1,
+  "gossan (limonite) added": 2,
+  "vanadinite share added": 1
+ },
+ "dropped": [
+  {
+   "id": "usgs-gcra-pcu-pc:10",
+   "why": "same place as usgs-vms-2009:765"
+  },
+  {
+   "id": "usgs-vms-2009:855",
+   "why": "same place as usgs-gcra-pcu:487"
+  },
+  {
+   "file": "named-hg-sb-ag-cu.csv",
+   "id": "named:pb-broken-hill",
+   "why": "duplicate of usgs-sedexmvt-2009:37 Broken Hill"
+  },
+  {
+   "id": "usgs-gcra-pcu:61",
+   "why": "inside the larger named district named:cu-resolution Resolution"
+  },
+  {
+   "file": "named-hg-sb-ag-cu.csv",
+   "id": "named:pb-bawdwin",
+   "why": "duplicate of usgs-vms-2009:617 Bawdwin"
+  },
+  {
+   "id": "usgs-sedexmvt-2009:145",
+   "why": "inside the larger named district named:zn-zawar Zawar"
+  },
+  {
+   "id": "usgs-vms-2009:1206",
+   "why": "inside the larger named district named:cu-mantoverde Mantoverde"
+  },
+  {
+   "file": "named-additions.csv",
+   "id": "named:pbzn-rammelsberg",
+   "why": "duplicate of usgs-sedexmvt-2009:179 Rammelsberg"
+  },
+  {
+   "file": "named-hg-sb-ag-cu.csv",
+   "id": "named:cu-rio-tinto",
+   "why": "duplicate of usgs-vms-2009:953 Rio Tinto"
+  },
+  {
+   "file": "named-sn-w-mo-bi.csv",
+   "id": "named:mo-jinduicheng",
+   "why": "duplicate of usgs-gcra-pcu:1010 Jinduicheng"
+  },
+  {
+   "file": "named-hg-sb-ag-cu.csv",
+   "id": "named:cu-mavrovouni",
+   "why": "duplicate of usgs-vms-2009:860 Mavrovouni"
+  },
+  {
+   "file": "named-hg-sb-ag-cu.csv",
+   "id": "named:cu-faynan",
+   "why": "duplicate of usgs-gcra-sedcu:10913 Feinan"
+  },
+  {
+   "file": "named-hg-sb-ag-cu.csv",
+   "id": "named:cu-ergani",
+   "why": "duplicate of usgs-vms-2009:1053 Weiss"
+  },
+  {
+   "file": "named-hg-sb-ag-cu.csv",
+   "id": "named:cu-timna",
+   "why": "duplicate of usgs-gcra-sedcu:10906 Timna"
+  },
+  {
+   "file": "named-hg-sb-ag-cu.csv",
+   "id": "named:cu-skouriotissa",
+   "why": "duplicate of usgs-vms-2009:985 Skouriotissa"
+  },
+  {
+   "file": "named-hg-sb-ag-cu.csv",
+   "id": "named:ag-cannington",
+   "why": "duplicate of usgs-sedexmvt-2009:44 Cannington"
+  },
+  {
+   "id": "usgs-gcra-pcu:468",
+   "why": "owned by precious-gems as pg:au-zijinshan: one Au-Cu system; precious lists it (600 Mt at 0.5 g/t) with a chalcopyrite share"
+  },
+  {
+   "id": "usgs-vms-2009:881",
+   "why": "owned by precious-gems as pg:au-mount-morgan: Au 3.8 g/t adds more value than Cu 0.75 %; precious lists it with a chalcopyrite share"
+  },
+  {
+   "id": "usgs-gcra-pcu:359",
+   "why": "owned by precious-gems as pg:au-barza-brad: Musariu is inside the Barza-Brad (Ruda-Musariu) gold district; Au adds more value than Cu 0.2 %"
+  },
+  {
+   "id": "named:ag-jachymov",
+   "why": "owned by precious-gems as pg:u-jachymov: the same vein system; uranium is the main value"
+  }
+ ],
+ "nearOtherGroups": [
+  {
+   "id": "usgs-vms-2009:1277",
+   "name": "Outokumpu",
+   "other": "pg:ga-outokumpu",
+   "otherName": "Outokumpu uvarovite",
+   "group": "precious-gems"
+  },
+  {
+   "id": "named:bi-schneeberg",
+   "name": "Schneeberg (Co-Ni-Bi-Ag veins)",
+   "other": "pg:tu-zschorlau",
+   "otherName": "Zschorlau (schorl)",
+   "group": "precious-gems"
+  },
+  {
+   "id": "usgs-vms-2009:1060",
+   "name": "Wildcat",
+   "other": "pg:au-baguio",
+   "otherName": "Baguio district",
+   "group": "precious-gems"
+  },
+  {
+   "id": "usgs-gcra-pcu:354",
+   "name": "Rosia Poieni",
+   "other": "pg:au-rosia-montana",
+   "otherName": "Rosia Montana (Alburnus Maior)",
+   "group": "precious-gems"
+  },
+  {
+   "id": "usgs-gcra-pcu:361",
+   "name": "Bolcana",
+   "other": "pg:au-sacaramb",
+   "otherName": "Sacaramb (Nagyag) tellurides",
+   "group": "precious-gems"
+  },
+  {
+   "id": "named:bi-schneeberg",
+   "name": "Schneeberg (Co-Ni-Bi-Ag veins)",
+   "other": "pg:u-schlema-alberoda",
+   "otherName": "Schlema-Alberoda",
+   "group": "precious-gems"
+  },
+  {
+   "id": "named:ag-pribram",
+   "name": "Příbram (Březové Hory)",
+   "other": "pg:u-pribram",
+   "otherName": "Pribram",
+   "group": "precious-gems"
+  },
+  {
+   "id": "usgs-vms-2009:1186",
+   "name": "Cerro de Maimon",
+   "other": "usgs-laterite-2011:40",
+   "otherName": "Cumpié Hill",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-gcra-pcu:514",
+   "name": "Luna-Asiga",
+   "other": "usgs-laterite-2011:88",
+   "otherName": "Agata",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:797",
+   "name": "Keystone-Union",
+   "other": "usgs-podchrome-2012:63",
+   "otherName": "Stone",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:886",
+   "name": "North Keystone",
+   "other": "usgs-podchrome-2012:63",
+   "otherName": "Stone",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:797",
+   "name": "Keystone-Union",
+   "other": "usgs-podchrome-2012:64",
+   "otherName": "Walker 1",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:886",
+   "name": "North Keystone",
+   "other": "usgs-podchrome-2012:64",
+   "otherName": "Walker 1",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:797",
+   "name": "Keystone-Union",
+   "other": "usgs-podchrome-2012:72",
+   "otherName": "Walker 2",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:886",
+   "name": "North Keystone",
+   "other": "usgs-podchrome-2012:72",
+   "otherName": "Walker 2",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:891",
+   "name": "Newton",
+   "other": "usgs-podchrome-2012:74",
+   "otherName": "Ellis Property",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:891",
+   "name": "Newton",
+   "other": "usgs-podchrome-2012:75",
+   "otherName": "Courtwright Property",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:676",
+   "name": "Copper Hill",
+   "other": "usgs-podchrome-2012:78",
+   "otherName": "Detert Property",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:676",
+   "name": "Copper Hill",
+   "other": "usgs-podchrome-2012:97",
+   "otherName": "Hoff Property",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:676",
+   "name": "Copper Hill",
+   "other": "usgs-podchrome-2012:98",
+   "otherName": "Helemar Claim",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:676",
+   "name": "Copper Hill",
+   "other": "usgs-podchrome-2012:99",
+   "otherName": "Murphy",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:637",
+   "name": "Blue Ledge",
+   "other": "usgs-podchrome-2012:274",
+   "otherName": "Ladd",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:637",
+   "name": "Blue Ledge",
+   "other": "usgs-podchrome-2012:275",
+   "otherName": "Fairview",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:939",
+   "name": "Queen of Bronze",
+   "other": "usgs-podchrome-2012:434",
+   "otherName": "Black Nugget",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:939",
+   "name": "Queen of Bronze",
+   "other": "usgs-podchrome-2012:435",
+   "otherName": "Ali Baba",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:939",
+   "name": "Queen of Bronze",
+   "other": "usgs-podchrome-2012:436",
+   "otherName": "Esterly",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:939",
+   "name": "Queen of Bronze",
+   "other": "usgs-podchrome-2012:441",
+   "otherName": "Happy Camp",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:939",
+   "name": "Queen of Bronze",
+   "other": "usgs-podchrome-2012:446",
+   "otherName": "Wildcat Claim",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:767",
+   "name": "Huntingdon",
+   "other": "usgs-podchrome-2012:513",
+   "otherName": "Stark",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:660",
+   "name": "Carawison",
+   "other": "usgs-podchrome-2012:1008",
+   "otherName": "Tigbatang",
+   "group": "iron-ferro"
+  },
+  {
+   "id": "usgs-vms-2009:643",
+   "name": "Bongbongan",
+   "other": "usgs-podchrome-2012:1008",
+   "otherName": "Tigbatang",
+   "group": "iron-ferro"
+  }
+ ],
+ "preWorked1318": [
+  {
+   "id": "named:hg-sizma",
+   "name": "Sızma-Ladik",
+   "firstWorked": -6000
+  },
+  {
+   "id": "named:cu-isle-royale-island",
+   "name": "Isle Royale ancient pits (Minong)",
+   "firstWorked": -5000
+  },
+  {
+   "id": "named:cu-ai-bunar",
+   "name": "Ai Bunar",
+   "firstWorked": -5000
+  },
+  {
+   "id": "named:cu-rudna-glava",
+   "name": "Rudna Glava",
+   "firstWorked": -5000
+  },
+  {
+   "id": "usgs-gcra-sedcu:10913",
+   "name": "Feinan",
+   "firstWorked": -4500
+  },
+  {
+   "id": "usgs-gcra-sedcu:10906",
+   "name": "Timna",
+   "firstWorked": -4000
+  },
+  {
+   "id": "named:ag-laurion",
+   "name": "Laurion (Lavrion)",
+   "firstWorked": -3200
+  },
+  {
+   "id": "usgs-vms-2009:953",
+   "name": "Rio Tinto",
+   "firstWorked": -3000
+  },
+  {
+   "id": "usgs-vms-2009:1053",
+   "name": "Weiss",
+   "firstWorked": -3000
+  },
+  {
+   "id": "named:cu-minesota",
+   "name": "Minesota mine (Rockland mass copper)",
+   "firstWorked": -3000
+  },
+  {
+   "id": "named:cu-khetri",
+   "name": "Khetri belt (Khetri-Kolihan)",
+   "firstWorked": -2500
+  },
+  {
+   "id": "usgs-vms-2009:985",
+   "name": "Skouriotissa",
+   "firstWorked": -2500
+  },
+  {
+   "id": "named:cu-kargaly",
+   "name": "Kargaly",
+   "firstWorked": -2500
+  },
+  {
+   "id": "named:sn-hensbarrow-streams",
+   "name": "Hensbarrow and St Austell Moor tin streams (incl. Pentewan valley)",
+   "firstWorked": -2000
+  },
+  {
+   "id": "named:sn-carnon-stream",
+   "name": "Carnon valley tin stream",
+   "firstWorked": -2000
+  },
+  {
+   "id": "named:sn-bodmin-streams",
+   "name": "Bodmin Moor tin streams",
+   "firstWorked": -2000
+  },
+  {
+   "id": "named:cu-great-orme",
+   "name": "Great Orme",
+   "firstWorked": -1900
+  },
+  {
+   "id": "named:cu-mitterberg",
+   "name": "Mitterberg (Mühlbach am Hochkönig)",
+   "firstWorked": -1800
+  },
+  {
+   "id": "named:ag-schwaz",
+   "name": "Schwaz (Falkenstein)",
+   "firstWorked": -1500
+  },
+  {
+   "id": "named:hg-huancavelica",
+   "name": "Huancavelica (Santa Bárbara)",
+   "firstWorked": -1400
+  },
+  {
+   "id": "named:cu-tonglushan",
+   "name": "Tonglüshan",
+   "firstWorked": -1100
+  },
+  {
+   "id": "named:cu-massa-marittima",
+   "name": "Massa Marittima (Fenice Massetana-Capanne Vecchie)",
+   "firstWorked": -700
+  },
+  {
+   "id": "named:zn-iglesias",
+   "name": "Iglesias (Monteponi, San Giovanni, Campo Pisano)",
+   "firstWorked": -500
+  },
+  {
+   "id": "named:hg-almaden",
+   "name": "Almadén (main mine)",
+   "firstWorked": -400
+  },
+  {
+   "id": "named:zn-zawar",
+   "name": "Zawar",
+   "firstWorked": -400
+  },
+  {
+   "id": "named:pbzn-cartagena",
+   "name": "Cartagena-La Union",
+   "firstWorked": -300
+  },
+  {
+   "id": "named:hg-wanshan",
+   "name": "Wanshan",
+   "firstWorked": -221
+  },
+  {
+   "id": "named:pb-linares",
+   "name": "Linares-La Carolina",
+   "firstWorked": -200
+  },
+  {
+   "id": "named:sn-gejiu",
+   "name": "Gejiu (Malage, Songshujiao, Gaosong, Laochang, Kafang)",
+   "firstWorked": -100
+  },
+  {
+   "id": "named:pb-mendip",
+   "name": "Mendip Hills (Charterhouse)",
+   "firstWorked": 49
+  },
+  {
+   "id": "named:pb-peak-district",
+   "name": "Derbyshire Peak District orefield",
+   "firstWorked": 80
+  },
+  {
+   "id": "named:pb-srebrenica",
+   "name": "Srebrenica (Sase)",
+   "firstWorked": 150
+  },
+  {
+   "id": "named:ag-melle",
+   "name": "Melle",
+   "firstWorked": 600
+  },
+  {
+   "id": "named:ag-sainte-marie",
+   "name": "Sainte-Marie-aux-Mines",
+   "firstWorked": 900
+  },
+  {
+   "id": "usgs-sedexmvt-2009:179",
+   "name": "Rammelsberg",
+   "firstWorked": 968
+  },
+  {
+   "id": "named:cu-falun",
+   "name": "Falun (Stora Kopparberg)",
+   "firstWorked": 1000
+  },
+  {
+   "id": "named:pb-north-pennines",
+   "name": "North Pennine orefield (Alston Moor and Weardale)",
+   "firstWorked": 1130
+  },
+  {
+   "id": "named:pbzn-bytom",
+   "name": "Bytom (Upper Silesia)",
+   "firstWorked": 1136
+  },
+  {
+   "id": "named:sn-dartmoor-streams",
+   "name": "Dartmoor tin streams",
+   "firstWorked": 1150
+  },
+  {
+   "id": "named:ag-banska-stiavnica",
+   "name": "Banská Štiavnica-Hodruša",
+   "firstWorked": 1156
+  },
+  {
+   "id": "named:ag-freiberg",
+   "name": "Freiberg district",
+   "firstWorked": 1168
+  },
+  {
+   "id": "usgs-gcra-sedcu:10621",
+   "name": "Mansfeld (Kupferschiefer)",
+   "firstWorked": 1199
+  },
+  {
+   "id": "named:pb-clausthal",
+   "name": "Upper Harz (Clausthal-Zellerfeld)",
+   "firstWorked": 1200
+  },
+  {
+   "id": "named:pbzn-olkusz",
+   "name": "Olkusz-Zawiercie (Upper Silesia-Krakow district)",
+   "firstWorked": 1200
+  },
+  {
+   "id": "usgs-gcra-sedcu:10622",
+   "name": "Sangerhausen (Kupferschiefer)",
+   "firstWorked": 1200
+  },
+  {
+   "id": "named:ag-jihlava",
+   "name": "Jihlava",
+   "firstWorked": 1240
+  },
+  {
+   "id": "named:sn-ehrenfriedersdorf",
+   "name": "Ehrenfriedersdorf (Sauberg)",
+   "firstWorked": 1248
+  },
+  {
+   "id": "named:zn-schauinsland",
+   "name": "Schauinsland",
+   "firstWorked": 1250
+  },
+  {
+   "id": "named:ag-kutna-hora",
+   "name": "Kutná Hora",
+   "firstWorked": 1260
+  },
+  {
+   "id": "named:pb-rudnik",
+   "name": "Rudnik",
+   "firstWorked": 1293
+  },
+  {
+   "id": "named:ag-novo-brdo",
+   "name": "Novo Brdo",
+   "firstWorked": 1300
+  },
+  {
+   "id": "usgs-gcra-sedcu:10556",
+   "name": "Richelsdorf (Kupferschiefer)",
+   "firstWorked": 1300
+  },
+  {
+   "id": "named:pb-trepca",
+   "name": "Trepča (Stari Trg)",
+   "firstWorked": 1303
+  },
+  {
+   "id": "named:sn-krupka",
+   "name": "Krupka (Knotel, Preisselberg)",
+   "firstWorked": 1305
+  },
+  {
+   "id": "named:ag-pribram",
+   "name": "Příbram (Březové Hory)",
+   "firstWorked": 1311
+  }
+ ],
+ "evidence": {
+  "features": 8893,
+  "stats": {
+   "Ag area": 8,
+   "Ag best-guess carried": 11,
+   "Ag best-guess superseded": 12,
+   "Ag deposit": 157,
+   "Ag large": 90,
+   "Ag province": 1,
+   "Ag small": 120,
+   "Ag world-class": 38,
+   "Bi best-guess carried": 3,
+   "Bi best-guess superseded": 4,
+   "Bi large": 5,
+   "Bi mrds cells": 408,
+   "Bi province": 2,
+   "Bi world-class": 3,
+   "Cu area": 94,
+   "Cu best-guess carried": 14,
+   "Cu best-guess superseded": 27,
+   "Cu deposit": 505,
+   "Cu large": 334,
+   "Cu small": 595,
+   "Cu world-class": 88,
+   "Hg best-guess carried": 2,
+   "Hg best-guess superseded": 4,
+   "Hg large": 9,
+   "Hg mrds cells": 682,
+   "Hg placeholder stack": 22,
+   "Hg world-class": 8,
+   "Mo best-guess carried": 6,
+   "Mo best-guess superseded": 8,
+   "Mo deposit": 31,
+   "Mo large": 58,
+   "Mo mrds cells": 1246,
+   "Mo placeholder stack": 5,
+   "Mo province": 5,
+   "Mo small": 4,
+   "Mo world-class": 25,
+   "Pb best-guess carried": 13,
+   "Pb best-guess superseded": 15,
+   "Pb deposit": 145,
+   "Pb large": 114,
+   "Pb small": 97,
+   "Pb world-class": 40,
+   "Sb best-guess carried": 2,
+   "Sb best-guess superseded": 2,
+   "Sb deposit": 2,
+   "Sb large": 4,
+   "Sb mrds cells": 1041,
+   "Sb placeholder stack": 42,
+   "Sb world-class": 2,
+   "Sn best-guess carried": 5,
+   "Sn best-guess superseded": 12,
+   "Sn deposit": 13,
+   "Sn large": 26,
+   "Sn mrds cells": 825,
+   "Sn placeholder stack": 67,
+   "Sn province": 23,
+   "Sn world-class": 22,
+   "W best-guess carried": 7,
+   "W best-guess superseded": 7,
+   "W deposit": 12,
+   "W large": 14,
+   "W mrds cells": 1163,
+   "W placeholder stack": 73,
+   "W province": 22,
+   "W world-class": 6,
+   "Zn best-guess carried": 15,
+   "Zn best-guess superseded": 13,
+   "Zn deposit": 304,
+   "Zn large": 186,
+   "Zn small": 181,
+   "Zn world-class": 57
+  },
+  "bestGuessCarried": [
+   {
+    "code": "Sn",
+    "name": "Punia tin (Maniema)"
+   },
+   {
+    "code": "Sn",
+    "name": "Masisi-Rubaya tin-coltan (North Kivu)"
+   },
+   {
+    "code": "Pb",
+    "name": "Abakaliki lead-zinc (Benue trough)"
+   },
+   {
+    "code": "Zn",
+    "name": "Abakaliki lead-zinc (Benue trough)"
+   },
+   {
+    "code": "Cu",
+    "name": "Guelb Moghrein copper-gold (Akjoujt)"
+   },
+   {
+    "code": "Cu",
+    "name": "Prieska copper-zinc"
+   },
+   {
+    "code": "Zn",
+    "name": "Prieska copper-zinc"
+   },
+   {
+    "code": "Cu",
+    "name": "Kalahari Copperbelt (Ghanzi)"
+   },
+   {
+    "code": "Zn",
+    "name": "Angouran zinc-lead"
+   },
+   {
+    "code": "Pb",
+    "name": "Angouran zinc-lead"
+   },
+   {
+    "code": "Zn",
+    "name": "Mehdiabad zinc"
+   },
+   {
+    "code": "Pb",
+    "name": "Mehdiabad zinc"
+   },
+   {
+    "code": "Hg",
+    "name": "Zarshuran gold"
+   },
+   {
+    "code": "Sb",
+    "name": "Zarshuran gold"
+   },
+   {
+    "code": "Pb",
+    "name": "Kentau lead-zinc (Achisay-Mirgalimsay)"
+   },
+   {
+    "code": "Zn",
+    "name": "Kentau lead-zinc (Achisay-Mirgalimsay)"
+   },
+   {
+    "code": "Sn",
+    "name": "Ust-Omchug gold-tin-tungsten"
+   },
+   {
+    "code": "W",
+    "name": "Ust-Omchug gold-tin-tungsten"
+   },
+   {
+    "code": "Ag",
+    "name": "Kupol gold-silver"
+   },
+   {
+    "code": "Sn",
+    "name": "Sherlovaya Gora tin-topaz-beryl"
+   },
+   {
+    "code": "W",
+    "name": "Sherlovaya Gora tin-topaz-beryl"
+   },
+   {
+    "code": "Sn",
+    "name": "Khapcheranga tin"
+   },
+   {
+    "code": "W",
+    "name": "Dzhida tungsten-molybdenum (Zakamensk)"
+   },
+   {
+    "code": "Mo",
+    "name": "Dzhida tungsten-molybdenum (Zakamensk)"
+   },
+   {
+    "code": "Pb",
+    "name": "Nerchinsk silver-lead"
+   },
+   {
+    "code": "Zn",
+    "name": "Nerchinsk silver-lead"
+   },
+   {
+    "code": "Ag",
+    "name": "Nerchinsk silver-lead"
+   },
+   {
+    "code": "Zn",
+    "name": "Ozernoye zinc"
+   },
+   {
+    "code": "Pb",
+    "name": "Ozernoye zinc"
+   },
+   {
+    "code": "Pb",
+    "name": "Dalnegorsk borosilicate and lead-zinc"
+   },
+   {
+    "code": "Zn",
+    "name": "Dalnegorsk borosilicate and lead-zinc"
+   },
+   {
+    "code": "Ag",
+    "name": "Baia Mare gold-silver-base metals"
+   },
+   {
+    "code": "Pb",
+    "name": "Baia Mare gold-silver-base metals"
+   },
+   {
+    "code": "Zn",
+    "name": "Baia Mare gold-silver-base metals"
+   },
+   {
+    "code": "Ag",
+    "name": "Rosia Montana gold"
+   },
+   {
+    "code": "Pb",
+    "name": "Vares iron-lead-zinc"
+   },
+   {
+    "code": "Zn",
+    "name": "Vares iron-lead-zinc"
+   },
+   {
+    "code": "Pb",
+    "name": "Kassandra mines (Halkidiki)"
+   },
+   {
+    "code": "Zn",
+    "name": "Kassandra mines (Halkidiki)"
+   },
+   {
+    "code": "Ag",
+    "name": "Kassandra mines (Halkidiki)"
+   },
+   {
+    "code": "Pb",
+    "name": "Leadhills-Wanlockhead lead"
+   },
+   {
+    "code": "Zn",
+    "name": "Leadhills-Wanlockhead lead"
+   },
+   {
+    "code": "Ag",
+    "name": "Leadhills-Wanlockhead lead"
+   },
+   {
+    "code": "Zn",
+    "name": "Garpenberg zinc-lead"
+   },
+   {
+    "code": "Pb",
+    "name": "Garpenberg zinc-lead"
+   },
+   {
+    "code": "Ag",
+    "name": "Garpenberg zinc-lead"
+   },
+   {
+    "code": "Cu",
+    "name": "Kevitsa nickel-copper-PGE"
+   },
+   {
+    "code": "Cu",
+    "name": "Sepon copper-gold"
+   },
+   {
+    "code": "Cu",
+    "name": "Phu Kham copper-gold"
+   },
+   {
+    "code": "Cu",
+    "name": "Nui Phao tungsten-fluorite-bismuth"
+   },
+   {
+    "code": "Cu",
+    "name": "Sin Quyen copper"
+   },
+   {
+    "code": "Mo",
+    "name": "Dexing copper"
+   },
+   {
+    "code": "Cu",
+    "name": "Zijinshan copper-gold"
+   },
+   {
+    "code": "Cu",
+    "name": "Jinchuan nickel-copper-PGE"
+   },
+   {
+    "code": "Pb",
+    "name": "Shuikoushan lead-zinc"
+   },
+   {
+    "code": "Zn",
+    "name": "Shuikoushan lead-zinc"
+   },
+   {
+    "code": "W",
+    "name": "Luanchuan molybdenum-tungsten"
+   },
+   {
+    "code": "Sb",
+    "name": "Dachang tin"
+   },
+   {
+    "code": "Bi",
+    "name": "Sangdong tungsten"
+   },
+   {
+    "code": "Cu",
+    "name": "Jinguashi gold-copper"
+   },
+   {
+    "code": "Hg",
+    "name": "Sierra Gorda mercury"
+   },
+   {
+    "code": "W",
+    "name": "Serido scheelite"
+   },
+   {
+    "code": "Cu",
+    "name": "Antamina copper-zinc"
+   },
+   {
+    "code": "Zn",
+    "name": "Antamina copper-zinc"
+   },
+   {
+    "code": "Ag",
+    "name": "Antamina copper-zinc"
+   },
+   {
+    "code": "Mo",
+    "name": "Antamina copper-zinc"
+   },
+   {
+    "code": "Mo",
+    "name": "Cerro Verde copper"
+   },
+   {
+    "code": "Mo",
+    "name": "Las Bambas copper"
+   },
+   {
+    "code": "Ag",
+    "name": "Yanacocha gold"
+   },
+   {
+    "code": "Bi",
+    "name": "Cerro de Pasco lead-zinc-silver"
+   },
+   {
+    "code": "Mo",
+    "name": "Morococha-Toromocho"
+   },
+   {
+    "code": "W",
+    "name": "Pasto Bueno tungsten"
+   },
+   {
+    "code": "Ag",
+    "name": "El Indio gold"
+   },
+   {
+    "code": "Cu",
+    "name": "El Indio gold"
+   },
+   {
+    "code": "Ag",
+    "name": "Cerro Vanguardia gold"
+   },
+   {
+    "code": "W",
+    "name": "Hillgrove antimony-tungsten"
+   },
+   {
+    "code": "Bi",
+    "name": "Tennant Creek gold-bismuth-copper"
+   },
+   {
+    "code": "Cu",
+    "name": "Tennant Creek gold-bismuth-copper"
+   }
+  ]
+ },
+ "validation": {
+  "Cu": {
+   "catalogueWorldT": 2493149743,
+   "mcsWorldReservesT": 1000000000.0,
+   "mcsWorldMine2023T": 22000000.0,
+   "mcsIdentifiedResourcesT": 2100000000.0,
+   "catalogueOverReserves": 2.49,
+   "catalogueYearsOfMine2023": 113,
+   "topCountries": [
+    {
+     "country": "Chile",
+     "catalogueT": 704626934,
+     "mcsReservesT": 190000000.0,
+     "mcsMine2023T": 5000000.0,
+     "mineShare2023": 0.227
+    },
+    {
+     "country": "United States",
+     "catalogueT": 384385440,
+     "mcsReservesT": 50000000.0,
+     "mcsMine2023T": 1100000.0,
+     "mineShare2023": 0.05
+    },
+    {
+     "country": "Peru",
+     "catalogueT": 127912328,
+     "mcsReservesT": 120000000.0,
+     "mcsMine2023T": 2600000.0,
+     "mineShare2023": 0.118
+    },
+    {
+     "country": "Democratic Republic of the Congo",
+     "catalogueT": 127414868,
+     "mcsReservesT": 80000000.0,
+     "mcsMine2023T": 2500000.0,
+     "mineShare2023": 0.114
+    },
+    {
+     "country": "Australia",
+     "catalogueT": 96677594,
+     "mcsReservesT": 100000000.0,
+     "mcsMine2023T": 810000.0,
+     "mineShare2023": 0.037
+    },
+    {
+     "country": "Canada",
+     "catalogueT": 94344473,
+     "mcsReservesT": 7600000.0,
+     "mcsMine2023T": 480000.0,
+     "mineShare2023": 0.022
+    },
+    {
+     "country": "Zambia",
+     "catalogueT": 84551941,
+     "mcsReservesT": 21000000.0,
+     "mcsMine2023T": 760000.0,
+     "mineShare2023": 0.035
+    },
+    {
+     "country": "China",
+     "catalogueT": 80988254,
+     "mcsReservesT": 41000000.0,
+     "mcsMine2023T": 1700000.0,
+     "mineShare2023": 0.077
+    },
+    {
+     "country": "Poland",
+     "catalogueT": 74624231,
+     "mcsReservesT": 34000000.0,
+     "mcsMine2023T": 400000.0,
+     "mineShare2023": 0.018
+    },
+    {
+     "country": "Kazakhstan",
+     "catalogueT": 71510795,
+     "mcsReservesT": 20000000.0,
+     "mcsMine2023T": 600000.0,
+     "mineShare2023": 0.027
+    }
+   ]
+  },
+  "Sn": {
+   "catalogueWorldT": 22550150,
+   "mcsWorldReservesT": 4300000.0,
+   "mcsWorldMine2023T": 290000.0,
+   "mcsIdentifiedResourcesT": null,
+   "catalogueOverReserves": 5.24,
+   "catalogueYearsOfMine2023": 78,
+   "topCountries": [
+    {
+     "country": "China",
+     "catalogueT": 5750000,
+     "mcsReservesT": 1100000.0,
+     "mcsMine2023T": 68000.0,
+     "mineShare2023": 0.234
+    },
+    {
+     "country": "Indonesia",
+     "catalogueT": 3450000,
+     "mcsReservesT": null,
+     "mcsMine2023T": 52000.0,
+     "mineShare2023": 0.179
+    },
+    {
+     "country": "Malaysia",
+     "catalogueT": 3160000,
+     "mcsReservesT": null,
+     "mcsMine2023T": 6100.0,
+     "mineShare2023": 0.021
+    },
+    {
+     "country": "Bolivia",
+     "catalogueT": 2770000,
+     "mcsReservesT": 400000.0,
+     "mcsMine2023T": 18000.0,
+     "mineShare2023": 0.062
+    },
+    {
+     "country": "Thailand",
+     "catalogueT": 1200000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Peru",
+     "catalogueT": 1125000,
+     "mcsReservesT": 130000.0,
+     "mcsMine2023T": 23000.0,
+     "mineShare2023": 0.079
+    },
+    {
+     "country": "United Kingdom",
+     "catalogueT": 791900,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "DR Congo",
+     "catalogueT": 657000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Australia",
+     "catalogueT": 620000,
+     "mcsReservesT": 620000.0,
+     "mcsMine2023T": 9100.0,
+     "mineShare2023": 0.031
+    },
+    {
+     "country": "Russia",
+     "catalogueT": 600000,
+     "mcsReservesT": 460000.0,
+     "mcsMine2023T": 2700.0,
+     "mineShare2023": 0.009
+    }
+   ]
+  },
+  "Pb": {
+   "catalogueWorldT": 344344321,
+   "mcsWorldReservesT": 95000000.0,
+   "mcsWorldMine2023T": 4500000.0,
+   "mcsIdentifiedResourcesT": 2000000000.0,
+   "catalogueOverReserves": 3.62,
+   "catalogueYearsOfMine2023": 77,
+   "topCountries": [
+    {
+     "country": "Australia",
+     "catalogueT": 81305925,
+     "mcsReservesT": 35000000.0,
+     "mcsMine2023T": 440000.0,
+     "mineShare2023": 0.098
+    },
+    {
+     "country": "United States",
+     "catalogueT": 40226992,
+     "mcsReservesT": 4600000.0,
+     "mcsMine2023T": 270000.0,
+     "mineShare2023": 0.06
+    },
+    {
+     "country": "Canada",
+     "catalogueT": 36324149,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Russia",
+     "catalogueT": 32439470,
+     "mcsReservesT": 8700000.0,
+     "mcsMine2023T": 200000.0,
+     "mineShare2023": 0.044
+    },
+    {
+     "country": "China",
+     "catalogueT": 26945278,
+     "mcsReservesT": 20000000.0,
+     "mcsMine2023T": 1900000.0,
+     "mineShare2023": 0.422
+    },
+    {
+     "country": "Spain",
+     "catalogueT": 12032199,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "India",
+     "catalogueT": 11100553,
+     "mcsReservesT": 1900000.0,
+     "mcsMine2023T": 220000.0,
+     "mineShare2023": 0.049
+    },
+    {
+     "country": "Mexico",
+     "catalogueT": 10852280,
+     "mcsReservesT": 5600000.0,
+     "mcsMine2023T": 270000.0,
+     "mineShare2023": 0.06
+    },
+    {
+     "country": "Kazakhstan",
+     "catalogueT": 10776160,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Poland",
+     "catalogueT": 8800000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    }
+   ]
+  },
+  "Zn": {
+   "catalogueWorldT": 799878609,
+   "mcsWorldReservesT": 220000000.0,
+   "mcsWorldMine2023T": 12000000.0,
+   "mcsIdentifiedResourcesT": 1900000000.0,
+   "catalogueOverReserves": 3.64,
+   "catalogueYearsOfMine2023": 67,
+   "topCountries": [
+    {
+     "country": "Australia",
+     "catalogueT": 134643466,
+     "mcsReservesT": 64000000.0,
+     "mcsMine2023T": 1100000.0,
+     "mineShare2023": 0.092
+    },
+    {
+     "country": "Canada",
+     "catalogueT": 114649850,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "China",
+     "catalogueT": 86507684,
+     "mcsReservesT": 44000000.0,
+     "mcsMine2023T": 4000000.0,
+     "mineShare2023": 0.333
+    },
+    {
+     "country": "Russia",
+     "catalogueT": 86232686,
+     "mcsReservesT": 25000000.0,
+     "mcsMine2023T": 310000.0,
+     "mineShare2023": 0.026
+    },
+    {
+     "country": "United States",
+     "catalogueT": 63543025,
+     "mcsReservesT": 6600000.0,
+     "mcsMine2023T": 750000.0,
+     "mineShare2023": 0.062
+    },
+    {
+     "country": "India",
+     "catalogueT": 35827536,
+     "mcsReservesT": 7400000.0,
+     "mcsMine2023T": 860000.0,
+     "mineShare2023": 0.072
+    },
+    {
+     "country": "Kazakhstan",
+     "catalogueT": 31579631,
+     "mcsReservesT": 6700000.0,
+     "mcsMine2023T": 330000.0,
+     "mineShare2023": 0.028
+    },
+    {
+     "country": "Spain",
+     "catalogueT": 28304503,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Poland",
+     "catalogueT": 21000000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Peru",
+     "catalogueT": 20743300,
+     "mcsReservesT": 21000000.0,
+     "mcsMine2023T": 1400000.0,
+     "mineShare2023": 0.117
+    }
+   ]
+  },
+  "Ag": {
+   "catalogueWorldT": 1927324,
+   "mcsWorldReservesT": 610000.0,
+   "mcsWorldMine2023T": 26000.0,
+   "mcsIdentifiedResourcesT": null,
+   "catalogueOverReserves": 3.16,
+   "catalogueYearsOfMine2023": 74,
+   "topCountries": [
+    {
+     "country": "United States",
+     "catalogueT": 236015,
+     "mcsReservesT": 23000.0,
+     "mcsMine2023T": 1000.0,
+     "mineShare2023": 0.038
+    },
+    {
+     "country": "Mexico",
+     "catalogueT": 228356,
+     "mcsReservesT": 37000.0,
+     "mcsMine2023T": 6400.0,
+     "mineShare2023": 0.246
+    },
+    {
+     "country": "Poland",
+     "catalogueT": 220933,
+     "mcsReservesT": 63000.0,
+     "mcsMine2023T": 1300.0,
+     "mineShare2023": 0.05
+    },
+    {
+     "country": "Chile",
+     "catalogueT": 206089,
+     "mcsReservesT": 26000.0,
+     "mcsMine2023T": 1400.0,
+     "mineShare2023": 0.054
+    },
+    {
+     "country": "Australia",
+     "catalogueT": 177851,
+     "mcsReservesT": 94000.0,
+     "mcsMine2023T": 1200.0,
+     "mineShare2023": 0.046
+    },
+    {
+     "country": "Russia",
+     "catalogueT": 122217,
+     "mcsReservesT": 92000.0,
+     "mcsMine2023T": 1200.0,
+     "mineShare2023": 0.046
+    },
+    {
+     "country": "Canada",
+     "catalogueT": 122130,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Peru",
+     "catalogueT": 95594,
+     "mcsReservesT": 110000.0,
+     "mcsMine2023T": 3100.0,
+     "mineShare2023": 0.119
+    },
+    {
+     "country": "China",
+     "catalogueT": 83025,
+     "mcsReservesT": 72000.0,
+     "mcsMine2023T": 3400.0,
+     "mineShare2023": 0.131
+    },
+    {
+     "country": "Bolivia",
+     "catalogueT": 64250,
+     "mcsReservesT": 22000.0,
+     "mcsMine2023T": 1200.0,
+     "mineShare2023": 0.046
+    }
+   ]
+  },
+  "Bi": {
+   "catalogueWorldT": 530700,
+   "mcsWorldReservesT": null,
+   "mcsWorldMine2023T": 0,
+   "mcsIdentifiedResourcesT": null,
+   "catalogueOverReserves": null,
+   "catalogueYearsOfMine2023": null,
+   "topCountries": [
+    {
+     "country": "China",
+     "catalogueT": 280000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Canada",
+     "catalogueT": 78200,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Vietnam",
+     "catalogueT": 76500,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Bolivia",
+     "catalogueT": 30000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "South Korea",
+     "catalogueT": 30000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Germany",
+     "catalogueT": 21000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Uzbekistan",
+     "catalogueT": 15000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    }
+   ]
+  },
+  "Hg": {
+   "catalogueWorldT": 788700,
+   "mcsWorldReservesT": null,
+   "mcsWorldMine2023T": 1200.0,
+   "mcsIdentifiedResourcesT": 600000.0,
+   "catalogueOverReserves": null,
+   "catalogueYearsOfMine2023": 657,
+   "topCountries": [
+    {
+     "country": "Spain",
+     "catalogueT": 278000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Slovenia",
+     "catalogueT": 143000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Italy",
+     "catalogueT": 89600,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "United States",
+     "catalogueT": 76800,
+     "mcsReservesT": null,
+     "mcsMine2023T": 0,
+     "mineShare2023": null
+    },
+    {
+     "country": "Peru",
+     "catalogueT": 60000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Ukraine",
+     "catalogueT": 55000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Kyrgyzstan",
+     "catalogueT": 45500,
+     "mcsReservesT": null,
+     "mcsMine2023T": 6.0,
+     "mineShare2023": 0.005
+    },
+    {
+     "country": "China",
+     "catalogueT": 24000,
+     "mcsReservesT": null,
+     "mcsMine2023T": 1000.0,
+     "mineShare2023": 0.833
+    },
+    {
+     "country": "Algeria",
+     "catalogueT": 10800,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Turkey",
+     "catalogueT": 6000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    }
+   ]
+  },
+  "W": {
+   "catalogueWorldT": 7844594,
+   "mcsWorldReservesT": 4400000.0,
+   "mcsWorldMine2023T": 78000.0,
+   "mcsIdentifiedResourcesT": null,
+   "catalogueOverReserves": 1.78,
+   "catalogueYearsOfMine2023": 101,
+   "topCountries": [
+    {
+     "country": "China",
+     "catalogueT": 5221429,
+     "mcsReservesT": 2300000.0,
+     "mcsMine2023T": 63000.0,
+     "mineShare2023": 0.808
+    },
+    {
+     "country": "Canada",
+     "catalogueT": 572467,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Australia",
+     "catalogueT": 350823,
+     "mcsReservesT": null,
+     "mcsMine2023T": 800.0,
+     "mineShare2023": 0.01
+    },
+    {
+     "country": "Russia",
+     "catalogueT": 323148,
+     "mcsReservesT": 400000.0,
+     "mcsMine2023T": 2000.0,
+     "mineShare2023": 0.026
+    },
+    {
+     "country": "United Kingdom",
+     "catalogueT": 316883,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "South Korea",
+     "catalogueT": 267638,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "United States",
+     "catalogueT": 206180,
+     "mcsReservesT": null,
+     "mcsMine2023T": 0,
+     "mineShare2023": null
+    },
+    {
+     "country": "Vietnam",
+     "catalogueT": 134810,
+     "mcsReservesT": 74000.0,
+     "mcsMine2023T": 3500.0,
+     "mineShare2023": 0.045
+    },
+    {
+     "country": "Czechia",
+     "catalogueT": 122122,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Portugal",
+     "catalogueT": 118950,
+     "mcsReservesT": 4000.0,
+     "mcsMine2023T": 500.0,
+     "mineShare2023": 0.006
+    }
+   ]
+  },
+  "Mo": {
+   "catalogueWorldT": 69451059,
+   "mcsWorldReservesT": 15000000.0,
+   "mcsWorldMine2023T": 260000.0,
+   "mcsIdentifiedResourcesT": 25400000.0,
+   "catalogueOverReserves": 4.63,
+   "catalogueYearsOfMine2023": 267,
+   "topCountries": [
+    {
+     "country": "Chile",
+     "catalogueT": 21726652,
+     "mcsReservesT": 1400000.0,
+     "mcsMine2023T": 46000.0,
+     "mineShare2023": 0.177
+    },
+    {
+     "country": "United States",
+     "catalogueT": 17480317,
+     "mcsReservesT": 3500000.0,
+     "mcsMine2023T": 34000.0,
+     "mineShare2023": 0.131
+    },
+    {
+     "country": "China",
+     "catalogueT": 11837224,
+     "mcsReservesT": 5800000.0,
+     "mcsMine2023T": 110000.0,
+     "mineShare2023": 0.423
+    },
+    {
+     "country": "Peru",
+     "catalogueT": 3700536,
+     "mcsReservesT": 1500000.0,
+     "mcsMine2023T": 37000.0,
+     "mineShare2023": 0.142
+    },
+    {
+     "country": "Canada",
+     "catalogueT": 2362242,
+     "mcsReservesT": 72000.0,
+     "mcsMine2023T": 1000.0,
+     "mineShare2023": 0.004
+    },
+    {
+     "country": "Armenia",
+     "catalogueT": 1835860,
+     "mcsReservesT": 150000.0,
+     "mcsMine2023T": 7800.0,
+     "mineShare2023": 0.03
+    },
+    {
+     "country": "Russian Federation",
+     "catalogueT": 1464300,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Mexico",
+     "catalogueT": 1283306,
+     "mcsReservesT": 130000.0,
+     "mcsMine2023T": 15000.0,
+     "mineShare2023": 0.058
+    },
+    {
+     "country": "Mongolia",
+     "catalogueT": 1025756,
+     "mcsReservesT": null,
+     "mcsMine2023T": 3100.0,
+     "mineShare2023": 0.012
+    },
+    {
+     "country": "Panama",
+     "catalogueT": 996015,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    }
+   ]
+  },
+  "Sb": {
+   "catalogueWorldT": 3381500,
+   "mcsWorldReservesT": 2000000.0,
+   "mcsWorldMine2023T": 83000.0,
+   "mcsIdentifiedResourcesT": null,
+   "catalogueOverReserves": 1.69,
+   "catalogueYearsOfMine2023": 41,
+   "topCountries": [
+    {
+     "country": "China",
+     "catalogueT": 2364000,
+     "mcsReservesT": 640000.0,
+     "mcsMine2023T": 40000.0,
+     "mineShare2023": 0.482
+    },
+    {
+     "country": "South Africa",
+     "catalogueT": 375000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Kyrgyzstan",
+     "catalogueT": 260000,
+     "mcsReservesT": 260000.0,
+     "mcsMine2023T": 40.0,
+     "mineShare2023": 0.0
+    },
+    {
+     "country": "Australia",
+     "catalogueT": 160000,
+     "mcsReservesT": 140000.0,
+     "mcsMine2023T": 2300.0,
+     "mineShare2023": 0.028
+    },
+    {
+     "country": "Russia",
+     "catalogueT": 80000,
+     "mcsReservesT": 350000.0,
+     "mcsMine2023T": 4300.0,
+     "mineShare2023": 0.052
+    },
+    {
+     "country": "Mexico",
+     "catalogueT": 45000,
+     "mcsReservesT": 18000.0,
+     "mcsMine2023T": 700.0,
+     "mineShare2023": 0.008
+    },
+    {
+     "country": "United States",
+     "catalogueT": 42000,
+     "mcsReservesT": 860000.0,
+     "mcsMine2023T": 0,
+     "mineShare2023": null
+    },
+    {
+     "country": "Canada",
+     "catalogueT": 35000,
+     "mcsReservesT": 78000.0,
+     "mcsMine2023T": 2.0,
+     "mineShare2023": 0.0
+    },
+    {
+     "country": "Ukraine",
+     "catalogueT": 11000,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    },
+    {
+     "country": "Czechia",
+     "catalogueT": 9500,
+     "mcsReservesT": null,
+     "mcsMine2023T": null,
+     "mineShare2023": null
+    }
+   ]
+  }
+ }
+}

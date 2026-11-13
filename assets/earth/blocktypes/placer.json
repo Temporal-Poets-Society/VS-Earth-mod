@@ -1,0 +1,66 @@
+{
+	"code": "placer",
+	"behaviors": [{"name": "UnstableFalling", "properties": {"fallSound": "game:effect/rockslide", "dustIntensity": 1, "fallSidewaysChance": 0.75}}],
+	"variantgroups": [
+		{"code": "bed", "states": ["gravel", "sand"]},
+		{"code": "metal", "states": ["gold", "tin", "platinum"]}
+	],
+	"creativeinventory": {"general": ["*"], "earthplus": ["*"], "terrain": ["*"]},
+	"shape": {"base": "game:block/basic/cube"},
+	"drawtype": "Cube",
+	"blockmaterialByType": {"*-gravel-*": "Gravel", "*-sand-*": "Sand"},
+	"texturesByType": {
+		"*-gravel-*": {"all": {"base": "game:block/stone/gravel/granite"}},
+		"*-sand-*": {"all": {"base": "game:block/stone/sand/sandstone"}}
+	},
+	"attributes": {
+		"handbook": {"extraSections": [{"title": "earth:handbooktitle-geology", "text": "earth:handbooktext-placer"}]},
+		"mapColorCode": "desert",
+		"pannable": true,
+		"preventsDecay": true,
+		"allowUnstablePlacement": true
+	},
+	"attributesByType": {
+		"*-gravel-*": {"pannedBlock": "game:gravel-granite-land-7", "inContainerTexture": {"base": "game:block/stone/gravel/granite"}},
+		"*-sand-*": {"pannedBlock": "game:sand-sandstone-7", "inContainerTexture": {"base": "game:block/stone/sand/sandstone"}}
+	},
+	"replaceable": 400,
+	"fertility": 5,
+	"resistanceByType": {"*-gravel-*": 2.4, "*-sand-*": 1.8},
+	"soundsByType": {
+		"*-gravel-*": {"place": "game:block/gravel", "break": "game:block/gravel", "hit": "game:block/gravel", "walk": "game:walk/gravel"},
+		"*-sand-*": {"place": "game:block/sand", "break": "game:block/sand", "hit": "game:block/sand", "walk": "game:walk/sand"}
+	},
+	"dropsByType": {
+		"*-gravel-gold": [
+			{"type": "block", "code": "game:gravel-granite", "quantity": {"avg": 1}},
+			{"type": "item", "code": "game:nugget-nativegold", "quantity": {"avg": 0.2, "var": 0.2}}
+		],
+		"*-gravel-tin": [
+			{"type": "block", "code": "game:gravel-granite", "quantity": {"avg": 1}},
+			{"type": "item", "code": "game:nugget-cassiterite", "quantity": {"avg": 0.3, "var": 0.3}}
+		],
+		"*-sand-gold": [
+			{"type": "block", "code": "game:sand-sandstone", "quantity": {"avg": 1}},
+			{"type": "item", "code": "game:nugget-nativegold", "quantity": {"avg": 0.15, "var": 0.15}}
+		],
+		"*-sand-tin": [
+			{"type": "block", "code": "game:sand-sandstone", "quantity": {"avg": 1}},
+			{"type": "item", "code": "game:nugget-cassiterite", "quantity": {"avg": 0.25, "var": 0.25}}
+		],
+		"*-gravel-platinum": [
+			{"type": "block", "code": "game:gravel-granite", "quantity": {"avg": 1}},
+			{"type": "item", "code": "earth:nugget-nativeplatinum", "quantity": {"avg": 0.2, "var": 0.2}}
+		],
+		"*-sand-platinum": [
+			{"type": "block", "code": "game:sand-sandstone", "quantity": {"avg": 1}},
+			{"type": "item", "code": "earth:nugget-nativeplatinum", "quantity": {"avg": 0.15, "var": 0.15}}
+		]
+	},
+	"heldTpIdleAnimation": "holdbothhandslarge", "heldRightReadyAnimation": "heldblockready", "heldTpUseAnimation": "twohandplaceblock",
+	"tpHandTransform": {
+		"translation": {"x": -1.23, "y": -0.91, "z": -0.8},
+		"rotation": {"x": -2, "y": 25, "z": -78},
+		"scale": 0.4
+	}
+}

@@ -1,0 +1,271 @@
+Earth ore deposit catalogues (decision 0065) and their heat-map evidence (ore-heatmaps-v2.json)
+
+The catalogues in assets/earth/config/ore-deposits-v1/ list real deposits and basins with tonnage, grade, depth and
+footprint taken or derived from the sources below. Positions, sizes and shapes are adapted for the game; estimated
+values are marked in each entry ("est", confidence "q"). They are not outputs or endorsements of the source authors
+or the organisations named. The same sources, as point and area evidence in tools/ore-data/<group>/evidence.geojson,
+feed ore-heatmaps-v2.json together with the sources in ore-heatmaps-SOURCES.txt.
+
+====================================================================================================
+Coal and evaporites (tools/ore-data/coal-evaporites/)
+====================================================================================================
+
+Coal and evaporites ore data (Earth mod, decision 0065)
+Shipped files: assets/earth/config/ore-deposits-v1/coal-evaporites.json, tools/ore-data/coal-evaporites/evidence.geojson
+Derived values only (simplified outlines, positions, tonnages, depths). No source file is redistributed.
+
+Coal Fields of the Conterminous United States, NCRA updated version (USGS Open-File Report 2012-1205)
+  Author: U.S. Geological Survey
+  URL: https://pubs.usgs.gov/of/2012/1205/
+  Licence: public domain (U.S. Government work); acknowledge USGS
+  Retrieved: 2026-09-29
+
+Coal-bearing areas of North, Central and South America (USGS Open-File Report 2008-1257)
+  Author: Tewalt, S.J., Kinney, S.A. and Merrill, M.D., U.S. Geological Survey
+  URL: https://pubs.usgs.gov/of/2008/1257/
+  Licence: public domain (U.S. Government work)
+  Retrieved: 2026-09-29
+
+Chinese coal-mining areas (USGS Open-File Report 2014-1219)
+  Author: Trippi, M.H., Belkin, H.E., Dai, S., Tewalt, S.J. and Chou, C.-L., U.S. Geological Survey
+  URL: https://pubs.usgs.gov/of/2014/1219/
+  Licence: public domain (U.S. Government work)
+  Retrieved: 2026-09-29
+
+Coal-bearing areas of India and Bangladesh (USGS Open-File Report 2011-1296)
+  Author: U.S. Geological Survey, after the Geological Survey of India
+  URL: https://pubs.usgs.gov/of/2011/1296/
+  Licence: public domain (U.S. Government work); acknowledge the Geological Survey of India as original source
+  Retrieved: 2026-09-29
+
+Global potash tracts and deposits (USGS Scientific Investigations Report 2010-5090-S)
+  Author: Orris, G.J. and others, U.S. Geological Survey
+  URL: https://pubs.usgs.gov/sir/2010/5090/s/
+  Licence: public domain (U.S. Government work)
+  Retrieved: 2026-09-29 (re-fetched 2026-11-08)
+
+World phosphate deposits (USGS mineral resource data)
+  Author: U.S. Geological Survey
+  URL: https://mrdata.usgs.gov/phosphate/
+  Licence: public domain (U.S. Government work)
+  Retrieved: 2026-09-29 (re-fetched 2026-11-08)
+
+Mineral Resources Data System (MRDS), native-sulfur subset
+  Author: U.S. Geological Survey
+  URL: https://mrdata.usgs.gov/mrds/
+  Licence: public domain (U.S. Government work)
+  Retrieved: 2026-09-29
+
+Coal geology and assessment of coal resources and reserves in the Powder River Basin (USGS Professional Paper 1809)
+  Author: Luppens, J.A. and others, U.S. Geological Survey, 2015
+  URL: https://doi.org/10.3133/pp1809
+  Licence: public domain (U.S. Government work); tonnage cited as a fact
+  Retrieved: 2026-11-08
+
+USGS Mineral Commodity Summaries 2025
+  Author: U.S. Geological Survey
+  URL: https://pubs.usgs.gov/publication/mcs2025
+  Licence: public domain (U.S. Government work); figures cited for validation
+  Retrieved: 2026-11-08
+
+Coal Resources for New Technologies
+  Author: British Geological Survey
+  URL: https://www.bgs.ac.uk/datasets/coal-resources-for-new-technologies/
+  Licence: Open Government Licence v3.0
+  Attribution: Contains British Geological Survey materials (c) UKRI 2004. BGS/Coal Authority 1999 geological base.
+  Retrieved: 2026-09-29
+
+MIDAS documented mineral-deposit boundaries (hard coal)
+  Author: Panstwowy Instytut Geologiczny - Panstwowy Instytut Badawczy (PIG-PIB)
+  URL: https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer
+  Licence: PIG-PIB public-sector information reuse conditions (https://www.pgi.gov.pl/rejestry-i-bazy-danych-geologicznych/zasady-korzystania-z-isp.html)
+  Attribution: Source: PIG-PIB, MIDAS, retrieved 29 September 2026. Processed: coal subset, reprojected to WGS84, merged and simplified to about 1 km.
+  Retrieved: 2026-09-29
+
+IS RK500 Rohstoffkarte (Steinkohle bis 2000 m Teufe, Braunkohle)
+  Author: Geologischer Dienst Nordrhein-Westfalen
+  URL: https://www.opengeodata.nrw.de/produkte/geologie/geologie/RK/ISRK500/
+  Licence: Datenlizenz Deutschland - Namensnennung 2.0 (https://www.govdata.de/dl-de/by-2-0)
+  Attribution: Geologischer Dienst NRW, IS RK500, Abrufdatum 29.09.2026; reprojected, merged and simplified.
+  Retrieved: 2026-09-29
+
+Rohstoffgeologische Karten (RoeK400 fossil fuels; Braunkohle 1:50,000)
+  Author: Saechsisches Landesamt fuer Umwelt, Landwirtschaft und Geologie (LfULG)
+  URL: https://luis.sachsen.de/geologie/rohstoffgeologische-karten.html
+  Licence: Datenlizenz Deutschland - Namensnennung 2.0 (https://www.govdata.de/dl-de/by-2-0)
+  Attribution: Geodaten Sachsen, LfULG, retrieved 29.09.2026; reprojected, merged and simplified.
+  Retrieved: 2026-09-29
+
+NSW Mining Coalfields
+  Author: Geological Survey of New South Wales / NSW Department of Industry
+  URL: https://data.nsw.gov.au/data/dataset/nsw-mining-coalfieds
+  Licence: Creative Commons Attribution
+  Retrieved: 2026-09-29
+
+Victorian Coal Fields 2006 inventory
+  Author: Geological Survey of Victoria (Victorian Government DEECA)
+  URL: https://discover.data.vic.gov.au/en_AU/dataset/victorian-coal-fields
+  Licence: Creative Commons Attribution 4.0 International
+  Retrieved: 2026-09-29
+
+Australian Coal Basins 2013
+  Author: Geoscience Australia, (c) Commonwealth of Australia
+  URL: https://data.gov.au/data/dataset/9d5a8d74-a201-42bd-9d49-3c392244be16
+  Licence: Creative Commons Attribution 3.0 Australia
+  Retrieved: 2026-09-29
+
+Natural Earth 1:10m admin-0 countries (checks only, not shipped)
+  Author: Natural Earth
+  URL: https://www.naturalearthdata.com/
+  Licence: public domain
+  Retrieved: 2026-10-02 (re-fetched 2026-11-08)
+
+BGR Energy Study 2023 (country coal totals, validation only)
+  Author: Bundesanstalt fuer Geowissenschaften und Rohstoffe (BGR)
+  URL: https://www.bgr.bund.de/EN/Themen/Energie/Produkte/produkte_node_en.html
+  Licence: facts cited; no tables reproduced
+  Retrieved: 2026-11-08
+
+Published figures (basin tonnages, seam thicknesses, depths, historical working dates)
+  Cited per entry in docs/research/ore-deposits-2026-11-08/coal-evaporites.md; used as facts with confidence B or C.
+  Authored outlines (entries marked est "geometry") were drawn for this project from general geography of the named
+  coalfields and basins; they are approximations, not copies of any map.
+
+====================================================================================================
+Base metals (tools/ore-data/base-metals/)
+====================================================================================================
+
+Base metals (Cu, Sn, Pb, Zn, Ag, Bi, Hg, W, Mo, Sb) for Earth decision 0065
+==========================================================================
+
+Files: assets/earth/config/ore-deposits-v1/base-metals.json (catalogue), tools/ore-data/base-metals/evidence.geojson
+and heatmap-overrides.json (heat-map evidence). All values are derived: positions, tonnages, grades, ages and
+names. No source tables, text or figures are redistributed.
+
+Databases (public domain, U.S. Geological Survey; no permission needed, citation given as courtesy)
+---------------------------------------------------------------------------------------------
+usgs-gcra-pcu, usgs-gcra-sedcu
+  Dicken, C.L., Dunlap, P., Parks, H.L., Hammarstrom, J.M., and Zientek, M.L., 2016, Spatial database for a global
+  assessment of undiscovered copper resources: U.S. Geological Survey Scientific Investigations Report 2010-5090-Z.
+  https://pubs.usgs.gov/sir/2010/5090/z/  (retrieved 2026-09-29; copy in docs/research/copper-tin-global-2026-09-29)
+usgs-porcu-2008
+  Singer, D.A., Berger, V.I., and Moring, B.C., 2008, Porphyry copper deposits of the world: database and grade and
+  tonnage models, 2008: U.S. Geological Survey Open-File Report 2008-1155. https://pubs.usgs.gov/of/2008/1155/
+  (retrieved 2026-11-08 to rawdata/ore/base-metals/usgs-porcu-2008; used for ore-body areas and ages)
+usgs-vms-2009
+  Mosier, D.L., Berger, V.I., and Singer, D.A., 2009, Volcanogenic massive sulfide deposits of the world: database
+  and grade and tonnage models: U.S. Geological Survey Open-File Report 2009-1034. https://pubs.usgs.gov/of/2009/1034/
+usgs-sedexmvt-2009
+  Taylor, R.D., Leach, D.L., Bradley, D.C., and Pisarevsky, S.A., 2009, Compilation of mineral resource data for
+  Mississippi Valley-type and clastic-dominated sediment-hosted lead-zinc deposits: U.S. Geological Survey Open-File
+  Report 2009-1297. https://pubs.usgs.gov/of/2009/1297/
+MRDS (heat-map evidence for Sn, W, Mo, Bi, Hg, Sb, re-stamped per 0.5 degree cell)
+  U.S. Geological Survey, 2011, Mineral Resources Data System (MRDS). https://mrdata.usgs.gov/mrds/
+  (copies under docs/research/copper-tin-global-2026-09-29 and docs/research/remaining-ores-2026-09-29)
+Validation only (not in the shipped files)
+  U.S. Geological Survey, 2024, Mineral Commodity Summaries 2024 (copper, zinc, lead, silver, tin, tungsten,
+  molybdenum, antimony, bismuth, mercury chapters). https://pubs.usgs.gov/periodicals/mcs2024/
+  (retrieved 2026-11-08 to rawdata/ore/base-metals/usgs-mcs-2024)
+
+Other data
+----------
+Natural Earth 1:10m admin-0 countries (public domain), https://www.naturalearthdata.com/ - land and country checks only.
+Best-guess districts (docs/research/remaining-ores-2026-09-29/corrections/authored) - authored for Earth; districts
+  the catalogue does not cover are carried into evidence.geojson.
+
+Named deposits (source id earth-named-2026)
+-------------------------------------------
+named-additions.csv, named-sn-w-mo-bi.csv and named-hg-sb-ag-cu.csv list well-known published figures (ore tonnage,
+grade, place, first working) as facts, each with its citation in the citation column (carried into the catalogue's
+`ref` field). Quality q B = a cited figure not re-checked against the primary report here; q C = an order of
+magnitude, a figure recalled rather than read from the source, or an estimate (the `est` field names estimated
+fields). Mindat and NC/ND/SA-licensed compilations were not used.
+
+====================================================================================================
+Iron, ferroalloys and aluminium (tools/ore-data/iron-ferro/)
+====================================================================================================
+
+Sources of the iron-ferro ore catalogue (assets/earth/config/ore-deposits-v1/iron-ferro.json) and heat-map evidence
+(tools/ore-data/iron-ferro/evidence.geojson). Only derived values (positions, tonnages, grades, outlines) are shipped.
+
+Ni-Co laterite deposits of the world: database and grade and tonnage models
+  Berger, V.I., Singer, D.A., Bliss, J.D., Moring, B.C., 2011, U.S. Geological Survey Open-File Report 2011-1058
+  https://pubs.usgs.gov/of/2011/1058/
+  Licence: public domain (U.S. Government work); retrieved 29 September 2026 (docs/research/remaining-ores-2026-09-29/raw)
+
+Podiform chromite deposits: database and grade and tonnage models
+  Mosier, D.L., Singer, D.A., Moring, B.C., Galloway, J.P., 2012, U.S. Geological Survey Scientific Investigations Report 2012-5157
+  https://pubs.usgs.gov/sir/2012/5157/
+  Licence: public domain (U.S. Government work); retrieved 29 September 2026
+
+An index to PGE-Ni-Cr deposits and occurrences in selected mineral-occurrence databases (nicrpge)
+  Causey, J.D., Galloway, J.P., Zientek, M.L., 2009, U.S. Geological Survey Open-File Report 2009-1045
+  https://pubs.usgs.gov/of/2009/1045/  (used for filtered heat-map re-adds only)
+  Licence: public domain (U.S. Government work); retrieved 29 September 2026
+
+Major mineral deposits of the world
+  U.S. Geological Survey Open-File Report 2005-1294 (ver. 2017)  https://mrdata.usgs.gov/major-deposits/
+  Licence: public domain (U.S. Government work); retrieved 29 September 2026 (heat-map re-adds)
+
+Mineral Commodity Summaries 2025 (iron ore, manganese, chromium, nickel, titanium mineral concentrates, vanadium,
+platinum-group metals, bauxite and alumina)
+  U.S. Geological Survey, 2025  https://pubs.usgs.gov/periodicals/mcs2025/
+  Licence: public domain (U.S. Government work); retrieved 8 November 2026 (validation and reserve figures cited in entries)
+
+Natural Earth 1:10m admin-0 countries (validation only, not shipped)
+  https://www.naturalearthdata.com/  Licence: public domain; retrieved 2 October 2026
+
+Published endowment figures (authored-deposits.csv, authored-areas.json)
+  Well-known figures from company annual reports and resource statements, national geological surveys and review papers,
+  each named in the entry's "ref" field (for example LKAB, Vale, Rio Tinto, BHP, Kumba Iron Ore, Norilsk Nickel,
+  Naldrett 2004 "Magmatic Sulfide Deposits", Cairncross and Beukes 2013, Lightfoot 2017, Indian Bureau of Mines,
+  Geoscience Australia AIMR). Used as facts with citation; no tables, maps or text copied. Outlines are drawn by hand
+  at about 5-10 km accuracy. Confidence q B or C. The compilation itself is offered under CC0 by the Earth project.
+
+====================================================================================================
+Precious metals, gems and industrial minerals (tools/ore-data/precious-gems/)
+====================================================================================================
+
+Earth ore deposits, group "precious-gems" (decision 0065): attribution and licences
+==================================================================================
+
+What is in git here and in assets/earth/config/ore-deposits-v1/precious-gems.json is derived values only:
+positions, tonnages, grades, depths, sizes and ages of named deposits, written by hand into deposits-*.csv,
+areas.json and extra-evidence.json, plus the scripts that check them. No third-party table, text, map or image is
+copied. Downloads used for checking stay in C:\VS mods\Earth\rawdata\ore\precious-gems\ (never in git).
+
+Every deposit row names its source id (column "src"); the full list with URLs is sources.json and
+sources-industrial.json, copied into the catalogue's sources[]. They fall into three kinds:
+
+1. Public domain (U.S. Government works)
+   - U.S. Geological Survey, Major Mineral Deposits of the World (Schulz and Briskey 2005, Open-File Report
+     2005-1294), https://mrdata.usgs.gov/major-deposits/ : positions and sizes of many lode deposits (source id
+     usgs-major-deposits). Five of its positions are wrong; see proposed-coordinate-corrections.csv.
+   - U.S. Geological Survey, Mineral Commodity Summaries 2025 and 2026 (gold; gemstones), https://pubs.usgs.gov/
+     periodicals/mcs2026/ : world mine production and reserves used only for validation
+     (reference-mcs2026.json, made by fetch_reference.py; ids usgs-mcs-2025).
+   - Berger et al. 2014, sediment-hosted gold deposits of the world (USGS) (lit-berger-2014); USGS Professional
+     Paper 1802 chapters H (fluorine) and J (graphite); USGS Minerals Yearbook quartz crystal; USGS/AGS Afghanistan
+     non-fuel mineral assessments (Sar-e-Sang lapis).
+   - The heat-map bake's own MRDS-derived evidence (public domain, USGS Mineral Resources Data System) is not
+     changed by this group; heatmap-overrides.json drops nothing.
+
+2. Public statistics and well-known published figures, used as facts (confidence q B or C)
+   Total tonnage, grade or contained metal of named deposits as published by geological surveys, company reserve and
+   resource statements, and peer-reviewed literature. Figures are facts, not creative expression; only the number is
+   used, and each row cites where it was published. These include World Gold Council above-ground stocks, Kimberley
+   Process statistics, OECD-NEA/IAEA "Red Book", the national surveys (BGS, GEUS, CPRM, Servicio Geologico
+   Colombiano, Geological Survey of India, GeoSphere Austria, Czech Geological Survey, State Geological Institute of
+   Slovakia, IGME, Bayerisches LfU, Yukon Geological Survey, Montana BMG, Arkansas GS, Wyoming SGS, NMBGMR, Ontario
+   GS), the company statements (Barrick, Newmont, AngloGold Ashanti, Gold Fields, Polyus, Kinross, Agnico Eagle,
+   B2Gold, IAMGOLD, Centamin, Evolution, Lundin Gold, Sumitomo Metal Mining, Eldorado, OceanaGold, De Beers/Anglo
+   American, ALROSA, Rio Tinto, Petra, Lucara, Gem Diamonds, Namdeb, Gemfields, Cameco, NexGen, ERA,
+   Kazatomprom, Rossing, Swakop Uranium, Paladin, Orano, DIAMO, Wismut, UCIL, Syrah, Black Rock, Triton, Graphit
+   Kropfmuehl, Mineral Commodities, Sibelco), and the literature listed in sources.json (Goldfarb et al. 2005,
+   Frimmel 2014, Phillips and Hughes 1996, Wall et al. 2004, Deng et al. 2020, Klemm and Klemm 2013, Levtzion,
+   Hughes, Themelis, Gems and Gemology papers and others).
+
+3. Natural Earth (public domain), https://www.naturalearthdata.com/ : 1:10m admin-0 countries, used by the build
+   (through the bake's CountryCheck) to check that each deposit is on land and inside its country.
+
+Not used: Mindat, GEMDATA/DIADATA rows marked research-only, and any NC, ND or SA licensed data.

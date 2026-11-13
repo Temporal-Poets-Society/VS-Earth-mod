@@ -1,0 +1,694 @@
+{
+  "mod": {
+    "modid": 1900,
+    "assetid": 10271,
+    "name": "Fauna of the Stone Age: Machairodontinae",
+    "text": "<p><span style=\"font-weight: 400;\">A collection of big cats of the subfamily Machairodontinae, these powerful predators will act as an elusive danger players will have to avoid, and protect their livestock from.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:</span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\" style=\"border-spacing: 0px;\"><colgroup><col width=\"150\" /><col width=\"146\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"141\" /><col width=\"120\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /></colgroup>\n<tbody>\n<tr>\n<td style=\"width: 149.988px;\">Common Name</td>\n<td style=\"width: 160.995px;\">Scientific name</td>\n<td style=\"width: 137.998px;\">Category</td>\n<td style=\"width: 99.9884px;\">Weight</td>\n<td style=\"width: 99.9884px;\">Health</td>\n<td style=\"width: 99.9884px;\">Height</td>\n<td style=\"width: 99.9884px;\">Damage</td>\n<td style=\"width: 99.9884px;\">Temp</td>\n<td style=\"width: 99.9884px;\">Preciptation</td>\n<td style=\"width: 99.9884px;\">Foliage Needs</td>\n<td style=\"width: 99.9884px;\">Altitude</td>\n<td style=\"width: 140.995px;\">Group Size</td>\n<td style=\"width: 119.988px;\">Meat Drops</td>\n<td style=\"width: 99.9884px;\">Fat Drops</td>\n<td style=\"width: 99.9884px;\">Hide Drops</td>\n<td style=\"width: 99.9884px;\">Other Drops</td>\n<td style=\"width: 99.9884px;\">Movement</td>\n<td style=\"width: 99.9884px;\">Diet</td>\n</tr>\n<tr>\n<td style=\"width: 149.988px;\">American Scimitar Cat</td>\n<td style=\"width: 160.995px;\">Homotherium serum &dagger;</td>\n<td style=\"width: 137.998px;\">Machairodontinae</td>\n<td style=\"width: 99.9884px;\">190/120/20</td>\n<td style=\"width: 99.9884px;\">27/20/6</td>\n<td style=\"width: 99.9884px;\">1.1/1.0</td>\n<td style=\"width: 99.9884px;\">9/8t2</td>\n<td style=\"width: 99.9884px;\">-11-21</td>\n<td style=\"width: 99.9884px;\">20-100%</td>\n<td style=\"width: 99.9884px;\">All</td>\n<td style=\"width: 99.9884px;\">1-1.8</td>\n<td style=\"width: 140.995px;\">1-4 M&amp;F 8-16 M&amp;F&amp;B</td>\n<td style=\"width: 119.988px;\">19-23,13-17, 1-2</td>\n<td style=\"width: 99.9884px;\">2-3</td>\n<td style=\"width: 99.9884px;\">6H, 5H, 1M</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">3 block step</td>\n<td style=\"width: 99.9884px;\">eggs, fish,meat</td>\n</tr>\n<tr>\n<td style=\"width: 149.988px;\">Northern Saber Cat</td>\n<td style=\"width: 160.995px;\">Smilodon fatalis &dagger;</td>\n<td style=\"width: 137.998px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">220/140/20</td>\n<td style=\"width: 99.9884px;\">30/22/6</td>\n<td style=\"width: 99.9884px;\">1.07/0.95</td>\n<td style=\"width: 99.9884px;\">10/8t2</td>\n<td style=\"width: 99.9884px;\">5-44</td>\n<td style=\"width: 99.9884px;\">10-100%</td>\n<td style=\"width: 99.9884px;\">25-100% Both</td>\n<td style=\"width: 99.9884px;\">1-1.5</td>\n<td style=\"width: 140.995px;\">1-4 M&amp;F 4-16 M&amp;F&amp;B</td>\n<td style=\"width: 119.988px;\">21-25, 14-18, 1-3</td>\n<td style=\"width: 99.9884px;\">2-3</td>\n<td style=\"width: 99.9884px;\">7H, 5H, 1M</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">3 block step</td>\n<td style=\"width: 99.9884px;\">eggs, fish,meat</td>\n</tr>\n<tr>\n<td style=\"width: 149.988px;\">Southern Saber Cat</td>\n<td style=\"width: 160.995px;\">Smilodon populator &dagger;</td>\n<td style=\"width: 137.998px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">275/220/20</td>\n<td style=\"width: 99.9884px;\">36/30/6</td>\n<td style=\"width: 99.9884px;\">1.2/1.1</td>\n<td style=\"width: 99.9884px;\">11/10t2</td>\n<td style=\"width: 99.9884px;\">3-44</td>\n<td style=\"width: 99.9884px;\">10-100%</td>\n<td style=\"width: 99.9884px;\">0-75% Both</td>\n<td style=\"width: 99.9884px;\">1-1.5</td>\n<td style=\"width: 140.995px;\">1-4 M&amp;F 3-13 M&amp;F&amp;B</td>\n<td style=\"width: 119.988px;\">22-28,21-25,1-3</td>\n<td style=\"width: 99.9884px;\">2-3</td>\n<td style=\"width: 99.9884px;\">8H, 7H, 1M</td>\n<td style=\"width: 99.9884px;\">Sabertooth skull</td>\n<td style=\"width: 99.9884px;\">3 block step</td>\n<td style=\"width: 99.9884px;\">eggs, fish,meat</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Each cat makes loud calls from time to time, acting as an early warning for players who learn to recognize which cats are making the sounds. What&rsquo;s more, meat can be set on the ground that will temporarily sate predatory cats, making them ignore the player unless they get too close. Or meat can be used to lure them into hazardous terrain.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">These large predators are extremely powerful and fast and fighting them head on is not recommended. Using historical hunting tactics is recommended, such as luring them into pit traps, burning the foliage around them, pitting them against other animals and going in for the kill or other indirect methods.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Feature:</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Carcasses:&nbsp; These unique type of fly covered carcasses will prevent big cats spawning in the area around them. They have a chance to spawn when first arriving in an area or when all big cats have been killed off from the area, allowing players to locally wipe out big cats. Destroying the carcass of the respective type will allow more cats to spawn again and some carnivores and scavengers may destroy them as well, so if you want big cat spawns prevented in an area protect these carcasses.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">All species have a unique pelt that can be used to craft hide, taxidermized full body and head mounts.</span></p>\n<p><span style=\"font-weight: 400;\">&nbsp;</span></p>\n<p><span style=\"font-weight: 400;\">And a big thanks to everyone who gave feedback and assistance!<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong> How do I domesticate the animals in this pack?<br /><br /><strong>A:</strong> Get a male and female adult of a given species within 10 blocks, wait until the female is ready to mate and feed her the sufficient number of portions and the male at least one. Different species require different amounts and can be found in the entity file under the multiply section. Animals can be fed either by dropping items on the ground or by using the large trough. The small trough is not supported at this time due to patching formats. Each species diet can be found in this mod's description or in their entity file under the diet section. After 10 generations, entities stop attacking the player and after 10 generations they will no longer flee the player. Only the mother's generation matters for progressing generations.<br /><br /><br /><strong>Q:</strong> Why so many animal packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain clade file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><strong>Q:</strong> Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> Yes, this mod series is safe to add and remove. Items from this mod that have been placed will be invisible or appear as question blocks if the mod is removed but can be safely broken.</div>\n</div>\n<p><span style=\"font-weight: 400;\"> <br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "machairodontinae",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_dca168600f3b4b13b32cb1cd72609297.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_dca168600f3b4b13b32cb1cd72609297.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_dca168600f3b4b13b32cb1cd72609297.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 193059,
+    "follows": 1324,
+    "trendingpoints": 0,
+    "comments": 97,
+    "side": "both",
+    "type": "mod",
+    "created": "2024-01-25 21:13:34",
+    "lastreleased": "2026-09-23 19:15:44",
+    "lastmodified": "2026-09-28 20:08:48",
+    "tags": [
+      "Crafting",
+      "Furniture",
+      "Creatures"
+    ],
+    "releases": [
+      {
+        "releaseid": 58158,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_f42423f2fa79de5326868efc23d85652.zip?dl=FotSA-Machairodontinae-v1.1.13.zip",
+        "filename": "FotSA-Machairodontinae-v1.1.13.zip",
+        "fileid": 124638,
+        "downloads": 1815,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.1.13",
+        "created": "2026-09-23 19:15:44",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Adult saber cats not dropping fat correctly</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Missing center point in carcass</span></p>"
+      },
+      {
+        "releaseid": 56520,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_31fa0e7a10277017a6634789d3cef8e7.zip?dl=FotSA-Machairodontinae-v1.1.12.zip",
+        "filename": "FotSA-Machairodontinae-v1.1.12.zip",
+        "fileid": 121539,
+        "downloads": 4024,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.1.12",
+        "created": "2026-09-11 15:45:28",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Pelts grouped in handbook</span></p>"
+      },
+      {
+        "releaseid": 48466,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_81f45fc7738ca79d4d64be169feee150.zip?dl=FotSA-Machairodontinae-v1.1.11.zip",
+        "filename": "FotSA-Machairodontinae-v1.1.11.zip",
+        "fileid": 105949,
+        "downloads": 16865,
+        "tags": [
+          "1.22.3",
+          "1.22.5",
+          "1.22.7"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.1.11",
+        "created": "2026-07-08 22:29:19",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Changed case of fleeDurationMs </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of MaxCooldownHours</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of MaxCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of MinCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of soundRange </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of soundRepeatMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted tamingGenerations to maxGeneration</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted LeapHeightFactor to leapHeightMul</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted maxcooldown to MaxCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted mincooldown to MinCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted maxdurationMS to maxduration</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted mindurationMS to minduration</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted maxFollowTimeSec to maxFollowTime</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unneeded mingenerations &amp; maxgenerations</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused After Jump Speed Reduction</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Distance To Target To Jump</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused DontExecuteIfRecentlyAttacked </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Eat after kill</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused fleeDurationWhenTargetLost</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Herd Alarm Range</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Ignore dead entities</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused lookAtEntities AI tasks</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused MaxBlocksChecked</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused min and maxduration from non-Idle tasks</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Player is meal</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Range Search Attempts Factors</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Sound volume</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused target light levels</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused wander range vertical max</span></p>"
+      },
+      {
+        "releaseid": 47080,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_eef1d842e1e7b1a30cf5022f974b1dba.zip?dl=FotSA-Machairodontinae-v1.1.10.zip",
+        "filename": "FotSA-Machairodontinae-v1.1.10.zip",
+        "fileid": 103120,
+        "downloads": 3691,
+        "tags": [
+          "1.22.3"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.1.10",
+        "created": "2026-06-25 16:47:26",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Baby cats applying wrong state tag</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Changed oiled hide recipe to use rendered fat</span></p>"
+      },
+      {
+        "releaseid": 35818,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_3a115455a1087d286cec88bc4e2c2f1f.zip?dl=FotSA-Machairodontinae-v1.1.9.zip",
+        "filename": "FotSA-Machairodontinae-v1.1.9.zip",
+        "fileid": 79031,
+        "downloads": 16320,
+        "tags": [
+          "1.22.0-pre.4",
+          "1.22.0-pre.5",
+          "1.22.0-rc.1"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.1.9",
+        "created": "2026-03-05 16:48:39",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Ancient Tools Brain drops (Thanks Whiskey Sunshine!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Slot 1 to melee attacks, should increase attack responsiveness</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Removed-Attack for UI display</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Ai task time frames over midnight</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-ai tasks tag formats</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-changed jump to leap </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-min and max durationMs to duration</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Stayclose to entity format</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 34494,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_d469c15fca3eb18794d3eaa7184ddd01.zip?dl=FotSA-Machairodontinae-v1.1.8.zip",
+        "filename": "FotSA-Machairodontinae-v1.1.8.zip",
+        "fileid": 76013,
+        "downloads": 441,
+        "tags": [
+          "1.22.0-pre.2"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.1.8",
+        "created": "2026-02-13 20:50:57",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Adjusted Frost overlay thresholds for cold weather cats</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Freshwater fish interaction</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-rolled back refactored ai tasks to main ai tasks </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Change chance and wanderChance to executionChance</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Changed inEmotionStates format</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 32483,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_b5caf69ea1284fadc0d77d6f9b17cc1d.zip?dl=FotSA-Machairodontinae-v1.1.7.zip",
+        "filename": "FotSA-Machairodontinae-v1.1.7.zip",
+        "fileid": 71470,
+        "downloads": 17742,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.1.7",
+        "created": "2026-01-13 01:30:54",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed- Biomes patch not working for the Southern Saber cat or American scimitar cat</span></p>"
+      },
+      {
+        "releaseid": 32106,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_5f768f90682522107d681e183f4043ad.zip?dl=FotSA-Machairodontinae-v1.1.6.zip",
+        "filename": "FotSA-Machairodontinae-v1.1.6.zip",
+        "fileid": 70673,
+        "downloads": 2498,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.1.6",
+        "created": "2026-01-06 21:33:57",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-1 hide is always dropped from killed animals</span></p>"
+      },
+      {
+        "releaseid": 31625,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_40710b67bdd1231201d08fca41c564d6.zip?dl=FotSA-Machairodontinae-v1.1.5.zip",
+        "filename": "FotSA-Machairodontinae-v1.1.5.zip",
+        "fileid": 69661,
+        "downloads": 3099,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.1.5",
+        "created": "2025-12-30 17:35:04",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Combat expanded patches</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-French Translation (Thanks Laerinok!)</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 30603,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_4b72e58634aa18c42b4a2d856d53daca.zip?dl=FotSA-Machairodontinae-v1.1.4.zip",
+        "filename": "FotSA-Machairodontinae-v1.1.4.zip",
+        "fileid": 67485,
+        "downloads": 5438,
+        "tags": [
+          "1.21.5",
+          "1.21.6-rc.1"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.1.4",
+        "created": "2025-12-10 23:13:42",
+        "changelog": "<p>Fixed-errors from combat overhaul patch</p>"
+      },
+      {
+        "releaseid": 30388,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_cb4a6d69a0e1e75c99cef57d89b083fd.zip?dl=FotSA-Machairodontinae-v1.1.3.zip",
+        "filename": "FotSA-Machairodontinae-v1.1.3.zip",
+        "fileid": 67059,
+        "downloads": 1607,
+        "tags": [
+          "1.21.5",
+          "1.21.6-rc.1"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.1.3",
+        "created": "2025-12-06 20:24:46",
+        "changelog": "<p>Fixed-Patches directing to the wrong file</p>"
+      },
+      {
+        "releaseid": 30242,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_c9853969cfdf2b65e0650fa033723142.zip?dl=FotSA-Machairodontinae-v1.1.2.zip",
+        "filename": "FotSA-Machairodontinae-v1.1.2.zip",
+        "fileid": 66735,
+        "downloads": 1376,
+        "tags": [
+          "1.21.5",
+          "1.21.6-rc.1"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.1.2",
+        "created": "2025-12-03 16:14:22",
+        "changelog": "<p>Fixed-Cats dropping old version of their pelts</p>"
+      },
+      {
+        "releaseid": 29876,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_1e8f6a7c4c12c74305dcb2b0bd881df3.zip?dl=FotSA-Machairodontinae-v1.1.1.zip",
+        "filename": "FotSA-Machairodontinae-v1.1.1.zip",
+        "fileid": 65940,
+        "downloads": 2714,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.1.1",
+        "created": "2025-11-25 21:09:54",
+        "changelog": "<p>Fixed-Oiled hide recipe creating salted hide</p>"
+      },
+      {
+        "releaseid": 29841,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_4e5720844f83cd1bde1d1cc6f1910709.zip?dl=FotSA-Machairodontinae-v1.1.0.zip",
+        "filename": "FotSA-Machairodontinae-v1.1.0.zip",
+        "fileid": 65861,
+        "downloads": 886,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.1.0",
+        "created": "2025-11-25 01:36:57",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Ancient Tools Brain drops (Thanks Whiskey Sunshine!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Entity state tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Oiled, Raw, Salted hides and associated recipes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Changed spawn conditions to have any amount of artificial light block spawns</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Cleaned up audio</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Climate conditions changed due to 1.21 changes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Changed despawn conditions to be pitch black</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Group size based on new research</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Raised pelt ratio to get closer to irl size</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Removed minimum altitude from most spawn conditions</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Refactored AI tasks to the new versions in 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Reformatted folders to match base game&rsquo;s folder layout</span></p>"
+      },
+      {
+        "releaseid": 28229,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_f009ac76dacbfe5a9708ef5d8c129634.zip?dl=FotSA-Machairodontinae-v1.0.28.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.28.zip",
+        "fileid": 62107,
+        "downloads": 7489,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.28",
+        "created": "2025-10-27 20:22:21",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Weighted diet </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Trappable format for 1.21</span></p>"
+      },
+      {
+        "releaseid": 25432,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_4edc075fa15715f52118cc05517fb329.zip?dl=FotSA-Machairodontinae-v1.0.27.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.27.zip",
+        "fileid": 56031,
+        "downloads": 17644,
+        "tags": [
+          "1.21.1",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.27",
+        "created": "2025-09-18 16:36:34",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span></p>"
+      },
+      {
+        "releaseid": 25347,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_39832470162471248b962e1623773b9c.zip?dl=FotSA-Machairodontinae-v1.0.26.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.26.zip",
+        "fileid": 55851,
+        "downloads": 930,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.26",
+        "created": "2025-09-17 15:04:26",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added- Creature tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Missing closed bracket in animal file</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-HP values recalculated to fit new carnivore hp ratio</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 19464,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_5c662156e0e3f25623c64b715637f430.zip?dl=FotSA-Machairodontinae-v1.0.25.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.25.zip",
+        "fileid": 42087,
+        "downloads": 26629,
+        "tags": [
+          "1.20.9",
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.25",
+        "created": "2025-04-29 22:09:31",
+        "changelog": "<p>Added-Devil interactions<br />Added-Mihirung interactions<br />Added-Diprotodon interactions<br />Added-Cetacea interactions<br />Refactored-combined male and female entity files into one to adhere to new game standard<br />Fixed-babies not following mothers and adult females not following males</p>"
+      },
+      {
+        "releaseid": 18514,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_6a73f8dd2853123be4522a3f7ab1a902.zip?dl=FotSA-Machairodontinae-v1.0.24.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.24.zip",
+        "fileid": 40012,
+        "downloads": 6551,
+        "tags": [
+          "1.20.7",
+          "1.20.8"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.24",
+        "created": "2025-04-04 23:42:46",
+        "changelog": "<p>Added-Worldgen spawn</p>"
+      },
+      {
+        "releaseid": 17546,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_b4233576ea36ac2bfdb8d12187ac04b5.zip?dl=FotSA-Machairodontinae-v1.0.23.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.23.zip",
+        "fileid": 37344,
+        "downloads": 5786,
+        "tags": [
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.23",
+        "created": "2025-03-13 20:11:17",
+        "changelog": "<p>Added-Thylacoleo interactions<br />Tweak-Spawn temperature ranges<br />Fixed-Model issues</p>"
+      },
+      {
+        "releaseid": 16568,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_3e5e8ba0ca36ba4a76fb9adeae96f720.zip?dl=FotSA-Machairodontinae-v1.0.22.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.22.zip",
+        "fileid": 34137,
+        "downloads": 6216,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.22",
+        "created": "2025-02-20 16:40:10",
+        "changelog": "<p>Added-Civet and Genet interactions</p>"
+      },
+      {
+        "releaseid": 16226,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_5a164a0e6b208acb52c971616da85c71.zip?dl=FotSA-Machairodontinae-v1.0.21.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.21.zip",
+        "fileid": 33365,
+        "downloads": 2783,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.21",
+        "created": "2025-02-14 17:54:15",
+        "changelog": "<p>Fixed-Base game animal patch format updated to 1.20.4</p>"
+      },
+      {
+        "releaseid": 15942,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_d7e1f454c974088d68dacb59d3daea51.zip?dl=FotSA-Machairodontinae-v1.0.20.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.20.zip",
+        "fileid": 32802,
+        "downloads": 2286,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.20",
+        "created": "2025-02-09 17:45:32",
+        "changelog": "<p>Fixed-Taxidermy being ground placeable</p>"
+      },
+      {
+        "releaseid": 15309,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_7e50e3ba8aed2f128032bf877004e6b7.zip?dl=FotSA-Machairodontinae-v1.0.19.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.19.zip",
+        "fileid": 31645,
+        "downloads": 4446,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.19",
+        "created": "2025-01-28 00:24:10",
+        "changelog": "<p>Added-Bovine compatibility</p>"
+      },
+      {
+        "releaseid": 14972,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_cd06257ee00d0a667508a42de334c717.zip?dl=FotSA-Machairodontinae-v1.0.18.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.18.zip",
+        "fileid": 31027,
+        "downloads": 2708,
+        "tags": [
+          "1.20.1",
+          "1.20.3"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.18",
+        "created": "2025-01-22 20:35:32",
+        "changelog": "<p>Added-Wombat Compatibility</p>"
+      },
+      {
+        "releaseid": 14608,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_99caf5ff79c7378584d7029d347371c4.zip?dl=FotSA-Machairodontinae-v1.0.17.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.17.zip",
+        "fileid": 30381,
+        "downloads": 3156,
+        "tags": [
+          "1.20.0",
+          "1.20.1"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.17",
+        "created": "2025-01-17 18:42:01",
+        "changelog": "<p>Added-Elephant compatibility</p>"
+      },
+      {
+        "releaseid": 14124,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_27e48b11216fb5340a181c6d5bbbcad1.zip?dl=FotSA-Machairodontinae-v1.0.16.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.16.zip",
+        "fileid": 29435,
+        "downloads": 2001,
+        "tags": [
+          "1.20.0-rc.6",
+          "1.20.0-rc.8",
+          "1.20.0-rc.9"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.16",
+        "created": "2025-01-01 23:47:33",
+        "changelog": "<p>Added-Felinae compatibility<br />Updated-1.20 land entity pathfinding<br />Updated-1.20 blending for movement animations</p>"
+      },
+      {
+        "releaseid": 13463,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_4547f0fcc71040d265f8d3d446609c84.zip?dl=FotSA-Machairodontinae-v1.0.15.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.15.zip",
+        "fileid": 28209,
+        "downloads": 2933,
+        "tags": [
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.15",
+        "created": "2024-12-05 21:31:43",
+        "changelog": "<p>Added- Ukrainian translation, thanks Deanbro!<br />Tweak-Combat Overhaul damage resistance</p>"
+      },
+      {
+        "releaseid": 13168,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_44ce0a0912f1b43edb31d2edae3bd357.zip?dl=FotSA-Machairodontinae-v1.0.14.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.14.zip",
+        "fileid": 27600,
+        "downloads": 965,
+        "tags": [
+          "1.20.0-pre.0",
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.14",
+        "created": "2024-11-21 18:13:16",
+        "changelog": "<p>Adjusted-Combat Overhaul damage resistance</p>"
+      },
+      {
+        "releaseid": 12981,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_fc51f6ee4d7007fbde1f274a642f9fcc.zip?dl=FotSA-Machairodontinae-v1.0.13.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.13.zip",
+        "fileid": 27253,
+        "downloads": 491,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.13",
+        "created": "2024-11-11 19:40:40",
+        "changelog": "<p>Added-Penguin interactions</p>"
+      },
+      {
+        "releaseid": 12674,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_80d6427fc96b8fa39f033190c58f3903.zip?dl=FotSA-Machairodontinae-v1.0.12.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.12.zip",
+        "fileid": 26648,
+        "downloads": 714,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.12",
+        "created": "2024-10-24 19:29:03",
+        "changelog": "<p>Added-Combat Overhaul compatibility (Thanks Maltiez)<br />Added-Dinornithidae plus bird interactions</p>"
+      },
+      {
+        "releaseid": 12556,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_ad8149d1913407534798156cb305fded.zip?dl=FotSA-Machairodontinae-v1.0.11.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.11.zip",
+        "fileid": 26341,
+        "downloads": 520,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.11",
+        "created": "2024-10-16 17:11:40",
+        "changelog": "<p>Added-French translation (Thanks Laerinok)<br />Fixed-Elk interaction patch</p>"
+      },
+      {
+        "releaseid": 12345,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_0962b9734843c9acf1a88fe2c8dfd0bd.zip?dl=FotSA-Machairodontinae-v1.0.10.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.10.zip",
+        "fileid": 25901,
+        "downloads": 684,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.10",
+        "created": "2024-10-04 18:20:21",
+        "changelog": "<p>Fixed-Trough diet tags<br />Refactored-Taxidermies and headmounts are now items, should reduce mod's texture impact by 33%<br />Refactored-Pelts are now only items, cuts down on mod size and memory impact. Place pelts on antler mounts or tool racks to get the wallmounted version<br />Updated-Animal patches, powdered item in recipe and various tweaks for 1.20's changes</p>"
+      },
+      {
+        "releaseid": 10706,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_d43ecf47ecc1bbe3e440b75df67cf7ea.zip?dl=FotSA-Machairodontinae-v1.0.9.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.9.zip",
+        "fileid": 22305,
+        "downloads": 8799,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.9",
+        "created": "2024-06-06 15:10:50",
+        "changelog": "<p>Fixed-trough diet strings<br />Removed-protein from diet, cats won't be surviving off nuts and insects anymore<br />Added-fish to diets<br />Recalculated-meat to weight ratio on animals over 100kg</p>"
+      },
+      {
+        "releaseid": 10383,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_eaad2b31b4e4113dc32255b49453c504.zip?dl=FotSA-Machairodontinae-v1.0.8.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.8.zip",
+        "fileid": 21721,
+        "downloads": 1711,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.8",
+        "created": "2024-05-18 21:12:53",
+        "changelog": "<p>Added-Crafting recipe for saber cat carcass, placing them will block spawns within render radius<br />Updated-fly covered carcass look<br />Fixed-Cats now can eat loose items off the ground<br />Tweak-Reduced spawn rate considerably<br />Tweak-Added a 100 minimum distance for spawning near player<br />Tweak-Added a maximum light level to prevent cats spawning near illuminating blocks<br />Tweak-readded spawn cap player scaling set to 0, to make sure it isn't scaling&nbsp;</p>"
+      },
+      {
+        "releaseid": 10199,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_ee72af7e90ff85b1583112de1e00c756.zip?dl=FotSA-Machairodontinae-v1.0.7.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.7.zip",
+        "fileid": 21385,
+        "downloads": 1226,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.7",
+        "created": "2024-05-04 19:48:47",
+        "changelog": "<p>Added-Compatibility with Pangolins and Manatees, saber cats will attack both but not actively hunt them<br />Removed-duplicated roar behavior from males<br />Tweak-reduced roar audible range from 200m to 120m<br />Tweak-adjusted multiple ai tasks to not play if fleeing or aggroed<br />Tweak-adjusted attack tasks so saber cats shouldn't do both types of attacks at once (defensive vs aggressive)<br />Tweak-adjusted hunting tasks so saber cats shouldn't attack proactively when full<br />Fixed-removed a number of errors about patches being server side only</p>"
+      },
+      {
+        "releaseid": 10038,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_313427b87c56a09d1f82d782df900475.zip?dl=FotSA-Machairodontinae-v1.0.6.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.6.zip",
+        "fileid": 21120,
+        "downloads": 950,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.6",
+        "created": "2024-04-25 23:28:47",
+        "changelog": "<p>Added-Rhino interactions, will hunt baby rhinos and flee from adults</p>"
+      },
+      {
+        "releaseid": 9917,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_63e7976ece21020534d81b659f0337ed.zip?dl=FotSA-Machairodontinae-v1.0.5.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.5.zip",
+        "fileid": 20916,
+        "downloads": 916,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.5",
+        "created": "2024-04-19 16:29:33",
+        "changelog": "<p>Added-Fall damage multipliers<br />Added-Killed by text (Thanks MadGnome)<br />Added-Diet strings</p>"
+      },
+      {
+        "releaseid": 9623,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_4a2708acf232876dc71522836cc971ac.zip?dl=FotSA-Machairodontinae-v1.0.4.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.4.zip",
+        "fileid": 20429,
+        "downloads": 1492,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.4",
+        "created": "2024-04-01 17:33:28",
+        "changelog": "<p>Added-Compatibility with Casuariidae</p>"
+      },
+      {
+        "releaseid": 9257,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_81a5444b8364109154300a3fd4de7dd0.zip?dl=FotSA-Machairodontinae-v1.0.3.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.3.zip",
+        "fileid": 19759,
+        "downloads": 1714,
+        "tags": [
+          "1.19.4",
+          "1.19.5-rc.1",
+          "1.19.5",
+          "1.19.6",
+          "1.19.7"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.3",
+        "created": "2024-03-08 21:07:36",
+        "changelog": "<p>Removed- population scaling with player count<br />Added-Additional harvest slots for mod compatibility</p>"
+      },
+      {
+        "releaseid": 8743,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_355467ed17abc8f1517279f66573bc8c.zip?dl=FotSA-Machairodontinae-v1.0.2.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.2.zip",
+        "fileid": 18898,
+        "downloads": 1387,
+        "tags": [
+          "1.19.3",
+          "1.19.4"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.2",
+        "created": "2024-02-08 17:43:28",
+        "changelog": "<p>Added- air blocks as acceptable spawn locations for the male and female cats<br />Fixed-mod ID for carcass spawn rate, should no longer be defaulting the the game's standard respawn rate</p>"
+      },
+      {
+        "releaseid": 8420,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_8a71d332ed7c960d57a73e48bee7eb4b.zip?dl=FotSA-Machairodontinae-v1.0.1.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.1.zip",
+        "fileid": 18206,
+        "downloads": 888,
+        "tags": [
+          "1.19.3"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.1",
+        "created": "2024-01-27 18:28:01",
+        "changelog": "<p>Added-French Translation (Thanks Laerinok)<br />Changed-Carcass named Saber Cat instead of Big Cat<br />Tweaked-lowered carcass spawn rate</p>"
+      },
+      {
+        "releaseid": 8371,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_57adf5aa936b1b2bfaeccc1faa84aea7.zip?dl=FotSA-Machairodontinae-v1.0.0.zip",
+        "filename": "FotSA-Machairodontinae-v1.0.0.zip",
+        "fileid": 18103,
+        "downloads": 529,
+        "tags": [
+          "1.19.2"
+        ],
+        "modidstr": "machairodontinae",
+        "modversion": "1.0.0",
+        "created": "2024-01-25 21:15:05",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 18099,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-01-24_17-39-08_d4863d78ba5e4703d420450864cd1bef.png",
+        "filename": "2024-01-24_17-39-08.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-01-24_17-39-08_d4863d78ba5e4703d420450864cd1bef_55_60.png",
+        "created": "2024-01-25 21:12:26"
+      },
+      {
+        "fileid": 18100,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-01-24_17-57-09_20ca47b984236efc1116a51e434803b4.png",
+        "filename": "2024-01-24_17-57-09.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-01-24_17-57-09_20ca47b984236efc1116a51e434803b4_55_60.png",
+        "created": "2024-01-25 21:13:05"
+      },
+      {
+        "fileid": 18101,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-01-24_17-57-47_9a9ca4c6e3841cd4a03e8931eebed6ab.png",
+        "filename": "2024-01-24_17-57-47.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-01-24_17-57-47_9a9ca4c6e3841cd4a03e8931eebed6ab_55_60.png",
+        "created": "2024-01-25 21:13:10"
+      },
+      {
+        "fileid": 18102,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-01-24_18-01-10_ee6baf77eada8b204a267d0dfedb8087.png",
+        "filename": "2024-01-24_18-01-10.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-01-24_18-01-10_ee6baf77eada8b204a267d0dfedb8087_55_60.png",
+        "created": "2024-01-25 21:13:23"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

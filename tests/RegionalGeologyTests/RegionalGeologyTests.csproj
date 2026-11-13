@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><LangVersion>12</LangVersion><Nullable>disable</Nullable><ImplicitUsings>enable</ImplicitUsings><EnableDefaultCompileItems>false</EnableDefaultCompileItems><ServerGarbageCollection>true</ServerGarbageCollection><Optimize>true</Optimize></PropertyGroup>
+  <!-- GoldenBaselineGenerator.cs is documentation of how golden-v1.json was produced (it compiled against the 0.12.2 sources); it is not built here. -->
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="GoldenWorlds.cs" />
+    <Compile Include="../../src/Core/*.cs" Link="Core/%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,962 @@
+{
+  "mod": {
+    "modid": 1125,
+    "assetid": 5788,
+    "name": "Fauna of the Stone Age: Pantherinae",
+    "text": "<p><span style=\"font-weight: 400;\">A collection of big and medium cats of the subfamily Pantherinae, these powerful predators will act as an elusive danger players will have to avoid, and protect their livestock from. </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:</span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" style=\"width: 2030px; border-spacing: 0px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col width=\"120\" /><col width=\"143\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"169\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /></colgroup>\n<tbody>\n<tr>\n<td style=\"width: 119.711px;\">Name</td>\n<td style=\"width: 147.766px;\">Scientific Name</td>\n<td style=\"width: 99.8032px;\">Category</td>\n<td style=\"width: 99.8843px;\">Weight</td>\n<td style=\"width: 99.7454px;\">Health</td>\n<td style=\"width: 168.588px;\">Length(Nose to Butt)</td>\n<td style=\"width: 99.7801px;\">Damage</td>\n<td style=\"width: 99.6644px;\">Temp</td>\n<td style=\"width: 99.9074px;\">Preciptation</td>\n<td style=\"width: 99.919px;\">Foliage Needs</td>\n<td style=\"width: 99.7454px;\">Altitude</td>\n<td style=\"width: 99.6991px;\">Group Size</td>\n<td style=\"width: 99.919px;\">Meat Drops</td>\n<td style=\"width: 99.6991px;\">Fat Drops</td>\n<td style=\"width: 99.8032px;\">Hide Drops</td>\n<td style=\"width: 99.8495px;\">Movement</td>\n<td style=\"width: 295.764px;\">Diet</td>\n</tr>\n<tr>\n<td style=\"width: 119.711px;\">American Lion</td>\n<td style=\"width: 147.766px;\">Panthera atrox &dagger;</td>\n<td style=\"width: 99.8032px;\">Panthera</td>\n<td style=\"width: 99.8843px;\">256/162/20</td>\n<td style=\"width: 99.7454px;\">34/25/6</td>\n<td style=\"width: 168.588px;\">2.5/2.25</td>\n<td style=\"width: 99.7801px;\">11/9t2</td>\n<td style=\"width: 99.6644px;\">1-21</td>\n<td style=\"width: 99.9074px;\">10-90%</td>\n<td style=\"width: 99.919px;\">0-65% Forest</td>\n<td style=\"width: 99.7454px;\">1-1.5</td>\n<td style=\"width: 99.6991px;\">2-8</td>\n<td style=\"width: 99.919px;\">24+-3,19+-2</td>\n<td style=\"width: 99.6991px;\">2+-0.3</td>\n<td style=\"width: 99.8032px;\">6L, 4L, 1S</td>\n<td style=\"width: 99.8495px;\">3.125 step</td>\n<td style=\"width: 295.764px;\">meat fish</td>\n</tr>\n<tr>\n<td style=\"width: 119.711px;\">Lion</td>\n<td style=\"width: 147.766px;\">Panthera leo</td>\n<td style=\"width: 99.8032px;\">Panthera</td>\n<td style=\"width: 99.8843px;\">186/118/20</td>\n<td style=\"width: 99.7454px;\">27/20/6</td>\n<td style=\"width: 168.588px;\">2.08/1.84</td>\n<td style=\"width: 99.7801px;\">9/8t2</td>\n<td style=\"width: 99.6644px;\">12-40</td>\n<td style=\"width: 99.9074px;\">10-90%</td>\n<td style=\"width: 99.919px;\">0-80% Forest</td>\n<td style=\"width: 99.7454px;\">1-1.5</td>\n<td style=\"width: 99.6991px;\">4-16</td>\n<td style=\"width: 99.919px;\">21+-2,15+-2</td>\n<td style=\"width: 99.6991px;\">2+-0.3</td>\n<td style=\"width: 99.8032px;\">5L, 3L, 1S</td>\n<td style=\"width: 99.8495px;\">3.125 step</td>\n<td style=\"width: 295.764px;\">meat, fish, egg</td>\n</tr>\n<tr>\n<td style=\"width: 119.711px;\">Jaguar</td>\n<td style=\"width: 147.766px;\">Panthera onca</td>\n<td style=\"width: 99.8032px;\">Panthera</td>\n<td style=\"width: 99.8843px;\">95/67/12</td>\n<td style=\"width: 99.7454px;\">18/15/5</td>\n<td style=\"width: 168.588px;\">1.85/1.6</td>\n<td style=\"width: 99.7801px;\">7t2/6t1</td>\n<td style=\"width: 99.6644px;\">12-40</td>\n<td style=\"width: 99.9074px;\">5-100%</td>\n<td style=\"width: 99.919px;\">10%+ Forest</td>\n<td style=\"width: 99.7454px;\">1-1.6</td>\n<td style=\"width: 99.6991px;\">1</td>\n<td style=\"width: 99.919px;\">7+-2</td>\n<td style=\"width: 99.6991px;\">1+-0.3</td>\n<td style=\"width: 99.8032px;\">3L,2L,1S</td>\n<td style=\"width: 99.8495px;\">3.125 step</td>\n<td style=\"width: 295.764px;\">meat, fish, egg</td>\n</tr>\n<tr>\n<td style=\"width: 119.711px;\">Leopard</td>\n<td style=\"width: 147.766px;\">Panthera pardus</td>\n<td style=\"width: 99.8032px;\">Panthera</td>\n<td style=\"width: 99.8843px;\">50/43/10</td>\n<td style=\"width: 99.7454px;\">12/11/5</td>\n<td style=\"width: 168.588px;\">1.43/1.28</td>\n<td style=\"width: 99.7801px;\">5t1</td>\n<td style=\"width: 99.6644px;\">8-40</td>\n<td style=\"width: 99.9074px;\">10-100%</td>\n<td style=\"width: 99.919px;\">10%+ Shrub</td>\n<td style=\"width: 99.7454px;\">1-1.6</td>\n<td style=\"width: 99.6991px;\">1</td>\n<td style=\"width: 99.919px;\">4+-2</td>\n<td style=\"width: 99.6991px;\">1+-0.3</td>\n<td style=\"width: 99.8032px;\">2L, 1S</td>\n<td style=\"width: 99.8495px;\">3.125 step</td>\n<td style=\"width: 295.764px;\">meat, fish, egg</td>\n</tr>\n<tr>\n<td style=\"width: 119.711px;\">Steppe Lion</td>\n<td style=\"width: 147.766px;\">Panthera spelaea &dagger;</td>\n<td style=\"width: 99.8032px;\">Panthera</td>\n<td style=\"width: 99.8843px;\">208/132/20</td>\n<td style=\"width: 99.7454px;\">29/22/6</td>\n<td style=\"width: 168.588px;\">2.25/2</td>\n<td style=\"width: 99.7801px;\">10/8t2</td>\n<td style=\"width: 99.6644px;\">-25-11</td>\n<td style=\"width: 99.9074px;\">10-75%</td>\n<td style=\"width: 99.919px;\">5%+ Forest</td>\n<td style=\"width: 99.7454px;\">1-1.8</td>\n<td style=\"width: 99.6991px;\">1</td>\n<td style=\"width: 99.919px;\">22+-2, 16+-2</td>\n<td style=\"width: 99.6991px;\">2+-0.3</td>\n<td style=\"width: 99.8032px;\">5L, 4L, 1S</td>\n<td style=\"width: 99.8495px;\">3.125 step</td>\n<td style=\"width: 295.764px;\">meat, fish, egg</td>\n</tr>\n<tr>\n<td style=\"width: 119.711px;\">Tiger</td>\n<td style=\"width: 147.766px;\">Panthera tigris</td>\n<td style=\"width: 99.8032px;\">Panthera</td>\n<td style=\"width: 99.8843px;\">174/116/20</td>\n<td style=\"width: 99.7454px;\">26/20/6</td>\n<td style=\"width: 168.588px;\">2.65/2.35</td>\n<td style=\"width: 99.7801px;\">9/8t2</td>\n<td style=\"width: 99.6644px;\">-12-40</td>\n<td style=\"width: 99.9074px;\">25-100%</td>\n<td style=\"width: 99.919px;\">40%+ Forest</td>\n<td style=\"width: 99.7454px;\">1-1.8</td>\n<td style=\"width: 99.6991px;\">1</td>\n<td style=\"width: 99.919px;\">20+-2, 15+-2</td>\n<td style=\"width: 99.6991px;\">2+-0.3</td>\n<td style=\"width: 99.8032px;\">5L, 4L, 1S</td>\n<td style=\"width: 99.8495px;\">3.125 step</td>\n<td style=\"width: 295.764px;\">meat, fish, egg</td>\n</tr>\n<tr>\n<td style=\"width: 119.711px;\">Snow Leopard</td>\n<td style=\"width: 147.766px;\">Panthera uncia</td>\n<td style=\"width: 99.8032px;\">Panthera</td>\n<td style=\"width: 99.8843px;\">37/10</td>\n<td style=\"width: 99.7454px;\">10/5</td>\n<td style=\"width: 168.588px;\">1.125</td>\n<td style=\"width: 99.7801px;\">5t1</td>\n<td style=\"width: 99.6644px;\">4-26</td>\n<td style=\"width: 99.9074px;\">0-65%</td>\n<td style=\"width: 99.919px;\">All</td>\n<td style=\"width: 99.7454px;\">1.4+</td>\n<td style=\"width: 99.6991px;\">1</td>\n<td style=\"width: 99.919px;\">4+-2</td>\n<td style=\"width: 99.6991px;\">1+-0.3</td>\n<td style=\"width: 99.8032px;\">2L, 1S</td>\n<td style=\"width: 99.8495px;\">3.125 step</td>\n<td style=\"width: 295.764px;\">meat, fish, egg</td>\n</tr>\n<tr>\n<td style=\"width: 119.711px;\">Sunda Clouded Leopard</td>\n<td style=\"width: 147.766px;\">Neofelis diardi</td>\n<td style=\"width: 99.8032px;\">Neofelis</td>\n<td style=\"width: 99.8843px;\">20/5</td>\n<td style=\"width: 99.7454px;\">7/4</td>\n<td style=\"width: 168.588px;\">1.08/0.94</td>\n<td style=\"width: 99.7801px;\">4t1</td>\n<td style=\"width: 99.6644px;\">26-40</td>\n<td style=\"width: 99.9074px;\">65-100%</td>\n<td style=\"width: 99.919px;\">65%+Forest</td>\n<td style=\"width: 99.7454px;\">1-1.3</td>\n<td style=\"width: 99.6991px;\">1</td>\n<td style=\"width: 99.919px;\">2+-1</td>\n<td style=\"width: 99.6991px;\">1+-0.3</td>\n<td style=\"width: 99.8032px;\">2M, 1S</td>\n<td style=\"width: 99.8495px;\">Climbing</td>\n<td style=\"width: 295.764px;\">meat, fish, egg</td>\n</tr>\n<tr>\n<td style=\"width: 119.711px;\">Clouded Leopard</td>\n<td style=\"width: 147.766px;\">Neofelis nebulosadiardi</td>\n<td style=\"width: 99.8032px;\">Neofelis</td>\n<td style=\"width: 99.8843px;\">18/5</td>\n<td style=\"width: 99.7454px;\">6/4</td>\n<td style=\"width: 168.588px;\">1.08/0.94</td>\n<td style=\"width: 99.7801px;\">4t1</td>\n<td style=\"width: 99.6644px;\">14-40</td>\n<td style=\"width: 99.9074px;\">45-100%</td>\n<td style=\"width: 99.919px;\">45%+Forest</td>\n<td style=\"width: 99.7454px;\">1-1.5</td>\n<td style=\"width: 99.6991px;\">1</td>\n<td style=\"width: 99.919px;\">2+-1</td>\n<td style=\"width: 99.6991px;\">1+-0.3</td>\n<td style=\"width: 99.8032px;\">2M, 1S</td>\n<td style=\"width: 99.8495px;\">Climbing</td>\n<td style=\"width: 295.764px;\">meat, fish, egg</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Each cat makes loud calls from time to time, acting as an early warning for players who learn to recognize which cats are making the sound and which will hunt humans. What&rsquo;s more, meat can be set on the ground that will temporarily sate predatory cats, making them ignore the player unless they get too close. Or meat can be used to lure them into hazardous terrain.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">When hunting prey, the Pantherines will slowly stalk their target before pouncing once close enough. Evasive and observant players should be able to escape in time and avoid conflict when not equipped to do so. The larger cats are similar in strength to brown and polar bears and players should avoid them when possible. For those determined to face these foes, it is recommended to use strategies early humans employed for hunting large predators.<br /><br />Feature:<br />Carcasses: &nbsp;These unique type of fly covered carcasses will prevent big cats spawning in the area around them. They have a chance to spawn when first arriving in an area or when all big cats have been killed off from the area, allowing players to locally wipe out big cats. Destroying the carcass of the respective type will allow more cats to spawn again and some carnivores and scavengers may destroy them as well, so if you want big cat spawns prevented in an area protect these carcasses. Carcasses can be crafted with bones, meat and cat pelts to place in the world.<br /><br /></span>All species have a unique pelt that can be used to craft hide, taxidermied full body and head mounts.<br /><br /><span style=\"font-weight: 400;\">Links:</span><span style=\"font-weight: 400;\"><br /></span><a href=\"https://ko-fi.com/tentharchitect\"><span style=\"font-weight: 400;\">https://ko-fi.com/tentharchitect</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span></a><span style=\"font-weight: 400;\">And a big thanks to everyone who gave feedback and assistance!<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong> How do I domesticate the animals in this pack?<br /><br /><strong>A:</strong> Get a male and female adult of a given species within 10 blocks, wait until the female is ready to mate and feed her the sufficient number of portions and the male at least one. Different species require different amounts and can be found in the entity file under the multiply section. Animals can be fed either by dropping items on the ground or by using the correct trough. Each species diet can be found in this mod's description or in their entity file under the diet section. Only the mother's generation matters for progressing generations.<br /><br /><br /><strong>Q:</strong> Why so many animal packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain clade file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><strong>Q:</strong> Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> Yes, this mod series is safe to add and remove. Items from this mod that have been placed will be invisible or appear as question blocks if the mod is removed but can be safely broken.</div>\n</div>\n<p><span style=\"font-weight: 400;\"> <br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "pantherinae",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_6a732b8a12ba48b2fb4ca89289a9f25a.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_6a732b8a12ba48b2fb4ca89289a9f25a.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_6a732b8a12ba48b2fb4ca89289a9f25a.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 253244,
+    "follows": 1660,
+    "trendingpoints": 0,
+    "comments": 227,
+    "side": "both",
+    "type": "mod",
+    "created": "2023-04-10 17:09:35",
+    "lastreleased": "2026-09-11 15:41:03",
+    "lastmodified": "2026-09-28 20:08:48",
+    "tags": [
+      "Crafting",
+      "Furniture",
+      "Creatures"
+    ],
+    "releases": [
+      {
+        "releaseid": 56517,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_8fa84519bab0bd5c26eedc907f70e3d8.zip?dl=FotSA-Pantherinae-v1.2.18.zip",
+        "filename": "FotSA-Pantherinae-v1.2.18.zip",
+        "fileid": 121535,
+        "downloads": 5813,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.18",
+        "created": "2026-09-11 15:41:03",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Pelts grouped in handbook</span></p>"
+      },
+      {
+        "releaseid": 48699,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_0fb56c676ee150ba8563fd2c6a71e0e5.zip?dl=FotSA-Pantherinae-v1.2.17.zip",
+        "filename": "FotSA-Pantherinae-v1.2.17.zip",
+        "fileid": 106384,
+        "downloads": 20682,
+        "tags": [
+          "1.22.3",
+          "1.22.5",
+          "1.22.7"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.17",
+        "created": "2026-07-10 23:39:29",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Converted maxFollowTimeSec to maxFollowTime</span></p>"
+      },
+      {
+        "releaseid": 48446,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_51a577687a3881564ccd70c6cce22554.zip?dl=FotSA-Pantherinae-v1.2.16.zip",
+        "filename": "FotSA-Pantherinae-v1.2.16.zip",
+        "fileid": 105919,
+        "downloads": 1668,
+        "tags": [
+          "1.22.3"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.16",
+        "created": "2026-07-08 18:33:58",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Changed case of fleeDurationMs </span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Changed case of MaxCooldownHours</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Changed case of MaxCooldownMs</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Changed case of MinCooldownMs</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Changed case of soundRange </span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Changed case of soundRepeatMs </span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Converted damageWindowMs to damagePlayerAtMs</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Converted maxcooldown to MaxCooldownMs</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Converted mincooldown to MinCooldownMs</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Converted JumpHeightFactor to leapHeightMul</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Converted LeapHeightFactor to leapHeightMul</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Converted tamingGenerations to minGeneration</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unneeded mingenerations</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused lookAtEntities AI tasks</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused After Jump Speed Reduction</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused Distance To Target To Jump</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused DontExecuteIfRecentlyAttacked </span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused Eat after kill</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused Herd Alarm Range</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused Ignore dead entities</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused Leap Height Factor</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused Leap Speed Factor</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused MaxBlocksChecked</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused min and maxduration from non-Idle tasks</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused Player is meal</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused Range Search Attempts Factors</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused Reverse Skip Tags Check</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused Sound volume</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused target light levels</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused wander range vertical max</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Removed unused when feet in liquid</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Singular emotion state format</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Typo in Max Target Weight for Clouded Leopards</span></p>"
+      },
+      {
+        "releaseid": 48245,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_26a4c22d05325a734c57e2e3d3661a72.zip?dl=FotSA-Pantherinae-v1.2.15.zip",
+        "filename": "FotSA-Pantherinae-v1.2.15.zip",
+        "fileid": 105472,
+        "downloads": 874,
+        "tags": [
+          "1.22.3"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.15",
+        "created": "2026-07-06 19:21:27",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Baby cats applying wrong state tag</span></p>"
+      },
+      {
+        "releaseid": 46896,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_7d5df7e8644e7e1cb2a87ba374d05488.zip?dl=FotSA-Pantherinae-v1.2.14.zip",
+        "filename": "FotSA-Pantherinae-v1.2.14.zip",
+        "fileid": 102777,
+        "downloads": 6321,
+        "tags": [
+          "1.22.3"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.14",
+        "created": "2026-06-23 16:52:31",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-Changed oiled hide recipe to use rendered fat</span></p>"
+      },
+      {
+        "releaseid": 35814,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_009563fc574db5035ef01a4f472420e9.zip?dl=FotSA-Pantherinae-v1.2.13.zip",
+        "filename": "FotSA-Pantherinae-v1.2.13.zip",
+        "fileid": 79027,
+        "downloads": 17918,
+        "tags": [
+          "1.22.0-pre.4",
+          "1.22.0-pre.5",
+          "1.22.0-rc.1",
+          "1.22.3"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.13",
+        "created": "2026-03-05 16:35:14",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Slot 1 to melee attacks, should increase attack responsiveness</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Baby big cats targeting female babies of their own species</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Removed-Attack for UI display</span></p>"
+      },
+      {
+        "releaseid": 35688,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_d7adfbbbbc2fff1e6ee8e45f7bd2c72b.zip?dl=FotSA-Pantherinae-v1.2.12.zip",
+        "filename": "FotSA-Pantherinae-v1.2.12.zip",
+        "fileid": 78747,
+        "downloads": 112,
+        "tags": [
+          "1.22.0-pre.4"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.12",
+        "created": "2026-03-03 17:43:08",
+        "changelog": "<p><span style=\"font-weight: 400;\">Tweak-Temporarily reduced seekEntity ranges</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-ai tasks tag formats</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-changed jump to leap</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-min and max durationMs to duration</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Stayclose to entity format</span></p>"
+      },
+      {
+        "releaseid": 34210,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_eeb291d832a33618d19368e65b0c1629.zip?dl=FotSA-Pantherinae-v1.2.11.zip",
+        "filename": "FotSA-Pantherinae-v1.2.11.zip",
+        "fileid": 75443,
+        "downloads": 708,
+        "tags": [
+          "1.22.0-pre.1"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.11",
+        "created": "2026-02-09 01:26:05",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-changed swim wander format for pre.2</span></p>"
+      },
+      {
+        "releaseid": 34110,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_d1ee296006c31e02f58eff52e544c473.zip?dl=FotSA-Pantherinae-v1.2.10.zip",
+        "filename": "FotSA-Pantherinae-v1.2.10.zip",
+        "fileid": 75204,
+        "downloads": 226,
+        "tags": [
+          "1.22.0-pre.1"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.10",
+        "created": "2026-02-07 22:56:34",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Adjusted Frost overlay thresholds for cold weather cats</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Attack range</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 34043,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_d5bef79d56e0b05765271d6816b064d6.zip?dl=FotSA-Pantherinae-v1.2.9.zip",
+        "filename": "FotSA-Pantherinae-v1.2.9.zip",
+        "fileid": 75050,
+        "downloads": 152,
+        "tags": [
+          "1.22.0-pre.1"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.9",
+        "created": "2026-02-06 22:16:34",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Freshwater fish interaction</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-rolled back refactored ai tasks to main ai tasks </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Changed inEmotionStates format</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Changed chance and wanderChance to executionChance</span></p>"
+      },
+      {
+        "releaseid": 32481,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_442ab4a9c0a64887801afcea9048eb3b.zip?dl=FotSA-Pantherinae-v1.2.8.zip",
+        "filename": "FotSA-Pantherinae-v1.2.8.zip",
+        "fileid": 71468,
+        "downloads": 22509,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.8",
+        "created": "2026-01-13 01:29:18",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Biomes patch not working for melanistic leopards or jaguars</span></p>"
+      },
+      {
+        "releaseid": 32101,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_5ff02a2f7afefa3a659e035e175890ab.zip?dl=FotSA-Pantherinae-v1.2.7.zip",
+        "filename": "FotSA-Pantherinae-v1.2.7.zip",
+        "fileid": 70660,
+        "downloads": 3305,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.7",
+        "created": "2026-01-06 21:00:37",
+        "changelog": "<p>Updated-1 hide is always dropped from killed animals</p>"
+      },
+      {
+        "releaseid": 31623,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_f3016fec14a8b96973ea00ce3f398115.zip?dl=FotSA-Pantherinae-v1.2.6.zip",
+        "filename": "FotSA-Pantherinae-v1.2.6.zip",
+        "fileid": 69659,
+        "downloads": 3595,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.6",
+        "created": "2025-12-30 17:32:21",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-French Translation (Thanks Laerinok!)</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 29691,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_54147b393b00d2249f070faffbc3995e.zip?dl=FotSA-Pantherinae-v1.2.5.zip",
+        "filename": "FotSA-Pantherinae-v1.2.5.zip",
+        "fileid": 65532,
+        "downloads": 12436,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.5",
+        "created": "2025-11-22 20:30:37",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Added missing Pantherninaetag to certain tasks, preventing big cats from being targets</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Clouded leopards fleeing potential prey animals when hungry</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Mismatched ai task formats in Neofelis</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-SkipEntityTags mistyped as SkipEntityTag</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 28422,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_d8c678ed1246bacdd35da81e42d21450.zip?dl=FotSA-Pantherinae-v1.2.4.zip",
+        "filename": "FotSA-Pantherinae-v1.2.4.zip",
+        "fileid": 62650,
+        "downloads": 8336,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.4",
+        "created": "2025-10-30 21:18:33",
+        "changelog": "<p>Fixed-Big cats giving birth to only female babies<br />Fixed-Pantherinaetag not activating, this temporary fix is in place until skipEntity is fixed with the base game, this prevents big cats from attacking/fleeing/seeking each other<br />Tweak-Big cats extinct at the beginning of the Holocene have their climate conditions shifted 3 degrees cooler</p>"
+      },
+      {
+        "releaseid": 28219,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_468480257277e3e7feb76a4e3a8a1b73.zip?dl=FotSA-Pantherinae-v1.2.3.zip",
+        "filename": "FotSA-Pantherinae-v1.2.3.zip",
+        "fileid": 62086,
+        "downloads": 1789,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.3",
+        "created": "2025-10-27 15:57:37",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Disabled lookatentity ai tasks until the refactor fixes them</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Rolled back seekentity ai tasks until the refactor fixes them </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Tag has-open-fire was malformed as state-holding-open-fire</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Added skip predator from preferred prey seek entity ai tasks</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Added flee entity task when not hungry so they flee potentially dangerous prey animals</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Raised flee distances greater than their seek distances</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 25909,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_6fb29e84391a8898d87ff7a4bdbd021d.zip?dl=FotSA-Pantherinae-v1.2.2.zip",
+        "filename": "FotSA-Pantherinae-v1.2.2.zip",
+        "fileid": 56931,
+        "downloads": 16688,
+        "tags": [
+          "1.21.1",
+          "1.21.2-rc.2",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.2",
+        "created": "2025-09-25 16:17:28",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Changed jump animation entry to prevent bugs logged</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 25345,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_6f8bb4f5f04bcbf4eb5cbe5e7556e2be.zip?dl=FotSA-Pantherinae-v1.2.1.zip",
+        "filename": "FotSA-Pantherinae-v1.2.1.zip",
+        "fileid": 55849,
+        "downloads": 5357,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.1",
+        "created": "2025-09-17 15:02:04",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Removed CO damage change patch</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-HP values recalculated to fit new carnivore hp ratio</span></p>"
+      },
+      {
+        "releaseid": 25151,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_2aa429eeaf0d4969fda1fbcad1fb1002.zip?dl=FotSA-Pantherinae-v1.2.0.zip",
+        "filename": "FotSA-Pantherinae-v1.2.0.zip",
+        "fileid": 55346,
+        "downloads": 1946,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.2.0",
+        "created": "2025-09-14 16:51:46",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Ancient Tools Brain drops (Thanks Whiskey Sunshine!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added- Creature tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Oiled, Raw, Salted hides and associated recipes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Weighted diet</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Missing closed bracket in animal file</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Sunda and Mainland clouded leopard had spawn conditions swapped</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Climate conditions changed due to 1.21 changes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Cleaned up audio</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-baby big cats eat from small troughs and can&rsquo;t use large ones</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Refactored AI tasks to the new versions in 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Reformatted folders to match base game&rsquo;s folder layout</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Trappable format for 1.21</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 19454,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_34efb467fdbfd83ecbb46cc4bb8f78e7.zip?dl=FotSA-Pantherinae-v1.1.27.zip",
+        "filename": "FotSA-Pantherinae-v1.1.27.zip",
+        "fileid": 42076,
+        "downloads": 30383,
+        "tags": [
+          "1.20.9",
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.27",
+        "created": "2025-04-29 20:37:45",
+        "changelog": "<p>Fixed-Missing bracket in Neofelis-adult.json</p>"
+      },
+      {
+        "releaseid": 19450,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_62ce24d9b77a26e664735988c200c41c.zip?dl=FotSA-Pantherinae-v1.1.26.zip",
+        "filename": "FotSA-Pantherinae-v1.1.26.zip",
+        "fileid": 42065,
+        "downloads": 165,
+        "tags": [
+          "1.20.9"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.26",
+        "created": "2025-04-29 19:22:33",
+        "changelog": "<p>Added-Devil interactions<br />Added-Mihirung interactions<br />Added-Diprotodon interactions<br />Refactored-combined male and female entity files into one to adhere to new game standard</p>"
+      },
+      {
+        "releaseid": 19042,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_09d0dca95789b6d582b984678d506064.zip?dl=FotSA-Pantherinae-v1.1.25.zip",
+        "filename": "FotSA-Pantherinae-v1.1.25.zip",
+        "fileid": 41179,
+        "downloads": 4267,
+        "tags": [
+          "1.20.7",
+          "1.20.8"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.25",
+        "created": "2025-04-17 22:50:10",
+        "changelog": "<p>Fixed-Breeding not working</p>"
+      },
+      {
+        "releaseid": 18512,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_a21744511276c4b978575395c67dfd86.zip?dl=FotSA-Pantherinae-v1.1.24.zip",
+        "filename": "FotSA-Pantherinae-v1.1.24.zip",
+        "fileid": 40010,
+        "downloads": 4027,
+        "tags": [
+          "1.20.7"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.24",
+        "created": "2025-04-04 23:39:20",
+        "changelog": "<p>Added-Worldgen spawn</p>"
+      },
+      {
+        "releaseid": 17549,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_6651a076bb37ed3aba86fa1a3f21fb0a.zip?dl=FotSA-Pantherinae-v1.1.23.zip",
+        "filename": "FotSA-Pantherinae-v1.1.23.zip",
+        "fileid": 37347,
+        "downloads": 6810,
+        "tags": [
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.23",
+        "created": "2025-03-13 20:18:13",
+        "changelog": "<p>Added-Thylacoleo interactions<br />Tweak-Spawn temperature ranges<br />Fixed-Model issues</p>"
+      },
+      {
+        "releaseid": 16571,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_7cc7f679851869d3766a4a21d3d62fa7.zip?dl=FotSA-Pantherinae-v1.1.22.zip",
+        "filename": "FotSA-Pantherinae-v1.1.22.zip",
+        "fileid": 34140,
+        "downloads": 8047,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.22",
+        "created": "2025-02-20 16:42:43",
+        "changelog": "<p>Added-Civet and Genet Interactions</p>"
+      },
+      {
+        "releaseid": 16223,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_f7608f642459aeabb776298d5a86801d.zip?dl=FotSA-Pantherinae-v1.1.21.zip",
+        "filename": "FotSA-Pantherinae-v1.1.21.zip",
+        "fileid": 33362,
+        "downloads": 3633,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.21",
+        "created": "2025-02-14 17:49:23",
+        "changelog": "<p>Fixed-Base game animal patch format updated to 1.20.4</p>"
+      },
+      {
+        "releaseid": 15939,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_8759419da07de76792338bcff4c55d76.zip?dl=FotSA-Pantherinae-v1.1.20.zip",
+        "filename": "FotSA-Pantherinae-v1.1.20.zip",
+        "fileid": 32800,
+        "downloads": 2600,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.20",
+        "created": "2025-02-09 17:43:02",
+        "changelog": "<p>Added-Horned turtle interactions</p>"
+      },
+      {
+        "releaseid": 15306,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_0caabfb1f8f02a53c0fd9cf92cfc7b28.zip?dl=FotSA-Pantherinae-v1.1.19.zip",
+        "filename": "FotSA-Pantherinae-v1.1.19.zip",
+        "fileid": 31641,
+        "downloads": 4959,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.19",
+        "created": "2025-01-28 00:21:11",
+        "changelog": "<p>Added-Bovine compatibility</p>"
+      },
+      {
+        "releaseid": 14970,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_f6e00eeb8f442d426fa0ecd5a317c096.zip?dl=FotSA-Pantherinae-v1.1.18.zip",
+        "filename": "FotSA-Pantherinae-v1.1.18.zip",
+        "fileid": 31025,
+        "downloads": 3006,
+        "tags": [
+          "1.20.1",
+          "1.20.3"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.18",
+        "created": "2025-01-22 20:33:21",
+        "changelog": "<p>Added-Wombat compatibility</p>"
+      },
+      {
+        "releaseid": 14605,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_84e45c94d191811cb03909a1622012f2.zip?dl=FotSA-Pantherinae-v1.1.17.zip",
+        "filename": "FotSA-Pantherinae-v1.1.17.zip",
+        "fileid": 30378,
+        "downloads": 3853,
+        "tags": [
+          "1.20.0",
+          "1.20.1"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.17",
+        "created": "2025-01-17 18:35:49",
+        "changelog": "<p>Added-Elephant compatibility<br />Fixed-Specified male breeding ID to reduce conflicts</p>"
+      },
+      {
+        "releaseid": 14121,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_30cb8b4bdb1dca1e9f1abdc9725e522e.zip?dl=FotSA-Pantherinae-v1.1.16.zip",
+        "filename": "FotSA-Pantherinae-v1.1.16.zip",
+        "fileid": 29432,
+        "downloads": 2641,
+        "tags": [
+          "1.20.0-rc.6",
+          "1.20.0-rc.8",
+          "1.20.0-rc.9"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.16",
+        "created": "2025-01-01 23:43:27",
+        "changelog": "<p>Added-Felinae compatibility<br />Updated-1.20 land entity pathfinding<br />Updated-1.20 blending for movement animations<br />Tweak-reduced American Lion pride size</p>"
+      },
+      {
+        "releaseid": 13459,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_5219d1b9c28de25d05a7d28591556dca.zip?dl=FotSA-Pantherinae-v1.1.15.zip",
+        "filename": "FotSA-Pantherinae-v1.1.15.zip",
+        "fileid": 28205,
+        "downloads": 2981,
+        "tags": [
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.15",
+        "created": "2024-12-05 19:16:28",
+        "changelog": "<p>Added-Ukrainian translation, thanks Deanbro!<br />Fixed-Audio bug<br />Tweak-Combat overhaul damage modifiers</p>"
+      },
+      {
+        "releaseid": 13165,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_e30f02ea52a113e6daf3147114f87bc1.zip?dl=FotSA-Pantherinae-v1.1.14.zip",
+        "filename": "FotSA-Pantherinae-v1.1.14.zip",
+        "fileid": 27597,
+        "downloads": 1209,
+        "tags": [
+          "1.20.0-pre.0",
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.14",
+        "created": "2024-11-21 17:59:25",
+        "changelog": "<p>Adjusted-Combat Overhaul damage resists</p>"
+      },
+      {
+        "releaseid": 12976,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_1240391f8b99f0cec7331d3322b9e963.zip?dl=FotSA-Pantherinae-v1.1.13.zip",
+        "filename": "FotSA-Pantherinae-v1.1.13.zip",
+        "fileid": 27248,
+        "downloads": 598,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.13",
+        "created": "2024-11-11 17:57:13",
+        "changelog": "<p>Added-Interaction with Penguins</p>"
+      },
+      {
+        "releaseid": 12668,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_7a844909d25ed612adcd1d56bd5c54a5.zip?dl=FotSA-Pantherinae-v1.1.12.zip",
+        "filename": "FotSA-Pantherinae-v1.1.12.zip",
+        "fileid": 26644,
+        "downloads": 854,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.12",
+        "created": "2024-10-24 16:31:51",
+        "changelog": "<p>Added-Dinornithidae plus bird interactions</p>"
+      },
+      {
+        "releaseid": 12553,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_5c2898ce8ccc887e56a702e021330a56.zip?dl=FotSA-Pantherinae-v1.1.11.zip",
+        "filename": "FotSA-Pantherinae-v1.1.11.zip",
+        "fileid": 26338,
+        "downloads": 672,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.11",
+        "created": "2024-10-16 15:19:37",
+        "changelog": "<p>Added-Combat Overhaul compatibility (Thanks Maltiez)<br />Added-French translation (Thanks Laerinok)<br />Fixed-Elk interaction patch</p>"
+      },
+      {
+        "releaseid": 12303,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_593851a96a1b4252eb4a1995c99f6b98.zip?dl=FotSA-Pantherinae-v1.1.10.zip",
+        "filename": "FotSA-Pantherinae-v1.1.10.zip",
+        "fileid": 25799,
+        "downloads": 894,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.10",
+        "created": "2024-10-01 17:42:36",
+        "changelog": "<p>Fixed-Trough diet tags<br />Refactored-Taxidermies and headmounts are now items, should reduce mod's texture impact by 33%<br />Refactored-Pelts are now only items, cuts down on mod size and memory impact. Place pelts on antler mounts or tool racks to get the wallmounted version<br />Updated-Animal patches, powdered item in recipe and various tweaks for 1.20's changes</p>"
+      },
+      {
+        "releaseid": 10666,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_82ff33ef7a5055f64adcc6dce6b3f2bb.zip?dl=FotSA-Pantherinae-v1.1.9.zip",
+        "filename": "FotSA-Pantherinae-v1.1.9.zip",
+        "fileid": 22242,
+        "downloads": 11185,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.9",
+        "created": "2024-06-03 18:39:03",
+        "changelog": "<p>Fixed-trough diet strings<br />Removed-protein from diet, cats won't be surviving off nuts and insects anymore<br />Recalculated-meat to weight ratio on animals over 100kg<br /><br /></p>"
+      },
+      {
+        "releaseid": 10380,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_05a8b1fe17e275d90af0c6f82eabd728.zip?dl=FotSA-Pantherinae-v1.1.8.zip",
+        "filename": "FotSA-Pantherinae-v1.1.8.zip",
+        "fileid": 21717,
+        "downloads": 1775,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.8",
+        "created": "2024-05-18 18:15:29",
+        "changelog": "<p>Added-Crafting recipe for panthera carcass and clouded leopard carcass, placing them will block spawns within render radius<br />Updated-fly covered carcass look<br />Tweak-Reduced spawn rate considerably<br />Tweak-Added a 100 minimum distance for spawning near player<br />Tweak-Added a maximum light level to prevent cats spawning near illuminating blocks<br />Tweak-readded spawn cap player scaling set to 0, to make sure it isn't scaling&nbsp;<br /><br /></p>"
+      },
+      {
+        "releaseid": 10235,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_939c05047a70da1a73ed4db2a47e31b9.zip?dl=FotSA-Pantherinae-v1.1.7.zip",
+        "filename": "FotSA-Pantherinae-v1.1.7.zip",
+        "fileid": 21448,
+        "downloads": 1226,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.7",
+        "created": "2024-05-07 16:36:28",
+        "changelog": "<p>Added-Compatibility with FotSA: Manidae<br />Added-fish to big cat's diet and eggs and fish to clouded leopard's diet<br />Added-Big cats will be aggressive when their babies are around, even those that don't normally attack humans<br />Tweak-Reduced audio range of roar<br />Tweak-increase saturated duration, Clouded leopards should wait a day before hunting again and big cats will wait two days<br />Tweak-big cats won't wander if they've eaten in the last two days<br />Tweak-reduced any population scaling with player count, should see lower cat population<br />Tweak-added emotion state requirements to many aitasks, should see fewer instances of cats doing idle animations during combat<br />Fix-Big cats shouldn't use both types of attacks when injured<br />Fix-Cats should eat loose items off ground again<br />Fix-typo in stay close to entity behavior, cats should now stick close to eachother in family groups</p>"
+      },
+      {
+        "releaseid": 10043,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_5f7963018fbeebabdcf944ef1e2d5b95.zip?dl=FotSA-Pantherinae-v1.1.6.zip",
+        "filename": "FotSA-Pantherinae-v1.1.6.zip",
+        "fileid": 21126,
+        "downloads": 1373,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.6",
+        "created": "2024-04-26 00:32:26",
+        "changelog": "<p>Added-Rhino compatibility, panthera cats will avoid adults and hunt baby rhinos</p>"
+      },
+      {
+        "releaseid": 9920,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_77c8725ba013f66c8e7546c23e11a81e.zip?dl=FotSA-Pantherinae-v1.1.5.zip",
+        "filename": "FotSA-Pantherinae-v1.1.5.zip",
+        "fileid": 20920,
+        "downloads": 1029,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.5",
+        "created": "2024-04-19 17:09:22",
+        "changelog": "<p>Added-Killed by strings (Thanks MadGnome)<br />Added-diet strings<br />Added-Fall damage multipliers, adult panthera species should die from 20 meter falls<br />Tweaked-animation transitions<br />Fixed-Deer interaction IDs</p>"
+      },
+      {
+        "releaseid": 9688,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_c5d9d272c2f6de527b1792709e4db635.zip?dl=FotSA-Pantherinae-v1.1.4.zip",
+        "filename": "FotSA-Pantherinae-v1.1.4.zip",
+        "fileid": 20534,
+        "downloads": 1548,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.4",
+        "created": "2024-04-05 15:51:16",
+        "changelog": "<p>Added-Missing male tiger pelt to hide recipe</p>"
+      },
+      {
+        "releaseid": 9625,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_63ef1dbaf057972bc64f6adeb568fbc1.zip?dl=FotSA-Pantherinae-v1.1.3.zip",
+        "filename": "FotSA-Pantherinae-v1.1.3.zip",
+        "fileid": 20433,
+        "downloads": 866,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.3",
+        "created": "2024-04-01 17:41:22",
+        "changelog": "<p>Added-Compatibility with Casuariidae<br />Fixed-interactions with baby Canina and saber cats</p>"
+      },
+      {
+        "releaseid": 9306,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_c29baef963e6f2bb95754bc4ea9a5a6f.zip?dl=FotSA-Pantherinae-v1.1.2.zip",
+        "filename": "FotSA-Pantherinae-v1.1.2.zip",
+        "fileid": 19858,
+        "downloads": 1841,
+        "tags": [
+          "1.19.4",
+          "1.19.5-rc.1",
+          "1.19.5",
+          "1.19.6",
+          "1.19.7"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.2",
+        "created": "2024-03-12 20:32:38",
+        "changelog": "<p>Fixed- baby clouded leopards not growing into adults<br />Added- more harvest slots for better mod compatibility<br />Updated-clouded leopard fall damage system to new version, now they take 1/10th fall damage instead of no fall damage, baby panthera cats do as well</p>"
+      },
+      {
+        "releaseid": 8760,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_83359dea02f8ed6dd53b36f5e7f7b2bf.zip?dl=FotSA-Pantherinae-v1.1.1.zip",
+        "filename": "FotSA-Pantherinae-v1.1.1.zip",
+        "fileid": 18929,
+        "downloads": 2142,
+        "tags": [
+          "1.19.3",
+          "1.19.4"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.1",
+        "created": "2024-02-09 16:08:15",
+        "changelog": "<p>Fixed- Male and Female Panthera members not dropping pelts</p>"
+      },
+      {
+        "releaseid": 8742,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_f86bd4b5be0c07ecc2b132b03fc6789d.zip?dl=FotSA-Pantherinae-v1.1.0.zip",
+        "filename": "FotSA-Pantherinae-v1.1.0.zip",
+        "fileid": 18888,
+        "downloads": 550,
+        "tags": [
+          "1.19.3"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.1.0",
+        "created": "2024-02-08 17:07:46",
+        "changelog": "<p>Updated-All textures are brought in line with the resolution of the base game animals, with their UV maps adjusted to fit the base game<br />Added-Pelts, wall mounted pelts, head mounts and taxidermy for all big cats<br />Added-baby cats are basketable and all cats now eat foods tagged as meat<br />Added-compatibility with FotSA:Machiarodontinae&nbsp;<br />Added-correct models and textures showing up when looking for the cats in creative mode and the handbook<br />Fixed-certain prey and predator interactions using incorrect wildcards<br />Fixed-some cats not dropping fat<br />Fixed-some cats incorrectly using bear noises<br />Fixed-cats attacking other members of their species when injured for any reason<br /><br />And many other minor art asset and statistic tweaks</p>"
+      },
+      {
+        "releaseid": 7211,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_6bd8da03407600e60a744ceb3af78a29.zip?dl=FotSA-Pantherinae-v1.0.9.zip",
+        "filename": "FotSA-Pantherinae-v1.0.9.zip",
+        "fileid": 15720,
+        "downloads": 4239,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.0.9",
+        "created": "2023-10-31 18:19:43",
+        "changelog": "<p>Removed-Venison from accepted diets of all cats<br />Added-compatibility with Biomes mod</p>"
+      },
+      {
+        "releaseid": 7022,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_a01b3a9cc5b7e5778c0b7acf029dbedf.zip?dl=FotSA-Pantherinae-v1.0.8.zip",
+        "filename": "FotSA-Pantherinae-v1.0.8.zip",
+        "fileid": 15276,
+        "downloads": 860,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.0.8",
+        "created": "2023-10-18 18:22:06",
+        "changelog": "<p>Fixed-error logs relating to foods</p>"
+      },
+      {
+        "releaseid": 6104,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_0f7aeacdc3755c4d1a0a89efe3145fe2.zip?dl=FotSA-Pantherinae-v1.0.7.zip",
+        "filename": "FotSA-Pantherinae-v1.0.7.zip",
+        "fileid": 13144,
+        "downloads": 5825,
+        "tags": [
+          "1.18.0",
+          "1.18.1",
+          "1.18.2",
+          "1.18.3",
+          "1.18.4",
+          "1.18.5",
+          "1.18.6",
+          "1.18.7",
+          "1.18.8-rc.1",
+          "1.18.13",
+          "1.18.14",
+          "1.18.15"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.0.7",
+        "created": "2023-08-01 16:14:35",
+        "changelog": "<p>Tweak: Adjusted spawn rates, increasing them by 60%.<br />Tweak: Stopped clouded leopards from fleeing panthera carcasses.<br />Added: Compatibility with FotSA: Caninae</p>"
+      },
+      {
+        "releaseid": 5871,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_5cfaa065504810830ab8c41dcd6f0c1c.zip?dl=FotSA-Pantherinae-v1.0.6.zip",
+        "filename": "FotSA-Pantherinae-v1.0.6.zip",
+        "fileid": 12669,
+        "downloads": 1634,
+        "tags": [
+          "1.18.0",
+          "1.18.1",
+          "1.18.2",
+          "1.18.3",
+          "1.18.4",
+          "1.18.5",
+          "1.18.6"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.0.6",
+        "created": "2023-07-08 17:02:16",
+        "changelog": "<p>Fix: Solved issue with mouth inventory.<br />Tweak: Adjusted spawn criteria so cats will only spawn on soil, sand, gravel, grass and snow.<br />Tweak: Reduced Steppe Lion's max temperature.<br />Tweak: Other cats had spawn criteria adjusted to be in line with my other mods.<br />Tweak: Changed Clouded leopards from climb on any surface to only climbable surfaces.<br />Tweak: Removed the chance of albino and melanistic cats from spawning with the exception of the black panther.&nbsp;<br />Added: Japanese Translation-Thanks macoto_hino!</p>"
+      },
+      {
+        "releaseid": 5430,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_2ae94777c4b830b5d7e8b3533a9280c7.zip?dl=FotSA-Pantherinae-v1.0.5.zip",
+        "filename": "FotSA-Pantherinae-v1.0.5.zip",
+        "fileid": 11747,
+        "downloads": 1461,
+        "tags": [
+          "1.18.0",
+          "1.18.1",
+          "1.18.2",
+          "1.18.3",
+          "1.18.4",
+          "1.18.5"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.0.5",
+        "created": "2023-05-30 15:56:20",
+        "changelog": "<p>Tweak: Changed model of clouded leopard carcass to a small fly covered carcass.<br />Fixed: Crash that would occur when harvesting big cat carcasses and clouded leopard carcasses on servers.</p>"
+      },
+      {
+        "releaseid": 5143,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_01fbda715b4511b831b04995e597cc95.zip?dl=FotSA-Pantherinae-v1.0.4.zip",
+        "filename": "FotSA-Pantherinae-v1.0.4.zip",
+        "fileid": 11159,
+        "downloads": 914,
+        "tags": [
+          "1.18.0",
+          "1.18.1",
+          "1.18.2-rc.1",
+          "1.18.2-rc.2"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.0.4",
+        "created": "2023-05-08 17:45:41",
+        "changelog": "<p><span style=\"font-weight: 400;\">Feature: Added carcasses that will prevent big cats respawning. Carcass entities share the same spawn conditions and spawn cap as the big cats, so will block cats from spawning in the surrounding area until destroyed. </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Feature: Behavior interactions with capreolinae deer.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak: Reduced roar frequency, reduced lick animation and loaf animation frequency.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Twear: Reduced roar audible range to 500 meters from 3000 meters.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak: Set Steppe Lion&rsquo;s group size to solitary males and females in pairs or with cubs.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed: Added precipitation spawn conditions to the panthera cats.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed: Patch for base game animal behavior, wolves and bears should now attack some cats when encountered.</span></p>"
+      },
+      {
+        "releaseid": 4739,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_72a494607596ed29b417808317f2ed24.zip?dl=FotSA-Pantherinae-v1.0.3.zip",
+        "filename": "FotSA-Pantherinae-v1.0.3.zip",
+        "fileid": 10483,
+        "downloads": 1172,
+        "tags": [
+          "1.18.0",
+          "1.18.1"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.0.3",
+        "created": "2023-04-17 16:12:07",
+        "changelog": "<p>Tweak: Removed albino, alternate textures and most melanistic variants to further reduce Entity Texture Atlas usage from 14% to 5%<br />Tweak: Used the Sunda Clouded Leopard cub for all big cat's creative inventory icons to reduce Item Texture Atlas usage from 14% to less than .25%</p>"
+      },
+      {
+        "releaseid": 4738,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_b975148b53d8ed81b5c23a4e435e7c8f.zip?dl=FotSA-Pantherinae-v1.0.2.zip",
+        "filename": "FotSA-Pantherinae-v1.0.2.zip",
+        "fileid": 10482,
+        "downloads": 415,
+        "tags": [
+          "1.18.0",
+          "1.18.1"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.0.2",
+        "created": "2023-04-17 16:10:00",
+        "changelog": "<p>Tweak: Reduced pounce chances by 80% and 90% for attacking prey and retaliating against damage respectively.<br />Tweak: Reduced spawn chance by 70% to be in line with bear's respawn rates<br />Fixed: Prevented orphan babies from spawning as often, hopefully<br />Fixed: Compressed textures to reduce Entity Texture Atlas and Item Texture Atlas usage from 60% to 14%&nbsp;</p>"
+      },
+      {
+        "releaseid": 4716,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_614ee965ea8e2676218dc67a9823808b.zip?dl=FotSA-Pantherinae-v1.0.1.zip",
+        "filename": "FotSA-Pantherinae-v1.0.1.zip",
+        "fileid": 10448,
+        "downloads": 537,
+        "tags": [
+          "1.18.0-pre.0",
+          "1.18.0-rc.1",
+          "1.18.0-rc.2",
+          "1.18.0-rc.3",
+          "1.18.0-rc.4",
+          "1.18.0-rc.5",
+          "1.18.0-rc.6"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.0.1",
+        "created": "2023-04-14 14:53:35",
+        "changelog": "<p>Hot Fix-<br />Reduced Texture Atlas usage by 10%</p>"
+      },
+      {
+        "releaseid": 4663,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_54dc8691bead9b715671750d43513625.zip?dl=FotSA-Pantherinae-v1.0.0.zip",
+        "filename": "FotSA-Pantherinae-v1.0.0.zip",
+        "fileid": 10332,
+        "downloads": 607,
+        "tags": [
+          "1.18.0-pre.0",
+          "1.18.0-rc.1",
+          "1.18.0-rc.2",
+          "1.18.0-rc.3",
+          "1.18.0-rc.4",
+          "1.18.0-rc.5"
+        ],
+        "modidstr": "pantherinae",
+        "modversion": "1.0.0",
+        "created": "2023-04-10 17:14:07",
+        "changelog": "<p>Initial Release</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 18889,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-02-07_09-36-13_65065cfc2ea4e27930e898ea5e00952c.png",
+        "filename": "2024-02-07_09-36-13.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-02-07_09-36-13_65065cfc2ea4e27930e898ea5e00952c_55_60.png",
+        "created": "2024-02-08 17:11:18"
+      },
+      {
+        "fileid": 18890,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-02-07_09-45-24_86d5fbe9327ea2f6a1731f3f833f8462.png",
+        "filename": "2024-02-07_09-45-24.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-02-07_09-45-24_86d5fbe9327ea2f6a1731f3f833f8462_55_60.png",
+        "created": "2024-02-08 17:11:22"
+      },
+      {
+        "fileid": 18891,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-02-07_09-46-21_083bf6148a69bf18fcdd2c5c7d3b7a83.png",
+        "filename": "2024-02-07_09-46-21.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-02-07_09-46-21_083bf6148a69bf18fcdd2c5c7d3b7a83_55_60.png",
+        "created": "2024-02-08 17:11:24"
+      },
+      {
+        "fileid": 18892,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-02-07_09-49-29_f56349c3a86f4bb357521bc73c57d166.png",
+        "filename": "2024-02-07_09-49-29.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-02-07_09-49-29_f56349c3a86f4bb357521bc73c57d166_55_60.png",
+        "created": "2024-02-08 17:11:31"
+      },
+      {
+        "fileid": 18893,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-02-07_09-50-00_cd76e96797df7361226d70c650f6909c.png",
+        "filename": "2024-02-07_09-50-00.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-02-07_09-50-00_cd76e96797df7361226d70c650f6909c_55_60.png",
+        "created": "2024-02-08 17:11:38"
+      },
+      {
+        "fileid": 18894,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-02-07_09-50-30_518b38032936930b548d9f9d528f2e49.png",
+        "filename": "2024-02-07_09-50-30.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-02-07_09-50-30_518b38032936930b548d9f9d528f2e49_55_60.png",
+        "created": "2024-02-08 17:11:45"
+      },
+      {
+        "fileid": 18895,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-02-07_09-53-16_332c212e18d0eeca9fdaf43d7bf5a271.png",
+        "filename": "2024-02-07_09-53-16.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-02-07_09-53-16_332c212e18d0eeca9fdaf43d7bf5a271_55_60.png",
+        "created": "2024-02-08 17:11:46"
+      },
+      {
+        "fileid": 18896,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-02-07_09-55-01_2c5cf9d4a2013c08862263d72ad7c747.png",
+        "filename": "2024-02-07_09-55-01.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-02-07_09-55-01_2c5cf9d4a2013c08862263d72ad7c747_55_60.png",
+        "created": "2024-02-08 17:11:54"
+      },
+      {
+        "fileid": 18897,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-02-07_09-54-02_f4a03219fc274b5311c4934402f87c91.png",
+        "filename": "2024-02-07_09-54-02.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-02-07_09-54-02_f4a03219fc274b5311c4934402f87c91_55_60.png",
+        "created": "2024-02-08 17:11:59"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

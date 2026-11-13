@@ -1,0 +1,204 @@
+code,taxon,natural,current,lost_regions
+elephantidae:elephasmaximus,Elephas maximus,1290,314,IND:242 CHS:149 CHC:90 IRN:57 PAK:52 CHT:42 IND~:35 IRQ:27 MYA:24 WHM:23 VIE:23 CHS~:19 THA:19 VIE~:17 SUM~:17 BOR:16 CHN:14 BOR~:11 MYA~:9 CBD:9 THA~:9 IRN~:8 LAO:8 SUM:8 CHX:7 NEP:7 EHM:7 BAN:7 SRL~:4 PAK~:3 BAN~:3 MLY~:3 LBS:1 CHN~:1 KUW:1 KUW~:1 ASS:1 PHI~:1 MLY:1
+elephantidae:elephasmaximusborneensis,Elephas maximus borneensis,1290,314,BOR:16 BOR~:11
+elephantidae:loxodontaafricana,Loxodonta africana,2780,930,SUD:185 ZAI:150 ETH:104 MTN:83 MLI:83 NGR:74 LBY:73 NGA:73 EGY:71 CPP:68 SOM:65 ANG:65 NAM:56 CHA:52 CAF:41 BOT:41 ALG:38 MOR:34 WSA:28 ZAM:27 KEN:26 TVL:24 GUI:22 SEN:19 SOM~:18 TAN:18 MOZ:18 TUN:16 ZIM:16 CON:14 OFS:14 LBY~:13 BKN:13 CMN:13 UGA:13 GHA:11 MOZ~:11 IVO:10 CPP~:10 ALG~:9 ERI:9 NAM~:8 WSA~:7 ERI~:7 ANG~:7 NAT:7 TUN~:6 MOR~:6 MTN~:6 BEN:5 TAN~:5 LBR~:4 EGY~:3 SEN~:3 GNB~:3 SIE~:3 NGA~:3 MLW:3 SUD~:2 GAM:2 DJI:2 GUI~:2 SIE:2 TOG:2 LBR:2 IVO~:2 CMN~:2 BUR:2 LES:2 NAT~:2 SPA~:1 CNY~:1 GAM~:1 YEM:1 DJI~:1 TOG~:1 GHA~:1 GAB:1 GAB~:1 RWA:1 KEN~:1 LES~:1
+elephantidae:loxodontacyclotis,Loxodonta cyclotis,2780,930,ZAI:150 NGA:73 CAF:41 GUI:22 CON:14 CMN:13 GHA:11 IVO:10 BEN:5 LBR~:4 SIE~:3 NGA~:3 GUI~:2 SIE:2 TOG:2 LBR:2 IVO~:2 CMN~:2 TOG~:1 GHA~:1 GAB:1 GAB~:1
+manidae:crassicaudata,Manis crassicaudata,450,450,
+manidae:culionensis,Manis culionensis,13,13,
+manidae:gigantea,Smutsia gigantea,493,452,NGA:14 GHA:7 TOG:6 NGA~:5 BEN:4 CMN:2 BKN:1 TOG~:1 CMN~:1
+manidae:javanica,Manis javanica,451,410,THA:13 VIE~:10 MYA:5 MYA~:5 THA~:4 VIE:2 LAO:1 SUM~:1
+manidae:pentadactyla,Manis pentadactyla,393,393,
+manidae:temminckii,Smutsia temminckii,878,878,
+manidae:tetradactyla,Phataginus tetradactyla,380,361,BEN:6 NGA:6 TOG:4 GHA:1 NGA~:1 TOG~:1
+manidae:tricuspis,Phataginus tricuspis,734,734,
+rhinocerotidae:ceratotheriumsimum,Ceratotherium simum,428,325,SUD:37 CAF:31 ANG:17 ZAI:12 CHA:6
+rhinocerotidae:dicerorhinussumatrensis,Dicerorhinus sumatrensis,646,10,CHS:152 MYA:75 BOR:70 CHC:67 SUM:43 THA:36 CHN:24 BOR~:23 CHS~:19 SUM~:17 ASS:16 LAO:16 VIE:13 MYA~:12 MLY:11 MLY~:10 THA~:9 CHN~:7 EHM:5 BAN:5 BAN~:3 ASS~:1 VIE~:1 PHI~:1
+rhinocerotidae:dicerosbicornis,Diceros bicornis,1359,772,SUD:98 ETH:78 NGA:73 CAF:48 CHA:47 SOM:35 ZAI:24 IVO:23 CMN:22 GUI:20 UGA:19 GHA:16 MLI:12 BOT:12 BKN:11 BEN:11 SOM~:10 NGR:9 TOG:4 LBR:4 SIE:3 SEN:2 RWA:2 BUR:1 LES:1 CPP:1 CPP~:1
+rhinocerotidae:rhinocerossondaicus,Rhinoceros sondaicus,394,3,CHS:68 MYA:55 SUM:39 THA:37 VIE:32 CBD:20 CHS~:17 ASS:17 VIE~:17 THA~:15 LAO:13 MYA~:12 MLY:8 JAW~:8 JAW:8 EHM:6 BAN:6 BAN~:3 SUM~:3 CHT:2 MLY~:2 ASS~:1 CHC:1 CBD~:1
+rhinocerotidae:rhinocerosunicornis,Rhinoceros unicornis,108,13,IND:52 PAK:16 WHM:13 NEP:5 EHM:3 ASS:3 BAN:2 IND~:1
+sirenia:dugon,Dugong dugon,1702,1702,
+sirenia:inunguis,Trichechus inunguis,304,304,
+sirenia:manatus,Trichechus manatus,470,470,
+sirenia:senegalensis,Trichechus senegalensis,237,237,
+capreolinae:alcesalces,Alces alces,3398,2946,UKR:59 NUN:44 GER:31 NWT:20 GRB:17 PEN:17 RUC:16 COL:13 WYO:12 ROM:11 MIC:11 ONT:10 RUS:10 WIS:10 ASK:8 SAS:7 CZE:7 FRA:7 MIN:7 KRY~:7 UTA:7 RUN~:6 ONT~:6 MNT:6 NDA:6 AUT:6 ITA:6 NWT~:5 DEN:5 UKR~:5 NWY:5 ASK~:4 NUN~:4 GRB~:4 GER~:4 NET:4 POL:4 ABT:4 SWI:4 RUN:3 MAN:3 HUN:3 YUG:3 DEN~:2 BLR:2 BRC:2 WAS:2 OHI:2 MAS~:2 POL~:1 NET~:1 BRC~:1 RUS~:1 SDA:1 KRY:1 CNT:1 RHO:1 NWJ:1
+capreolinae:capreoluscapreolus,Capreolus capreolus,954,943,LBS:6 LBS~:2 PAL:2 PAL~:1
+capreolinae:capreoluspygargus,Capreolus pygargus,1518,1518,
+capreolinae:hydropotesinermis,Hydropotes inermis,241,41,CHS:106 CHN:28 CHM:15 KOR:12 CHS~:10 CHN~:9 CHC:9 KOR~:8 CHM~:3
+capreolinae:blastocerusdichotomus,Blastocerus dichotomus,528,128,BZC:118 BZL:48 BZE:43 BZS:43 BZN:38 BOL:35 AGE:30 PAR:23 URU:17 BZS~:3 PER:2
+capreolinae:hippocamelusantisensis,Hippocamelus antisensis,167,99,PER:27 AGW:14 CLN:12 BOL:10 ECU:4 CLN~:1
+capreolinae:hippocamelusbisulcus,Hippocamelus bisulcus,73,39,AGS:11 CLC:9 CLS:8 CLS~:5 AGS~:1
+capreolinae:mazamaamericana,Mazama americana,1279,1279,
+capreolinae:mazamabricenii,Mazama bricenii,23,23,
+capreolinae:mazamajucunda,Mazama jucunda,46,46,
+capreolinae:mazamanana,Mazama nana,68,68,
+capreolinae:mazamarufa,Mazama rufa,1279,1279,
+capreolinae:mazamarufina,Mazama rufina,30,30,
+capreolinae:mazamatemama,Mazama temama,152,152,
+capreolinae:mazamatienhoveni,Mazama tienhoveni,917,917,
+capreolinae:odocoileushemionus,Odocoileus hemionus,1000,807,MAN:46 NWT:35 SAS:29 MIN:21 IOW:12 TEX:11 ABT:10 MXE:7 NDA:6 NUN:4 BRC:3 KAN:2 NWM:2 YUK:1 ONT:1 SDA:1 WIS:1 MSO:1
+capreolinae:odocoileuspandora,Odocoileus pandora,28,28,
+capreolinae:odocoileusvirginianus,Odocoileus virginianus,1903,1903,
+capreolinae:ozotocerosbezoarticus,Ozotoceros bezoarticus,708,136,BZC:116 AGE:109 BZE:91 BZL:44 BZS:43 AGW:40 PAR:38 BZN:37 BOL:20 AGS:12 URU:11 AGE~:5 URU~:4 BZS~:1 AGS~:1
+capreolinae:passalitesnemorivaga,Mazama nemorivaga,917,917,
+capreolinae:pudellacarlae,Pudella carlae,47,47,
+capreolinae:pudellamephistophiles,Pudu mephistophiles,47,47,
+capreolinae:pudupuda,Pudu puda,43,43,
+capreolinae:rangiferarcticus,Rangifer arcticus (provider taxonomy),4198,2727,ASK:28 ASK~:14 YUK:3
+capreolinae:rangifercaribou,Rangifer caribou (provider taxonomy),4198,2727,ONT:49 QUE:34 BRC:18 MAN:18 ABT:13 BRC~:4 SAS:3 QUE~:3
+capreolinae:rangiferfennicus,Rangifer fennicus (provider taxonomy),4198,2727,RUC:94 RUN:80 RUE:68 FIN:27 RUN~:18 RUW:18 FIN~:7
+capreolinae:rangifergroenlandicus,Rangifer groenlandicus (provider taxonomy),4198,2727,GNL~:56 GNL:50
+capreolinae:rangifertarandus,Rangifer tarandus,4198,2727,WSB:112 RUN:80 SWE:48 MAG:36 KAM:28 FIN:27 CTA:27 MAG~:23 KRA:22 KAM~:19 RUN~:18 RUW:18 NOR:16 NOR~:14 BRY:9 SWE~:7 FIN~:7 WSB~:6 KHA:6 IRK:4
+capreolinae:subulochunyi,Mazama chunyi,33,33,
+capreolinae:subulogouazoubira,Mazama gouazoubira,717,717,
+caninae:canis-aureus,Canis aureus,3335,3335,
+caninae:canis-latrans,Canis latrans,301,2113,
+caninae:canis-lupastor,Canis lupaster,3335,3335,
+caninae:canis-lupus,Canis lupus,8065,6554,IND:120 MXE:93 TEX:56 FRA:51 JAP~:43 JAP:41 GER:36 NUN:34 NEV:33 NWM:33 ARI:32 NUN~:29 GRB:27 COL:27 SPA:26 SWE:25 ?:23 ORE:23 NDA:21 CAL:21 KAN:21 GNL~:20 SAS:20 NEB:20 MXS:20 GRB~:19 UTA:19 MIC:18 PEN:18 GNL:17 SDA:17 IOW:17 OKL:17 WHM:17 MXN:17 NWY:15 MIN:13 SPA~:13 NOR~:12 MAG:12 FRA~:12 WIS:12 ILL:12 MSO:12 MAG~:11 WYO:11 ONT:11 PAK:11 SWE~:10 AUT:10 MAI:10 ITA~:10 IRE~:9 IRE:9 MNT:9 WAS:9 OHI:9 NOR:8 MAN:7 NBR:7 NSC~:7 INI:7 GRC~:7 MXC:7 NWT~:6 DEN~:6 POL:6 CZE:6 NWT:5 DEN:5 QUE:5 HUN:5 ITA:5 POR:5 GER~:4 NET:4 UKR:4 NWH:4 NSC:4 POR~:4 FIN:3 FIN~:3 ASK~:3 BGM:3 QUE~:3 WAS~:3 ROM:3 MAS~:3 GRC:3 BLT~:2 POL~:2 NET~:2 NBR~:2 ORE~:2 VER:2 MAI~:2 NWJ:2 NWY~:2 NWJ~:2 MXS~:2 BGM~:1 BRC:1 PEI~:1 PEI:1 UKR~:1 SAK~:1 YUG~:1 YUG:1 KUR~:1 IDA:1 BUL~:1 CAL~:1 CNT:1 RHO:1 TUE~:1 DEL:1 SIC~:1 EGY:1 EGY~:1 MXE~:1 IND~:1
+caninae:canis-lupusarctos,Canis lupus arctos,8065,6554,NUN:34 NUN~:29 GNL~:20 GNL:17
+caninae:canis-lycaon,Canis lycaon,8065,6554,ONT:11 QUE:5 QUE~:3
+caninae:canis-rufus,Canis rufus,283,4,TEX:46 OKL:18 FLA:18 ARK:15 TEN:14 MSI:14 GEO:14 LOU:14 VRG:13 ALA:13 MSO:12 KTY:12 NCA:11 SCA:10 FLA~:8 INI:7 OHI:6 PEN:6 ILL:5 WVA:5 LOU~:5 VRG~:2 SCA~:2 TEX~:2 NWJ:1 MRY:1 DEL:1 NWJ~:1 KAN:1 NCA~:1 GEO~:1
+caninae:canis-simensis,Canis simensis,116,11,ETH:87 ERI:9 SUD:6 SOM:2 ERI~:1
+caninae:cuon-alpinus,Cuon alpinus,7244,619,KAZ:294 WSB:269 KRA:184 MON:164 QUE:162 CHS:153 RUN:147 ASK:145 CHI:133 NWT:113 ONT:112 CHX:110 CHN:108 BRC:105 MXE:95 RUC:94 IRN:92 CHC:91 CHM:87 KHA:83 TUR:83 MAG:82 IRK:81 RUE:81 MAN:76 ABT:75 SAS:73 TEX:73 IND:68 UKR:65 CHQ:64 FRA:60 CHT:59 AFG:55 YAK:53 SPA:51 ASK~:49 SWE:49 UZB:49 RUS:48 TKM:48 KAM:47 YUK:46 CTA:43 AMU:42 BRY:41 GER:37 CAL:37 NWM:37 FIN:36 POL:36 MNT:35 NOR:34 ARI:34 NUN:33 MXS:32 NEV:31 KAM~:30 MIC:30 PAK:29 VIE:29 LAB:28 WYO:28 COL:28 ROM:27 ITA:27 NCS:27 MAG~:26 ALT:25 KOR:25 MXT:25 RUN~:24 MIN:24 YUG:24 OKL:24 MXN:24 ORE:23 UTA:23 IDA:22 QUE~:21 NDA:21 KGZ:21 KAN:21 NOR~:20 BLR:20 NEB:20 THA:20 BLT:19 WAS:19 TCS:19 MSO:19 CHS~:19 RUW:18 TVA:18 PRM:18 WIS:18 PEN:18 FLA:18 SDA:17 SPA~:17 ITA~:17 IOW:17 VIE~:17 WSB~:15 NWY:15 TZK:15 LBS:15 ARK:15 WHM:15 CZE:14 ILL:14 TEN:14 MSI:14 GEO:14 LOU:14 IND~:14 HON:14 KHA~:13 VRG:13 ALA:13 LAO:13 GUA:13 THA~:13 FRA~:12 BUL:12 KOR~:12 GRC:12 GRC~:12 KTY:12 NCA:12 MXT~:12 NIC:12 OHI:11 IRQ:11 MXS~:11 SWE~:10 NUN~:10 LAB~:10 AUT:10 HUN:10 MAI:10 POR:10 INI:10 SCA:10 MLY~:10 FIN~:9 BLT~:9 CAL~:9 TUR~:9 CHN~:9 MYA:9 PAN~:9 SRL~:9 TCS~:8 FLA~:8 BAN:8 MXC:8 KRA~:7 ONT~:7 NBR:7 PRM~:7 NSC~:7 KRY~:7 MXG:7 COS:7 SUM:7 DEN~:6 BRC~:6 PAN:6 SRL:6 MLY:6 UKR~:5 NCS~:5 YUG~:5 TKM~:5 WVA:5 LOU~:5 MXG~:5 MYA~:5 NIC~:5 DEN:4 GER~:4 NET:4 WAS~:4 SWI:4 RUS~:4 KAZ~:4 NWH:4 NSC:4 ALB:4 POR~:4 IRN~:4 NCA~:4 PAL:4 MXN~:4 BAN~:4 COS~:4 SUM~:4 BGM:3 MAS~:3 TUE~:3 CHM~:3 MXE~:3 BLZ:3 ELS:3 JAW:3 MAN~:2 POL~:2 NET~:2 NBR~:2 ORE~:2 VER:2 MAI~:2 TUE:2 NWJ:2 NWY~:2 NWJ~:2 SIC~:2 EAI~:2 VRG~:2 LBS~:2 SCA~:2 TEX~:2 HON~:2 CBD:2 JAW~:2 NWT~:1 NFL~:1 BGM~:1 TVA~:1 KUR~:1 PEI~:1 PEI:1 KRY:1 BUL~:1 CNT:1 RHO:1 CHX~:1 MRY:1 DEL:1 CYP~:1 PAL~:1 GEO~:1 GUA~:1
+caninae:lupulella-adusta,Canis adustus,1326,1326,
+caninae:lupulella-mesomelas,Canis mesomelas,891,807,SUD:35 ZIM:17 ZAM:9 ETH:6 ANG:6 EGY:4 SUD~:3 MOZ:3 ERI:1
+caninae:lycaon-pictus,Lycaon pictus,2177,358,SUD:186 ZAI:135 ANG:131 ETH:107 MLI:101 NGR:97 CHA:84 NGA:78 NAM:73 CPP:73 MOZ:68 SOM:66 MTN:54 TAN:47 CAF:41 KEN:33 ZIM:31 TVL:28 ZAM:27 GUI:25 BKN:24 UGA:22 IVO:21 GHA:21 CMN:19 CON:19 SOM~:18 SEN:17 MOZ~:14 BOT:14 OFS:14 ERI:12 BEN:11 CPP~:11 ANG~:10 NAT:8 ERI~:7 MLW:7 TOG:6 SIE:6 TAN~:6 MTN~:4 LBR:4 SEN~:3 GNB~:3 GAB:3 GAM:2 DJI:2 GUI~:2 SIE~:2 KEN~:2 NAM~:2 SWZ:2 LES:2 NAT~:2 SUD~:1 MLI~:1 GAM~:1 YEM:1 GNB:1 DJI~:1 TOG~:1 RWA:1 BUR:1 CON~:1 CAB:1 LES~:1
+caninae:atelocynus-microtis,Atelocynus microtis,358,358,
+caninae:cerdocyon-thous,Cerdocyon thous,1086,1086,
+caninae:chrysocyon-brachyurus,Chrysocyon brachyurus,565,565,
+caninae:lycalopex-culpaeus,Lycalopex culpaeus,391,391,
+caninae:lycalopex-fulvipes,Lycalopex fulvipes,14,14,
+caninae:lycalopex-griseus,Lycalopex griseus,268,268,
+caninae:lycalopex-gymnocercus,Lycalopex gymnocercus,365,365,
+caninae:lycalopex-sechurae,Lycalopex sechurae,30,30,
+caninae:lycalopex-vetulus,Lycalopex vetulus,233,233,
+caninae:speothos-venaticus,Speothos venaticus,1391,1391,
+caninae:urocyon-cinereoargenteus,Urocyon cinereoargenteus,1209,1209,
+caninae:nyctereutes-procyonoides,Nyctereutes procyonoides,845,845,
+caninae:nyctereutes-viverrinus,Nyctereutes viverrinus,845,845,
+caninae:otocyon-megalotis,Otocyon megalotis,638,638,
+caninae:vulpes-bengalensis,Vulpes bengalensis,404,404,
+caninae:vulpes-cana,Vulpes cana,465,465,
+caninae:vulpes-chama,Vulpes chama,274,274,
+caninae:vulpes-corsac,Vulpes corsac,1133,1133,
+caninae:vulpes-ferrilata,Vulpes ferrilata,293,293,
+caninae:vulpes-lagopus,Vulpes lagopus,2013,2013,
+caninae:vulpes-macrotis,Vulpes macrotis,264,264,
+caninae:vulpes-pallida,Vulpes pallida,522,522,
+caninae:vulpes-rueppellii,Vulpes rueppellii,1557,1557,
+caninae:vulpes-velox,Vulpes velox,256,118,NDA:18 TEX:18 SAS:16 ABT:15 NEB:14 MNT:10 MAN:8 MIN:8 SDA:8 IOW:6 KAN:6 WYO:4 COL:2 NWM:2 OKL:2 BRC:1
+caninae:vulpes-vulpes,Vulpes vulpes,8026,5943,QUE:163 ASK:156 NUN:155 NWT:113 ONT:112 BRC:105 NUN~:77 MAN:76 ABT:75 SAS:73 ASK~:59 YUK:46 TEX:37 MNT:35 MIC:30 LAB:28 WYO:28 COL:28 MIN:24 CAL:24 QUE~:23 OKL:23 IDA:22 NDA:21 UTA:21 KAN:21 NEB:20 MSO:19 WIS:18 PEN:18 ORE:17 SDA:17 IOW:17 FLA:17 NWT~:15 NWY:15 ARK:15 NFL~:14 WAS:14 ILL:14 TEN:14 MSI:14 GEO:14 VRG:13 ALA:13 LOU:13 NFL:12 KTY:12 NCA:12 OHI:11 NWM:11 LAB~:10 MAI:10 INI:10 SCA:10 ARI:8 ONT~:7 NBR:7 NSC~:7 BRC~:6 WVA:5 ?:4 WAS~:4 NWH:4 NSC:4 NEV:4 NCA~:4 CAL~:4 YUK~:3 MAS~:3 FLA~:3 MAN~:2 NBR~:2 PEI~:2 ORE~:2 VER:2 MAI~:2 NWJ:2 NWY~:2 NWJ~:2 VRG~:2 SCA~:2 TEX~:2 MAG~:1 PEI:1 CNT:1 RHO:1 MRY:1 DEL:1 GEO~:1 LOU~:1
+caninae:vulpes-zerda,Vulpes zerda,1028,1028,
+pantherinae:diardi,Neofelis diardi,206,139,BOR~:14 JAW~:14 JAW:13 SUM:10 SUM~:8 BOR:7 PHI~:1
+pantherinae:nebulosa,Neofelis nebulosa,522,382,CHC:42 CHS:22 THA:22 VIE:15 LAO:11 CBD:6 TAI~:5 CHT:4 TAI:4 MYA:4 ASS:3 CHS~:1 VIE~:1
+pantherinae:leo,Panthera leo,3166,496,SUD:204 ZAI:151 ANG:129 ALG:112 IRN:109 IND:108 MLI:107 MTN:92 CHA:91 NGR:89 NGA:80 ETH:74 SOM:67 CPP:67 PAK:64 NAM:62 TUR:59 LBY:55 MOR:45 EGY:45 MOZ:45 ZAM:42 KEN:37 IRQ:35 WSA:30 CMN:30 CAF:27 GUI:25 TVL:25 BKN:24 CON:24 LBS:22 IVO:21 GHA:21 ZIM:21 UGA:20 BOT:20 SOM~:18 TUN:16 AFG:16 SEN:16 GAB:16 TAN:16 OFS:14 LBY~:13 GRC:12 ERI:12 GRC~:11 MOZ~:11 PAL:10 EGY~:10 CPP~:10 BUL:9 ALG~:9 IND~:9 ANG~:9 IRN~:8 WSA~:7 ERI~:7 BEN:7 MLW:7 NAM~:7 NAT:7 TUN~:6 MOR~:6 SUD~:6 MTN~:6 TOG:6 TUR~:5 SIN:5 TUE~:3 PAK~:3 SEN~:3 GNB~:3 SIE:3 KEN~:3 TAN~:3 TUE:2 EAI~:2 LBS~:2 GAM:2 DJI:2 GUI~:2 RWA:2 BUR:2 CAB:2 SWZ:2 LES:2 NAT~:2 YUG:1 ALB:1 SPA~:1 CYP~:1 PAL~:1 SIN~:1 SAU:1 KUW:1 KUW~:1 CNY~:1 SAU~:1 MLI~:1 GAM~:1 YEM:1 GNB:1 DJI~:1 TOG~:1 CON~:1 LES~:1
+pantherinae:onca,Panthera onca,2306,1305,AGE:110 MXE:78 BZE:77 BZC:77 BZN:76 AGW:64 BZL:63 BZS:40 PER:36 TEX:33 MXN:31 AGS:31 BOL:30 MXN~:24 URU:19 ARI:17 NWM:17 BZE~:17 CLN:17 CLM:15 MXS:13 ECU:10 PAR:10 BZS~:8 CAL:7 MXC:7 AGE~:7 VEN~:5 CAL~:4 MXS~:4 CLM~:4 ECU~:4 PER~:4 URU~:4 AGS~:4 MXE~:3 MXG~:3 MXG:3 MXT~:3 ELS:3 PAN:3 PAN~:3 TEX~:2 MXT:2 GUA:2 BZL~:2 HON:1 GUA~:1 NIC:1 NIC~:1 TRT~:1
+pantherinae:pardus,Panthera pardus,6020,1982,SUD:186 CHS:136 CHC:121 IND:114 MLI:109 NGR:100 ZAI:100 RUC:94 NGA:91 CHA:87 SAU:82 TUR:79 RUE:76 RUN:73 CHN:73 PAK:72 UKR:65 FRA:60 ETH:57 MTN:56 SPA:51 SOM:50 WSB:49 RUS:48 ALG:47 MOR:44 CHI:43 SWE:42 CHM:42 YEM:40 THA:39 GER:37 POL:36 ANG:36 MYA:35 IRN:34 VIE:34 IRQ:32 CPP:32 TKM:31 EGY:30 FIN:29 AFG:28 OMA:28 GRB:27 ROM:27 ITA:27 ZAM:26 KOR:25 IVO:25 YUG:24 NCS:24 LAO:24 KAZ:23 GHA:23 UZB:22 LBS:21 CHS~:21 BKN:21 BLR:20 IND~:20 NOR:19 BLT:19 RUW:18 GRB~:18 SPA~:18 ITA~:17 VIE~:17 CMN:17 SOM~:17 CAF:16 CBD:15 CZE:14 TCS:14 SAU~:14 SEN:14 THA~:14 OFS:13 FRA~:12 BUL:12 KOR~:12 GRC:12 GRC~:12 SWE~:10 AUT:10 HUN:10 PRM:10 POR:10 PAL:10 BAN:10 GUI:10 NOR~:9 FIN~:9 BLT~:9 KHA:9 TUR~:9 KGZ:9 CHN~:9 ALG~:9 TUN:9 YEM~:9 JAW~:9 TCS~:8 TZK:8 CHQ:8 EGY~:8 CHT:8 GST:8 UGA:8 TAN:8 TVL:8 KRY~:7 TKM~:7 ERI~:7 BEN:7 MLY~:7 KEN:7 ANG~:7 MOZ:7 MOZ~:7 DEN~:6 MOR~:6 GST~:6 SIE:6 BOT:6 CPP~:6 UKR~:5 NCS~:5 YUG~:5 TUN~:5 SIN:5 IRN~:5 OMA~:5 MYA~:5 ERI:5 TOG:5 LBR~:5 NGA~:5 ZIM:5 RUN~:4 DEN:4 GER~:4 NET:4 SWI:4 ALB:4 POR~:4 SIE~:4 LBR:4 IVO~:4 NAM:4 BGM:3 RUS~:3 KAZ~:3 TUE~:3 CHM~:3 WHM:3 PAK~:3 SUD~:3 BAN~:3 MTN~:3 SEN~:3 GNB~:3 JAW:3 POL~:2 NET~:2 PRM~:2 TUE:2 SIC~:2 EAI~:2 LBS~:2 KUW~:2 GAM:2 GUI~:2 SRL~:2 CMN~:2 SUM:2 RWA:2 TAN~:2 MLW:2 NAT:2 LES:2 IRE~:1 BGM~:1 KRY:1 BUL~:1 CYP~:1 PAL~:1 SIN~:1 KUW:1 MLI~:1 GAM~:1 DJI~:1 DJI:1 CBD~:1 TOG~:1 GHA~:1 SUM~:1 KEN~:1 CON~:1 CON:1 CAB:1 NAM~:1 NAT~:1
+pantherinae:tigris,Panthera tigris,2499,337,KAZ:206 CHS:153 IND:138 CHC:110 CHX:88 BOR:79 YAK:77 CHM:76 CHN:71 MYA:58 KHA:56 IRN:56 CHI:44 AMU:42 JAP~:42 JAP:41 BRY:40 IRK:39 CTA:39 TKM:39 VIE:36 THA:29 BOR~:29 IND~:28 ALT:25 KOR:25 AFG:25 UZB:24 LAO:23 CBD:20 TCS:19 KGZ:19 CHS~:19 VIE~:17 JAW~:16 PAK:15 THA~:15 TVA:14 MON:14 SAK~:13 JAW:13 KOR~:12 WSB:11 KRA:10 NCS:10 TUR:10 BAN:10 MYA~:10 KHA~:9 SAK:9 CHN~:9 SRL~:9 SUM:9 RUS:8 CHT:8 ASS:8 PHI~:8 TCS~:7 TKM~:7 NEP:7 TZK:6 IRQ:6 SRL:6 MLY~:6 SUM~:6 KAZ~:4 IRN~:4 RUS~:3 CHM~:3 BAN~:3 NCS~:2 WHM:2 LSI~:2 TVA~:1 PRM:1 KUR~:1 EHM:1 CBD~:1 PHI:1
+pantherinae:uncia,Panthera uncia,579,579,
+bovinae:boselaphustragocamelus,Boselaphus tragocamelus,324,294,BAN:10 IND:6 IND~:4 ASS:4 NEP:3 BAN~:3
+bovinae:bubalusarnee,Bubalus arnee,460,24,IND:170 MYA:64 THA:41 VIE:28 IND~:26 LAO:25 VIE~:13 CBD:13 ASS:12 BAN:12 CHC:12 EHM:3 BAN~:3 THA~:3 SRL~:3 SRL:3 NEP:2 MYA~:2 CHS~:1
+bovinae:bubalusdepressicornis,Bubalus depressicornis,51,35,SUL~:14 SUL:2
+bovinae:bubalusmindorensis,Bubalus mindorensis,5,4,PHI~:1
+bovinae:bubalusquarlesi,Bubalus quarlesi,29,29,
+bovinae:pseudoryxnghetinhensis,Pseudoryx nghetinhensis,13,12,LAO:1
+bovinae:synceruscaffer,Syncerus caffer,1549,1127,ZAI:97 ANG:90 MOZ:51 NGA:50 BOT:39 ZIM:27 NAM:21 MOZ~:12 CHA:8 NGA~:5 ANG~:5 ZAM:4 CPP:3 CMN:2 BEN:2 NAT:2 CAF:1 CAB:1 TAN~:1 LES:1
+bovinae:syncerusnanus,Syncerus caffer nanus,1549,1127,ZAI:97 NGA:50 NGA~:5 CMN:2 BEN:2 CAF:1 CAB:1
+bovinae:taurotragusderbianus,Tragelaphus derbianus,347,71,NGA:52 IVO:33 GHA:26 SUD:25 CAF:23 CMN:20 MLI:19 BEN:13 ZAI:13 UGA:11 BKN:10 CHA:9 TOG:6 GUI:5 CON:5 GAB:2 NGR:1 NGA~:1 IVO~:1 GHA~:1
+bovinae:taurotragusoryx,Tragelaphus oryx,846,846,
+bovinae:tetracerusquadricornis,Tetracerus quadricornis,266,266,
+bovinae:tragelaphusangasii,Tragelaphus angasii,68,68,
+bovinae:tragelaphusbuxtoni,Tragelaphus buxtoni,9,9,
+bovinae:tragelaphuseurycerus,Tragelaphus eurycerus,306,306,
+bovinae:tragelaphusimberbis,Tragelaphus imberbis,219,219,
+bovinae:tragelaphusscriptus,Tragelaphus scriptus,1548,1548,
+bovinae:tragelaphusspekii,Tragelaphus spekii,603,603,
+bovinae:tragelaphusstrepsiceros,Tragelaphus strepsiceros,841,841,
+bovinae:tragelaphussylvaticus,Tragelaphus sylvaticus,1548,1548,
+thylacinidae:sarcophilusharrisii,Sarcophilus harrisii,388,18,NSW:75 QLD:73 WAU:65 QLD~:26 SOA:26 NTA:25 VIC:23 WAU~:19 NTA~:14 SOA~:10 NSW~:7 VIC~:7
+viverridae:nandiniabinotata,Nandinia binotata,781,781,
+viverridae:arctictisbinturong,Arctictis binturong,507,490,VIE~:10 VIE:5 CHS:2
+viverridae:arctogalidiatrivirgata,Arctogalidia trivirgata,443,443,
+viverridae:chrotogaleowstoni,Chrotogale owstoni,55,55,
+viverridae:civettictiscivetta,Civettictis civetta,1784,1784,
+viverridae:cynogalebennettii,Cynogale bennettii,221,221,
+viverridae:diplogalehosei,Diplogale hosei,33,33,
+viverridae:genettaabyssinica,Genetta abyssinica,76,76,
+viverridae:genettaangolensis,Genetta angolensis,219,219,
+viverridae:genettabourloni,Genetta bourloni,32,32,
+viverridae:genettacristata,Genetta cristata,24,24,
+viverridae:genettagenetta,Genetta genetta,1772,1772,
+viverridae:genettajohnstoni,Genetta johnstoni,57,57,
+viverridae:genettamaculata,Genetta maculata,1525,1525,
+viverridae:genettapardina,Genetta pardina,192,192,
+viverridae:genettapiscivora,Genetta piscivora,49,41,ZAI:8
+viverridae:genettapoensis,Genetta poensis,43,28,IVO:11 IVO~:4
+viverridae:genettaservalina,Genetta servalina,406,406,
+viverridae:genettathierryi,Genetta thierryi,334,334,
+viverridae:genettatigrina,Genetta tigrina,45,45,
+viverridae:genettavictoriae,Genetta victoriae,90,90,
+viverridae:hemigalusderbyanus,Hemigalus derbyanus,228,228,
+viverridae:macrogalidiamusschenbroekii,Macrogalidia musschenbroekii,34,22,SUL~:8 SUL:4
+viverridae:pagumalarvata,Paguma larvata,915,915,
+viverridae:paradoxurushermaphroditus,Paradoxurus hermaphroditus,1110,1110,
+viverridae:paradoxurusjerdoni,Paradoxurus jerdoni,27,27,
+viverridae:paradoxuruszeylonensis,Paradoxurus zeylonensis,10,10,
+viverridae:poianaleightoni,Poiana leightoni,21,17,IVO:4
+viverridae:poianarichardsonii,Poiana richardsonii,261,261,
+viverridae:viverracivettina,Viverra civettina,15,0,IND:8 IND~:7
+viverridae:viverramegaspila,Viverra megaspila,319,168,CHC:22 MYA:19 THA:18 LAO:17 VIE:16 EHM:10 MLY~:9 MLY:9 CHS:8 ASS:7 CHT:6 VIE~:6 ASS~:1 CHS~:1 SUM:1 SUM~:1
+viverridae:viverratangalunga,Viverra tangalunga,314,314,
+viverridae:viverrazibetha,Viverra zibetha,666,410,CHS:119 CHC:95 CHN:16 CHS~:16 CHH~:6 CHH:4
+viverridae:viverriculaindica,Viverricula indica,1119,1119,
+vombatidae:lasiorhinuskrefftii,Lasiorhinus krefftii,69,2,NSW:37 QLD:26 VIC:4
+vombatidae:lasiorhinuslatifrons,Lasiorhinus latifrons,94,33,SOA:27 WAU:22 WAU~:6 SOA~:3 VIC:3
+vombatidae:vombatusursinus,Vombatus ursinus,85,85,
+felinae:caracalcaracal,Caracal caracal,3820,2334,IND:172 SAU:158 ALG:119 MTN:86 LBY:79 IRN:65 SUD:65 ZAI:64 MLI:62 AFG:39 TUR:33 CHA:33 IRQ:31 WSA:30 UZB:26 EGY:24 PAK:23 NGR:21 TCS:17 LBS:16 MOR:16 IND~:16 GUI:15 LBY~:13 SAU~:13 SOM:12 TKM:11 IRN~:11 TUN:11 NCS:9 UGA:9 ANG:9 IVO:8 NAM~:8 KAZ:7 WHM:7 WSA~:7 TCS~:6 TKM~:6 TZK:6 TUN~:6 GST~:6 NGA:6 ZAM:6 GST:5 MTN~:5 YEM~:5 SOM~:5 TAN:5 OMA:4 OMA~:4 BKN:4 MOZ~:4 KAZ~:3 EGY~:3 YEM:3 CAF:3 BUR:3 ANG~:3 NCS~:2 KUW~:2 PAK~:2 SEN~:2 GNB~:2 GHA:2 TOG:2 BEN:2 KEN:2 MOZ:2 NAT~:2 CPP~:2 KGZ:1 CYP~:1 TUR~:1 LBS~:1 SIN~:1 KUW:1 MOR~:1 CNY~:1 MLI~:1 ERI~:1 ETH:1 ERI:1 GUI~:1 SIE:1 NGA~:1 RWA:1
+felinae:lynxcanadensis,Lynx canadensis,1554,1124,MNT:27 ORE:23 NDA:21 WYO:21 NEB:20 IDA:19 UTA:19 MIC:18 PEN:18 SDA:17 IOW:17 SAS:16 WAS:16 MIN:14 WIS:14 NWY:12 BRC:10 OHI:10 INI:10 ASK~:9 ILL:9 ABT:8 NEV:8 NSC~:7 ONT:7 COL:6 BRC~:5 WVA:5 WAS~:4 NSC:4 VRG:4 ASK:3 MAS~:3 CAL:3 MAN:2 ORE~:2 MAI~:2 NWH:2 NWJ:2 NWY~:2 KAN:2 KTY:2 PEI~:1 PEI:1 MAI:1 CNT:1 RHO:1 MRY:1 ARI:1
+felinae:lynxlynx,Lynx lynx,4775,2932,KAZ:202 CHS:153 CHI:111 CHN:103 CHC:98 KRA:67 MON:67 CHX:55 SPA:49 UKR:47 FRA:45 RUS:44 TKM:44 UZB:39 AFG:37 CHM:31 WSB:30 GER:26 TUR:26 GRB:25 RUN:23 YAK:22 ITA:21 IRN:21 CHS~:19 RUN~:17 MAG~:17 NCS:17 ITA~:17 YAK~:16 PAK:16 MAG:15 WSB~:13 POL:12 GRC~:12 LBS:12 KRA~:11 GRC:11 FRA~:10 KOR:10 YUG:9 CHN~:9 MYA:9 RUE:8 HUN:8 ROM:8 POR:8 CHQ:8 KOR~:8 NOR~:7 GRB~:7 KRY~:7 BUL:7 VIE:7 RUC:6 AUT:6 IRQ:6 ?:5 DEN:5 UKR~:5 NCS~:5 TUR~:5 TCS~:5 NEP:5 GER~:4 NET:4 RUS~:4 KAZ~:4 TKM~:4 IND:4 EHM:4 DEN~:3 BGM:3 SPA~:3 TUE~:3 CHM~:3 POL~:2 NET~:2 YUG~:2 SIC~:2 EAI~:2 LBS~:2 WHM:2 FIN~:1 SWE~:1 KAM~:1 BLT~:1 KHA~:1 BGM~:1 KRY:1 BUL~:1 ALB:1 TUE:1 CYP~:1 ASS:1
+felinae:lynxpardinus,Lynx pardinus,102,4,SPA:46 FRA:32 POR:7 FRA~:6 SPA~:5 POR~:2
+game:bear-black,Ursus americanus,2010,1619,TEX:52 MXE:40 NDA:21 KAN:21 NEB:20 OKL:19 SDA:17 IOW:16 ILL:12 ABT:10 MNT:10 INI:10 MSO:10 ALA:10 SAS:8 WYO:8 TEN:8 COL:7 OHI:7 NWM:7 KTY:6 MXN:6 MIN:5 NEV:5 ARI:5 MSI:5 GEO:5 CAL:3 SCA:3 LOU~:3 QUE~:2 ORE:2 IDA:2 WIS:2 MAS~:2 NCA:2 CAL~:2 FLA:2 FLA~:2 MXS:2 QUE:1 WAS:1 MAI:1 UTA:1 NWY~:1 MRY:1 VRG:1 ARK:1 GEO~:1 TEX~:1 MXN~:1 MXS~:1
+game:bear-brown,Ursus arctos,6938,3830,MON:126 QUE:108 ALG:102 IRN:100 KAZ:99 ONT:93 SAU:89 LBY:86 CHI:82 SAS:73 MAN:72 CHX:72 MXE:65 UKR:62 FRA:56 TEX:55 ABT:46 TKM:46 SPA:45 CHN:45 CAL:44 MOR:43 AFG:42 IRQ:41 UZB:39 GER:37 NWM:37 KRA:36 ARI:36 EGY:36 POL:34 RUS:33 NEV:33 COL:28 GRB:27 MIC:26 RUC:25 MNT:24 MIN:24 OKL:24 ORE:23 UTA:23 WYO:22 LBS:22 NDA:21 KAN:21 MXN:21 NEB:20 NWT:18 GRB~:18 IDA:18 WIS:18 ITA:18 SDA:17 SPA~:17 ITA~:17 IOW:17 MSO:17 YAK~:16 WAS:16 NCS:16 TUN:16 RUN:15 CHC:14 QUE~:13 LBY~:13 SWE:12 FRA~:12 PAL:12 KRA~:11 RUN~:11 CAL~:11 ILL:11 TUR:11 WSB~:10 NUN~:10 LAB:10 POR:10 GRC~:10 WSB:9 IRE~:9 IRE:9 BLR:9 CZE:9 HUN:9 ALG~:9 ROM:8 MAG~:7 ONT~:7 BLT:7 KRY~:7 TKM~:7 EGY~:7 NUN:6 NOR~:6 SWE~:6 DEN~:6 TCS~:6 TUN~:6 EHM:6 AUT:5 UKR~:5 MOR~:5 PAK:5 SIN:5 NEP:5 WSA:5 MTN:5 ?:4 LAB~:4 DEN:4 GER~:4 NET:4 WAS~:4 RUS~:4 YUG:4 NCS~:4 KAZ~:4 BUL:4 CHM:4 POR~:4 GRC:4 ARK:4 BLT~:3 BGM:3 SWI:3 TUR~:3 POL~:2 NET~:2 ORE~:2 TUE~:2 SIC~:2 EAI~:2 LBS~:2 MXN~:2 IRN~:2 SAU~:2 MYA:2 MXS:2 YAK:1 NOR:1 FIN~:1 MAN~:1 KHA~:1 BGM~:1 BRY:1 KRY:1 BUL~:1 YUG~:1 TUE:1 INI:1 TCS:1 CYP~:1 WHM:1 PAL~:1 SIN~:1 KUW:1
+game:bear-sun,Helarctos malayanus,520,451,THA:15 VIE~:13 THA~:9 VIE:8 BAN:5 MYA:5 SUM~:4 LAO:3 BAN~:2 MLY~:2 EHM:1 ASS:1 BOR~:1
+game:bear-panda,Ailuropoda melanoleuca,211,26,CHC:86 CHS:83 CHN:15 VIE:1
+game:bear-polar,Ursus maritimus,2712,2712,
+game:fox-red,Vulpes vulpes,8026,5943,QUE:163 ASK:156 NUN:155 NWT:113 ONT:112 BRC:105 NUN~:77 MAN:76 ABT:75 SAS:73 ASK~:59 YUK:46 TEX:37 MNT:35 MIC:30 LAB:28 WYO:28 COL:28 MIN:24 CAL:24 QUE~:23 OKL:23 IDA:22 NDA:21 UTA:21 KAN:21 NEB:20 MSO:19 WIS:18 PEN:18 ORE:17 SDA:17 IOW:17 FLA:17 NWT~:15 NWY:15 ARK:15 NFL~:14 WAS:14 ILL:14 TEN:14 MSI:14 GEO:14 VRG:13 ALA:13 LOU:13 NFL:12 KTY:12 NCA:12 OHI:11 NWM:11 LAB~:10 MAI:10 INI:10 SCA:10 ARI:8 ONT~:7 NBR:7 NSC~:7 BRC~:6 WVA:5 ?:4 WAS~:4 NWH:4 NSC:4 NEV:4 NCA~:4 CAL~:4 YUK~:3 MAS~:3 FLA~:3 MAN~:2 NBR~:2 PEI~:2 ORE~:2 VER:2 MAI~:2 NWJ:2 NWY~:2 NWJ~:2 VRG~:2 SCA~:2 TEX~:2 MAG~:1 PEI:1 CNT:1 RHO:1 MRY:1 DEL:1 GEO~:1 LOU~:1
+game:fox-arctic,Vulpes lagopus,2013,2013,
+game:hare-arctic,Lepus arcticus,822,822,
+game:hare-cape,Lepus capensis,1624,1624,
+game:hare-european,Lepus europaeus,1333,1337,
+game:hare-indian,Lepus nigricollis,473,473,
+game:hare-jackblack,Lepus californicus,585,585,
+game:hare-scrub,Lepus saxatilis,190,190,
+game:deer-whitetail,Odocoileus virginianus,1903,1903,
+game:deer-redbrocket,Mazama americana,1279,1279,
+game:deer-marsh,Blastocerus dichotomus,528,128,BZC:118 BZL:48 BZE:43 BZS:43 BZN:38 BOL:35 AGE:30 PAR:23 URU:17 BZS~:3 PER:2
+game:deer-caribou,Rangifer tarandus,4198,2727,WSB:112 RUC:94 RUN:80 RUE:68 KAZ:62 GNL~:56 GNL:50 MON:50 ONT:49 SWE:48 UKR:48 MAG:36 POL:34 QUE:34 ?:29 ASK:28 KAM:28 FIN:27 CTA:27 MAG~:23 MIC:23 KRA:22 BLR:20 KAM~:19 BLT:19 RUN~:18 BRC:18 RUW:18 MAN:18 NOR:16 ROM:16 NOR~:14 ASK~:14 RUS:14 ABT:13 ALT:13 MIN:13 CHI:12 PRM:12 TVA:10 SAK~:10 BLT~:9 BRY:9 MAI:9 NSC~:9 CHM:8 IDA:8 SWE~:7 FIN~:7 WIS:7 NBR:7 WSB~:6 KHA:6 NSC:5 BRC~:4 IRK:4 AMU:4 NDA:4 PRM~:4 YUK:3 SAS:3 SAK:3 QUE~:3 CHX:3 DEN~:2 POL~:2 WAS:2 MNT:2 NBR~:2 PEI~:2 NWY:2 VER:2 NWH:2 MAI~:2 GER:1 TVA~:1 CZE:1 PEI:1
+game:deer-water,Hydropotes inermis,241,41,CHS:106 CHN:28 CHM:15 KOR:12 CHS~:10 CHN~:9 CHC:9 KOR~:8 CHM~:3
+game:deer-pudu,Pudu puda,43,43,
+game:deer-elk,Cervus canadensis,2509,1493,KAZ:171 ONT:72 BRC:52 ABT:52 SAS:41 UZB:38 WSB:27 MIC:24 MIN:22 CAL:21 OKL:21 KAN:20 MSO:19 MAN:18 WIS:18 PEN:18 NDA:17 IOW:17 NEB:16 TEX:16 MNT:15 SDA:15 NWY:15 AFG:15 ILL:14 ARK:14 TEN:14 RUE:12 KTY:12 VRG:12 OHI:11 ALT:10 INI:10 TZK:10 NWM:9 LOU:9 NEV:8 TKM:8 SCA:8 GEO:8 COL:7 NCA:7 BRC~:6 ORE:6 CAL~:6 ARI:6 QUE:5 WYO:5 WVA:5 PAK:5 MXE:4 RUS~:3 MSI:3 YUK:2 RUS:2 NWJ:2 NEP:2 NWT:1 WAS:1 KAZ~:1 VER:1 NWH:1 CNT:1 TCS~:1 KGZ:1 MRY:1 DEL:1 UTA:1
+game:deer-taruca,Hippocamelus antisensis,167,99,PER:27 AGW:14 CLN:12 BOL:10 ECU:4 CLN~:1
+game:deer-chital,Axis axis,332,321,BAN:7 ASS:2 IND:1 BAN~:1
+game:deer-guemal,Hippocamelus bisulcus,73,39,AGS:11 CLC:9 CLS:8 CLS~:5 AGS~:1
+game:deer-pampas,Ozotoceros bezoarticus,708,136,BZC:116 AGE:109 BZE:91 BZL:44 BZS:43 AGW:40 PAR:38 BZN:37 BOL:20 AGS:12 URU:11 AGE~:5 URU~:4 BZS~:1 AGS~:1
+game:deer-fallow,Dama dama,574,53,FRA:60 SPA:51 UKR:41 GER:37 POL:36 GRB:27 ROM:22 BLR:20 GRB~:19 SWE:18 BLT:18 SPA~:18 CZE:14 YUG:13 FRA~:12 ITA:12 AUT:10 HUN:10 POR:10 IRE~:9 IRE:9 SWE~:7 DEN~:6 BLT~:5 DEN:4 GER~:4 NET:4 SWI:4 POR~:4 RUC:3 BGM:3 NOR:2 POL~:2 NET~:2 YUG~:2 ITA~:2 FIN~:1 NOR~:1 RUW:1 BGM~:1
+game:deer-moose,Alces alces,3398,2946,UKR:59 NUN:44 GER:31 NWT:20 GRB:17 PEN:17 RUC:16 COL:13 WYO:12 ROM:11 MIC:11 ONT:10 RUS:10 WIS:10 ASK:8 SAS:7 CZE:7 FRA:7 MIN:7 KRY~:7 UTA:7 RUN~:6 ONT~:6 MNT:6 NDA:6 AUT:6 ITA:6 NWT~:5 DEN:5 UKR~:5 NWY:5 ASK~:4 NUN~:4 GRB~:4 GER~:4 NET:4 POL:4 ABT:4 SWI:4 RUN:3 MAN:3 HUN:3 YUG:3 DEN~:2 BLR:2 BRC:2 WAS:2 OHI:2 MAS~:2 POL~:1 NET~:1 BRC~:1 RUS~:1 SDA:1 KRY:1 CNT:1 RHO:1 NWJ:1
+game:gazelle-thomson,Eudorcas thomsonii,42,42,
+game:goat-ibexalp,Capra ibex,30,24,AUT:2 FRA:2 HUN:1 ITA:1
+game:goat-ibexnub,Capra nubiana,103,95,SAU:3 YEM:3 SUD:1 YEM~:1
+game:goat-markhor,Capra falconeri,57,39,AFG:8 TZK:5 PAK:3 UZB:2
+game:goat-mountain,Oreamnos americanus,273,206,WAS:10 BRC:8 ORE:8 UTA:7 COL:7 ABT:6 IDA:6 NEV:4 MNT:3 WYO:3 WAS~:2 ASK~:1 SDA:1 NWM:1
+game:goat-muskox,Ovibos moschatus,1152,432,KRA:99 MAG:97 WSB:87 KAM:47 MAG~:45 NUN:43 ASK:33 KAM~:30 NUN~:27 RUN:26 YAK:22 MAN:18 WSB~:15 ASK~:15 YAK~:14 NOR:13 NWT:13 KRA~:11 KHA:10 SWE:9 NOR~:7 RUN~:6 ?:5 YUK:5 YUK~:3 NWT~:3 GNL~:3 FIN:3 MAN~:2 QUE~:2 KHA~:2 LAB:2 SAS:1 QUE:1 KUR~:1
+game:goat-takingold,Budorcas taxicolor,91,91,
+game:goat-angora,Capra aegagrus,301,281,AFG:5 LBS:4 PAK:4 PAL:3 TCS:2 LBS~:2
+game:goat-nubian,Capra aegagrus,301,281,AFG:5 LBS:4 PAK:4 PAL:3 TCS:2 LBS~:2
+game:goat-sirohi,Capra aegagrus,301,281,AFG:5 LBS:4 PAK:4 PAL:3 TCS:2 LBS~:2
+game:goat-turdag,Capra aegagrus,301,281,AFG:5 LBS:4 PAK:4 PAL:3 TCS:2 LBS~:2
+game:goat-valais,Capra aegagrus,301,281,AFG:5 LBS:4 PAK:4 PAL:3 TCS:2 LBS~:2
+game:pig-eurasian,Sus scrofa,4349,3782,MON:96 CHT:61 CHQ:60 CHX:52 ALG:35 CHI:29 GRB:24 EGY:19 GRB~:17 WHM:17 JAP~:16 JAP:16 LBY:16 PAK:12 CHN:11 IRE~:9 IRE:9 MOR:8 LBY~:6 DEN:5 TVA:5 CTA:5 GRC~:5 THA~:5 FIN:4 TUN:4 DEN~:3 FRA~:3 ITA~:3 IND:3 MYA:3 MYA~:3 NET~:2 NET:2 SPA:2 GRC:2 TZK:2 EGY~:2 CHS~:2 PAK~:2 FIN~:1 RUC:1 GER~:1 BGM~:1 SAK~:1 ITA:1 RUS~:1 UZB:1 KUR~:1 PRM~:1 KGZ:1 SPA~:1 EAI~:1 TUR~:1 CHN~:1 IRQ:1 NEP:1 IND~:1 VIE~:1
+game:pig-redriver,Potamochoerus porcus,609,609,
+game:pig-warthog,Phacochoerus africanus,1413,1413,
+game:sheep-bighorn,Ovis canadensis,422,271,MXE:26 CAL:19 NWM:14 WYO:13 MNT:12 ORE:10 ARI:9 BRC:8 MXN:8 ABT:6 IDA:6 UTA:6 WAS:4 NEV:3 NDA:2 COL:2 NEB:1 CAL~:1 TEX:1
+game:sheep-mouflon,Ovis orientalis,445,377,TUR:38 AFG:14 PAK:11 UZB:2 TZK:1 TKM:1 WHM:1
+game:hyena-spotted,Crocuta crocuta,5248,1758,IND:278 SAU:210 IRN:170 CHC:133 ALG:100 RUC:91 TUR:83 RUN:82 PAK:76 CHS:75 CHN:71 CPP:68 UKR:65 NGR:65 SUD:60 LBY:59 FRA:57 AFG:57 MYA:54 SPA:51 IRQ:47 CHA:47 MOR:45 YEM:45 SWE:42 THA:41 GER:37 RUS:37 MTN:37 POL:36 OMA:35 FIN:34 TKM:28 NAM:28 GRB:27 ROM:27 ITA:27 NCS:27 WSA:27 IND~:27 KAZ:26 YUG:24 MLI:24 LBS:22 BLR:20 EGY:20 BLT:19 TCS:19 UZB:19 VIE:19 RUW:18 GRB~:18 SPA~:18 LAO:18 ITA~:17 TUN:16 CHQ:15 SAU~:15 CZE:14 CBD:14 OFS:14 WHM:13 RUN~:12 BUL:12 KGZ:12 GRC:12 GRC~:12 LBY~:12 PAL:12 CHT:12 NOR:11 CHI:11 CPP~:11 SWE~:10 AUT:10 HUN:10 POR:10 TZK:10 FIN~:9 BLT~:9 TUR~:9 ALG~:9 YEM~:9 CMN:9 NAM~:9 TVL:9 IRN~:8 OMA~:8 GST:8 RUE:7 KRY~:7 CHS~:7 EGY~:7 NAT:7 DEN~:6 FRA~:6 TCS~:6 CHN~:6 TUN~:6 MOR~:6 GST~:6 UKR~:5 NCS~:5 YUG~:5 SIN:5 NEP:5 WSA~:5 ZIM:5 NOR~:4 DEN:4 GER~:4 NET:4 SWI:4 ALB:4 POR~:4 THA~:4 BGM:3 TUE~:3 TKM~:3 EHM:3 PAK~:3 BAN:3 MTN~:3 NGA:3 ANG~:3 POL~:2 NET~:2 RUS~:2 TUE:2 CHM~:2 SIC~:2 EAI~:2 LBS~:2 LES:2 NAT~:2 IRE~:1 BGM~:1 KRY:1 BUL~:1 CHM:1 CYP~:1 PAL~:1 SIN~:1 KUW:1 KUW~:1 CNY~:1 SUD~:1 MYA~:1 SRL~:1 ANG:1 LES~:1
+game:raccoon-common,Procyon lotor,1537,1537,
+game:wolf-eurasian,Canis lupus,8065,6554,IND:120 MXE:93 TEX:56 FRA:51 JAP~:43 JAP:41 GER:36 NUN:34 NEV:33 NWM:33 ARI:32 NUN~:29 GRB:27 COL:27 SPA:26 SWE:25 ?:23 ORE:23 NDA:21 CAL:21 KAN:21 GNL~:20 SAS:20 NEB:20 MXS:20 GRB~:19 UTA:19 MIC:18 PEN:18 GNL:17 SDA:17 IOW:17 OKL:17 WHM:17 MXN:17 NWY:15 MIN:13 SPA~:13 NOR~:12 MAG:12 FRA~:12 WIS:12 ILL:12 MSO:12 MAG~:11 WYO:11 ONT:11 PAK:11 SWE~:10 AUT:10 MAI:10 ITA~:10 IRE~:9 IRE:9 MNT:9 WAS:9 OHI:9 NOR:8 MAN:7 NBR:7 NSC~:7 INI:7 GRC~:7 MXC:7 NWT~:6 DEN~:6 POL:6 CZE:6 NWT:5 DEN:5 QUE:5 HUN:5 ITA:5 POR:5 GER~:4 NET:4 UKR:4 NWH:4 NSC:4 POR~:4 FIN:3 FIN~:3 ASK~:3 BGM:3 QUE~:3 WAS~:3 ROM:3 MAS~:3 GRC:3 BLT~:2 POL~:2 NET~:2 NBR~:2 ORE~:2 VER:2 MAI~:2 NWJ:2 NWY~:2 NWJ~:2 MXS~:2 BGM~:1 BRC:1 PEI~:1 PEI:1 UKR~:1 SAK~:1 YUG~:1 YUG:1 KUR~:1 IDA:1 BUL~:1 CAL~:1 CNT:1 RHO:1 TUE~:1 DEL:1 SIC~:1 EGY:1 EGY~:1 MXE~:1 IND~:1

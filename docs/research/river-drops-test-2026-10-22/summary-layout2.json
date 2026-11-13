@@ -1,0 +1,147 @@
+{
+ "congo_rapids [l2b]": {
+  "run": "l2b",
+  "kind": "Congo, Livingstone rapids",
+  "centre": [
+   129602,
+   54382
+  ],
+  "riverColumns": 17221,
+  "drops": {
+   "1": 821,
+   "2": 147,
+   "6": 83
+  },
+  "lowerColumnAtDrops": {
+   "1: rapid flowing": 684,
+   "1: flowing": 133,
+   "1: falling": 4,
+   "2: falling / rapid flowing": 147,
+   "6: falling / rapid flowing": 83
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {
+    "-1": 2,
+    "0": 57,
+    "1": 1
+   },
+   "elsewhere": {
+    "-1": 43,
+    "0": 669,
+    "1": 24
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {
+    "rapid flowing": 357,
+    "falling": 332
+   },
+   "elsewhere": {
+    "rapid flowing": 878,
+    "flowing": 141,
+    "falling": 4,
+    "source": 1
+   }
+  }
+ },
+ "victoria_falls [l2b]": {
+  "run": "l2b",
+  "kind": "listed waterfall, 22 blocks",
+  "centre": [
+   136494,
+   61387
+  ],
+  "riverColumns": 2443,
+  "drops": {},
+  "lowerColumnAtDrops": {},
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {},
+   "elsewhere": {
+    "0": 177,
+    "1": 6,
+    "3": 1
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {},
+   "elsewhere": {
+    "falling": 637,
+    "rapid flowing": 64,
+    "flowing": 3
+   }
+  }
+ },
+ "niagara_falls [l2b]": {
+  "run": "l2b",
+  "kind": "listed waterfall, 11 blocks",
+  "centre": [
+   77491,
+   26715
+  ],
+  "riverColumns": 5077,
+  "drops": {},
+  "lowerColumnAtDrops": {},
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {},
+   "elsewhere": {
+    "0": 136,
+    "1": 4,
+    "3": 5
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {},
+   "elsewhere": {
+    "falling": 963,
+    "rapid flowing": 91
+   }
+  }
+ },
+ "rhine_gorge [l2b]": {
+  "run": "l2b",
+  "kind": "Rhine gorge",
+  "centre": [
+   126189,
+   22600
+  ],
+  "riverColumns": 10094,
+  "drops": {
+   "1": 281,
+   "2": 17,
+   "3": 27,
+   "4": 1
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 198,
+   "1: rapid flowing": 81,
+   "1: falling": 2,
+   "2: falling / flowing": 16,
+   "2: falling": 1,
+   "3: falling / flowing": 27,
+   "4: falling / flowing": 1
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {
+    "0": 12,
+    "1": 1
+   },
+   "elsewhere": {
+    "-1": 9,
+    "0": 636,
+    "1": 15,
+    "2": 1,
+    "3": 7
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {
+    "flowing": 149,
+    "falling": 30
+   },
+   "elsewhere": {
+    "flowing": 174,
+    "rapid flowing": 93
+   }
+  }
+ }
+}

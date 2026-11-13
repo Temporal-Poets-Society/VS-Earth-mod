@@ -1,0 +1,20 @@
+== congo_rapids
+   drop blocks: {'d6': 7, 'd7': 17, 'dir7': 157, 'rapid d3': 342, 'rapid d4': 37, 'rapid d5': 38, 'rapid d6': 461, 'rapid dir1': 549, 'rapid dir2': 469, 'rapid dir3': 469, 'rapid dir4': 1187, 'rapid dir5': 1315, 'rapid dir6': 1302, 'rapid dir7': 1008}
+   drops (upper pool beside a lower one): sill 1211, no sill 0 []
+   flowing cells beside one a height higher (or under water): 3644, not: 2369 [(np.int64(129505), 172, np.int64(54475), 'water-sw-3'), (np.int64(129505), 172, np.int64(54476), 'water-sw-3'), (np.int64(129505), 172, np.int64(54477), 'water-sw-1'), (np.int64(129506), 172, np.int64(54477), 'water-sw-3')]
+   water beside open air: {'rapid d6': 562, 'rapid dir1': 507, 'rapid d3': 451, 'dir3': 62, 'rapid d4': 58, 'rapid d5': 54, 'dir4': 38, 'dir1': 22, 'd6': 17, 'dir6': 12, 'rapid dir2': 12, 'rapid dir3': 12, 'still7': 4, 'dir7': 3, 'dir2': 2, 'dir5': 2}
+== victoria_falls
+   drop blocks: {'d7': 4, 'dir7': 17, 'rapid d6': 439, 'rapid dir1': 21, 'rapid dir2': 22, 'rapid dir3': 21, 'rapid dir4': 22, 'rapid dir5': 22, 'rapid dir6': 22, 'rapid dir7': 42, 'rapid still7': 1}
+   drops (upper pool beside a lower one): sill 31, no sill 0 []
+   flowing cells beside one a height higher (or under water): 152, not: 12 [(np.int64(136417), 251, np.int64(61325), 'water-se-6'), (np.int64(136417), 251, np.int64(61326), 'water-se-6'), (np.int64(136417), 251, np.int64(61328), 'water-se-5'), (np.int64(136417), 251, np.int64(61331), 'water-se-2')]
+   water beside open air: {'rapid d6': 669, 'rapid dir1': 32, 'dir1': 13, 'rapid dir6': 2, 'dir6': 1, 'rapid still7': 1}
+== niagara_falls
+   drop blocks: {'d7': 5, 'dir7': 190, 'rapid d6': 550, 'rapid dir1': 61, 'rapid dir2': 63, 'rapid dir3': 64, 'rapid dir4': 68, 'rapid dir5': 69, 'rapid dir6': 75, 'rapid dir7': 109}
+   drops (upper pool beside a lower one): sill 318, no sill 0 []
+   flowing cells beside one a height higher (or under water): 1373, not: 146 [(np.int64(77468), 185, np.int64(26712), 'rapidwater-nw-1'), (np.int64(77468), 185, np.int64(26714), 'rapidwater-nw-2'), (np.int64(77468), 185, np.int64(26716), 'rapidwater-nw-3'), (np.int64(77468), 185, np.int64(26718), 'rapidwater-nw-4')]
+   water beside open air: {'rapid d6': 770, 'dir1': 202, 'rapid dir1': 71, 'dir2': 42, 'dir6': 4, 'dir7': 3, 'rapid dir4': 2, 'still7': 2, 'dir3': 2, 'rapid dir2': 1}
+== rhine_gorge
+   drop blocks: {'d6': 7, 'd7': 7, 'dir7': 173, 'rapid d3': 36, 'rapid d4': 9, 'rapid d6': 53, 'rapid dir1': 28, 'rapid dir2': 32, 'rapid dir3': 35, 'rapid dir4': 85, 'rapid dir5': 95, 'rapid dir6': 118, 'rapid dir7': 145, 'rapid still7': 1}
+   drops (upper pool beside a lower one): sill 359, no sill 0 []
+   flowing cells beside one a height higher (or under water): 1319, not: 324 [(np.int64(126158), 187, np.int64(22597), 'rapidwater-ne-5'), (np.int64(126158), 187, np.int64(22600), 'rapidwater-ne-6'), (np.int64(126159), 187, np.int64(22598), 'rapidwater-ne-5'), (np.int64(126159), 187, np.int64(22599), 'rapidwater-ne-5')]
+   water beside open air: {'dir1': 231, 'rapid d6': 80, 'rapid d3': 62, 'rapid dir1': 40, 'dir2': 14, 'rapid d4': 12, 'dir3': 10, 'dir4': 9, 'd6': 5, 'dir5': 5, 'dir6': 4, 'rapid dir2': 1, 'rapid still7': 1}

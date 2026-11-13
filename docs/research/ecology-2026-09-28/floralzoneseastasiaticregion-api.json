@@ -1,0 +1,464 @@
+{
+  "mod": {
+    "modid": 2081,
+    "assetid": 11807,
+    "name": "Floral Zones: East Asiatic Region",
+    "text": "<p><span style=\"font-weight: 400;\">This mod adds plants from the East Asiatic floristic region, filling out the roster of subtropical and temperate plants.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:</span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" style=\"border-spacing: 0px; height: 1756px; width: 1972px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col width=\"159\" /><col width=\"184\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"265\" /><col width=\"310\" /></colgroup>\n<tbody>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Common Name</td>\n<td style=\"height: 19px; width: 224.178px;\">Scientific name</td>\n<td style=\"height: 19px; width: 121.817px;\">Size</td>\n<td style=\"height: 19px; width: 121.817px;\">Temperature</td>\n<td style=\"height: 19px; width: 121.817px;\">Precipitation</td>\n<td style=\"height: 19px; width: 121.817px;\">Fertility</td>\n<td style=\"height: 19px; width: 121.817px;\">Forest</td>\n<td style=\"height: 19px; width: 121.817px;\">Altitude</td>\n<td style=\"height: 19px; width: 121.817px;\">Additional spawn conditions</td>\n<td style=\"height: 19px; width: 322.859px;\">Resources</td>\n</tr>\n<tr style=\"height: 11px;\">\n<td style=\"height: 11px; width: 193.715px;\">&nbsp;</td>\n<td style=\"height: 11px; width: 224.178px;\">&nbsp;</td>\n<td style=\"height: 11px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 11px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 11px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 11px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 11px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 11px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 11px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 11px; width: 322.859px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Chinese Wolfberry</td>\n<td style=\"height: 19px; width: 224.178px;\">Lycium barbarum</td>\n<td style=\"height: 19px; width: 121.817px;\">1-3 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">2-16</td>\n<td style=\"height: 19px; width: 121.817px;\">19-65%</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.8</td>\n<td style=\"height: 19px; width: 121.817px;\">0.3-0.6</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.6</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">Fruit</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Sponge Gourd</td>\n<td style=\"height: 19px; width: 224.178px;\">Luffa aegyptiaca</td>\n<td style=\"height: 19px; width: 121.817px;\">1 m W+</td>\n<td style=\"height: 19px; width: 121.817px;\">12-40</td>\n<td style=\"height: 19px; width: 121.817px;\">50-88%</td>\n<td style=\"height: 19px; width: 121.817px;\">0.4-0.7</td>\n<td style=\"height: 19px; width: 121.817px;\">0.3-0.8</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.1</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">Vegetable, Cleaning tool</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Fuki</td>\n<td style=\"height: 19px; width: 224.178px;\">Petasites japonicus</td>\n<td style=\"height: 19px; width: 121.817px;\">1 m W, 2 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">2-18</td>\n<td style=\"height: 19px; width: 121.817px;\">65-80%</td>\n<td style=\"height: 19px; width: 121.817px;\">0.5-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0.5-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.5</td>\n<td style=\"height: 19px; width: 121.817px;\">On Surface Plus Under Trees</td>\n<td style=\"height: 19px; width: 322.859px;\">Vegetable</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">King Sago</td>\n<td style=\"height: 19px; width: 224.178px;\">Cycas revoluta</td>\n<td style=\"height: 19px; width: 121.817px;\">1-1.2 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">12-18</td>\n<td style=\"height: 19px; width: 121.817px;\">66-81%</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.7</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.3</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.1</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 193.715px;\">Tassle Fern</td>\n<td style=\"height: 39px; width: 224.178px;\">Polystichum polyblepharum</td>\n<td style=\"height: 39px; width: 121.817px;\">1 m H</td>\n<td style=\"height: 39px; width: 121.817px;\">6-14</td>\n<td style=\"height: 39px; width: 121.817px;\">55-78%</td>\n<td style=\"height: 39px; width: 121.817px;\">0-1</td>\n<td style=\"height: 39px; width: 121.817px;\">0.3-1</td>\n<td style=\"height: 39px; width: 121.817px;\">0.18-0.55</td>\n<td style=\"height: 39px; width: 121.817px;\">On Surface Plus Under Trees</td>\n<td style=\"height: 39px; width: 322.859px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Chinese Aster</td>\n<td style=\"height: 19px; width: 224.178px;\">Callistephus chinensis</td>\n<td style=\"height: 19px; width: 121.817px;\">0.2-1 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">2-21</td>\n<td style=\"height: 19px; width: 121.817px;\">19-61%</td>\n<td style=\"height: 19px; width: 121.817px;\">0.3-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0.2-0.5</td>\n<td style=\"height: 19px; width: 121.817px;\">0.05-0.67</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 193.715px;\">Japanese Snow Flower</td>\n<td style=\"height: 39px; width: 224.178px;\">Deutzia gracilis</td>\n<td style=\"height: 39px; width: 121.817px;\">1.5 m H</td>\n<td style=\"height: 39px; width: 121.817px;\">6-12</td>\n<td style=\"height: 39px; width: 121.817px;\">41-91%</td>\n<td style=\"height: 39px; width: 121.817px;\">0.3-0.7</td>\n<td style=\"height: 39px; width: 121.817px;\">0.3-1</td>\n<td style=\"height: 39px; width: 121.817px;\">0-0.29</td>\n<td style=\"height: 39px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 322.859px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Common Hibiscus</td>\n<td style=\"height: 19px; width: 224.178px;\">Hibiscus syriacus</td>\n<td style=\"height: 19px; width: 121.817px;\">2-4 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">6-32</td>\n<td style=\"height: 19px; width: 121.817px;\">49-91%</td>\n<td style=\"height: 19px; width: 121.817px;\">0.6-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0.2-0.8</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.55</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Cattail Iris</td>\n<td style=\"height: 19px; width: 224.178px;\">Iris typhifolia</td>\n<td style=\"height: 19px; width: 121.817px;\">0.3-0.6 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">-4-8</td>\n<td style=\"height: 19px; width: 121.817px;\">14-61%</td>\n<td style=\"height: 19px; width: 121.817px;\">0.3-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.4</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.48</td>\n<td style=\"height: 19px; width: 121.817px;\">Near Water</td>\n<td style=\"height: 19px; width: 322.859px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Goldband Lily</td>\n<td style=\"height: 19px; width: 224.178px;\">Lilium auratum</td>\n<td style=\"height: 19px; width: 121.817px;\">1-2.5 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">8-14</td>\n<td style=\"height: 19px; width: 121.817px;\">50-78%</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.5</td>\n<td style=\"height: 19px; width: 121.817px;\">0.1-0.5</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.41</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">vegetable</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Tiger Lily</td>\n<td style=\"height: 19px; width: 224.178px;\">Lilium lancifolium</td>\n<td style=\"height: 19px; width: 121.817px;\">0.6-1.5 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">-2-18</td>\n<td style=\"height: 19px; width: 121.817px;\">31-82%</td>\n<td style=\"height: 19px; width: 121.817px;\">0-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0.2-0.6</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.3</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">vegetable</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Beauty Bush</td>\n<td style=\"height: 19px; width: 224.178px;\">Linnaea amabilis</td>\n<td style=\"height: 19px; width: 121.817px;\">2.4-4.6 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">4-16</td>\n<td style=\"height: 19px; width: 121.817px;\">25-67%</td>\n<td style=\"height: 19px; width: 121.817px;\">0-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0.3-0.6</td>\n<td style=\"height: 19px; width: 121.817px;\">0.05-0.61</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 193.715px;\">Chinese Fringe Flower</td>\n<td style=\"height: 39px; width: 224.178px;\">Loropetalum chinense</td>\n<td style=\"height: 39px; width: 121.817px;\">1.5-6 m H</td>\n<td style=\"height: 39px; width: 121.817px;\">14-40</td>\n<td style=\"height: 39px; width: 121.817px;\">61-98%</td>\n<td style=\"height: 39px; width: 121.817px;\">0.2-0.7</td>\n<td style=\"height: 39px; width: 121.817px;\">0.4-1</td>\n<td style=\"height: 39px; width: 121.817px;\">0-0.35</td>\n<td style=\"height: 39px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 322.859px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Red Spider Lily</td>\n<td style=\"height: 19px; width: 224.178px;\">Lycoris radiata</td>\n<td style=\"height: 19px; width: 121.817px;\">0.3-0.6 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">6-20</td>\n<td style=\"height: 19px; width: 121.817px;\">61-88%</td>\n<td style=\"height: 19px; width: 121.817px;\">0.6-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0.6-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.65</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Chinese Peony</td>\n<td style=\"height: 19px; width: 224.178px;\">Paeonia lactiflora</td>\n<td style=\"height: 19px; width: 121.817px;\">0.5-0.7 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">-2-16</td>\n<td style=\"height: 19px; width: 121.817px;\">20-80%</td>\n<td style=\"height: 19px; width: 121.817px;\">0.4-0.8</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.3</td>\n<td style=\"height: 19px; width: 121.817px;\">0.08-0.63</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Chinese Bellflower</td>\n<td style=\"height: 19px; width: 224.178px;\">Platycodon grandiflorus</td>\n<td style=\"height: 19px; width: 121.817px;\">0.6 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">-4-20</td>\n<td style=\"height: 19px; width: 121.817px;\">29-91%</td>\n<td style=\"height: 19px; width: 121.817px;\">0.5-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.2</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.61</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 193.715px;\">Warburg's Bladderwort</td>\n<td style=\"height: 39px; width: 224.178px;\">Utricularia warburgii</td>\n<td style=\"height: 39px; width: 121.817px;\">0.2 m H</td>\n<td style=\"height: 39px; width: 121.817px;\">14-20</td>\n<td style=\"height: 39px; width: 121.817px;\">65-82%</td>\n<td style=\"height: 39px; width: 121.817px;\">0-0.7</td>\n<td style=\"height: 39px; width: 121.817px;\">0-0.2</td>\n<td style=\"height: 39px; width: 121.817px;\">0.28-0.4</td>\n<td style=\"height: 39px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 322.859px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Fountain Bamboo</td>\n<td style=\"height: 19px; width: 224.178px;\">Fargesia nitida</td>\n<td style=\"height: 19px; width: 121.817px;\">3-4.5 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">4-16</td>\n<td style=\"height: 19px; width: 121.817px;\">22-78%</td>\n<td style=\"height: 19px; width: 121.817px;\">0.5-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0.2-0.5</td>\n<td style=\"height: 19px; width: 121.817px;\">0.63-0.76</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">Bamboo</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Kudzu</td>\n<td style=\"height: 19px; width: 224.178px;\">Pueraria montana</td>\n<td style=\"height: 19px; width: 121.817px;\">1 m W+</td>\n<td style=\"height: 19px; width: 121.817px;\">6-40</td>\n<td style=\"height: 19px; width: 121.817px;\">19-91%</td>\n<td style=\"height: 19px; width: 121.817px;\">0-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0.2-0.5</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.63</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">Vegetable, Flour</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 193.715px;\">Korean Fir</td>\n<td style=\"height: 39px; width: 224.178px;\">Abies koreana</td>\n<td style=\"height: 39px; width: 121.817px;\">10-18 m H</td>\n<td style=\"height: 39px; width: 121.817px;\">8-12</td>\n<td style=\"height: 39px; width: 121.817px;\">52-93%</td>\n<td style=\"height: 39px; width: 121.817px;\">0-1</td>\n<td style=\"height: 39px; width: 121.817px;\">0.5-1</td>\n<td style=\"height: 39px; width: 121.817px;\">0.3-0.59 (0.64)</td>\n<td style=\"height: 39px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 322.859px;\">Firewood, Seeds</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Amur Maple</td>\n<td style=\"height: 19px; width: 224.178px;\">Acer ginnala</td>\n<td style=\"height: 19px; width: 121.817px;\">3-10 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">0-12</td>\n<td style=\"height: 19px; width: 121.817px;\">20-63%</td>\n<td style=\"height: 19px; width: 121.817px;\">0-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.5</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.53 (0.55)</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">Wood, Seeds</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 193.715px;\">Japanese White Birch</td>\n<td style=\"height: 39px; width: 224.178px;\">Betula platyphylla</td>\n<td style=\"height: 39px; width: 121.817px;\">12-30 m H</td>\n<td style=\"height: 39px; width: 121.817px;\">-8-12</td>\n<td style=\"height: 39px; width: 121.817px;\">27-68%</td>\n<td style=\"height: 39px; width: 121.817px;\">0-0.7</td>\n<td style=\"height: 39px; width: 121.817px;\">0-0.8</td>\n<td style=\"height: 39px; width: 121.817px;\">0.1-0.81 (0.89)</td>\n<td style=\"height: 39px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 322.859px;\">Wood, Seeds</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 193.715px;\">Japanese Larch</td>\n<td style=\"height: 39px; width: 224.178px;\">Larix kaempferi</td>\n<td style=\"height: 39px; width: 121.817px;\">20-50 m H</td>\n<td style=\"height: 39px; width: 121.817px;\">2-16</td>\n<td style=\"height: 39px; width: 121.817px;\">52-91%</td>\n<td style=\"height: 39px; width: 121.817px;\">0-1</td>\n<td style=\"height: 39px; width: 121.817px;\">0-0.4</td>\n<td style=\"height: 39px; width: 121.817px;\">0.1-0.69 (0.73)</td>\n<td style=\"height: 39px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 322.859px;\">Wood, Seeds</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 193.715px;\">Dawn Redwood</td>\n<td style=\"height: 39px; width: 224.178px;\">Metasequoia glyptostroboides</td>\n<td style=\"height: 39px; width: 121.817px;\">35-50 m H</td>\n<td style=\"height: 39px; width: 121.817px;\">10-16</td>\n<td style=\"height: 39px; width: 121.817px;\">52-88%</td>\n<td style=\"height: 39px; width: 121.817px;\">0-1</td>\n<td style=\"height: 39px; width: 121.817px;\">0-0.6</td>\n<td style=\"height: 39px; width: 121.817px;\">0.15-0.55 (0.89)</td>\n<td style=\"height: 39px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 322.859px;\">Wood, Seeds</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Golden Bamboo</td>\n<td style=\"height: 19px; width: 224.178px;\">Phyllostachys aurea</td>\n<td style=\"height: 19px; width: 121.817px;\">8 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">12-18</td>\n<td style=\"height: 19px; width: 121.817px;\">52-100%</td>\n<td style=\"height: 19px; width: 121.817px;\">0.7-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0.8-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.48 (0.53)</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">Bamboo, Seeds</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Moso Bamboo</td>\n<td style=\"height: 19px; width: 224.178px;\">Phyllostachys edulis</td>\n<td style=\"height: 19px; width: 121.817px;\">28 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">8-22</td>\n<td style=\"height: 19px; width: 121.817px;\">50-100%</td>\n<td style=\"height: 19px; width: 121.817px;\">0.4-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0.7-0.95</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.55 (0.74)</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">Bamboo, Seeds</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Black Bamboo</td>\n<td style=\"height: 19px; width: 224.178px;\">Phyllostachys nigra</td>\n<td style=\"height: 19px; width: 121.817px;\">25 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">14-20</td>\n<td style=\"height: 19px; width: 121.817px;\">65-85%</td>\n<td style=\"height: 19px; width: 121.817px;\">0.6-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0.65-0.85</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.4 (0.57)</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">Bamboo, Seeds</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 193.715px;\">Japanese Pine</td>\n<td style=\"height: 19px; width: 224.178px;\">Pinus densiflora</td>\n<td style=\"height: 19px; width: 121.817px;\">20-35 m H</td>\n<td style=\"height: 19px; width: 121.817px;\">4-16</td>\n<td style=\"height: 19px; width: 121.817px;\">45-95%</td>\n<td style=\"height: 19px; width: 121.817px;\">0-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0-1</td>\n<td style=\"height: 19px; width: 121.817px;\">0-0.43 (0.57)</td>\n<td style=\"height: 19px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 322.859px;\">Wood, Seeds, Resin</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 193.715px;\">Jolcham Oak</td>\n<td style=\"height: 39px; width: 224.178px;\">Quercus serrata</td>\n<td style=\"height: 39px; width: 121.817px;\">20-25 m H</td>\n<td style=\"height: 39px; width: 121.817px;\">10-20</td>\n<td style=\"height: 39px; width: 121.817px;\">21-85%</td>\n<td style=\"height: 39px; width: 121.817px;\">0.5-1</td>\n<td style=\"height: 39px; width: 121.817px;\">0.3-1</td>\n<td style=\"height: 39px; width: 121.817px;\">0.02-0.62 (0.76)</td>\n<td style=\"height: 39px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 322.859px;\">Wood, Seeds, Tanin</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 193.715px;\">Windmill Palm</td>\n<td style=\"height: 39px; width: 224.178px;\">Trachycarpus fortunei</td>\n<td style=\"height: 39px; width: 121.817px;\">12-20 m H</td>\n<td style=\"height: 39px; width: 121.817px;\">14-22</td>\n<td style=\"height: 39px; width: 121.817px;\">41-87%</td>\n<td style=\"height: 39px; width: 121.817px;\">0-1</td>\n<td style=\"height: 39px; width: 121.817px;\">0.6-1</td>\n<td style=\"height: 39px; width: 121.817px;\">0.05-0.64 (0.72)</td>\n<td style=\"height: 39px; width: 121.817px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 322.859px;\">Rope, Firewood, Seeds</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Compatibility</div>\n<div class=\"spoiler-text\"><a href=\"https://mods.vintagestory.at/show/mod/8785\">Biomes</a>: This mod adds plant life to the Central Palearctic, Eastern Palearctic, Pacific Palearctic, Australasian and Oceanic Realms<br /><a href=\"https://mods.vintagestory.at/show/mod/25902\">Soap and Lye: Bloom and Lather</a>: Crafting recipe to turn FZ Hibiscus into S&amp;L Hibiscus<br /><a href=\"https://mods.vintagestory.at/wildcraftfruit\">Wildcraft</a>: Adds storage flags used by Wildcraft bags so FZ content can be added to WC bags<br /><a href=\"https://mods.vintagestory.at/show/mod/247\">XSkills</a>: Experience from berry bushes and trees<br /><br /></div>\n</div>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong> Why so many plant packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain plant pack file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><strong>Q:</strong>&nbsp;Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> It is safe to add, plants will only appear in chunks not previously generated. Removing this mod from an existing world will leave many broken blocks and is not recommended, but manually regenerating chunks via in game commands affecting can work.<br /><br /><br /><strong>Q:</strong> Can you add X plant?<br /><br /><strong>A:</strong> We are focusing on getting a core 30 plants into all 36 planned Floral Regions first before any plans to add more content, if ever. That said, we occasionally do commissions and would be open to adding plants that way. Check Tenth Architect's Discord or Author profile to see if any commission slots are open.<br /><br /><br /><strong>Q:</strong> Can you add X compatibility?<br /><br /><strong>A:</strong> Maintenance and our own planned content is our priority, and almost all our existing compatibilty files were those sent to us by community members. If you'd like to see compatibility added, you are welcome to make the patches, test to ensure they work and send them our way and we will add them. The exception to this would be if the size of the compatibility files would have significant performance impact for most users of this series, as performance is a higher priority of ours than cross compatibility.<br /><br /></div>\n</div>\n<p><br /><br />Features:</p>\n<p>The plants in this mod primarily spawn between 60 and 0 degrees latitude in a normal world climate.<br /><br />Links:<br /><a href=\"https://ko-fi.com/tentharchitect\">https://ko-fi.com/tentharchitect<br /><br /></a>A big thanks to everyone who gave feedback and assistance!</p>\n<p><span style=\"font-weight: 400;\"> <br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "floralzoneseastasiaticregion",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_994df69ce4467bfecdd746734e6e8259.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_994df69ce4467bfecdd746734e6e8259.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_994df69ce4467bfecdd746734e6e8259.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 113847,
+    "follows": 832,
+    "trendingpoints": 0,
+    "comments": 65,
+    "side": "both",
+    "type": "mod",
+    "created": "2024-04-07 17:35:11",
+    "lastreleased": "2026-09-23 19:42:47",
+    "lastmodified": "2026-09-28 20:10:29",
+    "tags": [
+      "Worldgen",
+      "Crafting",
+      "Food",
+      "Flora"
+    ],
+    "releases": [
+      {
+        "releaseid": 58170,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_3dcf2357390c853ec92bfc9ac6e8c9c9.zip?dl=FloralZonesEastAsiaticRegion-v1.0.24.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.24.zip",
+        "fileid": 124650,
+        "downloads": 920,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.24",
+        "created": "2026-09-23 19:42:47",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-Useful Traders patch (Thanks Droseran!)</span></p>"
+      },
+      {
+        "releaseid": 56446,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_5dfe4727bcc99aad27d13af68c1fa816.zip?dl=FloralZonesEastAsiaticRegion-v1.0.23.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.23.zip",
+        "fileid": 121411,
+        "downloads": 1714,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.23",
+        "created": "2026-09-10 23:24:15",
+        "changelog": "<p><span style=\"font-weight: 400;\">Tweak-Selection box of harvested kudzu</span></p>"
+      },
+      {
+        "releaseid": 54800,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_667690da28c4df9ddd91cd9fb82e4f18.zip?dl=FloralZonesEastAsiaticRegion-v1.0.22.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.22.zip",
+        "fileid": 118308,
+        "downloads": 2400,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.22",
+        "created": "2026-08-28 21:55:20",
+        "changelog": "<p>Added-XSkills Compat for berries and trees, Thanks Hydromancerx!</p>"
+      },
+      {
+        "releaseid": 54159,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_609fa18c16c4bfaf6fbc3745e9cb28d3.zip?dl=FloralZonesEastAsiaticRegion-v1.0.21.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.21.zip",
+        "fileid": 117163,
+        "downloads": 1063,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.21",
+        "created": "2026-08-23 22:23:11",
+        "changelog": "<p><span style=\"font-weight: 400;\">Tweak-Added rotation to palm fruits and tops</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Changed kudzu fishing bait recipe from new recipe to patch</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Selection box of fountain bamboo</span></p>"
+      },
+      {
+        "releaseid": 51253,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_e6fd6aa8d355cf3cdd4242b53b1e2777.zip?dl=FloralZonesEastAsiaticRegion-v1.0.20.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.20.zip",
+        "fileid": 111424,
+        "downloads": 6047,
+        "tags": [
+          "1.22.5"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.20",
+        "created": "2026-07-30 20:08:34",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Mannequin recipes</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Added-Stinkbait recipe with kudzu<br></span><span style=\"font-weight: 400;\">Added-Treeseed bracelets</span><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Changed-Goji Berry into new berry bush<br></span><span style=\"font-weight: 400;\">Updated-Basket shapes and attributes</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Changed amulet class to wearable behavior</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Thank you I Have Many Names for making many of these fixes!</span></p>"
+      },
+      {
+        "releaseid": 29764,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_da4c8b1cfde9b83662f6c00814ddf402.zip?dl=FloralZonesEastAsiaticRegion-v1.0.19.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.19.zip",
+        "fileid": 65711,
+        "downloads": 30568,
+        "tags": [
+          "1.21.5",
+          "1.21.6"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.19",
+        "created": "2025-11-23 21:40:34",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Useful Trader Compatibility (Thanks Droseran!)<br /></span><span style=\"font-weight: 400;\">Fixed-Pickled Sponge Gourd String</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Vegetables in wrong slot in scrambled eggs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Russian Translation (Thanks Nikuksis!)</span></p>"
+      },
+      {
+        "releaseid": 28798,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_89c9a50bc9c54e84fbff115d6791cc9d.zip?dl=FloralZonesEastAsiaticRegion-v1.0.18.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.18.zip",
+        "fileid": 63572,
+        "downloads": 3019,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.18",
+        "created": "2025-11-06 16:26:10",
+        "changelog": "<p>Fixed-Soap and Lye patch, hopefully for good!</p>"
+      },
+      {
+        "releaseid": 28771,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_8a7477e04865a101a2d2aa1eb3cf9487.zip?dl=FloralZonesEastAsiaticRegion-v1.0.17.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.17.zip",
+        "fileid": 63492,
+        "downloads": 290,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.17",
+        "created": "2025-11-05 21:22:41",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Hibiscus Soap and Lye patch</span></p>"
+      },
+      {
+        "releaseid": 28656,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_2561fcace5a7b4214c8690988b90c77e.zip?dl=FloralZonesEastAsiaticRegion-v1.0.16.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.16.zip",
+        "fileid": 63203,
+        "downloads": 662,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.16",
+        "created": "2025-11-03 17:14:38",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Recipe to craft hibiscus into hibiscus seeds Soap and Lye: Bloom and Lather (Thanks Whiskey Sunshine)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed non-essential strings from file</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 28159,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_9bbe43b219e1dfb86393e4275115c6af.zip?dl=FloralZonesEastAsiaticRegion-v1.0.15.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.15.zip",
+        "fileid": 61934,
+        "downloads": 3030,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.15",
+        "created": "2025-10-26 17:11:39",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Custom berry bush class to stop them from being pruned (Thanks Ape!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-wolfberry to small trough</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed fertility from wolfberry to stop other plants from growing on them</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 25979,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_9d49a810e5fc8f383a45aaf8f0fc5fa6.zip?dl=FloralZonesEastAsiaticRegion-v1.0.14.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.14.zip",
+        "fileid": 57085,
+        "downloads": 11986,
+        "tags": [
+          "1.21.1",
+          "1.21.2-rc.2",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.14",
+        "created": "2025-09-26 16:17:38",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Bowl and pot cleaning recipe to minimize mod conflicts</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Fountain bamboo spawn conditions</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Temporarily disabled bamboo class on bamboo due to it interfering with bamboo leaves dropping, will enable when a fix is found</span></p>"
+      },
+      {
+        "releaseid": 24051,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_54fb7ce44fa4c2c5743077c69b7a5cb3.zip?dl=FloralZonesEastAsiaticRegion-v1.0.13.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.13.zip",
+        "fileid": 52870,
+        "downloads": 8083,
+        "tags": [
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.13",
+        "created": "2025-08-31 15:25:12",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Bamboo class to multiblock bamboos, will now sway in the wind</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Palm frond Basket</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Palm frond Basket trap</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Palm frond Handbasket</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Palm frond Skep</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-treeseed necklaces</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Ukrainian translation (Thanks Deanbro!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Windmill palm leaves not dropping</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweaked-Temperature range of all plants, now closer to irl latitudes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Berry bush blocks now have realistic empty, flowering and fruiting durations<br /></span><span style=\"font-weight: 400;\">Updated-bowl recipes to use new 1.21 format<br /></span><span style=\"font-weight: 400;\">Updated-dough recipes to use new 1.21 format, added jug recipe</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-luffa sponge floor pileable<br /></span><span style=\"font-weight: 400;\">Updated-oil lamp recipes to use new 1.21 format<br /></span><span style=\"font-weight: 400;\">Updated-meal patches to use new 1.21 format</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 20077,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_3bc4b4e255ea199a9787d07d2a0de914.zip?dl=FloralZonesEastAsiaticRegion-v1.0.12.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.12.zip",
+        "fileid": 43507,
+        "downloads": 16227,
+        "tags": [
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.12",
+        "created": "2025-05-15 19:41:08",
+        "changelog": "<p>Added-Lily bulb, sponge gourds, fuki shoots, kudzu and Goji berry fruit mashes can be added to troughs<br />Fixed-Added missing meal recipes, meal recipe strings and incorrect meal shapes and colors</p>"
+      },
+      {
+        "releaseid": 19936,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_9e59a322fdd8a1c17179740219048c70.zip?dl=FloralZonesEastAsiaticRegion-v1.0.11.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.11.zip",
+        "fileid": 43198,
+        "downloads": 983,
+        "tags": [
+          "1.20.10"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.11",
+        "created": "2025-05-12 16:18:27",
+        "changelog": "<p>Fixed-WC bag compat file placement<br />Fixed-Missing Biome whitelisting for <span data-sheets-root=\"1\">Japanese White Birch and Japanese Larch</span></p>"
+      },
+      {
+        "releaseid": 19753,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_a8460bfe273f86dc86f3242e880b638e.zip?dl=FloralZonesEastAsiaticRegion-v1.0.10.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.10.zip",
+        "fileid": 42755,
+        "downloads": 862,
+        "tags": [
+          "1.20.10"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.10",
+        "created": "2025-05-07 22:13:20",
+        "changelog": "<p>Added-Wildcraft basket compatibility<br />Added-<span data-sheets-root=\"1\">Fountain Bamboo and Kudzu</span><span data-sheets-root=\"1\">&nbsp;now scythable</span></p>"
+      },
+      {
+        "releaseid": 19677,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_ad9b48b3271b5863efc71ab73ec12dbe.zip?dl=FloralZonesEastAsiaticRegion-v1.0.9.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.9.zip",
+        "fileid": 42545,
+        "downloads": 432,
+        "tags": [
+          "1.20.10"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.9",
+        "created": "2025-05-05 17:40:55",
+        "changelog": "<p>Fixed-Amur Maple, Dawn Redwood and <span data-sheets-root=\"1\">Jolcham Oak leaves not falling when cut down</span></p>"
+      },
+      {
+        "releaseid": 18500,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_80f935df8f5128b462196334940e9053.zip?dl=FloralZonesEastAsiaticRegion-v1.0.8.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.8.zip",
+        "fileid": 39980,
+        "downloads": 3873,
+        "tags": [
+          "1.20.7",
+          "1.20.8"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.8",
+        "created": "2025-04-04 21:20:57",
+        "changelog": "<p>Fixed-Long standing rendering bug, plants no longer fade to white at a distance</p>"
+      },
+      {
+        "releaseid": 17887,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_361e62a192b69d2491575118c1049d8b.zip?dl=FloralZonesEastAsiaticRegion-v1.0.7.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.7.zip",
+        "fileid": 39479,
+        "downloads": 776,
+        "tags": [
+          "1.20.6",
+          "1.20.7"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.7",
+        "created": "2025-03-21 21:13:11",
+        "changelog": "<p>Fixed-Golden bamboo offset breaking soil blocks</p>"
+      },
+      {
+        "releaseid": 15360,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_b845b6390177fe421782ba0a7849d890.zip?dl=FloralZonesEastAsiaticRegion-v1.0.6.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.6.zip",
+        "fileid": 31720,
+        "downloads": 7126,
+        "tags": [
+          "1.20.3",
+          "1.20.4",
+          "1.20.5",
+          "1.20.6"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.6",
+        "created": "2025-01-28 20:02:54",
+        "changelog": "<p>Added-Vegetables to soup recipe<br />Fixed-Wines, spirits and ciders now match base game satiety and decay rate</p>"
+      },
+      {
+        "releaseid": 13617,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_88f57818359a150470e44b4447d05fba.zip?dl=FloralZonesEastAsiaticRegion-v1.0.5.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.5.zip",
+        "fileid": 28531,
+        "downloads": 4249,
+        "tags": [
+          "1.20.0-rc.1",
+          "1.20.0-rc.6",
+          "1.20.0-rc.8",
+          "1.20.0-rc.9",
+          "1.20.0",
+          "1.20.1",
+          "1.20.3"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.5",
+        "created": "2024-12-12 19:41:51",
+        "changelog": "<p>Added-Quarter logs for <span data-sheets-root=\"1\">Korean Fir</span> and&nbsp;<span data-sheets-root=\"1\">Moso Bamboo</span><br />Added-Moso Bamboo drops blocks that can be used for building or crafting bamboo stakes<br />Added-Pickling for Fuki and Sponge Gourd<br />Added-Vegetable pies made from Sponge Gourd<br />Tweak-Reduce Goji berry spawns by 66%&nbsp;</p>"
+      },
+      {
+        "releaseid": 13454,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_704e8e62591edbbdd78352e1fcea775b.zip?dl=FloralZonesEastAsiaticRegion-v1.0.4.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.4.zip",
+        "fileid": 28198,
+        "downloads": 1061,
+        "tags": [
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.4",
+        "created": "2024-12-05 18:16:57",
+        "changelog": "<p>Refactored-fixed for 1.20's new formats<br /><br />Tweak-reduced Goji berry spawns 25%<br /><br />Fix-<span data-sheets-root=\"1\">Windmill Palm not fruiting</span></p>"
+      },
+      {
+        "releaseid": 10775,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_eeb5ed4cf276fac3e6fdad242b657666.zip?dl=FloralZonesEastAsiaticRegion-v1.0.3.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.3.zip",
+        "fileid": 22395,
+        "downloads": 4091,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.3",
+        "created": "2024-06-11 15:37:49",
+        "changelog": "<p>Fixed-Vegetable strings<br />Tweaked-Fuki and Sponge Gourd growth times</p>"
+      },
+      {
+        "releaseid": 10367,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_d85ede6d67afe11e8fe2413a6c9e3923.zip?dl=FloralZonesEastAsiaticRegion-v1.0.2.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.2.zip",
+        "fileid": 21692,
+        "downloads": 1052,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.2",
+        "created": "2024-05-18 00:21:03",
+        "changelog": "<p>Added-Russian translation, thanks Nikuksis!<br />Tweak-Adjusted tree spawning altitudes to factor in their height</p>"
+      },
+      {
+        "releaseid": 10249,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_6cb7c3f48fadd432915385c041777b8c.zip?dl=FloralZonesEastAsiaticRegion-v1.0.1.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.1.zip",
+        "fileid": 21470,
+        "downloads": 691,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.1",
+        "created": "2024-05-08 15:55:48",
+        "changelog": "<p>Tweak-Adjusted Kudzu spawning so it only occurs near water in the drier portion of its range<br />Fixed-Removed collision box from wolfberry<br />Fixed-wolfberry now drops an empty bush when broken</p>"
+      },
+      {
+        "releaseid": 9726,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_960dda4ebce2de028d575fac705e92e7.zip?dl=FloralZonesEastAsiaticRegion-v1.0.0.zip",
+        "filename": "FloralZonesEastAsiaticRegion-v1.0.0.zip",
+        "fileid": 20616,
+        "downloads": 1159,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "floralzoneseastasiaticregion",
+        "modversion": "1.0.0",
+        "created": "2024-04-07 18:08:58",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 20608,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-06_11-30-22_6764fd47eeeff33609ac6d9e8d879009.png",
+        "filename": "2024-04-06_11-30-22.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-06_11-30-22_6764fd47eeeff33609ac6d9e8d879009_55_60.png",
+        "created": "2024-04-07 17:26:31"
+      },
+      {
+        "fileid": 20609,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-06_10-29-19_0695fcedae87bb194808f70faf696e00.png",
+        "filename": "2024-04-06_10-29-19.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-06_10-29-19_0695fcedae87bb194808f70faf696e00_55_60.png",
+        "created": "2024-04-07 17:26:36"
+      },
+      {
+        "fileid": 20610,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-06_11-07-54_cfd0999472b947aa67160e7f9180e650.png",
+        "filename": "2024-04-06_11-07-54.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-06_11-07-54_cfd0999472b947aa67160e7f9180e650_55_60.png",
+        "created": "2024-04-07 17:26:43"
+      },
+      {
+        "fileid": 20611,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-06_11-08-51_0ee86715787bc1e5875c90988c8500e2.png",
+        "filename": "2024-04-06_11-08-51.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-06_11-08-51_0ee86715787bc1e5875c90988c8500e2_55_60.png",
+        "created": "2024-04-07 17:26:43"
+      },
+      {
+        "fileid": 20612,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-06_11-09-44_5a162691a493aad3b4da70ba45c9e64b.png",
+        "filename": "2024-04-06_11-09-44.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-06_11-09-44_5a162691a493aad3b4da70ba45c9e64b_55_60.png",
+        "created": "2024-04-07 17:26:43"
+      },
+      {
+        "fileid": 20613,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-06_11-15-59_0cc4be88192bc9860396ea11e7b7d297.png",
+        "filename": "2024-04-06_11-15-59.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-06_11-15-59_0cc4be88192bc9860396ea11e7b7d297_55_60.png",
+        "created": "2024-04-07 17:26:43"
+      },
+      {
+        "fileid": 20614,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-06_11-03-14_0b7b2fef855e29effbef84377def7ca4.png",
+        "filename": "2024-04-06_11-03-14.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-06_11-03-14_0b7b2fef855e29effbef84377def7ca4_55_60.png",
+        "created": "2024-04-07 17:26:44"
+      },
+      {
+        "fileid": 20615,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-04-06_11-21-03_cced82b61bd88429654915d677e008ea.png",
+        "filename": "2024-04-06_11-21-03.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-04-06_11-21-03_cced82b61bd88429654915d677e008ea_55_60.png",
+        "created": "2024-04-07 17:26:44"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

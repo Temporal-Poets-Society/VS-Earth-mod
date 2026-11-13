@@ -1,0 +1,577 @@
+{
+  "mod": {
+    "modid": 3934,
+    "assetid": 23261,
+    "name": "Interesting Ore Gen",
+    "text": "<h2><span style=\"color: #e74c3c;\">When updating IOG, BACK UP YOUR WORLDS!</span></h2>\n<p>&nbsp;</p>\n<p><span style=\"color: #e74c3c;\">2.1.0 adds better cave-in logic, it is enabled when you enable cave ins at world generation. It also adds noises for unstable blocks, listen to creaking and cracking and reinforce those ceilings!</span></p>\n<p><strong><span style=\"color: #e74c3c;\">As of 2.3.0 IOG has 3 ingame handbook entries going into DETAIL of each mechanic in the mod system. It DOES NOT and WILL NOT have what ores spawn in what structures, bar a bit of info for the \"end game\" gated ores via the new Hydrothermal Structures!</span></strong></p>\n<p>&nbsp;</p>\n<p>Ever since I saw my first playthrough of Vintage Story, I always thought it could benefit from more realistic ore generation. I was disappointed to see every ore with few exeptions spawn as discs! And after quite a lot of hard work I present to you:</p>\n<h1><span style=\"color: #34495e;\">Interesting Ore Gen</span></h1>\n<p><span style=\"color: #000000;\"><br />Adding several new ore generators to the game, and patches all vanilla metal ores and several mineral ores to use them! <br /><br /></span></p>\n<p>I balanced this mod around the idea of having a harder time finding ore, but once you do find it you're set. No more piddly little veins to harvest for a small scrap of trace material! Check the config in modconfig/interestingoregen/config for options to make ore more or less rare!<br /><br /></p>\n<p>As my mod also seems to have issues with prospecting, I cannot recommend enough using <strong><a href=\"https://mods.vintagestory.at/bettererprospecting\" target=\"_blank\" rel=\"noopener\">Betterer Prospecting!</a></strong> I made it so by default (configurable!) the mod places Boulders on the surface to indicate veins nearby. Dig around underground in the area where these boulders are and hunt for a Tracer Vein! (You can use the prospecting pick for this if you desire help). The tracer veins can be followed down to the main vein, be noted they are tricky to follow and have approx a 30% chance to place stone every step instead of ore! Following a tracer veins can be tricky so here is their rules:<br />Tracer veins build from the ore vein up, they will <em>always</em> go up 1 step, and possibly go <em>out</em> one step too. Keep in mind this can happen twice, thrice, and so on so you can get tracers that are a stairstep, and have gaps in that stairstep too.<br /><br /></p>\n<p>A small side note, IOG now has it's own saltpeter ore as of v2.3.0!</p>\n<h2><span style=\"color: #2b3e50;\">New Ore Generator Shapes</span></h2>\n<h2>&nbsp;</h2>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">New Oregen Shapes!</div>\n<div class=\"spoiler-text\">\n<h3><span style=\"color: #2b3e50;\">(Join the IOG Thread on the official Vintage Story Discord!)</span></h3>\n<h3><span style=\"color: #2b3e50;\">1) Fault Veins</span></h3>\n<p><span style=\"color: #2b3e50;\"><span style=\"color: #000000;\">These are disc shaped deposits, that are broadly a random orientation, are 64-128 blocks across and 1-5 blocks deep. The sub-type is \"Seam\" which is locked to +/- 30 degrees of horizontal for things like Coal.</span></span></p>\n<p><span style=\"color: #2b3e50;\"><span style=\"color: #000000;\">This is a typical fault vein (vertical in this case) of Quartz bearing Silver.</span></span></p>\n<p><span style=\"color: #2b3e50;\"><span style=\"color: #000000;\"> <img class=\"Box-sc-g0xbh4-0 fzFXnm\" src=\"https://github.com/RosstheGreat/ModPictures/blob/main/InterestingOreGen/IOG%20SeamandFault.png?raw=true\" alt=\"IOG SeamandFault.png\" data-hpc=\"true\" /></span></span></p>\n<h3><span style=\"color: #2b3e50;\">2) Chimney Formations</span></h3>\n<p><span style=\"color: #000000;\">Large verticalish columns/tubes (not hollow) of ore, the center of these tend to be a higher quality ore as well. They can branch and turn, and generally there's a few of them in a small area. Size ranges from 4-16 blocks in diameter and 30-100 blocks tall depending on the ore using it. Sometimes contain sub-deposits</span></p>\n<p><span style=\"color: #000000;\">This is a typical chimney shape from the side, containing native copper with no sub-deposit.</span></p>\n<p><span style=\"color: #000000;\"><img class=\"Box-sc-g0xbh4-0 fzFXnm\" src=\"https://github.com/RosstheGreat/ModPictures/blob/main/InterestingOreGen/IOG%20Chimney.png?raw=true\" alt=\"IOG Chimney.png\" data-hpc=\"true\" /></span></p>\n<p><span style=\"color: #000000;\">&nbsp;</span></p>\n<h3><span style=\"color: #2b3e50;\">3) Hydro Tubes</span></h3>\n<p><span style=\"color: #000000;\">Hydro Tubes are very long, thin tubes of ore that branch, twist, and turn occasionally fracturing into the host rock. These tubes can go on for hundreds of blocks! Size ranges from 2-20 blocks in diameter and often are found clusterd but traven for upwards of 500 blocks sometimes. The vein will branch and split as well, plenty of ore to be had! Sometimes contain sub-deposits.</span></p>\n<p><span style=\"color: #000000;\">A zinc Hydrotube Formation from above:<br /><img class=\"Box-sc-g0xbh4-0 fzFXnm\" src=\"https://github.com/RosstheGreat/ModPictures/blob/main/InterestingOreGen/IOG%20Hydrotube-1.png?raw=true\" alt=\"IOG Hydrotube-1.png\" data-hpc=\"true\" /><br /></span></p>\n<p>And more \"inside\" of the vein</p>\n<p><img class=\"Box-sc-g0xbh4-0 fzFXnm\" src=\"https://github.com/RosstheGreat/ModPictures/blob/main/InterestingOreGen/IOG%20Hydrotube-2.png?raw=true\" alt=\"IOG Hydrotube-2.png\" data-hpc=\"true\" /></p>\n<h3>4) Fault Ladder<br /><br /></h3>\n<p>Starting in IOG 2.3.0 there are now new large scale structures, in the thousands of blocks long. Within these structures are 3 new veintypes.</p>\n<p><img style=\"max-width: 100%;\" src=\"https://github.com/RosstheGreat/ModPictures/blob/main/InterestingOreGen/faultpics/faultladder1.png?raw=true\" alt=\"faultladder1.png\" data-hpc=\"true\" /></p>\n<p>&nbsp;</p>\n<p><img style=\"max-width: 100%;\" src=\"https://github.com/RosstheGreat/ModPictures/blob/main/InterestingOreGen/faultpics/faultladder2.png?raw=true\" alt=\"faultladder2.png\" data-hpc=\"true\" /></p>\n<p>&nbsp;</p>\n<h3>5) Ore Shoots</h3>\n<p><img style=\"max-width: 100%;\" src=\"https://github.com/RosstheGreat/ModPictures/blob/main/InterestingOreGen/faultpics/faultshoot1.png?raw=true\" alt=\"faultshoot1.png\" data-hpc=\"true\" /></p>\n<p>&nbsp;</p>\n<h3>6) Horsetail Zones</h3>\n<p>(Specifically the gold and zinc ores here)</p>\n<p><img style=\"max-width: 100%;\" src=\"https://github.com/RosstheGreat/ModPictures/blob/main/InterestingOreGen/faultpics/faultxray.png?raw=true\" alt=\"faultxray.png\" data-hpc=\"true\" /></p>\n<p>&nbsp;</p>\n<p>Finally,&nbsp;</p>\n<h2>FAULTS!</h2>\n<p>Extremely large structures that are often made of a simple unassuming rock. Currently there are 4 host rocks, quartz (in granite), Granite, Basalt, and Travertine. Each with it's own unique ore layout and amounts, and with some variants in each structure.</p>\n<p>Here are an example of the end of a Major Fault's line, a \"Horsetail Zone\"&nbsp;</p>\n<p><img style=\"max-width: 100%;\" src=\"https://github.com/RosstheGreat/ModPictures/blob/main/InterestingOreGen/faultpics/faultnoxray.png?raw=true\" alt=\"faultnoxray.png\" data-hpc=\"true\" /></p>\n<p>And, 2 large faults near each other in a Gravel \"Desert\"</p>\n<p><img style=\"max-width: 100%;\" src=\"https://github.com/RosstheGreat/ModPictures/blob/main/InterestingOreGen/faultpics/fault2.png?raw=true\" alt=\"fault2.png\" data-hpc=\"true\" /></p>\n</div>\n</div>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p><strong><span style=\"color: #000000;\"><span style=\"text-decoration: line-through;\">Most ores follow the vanilla oremap</span>!&nbsp;<span style=\"background-color: #e74c3c;\">As of 2.3.2 any ore spawned by IOG no longer uses vanilla oremap, ores are more random and that means sometimes you'll have to travel long distances to find what you want!</span>&nbsp;Ones like coal do not as they need to be kind of everywhere. You can use the handbook to find out what ores spawn in what stones, but aside from sub-deposits the vanilla ore generation requirements broadly still apply. Deposits will sometimes extend down, or up into other rocks they might not be able to spawn in so be aware sometimes you'll see odd rock intrusions! Investigate, it could be an ore!</span></strong></p>\n<h2><span style=\"color: #e74c3c;\"><strong>IOG has handbook entries now, 3 lengthy explanations of mechanics within the modsystem! If I missed something please let me know!</strong></span></h2>\n<p>&nbsp;</p>\n<h2><strong>Cave In Logic</strong></h2>\n<p><strong>This makes the game a lot more challenging, use cave-ins at your own risk. There is no config currently to disable IOG specific cave-ins but you can disabled cave-ins on your worldgen settings! </strong></p>\n<p>In IOG version 2.1.0 I changed cave-in logic again making it far more logical. In short, when you break a block a step-search begins on the block broken. This travels for up to 20 steps and seeks out the highest instability block it can find. If it finds a block with 100% instability it will collapse a rather large area around it. This step-search algorithm has to go through solid stone or other \"Unstable\" blocks. Also, it will only allow a collapse with unstable blocks with air beneath them, so you can put any block you want on the roof of your mines and prevent cave-ins on <em>only that specific block!</em> If the step-search finds the only hole in your ceiling, it will bring your ceiling down! If you want the more technical breakdown, read the 2.1.0 changelog.</p>\n<p><em><strong>Cave-in mechanics are actually an inherent (but optional) part of IOG's balance and difficulty. They will not be seperated into their own mod.&nbsp;</strong></em></p>\n<h2><strong>Recommended Mods!</strong></h2>\n<p><strong>A list of mods I recommend in addition to IOG!</strong></p>\n<p><strong><a href=\"https://mods.vintagestory.at/interestingme\" target=\"_blank\" rel=\"noopener\">Interesting Mining &amp; Extraction</a>&nbsp;</strong>Adds new ways to play with IOG and mining in general. I HIGHLY recommend playing with IOG, it balances things out significantly, Made by myself with model assistance from <a class=\"mention username mceNonEditable\" href=\"https://mods.vintagestory.at/show/user/A6C04AD296954A92574E\" data-user-hash=\"A6C04AD296954A92574E\">Protobean</a>!</p>\n<p><a href=\"https://mods.vintagestory.at/postsandbeams\">Posts and Beams!</a> Makes mining with Cave Ins significantly easier and your mines much prettier! By <a class=\"mention username mceNonEditable\" href=\"https://mods.vintagestory.at/show/user/6E8BC656B85F209A3BE2\" data-user-hash=\"6E8BC656B85F209A3BE2\">Zach2039</a> and <a class=\"mention username mceNonEditable\" href=\"https://mods.vintagestory.at/show/user/1E7966F0080EBE6E4CD8\" data-user-hash=\"1E7966F0080EBE6E4CD8\">ShaeTsu</a></p>\n<p><a href=\"https://mods.vintagestory.at/geologyaddons\" target=\"_blank\" rel=\"noopener\">Geology Additions!</a> Adds more rocks, Ores, and Gemstones! <span style=\"text-decoration: line-through;\">Compatible via <a href=\"https://mods.vintagestory.at/gaiogcompatpatch\" target=\"_blank\" rel=\"noopener\"><em><strong>this patch!</strong></em></a></span> As of IOG v2.2.0 it is naturally supported! Made by <a class=\"mention username mceNonEditable\" href=\"https://mods.vintagestory.at/show/user/413BE49987B43F55BF2D\" data-user-hash=\"413BE49987B43F55BF2D\">small_fern</a> and <a class=\"mention username mceNonEditable\" href=\"https://mods.vintagestory.at/show/user/769B06EA2BE4FDB74A2F\" data-user-hash=\"769B06EA2BE4FDB74A2F\">Catasteroid</a></p>\n<p><a href=\"https://mods.vintagestory.at/bettererprospecting\" target=\"_blank\" rel=\"noopener\">Betterer Prospecting!</a> IOG doesn't inherently work with vanilla prospecting all that well, <a class=\"mention username mceNonEditable\" href=\"https://mods.vintagestory.at/show/user/A4E08ECB69B27C6932BB\" data-user-hash=\"A4E08ECB69B27C6932BB\">KnewOne</a> spent a good bit of effort to get it functional and has built in integration!</p>\n<p><a href=\"https://mods.vintagestory.at/show/mod/27244\" target=\"_blank\" rel=\"noopener\">Deepvein: Asbestos!</a> Adds a bunch of Asbestos ore with some fireproofing uses! Very neat mod and has integrated mechanics with IOG by default! By <a class=\"mention username mceNonEditable\" href=\"https://mods.vintagestory.at/show/user/B5766A92CD72E3E2AC6A\" data-user-hash=\"B5766A92CD72E3E2AC6A\">ChiliKing</a></p>\n<p><a href=\"https://mods.vintagestory.at/materialneedsgeology\" target=\"_blank\" rel=\"noopener\">Material Needs: Geology!</a> by <a class=\"mention username mceNonEditable\" href=\"https://mods.vintagestory.at/show/user/2CE5B24B51748AD435B5\" data-user-hash=\"2CE5B24B51748AD435B5\">Nephelangelo</a>! Adds new stonetypes, if you like Geology Additions I also highly recommend this one! With natural integration as of v2.2.0 of IOG!&nbsp;</p>\n<p><a href=\"https://mods.vintagestory.at/show/mod/49001\" target=\"_blank\" rel=\"noopener\">Vanilla Cave-In Restore!</a> by <a class=\"mention username mceNonEditable\" href=\"https://mods.vintagestory.at/show/user/D732CF7D0F4D8B81F630\" data-user-hash=\"D732CF7D0F4D8B81F630\">Chilimunyaka</a> removes IOG's built in cave-in systems and restores it to the vanilla version.</p>\n<p><a href=\"https://mods.vintagestory.at/geologymap\" target=\"_blank\" rel=\"noopener\">Geology Map!</a> by <a class=\"mention username mceNonEditable\" href=\"https://mods.vintagestory.at/show/user/764FE1994EF550A0218E\" data-user-hash=\"764FE1994EF550A0218E\">cooli2</a>! Adds a mode for the map that shows rock layers, very nice for finding fault veins!&nbsp;</p>\n<p><a href=\"https://mods.vintagestory.at/show/mod/51614\" target=\"_blank\" rel=\"noopener\">Quality Ores!</a> by <a class=\"mention username mceNonEditable\" href=\"https://mods.vintagestory.at/show/user/31DC9B5DF4F8CEAC4166\" data-user-hash=\"31DC9B5DF4F8CEAC4166\">Thrakkus</a> Makes it so ores have visual differences in quality! Very lovely mod.</p>\n<p><a href=\"https://mods.vintagestory.at/prospectorsdispatch\" target=\"_blank\" rel=\"noopener\">Prospectors Dispatch!</a> by <a class=\"mention username mceNonEditable\" href=\"https://mods.vintagestory.at/show/user/A4198EC2C1163FDE3699\" data-user-hash=\"A4198EC2C1163FDE3699\">Berkyjay</a> Makes traders sell maps to the large Hydrothermal Districts!</p>\n<p><a href=\"https://mods.vintagestory.at/iogbalancepatch\" target=\"_blank\" rel=\"noopener\">IOG Balance Patch!</a> by <a class=\"mention username mceNonEditable\" href=\"https://mods.vintagestory.at/show/user/5AFC82958E32DA6A3484\" data-user-hash=\"5AFC82958E32DA6A3484\">ADumbBagel</a> Adjusts spawn rate of ores, as well as focuses less useful ores into Fault structures instead of regular IOG veins. Genuinely super nice mod!</p>\n<h2><strong>Bugs and Issues</strong></h2>\n<p>&nbsp;</p>\n<p>Hydrothermal Districts being too rare and too far apart (Will fix by reducing distance and force spawning them cardinally from spawn, configurable)</p>\n<p>&nbsp;</p>\n<p>Default config is awful, set to use this for now (Set it manually don't copy-paste it):</p>\n<p><em>GlobalOreDisableChance at 0.8 - 0.95</em></p>\n<p><em> DistanceBetweenSameOres at 400 - 1000&nbsp;</em></p>\n<p><em> DistanceBetweenAllOres at 0 -- THIS CAUSES PROBLEMS, very low numbers (sub 100) might be fine but it will be removed at a future date</em></p>\n<p>&nbsp;</p>\n<h2><strong>Incompatibilites</strong></h2>\n<p>Any mod that directly changes or modifies vanilla ore behavior <strong><em>wont work</em></strong><strong>.&nbsp;</strong>This is because I disable vanilla ore generation (for ores my mod effects, stuff like emeralds or lapis are uneffected). Otherwise this <em>should</em> be compatible with pretty much every mod. I've tested it with common terrain mods such as Terra Prety and Conquest Landform Overhaul, and had no issues so far.<br /><br />If there are any official incompatibilities I will put them here:<br /><strong>Vanilla Ore Rebalance</strong> (Or any mod like it)</p>\n<p>&nbsp;</p>\n<h2><strong>Integrations</strong></h2>\n<p><br /><em><strong><a href=\"https://mods.vintagestory.at/geologyaddons\" target=\"_blank\" rel=\"noopener\">Geology Additions</a> has Built In IOG Integration!</strong></em></p>\n<p><em><strong><a href=\"https://mods.vintagestory.at/materialneedsgeology\" target=\"_blank\" rel=\"noopener\">Material Needs: Geology</a> has Built In IOG Integration!</strong></em></p>\n<h2><strong>Roadmap/Future Plans</strong></h2>\n<p><em>I am on an extended hiatus from modding, I don't know when I'll come back so don't expect fixes or features anytime soon!</em></p>\n<p>&nbsp;</p>\n<p><strong>Create a small cloud of ore around the standard veins of IOG.</strong></p>\n<p><strong>New vein type: \"Veinlets\" which will essentially be spaghetti. Specifically for some crystal and special metallic ores.</strong></p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p><strong>I consider IOG mostly \"Feature Complete\" until someone can provide me more ore generation ideas. Specifically extremely large scale structures.</strong></p>\n<p>&nbsp;</p>\n<h2>Thanks!</h2>\n<p>Thanks to <em><strong>VinterNacht</strong></em>, <em><strong>Councilor</strong></em>,&nbsp;<strong>KnewOne</strong>,&nbsp;and <em><strong>SaltyWater</strong> </em>for all of the help along the way, <em><strong>Chiliking </strong></em><em>and&nbsp;</em><strong>Droseran </strong>on discord for all the help with patching, and <strong>small_fern </strong>for a ton of help with brainstorming ideas!</p>\n<p>&nbsp;</p>\n<h6><em>Do not redistribute or copy this mod, if you have ideas feel free to contact me on the Vintage Story Discord (username: Ross the Great). Unless the party has explicit <strong>written</strong> permission from me no copy or branch of this mod is to be made. However JSON (content) mods are okay to use this as a library for their own ore generation or if they want to patch something into or out of IOG, and anyone is welcome to learn from my mod's JSONs for how to use the generators. I am always happy to help, feel free to contact me if you need source code or help with anything!</em></h6>",
+    "author": "RosstheGreat",
+    "urlalias": "interestingoregen",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_93166b5553ff4885215b8b55f6c65182.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_93166b5553ff4885215b8b55f6c65182.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_93166b5553ff4885215b8b55f6c65182.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 62632,
+    "follows": 1183,
+    "trendingpoints": 0,
+    "comments": 624,
+    "side": "both",
+    "type": "mod",
+    "created": "2025-04-25 18:37:59",
+    "lastreleased": "2026-05-05 20:10:23",
+    "lastmodified": "2026-09-29 04:32:44",
+    "tags": [
+      "Worldgen",
+      "Ore Gen",
+      "Oregen",
+      "Oreshape",
+      "Ore Generation",
+      "Underground"
+    ],
+    "releases": [
+      {
+        "releaseid": 40603,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_c327592858a0d35756057d40b0e93e47.zip?dl=InterestingOreGen-v2.3.8.zip",
+        "filename": "InterestingOreGen-v2.3.8.zip",
+        "fileid": 90249,
+        "downloads": 23612,
+        "tags": [
+          "1.22.0-pre.1",
+          "1.22.0-pre.2",
+          "1.22.0-pre.3",
+          "1.22.0-pre.4",
+          "1.22.0-pre.5",
+          "1.22.0-rc.1",
+          "1.22.0-rc.2",
+          "1.22.0-rc.3",
+          "1.22.0-rc.4",
+          "1.22.0-rc.5",
+          "1.22.0-rc.6",
+          "1.22.0-rc.7",
+          "1.22.0-rc.8",
+          "1.22.0-rc.9",
+          "1.22.0-rc.10",
+          "1.22.0",
+          "1.22.1",
+          "1.22.2"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.3.8",
+        "created": "2026-05-05 20:10:23",
+        "changelog": "<p>Hopefully fixed some error spam from the MN:G patches&nbsp;</p>\n<p>deleted another leftover blank file.</p>"
+      },
+      {
+        "releaseid": 40542,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_7d0c51e15ca81fcdc8bb710e32f10d6f.zip?dl=InterestingOreGen-v2.3.7.zip",
+        "filename": "InterestingOreGen-v2.3.7.zip",
+        "fileid": 90141,
+        "downloads": 301,
+        "tags": [
+          "1.22.1",
+          "1.22.2"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.3.7",
+        "created": "2026-05-05 08:00:24",
+        "changelog": "<p>Hopefully fixed a jsonlib bug from blank jsons.</p>"
+      },
+      {
+        "releaseid": 40516,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_377c7c947c08cd0515acf161b5c3d012.zip?dl=InterestingOreGen-v2.3.6.zip",
+        "filename": "InterestingOreGen-v2.3.6.zip",
+        "fileid": 90099,
+        "downloads": 203,
+        "tags": [
+          "1.22.0-pre.1",
+          "1.22.0-pre.2",
+          "1.22.0-pre.3",
+          "1.22.0-pre.4",
+          "1.22.0-pre.5",
+          "1.22.0-rc.1",
+          "1.22.0-rc.2",
+          "1.22.0-rc.3",
+          "1.22.0-rc.4",
+          "1.22.0-rc.5",
+          "1.22.0-rc.6",
+          "1.22.0-rc.7",
+          "1.22.0-rc.8",
+          "1.22.0-rc.9",
+          "1.22.0-rc.10",
+          "1.22.0",
+          "1.22.1",
+          "1.22.2"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.3.6",
+        "created": "2026-05-05 01:02:52",
+        "changelog": "<p>Fixed an issue with JSONs&nbsp;</p>"
+      },
+      {
+        "releaseid": 39648,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_4dff921927cebbd177ca0ec6ea6b4f1a.zip?dl=InterestingOreGen-v2.3.5.zip",
+        "filename": "InterestingOreGen-v2.3.5.zip",
+        "fileid": 88284,
+        "downloads": 1901,
+        "tags": [
+          "1.22.0-pre.1",
+          "1.22.0-pre.2",
+          "1.22.0-pre.3",
+          "1.22.0-pre.4",
+          "1.22.0-pre.5",
+          "1.22.0-rc.1",
+          "1.22.0-rc.2",
+          "1.22.0-rc.3",
+          "1.22.0-rc.4",
+          "1.22.0-rc.5",
+          "1.22.0-rc.6",
+          "1.22.0-rc.7",
+          "1.22.0-rc.8",
+          "1.22.0-rc.9",
+          "1.22.0-rc.10",
+          "1.22.0",
+          "1.22.1",
+          "1.22.2"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.3.5",
+        "created": "2026-04-28 20:23:13",
+        "changelog": "<p>Fixed previous version issues (Hopefully)</p>"
+      },
+      {
+        "releaseid": 39268,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_101bd95327a076a228393f9d3e314ed0.zip?dl=InterestingOreGen-v2.3.3.zip",
+        "filename": "InterestingOreGen-v2.3.3.zip",
+        "fileid": 87450,
+        "downloads": 228,
+        "tags": [
+          "1.22.0-pre.1",
+          "1.22.0-pre.2",
+          "1.22.0-pre.3",
+          "1.22.0-pre.4",
+          "1.22.0-pre.5",
+          "1.22.0-rc.1",
+          "1.22.0-rc.2",
+          "1.22.0-rc.3",
+          "1.22.0-rc.4",
+          "1.22.0-rc.5",
+          "1.22.0-rc.6",
+          "1.22.0-rc.7",
+          "1.22.0-rc.8",
+          "1.22.0-rc.9",
+          "1.22.0-rc.10",
+          "1.22.0"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.3.3",
+        "created": "2026-04-25 21:53:04",
+        "changelog": "<p>Fixed ores not having the correct distribution weights and not spawning correctly. Should now see more consistency in areas with ores.</p>\n<p>Also fixed GA Gems not spawning!</p>"
+      },
+      {
+        "releaseid": 38178,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_8f9dd0a6b224a0dd669aba7ea0c716f7.zip?dl=InterestingOreGen-v2.3.2.zip",
+        "filename": "InterestingOreGen-v2.3.2.zip",
+        "fileid": 85001,
+        "downloads": 1415,
+        "tags": [
+          "1.22.0-pre.1",
+          "1.22.0-pre.2",
+          "1.22.0-pre.3",
+          "1.22.0-pre.4",
+          "1.22.0-pre.5",
+          "1.22.0-rc.1",
+          "1.22.0-rc.2",
+          "1.22.0-rc.3",
+          "1.22.0-rc.4",
+          "1.22.0-rc.5",
+          "1.22.0-rc.6",
+          "1.22.0-rc.7",
+          "1.22.0-rc.8",
+          "1.22.0-rc.9",
+          "1.22.0-rc.10",
+          "1.22.0"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.3.2",
+        "created": "2026-04-14 01:05:26",
+        "changelog": "<h2>Balance patch 1</h2>\n<p>Changed various ore generators to not use oremap anymore (WOO!) and rely purely on distance from other ores.</p>\n<p>Tweaked the size of structures, some of them were far too small.</p>\n<p>Increased the size of ore deposits in the new Hydrothermal Districts</p>"
+      },
+      {
+        "releaseid": 37875,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_cba491503656f68ae695321219f0eae1.zip?dl=InterestingOreGen-v2.3.1.zip",
+        "filename": "InterestingOreGen-v2.3.1.zip",
+        "fileid": 84202,
+        "downloads": 261,
+        "tags": [
+          "1.22.0-pre.1",
+          "1.22.0-pre.2",
+          "1.22.0-pre.3",
+          "1.22.0-pre.4",
+          "1.22.0-pre.5",
+          "1.22.0-rc.1",
+          "1.22.0-rc.2",
+          "1.22.0-rc.3",
+          "1.22.0-rc.4",
+          "1.22.0-rc.5",
+          "1.22.0-rc.6",
+          "1.22.0-rc.7"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.3.1",
+        "created": "2026-04-09 19:28:23",
+        "changelog": "<p>Fixed a minor Geology Addition compatibility issue.</p>"
+      },
+      {
+        "releaseid": 37853,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_8b92ee389766d8cd8797ed0a895f6d55.zip?dl=InterestingOreGen-v2.3.0.zip",
+        "filename": "InterestingOreGen-v2.3.0.zip",
+        "fileid": 84142,
+        "downloads": 101,
+        "tags": [
+          "1.22.0-pre.1",
+          "1.22.0-pre.2",
+          "1.22.0-pre.3",
+          "1.22.0-pre.4",
+          "1.22.0-pre.5",
+          "1.22.0-rc.1",
+          "1.22.0-rc.2",
+          "1.22.0-rc.3",
+          "1.22.0-rc.4",
+          "1.22.0-rc.5",
+          "1.22.0-rc.6",
+          "1.22.0-rc.7"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.3.0",
+        "created": "2026-04-09 09:26:19",
+        "changelog": "<h1>IOG-v2.3.0: The Big One</h1>\n<p>This is perhaps the largest singular update that I will ever release for IOG.</p>\n<h2>Added Hydrothermal Districts!</h2>\n<p>These MASSIVE new structures generate naturally throughout the world as large faults within a bound region. They come with a slew of complex inner systems that detect ore deposit locations, and can travel for (in theory) over 10,000 blocks. I have them practically limited to 4,000 blocks for now though, just because this is a first release and I had some balancing issues initially.</p>\n<p>New structures added:</p>\n<p>Major Faults</p>\n<p>Minor Faults</p>\n<p>Horsetail Zones</p>\n<p>Splits from Major -&gt; Minor</p>\n<p>Splits from Majopr -&gt; Horsetail Zones</p>\n<p>&nbsp;</p>\n<p>New Ore body types:</p>\n<p>Ladder Veins</p>\n<p>Horsetail Zone Clusters</p>\n<p>Ore Shoots</p>\n<p>Each ore vein can spawn with up to 2 ores inside of it, at varying amounts. Each ore has a density and weight for spawning.&nbsp;</p>\n<p>&nbsp;</p>\n<p>Also for ores, each structure has a \"Hot zone\" that's between 20 and 60 blocks tall. Within that band on the Y axis, will be the richest ore. The farther away from that band you get, the poorer the ores are. Each Fault type has it's own band from Y-0 to world height. The optimal mine is to find this band and use that knowledge for the single fault you're on.</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>New \"Fault Structures\"!</p>\n<p>Hydrothermal - Cold, with a Host Material of Travertine, you can find a wild assortment of useful minerals here such as Borax, Halite, and a new IOG exclusive Saltpeter ore!</p>\n<p>Magmatic Felsic Shallow - Now the only major source of Quartz. These are huge so you'll never run out, and is now one of the only sources of Gold and Silver! (Among others)</p>\n<p>Magmatic granitic Deep - Granite-hosted intrusions! The only source of end-game stuff such as Ilmenite, Pentlandite, and others!</p>\n<p>Magmatic Mafic Shallow - Basaltic Intrusions! A good source of Early-mid game materials and contains ample amounts of Sulfur and is also a source of Obsidian!&nbsp;</p>\n<p>All of these come with Geology Additions Compatibility!&nbsp;</p>\n<h2><strong>Added Handbook Entries!</strong></h2>\n<p><strong>I've also added 3 new lengthy handbook entries for the most commonly asked questions I've recieved!</strong></p>\n<p>Added: \"Prospecting with IOG\" which describes the boulder, tracer, and general prospecting tips</p>\n<p>Added: \"Cave-Ins and Supports for IOG\" which describes precisely how the cave-in mechanics work, and best practices for mining</p>\n<p>Added: \"Vein Information for IOG\" which goes over a rough overview of the various vein types, and the intended progression for this mod.</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<h3>Changed several ore deposits!</h3>\n<p>Many of them had spawns tweaked and \"Evened out\" spawns.</p>\n<p>&nbsp;</p>\n<h3>Added 2 new Config options for changing ore spawn rates!</h3>\n<p>DistancebetweenAllOres added to adjust the MINIMUM distance between every ore type in the game. \"If any ore within X distance, don't spawn\"<br />Distance BwtweenSameores added to adjust MINIMUM distance between SAME ore types. \"If X ore is within Y distance, X ore doesn't spawn\"</p>\n<p>Reduced starter GlobalOreDisableChance to 0.0f, as it's not required anymore, and in fact can cause issues if used alongside the two new spawn limiters.</p>\n<p>&nbsp;</p>\n<p>Finally</p>\n<h2>Added a new ore block!</h2>\n<p>It's Saltpeter ore, it can be found in the new Hydrothermal Districts sometimes.</p>"
+      },
+      {
+        "releaseid": 32297,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_5246b3f9240816093b32455d9d87c95d.zip?dl=InterestingOreGen-v2.2.3.zip",
+        "filename": "InterestingOreGen-v2.2.3.zip",
+        "fileid": 71075,
+        "downloads": 10699,
+        "tags": [
+          "1.21.0-pre.1",
+          "1.21.0-pre.2",
+          "1.21.0-pre.3",
+          "1.21.0-rc.1",
+          "1.21.0-rc.2",
+          "1.21.0-rc.3",
+          "1.21.0-rc.4",
+          "1.21.0-rc.5",
+          "1.21.0-rc.6",
+          "1.21.0-rc.7",
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5",
+          "1.21.6-rc.1",
+          "1.21.6"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.2.3",
+        "created": "2026-01-10 04:14:13",
+        "changelog": "<p>Fixed some patch stuff (thanks to <strong>Droseran)&nbsp;</strong>for IOG / MN:G / GA patches.&nbsp;</p>\n<p>Also should have fixed that startup error from the .txt comment files, however none of these errors were ever fatal or problematic, just a small annoyance.</p>"
+      },
+      {
+        "releaseid": 31997,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_44a4fac62cea228f6d287cb1ada93f69.zip?dl=InterestingOreGen-v2.2.2.zip",
+        "filename": "InterestingOreGen-v2.2.2.zip",
+        "fileid": 70419,
+        "downloads": 1456,
+        "tags": [
+          "1.21.0-pre.1",
+          "1.21.0-pre.2",
+          "1.21.0-pre.3",
+          "1.21.0-rc.1",
+          "1.21.0-rc.2",
+          "1.21.0-rc.3",
+          "1.21.0-rc.4",
+          "1.21.0-rc.5",
+          "1.21.0-rc.6",
+          "1.21.0-rc.7",
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5",
+          "1.21.6-rc.1",
+          "1.21.6"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.2.2",
+        "created": "2026-01-04 21:26:57",
+        "changelog": "<p>Same updates as v.2.2.1, unfortunately it seems when I went to build the file it kept some old files that caused issues. All fixed!</p>"
+      },
+      {
+        "releaseid": 31950,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_fef8adc64710725cb723f9f64a1d0b9b.zip?dl=InterestingOreGen-v2.2.0.zip",
+        "filename": "InterestingOreGen-v2.2.0.zip",
+        "fileid": 70332,
+        "downloads": 358,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.2.0",
+        "created": "2026-01-04 05:34:01",
+        "changelog": "<p><strong>FIXES</strong></p>\n<p>-Ghost Ores and spawning ore when using Density Search Mode should be fixed</p>\n<p>-Made coal veins slightly thicker on average to account for Fire Clay</p>\n<p>-Minor fixes and optimizations in the generator logic (nothing significant)</p>\n<p>&nbsp;</p>\n<p><strong>Thanks to Droseran, Fern, and Nephelangelo, IOG has built in Integration to Geology Additions and Material Needs: Geology now!</strong></p>\n<p>Also big thanks to Councilor and Chiliking who helped build the original Geology Additions + Interesting Ore Gen patch!</p>"
+      },
+      {
+        "releaseid": 30811,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_6bedeb38b68c52a26ff6a25d1ff67dea.zip?dl=InterestingOreGen-v2.1.2.zip",
+        "filename": "InterestingOreGen-v2.1.2.zip",
+        "fileid": 67865,
+        "downloads": 2099,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.1.2",
+        "created": "2025-12-14 22:12:46",
+        "changelog": "<h3>Changelog:</h3>\n<p>Added 2 config options to enable/disable Boulder spawning and Prospector Vein spawning!</p>"
+      },
+      {
+        "releaseid": 30766,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_183ac2ad5821c8405b3b3bed4576bcbb.zip?dl=InterestingOreGen-v2.1.1.zip",
+        "filename": "InterestingOreGen-v2.1.1.zip",
+        "fileid": 67778,
+        "downloads": 262,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.1.1",
+        "created": "2025-12-14 02:53:51",
+        "changelog": "<h2>Changelog:</h2>\n<p>Modified boulder shapes to be less jarring, and made them generally smaller</p>\n<p>Removed Oremap Reliance on SOME ore types, cannot do all though.</p>\n<p>Removed debug logspam error (Sorry about that!)</p>\n<p>Slightly optimized some orespawn logic (I couldn't notice an increase but 🤷&zwj;♂️)</p>"
+      },
+      {
+        "releaseid": 30622,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_734d1963fc5d5771902b0571fd9463eb.zip?dl=InterestingOreGen-v2.1.0.zip",
+        "filename": "InterestingOreGen-v2.1.0.zip",
+        "fileid": 67518,
+        "downloads": 1074,
+        "tags": [
+          "1.21.5",
+          "1.21.6-rc.1"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.1.0",
+        "created": "2025-12-11 09:54:35",
+        "changelog": "<h1>2.1.0!</h1>\n<h3>Changes/Tweaks:</h3>\n<p>1) Modified previous cave-in logic to now no longer be a \"scan\" search, but a 20 block long step search.<br />Mechanically: The block broken will choose 1 of any available solid blocks on any of it's orthogonal faces, and \"travel\" to that block. It checks instability, and then checks all of it's neighbors for instability. It will do this for up to 20 steps, at random, never doubling back on itself. It also has a weighted bias to travel to blocks with higher instability (not super high, but it does tend to do so) so it will normally seek out and find the highest instability block and travel along it. Once it reaches a block with 100% instability, it will then travel down (regardless of how many steps it has been, as it can only travel down a maximum of 6-10ish tiles anyway) and find the first \"unstable\" block with air on the bottom side. If it finds air, it will then become the epicenter of a relatively large cave-in. This means you can prevent cave-ins on certain blocks by reinforcing your ceilings! (I tested slabs, and solid blocks) As long as the block isn't air, it counts. (I didn't test liquids, so underwater cave-ins might be impossible!, whoops!). Understand, if you have a 1 block hole in a completely solid block ceiling (reinforced) and the step-search happens across that block it WILL collapse blocks in the ceiling too through your reinforcement.</p>\n<p>2) Removed hard cap on ore generation quality on all veintypes! Instead I have added a heavy bias to poorer quality ore. Approximately 50% of ore will be poor, 25% will be medium, 15% will be rich, and 10% will be bountiful. This applies to the whole vein, some veins still have \"rich cores\" though sitting at a higher quality than the surrounding ore.</p>\n<p>3) Optimized how some poorer performing ore generators function by contructing the entire body first, then having it place blocks (avoiding duplicate placements). I have personally experienced a significant increase in chunk generation time, and world load time.</p>\n<p>4) Changed spawning of \"Bits\". No longer will ore veins spawn bits, but instead boulders on the surface to represent a nearby vein. With this change, I also added \"Prospect Veins\" to all ore types, that randomly shoot off of an ore body and travel to the surface (for performance they have a maximum travel height so on really tall worlds this might not work, I was mostly fine at 384). These prospect veins only spawn ore through stone, not air and not dirt. Dig through the dirt and poke around down below boulder clusters and you should find single pieces of ore, follow them down to the main vein! You can use the prospecting pickaxe for this too! (I would highly recommend)</p>\n<h3>The Config has Arrived!</h3>\n<p>I was unable to test if it functions across Client-Server connections and there's a few cases where it <em>might</em> break that I have been unable to test. For the most part it should be fine though.</p>\n<p>There is one configurable option for now:</p>\n<p><em>GobalOreDisableChance</em></p>\n<p>This is to tune down or up the ore spawns of IOG. I would highly recommend keeping it at 0.5 (as default) to test. This is a flat % chance of ore bodys to not generate. At 0.5 that is 50% chance for ores to not generate, at 0.9 that is a 90% chance for ores to not generate, and so on. I found 0.9 to be nearly barren with one ore body per maybe 3,000 blocks. If you play with Geology Additions, and the <a href=\"https://mods.vintagestory.at/gaiogcompatpatch\" target=\"_blank\" rel=\"noopener\"><span style=\"color: #3598db;\">GA+IOG patch</span></a> we made, I recommend turning this to 0.6 due to the increase in ore vein types. (And therefore increase in spawns)</p>"
+      },
+      {
+        "releaseid": 25884,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_33152b103adba2a3f81a529e10334c7f.zip?dl=InterestingOreGen-v2.0.2.zip",
+        "filename": "InterestingOreGen-v2.0.2.zip",
+        "fileid": 56889,
+        "downloads": 6917,
+        "tags": [
+          "1.21.1",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.0.2",
+        "created": "2025-09-25 02:55:38",
+        "changelog": "<h2>Update 2.0.2!</h2>\n<p>-Significantly reduced frequency of knocking and rumbling sounds (5-15 minutes between scans)</p>\n<p>-Reduced radius of secondary cave-in search radius by half (down to 10 blocks)</p>\n<p>-Reduced radius of Primary cave-in search radius (down to 10 blocks)</p>\n<p>-Changed secondary cave-ins to only trigger epicenters on blocks with 100% instability</p>\n<p>-Patch out vanilla cave-in logic for placing blocks</p>\n<p>-<strong>Changed it so when stone blocks collapse, they turn into gravel instead of cracked</strong> stone!</p>\n<p>&nbsp;</p>\n<p>Experimented with different cave-in logic, for now it was deemed to be unnecessary but I might experiment adding them further.</p>"
+      },
+      {
+        "releaseid": 25535,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_8be6d7760af119f4fd1ace18c2a646c9.zip?dl=InterestingOreGen-v2.0.1.zip",
+        "filename": "InterestingOreGen-v2.0.1.zip",
+        "fileid": 56252,
+        "downloads": 778,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.0.1",
+        "created": "2025-09-19 22:39:48",
+        "changelog": "<p>Removed the Config, My original one didn't save and it was completely useless. (It didn't actually do anything)</p>\n<p>Fixed cave in sounds playing when cave ins are disabled</p>\n<p>Fixed the log spam (hopefully) and removed any errenious logs.</p>\n<p>Increased the maximum time between cave-knocking noises from 30 seconds to 1 minute, with a minimum of 10 seconds</p>\n<p>Stops scheduling search events if no player is online (for dedicated servers)</p>\n<p>Fixed faults/seam veins having random grid locking</p>\n<p>&nbsp;</p>\n<p><br />Config will come back at a later point in time with actual functioning features, but it will be a good while.</p>\n<p>&nbsp;</p>"
+      },
+      {
+        "releaseid": 25238,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v2_630beb10a19fd517754230e9d97fe868.zip?dl=InterestingOreGen-v2.0.0.zip",
+        "filename": "InterestingOreGen-v2.0.0.zip",
+        "fileid": 55579,
+        "downloads": 682,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "2.0.0",
+        "created": "2025-09-15 19:37:18",
+        "changelog": "<p><strong>Additions:</strong></p>\n<p>Added proper Cave In logic to the game, as well as sounds.<br />Added a Config<br />Added the Fault and Seam deposit<br />Added Coal, Quartz, Olivine, and a few other Mineral deposits (The more rare the coal the bigger the fire clay patches in it)<br />Added Surface Indicators to all ores (For now this just means they all have \"Bits\" Directly above the vein)</p>\n<p><strong>Changes:</strong></p>\n<p>Removed Thread and Intrusion Veintypes (I was unhappy with their implementation, and they were convoluted to mine and follow)<br />Made all ore veins 50-200% bigger<br />Made all ore veins spawn 100x-1000x LESS frequently, however you will still occasionally find clusters of similar veins nearby (This is an oremap issue, unfortunately)<br />Broadly changed some of the shapes of the ore veins to be more interesting.<br />Modified Collapse Logic to be significantly more punishing and easier to trigger, <strong>REINFORCE YOUR MINES, any block at 100% instability will by default become a cave-in epicenter!</strong><br />Cleaned up the code a lot, should be even more stable than before.</p>\n<p>&nbsp;</p>\n<p><strong>There's definitely things I'm forgetting but this is the broad overview of the important parts that was added/changed.</strong></p>"
+      },
+      {
+        "releaseid": 20984,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v1_95f8646466495266c2f8094c1a7975d7.zip?dl=InterestingOreGen-v1.2.3.zip",
+        "filename": "InterestingOreGen-v1.2.3.zip",
+        "fileid": 45451,
+        "downloads": 5263,
+        "tags": [
+          "1.20.10"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "1.2.3",
+        "created": "2025-06-10 22:32:19",
+        "changelog": "<p>Removed the air block check, this caused errors. Kept 50% ore spawns.<br />This should fix any issues of 1.2.1 and 1.2.2.</p>"
+      },
+      {
+        "releaseid": 20982,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v1_43ea5c940a5a3ebbcdc51cdf045bd152.zip?dl=InterestingOreGen-v1.2.2.zip",
+        "filename": "InterestingOreGen-v1.2.2.zip",
+        "fileid": 45450,
+        "downloads": 125,
+        "tags": [
+          "1.20.10"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "1.2.2",
+        "created": "2025-06-10 21:31:23",
+        "changelog": "<p>Adjusted ore generation on all major metal ores and sulfur. Overall ores spawn about 50% less frequently than prior updates, except Malachite and Rhodochrosite. Those spawn infrequently to begin with and malachite especially is quite uncommon. (Plus it's my favorite ore :P)<br /><br />Changed ore generation to only spawn ore <em>below</em> 40% world height. This is based on absolute WORLD height not on terrain level, if it's assumed \"ground\" is normally 50-70% world height often you wont find ore exposed on the surface. This check ONLY looks for&nbsp;<strong>air&nbsp;</strong>blocks though, so you can still find ore peaking out behind tall grass! 😁 Often you wont find veins on the surface in caves though.</p>"
+      },
+      {
+        "releaseid": 20967,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGenv-1_8860199a1cf63af23750ad8bd14d86e5.zip?dl=InterestingOreGenv-1.2.1.zip",
+        "filename": "InterestingOreGenv-1.2.1.zip",
+        "fileid": 45412,
+        "downloads": 207,
+        "tags": [
+          "1.20.10"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "1.2.1",
+        "created": "2025-06-10 07:34:33",
+        "changelog": "<p>Added a quick patch to make it so ore doesn't spawn exposed in caves. Very testy, but as efficient as I could get it.&nbsp;<br />For those interested in the technical details, it checks all faces of a block and doesn't spawn an ore if any single face is exposed to air (keeping it the main host stone)</p>"
+      },
+      {
+        "releaseid": 19664,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v1_0818a3910dfd102df561d71b2514e5a7.zip?dl=InterestingOreGen-v1.2.0.zip",
+        "filename": "InterestingOreGen-v1.2.0.zip",
+        "fileid": 42529,
+        "downloads": 2990,
+        "tags": [
+          "1.20.9"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "1.2.0",
+        "created": "2025-05-05 07:12:53",
+        "changelog": "<p>New generator! Fault Veins, large thin sheets of ore (discs) that are randomly oriented in any axis!<br />New ore changes:<br />1) Bismuthinite spawns in Hydrotube and Intrusion veins, Hydrotube has a sub-deposit of Flourite.<br />2) Cassiterite spawns in Chimneys and Intrusions, on Chimneys in Granite, Peridotite, and Phyllite it will have a core of hematite. <br />3) Chromite now spawns with Magnetite Cores in andesite(poor) granite(medium) basalt (rich) and peridotite (medium)<br />4) Galena now spawns with Native Silver in it occasionally.<br />5) Magnetite now spawns as Thread and Fault Vein, fault will have small amounts of poor to medium Hematite in it. If the vein spawns in Andesite, it wont give any hematite.<br />6) Malachite can spawn with gold when it's in limestone<br />7) Native Copper in chimney form also spawns with poor gold, also now instead of intrusion veins spawns in the new Fault Veins! With a tiny amount of gold sometimes too)<br />8) Pentlandite spawns with chromite cores from Chimneys<br />9) Rhodochrosite (manganese) spawns with small amounts of Chromite<br />10) Sphalerite now spawns with Galena patches in both Chimney and Hydrotubes.<br /><br /></p>\n<p>Adjusted ore spawns to be generally more common!</p>"
+      },
+      {
+        "releaseid": 19571,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v1_e226bbb6485fc3098bfe9f0e5ca0d838.zip?dl=InterestingOreGen-v1.1.2.zip",
+        "filename": "InterestingOreGen-v1.1.2.zip",
+        "fileid": 42338,
+        "downloads": 668,
+        "tags": [
+          "1.20.9"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "1.1.2",
+        "created": "2025-05-02 18:56:46",
+        "changelog": "<p>Fixed Prospecting bug! Removed absoluteaveragequantity and replaced it with an approximate average stand in, in this case 20000. Expect to see high values in prospecting!</p>"
+      },
+      {
+        "releaseid": 19545,
+        "mainfile": "https://moddbcdn.vintagestory.at/InterestingOreGen-v1_d42f2e2aad02e77bb46b49df39eca959.zip?dl=InterestingOreGen-v1.1.1.zip",
+        "filename": "InterestingOreGen-v1.1.1.zip",
+        "fileid": 42248,
+        "downloads": 357,
+        "tags": [
+          "1.20.9"
+        ],
+        "modidstr": "interestingoregen",
+        "modversion": "1.1.1",
+        "created": "2025-05-01 18:59:10",
+        "changelog": "<p>Initial Release!</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 42239,
+        "mainfile": "https://moddbcdn.vintagestory.at/IOG+Slideshow+3_2efd39cf747f2ba69d6163733e59ea97.png",
+        "filename": "IOG Slideshow 3.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/IOG+Slideshow+3_2efd39cf747f2ba69d6163733e59ea97_55_60.png",
+        "created": "2025-05-01 18:38:13"
+      },
+      {
+        "fileid": 42240,
+        "mainfile": "https://moddbcdn.vintagestory.at/IOG+Slideshow+2_dc72613bcde1e802fee29ed0263ee9b8.png",
+        "filename": "IOG Slideshow 2.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/IOG+Slideshow+2_dc72613bcde1e802fee29ed0263ee9b8_55_60.png",
+        "created": "2025-05-01 18:53:16"
+      },
+      {
+        "fileid": 42241,
+        "mainfile": "https://moddbcdn.vintagestory.at/IOG+Slideshow+1_6ac8019931804639819984f48da81efd.png",
+        "filename": "IOG Slideshow 1.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/IOG+Slideshow+1_6ac8019931804639819984f48da81efd_55_60.png",
+        "created": "2025-05-01 18:53:16"
+      },
+      {
+        "fileid": 42242,
+        "mainfile": "https://moddbcdn.vintagestory.at/IOG+Slideshow+4_7d18e849fab3f5565218efc067e358e3.png",
+        "filename": "IOG Slideshow 4.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/IOG+Slideshow+4_7d18e849fab3f5565218efc067e358e3_55_60.png",
+        "created": "2025-05-01 18:53:17"
+      },
+      {
+        "fileid": 55570,
+        "mainfile": "https://moddbcdn.vintagestory.at/IOG+Pic+4new_36cdb91653fd1e2c27d150e166422abd.png",
+        "filename": "IOG Pic 4new.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/IOG+Pic+4new_36cdb91653fd1e2c27d150e166422abd_55_60.png",
+        "created": "2025-09-15 19:15:37"
+      },
+      {
+        "fileid": 55571,
+        "mainfile": "https://moddbcdn.vintagestory.at/IOG+Pic+1new_16dec13e2a2a5c03fc9e400093a5fd9d.png",
+        "filename": "IOG Pic 1new.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/IOG+Pic+1new_16dec13e2a2a5c03fc9e400093a5fd9d_55_60.png",
+        "created": "2025-09-15 19:15:37"
+      },
+      {
+        "fileid": 55572,
+        "mainfile": "https://moddbcdn.vintagestory.at/IOG+Pic+5new_474daec3c96cff96aa4df33ed95e2cdc.png",
+        "filename": "IOG Pic 5new.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/IOG+Pic+5new_474daec3c96cff96aa4df33ed95e2cdc_55_60.png",
+        "created": "2025-09-15 19:15:48"
+      },
+      {
+        "fileid": 55573,
+        "mainfile": "https://moddbcdn.vintagestory.at/IOG+Pic+2new_171a971928bdb3d24e6ab7025bd90252.png",
+        "filename": "IOG Pic 2new.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/IOG+Pic+2new_171a971928bdb3d24e6ab7025bd90252_55_60.png",
+        "created": "2025-09-15 19:15:49"
+      },
+      {
+        "fileid": 55574,
+        "mainfile": "https://moddbcdn.vintagestory.at/IOG+Pic+3new_48187dbd0fdc2ed3c35bc2b51a476117.png",
+        "filename": "IOG Pic 3new.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/IOG+Pic+3new_48187dbd0fdc2ed3c35bc2b51a476117_55_60.png",
+        "created": "2025-09-15 19:18:21"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

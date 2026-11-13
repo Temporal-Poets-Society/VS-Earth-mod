@@ -1,0 +1,368 @@
+{
+  "snapshot_date": "2026-09-29",
+  "status": "passed",
+  "runtime_changes": false,
+  "confirmed_unique_geological_deposits": null,
+  "generation_ready": false,
+  "reused_mrds_sha256_verified": true,
+  "mrds_source_records": 185733,
+  "mrds_zero_longitude_latitude_records": 0,
+  "mrds_commodity_links": 321772,
+  "explicit_ore_mineral_links": 52862,
+  "mrds_commodity_csv_geojson_layers_verified": 40,
+  "specialist_source_records": 24757,
+  "specialist_commodity_links": 41294,
+  "positive_grade_rows": 3838,
+  "specialist_commodity_geojson_layers_verified": 40,
+  "potash_source_tracts": 84,
+  "invalid_source_tracts_preserved_withheld_from_map": 7,
+  "potash_typed_point_records": 981,
+  "coal_source_points": 446,
+  "asset_files_audited": 96,
+  "asset_parse_errors": 0,
+  "scope_rows": 82,
+  "historical_cases_without_invented_geometry": 8,
+  "commodities_with_review_checklist": 40,
+  "download_hashes_verified": 34,
+  "documented_acquisition_failures": [
+    {
+      "file": "raw/fsu-coal_pt.dbf",
+      "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_pt.dbf",
+      "retrieved_utc": "2026-09-29T17:58:08.939760+00:00",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "file": "raw/fsu-coal_pt.shx",
+      "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_pt.shx",
+      "retrieved_utc": "2026-09-29T17:58:08.940757+00:00",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "file": "raw/fsu-coal_pt.prj",
+      "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_pt.prj",
+      "retrieved_utc": "2026-09-29T17:58:08.940757+00:00",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "file": "raw/fsu-coal_dep.dbf",
+      "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_dep.dbf",
+      "retrieved_utc": "2026-09-29T17:58:09.761237+00:00",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "file": "raw/fsu-coal_dep.shx",
+      "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_dep.shx",
+      "retrieved_utc": "2026-09-29T17:58:09.766343+00:00",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "file": "raw/fsu-coal_dep.prj",
+      "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coal_dep.prj",
+      "retrieved_utc": "2026-09-29T17:58:09.879663+00:00",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "file": "raw/fsu-coalbnd.dbf",
+      "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coalbnd.dbf",
+      "retrieved_utc": "2026-09-29T17:58:10.498226+00:00",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "file": "raw/fsu-coalbnd.shx",
+      "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coalbnd.shx",
+      "retrieved_utc": "2026-09-29T17:58:10.589591+00:00",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "file": "raw/fsu-coalbnd.prj",
+      "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/views/shapes/coalbnd.prj",
+      "retrieved_utc": "2026-09-29T17:58:10.726525+00:00",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "file": "raw/fsu-coalbnd.gen",
+      "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/export/ascii/coalbnd.gen",
+      "retrieved_utc": "2026-09-29T17:58:40.965330+00:00",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "file": "raw/fsu-coalbnd.csv",
+      "url": "https://pubs.usgs.gov/of/2001/ofr-01-104/fsucoal/export/ascii/coalbnd.csv",
+      "retrieved_utc": "2026-09-29T17:58:40.977208+00:00",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "new_archive_crc_checks": 8,
+  "png_headers_and_completion_verified": [
+    {
+      "file": "maps/Ag.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/Al.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/alum.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/Au.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/B.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/beryl.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/Bi.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/C_coal.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/C_graphite.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/contact-sheet-1.png",
+      "width": 2240,
+      "height": 2156
+    },
+    {
+      "file": "maps/contact-sheet-2.png",
+      "width": 2240,
+      "height": 2156
+    },
+    {
+      "file": "maps/contact-sheet-3.png",
+      "width": 2240,
+      "height": 2156
+    },
+    {
+      "file": "maps/contact-sheet-4.png",
+      "width": 2240,
+      "height": 2156
+    },
+    {
+      "file": "maps/contact-sheet-5.png",
+      "width": 2240,
+      "height": 2156
+    },
+    {
+      "file": "maps/corundum.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/Cr.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/diamond.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/emerald.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/evaporite-permissive.png",
+      "width": 2240,
+      "height": 1120
+    },
+    {
+      "file": "maps/F.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/Fe.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/garnet.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/gypsum.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/Hg.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/K.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/lapis.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/mineral-forms-1.png",
+      "width": 2240,
+      "height": 2156
+    },
+    {
+      "file": "maps/mineral-forms-2.png",
+      "width": 2240,
+      "height": 2156
+    },
+    {
+      "file": "maps/mineral-forms-3.png",
+      "width": 2240,
+      "height": 2156
+    },
+    {
+      "file": "maps/Mn.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/Mo.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/N.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/NaCl.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/Ni.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/olivine.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/P.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/Pb.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/Pt.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/S.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/Sb.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/SiO2.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/spinel.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/Ti.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/topaz.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/tourmaline.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/U.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/V.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/W.png",
+      "width": 2025,
+      "height": 990
+    },
+    {
+      "file": "maps/Zn.png",
+      "width": 2025,
+      "height": 990
+    }
+  ],
+  "atlas_local_links_verified": true,
+  "research_script_syntax_verified": true,
+  "source_inventory_entries": 25,
+  "remaining_gaps": [
+    "No globally complete evidence claim",
+    "Cross-source deposit entity matching incomplete",
+    "Most commodities lack spatial permissive geology",
+    "Historical geometry and accessibility incomplete",
+    "Economic status cannot be inferred from source grade",
+    "Coal ranks/name joins withheld",
+    "PP1802 and GEM coal datasets not imported"
+  ],
+  "package_hashed_files": 272,
+  "package_bytes_excluding_manifests_and_report": 297280032
+}

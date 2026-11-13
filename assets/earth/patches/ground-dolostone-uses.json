@@ -1,0 +1,5 @@
+[
+  {"op": "add", "file": "game:blocktypes/stone/cobble/fanned.json", "path": "/variantgroups/0/states/-", "value": "dolostone", "dependsOn": [{"modid": "geoaddons", "invert": true}]},
+  {"op": "add", "file": "game:itemtypes/resource/stone.json", "path": "/grindingPropsByType/*-dolostone", "value": {"groundStack": {"type": "item", "code": "lime", "stacksize": 1}}, "dependsOn": [{"modid": "geoaddons", "invert": true}]},
+  {"op": "add", "file": "game:itemtypes/snowball.json", "path": "/transitionablePropsByType/snowball-dolostone", "value": [{"type": "Melt", "freshHours": {"avg": 0}, "transitionHours": {"avg": 3}, "transitionedStack": {"type": "item", "code": "stone-dolostone"}, "transitionRatio": 1}], "dependsOn": [{"modid": "geoaddons", "invert": true}]}
+]

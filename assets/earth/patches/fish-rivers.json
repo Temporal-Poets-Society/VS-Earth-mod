@@ -1,0 +1,26 @@
+[
+  {
+    "op": "add",
+    "file": "game:entities/animal/fish/freshwater-adult.json",
+    "path": "/server/spawnconditions/worldgen/insideBlockCodes/-",
+    "value": "water-*-7"
+  },
+  {
+    "op": "add",
+    "file": "game:entities/animal/fish/freshwater-adult.json",
+    "path": "/server/spawnconditions/worldgen/insideBlockCodes/-",
+    "value": "rapidwater-*-7"
+  },
+  {
+    "op": "add",
+    "file": "game:entities/animal/fish/freshwater-adult.json",
+    "path": "/server/spawnconditions/runtime/insideBlockCodes/-",
+    "value": "water-*-7"
+  },
+  {
+    "op": "add",
+    "file": "game:entities/animal/fish/freshwater-adult.json",
+    "path": "/server/spawnconditions/runtime/insideBlockCodes/-",
+    "value": "rapidwater-*-7"
+  }
+]

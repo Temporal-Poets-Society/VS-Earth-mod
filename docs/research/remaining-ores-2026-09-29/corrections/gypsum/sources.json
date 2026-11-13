@@ -1,0 +1,74 @@
+[
+  {
+    "source_id": "latvia_cabinet321_2012",
+    "feature_count": 2,
+    "country": "Latvia",
+    "source_url": "https://likumi.lv/ta/id/247498-noteikumi-par-valsts-nozimes-derigo-izraktenu-atradnem",
+    "license_and_coverage_notes": "README.md",
+    "native_requests_and_checksums": "download-manifest.json"
+  },
+  {
+    "source_id": "lvgmc_inspire_licensed_occurrence",
+    "feature_count": 1,
+    "country": "Latvia",
+    "source_url": "https://geoserver.lvgmc.lv/geoserver/mr/ows?service=WFS&request=GetFeature&version=2.0.0&typeNames=mr%3AMR.MineralOccurrence1&outputFormat=application%2Fjson",
+    "license_and_coverage_notes": "README.md",
+    "native_requests_and_checksums": "download-manifest.json"
+  },
+  {
+    "source_id": "pgi_midas_documented",
+    "feature_count": 18,
+    "country": "Poland",
+    "source_url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/0/query?where=UPPER%28KOPALINA_ALL%29+LIKE+%27%25GIPS%25%27+OR+UPPER%28KOPALINA_ALL%29+LIKE+%27%25ANHYDR%25%27&outFields=%2A&returnGeometry=true&f=json",
+    "license_and_coverage_notes": "README.md",
+    "native_requests_and_checksums": "download-manifest.json"
+  },
+  {
+    "source_id": "pgi_midas_historical",
+    "feature_count": 1,
+    "country": "Poland",
+    "source_url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/3/query?where=UPPER%28KOPALINA%29+LIKE+%27%25GIPS%25%27+OR+UPPER%28KOPALINA%29+LIKE+%27%25ANHYDR%25%27&outFields=%2A&returnGeometry=true&f=json",
+    "license_and_coverage_notes": "README.md",
+    "native_requests_and_checksums": "download-manifest.json"
+  },
+  {
+    "source_id": "igme_bdmin",
+    "feature_count": 492,
+    "country": "Spain",
+    "source_url": "https://mapas.igme.es/gis/rest/services/BasesDatos/IGME_BDMIN_Explotaciones/MapServer/0/query?where=UPPER%28Sustancia%29+LIKE+%27%25YES%25%27+OR+UPPER%28Sustancia%29+LIKE+%27%25ANHIDR%25%27&outFields=%2A&returnGeometry=true&f=json",
+    "license_and_coverage_notes": "README.md",
+    "native_requests_and_checksums": "download-manifest.json"
+  },
+  {
+    "source_id": "bgs_report_locality",
+    "feature_count": 11,
+    "country": "United Kingdom",
+    "source_url": "https://webapps.bgs.ac.uk/memoirs/docs/B06079.html",
+    "license_and_coverage_notes": "README.md",
+    "native_requests_and_checksums": "download-manifest.json"
+  },
+  {
+    "source_id": "drieat_idf_resources",
+    "feature_count": 38,
+    "country": "France",
+    "source_url": "https://www.data.gouv.fr/api/1/datasets/ressources-geologiques-dile-de-france/",
+    "license_and_coverage_notes": "README.md",
+    "native_requests_and_checksums": "download-manifest.json"
+  },
+  {
+    "source_id": "igme_geode50_gypsum_units",
+    "feature_count": 25541,
+    "country": "Spain",
+    "source_url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/layers?f=pjson",
+    "license_and_coverage_notes": "README.md",
+    "native_requests_and_checksums": "download-manifest.json"
+  },
+  {
+    "source_id": "lgrb_gkbw_ge3",
+    "feature_count": 3174,
+    "country": "Germany",
+    "source_url": "https://geoportal.lgrb-bw.de/produkt/dgkbw",
+    "license_and_coverage_notes": "README.md",
+    "native_requests_and_checksums": "download-manifest.json"
+  }
+]

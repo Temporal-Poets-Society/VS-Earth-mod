@@ -1,0 +1,45 @@
+Base metals (Cu, Sn, Pb, Zn, Ag, Bi, Hg, W, Mo, Sb) for Earth decision 0065
+==========================================================================
+
+Files: assets/earth/config/ore-deposits-v1/base-metals.json (catalogue), tools/ore-data/base-metals/evidence.geojson
+and heatmap-overrides.json (heat-map evidence). All values are derived: positions, tonnages, grades, ages and
+names. No source tables, text or figures are redistributed.
+
+Databases (public domain, U.S. Geological Survey; no permission needed, citation given as courtesy)
+---------------------------------------------------------------------------------------------
+usgs-gcra-pcu, usgs-gcra-sedcu
+  Dicken, C.L., Dunlap, P., Parks, H.L., Hammarstrom, J.M., and Zientek, M.L., 2016, Spatial database for a global
+  assessment of undiscovered copper resources: U.S. Geological Survey Scientific Investigations Report 2010-5090-Z.
+  https://pubs.usgs.gov/sir/2010/5090/z/  (retrieved 2026-09-29; copy in docs/research/copper-tin-global-2026-09-29)
+usgs-porcu-2008
+  Singer, D.A., Berger, V.I., and Moring, B.C., 2008, Porphyry copper deposits of the world: database and grade and
+  tonnage models, 2008: U.S. Geological Survey Open-File Report 2008-1155. https://pubs.usgs.gov/of/2008/1155/
+  (retrieved 2026-11-08 to rawdata/ore/base-metals/usgs-porcu-2008; used for ore-body areas and ages)
+usgs-vms-2009
+  Mosier, D.L., Berger, V.I., and Singer, D.A., 2009, Volcanogenic massive sulfide deposits of the world: database
+  and grade and tonnage models: U.S. Geological Survey Open-File Report 2009-1034. https://pubs.usgs.gov/of/2009/1034/
+usgs-sedexmvt-2009
+  Taylor, R.D., Leach, D.L., Bradley, D.C., and Pisarevsky, S.A., 2009, Compilation of mineral resource data for
+  Mississippi Valley-type and clastic-dominated sediment-hosted lead-zinc deposits: U.S. Geological Survey Open-File
+  Report 2009-1297. https://pubs.usgs.gov/of/2009/1297/
+MRDS (heat-map evidence for Sn, W, Mo, Bi, Hg, Sb, re-stamped per 0.5 degree cell)
+  U.S. Geological Survey, 2011, Mineral Resources Data System (MRDS). https://mrdata.usgs.gov/mrds/
+  (copies under docs/research/copper-tin-global-2026-09-29 and docs/research/remaining-ores-2026-09-29)
+Validation only (not in the shipped files)
+  U.S. Geological Survey, 2024, Mineral Commodity Summaries 2024 (copper, zinc, lead, silver, tin, tungsten,
+  molybdenum, antimony, bismuth, mercury chapters). https://pubs.usgs.gov/periodicals/mcs2024/
+  (retrieved 2026-11-08 to rawdata/ore/base-metals/usgs-mcs-2024)
+
+Other data
+----------
+Natural Earth 1:10m admin-0 countries (public domain), https://www.naturalearthdata.com/ - land and country checks only.
+Best-guess districts (docs/research/remaining-ores-2026-09-29/corrections/authored) - authored for Earth; districts
+  the catalogue does not cover are carried into evidence.geojson.
+
+Named deposits (source id earth-named-2026)
+-------------------------------------------
+named-additions.csv, named-sn-w-mo-bi.csv and named-hg-sb-ag-cu.csv list well-known published figures (ore tonnage,
+grade, place, first working) as facts, each with its citation in the citation column (carried into the catalogue's
+`ref` field). Quality q B = a cited figure not re-checked against the primary report here; q C = an order of
+magnitude, a figure recalled rather than read from the source, or an estimate (the `est` field names estimated
+fields). Mindat and NC/ND/SA-licensed compilations were not used.

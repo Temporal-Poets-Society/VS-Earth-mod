@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>12</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <EarthSrc Condition="'$(EarthSrc)' == ''">C:\VS mods\Earth\.claude\worktrees\release-1.0\src</EarthSrc>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(EarthSrc)\Core\*.cs" Link="Core\%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

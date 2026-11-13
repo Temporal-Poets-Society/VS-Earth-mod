@@ -1,0 +1,667 @@
+{
+  "mod": {
+    "modid": 2066,
+    "assetid": 11675,
+    "name": "Fauna of the Stone Age: Casuariidae Plus",
+    "text": "<p><span style=\"font-weight: 400;\">A collection of flightless birds of the subfamily Casuariidae and other flightless Australian birds, these normally passive animals can be dangerous foes when their eggs or young are near and potentially lethal if agitated.</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">This mod includes:</span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" style=\"border-spacing: 0px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col width=\"147\"><col width=\"166\"><col width=\"100\"><col width=\"64\"><col width=\"57\"><col width=\"60\"><col width=\"64\"><col width=\"50\"><col width=\"65\"><col width=\"100\"><col width=\"100\"><col width=\"145\"><col width=\"83\"><col width=\"100\"><col width=\"100\"><col width=\"100\"><col width=\"100\"><col width=\"234\"></colgroup>\n<tbody>\n<tr>\n<td style=\"width: 190.995px;\">Common Name</td>\n<td style=\"width: 297.998px;\">Scientific name</td>\n<td style=\"width: 128.993px;\">Category</td>\n<td style=\"width: 63.9931px;\">Weight</td>\n<td style=\"width: 56.9907px;\">Health</td>\n<td style=\"width: 59.9884px;\">Height</td>\n<td style=\"width: 63.9931px;\">Damage</td>\n<td style=\"width: 49.9884px;\">Temp</td>\n<td style=\"width: 64.9884px;\">Precip</td>\n<td style=\"width: 99.9884px;\">Foliage Needs</td>\n<td style=\"width: 99.9884px;\">Altitude</td>\n<td style=\"width: 144.988px;\">Group Size</td>\n<td style=\"width: 82.9977px;\">Meat Drops</td>\n<td style=\"width: 99.9884px;\">Fat Drops</td>\n<td style=\"width: 99.9884px;\">Hide Drops</td>\n<td style=\"width: 99.9884px;\">Other Drops</td>\n<td style=\"width: 99.9884px;\">Movement</td>\n<td style=\"width: 233.993px;\">Diet</td>\n</tr>\n<tr>\n<td style=\"width: 190.995px;\">Cape Barren goose</td>\n<td style=\"width: 297.998px;\">Cereopsis novaehollandiae</td>\n<td style=\"width: 128.993px;\">Anatidae</td>\n<td style=\"width: 63.9931px;\">5/4/1</td>\n<td style=\"width: 56.9907px;\">4/2</td>\n<td style=\"width: 59.9884px;\">1m</td>\n<td style=\"width: 63.9931px;\">3t1</td>\n<td style=\"width: 49.9884px;\">10-18</td>\n<td style=\"width: 64.9884px;\">30-60%</td>\n<td style=\"width: 99.9884px;\">0-50% Forest</td>\n<td style=\"width: 99.9884px;\">1.0-1.2</td>\n<td style=\"width: 144.988px;\">2M&amp;F, 6-40M&amp;F&amp;B</td>\n<td style=\"width: 82.9977px;\">1-2</td>\n<td style=\"width: 99.9884px;\">0</td>\n<td style=\"width: 99.9884px;\">1M</td>\n<td style=\"width: 99.9884px;\">15 +-7 feathers</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 233.993px;\">Grass, Nibble Crop, Peanut</td>\n</tr>\n<tr>\n<td style=\"width: 190.995px;\">Dwarf cassowary</td>\n<td style=\"width: 297.998px;\">Casuarius bennetti</td>\n<td style=\"width: 128.993px;\">Casuariidae</td>\n<td style=\"width: 63.9931px;\">20/24/3</td>\n<td style=\"width: 56.9907px;\">6/3</td>\n<td style=\"width: 59.9884px;\">1.35m</td>\n<td style=\"width: 63.9931px;\">4</td>\n<td style=\"width: 49.9884px;\">18-34</td>\n<td style=\"width: 64.9884px;\">70-100%</td>\n<td style=\"width: 99.9884px;\">60%-100%</td>\n<td style=\"width: 99.9884px;\">1.2-1.73</td>\n<td style=\"width: 144.988px;\">1-2 M/F</td>\n<td style=\"width: 82.9977px;\">2-3</td>\n<td style=\"width: 99.9884px;\">0</td>\n<td style=\"width: 99.9884px;\">1 M</td>\n<td style=\"width: 99.9884px;\">15 +-7 feathers</td>\n<td style=\"width: 99.9884px;\">2 block step</td>\n<td style=\"width: 233.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 190.995px;\">Southern cassowary</td>\n<td style=\"width: 297.998px;\">Casuarius casuarius</td>\n<td style=\"width: 128.993px;\">&nbsp;</td>\n<td style=\"width: 63.9931px;\">31/58/5</td>\n<td style=\"width: 56.9907px;\">9/14/3</td>\n<td style=\"width: 59.9884px;\">1.8m</td>\n<td style=\"width: 63.9931px;\">5/6</td>\n<td style=\"width: 49.9884px;\">26-42</td>\n<td style=\"width: 64.9884px;\">70-100%</td>\n<td style=\"width: 99.9884px;\">50-100%</td>\n<td style=\"width: 99.9884px;\">1.0-1.3</td>\n<td style=\"width: 144.988px;\">1-2 M/F</td>\n<td style=\"width: 82.9977px;\">3-4/6-9</td>\n<td style=\"width: 99.9884px;\">1+-0.1</td>\n<td style=\"width: 99.9884px;\">2 M/3 M</td>\n<td style=\"width: 99.9884px;\">15 +-7 feathers</td>\n<td style=\"width: 99.9884px;\">2 block step</td>\n<td style=\"width: 233.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 190.995px;\">Northern cassowary</td>\n<td style=\"width: 297.998px;\">\n<div>\n<div>Casuarius unappendiculatus</div>\n</div>\n</td>\n<td style=\"width: 128.993px;\">&nbsp;</td>\n<td style=\"width: 63.9931px;\">34/58/5</td>\n<td style=\"width: 56.9907px;\">9/14/3</td>\n<td style=\"width: 59.9884px;\">1.7m</td>\n<td style=\"width: 63.9931px;\">5/6</td>\n<td style=\"width: 49.9884px;\">30-42</td>\n<td style=\"width: 64.9884px;\">70-100%</td>\n<td style=\"width: 99.9884px;\">50-100%</td>\n<td style=\"width: 99.9884px;\">1.0-1.1</td>\n<td style=\"width: 144.988px;\">1-2 M/F</td>\n<td style=\"width: 82.9977px;\">3-4/6-9</td>\n<td style=\"width: 99.9884px;\">1+-0.1</td>\n<td style=\"width: 99.9884px;\">2 M/3 M</td>\n<td style=\"width: 99.9884px;\">15 +-7 feathers</td>\n<td style=\"width: 99.9884px;\">2 block step</td>\n<td style=\"width: 233.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 190.995px;\">Emu</td>\n<td style=\"width: 297.998px;\">Dromaius novaehollandiae</td>\n<td style=\"width: 128.993px;\">&nbsp;</td>\n<td style=\"width: 63.9931px;\">31/37/5</td>\n<td style=\"width: 56.9907px;\">9/10/3</td>\n<td style=\"width: 59.9884px;\">1.9m</td>\n<td style=\"width: 63.9931px;\">5</td>\n<td style=\"width: 49.9884px;\">16-48</td>\n<td style=\"width: 64.9884px;\">0-70%</td>\n<td style=\"width: 99.9884px;\">0-70%</td>\n<td style=\"width: 99.9884px;\">1.0-1.2</td>\n<td style=\"width: 144.988px;\">5-40 M/F/B</td>\n<td style=\"width: 82.9977px;\">3-4</td>\n<td style=\"width: 99.9884px;\">1+-0.1</td>\n<td style=\"width: 99.9884px;\">2M</td>\n<td style=\"width: 99.9884px;\">15 +-7 feathers</td>\n<td style=\"width: 99.9884px;\">2 block step</td>\n<td style=\"width: 233.993px;\">\n<div>\n<div>Berrybush, Fruit, Grain, Grass, Insect, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 190.995px;\">Tasmanian Emu †</td>\n<td style=\"width: 297.998px;\">\n<div>\n<div>Dromaius novaehollandiae diemenensis</div>\n</div>\n</td>\n<td style=\"width: 128.993px;\">&nbsp;</td>\n<td style=\"width: 63.9931px;\">27/33/5</td>\n<td style=\"width: 56.9907px;\">8/9/3</td>\n<td style=\"width: 59.9884px;\">1.7m</td>\n<td style=\"width: 63.9931px;\">5</td>\n<td style=\"width: 49.9884px;\">10-14</td>\n<td style=\"width: 64.9884px;\">40-100%</td>\n<td style=\"width: 99.9884px;\">0-100%</td>\n<td style=\"width: 99.9884px;\">1.0-1.2</td>\n<td style=\"width: 144.988px;\">5-40 M/F/B</td>\n<td style=\"width: 82.9977px;\">3-4</td>\n<td style=\"width: 99.9884px;\">1+-0.1</td>\n<td style=\"width: 99.9884px;\">2M</td>\n<td style=\"width: 99.9884px;\">15 +-7 feathers</td>\n<td style=\"width: 99.9884px;\">2 block step</td>\n<td style=\"width: 233.993px;\">\n<div>\n<div>Berrybush, Fruit, Grain, Grass, Insect, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 190.995px;\">&nbsp;</td>\n<td style=\"width: 297.998px;\">&nbsp;</td>\n<td style=\"width: 128.993px;\">&nbsp;</td>\n<td style=\"width: 63.9931px;\">&nbsp;</td>\n<td style=\"width: 56.9907px;\">&nbsp;</td>\n<td style=\"width: 59.9884px;\">&nbsp;</td>\n<td style=\"width: 63.9931px;\">&nbsp;</td>\n<td style=\"width: 49.9884px;\">&nbsp;</td>\n<td style=\"width: 64.9884px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 144.988px;\">&nbsp;</td>\n<td style=\"width: 82.9977px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 233.993px;\">&nbsp;</td>\n</tr>\n<tr>\n<td style=\"width: 190.995px;\">Newton's Mihirung †</td>\n<td style=\"width: 297.998px;\">Genyornis newtoni</td>\n<td style=\"width: 128.993px;\">Dromornithidae</td>\n<td style=\"width: 63.9931px;\">230/20</td>\n<td style=\"width: 56.9907px;\">20/7</td>\n<td style=\"width: 59.9884px;\">2.15m</td>\n<td style=\"width: 63.9931px;\">10t2</td>\n<td style=\"width: 49.9884px;\">12-22</td>\n<td style=\"width: 64.9884px;\">20-70%</td>\n<td style=\"width: 99.9884px;\">20-90%</td>\n<td style=\"width: 99.9884px;\">1.0-1.3</td>\n<td style=\"width: 144.988px;\">2-5M&amp;F, 2-12M&amp;F&amp;B</td>\n<td style=\"width: 82.9977px;\">21-25/3-4</td>\n<td style=\"width: 99.9884px;\">2-4</td>\n<td style=\"width: 99.9884px;\">2 H</td>\n<td style=\"width: 99.9884px;\">15 +-7 feathers</td>\n<td style=\"width: 99.9884px;\">2 block step</td>\n<td style=\"width: 233.993px;\">Grass, Nibblecrops, Vegetables</td>\n</tr>\n<tr>\n<td style=\"width: 190.995px;\">&nbsp;</td>\n<td style=\"width: 297.998px;\">&nbsp;</td>\n<td style=\"width: 128.993px;\">&nbsp;</td>\n<td style=\"width: 63.9931px;\">&nbsp;</td>\n<td style=\"width: 56.9907px;\">&nbsp;</td>\n<td style=\"width: 59.9884px;\">&nbsp;</td>\n<td style=\"width: 63.9931px;\">&nbsp;</td>\n<td style=\"width: 49.9884px;\">&nbsp;</td>\n<td style=\"width: 64.9884px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 144.988px;\">&nbsp;</td>\n<td style=\"width: 82.9977px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 233.993px;\">&nbsp;</td>\n</tr>\n<tr>\n<td style=\"width: 190.995px;\">Tasmanian nativehen</td>\n<td style=\"width: 297.998px;\">Tribonyx mortierii</td>\n<td style=\"width: 128.993px;\">Rallidae</td>\n<td style=\"width: 63.9931px;\">.28/.01</td>\n<td style=\"width: 56.9907px;\">2</td>\n<td style=\"width: 59.9884px;\">.4L</td>\n<td style=\"width: 63.9931px;\">.25</td>\n<td style=\"width: 49.9884px;\">10-28</td>\n<td style=\"width: 64.9884px;\">40-85%</td>\n<td style=\"width: 99.9884px;\">20+Shrub</td>\n<td style=\"width: 99.9884px;\">1.0-1.2</td>\n<td style=\"width: 144.988px;\">2-5M&amp;F</td>\n<td style=\"width: 82.9977px;\">0.25</td>\n<td style=\"width: 99.9884px;\">0</td>\n<td style=\"width: 99.9884px;\">1 S</td>\n<td style=\"width: 99.9884px;\">5+-4 feathers</td>\n<td style=\"width: 99.9884px;\">&nbsp;</td>\n<td style=\"width: 233.993px;\">\n<div>\n<div>Berrybush, Fruit, Grass, Insect, Nibblecrop, Vegetable</div>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">All of the adult birds can be fed in order to get them to lay eggs in hen boxes. Like the base game chickens, the eggs need to be incubated by the parents, though which of the parents does that depends on the species.&nbsp;</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Feature:</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Carcasses:&nbsp; These unique type of fly covered carcasses will occasionally spawn in the area. This is a source of meat and feathers for early game players still in a hunter gatherer stage, and it does nothing to deter cassowary or emu from approaching the area.</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">All species have a unique pelt that can be used to craft hide, feathers and a taxidermied full body.</span></p>\n<p>&nbsp;</p>\n<p><span style=\"font-weight: 400;\">A big thanks to Endarius for commissioning the Tasmanian Emu, Newton's Mihirung and the Tasmanian Nativehen!<br>And a big thanks to everyone who gave feedback and assistance!<br><br></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong> How do I domesticate the animals in this pack?<br><br><strong>A:</strong> The animals in this mod can be domesticated like base game chickens, by feeding them and allowing them to rear chicks from a hen box<br><br><br><br><strong>Q:</strong> Why so many animal packs? Can't you make one giant one?<br><br><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain clade file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br><br><br><br><strong>Q:</strong> Is this mod safe to add and remove to an existing world?<br><br><strong>A:</strong> Yes, this mod series is safe to add and remove. Items from this mod that have been placed will be invisible or appear as question blocks if the mod is removed but can be safely broken.</div>\n</div>\n<p><span style=\"font-weight: 400;\"> <br>All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "casuariidae",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_0701aaaf78d149014611d14a5573d33f.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_0701aaaf78d149014611d14a5573d33f.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_0701aaaf78d149014611d14a5573d33f.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 167131,
+    "follows": 1226,
+    "trendingpoints": 0,
+    "comments": 122,
+    "side": "both",
+    "type": "mod",
+    "created": "2024-03-31 23:58:46",
+    "lastreleased": "2026-09-23 19:17:31",
+    "lastmodified": "2026-09-28 20:03:54",
+    "tags": [
+      "Crafting",
+      "Food",
+      "Furniture",
+      "Creatures"
+    ],
+    "releases": [
+      {
+        "releaseid": 58160,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_448533f883bf6937e8cedb45e12e22a2.zip?dl=FotSA-Casuariidae-v1.1.13.zip",
+        "filename": "FotSA-Casuariidae-v1.1.13.zip",
+        "fileid": 124640,
+        "downloads": 1242,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.1.13",
+        "created": "2026-09-23 19:17:31",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Missing center point in carcass</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Added missing preloaded tags</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Hides unused nests from creative and handbook</span></p>"
+      },
+      {
+        "releaseid": 56522,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_3116b5dd0e4e7ffc52b2159e03007c3f.zip?dl=FotSA-Casuariidae-v1.1.12.zip",
+        "filename": "FotSA-Casuariidae-v1.1.12.zip",
+        "fileid": 121541,
+        "downloads": 2558,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.1.12",
+        "created": "2026-09-11 15:47:12",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Pelts grouped in handbook</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Female Casuariidae will now incubate eggs in short inefficient bursts to help folks without a male nearby, males are still primary incubators</span></p>"
+      },
+      {
+        "releaseid": 48701,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_2dd77f4cfe0ed835ecc00ea2b0156182.zip?dl=FotSA-Casuariidae-v1.1.11.zip",
+        "filename": "FotSA-Casuariidae-v1.1.11.zip",
+        "fileid": 106386,
+        "downloads": 13980,
+        "tags": [
+          "1.22.3",
+          "1.22.5",
+          "1.22.7"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.1.11",
+        "created": "2026-07-10 23:41:19",
+        "changelog": "<p>Fixed-Crash due to malformed recipe</p>"
+      },
+      {
+        "releaseid": 48589,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_57b1c26521247e45d18b8fb5a38af68d.zip?dl=FotSA-Casuariidae-v1.1.10.zip",
+        "filename": "FotSA-Casuariidae-v1.1.10.zip",
+        "fileid": 106183,
+        "downloads": 575,
+        "tags": [
+          "1.22.3"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.1.10",
+        "created": "2026-07-10 02:27:54",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Ancient Tools Brain drops (Thanks Whiskey Sunshine!)</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Added-Foot step sounds for cassowaries, emus and mihirung</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Added-Hen Box functionality, birds will now lay eggs in hen boxes and progress generations</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Egg meal patch shapes and extra egg slots</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Changed spawn conditions to have any amount of artificial light block spawns</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Added-Oiled, Raw, Salted hides and associated recipes</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Running speeds were increased to be closer to irl mid running speed</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Reduced spawn checks to single per species for optimization</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Change chance and wanderChance to executionChance</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Changed oiled hide recipe to use rendered fat</span><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Compatibility patches to new folder layout</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Refactored AI tasks to the new versions in 1.21</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Reformatted folders to match base game’s folder layout</span></p>"
+      },
+      {
+        "releaseid": 32111,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_bb79c5345f80a6ac304761fcb3494585.zip?dl=FotSA-Casuariidae-v1.1.9.zip",
+        "filename": "FotSA-Casuariidae-v1.1.9.zip",
+        "fileid": 70680,
+        "downloads": 23632,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.1.9",
+        "created": "2026-01-06 22:00:06",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-1 hide is always dropped from killed animals</span></p>"
+      },
+      {
+        "releaseid": 29756,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_c797cf3f291ac681be789c0064101214.zip?dl=FotSA-Casuariidae-v1.1.8.zip",
+        "filename": "FotSA-Casuariidae-v1.1.8.zip",
+        "fileid": 65701,
+        "downloads": 10921,
+        "tags": [
+          "1.21.5",
+          "1.21.6"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.1.8",
+        "created": "2025-11-23 21:32:46",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Russian Translation (Thanks Nikuksis!)</span></p>"
+      },
+      {
+        "releaseid": 28236,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_161a3ec39fb101d9d796c9d64b143afd.zip?dl=FotSA-Casuariidae-v1.1.7.zip",
+        "filename": "FotSA-Casuariidae-v1.1.7.zip",
+        "fileid": 62124,
+        "downloads": 7298,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.1.7",
+        "created": "2025-10-27 21:49:20",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Weighted diet </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Cape Barren Goose, Mihirung and Tasmanian Nativehen eggs not showing up in creative mode</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed- Mihirung and Tasmanian Nativehen eggs malformed and not placeable</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Trappable format for 1.21</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 25912,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_76feb830e32bb13d49721f69ada30937.zip?dl=FotSA-Casuariidae-v1.1.6.zip",
+        "filename": "FotSA-Casuariidae-v1.1.6.zip",
+        "fileid": 56934,
+        "downloads": 14449,
+        "tags": [
+          "1.21.1",
+          "1.21.2-rc.2",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.1.6",
+        "created": "2025-09-25 16:19:01",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Combat Overhaul patches</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Malformed entity code preventing nests being &lsquo;born&rsquo;</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Meal patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Rail fall damage multiplier</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 25434,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_d31302162ca0b11cf818a5b754f6e968.zip?dl=FotSA-Casuariidae-v1.1.5.zip",
+        "filename": "FotSA-Casuariidae-v1.1.5.zip",
+        "fileid": 56033,
+        "downloads": 4142,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.1.5",
+        "created": "2025-09-18 16:38:05",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added- Creature tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Birds nest causing errors due to missing animation</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Exposed empty face in Mihirung&rsquo;s neck</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Knockback resistance</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Male Mihirung pelt recipe</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 20069,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_1ecc7e2a3a5b59685cddc593fa8001af.zip?dl=FotSA-Casuariidae-v1.1.4.zip",
+        "filename": "FotSA-Casuariidae-v1.1.4.zip",
+        "fileid": 43499,
+        "downloads": 23108,
+        "tags": [
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.1.4",
+        "created": "2025-05-15 19:24:19",
+        "changelog": "<p>Added-New FR translation (Thanks Laerinok!)</p>"
+      },
+      {
+        "releaseid": 19935,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_e7e8e4a08be0bc4d507b2480066c02cf.zip?dl=FotSA-Casuariidae-v1.1.3.zip",
+        "filename": "FotSA-Casuariidae-v1.1.3.zip",
+        "fileid": 43197,
+        "downloads": 1327,
+        "tags": [
+          "1.20.10"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.1.3",
+        "created": "2025-05-12 16:16:26",
+        "changelog": "<p>Added-UK translation (Thanks Deanbro!)<br />Fixed-Missing Biome whitelisting for&nbsp;<span data-sheets-root=\"1\">nests</span></p>"
+      },
+      {
+        "releaseid": 19468,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_26543cc9bd92ec2590355a294b56f87a.zip?dl=FotSA-Casuariidae-v1.1.2.zip",
+        "filename": "FotSA-Casuariidae-v1.1.2.zip",
+        "fileid": 42095,
+        "downloads": 3117,
+        "tags": [
+          "1.20.9",
+          "1.20.10"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.1.2",
+        "created": "2025-04-29 23:18:31",
+        "changelog": "<p>Added-Devil interactions<br />Added-Diprotodon interactions<br />Fixed-Tasmanian nativehen not dropping pelts<br />Fixed-Tasmanian nativehengrowth and breeding<br />Fixed-Pelts not placeable on toolracks<br />Fixed-Mihirung pelt faces swapped</p>"
+      },
+      {
+        "releaseid": 19156,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_469be9f4800b72c7fe2362e3b5e7a947.zip?dl=FotSA-Casuariidae-v1.1.1.zip",
+        "filename": "FotSA-Casuariidae-v1.1.1.zip",
+        "fileid": 41428,
+        "downloads": 3102,
+        "tags": [
+          "1.20.7",
+          "1.20.8"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.1.1",
+        "created": "2025-04-20 17:12:37",
+        "changelog": "<p>Fixed-Spelling error in dead female Mihirung string<br />Fixed-Birds not spawning with Biomes due to refactor<br />Tweak-Raised Tasmanian Nativehen's spawn conditions to historical range</p>"
+      },
+      {
+        "releaseid": 19039,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_d3961f243d48b81ab8a40c16610db58b.zip?dl=FotSA-Casuariidae-v1.1.0.zip",
+        "filename": "FotSA-Casuariidae-v1.1.0.zip",
+        "fileid": 41174,
+        "downloads": 1214,
+        "tags": [
+          "1.20.7"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.1.0",
+        "created": "2025-04-17 21:25:19",
+        "changelog": "<p>Added-Tasmanian Emu, Newton's Mihirung and the Tasmanian native hen<br />Refactored-Entity files split between adults and babies</p>"
+      },
+      {
+        "releaseid": 18516,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_45a7a4530bdc98ef551052302d66f26e.zip?dl=FotSA-Casuariidae-v1.0.23.zip",
+        "filename": "FotSA-Casuariidae-v1.0.23.zip",
+        "fileid": 40014,
+        "downloads": 3716,
+        "tags": [
+          "1.20.7"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.23",
+        "created": "2025-04-04 23:46:02",
+        "changelog": "<p>Added-Worldgen spawn</p>"
+      },
+      {
+        "releaseid": 17521,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_20f02ee7cb2a451b195028c1a1df2c0c.zip?dl=FotSA-Casuariidae-v1.0.22.zip",
+        "filename": "FotSA-Casuariidae-v1.0.22.zip",
+        "fileid": 37271,
+        "downloads": 5783,
+        "tags": [
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.22",
+        "created": "2025-03-12 19:06:29",
+        "changelog": "<p>Added-Thylacoleo interactions<br />Tweak-Spawn temperature ranges<br />Tweak-Male follow distance</p>"
+      },
+      {
+        "releaseid": 16567,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_0fa8e8ec11c6053d4f101db88213617f.zip?dl=FotSA-Casuariidae-v1.0.21.zip",
+        "filename": "FotSA-Casuariidae-v1.0.21.zip",
+        "fileid": 34136,
+        "downloads": 6271,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.21",
+        "created": "2025-02-20 16:38:59",
+        "changelog": "<p>Added-Civet and Genet Interactions<br />Fixed-Pelt placement on antler racks</p>"
+      },
+      {
+        "releaseid": 16228,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_9ec22aff0e1fa7da2d4e1a7edd915c52.zip?dl=FotSA-Casuariidae-v1.0.20.zip",
+        "filename": "FotSA-Casuariidae-v1.0.20.zip",
+        "fileid": 33367,
+        "downloads": 2779,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.20",
+        "created": "2025-02-14 17:56:12",
+        "changelog": "<p>Fixed-Base game animal patch format updated to 1.20.4<br />Fixed-Changed the geese habitat from sea to land</p>"
+      },
+      {
+        "releaseid": 15944,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_93582b0120c019fd2b8bc03e5363b871.zip?dl=FotSA-Casuariidae-v1.0.19.zip",
+        "filename": "FotSA-Casuariidae-v1.0.19.zip",
+        "fileid": 32804,
+        "downloads": 2383,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.19",
+        "created": "2025-02-09 17:47:27",
+        "changelog": "<p>Tweak-Reduced Goose call range to match rooster</p>"
+      },
+      {
+        "releaseid": 15664,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_795ab41a4a5f7d90f73c9acf898c148e.zip?dl=FotSA-Casuariidae-v1.0.18.zip",
+        "filename": "FotSA-Casuariidae-v1.0.18.zip",
+        "fileid": 32305,
+        "downloads": 2479,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.18",
+        "created": "2025-02-03 19:34:36",
+        "changelog": "<p>Added-Rope attachments to Geese</p>"
+      },
+      {
+        "releaseid": 14974,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_633039feb85019cb58bed1b5707c34de.zip?dl=FotSA-Casuariidae-v1.0.17.zip",
+        "filename": "FotSA-Casuariidae-v1.0.17.zip",
+        "fileid": 31029,
+        "downloads": 4967,
+        "tags": [
+          "1.20.1",
+          "1.20.3"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.17",
+        "created": "2025-01-22 20:37:43",
+        "changelog": "<p>Tweak-Standardized sounds to cap at 60% max audio output</p>"
+      },
+      {
+        "releaseid": 14610,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_cb4f6946538486e6e5bdf1ae9e88426d.zip?dl=FotSA-Casuariidae-v1.0.16.zip",
+        "filename": "FotSA-Casuariidae-v1.0.16.zip",
+        "fileid": 30383,
+        "downloads": 2903,
+        "tags": [
+          "1.20.0",
+          "1.20.1"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.16",
+        "created": "2025-01-17 18:43:59",
+        "changelog": "<p>Added-Elephant compatibility</p>"
+      },
+      {
+        "releaseid": 14126,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_1350e7fb67822d4e0dda1592b5a1113b.zip?dl=FotSA-Casuariidae-v1.0.15.zip",
+        "filename": "FotSA-Casuariidae-v1.0.15.zip",
+        "fileid": 29437,
+        "downloads": 1846,
+        "tags": [
+          "1.20.0-rc.6",
+          "1.20.0-rc.8",
+          "1.20.0-rc.9"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.15",
+        "created": "2025-01-01 23:49:06",
+        "changelog": "<p>Added-Felinae compatibility<br />Updated-1.20 land entity pathfinding<br />Updated-1.20 blending for movement animations<br />Tweak-Goose call range</p>"
+      },
+      {
+        "releaseid": 13466,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_d9ece53262001e568ba4df3d4629f7ae.zip?dl=FotSA-Casuariidae-v1.0.14.zip",
+        "filename": "FotSA-Casuariidae-v1.0.14.zip",
+        "fileid": 28212,
+        "downloads": 3068,
+        "tags": [
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.14",
+        "created": "2024-12-05 21:54:38",
+        "changelog": "<p>Added-Ukrainian translation, thanks Deanbro!<br />Tweak-Combat Overhaul damage resistance<br />Tweak-Reduced Cape Barren Goose call range by 40 meters</p>"
+      },
+      {
+        "releaseid": 13170,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_9f81689fefee623adf4a9f269780b0f0.zip?dl=FotSA-Casuariidae-v1.0.13.zip",
+        "filename": "FotSA-Casuariidae-v1.0.13.zip",
+        "fileid": 27602,
+        "downloads": 833,
+        "tags": [
+          "1.20.0-pre.0",
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.13",
+        "created": "2024-11-21 18:18:05",
+        "changelog": "<p>Adjusted-Combat Overhaul Damage Resistance</p>"
+      },
+      {
+        "releaseid": 12986,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_cc487a2edbceece24006911389e1766b.zip?dl=FotSA-Casuariidae-v1.0.12.zip",
+        "filename": "FotSA-Casuariidae-v1.0.12.zip",
+        "fileid": 27262,
+        "downloads": 549,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.12",
+        "created": "2024-11-11 22:05:26",
+        "changelog": "<p>Tweak-Reduced geese aggressive around entity duration from 60 sec to 5 sec<br />Tweak-Reduced geese aggressive on damage duration from 30 sec to 10 sec<br />Tweak-Reduced geese aggressive on damage chance from 50% to 25%</p>"
+      },
+      {
+        "releaseid": 12676,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_e98f62992e96c115dca8e9bcce655b6e.zip?dl=FotSA-Casuariidae-v1.0.11.zip",
+        "filename": "FotSA-Casuariidae-v1.0.11.zip",
+        "fileid": 26650,
+        "downloads": 833,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.11",
+        "created": "2024-10-24 19:30:35",
+        "changelog": "<p>Added-Combat Overhaul compatibility (Thanks Maltiez)</p>"
+      },
+      {
+        "releaseid": 12559,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_38f21092fa4a38aeba45e6a305071418.zip?dl=FotSA-Casuariidae-v1.0.10.zip",
+        "filename": "FotSA-Casuariidae-v1.0.10.zip",
+        "fileid": 26344,
+        "downloads": 637,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.10",
+        "created": "2024-10-16 17:20:07",
+        "changelog": "<p>Updated-French translation (Thanks Laerinok)</p>"
+      },
+      {
+        "releaseid": 12403,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_cc562c236d053cf9c9a0e9e89d4e865d.zip?dl=FotSA-Casuariidae-v1.0.9.zip",
+        "filename": "FotSA-Casuariidae-v1.0.9.zip",
+        "fileid": 26011,
+        "downloads": 616,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.9",
+        "created": "2024-10-07 15:45:16",
+        "changelog": "<p>Fixed-Trough diet tags<br />Refactored-Taxidermies are now items, should reduce mod's texture impact by 33%<br />Refactored-Pelts are now only items, cuts down on mod size and memory impact. Place pelts on antler mounts or tool racks to get the wallmounted version<br />Updated-Animal patches, powdered item in recipe and various tweaks for 1.20's changes<br />Updated-Added new water ai task settings to goose AI, should bob in the water less</p>"
+      },
+      {
+        "releaseid": 11404,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_3ff7d5c65f826f553894ef76b3b3a805.zip?dl=FotSA-Casuariidae-v1.0.8.zip",
+        "filename": "FotSA-Casuariidae-v1.0.8.zip",
+        "fileid": 23764,
+        "downloads": 5570,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.8",
+        "created": "2024-07-25 16:40:46",
+        "changelog": "<p>Tweak- Reduced geese aggro range from 20 meters to 2 meters</p>"
+      },
+      {
+        "releaseid": 11203,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_9ad1d9d4f9519251e0a0ad1d458bb0a2.zip?dl=FotSA-Casuariidae-v1.0.7.zip",
+        "filename": "FotSA-Casuariidae-v1.0.7.zip",
+        "fileid": 23316,
+        "downloads": 1633,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.7",
+        "created": "2024-07-08 17:59:43",
+        "changelog": "<p>Added-Cape Barren Goose</p>"
+      },
+      {
+        "releaseid": 10749,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_dcdf425d5eac97ef62eef0bb71a98983.zip?dl=FotSA-Casuariidae-v1.0.6.zip",
+        "filename": "FotSA-Casuariidae-v1.0.6.zip",
+        "fileid": 22361,
+        "downloads": 1794,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.6",
+        "created": "2024-06-09 22:07:53",
+        "changelog": "<p>Added-Females now give birth to nests, which can be broken to acquire eggs or left to mature where they will spawn a clutch of chicks<br />Added-Incubating nests will now spawn in the world, occasionally with a male guarding it<br />Fixed-Babies only growing up into females<br /><br /></p>"
+      },
+      {
+        "releaseid": 10385,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_351076c528301a1bb6a1563bcd083457.zip?dl=FotSA-Casuariidae-v1.0.5.zip",
+        "filename": "FotSA-Casuariidae-v1.0.5.zip",
+        "fileid": 21723,
+        "downloads": 1824,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.5",
+        "created": "2024-05-18 21:33:50",
+        "changelog": "<p>Added-Crafting recipe for cassowary carcass, placing them will block spawns within render radius<br />Updated-fly covered carcass look<br />Tweak-Reduced spawn rate considerably<br />Tweak-Added a 50 minimum distance for spawning near player<br />Tweak-Added a maximum light level to prevent birds spawning near illuminating blocks<br />Tweak-readded spawn cap player scaling set to 0, to make sure it isn't scaling&nbsp;</p>"
+      },
+      {
+        "releaseid": 10197,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_3c0d85a162f9a8a9cbe4a33a5906feaa.zip?dl=FotSA-Casuariidae-v1.0.4.zip",
+        "filename": "FotSA-Casuariidae-v1.0.4.zip",
+        "fileid": 21383,
+        "downloads": 1319,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.4",
+        "created": "2024-05-04 18:27:27",
+        "changelog": "<p>Added-\"egg\" food tag to the animal egg item<br />Added- insects and fish to the animal's diets<br />Fixed-removed a number of errors about patches being server only</p>"
+      },
+      {
+        "releaseid": 10035,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_d00584f03fea95f5aa3dad085e6b5a12.zip?dl=FotSA-Casuariidae-v1.0.3.zip",
+        "filename": "FotSA-Casuariidae-v1.0.3.zip",
+        "fileid": 21117,
+        "downloads": 1038,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.3",
+        "created": "2024-04-25 23:13:32",
+        "changelog": "<p>Fixed-Pelts not dropping correctly</p>"
+      },
+      {
+        "releaseid": 9915,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_e075037c269a82605ca500bc36f45c10.zip?dl=FotSA-Casuariidae-v1.0.2.zip",
+        "filename": "FotSA-Casuariidae-v1.0.2.zip",
+        "fileid": 20914,
+        "downloads": 946,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.2",
+        "created": "2024-04-19 16:12:48",
+        "changelog": "<p>Added-Missing killed by strings<br />Added-Missing diet strings<br />Tweaked-Animation transition speeds<br />Fixed-Emotions not using same slot, hunger will no longer be reset by getting hurt, aggroed or startled</p>"
+      },
+      {
+        "releaseid": 9664,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_2843827f207379b308f2fb002c0184d0.zip?dl=FotSA-Casuariidae-v1.0.1.zip",
+        "filename": "FotSA-Casuariidae-v1.0.1.zip",
+        "fileid": 20499,
+        "downloads": 1524,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.1",
+        "created": "2024-04-03 13:49:37",
+        "changelog": "<p>Fixed-Animals missing from creature tab in creative mode</p>"
+      },
+      {
+        "releaseid": 9639,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_12cd43de7c0ac53dcbb99a36a9e1aca8.zip?dl=FotSA-Casuariidae-v1.0.0.zip",
+        "filename": "FotSA-Casuariidae-v1.0.0.zip",
+        "fileid": 20458,
+        "downloads": 779,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "1.0.0",
+        "created": "2024-04-02 00:36:04",
+        "changelog": "<p>APR-F0015 serum has worn off, we've won!<br />French translation added!</p>"
+      },
+      {
+        "releaseid": 9609,
+        "mainfile": "https://moddbcdn.vintagestory.at/GreatEmuWarII_804702d1c4557874c96cc8145faef9b1.zip?dl=GreatEmuWarII.zip",
+        "filename": "GreatEmuWarII.zip",
+        "fileid": 20399,
+        "downloads": 377,
+        "tags": [
+          "1.19.6",
+          "1.19.7"
+        ],
+        "modidstr": "casuariidae",
+        "modversion": "0.9.0",
+        "created": "2024-03-31 23:59:25",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 20451,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-03-05_10-10-50_6e70731c8cba96cdfac7e93c69e03ac4.png",
+        "filename": "2024-03-05_10-10-50.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-03-05_10-10-50_6e70731c8cba96cdfac7e93c69e03ac4_55_60.png",
+        "created": "2024-04-02 00:41:29"
+      },
+      {
+        "fileid": 20452,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-03-05_11-02-41_3254d55c93cc84ad6aaa1abe49164dcb.png",
+        "filename": "2024-03-05_11-02-41.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-03-05_11-02-41_3254d55c93cc84ad6aaa1abe49164dcb_55_60.png",
+        "created": "2024-04-02 00:41:31"
+      },
+      {
+        "fileid": 20453,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-03-03_10-29-56_b286737c3aeaec33e2e0edb4a533de4c.png",
+        "filename": "2024-03-03_10-29-56.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-03-03_10-29-56_b286737c3aeaec33e2e0edb4a533de4c_55_60.png",
+        "created": "2024-04-02 00:41:36"
+      },
+      {
+        "fileid": 20454,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-03-05_08-51-13_7b08eb65f7c41229a3911c2d0c1e04e6.png",
+        "filename": "2024-03-05_08-51-13.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-03-05_08-51-13_7b08eb65f7c41229a3911c2d0c1e04e6_55_60.png",
+        "created": "2024-04-02 00:41:39"
+      },
+      {
+        "fileid": 20455,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-03-06_10-44-55_479e63677b2c493ab525414e1fe64890.png",
+        "filename": "2024-03-06_10-44-55.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-03-06_10-44-55_479e63677b2c493ab525414e1fe64890_55_60.png",
+        "created": "2024-04-02 00:41:41"
+      },
+      {
+        "fileid": 20456,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-03-06_10-48-24_113dbdd06ace47e73cbad7bb6c9a0b10.png",
+        "filename": "2024-03-06_10-48-24.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-03-06_10-48-24_113dbdd06ace47e73cbad7bb6c9a0b10_55_60.png",
+        "created": "2024-04-02 00:41:44"
+      },
+      {
+        "fileid": 20457,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-03-30_13-38-24_46988602000698c8b8a308f0f30970ad.png",
+        "filename": "2024-03-30_13-38-24.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-03-30_13-38-24_46988602000698c8b8a308f0f30970ad_55_60.png",
+        "created": "2024-04-02 00:41:46"
+      },
+      {
+        "fileid": 41175,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-17_12-30-23_a7cafcffce678403e10d3ca9081cddb7.png",
+        "filename": "2025-04-17_12-30-23.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-17_12-30-23_a7cafcffce678403e10d3ca9081cddb7_55_60.png",
+        "created": "2025-04-17 21:25:35"
+      },
+      {
+        "fileid": 41176,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-17_12-18-00_c6a8319b6951695fb4039ee2d2e2685e.png",
+        "filename": "2025-04-17_12-18-00.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-17_12-18-00_c6a8319b6951695fb4039ee2d2e2685e_55_60.png",
+        "created": "2025-04-17 21:25:41"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

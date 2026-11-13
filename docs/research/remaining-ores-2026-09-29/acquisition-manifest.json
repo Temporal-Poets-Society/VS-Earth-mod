@@ -1,0 +1,260 @@
+[
+  {
+    "file": "raw/phosphate-page.html",
+    "url": "https://mrdata.usgs.gov/phosphate/",
+    "retrieved_utc": "2026-09-29T17:47:50.966497+00:00",
+    "status": "already_present",
+    "bytes": 14397,
+    "sha256": "5489a2ea924362c544d4c5e192cdae0cfdc02c1c722bc944a8e6135b6f59d92e"
+  },
+  {
+    "file": "raw/sedexmvt-page.html",
+    "url": "https://mrdata.usgs.gov/sedexmvt/",
+    "retrieved_utc": "2026-09-29T17:47:50.967497+00:00",
+    "final_url": "https://mrdata.usgs.gov/sedexmvt/",
+    "content_type": "text/html; charset=UTF-8",
+    "last_modified": null,
+    "status": "acquired",
+    "bytes": 15781,
+    "sha256": "28ffe85fbb9d9072794a38958479228e9cd742a87c5907944e56d8e817c85a54"
+  },
+  {
+    "file": "raw/laterite-page.html",
+    "url": "https://mrdata.usgs.gov/laterite/",
+    "retrieved_utc": "2026-09-29T17:47:50.967497+00:00",
+    "final_url": "https://mrdata.usgs.gov/laterite/",
+    "content_type": "text/html; charset=UTF-8",
+    "last_modified": null,
+    "status": "acquired",
+    "bytes": 15287,
+    "sha256": "b752e66f0c208ec6061e1ef60d48bebdcc5a5fcfa922f2114d551790157cda35"
+  },
+  {
+    "file": "raw/nicrpge-page.html",
+    "url": "https://mrdata.usgs.gov/nicrpge/",
+    "retrieved_utc": "2026-09-29T17:47:50.967497+00:00",
+    "final_url": "https://mrdata.usgs.gov/nicrpge/",
+    "content_type": "text/html; charset=UTF-8",
+    "last_modified": null,
+    "status": "acquired",
+    "bytes": 15611,
+    "sha256": "2136e7f0cab97afbef8c00f290db9368f64c1766cf72e95af9d50a949e22e618"
+  },
+  {
+    "file": "raw/podchrome-page.html",
+    "url": "https://mrdata.usgs.gov/podchrome/",
+    "retrieved_utc": "2026-09-29T17:47:51.006223+00:00",
+    "final_url": "https://mrdata.usgs.gov/podchrome/",
+    "content_type": "text/html; charset=UTF-8",
+    "last_modified": null,
+    "status": "acquired",
+    "bytes": 15404,
+    "sha256": "416453a2c1bd429c52702298d53f5fa2c8883fc4773a02360f5a070d4aa65a94"
+  },
+  {
+    "file": "raw/major-deposits-page.html",
+    "url": "https://mrdata.usgs.gov/major-deposits/",
+    "retrieved_utc": "2026-09-29T17:47:51.485932+00:00",
+    "final_url": "https://mrdata.usgs.gov/major-deposits/",
+    "content_type": "text/html; charset=UTF-8",
+    "last_modified": null,
+    "status": "acquired",
+    "bytes": 14943,
+    "sha256": "f89785472012f37b94ea2d03659c75301aa06ec35407b656180472faf98330fd"
+  },
+  {
+    "file": "raw/pp1802-page.html",
+    "url": "https://mrdata.usgs.gov/pp1802/",
+    "retrieved_utc": "2026-09-29T17:47:51.488933+00:00",
+    "final_url": "https://mrdata.usgs.gov/pp1802/",
+    "content_type": "text/html; charset=UTF-8",
+    "last_modified": null,
+    "status": "acquired",
+    "bytes": 35150,
+    "sha256": "722495eac272c650fc0a84fe129b514b6572a3af1473176d1b894baeb2aba303"
+  },
+  {
+    "file": "raw/vms-page.html",
+    "url": "https://mrdata.usgs.gov/vms/",
+    "retrieved_utc": "2026-09-29T17:47:51.488933+00:00",
+    "final_url": "https://mrdata.usgs.gov/vms/",
+    "content_type": "text/html; charset=UTF-8",
+    "last_modified": null,
+    "status": "acquired",
+    "bytes": 15467,
+    "sha256": "5cf1e2a964fb3eebf0bc1d993708355bf00b00deb820757b8c60fba6a864f3d3"
+  },
+  {
+    "file": "raw/potash-page.html",
+    "url": "https://pubs.usgs.gov/sir/2010/5090/s/",
+    "retrieved_utc": "2026-09-29T17:47:51.495447+00:00",
+    "status": "already_present",
+    "bytes": 14641,
+    "sha256": "f57a5b6e78d5fb25744bbad86e5a33a0bd75f41972a13e9ca4a05ce53fbd6554"
+  },
+  {
+    "file": "raw/phosphate-phosphate-csv.zip",
+    "url": "https://mrdata.usgs.gov/phosphate/phosphate-csv.zip",
+    "retrieved_utc": "2026-09-29T17:47:52.053856+00:00",
+    "final_url": "https://mrdata.usgs.gov/phosphate/phosphate-csv.zip",
+    "content_type": "application/zip",
+    "last_modified": "Mon, 27 Sep 2021 15:48:30 GMT",
+    "status": "acquired",
+    "bytes": 239270,
+    "sha256": "a5db4dd27848ef8abb5711ae11578c92247b822d6ffbc7a7aeecb645ffb2daf7"
+  },
+  {
+    "file": "raw/phosphate-metadata.xml",
+    "url": "https://mrdata.usgs.gov/metadata/ofr-2002-156.xml",
+    "retrieved_utc": "2026-09-29T17:47:52.053856+00:00",
+    "final_url": "https://mrdata.usgs.gov/metadata/ofr-2002-156.xml",
+    "content_type": "text/xml",
+    "last_modified": "Mon, 27 Sep 2021 15:47:03 GMT",
+    "status": "acquired",
+    "bytes": 54924,
+    "sha256": "3eb0846933e3074142048af91706632854f57617426a8f4d59894f6e549cf854"
+  },
+  {
+    "file": "raw/sedexmvt-sedexmvt-csv.zip",
+    "url": "https://mrdata.usgs.gov/sedexmvt/sedexmvt-csv.zip",
+    "retrieved_utc": "2026-09-29T17:47:52.053856+00:00",
+    "final_url": "https://mrdata.usgs.gov/sedexmvt/sedexmvt-csv.zip",
+    "content_type": "application/zip",
+    "last_modified": "Fri, 17 Jun 2016 20:45:50 GMT",
+    "status": "acquired",
+    "bytes": 71438,
+    "sha256": "185cfb718cbb987d767f7a90c58bc46dfaf8412314abaf0315c5b69f319c936b"
+  },
+  {
+    "file": "raw/sedexmvt-metadata.xml",
+    "url": "https://mrdata.usgs.gov/metadata/ofr-2009-1297.xml",
+    "retrieved_utc": "2026-09-29T17:47:52.055359+00:00",
+    "final_url": "https://mrdata.usgs.gov/metadata/ofr-2009-1297.xml",
+    "content_type": "text/xml",
+    "last_modified": "Thu, 21 Jan 2021 14:18:57 GMT",
+    "status": "acquired",
+    "bytes": 32064,
+    "sha256": "b30460e8f5fd61da833f5af2ff3b68f3d45aec93ee3d6140f7ada1fba29ee425"
+  },
+  {
+    "file": "raw/laterite-laterite-csv.zip",
+    "url": "https://mrdata.usgs.gov/laterite/laterite-csv.zip",
+    "retrieved_utc": "2026-09-29T17:47:52.502843+00:00",
+    "final_url": "https://mrdata.usgs.gov/laterite/laterite-csv.zip",
+    "content_type": "application/zip",
+    "last_modified": "Wed, 07 Sep 2016 19:51:04 GMT",
+    "status": "acquired",
+    "bytes": 89359,
+    "sha256": "e8fe1282fcabada49141c19c8c7ba756092715ed5cf55e88fe3e722063b3b916"
+  },
+  {
+    "file": "raw/laterite-metadata.xml",
+    "url": "https://mrdata.usgs.gov/metadata/ofr-2011-1058.xml",
+    "retrieved_utc": "2026-09-29T17:47:52.523559+00:00",
+    "final_url": "https://mrdata.usgs.gov/metadata/ofr-2011-1058.xml",
+    "content_type": "text/xml",
+    "last_modified": "Tue, 19 Jan 2021 23:40:33 GMT",
+    "status": "acquired",
+    "bytes": 56678,
+    "sha256": "5e9f3f44cf9e37f77ef8f46a9494a8a2b3dc9215aef9afc4068dab46662cdae3"
+  },
+  {
+    "file": "raw/nicrpge-nicrpge-csv.zip",
+    "url": "https://mrdata.usgs.gov/nicrpge/nicrpge-csv.zip",
+    "retrieved_utc": "2026-09-29T17:47:52.523559+00:00",
+    "final_url": "https://mrdata.usgs.gov/nicrpge/nicrpge-csv.zip",
+    "content_type": "application/zip",
+    "last_modified": "Fri, 22 Jul 2016 17:47:42 GMT",
+    "status": "acquired",
+    "bytes": 1429169,
+    "sha256": "eda55996566a1859e4765a94edc7d0e645d5f13d45a6bce246a1f55cd5bc1d1e"
+  },
+  {
+    "file": "raw/nicrpge-metadata.xml",
+    "url": "https://mrdata.usgs.gov/metadata/ofr-2009-1045.xml",
+    "retrieved_utc": "2026-09-29T17:47:52.724499+00:00",
+    "final_url": "https://mrdata.usgs.gov/metadata/ofr-2009-1045.xml",
+    "content_type": "text/xml",
+    "last_modified": "Wed, 10 Feb 2021 21:07:48 GMT",
+    "status": "acquired",
+    "bytes": 24723,
+    "sha256": "634c624203c19e3808f1894aeca515de846a17b68eff003b98f6ca083470e2a0"
+  },
+  {
+    "file": "raw/podchrome-podchrome-csv.zip",
+    "url": "https://mrdata.usgs.gov/podchrome/podchrome-csv.zip",
+    "retrieved_utc": "2026-09-29T17:47:53.044823+00:00",
+    "final_url": "https://mrdata.usgs.gov/podchrome/podchrome-csv.zip",
+    "content_type": "application/zip",
+    "last_modified": "Mon, 19 Sep 2016 18:06:37 GMT",
+    "status": "acquired",
+    "bytes": 265471,
+    "sha256": "c48854340208f9c920016d366b8531986a0f1c5c7a0c3fa75ecd540389bc4dc5"
+  },
+  {
+    "file": "raw/podchrome-metadata.xml",
+    "url": "https://mrdata.usgs.gov/metadata/sir-2012-5157.xml",
+    "retrieved_utc": "2026-09-29T17:47:53.120389+00:00",
+    "final_url": "https://mrdata.usgs.gov/metadata/sir-2012-5157.xml",
+    "content_type": "text/xml",
+    "last_modified": "Fri, 15 Jan 2021 20:07:04 GMT",
+    "status": "acquired",
+    "bytes": 42500,
+    "sha256": "6faec9f228c051406c0946444a22f0269d943e32ce9ca3f355941545e7cdb46e"
+  },
+  {
+    "file": "raw/major-deposits-ofr20051294-csv.zip",
+    "url": "https://mrdata.usgs.gov/major-deposits/ofr20051294-csv.zip",
+    "retrieved_utc": "2026-09-29T17:47:53.149727+00:00",
+    "final_url": "https://mrdata.usgs.gov/major-deposits/ofr20051294-csv.zip",
+    "content_type": "application/zip",
+    "last_modified": "Thu, 16 Mar 2017 16:51:11 GMT",
+    "status": "acquired",
+    "bytes": 311703,
+    "sha256": "76456294a5d96b90f49ce88371e0be3ee8ab03ff6afcaa3c2de53d962a369685"
+  },
+  {
+    "file": "raw/major-deposits-metadata.xml",
+    "url": "https://mrdata.usgs.gov/metadata/ofr-2005-1294.xml",
+    "retrieved_utc": "2026-09-29T17:47:53.464436+00:00",
+    "final_url": "https://mrdata.usgs.gov/metadata/ofr-2005-1294.xml",
+    "content_type": "text/xml",
+    "last_modified": "Fri, 19 Feb 2021 20:33:06 GMT",
+    "status": "acquired",
+    "bytes": 25727,
+    "sha256": "e3d6b9bb92f3bccb07b38c3f1f4c17be1c9116cc83d2841da3a2696af514c493"
+  },
+  {
+    "file": "raw/vms-vms-csv.zip",
+    "url": "https://mrdata.usgs.gov/vms/vms-csv.zip",
+    "retrieved_utc": "2026-09-29T17:47:53.552230+00:00",
+    "final_url": "https://mrdata.usgs.gov/vms/vms-csv.zip",
+    "content_type": "application/zip",
+    "last_modified": "Fri, 15 Jul 2016 16:31:55 GMT",
+    "status": "acquired",
+    "bytes": 498641,
+    "sha256": "8ae145689bb5137d5332e7927d31ed997541381dfa3ff876103702bf398b35be"
+  },
+  {
+    "file": "raw/vms-metadata.xml",
+    "url": "https://mrdata.usgs.gov/metadata/ofr-2009-1034.xml",
+    "retrieved_utc": "2026-09-29T17:47:53.578761+00:00",
+    "final_url": "https://mrdata.usgs.gov/metadata/ofr-2009-1034.xml",
+    "content_type": "text/xml",
+    "last_modified": "Wed, 10 Feb 2021 23:13:50 GMT",
+    "status": "acquired",
+    "bytes": 75046,
+    "sha256": "31948ba3d9d1013bc6e8d76148c94e8b76b4f98400ce11fbe0c7c073ba9a8655"
+  },
+  {
+    "file": "raw/potash-PotashGIS.zip",
+    "url": "https://pubs.usgs.gov/sir/2010/5090/s/PotashGIS.zip",
+    "retrieved_utc": "2026-09-29T17:47:53.858329+00:00",
+    "final_url": "https://pubs.usgs.gov/sir/2010/5090/s/PotashGIS.zip",
+    "content_type": "application/zip",
+    "last_modified": "Wed, 19 Nov 2014 14:32:31 GMT",
+    "status": "acquired",
+    "bytes": 77474782,
+    "sha256": "3cb4b000142f86e55d6ccf7edb9586d87e6173d566102080fe9c63c3bf190220"
+  }
+]

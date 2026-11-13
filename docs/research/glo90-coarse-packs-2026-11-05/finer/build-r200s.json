@@ -1,0 +1,17 @@
+{
+  "tiles": 26475,
+  "tilesWithLand": 26168,
+  "sharpen": 0.3,
+  "rowsPerDegree": 200,
+  "roughRowsPerDegree": 40,
+  "steps": "-512:2,128:4,1024:8",
+  "roughCodes": 16,
+  "heightMB": 183.615698,
+  "roughMB": 4.711673,
+  "landCells": 482908767,
+  "cells": 591096200,
+  "glo90LandPoints": 20479280168,
+  "rmsDifferenceM": 13.036817806204052,
+  "pass1Seconds": 133.4102143,
+  "pass2Seconds": 246.4555475
+}

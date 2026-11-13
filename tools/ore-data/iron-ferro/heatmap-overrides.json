@@ -1,0 +1,20 @@
+{
+ "comment": "Dropped for the iron-ferro codes and re-added selectively in evidence.geojson (see build_evidence.py).",
+ "drop": {
+  "Pt": [
+   "Pt-specialist.geojson",
+   "Pt-occurrences.csv.gz",
+   "mrds"
+  ],
+  "Ni": [
+   "Ni-specialist.geojson",
+   "Ni-occurrences.csv.gz",
+   "mrds"
+  ],
+  "Cr": [
+   "Cr-specialist.geojson",
+   "Cr-occurrences.csv.gz",
+   "mrds"
+  ]
+ }
+}

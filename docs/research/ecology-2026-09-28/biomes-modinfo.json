@@ -1,0 +1,32 @@
+{
+  "type": "code",
+  "modid": "biomes",
+  "name": "Biomes",
+  "authors": [
+    "Crabb",
+    "actioninja",
+    "Hydromancerx",
+    "Hieronymus",
+    "TenthArchitect",
+    "Sheepon",
+    "Clown Skeleton",
+    "Gryfang",
+    "BraniyaKz",
+    "Clint",
+    "ComitatesSaxoni",
+    "RaptorMother",
+    "Crumps",
+    "Churburby",
+    "Crupette",
+    "NiCH518",
+    "n_azurik",
+    "ShaeTsu",
+    "H3B"
+  ],
+  "description": "Separates the world into distinct biomes to increase world variety",
+  "version": "2.3.1",
+  "dependencies": {
+    "game": "1.22.0"
+  },
+  "side": "Server"
+}

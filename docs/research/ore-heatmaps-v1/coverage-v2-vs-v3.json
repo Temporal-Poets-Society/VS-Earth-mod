@@ -1,0 +1,2788 @@
+{
+ "v2": {
+  "Fe": {
+   "North America": {
+    "lit": 3002,
+    "atLeast0.5": 471
+   },
+   "South America": {
+    "lit": 861,
+    "atLeast0.5": 135
+   },
+   "Europe": {
+    "lit": 1351,
+    "atLeast0.5": 335
+   },
+   "Africa": {
+    "lit": 778,
+    "atLeast0.5": 217
+   },
+   "Asia": {
+    "lit": 2737,
+    "atLeast0.5": 709
+   },
+   "Oceania": {
+    "lit": 545,
+    "atLeast0.5": 180
+   },
+   "World": {
+    "lit": 9274,
+    "atLeast0.5": 2047
+   }
+  },
+  "Au": {
+   "North America": {
+    "lit": 5743,
+    "atLeast0.5": 1102
+   },
+   "South America": {
+    "lit": 2299,
+    "atLeast0.5": 374
+   },
+   "Europe": {
+    "lit": 1398,
+    "atLeast0.5": 214
+   },
+   "Africa": {
+    "lit": 3367,
+    "atLeast0.5": 319
+   },
+   "Asia": {
+    "lit": 5512,
+    "atLeast0.5": 1021
+   },
+   "Oceania": {
+    "lit": 1052,
+    "atLeast0.5": 453
+   },
+   "World": {
+    "lit": 19384,
+    "atLeast0.5": 3483
+   }
+  },
+  "Ag": {
+   "North America": {
+    "lit": 4036,
+    "atLeast0.5": 910
+   },
+   "South America": {
+    "lit": 1073,
+    "atLeast0.5": 212
+   },
+   "Europe": {
+    "lit": 854,
+    "atLeast0.5": 209
+   },
+   "Africa": {
+    "lit": 548,
+    "atLeast0.5": 182
+   },
+   "Asia": {
+    "lit": 2692,
+    "atLeast0.5": 403
+   },
+   "Oceania": {
+    "lit": 690,
+    "atLeast0.5": 231
+   },
+   "World": {
+    "lit": 9893,
+    "atLeast0.5": 2147
+   }
+  },
+  "Pb": {
+   "North America": {
+    "lit": 4014,
+    "atLeast0.5": 673
+   },
+   "South America": {
+    "lit": 1041,
+    "atLeast0.5": 173
+   },
+   "Europe": {
+    "lit": 1554,
+    "atLeast0.5": 321
+   },
+   "Africa": {
+    "lit": 1085,
+    "atLeast0.5": 144
+   },
+   "Asia": {
+    "lit": 4214,
+    "atLeast0.5": 574
+   },
+   "Oceania": {
+    "lit": 642,
+    "atLeast0.5": 160
+   },
+   "World": {
+    "lit": 12550,
+    "atLeast0.5": 2045
+   }
+  },
+  "Zn": {
+   "North America": {
+    "lit": 4152,
+    "atLeast0.5": 751
+   },
+   "South America": {
+    "lit": 978,
+    "atLeast0.5": 175
+   },
+   "Europe": {
+    "lit": 1617,
+    "atLeast0.5": 348
+   },
+   "Africa": {
+    "lit": 1121,
+    "atLeast0.5": 160
+   },
+   "Asia": {
+    "lit": 4234,
+    "atLeast0.5": 571
+   },
+   "Oceania": {
+    "lit": 667,
+    "atLeast0.5": 179
+   },
+   "World": {
+    "lit": 12769,
+    "atLeast0.5": 2184
+   }
+  },
+  "Bi": {
+   "North America": {
+    "lit": 685,
+    "atLeast0.5": 58
+   },
+   "South America": {
+    "lit": 108,
+    "atLeast0.5": 17
+   },
+   "Europe": {
+    "lit": 105,
+    "atLeast0.5": 23
+   },
+   "Africa": {
+    "lit": 29,
+    "atLeast0.5": 5
+   },
+   "Asia": {
+    "lit": 389,
+    "atLeast0.5": 64
+   },
+   "Oceania": {
+    "lit": 72,
+    "atLeast0.5": 14
+   },
+   "World": {
+    "lit": 1388,
+    "atLeast0.5": 181
+   }
+  },
+  "Ni": {
+   "North America": {
+    "lit": 2191,
+    "atLeast0.5": 586
+   },
+   "South America": {
+    "lit": 363,
+    "atLeast0.5": 76
+   },
+   "Europe": {
+    "lit": 825,
+    "atLeast0.5": 191
+   },
+   "Africa": {
+    "lit": 477,
+    "atLeast0.5": 136
+   },
+   "Asia": {
+    "lit": 1534,
+    "atLeast0.5": 181
+   },
+   "Oceania": {
+    "lit": 558,
+    "atLeast0.5": 219
+   },
+   "World": {
+    "lit": 5948,
+    "atLeast0.5": 1389
+   }
+  },
+  "Cr": {
+   "North America": {
+    "lit": 1130,
+    "atLeast0.5": 297
+   },
+   "South America": {
+    "lit": 253,
+    "atLeast0.5": 50
+   },
+   "Europe": {
+    "lit": 417,
+    "atLeast0.5": 77
+   },
+   "Africa": {
+    "lit": 386,
+    "atLeast0.5": 113
+   },
+   "Asia": {
+    "lit": 1280,
+    "atLeast0.5": 215
+   },
+   "Oceania": {
+    "lit": 306,
+    "atLeast0.5": 82
+   },
+   "World": {
+    "lit": 3772,
+    "atLeast0.5": 834
+   }
+  },
+  "Ti": {
+   "North America": {
+    "lit": 1159,
+    "atLeast0.5": 129
+   },
+   "South America": {
+    "lit": 266,
+    "atLeast0.5": 35
+   },
+   "Europe": {
+    "lit": 628,
+    "atLeast0.5": 79
+   },
+   "Africa": {
+    "lit": 252,
+    "atLeast0.5": 66
+   },
+   "Asia": {
+    "lit": 843,
+    "atLeast0.5": 91
+   },
+   "Oceania": {
+    "lit": 310,
+    "atLeast0.5": 102
+   },
+   "World": {
+    "lit": 3458,
+    "atLeast0.5": 502
+   }
+  },
+  "Mn": {
+   "North America": {
+    "lit": 1257,
+    "atLeast0.5": 79
+   },
+   "South America": {
+    "lit": 410,
+    "atLeast0.5": 50
+   },
+   "Europe": {
+    "lit": 329,
+    "atLeast0.5": 53
+   },
+   "Africa": {
+    "lit": 388,
+    "atLeast0.5": 75
+   },
+   "Asia": {
+    "lit": 1108,
+    "atLeast0.5": 155
+   },
+   "Oceania": {
+    "lit": 142,
+    "atLeast0.5": 46
+   },
+   "World": {
+    "lit": 3634,
+    "atLeast0.5": 458
+   }
+  },
+  "Hg": {
+   "North America": {
+    "lit": 811,
+    "atLeast0.5": 96
+   },
+   "South America": {
+    "lit": 60,
+    "atLeast0.5": 2
+   },
+   "Europe": {
+    "lit": 76,
+    "atLeast0.5": 12
+   },
+   "Africa": {
+    "lit": 32,
+    "atLeast0.5": 9
+   },
+   "Asia": {
+    "lit": 538,
+    "atLeast0.5": 87
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 1517,
+    "atLeast0.5": 206
+   }
+  },
+  "W": {
+   "North America": {
+    "lit": 3702,
+    "atLeast0.5": 93
+   },
+   "South America": {
+    "lit": 1621,
+    "atLeast0.5": 50
+   },
+   "Europe": {
+    "lit": 1254,
+    "atLeast0.5": 45
+   },
+   "Africa": {
+    "lit": 586,
+    "atLeast0.5": 52
+   },
+   "Asia": {
+    "lit": 4992,
+    "atLeast0.5": 220
+   },
+   "Oceania": {
+    "lit": 369,
+    "atLeast0.5": 35
+   },
+   "World": {
+    "lit": 12540,
+    "atLeast0.5": 495
+   }
+  },
+  "U": {
+   "North America": {
+    "lit": 2410,
+    "atLeast0.5": 106
+   },
+   "South America": {
+    "lit": 734,
+    "atLeast0.5": 14
+   },
+   "Europe": {
+    "lit": 518,
+    "atLeast0.5": 15
+   },
+   "Africa": {
+    "lit": 264,
+    "atLeast0.5": 53
+   },
+   "Asia": {
+    "lit": 1635,
+    "atLeast0.5": 47
+   },
+   "Oceania": {
+    "lit": 332,
+    "atLeast0.5": 81
+   },
+   "World": {
+    "lit": 5903,
+    "atLeast0.5": 316
+   }
+  },
+  "Pt": {
+   "North America": {
+    "lit": 1957,
+    "atLeast0.5": 453
+   },
+   "South America": {
+    "lit": 294,
+    "atLeast0.5": 63
+   },
+   "Europe": {
+    "lit": 704,
+    "atLeast0.5": 139
+   },
+   "Africa": {
+    "lit": 429,
+    "atLeast0.5": 127
+   },
+   "Asia": {
+    "lit": 2200,
+    "atLeast0.5": 349
+   },
+   "Oceania": {
+    "lit": 449,
+    "atLeast0.5": 128
+   },
+   "World": {
+    "lit": 6033,
+    "atLeast0.5": 1259
+   }
+  },
+  "V": {
+   "North America": {
+    "lit": 854,
+    "atLeast0.5": 91
+   },
+   "South America": {
+    "lit": 103,
+    "atLeast0.5": 12
+   },
+   "Europe": {
+    "lit": 538,
+    "atLeast0.5": 64
+   },
+   "Africa": {
+    "lit": 214,
+    "atLeast0.5": 48
+   },
+   "Asia": {
+    "lit": 530,
+    "atLeast0.5": 36
+   },
+   "Oceania": {
+    "lit": 141,
+    "atLeast0.5": 33
+   },
+   "World": {
+    "lit": 2380,
+    "atLeast0.5": 284
+   }
+  },
+  "Mo": {
+   "North America": {
+    "lit": 2839,
+    "atLeast0.5": 218
+   },
+   "South America": {
+    "lit": 1134,
+    "atLeast0.5": 59
+   },
+   "Europe": {
+    "lit": 694,
+    "atLeast0.5": 30
+   },
+   "Africa": {
+    "lit": 287,
+    "atLeast0.5": 24
+   },
+   "Asia": {
+    "lit": 3162,
+    "atLeast0.5": 174
+   },
+   "Oceania": {
+    "lit": 298,
+    "atLeast0.5": 45
+   },
+   "World": {
+    "lit": 8424,
+    "atLeast0.5": 550
+   }
+  },
+  "Sb": {
+   "North America": {
+    "lit": 1417,
+    "atLeast0.5": 191
+   },
+   "South America": {
+    "lit": 321,
+    "atLeast0.5": 32
+   },
+   "Europe": {
+    "lit": 307,
+    "atLeast0.5": 98
+   },
+   "Africa": {
+    "lit": 66,
+    "atLeast0.5": 20
+   },
+   "Asia": {
+    "lit": 1238,
+    "atLeast0.5": 483
+   },
+   "Oceania": {
+    "lit": 162,
+    "atLeast0.5": 38
+   },
+   "World": {
+    "lit": 3511,
+    "atLeast0.5": 862
+   }
+  },
+  "B": {
+   "North America": {
+    "lit": 131,
+    "atLeast0.5": 16
+   },
+   "South America": {
+    "lit": 114,
+    "atLeast0.5": 28
+   },
+   "Europe": {
+    "lit": 48,
+    "atLeast0.5": 11
+   },
+   "Africa": {
+    "lit": 5,
+    "atLeast0.5": 1
+   },
+   "Asia": {
+    "lit": 266,
+    "atLeast0.5": 50
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 564,
+    "atLeast0.5": 106
+   }
+  },
+  "P": {
+   "North America": {
+    "lit": 734,
+    "atLeast0.5": 175
+   },
+   "South America": {
+    "lit": 361,
+    "atLeast0.5": 108
+   },
+   "Europe": {
+    "lit": 759,
+    "atLeast0.5": 227
+   },
+   "Africa": {
+    "lit": 613,
+    "atLeast0.5": 217
+   },
+   "Asia": {
+    "lit": 1248,
+    "atLeast0.5": 405
+   },
+   "Oceania": {
+    "lit": 268,
+    "atLeast0.5": 85
+   },
+   "World": {
+    "lit": 3983,
+    "atLeast0.5": 1217
+   }
+  },
+  "N": {
+   "North America": {
+    "lit": 47,
+    "atLeast0.5": 3
+   },
+   "South America": {
+    "lit": 27,
+    "atLeast0.5": 11
+   },
+   "Europe": {
+    "lit": 3,
+    "atLeast0.5": 1
+   },
+   "Africa": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Asia": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 77,
+    "atLeast0.5": 15
+   }
+  },
+  "K": {
+   "North America": {
+    "lit": 1221,
+    "atLeast0.5": 166
+   },
+   "South America": {
+    "lit": 290,
+    "atLeast0.5": 59
+   },
+   "Europe": {
+    "lit": 734,
+    "atLeast0.5": 253
+   },
+   "Africa": {
+    "lit": 572,
+    "atLeast0.5": 62
+   },
+   "Asia": {
+    "lit": 2601,
+    "atLeast0.5": 254
+   },
+   "Oceania": {
+    "lit": 363,
+    "atLeast0.5": 23
+   },
+   "World": {
+    "lit": 5781,
+    "atLeast0.5": 817
+   }
+  },
+  "NaCl": {
+   "North America": {
+    "lit": 1399,
+    "atLeast0.5": 226
+   },
+   "South America": {
+    "lit": 380,
+    "atLeast0.5": 80
+   },
+   "Europe": {
+    "lit": 871,
+    "atLeast0.5": 329
+   },
+   "Africa": {
+    "lit": 640,
+    "atLeast0.5": 92
+   },
+   "Asia": {
+    "lit": 2811,
+    "atLeast0.5": 336
+   },
+   "Oceania": {
+    "lit": 374,
+    "atLeast0.5": 25
+   },
+   "World": {
+    "lit": 6475,
+    "atLeast0.5": 1088
+   }
+  },
+  "S": {
+   "North America": {
+    "lit": 651,
+    "atLeast0.5": 69
+   },
+   "South America": {
+    "lit": 166,
+    "atLeast0.5": 28
+   },
+   "Europe": {
+    "lit": 292,
+    "atLeast0.5": 54
+   },
+   "Africa": {
+    "lit": 181,
+    "atLeast0.5": 44
+   },
+   "Asia": {
+    "lit": 458,
+    "atLeast0.5": 89
+   },
+   "Oceania": {
+    "lit": 23,
+    "atLeast0.5": 7
+   },
+   "World": {
+    "lit": 1771,
+    "atLeast0.5": 291
+   }
+  },
+  "C_graphite": {
+   "North America": {
+    "lit": 2302,
+    "atLeast0.5": 74
+   },
+   "South America": {
+    "lit": 835,
+    "atLeast0.5": 18
+   },
+   "Europe": {
+    "lit": 819,
+    "atLeast0.5": 38
+   },
+   "Africa": {
+    "lit": 3010,
+    "atLeast0.5": 27
+   },
+   "Asia": {
+    "lit": 1542,
+    "atLeast0.5": 72
+   },
+   "Oceania": {
+    "lit": 152,
+    "atLeast0.5": 20
+   },
+   "World": {
+    "lit": 8673,
+    "atLeast0.5": 249
+   }
+  },
+  "C_coal": {
+   "North America": {
+    "lit": 2664,
+    "atLeast0.5": 1194
+   },
+   "South America": {
+    "lit": 559,
+    "atLeast0.5": 215
+   },
+   "Europe": {
+    "lit": 726,
+    "atLeast0.5": 236
+   },
+   "Africa": {
+    "lit": 94,
+    "atLeast0.5": 40
+   },
+   "Asia": {
+    "lit": 2933,
+    "atLeast0.5": 583
+   },
+   "Oceania": {
+    "lit": 1046,
+    "atLeast0.5": 207
+   },
+   "World": {
+    "lit": 8022,
+    "atLeast0.5": 2475
+   }
+  },
+  "F": {
+   "North America": {
+    "lit": 2813,
+    "atLeast0.5": 99
+   },
+   "South America": {
+    "lit": 789,
+    "atLeast0.5": 27
+   },
+   "Europe": {
+    "lit": 1371,
+    "atLeast0.5": 63
+   },
+   "Africa": {
+    "lit": 1069,
+    "atLeast0.5": 74
+   },
+   "Asia": {
+    "lit": 3768,
+    "atLeast0.5": 114
+   },
+   "Oceania": {
+    "lit": 312,
+    "atLeast0.5": 10
+   },
+   "World": {
+    "lit": 10132,
+    "atLeast0.5": 387
+   }
+  },
+  "SiO2": {
+   "North America": {
+    "lit": 1329,
+    "atLeast0.5": 82
+   },
+   "South America": {
+    "lit": 361,
+    "atLeast0.5": 63
+   },
+   "Europe": {
+    "lit": 237,
+    "atLeast0.5": 61
+   },
+   "Africa": {
+    "lit": 201,
+    "atLeast0.5": 40
+   },
+   "Asia": {
+    "lit": 303,
+    "atLeast0.5": 55
+   },
+   "Oceania": {
+    "lit": 70,
+    "atLeast0.5": 13
+   },
+   "World": {
+    "lit": 2501,
+    "atLeast0.5": 314
+   }
+  },
+  "Al": {
+   "North America": {
+    "lit": 715,
+    "atLeast0.5": 40
+   },
+   "South America": {
+    "lit": 2100,
+    "atLeast0.5": 55
+   },
+   "Europe": {
+    "lit": 419,
+    "atLeast0.5": 85
+   },
+   "Africa": {
+    "lit": 1185,
+    "atLeast0.5": 62
+   },
+   "Asia": {
+    "lit": 2106,
+    "atLeast0.5": 170
+   },
+   "Oceania": {
+    "lit": 277,
+    "atLeast0.5": 33
+   },
+   "World": {
+    "lit": 6802,
+    "atLeast0.5": 445
+   }
+  },
+  "gypsum": {
+   "North America": {
+    "lit": 1608,
+    "atLeast0.5": 92
+   },
+   "South America": {
+    "lit": 371,
+    "atLeast0.5": 31
+   },
+   "Europe": {
+    "lit": 828,
+    "atLeast0.5": 127
+   },
+   "Africa": {
+    "lit": 532,
+    "atLeast0.5": 29
+   },
+   "Asia": {
+    "lit": 2615,
+    "atLeast0.5": 61
+   },
+   "Oceania": {
+    "lit": 316,
+    "atLeast0.5": 1
+   },
+   "World": {
+    "lit": 6270,
+    "atLeast0.5": 341
+   }
+  },
+  "diamond": {
+   "North America": {
+    "lit": 79,
+    "atLeast0.5": 16
+   },
+   "South America": {
+    "lit": 518,
+    "atLeast0.5": 144
+   },
+   "Europe": {
+    "lit": 34,
+    "atLeast0.5": 9
+   },
+   "Africa": {
+    "lit": 356,
+    "atLeast0.5": 144
+   },
+   "Asia": {
+    "lit": 117,
+    "atLeast0.5": 44
+   },
+   "Oceania": {
+    "lit": 44,
+    "atLeast0.5": 13
+   },
+   "World": {
+    "lit": 1148,
+    "atLeast0.5": 370
+   }
+  },
+  "corundum": {
+   "North America": {
+    "lit": 141,
+    "atLeast0.5": 9
+   },
+   "South America": {
+    "lit": 15,
+    "atLeast0.5": 1
+   },
+   "Europe": {
+    "lit": 10,
+    "atLeast0.5": 0
+   },
+   "Africa": {
+    "lit": 41,
+    "atLeast0.5": 12
+   },
+   "Asia": {
+    "lit": 62,
+    "atLeast0.5": 18
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 269,
+    "atLeast0.5": 40
+   }
+  },
+  "emerald": {
+   "North America": {
+    "lit": 7,
+    "atLeast0.5": 0
+   },
+   "South America": {
+    "lit": 37,
+    "atLeast0.5": 8
+   },
+   "Europe": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Africa": {
+    "lit": 30,
+    "atLeast0.5": 7
+   },
+   "Asia": {
+    "lit": 21,
+    "atLeast0.5": 5
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 95,
+    "atLeast0.5": 20
+   }
+  },
+  "olivine": {
+   "North America": {
+    "lit": 37,
+    "atLeast0.5": 9
+   },
+   "South America": {
+    "lit": 4,
+    "atLeast0.5": 0
+   },
+   "Europe": {
+    "lit": 17,
+    "atLeast0.5": 6
+   },
+   "Africa": {
+    "lit": 12,
+    "atLeast0.5": 2
+   },
+   "Asia": {
+    "lit": 2,
+    "atLeast0.5": 0
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 72,
+    "atLeast0.5": 17
+   }
+  },
+  "garnet": {
+   "North America": {
+    "lit": 337,
+    "atLeast0.5": 22
+   },
+   "South America": {
+    "lit": 35,
+    "atLeast0.5": 3
+   },
+   "Europe": {
+    "lit": 12,
+    "atLeast0.5": 0
+   },
+   "Africa": {
+    "lit": 23,
+    "atLeast0.5": 6
+   },
+   "Asia": {
+    "lit": 50,
+    "atLeast0.5": 6
+   },
+   "Oceania": {
+    "lit": 13,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 470,
+    "atLeast0.5": 37
+   }
+  },
+  "lapis": {
+   "North America": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "South America": {
+    "lit": 1,
+    "atLeast0.5": 0
+   },
+   "Europe": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Africa": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Asia": {
+    "lit": 11,
+    "atLeast0.5": 4
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 12,
+    "atLeast0.5": 4
+   }
+  },
+  "alum": {
+   "North America": {
+    "lit": 72,
+    "atLeast0.5": 0
+   },
+   "South America": {
+    "lit": 10,
+    "atLeast0.5": 0
+   },
+   "Europe": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Africa": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Asia": {
+    "lit": 19,
+    "atLeast0.5": 6
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 101,
+    "atLeast0.5": 6
+   }
+  },
+  "topaz": {
+   "North America": {
+    "lit": 26,
+    "atLeast0.5": 0
+   },
+   "South America": {
+    "lit": 17,
+    "atLeast0.5": 3
+   },
+   "Europe": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Africa": {
+    "lit": 6,
+    "atLeast0.5": 4
+   },
+   "Asia": {
+    "lit": 14,
+    "atLeast0.5": 2
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 63,
+    "atLeast0.5": 9
+   }
+  },
+  "tourmaline": {
+   "North America": {
+    "lit": 53,
+    "atLeast0.5": 0
+   },
+   "South America": {
+    "lit": 21,
+    "atLeast0.5": 0
+   },
+   "Europe": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Africa": {
+    "lit": 12,
+    "atLeast0.5": 5
+   },
+   "Asia": {
+    "lit": 29,
+    "atLeast0.5": 4
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 115,
+    "atLeast0.5": 9
+   }
+  },
+  "beryl": {
+   "North America": {
+    "lit": 135,
+    "atLeast0.5": 0
+   },
+   "South America": {
+    "lit": 110,
+    "atLeast0.5": 2
+   },
+   "Europe": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Africa": {
+    "lit": 32,
+    "atLeast0.5": 10
+   },
+   "Asia": {
+    "lit": 31,
+    "atLeast0.5": 5
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 308,
+    "atLeast0.5": 17
+   }
+  },
+  "spinel": {
+   "North America": {
+    "lit": 16,
+    "atLeast0.5": 0
+   },
+   "South America": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Europe": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Africa": {
+    "lit": 3,
+    "atLeast0.5": 0
+   },
+   "Asia": {
+    "lit": 13,
+    "atLeast0.5": 2
+   },
+   "Oceania": {
+    "lit": 2,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 34,
+    "atLeast0.5": 2
+   }
+  },
+  "Cu": {
+   "North America": {
+    "lit": 5346,
+    "atLeast0.5": 1248
+   },
+   "South America": {
+    "lit": 1726,
+    "atLeast0.5": 351
+   },
+   "Europe": {
+    "lit": 1848,
+    "atLeast0.5": 540
+   },
+   "Africa": {
+    "lit": 1293,
+    "atLeast0.5": 318
+   },
+   "Asia": {
+    "lit": 10883,
+    "atLeast0.5": 1464
+   },
+   "Oceania": {
+    "lit": 1060,
+    "atLeast0.5": 355
+   },
+   "World": {
+    "lit": 22156,
+    "atLeast0.5": 4276
+   }
+  },
+  "Sn": {
+   "North America": {
+    "lit": 3262,
+    "atLeast0.5": 101
+   },
+   "South America": {
+    "lit": 1705,
+    "atLeast0.5": 136
+   },
+   "Europe": {
+    "lit": 1210,
+    "atLeast0.5": 23
+   },
+   "Africa": {
+    "lit": 606,
+    "atLeast0.5": 81
+   },
+   "Asia": {
+    "lit": 4957,
+    "atLeast0.5": 203
+   },
+   "Oceania": {
+    "lit": 376,
+    "atLeast0.5": 47
+   },
+   "World": {
+    "lit": 12132,
+    "atLeast0.5": 591
+   }
+  },
+  "peat": {
+   "North America": {
+    "lit": 4023,
+    "atLeast0.5": 593
+   },
+   "South America": {
+    "lit": 1586,
+    "atLeast0.5": 27
+   },
+   "Europe": {
+    "lit": 3216,
+    "atLeast0.5": 309
+   },
+   "Africa": {
+    "lit": 443,
+    "atLeast0.5": 74
+   },
+   "Asia": {
+    "lit": 4272,
+    "atLeast0.5": 945
+   },
+   "Oceania": {
+    "lit": 237,
+    "atLeast0.5": 21
+   },
+   "World": {
+    "lit": 13777,
+    "atLeast0.5": 1969
+   }
+  },
+  "clay": {
+   "North America": {
+    "lit": 1353,
+    "atLeast0.5": 30
+   },
+   "South America": {
+    "lit": 605,
+    "atLeast0.5": 14
+   },
+   "Europe": {
+    "lit": 1011,
+    "atLeast0.5": 74
+   },
+   "Africa": {
+    "lit": 250,
+    "atLeast0.5": 42
+   },
+   "Asia": {
+    "lit": 2234,
+    "atLeast0.5": 59
+   },
+   "Oceania": {
+    "lit": 103,
+    "atLeast0.5": 17
+   },
+   "World": {
+    "lit": 5556,
+    "atLeast0.5": 236
+   }
+  }
+ },
+ "v3": {
+  "Fe": {
+   "North America": {
+    "lit": 3003,
+    "atLeast0.5": 472
+   },
+   "South America": {
+    "lit": 861,
+    "atLeast0.5": 137
+   },
+   "Europe": {
+    "lit": 1355,
+    "atLeast0.5": 338
+   },
+   "Africa": {
+    "lit": 780,
+    "atLeast0.5": 220
+   },
+   "Asia": {
+    "lit": 2739,
+    "atLeast0.5": 710
+   },
+   "Oceania": {
+    "lit": 545,
+    "atLeast0.5": 180
+   },
+   "World": {
+    "lit": 9283,
+    "atLeast0.5": 2057
+   }
+  },
+  "Au": {
+   "North America": {
+    "lit": 5743,
+    "atLeast0.5": 1102
+   },
+   "South America": {
+    "lit": 2299,
+    "atLeast0.5": 377
+   },
+   "Europe": {
+    "lit": 1402,
+    "atLeast0.5": 217
+   },
+   "Africa": {
+    "lit": 3368,
+    "atLeast0.5": 336
+   },
+   "Asia": {
+    "lit": 5516,
+    "atLeast0.5": 1032
+   },
+   "Oceania": {
+    "lit": 1052,
+    "atLeast0.5": 454
+   },
+   "World": {
+    "lit": 19393,
+    "atLeast0.5": 3518
+   }
+  },
+  "Ag": {
+   "North America": {
+    "lit": 4036,
+    "atLeast0.5": 910
+   },
+   "South America": {
+    "lit": 1073,
+    "atLeast0.5": 214
+   },
+   "Europe": {
+    "lit": 862,
+    "atLeast0.5": 218
+   },
+   "Africa": {
+    "lit": 548,
+    "atLeast0.5": 182
+   },
+   "Asia": {
+    "lit": 2695,
+    "atLeast0.5": 406
+   },
+   "Oceania": {
+    "lit": 690,
+    "atLeast0.5": 231
+   },
+   "World": {
+    "lit": 9904,
+    "atLeast0.5": 2161
+   }
+  },
+  "Pb": {
+   "North America": {
+    "lit": 4014,
+    "atLeast0.5": 673
+   },
+   "South America": {
+    "lit": 1041,
+    "atLeast0.5": 173
+   },
+   "Europe": {
+    "lit": 1557,
+    "atLeast0.5": 327
+   },
+   "Africa": {
+    "lit": 1087,
+    "atLeast0.5": 145
+   },
+   "Asia": {
+    "lit": 4217,
+    "atLeast0.5": 577
+   },
+   "Oceania": {
+    "lit": 642,
+    "atLeast0.5": 160
+   },
+   "World": {
+    "lit": 12558,
+    "atLeast0.5": 2055
+   }
+  },
+  "Zn": {
+   "North America": {
+    "lit": 4152,
+    "atLeast0.5": 751
+   },
+   "South America": {
+    "lit": 978,
+    "atLeast0.5": 175
+   },
+   "Europe": {
+    "lit": 1625,
+    "atLeast0.5": 354
+   },
+   "Africa": {
+    "lit": 1123,
+    "atLeast0.5": 162
+   },
+   "Asia": {
+    "lit": 4237,
+    "atLeast0.5": 575
+   },
+   "Oceania": {
+    "lit": 667,
+    "atLeast0.5": 179
+   },
+   "World": {
+    "lit": 12782,
+    "atLeast0.5": 2196
+   }
+  },
+  "Bi": {
+   "North America": {
+    "lit": 685,
+    "atLeast0.5": 58
+   },
+   "South America": {
+    "lit": 108,
+    "atLeast0.5": 19
+   },
+   "Europe": {
+    "lit": 107,
+    "atLeast0.5": 24
+   },
+   "Africa": {
+    "lit": 29,
+    "atLeast0.5": 5
+   },
+   "Asia": {
+    "lit": 390,
+    "atLeast0.5": 65
+   },
+   "Oceania": {
+    "lit": 72,
+    "atLeast0.5": 15
+   },
+   "World": {
+    "lit": 1391,
+    "atLeast0.5": 186
+   }
+  },
+  "Ni": {
+   "North America": {
+    "lit": 2191,
+    "atLeast0.5": 586
+   },
+   "South America": {
+    "lit": 363,
+    "atLeast0.5": 76
+   },
+   "Europe": {
+    "lit": 825,
+    "atLeast0.5": 192
+   },
+   "Africa": {
+    "lit": 477,
+    "atLeast0.5": 136
+   },
+   "Asia": {
+    "lit": 1534,
+    "atLeast0.5": 181
+   },
+   "Oceania": {
+    "lit": 558,
+    "atLeast0.5": 219
+   },
+   "World": {
+    "lit": 5948,
+    "atLeast0.5": 1390
+   }
+  },
+  "Cr": {
+   "North America": {
+    "lit": 1130,
+    "atLeast0.5": 297
+   },
+   "South America": {
+    "lit": 253,
+    "atLeast0.5": 50
+   },
+   "Europe": {
+    "lit": 417,
+    "atLeast0.5": 77
+   },
+   "Africa": {
+    "lit": 386,
+    "atLeast0.5": 113
+   },
+   "Asia": {
+    "lit": 1281,
+    "atLeast0.5": 216
+   },
+   "Oceania": {
+    "lit": 306,
+    "atLeast0.5": 82
+   },
+   "World": {
+    "lit": 3773,
+    "atLeast0.5": 835
+   }
+  },
+  "Ti": {
+   "North America": {
+    "lit": 1159,
+    "atLeast0.5": 129
+   },
+   "South America": {
+    "lit": 266,
+    "atLeast0.5": 35
+   },
+   "Europe": {
+    "lit": 629,
+    "atLeast0.5": 80
+   },
+   "Africa": {
+    "lit": 252,
+    "atLeast0.5": 66
+   },
+   "Asia": {
+    "lit": 844,
+    "atLeast0.5": 92
+   },
+   "Oceania": {
+    "lit": 311,
+    "atLeast0.5": 103
+   },
+   "World": {
+    "lit": 3461,
+    "atLeast0.5": 505
+   }
+  },
+  "Mn": {
+   "North America": {
+    "lit": 1257,
+    "atLeast0.5": 79
+   },
+   "South America": {
+    "lit": 410,
+    "atLeast0.5": 52
+   },
+   "Europe": {
+    "lit": 329,
+    "atLeast0.5": 53
+   },
+   "Africa": {
+    "lit": 388,
+    "atLeast0.5": 75
+   },
+   "Asia": {
+    "lit": 1109,
+    "atLeast0.5": 157
+   },
+   "Oceania": {
+    "lit": 142,
+    "atLeast0.5": 46
+   },
+   "World": {
+    "lit": 3635,
+    "atLeast0.5": 462
+   }
+  },
+  "Hg": {
+   "North America": {
+    "lit": 811,
+    "atLeast0.5": 97
+   },
+   "South America": {
+    "lit": 60,
+    "atLeast0.5": 3
+   },
+   "Europe": {
+    "lit": 76,
+    "atLeast0.5": 12
+   },
+   "Africa": {
+    "lit": 32,
+    "atLeast0.5": 9
+   },
+   "Asia": {
+    "lit": 540,
+    "atLeast0.5": 89
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 1519,
+    "atLeast0.5": 210
+   }
+  },
+  "W": {
+   "North America": {
+    "lit": 3702,
+    "atLeast0.5": 93
+   },
+   "South America": {
+    "lit": 1621,
+    "atLeast0.5": 51
+   },
+   "Europe": {
+    "lit": 1254,
+    "atLeast0.5": 45
+   },
+   "Africa": {
+    "lit": 586,
+    "atLeast0.5": 52
+   },
+   "Asia": {
+    "lit": 4993,
+    "atLeast0.5": 223
+   },
+   "Oceania": {
+    "lit": 370,
+    "atLeast0.5": 36
+   },
+   "World": {
+    "lit": 12542,
+    "atLeast0.5": 500
+   }
+  },
+  "U": {
+   "North America": {
+    "lit": 2416,
+    "atLeast0.5": 110
+   },
+   "South America": {
+    "lit": 736,
+    "atLeast0.5": 16
+   },
+   "Europe": {
+    "lit": 531,
+    "atLeast0.5": 23
+   },
+   "Africa": {
+    "lit": 269,
+    "atLeast0.5": 56
+   },
+   "Asia": {
+    "lit": 1666,
+    "atLeast0.5": 57
+   },
+   "Oceania": {
+    "lit": 332,
+    "atLeast0.5": 81
+   },
+   "World": {
+    "lit": 5960,
+    "atLeast0.5": 343
+   }
+  },
+  "Pt": {
+   "North America": {
+    "lit": 1957,
+    "atLeast0.5": 453
+   },
+   "South America": {
+    "lit": 294,
+    "atLeast0.5": 63
+   },
+   "Europe": {
+    "lit": 704,
+    "atLeast0.5": 139
+   },
+   "Africa": {
+    "lit": 429,
+    "atLeast0.5": 129
+   },
+   "Asia": {
+    "lit": 2200,
+    "atLeast0.5": 349
+   },
+   "Oceania": {
+    "lit": 449,
+    "atLeast0.5": 128
+   },
+   "World": {
+    "lit": 6033,
+    "atLeast0.5": 1261
+   }
+  },
+  "V": {
+   "North America": {
+    "lit": 854,
+    "atLeast0.5": 91
+   },
+   "South America": {
+    "lit": 103,
+    "atLeast0.5": 12
+   },
+   "Europe": {
+    "lit": 538,
+    "atLeast0.5": 64
+   },
+   "Africa": {
+    "lit": 214,
+    "atLeast0.5": 48
+   },
+   "Asia": {
+    "lit": 530,
+    "atLeast0.5": 37
+   },
+   "Oceania": {
+    "lit": 141,
+    "atLeast0.5": 33
+   },
+   "World": {
+    "lit": 2380,
+    "atLeast0.5": 285
+   }
+  },
+  "Mo": {
+   "North America": {
+    "lit": 2839,
+    "atLeast0.5": 218
+   },
+   "South America": {
+    "lit": 1134,
+    "atLeast0.5": 62
+   },
+   "Europe": {
+    "lit": 694,
+    "atLeast0.5": 30
+   },
+   "Africa": {
+    "lit": 287,
+    "atLeast0.5": 24
+   },
+   "Asia": {
+    "lit": 3163,
+    "atLeast0.5": 176
+   },
+   "Oceania": {
+    "lit": 298,
+    "atLeast0.5": 45
+   },
+   "World": {
+    "lit": 8425,
+    "atLeast0.5": 555
+   }
+  },
+  "Sb": {
+   "North America": {
+    "lit": 1417,
+    "atLeast0.5": 191
+   },
+   "South America": {
+    "lit": 321,
+    "atLeast0.5": 32
+   },
+   "Europe": {
+    "lit": 307,
+    "atLeast0.5": 98
+   },
+   "Africa": {
+    "lit": 66,
+    "atLeast0.5": 20
+   },
+   "Asia": {
+    "lit": 1238,
+    "atLeast0.5": 485
+   },
+   "Oceania": {
+    "lit": 162,
+    "atLeast0.5": 38
+   },
+   "World": {
+    "lit": 3511,
+    "atLeast0.5": 864
+   }
+  },
+  "B": {
+   "North America": {
+    "lit": 131,
+    "atLeast0.5": 16
+   },
+   "South America": {
+    "lit": 114,
+    "atLeast0.5": 33
+   },
+   "Europe": {
+    "lit": 50,
+    "atLeast0.5": 12
+   },
+   "Africa": {
+    "lit": 5,
+    "atLeast0.5": 1
+   },
+   "Asia": {
+    "lit": 268,
+    "atLeast0.5": 53
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 568,
+    "atLeast0.5": 115
+   }
+  },
+  "P": {
+   "North America": {
+    "lit": 734,
+    "atLeast0.5": 175
+   },
+   "South America": {
+    "lit": 361,
+    "atLeast0.5": 108
+   },
+   "Europe": {
+    "lit": 759,
+    "atLeast0.5": 227
+   },
+   "Africa": {
+    "lit": 613,
+    "atLeast0.5": 217
+   },
+   "Asia": {
+    "lit": 1250,
+    "atLeast0.5": 406
+   },
+   "Oceania": {
+    "lit": 268,
+    "atLeast0.5": 85
+   },
+   "World": {
+    "lit": 3985,
+    "atLeast0.5": 1218
+   }
+  },
+  "N": {
+   "North America": {
+    "lit": 47,
+    "atLeast0.5": 3
+   },
+   "South America": {
+    "lit": 27,
+    "atLeast0.5": 11
+   },
+   "Europe": {
+    "lit": 3,
+    "atLeast0.5": 1
+   },
+   "Africa": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Asia": {
+    "lit": 5,
+    "atLeast0.5": 0
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 82,
+    "atLeast0.5": 15
+   }
+  },
+  "K": {
+   "North America": {
+    "lit": 1221,
+    "atLeast0.5": 166
+   },
+   "South America": {
+    "lit": 290,
+    "atLeast0.5": 59
+   },
+   "Europe": {
+    "lit": 734,
+    "atLeast0.5": 253
+   },
+   "Africa": {
+    "lit": 572,
+    "atLeast0.5": 62
+   },
+   "Asia": {
+    "lit": 2601,
+    "atLeast0.5": 256
+   },
+   "Oceania": {
+    "lit": 363,
+    "atLeast0.5": 23
+   },
+   "World": {
+    "lit": 5781,
+    "atLeast0.5": 819
+   }
+  },
+  "NaCl": {
+   "North America": {
+    "lit": 1399,
+    "atLeast0.5": 226
+   },
+   "South America": {
+    "lit": 381,
+    "atLeast0.5": 81
+   },
+   "Europe": {
+    "lit": 871,
+    "atLeast0.5": 334
+   },
+   "Africa": {
+    "lit": 640,
+    "atLeast0.5": 92
+   },
+   "Asia": {
+    "lit": 2817,
+    "atLeast0.5": 341
+   },
+   "Oceania": {
+    "lit": 374,
+    "atLeast0.5": 25
+   },
+   "World": {
+    "lit": 6482,
+    "atLeast0.5": 1099
+   }
+  },
+  "S": {
+   "North America": {
+    "lit": 651,
+    "atLeast0.5": 69
+   },
+   "South America": {
+    "lit": 166,
+    "atLeast0.5": 28
+   },
+   "Europe": {
+    "lit": 296,
+    "atLeast0.5": 57
+   },
+   "Africa": {
+    "lit": 183,
+    "atLeast0.5": 46
+   },
+   "Asia": {
+    "lit": 459,
+    "atLeast0.5": 92
+   },
+   "Oceania": {
+    "lit": 23,
+    "atLeast0.5": 7
+   },
+   "World": {
+    "lit": 1778,
+    "atLeast0.5": 299
+   }
+  },
+  "C_graphite": {
+   "North America": {
+    "lit": 2303,
+    "atLeast0.5": 74
+   },
+   "South America": {
+    "lit": 835,
+    "atLeast0.5": 18
+   },
+   "Europe": {
+    "lit": 819,
+    "atLeast0.5": 38
+   },
+   "Africa": {
+    "lit": 3010,
+    "atLeast0.5": 29
+   },
+   "Asia": {
+    "lit": 1543,
+    "atLeast0.5": 73
+   },
+   "Oceania": {
+    "lit": 152,
+    "atLeast0.5": 20
+   },
+   "World": {
+    "lit": 8675,
+    "atLeast0.5": 252
+   }
+  },
+  "C_coal": {
+   "North America": {
+    "lit": 2664,
+    "atLeast0.5": 1194
+   },
+   "South America": {
+    "lit": 560,
+    "atLeast0.5": 218
+   },
+   "Europe": {
+    "lit": 773,
+    "atLeast0.5": 254
+   },
+   "Africa": {
+    "lit": 114,
+    "atLeast0.5": 49
+   },
+   "Asia": {
+    "lit": 2998,
+    "atLeast0.5": 636
+   },
+   "Oceania": {
+    "lit": 1046,
+    "atLeast0.5": 207
+   },
+   "World": {
+    "lit": 8155,
+    "atLeast0.5": 2558
+   }
+  },
+  "F": {
+   "North America": {
+    "lit": 2816,
+    "atLeast0.5": 101
+   },
+   "South America": {
+    "lit": 789,
+    "atLeast0.5": 27
+   },
+   "Europe": {
+    "lit": 1371,
+    "atLeast0.5": 64
+   },
+   "Africa": {
+    "lit": 1069,
+    "atLeast0.5": 74
+   },
+   "Asia": {
+    "lit": 3768,
+    "atLeast0.5": 115
+   },
+   "Oceania": {
+    "lit": 312,
+    "atLeast0.5": 10
+   },
+   "World": {
+    "lit": 10135,
+    "atLeast0.5": 391
+   }
+  },
+  "SiO2": {
+   "North America": {
+    "lit": 1329,
+    "atLeast0.5": 82
+   },
+   "South America": {
+    "lit": 361,
+    "atLeast0.5": 64
+   },
+   "Europe": {
+    "lit": 237,
+    "atLeast0.5": 61
+   },
+   "Africa": {
+    "lit": 201,
+    "atLeast0.5": 40
+   },
+   "Asia": {
+    "lit": 303,
+    "atLeast0.5": 55
+   },
+   "Oceania": {
+    "lit": 70,
+    "atLeast0.5": 13
+   },
+   "World": {
+    "lit": 2501,
+    "atLeast0.5": 315
+   }
+  },
+  "Al": {
+   "North America": {
+    "lit": 715,
+    "atLeast0.5": 40
+   },
+   "South America": {
+    "lit": 2100,
+    "atLeast0.5": 56
+   },
+   "Europe": {
+    "lit": 422,
+    "atLeast0.5": 85
+   },
+   "Africa": {
+    "lit": 1185,
+    "atLeast0.5": 63
+   },
+   "Asia": {
+    "lit": 2111,
+    "atLeast0.5": 180
+   },
+   "Oceania": {
+    "lit": 277,
+    "atLeast0.5": 33
+   },
+   "World": {
+    "lit": 6810,
+    "atLeast0.5": 457
+   }
+  },
+  "gypsum": {
+   "North America": {
+    "lit": 1608,
+    "atLeast0.5": 93
+   },
+   "South America": {
+    "lit": 371,
+    "atLeast0.5": 31
+   },
+   "Europe": {
+    "lit": 828,
+    "atLeast0.5": 127
+   },
+   "Africa": {
+    "lit": 532,
+    "atLeast0.5": 30
+   },
+   "Asia": {
+    "lit": 2615,
+    "atLeast0.5": 62
+   },
+   "Oceania": {
+    "lit": 316,
+    "atLeast0.5": 1
+   },
+   "World": {
+    "lit": 6270,
+    "atLeast0.5": 344
+   }
+  },
+  "diamond": {
+   "North America": {
+    "lit": 79,
+    "atLeast0.5": 16
+   },
+   "South America": {
+    "lit": 525,
+    "atLeast0.5": 147
+   },
+   "Europe": {
+    "lit": 36,
+    "atLeast0.5": 10
+   },
+   "Africa": {
+    "lit": 364,
+    "atLeast0.5": 147
+   },
+   "Asia": {
+    "lit": 127,
+    "atLeast0.5": 47
+   },
+   "Oceania": {
+    "lit": 44,
+    "atLeast0.5": 13
+   },
+   "World": {
+    "lit": 1175,
+    "atLeast0.5": 380
+   }
+  },
+  "corundum": {
+   "North America": {
+    "lit": 141,
+    "atLeast0.5": 9
+   },
+   "South America": {
+    "lit": 15,
+    "atLeast0.5": 1
+   },
+   "Europe": {
+    "lit": 12,
+    "atLeast0.5": 0
+   },
+   "Africa": {
+    "lit": 51,
+    "atLeast0.5": 17
+   },
+   "Asia": {
+    "lit": 82,
+    "atLeast0.5": 27
+   },
+   "Oceania": {
+    "lit": 4,
+    "atLeast0.5": 2
+   },
+   "World": {
+    "lit": 305,
+    "atLeast0.5": 56
+   }
+  },
+  "emerald": {
+   "North America": {
+    "lit": 7,
+    "atLeast0.5": 0
+   },
+   "South America": {
+    "lit": 40,
+    "atLeast0.5": 10
+   },
+   "Europe": {
+    "lit": 2,
+    "atLeast0.5": 1
+   },
+   "Africa": {
+    "lit": 34,
+    "atLeast0.5": 9
+   },
+   "Asia": {
+    "lit": 27,
+    "atLeast0.5": 7
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 110,
+    "atLeast0.5": 27
+   }
+  },
+  "olivine": {
+   "North America": {
+    "lit": 37,
+    "atLeast0.5": 9
+   },
+   "South America": {
+    "lit": 4,
+    "atLeast0.5": 0
+   },
+   "Europe": {
+    "lit": 17,
+    "atLeast0.5": 6
+   },
+   "Africa": {
+    "lit": 12,
+    "atLeast0.5": 2
+   },
+   "Asia": {
+    "lit": 6,
+    "atLeast0.5": 1
+   },
+   "Oceania": {
+    "lit": 2,
+    "atLeast0.5": 1
+   },
+   "World": {
+    "lit": 78,
+    "atLeast0.5": 19
+   }
+  },
+  "garnet": {
+   "North America": {
+    "lit": 337,
+    "atLeast0.5": 22
+   },
+   "South America": {
+    "lit": 35,
+    "atLeast0.5": 3
+   },
+   "Europe": {
+    "lit": 16,
+    "atLeast0.5": 1
+   },
+   "Africa": {
+    "lit": 33,
+    "atLeast0.5": 10
+   },
+   "Asia": {
+    "lit": 57,
+    "atLeast0.5": 9
+   },
+   "Oceania": {
+    "lit": 13,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 491,
+    "atLeast0.5": 45
+   }
+  },
+  "lapis": {
+   "North America": {
+    "lit": 3,
+    "atLeast0.5": 1
+   },
+   "South America": {
+    "lit": 3,
+    "atLeast0.5": 1
+   },
+   "Europe": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Africa": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Asia": {
+    "lit": 14,
+    "atLeast0.5": 5
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 20,
+    "atLeast0.5": 7
+   }
+  },
+  "alum": {
+   "North America": {
+    "lit": 72,
+    "atLeast0.5": 0
+   },
+   "South America": {
+    "lit": 10,
+    "atLeast0.5": 0
+   },
+   "Europe": {
+    "lit": 2,
+    "atLeast0.5": 1
+   },
+   "Africa": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Asia": {
+    "lit": 23,
+    "atLeast0.5": 8
+   },
+   "Oceania": {
+    "lit": 1,
+    "atLeast0.5": 1
+   },
+   "World": {
+    "lit": 108,
+    "atLeast0.5": 10
+   }
+  },
+  "topaz": {
+   "North America": {
+    "lit": 26,
+    "atLeast0.5": 0
+   },
+   "South America": {
+    "lit": 29,
+    "atLeast0.5": 6
+   },
+   "Europe": {
+    "lit": 7,
+    "atLeast0.5": 2
+   },
+   "Africa": {
+    "lit": 20,
+    "atLeast0.5": 6
+   },
+   "Asia": {
+    "lit": 32,
+    "atLeast0.5": 10
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 114,
+    "atLeast0.5": 24
+   }
+  },
+  "tourmaline": {
+   "North America": {
+    "lit": 53,
+    "atLeast0.5": 0
+   },
+   "South America": {
+    "lit": 33,
+    "atLeast0.5": 3
+   },
+   "Europe": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Africa": {
+    "lit": 29,
+    "atLeast0.5": 9
+   },
+   "Asia": {
+    "lit": 41,
+    "atLeast0.5": 10
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 156,
+    "atLeast0.5": 22
+   }
+  },
+  "beryl": {
+   "North America": {
+    "lit": 135,
+    "atLeast0.5": 0
+   },
+   "South America": {
+    "lit": 110,
+    "atLeast0.5": 4
+   },
+   "Europe": {
+    "lit": 6,
+    "atLeast0.5": 2
+   },
+   "Africa": {
+    "lit": 48,
+    "atLeast0.5": 14
+   },
+   "Asia": {
+    "lit": 52,
+    "atLeast0.5": 14
+   },
+   "Oceania": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 351,
+    "atLeast0.5": 34
+   }
+  },
+  "spinel": {
+   "North America": {
+    "lit": 16,
+    "atLeast0.5": 0
+   },
+   "South America": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Europe": {
+    "lit": 0,
+    "atLeast0.5": 0
+   },
+   "Africa": {
+    "lit": 7,
+    "atLeast0.5": 2
+   },
+   "Asia": {
+    "lit": 27,
+    "atLeast0.5": 8
+   },
+   "Oceania": {
+    "lit": 2,
+    "atLeast0.5": 0
+   },
+   "World": {
+    "lit": 52,
+    "atLeast0.5": 10
+   }
+  },
+  "Cu": {
+   "North America": {
+    "lit": 5346,
+    "atLeast0.5": 1248
+   },
+   "South America": {
+    "lit": 1726,
+    "atLeast0.5": 354
+   },
+   "Europe": {
+    "lit": 1849,
+    "atLeast0.5": 542
+   },
+   "Africa": {
+    "lit": 1293,
+    "atLeast0.5": 319
+   },
+   "Asia": {
+    "lit": 10884,
+    "atLeast0.5": 1465
+   },
+   "Oceania": {
+    "lit": 1060,
+    "atLeast0.5": 355
+   },
+   "World": {
+    "lit": 22158,
+    "atLeast0.5": 4283
+   }
+  },
+  "Sn": {
+   "North America": {
+    "lit": 3262,
+    "atLeast0.5": 101
+   },
+   "South America": {
+    "lit": 1705,
+    "atLeast0.5": 136
+   },
+   "Europe": {
+    "lit": 1210,
+    "atLeast0.5": 23
+   },
+   "Africa": {
+    "lit": 610,
+    "atLeast0.5": 84
+   },
+   "Asia": {
+    "lit": 4957,
+    "atLeast0.5": 206
+   },
+   "Oceania": {
+    "lit": 376,
+    "atLeast0.5": 47
+   },
+   "World": {
+    "lit": 12136,
+    "atLeast0.5": 597
+   }
+  },
+  "peat": {
+   "North America": {
+    "lit": 4023,
+    "atLeast0.5": 593
+   },
+   "South America": {
+    "lit": 1586,
+    "atLeast0.5": 27
+   },
+   "Europe": {
+    "lit": 3216,
+    "atLeast0.5": 309
+   },
+   "Africa": {
+    "lit": 443,
+    "atLeast0.5": 74
+   },
+   "Asia": {
+    "lit": 4272,
+    "atLeast0.5": 945
+   },
+   "Oceania": {
+    "lit": 237,
+    "atLeast0.5": 21
+   },
+   "World": {
+    "lit": 13777,
+    "atLeast0.5": 1969
+   }
+  },
+  "clay": {
+   "North America": {
+    "lit": 1353,
+    "atLeast0.5": 30
+   },
+   "South America": {
+    "lit": 605,
+    "atLeast0.5": 14
+   },
+   "Europe": {
+    "lit": 1011,
+    "atLeast0.5": 74
+   },
+   "Africa": {
+    "lit": 250,
+    "atLeast0.5": 42
+   },
+   "Asia": {
+    "lit": 2234,
+    "atLeast0.5": 59
+   },
+   "Oceania": {
+    "lit": 103,
+    "atLeast0.5": 17
+   },
+   "World": {
+    "lit": 5556,
+    "atLeast0.5": 236
+   }
+  }
+ },
+ "metrics": {
+  "v2": {
+   "continents": {
+    "North America": {
+     "cells": 12679,
+     "observedMetalShare": 0.526,
+     "anyMetalHeatShare": 0.719,
+     "meanObservedMetalLayers": 3.01
+    },
+    "South America": {
+     "cells": 6186,
+     "observedMetalShare": 0.483,
+     "anyMetalHeatShare": 0.621,
+     "meanObservedMetalLayers": 1.6
+    },
+    "Europe": {
+     "cells": 5753,
+     "observedMetalShare": 0.484,
+     "anyMetalHeatShare": 0.643,
+     "meanObservedMetalLayers": 1.88
+    },
+    "Africa": {
+     "cells": 10249,
+     "observedMetalShare": 0.23,
+     "anyMetalHeatShare": 0.512,
+     "meanObservedMetalLayers": 0.64
+    },
+    "Asia": {
+     "cells": 21605,
+     "observedMetalShare": 0.46,
+     "anyMetalHeatShare": 0.691,
+     "meanObservedMetalLayers": 1.37
+    },
+    "Oceania": {
+     "cells": 3228,
+     "observedMetalShare": 0.504,
+     "anyMetalHeatShare": 0.573,
+     "meanObservedMetalLayers": 2.09
+    }
+   },
+   "usShareOfLitLandCells": {
+    "Cu": 0.109,
+    "Sn": 0.081,
+    "Fe": 0.202,
+    "Au": 0.109,
+    "Ag": 0.194,
+    "Pb": 0.161,
+    "Zn": 0.153,
+    "Ni": 0.14,
+    "Cr": 0.185,
+    "Mn": 0.288,
+    "W": 0.105,
+    "U": 0.221,
+    "Hg": 0.447,
+    "Mo": 0.147,
+    "Sb": 0.264,
+    "Bi": 0.378,
+    "Ti": 0.23,
+    "Pt": 0.142,
+    "V": 0.231
+   },
+   "usMeanSaturation": 0.0476,
+   "restOfWorldMeanSaturation": 0.0217,
+   "usToRestSaturationRatio": 2.19,
+   "usHeatMassShare": 0.164,
+   "usIceFreeLandShare": 0.074,
+   "iceFreeLandObservedMetalShare": 0.441,
+   "iceFreeLandAnyMetalHeatShare": 0.648,
+   "usMeanObservedMetalLayers": 4.98,
+   "restOfWorldMeanObservedMetalLayers": 1.44
+  },
+  "v3": {
+   "continents": {
+    "North America": {
+     "cells": 12679,
+     "observedMetalShare": 0.527,
+     "anyMetalHeatShare": 0.719,
+     "meanObservedMetalLayers": 3.01
+    },
+    "South America": {
+     "cells": 6186,
+     "observedMetalShare": 0.483,
+     "anyMetalHeatShare": 0.621,
+     "meanObservedMetalLayers": 1.6
+    },
+    "Europe": {
+     "cells": 5753,
+     "observedMetalShare": 0.485,
+     "anyMetalHeatShare": 0.644,
+     "meanObservedMetalLayers": 1.89
+    },
+    "Africa": {
+     "cells": 10249,
+     "observedMetalShare": 0.232,
+     "anyMetalHeatShare": 0.513,
+     "meanObservedMetalLayers": 0.64
+    },
+    "Asia": {
+     "cells": 21605,
+     "observedMetalShare": 0.46,
+     "anyMetalHeatShare": 0.691,
+     "meanObservedMetalLayers": 1.38
+    },
+    "Oceania": {
+     "cells": 3228,
+     "observedMetalShare": 0.504,
+     "anyMetalHeatShare": 0.573,
+     "meanObservedMetalLayers": 2.09
+    }
+   },
+   "usShareOfLitLandCells": {
+    "Cu": 0.109,
+    "Sn": 0.081,
+    "Fe": 0.202,
+    "Au": 0.108,
+    "Ag": 0.194,
+    "Pb": 0.161,
+    "Zn": 0.153,
+    "Ni": 0.14,
+    "Cr": 0.185,
+    "Mn": 0.287,
+    "W": 0.105,
+    "U": 0.219,
+    "Hg": 0.446,
+    "Mo": 0.147,
+    "Sb": 0.264,
+    "Bi": 0.377,
+    "Ti": 0.229,
+    "Pt": 0.142,
+    "V": 0.231
+   },
+   "usMeanSaturation": 0.0476,
+   "restOfWorldMeanSaturation": 0.0218,
+   "usToRestSaturationRatio": 2.18,
+   "usHeatMassShare": 0.163,
+   "usIceFreeLandShare": 0.074,
+   "iceFreeLandObservedMetalShare": 0.442,
+   "iceFreeLandAnyMetalHeatShare": 0.648,
+   "usMeanObservedMetalLayers": 4.98,
+   "restOfWorldMeanObservedMetalLayers": 1.45
+  }
+ }
+}

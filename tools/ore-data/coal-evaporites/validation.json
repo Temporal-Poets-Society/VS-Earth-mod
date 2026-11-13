@@ -1,0 +1,8746 @@
+{
+ "catalogueBytes": 766010,
+ "areas": 216,
+ "deposits": 76,
+ "evidenceFeatures": 1697,
+ "byLayer": {
+  "C_coal": 119,
+  "K": 24,
+  "NaCl": 69,
+  "gypsum": 18,
+  "S": 11,
+  "P": 27,
+  "B": 12,
+  "alum": 12
+ },
+ "mtByLayerCountry": {
+  "C_coal": {
+   "Russia": 5270000.0,
+   "United States of America": 4341000.0,
+   "China": 1688500.0,
+   "Canada": 662000.0,
+   "India": 317000.0,
+   "Australia": 240000.0,
+   "Botswana": 200000.0,
+   "Pakistan": 175000.0,
+   "Ukraine": 142500.0,
+   "Germany": 135100.0,
+   "Indonesia": 130000.0,
+   "Kazakhstan": 122000.0,
+   "South Africa": 118000.0,
+   "United Kingdom": 67000.0,
+   "Poland": 67000.0,
+   "Mongolia": 57500.0,
+   "Brazil": 28000.0,
+   "Czechia": 25000.0,
+   "Mozambique": 25000.0,
+   "Belgium": 12000.0,
+   "Kosovo": 12000.0,
+   "Japan": 12000.0,
+   "Colombia": 11000.0,
+   "France": 10000.0,
+   "Iran": 10000.0,
+   "Vietnam": 10000.0,
+   "Turkey": 6300.0,
+   "North Korea": 6000.0,
+   "Zimbabwe": 5000.0,
+   "Chile": 5000.0,
+   "Greece": 4000.0,
+   "Republic of Serbia": 3000.0,
+   "Mexico": 3000.0,
+   "Norway": 3000.0,
+   "Bulgaria": 2500.0,
+   "Spain": 2000.0,
+   "Nigeria": 2000.0,
+   "Thailand": 1100.0,
+   "New Zealand": 1000.0
+  },
+  "K": {
+   "Canada": 151000.0,
+   "Thailand": 50000.0,
+   "Germany": 20000.0,
+   "Russia": 20000.0,
+   "Belarus": 15000.0,
+   "United States of America": 7050.0,
+   "Republic of the Congo": 5000.0,
+   "Brazil": 3500.0,
+   "Ethiopia": 3000.0,
+   "China": 3000.0,
+   "Ukraine": 2500.0,
+   "Israel": 2000.0,
+   "Turkmenistan": 2000.0,
+   "United Kingdom": 1500.0,
+   "Spain": 1500.0,
+   "Argentina": 1500.0,
+   "France": 500.0,
+   "Morocco": 500.0,
+   "Chile": 500.0
+  },
+  "S": {
+   "Poland": 2000.0,
+   "United States of America": 820.0,
+   "Iraq": 800.0,
+   "Ukraine": 600.0,
+   "Italy": 300.0,
+   "Turkmenistan": 200.0,
+   "Mexico": 100.0
+  },
+  "P": {
+   "Morocco": 50000.0,
+   "United States of America": 21000.0,
+   "China": 7000.0,
+   "Peru": 5000.0,
+   "Kazakhstan": 4000.0,
+   "Australia": 4000.0,
+   "Estonia": 3700.0,
+   "Tunisia": 2500.0,
+   "Vietnam": 2500.0,
+   "Jordan": 2000.0,
+   "Algeria": 2000.0,
+   "Syria": 1700.0,
+   "Western Sahara": 1000.0,
+   "Saudi Arabia": 1000.0,
+   "Egypt": 1000.0,
+   "Iraq": 1000.0,
+   "Israel": 1000.0,
+   "Mexico": 500.0,
+   "Brazil": 400.0,
+   "Senegal": 300.0,
+   "Togo": 300.0
+  },
+  "NaCl": {
+   "Iran": 424116.0,
+   "Germany": 200148.0,
+   "United States of America": 185842.0,
+   "Poland": 63145.0,
+   "Denmark": 51912.0,
+   "Israel": 33929.0,
+   "Austria": 10178.0,
+   "Netherlands": 8482.0,
+   "Romania": 7393.0,
+   "Spain": 7083.0,
+   "Algeria": 5726.0,
+   "Ukraine": 5611.0
+  },
+  "gypsum": {
+   "China": 1000.0,
+   "Mexico": 500.0,
+   "Australia": 200.0,
+   "United States of America": 100.0
+  },
+  "B": {
+   "Turkey": 2010.0,
+   "United States of America": 1150.0,
+   "Chile": 80.0,
+   "Argentina": 50.0,
+   "China": 20.0
+  },
+  "alum": {
+   "China": 300.0,
+   "Azerbaijan": 160.0,
+   "Italy": 52.0,
+   "Sweden": 50.0,
+   "United Kingdom": 50.0,
+   "Turkey": 40.0,
+   "Greece": 5.0,
+   "Australia": 5.0,
+   "United States of America": 5.0
+  }
+ },
+ "impliedTonnage": [
+  {
+   "id": "coal:great-northern-exposed",
+   "name": "Northumberland and Durham coalfield (exposed)",
+   "areaKm2": 2410,
+   "scale": 0.077,
+   "impliedMt": 2998,
+   "publishedMt": 3000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:great-northern-concealed",
+   "name": "Durham coalfield under the Permian (concealed)",
+   "areaKm2": 741,
+   "scale": 0.333,
+   "impliedMt": 4000,
+   "publishedMt": 4000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:east-pennine-exposed",
+   "name": "Yorkshire and Nottinghamshire coalfield (exposed)",
+   "areaKm2": 2332,
+   "scale": 0.091,
+   "impliedMt": 4002,
+   "publishedMt": 4000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:east-pennine-concealed",
+   "name": "Yorkshire and Nottinghamshire coalfield (concealed)",
+   "areaKm2": 7932,
+   "scale": 0.107,
+   "impliedMt": 15996,
+   "publishedMt": 16000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:south-wales-bituminous",
+   "name": "South Wales coalfield, eastern (bituminous)",
+   "areaKm2": 1713,
+   "scale": 0.173,
+   "impliedMt": 8000,
+   "publishedMt": 8000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:south-wales-anthracite",
+   "name": "South Wales coalfield, western (anthracite) and Pembrokeshire",
+   "areaKm2": 753,
+   "scale": 0.295,
+   "impliedMt": 5000,
+   "publishedMt": 5000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:midland-valley",
+   "name": "Scottish Midland Valley coalfields (Fife, Lothians, Lanarkshire, Ayrshire)",
+   "areaKm2": 3855,
+   "scale": 0.16,
+   "impliedMt": 9997,
+   "publishedMt": 10000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:lancashire",
+   "name": "Lancashire and North Wales coalfields",
+   "areaKm2": 3004,
+   "scale": 0.123,
+   "impliedMt": 6000,
+   "publishedMt": 6000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:english-midlands",
+   "name": "English Midlands coalfields (Staffordshire, Warwickshire, Leicestershire, Shropshire)",
+   "areaKm2": 681,
+   "scale": 0.58,
+   "impliedMt": 8000,
+   "publishedMt": 8000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:dean-somerset",
+   "name": "Forest of Dean, Bristol and Somerset coalfields",
+   "areaKm2": 1094,
+   "scale": 0.169,
+   "impliedMt": 1500,
+   "publishedMt": 1500,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:cumbria",
+   "name": "Cumberland coalfield",
+   "areaKm2": 387,
+   "scale": 0.359,
+   "impliedMt": 1500,
+   "publishedMt": 1500,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:liege",
+   "name": "Liege coal basin (Meuse valley)",
+   "areaKm2": 396,
+   "scale": 0.208,
+   "impliedMt": 2000,
+   "publishedMt": 2000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:haine-sambre",
+   "name": "Haine-Sambre basin (Borinage, Centre, Charleroi)",
+   "areaKm2": 1094,
+   "scale": 0.135,
+   "impliedMt": 4000,
+   "publishedMt": 4000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:campine",
+   "name": "Campine (Kempen) coal basin (concealed)",
+   "areaKm2": 1645,
+   "scale": 0.18,
+   "impliedMt": 5999,
+   "publishedMt": 6000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:nord-pas-de-calais",
+   "name": "Nord-Pas-de-Calais coal basin (under the Chalk)",
+   "areaKm2": 1022,
+   "scale": 0.242,
+   "impliedMt": 5000,
+   "publishedMt": 5000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:limburg-aachen",
+   "name": "South Limburg and Aachen coalfields (Wurm, Inde)",
+   "areaKm2": 685,
+   "scale": 0.27,
+   "impliedMt": 3000,
+   "publishedMt": 3000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:saint-etienne",
+   "name": "Saint-Etienne coal basin",
+   "areaKm2": 367,
+   "scale": 0.134,
+   "impliedMt": 1000,
+   "publishedMt": 1000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:lorraine",
+   "name": "Lorraine coal basin (concealed continuation of the Saar)",
+   "areaKm2": 479,
+   "scale": 0.309,
+   "impliedMt": 4000,
+   "publishedMt": 4000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:asturias",
+   "name": "Central Asturian coal basin",
+   "areaKm2": 951,
+   "scale": 0.104,
+   "impliedMt": 2000,
+   "publishedMt": 2000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:ruhr-outcrop",
+   "name": "Southern Ruhr (outcrop coal of the Ruhr valley)",
+   "areaKm2": 534,
+   "scale": 0.166,
+   "impliedMt": 3000,
+   "publishedMt": 3000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:ruhr-concealed",
+   "name": "Ruhr coalfield under the Cretaceous (to 2000 m)",
+   "areaKm2": 6476,
+   "scale": 0.172,
+   "impliedMt": 45007,
+   "publishedMt": 45000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:ibbenbueren",
+   "name": "Ibbenbueren anthracite (Carboniferous horst)",
+   "areaKm2": 137,
+   "scale": 0.485,
+   "impliedMt": 800,
+   "publishedMt": 800,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:saar",
+   "name": "Saar coalfield (Saarkohlenwald)",
+   "areaKm2": 617,
+   "scale": 0.288,
+   "impliedMt": 5999,
+   "publishedMt": 6000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:zwickau-lugau",
+   "name": "Zwickau and Lugau-Oelsnitz coalfields",
+   "areaKm2": 225,
+   "scale": 0.082,
+   "impliedMt": 300,
+   "publishedMt": 300,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:rhenish-lignite",
+   "name": "Rhenish lignite (Ville, Garzweiler, Hambach, Inden)",
+   "areaKm2": 2275,
+   "scale": 0.403,
+   "impliedMt": 55000,
+   "publishedMt": 55000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:lusatia",
+   "name": "Lusatian lignite (Lausitz)",
+   "areaKm2": 4714,
+   "scale": 0.177,
+   "impliedMt": 12003,
+   "publishedMt": 12000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:central-german-lignite",
+   "name": "Central German lignite (Leipzig, Halle, Geiseltal, Zeitz)",
+   "areaKm2": 4091,
+   "scale": 0.136,
+   "impliedMt": 9999,
+   "publishedMt": 10000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:north-bohemia",
+   "name": "North Bohemian lignite basins (Most, Sokolov)",
+   "areaKm2": 1150,
+   "scale": 0.29,
+   "impliedMt": 10001,
+   "publishedMt": 10000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:upper-silesia-pl",
+   "name": "Upper Silesian coal basin, Polish part",
+   "areaKm2": 3409,
+   "scale": 0.299,
+   "impliedMt": 55006,
+   "publishedMt": 55000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:ostrava-karvina",
+   "name": "Upper Silesian coal basin, Czech part (Ostrava-Karvina)",
+   "areaKm2": 786,
+   "scale": 0.471,
+   "impliedMt": 15000,
+   "publishedMt": 15000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:lublin",
+   "name": "Lublin coal basin (concealed)",
+   "areaKm2": 1206,
+   "scale": 0.553,
+   "impliedMt": 9000,
+   "publishedMt": 9000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:lower-silesia",
+   "name": "Lower Silesian coal basin (Walbrzych, Nowa Ruda)",
+   "areaKm2": 131,
+   "scale": 0.707,
+   "impliedMt": 1000,
+   "publishedMt": 1000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:belchatow",
+   "name": "Belchatow lignite (central Poland)",
+   "areaKm2": 311,
+   "scale": 0.107,
+   "impliedMt": 2000,
+   "publishedMt": 2000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:lviv-volyn",
+   "name": "Lviv-Volyn coal basin",
+   "areaKm2": 4098,
+   "scale": 0.151,
+   "impliedMt": 2499,
+   "publishedMt": 2500,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:maritsa-east",
+   "name": "Maritsa East lignite",
+   "areaKm2": 1147,
+   "scale": 0.121,
+   "impliedMt": 2501,
+   "publishedMt": 2500,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:kosovo",
+   "name": "Kosovo lignite basin",
+   "areaKm2": 1457,
+   "scale": 0.172,
+   "impliedMt": 11998,
+   "publishedMt": 12000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:kolubara",
+   "name": "Kolubara lignite",
+   "areaKm2": 884,
+   "scale": 0.113,
+   "impliedMt": 3000,
+   "publishedMt": 3000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:ptolemais",
+   "name": "Ptolemais-Amyntaio lignite",
+   "areaKm2": 1505,
+   "scale": 0.074,
+   "impliedMt": 3998,
+   "publishedMt": 4000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:zonguldak",
+   "name": "Zonguldak coal basin",
+   "areaKm2": 2065,
+   "scale": 0.054,
+   "impliedMt": 1500,
+   "publishedMt": 1500,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:afsin-elbistan",
+   "name": "Afsin-Elbistan lignite",
+   "areaKm2": 971,
+   "scale": 0.103,
+   "impliedMt": 4802,
+   "publishedMt": 4800,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:tabas",
+   "name": "Tabas coalfield",
+   "areaKm2": 9085,
+   "scale": 0.136,
+   "impliedMt": 10001,
+   "publishedMt": 10000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:donbas",
+   "name": "Donets basin (Donbas), bituminous part",
+   "areaKm2": 23426,
+   "scale": 0.105,
+   "impliedMt": 99997,
+   "publishedMt": 100000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:donbas-anthracite",
+   "name": "Donets basin (Donbas), eastern anthracite part",
+   "areaKm2": 18957,
+   "scale": 0.047,
+   "impliedMt": 40008,
+   "publishedMt": 40000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:moscow-basin",
+   "name": "Moscow brown-coal basin (Tula, Kaluga, Ryazan)",
+   "areaKm2": 34515,
+   "scale": 0.161,
+   "impliedMt": 20005,
+   "publishedMt": 20000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:pechora",
+   "name": "Pechora coal basin (Vorkuta, Inta)",
+   "areaKm2": 30558,
+   "scale": 0.549,
+   "impliedMt": 339970,
+   "publishedMt": 340000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:kuzbass",
+   "name": "Kuznetsk basin (Kuzbass)",
+   "areaKm2": 24318,
+   "scale": 0.322,
+   "impliedMt": 639943,
+   "publishedMt": 640000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:kansk-achinsk",
+   "name": "Kansk-Achinsk lignite basin",
+   "areaKm2": 47131,
+   "scale": 0.212,
+   "impliedMt": 600070,
+   "publishedMt": 600000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:irkutsk",
+   "name": "Irkutsk coal basin (Cheremkhovo)",
+   "areaKm2": 21388,
+   "scale": 0.13,
+   "impliedMt": 30006,
+   "publishedMt": 30000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:south-yakutia",
+   "name": "South Yakutian coal basin (Neryungri)",
+   "areaKm2": 14693,
+   "scale": 0.101,
+   "impliedMt": 39988,
+   "publishedMt": 40000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:tunguska",
+   "name": "Tunguska coal basin",
+   "areaKm2": 1349832,
+   "scale": 0.11,
+   "impliedMt": 2000856,
+   "publishedMt": 2000000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:lena",
+   "name": "Lena coal basin",
+   "areaKm2": 761655,
+   "scale": 0.219,
+   "impliedMt": 1599842,
+   "publishedMt": 1600000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:karaganda",
+   "name": "Karaganda coal basin",
+   "areaKm2": 3938,
+   "scale": 0.47,
+   "impliedMt": 50004,
+   "publishedMt": 50000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:ekibastuz",
+   "name": "Ekibastuz coalfield",
+   "areaKm2": 865,
+   "scale": 0.079,
+   "impliedMt": 12007,
+   "publishedMt": 12000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:turgai",
+   "name": "Turgai brown-coal basin (Priozernoye, Kushmurun, Orlovka)",
+   "areaKm2": 45487,
+   "scale": 0.037,
+   "impliedMt": 59933,
+   "publishedMt": 60000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:shanxi",
+   "name": "Shanxi coal province (Datong, Ningwu, Xishan, Hedong)",
+   "areaKm2": 24705,
+   "scale": 0.44,
+   "impliedMt": 220023,
+   "publishedMt": 220000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:qinshui-anthracite",
+   "name": "Qinshui anthracite (Jincheng, Yangquan)",
+   "areaKm2": 7961,
+   "scale": 0.349,
+   "impliedMt": 49996,
+   "publishedMt": 50000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:ordos",
+   "name": "Ordos basin Jurassic coal (Shendong, Shenfu-Dongsheng)",
+   "areaKm2": 11675,
+   "scale": 0.698,
+   "impliedMt": 220001,
+   "publishedMt": 220000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:fushun",
+   "name": "Fushun coalfield",
+   "areaKm2": 184,
+   "scale": 0.12,
+   "impliedMt": 1500,
+   "publishedMt": 1500,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:western-hills",
+   "name": "Western Hills of Beijing (Mentougou)",
+   "areaKm2": 2252,
+   "scale": 0.074,
+   "impliedMt": 2000,
+   "publishedMt": 2000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:henan",
+   "name": "Henan coalfields (Pingdingshan, Hebi, Jiaozuo, Yima)",
+   "areaKm2": 19616,
+   "scale": 0.174,
+   "impliedMt": 40005,
+   "publishedMt": 40000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:hebei-kaiping",
+   "name": "Hebei coalfields (Kaiping, Fengfeng, Xingtai)",
+   "areaKm2": 13004,
+   "scale": 0.114,
+   "impliedMt": 19996,
+   "publishedMt": 20000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:shandong",
+   "name": "Shandong coalfields (Zibo, Yanzhou, Zaozhuang)",
+   "areaKm2": 16814,
+   "scale": 0.132,
+   "impliedMt": 30008,
+   "publishedMt": 30000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:huainan-huaibei",
+   "name": "Huainan and Huaibei coalfields",
+   "areaKm2": 17055,
+   "scale": 0.13,
+   "impliedMt": 60000,
+   "publishedMt": 60000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:guizhou",
+   "name": "Guizhou coalfields (Liupanshui, Zhina)",
+   "areaKm2": 21789,
+   "scale": 0.156,
+   "impliedMt": 59985,
+   "publishedMt": 60000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:heilongjiang",
+   "name": "Heilongjiang coalfields (Hegang, Jixi, Shuangyashan, Qitaihe)",
+   "areaKm2": 3474,
+   "scale": 0.426,
+   "impliedMt": 19999,
+   "publishedMt": 20000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:inner-mongolia-lignite",
+   "name": "Inner Mongolian lignite (Shengli, Huolinhe, Yimin, Baorixile)",
+   "areaKm2": 6234,
+   "scale": 0.501,
+   "impliedMt": 149997,
+   "publishedMt": 150000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:xinjiang",
+   "name": "Xinjiang Jurassic coal (Junggar, Turpan-Hami, Ili)",
+   "areaKm2": 24072,
+   "scale": 0.615,
+   "impliedMt": 799955,
+   "publishedMt": 800000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:yunnan-lignite",
+   "name": "Yunnan Neogene lignite (Xiaolongtan, Zhaotong)",
+   "areaKm2": 12186,
+   "scale": 0.026,
+   "impliedMt": 14974,
+   "publishedMt": 15000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:damodar",
+   "name": "Damodar valley coalfields (Raniganj, Jharia, Bokaro, Karanpura)",
+   "areaKm2": 4664,
+   "scale": 0.397,
+   "impliedMt": 100008,
+   "publishedMt": 100000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:mahanadi",
+   "name": "Mahanadi coalfields (Talcher, Ib River)",
+   "areaKm2": 4102,
+   "scale": 0.289,
+   "impliedMt": 80012,
+   "publishedMt": 80000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:son-hasdeo",
+   "name": "Son and Hasdeo coalfields (Singrauli, Korba, Mand-Raigarh, Hasdo-Arand, Sohagpur)",
+   "areaKm2": 12387,
+   "scale": 0.164,
+   "impliedMt": 110032,
+   "publishedMt": 110000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:godavari",
+   "name": "Pranhita-Godavari coalfields (Singareni)",
+   "areaKm2": 11176,
+   "scale": 0.076,
+   "impliedMt": 22993,
+   "publishedMt": 23000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:neyveli",
+   "name": "Neyveli lignite",
+   "areaKm2": 410,
+   "scale": 0.406,
+   "impliedMt": 4000,
+   "publishedMt": 4000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:thar",
+   "name": "Thar lignite field",
+   "areaKm2": 10843,
+   "scale": 0.672,
+   "impliedMt": 175012,
+   "publishedMt": 175000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:tavan-tolgoi",
+   "name": "Tavan Tolgoi coalfield",
+   "areaKm2": 2420,
+   "scale": 0.077,
+   "impliedMt": 7498,
+   "publishedMt": 7500,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:east-mongolia-lignite",
+   "name": "East Mongolian lignite basins (Baganuur, Choir-Nyalga, Shivee Ovoo, Aduunchuluun)",
+   "areaKm2": 34452,
+   "scale": 0.04,
+   "impliedMt": 49983,
+   "publishedMt": 50000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:quang-ninh",
+   "name": "Quang Ninh anthracite (Hon Gai, Cam Pha)",
+   "areaKm2": 2298,
+   "scale": 0.145,
+   "impliedMt": 10003,
+   "publishedMt": 10000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:pyongan",
+   "name": "Pyongan anthracite (South Pyongan; Samcheok)",
+   "areaKm2": 3568,
+   "scale": 0.14,
+   "impliedMt": 5998,
+   "publishedMt": 6000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:kyushu",
+   "name": "Chikuho and Miike coalfields (Kyushu)",
+   "areaKm2": 1344,
+   "scale": 0.344,
+   "impliedMt": 5000,
+   "publishedMt": 5000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:ishikari",
+   "name": "Ishikari coalfield (Hokkaido)",
+   "areaKm2": 2842,
+   "scale": 0.182,
+   "impliedMt": 7002,
+   "publishedMt": 7000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:mae-moh",
+   "name": "Mae Moh lignite",
+   "areaKm2": 263,
+   "scale": 0.116,
+   "impliedMt": 1100,
+   "publishedMt": 1100,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:kutai",
+   "name": "Kutai basin coal (East Kalimantan)",
+   "areaKm2": 32003,
+   "scale": 0.077,
+   "impliedMt": 50030,
+   "publishedMt": 50000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:barito",
+   "name": "Barito basin coal (South Kalimantan)",
+   "areaKm2": 29873,
+   "scale": 0.05,
+   "impliedMt": 30005,
+   "publishedMt": 30000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:south-sumatra",
+   "name": "South Sumatra basin lignite (Muara Enim)",
+   "areaKm2": 35635,
+   "scale": 0.039,
+   "impliedMt": 50032,
+   "publishedMt": 50000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:bowen",
+   "name": "Bowen basin",
+   "areaKm2": 157215,
+   "scale": 0.016,
+   "impliedMt": 49983,
+   "publishedMt": 50000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:sydney-gunnedah",
+   "name": "Sydney and Gunnedah basin coalfields (Hunter, Newcastle, Western, Southern, Gunnedah)",
+   "areaKm2": 69571,
+   "scale": 0.05,
+   "impliedMt": 70018,
+   "publishedMt": 70000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:surat",
+   "name": "Surat basin (Walloon Coal Measures)",
+   "areaKm2": 255450,
+   "scale": 0.007,
+   "impliedMt": 24830,
+   "publishedMt": 25000,
+   "ratio": 0.99
+  },
+  {
+   "id": "coal:galilee",
+   "name": "Galilee basin",
+   "areaKm2": 248106,
+   "scale": 0.009,
+   "impliedMt": 30145,
+   "publishedMt": 30000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:latrobe-valley",
+   "name": "Latrobe Valley brown coal (Morwell, Yallourn, Loy Yang)",
+   "areaKm2": 381,
+   "scale": 0.947,
+   "impliedMt": 65000,
+   "publishedMt": 65000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:buller",
+   "name": "Buller and Greymouth coalfields (West Coast)",
+   "areaKm2": 1847,
+   "scale": 0.04,
+   "impliedMt": 1000,
+   "publishedMt": 1000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:witbank-highveld",
+   "name": "Witbank and Highveld coalfields",
+   "areaKm2": 17062,
+   "scale": 0.152,
+   "impliedMt": 35011,
+   "publishedMt": 35000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:waterberg",
+   "name": "Waterberg coalfield",
+   "areaKm2": 4069,
+   "scale": 0.228,
+   "impliedMt": 75009,
+   "publishedMt": 75000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:kwazulu-natal",
+   "name": "KwaZulu-Natal coalfields (Vryheid, Utrecht, Klip River)",
+   "areaKm2": 9392,
+   "scale": 0.169,
+   "impliedMt": 8000,
+   "publishedMt": 8000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:moatize",
+   "name": "Moatize coalfield (Tete)",
+   "areaKm2": 2902,
+   "scale": 0.213,
+   "impliedMt": 25003,
+   "publishedMt": 25000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:hwange",
+   "name": "Hwange coalfield",
+   "areaKm2": 7968,
+   "scale": 0.046,
+   "impliedMt": 5002,
+   "publishedMt": 5000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:botswana-kalahari",
+   "name": "Botswana Karoo coalfields (Morupule, Mmamabula)",
+   "areaKm2": 45220,
+   "scale": 0.328,
+   "impliedMt": 199990,
+   "publishedMt": 200000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:enugu",
+   "name": "Enugu coalfield",
+   "areaKm2": 1835,
+   "scale": 0.303,
+   "impliedMt": 2000,
+   "publishedMt": 2000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:appalachian-north",
+   "name": "Northern Appalachian coal region (Pittsburgh, Upper Freeport)",
+   "areaKm2": 90736,
+   "scale": 0.163,
+   "impliedMt": 120019,
+   "publishedMt": 120000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:appalachian-central",
+   "name": "Central Appalachian coal region",
+   "areaKm2": 59751,
+   "scale": 0.17,
+   "impliedMt": 110026,
+   "publishedMt": 110000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:appalachian-south",
+   "name": "Southern Appalachian coal region (Warrior, Cahaba, Coosa, Tennessee)",
+   "areaKm2": 33275,
+   "scale": 0.148,
+   "impliedMt": 39997,
+   "publishedMt": 40000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:pennsylvania-anthracite",
+   "name": "Pennsylvania anthracite region",
+   "areaKm2": 2150,
+   "scale": 0.326,
+   "impliedMt": 20999,
+   "publishedMt": 21000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:illinois",
+   "name": "Illinois basin",
+   "areaKm2": 129723,
+   "scale": 0.286,
+   "impliedMt": 299991,
+   "publishedMt": 300000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:western-interior",
+   "name": "Western Interior coal region (Iowa, Missouri, Kansas, Oklahoma)",
+   "areaKm2": 212554,
+   "scale": 0.087,
+   "impliedMt": 49986,
+   "publishedMt": 50000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:powder-river",
+   "name": "Powder River basin (Fort Union, Wyodak)",
+   "areaKm2": 52480,
+   "scale": 0.513,
+   "impliedMt": 969965,
+   "publishedMt": 970000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:fort-union-lignite",
+   "name": "Fort Union lignite region (Williston basin)",
+   "areaKm2": 166336,
+   "scale": 0.15,
+   "impliedMt": 300003,
+   "publishedMt": 300000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:green-river-hams-fork",
+   "name": "Green River, Hams Fork and Hanna coal regions",
+   "areaKm2": 57553,
+   "scale": 0.129,
+   "impliedMt": 99995,
+   "publishedMt": 100000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:uinta-piceance",
+   "name": "Uinta region (Book Cliffs, Wasatch Plateau, Piceance)",
+   "areaKm2": 46645,
+   "scale": 0.159,
+   "impliedMt": 79998,
+   "publishedMt": 80000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:san-juan",
+   "name": "San Juan basin (Fruitland)",
+   "areaKm2": 39800,
+   "scale": 0.279,
+   "impliedMt": 150012,
+   "publishedMt": 150000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:gulf-lignite",
+   "name": "Gulf Coast lignite (Wilcox, Jackson; Texas to Mississippi)",
+   "areaKm2": 352212,
+   "scale": 0.047,
+   "impliedMt": 99958,
+   "publishedMt": 100000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:alaska-north-slope",
+   "name": "North Slope of Alaska (Nanushuk, Colville)",
+   "areaKm2": 51185,
+   "scale": 0.965,
+   "impliedMt": 2000038,
+   "publishedMt": 2000000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:alberta-plains",
+   "name": "Alberta plains coal (Horseshoe Canyon, Paskapoo, Scollard)",
+   "areaKm2": 173767,
+   "scale": 0.48,
+   "impliedMt": 600038,
+   "publishedMt": 600000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:rocky-foothills",
+   "name": "Rocky Mountain foothills and Elk Valley (Kootenay, Mist Mountain)",
+   "areaKm2": 83840,
+   "scale": 0.027,
+   "impliedMt": 59988,
+   "publishedMt": 60000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:sydney-nova-scotia",
+   "name": "Sydney coalfield (Cape Breton)",
+   "areaKm2": 641,
+   "scale": 0.289,
+   "impliedMt": 2000,
+   "publishedMt": 2000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:sabinas",
+   "name": "Sabinas basin (Coahuila)",
+   "areaKm2": 6979,
+   "scale": 0.106,
+   "impliedMt": 2999,
+   "publishedMt": 3000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:cerrejon",
+   "name": "Cerrejon coalfield (La Guajira)",
+   "areaKm2": 1601,
+   "scale": 0.058,
+   "impliedMt": 4997,
+   "publishedMt": 5000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:cesar",
+   "name": "Cesar coalfields (La Loma, Calenturitas, La Jagua)",
+   "areaKm2": 2731,
+   "scale": 0.054,
+   "impliedMt": 5996,
+   "publishedMt": 6000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:rio-grande-do-sul",
+   "name": "Parana basin coal of Rio Grande do Sul (Candiota, Leao)",
+   "areaKm2": 35013,
+   "scale": 0.148,
+   "impliedMt": 28001,
+   "publishedMt": 28000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:magallanes",
+   "name": "Magallanes basin lignite (Pecket, Isla Riesco)",
+   "areaKm2": 6004,
+   "scale": 0.069,
+   "impliedMt": 5000,
+   "publishedMt": 5000,
+   "ratio": 1.0
+  },
+  {
+   "id": "coal:svalbard",
+   "name": "Svalbard coal (Longyearbyen, Svea)",
+   "areaKm2": 998,
+   "scale": 1.113,
+   "impliedMt": 2696,
+   "publishedMt": 3000,
+   "ratio": 0.9
+  },
+  {
+   "id": "evap:zechstein",
+   "name": "Zechstein basin, bedded salt and potash (Germany, Netherlands, Poland, Denmark)",
+   "areaKm2": 128421,
+   "scale": 0.013,
+   "impliedMt": 20034,
+   "publishedMt": 20000,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:boulby",
+   "name": "Zechstein of North Yorkshire (Boulby potash and polyhalite, Teesside salt)",
+   "areaKm2": 1546,
+   "scale": 0.069,
+   "impliedMt": 1500,
+   "publishedMt": 1500,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:upper-kama",
+   "name": "Upper Kama potash basin (Verkhnekamskoye; Solikamsk, Berezniki)",
+   "areaKm2": 3878,
+   "scale": 0.129,
+   "impliedMt": 19993,
+   "publishedMt": 20000,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:elk-point",
+   "name": "Elk Point basin, Prairie Evaporite potash (Saskatchewan)",
+   "areaKm2": 184171,
+   "scale": 0.051,
+   "impliedMt": 149989,
+   "publishedMt": 150000,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:pripyat",
+   "name": "Pripyat trough potash (Soligorsk, Starobin)",
+   "areaKm2": 15191,
+   "scale": 0.049,
+   "impliedMt": 15009,
+   "publishedMt": 15000,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:khorat",
+   "name": "Khorat and Sakon Nakhon basins (Maha Sarakham Formation)",
+   "areaKm2": 80349,
+   "scale": 0.031,
+   "impliedMt": 49977,
+   "publishedMt": 50000,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:permian-salado",
+   "name": "Delaware basin Salado potash (Carlsbad district)",
+   "areaKm2": 91152,
+   "scale": 0.004,
+   "impliedMt": 2024,
+   "publishedMt": 2000,
+   "ratio": 1.01
+  },
+  {
+   "id": "evap:paradox",
+   "name": "Paradox basin salt and potash (Moab)",
+   "areaKm2": 31206,
+   "scale": 0.016,
+   "impliedMt": 4993,
+   "publishedMt": 5000,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:maritimes",
+   "name": "Maritimes basin, Windsor salt and potash (Sussex, Pugwash)",
+   "areaKm2": 48416,
+   "scale": 0.002,
+   "impliedMt": 1017,
+   "publishedMt": 1000,
+   "ratio": 1.02
+  },
+  {
+   "id": "evap:carpathian",
+   "name": "Carpathian foredeep salt and potash (Kalush, Stebnyk)",
+   "areaKm2": 30957,
+   "scale": 0.008,
+   "impliedMt": 2507,
+   "publishedMt": 2500,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:south-pyrenean",
+   "name": "South Pyrenean (Catalan) potash basin (Cardona, Suria, Sallent)",
+   "areaKm2": 10098,
+   "scale": 0.007,
+   "impliedMt": 1494,
+   "publishedMt": 1500,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:rhine-graben",
+   "name": "Upper Rhine graben potash (Alsace, Buggingen)",
+   "areaKm2": 427,
+   "scale": 0.117,
+   "impliedMt": 500,
+   "publishedMt": 500,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:dead-sea",
+   "name": "Dead Sea basin (Sedom Formation; Dead Sea brines)",
+   "areaKm2": 2515,
+   "scale": 0.08,
+   "impliedMt": 1999,
+   "publishedMt": 2000,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:amazonas",
+   "name": "Amazon basin Nova Olinda salt and potash (Autazes)",
+   "areaKm2": 227707,
+   "scale": 0.002,
+   "impliedMt": 3006,
+   "publishedMt": 3000,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:sergipe",
+   "name": "Sergipe potash (Taquari-Vassouras)",
+   "areaKm2": 9871,
+   "scale": 0.005,
+   "impliedMt": 503,
+   "publishedMt": 500,
+   "ratio": 1.01
+  },
+  {
+   "id": "evap:neuquen",
+   "name": "Neuquen basin potash (Huitrin Formation)",
+   "areaKm2": 106121,
+   "scale": 0.001,
+   "impliedMt": 1486,
+   "publishedMt": 1500,
+   "ratio": 0.99
+  },
+  {
+   "id": "evap:lower-congo",
+   "name": "Lower Congo potash (Loeme Formation; Kouilou)",
+   "areaKm2": 11043,
+   "scale": 0.045,
+   "impliedMt": 5002,
+   "publishedMt": 5000,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:danakil",
+   "name": "Danakil depression salt and potash (Dallol)",
+   "areaKm2": 1929,
+   "scale": 0.078,
+   "impliedMt": 3001,
+   "publishedMt": 3000,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:khemisset",
+   "name": "Moroccan Meseta Triassic salt (Khemisset potash)",
+   "areaKm2": 38789,
+   "scale": 0.001,
+   "impliedMt": 504,
+   "publishedMt": 500,
+   "ratio": 1.01
+  },
+  {
+   "id": "evap:gissar-amudarya",
+   "name": "Gaurdak salt and potash (Gissar, Amu Darya)",
+   "areaKm2": 66891,
+   "scale": 0.003,
+   "impliedMt": 2007,
+   "publishedMt": 2000,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:lop-nur",
+   "name": "Lop Nur potash brines and salt crust (Luobupo)",
+   "areaKm2": 12191,
+   "scale": 0.082,
+   "impliedMt": 1999,
+   "publishedMt": 2000,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:qarhan",
+   "name": "Qarhan salt lake (Qaidam basin)",
+   "areaKm2": 11869,
+   "scale": 0.042,
+   "impliedMt": 999,
+   "publishedMt": 1000,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:atacama-salar",
+   "name": "Salar de Atacama",
+   "areaKm2": 3338,
+   "scale": 0.075,
+   "impliedMt": 500,
+   "publishedMt": 500,
+   "ratio": 1.0
+  },
+  {
+   "id": "evap:bonneville",
+   "name": "Bonneville Salt Flats and Great Salt Lake Desert",
+   "areaKm2": 2014,
+   "scale": 0.041,
+   "impliedMt": 50,
+   "publishedMt": 50,
+   "ratio": 1.0
+  },
+  {
+   "id": "sul:tarnobrzeg",
+   "name": "Tarnobrzeg sulfur district (Machow, Jeziorko, Osiek, Grzybow)",
+   "areaKm2": 1237,
+   "scale": 0.035,
+   "impliedMt": 2002,
+   "publishedMt": 2000,
+   "ratio": 1.0
+  },
+  {
+   "id": "sul:yavoriv-rozdil",
+   "name": "Yavoriv and Rozdil sulfur (Carpathian foredeep)",
+   "areaKm2": 541,
+   "scale": 0.024,
+   "impliedMt": 600,
+   "publishedMt": 600,
+   "ratio": 1.0
+  },
+  {
+   "id": "sul:sicily",
+   "name": "Sicilian Messinian evaporite basin: sulfur, gypsum and salt (Caltanissetta, Agrigento, Enna, Realmonte)",
+   "areaKm2": 6691,
+   "scale": 0.004,
+   "impliedMt": 300,
+   "publishedMt": 300,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:ouled-abdoun",
+   "name": "Ouled Abdoun phosphate basin (Khouribga)",
+   "areaKm2": 5393,
+   "scale": 0.14,
+   "impliedMt": 25993,
+   "publishedMt": 26000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:gantour",
+   "name": "Gantour phosphate basin (Youssoufia, Benguerir)",
+   "areaKm2": 6327,
+   "scale": 0.137,
+   "impliedMt": 19996,
+   "publishedMt": 20000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:meskala",
+   "name": "Meskala phosphate basin",
+   "areaKm2": 1899,
+   "scale": 0.114,
+   "impliedMt": 4001,
+   "publishedMt": 4000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:bou-craa",
+   "name": "Bou Craa phosphate",
+   "areaKm2": 774,
+   "scale": 0.094,
+   "impliedMt": 1000,
+   "publishedMt": 1000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:phosphoria",
+   "name": "Phosphoria Formation (Idaho, Utah, Wyoming, Montana)",
+   "areaKm2": 52299,
+   "scale": 0.028,
+   "impliedMt": 9996,
+   "publishedMt": 10000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:central-florida",
+   "name": "Central Florida phosphate district (Bone Valley, Peace River)",
+   "areaKm2": 6115,
+   "scale": 0.114,
+   "impliedMt": 8003,
+   "publishedMt": 8000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:aurora",
+   "name": "Aurora phosphate (Pungo River Formation, North Carolina)",
+   "areaKm2": 1008,
+   "scale": 0.108,
+   "impliedMt": 3000,
+   "publishedMt": 3000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:karatau",
+   "name": "Karatau phosphorite basin (Zhanatas, Koksu)",
+   "areaKm2": 7928,
+   "scale": 0.015,
+   "impliedMt": 3993,
+   "publishedMt": 4000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:georgina",
+   "name": "Georgina basin phosphorite (Phosphate Hill, Duchess, Lady Annie)",
+   "areaKm2": 11259,
+   "scale": 0.01,
+   "impliedMt": 4001,
+   "publishedMt": 4000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:baltic-obolus",
+   "name": "Baltic Obolus phosphorite (Maardu, Toolse, Rakvere, Kingisepp)",
+   "areaKm2": 7569,
+   "scale": 0.071,
+   "impliedMt": 3698,
+   "publishedMt": 3700,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:jordan",
+   "name": "Jordan phosphate (Eshidiya, Al-Hasa)",
+   "areaKm2": 2025,
+   "scale": 0.072,
+   "impliedMt": 2001,
+   "publishedMt": 2000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:al-jalamid",
+   "name": "Al Jalamid phosphate (northern Saudi Arabia)",
+   "areaKm2": 2216,
+   "scale": 0.039,
+   "impliedMt": 999,
+   "publishedMt": 1000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:gafsa",
+   "name": "Gafsa-Metlaoui phosphate basin",
+   "areaKm2": 2654,
+   "scale": 0.051,
+   "impliedMt": 2500,
+   "publishedMt": 2500,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:djebel-onk",
+   "name": "Djebel Onk phosphate",
+   "areaKm2": 610,
+   "scale": 0.071,
+   "impliedMt": 2000,
+   "publishedMt": 2000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:abu-tartur",
+   "name": "Abu Tartur phosphate (Western Desert)",
+   "areaKm2": 892,
+   "scale": 0.122,
+   "impliedMt": 1000,
+   "publishedMt": 1000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:khneifis",
+   "name": "Palmyrides phosphate (Khneifis, Sharqiyah)",
+   "areaKm2": 2447,
+   "scale": 0.05,
+   "impliedMt": 1702,
+   "publishedMt": 1700,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:akashat",
+   "name": "Akashat phosphate (western Iraq)",
+   "areaKm2": 1798,
+   "scale": 0.024,
+   "impliedMt": 1001,
+   "publishedMt": 1000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:negev",
+   "name": "Negev phosphate (Oron, Zin, Arad)",
+   "areaKm2": 636,
+   "scale": 0.228,
+   "impliedMt": 1000,
+   "publishedMt": 1000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:sechura",
+   "name": "Sechura phosphate (Bayovar)",
+   "areaKm2": 2449,
+   "scale": 0.089,
+   "impliedMt": 5003,
+   "publishedMt": 5000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:taiba",
+   "name": "Taiba phosphate (Senegal)",
+   "areaKm2": 476,
+   "scale": 0.046,
+   "impliedMt": 300,
+   "publishedMt": 300,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:hahotoe",
+   "name": "Hahotoe-Kpogame phosphate (Togo)",
+   "areaKm2": 612,
+   "scale": 0.043,
+   "impliedMt": 300,
+   "publishedMt": 300,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:kunyang",
+   "name": "Kunyang phosphorite (Yunnan)",
+   "areaKm2": 1176,
+   "scale": 0.111,
+   "impliedMt": 3001,
+   "publishedMt": 3000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:kaiyang",
+   "name": "Kaiyang phosphorite (Guizhou)",
+   "areaKm2": 440,
+   "scale": 0.33,
+   "impliedMt": 2000,
+   "publishedMt": 2000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:yichang",
+   "name": "Yichang phosphorite (Hubei)",
+   "areaKm2": 1480,
+   "scale": 0.118,
+   "impliedMt": 1999,
+   "publishedMt": 2000,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:lao-cai",
+   "name": "Lao Cai apatite-phosphorite belt",
+   "areaKm2": 1539,
+   "scale": 0.071,
+   "impliedMt": 2500,
+   "publishedMt": 2500,
+   "ratio": 1.0
+  },
+  {
+   "id": "phos:patos-de-minas",
+   "name": "Patos de Minas phosphorite",
+   "areaKm2": 1052,
+   "scale": 0.017,
+   "impliedMt": 399,
+   "publishedMt": 400,
+   "ratio": 1.0
+  }
+ ],
+ "evidenceFixes": {
+  "S native-sulfur MRDS records kept": 100,
+  "P specialist records kept (sedimentary)": 1099,
+  "P specialist records left out (Ni-Cr-PGE, magmatic apatite, pure guano, unclassified)": 348,
+  "potash tracts by K weight": {
+   "0.5": 33,
+   "0.35": 36,
+   "0.15": 15
+  }
+ },
+ "checks": [
+  {
+   "kind": "area",
+   "id": "coal:great-northern-exposed",
+   "name": "Northumberland and Durham coalfield (exposed)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United Kingdom",
+   "largestOverlap": "United Kingdom",
+   "landShare": 0.916,
+   "areaKm2": 2410,
+   "vertices": 110,
+   "ageConflict": "",
+   "mt": 3000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.077,
+    "impliedMt": 2998,
+    "publishedMt": 3000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.5
+  },
+  {
+   "kind": "area",
+   "id": "coal:great-northern-concealed",
+   "name": "Durham coalfield under the Permian (concealed)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United Kingdom",
+   "largestOverlap": "United Kingdom",
+   "landShare": 0.709,
+   "areaKm2": 741,
+   "vertices": 57,
+   "ageConflict": "",
+   "mt": 4000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.333,
+    "impliedMt": 4000,
+    "publishedMt": 4000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:east-pennine-exposed",
+   "name": "Yorkshire and Nottinghamshire coalfield (exposed)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United Kingdom",
+   "largestOverlap": "United Kingdom",
+   "landShare": 1.0,
+   "areaKm2": 2332,
+   "vertices": 92,
+   "ageConflict": "",
+   "mt": 4000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.091,
+    "impliedMt": 4002,
+    "publishedMt": 4000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.529
+  },
+  {
+   "kind": "area",
+   "id": "coal:east-pennine-concealed",
+   "name": "Yorkshire and Nottinghamshire coalfield (concealed)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United Kingdom",
+   "largestOverlap": "United Kingdom",
+   "landShare": 0.994,
+   "areaKm2": 7932,
+   "vertices": 61,
+   "ageConflict": "",
+   "mt": 16000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.107,
+    "impliedMt": 15996,
+    "publishedMt": 16000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.544
+  },
+  {
+   "kind": "area",
+   "id": "coal:south-wales-bituminous",
+   "name": "South Wales coalfield, eastern (bituminous)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United Kingdom",
+   "largestOverlap": "United Kingdom",
+   "landShare": 0.955,
+   "areaKm2": 1713,
+   "vertices": 35,
+   "ageConflict": "",
+   "mt": 8000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.173,
+    "impliedMt": 8000,
+    "publishedMt": 8000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:south-wales-anthracite",
+   "name": "South Wales coalfield, western (anthracite) and Pembrokeshire",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "anthracite"
+   ],
+   "country": "United Kingdom",
+   "largestOverlap": "United Kingdom",
+   "landShare": 0.747,
+   "areaKm2": 753,
+   "vertices": 30,
+   "ageConflict": "",
+   "mt": 5000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.295,
+    "impliedMt": 5000,
+    "publishedMt": 5000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:midland-valley",
+   "name": "Scottish Midland Valley coalfields (Fife, Lothians, Lanarkshire, Ayrshire)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United Kingdom",
+   "largestOverlap": "United Kingdom",
+   "landShare": 0.947,
+   "areaKm2": 3855,
+   "vertices": 168,
+   "ageConflict": "",
+   "mt": 10000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.16,
+    "impliedMt": 9997,
+    "publishedMt": 10000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.567
+  },
+  {
+   "kind": "area",
+   "id": "coal:lancashire",
+   "name": "Lancashire and North Wales coalfields",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United Kingdom",
+   "largestOverlap": "United Kingdom",
+   "landShare": 0.986,
+   "areaKm2": 3004,
+   "vertices": 149,
+   "ageConflict": "",
+   "mt": 6000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.123,
+    "impliedMt": 6000,
+    "publishedMt": 6000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.543
+  },
+  {
+   "kind": "area",
+   "id": "coal:english-midlands",
+   "name": "English Midlands coalfields (Staffordshire, Warwickshire, Leicestershire, Shropshire)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United Kingdom",
+   "largestOverlap": "United Kingdom",
+   "landShare": 1.0,
+   "areaKm2": 681,
+   "vertices": 114,
+   "ageConflict": "",
+   "mt": 8000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.58,
+    "impliedMt": 8000,
+    "publishedMt": 8000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:dean-somerset",
+   "name": "Forest of Dean, Bristol and Somerset coalfields",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United Kingdom",
+   "largestOverlap": "United Kingdom",
+   "landShare": 0.947,
+   "areaKm2": 1094,
+   "vertices": 45,
+   "ageConflict": "",
+   "mt": 1500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.169,
+    "impliedMt": 1500,
+    "publishedMt": 1500,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.509
+  },
+  {
+   "kind": "area",
+   "id": "coal:cumbria",
+   "name": "Cumberland coalfield",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United Kingdom",
+   "largestOverlap": "United Kingdom",
+   "landShare": 0.797,
+   "areaKm2": 387,
+   "vertices": 31,
+   "ageConflict": "",
+   "mt": 1500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.359,
+    "impliedMt": 1500,
+    "publishedMt": 1500,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:liege",
+   "name": "Liege coal basin (Meuse valley)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Belgium",
+   "largestOverlap": "Belgium",
+   "landShare": 1.0,
+   "areaKm2": 396,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.208,
+    "impliedMt": 2000,
+    "publishedMt": 2000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:haine-sambre",
+   "name": "Haine-Sambre basin (Borinage, Centre, Charleroi)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Belgium",
+   "largestOverlap": "Belgium",
+   "landShare": 1.0,
+   "areaKm2": 1094,
+   "vertices": 8,
+   "ageConflict": "",
+   "mt": 4000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.135,
+    "impliedMt": 4000,
+    "publishedMt": 4000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.598
+  },
+  {
+   "kind": "area",
+   "id": "coal:campine",
+   "name": "Campine (Kempen) coal basin (concealed)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Belgium",
+   "largestOverlap": "Belgium",
+   "landShare": 1.0,
+   "areaKm2": 1645,
+   "vertices": 7,
+   "ageConflict": "",
+   "mt": 6000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.18,
+    "impliedMt": 5999,
+    "publishedMt": 6000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.598
+  },
+  {
+   "kind": "area",
+   "id": "coal:nord-pas-de-calais",
+   "name": "Nord-Pas-de-Calais coal basin (under the Chalk)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "France",
+   "largestOverlap": "France",
+   "landShare": 1.0,
+   "areaKm2": 1022,
+   "vertices": 11,
+   "ageConflict": "",
+   "mt": 5000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.242,
+    "impliedMt": 5000,
+    "publishedMt": 5000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:limburg-aachen",
+   "name": "South Limburg and Aachen coalfields (Wurm, Inde)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Germany",
+   "largestOverlap": "Germany",
+   "landShare": 1.001,
+   "areaKm2": 685,
+   "vertices": 7,
+   "ageConflict": "",
+   "mt": 3000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.27,
+    "impliedMt": 3000,
+    "publishedMt": 3000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:saint-etienne",
+   "name": "Saint-Etienne coal basin",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "France",
+   "largestOverlap": "France",
+   "landShare": 1.0,
+   "areaKm2": 367,
+   "vertices": 7,
+   "ageConflict": "",
+   "mt": 1000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.134,
+    "impliedMt": 1000,
+    "publishedMt": 1000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.571
+  },
+  {
+   "kind": "area",
+   "id": "coal:lorraine",
+   "name": "Lorraine coal basin (concealed continuation of the Saar)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "France",
+   "largestOverlap": "France",
+   "landShare": 1.0,
+   "areaKm2": 479,
+   "vertices": 8,
+   "ageConflict": "",
+   "mt": 4000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.309,
+    "impliedMt": 4000,
+    "publishedMt": 4000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:asturias",
+   "name": "Central Asturian coal basin",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Spain",
+   "largestOverlap": "Spain",
+   "landShare": 1.0,
+   "areaKm2": 951,
+   "vertices": 7,
+   "ageConflict": "",
+   "mt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.104,
+    "impliedMt": 2000,
+    "publishedMt": 2000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.548
+  },
+  {
+   "kind": "area",
+   "id": "coal:ruhr-outcrop",
+   "name": "Southern Ruhr (outcrop coal of the Ruhr valley)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Germany",
+   "largestOverlap": "Germany",
+   "landShare": 1.0,
+   "areaKm2": 534,
+   "vertices": 8,
+   "ageConflict": "",
+   "mt": 3000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.166,
+    "impliedMt": 3000,
+    "publishedMt": 3000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:ruhr-concealed",
+   "name": "Ruhr coalfield under the Cretaceous (to 2000 m)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Germany",
+   "largestOverlap": "Germany",
+   "landShare": 1.0,
+   "areaKm2": 6476,
+   "vertices": 39,
+   "ageConflict": "",
+   "mt": 45000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.172,
+    "impliedMt": 45007,
+    "publishedMt": 45000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:ibbenbueren",
+   "name": "Ibbenbueren anthracite (Carboniferous horst)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "anthracite"
+   ],
+   "country": "Germany",
+   "largestOverlap": "Germany",
+   "landShare": 1.0,
+   "areaKm2": 137,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 800,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.485,
+    "impliedMt": 800,
+    "publishedMt": 800,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:saar",
+   "name": "Saar coalfield (Saarkohlenwald)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Germany",
+   "largestOverlap": "Germany",
+   "landShare": 1.0,
+   "areaKm2": 617,
+   "vertices": 8,
+   "ageConflict": "",
+   "mt": 6000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.288,
+    "impliedMt": 5999,
+    "publishedMt": 6000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:zwickau-lugau",
+   "name": "Zwickau and Lugau-Oelsnitz coalfields",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Germany",
+   "largestOverlap": "Germany",
+   "landShare": 1.0,
+   "areaKm2": 225,
+   "vertices": 11,
+   "ageConflict": "",
+   "mt": 300,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.082,
+    "impliedMt": 300,
+    "publishedMt": 300,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.506
+  },
+  {
+   "kind": "area",
+   "id": "coal:rhenish-lignite",
+   "name": "Rhenish lignite (Ville, Garzweiler, Hambach, Inden)",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Germany",
+   "largestOverlap": "Germany",
+   "landShare": 1.0,
+   "areaKm2": 2275,
+   "vertices": 47,
+   "ageConflict": "",
+   "mt": 55000,
+   "q": "B",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.403,
+    "impliedMt": 55000,
+    "publishedMt": 55000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "coal:lusatia",
+   "name": "Lusatian lignite (Lausitz)",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Germany",
+   "largestOverlap": "Germany",
+   "landShare": 1.0,
+   "areaKm2": 4714,
+   "vertices": 67,
+   "ageConflict": "",
+   "mt": 12000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.177,
+    "impliedMt": 12003,
+    "publishedMt": 12000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.565
+  },
+  {
+   "kind": "area",
+   "id": "coal:central-german-lignite",
+   "name": "Central German lignite (Leipzig, Halle, Geiseltal, Zeitz)",
+   "layer": "C_coal",
+   "age": "Paleogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Germany",
+   "largestOverlap": "Germany",
+   "landShare": 1.0,
+   "areaKm2": 4091,
+   "vertices": 60,
+   "ageConflict": "",
+   "mt": 10000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.136,
+    "impliedMt": 9999,
+    "publishedMt": 10000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.562
+  },
+  {
+   "kind": "area",
+   "id": "coal:north-bohemia",
+   "name": "North Bohemian lignite basins (Most, Sokolov)",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Czechia",
+   "largestOverlap": "Czechia",
+   "landShare": 1.0,
+   "areaKm2": 1150,
+   "vertices": 13,
+   "ageConflict": "",
+   "mt": 10000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.29,
+    "impliedMt": 10001,
+    "publishedMt": 10000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:upper-silesia-pl",
+   "name": "Upper Silesian coal basin, Polish part",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Poland",
+   "largestOverlap": "Poland",
+   "landShare": 1.0,
+   "areaKm2": 3409,
+   "vertices": 50,
+   "ageConflict": "",
+   "mt": 55000,
+   "q": "B",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.299,
+    "impliedMt": 55006,
+    "publishedMt": 55000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "coal:ostrava-karvina",
+   "name": "Upper Silesian coal basin, Czech part (Ostrava-Karvina)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Czechia",
+   "largestOverlap": "Czechia",
+   "landShare": 1.0,
+   "areaKm2": 786,
+   "vertices": 13,
+   "ageConflict": "",
+   "mt": 15000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.471,
+    "impliedMt": 15000,
+    "publishedMt": 15000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:lublin",
+   "name": "Lublin coal basin (concealed)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Poland",
+   "largestOverlap": "Poland",
+   "landShare": 1.0,
+   "areaKm2": 1206,
+   "vertices": 23,
+   "ageConflict": "",
+   "mt": 9000,
+   "q": "B",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.553,
+    "impliedMt": 9000,
+    "publishedMt": 9000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "coal:lower-silesia",
+   "name": "Lower Silesian coal basin (Walbrzych, Nowa Ruda)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Poland",
+   "largestOverlap": "Poland",
+   "landShare": 1.0,
+   "areaKm2": 131,
+   "vertices": 24,
+   "ageConflict": "",
+   "mt": 1000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.707,
+    "impliedMt": 1000,
+    "publishedMt": 1000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:belchatow",
+   "name": "Belchatow lignite (central Poland)",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Poland",
+   "largestOverlap": "Poland",
+   "landShare": 1.0,
+   "areaKm2": 311,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.107,
+    "impliedMt": 2000,
+    "publishedMt": 2000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:lviv-volyn",
+   "name": "Lviv-Volyn coal basin",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Ukraine",
+   "largestOverlap": "Ukraine",
+   "landShare": 0.999,
+   "areaKm2": 4098,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": 2500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.151,
+    "impliedMt": 2499,
+    "publishedMt": 2500,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.435
+  },
+  {
+   "kind": "area",
+   "id": "coal:maritsa-east",
+   "name": "Maritsa East lignite",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Bulgaria",
+   "largestOverlap": "Bulgaria",
+   "landShare": 1.0,
+   "areaKm2": 1147,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 2500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.121,
+    "impliedMt": 2501,
+    "publishedMt": 2500,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.551
+  },
+  {
+   "kind": "area",
+   "id": "coal:kosovo",
+   "name": "Kosovo lignite basin",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Kosovo",
+   "largestOverlap": "Kosovo",
+   "landShare": 1.0,
+   "areaKm2": 1457,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 12000,
+   "q": "B",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.172,
+    "impliedMt": 11998,
+    "publishedMt": 12000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "coal:kolubara",
+   "name": "Kolubara lignite",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Republic of Serbia",
+   "largestOverlap": "Republic of Serbia",
+   "landShare": 1.0,
+   "areaKm2": 884,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 3000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.113,
+    "impliedMt": 3000,
+    "publishedMt": 3000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.591
+  },
+  {
+   "kind": "area",
+   "id": "coal:ptolemais",
+   "name": "Ptolemais-Amyntaio lignite",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Greece",
+   "largestOverlap": "Greece",
+   "landShare": 1.0,
+   "areaKm2": 1505,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 4000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.074,
+    "impliedMt": 3998,
+    "publishedMt": 4000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.569
+  },
+  {
+   "kind": "area",
+   "id": "coal:zonguldak",
+   "name": "Zonguldak coal basin",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Turkey",
+   "largestOverlap": "Turkey",
+   "landShare": 0.999,
+   "areaKm2": 2065,
+   "vertices": 7,
+   "ageConflict": "",
+   "mt": 1500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.054,
+    "impliedMt": 1500,
+    "publishedMt": 1500,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.451
+  },
+  {
+   "kind": "area",
+   "id": "coal:afsin-elbistan",
+   "name": "Afsin-Elbistan lignite",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Turkey",
+   "largestOverlap": "Turkey",
+   "landShare": 1.0,
+   "areaKm2": 971,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 4800,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.103,
+    "impliedMt": 4802,
+    "publishedMt": 4800,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:tabas",
+   "name": "Tabas coalfield",
+   "layer": "C_coal",
+   "age": "Jurassic",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Iran",
+   "largestOverlap": "Iran",
+   "landShare": 1.0,
+   "areaKm2": 9085,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 10000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.136,
+    "impliedMt": 10001,
+    "publishedMt": 10000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.489
+  },
+  {
+   "kind": "area",
+   "id": "coal:donbas",
+   "name": "Donets basin (Donbas), bituminous part",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Ukraine",
+   "largestOverlap": "Ukraine",
+   "landShare": 1.0,
+   "areaKm2": 23426,
+   "vertices": 10,
+   "ageConflict": "",
+   "mt": 100000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.105,
+    "impliedMt": 99997,
+    "publishedMt": 100000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:donbas-anthracite",
+   "name": "Donets basin (Donbas), eastern anthracite part",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "anthracite"
+   ],
+   "country": "Ukraine",
+   "largestOverlap": "Ukraine",
+   "landShare": 1.0,
+   "areaKm2": 18957,
+   "vertices": 8,
+   "ageConflict": "",
+   "mt": 40000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.047,
+    "impliedMt": 40008,
+    "publishedMt": 40000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.548
+  },
+  {
+   "kind": "area",
+   "id": "coal:moscow-basin",
+   "name": "Moscow brown-coal basin (Tula, Kaluga, Ryazan)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Russia",
+   "largestOverlap": "Russia",
+   "landShare": 1.0,
+   "areaKm2": 34515,
+   "vertices": 9,
+   "ageConflict": "lignite must be Cenozoic or Mesozoic",
+   "mt": 20000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.161,
+    "impliedMt": 20005,
+    "publishedMt": 20000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.43
+  },
+  {
+   "kind": "area",
+   "id": "coal:pechora",
+   "name": "Pechora coal basin (Vorkuta, Inta)",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Russia",
+   "largestOverlap": "Russia",
+   "landShare": 1.0,
+   "areaKm2": 30558,
+   "vertices": 9,
+   "ageConflict": "",
+   "mt": 340000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.549,
+    "impliedMt": 339970,
+    "publishedMt": 340000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:kuzbass",
+   "name": "Kuznetsk basin (Kuzbass)",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal",
+    "anthracite"
+   ],
+   "country": "Russia",
+   "largestOverlap": "Russia",
+   "landShare": 1.0,
+   "areaKm2": 24318,
+   "vertices": 12,
+   "ageConflict": "",
+   "mt": 640000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.322,
+    "impliedMt": 639943,
+    "publishedMt": 640000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:kansk-achinsk",
+   "name": "Kansk-Achinsk lignite basin",
+   "layer": "C_coal",
+   "age": "Jurassic",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Russia",
+   "largestOverlap": "Russia",
+   "landShare": 1.0,
+   "areaKm2": 47131,
+   "vertices": 10,
+   "ageConflict": "",
+   "mt": 600000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.212,
+    "impliedMt": 600070,
+    "publishedMt": 600000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:irkutsk",
+   "name": "Irkutsk coal basin (Cheremkhovo)",
+   "layer": "C_coal",
+   "age": "Jurassic",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Russia",
+   "largestOverlap": "Russia",
+   "landShare": 1.0,
+   "areaKm2": 21388,
+   "vertices": 8,
+   "ageConflict": "",
+   "mt": 30000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.13,
+    "impliedMt": 30006,
+    "publishedMt": 30000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.511
+  },
+  {
+   "kind": "area",
+   "id": "coal:south-yakutia",
+   "name": "South Yakutian coal basin (Neryungri)",
+   "layer": "C_coal",
+   "age": "Jurassic",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Russia",
+   "largestOverlap": "Russia",
+   "landShare": 1.0,
+   "areaKm2": 14693,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 40000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.101,
+    "impliedMt": 39988,
+    "publishedMt": 40000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.571
+  },
+  {
+   "kind": "area",
+   "id": "coal:tunguska",
+   "name": "Tunguska coal basin",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Russia",
+   "largestOverlap": "Russia",
+   "landShare": 1.0,
+   "areaKm2": 1349832,
+   "vertices": 10,
+   "ageConflict": "",
+   "mt": 2000000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.11,
+    "impliedMt": 2000856,
+    "publishedMt": 2000000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.516
+  },
+  {
+   "kind": "area",
+   "id": "coal:lena",
+   "name": "Lena coal basin",
+   "layer": "C_coal",
+   "age": "Jurassic",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Russia",
+   "largestOverlap": "Russia",
+   "landShare": 1.0,
+   "areaKm2": 761655,
+   "vertices": 9,
+   "ageConflict": "",
+   "mt": 1600000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.219,
+    "impliedMt": 1599842,
+    "publishedMt": 1600000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.548
+  },
+  {
+   "kind": "area",
+   "id": "coal:karaganda",
+   "name": "Karaganda coal basin",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Kazakhstan",
+   "largestOverlap": "Kazakhstan",
+   "landShare": 1.0,
+   "areaKm2": 3938,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": 50000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.47,
+    "impliedMt": 50004,
+    "publishedMt": 50000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:ekibastuz",
+   "name": "Ekibastuz coalfield",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Kazakhstan",
+   "largestOverlap": "Kazakhstan",
+   "landShare": 1.0,
+   "areaKm2": 865,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 12000,
+   "q": "B",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.079,
+    "impliedMt": 12007,
+    "publishedMt": 12000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "coal:turgai",
+   "name": "Turgai brown-coal basin (Priozernoye, Kushmurun, Orlovka)",
+   "layer": "C_coal",
+   "age": "Jurassic",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Kazakhstan",
+   "largestOverlap": "Kazakhstan",
+   "landShare": 1.0,
+   "areaKm2": 45487,
+   "vertices": 7,
+   "ageConflict": "",
+   "mt": 60000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.037,
+    "impliedMt": 59933,
+    "publishedMt": 60000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.505
+  },
+  {
+   "kind": "area",
+   "id": "coal:shanxi",
+   "name": "Shanxi coal province (Datong, Ningwu, Xishan, Hedong)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 24705,
+   "vertices": 503,
+   "ageConflict": "",
+   "mt": 220000,
+   "q": "B",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.44,
+    "impliedMt": 220023,
+    "publishedMt": 220000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "coal:qinshui-anthracite",
+   "name": "Qinshui anthracite (Jincheng, Yangquan)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "anthracite"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 7961,
+   "vertices": 157,
+   "ageConflict": "",
+   "mt": 50000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.349,
+    "impliedMt": 49996,
+    "publishedMt": 50000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:ordos",
+   "name": "Ordos basin Jurassic coal (Shendong, Shenfu-Dongsheng)",
+   "layer": "C_coal",
+   "age": "Jurassic",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 11675,
+   "vertices": 247,
+   "ageConflict": "",
+   "mt": 220000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.698,
+    "impliedMt": 220001,
+    "publishedMt": 220000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:fushun",
+   "name": "Fushun coalfield",
+   "layer": "C_coal",
+   "age": "Paleogene",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 184,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 1500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.12,
+    "impliedMt": 1500,
+    "publishedMt": 1500,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:western-hills",
+   "name": "Western Hills of Beijing (Mentougou)",
+   "layer": "C_coal",
+   "age": "Jurassic",
+   "codes": [
+    "anthracite"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 2252,
+   "vertices": 34,
+   "ageConflict": "",
+   "mt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.074,
+    "impliedMt": 2000,
+    "publishedMt": 2000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.469
+  },
+  {
+   "kind": "area",
+   "id": "coal:henan",
+   "name": "Henan coalfields (Pingdingshan, Hebi, Jiaozuo, Yima)",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal",
+    "anthracite"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 19616,
+   "vertices": 282,
+   "ageConflict": "",
+   "mt": 40000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.174,
+    "impliedMt": 40005,
+    "publishedMt": 40000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.545
+  },
+  {
+   "kind": "area",
+   "id": "coal:hebei-kaiping",
+   "name": "Hebei coalfields (Kaiping, Fengfeng, Xingtai)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 13004,
+   "vertices": 285,
+   "ageConflict": "",
+   "mt": 20000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.114,
+    "impliedMt": 19996,
+    "publishedMt": 20000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.519
+  },
+  {
+   "kind": "area",
+   "id": "coal:shandong",
+   "name": "Shandong coalfields (Zibo, Yanzhou, Zaozhuang)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 0.987,
+   "areaKm2": 16814,
+   "vertices": 286,
+   "ageConflict": "",
+   "mt": 30000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.132,
+    "impliedMt": 30008,
+    "publishedMt": 30000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.533
+  },
+  {
+   "kind": "area",
+   "id": "coal:huainan-huaibei",
+   "name": "Huainan and Huaibei coalfields",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 17055,
+   "vertices": 300,
+   "ageConflict": "",
+   "mt": 60000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.13,
+    "impliedMt": 60000,
+    "publishedMt": 60000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.595
+  },
+  {
+   "kind": "area",
+   "id": "coal:guizhou",
+   "name": "Guizhou coalfields (Liupanshui, Zhina)",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal",
+    "anthracite"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 21789,
+   "vertices": 484,
+   "ageConflict": "",
+   "mt": 60000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.156,
+    "impliedMt": 59985,
+    "publishedMt": 60000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.572
+  },
+  {
+   "kind": "area",
+   "id": "coal:heilongjiang",
+   "name": "Heilongjiang coalfields (Hegang, Jixi, Shuangyashan, Qitaihe)",
+   "layer": "C_coal",
+   "age": "Cretaceous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 3474,
+   "vertices": 158,
+   "ageConflict": "",
+   "mt": 20000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.426,
+    "impliedMt": 19999,
+    "publishedMt": 20000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:inner-mongolia-lignite",
+   "name": "Inner Mongolian lignite (Shengli, Huolinhe, Yimin, Baorixile)",
+   "layer": "C_coal",
+   "age": "Cretaceous",
+   "codes": [
+    "lignite"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 6234,
+   "vertices": 269,
+   "ageConflict": "",
+   "mt": 150000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.501,
+    "impliedMt": 149997,
+    "publishedMt": 150000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:xinjiang",
+   "name": "Xinjiang Jurassic coal (Junggar, Turpan-Hami, Ili)",
+   "layer": "C_coal",
+   "age": "Jurassic",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 24072,
+   "vertices": 799,
+   "ageConflict": "",
+   "mt": 800000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.615,
+    "impliedMt": 799955,
+    "publishedMt": 800000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:yunnan-lignite",
+   "name": "Yunnan Neogene lignite (Xiaolongtan, Zhaotong)",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 12186,
+   "vertices": 354,
+   "ageConflict": "",
+   "mt": 15000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.026,
+    "impliedMt": 14974,
+    "publishedMt": 15000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.499
+  },
+  {
+   "kind": "area",
+   "id": "coal:damodar",
+   "name": "Damodar valley coalfields (Raniganj, Jharia, Bokaro, Karanpura)",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "India",
+   "largestOverlap": "India",
+   "landShare": 1.0,
+   "areaKm2": 4664,
+   "vertices": 119,
+   "ageConflict": "",
+   "mt": 100000,
+   "q": "B",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.397,
+    "impliedMt": 100008,
+    "publishedMt": 100000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "coal:mahanadi",
+   "name": "Mahanadi coalfields (Talcher, Ib River)",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "India",
+   "largestOverlap": "India",
+   "landShare": 1.0,
+   "areaKm2": 4102,
+   "vertices": 82,
+   "ageConflict": "",
+   "mt": 80000,
+   "q": "B",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.289,
+    "impliedMt": 80012,
+    "publishedMt": 80000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "coal:son-hasdeo",
+   "name": "Son and Hasdeo coalfields (Singrauli, Korba, Mand-Raigarh, Hasdo-Arand, Sohagpur)",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "India",
+   "largestOverlap": "India",
+   "landShare": 1.0,
+   "areaKm2": 12387,
+   "vertices": 317,
+   "ageConflict": "",
+   "mt": 110000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.164,
+    "impliedMt": 110032,
+    "publishedMt": 110000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:godavari",
+   "name": "Pranhita-Godavari coalfields (Singareni)",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "India",
+   "largestOverlap": "India",
+   "landShare": 1.0,
+   "areaKm2": 11176,
+   "vertices": 212,
+   "ageConflict": "",
+   "mt": 23000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.076,
+    "impliedMt": 22993,
+    "publishedMt": 23000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.546
+  },
+  {
+   "kind": "area",
+   "id": "coal:neyveli",
+   "name": "Neyveli lignite",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "India",
+   "largestOverlap": "India",
+   "landShare": 1.0,
+   "areaKm2": 410,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 4000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.406,
+    "impliedMt": 4000,
+    "publishedMt": 4000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:thar",
+   "name": "Thar lignite field",
+   "layer": "C_coal",
+   "age": "Paleogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Pakistan",
+   "largestOverlap": "Pakistan",
+   "landShare": 1.0,
+   "areaKm2": 10843,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": 175000,
+   "q": "B",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.672,
+    "impliedMt": 175012,
+    "publishedMt": 175000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "coal:tavan-tolgoi",
+   "name": "Tavan Tolgoi coalfield",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Mongolia",
+   "largestOverlap": "Mongolia",
+   "landShare": 1.0,
+   "areaKm2": 2420,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 7500,
+   "q": "B",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.077,
+    "impliedMt": 7498,
+    "publishedMt": 7500,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.68
+  },
+  {
+   "kind": "area",
+   "id": "coal:east-mongolia-lignite",
+   "name": "East Mongolian lignite basins (Baganuur, Choir-Nyalga, Shivee Ovoo, Aduunchuluun)",
+   "layer": "C_coal",
+   "age": "Cretaceous",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Mongolia",
+   "largestOverlap": "Mongolia",
+   "landShare": 1.0,
+   "areaKm2": 34452,
+   "vertices": 12,
+   "ageConflict": "",
+   "mt": 50000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.04,
+    "impliedMt": 49983,
+    "publishedMt": 50000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.514
+  },
+  {
+   "kind": "area",
+   "id": "coal:quang-ninh",
+   "name": "Quang Ninh anthracite (Hon Gai, Cam Pha)",
+   "layer": "C_coal",
+   "age": "Triassic",
+   "codes": [
+    "anthracite"
+   ],
+   "country": "Vietnam",
+   "largestOverlap": "Vietnam",
+   "landShare": 0.856,
+   "areaKm2": 2298,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 10000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.145,
+    "impliedMt": 10003,
+    "publishedMt": 10000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:pyongan",
+   "name": "Pyongan anthracite (South Pyongan; Samcheok)",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "anthracite"
+   ],
+   "country": "North Korea",
+   "largestOverlap": "North Korea",
+   "landShare": 0.992,
+   "areaKm2": 3568,
+   "vertices": 10,
+   "ageConflict": "",
+   "mt": 6000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.14,
+    "impliedMt": 5998,
+    "publishedMt": 6000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.527
+  },
+  {
+   "kind": "area",
+   "id": "coal:kyushu",
+   "name": "Chikuho and Miike coalfields (Kyushu)",
+   "layer": "C_coal",
+   "age": "Paleogene",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Japan",
+   "largestOverlap": "Japan",
+   "landShare": 0.947,
+   "areaKm2": 1344,
+   "vertices": 10,
+   "ageConflict": "",
+   "mt": 5000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.344,
+    "impliedMt": 5000,
+    "publishedMt": 5000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:ishikari",
+   "name": "Ishikari coalfield (Hokkaido)",
+   "layer": "C_coal",
+   "age": "Paleogene",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Japan",
+   "largestOverlap": "Japan",
+   "landShare": 1.0,
+   "areaKm2": 2842,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 7000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.182,
+    "impliedMt": 7002,
+    "publishedMt": 7000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.562
+  },
+  {
+   "kind": "area",
+   "id": "coal:mae-moh",
+   "name": "Mae Moh lignite",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Thailand",
+   "largestOverlap": "Thailand",
+   "landShare": 1.0,
+   "areaKm2": 263,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 1100,
+   "q": "B",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.116,
+    "impliedMt": 1100,
+    "publishedMt": 1100,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "coal:kutai",
+   "name": "Kutai basin coal (East Kalimantan)",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Indonesia",
+   "largestOverlap": "Indonesia",
+   "landShare": 0.73,
+   "areaKm2": 32003,
+   "vertices": 7,
+   "ageConflict": "",
+   "mt": 50000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.077,
+    "impliedMt": 50030,
+    "publishedMt": 50000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.521
+  },
+  {
+   "kind": "area",
+   "id": "coal:barito",
+   "name": "Barito basin coal (South Kalimantan)",
+   "layer": "C_coal",
+   "age": "Paleogene",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Indonesia",
+   "largestOverlap": "Indonesia",
+   "landShare": 0.969,
+   "areaKm2": 29873,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": 30000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.05,
+    "impliedMt": 30005,
+    "publishedMt": 30000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.48
+  },
+  {
+   "kind": "area",
+   "id": "coal:south-sumatra",
+   "name": "South Sumatra basin lignite (Muara Enim)",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Indonesia",
+   "largestOverlap": "Indonesia",
+   "landShare": 1.0,
+   "areaKm2": 35635,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": 50000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.039,
+    "impliedMt": 50032,
+    "publishedMt": 50000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.511
+  },
+  {
+   "kind": "area",
+   "id": "coal:bowen",
+   "name": "Bowen basin",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Australia",
+   "largestOverlap": "Australia",
+   "landShare": 1.0,
+   "areaKm2": 157215,
+   "vertices": 458,
+   "ageConflict": "",
+   "mt": 50000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.016,
+    "impliedMt": 49983,
+    "publishedMt": 50000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.376
+  },
+  {
+   "kind": "area",
+   "id": "coal:sydney-gunnedah",
+   "name": "Sydney and Gunnedah basin coalfields (Hunter, Newcastle, Western, Southern, Gunnedah)",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Australia",
+   "largestOverlap": "Australia",
+   "landShare": 0.998,
+   "areaKm2": 69571,
+   "vertices": 521,
+   "ageConflict": "",
+   "mt": 70000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.05,
+    "impliedMt": 70018,
+    "publishedMt": 70000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.481
+  },
+  {
+   "kind": "area",
+   "id": "coal:surat",
+   "name": "Surat basin (Walloon Coal Measures)",
+   "layer": "C_coal",
+   "age": "Jurassic",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Australia",
+   "largestOverlap": "Australia",
+   "landShare": 1.0,
+   "areaKm2": 255450,
+   "vertices": 586,
+   "ageConflict": "",
+   "mt": 25000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.007,
+    "impliedMt": 24830,
+    "publishedMt": 25000,
+    "ratio": 0.99
+   },
+   "evidenceWeight": 0.268
+  },
+  {
+   "kind": "area",
+   "id": "coal:galilee",
+   "name": "Galilee basin",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Australia",
+   "largestOverlap": "Australia",
+   "landShare": 1.0,
+   "areaKm2": 248106,
+   "vertices": 308,
+   "ageConflict": "",
+   "mt": 30000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.009,
+    "impliedMt": 30145,
+    "publishedMt": 30000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.287
+  },
+  {
+   "kind": "area",
+   "id": "coal:latrobe-valley",
+   "name": "Latrobe Valley brown coal (Morwell, Yallourn, Loy Yang)",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Australia",
+   "largestOverlap": "Australia",
+   "landShare": 1.0,
+   "areaKm2": 381,
+   "vertices": 60,
+   "ageConflict": "",
+   "mt": 65000,
+   "q": "B",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.947,
+    "impliedMt": 65000,
+    "publishedMt": 65000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "coal:buller",
+   "name": "Buller and Greymouth coalfields (West Coast)",
+   "layer": "C_coal",
+   "age": "Paleogene",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "New Zealand",
+   "largestOverlap": "New Zealand",
+   "landShare": 0.972,
+   "areaKm2": 1847,
+   "vertices": 7,
+   "ageConflict": "",
+   "mt": 1000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.04,
+    "impliedMt": 1000,
+    "publishedMt": 1000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.424
+  },
+  {
+   "kind": "area",
+   "id": "coal:witbank-highveld",
+   "name": "Witbank and Highveld coalfields",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "South Africa",
+   "largestOverlap": "South Africa",
+   "landShare": 1.0,
+   "areaKm2": 17062,
+   "vertices": 7,
+   "ageConflict": "",
+   "mt": 35000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.152,
+    "impliedMt": 35011,
+    "publishedMt": 35000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.546
+  },
+  {
+   "kind": "area",
+   "id": "coal:waterberg",
+   "name": "Waterberg coalfield",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "South Africa",
+   "largestOverlap": "South Africa",
+   "landShare": 1.0,
+   "areaKm2": 4069,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 75000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.228,
+    "impliedMt": 75009,
+    "publishedMt": 75000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:kwazulu-natal",
+   "name": "KwaZulu-Natal coalfields (Vryheid, Utrecht, Klip River)",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal",
+    "anthracite"
+   ],
+   "country": "South Africa",
+   "largestOverlap": "South Africa",
+   "landShare": 1.0,
+   "areaKm2": 9392,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": 8000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.169,
+    "impliedMt": 8000,
+    "publishedMt": 8000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.465
+  },
+  {
+   "kind": "area",
+   "id": "coal:moatize",
+   "name": "Moatize coalfield (Tete)",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Mozambique",
+   "largestOverlap": "Mozambique",
+   "landShare": 1.0,
+   "areaKm2": 2902,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 25000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.213,
+    "impliedMt": 25003,
+    "publishedMt": 25000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:hwange",
+   "name": "Hwange coalfield",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Zimbabwe",
+   "largestOverlap": "Zimbabwe",
+   "landShare": 1.001,
+   "areaKm2": 7968,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 5000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.046,
+    "impliedMt": 5002,
+    "publishedMt": 5000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.437
+  },
+  {
+   "kind": "area",
+   "id": "coal:botswana-kalahari",
+   "name": "Botswana Karoo coalfields (Morupule, Mmamabula)",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Botswana",
+   "largestOverlap": "Botswana",
+   "landShare": 1.0,
+   "areaKm2": 45220,
+   "vertices": 7,
+   "ageConflict": "",
+   "mt": 200000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.328,
+    "impliedMt": 199990,
+    "publishedMt": 200000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:enugu",
+   "name": "Enugu coalfield",
+   "layer": "C_coal",
+   "age": "Cretaceous",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Nigeria",
+   "largestOverlap": "Nigeria",
+   "landShare": 1.0,
+   "areaKm2": 1835,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.303,
+    "impliedMt": 2000,
+    "publishedMt": 2000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.488
+  },
+  {
+   "kind": "area",
+   "id": "coal:appalachian-north",
+   "name": "Northern Appalachian coal region (Pittsburgh, Upper Freeport)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 90736,
+   "vertices": 912,
+   "ageConflict": "",
+   "mt": 120000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.163,
+    "impliedMt": 120019,
+    "publishedMt": 120000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.505
+  },
+  {
+   "kind": "area",
+   "id": "coal:appalachian-central",
+   "name": "Central Appalachian coal region",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 59751,
+   "vertices": 268,
+   "ageConflict": "",
+   "mt": 110000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.17,
+    "impliedMt": 110026,
+    "publishedMt": 110000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.536
+  },
+  {
+   "kind": "area",
+   "id": "coal:appalachian-south",
+   "name": "Southern Appalachian coal region (Warrior, Cahaba, Coosa, Tennessee)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 33275,
+   "vertices": 371,
+   "ageConflict": "",
+   "mt": 40000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.148,
+    "impliedMt": 39997,
+    "publishedMt": 40000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.497
+  },
+  {
+   "kind": "area",
+   "id": "coal:pennsylvania-anthracite",
+   "name": "Pennsylvania anthracite region",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "anthracite"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 2150,
+   "vertices": 110,
+   "ageConflict": "",
+   "mt": 21000,
+   "q": "B",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.326,
+    "impliedMt": 20999,
+    "publishedMt": 21000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "coal:illinois",
+   "name": "Illinois basin",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 129723,
+   "vertices": 664,
+   "ageConflict": "",
+   "mt": 300000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.286,
+    "impliedMt": 299991,
+    "publishedMt": 300000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.556
+  },
+  {
+   "kind": "area",
+   "id": "coal:western-interior",
+   "name": "Western Interior coal region (Iowa, Missouri, Kansas, Oklahoma)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 212554,
+   "vertices": 965,
+   "ageConflict": "",
+   "mt": 50000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.087,
+    "impliedMt": 49986,
+    "publishedMt": 50000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.348
+  },
+  {
+   "kind": "area",
+   "id": "coal:powder-river",
+   "name": "Powder River basin (Fort Union, Wyodak)",
+   "layer": "C_coal",
+   "age": "Paleogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 52480,
+   "vertices": 176,
+   "ageConflict": "",
+   "mt": 970000,
+   "q": "B",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.513,
+    "impliedMt": 969965,
+    "publishedMt": 970000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "coal:fort-union-lignite",
+   "name": "Fort Union lignite region (Williston basin)",
+   "layer": "C_coal",
+   "age": "Paleogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 166336,
+   "vertices": 345,
+   "ageConflict": "",
+   "mt": 300000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.15,
+    "impliedMt": 300003,
+    "publishedMt": 300000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.534
+  },
+  {
+   "kind": "area",
+   "id": "coal:green-river-hams-fork",
+   "name": "Green River, Hams Fork and Hanna coal regions",
+   "layer": "C_coal",
+   "age": "Cretaceous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 57553,
+   "vertices": 397,
+   "ageConflict": "",
+   "mt": 100000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.129,
+    "impliedMt": 99995,
+    "publishedMt": 100000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.53
+  },
+  {
+   "kind": "area",
+   "id": "coal:uinta-piceance",
+   "name": "Uinta region (Book Cliffs, Wasatch Plateau, Piceance)",
+   "layer": "C_coal",
+   "age": "Cretaceous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 46645,
+   "vertices": 286,
+   "ageConflict": "",
+   "mt": 80000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.159,
+    "impliedMt": 79998,
+    "publishedMt": 80000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.529
+  },
+  {
+   "kind": "area",
+   "id": "coal:san-juan",
+   "name": "San Juan basin (Fruitland)",
+   "layer": "C_coal",
+   "age": "Cretaceous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 39800,
+   "vertices": 246,
+   "ageConflict": "",
+   "mt": 150000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.279,
+    "impliedMt": 150012,
+    "publishedMt": 150000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:gulf-lignite",
+   "name": "Gulf Coast lignite (Wilcox, Jackson; Texas to Mississippi)",
+   "layer": "C_coal",
+   "age": "Paleogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 352212,
+   "vertices": 340,
+   "ageConflict": "",
+   "mt": 100000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.047,
+    "impliedMt": 99958,
+    "publishedMt": 100000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.365
+  },
+  {
+   "kind": "area",
+   "id": "coal:alaska-north-slope",
+   "name": "North Slope of Alaska (Nanushuk, Colville)",
+   "layer": "C_coal",
+   "age": "Cretaceous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 0.994,
+   "areaKm2": 51185,
+   "vertices": 505,
+   "ageConflict": "",
+   "mt": 2000000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.965,
+    "impliedMt": 2000038,
+    "publishedMt": 2000000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "coal:alberta-plains",
+   "name": "Alberta plains coal (Horseshoe Canyon, Paskapoo, Scollard)",
+   "layer": "C_coal",
+   "age": "Cretaceous",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Canada",
+   "largestOverlap": "Canada",
+   "landShare": 1.0,
+   "areaKm2": 173767,
+   "vertices": 390,
+   "ageConflict": "",
+   "mt": 600000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.48,
+    "impliedMt": 600038,
+    "publishedMt": 600000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.593
+  },
+  {
+   "kind": "area",
+   "id": "coal:rocky-foothills",
+   "name": "Rocky Mountain foothills and Elk Valley (Kootenay, Mist Mountain)",
+   "layer": "C_coal",
+   "age": "Jurassic",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Canada",
+   "largestOverlap": "Canada",
+   "landShare": 1.0,
+   "areaKm2": 83840,
+   "vertices": 674,
+   "ageConflict": "",
+   "mt": 60000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.027,
+    "impliedMt": 59988,
+    "publishedMt": 60000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.449
+  },
+  {
+   "kind": "area",
+   "id": "coal:sydney-nova-scotia",
+   "name": "Sydney coalfield (Cape Breton)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Canada",
+   "largestOverlap": "Canada",
+   "landShare": 0.598,
+   "areaKm2": 641,
+   "vertices": 7,
+   "ageConflict": "",
+   "mt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.289,
+    "impliedMt": 2000,
+    "publishedMt": 2000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.584
+  },
+  {
+   "kind": "area",
+   "id": "coal:sabinas",
+   "name": "Sabinas basin (Coahuila)",
+   "layer": "C_coal",
+   "age": "Cretaceous",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Mexico",
+   "largestOverlap": "Mexico",
+   "landShare": 1.0,
+   "areaKm2": 6979,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 3000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.106,
+    "impliedMt": 2999,
+    "publishedMt": 3000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.403
+  },
+  {
+   "kind": "area",
+   "id": "coal:cerrejon",
+   "name": "Cerrejon coalfield (La Guajira)",
+   "layer": "C_coal",
+   "age": "Paleogene",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Colombia",
+   "largestOverlap": "Colombia",
+   "landShare": 1.0,
+   "areaKm2": 1601,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": 5000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.058,
+    "impliedMt": 4997,
+    "publishedMt": 5000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.584
+  },
+  {
+   "kind": "area",
+   "id": "coal:cesar",
+   "name": "Cesar coalfields (La Loma, Calenturitas, La Jagua)",
+   "layer": "C_coal",
+   "age": "Paleogene",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Colombia",
+   "largestOverlap": "Colombia",
+   "landShare": 1.0,
+   "areaKm2": 2731,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 6000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.054,
+    "impliedMt": 5996,
+    "publishedMt": 6000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.552
+  },
+  {
+   "kind": "area",
+   "id": "coal:rio-grande-do-sul",
+   "name": "Parana basin coal of Rio Grande do Sul (Candiota, Leao)",
+   "layer": "C_coal",
+   "age": "Permian",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Brazil",
+   "largestOverlap": "Brazil",
+   "landShare": 1.0,
+   "areaKm2": 35013,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": 28000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.148,
+    "impliedMt": 28001,
+    "publishedMt": 28000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.46
+  },
+  {
+   "kind": "area",
+   "id": "coal:magallanes",
+   "name": "Magallanes basin lignite (Pecket, Isla Riesco)",
+   "layer": "C_coal",
+   "age": "Neogene",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Chile",
+   "largestOverlap": "Chile",
+   "landShare": 0.7,
+   "areaKm2": 6004,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 5000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.069,
+    "impliedMt": 5000,
+    "publishedMt": 5000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.463
+  },
+  {
+   "kind": "area",
+   "id": "coal:svalbard",
+   "name": "Svalbard coal (Longyearbyen, Svea)",
+   "layer": "C_coal",
+   "age": "Paleogene",
+   "codes": [
+    "bituminouscoal"
+   ],
+   "country": "Norway",
+   "largestOverlap": "Norway",
+   "landShare": 0.939,
+   "areaKm2": 998,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 3000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 1.113,
+    "impliedMt": 2696,
+    "publishedMt": 3000,
+    "ratio": 0.9
+   },
+   "evidenceWeight": 0.58
+  },
+  {
+   "kind": "area",
+   "id": "evap:zechstein",
+   "name": "Zechstein basin, bedded salt and potash (Germany, Netherlands, Poland, Denmark)",
+   "layer": "K",
+   "age": "Permian",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Germany",
+   "largestOverlap": "Poland",
+   "landShare": 0.997,
+   "areaKm2": 128421,
+   "vertices": 1808,
+   "ageConflict": "",
+   "mt": 20000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.013,
+    "impliedMt": 20034,
+    "publishedMt": 20000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.31
+  },
+  {
+   "kind": "area",
+   "id": "evap:zechstein-domes",
+   "name": "Zechstein salt structures (North German and Polish salt domes and pillows)",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Germany",
+   "largestOverlap": "Germany",
+   "landShare": 0.998,
+   "areaKm2": 32785,
+   "vertices": 3296,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:boulby",
+   "name": "Zechstein of North Yorkshire (Boulby potash and polyhalite, Teesside salt)",
+   "layer": "K",
+   "age": "Permian",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "United Kingdom",
+   "largestOverlap": "United Kingdom",
+   "landShare": 0.994,
+   "areaKm2": 1546,
+   "vertices": 35,
+   "ageConflict": "",
+   "mt": 1500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.069,
+    "impliedMt": 1500,
+    "publishedMt": 1500,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.477
+  },
+  {
+   "kind": "area",
+   "id": "evap:upper-kama",
+   "name": "Upper Kama potash basin (Verkhnekamskoye; Solikamsk, Berezniki)",
+   "layer": "K",
+   "age": "Permian",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Russia",
+   "largestOverlap": "Russia",
+   "landShare": 1.0,
+   "areaKm2": 3878,
+   "vertices": 70,
+   "ageConflict": "",
+   "mt": 20000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.129,
+    "impliedMt": 19993,
+    "publishedMt": 20000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:elk-point",
+   "name": "Elk Point basin, Prairie Evaporite potash (Saskatchewan)",
+   "layer": "K",
+   "age": "Devonian",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Canada",
+   "largestOverlap": "Canada",
+   "landShare": 1.0,
+   "areaKm2": 184171,
+   "vertices": 1303,
+   "ageConflict": "",
+   "mt": 150000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.051,
+    "impliedMt": 149989,
+    "publishedMt": 150000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.461
+  },
+  {
+   "kind": "area",
+   "id": "evap:pripyat",
+   "name": "Pripyat trough potash (Soligorsk, Starobin)",
+   "layer": "K",
+   "age": "Devonian",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Belarus",
+   "largestOverlap": "Belarus",
+   "landShare": 1.0,
+   "areaKm2": 15191,
+   "vertices": 213,
+   "ageConflict": "",
+   "mt": 15000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.049,
+    "impliedMt": 15009,
+    "publishedMt": 15000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.479
+  },
+  {
+   "kind": "area",
+   "id": "evap:khorat",
+   "name": "Khorat and Sakon Nakhon basins (Maha Sarakham Formation)",
+   "layer": "K",
+   "age": "Cretaceous",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Thailand",
+   "largestOverlap": "Thailand",
+   "landShare": 1.0,
+   "areaKm2": 80349,
+   "vertices": 280,
+   "ageConflict": "",
+   "mt": 50000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.031,
+    "impliedMt": 49977,
+    "publishedMt": 50000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.437
+  },
+  {
+   "kind": "area",
+   "id": "evap:permian-salado",
+   "name": "Delaware basin Salado potash (Carlsbad district)",
+   "layer": "K",
+   "age": "Permian",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 91152,
+   "vertices": 100,
+   "ageConflict": "",
+   "mt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.004,
+    "impliedMt": 2024,
+    "publishedMt": 2000,
+    "ratio": 1.01
+   },
+   "evidenceWeight": 0.15
+  },
+  {
+   "kind": "area",
+   "id": "evap:permian-basin-salt",
+   "name": "Permian basin bedded salt (Kansas to Texas: Wellington, Blaine, Salado)",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 251237,
+   "vertices": 159,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:paradox",
+   "name": "Paradox basin salt and potash (Moab)",
+   "layer": "K",
+   "age": "Carboniferous",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 31206,
+   "vertices": 45,
+   "ageConflict": "",
+   "mt": 5000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.016,
+    "impliedMt": 4993,
+    "publishedMt": 5000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.313
+  },
+  {
+   "kind": "area",
+   "id": "evap:michigan-salina",
+   "name": "Michigan and Appalachian basins, Salina salt (Detroit, Goderich, Retsof)",
+   "layer": "NaCl",
+   "age": "Silurian",
+   "codes": [
+    "halite"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 164967,
+   "vertices": 176,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:maritimes",
+   "name": "Maritimes basin, Windsor salt and potash (Sussex, Pugwash)",
+   "layer": "K",
+   "age": "Carboniferous",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Canada",
+   "largestOverlap": "Canada",
+   "landShare": 0.974,
+   "areaKm2": 48416,
+   "vertices": 2003,
+   "ageConflict": "",
+   "mt": 1000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.002,
+    "impliedMt": 1017,
+    "publishedMt": 1000,
+    "ratio": 1.02
+   },
+   "evidenceWeight": 0.15
+  },
+  {
+   "kind": "area",
+   "id": "evap:gulf-louann",
+   "name": "Gulf of Mexico basin, Louann salt (mother salt; domes listed separately)",
+   "layer": "NaCl",
+   "age": "Jurassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "Mexico",
+   "landShare": 0.996,
+   "areaKm2": 335331,
+   "vertices": 1443,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:pricaspian",
+   "name": "Pricaspian (Caspian) depression salt domes",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Kazakhstan",
+   "largestOverlap": "Kazakhstan",
+   "landShare": 0.989,
+   "areaKm2": 463428,
+   "vertices": 395,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:cisuralian",
+   "name": "Cisuralian salt (southern Urals foredeep; Sol-Iletsk)",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Russia",
+   "largestOverlap": "Russia",
+   "landShare": 1.0,
+   "areaKm2": 68764,
+   "vertices": 142,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:dnieper-donets",
+   "name": "Dnieper-Donets salt (Soledar, Artemivsk)",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Ukraine",
+   "largestOverlap": "Ukraine",
+   "landShare": 1.0,
+   "areaKm2": 63697,
+   "vertices": 131,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:carpathian",
+   "name": "Carpathian foredeep salt and potash (Kalush, Stebnyk)",
+   "layer": "K",
+   "age": "Neogene",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Ukraine",
+   "largestOverlap": "Romania",
+   "landShare": 1.0,
+   "areaKm2": 30957,
+   "vertices": 113,
+   "ageConflict": "",
+   "mt": 2500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.008,
+    "impliedMt": 2507,
+    "publishedMt": 2500,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.251
+  },
+  {
+   "kind": "area",
+   "id": "evap:transylvania",
+   "name": "Transylvanian basin salt (Ocna Mures, Dej, Ocna Sibiului)",
+   "layer": "NaCl",
+   "age": "Neogene",
+   "codes": [
+    "halite"
+   ],
+   "country": "Romania",
+   "largestOverlap": "Romania",
+   "landShare": 1.0,
+   "areaKm2": 19024,
+   "vertices": 45,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:south-pyrenean",
+   "name": "South Pyrenean (Catalan) potash basin (Cardona, Suria, Sallent)",
+   "layer": "K",
+   "age": "Paleogene",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Spain",
+   "largestOverlap": "Spain",
+   "landShare": 1.0,
+   "areaKm2": 10098,
+   "vertices": 63,
+   "ageConflict": "",
+   "mt": 1500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.007,
+    "impliedMt": 1494,
+    "publishedMt": 1500,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.306
+  },
+  {
+   "kind": "area",
+   "id": "evap:rhine-graben",
+   "name": "Upper Rhine graben potash (Alsace, Buggingen)",
+   "layer": "K",
+   "age": "Paleogene",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "France",
+   "largestOverlap": "France",
+   "landShare": 1.0,
+   "areaKm2": 427,
+   "vertices": 16,
+   "ageConflict": "",
+   "mt": 500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.117,
+    "impliedMt": 500,
+    "publishedMt": 500,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.494
+  },
+  {
+   "kind": "area",
+   "id": "evap:aquitaine",
+   "name": "Aquitaine Triassic salt structures (Salies-de-Bearn, Dax)",
+   "layer": "NaCl",
+   "age": "Triassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "France",
+   "largestOverlap": "France",
+   "landShare": 0.999,
+   "areaKm2": 33749,
+   "vertices": 207,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:dead-sea",
+   "name": "Dead Sea basin (Sedom Formation; Dead Sea brines)",
+   "layer": "K",
+   "age": "Neogene",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Israel",
+   "largestOverlap": "Jordan",
+   "landShare": 1.0,
+   "areaKm2": 2515,
+   "vertices": 30,
+   "ageConflict": "",
+   "mt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.08,
+    "impliedMt": 1999,
+    "publishedMt": 2000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.459
+  },
+  {
+   "kind": "area",
+   "id": "evap:zagros",
+   "name": "Zagros Gachsaran evaporites",
+   "layer": "NaCl",
+   "age": "Neogene",
+   "codes": [
+    "halite"
+   ],
+   "country": "Iran",
+   "largestOverlap": "Iran",
+   "landShare": 0.998,
+   "areaKm2": 216989,
+   "vertices": 345,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:hormuz",
+   "name": "Hormuz salt diapirs (Persian Gulf)",
+   "layer": "NaCl",
+   "age": "Cambrian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Iran",
+   "largestOverlap": "Iran",
+   "landShare": 0.993,
+   "areaKm2": 269811,
+   "vertices": 1601,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:qom-kavir",
+   "name": "Qom and Great Kavir salt (Lower and Upper Red Formations)",
+   "layer": "NaCl",
+   "age": "Paleogene",
+   "codes": [
+    "halite"
+   ],
+   "country": "Iran",
+   "largestOverlap": "Iran",
+   "landShare": 1.0,
+   "areaKm2": 147977,
+   "vertices": 2517,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:east-siberian",
+   "name": "East Siberian Cambrian salt (Angara-Lena, Nepa)",
+   "layer": "NaCl",
+   "age": "Cambrian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Russia",
+   "largestOverlap": "Russia",
+   "landShare": 1.0,
+   "areaKm2": 1778704,
+   "vertices": 250,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:amazonas",
+   "name": "Amazon basin Nova Olinda salt and potash (Autazes)",
+   "layer": "K",
+   "age": "Carboniferous",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Brazil",
+   "largestOverlap": "Brazil",
+   "landShare": 1.0,
+   "areaKm2": 227707,
+   "vertices": 179,
+   "ageConflict": "",
+   "mt": 3000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.002,
+    "impliedMt": 3006,
+    "publishedMt": 3000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.15
+  },
+  {
+   "kind": "area",
+   "id": "evap:sergipe",
+   "name": "Sergipe potash (Taquari-Vassouras)",
+   "layer": "K",
+   "age": "Cretaceous",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Brazil",
+   "largestOverlap": "Brazil",
+   "landShare": 0.977,
+   "areaKm2": 9871,
+   "vertices": 202,
+   "ageConflict": "",
+   "mt": 500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.005,
+    "impliedMt": 503,
+    "publishedMt": 500,
+    "ratio": 1.01
+   },
+   "evidenceWeight": 0.208
+  },
+  {
+   "kind": "area",
+   "id": "evap:neuquen",
+   "name": "Neuquen basin potash (Huitrin Formation)",
+   "layer": "K",
+   "age": "Cretaceous",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Argentina",
+   "largestOverlap": "Argentina",
+   "landShare": 1.0,
+   "areaKm2": 106121,
+   "vertices": 330,
+   "ageConflict": "",
+   "mt": 1500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.001,
+    "impliedMt": 1486,
+    "publishedMt": 1500,
+    "ratio": 0.99
+   },
+   "evidenceWeight": 0.15
+  },
+  {
+   "kind": "area",
+   "id": "evap:lower-congo",
+   "name": "Lower Congo potash (Loeme Formation; Kouilou)",
+   "layer": "K",
+   "age": "Cretaceous",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Republic of the Congo",
+   "largestOverlap": "Republic of the Congo",
+   "landShare": 0.99,
+   "areaKm2": 11043,
+   "vertices": 88,
+   "ageConflict": "",
+   "mt": 5000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.045,
+    "impliedMt": 5002,
+    "publishedMt": 5000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.408
+  },
+  {
+   "kind": "area",
+   "id": "evap:danakil",
+   "name": "Danakil depression salt and potash (Dallol)",
+   "layer": "K",
+   "age": "Quaternary",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Ethiopia",
+   "largestOverlap": "Ethiopia",
+   "landShare": 1.0,
+   "areaKm2": 1929,
+   "vertices": 82,
+   "ageConflict": "",
+   "mt": 3000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.078,
+    "impliedMt": 3001,
+    "publishedMt": 3000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.52
+  },
+  {
+   "kind": "area",
+   "id": "evap:khemisset",
+   "name": "Moroccan Meseta Triassic salt (Khemisset potash)",
+   "layer": "K",
+   "age": "Triassic",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Morocco",
+   "largestOverlap": "Morocco",
+   "landShare": 0.998,
+   "areaKm2": 38789,
+   "vertices": 271,
+   "ageConflict": "",
+   "mt": 500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.001,
+    "impliedMt": 504,
+    "publishedMt": 500,
+    "ratio": 1.01
+   },
+   "evidenceWeight": 0.15
+  },
+  {
+   "kind": "area",
+   "id": "evap:saharan",
+   "name": "Saharan Triassic salt (Algeria, Tunisia, Libya)",
+   "layer": "NaCl",
+   "age": "Triassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "Algeria",
+   "largestOverlap": "Algeria",
+   "landShare": 1.0,
+   "areaKm2": 524330,
+   "vertices": 232,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:gissar-amudarya",
+   "name": "Gaurdak salt and potash (Gissar, Amu Darya)",
+   "layer": "K",
+   "age": "Jurassic",
+   "codes": [
+    "halite",
+    "sylvite"
+   ],
+   "country": "Turkmenistan",
+   "largestOverlap": "Turkmenistan",
+   "landShare": 1.0,
+   "areaKm2": 66891,
+   "vertices": 199,
+   "ageConflict": "",
+   "mt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.003,
+    "impliedMt": 2007,
+    "publishedMt": 2000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.16
+  },
+  {
+   "kind": "area",
+   "id": "evap:lop-nur",
+   "name": "Lop Nur potash brines and salt crust (Luobupo)",
+   "layer": "K",
+   "age": "Quaternary",
+   "codes": [
+    "earth-saltflat",
+    "earth-saltflat-sylvite"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 12191,
+   "vertices": 60,
+   "ageConflict": "",
+   "mt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.082,
+    "impliedMt": 1999,
+    "publishedMt": 2000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.315
+  },
+  {
+   "kind": "area",
+   "id": "evap:qarhan",
+   "name": "Qarhan salt lake (Qaidam basin)",
+   "layer": "K",
+   "age": "Quaternary",
+   "codes": [
+    "earth-saltflat",
+    "earth-saltflat-sylvite"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 11869,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 1000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.042,
+    "impliedMt": 999,
+    "publishedMt": 1000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.254
+  },
+  {
+   "kind": "area",
+   "id": "evap:simao",
+   "name": "Simao and Lanping salt (Mengyejing; Yunnan brine wells)",
+   "layer": "NaCl",
+   "age": "Cretaceous",
+   "codes": [
+    "halite"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 37823,
+   "vertices": 1329,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:zigong",
+   "name": "Sichuan basin Triassic brine and salt (Zigong)",
+   "layer": "NaCl",
+   "age": "Triassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 2073,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:salt-range",
+   "name": "Salt Range (Khewra, Warcha, Kalabagh)",
+   "layer": "NaCl",
+   "age": "Cambrian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Pakistan",
+   "largestOverlap": "Pakistan",
+   "landShare": 1.0,
+   "areaKm2": 6074,
+   "vertices": 8,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:cheshire",
+   "name": "Cheshire salt field (Northwich Halite)",
+   "layer": "NaCl",
+   "age": "Triassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "United Kingdom",
+   "largestOverlap": "United Kingdom",
+   "landShare": 0.998,
+   "areaKm2": 1116,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:droitwich",
+   "name": "Droitwich salt (Worcestershire)",
+   "layer": "NaCl",
+   "age": "Triassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "United Kingdom",
+   "largestOverlap": "United Kingdom",
+   "landShare": 1.0,
+   "areaKm2": 129,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:lorraine-salt",
+   "name": "Lorraine Keuper salt (Dieuze, Vic, Varangeville)",
+   "layer": "NaCl",
+   "age": "Triassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "France",
+   "largestOverlap": "France",
+   "landShare": 1.0,
+   "areaKm2": 1400,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:salins",
+   "name": "Salins-les-Bains brine (Jura Triassic salt)",
+   "layer": "NaCl",
+   "age": "Triassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "France",
+   "largestOverlap": "France",
+   "landShare": 1.0,
+   "areaKm2": 127,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:muschelkalk-wuerttemberg",
+   "name": "Middle Muschelkalk salt of Wuerttemberg (Heilbronn, Bad Friedrichshall, Schwaebisch Hall)",
+   "layer": "NaCl",
+   "age": "Triassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "Germany",
+   "largestOverlap": "Germany",
+   "landShare": 1.0,
+   "areaKm2": 1722,
+   "vertices": 7,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:uyuni",
+   "name": "Salar de Uyuni",
+   "layer": "NaCl",
+   "age": "Quaternary",
+   "codes": [
+    "earth-saltflat",
+    "earth-saltflat-sylvite"
+   ],
+   "country": "Bolivia",
+   "largestOverlap": "Bolivia",
+   "landShare": 1.0,
+   "areaKm2": 9358,
+   "vertices": 8,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:atacama-salar",
+   "name": "Salar de Atacama",
+   "layer": "K",
+   "age": "Quaternary",
+   "codes": [
+    "earth-saltflat",
+    "earth-saltflat-sylvite"
+   ],
+   "country": "Chile",
+   "largestOverlap": "Chile",
+   "landShare": 1.0,
+   "areaKm2": 3338,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": 500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.075,
+    "impliedMt": 500,
+    "publishedMt": 500,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.307
+  },
+  {
+   "kind": "area",
+   "id": "evap:bonneville",
+   "name": "Bonneville Salt Flats and Great Salt Lake Desert",
+   "layer": "K",
+   "age": "Quaternary",
+   "codes": [
+    "earth-saltflat",
+    "earth-saltflat-sylvite"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 2014,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": 50,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.041,
+    "impliedMt": 50,
+    "publishedMt": 50,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.15
+  },
+  {
+   "kind": "area",
+   "id": "evap:taghaza-taoudenni",
+   "name": "Taghaza and Taoudenni rock-salt pans",
+   "layer": "NaCl",
+   "age": "Quaternary",
+   "codes": [
+    "earth-saltflat"
+   ],
+   "country": "Mali",
+   "largestOverlap": "Mali",
+   "landShare": 1.0,
+   "areaKm2": 1163,
+   "vertices": 10,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:bilma",
+   "name": "Kawar salt pans (Bilma, Fachi)",
+   "layer": "NaCl",
+   "age": "Quaternary",
+   "codes": [
+    "earth-saltflat"
+   ],
+   "country": "Niger",
+   "largestOverlap": "Niger",
+   "landShare": 1.0,
+   "areaKm2": 350,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:sambhar",
+   "name": "Sambhar Lake",
+   "layer": "NaCl",
+   "age": "Quaternary",
+   "codes": [
+    "earth-saltflat"
+   ],
+   "country": "India",
+   "largestOverlap": "India",
+   "landShare": 1.0,
+   "areaKm2": 550,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:elton-baskunchak",
+   "name": "Lakes Elton and Baskunchak",
+   "layer": "NaCl",
+   "age": "Quaternary",
+   "codes": [
+    "earth-saltflat"
+   ],
+   "country": "Russia",
+   "largestOverlap": "Russia",
+   "landShare": 1.0,
+   "areaKm2": 526,
+   "vertices": 10,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:tuz-golu",
+   "name": "Tuz Golu (Lake Tuz)",
+   "layer": "NaCl",
+   "age": "Quaternary",
+   "codes": [
+    "earth-saltflat"
+   ],
+   "country": "Turkey",
+   "largestOverlap": "Turkey",
+   "landShare": 1.0,
+   "areaKm2": 1723,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:chott-djerid",
+   "name": "Chott el Djerid",
+   "layer": "NaCl",
+   "age": "Quaternary",
+   "codes": [
+    "earth-saltflat"
+   ],
+   "country": "Tunisia",
+   "largestOverlap": "Tunisia",
+   "landShare": 1.0,
+   "areaKm2": 3390,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "evap:lake-eyre",
+   "name": "Kati Thanda-Lake Eyre North",
+   "layer": "NaCl",
+   "age": "Quaternary",
+   "codes": [
+    "earth-saltflat"
+   ],
+   "country": "Australia",
+   "largestOverlap": "Australia",
+   "landShare": 1.0,
+   "areaKm2": 6942,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "gyp:paris-basin",
+   "name": "Paris basin gypsum (Montmartre, Cormeilles, Vaujours)",
+   "layer": "gypsum",
+   "age": "Paleogene",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "France",
+   "largestOverlap": "France",
+   "landShare": 1.0,
+   "areaKm2": 1256,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": null,
+   "q": "B",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "gyp:suedharz",
+   "name": "Southern Harz Zechstein gypsum belt (Nordhausen to Sangerhausen)",
+   "layer": "gypsum",
+   "age": "Permian",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "Germany",
+   "largestOverlap": "Germany",
+   "landShare": 1.0,
+   "areaKm2": 712,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "B",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "gyp:windsor",
+   "name": "Windsor Group gypsum of Nova Scotia (Windsor, Milford, Little Narrows)",
+   "layer": "gypsum",
+   "age": "Carboniferous",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "Canada",
+   "largestOverlap": "Canada",
+   "landShare": 0.962,
+   "areaKm2": 2628,
+   "vertices": 10,
+   "ageConflict": "",
+   "mt": null,
+   "q": "B",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "gyp:sorbas",
+   "name": "Sorbas and Vera Messinian gypsum (Almeria)",
+   "layer": "gypsum",
+   "age": "Neogene",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "Spain",
+   "largestOverlap": "Spain",
+   "landShare": 0.986,
+   "areaKm2": 592,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "B",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "gyp:sivas",
+   "name": "Sivas basin gypsum",
+   "layer": "gypsum",
+   "age": "Paleogene",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "Turkey",
+   "largestOverlap": "Turkey",
+   "landShare": 1.0,
+   "areaKm2": 6866,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "gyp:blaine",
+   "name": "Blaine Formation gypsum (western Oklahoma)",
+   "layer": "gypsum",
+   "age": "Permian",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 17458,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "gyp:fort-dodge",
+   "name": "Fort Dodge gypsum (Iowa)",
+   "layer": "gypsum",
+   "age": "Jurassic",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 329,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "B",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "gyp:michigan",
+   "name": "Michigan Formation gypsum (Tawas, Grand Rapids)",
+   "layer": "gypsum",
+   "age": "Carboniferous",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 714,
+   "vertices": 10,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "gyp:midlands-alabaster",
+   "name": "Mercia Mudstone gypsum and alabaster (Chellaston, Tutbury, Fauld, East Leake)",
+   "layer": "gypsum",
+   "age": "Triassic",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "United Kingdom",
+   "largestOverlap": "United Kingdom",
+   "landShare": 1.0,
+   "areaKm2": 815,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "gyp:volterra",
+   "name": "Volterra alabaster",
+   "layer": "gypsum",
+   "age": "Neogene",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "Italy",
+   "largestOverlap": "Italy",
+   "landShare": 1.0,
+   "areaKm2": 180,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "gyp:vena-del-gesso",
+   "name": "Vena del Gesso Romagnola",
+   "layer": "gypsum",
+   "age": "Neogene",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "Italy",
+   "largestOverlap": "Italy",
+   "landShare": 1.0,
+   "areaKm2": 266,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "gyp:salaspils",
+   "name": "Salaspils Formation gypsum near Riga (Saulkalne, Sauriesi)",
+   "layer": "gypsum",
+   "age": "Devonian",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "Latvia",
+   "largestOverlap": "Latvia",
+   "landShare": 1.0,
+   "areaKm2": 204,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "B",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "gyp:birzai-pasvalys",
+   "name": "Birzai and Pasvalys gypsum karst",
+   "layer": "gypsum",
+   "age": "Devonian",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "Lithuania",
+   "largestOverlap": "Lithuania",
+   "landShare": 0.999,
+   "areaKm2": 1244,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "gyp:pinega",
+   "name": "Pinega gypsum karst (Arkhangelsk)",
+   "layer": "gypsum",
+   "age": "Permian",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "Russia",
+   "largestOverlap": "Russia",
+   "landShare": 1.0,
+   "areaKm2": 2127,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": null,
+   "q": "C",
+   "countryOk": true,
+   "derived": null,
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "sul:tarnobrzeg",
+   "name": "Tarnobrzeg sulfur district (Machow, Jeziorko, Osiek, Grzybow)",
+   "layer": "S",
+   "age": "Neogene",
+   "codes": [
+    "sulfur"
+   ],
+   "country": "Poland",
+   "largestOverlap": "Poland",
+   "landShare": 1.0,
+   "areaKm2": 1237,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.035,
+    "impliedMt": 2002,
+    "publishedMt": 2000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "sul:yavoriv-rozdil",
+   "name": "Yavoriv and Rozdil sulfur (Carpathian foredeep)",
+   "layer": "S",
+   "age": "Neogene",
+   "codes": [
+    "sulfur"
+   ],
+   "country": "Ukraine",
+   "largestOverlap": "Ukraine",
+   "landShare": 1.0,
+   "areaKm2": 541,
+   "vertices": 10,
+   "ageConflict": "",
+   "mt": 600,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.024,
+    "impliedMt": 600,
+    "publishedMt": 600,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "sul:sicily",
+   "name": "Sicilian Messinian evaporite basin: sulfur, gypsum and salt (Caltanissetta, Agrigento, Enna, Realmonte)",
+   "layer": "S",
+   "age": "Neogene",
+   "codes": [
+    "earth-gypsum",
+    "sulfur",
+    "halite"
+   ],
+   "country": "Italy",
+   "largestOverlap": "Italy",
+   "landShare": 0.966,
+   "areaKm2": 6691,
+   "vertices": 187,
+   "ageConflict": "",
+   "mt": 300,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.004,
+    "impliedMt": 300,
+    "publishedMt": 300,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:ouled-abdoun",
+   "name": "Ouled Abdoun phosphate basin (Khouribga)",
+   "layer": "P",
+   "age": "Paleogene",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Morocco",
+   "largestOverlap": "Morocco",
+   "landShare": 1.0,
+   "areaKm2": 5393,
+   "vertices": 6,
+   "ageConflict": "",
+   "mt": 26000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.14,
+    "impliedMt": 25993,
+    "publishedMt": 26000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:gantour",
+   "name": "Gantour phosphate basin (Youssoufia, Benguerir)",
+   "layer": "P",
+   "age": "Paleogene",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Morocco",
+   "largestOverlap": "Morocco",
+   "landShare": 1.0,
+   "areaKm2": 6327,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 20000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.137,
+    "impliedMt": 19996,
+    "publishedMt": 20000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:meskala",
+   "name": "Meskala phosphate basin",
+   "layer": "P",
+   "age": "Paleogene",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Morocco",
+   "largestOverlap": "Morocco",
+   "landShare": 1.0,
+   "areaKm2": 1899,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 4000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.114,
+    "impliedMt": 4001,
+    "publishedMt": 4000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:bou-craa",
+   "name": "Bou Craa phosphate",
+   "layer": "P",
+   "age": "Paleogene",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Western Sahara",
+   "largestOverlap": "Morocco",
+   "landShare": 1.0,
+   "areaKm2": 774,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 1000,
+   "q": "C",
+   "countryOk": false,
+   "derived": {
+    "scale": 0.094,
+    "impliedMt": 1000,
+    "publishedMt": 1000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:phosphoria",
+   "name": "Phosphoria Formation (Idaho, Utah, Wyoming, Montana)",
+   "layer": "P",
+   "age": "Permian",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 52299,
+   "vertices": 8,
+   "ageConflict": "",
+   "mt": 10000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.028,
+    "impliedMt": 9996,
+    "publishedMt": 10000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:central-florida",
+   "name": "Central Florida phosphate district (Bone Valley, Peace River)",
+   "layer": "P",
+   "age": "Neogene",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 1.0,
+   "areaKm2": 6115,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 8000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.114,
+    "impliedMt": 8003,
+    "publishedMt": 8000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:aurora",
+   "name": "Aurora phosphate (Pungo River Formation, North Carolina)",
+   "layer": "P",
+   "age": "Neogene",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "United States of America",
+   "largestOverlap": "United States of America",
+   "landShare": 0.801,
+   "areaKm2": 1008,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 3000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.108,
+    "impliedMt": 3000,
+    "publishedMt": 3000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:karatau",
+   "name": "Karatau phosphorite basin (Zhanatas, Koksu)",
+   "layer": "P",
+   "age": "Cambrian",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Kazakhstan",
+   "largestOverlap": "Kazakhstan",
+   "landShare": 1.0,
+   "areaKm2": 7928,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 4000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.015,
+    "impliedMt": 3993,
+    "publishedMt": 4000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:georgina",
+   "name": "Georgina basin phosphorite (Phosphate Hill, Duchess, Lady Annie)",
+   "layer": "P",
+   "age": "Cambrian",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Australia",
+   "largestOverlap": "Australia",
+   "landShare": 1.0,
+   "areaKm2": 11259,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 4000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.01,
+    "impliedMt": 4001,
+    "publishedMt": 4000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:baltic-obolus",
+   "name": "Baltic Obolus phosphorite (Maardu, Toolse, Rakvere, Kingisepp)",
+   "layer": "P",
+   "age": "Ordovician",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Estonia",
+   "largestOverlap": "Estonia",
+   "landShare": 0.803,
+   "areaKm2": 7569,
+   "vertices": 7,
+   "ageConflict": "",
+   "mt": 3700,
+   "q": "B",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.071,
+    "impliedMt": 3698,
+    "publishedMt": 3700,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.7
+  },
+  {
+   "kind": "area",
+   "id": "phos:jordan",
+   "name": "Jordan phosphate (Eshidiya, Al-Hasa)",
+   "layer": "P",
+   "age": "Cretaceous",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Jordan",
+   "largestOverlap": "Jordan",
+   "landShare": 1.0,
+   "areaKm2": 2025,
+   "vertices": 10,
+   "ageConflict": "",
+   "mt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.072,
+    "impliedMt": 2001,
+    "publishedMt": 2000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:al-jalamid",
+   "name": "Al Jalamid phosphate (northern Saudi Arabia)",
+   "layer": "P",
+   "age": "Paleogene",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Saudi Arabia",
+   "largestOverlap": "Saudi Arabia",
+   "landShare": 1.0,
+   "areaKm2": 2216,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 1000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.039,
+    "impliedMt": 999,
+    "publishedMt": 1000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:gafsa",
+   "name": "Gafsa-Metlaoui phosphate basin",
+   "layer": "P",
+   "age": "Paleogene",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Tunisia",
+   "largestOverlap": "Tunisia",
+   "landShare": 1.0,
+   "areaKm2": 2654,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 2500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.051,
+    "impliedMt": 2500,
+    "publishedMt": 2500,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:djebel-onk",
+   "name": "Djebel Onk phosphate",
+   "layer": "P",
+   "age": "Paleogene",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Algeria",
+   "largestOverlap": "Algeria",
+   "landShare": 1.0,
+   "areaKm2": 610,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.071,
+    "impliedMt": 2000,
+    "publishedMt": 2000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:abu-tartur",
+   "name": "Abu Tartur phosphate (Western Desert)",
+   "layer": "P",
+   "age": "Cretaceous",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Egypt",
+   "largestOverlap": "Egypt",
+   "landShare": 1.0,
+   "areaKm2": 892,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 1000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.122,
+    "impliedMt": 1000,
+    "publishedMt": 1000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:khneifis",
+   "name": "Palmyrides phosphate (Khneifis, Sharqiyah)",
+   "layer": "P",
+   "age": "Cretaceous",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Syria",
+   "largestOverlap": "Syria",
+   "landShare": 1.0,
+   "areaKm2": 2447,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 1700,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.05,
+    "impliedMt": 1702,
+    "publishedMt": 1700,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:akashat",
+   "name": "Akashat phosphate (western Iraq)",
+   "layer": "P",
+   "age": "Paleogene",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Iraq",
+   "largestOverlap": "Iraq",
+   "landShare": 1.0,
+   "areaKm2": 1798,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 1000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.024,
+    "impliedMt": 1001,
+    "publishedMt": 1000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:negev",
+   "name": "Negev phosphate (Oron, Zin, Arad)",
+   "layer": "P",
+   "age": "Cretaceous",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Israel",
+   "largestOverlap": "Israel",
+   "landShare": 1.0,
+   "areaKm2": 636,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 1000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.228,
+    "impliedMt": 1000,
+    "publishedMt": 1000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:sechura",
+   "name": "Sechura phosphate (Bayovar)",
+   "layer": "P",
+   "age": "Neogene",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Peru",
+   "largestOverlap": "Peru",
+   "landShare": 0.975,
+   "areaKm2": 2449,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 5000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.089,
+    "impliedMt": 5003,
+    "publishedMt": 5000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:taiba",
+   "name": "Taiba phosphate (Senegal)",
+   "layer": "P",
+   "age": "Paleogene",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Senegal",
+   "largestOverlap": "Senegal",
+   "landShare": 1.0,
+   "areaKm2": 476,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 300,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.046,
+    "impliedMt": 300,
+    "publishedMt": 300,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:hahotoe",
+   "name": "Hahotoe-Kpogame phosphate (Togo)",
+   "layer": "P",
+   "age": "Paleogene",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Togo",
+   "largestOverlap": "Togo",
+   "landShare": 1.0,
+   "areaKm2": 612,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 300,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.043,
+    "impliedMt": 300,
+    "publishedMt": 300,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:kunyang",
+   "name": "Kunyang phosphorite (Yunnan)",
+   "layer": "P",
+   "age": "Cambrian",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 1176,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 3000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.111,
+    "impliedMt": 3001,
+    "publishedMt": 3000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:kaiyang",
+   "name": "Kaiyang phosphorite (Guizhou)",
+   "layer": "P",
+   "age": "Precambrian",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 440,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.33,
+    "impliedMt": 2000,
+    "publishedMt": 2000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:yichang",
+   "name": "Yichang phosphorite (Hubei)",
+   "layer": "P",
+   "age": "Precambrian",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "China",
+   "largestOverlap": "China",
+   "landShare": 1.0,
+   "areaKm2": 1480,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.118,
+    "impliedMt": 1999,
+    "publishedMt": 2000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:lao-cai",
+   "name": "Lao Cai apatite-phosphorite belt",
+   "layer": "P",
+   "age": "Cambrian",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Vietnam",
+   "largestOverlap": "Vietnam",
+   "landShare": 1.0,
+   "areaKm2": 1539,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 2500,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.071,
+    "impliedMt": 2500,
+    "publishedMt": 2500,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "area",
+   "id": "phos:patos-de-minas",
+   "name": "Patos de Minas phosphorite",
+   "layer": "P",
+   "age": "Precambrian",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Brazil",
+   "largestOverlap": "Brazil",
+   "landShare": 1.0,
+   "areaKm2": 1052,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 400,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.017,
+    "impliedMt": 399,
+    "publishedMt": 400,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:avery-island",
+   "name": "Avery Island salt dome",
+   "layer": "NaCl",
+   "age": "Jurassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 31650,
+   "bodyMt": 31650,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:weeks-island",
+   "name": "Weeks Island salt dome",
+   "layer": "NaCl",
+   "age": "Jurassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 20154,
+   "bodyMt": 20154,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:jefferson-island",
+   "name": "Jefferson Island salt dome",
+   "layer": "NaCl",
+   "age": "Jurassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 11222,
+   "bodyMt": 11222,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:cote-blanche",
+   "name": "Cote Blanche salt dome",
+   "layer": "NaCl",
+   "age": "Jurassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": false,
+   "ageConflict": "",
+   "mt": 20154,
+   "bodyMt": 20154,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:grand-saline",
+   "name": "Grand Saline salt dome",
+   "layer": "NaCl",
+   "age": "Jurassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 18856,
+   "bodyMt": 18856,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:hockley",
+   "name": "Hockley salt dome",
+   "layer": "NaCl",
+   "age": "Jurassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 49834,
+   "bodyMt": 49834,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:bryan-mound",
+   "name": "Bryan Mound salt dome",
+   "layer": "NaCl",
+   "age": "Jurassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 16795,
+   "bodyMt": 16795,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:big-hill",
+   "name": "Big Hill salt dome",
+   "layer": "NaCl",
+   "age": "Jurassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 17177,
+   "bodyMt": 17177,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:gorleben",
+   "name": "Gorleben-Rambow salt dome",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Germany",
+   "foundCountry": "Germany",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 88216,
+   "bodyMt": 88216,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:asse",
+   "name": "Asse salt anticline",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Germany",
+   "foundCountry": "Germany",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 12893,
+   "bodyMt": 12893,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:lueneburg",
+   "name": "Lueneburg salt dome",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Germany",
+   "foundCountry": "Germany",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 20086,
+   "bodyMt": 20086,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:bad-segeberg",
+   "name": "Bad Segeberg salt dome (Kalkberg cap rock)",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Germany",
+   "foundCountry": "Germany",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 19679,
+   "bodyMt": 19679,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:stassfurt",
+   "name": "Stassfurt salt saddle",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Germany",
+   "foundCountry": "Germany",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 28246,
+   "bodyMt": 28246,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:bernburg",
+   "name": "Bernburg salt dome",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Germany",
+   "foundCountry": "Germany",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 8143,
+   "bodyMt": 8143,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:sperenberg",
+   "name": "Sperenberg salt dome",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Germany",
+   "foundCountry": "Germany",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 19747,
+   "bodyMt": 19747,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:mors",
+   "name": "Mors salt dome",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Denmark",
+   "foundCountry": "Denmark",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 51912,
+   "bodyMt": 51912,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:hengelo",
+   "name": "Hengelo-Boekelo salt (Twente)",
+   "layer": "NaCl",
+   "age": "Triassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "Netherlands",
+   "foundCountry": "Netherlands",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 8482,
+   "bodyMt": 8482,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:klodawa",
+   "name": "Klodawa salt dome",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Poland",
+   "foundCountry": "Poland",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 32911,
+   "bodyMt": 32911,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:inowroclaw",
+   "name": "Inowroclaw salt dome",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Poland",
+   "foundCountry": "Poland",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 18703,
+   "bodyMt": 18703,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:wapno",
+   "name": "Wapno salt dome",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Poland",
+   "foundCountry": "Poland",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 6531,
+   "bodyMt": 6531,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:slanic",
+   "name": "Slanic Prahova salt massif",
+   "layer": "NaCl",
+   "age": "Neogene",
+   "codes": [
+    "halite"
+   ],
+   "country": "Romania",
+   "foundCountry": "Romania",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 3393,
+   "bodyMt": 3393,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:solotvyno",
+   "name": "Solotvyno salt diapir",
+   "layer": "NaCl",
+   "age": "Neogene",
+   "codes": [
+    "halite"
+   ],
+   "country": "Ukraine",
+   "foundCountry": "Ukraine",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 5611,
+   "bodyMt": 5611,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:mount-sodom",
+   "name": "Mount Sodom salt diapir",
+   "layer": "NaCl",
+   "age": "Neogene",
+   "codes": [
+    "halite"
+   ],
+   "country": "Israel",
+   "foundCountry": "Israel",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 33929,
+   "bodyMt": 33929,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:hormuz-island",
+   "name": "Hormuz Island salt diapir",
+   "layer": "NaCl",
+   "age": "Cambrian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Iran",
+   "foundCountry": "Iran",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 212058,
+   "bodyMt": 212058,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:namakdan",
+   "name": "Namakdan salt diapir (Qeshm)",
+   "layer": "NaCl",
+   "age": "Cambrian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Iran",
+   "foundCountry": "Iran",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 212058,
+   "bodyMt": 212058,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:djelfa",
+   "name": "Rocher de Sel (Djelfa)",
+   "layer": "NaCl",
+   "age": "Triassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "Algeria",
+   "foundCountry": "Algeria",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 5726,
+   "bodyMt": 5726,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:cardona",
+   "name": "Cardona salt diapir (Muntanya de Sal)",
+   "layer": "NaCl",
+   "age": "Paleogene",
+   "codes": [
+    "halite"
+   ],
+   "country": "Spain",
+   "foundCountry": "Spain",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 5726,
+   "bodyMt": 5726,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:remolinos",
+   "name": "Remolinos rock salt (Ebro basin)",
+   "layer": "NaCl",
+   "age": "Paleogene",
+   "codes": [
+    "halite"
+   ],
+   "country": "Spain",
+   "foundCountry": "Spain",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 1357,
+   "bodyMt": 1357,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:hallstatt",
+   "name": "Hallstatt salt body (Haselgebirge)",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Austria",
+   "foundCountry": "Austria",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 2290,
+   "bodyMt": 2290,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:altaussee",
+   "name": "Altaussee salt body (Haselgebirge)",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Austria",
+   "foundCountry": "Austria",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 2290,
+   "bodyMt": 2290,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:bad-ischl",
+   "name": "Bad Ischl salt body (Haselgebirge)",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Austria",
+   "foundCountry": "Austria",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 1018,
+   "bodyMt": 1018,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:duerrnberg",
+   "name": "Duerrnberg (Hallein) salt body",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Austria",
+   "foundCountry": "Austria",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 2290,
+   "bodyMt": 2290,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:berchtesgaden",
+   "name": "Berchtesgaden salt body",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Germany",
+   "foundCountry": "Germany",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 2290,
+   "bodyMt": 2290,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:bad-reichenhall",
+   "name": "Bad Reichenhall brine (Haselgebirge)",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Germany",
+   "foundCountry": "Germany",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 848,
+   "bodyMt": 848,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "dome:hall-in-tirol",
+   "name": "Hall in Tirol salt body (Absam)",
+   "layer": "NaCl",
+   "age": "Permian",
+   "codes": [
+    "halite"
+   ],
+   "country": "Austria",
+   "foundCountry": "Austria",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 2290,
+   "bodyMt": 2290,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "salt:wieliczka",
+   "name": "Wieliczka salt deposit",
+   "layer": "NaCl",
+   "age": "Neogene",
+   "codes": [
+    "halite"
+   ],
+   "country": "Poland",
+   "foundCountry": "Poland",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 4000,
+   "bodyMt": 4000,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "salt:bochnia",
+   "name": "Bochnia salt deposit",
+   "layer": "NaCl",
+   "age": "Neogene",
+   "codes": [
+    "halite"
+   ],
+   "country": "Poland",
+   "foundCountry": "Poland",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 1000,
+   "bodyMt": 1000,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "salt:turda",
+   "name": "Turda salt deposit",
+   "layer": "NaCl",
+   "age": "Neogene",
+   "codes": [
+    "halite"
+   ],
+   "country": "Romania",
+   "foundCountry": "Romania",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 2000,
+   "bodyMt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "salt:praid",
+   "name": "Praid salt diapir",
+   "layer": "NaCl",
+   "age": "Neogene",
+   "codes": [
+    "halite"
+   ],
+   "country": "Romania",
+   "foundCountry": "Romania",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 2000,
+   "bodyMt": 2000,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "gyp:san-marcos",
+   "name": "San Marcos Island gypsum (Baja California Sur)",
+   "layer": "gypsum",
+   "age": "Neogene",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "Mexico",
+   "foundCountry": "Mexico",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 500,
+   "bodyMt": 500,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "gyp:plaster-city",
+   "name": "Fish Creek Mountains gypsum (Plaster City quarry)",
+   "layer": "gypsum",
+   "age": "Neogene",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 100,
+   "bodyMt": 100,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "gyp:yingcheng",
+   "name": "Yingcheng gypsum (Hubei)",
+   "layer": "gypsum",
+   "age": "Paleogene",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "China",
+   "foundCountry": "China",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 1000,
+   "bodyMt": 1000,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "gyp:lake-macdonnell",
+   "name": "Lake MacDonnell gypsum",
+   "layer": "gypsum",
+   "age": "Quaternary",
+   "codes": [
+    "earth-gypsum"
+   ],
+   "country": "Australia",
+   "foundCountry": "Australia",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 200,
+   "bodyMt": 200,
+   "q": "C",
+   "countryOk": true,
+   "layers": [
+    "playa"
+   ]
+  },
+  {
+   "kind": "deposit",
+   "id": "bor:boron",
+   "name": "Boron (Kramer) borate deposit",
+   "layer": "B",
+   "age": "Neogene",
+   "codes": [
+    "borax",
+    "kernite"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 130,
+   "bodyMt": 130,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "bor:searles",
+   "name": "Searles Lake borate and potash evaporites",
+   "layer": "B",
+   "age": "Quaternary",
+   "codes": [
+    "borax"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 1000,
+   "bodyMt": 1000,
+   "q": "C",
+   "countryOk": true,
+   "layers": [
+    "playa"
+   ]
+  },
+  {
+   "kind": "deposit",
+   "id": "bor:furnace-creek",
+   "name": "Furnace Creek colemanite (Death Valley)",
+   "layer": "B",
+   "age": "Neogene",
+   "codes": [
+    "borax"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 20,
+   "bodyMt": 20,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "bor:kirka",
+   "name": "Kirka borax deposit",
+   "layer": "B",
+   "age": "Neogene",
+   "codes": [
+    "borax"
+   ],
+   "country": "Turkey",
+   "foundCountry": "Turkey",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 600,
+   "bodyMt": 600,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "bor:bigadic",
+   "name": "Bigadic colemanite and ulexite",
+   "layer": "B",
+   "age": "Neogene",
+   "codes": [
+    "borax"
+   ],
+   "country": "Turkey",
+   "foundCountry": "Turkey",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 600,
+   "bodyMt": 600,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "bor:emet",
+   "name": "Emet and Hisarcik colemanite",
+   "layer": "B",
+   "age": "Neogene",
+   "codes": [
+    "borax"
+   ],
+   "country": "Turkey",
+   "foundCountry": "Turkey",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 800,
+   "bodyMt": 800,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "bor:kestelek",
+   "name": "Kestelek colemanite",
+   "layer": "B",
+   "age": "Neogene",
+   "codes": [
+    "borax"
+   ],
+   "country": "Turkey",
+   "foundCountry": "Turkey",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 10,
+   "bodyMt": 10,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "bor:tincalayu",
+   "name": "Tincalayu borax (Salar del Hombre Muerto)",
+   "layer": "B",
+   "age": "Neogene",
+   "codes": [
+    "borax",
+    "kernite"
+   ],
+   "country": "Argentina",
+   "foundCountry": "Argentina",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 30,
+   "bodyMt": 30,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "bor:loma-blanca",
+   "name": "Loma Blanca borax (Jujuy)",
+   "layer": "B",
+   "age": "Neogene",
+   "codes": [
+    "borax"
+   ],
+   "country": "Argentina",
+   "foundCountry": "Argentina",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 20,
+   "bodyMt": 20,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "bor:surire",
+   "name": "Salar de Surire ulexite",
+   "layer": "B",
+   "age": "Quaternary",
+   "codes": [
+    "borax"
+   ],
+   "country": "Chile",
+   "foundCountry": "Chile",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 50,
+   "bodyMt": 50,
+   "q": "C",
+   "countryOk": true,
+   "layers": [
+    "playa"
+   ]
+  },
+  {
+   "kind": "deposit",
+   "id": "bor:ascotan",
+   "name": "Salar de Ascotan ulexite",
+   "layer": "B",
+   "age": "Quaternary",
+   "codes": [
+    "borax"
+   ],
+   "country": "Chile",
+   "foundCountry": "Chile",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 30,
+   "bodyMt": 30,
+   "q": "C",
+   "countryOk": true,
+   "layers": [
+    "playa"
+   ]
+  },
+  {
+   "kind": "deposit",
+   "id": "bor:zabuye",
+   "name": "Zabuye salt lake borax (Tibet)",
+   "layer": "B",
+   "age": "Quaternary",
+   "codes": [
+    "borax"
+   ],
+   "country": "China",
+   "foundCountry": "China",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 20,
+   "bodyMt": 20,
+   "q": "C",
+   "countryOk": true,
+   "layers": [
+    "playa"
+   ]
+  },
+  {
+   "kind": "deposit",
+   "id": "sul:boling",
+   "name": "Boling salt dome (sulfur cap rock)",
+   "layer": "S",
+   "age": "Jurassic",
+   "codes": [
+    "sulfur",
+    "halite"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 300,
+   "bodyMt": 127874,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "sul:sulphur-mines",
+   "name": "Sulphur Mines salt dome (Calcasieu; first Frasch mine)",
+   "layer": "S",
+   "age": "Jurassic",
+   "codes": [
+    "sulfur",
+    "halite"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 40,
+   "bodyMt": 8098,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "sul:grand-ecaille",
+   "name": "Grand Ecaille salt dome (sulfur cap rock)",
+   "layer": "S",
+   "age": "Jurassic",
+   "codes": [
+    "sulfur",
+    "halite"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": false,
+   "ageConflict": "",
+   "mt": 150,
+   "bodyMt": 30008,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "sul:spindletop",
+   "name": "Spindletop salt dome (sulfur cap rock)",
+   "layer": "S",
+   "age": "Jurassic",
+   "codes": [
+    "sulfur",
+    "halite"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 30,
+   "bodyMt": 17207,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "sul:jaltipan",
+   "name": "Jaltipan salt dome (sulfur cap rock, Isthmus of Tehuantepec)",
+   "layer": "S",
+   "age": "Jurassic",
+   "codes": [
+    "sulfur",
+    "halite"
+   ],
+   "country": "Mexico",
+   "foundCountry": "Mexico",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 100,
+   "bodyMt": 31315,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "sul:culberson",
+   "name": "Culberson sulfur (Castile Formation)",
+   "layer": "S",
+   "age": "Permian",
+   "codes": [
+    "sulfur"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 300,
+   "bodyMt": 300,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "sul:mishraq",
+   "name": "Mishraq sulfur (Fatha Formation)",
+   "layer": "S",
+   "age": "Neogene",
+   "codes": [
+    "sulfur"
+   ],
+   "country": "Iraq",
+   "foundCountry": "Iraq",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 800,
+   "bodyMt": 800,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "sul:gaurdak",
+   "name": "Gaurdak sulfur",
+   "layer": "S",
+   "age": "Jurassic",
+   "codes": [
+    "sulfur"
+   ],
+   "country": "Turkmenistan",
+   "foundCountry": "Turkmenistan",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 200,
+   "bodyMt": 200,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "phos:san-juan-de-la-costa",
+   "name": "San Juan de la Costa phosphorite",
+   "layer": "P",
+   "age": "Neogene",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Mexico",
+   "foundCountry": "Mexico",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 500,
+   "bodyMt": 500,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "alum:phocaea",
+   "name": "Phocaea alum (Foca)",
+   "layer": "alum",
+   "age": "Neogene",
+   "codes": [
+    "alum"
+   ],
+   "country": "Turkey",
+   "foundCountry": "Turkey",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 20,
+   "bodyMt": 20,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "alum:karahisar",
+   "name": "Sebinkarahisar alum (Koloneia)",
+   "layer": "alum",
+   "age": "Cretaceous",
+   "codes": [
+    "alum"
+   ],
+   "country": "Turkey",
+   "foundCountry": "Turkey",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 20,
+   "bodyMt": 20,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "alum:tolfa",
+   "name": "Tolfa alunite",
+   "layer": "alum",
+   "age": "Neogene",
+   "codes": [
+    "alum"
+   ],
+   "country": "Italy",
+   "foundCountry": "Italy",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 50,
+   "bodyMt": 50,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "alum:vulcano",
+   "name": "Vulcano and Lipari alum",
+   "layer": "alum",
+   "age": "Quaternary",
+   "codes": [
+    "alum"
+   ],
+   "country": "Italy",
+   "foundCountry": "Italy",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 2,
+   "bodyMt": 2,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "alum:milos",
+   "name": "Milos alum",
+   "layer": "alum",
+   "age": "Neogene",
+   "codes": [
+    "alum"
+   ],
+   "country": "Greece",
+   "foundCountry": "Greece",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 5,
+   "bodyMt": 5,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "alum:zaglik",
+   "name": "Zaglik alunite",
+   "layer": "alum",
+   "age": "Jurassic",
+   "codes": [
+    "alum"
+   ],
+   "country": "Azerbaijan",
+   "foundCountry": "Azerbaijan",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 160,
+   "bodyMt": 160,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "alum:fanshan",
+   "name": "Fanshan alunite (Cangnan)",
+   "layer": "alum",
+   "age": "Cretaceous",
+   "codes": [
+    "alum"
+   ],
+   "country": "China",
+   "foundCountry": "China",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 200,
+   "bodyMt": 200,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "alum:lujiang",
+   "name": "Lujiang alunite (Anhui)",
+   "layer": "alum",
+   "age": "Cretaceous",
+   "codes": [
+    "alum"
+   ],
+   "country": "China",
+   "foundCountry": "China",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 100,
+   "bodyMt": 100,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "alum:bulahdelah",
+   "name": "Bulahdelah alunite",
+   "layer": "alum",
+   "age": "Carboniferous",
+   "codes": [
+    "alum"
+   ],
+   "country": "Australia",
+   "foundCountry": "Australia",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 5,
+   "bodyMt": 5,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "alum:marysvale",
+   "name": "Marysvale alunite",
+   "layer": "alum",
+   "age": "Neogene",
+   "codes": [
+    "alum"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 5,
+   "bodyMt": 5,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "alum:andrarum",
+   "name": "Andrarum alum shale",
+   "layer": "alum",
+   "age": "Cambrian",
+   "codes": [
+    "alum"
+   ],
+   "country": "Sweden",
+   "foundCountry": "Sweden",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 50,
+   "bodyMt": 50,
+   "q": "C",
+   "countryOk": true,
+   "layers": [
+    "bed"
+   ]
+  },
+  {
+   "kind": "deposit",
+   "id": "alum:whitby",
+   "name": "Whitby alum shale (Jurassic Lias)",
+   "layer": "alum",
+   "age": "Jurassic",
+   "codes": [
+    "alum"
+   ],
+   "country": "United Kingdom",
+   "foundCountry": "United Kingdom",
+   "onLand": true,
+   "ageConflict": "",
+   "mt": 50,
+   "bodyMt": 50,
+   "q": "C",
+   "countryOk": true,
+   "layers": [
+    "bed"
+   ]
+  },
+  {
+   "kind": "evidence",
+   "id": "volcanic:aucanquilcha",
+   "name": "Aucanquilcha volcanic sulfur",
+   "layer": "S",
+   "country": "Chile",
+   "foundCountry": "Chile",
+   "countryOk": true
+  },
+  {
+   "kind": "evidence",
+   "id": "volcanic:namafjall",
+   "name": "Namafjall sulfur (Iceland)",
+   "layer": "S",
+   "country": "Iceland",
+   "foundCountry": "Iceland",
+   "countryOk": true
+  },
+  {
+   "kind": "evidence",
+   "id": "volcanic:vulcano",
+   "name": "Vulcano sulfur",
+   "layer": "S",
+   "country": "Italy",
+   "foundCountry": "Italy",
+   "countryOk": true
+  },
+  {
+   "kind": "evidence",
+   "id": "volcanic:ijen",
+   "name": "Kawah Ijen sulfur",
+   "layer": "S",
+   "country": "Indonesia",
+   "foundCountry": "Indonesia",
+   "countryOk": true
+  },
+  {
+   "kind": "evidence",
+   "id": "borate:inder",
+   "name": "Inder borates (Permian salt dome cap)",
+   "layer": "B",
+   "country": "Kazakhstan",
+   "foundCountry": "Kazakhstan",
+   "countryOk": true
+  }
+ ],
+ "ageConflicts": [
+  {
+   "kind": "area",
+   "id": "coal:moscow-basin",
+   "name": "Moscow brown-coal basin (Tula, Kaluga, Ryazan)",
+   "layer": "C_coal",
+   "age": "Carboniferous",
+   "codes": [
+    "lignite"
+   ],
+   "country": "Russia",
+   "largestOverlap": "Russia",
+   "landShare": 1.0,
+   "areaKm2": 34515,
+   "vertices": 9,
+   "ageConflict": "lignite must be Cenozoic or Mesozoic",
+   "mt": 20000,
+   "q": "C",
+   "countryOk": true,
+   "derived": {
+    "scale": 0.161,
+    "impliedMt": 20005,
+    "publishedMt": 20000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.43
+  }
+ ],
+ "countryProblems": [
+  {
+   "kind": "area",
+   "id": "phos:bou-craa",
+   "name": "Bou Craa phosphate",
+   "layer": "P",
+   "age": "Paleogene",
+   "codes": [
+    "phosphorite"
+   ],
+   "country": "Western Sahara",
+   "largestOverlap": "Morocco",
+   "landShare": 1.0,
+   "areaKm2": 774,
+   "vertices": 5,
+   "ageConflict": "",
+   "mt": 1000,
+   "q": "C",
+   "countryOk": false,
+   "derived": {
+    "scale": 0.094,
+    "impliedMt": 1000,
+    "publishedMt": 1000,
+    "ratio": 1.0
+   },
+   "evidenceWeight": 0.6
+  }
+ ],
+ "offLand": [
+  {
+   "kind": "deposit",
+   "id": "dome:cote-blanche",
+   "name": "Cote Blanche salt dome",
+   "layer": "NaCl",
+   "age": "Jurassic",
+   "codes": [
+    "halite"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": false,
+   "ageConflict": "",
+   "mt": 20154,
+   "bodyMt": 20154,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  },
+  {
+   "kind": "deposit",
+   "id": "sul:grand-ecaille",
+   "name": "Grand Ecaille salt dome (sulfur cap rock)",
+   "layer": "S",
+   "age": "Jurassic",
+   "codes": [
+    "sulfur",
+    "halite"
+   ],
+   "country": "United States of America",
+   "foundCountry": "United States of America",
+   "onLand": false,
+   "ageConflict": "",
+   "mt": 150,
+   "bodyMt": 30008,
+   "q": "C",
+   "countryOk": true,
+   "layers": null
+  }
+ ]
+}

@@ -1,0 +1,2273 @@
+{
+  "v1": {
+    "grid": "C:\\VS mods\\Earth\\docs\\research\\ore-heatmaps-v1\\baseline-v1\\ore-heatmaps-v1.json",
+    "datasetId": "earth-resource-evidence-2026-09-29-v1",
+    "famous": [
+      {
+        "name": "Chuquicamata",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Escondida",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Grasberg",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Grasberg Au",
+        "code": "Au",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Bingham Canyon",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Olympic Dam",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Olympic Dam U",
+        "code": "U",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Norilsk",
+        "code": "Ni",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Norilsk PGE",
+        "code": "Pt",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Sudbury",
+        "code": "Ni",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Bushveld Rustenburg",
+        "code": "Pt",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Bushveld Steelpoort",
+        "code": "Cr",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Great Dyke",
+        "code": "Cr",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Kiruna",
+        "code": "Fe",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Pilbara Mt Whaleback",
+        "code": "Fe",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Carajas",
+        "code": "Fe",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Witwatersrand",
+        "code": "Au",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Kalgoorlie",
+        "code": "Au",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Muruntau",
+        "code": "Au",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Broken Hill",
+        "code": "Pb",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Red Dog",
+        "code": "Zn",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Mount Isa",
+        "code": "Pb",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Potosi Cerro Rico",
+        "code": "Ag",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Cornwall",
+        "code": "Sn",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Bangka",
+        "code": "Sn",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Gejiu",
+        "code": "Sn",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Kolwezi (Katanga)",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Chingola (Zambian Copperbelt)",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Lubin (Kupferschiefer)",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Mansfeld (Kupferschiefer)",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Almaden",
+        "code": "Hg",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Freiberg (Erzgebirge)",
+        "code": "Ag",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Altenberg (Erzgebirge)",
+        "code": "Sn",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Jachymov (Erzgebirge)",
+        "code": "U",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Falun",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Rio Tinto",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Saskatchewan potash (Esterhazy)",
+        "code": "K",
+        "cell": 0.53,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Saskatoon potash belt",
+        "code": "K",
+        "cell": 0.5,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Saskatoon halite (sylvite parent)",
+        "code": "NaCl",
+        "cell": 0.15,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Stassfurt (Zechstein) K",
+        "code": "K",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Stassfurt (Zechstein) NaCl",
+        "code": "NaCl",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Gorleben salt dome NaCl",
+        "code": "NaCl",
+        "cell": 0.0,
+        "ring1": 0.17,
+        "min": 0.3,
+        "status": "weak"
+      },
+      {
+        "name": "Gorleben salt dome K",
+        "code": "K",
+        "cell": 0.0,
+        "ring1": 0.3,
+        "min": 0.3,
+        "status": "weak"
+      },
+      {
+        "name": "Upper Silesia coal",
+        "code": "C_coal",
+        "cell": 0.8,
+        "ring1": 0.8,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Ruhr coal",
+        "code": "C_coal",
+        "cell": 0.8,
+        "ring1": 0.8,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Appalachian coal (WV)",
+        "code": "C_coal",
+        "cell": 0.8,
+        "ring1": 0.8,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Powder River coal",
+        "code": "C_coal",
+        "cell": 0.8,
+        "ring1": 0.8,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Kuzbass coal",
+        "code": "C_coal",
+        "cell": 0.0,
+        "ring1": 0.0,
+        "min": 0.5,
+        "status": "missing"
+      },
+      {
+        "name": "Donbas coal",
+        "code": "C_coal",
+        "cell": 0.0,
+        "ring1": 0.0,
+        "min": 0.5,
+        "status": "missing"
+      },
+      {
+        "name": "Karaganda coal",
+        "code": "C_coal",
+        "cell": 0.0,
+        "ring1": 0.0,
+        "min": 0.5,
+        "status": "missing"
+      },
+      {
+        "name": "Pechora coal (Vorkuta)",
+        "code": "C_coal",
+        "cell": 0.0,
+        "ring1": 0.0,
+        "min": 0.5,
+        "status": "missing"
+      },
+      {
+        "name": "Bowen Basin coal",
+        "code": "C_coal",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Kimberley",
+        "code": "diamond",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Mirny (Mir pipe)",
+        "code": "diamond",
+        "cell": 0.0,
+        "ring1": 0.0,
+        "min": 0.5,
+        "status": "missing"
+      },
+      {
+        "name": "Muzo emeralds",
+        "code": "emerald",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Sar-e-Sang lapis",
+        "code": "lapis",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Guinea bauxite (Sangaredi)",
+        "code": "Al",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Jamaica bauxite",
+        "code": "Al",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Weipa bauxite",
+        "code": "Al",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Khouribga phosphate",
+        "code": "P",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Atacama nitrates (Maria Elena)",
+        "code": "N",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Kirka borates",
+        "code": "B",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Bigadic borates",
+        "code": "B",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Las Cuevas fluorite (MX)",
+        "code": "F",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Dayu tungsten (Jiangxi)",
+        "code": "W",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Panasqueira",
+        "code": "W",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Climax",
+        "code": "Mo",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "McArthur River U (Athabasca)",
+        "code": "U",
+        "cell": 0.15,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Kivu tin belt (DRC, corrected Major Deposits record)",
+        "code": "Sn",
+        "cell": 0.2,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Jinchuan Ni-Cu",
+        "code": "Cu",
+        "cell": 0.0,
+        "ring1": 0.5,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Pomalaa Ni laterite",
+        "code": "Ni",
+        "cell": 0.7,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Tarnobrzeg native sulfur",
+        "code": "S",
+        "cell": 0.8,
+        "ring1": 0.8,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "East Kalimantan coal",
+        "code": "C_coal",
+        "cell": 0.0,
+        "ring1": 0.0,
+        "min": 0.5,
+        "status": "missing"
+      },
+      {
+        "name": "Quang Ninh coal (VN)",
+        "code": "C_coal",
+        "cell": 0.0,
+        "ring1": 0.0,
+        "min": 0.5,
+        "status": "missing"
+      },
+      {
+        "name": "Hwange coal (ZW)",
+        "code": "C_coal",
+        "cell": 0.0,
+        "ring1": 0.0,
+        "min": 0.5,
+        "status": "missing"
+      },
+      {
+        "name": "Zonguldak coal (TR)",
+        "code": "C_coal",
+        "cell": 0.0,
+        "ring1": 0.0,
+        "min": 0.5,
+        "status": "missing"
+      },
+      {
+        "name": "Asturias coal (ES)",
+        "code": "C_coal",
+        "cell": 0.0,
+        "ring1": 0.0,
+        "min": 0.5,
+        "status": "missing"
+      },
+      {
+        "name": "Witbank coal (ZA)",
+        "code": "C_coal",
+        "cell": 0.0,
+        "ring1": 0.7,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Vasyugan mire (PEATMAP)",
+        "code": "peat",
+        "cell": 0.0,
+        "ring1": 0.0,
+        "min": 0.5,
+        "status": "missing"
+      },
+      {
+        "name": "Irish midland bogs (peat)",
+        "code": "peat",
+        "cell": 0.0,
+        "ring1": 0.0,
+        "min": 0.3,
+        "status": "missing"
+      },
+      {
+        "name": "Central Kalimantan peat (PEATMAP)",
+        "code": "peat",
+        "cell": 0.0,
+        "ring1": 0.0,
+        "min": 0.5,
+        "status": "missing"
+      }
+    ],
+    "repairedTracts": [
+      {
+        "name": "pCu tract Gangdese (was invalid)",
+        "potential": 0.0
+      },
+      {
+        "name": "pCu tract Outer Melanesian Arc II (antimeridian)",
+        "potential": 0.0
+      },
+      {
+        "name": "pCu tract Alaska Peninsula and Aleutians (antimeridian)",
+        "potential": 0.0
+      },
+      {
+        "name": "pCu tract Chukotka (antimeridian)",
+        "potential": 0.0
+      },
+      {
+        "name": "pCu tract Pacific Margin (antimeridian)",
+        "potential": 0.0
+      },
+      {
+        "name": "sedCu tract Hercynian-Thuringian / Kupferschiefer (was invalid)",
+        "potential": 0.0
+      },
+      {
+        "name": "Potash tract Zechstein halokinetic (was invalid)",
+        "potential": 0.0
+      },
+      {
+        "name": "Potash tract Qom-Great Kavir (was invalid)",
+        "potential": 0.0
+      },
+      {
+        "name": "Potash tract Red Sea (was invalid)",
+        "potential": 0.0
+      }
+    ],
+    "knownGaps": [
+      {
+        "name": "Tavan Tolgoi coal (MN)",
+        "code": "C_coal",
+        "ring1": 0.0,
+        "fix": "USGS Asia GIS compilation (ScienceBase, Cloudflare-blocked for scripted download) or a national Mongolian deposit register"
+      },
+      {
+        "name": "Moatize coal (MZ)",
+        "code": "C_coal",
+        "ring1": 0.0,
+        "fix": "USGS Compilation of GIS data for the mineral industries of Africa (doi:10.5066/P97EQWXP; coal occurrence areas)"
+      },
+      {
+        "name": "Nord-Pas-de-Calais coal (FR)",
+        "code": "C_coal",
+        "ring1": 0.0,
+        "fix": "BRGM historical coalfield outlines (closed 1990, so absent from facility lists)"
+      },
+      {
+        "name": "Inkai U (Chu-Sarysu, KZ)",
+        "code": "U",
+        "ring1": 0.0,
+        "fix": "USGS Asia/Eurasia GIS compilations (in-situ-leach U mines); IAEA UDEPO is excluded by policy"
+      },
+      {
+        "name": "Sicily native sulfur",
+        "code": "S",
+        "ring1": 0.0,
+        "fix": "Historic sulfur mines are not in MRDS or 2006-2010 facility lists; needs an Italian (ISPRA) abandoned-mine inventory if openly licensed"
+      }
+    ],
+    "extra": [
+      {
+        "name": "San Rafael Sn (PE)",
+        "code": "Sn",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Pitinga Sn (BR)",
+        "code": "Sn",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Bisie Sn (DRC)",
+        "code": "Sn",
+        "cell": 0.0,
+        "ring1": 0.7
+      },
+      {
+        "name": "Renison Sn (AU)",
+        "code": "Sn",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Dachang Sn (CN)",
+        "code": "Sn",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Rondonia Sn (BR)",
+        "code": "Sn",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Jos Plateau Sn (NG)",
+        "code": "Sn",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Neves-Corvo Cu",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Kidd Creek Cu",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Aitik Cu",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Udokan Cu",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Kamoa-Kakula Cu",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Dzhezkazgan Cu",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Almalyk Cu",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Bor Cu (RS)",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Aynak Cu (AF)",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Dexing Cu (CN)",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Obuasi Au (GH)",
+        "code": "Au",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Sadiola Au (ML)",
+        "code": "Au",
+        "cell": 0.0,
+        "ring1": 0.7
+      },
+      {
+        "name": "Geita Au (TZ)",
+        "code": "Au",
+        "cell": 0.27,
+        "ring1": 0.7
+      },
+      {
+        "name": "Kibali Au (DRC)",
+        "code": "Au",
+        "cell": 0.33,
+        "ring1": 0.7
+      },
+      {
+        "name": "Sukhoi Log Au",
+        "code": "Au",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Olimpiada Au",
+        "code": "Au",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Natalka Au",
+        "code": "Au",
+        "cell": 0.43,
+        "ring1": 0.7
+      },
+      {
+        "name": "Kumtor Au",
+        "code": "Au",
+        "cell": 0.32,
+        "ring1": 0.7
+      },
+      {
+        "name": "Yanacocha Au",
+        "code": "Au",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Lihir Au",
+        "code": "Au",
+        "cell": 0.33,
+        "ring1": 0.7
+      },
+      {
+        "name": "Voiseys Bay Ni",
+        "code": "Ni",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Jinchuan Ni",
+        "code": "Ni",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "New Caledonia Ni",
+        "code": "Ni",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Sorowako Ni",
+        "code": "Ni",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Simandou Fe",
+        "code": "Fe",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "KMA Kursk Fe",
+        "code": "Fe",
+        "cell": 0.51,
+        "ring1": 0.7
+      },
+      {
+        "name": "Kryvyi Rih Fe",
+        "code": "Fe",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Quadrilatero Ferrifero Fe",
+        "code": "Fe",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Mesabi Fe",
+        "code": "Fe",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Wanshan Hg (CN)",
+        "code": "Hg",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Moanda Mn (GA)",
+        "code": "Mn",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Sukinda Cr (IN)",
+        "code": "Cr",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Rossing U (NA)",
+        "code": "U",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Arlit U (NE)",
+        "code": "U",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Ranger U (AU)",
+        "code": "U",
+        "cell": 0.7,
+        "ring1": 0.7
+      },
+      {
+        "name": "Cerrejon coal (CO)",
+        "code": "C_coal",
+        "cell": 0.8,
+        "ring1": 0.8
+      },
+      {
+        "name": "Ostrava coal (CZ)",
+        "code": "C_coal",
+        "cell": 0.8,
+        "ring1": 0.8
+      },
+      {
+        "name": "Hudson Bay Lowlands peat",
+        "code": "peat",
+        "cell": 0.0,
+        "ring1": 0.78
+      },
+      {
+        "name": "Finland peat (Ostrobothnia)",
+        "code": "peat",
+        "cell": 0.0,
+        "ring1": 0.78
+      },
+      {
+        "name": "Belarus Polesie peat",
+        "code": "peat",
+        "cell": 0.0,
+        "ring1": 0.0
+      },
+      {
+        "name": "Riga gypsum (Skaistkalne)",
+        "code": "gypsum",
+        "cell": 0.8,
+        "ring1": 0.8
+      }
+    ],
+    "metrics": {
+      "continents": {
+        "North America": {
+          "cells": 12679,
+          "observedMetalShare": 0.615,
+          "anyMetalHeatShare": 0.626,
+          "meanObservedMetalLayers": 4.63
+        },
+        "South America": {
+          "cells": 6186,
+          "observedMetalShare": 0.545,
+          "anyMetalHeatShare": 0.56,
+          "meanObservedMetalLayers": 2.48
+        },
+        "Europe": {
+          "cells": 5753,
+          "observedMetalShare": 0.525,
+          "anyMetalHeatShare": 0.54,
+          "meanObservedMetalLayers": 2.28
+        },
+        "Africa": {
+          "cells": 10249,
+          "observedMetalShare": 0.262,
+          "anyMetalHeatShare": 0.266,
+          "meanObservedMetalLayers": 0.77
+        },
+        "Asia": {
+          "cells": 21605,
+          "observedMetalShare": 0.515,
+          "anyMetalHeatShare": 0.584,
+          "meanObservedMetalLayers": 1.71
+        },
+        "Oceania": {
+          "cells": 3228,
+          "observedMetalShare": 0.564,
+          "anyMetalHeatShare": 0.581,
+          "meanObservedMetalLayers": 2.67
+        }
+      },
+      "usShareOfLitLandCells": {
+        "Cu": 0.152,
+        "Sn": 0.342,
+        "Fe": 0.233,
+        "Au": 0.179,
+        "Ag": 0.234,
+        "Pb": 0.234,
+        "Zn": 0.224,
+        "Ni": 0.154,
+        "Cr": 0.213,
+        "Mn": 0.358,
+        "W": 0.393,
+        "U": 0.565,
+        "Hg": 0.493,
+        "Mo": 0.385,
+        "Sb": 0.318,
+        "Bi": 0.455,
+        "Ti": 0.363,
+        "Pt": 0.167,
+        "V": 0.359
+      },
+      "usMeanSaturation": 0.1866,
+      "restOfWorldMeanSaturation": 0.0331,
+      "usToRestSaturationRatio": 5.64,
+      "usHeatMassShare": 0.287,
+      "usIceFreeLandShare": 0.074,
+      "iceFreeLandObservedMetalShare": 0.499,
+      "iceFreeLandAnyMetalHeatShare": 0.531,
+      "usMeanObservedMetalLayers": 8.26,
+      "restOfWorldMeanObservedMetalLayers": 1.89
+    },
+    "sulfurLitLandCells": 8368,
+    "peatLitCells": 433,
+    "latvia": {
+      "P": {
+        "lit": 1,
+        "atLeast": 1,
+        "max": 0.56
+      },
+      "gypsum": {
+        "lit": 2,
+        "atLeast": 2,
+        "max": 0.8
+      },
+      "peat": {
+        "lit": 3,
+        "atLeast": 3,
+        "max": 0.78
+      },
+      "clay": {
+        "lit": 10,
+        "atLeast": 10,
+        "max": 0.59
+      }
+    },
+    "gypsumBadenWuerttembergShareAtLeast0.5": 0.633,
+    "gypsumIranLitShare": 0.012,
+    "failures": [
+      "Gorleben salt dome NaCl NaCl: 0.17 < 0.3",
+      "Kuzbass coal C_coal: 0.00 < 0.5",
+      "Donbas coal C_coal: 0.00 < 0.5",
+      "Karaganda coal C_coal: 0.00 < 0.5",
+      "Pechora coal (Vorkuta) C_coal: 0.00 < 0.5",
+      "Mirny (Mir pipe) diamond: 0.00 < 0.5",
+      "East Kalimantan coal C_coal: 0.00 < 0.5",
+      "Quang Ninh coal (VN) C_coal: 0.00 < 0.5",
+      "Hwange coal (ZW) C_coal: 0.00 < 0.5",
+      "Zonguldak coal (TR) C_coal: 0.00 < 0.5",
+      "Asturias coal (ES) C_coal: 0.00 < 0.5",
+      "Vasyugan mire (PEATMAP) peat: 0.00 < 0.5",
+      "Irish midland bogs (peat) peat: 0.00 < 0.3",
+      "Central Kalimantan peat (PEATMAP) peat: 0.00 < 0.5",
+      "pCu tract Gangdese (was invalid): potential 0.00 < 0.2",
+      "pCu tract Outer Melanesian Arc II (antimeridian): potential 0.00 < 0.2",
+      "pCu tract Alaska Peninsula and Aleutians (antimeridian): potential 0.00 < 0.2",
+      "pCu tract Chukotka (antimeridian): potential 0.00 < 0.2",
+      "pCu tract Pacific Margin (antimeridian): potential 0.00 < 0.2",
+      "sedCu tract Hercynian-Thuringian / Kupferschiefer (was invalid): potential 0.00 < 0.2",
+      "Potash tract Zechstein halokinetic (was invalid): potential 0.00 < 0.2",
+      "Potash tract Qom-Great Kavir (was invalid): potential 0.00 < 0.2",
+      "Potash tract Red Sea (was invalid): potential 0.00 < 0.2",
+      "Africa: only 27% of ice-free land has any metal heat (<50%)",
+      "US/rest-of-world saturation ratio 5.64 > 3",
+      "US holds 29% of all metal heat (> 20%)",
+      "some cells have potash (K) stronger than parent halite (NaCl)",
+      "native sulfur lit on 8368 land cells; pyrite-only records leaking in?",
+      "peat lit on only 433 cells",
+      "Latvia: fewer than 20 land cells with peat >= 0.5",
+      "Latvia: no clay deposit-strength (>=0.7) cell",
+      "gypsum >= 0.5 on 63% of Baden-Wuerttemberg (formation polygons over-weighted)",
+      "gypsum lit on only 1% of Iran (evaporite priors missing)"
+    ]
+  },
+  "v2": {
+    "grid": "C:\\VS mods\\Earth\\assets\\earthmap\\config\\ore-heatmaps-v1.json",
+    "datasetId": "earth-resource-evidence-2026-10-02-v2",
+    "famous": [
+      {
+        "name": "Chuquicamata",
+        "code": "Cu",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Escondida",
+        "code": "Cu",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Grasberg",
+        "code": "Cu",
+        "cell": 0.85,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Grasberg Au",
+        "code": "Au",
+        "cell": 0.85,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Bingham Canyon",
+        "code": "Cu",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Olympic Dam",
+        "code": "Cu",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Olympic Dam U",
+        "code": "U",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Norilsk",
+        "code": "Ni",
+        "cell": 0.85,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Norilsk PGE",
+        "code": "Pt",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Sudbury",
+        "code": "Ni",
+        "cell": 0.75,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Bushveld Rustenburg",
+        "code": "Pt",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Bushveld Steelpoort",
+        "code": "Cr",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Great Dyke",
+        "code": "Cr",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Kiruna",
+        "code": "Fe",
+        "cell": 0.85,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Pilbara Mt Whaleback",
+        "code": "Fe",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Carajas",
+        "code": "Fe",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Witwatersrand",
+        "code": "Au",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Kalgoorlie",
+        "code": "Au",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Muruntau",
+        "code": "Au",
+        "cell": 0.85,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Broken Hill",
+        "code": "Pb",
+        "cell": 0.85,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Red Dog",
+        "code": "Zn",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Mount Isa",
+        "code": "Pb",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Potosi Cerro Rico",
+        "code": "Ag",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Cornwall",
+        "code": "Sn",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Bangka",
+        "code": "Sn",
+        "cell": 0.85,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Gejiu",
+        "code": "Sn",
+        "cell": 0.75,
+        "ring1": 0.75,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Kolwezi (Katanga)",
+        "code": "Cu",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Chingola (Zambian Copperbelt)",
+        "code": "Cu",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Lubin (Kupferschiefer)",
+        "code": "Cu",
+        "cell": 0.85,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Mansfeld (Kupferschiefer)",
+        "code": "Cu",
+        "cell": 0.75,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Almaden",
+        "code": "Hg",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Freiberg (Erzgebirge)",
+        "code": "Ag",
+        "cell": 0.4,
+        "ring1": 0.75,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Altenberg (Erzgebirge)",
+        "code": "Sn",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Jachymov (Erzgebirge)",
+        "code": "U",
+        "cell": 0.4,
+        "ring1": 0.6,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Falun",
+        "code": "Cu",
+        "cell": 0.7,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Rio Tinto",
+        "code": "Cu",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Saskatchewan potash (Esterhazy)",
+        "code": "K",
+        "cell": 0.85,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Saskatoon potash belt",
+        "code": "K",
+        "cell": 0.85,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Saskatoon halite (sylvite parent)",
+        "code": "NaCl",
+        "cell": 0.85,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Stassfurt (Zechstein) K",
+        "code": "K",
+        "cell": 0.85,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Stassfurt (Zechstein) NaCl",
+        "code": "NaCl",
+        "cell": 0.85,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Gorleben salt dome NaCl",
+        "code": "NaCl",
+        "cell": 0.85,
+        "ring1": 0.85,
+        "min": 0.3,
+        "status": "present"
+      },
+      {
+        "name": "Gorleben salt dome K",
+        "code": "K",
+        "cell": 0.85,
+        "ring1": 0.85,
+        "min": 0.3,
+        "status": "present"
+      },
+      {
+        "name": "Upper Silesia coal",
+        "code": "C_coal",
+        "cell": 0.61,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Ruhr coal",
+        "code": "C_coal",
+        "cell": 0.55,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Appalachian coal (WV)",
+        "code": "C_coal",
+        "cell": 0.8,
+        "ring1": 0.8,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Powder River coal",
+        "code": "C_coal",
+        "cell": 0.8,
+        "ring1": 0.8,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Kuzbass coal",
+        "code": "C_coal",
+        "cell": 0.35,
+        "ring1": 0.55,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Donbas coal",
+        "code": "C_coal",
+        "cell": 0.85,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Karaganda coal",
+        "code": "C_coal",
+        "cell": 0.32,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Pechora coal (Vorkuta)",
+        "code": "C_coal",
+        "cell": 0.35,
+        "ring1": 0.55,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Bowen Basin coal",
+        "code": "C_coal",
+        "cell": 0.85,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Kimberley",
+        "code": "diamond",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Mirny (Mir pipe)",
+        "code": "diamond",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Muzo emeralds",
+        "code": "emerald",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Sar-e-Sang lapis",
+        "code": "lapis",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Guinea bauxite (Sangaredi)",
+        "code": "Al",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Jamaica bauxite",
+        "code": "Al",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Weipa bauxite",
+        "code": "Al",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Khouribga phosphate",
+        "code": "P",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Atacama nitrates (Maria Elena)",
+        "code": "N",
+        "cell": 0.85,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Kirka borates",
+        "code": "B",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Bigadic borates",
+        "code": "B",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Las Cuevas fluorite (MX)",
+        "code": "F",
+        "cell": 0.5,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Dayu tungsten (Jiangxi)",
+        "code": "W",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Panasqueira",
+        "code": "W",
+        "cell": 0.85,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Climax",
+        "code": "Mo",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "McArthur River U (Athabasca)",
+        "code": "U",
+        "cell": 0.25,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Kivu tin belt (DRC, corrected Major Deposits record)",
+        "code": "Sn",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Jinchuan Ni-Cu",
+        "code": "Cu",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Pomalaa Ni laterite",
+        "code": "Ni",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Tarnobrzeg native sulfur",
+        "code": "S",
+        "cell": 0.95,
+        "ring1": 0.95,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "East Kalimantan coal",
+        "code": "C_coal",
+        "cell": 0.0,
+        "ring1": 0.51,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Quang Ninh coal (VN)",
+        "code": "C_coal",
+        "cell": 0.85,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Hwange coal (ZW)",
+        "code": "C_coal",
+        "cell": 0.57,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Zonguldak coal (TR)",
+        "code": "C_coal",
+        "cell": 0.85,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Asturias coal (ES)",
+        "code": "C_coal",
+        "cell": 0.85,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Witbank coal (ZA)",
+        "code": "C_coal",
+        "cell": 0.85,
+        "ring1": 0.85,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Vasyugan mire (PEATMAP)",
+        "code": "peat",
+        "cell": 0.5,
+        "ring1": 0.82,
+        "min": 0.5,
+        "status": "present"
+      },
+      {
+        "name": "Irish midland bogs (peat)",
+        "code": "peat",
+        "cell": 0.36,
+        "ring1": 0.44,
+        "min": 0.3,
+        "status": "weak"
+      },
+      {
+        "name": "Central Kalimantan peat (PEATMAP)",
+        "code": "peat",
+        "cell": 0.79,
+        "ring1": 0.79,
+        "min": 0.5,
+        "status": "present"
+      }
+    ],
+    "repairedTracts": [
+      {
+        "name": "pCu tract Gangdese (was invalid)",
+        "potential": 0.5
+      },
+      {
+        "name": "pCu tract Outer Melanesian Arc II (antimeridian)",
+        "potential": 0.5
+      },
+      {
+        "name": "pCu tract Alaska Peninsula and Aleutians (antimeridian)",
+        "potential": 0.47
+      },
+      {
+        "name": "pCu tract Chukotka (antimeridian)",
+        "potential": 0.5
+      },
+      {
+        "name": "pCu tract Pacific Margin (antimeridian)",
+        "potential": 0.5
+      },
+      {
+        "name": "sedCu tract Hercynian-Thuringian / Kupferschiefer (was invalid)",
+        "potential": 0.49
+      },
+      {
+        "name": "Potash tract Zechstein halokinetic (was invalid)",
+        "potential": 0.27
+      },
+      {
+        "name": "Potash tract Qom-Great Kavir (was invalid)",
+        "potential": 0.5
+      },
+      {
+        "name": "Potash tract Red Sea (was invalid)",
+        "potential": 0.24
+      }
+    ],
+    "knownGaps": [
+      {
+        "name": "Tavan Tolgoi coal (MN)",
+        "code": "C_coal",
+        "ring1": 0.0,
+        "fix": "USGS Asia GIS compilation (ScienceBase, Cloudflare-blocked for scripted download) or a national Mongolian deposit register"
+      },
+      {
+        "name": "Moatize coal (MZ)",
+        "code": "C_coal",
+        "ring1": 0.0,
+        "fix": "USGS Compilation of GIS data for the mineral industries of Africa (doi:10.5066/P97EQWXP; coal occurrence areas)"
+      },
+      {
+        "name": "Nord-Pas-de-Calais coal (FR)",
+        "code": "C_coal",
+        "ring1": 0.0,
+        "fix": "BRGM historical coalfield outlines (closed 1990, so absent from facility lists)"
+      },
+      {
+        "name": "Inkai U (Chu-Sarysu, KZ)",
+        "code": "U",
+        "ring1": 0.0,
+        "fix": "USGS Asia/Eurasia GIS compilations (in-situ-leach U mines); IAEA UDEPO is excluded by policy"
+      },
+      {
+        "name": "Sicily native sulfur",
+        "code": "S",
+        "ring1": 0.0,
+        "fix": "Historic sulfur mines are not in MRDS or 2006-2010 facility lists; needs an Italian (ISPRA) abandoned-mine inventory if openly licensed"
+      }
+    ],
+    "extra": [
+      {
+        "name": "San Rafael Sn (PE)",
+        "code": "Sn",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Pitinga Sn (BR)",
+        "code": "Sn",
+        "cell": 0.75,
+        "ring1": 0.95
+      },
+      {
+        "name": "Bisie Sn (DRC)",
+        "code": "Sn",
+        "cell": 0.0,
+        "ring1": 0.95
+      },
+      {
+        "name": "Renison Sn (AU)",
+        "code": "Sn",
+        "cell": 0.85,
+        "ring1": 0.85
+      },
+      {
+        "name": "Dachang Sn (CN)",
+        "code": "Sn",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Rondonia Sn (BR)",
+        "code": "Sn",
+        "cell": 0.55,
+        "ring1": 0.95
+      },
+      {
+        "name": "Jos Plateau Sn (NG)",
+        "code": "Sn",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Neves-Corvo Cu",
+        "code": "Cu",
+        "cell": 0.85,
+        "ring1": 0.85
+      },
+      {
+        "name": "Kidd Creek Cu",
+        "code": "Cu",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Aitik Cu",
+        "code": "Cu",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Udokan Cu",
+        "code": "Cu",
+        "cell": 0.68,
+        "ring1": 0.95
+      },
+      {
+        "name": "Kamoa-Kakula Cu",
+        "code": "Cu",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Dzhezkazgan Cu",
+        "code": "Cu",
+        "cell": 0.6,
+        "ring1": 0.95
+      },
+      {
+        "name": "Almalyk Cu",
+        "code": "Cu",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Bor Cu (RS)",
+        "code": "Cu",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Aynak Cu (AF)",
+        "code": "Cu",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Dexing Cu (CN)",
+        "code": "Cu",
+        "cell": 0.85,
+        "ring1": 0.95
+      },
+      {
+        "name": "Obuasi Au (GH)",
+        "code": "Au",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Sadiola Au (ML)",
+        "code": "Au",
+        "cell": 0.12,
+        "ring1": 0.85
+      },
+      {
+        "name": "Geita Au (TZ)",
+        "code": "Au",
+        "cell": 0.51,
+        "ring1": 0.95
+      },
+      {
+        "name": "Kibali Au (DRC)",
+        "code": "Au",
+        "cell": 0.18,
+        "ring1": 0.4
+      },
+      {
+        "name": "Sukhoi Log Au",
+        "code": "Au",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Olimpiada Au",
+        "code": "Au",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Natalka Au",
+        "code": "Au",
+        "cell": 0.67,
+        "ring1": 0.95
+      },
+      {
+        "name": "Kumtor Au",
+        "code": "Au",
+        "cell": 0.56,
+        "ring1": 0.95
+      },
+      {
+        "name": "Yanacocha Au",
+        "code": "Au",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Lihir Au",
+        "code": "Au",
+        "cell": 0.85,
+        "ring1": 0.85
+      },
+      {
+        "name": "Voiseys Bay Ni",
+        "code": "Ni",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Jinchuan Ni",
+        "code": "Ni",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "New Caledonia Ni",
+        "code": "Ni",
+        "cell": 0.58,
+        "ring1": 0.95
+      },
+      {
+        "name": "Sorowako Ni",
+        "code": "Ni",
+        "cell": 0.85,
+        "ring1": 0.95
+      },
+      {
+        "name": "Simandou Fe",
+        "code": "Fe",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "KMA Kursk Fe",
+        "code": "Fe",
+        "cell": 0.59,
+        "ring1": 0.85
+      },
+      {
+        "name": "Kryvyi Rih Fe",
+        "code": "Fe",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Quadrilatero Ferrifero Fe",
+        "code": "Fe",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Mesabi Fe",
+        "code": "Fe",
+        "cell": 0.64,
+        "ring1": 0.95
+      },
+      {
+        "name": "Wanshan Hg (CN)",
+        "code": "Hg",
+        "cell": 0.3,
+        "ring1": 0.6
+      },
+      {
+        "name": "Moanda Mn (GA)",
+        "code": "Mn",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Sukinda Cr (IN)",
+        "code": "Cr",
+        "cell": 0.85,
+        "ring1": 0.95
+      },
+      {
+        "name": "Rossing U (NA)",
+        "code": "U",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Arlit U (NE)",
+        "code": "U",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Ranger U (AU)",
+        "code": "U",
+        "cell": 0.95,
+        "ring1": 0.95
+      },
+      {
+        "name": "Cerrejon coal (CO)",
+        "code": "C_coal",
+        "cell": 0.57,
+        "ring1": 0.85
+      },
+      {
+        "name": "Ostrava coal (CZ)",
+        "code": "C_coal",
+        "cell": 0.85,
+        "ring1": 0.85
+      },
+      {
+        "name": "Hudson Bay Lowlands peat",
+        "code": "peat",
+        "cell": 0.82,
+        "ring1": 0.85
+      },
+      {
+        "name": "Finland peat (Ostrobothnia)",
+        "code": "peat",
+        "cell": 0.55,
+        "ring1": 0.78
+      },
+      {
+        "name": "Belarus Polesie peat",
+        "code": "peat",
+        "cell": 0.38,
+        "ring1": 0.51
+      },
+      {
+        "name": "Riga gypsum (Skaistkalne)",
+        "code": "gypsum",
+        "cell": 0.85,
+        "ring1": 0.85
+      }
+    ],
+    "metrics": {
+      "continents": {
+        "North America": {
+          "cells": 12679,
+          "observedMetalShare": 0.526,
+          "anyMetalHeatShare": 0.719,
+          "meanObservedMetalLayers": 3.01
+        },
+        "South America": {
+          "cells": 6186,
+          "observedMetalShare": 0.483,
+          "anyMetalHeatShare": 0.621,
+          "meanObservedMetalLayers": 1.6
+        },
+        "Europe": {
+          "cells": 5753,
+          "observedMetalShare": 0.484,
+          "anyMetalHeatShare": 0.643,
+          "meanObservedMetalLayers": 1.88
+        },
+        "Africa": {
+          "cells": 10249,
+          "observedMetalShare": 0.23,
+          "anyMetalHeatShare": 0.512,
+          "meanObservedMetalLayers": 0.64
+        },
+        "Asia": {
+          "cells": 21605,
+          "observedMetalShare": 0.46,
+          "anyMetalHeatShare": 0.691,
+          "meanObservedMetalLayers": 1.37
+        },
+        "Oceania": {
+          "cells": 3228,
+          "observedMetalShare": 0.504,
+          "anyMetalHeatShare": 0.573,
+          "meanObservedMetalLayers": 2.09
+        }
+      },
+      "usShareOfLitLandCells": {
+        "Cu": 0.109,
+        "Sn": 0.081,
+        "Fe": 0.202,
+        "Au": 0.109,
+        "Ag": 0.194,
+        "Pb": 0.161,
+        "Zn": 0.153,
+        "Ni": 0.14,
+        "Cr": 0.185,
+        "Mn": 0.288,
+        "W": 0.105,
+        "U": 0.221,
+        "Hg": 0.447,
+        "Mo": 0.147,
+        "Sb": 0.264,
+        "Bi": 0.378,
+        "Ti": 0.23,
+        "Pt": 0.142,
+        "V": 0.231
+      },
+      "usMeanSaturation": 0.0476,
+      "restOfWorldMeanSaturation": 0.0217,
+      "usToRestSaturationRatio": 2.19,
+      "usHeatMassShare": 0.164,
+      "usIceFreeLandShare": 0.074,
+      "iceFreeLandObservedMetalShare": 0.441,
+      "iceFreeLandAnyMetalHeatShare": 0.648,
+      "usMeanObservedMetalLayers": 4.98,
+      "restOfWorldMeanObservedMetalLayers": 1.44
+    },
+    "sulfurLitLandCells": 1771,
+    "peatLitCells": 13777,
+    "latvia": {
+      "Pb": {
+        "lit": 6,
+        "atLeast": 0,
+        "max": 0.15
+      },
+      "Zn": {
+        "lit": 6,
+        "atLeast": 0,
+        "max": 0.15
+      },
+      "P": {
+        "lit": 1,
+        "atLeast": 1,
+        "max": 0.6
+      },
+      "F": {
+        "lit": 6,
+        "atLeast": 0,
+        "max": 0.15
+      },
+      "gypsum": {
+        "lit": 4,
+        "atLeast": 2,
+        "max": 0.85
+      },
+      "peat": {
+        "lit": 53,
+        "atLeast": 35,
+        "max": 0.78
+      },
+      "clay": {
+        "lit": 13,
+        "atLeast": 12,
+        "max": 0.75
+      }
+    },
+    "gypsumBadenWuerttembergShareAtLeast0.5": 0.0,
+    "gypsumIranLitShare": 0.36,
+    "failures": []
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "comment": "Coal and evaporites group (decision 0065). Dropped sources are replaced by filtered evidence in evidence.geojson; why: tools/ore-data/coal-evaporites/evidence_fixes.py and docs/research/ore-deposits-2026-11-08/coal-evaporites.md.",
+  "drop": {
+    "S": ["S-occurrences.csv.gz", "usgs-minfac-mines.geojson", "additional-evidence.geojson"],
+    "P": ["P-specialist.geojson"],
+    "K": ["PotashTracts.geojson"]
+  }
+}

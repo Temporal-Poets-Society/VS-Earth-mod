@@ -1,0 +1,2072 @@
+[
+  {
+    "commodity": "Fe",
+    "expected_country": "Australia",
+    "existing_records": 196,
+    "new_complement_records": 206,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=113"
+  },
+  {
+    "commodity": "Fe",
+    "expected_country": "Brazil",
+    "existing_records": 270,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=113"
+  },
+  {
+    "commodity": "Fe",
+    "expected_country": "Canada",
+    "existing_records": 372,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=113"
+  },
+  {
+    "commodity": "Fe",
+    "expected_country": "China",
+    "existing_records": 283,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=113"
+  },
+  {
+    "commodity": "Fe",
+    "expected_country": "India",
+    "existing_records": 253,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=113"
+  },
+  {
+    "commodity": "Fe",
+    "expected_country": "Iran",
+    "existing_records": 54,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=113"
+  },
+  {
+    "commodity": "Fe",
+    "expected_country": "Kazakhstan",
+    "existing_records": 79,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=113"
+  },
+  {
+    "commodity": "Fe",
+    "expected_country": "Russia",
+    "existing_records": 255,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=113"
+  },
+  {
+    "commodity": "Fe",
+    "expected_country": "South Africa",
+    "existing_records": 132,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=113"
+  },
+  {
+    "commodity": "Fe",
+    "expected_country": "Sweden",
+    "existing_records": 52,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=113"
+  },
+  {
+    "commodity": "Fe",
+    "expected_country": "Turkey",
+    "existing_records": 42,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=113"
+  },
+  {
+    "commodity": "Fe",
+    "expected_country": "Ukraine",
+    "existing_records": 37,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=113"
+  },
+  {
+    "commodity": "Fe",
+    "expected_country": "United States",
+    "existing_records": 20515,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=113"
+  },
+  {
+    "commodity": "Fe",
+    "expected_country": "Latvia",
+    "existing_records": 0,
+    "new_complement_records": 0,
+    "verdict": "ABSENT in imported evidence",
+    "basis": "Primary drill-core study; deep buried ore, not current mining",
+    "source_url": "https://dspace.lu.lv/items/f9bf4048-f4d6-48fa-a19f-fe0c605bbfbe"
+  },
+  {
+    "commodity": "Au",
+    "expected_country": "Australia",
+    "existing_records": 642,
+    "new_complement_records": 1386,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=95"
+  },
+  {
+    "commodity": "Au",
+    "expected_country": "Canada",
+    "existing_records": 1693,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=95"
+  },
+  {
+    "commodity": "Au",
+    "expected_country": "China",
+    "existing_records": 167,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=95"
+  },
+  {
+    "commodity": "Au",
+    "expected_country": "Ghana",
+    "existing_records": 34,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=95"
+  },
+  {
+    "commodity": "Au",
+    "expected_country": "Indonesia",
+    "existing_records": 43,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=95"
+  },
+  {
+    "commodity": "Au",
+    "expected_country": "Kazakhstan",
+    "existing_records": 104,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=95"
+  },
+  {
+    "commodity": "Au",
+    "expected_country": "Mexico",
+    "existing_records": 980,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=95"
+  },
+  {
+    "commodity": "Au",
+    "expected_country": "Peru",
+    "existing_records": 570,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=95"
+  },
+  {
+    "commodity": "Au",
+    "expected_country": "Russia",
+    "existing_records": 842,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=95"
+  },
+  {
+    "commodity": "Au",
+    "expected_country": "South Africa",
+    "existing_records": 599,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=95"
+  },
+  {
+    "commodity": "Au",
+    "expected_country": "United States",
+    "existing_records": 76687,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=95"
+  },
+  {
+    "commodity": "Au",
+    "expected_country": "Uzbekistan",
+    "existing_records": 42,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=95"
+  },
+  {
+    "commodity": "Ag",
+    "expected_country": "Argentina",
+    "existing_records": 465,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=177"
+  },
+  {
+    "commodity": "Ag",
+    "expected_country": "Australia",
+    "existing_records": 229,
+    "new_complement_records": 277,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=177"
+  },
+  {
+    "commodity": "Ag",
+    "expected_country": "Bolivia",
+    "existing_records": 398,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=177"
+  },
+  {
+    "commodity": "Ag",
+    "expected_country": "Chile",
+    "existing_records": 633,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=177"
+  },
+  {
+    "commodity": "Ag",
+    "expected_country": "China",
+    "existing_records": 77,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=177"
+  },
+  {
+    "commodity": "Ag",
+    "expected_country": "India",
+    "existing_records": 26,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=177"
+  },
+  {
+    "commodity": "Ag",
+    "expected_country": "Kazakhstan",
+    "existing_records": 78,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=177"
+  },
+  {
+    "commodity": "Ag",
+    "expected_country": "Mexico",
+    "existing_records": 1346,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=177"
+  },
+  {
+    "commodity": "Ag",
+    "expected_country": "Peru",
+    "existing_records": 1792,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=177"
+  },
+  {
+    "commodity": "Ag",
+    "expected_country": "Poland",
+    "existing_records": 6,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=177"
+  },
+  {
+    "commodity": "Ag",
+    "expected_country": "Russia",
+    "existing_records": 184,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=177"
+  },
+  {
+    "commodity": "Ag",
+    "expected_country": "United States",
+    "existing_records": 44066,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=177"
+  },
+  {
+    "commodity": "Pb",
+    "expected_country": "Australia",
+    "existing_records": 205,
+    "new_complement_records": 192,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=119"
+  },
+  {
+    "commodity": "Pb",
+    "expected_country": "Bolivia",
+    "existing_records": 416,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=119"
+  },
+  {
+    "commodity": "Pb",
+    "expected_country": "China",
+    "existing_records": 183,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=119"
+  },
+  {
+    "commodity": "Pb",
+    "expected_country": "India",
+    "existing_records": 66,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=119"
+  },
+  {
+    "commodity": "Pb",
+    "expected_country": "Kazakhstan",
+    "existing_records": 144,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=119"
+  },
+  {
+    "commodity": "Pb",
+    "expected_country": "Mexico",
+    "existing_records": 1121,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=119"
+  },
+  {
+    "commodity": "Pb",
+    "expected_country": "Peru",
+    "existing_records": 1499,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=119"
+  },
+  {
+    "commodity": "Pb",
+    "expected_country": "Russia",
+    "existing_records": 198,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=119"
+  },
+  {
+    "commodity": "Pb",
+    "expected_country": "Sweden",
+    "existing_records": 70,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=119"
+  },
+  {
+    "commodity": "Pb",
+    "expected_country": "Turkey",
+    "existing_records": 38,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=119"
+  },
+  {
+    "commodity": "Pb",
+    "expected_country": "United States",
+    "existing_records": 33169,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=119"
+  },
+  {
+    "commodity": "Zn",
+    "expected_country": "Australia",
+    "existing_records": 236,
+    "new_complement_records": 192,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=217"
+  },
+  {
+    "commodity": "Zn",
+    "expected_country": "Bolivia",
+    "existing_records": 362,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=217"
+  },
+  {
+    "commodity": "Zn",
+    "expected_country": "Canada",
+    "existing_records": 980,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=217"
+  },
+  {
+    "commodity": "Zn",
+    "expected_country": "China",
+    "existing_records": 191,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=217"
+  },
+  {
+    "commodity": "Zn",
+    "expected_country": "India",
+    "existing_records": 58,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=217"
+  },
+  {
+    "commodity": "Zn",
+    "expected_country": "Kazakhstan",
+    "existing_records": 123,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=217"
+  },
+  {
+    "commodity": "Zn",
+    "expected_country": "Mexico",
+    "existing_records": 807,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=217"
+  },
+  {
+    "commodity": "Zn",
+    "expected_country": "Peru",
+    "existing_records": 1123,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=217"
+  },
+  {
+    "commodity": "Zn",
+    "expected_country": "Russia",
+    "existing_records": 239,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=217"
+  },
+  {
+    "commodity": "Zn",
+    "expected_country": "Sweden",
+    "existing_records": 86,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=217"
+  },
+  {
+    "commodity": "Zn",
+    "expected_country": "Turkey",
+    "existing_records": 43,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=217"
+  },
+  {
+    "commodity": "Zn",
+    "expected_country": "United States",
+    "existing_records": 23655,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=217"
+  },
+  {
+    "commodity": "Bi",
+    "expected_country": "Bolivia",
+    "existing_records": 74,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=59"
+  },
+  {
+    "commodity": "Bi",
+    "expected_country": "China",
+    "existing_records": 16,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=59"
+  },
+  {
+    "commodity": "Bi",
+    "expected_country": "Vietnam",
+    "existing_records": 0,
+    "new_complement_records": 1,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=59"
+  },
+  {
+    "commodity": "Ni",
+    "expected_country": "Australia",
+    "existing_records": 1532,
+    "new_complement_records": 184,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=137"
+  },
+  {
+    "commodity": "Ni",
+    "expected_country": "Brazil",
+    "existing_records": 274,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=137"
+  },
+  {
+    "commodity": "Ni",
+    "expected_country": "Canada",
+    "existing_records": 3676,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=137"
+  },
+  {
+    "commodity": "Ni",
+    "expected_country": "China",
+    "existing_records": 97,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=137"
+  },
+  {
+    "commodity": "Ni",
+    "expected_country": "Cuba",
+    "existing_records": 52,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=137"
+  },
+  {
+    "commodity": "Ni",
+    "expected_country": "Finland",
+    "existing_records": 211,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=137"
+  },
+  {
+    "commodity": "Ni",
+    "expected_country": "Indonesia",
+    "existing_records": 68,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=137"
+  },
+  {
+    "commodity": "Ni",
+    "expected_country": "Madagascar",
+    "existing_records": 44,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=137"
+  },
+  {
+    "commodity": "Ni",
+    "expected_country": "New Caledonia",
+    "existing_records": 14,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=137"
+  },
+  {
+    "commodity": "Ni",
+    "expected_country": "Philippines",
+    "existing_records": 149,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=137"
+  },
+  {
+    "commodity": "Ni",
+    "expected_country": "Russia",
+    "existing_records": 786,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=137"
+  },
+  {
+    "commodity": "Ni",
+    "expected_country": "South Africa",
+    "existing_records": 268,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=137"
+  },
+  {
+    "commodity": "Ni",
+    "expected_country": "United States",
+    "existing_records": 2782,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=137"
+  },
+  {
+    "commodity": "Cr",
+    "expected_country": "Albania",
+    "existing_records": 48,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=71"
+  },
+  {
+    "commodity": "Cr",
+    "expected_country": "Brazil",
+    "existing_records": 305,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=71"
+  },
+  {
+    "commodity": "Cr",
+    "expected_country": "Finland",
+    "existing_records": 19,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=71"
+  },
+  {
+    "commodity": "Cr",
+    "expected_country": "India",
+    "existing_records": 191,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=71"
+  },
+  {
+    "commodity": "Cr",
+    "expected_country": "Kazakhstan",
+    "existing_records": 162,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=71"
+  },
+  {
+    "commodity": "Cr",
+    "expected_country": "South Africa",
+    "existing_records": 205,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=71"
+  },
+  {
+    "commodity": "Cr",
+    "expected_country": "Turkey",
+    "existing_records": 320,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=71"
+  },
+  {
+    "commodity": "Cr",
+    "expected_country": "Zimbabwe",
+    "existing_records": 166,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=71"
+  },
+  {
+    "commodity": "Cr",
+    "expected_country": "United States",
+    "existing_records": 9843,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=71"
+  },
+  {
+    "commodity": "Ti",
+    "expected_country": "Australia",
+    "existing_records": 146,
+    "new_complement_records": 196,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=203"
+  },
+  {
+    "commodity": "Ti",
+    "expected_country": "Canada",
+    "existing_records": 102,
+    "new_complement_records": 8,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=203"
+  },
+  {
+    "commodity": "Ti",
+    "expected_country": "China",
+    "existing_records": 20,
+    "new_complement_records": 6,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=203"
+  },
+  {
+    "commodity": "Ti",
+    "expected_country": "India",
+    "existing_records": 49,
+    "new_complement_records": 4,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=203"
+  },
+  {
+    "commodity": "Ti",
+    "expected_country": "Kenya",
+    "existing_records": 3,
+    "new_complement_records": 1,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=203"
+  },
+  {
+    "commodity": "Ti",
+    "expected_country": "Madagascar",
+    "existing_records": 11,
+    "new_complement_records": 2,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=203"
+  },
+  {
+    "commodity": "Ti",
+    "expected_country": "Mozambique",
+    "existing_records": 10,
+    "new_complement_records": 1,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=203"
+  },
+  {
+    "commodity": "Ti",
+    "expected_country": "Norway",
+    "existing_records": 20,
+    "new_complement_records": 6,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=203"
+  },
+  {
+    "commodity": "Ti",
+    "expected_country": "Senegal",
+    "existing_records": 1,
+    "new_complement_records": 1,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=203"
+  },
+  {
+    "commodity": "Ti",
+    "expected_country": "Sierra Leone",
+    "existing_records": 14,
+    "new_complement_records": 1,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=203"
+  },
+  {
+    "commodity": "Ti",
+    "expected_country": "South Africa",
+    "existing_records": 34,
+    "new_complement_records": 7,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=203"
+  },
+  {
+    "commodity": "Ti",
+    "expected_country": "Ukraine",
+    "existing_records": 15,
+    "new_complement_records": 3,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=203"
+  },
+  {
+    "commodity": "Ti",
+    "expected_country": "United States",
+    "existing_records": 1745,
+    "new_complement_records": 35,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=203"
+  },
+  {
+    "commodity": "Mn",
+    "expected_country": "Australia",
+    "existing_records": 59,
+    "new_complement_records": 49,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=129"
+  },
+  {
+    "commodity": "Mn",
+    "expected_country": "Brazil",
+    "existing_records": 100,
+    "new_complement_records": 4,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=129"
+  },
+  {
+    "commodity": "Mn",
+    "expected_country": "China",
+    "existing_records": 134,
+    "new_complement_records": 4,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=129"
+  },
+  {
+    "commodity": "Mn",
+    "expected_country": "Gabon",
+    "existing_records": 12,
+    "new_complement_records": 1,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=129"
+  },
+  {
+    "commodity": "Mn",
+    "expected_country": "Ghana",
+    "existing_records": 29,
+    "new_complement_records": 1,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=129"
+  },
+  {
+    "commodity": "Mn",
+    "expected_country": "India",
+    "existing_records": 130,
+    "new_complement_records": 7,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=129"
+  },
+  {
+    "commodity": "Mn",
+    "expected_country": "South Africa",
+    "existing_records": 59,
+    "new_complement_records": 3,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=129"
+  },
+  {
+    "commodity": "Mn",
+    "expected_country": "Ukraine",
+    "existing_records": 21,
+    "new_complement_records": 2,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=129"
+  },
+  {
+    "commodity": "Hg",
+    "expected_country": "China",
+    "existing_records": 63,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=131"
+  },
+  {
+    "commodity": "Hg",
+    "expected_country": "Kyrgyzstan",
+    "existing_records": 13,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=131"
+  },
+  {
+    "commodity": "Hg",
+    "expected_country": "Mexico",
+    "existing_records": 91,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=131"
+  },
+  {
+    "commodity": "Hg",
+    "expected_country": "Peru",
+    "existing_records": 25,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=131"
+  },
+  {
+    "commodity": "Hg",
+    "expected_country": "Russia",
+    "existing_records": 32,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=131"
+  },
+  {
+    "commodity": "Hg",
+    "expected_country": "Slovenia",
+    "existing_records": 1,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=131"
+  },
+  {
+    "commodity": "Hg",
+    "expected_country": "Spain",
+    "existing_records": 6,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=131"
+  },
+  {
+    "commodity": "Hg",
+    "expected_country": "Ukraine",
+    "existing_records": 7,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=131"
+  },
+  {
+    "commodity": "Hg",
+    "expected_country": "United States",
+    "existing_records": 3724,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=131"
+  },
+  {
+    "commodity": "W",
+    "expected_country": "Australia",
+    "existing_records": 40,
+    "new_complement_records": 32,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=205"
+  },
+  {
+    "commodity": "W",
+    "expected_country": "Austria",
+    "existing_records": 5,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=205"
+  },
+  {
+    "commodity": "W",
+    "expected_country": "Bolivia",
+    "existing_records": 224,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=205"
+  },
+  {
+    "commodity": "W",
+    "expected_country": "Canada",
+    "existing_records": 43,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=205"
+  },
+  {
+    "commodity": "W",
+    "expected_country": "China",
+    "existing_records": 52,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=205"
+  },
+  {
+    "commodity": "W",
+    "expected_country": "Kazakhstan",
+    "existing_records": 31,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=205"
+  },
+  {
+    "commodity": "W",
+    "expected_country": "North Korea",
+    "existing_records": 5,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=205"
+  },
+  {
+    "commodity": "W",
+    "expected_country": "Portugal",
+    "existing_records": 13,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=205"
+  },
+  {
+    "commodity": "W",
+    "expected_country": "Russia",
+    "existing_records": 118,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=205"
+  },
+  {
+    "commodity": "W",
+    "expected_country": "Rwanda",
+    "existing_records": 3,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=205"
+  },
+  {
+    "commodity": "W",
+    "expected_country": "Spain",
+    "existing_records": 11,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=205"
+  },
+  {
+    "commodity": "W",
+    "expected_country": "Vietnam",
+    "existing_records": 4,
+    "new_complement_records": 1,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=205"
+  },
+  {
+    "commodity": "W",
+    "expected_country": "United States",
+    "existing_records": 7040,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=205"
+  },
+  {
+    "commodity": "U",
+    "expected_country": "Argentina",
+    "existing_records": 63,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "IAEA UDEPO/NEA global inventory",
+    "source_url": "https://infcis.iaea.org/UTHDEPO/Deposits"
+  },
+  {
+    "commodity": "U",
+    "expected_country": "Australia",
+    "existing_records": 114,
+    "new_complement_records": 95,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "IAEA UDEPO/NEA global inventory",
+    "source_url": "https://infcis.iaea.org/UTHDEPO/Deposits"
+  },
+  {
+    "commodity": "U",
+    "expected_country": "Brazil",
+    "existing_records": 51,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "IAEA UDEPO/NEA global inventory",
+    "source_url": "https://infcis.iaea.org/UTHDEPO/Deposits"
+  },
+  {
+    "commodity": "U",
+    "expected_country": "Canada",
+    "existing_records": 49,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "IAEA UDEPO/NEA global inventory",
+    "source_url": "https://infcis.iaea.org/UTHDEPO/Deposits"
+  },
+  {
+    "commodity": "U",
+    "expected_country": "China",
+    "existing_records": 3,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "IAEA UDEPO/NEA global inventory",
+    "source_url": "https://infcis.iaea.org/UTHDEPO/Deposits"
+  },
+  {
+    "commodity": "U",
+    "expected_country": "Czech Republic",
+    "existing_records": 6,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "IAEA UDEPO/NEA global inventory",
+    "source_url": "https://infcis.iaea.org/UTHDEPO/Deposits"
+  },
+  {
+    "commodity": "U",
+    "expected_country": "Kazakhstan",
+    "existing_records": 1,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "IAEA UDEPO/NEA global inventory",
+    "source_url": "https://infcis.iaea.org/UTHDEPO/Deposits"
+  },
+  {
+    "commodity": "U",
+    "expected_country": "Namibia",
+    "existing_records": 2,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "IAEA UDEPO/NEA global inventory",
+    "source_url": "https://infcis.iaea.org/UTHDEPO/Deposits"
+  },
+  {
+    "commodity": "U",
+    "expected_country": "Niger",
+    "existing_records": 3,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "IAEA UDEPO/NEA global inventory",
+    "source_url": "https://infcis.iaea.org/UTHDEPO/Deposits"
+  },
+  {
+    "commodity": "U",
+    "expected_country": "Russia",
+    "existing_records": 12,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "IAEA UDEPO/NEA global inventory",
+    "source_url": "https://infcis.iaea.org/UTHDEPO/Deposits"
+  },
+  {
+    "commodity": "U",
+    "expected_country": "Ukraine",
+    "existing_records": 0,
+    "new_complement_records": 0,
+    "verdict": "ABSENT in imported evidence",
+    "basis": "IAEA named dormant Yuzhnoye deposit, zero cumulative production in historical record: occurrence does not require mining",
+    "source_url": "https://www-pub.iaea.org/MTCD/publications/PDF/TE_1629_CD/Deposits/652.html"
+  },
+  {
+    "commodity": "U",
+    "expected_country": "United States",
+    "existing_records": 14902,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "IAEA UDEPO/NEA global inventory",
+    "source_url": "https://infcis.iaea.org/UTHDEPO/Deposits"
+  },
+  {
+    "commodity": "U",
+    "expected_country": "Uzbekistan",
+    "existing_records": 0,
+    "new_complement_records": 0,
+    "verdict": "ABSENT in imported evidence",
+    "basis": "IAEA World Uranium country exploration history names Kizylkum sandstone and Boztau black-shale exploration; not an economic-mine-only filter",
+    "source_url": "https://www-pub.iaea.org/MTCD/publications/PDF/WOR_URA_web.pdf"
+  },
+  {
+    "commodity": "Pt",
+    "expected_country": "Canada",
+    "existing_records": 1422,
+    "new_complement_records": 17,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=149"
+  },
+  {
+    "commodity": "Pt",
+    "expected_country": "Russia",
+    "existing_records": 1387,
+    "new_complement_records": 45,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=149"
+  },
+  {
+    "commodity": "Pt",
+    "expected_country": "South Africa",
+    "existing_records": 697,
+    "new_complement_records": 18,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=149"
+  },
+  {
+    "commodity": "Pt",
+    "expected_country": "United States",
+    "existing_records": 2486,
+    "new_complement_records": 14,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=149"
+  },
+  {
+    "commodity": "Pt",
+    "expected_country": "Zimbabwe",
+    "existing_records": 52,
+    "new_complement_records": 5,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=149"
+  },
+  {
+    "commodity": "V",
+    "expected_country": "Australia",
+    "existing_records": 21,
+    "new_complement_records": 40,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=207"
+  },
+  {
+    "commodity": "V",
+    "expected_country": "Brazil",
+    "existing_records": 21,
+    "new_complement_records": 2,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=207"
+  },
+  {
+    "commodity": "V",
+    "expected_country": "China",
+    "existing_records": 16,
+    "new_complement_records": 4,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=207"
+  },
+  {
+    "commodity": "V",
+    "expected_country": "Russia",
+    "existing_records": 63,
+    "new_complement_records": 14,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=207"
+  },
+  {
+    "commodity": "V",
+    "expected_country": "South Africa",
+    "existing_records": 23,
+    "new_complement_records": 5,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=207"
+  },
+  {
+    "commodity": "V",
+    "expected_country": "United States",
+    "existing_records": 4597,
+    "new_complement_records": 18,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=207"
+  },
+  {
+    "commodity": "Mo",
+    "expected_country": "Armenia",
+    "existing_records": 8,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135"
+  },
+  {
+    "commodity": "Mo",
+    "expected_country": "Australia",
+    "existing_records": 10,
+    "new_complement_records": 35,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135"
+  },
+  {
+    "commodity": "Mo",
+    "expected_country": "Canada",
+    "existing_records": 114,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135"
+  },
+  {
+    "commodity": "Mo",
+    "expected_country": "Chile",
+    "existing_records": 134,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135"
+  },
+  {
+    "commodity": "Mo",
+    "expected_country": "China",
+    "existing_records": 48,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135"
+  },
+  {
+    "commodity": "Mo",
+    "expected_country": "Iran",
+    "existing_records": 14,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135"
+  },
+  {
+    "commodity": "Mo",
+    "expected_country": "Kazakhstan",
+    "existing_records": 55,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135"
+  },
+  {
+    "commodity": "Mo",
+    "expected_country": "Mexico",
+    "existing_records": 148,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135"
+  },
+  {
+    "commodity": "Mo",
+    "expected_country": "Mongolia",
+    "existing_records": 8,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135"
+  },
+  {
+    "commodity": "Mo",
+    "expected_country": "North Korea",
+    "existing_records": 1,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135"
+  },
+  {
+    "commodity": "Mo",
+    "expected_country": "Peru",
+    "existing_records": 70,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135"
+  },
+  {
+    "commodity": "Mo",
+    "expected_country": "Russia",
+    "existing_records": 63,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135"
+  },
+  {
+    "commodity": "Mo",
+    "expected_country": "South Korea",
+    "existing_records": 12,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135"
+  },
+  {
+    "commodity": "Mo",
+    "expected_country": "United States",
+    "existing_records": 4045,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135"
+  },
+  {
+    "commodity": "Mo",
+    "expected_country": "Uzbekistan",
+    "existing_records": 21,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "Australia",
+    "existing_records": 63,
+    "new_complement_records": 11,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "Bolivia",
+    "existing_records": 220,
+    "new_complement_records": 4,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "Canada",
+    "existing_records": 66,
+    "new_complement_records": 3,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "China",
+    "existing_records": 47,
+    "new_complement_records": 5,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "Guatemala",
+    "existing_records": 11,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "Iran",
+    "existing_records": 4,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "Kazakhstan",
+    "existing_records": 32,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "Kyrgyzstan",
+    "existing_records": 9,
+    "new_complement_records": 2,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "Laos",
+    "existing_records": 7,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "Mexico",
+    "existing_records": 140,
+    "new_complement_records": 2,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "Myanmar",
+    "existing_records": 3,
+    "new_complement_records": 1,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "Pakistan",
+    "existing_records": 0,
+    "new_complement_records": 0,
+    "verdict": "ABSENT in imported evidence",
+    "basis": "GSP Metallic Minerals chapter pp62-63 documents quartz-stibnite veins, showings and intermittent mining around Krinj and Partsan",
+    "source_url": "https://gsp.gov.pk/wp-content/uploads/2026/02/Matellogeny-and-Mineral-Deposits-of-Pakistan-Kazmi-and-Abbas.pdf"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "Russia",
+    "existing_records": 49,
+    "new_complement_records": 3,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "South Africa",
+    "existing_records": 12,
+    "new_complement_records": 1,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "Tajikistan",
+    "existing_records": 5,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "Turkey",
+    "existing_records": 32,
+    "new_complement_records": 1,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "Vietnam",
+    "existing_records": 3,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Sb",
+    "expected_country": "United States",
+    "existing_records": 4417,
+    "new_complement_records": 5,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47"
+  },
+  {
+    "commodity": "Al",
+    "expected_country": "Australia",
+    "existing_records": 60,
+    "new_complement_records": 40,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=55"
+  },
+  {
+    "commodity": "Al",
+    "expected_country": "Brazil",
+    "existing_records": 110,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=55"
+  },
+  {
+    "commodity": "Al",
+    "expected_country": "China",
+    "existing_records": 27,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=55"
+  },
+  {
+    "commodity": "Al",
+    "expected_country": "Greece",
+    "existing_records": 17,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=55"
+  },
+  {
+    "commodity": "Al",
+    "expected_country": "Guinea",
+    "existing_records": 27,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=55"
+  },
+  {
+    "commodity": "Al",
+    "expected_country": "India",
+    "existing_records": 106,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=55"
+  },
+  {
+    "commodity": "Al",
+    "expected_country": "Indonesia",
+    "existing_records": 14,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=55"
+  },
+  {
+    "commodity": "Al",
+    "expected_country": "Jamaica",
+    "existing_records": 116,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=55"
+  },
+  {
+    "commodity": "Al",
+    "expected_country": "Kazakhstan",
+    "existing_records": 25,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=55"
+  },
+  {
+    "commodity": "Al",
+    "expected_country": "Russia",
+    "existing_records": 43,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=55"
+  },
+  {
+    "commodity": "Al",
+    "expected_country": "Saudi Arabia",
+    "existing_records": 1,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=55"
+  },
+  {
+    "commodity": "Al",
+    "expected_country": "Turkey",
+    "existing_records": 19,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=55"
+  },
+  {
+    "commodity": "Al",
+    "expected_country": "Vietnam",
+    "existing_records": 2,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=55"
+  },
+  {
+    "commodity": "Cu",
+    "expected_country": "Australia",
+    "existing_records": 264,
+    "new_complement_records": 406,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=77"
+  },
+  {
+    "commodity": "Cu",
+    "expected_country": "Canada",
+    "existing_records": 1107,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=77"
+  },
+  {
+    "commodity": "Cu",
+    "expected_country": "Chile",
+    "existing_records": 3049,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=77"
+  },
+  {
+    "commodity": "Cu",
+    "expected_country": "China",
+    "existing_records": 447,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=77"
+  },
+  {
+    "commodity": "Cu",
+    "expected_country": "Democratic Republic of the Congo",
+    "existing_records": 219,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=77"
+  },
+  {
+    "commodity": "Cu",
+    "expected_country": "Indonesia",
+    "existing_records": 64,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=77"
+  },
+  {
+    "commodity": "Cu",
+    "expected_country": "Kazakhstan",
+    "existing_records": 271,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=77"
+  },
+  {
+    "commodity": "Cu",
+    "expected_country": "Mexico",
+    "existing_records": 962,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=77"
+  },
+  {
+    "commodity": "Cu",
+    "expected_country": "Peru",
+    "existing_records": 1433,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=77"
+  },
+  {
+    "commodity": "Cu",
+    "expected_country": "Poland",
+    "existing_records": 50,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=77"
+  },
+  {
+    "commodity": "Cu",
+    "expected_country": "Russia",
+    "existing_records": 378,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=77"
+  },
+  {
+    "commodity": "Cu",
+    "expected_country": "United States",
+    "existing_records": 35060,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=77"
+  },
+  {
+    "commodity": "Cu",
+    "expected_country": "Zambia",
+    "existing_records": 91,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=77"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "Australia",
+    "existing_records": 41,
+    "new_complement_records": 74,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "Bolivia",
+    "existing_records": 452,
+    "new_complement_records": 6,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "Brazil",
+    "existing_records": 146,
+    "new_complement_records": 8,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "China",
+    "existing_records": 49,
+    "new_complement_records": 8,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "Democratic Republic of the Congo",
+    "existing_records": 12,
+    "new_complement_records": 1,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "Indonesia",
+    "existing_records": 14,
+    "new_complement_records": 5,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "Laos",
+    "existing_records": 27,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "Malaysia",
+    "existing_records": 70,
+    "new_complement_records": 5,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "Myanmar",
+    "existing_records": 42,
+    "new_complement_records": 2,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "Nigeria",
+    "existing_records": 6,
+    "new_complement_records": 1,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "Peru",
+    "existing_records": 10,
+    "new_complement_records": 2,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "Russia",
+    "existing_records": 80,
+    "new_complement_records": 5,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "Rwanda",
+    "existing_records": 1,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "Vietnam",
+    "existing_records": 3,
+    "new_complement_records": 0,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "United States",
+    "existing_records": 1466,
+    "new_complement_records": 17,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "USGS MCS2026 country table/resources plus named historical cases",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "United Kingdom",
+    "existing_records": 13,
+    "new_complement_records": 4,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "Historical tin province; PP1802-S/primary geological surveys, not modern production",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "Czech Republic",
+    "existing_records": 5,
+    "new_complement_records": 1,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "Historical tin province; PP1802-S/primary geological surveys, not modern production",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  },
+  {
+    "commodity": "Sn",
+    "expected_country": "Germany",
+    "existing_records": 0,
+    "new_complement_records": 9,
+    "verdict": "Country has positive evidence; completeness NOT established",
+    "basis": "Historical tin province; PP1802-S/primary geological surveys, not modern production",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199"
+  }
+]

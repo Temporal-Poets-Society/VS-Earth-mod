@@ -1,0 +1,15 @@
+[
+  {"Name": "river_trench2_in", "Kind": "river_trench", "Width": 2, "Length": 40, "Order": "in", "Sites": [[56.4985, 25.8613], [52.13, 11.65]]},
+  {"Name": "river_trench2_out", "Kind": "river_trench", "Width": 2, "Length": 40, "Order": "out", "Sites": [[56.4985, 25.8613], [52.13, 11.65]]},
+  {"Name": "river_trench1_in", "Kind": "river_trench", "Width": 1, "Length": 40, "Order": "in", "Sites": [[56.4985, 25.8613], [52.13, 11.65]]},
+  {"Name": "sea_trench2_in", "Kind": "sea_trench", "Width": 2, "Length": 40, "Order": "in", "Sites": [[56.97, 23.77], [57.40, 21.55], [38.78, -9.48]]},
+  {"Name": "sea_trench2_out", "Kind": "sea_trench", "Width": 2, "Length": 40, "Order": "out", "Sites": [[56.97, 23.77], [57.40, 21.55], [38.78, -9.48]]},
+  {"Name": "sea_trench1_out", "Kind": "sea_trench", "Width": 1, "Length": 40, "Order": "out", "Sites": [[56.97, 23.77], [57.40, 21.55], [38.78, -9.48]]},
+  {"Name": "lisbon_trench2_in", "Kind": "sea_trench", "Width": 2, "Length": 40, "Order": "in", "Sites": [[38.78, -9.48]]},
+  {"Name": "mill_side", "Kind": "mill", "WheelAt": "side", "Sites": [[49.32, 8.45], [50.0, 8.27], [52.13, 11.65]]},
+  {"Name": "mill_under", "Kind": "mill", "WheelAt": "under", "Sites": [[49.32, 8.45], [50.0, 8.27], [52.13, 11.65]]},
+  {"Name": "dam", "Kind": "dam", "Sites": [[55.8714, 26.5162], [56.6437, 25.4241], [50.0, 8.27]]},
+  {"Name": "ramp", "Kind": "ramp", "Sites": [[51.055, 13.74], [47.56, 7.60]]},
+  {"Name": "ramp2", "Kind": "ramp", "Sites": [[55.8714, 26.5162], [56.6437, 25.4241], [47.56, 7.60]]},
+  {"Name": "wheel", "Kind": "wheel", "Sites": [[47.6779, 8.6153], [47.27, 11.40]]}
+]

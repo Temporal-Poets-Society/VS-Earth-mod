@@ -1,0 +1,360 @@
+<title>Earth Water Atlas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a survey sheet. Method and legend up top, then a filterable column of cards, each a satellite photo beside its disagreement map. */
+:root {
+  --bg: #eef1f2; --panel: #ffffff; --ink: #18232b; --muted: #5a6872; --line: #d3dadf;
+  --water: #1e46aa; --both: #a0c8eb; --wrong: #dc3228; --land: #ece2c8; --channel: #ff8c00;
+  --accent: #1e46aa; --ok: #2e7d4f; --bad: #c0352b; --maybe: #9a6a00;
+  --display: "Barlow Semi Condensed", "Arial Narrow", system-ui, sans-serif;
+  --body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #10171c; --panel: #18222a; --ink: #e3e9ed; --muted: #9aa8b2; --line: #2b3842;
+  --accent: #8fb4ff; --ok: #6cc28f; --bad: #ff7a6e; --maybe: #e0b34a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #10171c; --panel: #18222a; --ink: #e3e9ed; --muted: #9aa8b2; --line: #2b3842;
+  --accent: #8fb4ff; --ok: #6cc28f; --bad: #ff7a6e; --maybe: #e0b34a; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--body); }
+.wrap { max-width: 1520px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 28px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.15; }
+h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: .01em; }
+h2 { font-size: 1.45rem; font-weight: 600; }
+h3 { font-size: 1.12rem; font-weight: 600; }
+p { margin: 0; max-width: 72ch; }
+a { color: var(--accent); }
+.mono { font-family: var(--mono); font-size: .86em; font-variant-numeric: tabular-nums; }
+.muted { color: var(--muted); }
+header { display: grid; gap: 12px; }
+.eyebrow { font: 600 .78rem/1 var(--display); text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+.two { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 900px) { .two { grid-template-columns: minmax(0, 1fr); } }
+.prose { display: grid; gap: 10px; }
+.legend { display: grid; gap: 8px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+.key { display: flex; gap: 10px; align-items: center; }
+.sw { width: 26px; height: 14px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+.sw.line { height: 4px; border: none; }
+.tablewrap { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font: 600 .8rem/1.2 var(--display); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+td.n { text-align: right; white-space: nowrap; }
+tr:last-child td { border-bottom: none; }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg);
+  padding-block: 10px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; border-bottom: 1px solid var(--line); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.chip { font: 500 .88rem/1 var(--body); border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+  border-radius: 999px; padding: 7px 12px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.chip:focus-visible, .v:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.chip .c { opacity: .7; margin-left: 4px; }
+.spacer { flex: 1; }
+.tally { font-size: .88rem; color: var(--muted); }
+.cards { display: grid; gap: 22px; }
+.group-head { display: grid; gap: 6px; padding-top: 14px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; display: grid; }
+.card[data-v="problem"] { box-shadow: inset 4px 0 0 var(--bad); }
+.card[data-v="fine"] { box-shadow: inset 4px 0 0 var(--ok); }
+.card[data-v="unsure"] { box-shadow: inset 4px 0 0 var(--maybe); }
+.pics { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2px; background: var(--line); }
+@media (max-width: 760px) { .pics { grid-template-columns: minmax(0, 1fr); } }
+.pics figure { margin: 0; position: relative; background: var(--panel); }
+.pics img { display: block; width: 100%; height: auto; max-width: 100%; }
+.pics figcaption { position: absolute; left: 8px; top: 8px; font: 600 .72rem/1 var(--display); letter-spacing: .08em;
+  text-transform: uppercase; background: rgba(16, 23, 28, .72); color: #fff; padding: 5px 7px; border-radius: 3px; }
+.meta { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 20px; padding: 14px 16px; align-items: start; }
+@media (max-width: 760px) { .meta { grid-template-columns: minmax(0, 1fr); } }
+.meta .t { display: grid; gap: 4px; min-width: 0; }
+.verdict { display: grid; gap: 8px; justify-items: start; }
+.vs { display: flex; flex-wrap: wrap; gap: 6px; }
+.v { font: 600 .86rem/1 var(--body); padding: 8px 12px; border-radius: 6px; cursor: pointer; border: 1px solid var(--line);
+  background: transparent; color: var(--ink); }
+.v[data-k="problem"][aria-pressed="true"] { background: var(--bad); border-color: var(--bad); color: #fff; }
+.v[data-k="fine"][aria-pressed="true"] { background: var(--ok); border-color: var(--ok); color: #fff; }
+.v[data-k="unsure"][aria-pressed="true"] { background: var(--maybe); border-color: var(--maybe); color: #fff; }
+.v:disabled { opacity: .5; cursor: default; }
+.note { width: min(320px, 100%); font: 400 .9rem var(--body); padding: 7px 9px; border-radius: 6px; border: 1px solid var(--line);
+  background: var(--bg); color: var(--ink); }
+.status { font-size: .84rem; color: var(--muted); }
+.shots { display: grid; gap: 18px; }
+.shot { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin: 0; }
+.shot img { display: block; width: 100%; height: auto; }
+.shot figcaption { padding: 10px 14px; display: grid; gap: 2px; }
+.shot figcaption b { font: 600 1.02rem/1.25 var(--display); }
+footer { font-size: .84rem; color: var(--muted); display: grid; gap: 6px; }
+@media (prefers-reduced-motion: no-preference) { .card { transition: box-shadow .15s; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Earth mod · water review · GLO-90 water mask as referee</div>
+    <h1>Where Earth's water disagrees with the real map</h1>
+    <p>Each card shows one place from the worldwide comparison: a cloud-free Sentinel-2 picture on the left, and on the right
+    Earth's sea, lakes, rivers and exit channels over the Copernicus GLO-90 water mask, on the same 3″ grid as the heights.
+    Mark each one so the fixes go after real problems first.</p>
+  </header>
+
+  <section class="two">
+    <div class="prose">
+      <h2>How the comparison works</h2>
+      <p>The water mask is a by-product of the height map we already use: when Copernicus built GLO-90 it flagged every 90 m
+      cell as land, ocean, lake or river (and flattened the water). Earth draws its water from other sources: GSHHG coasts,
+      Natural Earth lakes, HydroRIVERS courses, RGI glaciers. Where the two disagree, either the source is wrong or old, or the
+      mask is (it misses dry salt lakes, frozen lakes and floating ice).</p>
+      <p>The atlas counted each kind of disagreement on a 30″ grid, ranked the places by size and height, and walked every
+      river and exit channel at 100 m steps to see where its bed leaves real water. The cards below are the top places of each
+      kind outside Greenland and the high Arctic, plus the places you pointed out.</p>
+      <p class="muted">Earth layers in the maps are sampled at their own resolution (sea 30″, lakes 1′ and 2′), so stair steps
+      along coasts are expected. Rivers are drawn as lines, not at their game width.</p>
+    </div>
+    <div class="legend" aria-label="Map legend">
+      <h3>Reading the map</h3>
+      <div class="key"><span class="sw" style="background:var(--both)"></span>water in both</div>
+      <div class="key"><span class="sw" style="background:var(--wrong)"></span>Earth has water, the mask has land</div>
+      <div class="key"><span class="sw" style="background:var(--water)"></span>the mask has water, Earth has land</div>
+      <div class="key"><span class="sw" style="background:var(--land)"></span>land in both</div>
+      <div class="key"><span class="sw line" style="background:#fff;outline:1px solid #222"></span>river course (thicker from 1000 m³/s)</div>
+      <div class="key"><span class="sw line" style="background:var(--channel)"></span>river exit channel (dredged)</div>
+    </div>
+  </section>
+
+  <section class="prose" id="fixes" hidden>
+    <h2>Fixes applied</h2>
+    <p id="fixes-lead"></p>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Measure</th><th class="n">Before</th><th class="n">After</th></tr></thead>
+      <tbody id="results"></tbody>
+    </table></div>
+    <div class="shots" id="shots"></div>
+  </section>
+
+  <section class="prose">
+    <h2>Worldwide counts before the fixes</h2>
+    <p class="muted">These counts, and the maps on the cards below, show the water as it was before the fixes, so the marks still apply to what was found.</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Disagreement</th><th class="n">Places</th><th class="n">Area</th><th>What it mostly is</th></tr></thead>
+      <tbody id="counts"></tbody>
+    </table></div>
+    <div class="tablewrap"><table>
+      <thead><tr><th>River size</th><th class="n">Length</th><th class="n">Bed off real water</th><th class="n">Centre line on land</th></tr></thead>
+      <tbody id="bands"></tbody>
+    </table></div>
+    <p class="muted">River courses are the tall line's GLO-90-snapped set (rivers-glo90.bin) as the release/1.0 code places them in a 1:10 world,
+    with exit channel rules 2 (tall.13 plans the routes the same way), discharge 500 m³/s and up. A bed counts as off water where the river's half width plus 90 m does not reach mask water.</p>
+  </section>
+
+  <div class="bar" role="toolbar" aria-label="Filter cards">
+    <div id="chips" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+    <span class="spacer"></span>
+    <span class="tally" id="tally"></span>
+  </div>
+
+  <main class="cards" id="cards"></main>
+
+  <footer>
+    <div>Satellite pictures: Sentinel-2 cloudless 2016 – <a href="https://s2maps.eu" target="_blank" rel="noopener">s2maps.eu</a> by EOX IT Services GmbH (contains modified Copernicus Sentinel data 2016), CC BY 4.0.</div>
+    <div>Water mask and heights: Copernicus DEM GLO-90 © DLR e.V. 2010–2014 and © Airbus Defence and Space GmbH 2014–2018, provided under COPERNICUS by the European Union and ESA.</div>
+    <div>Made by tools/water_atlas.py and tools/water_atlas_cards.py in the Earth mod.</div>
+  </footer>
+</div>
+
+<script>
+const DATA = /*DATA*/null;
+const GROUPS = {
+  reported: ["Places you pointed out", "The screenshots and charts from 5 and 6 November."],
+  sea_on_land: ["Sea over land", "GSHHG sea where GLO-90 has land. Ranked by area times height, so fjords that end in glaciers (Patagonia) come first; flat ones are tidal flats and lagoons."],
+  land_on_sea: ["Land over sea", "Earth land where the mask has sea: tidal flats, salt marshes, deltas and lagoons that GSHHG draws as land."],
+  lake_on_land: ["Lake over land", "Natural Earth lakes where the mask has land. Many are salt lakes that were dry when GLO-90 was flown (2011–2015) but fuller in 1318."],
+  lake_missing: ["Missing lakes", "Lakes in the mask that Earth lacks. Reservoirs (left out on purpose) are counted but not shown. The largest are salt flats and marshes the mask counts as lakes (Rann of Kutch, Uyuni, Eyre, Torrens), then small lakes and a few real gaps (Chilika, Songkhla, Lake Chilwa, Lake Rukwa)."],
+  glacier_in_water: ["Water over glaciers", "Earth sea or lake where RGI maps a glacier."],
+  island_lost: ["Lost river islands", "Islands of 0.25 km² or more in rivers and lakes that end up under Earth's water."],
+  course_channels: ["Exit channels off course", "Dredged river exit channels whose bed leaves real water. These are the cuts you saw in New York and on the Mississippi."],
+  course_rivers: ["Rivers off course", "River courses whose bed leaves real water for the longest stretch."],
+};
+const NOTE_FOR = {
+  sea_on_land: "fjords at glaciers, tidal flats", land_on_sea: "tidal flats, deltas, lagoons", lake_on_land: "salt and dried lakes, revived lakes (on purpose)",
+  lake_missing: "reservoirs (on purpose), salt flats, small lakes", glacier_in_water: "glacier fronts in fjords",
+};
+const $ = (s, el = document) => el.querySelector(s);
+const fmt = n => Math.round(n).toLocaleString("en");
+const verdicts = new Map();
+let filter = "all", canWrite = null, db = null;
+
+function counts() {
+  const tb = $("#counts");
+  for (const c of DATA.counts) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td></td><td class="n"></td><td class="n"></td><td class="muted"></td>`;
+    tr.children[0].textContent = GROUPS[c.key][0];
+    tr.children[1].textContent = fmt(c.sites);
+    tr.children[2].textContent = c.km2 == null ? "" : fmt(c.km2) + " km²";
+    tr.children[3].textContent = c.note || NOTE_FOR[c.key] || "";
+    tb.append(tr);
+  }
+  const bb = $("#bands");
+  for (const b of DATA.bands) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td></td><td class="n"></td><td class="n"></td><td class="n"></td>`;
+    tr.children[0].textContent = b.label; tr.children[1].textContent = fmt(b.km) + " km";
+    tr.children[2].textContent = b.off.toFixed(1) + " %"; tr.children[3].textContent = b.centre.toFixed(1) + " %";
+    bb.append(tr);
+  }
+}
+
+function fixes() {
+  const F = DATA.fixes;
+  if (!F) return;
+  $("#fixes").hidden = false;
+  $("#fixes-lead").textContent = F.lead;
+  for (const r of F.results) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td></td><td class="n"></td><td class="n"></td>`;
+    tr.children[0].textContent = r[0]; tr.children[1].textContent = r[1]; tr.children[2].textContent = r[2];
+    $("#results").append(tr);
+  }
+  for (const s of F.shots) {
+    const f = document.createElement("figure");
+    f.className = "shot";
+    f.innerHTML = `<img loading="lazy" alt=""><figcaption><b></b><span class="muted"></span></figcaption>`;
+    f.querySelector("img").src = s.img; f.querySelector("img").alt = s.title;
+    f.querySelector("b").textContent = s.title; f.querySelector("span").textContent = s.text;
+    $("#shots").append(f);
+  }
+}
+
+function chips() {
+  const host = $("#chips");
+  const opts = [["all", "All"], ...Object.keys(GROUPS).map(k => [k, GROUPS[k][0]]), ["open", "Not marked"], ["problem", "Real problems"]];
+  for (const [k, label] of opts) {
+    const b = document.createElement("button");
+    b.className = "chip"; b.type = "button"; b.dataset.k = k; b.id = "chip-" + k;
+    b.setAttribute("aria-pressed", String(k === filter));
+    b.innerHTML = `<span></span><span class="c"></span>`; b.firstChild.textContent = label;
+    b.onclick = () => { filter = k; try { localStorage.setItem("wa-filter", k); } catch (e) {} apply(); };
+    host.append(b);
+  }
+}
+
+function card(c) {
+  const el = document.createElement("article");
+  el.className = "card"; el.id = c.id; el.dataset.group = c.group;
+  const [la0, lo0, la1, lo1] = c.box;
+  const lat = ((la0 + la1) / 2).toFixed(4), lon = ((lo0 + lo1) / 2).toFixed(4);
+  const zoom = Math.max(8, Math.min(14, Math.round(Math.log2(360 / (lo1 - lo0)) + 1)));
+  el.innerHTML = `
+    <div class="pics">
+      <figure><img loading="lazy" alt=""><figcaption>Sentinel-2, 2016</figcaption></figure>
+      <figure><img loading="lazy" alt=""><figcaption>Earth vs water mask</figcaption></figure>
+    </div>
+    <div class="meta">
+      <div class="t"><h3></h3><div class="mono muted"></div><div><a target="_blank" rel="noopener">Open in Google Maps (satellite)</a></div></div>
+      <div class="verdict">
+        <div class="vs" role="group" aria-label="Verdict">
+          <button class="v" type="button" data-k="problem" aria-pressed="false">Real problem</button>
+          <button class="v" type="button" data-k="fine" aria-pressed="false">Fine</button>
+          <button class="v" type="button" data-k="unsure" aria-pressed="false">Not sure</button>
+        </div>
+        <input class="note" type="text" placeholder="Note (optional)">
+        <div class="status"></div>
+      </div>
+    </div>`;
+  const imgs = el.querySelectorAll("img");
+  if (c.s2) { imgs[0].src = c.s2; imgs[0].alt = "Sentinel-2 picture of " + c.title; } else imgs[0].closest("figure").hidden = true;
+  imgs[1].src = c.map; imgs[1].alt = "Disagreement map of " + c.title;
+  $("h3", el).textContent = c.title;
+  $(".mono", el).textContent = `${lat}, ${lon} · box ${(la1 - la0).toFixed(2)}° × ${(lo1 - lo0).toFixed(2)}°`;
+  $("a", el).href = `https://www.google.com/maps/@${lat},${lon},${zoom}z/data=!3m1!1e3`;
+  const note = $(".note", el); note.id = "note-" + c.id;
+  for (const b of el.querySelectorAll(".v")) b.onclick = () => save(c.id, b.dataset.k === verdicts.get(c.id)?.verdict ? null : b.dataset.k, note.value);
+  let t; note.oninput = () => { clearTimeout(t); t = setTimeout(() => { const v = verdicts.get(c.id); if (v?.verdict) save(c.id, v.verdict, note.value); }, 900); };
+  return el;
+}
+
+function paint(id) {
+  const el = document.getElementById(id); if (!el) return;
+  const v = verdicts.get(id);
+  el.dataset.v = v?.verdict || "";
+  for (const b of el.querySelectorAll(".v")) { b.setAttribute("aria-pressed", String(b.dataset.k === v?.verdict)); b.disabled = canWrite === false; }
+  const note = $(".note", el);
+  if (document.activeElement !== note) note.value = v?.note || "";
+  note.disabled = canWrite === false;
+}
+
+async function save(id, verdict, note) {
+  const st = $("#" + CSS.escape(id) + " .status");
+  if (!db) { st.textContent = "Marks can't be saved in this view."; return; }
+  const prev = verdicts.get(id);
+  verdicts.set(id, verdict ? { verdict, note } : undefined); paint(id); apply();
+  try {
+    const ref = db.collection("verdicts").doc(id);
+    if (verdict) await ref.set({ verdict, note: note || "", at: new Date().toISOString() }); else await ref.delete();
+    st.textContent = verdict ? "Saved" : "Cleared";
+  } catch (e) {
+    verdicts.set(id, prev); paint(id); apply();
+    if (e && e.code === "invalid_argument") { canWrite = false; DATA.cards.forEach(c => paint(c.id)); st.textContent = "You can view marks but not change them."; }
+    else st.textContent = "Not saved: " + (e && e.message || "the store did not answer") + ". Try again.";
+  }
+}
+
+function apply() {
+  let shown = 0, marked = 0, problems = 0;
+  const per = {};
+  for (const c of DATA.cards) {
+    const v = verdicts.get(c.id)?.verdict;
+    if (v) marked++; if (v === "problem") problems++;
+    per[c.group] = (per[c.group] || 0) + 1;
+    const ok = filter === "all" || filter === c.group || (filter === "open" && !v) || (filter === "problem" && v === "problem");
+    document.getElementById(c.id).hidden = !ok;
+    if (ok) shown++;
+  }
+  for (const h of document.querySelectorAll(".group-head")) h.hidden = !(filter === "all" || filter === h.dataset.group || filter === "open" || filter === "problem");
+  for (const b of document.querySelectorAll(".chip")) {
+    b.setAttribute("aria-pressed", String(b.dataset.k === filter));
+    const k = b.dataset.k;
+    b.lastChild.textContent = k === "all" ? DATA.cards.length : k === "open" ? DATA.cards.length - marked : k === "problem" ? problems : (per[k] || 0);
+  }
+  $("#tally").textContent = `${marked} of ${DATA.cards.length} marked · ${problems} real problems · ${shown} shown`;
+}
+
+function build() {
+  fixes();
+  counts();
+  try { const f = localStorage.getItem("wa-filter"); if (f) filter = f; } catch (e) {}
+  chips();
+  const host = $("#cards");
+  let last = null;
+  for (const c of DATA.cards) {
+    if (c.group !== last) {
+      const h = document.createElement("div"); h.className = "group-head"; h.dataset.group = c.group;
+      h.innerHTML = `<h2></h2><p class="muted"></p>`;
+      h.firstChild.textContent = GROUPS[c.group][0]; h.lastChild.textContent = GROUPS[c.group][1];
+      host.append(h); last = c.group;
+    }
+    host.append(card(c));
+  }
+  apply();
+}
+
+async function connect() {
+  const statusAll = msg => document.querySelectorAll(".status").forEach(s => { if (!s.textContent) s.textContent = msg; });
+  let user = null;
+  try { [db, user] = await Promise.all([window.claude?.use?.("db"), window.claude?.use?.("user")]); } catch (e) {}
+  if (!db) { canWrite = false; DATA.cards.forEach(c => paint(c.id)); statusAll("Marks are saved only when the page is open on claude.ai."); return; }
+  try { const w = await user?.can?.("data.write"); if (w === false) canWrite = false; } catch (e) {}
+  DATA.cards.forEach(c => paint(c.id));
+  const timer = setTimeout(() => statusAll("Saved marks can't be reached yet."), 10000);
+  db.collection("verdicts").onSnapshot(snap => {
+    if (!snap.metadata.fromCache) { clearTimeout(timer); document.querySelectorAll(".status").forEach(s => { if (s.textContent === "Saved marks can't be reached yet.") s.textContent = ""; }); }
+    verdicts.clear();
+    for (const d of snap.docs) verdicts.set(d.id, d.data());
+    DATA.cards.forEach(c => paint(c.id)); apply();
+  }, e => { clearTimeout(timer); statusAll("Saved marks can't be loaded: " + e.message); });
+}
+
+build();
+connect();
+</script>

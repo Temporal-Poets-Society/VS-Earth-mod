@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-29",
+  "game": "1.22.7",
+  "earth": "0.9.0",
+  "rangeChecksPassed": 46,
+  "naturalGeneratorsMapped": 195,
+  "fullPackServerErrors": 0,
+  "upstreamTrellisWarnings": 50,
+  "installer": {
+    "actualCdnDownload": "Herbarium 1.4.4 passed",
+    "corruptArchiveRejected": "pass",
+    "shell": "Windows PowerShell 5.1",
+    "archiveCount": 11,
+    "incompleteMarker": "pass",
+    "resume": "pass",
+    "repeatRunPreservesConfig": "pass",
+    "existingProfileGuard": "pass"
+  },
+  "clientPlaytest": "not performed",
+  "multiplayerJoin": "not performed"
+}

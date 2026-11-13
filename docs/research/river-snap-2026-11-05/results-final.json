@@ -1,0 +1,466 @@
+{
+ "grandcanyon": {
+  "before": {
+   "all": {
+    "points": 1462,
+    "km": 43.9,
+    "floor_dist_median": 405.0,
+    "floor_dist_p90": 585.0,
+    "level_minus_glo_median": -170.26481421623424,
+    "level_minus_glo_p10": -447.73435384558843,
+    "level_minus_glo_p90": 64.36650093225494,
+    "cut_over_30m_pct": 77.49658002735978
+   },
+   "main": {
+    "points": 1462,
+    "km": 43.9,
+    "floor_dist_median": 405.0,
+    "floor_dist_p90": 585.0,
+    "level_minus_glo_median": -170.26481421623424,
+    "level_minus_glo_p10": -447.73435384558843,
+    "level_minus_glo_p90": 64.36650093225494,
+    "cut_over_30m_pct": 77.49658002735978
+   },
+   "main_q": 531.0089721679688,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 38
+  },
+  "after": {
+   "all": {
+    "points": 1446,
+    "km": 43.4,
+    "floor_dist_median": 15.0,
+    "floor_dist_p90": 30.0,
+    "level_minus_glo_median": -4.826101999432069,
+    "level_minus_glo_p10": -14.893179194161291,
+    "level_minus_glo_p90": 2.3445089684535105,
+    "cut_over_30m_pct": 0.0
+   },
+   "main": {
+    "points": 1446,
+    "km": 43.4,
+    "floor_dist_median": 15.0,
+    "floor_dist_p90": 30.0,
+    "level_minus_glo_median": -4.826101999432069,
+    "level_minus_glo_p10": -14.893179194161291,
+    "level_minus_glo_p90": 2.3445089684535105,
+    "cut_over_30m_pct": 0.0
+   },
+   "main_q": 531.0089721679688,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 88
+  }
+ },
+ "rhine": {
+  "before": {
+   "all": {
+    "points": 1638,
+    "km": 49.1,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 120.0,
+    "level_minus_glo_median": 11.191544103864224,
+    "level_minus_glo_p10": 4.0498924119810695,
+    "level_minus_glo_p90": 16.5,
+    "cut_over_30m_pct": 1.8315018315018317
+   },
+   "main": {
+    "points": 1638,
+    "km": 49.1,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 120.0,
+    "level_minus_glo_median": 11.191544103864224,
+    "level_minus_glo_p10": 4.0498924119810695,
+    "level_minus_glo_p90": 16.5,
+    "cut_over_30m_pct": 1.8315018315018317
+   },
+   "main_q": 1760.6280517578125,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 49
+  },
+  "after": {
+   "all": {
+    "points": 1667,
+    "km": 50.0,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 0.0,
+    "level_minus_glo_median": 0.0,
+    "level_minus_glo_p10": -0.5,
+    "level_minus_glo_p90": 0.5,
+    "cut_over_30m_pct": 0.0
+   },
+   "main": {
+    "points": 1667,
+    "km": 50.0,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 0.0,
+    "level_minus_glo_median": 0.0,
+    "level_minus_glo_p10": -0.5,
+    "level_minus_glo_p90": 0.5,
+    "cut_over_30m_pct": 0.0
+   },
+   "main_q": 1760.6280517578125,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 100
+  }
+ },
+ "kaligandaki": {
+  "before": {
+   "all": {
+    "points": 1554,
+    "km": 46.6,
+    "floor_dist_median": 30.0,
+    "floor_dist_p90": 210.0,
+    "level_minus_glo_median": 22.093421128227874,
+    "level_minus_glo_p10": -174.53947784177637,
+    "level_minus_glo_p90": 57.015749678842624,
+    "cut_over_30m_pct": 29.343629343629345
+   },
+   "main": {
+    "points": 1554,
+    "km": 46.6,
+    "floor_dist_median": 30.0,
+    "floor_dist_p90": 210.0,
+    "level_minus_glo_median": 22.093421128227874,
+    "level_minus_glo_p10": -174.53947784177637,
+    "level_minus_glo_p90": 57.015749678842624,
+    "cut_over_30m_pct": 29.343629343629345
+   },
+   "main_q": 67.94100189208984,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 66
+  },
+  "after": {
+   "all": {
+    "points": 1572,
+    "km": 47.2,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 30.0,
+    "level_minus_glo_median": -0.6198498812368598,
+    "level_minus_glo_p10": -10.321001995520101,
+    "level_minus_glo_p90": 5.134214843672614,
+    "cut_over_30m_pct": 3.2442748091603053
+   },
+   "main": {
+    "points": 1572,
+    "km": 47.2,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 30.0,
+    "level_minus_glo_median": -0.6198498812368598,
+    "level_minus_glo_p10": -10.321001995520101,
+    "level_minus_glo_p90": 5.134214843672614,
+    "cut_over_30m_pct": 3.2442748091603053
+   },
+   "main_q": 67.94100189208984,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 127
+  }
+ },
+ "gauja": {
+  "before": {
+   "all": {
+    "points": 795,
+    "km": 23.8,
+    "floor_dist_median": 105.0,
+    "floor_dist_p90": 315.0,
+    "level_minus_glo_median": 6.975510186095427,
+    "level_minus_glo_p10": -3.2960179834062293,
+    "level_minus_glo_p90": 13.458463165021653,
+    "cut_over_30m_pct": 0.0
+   },
+   "main": {
+    "points": 795,
+    "km": 23.8,
+    "floor_dist_median": 105.0,
+    "floor_dist_p90": 315.0,
+    "level_minus_glo_median": 6.975510186095427,
+    "level_minus_glo_p10": -3.2960179834062293,
+    "level_minus_glo_p90": 13.458463165021653,
+    "cut_over_30m_pct": 0.0
+   },
+   "main_q": 91.66600036621094,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 28
+  },
+  "after": {
+   "all": {
+    "points": 803,
+    "km": 24.1,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 270.0,
+    "level_minus_glo_median": -2.4639956784419237,
+    "level_minus_glo_p10": -8.758723001174168,
+    "level_minus_glo_p90": 0.34664537999116446,
+    "cut_over_30m_pct": 0.0
+   },
+   "main": {
+    "points": 803,
+    "km": 24.1,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 270.0,
+    "level_minus_glo_median": -2.4639956784419237,
+    "level_minus_glo_p10": -8.758723001174168,
+    "level_minus_glo_p90": 0.34664537999116446,
+    "cut_over_30m_pct": 0.0
+   },
+   "main_q": 91.66600036621094,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 63
+  }
+ },
+ "irongates": {
+  "before": {
+   "all": {
+    "points": 1839,
+    "km": 55.2,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 0.0,
+    "level_minus_glo_median": -8.5,
+    "level_minus_glo_p10": -10.352631578947369,
+    "level_minus_glo_p90": 6.5,
+    "cut_over_30m_pct": 0.38064165307232195
+   },
+   "main": {
+    "points": 1839,
+    "km": 55.2,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 0.0,
+    "level_minus_glo_median": -8.5,
+    "level_minus_glo_p10": -10.352631578947369,
+    "level_minus_glo_p90": 6.5,
+    "cut_over_30m_pct": 0.38064165307232195
+   },
+   "main_q": 5522.18408203125,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 51
+  },
+  "after": {
+   "all": {
+    "points": 1845,
+    "km": 55.4,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 0.0,
+    "level_minus_glo_median": -5.3600799803827,
+    "level_minus_glo_p10": -8.0,
+    "level_minus_glo_p90": 0.0,
+    "cut_over_30m_pct": 0.0
+   },
+   "main": {
+    "points": 1845,
+    "km": 55.4,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 0.0,
+    "level_minus_glo_median": -5.3600799803827,
+    "level_minus_glo_p10": -8.0,
+    "level_minus_glo_p90": 0.0,
+    "cut_over_30m_pct": 0.0
+   },
+   "main_q": 5522.18408203125,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 86
+  }
+ },
+ "sion": {
+  "before": {
+   "all": {
+    "points": 1034,
+    "km": 31.0,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 90.0,
+    "level_minus_glo_median": 6.210674807179316,
+    "level_minus_glo_p10": -1.3106363959629501,
+    "level_minus_glo_p90": 8.161134179647604,
+    "cut_over_30m_pct": 0.0
+   },
+   "main": {
+    "points": 1034,
+    "km": 31.0,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 90.0,
+    "level_minus_glo_median": 6.210674807179316,
+    "level_minus_glo_p10": -1.3106363959629501,
+    "level_minus_glo_p90": 8.161134179647604,
+    "cut_over_30m_pct": 0.0
+   },
+   "main_q": 132.14599609375,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 41
+  },
+  "after": {
+   "all": {
+    "points": 944,
+    "km": 28.3,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 0.0,
+    "level_minus_glo_median": -0.18736233558530557,
+    "level_minus_glo_p10": -1.9672364385071601,
+    "level_minus_glo_p90": 0.5357801415990764,
+    "cut_over_30m_pct": 0.0
+   },
+   "main": {
+    "points": 944,
+    "km": 28.3,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 0.0,
+    "level_minus_glo_median": -0.18736233558530557,
+    "level_minus_glo_p10": -1.9672364385071601,
+    "level_minus_glo_p90": 0.5357801415990764,
+    "cut_over_30m_pct": 0.0
+   },
+   "main_q": 132.14599609375,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 62
+  }
+ },
+ "manaus": {
+  "before": {
+   "all": {
+    "points": 3159,
+    "km": 94.8,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 45.0,
+    "level_minus_glo_median": 0.0,
+    "level_minus_glo_p10": -3.900071768947752,
+    "level_minus_glo_p90": 0.0,
+    "cut_over_30m_pct": 0.538144982589427
+   },
+   "main": {
+    "points": 671,
+    "km": 20.1,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 105.0,
+    "level_minus_glo_median": 0.0,
+    "level_minus_glo_p10": -7.450227653281033,
+    "level_minus_glo_p90": 0.0,
+    "cut_over_30m_pct": 0.0
+   },
+   "main_q": 127105.25,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 98
+  },
+  "after": {
+   "all": {
+    "points": 3181,
+    "km": 95.4,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 0.0,
+    "level_minus_glo_median": 0.0,
+    "level_minus_glo_p10": -0.5,
+    "level_minus_glo_p90": 0.005748803351188769,
+    "cut_over_30m_pct": 0.0
+   },
+   "main": {
+    "points": 724,
+    "km": 21.7,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 735.0,
+    "level_minus_glo_median": 0.0,
+    "level_minus_glo_p10": -10.504415557120964,
+    "level_minus_glo_p90": 0.0,
+    "cut_over_30m_pct": 0.0
+   },
+   "main_q": 127105.25,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 153
+  }
+ },
+ "stlouis": {
+  "before": {
+   "all": {
+    "points": 1365,
+    "km": 40.9,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 0.0,
+    "level_minus_glo_median": 3.188679245283012,
+    "level_minus_glo_p10": 2.0,
+    "level_minus_glo_p90": 4.0,
+    "cut_over_30m_pct": 0.0
+   },
+   "main": {
+    "points": 1365,
+    "km": 40.9,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 0.0,
+    "level_minus_glo_median": 3.188679245283012,
+    "level_minus_glo_p10": 2.0,
+    "level_minus_glo_p90": 4.0,
+    "cut_over_30m_pct": 0.0
+   },
+   "main_q": 6517.83203125,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 33
+  },
+  "after": {
+   "all": {
+    "points": 1356,
+    "km": 40.7,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 0.0,
+    "level_minus_glo_median": 0.0,
+    "level_minus_glo_p10": -0.5,
+    "level_minus_glo_p90": 0.5,
+    "cut_over_30m_pct": 0.0
+   },
+   "main": {
+    "points": 1356,
+    "km": 40.7,
+    "floor_dist_median": 0.0,
+    "floor_dist_p90": 0.0,
+    "level_minus_glo_median": 0.0,
+    "level_minus_glo_p10": -0.5,
+    "level_minus_glo_p90": 0.5,
+    "cut_over_30m_pct": 0.0
+   },
+   "main_q": 6517.83203125,
+   "rises": [
+    0,
+    0
+   ],
+   "vertices": 56
+  }
+ }
+}

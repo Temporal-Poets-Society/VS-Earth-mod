@@ -1,0 +1,508 @@
+source,source_id,source_feature_id,name,country,latitude,longitude,action,repaired_latitude,repaired_longitude
+Fe-occurrences.csv.gz,usgs_mrds_digest,10133748,Oron,Israel,30.86577,35.9847,dropped,,
+Fe-occurrences.csv.gz,usgs_mrds_digest,10183198,F'Derik,Mauritania,20.45,12.75151,repaired_flip_lon,20.45,-12.75151
+Fe-occurrences.csv.gz,usgs_mrds_digest,10207488,Black Rock,South Africa,-22.83007,27.16812,repaired_swap_flip_both,-27.16812,22.83007
+Fe-occurrences.csv.gz,usgs_mrds_digest,10278882,Practice Mine,Canada,52.83152,125.00014,repaired_flip_lon,52.83152,-125.00014
+Fe-occurrences.csv.gz,usgs_mrds_digest,10280680,Tazadit,Mauritania,22.66655,12.47654,repaired_flip_lon,22.66655,-12.47654
+Fe-occurrences.csv.gz,usgs_mrds_digest,10304526,Belinga,Gabon,13.23385,11.00147,dropped,,
+Fe-occurrences.csv.gz,usgs_mrds_digest,10307226,Unknown (east of Abraham Bay),United States,52.84898,-172.82237,repaired_flip_lon,52.84898,172.82237
+Fe-occurrences.csv.gz,usgs_mrds_digest,10307227,Unnamed (west of Chirikof Point),United States,52.81897,-173.42237,repaired_flip_lon,52.81897,173.42237
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400137,Antamina,Peru,9.55564,77.1087,repaired_flip_both,-9.55564,-77.1087
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400127,Acos,Peru,14.20019,74.45047,repaired_flip_both,-14.20019,-74.45047
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400132,Almacen,Peru,13.23218,75.91713,repaired_flip_both,-13.23218,-75.91713
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400134,Alondra,Peru,15.81673,73.58379,repaired_flip_both,-15.81673,-73.58379
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400135,Anita de Tibilos,Peru,14.18349,75.14875,repaired_flip_both,-14.18349,-75.14875
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400166,Quelleveco,Peru,17.10802,70.58447,repaired_flip_both,-17.10802,-70.58447
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400138,Antapaccay,Peru,14.91732,71.26945,repaired_flip_both,-14.91732,-71.26945
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400139,Canariaco,Peru,6.08428,79.28364,repaired_flip_both,-6.08428,-79.28364
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400141,Cerro Corona,Peru,6.76261,78.60616,repaired_flip_both,-6.76261,-78.60616
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400142,Cerro Negro,Peru,16.54577,71.55335,repaired_flip_both,-16.54577,-71.55335
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400143,Cerro Verde,Peru,16.51887,71.57244,repaired_flip_both,-16.51887,-71.57244
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400144,Chapi,Peru,16.77355,71.35835,repaired_flip_both,-16.77355,-71.35835
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400145,Chavez N2 Concesion,Peru,14.23348,75.41715,repaired_flip_both,-14.23348,-75.41715
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400147,Eliana,Peru,13.76692,75.71714,repaired_flip_both,-13.76692,-75.71714
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400167,Rio Blanco,Peru,4.9455,79.30864,repaired_flip_both,-4.9455,-79.30864
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400149,La Granja,Peru,6.35925,79.11974,repaired_flip_both,-6.35925,-79.11974
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400155,La Vega,Peru,5.70572,79.28114,repaired_flip_both,-5.70572,-79.28114
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400156,Laguna Chamis,Peru,7.11898,78.57596,repaired_flip_both,-7.11898,-78.57596
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400159,Michiquillay,Peru,7.30086,78.32256,repaired_flip_both,-7.30086,-78.32256
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400168,San Salvador de Patillani,Peru,15.71085,71.67384,repaired_flip_both,-15.71085,-71.67384
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400160,Minas Conga,Peru,6.9265,78.35896,repaired_flip_both,-6.9265,-78.35896
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400161,Paramo,Peru,5.71602,79.20724,repaired_flip_both,-5.71602,-79.20724
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400162,Pashpap,Peru,8.78261,77.96147,repaired_flip_both,-8.78261,-77.96147
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400163,Puquio,Peru,13.92941,75.35045,repaired_flip_both,-13.92941,-75.35045
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400164,Puy-Puy,Peru,11.48015,76.08482,repaired_flip_both,-11.48015,-76.08482
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400165,Quechua,Peru,15.00013,71.25055,repaired_flip_both,-15.00013,-71.25055
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400170,Toquepala,Peru,17.21661,70.60057,repaired_flip_both,-17.21661,-70.60057
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400171,Tingo,Peru,13.68633,75.09355,repaired_flip_both,-13.68633,-75.09355
+Fe-occurrences.csv.gz,usgs_mrds_digest,10400172,Toro Mocho,Peru,11.60044,76.13372,repaired_flip_both,-11.60044,-76.13372
+Au-occurrences.csv.gz,usgs_mrds_digest,10060610,Rio Cacipore,Brazil,2.76811,-57.49929,repaired_flip_lat,-2.76811,-57.49929
+Au-occurrences.csv.gz,usgs_mrds_digest,10133580,La Granja,Peru,7.15123,-78.53308,repaired_flip_lat,-7.15123,-78.53308
+Au-occurrences.csv.gz,usgs_mrds_digest,10183097,Dul Mountain,Ethiopia,9.00081,31.65128,dropped,,
+Au-occurrences.csv.gz,usgs_mrds_digest,10183200,Poura,Burkina Faso,12.01745,-9.53186,dropped,,
+Au-occurrences.csv.gz,usgs_mrds_digest,10183202,Big Bell,Australia,27.33266,117.66622,repaired_flip_lat,-27.33266,117.66622
+Au-occurrences.csv.gz,usgs_mrds_digest,10183508,Darlot,Australia,27.94903,121.26593,repaired_flip_lat,-27.94903,121.26593
+Au-occurrences.csv.gz,usgs_mrds_digest,10230967,Laurani,Bolivia,17.4207,-67.7445,repaired_flip_lat,-17.4207,-67.7445
+Au-occurrences.csv.gz,usgs_mrds_digest,10232066,Sehuela-Sinada  Normanby Isl,Papua New Guinea,-1.09831,150.96548,dropped,,
+Au-occurrences.csv.gz,usgs_mrds_digest,10232187,Woodlark,Papua New Guinea,-9.91428,152.71544,dropped,,
+Au-occurrences.csv.gz,usgs_mrds_digest,10304296,Awak Mas,Indonesia,4.00121,119.99935,repaired_flip_lat,-4.00121,119.99935
+Au-occurrences.csv.gz,usgs_mrds_digest,10304787,Akjoujt Tailings Project,Mauritania,19.50005,14.58479,repaired_flip_lon,19.50005,-14.58479
+Au-occurrences.csv.gz,usgs_mrds_digest,10400138,Antapaccay,Peru,14.91732,71.26945,repaired_flip_both,-14.91732,-71.26945
+Au-occurrences.csv.gz,usgs_mrds_digest,10400141,Cerro Corona,Peru,6.76261,78.60616,repaired_flip_both,-6.76261,-78.60616
+Au-occurrences.csv.gz,usgs_mrds_digest,10400148,El Galeno,Peru,7.01759,78.31706,repaired_flip_both,-7.01759,-78.31706
+Au-occurrences.csv.gz,usgs_mrds_digest,10400159,Michiquillay,Peru,7.30086,78.32256,repaired_flip_both,-7.30086,-78.32256
+Au-occurrences.csv.gz,usgs_mrds_digest,10400160,Minas Conga,Peru,6.9265,78.35896,repaired_flip_both,-6.9265,-78.35896
+Au-occurrences.csv.gz,usgs_mrds_digest,10400169,Tantahuatay,Peru,6.72622,78.66976,repaired_flip_both,-6.72622,-78.66976
+Ag-occurrences.csv.gz,usgs_mrds_digest,10133580,La Granja,Peru,7.15123,-78.53308,repaired_flip_lat,-7.15123,-78.53308
+Ag-occurrences.csv.gz,usgs_mrds_digest,10183202,Big Bell,Australia,27.33266,117.66622,repaired_flip_lat,-27.33266,117.66622
+Ag-occurrences.csv.gz,usgs_mrds_digest,10230967,Laurani,Bolivia,17.4207,-67.7445,repaired_flip_lat,-17.4207,-67.7445
+Ag-occurrences.csv.gz,usgs_mrds_digest,10400132,Almacen,Peru,13.23218,75.91713,repaired_flip_both,-13.23218,-75.91713
+Ag-occurrences.csv.gz,usgs_mrds_digest,10400166,Quelleveco,Peru,17.10802,70.58447,repaired_flip_both,-17.10802,-70.58447
+Ag-occurrences.csv.gz,usgs_mrds_digest,10400146,Cuajone,Peru,17.04213,70.67167,repaired_flip_both,-17.04213,-70.67167
+Ag-occurrences.csv.gz,usgs_mrds_digest,10400149,La Granja,Peru,6.35925,79.11974,repaired_flip_both,-6.35925,-79.11974
+Ag-occurrences.csv.gz,usgs_mrds_digest,10400159,Michiquillay,Peru,7.30086,78.32256,repaired_flip_both,-7.30086,-78.32256
+Ag-occurrences.csv.gz,usgs_mrds_digest,10400170,Toquepala,Peru,17.21661,70.60057,repaired_flip_both,-17.21661,-70.60057
+Ag-occurrences.csv.gz,usgs_mrds_digest,10400172,Toro Mocho,Peru,11.60044,76.13372,repaired_flip_both,-11.60044,-76.13372
+Pb-occurrences.csv.gz,usgs_mrds_digest,10255758,Brskovo Zuta Prla,Montenegro,43.66542,19.8352,dropped,,
+Pb-occurrences.csv.gz,usgs_mrds_digest,10279844,Bladogat Krifa Feja,Montenegro,42.53201,22.23514,dropped,,
+Pb-occurrences.csv.gz,usgs_mrds_digest,10280333,Pha Louang Deposit,Laos,10.15057,102.39976,dropped,,
+Pb-occurrences.csv.gz,usgs_mrds_digest,10304287,Wasirawi Drainage Deposit,Indonesia,1.05149,133.54906,repaired_flip_lat,-1.05149,133.54906
+Pb-occurrences.csv.gz,usgs_mrds_digest,10307226,Unknown (east of Abraham Bay),United States,52.84898,-172.82237,repaired_flip_lon,52.84898,172.82237
+Pb-occurrences.csv.gz,usgs_mrds_digest,10307227,Unnamed (west of Chirikof Point),United States,52.81897,-173.42237,repaired_flip_lon,52.81897,173.42237
+Pb-occurrences.csv.gz,usgs_mrds_digest,10400137,Antamina,Peru,9.55564,77.1087,repaired_flip_both,-9.55564,-77.1087
+Pb-occurrences.csv.gz,usgs_mrds_digest,10400132,Almacen,Peru,13.23218,75.91713,repaired_flip_both,-13.23218,-75.91713
+Pb-occurrences.csv.gz,usgs_mrds_digest,10400139,Canariaco,Peru,6.08428,79.28364,repaired_flip_both,-6.08428,-79.28364
+Pb-occurrences.csv.gz,usgs_mrds_digest,10400142,Cerro Negro,Peru,16.54577,71.55335,repaired_flip_both,-16.54577,-71.55335
+Pb-occurrences.csv.gz,usgs_mrds_digest,10400143,Cerro Verde,Peru,16.51887,71.57244,repaired_flip_both,-16.51887,-71.57244
+Pb-occurrences.csv.gz,usgs_mrds_digest,10400145,Chavez N2 Concesion,Peru,14.23348,75.41715,repaired_flip_both,-14.23348,-75.41715
+Pb-occurrences.csv.gz,usgs_mrds_digest,10400146,Cuajone,Peru,17.04213,70.67167,repaired_flip_both,-17.04213,-70.67167
+Pb-occurrences.csv.gz,usgs_mrds_digest,10400157,Los Pinos,Peru,12.9761,76.13982,repaired_flip_both,-12.9761,-76.13982
+Pb-occurrences.csv.gz,usgs_mrds_digest,10400158,Magistral,Peru,8.01079,77.97037,repaired_flip_both,-8.01079,-77.97037
+Pb-occurrences.csv.gz,usgs_mrds_digest,10400159,Michiquillay,Peru,7.30086,78.32256,repaired_flip_both,-7.30086,-78.32256
+Pb-occurrences.csv.gz,usgs_mrds_digest,10400162,Pashpap,Peru,8.78261,77.96147,repaired_flip_both,-8.78261,-77.96147
+Pb-occurrences.csv.gz,usgs_mrds_digest,10400164,Puy-Puy,Peru,11.48015,76.08482,repaired_flip_both,-11.48015,-76.08482
+Pb-occurrences.csv.gz,usgs_mrds_digest,10400165,Quechua,Peru,15.00013,71.25055,repaired_flip_both,-15.00013,-71.25055
+Pb-occurrences.csv.gz,usgs_mrds_digest,10400170,Toquepala,Peru,17.21661,70.60057,repaired_flip_both,-17.21661,-70.60057
+Pb-occurrences.csv.gz,usgs_mrds_digest,10400172,Toro Mocho,Peru,11.60044,76.13372,repaired_flip_both,-11.60044,-76.13372
+Zn-occurrences.csv.gz,usgs_mrds_digest,10255758,Brskovo Zuta Prla,Montenegro,43.66542,19.8352,dropped,,
+Zn-occurrences.csv.gz,usgs_mrds_digest,10279844,Bladogat Krifa Feja,Montenegro,42.53201,22.23514,dropped,,
+Zn-occurrences.csv.gz,usgs_mrds_digest,10280333,Pha Louang Deposit,Laos,10.15057,102.39976,dropped,,
+Zn-occurrences.csv.gz,usgs_mrds_digest,10304287,Wasirawi Drainage Deposit,Indonesia,1.05149,133.54906,repaired_flip_lat,-1.05149,133.54906
+Zn-occurrences.csv.gz,usgs_mrds_digest,10400137,Antamina,Peru,9.55564,77.1087,repaired_flip_both,-9.55564,-77.1087
+Zn-occurrences.csv.gz,usgs_mrds_digest,10400139,Canariaco,Peru,6.08428,79.28364,repaired_flip_both,-6.08428,-79.28364
+Zn-occurrences.csv.gz,usgs_mrds_digest,10400142,Cerro Negro,Peru,16.54577,71.55335,repaired_flip_both,-16.54577,-71.55335
+Zn-occurrences.csv.gz,usgs_mrds_digest,10400143,Cerro Verde,Peru,16.51887,71.57244,repaired_flip_both,-16.51887,-71.57244
+Zn-occurrences.csv.gz,usgs_mrds_digest,10400145,Chavez N2 Concesion,Peru,14.23348,75.41715,repaired_flip_both,-14.23348,-75.41715
+Zn-occurrences.csv.gz,usgs_mrds_digest,10400146,Cuajone,Peru,17.04213,70.67167,repaired_flip_both,-17.04213,-70.67167
+Zn-occurrences.csv.gz,usgs_mrds_digest,10400157,Los Pinos,Peru,12.9761,76.13982,repaired_flip_both,-12.9761,-76.13982
+Zn-occurrences.csv.gz,usgs_mrds_digest,10400158,Magistral,Peru,8.01079,77.97037,repaired_flip_both,-8.01079,-77.97037
+Zn-occurrences.csv.gz,usgs_mrds_digest,10400159,Michiquillay,Peru,7.30086,78.32256,repaired_flip_both,-7.30086,-78.32256
+Zn-occurrences.csv.gz,usgs_mrds_digest,10400162,Pashpap,Peru,8.78261,77.96147,repaired_flip_both,-8.78261,-77.96147
+Zn-occurrences.csv.gz,usgs_mrds_digest,10400165,Quechua,Peru,15.00013,71.25055,repaired_flip_both,-15.00013,-71.25055
+Zn-occurrences.csv.gz,usgs_mrds_digest,10400170,Toquepala,Peru,17.21661,70.60057,repaired_flip_both,-17.21661,-70.60057
+Zn-occurrences.csv.gz,usgs_mrds_digest,10400172,Toro Mocho,Peru,11.60044,76.13372,repaired_flip_both,-11.60044,-76.13372
+Bi-occurrences.csv.gz,usgs_mrds_digest,10400172,Toro Mocho,Peru,11.60044,76.13372,repaired_flip_both,-11.60044,-76.13372
+Ni-occurrences.csv.gz,usgs_mrds_digest,10158964,Poun,France,-19.99697,165.91524,dropped,,
+Ni-occurrences.csv.gz,usgs_mrds_digest,10159109,Nepoui Areasln,France,-17.38043,164.99858,dropped,,
+Ni-occurrences.csv.gz,usgs_mrds_digest,10182432,Kosova Mine & Feni Smelt Operation,Slovenia,42.38203,21.05185,dropped,,
+Ni-occurrences.csv.gz,usgs_mrds_digest,10182853,Rudnici,Macedonia,41.99877,20.00186,dropped,,
+Ni-occurrences.csv.gz,usgs_mrds_digest,10231923,Poro Mine,France,-19.99697,165.99854,dropped,,
+Ni-occurrences.csv.gz,usgs_mrds_digest,10279449,Remmk Kosova,Macedonia,41.99877,20.00186,dropped,,
+Ni-occurrences.csv.gz,usgs_mrds_digest,10304793,Hunters Road,Zimbabwe,-14.33057,29.50133,dropped,,
+Cr-occurrences.csv.gz,usgs_mrds_digest,10134423,Hokaido Placer,Japan,42.99836,139.49857,dropped,,
+Cr-occurrences.csv.gz,usgs_mrds_digest,10255767,Mt. Ahito,Togo,7.25935,-0.93185,repaired_flip_lon,7.25935,0.93185
+Cr-occurrences.csv.gz,usgs_mrds_digest,10304868,Gatooma Prospect,Zimbabwe,-17.26366,47.50107,dropped,,
+Ti-occurrences.csv.gz,usgs_mrds_digest,10134421,Lukoyanov,Russia,44.83148,55.00125,repaired_swap,55.00125,44.83148
+Ti-occurrences.csv.gz,usgs_mrds_digest,10304107,Serra,Brazil,-20.16416,-39.33216,dropped,,
+Ti-occurrences.csv.gz,usgs_mrds_digest,10400143,Cerro Verde,Peru,16.51887,71.57244,repaired_flip_both,-16.51887,-71.57244
+Ti-occurrences.csv.gz,usgs_mrds_digest,10400149,La Granja,Peru,6.35925,79.11974,repaired_flip_both,-6.35925,-79.11974
+Ti-occurrences.csv.gz,usgs_mrds_digest,10400170,Toquepala,Peru,17.21661,70.60057,repaired_flip_both,-17.21661,-70.60057
+Mn-occurrences.csv.gz,usgs_mrds_digest,10207488,Black Rock,South Africa,-22.83007,27.16812,repaired_swap_flip_both,-27.16812,22.83007
+Mn-occurrences.csv.gz,usgs_mrds_digest,10304042,Bulgaust Mangan Jv,Bulgaria,53.24792,60.51128,dropped,,
+Mn-occurrences.csv.gz,usgs_mrds_digest,10400146,Cuajone,Peru,17.04213,70.67167,repaired_flip_both,-17.04213,-70.67167
+Mn-occurrences.csv.gz,usgs_mrds_digest,10400159,Michiquillay,Peru,7.30086,78.32256,repaired_flip_both,-7.30086,-78.32256
+Mn-occurrences.csv.gz,usgs_mrds_digest,10400353,Blake Plateau Nodule Deposit,United States,31.43333,-78.4,dropped,,
+W-occurrences.csv.gz,usgs_mrds_digest,10279787,Banhuni Area,Burma,9.00069,98.99985,dropped,,
+W-occurrences.csv.gz,usgs_mrds_digest,10303751,Maliwun Mines,Burma,8.91739,98.99985,dropped,,
+W-occurrences.csv.gz,usgs_mrds_digest,10400159,Michiquillay,Peru,7.30086,78.32256,repaired_flip_both,-7.30086,-78.32256
+U-occurrences.csv.gz,usgs_mrds_digest,10133748,Oron,Israel,30.86577,35.9847,dropped,,
+U-occurrences.csv.gz,usgs_mrds_digest,10279475,Olinda,Brazil,-8.32794,-34.32884,dropped,,
+Pt-occurrences.csv.gz,usgs_mrds_digest,10039291,Wicklow,Finland,52.97407,-6.04704,dropped,,
+Mo-occurrences.csv.gz,usgs_mrds_digest,10133580,La Granja,Peru,7.15123,-78.53308,repaired_flip_lat,-7.15123,-78.53308
+Mo-occurrences.csv.gz,usgs_mrds_digest,10181391,Ruby Creek,Canada,44.21517,-116.22097,dropped,,
+Mo-occurrences.csv.gz,usgs_mrds_digest,10400130,Aguila,Peru,8.56043,77.89708,repaired_flip_both,-8.56043,-77.89708
+Mo-occurrences.csv.gz,usgs_mrds_digest,10400132,Almacen,Peru,13.23218,75.91713,repaired_flip_both,-13.23218,-75.91713
+Mo-occurrences.csv.gz,usgs_mrds_digest,10400166,Quelleveco,Peru,17.10802,70.58447,repaired_flip_both,-17.10802,-70.58447
+Mo-occurrences.csv.gz,usgs_mrds_digest,10400143,Cerro Verde,Peru,16.51887,71.57244,repaired_flip_both,-16.51887,-71.57244
+Mo-occurrences.csv.gz,usgs_mrds_digest,10400146,Cuajone,Peru,17.04213,70.67167,repaired_flip_both,-17.04213,-70.67167
+Mo-occurrences.csv.gz,usgs_mrds_digest,10400149,La Granja,Peru,6.35925,79.11974,repaired_flip_both,-6.35925,-79.11974
+Mo-occurrences.csv.gz,usgs_mrds_digest,10400158,Magistral,Peru,8.01079,77.97037,repaired_flip_both,-8.01079,-77.97037
+Mo-occurrences.csv.gz,usgs_mrds_digest,10400159,Michiquillay,Peru,7.30086,78.32256,repaired_flip_both,-7.30086,-78.32256
+Mo-occurrences.csv.gz,usgs_mrds_digest,10400162,Pashpap,Peru,8.78261,77.96147,repaired_flip_both,-8.78261,-77.96147
+Mo-occurrences.csv.gz,usgs_mrds_digest,10400170,Toquepala,Peru,17.21661,70.60057,repaired_flip_both,-17.21661,-70.60057
+Mo-occurrences.csv.gz,usgs_mrds_digest,10400172,Toro Mocho,Peru,11.60044,76.13372,repaired_flip_both,-11.60044,-76.13372
+Sb-occurrences.csv.gz,usgs_mrds_digest,10158162,Norcro,Honduras,15.7508,-90.25008,dropped,,
+Sb-occurrences.csv.gz,usgs_mrds_digest,10158940,Timerhdoudine Antimony Mine,Morocco,32.98263,5.98501,repaired_flip_lon,32.98263,-5.98501
+Sb-occurrences.csv.gz,usgs_mrds_digest,10304854,Tourtite Antimony Mine,Morocco,32.48266,5.835,repaired_flip_lon,32.48266,-5.835
+Sb-occurrences.csv.gz,usgs_mrds_digest,10400137,Antamina,Peru,9.55564,77.1087,repaired_flip_both,-9.55564,-77.1087
+Sb-occurrences.csv.gz,usgs_mrds_digest,10400139,Canariaco,Peru,6.08428,79.28364,repaired_flip_both,-6.08428,-79.28364
+Sb-occurrences.csv.gz,usgs_mrds_digest,10400146,Cuajone,Peru,17.04213,70.67167,repaired_flip_both,-17.04213,-70.67167
+Sb-occurrences.csv.gz,usgs_mrds_digest,10400157,Los Pinos,Peru,12.9761,76.13982,repaired_flip_both,-12.9761,-76.13982
+Sb-occurrences.csv.gz,usgs_mrds_digest,10400158,Magistral,Peru,8.01079,77.97037,repaired_flip_both,-8.01079,-77.97037
+Sb-occurrences.csv.gz,usgs_mrds_digest,10400159,Michiquillay,Peru,7.30086,78.32256,repaired_flip_both,-7.30086,-78.32256
+Sb-occurrences.csv.gz,usgs_mrds_digest,10400170,Toquepala,Peru,17.21661,70.60057,repaired_flip_both,-17.21661,-70.60057
+Sb-occurrences.csv.gz,usgs_mrds_digest,10400172,Toro Mocho,Peru,11.60044,76.13372,repaired_flip_both,-11.60044,-76.13372
+P-occurrences.csv.gz,usgs_mrds_digest,10049317,San Roque B,Mexico,27.13165,0.00162,dropped,,
+P-occurrences.csv.gz,usgs_mrds_digest,10133748,Oron,Israel,30.86577,35.9847,dropped,,
+P-occurrences.csv.gz,usgs_mrds_digest,10182217,La Cascajera Pesca,Colombia,-5.63144,-73.08295,repaired_flip_lat,5.63144,-73.08295
+P-occurrences.csv.gz,usgs_mrds_digest,10182786,Makhtesh Qatan,Israel,30.86577,35.9847,dropped,,
+P-occurrences.csv.gz,usgs_mrds_digest,10182986,Wonarah,Australia,-19.83034,14.0348,dropped,,
+P-occurrences.csv.gz,usgs_mrds_digest,10207488,Black Rock,South Africa,-22.83007,27.16812,repaired_swap_flip_both,-27.16812,22.83007
+P-occurrences.csv.gz,usgs_mrds_digest,10279475,Olinda,Brazil,-8.32794,-34.32884,dropped,,
+P-occurrences.csv.gz,usgs_mrds_digest,10304868,Gatooma Prospect,Zimbabwe,-17.26366,47.50107,dropped,,
+P-occurrences.csv.gz,usgs_mrds_digest,10400147,Eliana,Peru,13.76692,75.71714,repaired_flip_both,-13.76692,-75.71714
+P-occurrences.csv.gz,usgs_mrds_digest,10400156,Laguna Chamis,Peru,7.11898,78.57596,repaired_flip_both,-7.11898,-78.57596
+P-occurrences.csv.gz,usgs_mrds_digest,10400170,Toquepala,Peru,17.21661,70.60057,repaired_flip_both,-17.21661,-70.60057
+P-occurrences.csv.gz,usgs_mrds_digest,10400501,Blake Plateau/Charlston Bump,United States,31.5,-79.0,dropped,,
+C_graphite-occurrences.csv.gz,usgs_mrds_digest,10206438,Kirkham,Canada,41.2333,-76.49965,dropped,,
+F-occurrences.csv.gz,usgs_mrds_digest,10133748,Oron,Israel,30.86577,35.9847,dropped,,
+F-occurrences.csv.gz,usgs_mrds_digest,10134521,Djebel Oust,Tunisia,26.58292,10.45989,dropped,,
+F-occurrences.csv.gz,usgs_mrds_digest,10183060,Buffalo Fluorspar,South Africa,65.69526,-65.68813,dropped,,
+F-occurrences.csv.gz,usgs_mrds_digest,10280246,Kruidfontein,South Africa,25.16623,27.50144,dropped,,
+F-occurrences.csv.gz,usgs_mrds_digest,10280556,Djebel Sta,Tunisia,26.58292,10.45989,dropped,,
+F-occurrences.csv.gz,usgs_mrds_digest,10400137,Antamina,Peru,9.55564,77.1087,repaired_flip_both,-9.55564,-77.1087
+SiO2-occurrences.csv.gz,usgs_mrds_digest,10133748,Oron,Israel,30.86577,35.9847,dropped,,
+SiO2-occurrences.csv.gz,usgs_mrds_digest,10207488,Black Rock,South Africa,-22.83007,27.16812,repaired_swap_flip_both,-27.16812,22.83007
+Al-occurrences.csv.gz,usgs_mrds_digest,10068687,Bauxite Australia,Australia,-2.07822,146.92883,dropped,,
+Al-occurrences.csv.gz,usgs_mrds_digest,10133748,Oron,Israel,30.86577,35.9847,dropped,,
+Al-occurrences.csv.gz,usgs_mrds_digest,10207488,Black Rock,South Africa,-22.83007,27.16812,repaired_swap_flip_both,-27.16812,22.83007
+Al-occurrences.csv.gz,usgs_mrds_digest,10231534,"Nag Hamadi,Aswan Dam",Namibia,26.06612,32.2181,dropped,,
+Al-occurrences.csv.gz,usgs_mrds_digest,10304232,Nuria Plateau,Venezuela,2.0015,-60.99936,dropped,,
+gypsum-occurrences.csv.gz,usgs_mrds_digest,10232362,Michigan Gypsum Co Pit,United States,47.1708,-83.87068,dropped,,
+gypsum-occurrences.csv.gz,usgs_mrds_digest,10400143,Cerro Verde,Peru,16.51887,71.57244,repaired_flip_both,-16.51887,-71.57244
+gypsum-occurrences.csv.gz,usgs_mrds_digest,10400147,Eliana,Peru,13.76692,75.71714,repaired_flip_both,-13.76692,-75.71714
+gypsum-occurrences.csv.gz,usgs_mrds_digest,10400149,La Granja,Peru,6.35925,79.11974,repaired_flip_both,-6.35925,-79.11974
+gypsum-occurrences.csv.gz,usgs_mrds_digest,10400159,Michiquillay,Peru,7.30086,78.32256,repaired_flip_both,-7.30086,-78.32256
+gypsum-occurrences.csv.gz,usgs_mrds_digest,10400162,Pashpap,Peru,8.78261,77.96147,repaired_flip_both,-8.78261,-77.96147
+gypsum-occurrences.csv.gz,usgs_mrds_digest,10400170,Toquepala,Peru,17.21661,70.60057,repaired_flip_both,-17.21661,-70.60057
+gypsum-occurrences.csv.gz,usgs_mrds_digest,10400171,Tingo,Peru,13.68633,75.09355,repaired_flip_both,-13.68633,-75.09355
+garnet-occurrences.csv.gz,usgs_mrds_digest,10400137,Antamina,Peru,9.55564,77.1087,repaired_flip_both,-9.55564,-77.1087
+garnet-occurrences.csv.gz,usgs_mrds_digest,10400138,Antapaccay,Peru,14.91732,71.26945,repaired_flip_both,-14.91732,-71.26945
+garnet-occurrences.csv.gz,usgs_mrds_digest,10400157,Los Pinos,Peru,12.9761,76.13982,repaired_flip_both,-12.9761,-76.13982
+garnet-occurrences.csv.gz,usgs_mrds_digest,10400170,Toquepala,Peru,17.21661,70.60057,repaired_flip_both,-17.21661,-70.60057
+garnet-occurrences.csv.gz,usgs_mrds_digest,10400172,Toro Mocho,Peru,11.60044,76.13372,repaired_flip_both,-11.60044,-76.13372
+alum-occurrences.csv.gz,usgs_mrds_digest,10400139,Canariaco,Peru,6.08428,79.28364,repaired_flip_both,-6.08428,-79.28364
+alum-occurrences.csv.gz,usgs_mrds_digest,10400143,Cerro Verde,Peru,16.51887,71.57244,repaired_flip_both,-16.51887,-71.57244
+alum-occurrences.csv.gz,usgs_mrds_digest,10400149,La Granja,Peru,6.35925,79.11974,repaired_flip_both,-6.35925,-79.11974
+alum-occurrences.csv.gz,usgs_mrds_digest,10400159,Michiquillay,Peru,7.30086,78.32256,repaired_flip_both,-7.30086,-78.32256
+alum-occurrences.csv.gz,usgs_mrds_digest,10400160,Minas Conga,Peru,6.9265,78.35896,repaired_flip_both,-6.9265,-78.35896
+alum-occurrences.csv.gz,usgs_mrds_digest,10400169,Tantahuatay,Peru,6.72622,78.66976,repaired_flip_both,-6.72622,-78.66976
+tourmaline-occurrences.csv.gz,usgs_mrds_digest,10400139,Canariaco,Peru,6.08428,79.28364,repaired_flip_both,-6.08428,-79.28364
+tourmaline-occurrences.csv.gz,usgs_mrds_digest,10400142,Cerro Negro,Peru,16.54577,71.55335,repaired_flip_both,-16.54577,-71.55335
+tourmaline-occurrences.csv.gz,usgs_mrds_digest,10400143,Cerro Verde,Peru,16.51887,71.57244,repaired_flip_both,-16.51887,-71.57244
+tourmaline-occurrences.csv.gz,usgs_mrds_digest,10400167,Rio Blanco,Peru,4.9455,79.30864,repaired_flip_both,-4.9455,-79.30864
+tourmaline-occurrences.csv.gz,usgs_mrds_digest,10400149,La Granja,Peru,6.35925,79.11974,repaired_flip_both,-6.35925,-79.11974
+tourmaline-occurrences.csv.gz,usgs_mrds_digest,10400159,Michiquillay,Peru,7.30086,78.32256,repaired_flip_both,-7.30086,-78.32256
+tourmaline-occurrences.csv.gz,usgs_mrds_digest,10400162,Pashpap,Peru,8.78261,77.96147,repaired_flip_both,-8.78261,-77.96147
+tourmaline-occurrences.csv.gz,usgs_mrds_digest,10400163,Puquio,Peru,13.92941,75.35045,repaired_flip_both,-13.92941,-75.35045
+tourmaline-occurrences.csv.gz,usgs_mrds_digest,10400165,Quechua,Peru,15.00013,71.25055,repaired_flip_both,-15.00013,-71.25055
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10132971,Los Pinos,Peru,-7.14806,-70.53289,dropped,,
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10133580,La Granja,Peru,7.15123,-78.53308,repaired_flip_lat,-7.15123,-78.53308
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10158907,Timor Island Project,Indonesia,10.10061,123.34926,repaired_flip_lat,-10.10061,123.34926
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10183154,Inki,Morocco,30.58273,7.80166,repaired_flip_lon,30.58273,-7.80166
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10207307,Chalcobamba-Lasbamba,Peru,-14.06449,-77.98306,dropped,,
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10208043,Iferghane,Morocco,30.49943,7.80166,repaired_flip_lon,30.49943,-7.80166
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10230967,Laurani,Bolivia,17.4207,-67.7445,repaired_flip_lat,-17.4207,-67.7445
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10278882,Practice Mine,Canada,52.83152,125.00014,repaired_flip_lon,52.83152,-125.00014
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10279787,Banhuni Area,Burma,9.00069,98.99985,dropped,,
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10303751,Maliwun Mines,Burma,8.91739,98.99985,dropped,,
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10304287,Wasirawi Drainage Deposit,Indonesia,1.05149,133.54906,repaired_flip_lat,-1.05149,133.54906
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10307226,Unknown (east of Abraham Bay),United States,52.84898,-172.82237,repaired_flip_lon,52.84898,172.82237
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10307227,Unnamed (west of Chirikof Point),United States,52.81897,-173.42237,repaired_flip_lon,52.81897,173.42237
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400130,Aguila,Peru,8.56043,77.89708,repaired_flip_both,-8.56043,-77.89708
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400132,Almacen,Peru,13.23218,75.91713,repaired_flip_both,-13.23218,-75.91713
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400166,Quelleveco,Peru,17.10802,70.58447,repaired_flip_both,-17.10802,-70.58447
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400138,Antapaccay,Peru,14.91732,71.26945,repaired_flip_both,-14.91732,-71.26945
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400139,Canariaco,Peru,6.08428,79.28364,repaired_flip_both,-6.08428,-79.28364
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400141,Cerro Corona,Peru,6.76261,78.60616,repaired_flip_both,-6.76261,-78.60616
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400142,Cerro Negro,Peru,16.54577,71.55335,repaired_flip_both,-16.54577,-71.55335
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400143,Cerro Verde,Peru,16.51887,71.57244,repaired_flip_both,-16.51887,-71.57244
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400146,Cuajone,Peru,17.04213,70.67167,repaired_flip_both,-17.04213,-70.67167
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400148,El Galeno,Peru,7.01759,78.31706,repaired_flip_both,-7.01759,-78.31706
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400149,La Granja,Peru,6.35925,79.11974,repaired_flip_both,-6.35925,-79.11974
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400157,Los Pinos,Peru,12.9761,76.13982,repaired_flip_both,-12.9761,-76.13982
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400158,Magistral,Peru,8.01079,77.97037,repaired_flip_both,-8.01079,-77.97037
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400159,Michiquillay,Peru,7.30086,78.32256,repaired_flip_both,-7.30086,-78.32256
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400160,Minas Conga,Peru,6.9265,78.35896,repaired_flip_both,-6.9265,-78.35896
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400162,Pashpap,Peru,8.78261,77.96147,repaired_flip_both,-8.78261,-77.96147
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400163,Puquio,Peru,13.92941,75.35045,repaired_flip_both,-13.92941,-75.35045
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400169,Tantahuatay,Peru,6.72622,78.66976,repaired_flip_both,-6.72622,-78.66976
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400170,Toquepala,Peru,17.21661,70.60057,repaired_flip_both,-17.21661,-70.60057
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400172,Toro Mocho,Peru,11.60044,76.13372,repaired_flip_both,-11.60044,-76.13372
+mrds-copper-tin-occurrences.csv,usgs_mrds_digest,10400569,Kansalawile,Congo (Kinshasa),10.6202,26.2228,repaired_flip_lat,-10.6202,26.2228
+Fe-specialist.geojson,usgs_major-deposits,2351,Bélinga (Djadi),Gabon,13.2333,11.0,dropped,,
+Fe-specialist.geojson,usgs_major-deposits,2862,Black Rock,South Africa,-22.8333,27.1667,repaired_swap_flip_both,-27.1667,22.8333
+Fe-specialist.geojson,usgs_nicrpge,71979,Derenyukhske,Ukraine,30.56,48.16,repaired_swap,48.16,30.56
+Fe-specialist.geojson,usgs_nicrpge,71980,Tarnavitske,Ukraine,30.53,48.15,repaired_swap,48.15,30.53
+Fe-specialist.geojson,usgs_vms,1353,Copper King,United States,34.5697222222222,113.229166666667,repaired_flip_lon,34.5697222222222,-113.229166666667
+Au-specialist.geojson,usgs_major-deposits,2497,Akjoujt Tailings Project,Mauritania,19.5,14.5833,repaired_flip_lon,19.5,-14.5833
+Au-specialist.geojson,usgs_major-deposits,2632,Atlantis II Deep,Saudi Arabia,21.3833,38.0667,dropped,,
+Au-specialist.geojson,usgs_nicrpge,71301,Prut?vske__2,Ukraine,28.11,50.36,repaired_swap,50.36,28.11
+Au-specialist.geojson,usgs_nicrpge,71302,Prut?vske__1,Ukraine,28.11,50.36,repaired_swap,50.36,28.11
+Au-specialist.geojson,usgs_nicrpge,224141,Moncheozerskaja group of deposits: Njuduajvench etc.,Russia,72.52,42.66,dropped,,
+Au-specialist.geojson,usgs_vms,1353,Copper King,United States,34.5697222222222,113.229166666667,repaired_flip_lon,34.5697222222222,-113.229166666667
+Ag-specialist.geojson,usgs_major-deposits,2632,Atlantis II Deep,Saudi Arabia,21.3833,38.0667,dropped,,
+Ag-specialist.geojson,usgs_vms,1353,Copper King,United States,34.5697222222222,113.229166666667,repaired_flip_lon,34.5697222222222,-113.229166666667
+Ag-specialist.geojson,usgs_vms,1375,Chance,Canada,48.7041666666667,81.39,repaired_flip_lon,48.7041666666667,-81.39
+Pb-specialist.geojson,usgs_sedexmvt,6,Allenwood West,Ireland,53.29,6.9,repaired_flip_lon,53.29,-6.9
+Pb-specialist.geojson,usgs_sedexmvt,33,Boston Hill,Ireland,53.22,6.94,repaired_flip_lon,53.22,-6.94
+Pb-specialist.geojson,usgs_sedexmvt,187,Rickardstown,Ireland,53.9,6.82,repaired_flip_lon,53.9,-6.82
+Pb-specialist.geojson,usgs_vms,1353,Copper King,United States,34.5697222222222,113.229166666667,repaired_flip_lon,34.5697222222222,-113.229166666667
+Pb-specialist.geojson,usgs_vms,1375,Chance,Canada,48.7041666666667,81.39,repaired_flip_lon,48.7041666666667,-81.39
+Zn-specialist.geojson,usgs_major-deposits,2632,Atlantis II Deep,Saudi Arabia,21.3833,38.0667,dropped,,
+Zn-specialist.geojson,usgs_sedexmvt,6,Allenwood West,Ireland,53.29,6.9,repaired_flip_lon,53.29,-6.9
+Zn-specialist.geojson,usgs_sedexmvt,33,Boston Hill,Ireland,53.22,6.94,repaired_flip_lon,53.22,-6.94
+Zn-specialist.geojson,usgs_sedexmvt,187,Rickardstown,Ireland,53.9,6.82,repaired_flip_lon,53.9,-6.82
+Zn-specialist.geojson,usgs_vms,1353,Copper King,United States,34.5697222222222,113.229166666667,repaired_flip_lon,34.5697222222222,-113.229166666667
+Zn-specialist.geojson,usgs_vms,1375,Chance,Canada,48.7041666666667,81.39,repaired_flip_lon,48.7041666666667,-81.39
+Ni-specialist.geojson,usgs_major-deposits,3155,Hunters Road,Zimbabwe,-14.3333,29.5,dropped,,
+Ni-specialist.geojson,usgs_nicrpge,70611,Krimka,Ukraine,30.84,47.95,repaired_swap,47.95,30.84
+Ni-specialist.geojson,usgs_nicrpge,70613,Kumar?vskiy__3,Ukraine,30.67,47.92,repaired_swap,47.92,30.67
+Ni-specialist.geojson,usgs_nicrpge,70614,Kumari,Ukraine,30.75,47.94,repaired_swap,47.94,30.75
+Ni-specialist.geojson,usgs_nicrpge,70720,Ust-Kamyanske,Ukraine,34.02,47.7,repaired_swap,47.7,34.02
+Ni-specialist.geojson,usgs_nicrpge,70724,Nove__2,Ukraine,34.06,47.67,repaired_swap,47.67,34.06
+Ni-specialist.geojson,usgs_nicrpge,71071,Kamyaniy,Ukraine,27.63,51.54,repaired_swap,51.54,27.63
+Ni-specialist.geojson,usgs_nicrpge,71301,Prut?vske__2,Ukraine,28.11,50.36,repaired_swap,50.36,28.11
+Ni-specialist.geojson,usgs_nicrpge,71302,Prut?vske__1,Ukraine,28.11,50.36,repaired_swap,50.36,28.11
+Ni-specialist.geojson,usgs_nicrpge,71309,area Todika,Ukraine,28.25,50.18,repaired_swap,50.18,28.25
+Ni-specialist.geojson,usgs_nicrpge,71313,Zal?znyanskiy,Ukraine,28.32,50.13,repaired_swap,50.13,28.32
+Ni-specialist.geojson,usgs_nicrpge,71975,Lasch?vske,Ukraine,30.79,48.18,repaired_swap,48.18,30.79
+Ni-specialist.geojson,usgs_nicrpge,71979,Derenyukhske,Ukraine,30.56,48.16,repaired_swap,48.16,30.56
+Ni-specialist.geojson,usgs_nicrpge,71980,Tarnavitske,Ukraine,30.53,48.15,repaired_swap,48.15,30.53
+Ni-specialist.geojson,usgs_nicrpge,71987,Kamyana Balka,Ukraine,30.7,48.02,repaired_swap,48.02,30.7
+Ni-specialist.geojson,usgs_nicrpge,71988,Grushk?vske__2,Ukraine,30.31,48.33,repaired_swap,48.33,30.31
+Ni-specialist.geojson,usgs_nicrpge,71990,Lipovenk?vske,Ukraine,30.53,48.22,repaired_swap,48.22,30.53
+Ni-specialist.geojson,usgs_nicrpge,71991,Kap?tan?vske__3,Ukraine,30.59,48.21,repaired_swap,48.21,30.59
+Ni-specialist.geojson,usgs_nicrpge,72047,Chervonoyarske,Ukraine,33.89,48.16,repaired_swap,48.16,33.89
+Ni-specialist.geojson,usgs_nicrpge,72054,Tern?vske__1,Ukraine,33.66,48.08,repaired_swap,48.08,33.66
+Ni-specialist.geojson,usgs_nicrpge,72055,Devlad?vske,Ukraine,33.78,48.08,repaired_swap,48.08,33.78
+Ni-specialist.geojson,usgs_nicrpge,72058,Vodyanske,Ukraine,33.7,48.07,repaired_swap,48.07,33.7
+Ni-specialist.geojson,usgs_nicrpge,72073,Karnaukh?vske__1,Ukraine,34.69,48.37,repaired_swap,48.37,34.69
+Ni-specialist.geojson,usgs_nicrpge,72079,Mykolaivske__1,Ukraine,34.82,48.32,repaired_swap,48.32,34.82
+Ni-specialist.geojson,usgs_nicrpge,72081,Sukhokhut?rske,Ukraine,34.33,48.3,repaired_swap,48.3,34.33
+Ni-specialist.geojson,usgs_nicrpge,72082,Marivske__1,Ukraine,34.21,48.29,repaired_swap,48.29,34.21
+Ni-specialist.geojson,usgs_nicrpge,72086,Pavl?vske__3,Ukraine,34.58,48.26,repaired_swap,48.26,34.58
+Ni-specialist.geojson,usgs_nicrpge,72088,Petr?vske__4,Ukraine,34.71,48.23,repaired_swap,48.23,34.71
+Ni-specialist.geojson,usgs_nicrpge,72113,Slavgorodske__1,Ukraine,35.48,48.03,repaired_swap,48.03,35.48
+Ni-specialist.geojson,usgs_nicrpge,81993,,Egypt,23.66,36.78,dropped,,
+Ni-specialist.geojson,usgs_nicrpge,181773,Koniambo,Territory of New Caledonia and Dependencies,-21.08,162.53,dropped,,
+Ni-specialist.geojson,usgs_nicrpge,224141,Moncheozerskaja group of deposits: Njuduajvench etc.,Russia,72.52,42.66,dropped,,
+Ni-specialist.geojson,usgs_nicrpge,12149845,Podol'skoe East,Kazakhstan,60.45,51.73,repaired_swap,51.73,60.45
+Ni-specialist.geojson,usgs_nicrpge,12149874,Qara-Mola,Kazakhstan,61.36,51.61,repaired_swap,51.61,61.36
+Ni-specialist.geojson,usgs_nicrpge,12149883,Mechetny uchastok,Kazakhstan,61.53,51.95,repaired_swap,51.95,61.53
+Ni-specialist.geojson,usgs_nicrpge,12150009,Goryunskoe I,Kazakhstan,58.11,51.02,repaired_swap,51.02,58.11
+Ni-specialist.geojson,usgs_nicrpge,12150033,Erserum,Kazakhstan,57.89,50.86,repaired_swap,50.86,57.89
+Ni-specialist.geojson,usgs_nicrpge,12150063,Ushqarasu Centralny,Kazakhstan,59.96,50.55,repaired_swap,50.55,59.96
+Ni-specialist.geojson,usgs_nicrpge,12150064,Ushqarasu South,Kazakhstan,59.97,50.52,repaired_swap,50.52,59.97
+Ni-specialist.geojson,usgs_nicrpge,12150066,Tastykolack,Kazakhstan,60.66,50.27,repaired_swap,50.27,60.66
+Ni-specialist.geojson,usgs_nicrpge,12150077,Vazhankol,Kazakhstan,61.61,50.2,repaired_swap,50.2,61.61
+Ni-specialist.geojson,usgs_nicrpge,12150084,Bashensor,Kazakhstan,60.54,49.51,repaired_swap,49.51,60.54
+Ni-specialist.geojson,usgs_nicrpge,12150094,Olendy-Sai,Kazakhstan,59.57,49.44,repaired_swap,49.44,59.57
+Ni-specialist.geojson,usgs_nicrpge,12150096,Cherny Kamen',Kazakhstan,59.32,49.56,repaired_swap,49.56,59.32
+Ni-specialist.geojson,usgs_nicrpge,12150102,Zhamantau,Kazakhstan,58.82,49.54,repaired_swap,49.54,58.82
+Ni-specialist.geojson,usgs_nicrpge,12150110,Aqsui,Kazakhstan,58.15,49.59,repaired_swap,49.59,58.15
+Ni-specialist.geojson,usgs_nicrpge,12150113,Qara-Mola,Kazakhstan,58.11,49.86,repaired_swap,49.86,58.11
+Ni-specialist.geojson,usgs_nicrpge,12150147,Kuduksai,Kazakhstan,60.5,48.94,repaired_swap,48.94,60.5
+Ni-specialist.geojson,usgs_nicrpge,12161234,Poun,Territory of New Caledonia and Dependencies,-19.99,165.91,dropped,,
+Ni-specialist.geojson,usgs_nicrpge,12161391,Nepoui Areasln,Territory of New Caledonia and Dependencies,-17.38,165.0,dropped,,
+Ni-specialist.geojson,usgs_nicrpge,12161474,Rudnici,Macedonia,41.99,20.0,dropped,,
+Ni-specialist.geojson,usgs_nicrpge,12161523,Kosova Mine & Feni Smelt Operation,Slovenia,42.38,21.05,dropped,,
+Ni-specialist.geojson,usgs_nicrpge,12161978,Remmk Kosova,Macedonia,41.99,20.0,dropped,,
+Ni-specialist.geojson,usgs_nicrpge,12162080,Poro Mine,Territory of New Caledonia and Dependencies,-19.99,166.0,dropped,,
+Ni-specialist.geojson,usgs_nicrpge,12162120,Hunters Road,Zimbabwe,-14.33,29.5,dropped,,
+Cr-specialist.geojson,usgs_major-deposits,2961,Mt. Ahito,Togo,7.2583,-0.9333,repaired_flip_lon,7.2583,0.9333
+Cr-specialist.geojson,usgs_nicrpge,71412,Mal? Kutischa,Ukraine,28.46,49.67,repaired_swap,49.67,28.46
+Cr-specialist.geojson,usgs_nicrpge,71993,Kap?tan?vske__1,Ukraine,30.61,48.19,repaired_swap,48.19,30.61
+Cr-specialist.geojson,usgs_nicrpge,12149735,Zhetygara II,Kazakhstan,61.23,52.18,repaired_swap,52.18,61.23
+Cr-specialist.geojson,usgs_nicrpge,12149858,Kundybai,Kazakhstan,60.73,51.71,repaired_swap,51.71,60.73
+Cr-specialist.geojson,usgs_nicrpge,12149866,Aqkargin,Kazakhstan,61.14,51.46,repaired_swap,51.46,61.14
+Cr-specialist.geojson,usgs_nicrpge,12149875,Aqkargin North,Kazakhstan,61.13,51.54,repaired_swap,51.54,61.13
+Cr-specialist.geojson,usgs_nicrpge,12149880,Milyutinskoe,Kazakhstan,61.23,51.93,repaired_swap,51.93,61.23
+Cr-specialist.geojson,usgs_nicrpge,12150109,Aqsui,Kazakhstan,58.19,49.62,repaired_swap,49.62,58.19
+Cr-specialist.geojson,usgs_nicrpge,12158782,Mt. Ahito,Togo,7.25,-0.93,repaired_flip_lon,7.25,0.93
+Cr-specialist.geojson,usgs_nicrpge,12159417,Gatooma Prospect,Zimbabwe,-17.26,47.5,dropped,,
+Ti-specialist.geojson,usgs_major-deposits,464,Cat Khanh,Vietnam,13.5,105.2,dropped,,
+Ti-specialist.geojson,usgs_major-deposits,2483,Pebane,Madagascar,-17.33333,38.16667,dropped,,
+Mn-specialist.geojson,usgs_major-deposits,2862,Black Rock,South Africa,-22.8333,27.1667,repaired_swap_flip_both,-27.1667,22.8333
+W-specialist.geojson,usgs_major-deposits,1506,Lyangar,Kyrgyzstan,40.4,65.95,dropped,,
+U-specialist.geojson,usgs_major-deposits,2412,Oron,Israel,30.86667,35.98333,dropped,,
+Pt-specialist.geojson,usgs_nicrpge,70612,Krimk?vskiy,Ukraine,30.89,47.94,repaired_swap,47.94,30.89
+Pt-specialist.geojson,usgs_nicrpge,70615,Kumar?vskiy__1,Ukraine,30.73,47.91,repaired_swap,47.91,30.73
+Pt-specialist.geojson,usgs_nicrpge,70685,Oleksand r?vskiy__2,Ukraine,33.97,47.71,repaired_swap,47.71,33.97
+Pt-specialist.geojson,usgs_nicrpge,70718,Chortomlitsko-Solen?vskiy,Ukraine,34.1,47.75,repaired_swap,47.75,34.1
+Pt-specialist.geojson,usgs_nicrpge,70768,B?lozerskiy__2,Ukraine,34.89,47.27,repaired_swap,47.27,34.89
+Pt-specialist.geojson,usgs_nicrpge,70980,Elanchitskiy massif,Ukraine,38.22,47.55,repaired_swap,47.55,38.22
+Pt-specialist.geojson,usgs_nicrpge,71134,Oktyabrskiy,Ukraine,37.57,47.56,repaired_swap,47.56,37.57
+Pt-specialist.geojson,usgs_nicrpge,71301,Prut?vske__2,Ukraine,28.11,50.36,repaired_swap,50.36,28.11
+Pt-specialist.geojson,usgs_nicrpge,71302,Prut?vske__1,Ukraine,28.11,50.36,repaired_swap,50.36,28.11
+Pt-specialist.geojson,usgs_nicrpge,71305,Bukinskiy,Ukraine,28.43,50.28,repaired_swap,50.28,28.43
+Pt-specialist.geojson,usgs_nicrpge,71898,area Lotasheve,Ukraine,31.34,48.99,repaired_swap,48.99,31.34
+Pt-specialist.geojson,usgs_nicrpge,71900,P?schaniy,Ukraine,31.25,48.96,repaired_swap,48.96,31.25
+Pt-specialist.geojson,usgs_nicrpge,71974,Pervomayskiy,Ukraine,30.56,48.19,repaired_swap,48.19,30.56
+Pt-specialist.geojson,usgs_nicrpge,71977,Demovyarskiy__2,Ukraine,30.5,48.18,repaired_swap,48.18,30.5
+Pt-specialist.geojson,usgs_nicrpge,71978,Zavodskiy,Ukraine,30.58,48.17,repaired_swap,48.17,30.58
+Pt-specialist.geojson,usgs_nicrpge,71985,Tarnavatskiy,Ukraine,30.57,48.07,repaired_swap,48.07,30.57
+Pt-specialist.geojson,usgs_nicrpge,72039,Pershotravneviy karEr,Ukraine,33.43,48.3,repaired_swap,48.3,33.43
+Pt-specialist.geojson,usgs_nicrpge,72042,Pibnichna mine,Ukraine,33.43,48.27,repaired_swap,48.27,33.43
+Pt-specialist.geojson,usgs_nicrpge,72075,Pravdinskiy__2,Ukraine,34.61,48.37,repaired_swap,48.37,34.61
+Pt-specialist.geojson,usgs_nicrpge,72080,Pridn?provskiy,Ukraine,34.25,48.31,repaired_swap,48.31,34.25
+Pt-specialist.geojson,usgs_nicrpge,224141,Moncheozerskaja group of deposits: Njuduajvench etc.,Russia,72.52,42.66,dropped,,
+Pt-specialist.geojson,usgs_nicrpge,12162920,Wicklow,Finland,52.97,-6.04,dropped,,
+Sb-specialist.geojson,usgs_major-deposits,2503,Timerhdoudine,Morocco,32.9833,5.9833,repaired_flip_lon,32.9833,-5.9833
+Sb-specialist.geojson,usgs_major-deposits,2504,Tourtite,Morocco,32.4833,5.8333,repaired_flip_lon,32.4833,-5.8333
+P-specialist.geojson,usgs_major-deposits,698,"Atlantic coastal plain phosphate province, Blake Plateau/Charleston Bump",United States,31.5,-79.0,dropped,,
+P-specialist.geojson,usgs_major-deposits,2412,Oron,Israel,30.86667,35.98333,dropped,,
+P-specialist.geojson,usgs_nicrpge,12159417,Gatooma Prospect,Zimbabwe,-17.26,47.5,dropped,,
+P-specialist.geojson,usgs_phosphate,70,Offshore Guyots,Australia,-33.0,153.0,dropped,,
+P-specialist.geojson,usgs_phosphate,107,Continental Shelf,Australia,-41.0,144.0,dropped,,
+P-specialist.geojson,usgs_phosphate,429,Sintou-Kola,Congo (Zaire),-4.083333,11.7,dropped,,
+P-specialist.geojson,usgs_phosphate,440,Naser,Egypt,28.08333,35.4,dropped,,
+P-specialist.geojson,usgs_phosphate,480,Baltic Basin/Kingisepp,Estonia,59.16667,29.0,dropped,,
+P-specialist.geojson,usgs_phosphate,577,Offshore,India,-8.95,76.0,dropped,,
+P-specialist.geojson,usgs_phosphate,708,Oron,Israel,30.866667,35.983333,dropped,,
+P-specialist.geojson,usgs_phosphate,954,Chatham Rise Phosphorites,New Zealand,-43.6,177.3,dropped,,
+P-specialist.geojson,usgs_phosphate,1084,Gayumskoe,Russia,55.71667,14.25,dropped,,
+P-specialist.geojson,usgs_phosphate,1256,Qarnain,United Arab Emirates,24.93333,52.85,dropped,,
+P-specialist.geojson,usgs_phosphate,1348,Blake Plateau/Charleston Bump,United States,31.5,-79.0,dropped,,
+P-specialist.geojson,usgs_phosphate,1352,Brown-rock phosphate district,United States,35.5,-51.75,dropped,,
+P-specialist.geojson,usgs_phosphate,1418,Lady Elliot Island,Australia,-24.116667,152.7,dropped,,
+P-specialist.geojson,usgs_phosphate,1419,Raine Island,Australia,-11.6,144.033333,dropped,,
+P-specialist.geojson,usgs_phosphate,1420,Bickers Islets,Australia,-34.5,134.0,dropped,,
+P-specialist.geojson,usgs_phosphate,1426,Slopen Island,Australia,-42.95,142.65,dropped,,
+P-specialist.geojson,usgs_phosphate,1429,Adele Island,Australia,-15.533333,123.15,dropped,,
+P-specialist.geojson,usgs_phosphate,1430,Ashmore Reef,Australia,-13.0,122.0,dropped,,
+P-specialist.geojson,usgs_phosphate,1431,Browse Island,Australia,-14.116667,123.55,dropped,,
+P-specialist.geojson,usgs_phosphate,1478,Kangean Island,Indonesia,-6.9,122.21667,dropped,,
+P-specialist.geojson,usgs_phosphate,1479,Quelicai,Indonesia,-8.75,126.0,dropped,,
+P-specialist.geojson,usgs_phosphate,1484,Kakabiya Island,Indonesia,-6.9,122.21667,dropped,,
+K-specialist.geojson,usgs_major-deposits,462,Vientiane Plain,Vietnam,18.0,102.6667,dropped,,
+K-specialist.geojson,usgs_major-deposits,1921,Mulhouse Basin,France,46.7666666666667,7.25,dropped,,
+NaCl-specialist.geojson,usgs_major-deposits,462,Vientiane Plain,Vietnam,18.0,102.6667,dropped,,
+NaCl-specialist.geojson,usgs_major-deposits,1930,Bad Friedrichshall-Kochendorf,Germany,40.0833333333333,9.18333333333333,dropped,,
+F-specialist.geojson,usgs_major-deposits,1918,Font Sante,France,43.4166666666667,-6.76666666666667,repaired_flip_lon,43.4166666666667,6.76666666666667
+F-specialist.geojson,usgs_major-deposits,2963,Djebel Oust,Tunisia,26.5833,10.4583,dropped,,
+F-specialist.geojson,usgs_major-deposits,2964,Djebel Sta,Tunisia,26.5833,10.4583,dropped,,
+SiO2-specialist.geojson,usgs_major-deposits,399,Parengarenga,New Zealand,-31.5283,172.9587,dropped,,
+gypsum-specialist.geojson,usgs_major-deposits,462,Vientiane Plain,Vietnam,18.0,102.6667,dropped,,
+diamond-specialist.geojson,usgs_major-deposits,2358,Ghana Cons Diamonds,Ghana,9.5,-13.7,dropped,,
+Cu-specialist.geojson,usgs_major-deposits,2632,Atlantis II Deep,Saudi Arabia,21.3833,38.0667,dropped,,
+Cu-specialist.geojson,usgs_major-deposits,3155,Hunters Road,Zimbabwe,-14.3333,29.5,dropped,,
+Cu-specialist.geojson,usgs_nicrpge,70613,Kumar?vskiy__3,Ukraine,30.67,47.92,repaired_swap,47.92,30.67
+Cu-specialist.geojson,usgs_nicrpge,71071,Kamyaniy,Ukraine,27.63,51.54,repaired_swap,51.54,27.63
+Cu-specialist.geojson,usgs_nicrpge,71301,Prut?vske__2,Ukraine,28.11,50.36,repaired_swap,50.36,28.11
+Cu-specialist.geojson,usgs_nicrpge,71302,Prut?vske__1,Ukraine,28.11,50.36,repaired_swap,50.36,28.11
+Cu-specialist.geojson,usgs_nicrpge,71309,area Todika,Ukraine,28.25,50.18,repaired_swap,50.18,28.25
+Cu-specialist.geojson,usgs_nicrpge,71313,Zal?znyanskiy,Ukraine,28.32,50.13,repaired_swap,50.13,28.32
+Cu-specialist.geojson,usgs_nicrpge,72082,Marivske__1,Ukraine,34.21,48.29,repaired_swap,48.29,34.21
+Cu-specialist.geojson,usgs_nicrpge,224141,Moncheozerskaja group of deposits: Njuduajvench etc.,Russia,72.52,42.66,dropped,,
+Cu-specialist.geojson,usgs_nicrpge,12150009,Goryunskoe I,Kazakhstan,58.11,51.02,repaired_swap,51.02,58.11
+Cu-specialist.geojson,usgs_nicrpge,12150094,Olendy-Sai,Kazakhstan,59.57,49.44,repaired_swap,49.44,59.57
+Cu-specialist.geojson,usgs_nicrpge,12150102,Zhamantau,Kazakhstan,58.82,49.54,repaired_swap,49.54,58.82
+Cu-specialist.geojson,usgs_vms,1353,Copper King,United States,34.5697222222222,113.229166666667,repaired_flip_lon,34.5697222222222,-113.229166666667
+additional-evidence.geojson,usgs_afghanistan_2002,usgs_afghanistan_2002:row390,Khanneshin,Afghanistan,38.46666666666667,63.583333333333336,dropped,,
+coal-supplement-points.geojson,usgs_americas_2008,32,,Nicaragua,14.475070895770113,-89.07909765182936,dropped,,
+coal-supplement-points.geojson,usgs_americas_2008,37,,Nicaragua,14.026912229968262,-88.62759451837226,dropped,,
+coal-supplement-points.geojson,usgs_americas_2008,39,,Nicaragua,13.824854211965373,-87.35188234434906,dropped,,
+coal-supplement-points.geojson,usgs_americas_2008,44,,Honduras,12.08558734831353,-84.93151352608707,dropped,,
+coal-supplement-points.geojson,usgs_americas_2008,45,,Nicaragua,14.273436377195635,-86.93179830375017,dropped,,
+coal-supplement-points.geojson,usgs_americas_2008,46,,Nicaragua,14.74222985123205,-86.00564534284896,dropped,,
+coal-supplement-points.geojson,usgs_americas_2008,84,,Nicaragua,14.553316767871092,-87.33341807607847,dropped,,
+coal-supplement-points.geojson,usgs_americas_2008,85,,Nicaragua,15.64309024810791,-87.25323486328125,dropped,,
+coal-supplement-points.geojson,usgs_americas_2008,87,,Nicaragua,13.707021487144084,-87.62507916152677,dropped,,
+coal-supplement-points.geojson,usgs_americas_2008,88,,Honduras,12.950584387574265,-86.11711272327425,dropped,,
+coal-supplement-points.geojson,usgs_americas_2008,92,,Honduras,12.11339407540732,-84.25988630299369,dropped,,
+usgs-minfac-mines.geojson,usgs_minfac_2010,2145,Lermontov,Russia,44.1,142.97,dropped,,
+usgs-minfac-mines.geojson,usgs_minfac_2010,5465,,Iran,48.7,36.392,repaired_swap,36.392,48.7
+PotashDeps.geojson,usgs_global_potash_2014,849,Ewing Bank,United States of America,28.500000000000057,-90.99999999999994,dropped,,
+PotashDeps.geojson,usgs_global_potash_2014,850,Green Canyon,United States of America,27.500000000000057,-90.99999999999994,dropped,,
+base-metals mrds capped,base-metals mrds capped,,,Burma,9.159,98.767,dropped,,
+base-metals mrds capped,base-metals mrds capped,,,Burma,8.917,99.0,dropped,,
+base-metals mrds capped,base-metals mrds capped,,,Burma,9.001,99.0,dropped,,
+base-metals mrds capped,base-metals mrds capped,,,Burma,8.917,99.0,dropped,,
+base-metals mrds capped,base-metals mrds capped,,,Peru,7.301,78.323,repaired_flip_both,-7.301,-78.323
+base-metals mrds capped,base-metals mrds capped,,,Peru,7.151,-78.533,repaired_flip_lat,-7.151,-78.533
+base-metals mrds capped,base-metals mrds capped,,,Canada,44.215,-116.221,dropped,,
+base-metals mrds capped,base-metals mrds capped,,,Peru,8.672,77.929,repaired_flip_both,-8.672,-77.929
+base-metals mrds capped,base-metals mrds capped,,,Peru,13.232,75.917,repaired_flip_both,-13.232,-75.917
+base-metals mrds capped,base-metals mrds capped,,,Peru,17.122,70.619,repaired_flip_both,-17.122,-70.619
+base-metals mrds capped,base-metals mrds capped,,,Peru,16.519,71.572,repaired_flip_both,-16.519,-71.572
+base-metals mrds capped,base-metals mrds capped,,,Peru,6.359,79.12,repaired_flip_both,-6.359,-79.12
+base-metals mrds capped,base-metals mrds capped,,,Peru,8.011,77.97,repaired_flip_both,-8.011,-77.97
+base-metals mrds capped,base-metals mrds capped,,,Peru,7.301,78.323,repaired_flip_both,-7.301,-78.323
+base-metals mrds capped,base-metals mrds capped,,,Peru,11.6,76.134,repaired_flip_both,-11.6,-76.134
+base-metals mrds capped,base-metals mrds capped,,,Peru,11.6,76.134,repaired_flip_both,-11.6,-76.134
+base-metals mrds capped,base-metals mrds capped,,,Honduras,15.626,-90.125,dropped,,
+base-metals mrds capped,base-metals mrds capped,,,Morocco,32.983,5.985,repaired_flip_lon,32.983,-5.985
+base-metals mrds capped,base-metals mrds capped,,,Morocco,32.483,5.835,repaired_flip_lon,32.483,-5.835
+base-metals mrds capped,base-metals mrds capped,,,Peru,9.556,77.109,repaired_flip_both,-9.556,-77.109
+base-metals mrds capped,base-metals mrds capped,,,Peru,6.084,79.284,repaired_flip_both,-6.084,-79.284
+base-metals mrds capped,base-metals mrds capped,,,Peru,17.129,70.636,repaired_flip_both,-17.129,-70.636
+base-metals mrds capped,base-metals mrds capped,,,Peru,12.976,76.14,repaired_flip_both,-12.976,-76.14
+base-metals mrds capped,base-metals mrds capped,,,Peru,8.011,77.97,repaired_flip_both,-8.011,-77.97
+base-metals mrds capped,base-metals mrds capped,,,Peru,7.301,78.323,repaired_flip_both,-7.301,-78.323
+base-metals mrds capped,base-metals mrds capped,,,Peru,11.6,76.134,repaired_flip_both,-11.6,-76.134
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,698,"Atlantic coastal plain phosphate province, Blake Plateau/Charleston Bump",United States,31.5,-79.0,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,2412,Oron,Israel,30.86667,35.98333,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,70,Offshore Guyots,Australia,-33.0,153.0,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,107,Continental Shelf,Australia,-41.0,144.0,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,429,Sintou-Kola,Congo (Zaire),-4.083333,11.7,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,440,Naser,Egypt,28.08333,35.4,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,480,Baltic Basin/Kingisepp,Estonia,59.16667,29.0,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,577,Offshore,India,-8.95,76.0,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,708,Oron,Israel,30.866667,35.983333,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,954,Chatham Rise Phosphorites,New Zealand,-43.6,177.3,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,1256,Qarnain,United Arab Emirates,24.93333,52.85,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,1348,Blake Plateau/Charleston Bump,United States,31.5,-79.0,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,1352,Brown-rock phosphate district,United States,35.5,-51.75,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,1418,Lady Elliot Island,Australia,-24.116667,152.7,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,1419,Raine Island,Australia,-11.6,144.033333,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,1420,Bickers Islets,Australia,-34.5,134.0,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,1426,Slopen Island,Australia,-42.95,142.65,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,1429,Adele Island,Australia,-15.533333,123.15,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,1430,Ashmore Reef,Australia,-13.0,122.0,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,1431,Browse Island,Australia,-14.116667,123.55,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,1478,Kangean Island,Indonesia,-6.9,122.21667,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,1479,Quelicai,Indonesia,-8.75,126.0,dropped,,
+usgs-phosphate-sedimentary,usgs-phosphate-sedimentary,1484,Kakabiya Island,Indonesia,-6.9,122.21667,dropped,,
+usgs major deposits (iron-ferro re-add),usgs major deposits (iron-ferro re-add),major-deposits:3155,Hunters Road,Zimbabwe,-14.3333,29.5,dropped,,
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:70611,Krimka,Ukraine,30.84,47.95,repaired_swap,47.95,30.84
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:70614,Kumari,Ukraine,30.75,47.94,repaired_swap,47.94,30.75
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:70720,Ust-Kamyanske,Ukraine,34.02,47.7,repaired_swap,47.7,34.02
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:70724,Nove__2,Ukraine,34.06,47.67,repaired_swap,47.67,34.06
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:71301,Prut?vske__2,Ukraine,28.11,50.36,repaired_swap,50.36,28.11
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:71302,Prut?vske__1,Ukraine,28.11,50.36,repaired_swap,50.36,28.11
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:71975,Lasch?vske,Ukraine,30.79,48.18,repaired_swap,48.18,30.79
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:71979,Derenyukhske,Ukraine,30.56,48.16,repaired_swap,48.16,30.56
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:71980,Tarnavitske,Ukraine,30.53,48.15,repaired_swap,48.15,30.53
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:71987,Kamyana Balka,Ukraine,30.7,48.02,repaired_swap,48.02,30.7
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:71988,Grushk?vske__2,Ukraine,30.31,48.33,repaired_swap,48.33,30.31
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:71990,Lipovenk?vske,Ukraine,30.53,48.22,repaired_swap,48.22,30.53
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:71991,Kap?tan?vske__3,Ukraine,30.59,48.21,repaired_swap,48.21,30.59
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:72047,Chervonoyarske,Ukraine,33.89,48.16,repaired_swap,48.16,33.89
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:72054,Tern?vske__1,Ukraine,33.66,48.08,repaired_swap,48.08,33.66
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:72055,Devlad?vske,Ukraine,33.78,48.08,repaired_swap,48.08,33.78
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:72058,Vodyanske,Ukraine,33.7,48.07,repaired_swap,48.07,33.7
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:72073,Karnaukh?vske__1,Ukraine,34.69,48.37,repaired_swap,48.37,34.69
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:72079,Mykolaivske__1,Ukraine,34.82,48.32,repaired_swap,48.32,34.82
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:72081,Sukhokhut?rske,Ukraine,34.33,48.3,repaired_swap,48.3,34.33
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:72086,Pavl?vske__3,Ukraine,34.58,48.26,repaired_swap,48.26,34.58
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:72088,Petr?vske__4,Ukraine,34.71,48.23,repaired_swap,48.23,34.71
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:72113,Slavgorodske__1,Ukraine,35.48,48.03,repaired_swap,48.03,35.48
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:12161391,Nepoui Areasln,Territory of New Caledonia and Dependencies,-17.38,165.0,dropped,,
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:12161474,Rudnici,Macedonia,41.99,20.0,dropped,,
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:12161523,Kosova Mine & Feni Smelt Operation,Slovenia,42.38,21.05,dropped,,
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:12161978,Remmk Kosova,Macedonia,41.99,20.0,dropped,,
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:12162080,Poro Mine,Territory of New Caledonia and Dependencies,-19.99,166.0,dropped,,
+usgs major deposits (iron-ferro re-add),usgs major deposits (iron-ferro re-add),major-deposits:2961,Mt. Ahito,Togo,7.2583,-0.9333,repaired_flip_lon,7.2583,0.9333
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:71412,Mal? Kutischa,Ukraine,28.46,49.67,repaired_swap,49.67,28.46
+usgs nicrpge primary (iron-ferro re-add),usgs nicrpge primary (iron-ferro re-add),nicrpge:71993,Kap?tan?vske__1,Ukraine,30.61,48.19,repaired_swap,48.19,30.61

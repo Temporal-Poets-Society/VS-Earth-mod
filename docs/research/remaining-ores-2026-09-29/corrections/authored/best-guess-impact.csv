@@ -1,0 +1,481 @@
+name,country,layers,size,confidence,peak,radius_km,baseline_at_point,cells_raised_observed,cells_raised_any,status
+Tavan Tolgoi coal,Mongolia,C_coal,world-class,high,0.85,50.0,C_coal=0.00,4,4,changes cells
+Moatize-Benga coal (Tete basin),Mozambique,C_coal,world-class,high,0.85,55.0,C_coal=0.00,3,3,changes cells
+Nord-Pas-de-Calais coal (Bethune-Bruay),France,C_coal,major,high,0.75,50.0,C_coal=0.00,4,4,changes cells
+Nord-Pas-de-Calais coal (Lens-Douai),France,C_coal,major,high,0.75,50.0,C_coal=0.00,4,4,changes cells
+Nord-Pas-de-Calais coal (Valenciennes-Denain),France,C_coal,major,high,0.75,50.0,C_coal=0.00,4,4,changes cells
+Inkai ISR uranium (Chu-Sarysu),Kazakhstan,U,world-class,high,0.85,60.0,U=0.00,5,5,changes cells
+Chu-Sarysu north (Mynkuduk-Akdala-Budenovskoye),Kazakhstan,U,major,medium,0.7,70.0,U=0.00,6,6,changes cells
+Chu-Sarysu south (Moinkum-Kanzhugan-Uvanas),Kazakhstan,U,major,medium,0.7,70.0,U=0.00,6,6,changes cells
+Syrdarya ISR uranium (Irkol-Kharasan-Karamurun),Kazakhstan,U,major,medium,0.7,80.0,U=0.00,10,10,changes cells
+Zarechnoye ISR uranium,Kazakhstan,U,medium,low,0.45,40.0,U=0.00,2,2,changes cells
+Caltanissetta sulfur district,Italy,S,world-class,high,0.85,45.0,S=0.00,4,4,changes cells
+Agrigento hinterland sulfur (Aragona-Favara-Racalmuto),Italy,S,major,high,0.75,45.0,S=0.00,3,3,changes cells
+Enna-Floristella sulfur,Italy,S,major,high,0.75,45.0,S=0.00,2,2,changes cells
+Lercara Friddi sulfur,Italy,S,medium,medium,0.6,40.0,S=0.00,2,2,changes cells
+Sicilian Messinian gypsum,Italy,gypsum,major,high,0.75,70.0,gypsum=0.15,6,6,changes cells
+Kibali gold,Congo (Kinshasa),Au,world-class,high,0.85,45.0,Au=0.18,1,1,changes cells
+Kilo-Moto gold (Mongbwalu),Congo (Kinshasa),Au,major,medium,0.7,45.0,Au=0.12,3,3,changes cells
+Cigar Lake uranium,Canada,U,world-class,high,0.85,40.0,U=0.00,4,4,changes cells
+McArthur River uranium,Canada,U,world-class,high,0.85,40.0,U=0.25,2,2,changes cells
+Rabbit Lake-McClean Lake uranium,Canada,U,major,high,0.75,45.0,U=0.00,3,3,changes cells
+Freiberg lead-zinc-silver,Germany,Pb;Zn;Ag,major,high,0.75,45.0,Pb=0.00 Zn=0.00 Ag=0.40,8,8,changes cells
+Ermelo coalfield,South Africa,C_coal,major,high,0.75,50.0,C_coal=0.29,2,2,changes cells
+KwaZulu-Natal coalfields (Vryheid),South Africa,C_coal,major,high,0.75,50.0,C_coal=0.00,2,2,changes cells
+Sasolburg-Vereeniging coal,South Africa,C_coal,medium,high,0.65,50.0,C_coal=0.00,3,3,changes cells
+Sadiola gold,Mali,Au,major,high,0.75,45.0,Au=0.12,2,2,changes cells
+Yatela gold,Mali,Au,medium,medium,0.6,40.0,Au=0.25,2,2,changes cells
+Loulo-Gounkoto gold,Mali,Au,world-class,medium,0.75,45.0,Au=0.51,1,1,changes cells
+Fekola gold,Mali,Au,major,medium,0.7,40.0,Au=0.51,1,1,changes cells
+Morila gold,Mali,Au,major,medium,0.7,40.0,Au=0.55,1,1,changes cells
+Syama gold,Mali,Au,major,medium,0.7,40.0,Au=0.12,2,2,changes cells
+Geita gold,Tanzania,Au,world-class,high,0.85,45.0,Au=0.51,1,1,changes cells
+North Mara gold,Tanzania,Au,major,high,0.75,40.0,Au=0.18,1,1,changes cells
+Lupa goldfield (Chunya),Tanzania,Au,medium,medium,0.6,50.0,Au=0.15,4,4,changes cells
+Kumtor gold,Kyrgyzstan,Au,world-class,high,0.85,40.0,Au=0.56,1,1,changes cells
+Bisie tin (Walikale),Congo (Kinshasa),Sn,major,high,0.75,45.0,Sn=0.00,2,2,changes cells
+Punia tin (Maniema),Congo (Kinshasa),Sn,medium,medium,0.6,45.0,Sn=0.00,2,2,changes cells
+Masisi-Rubaya tin-coltan (North Kivu),Congo (Kinshasa),Sn,medium,medium,0.6,45.0,Sn=0.43,1,1,changes cells
+Twangiza gold,Congo (Kinshasa),Au,medium,medium,0.6,40.0,Au=0.34,1,1,changes cells
+Ruseifa phosphate,Jordan,P,medium,high,0.65,40.0,P=0.62,1,1,changes cells
+Salobo copper-gold (Carajas),Brazil,Cu;Au,world-class,high,0.85,40.0,Cu=0.64 Au=0.64,2,2,changes cells
+Igarape Bahia-Alemao copper-gold (Carajas),Brazil,Cu;Au,medium,medium,0.6,40.0,Cu=0.36 Au=0.58,2,2,changes cells
+Schlema-Alberoda uranium,Germany,U,world-class,high,0.85,45.0,U=0.00,3,3,changes cells
+Ronneburg uranium,Germany,U,major,high,0.75,45.0,U=0.00,4,4,changes cells
+Konigstein uranium,Germany,U,medium,high,0.65,40.0,U=0.51,3,3,changes cells
+Schneeberg bismuth-cobalt,Germany,Bi,medium,high,0.65,40.0,Bi=0.00,2,2,changes cells
+Schneckenstein topaz,Germany,topaz,medium,high,0.65,40.0,topaz=0.00,3,3,changes cells
+Sabodala gold,Senegal,Au,major,medium,0.7,45.0,Au=0.12,1,1,changes cells
+Hounde gold belt,Burkina Faso,Au,major,medium,0.7,50.0,Au=0.38,2,2,changes cells
+Essakane gold,Burkina Faso,Au,major,medium,0.7,40.0,Au=0.12,2,2,changes cells
+Bissa-Bouly gold,Burkina Faso,Au,major,low,0.5,40.0,Au=0.12,1,1,changes cells
+Tongon gold,Cote D'Ivoire,Au,major,low,0.5,40.0,Au=0.12,2,2,changes cells
+Oume-Fetekro belt gold (Yaoure-Bonikro),Cote D'Ivoire,Au,major,medium,0.7,60.0,Au=0.45,3,3,changes cells
+Ahafo gold (Sefwi belt),Ghana,Au,major,high,0.75,45.0,Au=0.41,1,1,changes cells
+Tongo diamond field,Sierra Leone,diamond,major,medium,0.7,45.0,diamond=0.68,1,1,changes cells
+Marampa iron (Lunsar),Sierra Leone,Fe,major,high,0.75,40.0,Fe=0.09,1,1,changes cells
+Tonkolili iron,Sierra Leone,Fe,major,medium,0.7,40.0,Fe=0.19,1,1,changes cells
+Mokanji bauxite,Sierra Leone,Al,medium,medium,0.6,40.0,Al=0.48,1,1,changes cells
+Nimba iron (Yekepa),Liberia,Fe,world-class,high,0.85,45.0,Fe=0.61,1,1,changes cells
+Bong iron,Liberia,Fe,major,high,0.75,40.0,Fe=0.65,1,1,changes cells
+Dabola-Tougue bauxite,Guinea,Al,major,medium,0.7,60.0,Al=0.50,3,3,changes cells
+Banankoro diamonds,Guinea,diamond,medium,low,0.45,45.0,diamond=0.00,1,1,changes cells
+Lac Rose salt,Senegal,NaCl,medium,high,0.65,40.0,NaCl=0.00,1,1,changes cells
+Enugu coal,Nigeria,C_coal,major,high,0.75,50.0,C_coal=0.53,1,1,changes cells
+Abakaliki lead-zinc (Benue trough),Nigeria,Pb;Zn,medium,medium,0.6,45.0,Pb=0.00 Zn=0.00,4,4,changes cells
+Nigerian gem pegmatites (Plateau-Nasarawa),Nigeria,beryl;tourmaline;topaz,medium,low,0.45,80.0,beryl=0.00 tourmaline=0.00 topaz=0.00,18,18,changes cells
+Imouraren uranium,Niger,U,major,medium,0.7,40.0,U=0.40,2,2,changes cells
+Guelb Moghrein copper-gold (Akjoujt),Mauritania,Cu;Au,major,high,0.75,40.0,Cu=0.53 Au=0.53,2,2,changes cells
+Tasiast gold,Mauritania,Au,major,medium,0.7,40.0,Au=0.12,2,2,changes cells
+Jerada coal,Morocco,C_coal,major,high,0.75,45.0,C_coal=0.00,2,2,changes cells
+Wadi Sikait emeralds,Egypt,emerald;beryl,medium,high,0.65,45.0,emerald=0.60 beryl=0.00,3,3,changes cells
+Taita-Taveta tsavorite,Kenya,garnet,medium,medium,0.6,50.0,garnet=0.00,2,2,changes cells
+Merelani tsavorite-tanzanite,Tanzania,garnet,major,high,0.75,40.0,garnet=0.00,2,2,changes cells
+Umba valley sapphire-garnet,Tanzania,corundum;garnet,medium,medium,0.6,45.0,corundum=0.00 garnet=0.00,3,3,changes cells
+Mahenge spinel-ruby,Tanzania,spinel;corundum,major,high,0.75,45.0,spinel=0.00 corundum=0.00,2,2,changes cells
+Mahenge graphite,Tanzania,C_graphite,medium,medium,0.6,40.0,C_graphite=0.10,1,1,changes cells
+Tunduru gem placers,Tanzania,corundum;spinel;garnet;tourmaline,major,medium,0.7,50.0,corundum=0.00 spinel=0.00 garnet=0.00 tourmaline=0.00,12,12,changes cells
+Mchuchuma coal (Ruhuhu basin),Tanzania,C_coal,major,medium,0.7,45.0,C_coal=0.00,2,2,changes cells
+Tshikapa diamonds,Congo (Kinshasa),diamond,major,high,0.75,50.0,diamond=0.58,1,1,changes cells
+Shinkolobwe uranium,Congo (Kinshasa),U,major,high,0.75,40.0,U=0.95,1,1,changes cells
+Mounana-Oklo uranium,Gabon,U,medium,high,0.65,45.0,U=0.00,1,1,changes cells
+Belinga iron,Gabon,Fe,major,medium,0.7,45.0,Fe=0.00,2,2,changes cells
+Kafubu emeralds (Kagem),Zambia,emerald;beryl,world-class,high,0.85,45.0,emerald=0.95 beryl=0.00,2,2,changes cells
+Lundazi gem pegmatites,Zambia,tourmaline;beryl,medium,medium,0.6,45.0,tourmaline=0.00 beryl=0.00,2,2,changes cells
+Great Dyke PGE (Ngezi-Unki-Mimosa),Zimbabwe,Pt,world-class,high,0.85,80.0,Pt=0.42,2,2,changes cells
+Sandawana emeralds,Zimbabwe,emerald,major,medium,0.7,40.0,emerald=0.00,2,2,changes cells
+Marange diamonds,Zimbabwe,diamond,major,high,0.75,45.0,diamond=0.00,2,2,changes cells
+Murowa diamonds,Zimbabwe,diamond,medium,medium,0.6,40.0,diamond=0.00,2,2,changes cells
+Montepuez ruby,Mozambique,corundum,world-class,medium,0.75,45.0,corundum=0.00,1,1,changes cells
+Balama graphite,Mozambique,C_graphite,world-class,high,0.85,45.0,C_graphite=0.10,2,2,changes cells
+Alto Ligonha pegmatites,Mozambique,tourmaline;beryl;topaz,major,medium,0.7,60.0,tourmaline=0.00 beryl=0.95 topaz=0.00,10,10,changes cells
+Kayelekera uranium,Malawi,U,medium,medium,0.6,40.0,U=0.00,2,2,changes cells
+Fort-Dauphin ilmenite (Mandena),Madagascar,Ti,major,high,0.75,40.0,Ti=0.59,1,1,changes cells
+Andranondambo sapphire,Madagascar,corundum,medium,low,0.45,40.0,corundum=0.00,2,2,changes cells
+Antsirabe-Betafo gem pegmatites,Madagascar,tourmaline;beryl;topaz,major,medium,0.7,60.0,tourmaline=0.00 beryl=0.00 topaz=0.00,9,9,changes cells
+Mananjary-Kianjavato emeralds,Madagascar,emerald,medium,medium,0.6,45.0,emerald=0.00,2,2,changes cells
+Sakoa coal,Madagascar,C_coal,medium,medium,0.6,45.0,C_coal=0.00,2,2,changes cells
+Bekily garnet,Madagascar,garnet,medium,low,0.45,40.0,garnet=0.00,1,1,changes cells
+Prieska copper-zinc,South Africa,Cu;Zn,medium,medium,0.6,40.0,Cu=0.47 Zn=0.47,2,2,changes cells
+Pilgrim's Rest gold,South Africa,Au,medium,high,0.65,40.0,Au=0.33,1,1,changes cells
+Husab uranium,Namibia,U,world-class,medium,0.75,40.0,U=0.53,1,1,changes cells
+Langer Heinrich uranium,Namibia,U,major,high,0.75,40.0,U=0.53,1,1,changes cells
+Oranjemund coastal diamonds,Namibia,diamond,world-class,high,0.85,50.0,diamond=0.00,4,4,changes cells
+Elizabeth Bay diamonds,Namibia,diamond,major,medium,0.7,40.0,diamond=0.38,2,2,changes cells
+Erongo-Usakos gem pegmatites,Namibia,tourmaline;beryl;topaz,major,medium,0.7,50.0,tourmaline=0.51 beryl=0.51 topaz=0.51,3,3,changes cells
+Klein Spitzkoppe topaz-aquamarine,Namibia,topaz;beryl,medium,high,0.65,40.0,topaz=0.51 beryl=0.51,4,4,changes cells
+Morupule coal,Botswana,C_coal,major,high,0.75,45.0,C_coal=0.00,3,3,changes cells
+Kalahari Copperbelt (Ghanzi),Botswana,Cu,medium,medium,0.6,60.0,Cu=0.55,2,1,changes cells
+Al Ba'itha bauxite (Az Zabirah),Saudi Arabia,Al,major,medium,0.7,50.0,Al=0.42,3,3,changes cells
+Akashat phosphate,Iraq,P,major,medium,0.7,45.0,P=0.39,2,2,changes cells
+Sungun copper,Iran,Cu;Mo,major,high,0.75,40.0,Cu=0.85 Mo=0.45,1,1,changes cells
+Gol-e-Gohar iron,Iran,Fe,world-class,high,0.85,40.0,Fe=0.65,1,1,changes cells
+Angouran zinc-lead,Iran,Zn;Pb,world-class,high,0.85,40.0,Zn=0.71 Pb=0.71,2,2,changes cells
+Mehdiabad zinc,Iran,Zn;Pb,major,medium,0.7,40.0,Zn=0.33 Pb=0.33,4,4,changes cells
+Zarshuran gold,Iran,Au;Hg;Sb,medium,medium,0.6,40.0,Au=0.95 Hg=0.00 Sb=0.14,3,3,changes cells
+Tabas coal,Iran,C_coal,major,high,0.75,60.0,C_coal=0.00,5,5,changes cells
+Kerman coal (Zarand),Iran,C_coal,major,medium,0.7,50.0,C_coal=0.00,2,2,changes cells
+Alborz coal (Shemshak-Zirab),Iran,C_coal,medium,medium,0.6,50.0,C_coal=0.25,4,4,changes cells
+Afsin-Elbistan lignite,Turkey,C_coal,world-class,high,0.85,50.0,C_coal=0.00,2,2,changes cells
+Soma lignite,Turkey,C_coal,major,high,0.75,45.0,C_coal=0.00,2,2,changes cells
+Yatagan lignite,Turkey,C_coal,medium,medium,0.6,40.0,C_coal=0.00,2,2,changes cells
+Tuncbilek lignite,Turkey,C_coal,medium,medium,0.6,40.0,C_coal=0.00,2,2,changes cells
+Copler gold,Turkey,Au,major,medium,0.7,40.0,Au=0.00,2,2,changes cells
+Milas emery,Turkey,corundum,major,high,0.75,45.0,corundum=0.00,2,2,changes cells
+Sebinkarahisar alum,Turkey,alum,medium,medium,0.6,40.0,alum=0.00,2,2,changes cells
+Zaglik alunite,Azerbaijan,alum,medium,medium,0.6,40.0,alum=0.22,2,2,changes cells
+Gedabek copper-gold,Azerbaijan,Cu;Au,medium,high,0.65,40.0,Cu=0.85 Au=0.37,1,1,changes cells
+Nakhchivan rock salt,Azerbaijan,NaCl,medium,low,0.45,40.0,NaCl=0.00,2,2,changes cells
+Nuristan gem pegmatites,Afghanistan,tourmaline;beryl,major,medium,0.7,50.0,tourmaline=0.75 beryl=0.42,1,1,changes cells
+Thar coal,Pakistan,C_coal,world-class,high,0.85,60.0,C_coal=0.85,2,2,changes cells
+Hunza ruby-spinel,Pakistan,corundum;spinel,medium,high,0.65,45.0,corundum=0.00 spinel=0.00,4,4,changes cells
+Shigar-Skardu gem pegmatites,Pakistan,beryl;topaz;tourmaline;garnet,major,high,0.75,50.0,beryl=0.00 topaz=0.00 tourmaline=0.00 garnet=0.00,16,16,changes cells
+Katlang topaz,Pakistan,topaz,medium,medium,0.6,40.0,topaz=0.00,2,2,changes cells
+Muslim Bagh chromite,Pakistan,Cr,major,high,0.75,45.0,Cr=0.55,1,1,changes cells
+Sapat peridot (Kohistan),Pakistan,olivine,medium,low,0.45,40.0,olivine=0.00,1,1,changes cells
+Kuh-i-Lal spinel,Tajikistan,spinel,major,medium,0.7,40.0,spinel=0.00,3,3,changes cells
+Angren coal,Uzbekistan,C_coal,major,high,0.75,45.0,C_coal=0.55,1,1,changes cells
+Uchkuduk uranium,Uzbekistan,U,major,high,0.75,45.0,U=0.00,2,2,changes cells
+Tyubegatan potash,Uzbekistan,K;NaCl,medium,medium,0.6,40.0,K=0.55 NaCl=0.55,2,2,changes cells
+Kyzylkum phosphate (Jeroy-Sardara),Uzbekistan,P,medium,low,0.45,45.0,P=0.00,2,2,changes cells
+Khaidarkan mercury-antimony,Kyrgyzstan,Hg;Sb,major,high,0.75,40.0,Hg=0.95 Sb=0.40,1,1,changes cells
+Gaurdak native sulfur,Turkmenistan,S,major,medium,0.7,40.0,S=0.45,1,1,changes cells
+Zhezkazgan copper,Kazakhstan,Cu,world-class,high,0.85,45.0,Cu=0.60,1,1,changes cells
+Shubarkol coal,Kazakhstan,C_coal,major,medium,0.7,40.0,C_coal=0.00,3,3,changes cells
+Sokolov-Sarybai iron (Rudny),Kazakhstan,Fe,world-class,high,0.85,45.0,Fe=0.60,1,1,changes cells
+Krasnooktyabrsk bauxite,Kazakhstan,Al,major,medium,0.7,40.0,Al=0.42,1,1,changes cells
+Atasu-Karazhal iron-manganese,Kazakhstan,Mn;Fe,medium,medium,0.6,60.0,Mn=0.60 Fe=0.56,3,3,changes cells
+Kentau lead-zinc (Achisay-Mirgalimsay),Kazakhstan,Pb;Zn,major,high,0.75,45.0,Pb=0.95 Zn=0.60,1,1,changes cells
+Oyu Tolgoi copper-gold,Mongolia,Cu;Au,world-class,high,0.85,40.0,Cu=0.67 Au=0.32,2,2,changes cells
+Ovoot Tolgoi-Nariin Sukhait coal,Mongolia,C_coal,major,medium,0.7,45.0,C_coal=0.00,3,3,changes cells
+Usolye-Sibirskoye salt,Russia,NaCl,major,high,0.75,40.0,NaCl=0.50,2,1,changes cells
+Ural emerald mines (Malyshevo),Russia,emerald;beryl,major,high,0.75,45.0,emerald=0.00 beryl=0.00,10,10,changes cells
+Murzinka gem pegmatites,Russia,topaz;beryl;tourmaline,major,high,0.75,45.0,topaz=0.00 beryl=0.00 tourmaline=0.00,6,6,changes cells
+Ilmeny Mountains (Miass),Russia,topaz;corundum;beryl,medium,medium,0.6,45.0,topaz=0.00 corundum=0.00 beryl=0.00,18,18,changes cells
+Korkino coal (Chelyabinsk basin),Russia,C_coal,medium,high,0.65,40.0,C_coal=0.55,1,1,changes cells
+Kizel coal,Russia,C_coal,medium,high,0.65,45.0,C_coal=0.55,1,1,changes cells
+KMA iron (Yakovlevo-Belgorod),Russia,Fe,major,medium,0.7,45.0,Fe=0.00,2,2,changes cells
+Moscow basin lignite (Tula),Russia,C_coal,medium,high,0.65,80.0,C_coal=0.55,7,7,changes cells
+Kansk-Achinsk lignite (Borodino-Nazarovo),Russia,C_coal,world-class,high,0.85,80.0,C_coal=0.85,9,9,changes cells
+Kansk-Achinsk lignite (Berezovsky-Sharypovo),Russia,C_coal,world-class,high,0.85,60.0,C_coal=0.55,5,5,changes cells
+Irkutsk coal basin (Cheremkhovo),Russia,C_coal,major,high,0.75,50.0,C_coal=0.37,4,4,changes cells
+Minusinsk coal (Chernogorsk),Russia,C_coal,medium,high,0.65,45.0,C_coal=0.55,3,3,changes cells
+Bureya coal (Chegdomyn-Urgal),Russia,C_coal,medium,medium,0.6,45.0,C_coal=0.42,1,1,changes cells
+Partizansk coal,Russia,C_coal,medium,medium,0.6,40.0,C_coal=0.55,1,1,changes cells
+Kaa-Khem coal (Tuva),Russia,C_coal,medium,medium,0.6,40.0,C_coal=0.00,2,2,changes cells
+Nyurba (Nakyn field) diamonds,Russia,diamond,major,low,0.5,45.0,diamond=0.00,6,6,changes cells
+Arkhangelsk kimberlites (Lomonosov-Grib),Russia,diamond,major,medium,0.7,60.0,diamond=0.31,5,5,changes cells
+Natalka gold,Russia,Au,world-class,high,0.85,40.0,Au=0.67,1,1,changes cells
+Kolyma goldfields (Yagodnoye),Russia,Au,major,high,0.75,50.0,Au=0.30,3,3,changes cells
+Ust-Omchug gold-tin-tungsten,Russia,Au;Sn;W,medium,medium,0.6,45.0,Au=0.42 Sn=0.17 W=0.34,8,8,changes cells
+Kupol gold-silver,Russia,Au;Ag,major,high,0.75,40.0,Au=0.20 Ag=0.20,8,8,changes cells
+Udokan copper,Russia,Cu,world-class,high,0.85,45.0,Cu=0.68,1,1,changes cells
+Streltsovsky uranium (Krasnokamensk),Russia,U,world-class,high,0.85,45.0,U=0.29,4,4,changes cells
+Sherlovaya Gora tin-topaz-beryl,Russia,Sn;W;topaz;beryl;tourmaline,major,high,0.75,40.0,Sn=0.95 W=0.85 topaz=0.00 beryl=0.00 tourmaline=0.00,6,6,changes cells
+Khapcheranga tin,Russia,Sn,medium,medium,0.6,40.0,Sn=0.43,2,2,changes cells
+Dzhida tungsten-molybdenum (Zakamensk),Russia,W;Mo,major,high,0.75,40.0,W=0.70 Mo=0.70,2,2,changes cells
+Nerchinsk silver-lead,Russia,Pb;Zn;Ag,major,high,0.75,45.0,Pb=0.60 Zn=0.60 Ag=0.00,4,4,changes cells
+Darasun gold,Russia,Au,medium,medium,0.6,40.0,Au=0.18,2,2,changes cells
+Ozernoye zinc,Russia,Zn;Pb,medium,medium,0.6,40.0,Zn=0.00 Pb=0.00,6,6,changes cells
+Dalnegorsk borosilicate and lead-zinc,Russia,B;Pb;Zn,world-class,high,0.85,45.0,B=0.64 Pb=0.60 Zn=0.60,3,3,changes cells
+Solnechny tin (Komsomolsk),Russia,Sn,major,medium,0.7,45.0,Sn=0.44,1,1,changes cells
+Pevek tin-gold,Russia,Sn;Au,medium,medium,0.6,45.0,Sn=0.95 Au=0.14,4,4,changes cells
+Korshunovsky iron,Russia,Fe,major,high,0.75,40.0,Fe=0.60,1,1,changes cells
+Sorsk molybdenum-copper,Russia,Mo;Cu,major,high,0.75,40.0,Mo=0.66 Cu=0.85,1,1,changes cells
+Yarega titanium (leucoxene),Russia,Ti,medium,medium,0.6,40.0,Ti=0.50,1,1,changes cells
+Middle Timan bauxite,Russia,Al,medium,low,0.45,45.0,Al=0.00,3,3,changes cells
+Malaya Bystraya lapis (Baikal),Russia,lapis,medium,medium,0.6,40.0,lapis=0.00,3,3,changes cells
+Lviv-Volyn coal,Ukraine,C_coal,major,high,0.75,50.0,C_coal=0.55,1,1,changes cells
+Irshansk ilmenite,Ukraine,Ti,major,high,0.75,45.0,Ti=0.47,2,2,changes cells
+Zhovti Vody uranium,Ukraine,U,major,high,0.75,40.0,U=0.15,2,2,changes cells
+Soledar salt,Ukraine,NaCl,world-class,high,0.85,40.0,NaCl=0.36,2,1,changes cells
+Yavoriv native sulfur,Ukraine,S,major,high,0.75,40.0,S=0.57,1,1,changes cells
+Volyn topaz-beryl pegmatites (Khoroshiv),Ukraine,topaz;beryl,medium,high,0.65,40.0,topaz=0.00 beryl=0.00,4,4,changes cells
+Lorraine iron (minette; Briey-Thionville),France,Fe,world-class,high,0.85,50.0,Fe=0.71,1,1,changes cells
+Salies-de-Bearn salt,France,NaCl,medium,high,0.65,40.0,NaCl=0.49,2,1,changes cells
+Provence bauxite (Brignoles),France,Al,major,high,0.75,45.0,Al=0.70,1,1,changes cells
+Saint-Etienne coal,France,C_coal,medium,high,0.65,45.0,C_coal=0.00,3,3,changes cells
+Blanzy-Montceau coal,France,C_coal,medium,high,0.65,45.0,C_coal=0.00,2,2,changes cells
+Carmaux coal,France,C_coal,medium,high,0.65,40.0,C_coal=0.00,3,3,changes cells
+Decazeville coal,France,C_coal,medium,high,0.65,40.0,C_coal=0.00,2,2,changes cells
+Ales coal (Cevennes),France,C_coal,medium,high,0.65,45.0,C_coal=0.00,3,3,changes cells
+Gardanne lignite (Provence),France,C_coal,medium,high,0.65,40.0,C_coal=0.00,3,3,changes cells
+Borinage coal,Belgium,C_coal,major,high,0.75,50.0,C_coal=0.00,5,5,changes cells
+Charleroi coal,Belgium,C_coal,major,high,0.75,50.0,C_coal=0.00,4,4,changes cells
+Liege coal,Belgium,C_coal,major,high,0.75,50.0,C_coal=0.46,4,4,changes cells
+Campine coal,Belgium,C_coal,major,high,0.75,50.0,C_coal=0.46,4,4,changes cells
+La Calamine zinc (Kelmis),Belgium,Zn;Pb,medium,high,0.65,40.0,Zn=0.49 Pb=0.73,1,1,changes cells
+South Limburg coal,Netherlands,C_coal,medium,high,0.65,45.0,C_coal=0.46,1,1,changes cells
+Central German lignite (Leipzig),Germany,C_coal,major,high,0.75,50.0,C_coal=0.71,3,3,changes cells
+Siegerland iron,Germany,Fe,medium,high,0.65,45.0,Fe=0.32,2,2,changes cells
+Lahn-Dill iron,Germany,Fe,medium,high,0.65,45.0,Fe=0.32,4,4,changes cells
+Wolsendorf fluorite,Germany,F,medium,high,0.65,40.0,F=0.31,1,1,changes cells
+Berchtesgaden salt,Germany,NaCl,medium,high,0.65,40.0,NaCl=0.60,2,2,changes cells
+Habachtal emerald,Austria,emerald;beryl,medium,high,0.65,40.0,emerald=0.00 beryl=0.00,4,4,changes cells
+Pribram lead-silver-uranium,Czech Republic,Pb;Ag;U,major,high,0.75,45.0,Pb=0.20 Ag=0.00 U=0.15,6,6,changes cells
+Kutna Hora silver,Czech Republic,Ag,medium,high,0.65,40.0,Ag=0.42,1,1,changes cells
+North Bohemian lignite (Most),Czech Republic,C_coal,world-class,high,0.85,50.0,C_coal=0.56,1,1,changes cells
+Bohemian garnet (Trebenice),Czech Republic,garnet,major,high,0.75,45.0,garnet=0.00,4,4,changes cells
+Banska Stiavnica silver-gold,Slovakia,Ag;Au;Pb;Zn,major,high,0.75,45.0,Ag=0.31 Au=0.74 Pb=0.85 Zn=0.85,6,6,changes cells
+Kremnica gold,Slovakia,Au,medium,high,0.65,40.0,Au=0.38,2,2,changes cells
+Lublin coal (Bogdanka),Poland,C_coal,major,high,0.75,50.0,C_coal=0.61,1,1,changes cells
+Vertes bauxite (Gant),Hungary,Al,medium,medium,0.6,40.0,Al=0.52,1,1,changes cells
+Mecsek uranium,Hungary,U,medium,high,0.65,40.0,U=0.00,2,2,changes cells
+Baia Mare gold-silver-base metals,Romania,Au;Ag;Pb;Zn,major,high,0.75,45.0,Au=0.15 Ag=0.15 Pb=0.95 Zn=0.62,5,5,changes cells
+Rosia Montana gold,Romania,Au;Ag,major,high,0.75,40.0,Au=0.00 Ag=0.00,4,4,changes cells
+Jiu Valley coal,Romania,C_coal,major,high,0.75,50.0,C_coal=0.00,4,4,changes cells
+Oltenia lignite (Motru-Rovinari),Romania,C_coal,major,high,0.75,50.0,C_coal=0.38,3,3,changes cells
+Praid salt,Romania,NaCl,major,high,0.75,40.0,NaCl=0.31,3,1,changes cells
+Slanic salt,Romania,NaCl,medium,high,0.65,40.0,NaCl=0.31,2,1,changes cells
+Turda salt,Romania,NaCl,medium,high,0.65,40.0,NaCl=0.35,3,1,changes cells
+Panagyurishte copper-gold,Bulgaria,Cu;Au,major,high,0.75,45.0,Cu=0.95 Au=0.62,1,1,changes cells
+Maritsa Iztok lignite,Bulgaria,C_coal,world-class,high,0.85,50.0,C_coal=0.00,4,4,changes cells
+Majdanpek copper-gold,Serbia,Cu;Au,major,high,0.75,40.0,Cu=0.85 Au=0.65,1,1,changes cells
+Trepca lead-zinc-silver,Kosovo,Pb;Zn;Ag,major,high,0.75,45.0,Pb=0.95 Zn=0.65 Ag=0.46,3,3,changes cells
+Kosovo lignite (Obilic),Kosovo,C_coal,major,high,0.75,50.0,C_coal=0.00,2,2,changes cells
+Vares iron-lead-zinc,Bosnia and Herzegovina,Fe;Pb;Zn,medium,high,0.65,40.0,Fe=0.85 Pb=0.58 Zn=0.65,1,1,changes cells
+Tuzla salt and lignite,Bosnia and Herzegovina,NaCl;C_coal,major,high,0.75,45.0,NaCl=0.85 C_coal=0.00,3,3,changes cells
+Niksic bauxite,Montenegro,Al,medium,high,0.65,40.0,Al=0.60,1,1,changes cells
+Mezica lead-zinc,Slovenia,Pb;Zn,medium,high,0.65,40.0,Pb=0.37 Zn=0.50,4,4,changes cells
+Lavrion lead-silver,Greece,Pb;Ag;Zn,major,high,0.75,40.0,Pb=0.00 Ag=0.00 Zn=0.00,6,6,changes cells
+Kassandra mines (Halkidiki),Greece,Pb;Zn;Au;Ag,medium,high,0.65,45.0,Pb=0.57 Zn=0.57 Au=0.58 Ag=0.49,4,4,changes cells
+Naxos emery,Greece,corundum,major,high,0.75,40.0,corundum=0.00,2,2,changes cells
+Iglesiente lead-zinc (Sardinia),Italy,Pb;Zn;Ag,major,high,0.75,45.0,Pb=0.70 Zn=0.70 Ag=0.65,3,3,changes cells
+Sulcis coal (Sardinia),Italy,C_coal,medium,high,0.65,40.0,C_coal=0.00,2,2,changes cells
+Monte Amiata mercury,Italy,Hg,major,high,0.75,45.0,Hg=0.60,1,1,changes cells
+Elba iron,Italy,Fe,medium,high,0.65,40.0,Fe=0.60,1,1,changes cells
+Larderello boric acid,Italy,B,major,high,0.75,40.0,B=0.00,2,2,changes cells
+Tolfa alunite,Italy,alum,major,high,0.75,40.0,alum=0.00,2,2,changes cells
+Colline Metallifere (Massa Marittima),Italy,Cu;Pb;Zn,medium,medium,0.6,45.0,Cu=0.32 Pb=0.27 Zn=0.32,5,5,changes cells
+Perticara sulfur (Romagna),Italy,S,medium,medium,0.6,40.0,S=0.00,1,1,changes cells
+Linares-La Carolina lead-silver,Spain,Pb;Ag,major,high,0.75,45.0,Pb=0.65 Ag=0.64,2,2,changes cells
+Cartagena-La Union lead-zinc,Spain,Pb;Zn;Ag,major,high,0.75,45.0,Pb=0.95 Zn=0.70 Ag=0.70,2,2,changes cells
+Leon-Bierzo coal,Spain,C_coal,medium,high,0.65,50.0,C_coal=0.32,2,2,changes cells
+Las Medulas gold,Spain,Au,medium,high,0.65,40.0,Au=0.55,1,1,changes cells
+Rodalquilar alunite-gold,Spain,alum;Au,medium,medium,0.6,40.0,alum=0.00 Au=0.52,3,3,changes cells
+Lanzarote peridot,Spain,olivine,medium,medium,0.6,40.0,olivine=0.00,2,2,changes cells
+Saelices el Chico uranium,Spain,U,medium,medium,0.6,40.0,U=0.15,2,2,changes cells
+Urgeirica uranium,Portugal,U,medium,medium,0.6,40.0,U=0.00,2,2,changes cells
+Cheshire salt,United Kingdom,NaCl,major,high,0.75,45.0,NaCl=0.64,1,1,changes cells
+Peak District lead-fluorite,United Kingdom,Pb;F,major,high,0.75,45.0,Pb=0.70 F=0.95,1,1,changes cells
+North Pennines lead-fluorite,United Kingdom,Pb;F;Zn,major,high,0.75,45.0,Pb=0.70 F=0.75 Zn=0.15,4,4,changes cells
+West Cumbria hematite,United Kingdom,Fe,medium,high,0.65,45.0,Fe=0.00,4,4,changes cells
+Leadhills-Wanlockhead lead,United Kingdom,Pb;Zn;Ag,medium,high,0.65,40.0,Pb=0.30 Zn=0.00 Ag=0.00,11,11,changes cells
+Hemerdon tungsten,United Kingdom,W;Sn,medium,high,0.65,40.0,W=0.56 Sn=0.49,2,2,changes cells
+Garpenberg zinc-lead,Sweden,Zn;Pb;Ag,major,high,0.75,40.0,Zn=0.95 Pb=0.85 Ag=0.69,1,1,changes cells
+Grangesberg iron (Bergslagen),Sweden,Fe,major,high,0.75,45.0,Fe=0.60,1,1,changes cells
+Svalbard coal (Longyearbyen),Norway,C_coal,major,high,0.75,45.0,C_coal=0.71,1,1,changes cells
+Kevitsa nickel-copper-PGE,Finland,Ni;Cu;Pt,medium,medium,0.6,40.0,Ni=0.40 Cu=0.40 Pt=0.75,8,8,changes cells
+Ivittuut cryolite,Greenland,F,medium,high,0.65,40.0,F=0.00,3,3,changes cells
+Kimmirut lapis lazuli (Baffin Island),Canada,lapis,medium,medium,0.6,40.0,lapis=0.00,3,3,changes cells
+Jharia coal,India,C_coal,world-class,high,0.85,50.0,C_coal=0.34,2,2,changes cells
+Raniganj coal,India,C_coal,world-class,high,0.85,50.0,C_coal=0.45,2,2,changes cells
+Bokaro-Karanpura coal,India,C_coal,major,high,0.75,50.0,C_coal=0.31,1,1,changes cells
+Talcher coal,India,C_coal,major,high,0.75,50.0,C_coal=0.30,2,2,changes cells
+Ib Valley coal,India,C_coal,major,high,0.75,50.0,C_coal=0.32,2,2,changes cells
+Korba coal,India,C_coal,world-class,high,0.85,50.0,C_coal=0.45,1,1,changes cells
+Singrauli coal,India,C_coal,world-class,high,0.85,50.0,C_coal=0.31,1,1,changes cells
+Godavari valley coal (Singareni),India,C_coal,major,high,0.75,50.0,C_coal=0.49,1,1,changes cells
+Wardha valley coal (Chandrapur),India,C_coal,major,high,0.75,50.0,C_coal=0.44,1,1,changes cells
+Neyveli lignite,India,C_coal,major,high,0.75,45.0,C_coal=0.24,2,2,changes cells
+Joda-Barbil iron (Keonjhar),India,Fe,world-class,high,0.85,45.0,Fe=0.60,1,1,changes cells
+Panchpatmali bauxite (Koraput),India,Al,world-class,high,0.85,45.0,Al=0.28,2,2,changes cells
+Kolar gold,India,Au,major,high,0.75,40.0,Au=0.50,1,1,changes cells
+Khetri copper,India,Cu,major,high,0.75,45.0,Cu=0.70,1,1,changes cells
+Malanjkhand copper,India,Cu,major,high,0.75,40.0,Cu=0.67,1,1,changes cells
+Jaduguda uranium,India,U,major,high,0.75,40.0,U=0.00,1,1,changes cells
+Tummalapalle uranium,India,U,medium,medium,0.6,40.0,U=0.00,1,1,changes cells
+Tamil Nadu garnet beach sands (Tuticorin),India,garnet,medium,medium,0.6,45.0,garnet=0.30,2,2,changes cells
+Sandur manganese,India,Mn,major,high,0.75,45.0,Mn=0.85,1,1,changes cells
+Krishna valley diamonds (Golconda),India,diamond,medium,medium,0.6,45.0,diamond=0.00,2,2,changes cells
+Bikaner gypsum,India,gypsum,major,high,0.75,50.0,gypsum=0.14,2,2,changes cells
+Sambhar salt lake,India,NaCl,major,high,0.75,40.0,NaCl=0.00,2,2,changes cells
+Little Rann of Kutch salt,India,NaCl,major,high,0.75,50.0,NaCl=0.00,2,2,changes cells
+Kashmir sapphire (Padar),India,corundum,major,medium,0.7,40.0,corundum=0.00,2,2,changes cells
+Bihar saltpetre (Saran),India,N,medium,low,0.45,60.0,N=0.00,5,5,changes cells
+Ratnapura gem gravels,Sri Lanka,corundum;spinel;garnet;beryl;topaz;tourmaline,world-class,high,0.85,45.0,corundum=0.00 spinel=0.00 garnet=0.00 beryl=0.00 topaz=0.00 tourmaline=0.00,12,12,changes cells
+Elahera gem field,Sri Lanka,corundum;spinel;garnet,medium,high,0.65,45.0,corundum=0.00 spinel=0.00 garnet=0.00,3,3,changes cells
+Okkampitiya gem field,Sri Lanka,corundum,medium,medium,0.6,40.0,corundum=0.00,1,1,changes cells
+Mogok ruby-sapphire-spinel,Burma,corundum;spinel,world-class,high,0.85,45.0,corundum=0.00 spinel=0.00,8,8,changes cells
+Mong Hsu ruby,Burma,corundum,medium,medium,0.6,40.0,corundum=0.00,2,2,changes cells
+Pyaung Gaung peridot,Burma,olivine,medium,low,0.45,40.0,olivine=0.00,1,1,changes cells
+Mawchi tin-tungsten,Burma,Sn;W,major,high,0.75,40.0,Sn=0.75 W=0.70,1,1,changes cells
+Tagaung Taung nickel,Burma,Ni,medium,medium,0.6,40.0,Ni=0.53,1,1,changes cells
+Chanthaburi-Trat gem field,Thailand,corundum,major,high,0.75,45.0,corundum=0.58,2,2,changes cells
+Phang Nga-Phuket tin,Thailand,Sn,major,high,0.75,45.0,Sn=0.60,1,1,changes cells
+Sepon copper-gold,Laos,Cu;Au,major,medium,0.7,40.0,Cu=0.52 Au=0.52,2,2,changes cells
+Phu Kham copper-gold,Laos,Cu;Au,medium,low,0.45,40.0,Cu=0.40 Au=0.85,2,1,changes cells
+Hongsa lignite,Laos,C_coal,medium,medium,0.6,40.0,C_coal=0.00,1,1,changes cells
+Tan Rai bauxite (Lam Dong),Vietnam,Al,world-class,high,0.85,45.0,Al=0.20,2,2,changes cells
+Nhan Co bauxite (Dak Nong),Vietnam,Al,major,high,0.75,45.0,Al=0.36,1,1,changes cells
+Nui Phao tungsten-fluorite-bismuth,Vietnam,W;F;Bi;Cu,major,high,0.75,40.0,W=0.00 F=0.75 Bi=0.00 Cu=0.00,3,3,changes cells
+Lao Cai apatite,Vietnam,P,major,high,0.75,45.0,P=0.56,1,1,changes cells
+Sin Quyen copper,Vietnam,Cu,medium,high,0.65,40.0,Cu=0.59,1,1,changes cells
+Binh Thuan mineral sands,Vietnam,Ti,medium,medium,0.6,45.0,Ti=0.00,2,2,changes cells
+Luc Yen ruby-spinel,Vietnam,corundum;spinel,major,high,0.75,45.0,corundum=0.00 spinel=0.00,4,4,changes cells
+Klang Valley tin,Malaysia,Sn,major,high,0.75,45.0,Sn=0.60,1,1,changes cells
+Kuantan bauxite,Malaysia,Al,medium,high,0.65,40.0,Al=0.00,1,1,changes cells
+Mamut copper (Sabah),Malaysia,Cu,medium,medium,0.6,40.0,Cu=0.58,1,1,changes cells
+Bau gold (Sarawak),Malaysia,Au,medium,medium,0.6,40.0,Au=0.00,2,2,changes cells
+Morowali nickel,Indonesia,Ni,major,medium,0.7,45.0,Ni=0.52,1,1,changes cells
+Weda Bay nickel (Halmahera),Indonesia,Ni,major,medium,0.7,45.0,Ni=0.40,1,1,changes cells
+Obi Island nickel,Indonesia,Ni,medium,medium,0.6,40.0,Ni=0.44,1,1,changes cells
+Martabe gold,Indonesia,Au,medium,medium,0.6,40.0,Au=0.15,1,1,changes cells
+Ombilin coal (Sawahlunto),Indonesia,C_coal,major,high,0.75,40.0,C_coal=0.00,1,1,changes cells
+South Kalimantan coal (Satui-Asam Asam),Indonesia,C_coal,major,high,0.75,50.0,C_coal=0.00,3,3,changes cells
+Tayan bauxite (West Kalimantan),Indonesia,Al,major,medium,0.7,45.0,Al=0.20,2,2,changes cells
+Bintan bauxite,Indonesia,Al,medium,high,0.65,40.0,Al=0.43,1,1,changes cells
+Ijen volcanic sulfur,Indonesia,S,medium,high,0.65,40.0,S=0.00,2,2,changes cells
+Tampakan copper,Philippines,Cu,major,medium,0.7,40.0,Cu=0.55,1,1,changes cells
+Didipio copper-gold,Philippines,Cu;Au,medium,medium,0.6,40.0,Cu=0.85 Au=0.65,1,1,changes cells
+Semirara coal,Philippines,C_coal,major,medium,0.7,40.0,C_coal=0.00,2,2,changes cells
+Panguna copper-gold (Bougainville),Papua New Guinea,Cu;Au,world-class,high,0.85,40.0,Cu=0.85 Au=0.75,1,1,changes cells
+Wafi-Golpu copper-gold,Papua New Guinea,Cu;Au,major,medium,0.7,40.0,Cu=0.85 Au=0.45,2,2,changes cells
+Wau-Hidden Valley gold,Papua New Guinea,Au,medium,high,0.65,45.0,Au=0.55,1,1,changes cells
+Ordos coal (Shenfu-Dongsheng),China,C_coal,world-class,high,0.85,100.0,C_coal=0.31,11,11,changes cells
+Jungar coal,China,C_coal,world-class,high,0.85,60.0,C_coal=0.49,4,4,changes cells
+Datong coal,China,C_coal,world-class,high,0.85,60.0,C_coal=0.40,3,3,changes cells
+Qinshui coal (Yangquan),China,C_coal,world-class,high,0.85,80.0,C_coal=0.48,5,5,changes cells
+Jincheng anthracite,China,C_coal,major,high,0.75,50.0,C_coal=0.38,1,1,changes cells
+Huainan coal,China,C_coal,major,high,0.75,50.0,C_coal=0.00,1,1,changes cells
+Pingdingshan coal,China,C_coal,major,high,0.75,50.0,C_coal=0.52,1,1,changes cells
+Kailuan coal (Tangshan),China,C_coal,major,high,0.75,50.0,C_coal=0.56,2,2,changes cells
+Fushun coal,China,C_coal,major,high,0.75,45.0,C_coal=0.60,2,2,changes cells
+Hegang coal,China,C_coal,medium,high,0.65,45.0,C_coal=0.34,3,3,changes cells
+Jixi coal,China,C_coal,medium,high,0.65,45.0,C_coal=0.43,2,2,changes cells
+Shengli lignite (Xilinhot),China,C_coal,major,high,0.75,50.0,C_coal=0.29,3,3,changes cells
+Huolinhe lignite,China,C_coal,major,medium,0.7,45.0,C_coal=0.32,3,3,changes cells
+Zhundong coal (Junggar),China,C_coal,world-class,medium,0.75,90.0,C_coal=0.00,12,12,changes cells
+Hami coal,China,C_coal,major,low,0.5,70.0,C_coal=0.20,4,4,changes cells
+Ningdong coal,China,C_coal,major,medium,0.7,50.0,C_coal=0.44,2,2,changes cells
+Liupanshui coal,China,C_coal,major,high,0.75,50.0,C_coal=0.54,1,1,changes cells
+Yanzhou coal,China,C_coal,major,high,0.75,50.0,C_coal=0.40,1,1,changes cells
+Bayan Obo iron-fluorite,China,Fe;F,world-class,high,0.85,40.0,Fe=0.95 F=0.27,2,2,changes cells
+Panzhihua titanomagnetite,China,Ti;V;Fe,world-class,high,0.85,45.0,Ti=0.75 V=0.70 Fe=0.85,2,2,changes cells
+Chengde titanomagnetite,China,Ti;V;Fe,major,medium,0.7,45.0,Ti=0.42 V=0.50 Fe=0.50,3,3,changes cells
+Dexing copper,China,Cu;Mo;Au,world-class,high,0.85,40.0,Cu=0.85 Mo=0.75 Au=0.75,2,2,changes cells
+Daye copper-iron,China,Cu;Fe,major,high,0.75,45.0,Cu=0.60 Fe=0.60,3,3,changes cells
+Zijinshan copper-gold,China,Cu;Au,major,high,0.75,40.0,Cu=0.85 Au=0.66,1,1,changes cells
+Qulong copper,China,Cu;Mo,major,medium,0.7,40.0,Cu=0.85 Mo=0.00,2,2,changes cells
+Jinchuan nickel-copper-PGE,China,Ni;Cu;Pt,world-class,high,0.85,40.0,Ni=0.95 Cu=0.95 Pt=0.75,1,1,changes cells
+Shizhuyuan tungsten-tin-bismuth,China,W;Sn;Bi;Mo;F,world-class,high,0.85,40.0,W=0.95 Sn=0.95 Bi=0.65 Mo=0.65 F=0.75,3,3,changes cells
+Shuikoushan lead-zinc,China,Pb;Zn,major,high,0.75,40.0,Pb=0.27 Zn=0.27,2,2,changes cells
+Wanshan mercury,China,Hg,world-class,high,0.85,45.0,Hg=0.30,1,1,changes cells
+Luanchuan molybdenum-tungsten,China,Mo;W,world-class,high,0.85,45.0,Mo=0.85 W=0.15,2,2,changes cells
+Jinduicheng molybdenum,China,Mo,major,high,0.75,40.0,Mo=0.60,1,1,changes cells
+Jiaodong gold (Zhaoyuan-Laizhou),China,Au,world-class,high,0.85,60.0,Au=0.60,1,1,changes cells
+Qarhan salt lake potash,China,K;NaCl;B,world-class,high,0.85,60.0,K=0.85 NaCl=0.85 B=0.40,4,4,changes cells
+Lop Nur potash,China,K;NaCl,major,medium,0.7,50.0,K=0.49 NaCl=0.49,6,2,changes cells
+Zabuye salt lake borates,China,B,medium,medium,0.6,40.0,B=0.00,2,2,changes cells
+Yichang phosphate,China,P,major,medium,0.7,45.0,P=0.95,1,1,changes cells
+Jixi graphite (Liumao),China,C_graphite,world-class,high,0.85,45.0,C_graphite=0.75,1,1,changes cells
+Luobei graphite,China,C_graphite,major,medium,0.7,40.0,C_graphite=0.75,1,1,changes cells
+Pingdu graphite (Nanshu),China,C_graphite,major,medium,0.7,40.0,C_graphite=0.24,1,1,changes cells
+Henan bauxite (Gongyi),China,Al,major,medium,0.7,45.0,Al=0.44,1,1,changes cells
+Pingguo bauxite,China,Al,major,high,0.75,45.0,Al=0.00,2,2,changes cells
+Guizhou bauxite (Qingzhen-Xiuwen),China,Al,major,medium,0.7,45.0,Al=0.45,2,2,changes cells
+Luobusa chromite,China,Cr,major,medium,0.7,40.0,Cr=0.00,1,1,changes cells
+Daxin manganese,China,Mn,major,medium,0.7,40.0,Mn=0.00,1,1,changes cells
+Huayuan manganese,China,Mn,medium,medium,0.6,40.0,Mn=0.36,1,1,changes cells
+Xiaoqinling gold,China,Au,medium,medium,0.6,45.0,Au=0.45,1,1,changes cells
+Koktokay pegmatite (Altay),China,beryl;tourmaline,major,medium,0.7,40.0,beryl=0.00 tourmaline=0.00,4,4,changes cells
+Mengyin diamonds,China,diamond,medium,high,0.65,40.0,diamond=0.00,2,2,changes cells
+Wafangdian diamonds,China,diamond,medium,high,0.65,40.0,diamond=0.52,1,1,changes cells
+Malipo emerald,China,emerald,medium,medium,0.6,40.0,emerald=0.00,1,1,changes cells
+Jiaohe peridot,China,olivine,medium,medium,0.6,40.0,olivine=0.00,2,2,changes cells
+Pingyang alunite (Fanshan),China,alum,major,medium,0.7,40.0,alum=0.00,3,3,changes cells
+Dachang tin,China,Sn;Zn;Sb,world-class,high,0.85,45.0,Sn=0.95 Zn=0.30 Sb=0.53,2,2,changes cells
+Sangdong tungsten,South Korea,W;Bi;Mo,major,high,0.75,40.0,W=0.70 Bi=0.70 Mo=0.95,2,2,changes cells
+Taebaek coal,South Korea,C_coal,major,high,0.75,45.0,C_coal=0.00,2,2,changes cells
+Iwami Ginzan silver,Japan,Ag,medium,high,0.65,40.0,Ag=0.00,2,2,changes cells
+Chikuho coal,Japan,C_coal,medium,high,0.65,45.0,C_coal=0.00,3,3,changes cells
+Ishikari coal (Yubari),Japan,C_coal,major,high,0.75,45.0,C_coal=0.00,4,4,changes cells
+Miike coal,Japan,C_coal,medium,high,0.65,40.0,C_coal=0.00,4,4,changes cells
+Matsuo sulfur,Japan,S,medium,high,0.65,40.0,S=0.21,1,1,changes cells
+Naegi topaz,Japan,topaz,medium,medium,0.6,40.0,topaz=0.00,2,2,changes cells
+Jinguashi gold-copper,Taiwan,Au;Cu,medium,high,0.65,40.0,Au=0.65 Cu=0.55,1,1,changes cells
+La Caridad copper,Mexico,Cu;Mo,major,high,0.75,40.0,Cu=0.85 Mo=0.72,1,1,changes cells
+Coahuila fluorspar (Muzquiz),Mexico,F,major,medium,0.7,45.0,F=0.49,2,2,changes cells
+Cerro de Mercado iron,Mexico,Fe,medium,high,0.65,40.0,Fe=0.31,2,2,changes cells
+Las Truchas iron,Mexico,Fe,medium,medium,0.6,40.0,Fe=0.49,1,1,changes cells
+Sierra Gorda mercury,Mexico,Hg,medium,medium,0.6,45.0,Hg=0.21,1,1,changes cells
+Sonora graphite,Mexico,C_graphite,medium,medium,0.6,45.0,C_graphite=0.95,1,1,changes cells
+Cesar coal (La Loma-La Jagua),Colombia,C_coal,world-class,high,0.85,50.0,C_coal=0.46,2,2,changes cells
+Cerrejon coal,Colombia,C_coal,world-class,high,0.85,45.0,C_coal=0.57,1,1,changes cells
+Zipaquira salt,Colombia,NaCl,major,high,0.75,40.0,NaCl=0.51,2,2,changes cells
+Marmato gold,Colombia,Au,medium,high,0.65,40.0,Au=0.46,1,1,changes cells
+El Pao iron,Venezuela,Fe,major,medium,0.7,40.0,Fe=0.39,1,1,changes cells
+Guasare coal (Paso Diablo),Venezuela,C_coal,medium,medium,0.6,40.0,C_coal=0.49,1,1,changes cells
+Guaniamo diamonds,Venezuela,diamond,medium,medium,0.6,45.0,diamond=0.00,2,2,changes cells
+Araya salt,Venezuela,NaCl,medium,high,0.65,40.0,NaCl=0.00,2,2,changes cells
+Matthews Ridge manganese,Guyana,Mn,medium,medium,0.6,40.0,Mn=0.13,1,1,changes cells
+Rosebel gold,Suriname,Au,major,high,0.75,40.0,Au=0.51,1,1,changes cells
+Merian gold,Suriname,Au,medium,medium,0.6,40.0,Au=0.48,1,1,changes cells
+Quadrilatero Ferrifero (Mariana-Ouro Preto),Brazil,Fe;Au,world-class,high,0.85,45.0,Fe=0.95 Au=0.75,1,1,changes cells
+Ouro Preto imperial topaz,Brazil,topaz,major,high,0.75,45.0,topaz=0.00,2,2,changes cells
+Trombetas bauxite,Brazil,Al,world-class,high,0.85,50.0,Al=0.65,1,1,changes cells
+Paragominas bauxite,Brazil,Al,world-class,high,0.85,50.0,Al=0.40,2,2,changes cells
+Pocos de Caldas bauxite-uranium,Brazil,Al;U,major,high,0.75,45.0,Al=0.85 U=0.60,1,1,changes cells
+Teofilo Otoni-Governador Valadares pegmatites,Brazil,beryl;tourmaline;topaz,world-class,high,0.85,80.0,beryl=0.33 tourmaline=0.00 topaz=0.00,22,22,changes cells
+Aracuai-Itinga pegmatites,Brazil,tourmaline;beryl;topaz,major,high,0.75,45.0,tourmaline=0.00 beryl=0.18 topaz=0.00,6,6,changes cells
+Carnaiba emeralds,Brazil,emerald,medium,medium,0.6,40.0,emerald=0.00,1,1,changes cells
+Santa Terezinha emeralds,Brazil,emerald,medium,high,0.65,40.0,emerald=0.00,2,2,changes cells
+Serra do Navio manganese,Brazil,Mn,major,high,0.75,40.0,Mn=0.38,1,1,changes cells
+Pitinga tin,Brazil,Sn,world-class,high,0.85,40.0,Sn=0.75,1,1,changes cells
+Rondonia tin (Bom Futuro-Ariquemes),Brazil,Sn,major,high,0.75,60.0,Sn=0.55,1,1,changes cells
+Candiota coal,Brazil,C_coal,major,high,0.75,45.0,C_coal=0.45,2,2,changes cells
+Caetite uranium,Brazil,U,medium,high,0.65,40.0,U=0.00,2,2,changes cells
+Juina diamonds,Brazil,diamond,medium,medium,0.6,45.0,diamond=0.00,2,2,changes cells
+Chapada Diamantina diamonds (Lencois),Brazil,diamond,medium,high,0.65,45.0,diamond=0.00,3,3,changes cells
+Serido scheelite,Brazil,W,medium,high,0.65,45.0,W=0.62,1,1,changes cells
+Cristalina quartz crystal,Brazil,SiO2,medium,high,0.65,45.0,SiO2=0.36,1,1,changes cells
+Ametista do Sul amethyst,Brazil,SiO2,medium,high,0.65,45.0,SiO2=0.55,1,1,changes cells
+Mossoro-Macau solar salt,Brazil,NaCl,major,high,0.75,45.0,NaCl=0.25,2,2,changes cells
+Paraiba tourmaline (Sao Jose da Batalha),Brazil,tourmaline,medium,high,0.65,40.0,tourmaline=0.00,2,2,changes cells
+Antamina copper-zinc,Peru,Cu;Zn;Ag;Mo,world-class,high,0.85,40.0,Cu=0.95 Zn=0.95 Ag=0.47 Mo=0.20,3,3,changes cells
+Cerro Verde copper,Peru,Cu;Mo,world-class,high,0.85,40.0,Cu=0.95 Mo=0.53,2,2,changes cells
+Las Bambas copper,Peru,Cu;Mo,world-class,high,0.85,40.0,Cu=0.85 Mo=0.31,2,2,changes cells
+Yanacocha gold,Peru,Au;Ag;Cu,world-class,high,0.85,45.0,Au=0.95 Ag=0.51 Cu=0.95,1,1,changes cells
+Lagunas Norte gold,Peru,Au,medium,medium,0.6,40.0,Au=0.56,1,1,changes cells
+Cerro de Pasco lead-zinc-silver,Peru,Pb;Zn;Ag;Cu;Bi,world-class,high,0.85,40.0,Pb=0.95 Zn=0.95 Ag=0.48 Cu=0.48 Bi=0.38,3,3,changes cells
+Morococha-Toromocho,Peru,Cu;Zn;Pb;Ag;Mo,major,high,0.75,45.0,Cu=0.95 Zn=0.85 Pb=0.85 Ag=0.85 Mo=0.43,2,2,changes cells
+Huancavelica mercury (Santa Barbara),Peru,Hg,major,high,0.75,40.0,Hg=0.41,1,1,changes cells
+Marcona iron,Peru,Fe,world-class,high,0.85,45.0,Fe=0.47,1,1,changes cells
+Pasto Bueno tungsten,Peru,W,medium,medium,0.6,40.0,W=0.44,1,1,changes cells
+Salinas borates (Arequipa),Peru,B,medium,medium,0.6,40.0,B=0.47,1,1,changes cells
+Chorolque-Tasna tin-bismuth,Bolivia,Sn;Bi,medium,medium,0.6,45.0,Sn=0.62 Bi=0.21,1,1,changes cells
+Salar de Uyuni salt and borates,Bolivia,NaCl;B,world-class,high,0.85,70.0,NaCl=0.85 B=0.95,2,2,changes cells
+Chilean iron belt (El Romeral),Chile,Fe,major,high,0.75,40.0,Fe=0.53,1,1,changes cells
+Chilean iron belt (Los Colorados-Algarrobo),Chile,Fe,major,high,0.75,45.0,Fe=0.27,1,1,changes cells
+Pedro de Valdivia nitrates,Chile,N,world-class,high,0.85,45.0,N=0.75,1,1,changes cells
+Salar de Atacama brines,Chile,K;NaCl;B,world-class,high,0.85,50.0,K=0.95 NaCl=0.95 B=0.40,2,2,changes cells
+Salar de Surire borates,Chile,B,medium,high,0.65,40.0,B=0.42,1,1,changes cells
+Salar de Ascotan borates,Chile,B,medium,medium,0.6,40.0,B=0.40,1,1,changes cells
+Aucanquilcha volcanic sulfur,Chile,S,medium,high,0.65,40.0,S=0.64,1,1,changes cells
+Magallanes coal (Riesco Island),Chile,C_coal,medium,medium,0.6,45.0,C_coal=0.58,2,2,changes cells
+El Indio gold,Chile,Au;Ag;Cu,medium,high,0.65,40.0,Au=0.71 Ag=0.71 Cu=0.34,1,1,changes cells
+Flor de los Andes lapis,Chile,lapis,medium,medium,0.6,40.0,lapis=0.00,2,2,changes cells
+Cerro Vanguardia gold,Argentina,Au;Ag,medium,medium,0.6,40.0,Au=0.95 Ag=0.55,1,1,changes cells
+Sierra Grande iron,Argentina,Fe,medium,high,0.65,40.0,Fe=0.55,1,1,changes cells
+Puna borates (Tincalayu-Hombre Muerto),Argentina,B,major,high,0.75,45.0,B=0.66,1,1,changes cells
+Salinas Grandes salt-borates,Argentina,NaCl;B,major,high,0.75,45.0,NaCl=0.55 B=0.41,2,2,changes cells
+Sierra Pintada uranium,Argentina,U,medium,medium,0.6,40.0,U=0.18,1,1,changes cells
+Potasio Rio Colorado,Argentina,K;NaCl,medium,medium,0.6,40.0,K=0.85 NaCl=0.85,2,0,changes cells
+Fruta del Norte gold,Ecuador,Au,major,medium,0.7,40.0,Au=0.29,1,1,changes cells
+Elliot Lake uranium,Canada,U,major,high,0.75,45.0,U=0.70,1,1,changes cells
+Labrador Trough iron (Labrador City-Fermont),Canada,Fe,world-class,high,0.85,50.0,Fe=0.63,1,1,changes cells
+Schefferville iron,Canada,Fe,major,high,0.75,45.0,Fe=0.65,1,1,changes cells
+Sydney coalfield,Canada,C_coal,medium,high,0.65,45.0,C_coal=0.56,1,1,changes cells
+Windsor gypsum,Canada,gypsum,major,high,0.75,45.0,gypsum=0.27,2,2,changes cells
+Klondike gold,Canada,Au,major,high,0.75,45.0,Au=0.60,1,1,changes cells
+Cantung tungsten,Canada,W,major,high,0.75,40.0,W=0.70,1,1,changes cells
+Bell Island iron,Canada,Fe,medium,medium,0.6,40.0,Fe=0.00,2,2,changes cells
+Anakie sapphire fields,Australia,corundum,major,high,0.75,45.0,corundum=0.00,2,2,changes cells
+Inverell sapphire,Australia,corundum,major,high,0.75,45.0,corundum=0.00,2,2,changes cells
+Leigh Creek coal,Australia,C_coal,medium,high,0.65,40.0,C_coal=0.54,1,1,changes cells
+Hillgrove antimony-tungsten,Australia,Sb;W,medium,high,0.65,40.0,Sb=0.85 W=0.20,3,3,changes cells
+King Island scheelite,Australia,W,medium,high,0.65,40.0,W=0.46,1,1,changes cells
+Tennant Creek gold-bismuth-copper,Australia,Au;Bi;Cu,major,high,0.75,45.0,Au=0.75 Bi=0.42 Cu=0.75,1,1,changes cells
+Bulahdelah alunite,Australia,alum,medium,high,0.65,40.0,alum=0.00,2,2,changes cells
+Taharoa ironsand,New Zealand,Fe;Ti,medium,high,0.65,40.0,Fe=0.85 Ti=0.00,1,1,changes cells
+Dun Mountain dunite,New Zealand,olivine;Cr,medium,medium,0.6,40.0,olivine=0.00 Cr=0.75,2,2,changes cells

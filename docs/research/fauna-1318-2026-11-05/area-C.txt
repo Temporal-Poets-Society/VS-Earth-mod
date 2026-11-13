@@ -1,0 +1,195 @@
+# taxon (entity key, binomial): TDWG L3 region code = number of ~96 km PHYLACINE cells in the present-natural range but NOT in the current range
+bovinae:synceruscaffer (Syncerus caffer): ZAI=97, ANG=95, MOZ=63, NGA=55, BOT=39, ZIM=27, NAM=21, ZAM=4, CPP=3, CMN=2, BEN=2, NAT=2, CAF=1, CAB=1, TAN=1, LES=1
+bovinae:syncerusnanus (Syncerus caffer nanus): ZAI=97, NGA=55, CMN=2, BEN=2, CAF=1, CAB=1
+bovinae:taurotragusderbianus (Tragelaphus derbianus): NGA=53, IVO=34, GHA=27, CAF=23, CMN=20, BEN=13, ZAI=13, UGA=11, TOG=6, GUI=5, CON=5, GAB=2
+caninae:canis-lupus (Canis lupus): MXE=94, NUN=63, TEX=56, GNL=37, NEV=33, NWM=33, ARI=32, COL=27, ORE=25, CAL=22, MXS=22, NDA=21, KAN=21, SAS=20, NEB=20, UTA=19, MIC=18, PEN=18, SDA=17, IOW=17, OKL=17, MXN=17, NWY=17, MIN=13, WIS=12, ILL=12, MSO=12, MAI=12, WAS=12, WYO=11, ONT=11, NSC=11, NWT=11, MNT=9, OHI=9, NBR=9, QUE=8, MAN=7, INI=7, MXC=7, NWH=4, NWJ=4, ASK=3, MAS=3, VER=2, PEI=2, BRC=1, IDA=1, CNT=1, RHO=1, DEL=1
+caninae:canis-lupusarctos (Canis lupus arctos): NUN=63, GNL=37
+caninae:canis-lycaon (Canis lycaon): ONT=11, QUE=8
+caninae:canis-rufus (Canis rufus): TEX=48, FLA=26, LOU=19, OKL=18, ARK=15, GEO=15, VRG=15, TEN=14, MSI=14, ALA=13, MSO=12, KTY=12, NCA=12, SCA=12, INI=7, OHI=6, PEN=6, ILL=5, WVA=5, NWJ=2, MRY=1, DEL=1, KAN=1
+caninae:canis-simensis (Canis simensis): ETH=87, SOM=2
+caninae:cuon-alpinus (Cuon alpinus): ASK=194, QUE=183, ONT=119, NWT=114, BRC=111, MXE=98, MAN=78, ABT=75, TEX=75, SAS=73, YUK=46, CAL=46, NUN=43, MXS=43, LAB=38, NWM=37, MXT=37, MNT=35, ARI=34, NEV=31, MIC=30, WYO=28, COL=28, MXN=28, FLA=26, ORE=25, MIN=24, OKL=24, UTA=23, WAS=23, IDA=22, NDA=21, KAN=21, NEB=20, MSO=19, LOU=19, WIS=18, PEN=18, SDA=17, IOW=17, NWY=17, NIC=17, HON=16, NCA=16, ARK=15, GEO=15, VRG=15, PAN=15, ILL=14, TEN=14, MSI=14, GUA=14, ALA=13, KTY=12, MAI=12, SCA=12, MXG=12, OHI=11, NSC=11, COS=11, INI=10, NBR=9, MXC=8, WVA=5, NWH=4, NWJ=4, MAS=3, BLZ=3, ELS=3, VER=2, PEI=2, NFL=1, CNT=1, RHO=1, MRY=1, DEL=1
+caninae:lupulella-mesomelas (Canis mesomelas): ZIM=17, ZAM=9, ETH=6, ANG=6, MOZ=3
+caninae:lycaon-pictus (Lycaon pictus): ANG=141, ZAI=135, ETH=107, CPP=84, SOM=84, MOZ=82, NGA=78, NAM=75, TAN=53, CAF=41, KEN=35, ZIM=31, TVL=28, ZAM=27, GUI=27, UGA=22, IVO=21, GHA=21, CON=20, CMN=19, BOT=14, OFS=14, BEN=11, NAT=10, SIE=8, MLW=7, TOG=7, LBR=4, GNB=4, GAB=3, DJI=3, LES=3, SWZ=2, RWA=1, BUR=1, CAB=1
+caninae:vulpes-velox (Vulpes velox): NDA=18, TEX=18, SAS=16, ABT=15, NEB=14, MNT=10, MAN=8, MIN=8, SDA=8, IOW=6, KAN=6, WYO=4, COL=2, NWM=2, OKL=2, BRC=1
+caninae:vulpes-vulpes (Vulpes vulpes): NUN=232, ASK=215, QUE=186, NWT=128, ONT=119, BRC=111, MAN=78, ABT=75, SAS=73, YUK=49, TEX=39, LAB=38, MNT=35, MIC=30, WYO=28, COL=28, CAL=28, NFL=26, MIN=24, OKL=23, IDA=22, NDA=21, UTA=21, KAN=21, NEB=20, FLA=20, MSO=19, ORE=19, WIS=18, PEN=18, WAS=18, SDA=17, IOW=17, NWY=17, NCA=16, ARK=15, GEO=15, VRG=15, ILL=14, TEN=14, MSI=14, LOU=14, ALA=13, KTY=12, MAI=12, SCA=12, OHI=11, NWM=11, NSC=11, INI=10, NBR=9, ARI=8, WVA=5, NWH=4, NEV=4, NWJ=4, MAS=3, PEI=3, VER=2, CNT=1, RHO=1, MRY=1, DEL=1
+capreolinae:alcesalces (Alces alces): NUN=48, NWT=25, PEN=17, ONT=16, COL=13, WYO=12, ASK=12, MIC=11, WIS=10, SAS=7, MIN=7, UTA=7, MNT=6, NDA=6, NWY=5, ABT=4, MAN=3, BRC=3, WAS=2, OHI=2, MAS=2, SDA=1, CNT=1, RHO=1, NWJ=1
+capreolinae:blastocerusdichotomus (Blastocerus dichotomus): BZC=118, BZL=48, BZS=46, BZE=43, BZN=38, BOL=35, AGE=30, PAR=23, URU=17, PER=2
+capreolinae:hippocamelusantisensis (Hippocamelus antisensis): PER=27, AGW=14, CLN=13, BOL=10, ECU=4
+capreolinae:hippocamelusbisulcus (Hippocamelus bisulcus): CLS=13, AGS=12, CLC=9
+capreolinae:odocoileushemionus (Odocoileus hemionus): MAN=46, NWT=35, SAS=29, MIN=21, IOW=12, TEX=11, ABT=10, MXE=7, NDA=6, NUN=4, BRC=3, KAN=2, NWM=2, YUK=1, ONT=1, SDA=1, WIS=1, MSO=1
+capreolinae:ozotocerosbezoarticus (Ozotoceros bezoarticus): BZC=116, AGE=114, BZE=91, BZL=44, BZS=44, AGW=40, PAR=38, BZN=37, BOL=20, URU=15, AGS=13
+capreolinae:rangiferarcticus (Rangifer arcticus (provider taxonomy)): ASK=42, YUK=3
+capreolinae:rangifercaribou (Rangifer caribou (provider taxonomy)): ONT=49, QUE=37, BRC=22, MAN=18, ABT=13, SAS=3
+capreolinae:rangifergroenlandicus (Rangifer groenlandicus (provider taxonomy)): GNL=106
+elephantidae:loxodontaafricana (Loxodonta africana): ZAI=150, ETH=104, SOM=83, CPP=78, NGA=76, ANG=72, NAM=64, CAF=41, BOT=41, MOZ=29, ZAM=27, KEN=27, TVL=24, GUI=24, TAN=23, ZIM=16, CMN=15, CON=14, OFS=14, UGA=13, GHA=12, IVO=12, NAT=9, LBR=6, BEN=5, SIE=5, GNB=3, MLW=3, DJI=3, TOG=3, LES=3, BUR=2, GAB=2, RWA=1
+elephantidae:loxodontacyclotis (Loxodonta cyclotis): ZAI=150, NGA=76, CAF=41, GUI=24, CMN=15, CON=14, GHA=12, IVO=12, LBR=6, BEN=5, SIE=5, TOG=3, GAB=2
+felinae:caracalcaracal (Caracal caracal): ZAI=64, SOM=17, GUI=16, ANG=12, UGA=9, IVO=8, NAM=8, NGA=7, ZAM=6, MOZ=6, TAN=5, CAF=3, BUR=3, GNB=2, GHA=2, TOG=2, BEN=2, KEN=2, NAT=2, CPP=2, ETH=1, SIE=1, RWA=1
+felinae:lynxcanadensis (Lynx canadensis): MNT=27, ORE=25, NDA=21, WYO=21, NEB=20, WAS=20, IDA=19, UTA=19, MIC=18, PEN=18, SDA=17, IOW=17, SAS=16, BRC=15, MIN=14, WIS=14, NWY=14, ASK=12, NSC=11, OHI=10, INI=10, ILL=9, ABT=8, NEV=8, ONT=7, COL=6, WVA=5, VRG=4, MAS=3, CAL=3, MAI=3, MAN=2, NWH=2, NWJ=2, KAN=2, KTY=2, PEI=2, CNT=1, RHO=1, MRY=1, ARI=1
+game:bear-black (Ursus americanus): TEX=53, MXE=40, NDA=21, KAN=21, NEB=20, OKL=19, SDA=17, IOW=16, ILL=12, ABT=10, MNT=10, INI=10, MSO=10, ALA=10, SAS=8, WYO=8, TEN=8, COL=7, OHI=7, NWM=7, MXN=7, KTY=6, GEO=6, MIN=5, NEV=5, ARI=5, MSI=5, CAL=5, FLA=4, SCA=3, LOU=3, QUE=3, MXS=3, ORE=2, IDA=2, WIS=2, MAS=2, NCA=2, WAS=1, MAI=1, UTA=1, NWY=1, MRY=1, VRG=1, ARK=1
+game:bear-brown (Ursus arctos): QUE=121, ONT=100, SAS=73, MAN=73, MXE=65, TEX=55, CAL=55, ABT=46, NWM=37, ARI=36, NEV=33, COL=28, MIC=26, ORE=25, MNT=24, MIN=24, OKL=24, UTA=23, MXN=23, WYO=22, NDA=21, KAN=21, NEB=20, WAS=20, NWT=18, IDA=18, WIS=18, SDA=17, IOW=17, MSO=17, NUN=16, LAB=14, ILL=11, ARK=4, MXS=2, INI=1
+game:deer-caribou (Rangifer tarandus): GNL=106, ONT=49, ASK=42, QUE=37, MIC=23, BRC=22, MAN=18, NSC=14, ABT=13, MIN=13, MAI=11, NBR=9, IDA=8, WIS=7, NDA=4, YUK=3, SAS=3, PEI=3, WAS=2, MNT=2, NWY=2, VER=2, NWH=2
+game:deer-elk (Cervus canadensis): ONT=72, BRC=58, ABT=52, SAS=41, CAL=27, MIC=24, MIN=22, OKL=21, KAN=20, MSO=19, MAN=18, WIS=18, PEN=18, NDA=17, IOW=17, NEB=16, TEX=16, MNT=15, SDA=15, NWY=15, ILL=14, ARK=14, TEN=14, KTY=12, VRG=12, OHI=11, INI=10, NWM=9, LOU=9, NEV=8, SCA=8, GEO=8, COL=7, NCA=7, ORE=6, ARI=6, QUE=5, WYO=5, WVA=5, MXE=4, MSI=3, YUK=2, NWJ=2, NWT=1, WAS=1, VER=1, NWH=1, CNT=1, MRY=1, DEL=1, UTA=1
+game:deer-guemal (Hippocamelus bisulcus): CLS=13, AGS=12, CLC=9
+game:deer-marsh (Blastocerus dichotomus): BZC=118, BZL=48, BZS=46, BZE=43, BZN=38, BOL=35, AGE=30, PAR=23, URU=17, PER=2
+game:deer-moose (Alces alces): NUN=48, NWT=25, PEN=17, ONT=16, COL=13, WYO=12, ASK=12, MIC=11, WIS=10, SAS=7, MIN=7, UTA=7, MNT=6, NDA=6, NWY=5, ABT=4, MAN=3, BRC=3, WAS=2, OHI=2, MAS=2, SDA=1, CNT=1, RHO=1, NWJ=1
+game:deer-pampas (Ozotoceros bezoarticus): BZC=116, AGE=114, BZE=91, BZL=44, BZS=44, AGW=40, PAR=38, BZN=37, BOL=20, URU=15, AGS=13
+game:deer-taruca (Hippocamelus antisensis): PER=27, AGW=14, CLN=13, BOL=10, ECU=4
+game:fox-red (Vulpes vulpes): NUN=232, ASK=215, QUE=186, NWT=128, ONT=119, BRC=111, MAN=78, ABT=75, SAS=73, YUK=49, TEX=39, LAB=38, MNT=35, MIC=30, WYO=28, COL=28, CAL=28, NFL=26, MIN=24, OKL=23, IDA=22, NDA=21, UTA=21, KAN=21, NEB=20, FLA=20, MSO=19, ORE=19, WIS=18, PEN=18, WAS=18, SDA=17, IOW=17, NWY=17, NCA=16, ARK=15, GEO=15, VRG=15, ILL=14, TEN=14, MSI=14, LOU=14, ALA=13, KTY=12, MAI=12, SCA=12, OHI=11, NWM=11, NSC=11, INI=10, NBR=9, ARI=8, WVA=5, NWH=4, NEV=4, NWJ=4, MAS=3, PEI=3, VER=2, CNT=1, RHO=1, MRY=1, DEL=1
+game:goat-mountain (Oreamnos americanus): WAS=12, BRC=8, ORE=8, UTA=7, COL=7, ABT=6, IDA=6, NEV=4, MNT=3, WYO=3, ASK=1, SDA=1, NWM=1
+game:goat-muskox (Ovibos moschatus): NUN=70, ASK=48, MAN=20, NWT=16, YUK=8, GNL=3, QUE=3, LAB=2, SAS=1
+game:hyena-spotted (Crocuta crocuta): CPP=79, NAM=37, OFS=14, CMN=9, TVL=9, NAT=9, ZIM=5, ANG=4, NGA=3, LES=3
+game:sheep-bighorn (Ovis canadensis): MXE=26, CAL=20, NWM=14, WYO=13, MNT=12, ORE=10, ARI=9, BRC=8, MXN=8, ABT=6, IDA=6, UTA=6, WAS=4, NEV=3, NDA=2, COL=2, NEB=1, TEX=1
+game:wolf-eurasian (Canis lupus): MXE=94, NUN=63, TEX=56, GNL=37, NEV=33, NWM=33, ARI=32, COL=27, ORE=25, CAL=22, MXS=22, NDA=21, KAN=21, SAS=20, NEB=20, UTA=19, MIC=18, PEN=18, SDA=17, IOW=17, OKL=17, MXN=17, NWY=17, MIN=13, WIS=12, ILL=12, MSO=12, MAI=12, WAS=12, WYO=11, ONT=11, NSC=11, NWT=11, MNT=9, OHI=9, NBR=9, QUE=8, MAN=7, INI=7, MXC=7, NWH=4, NWJ=4, ASK=3, MAS=3, VER=2, PEI=2, BRC=1, IDA=1, CNT=1, RHO=1, DEL=1
+manidae:gigantea (Smutsia gigantea): NGA=19, GHA=7, TOG=7, BEN=4, CMN=3
+manidae:tetradactyla (Phataginus tetradactyla): NGA=7, BEN=6, TOG=5, GHA=1
+pantherinae:leo (Panthera leo): ZAI=151, ANG=138, SOM=85, NGA=80, CPP=77, ETH=74, NAM=69, MOZ=56, ZAM=42, KEN=40, CMN=30, CAF=27, GUI=27, TVL=25, CON=25, IVO=21, GHA=21, ZIM=21, UGA=20, BOT=20, TAN=19, GAB=16, OFS=14, NAT=9, BEN=7, MLW=7, TOG=7, GNB=4, SIE=3, DJI=3, LES=3, RWA=2, BUR=2, CAB=2, SWZ=2
+pantherinae:onca (Panthera onca): AGE=117, BZE=94, MXE=81, BZC=77, BZN=76, BZL=65, AGW=64, MXN=55, BZS=48, PER=40, TEX=35, AGS=35, BOL=30, URU=23, CLM=19, ARI=17, NWM=17, CLN=17, MXS=17, ECU=14, CAL=11, PAR=10, MXC=7, MXG=6, PAN=6, VEN=5, MXT=5, ELS=3, GUA=3, NIC=2, HON=1, TRT=1
+pantherinae:pardus (Panthera pardus): ZAI=100, NGA=96, SOM=67, ETH=57, ANG=43, CPP=38, IVO=29, ZAM=26, GHA=24, CMN=19, CAF=16, MOZ=14, OFS=13, GUI=12, TAN=10, SIE=10, LBR=9, UGA=8, TVL=8, KEN=8, BEN=7, BOT=6, TOG=6, ZIM=5, NAM=5, GNB=3, NAT=3, RWA=2, MLW=2, LES=2, DJI=2, CON=2, CAB=1
+rhinocerotidae:ceratotheriumsimum (Ceratotherium simum): CAF=31, ANG=17, ZAI=12
+rhinocerotidae:dicerosbicornis (Diceros bicornis): ETH=78, NGA=73, CAF=48, SOM=45, ZAI=24, IVO=23, CMN=22, GUI=20, UGA=19, GHA=16, BOT=12, BEN=11, TOG=4, LBR=4, SIE=3, RWA=2, CPP=2, BUR=1, LES=1
+thylacinidae:sarcophilusharrisii (Sarcophilus harrisii): QLD=99, WAU=84, NSW=82, NTA=39, SOA=36, VIC=30
+viverridae:genettapiscivora (Genetta piscivora): ZAI=8
+viverridae:genettapoensis (Genetta poensis): IVO=15
+viverridae:poianaleightoni (Poiana leightoni): IVO=4
+vombatidae:lasiorhinuskrefftii (Lasiorhinus krefftii): NSW=37, QLD=26, VIC=4
+vombatidae:lasiorhinuslatifrons (Lasiorhinus latifrons): SOA=30, WAU=28, VIC=3
+
+# region names
+ABT = Alberta
+AGE = Argentina Northeast
+AGS = Argentina South
+AGW = Argentina Northwest
+ALA = Alabama
+ANG = Angola
+ARI = Arizona
+ARK = Arkansas
+ASK = Alaska
+BEN = Benin
+BLZ = Belize
+BOL = Bolivia
+BOT = Botswana
+BRC = British Columbia
+BUR = Burundi
+BZC = Brazil West-Central
+BZE = Brazil Northeast
+BZL = Brazil Southeast
+BZN = Brazil North
+BZS = Brazil South
+CAB = Cabinda
+CAF = Central African Republic
+CAL = California
+CLC = Chile Central
+CLM = Colombia
+CLN = Chile North
+CLS = Chile South
+CMN = Cameroon
+CNT = Connecticut
+COL = Colorado
+CON = Congo
+COS = Costa Rica
+CPP = Cape Provinces
+DEL = Delaware
+DJI = Djibouti
+ECU = Ecuador
+ELS = El Salvador
+ETH = Ethiopia
+FLA = Florida
+GAB = Gabon
+GEO = Georgia
+GHA = Ghana
+GNB = Guinea-Bissau
+GNL = Greenland
+GUA = Guatemala
+GUI = Guinea
+HON = Honduras
+IDA = Idaho
+ILL = Illinois
+INI = Indiana
+IOW = Iowa
+IVO = Ivory Coast
+KAN = Kansas
+KEN = Kenya
+KTY = Kentucky
+LAB = Labrador
+LBR = Liberia
+LES = Lesotho
+LOU = Louisiana
+MAI = Maine
+MAN = Manitoba
+MAS = Massachusetts
+MIC = Michigan
+MIN = Minnesota
+MLW = Malawi
+MNT = Montana
+MOZ = Mozambique
+MRY = Maryland
+MSI = Mississippi
+MSO = Missouri
+MXC = Mexico Central
+MXE = Mexico Northeast
+MXG = Mexico Gulf
+MXN = Mexico Northwest
+MXS = Mexico Southwest
+MXT = Mexico Southeast
+NAM = Namibia
+NAT = KwaZulu-Natal
+NBR = New Brunswick
+NCA = North Carolina
+NDA = North Dakota
+NEB = Nebraska
+NEV = Nevada
+NFL = Newfoundland
+NGA = Nigeria
+NIC = Nicaragua
+NSC = Nova Scotia
+NSW = New South Wales
+NTA = Northern Territory
+NUN = Nunavut
+NWH = New Hampshire
+NWJ = New Jersey
+NWM = New Mexico
+NWT = Northwest Territories
+NWY = New York
+OFS = Free State
+OHI = Ohio
+OKL = Oklahoma
+ONT = Ontario
+ORE = Oregon
+PAN = Panama
+PAR = Paraguay
+PEI = Prince Edward I.
+PEN = Pennsylvania
+PER = Peru
+QLD = Queensland
+QUE = QuÃ©bec
+RHO = Rhode I.
+RWA = Rwanda
+SAS = Saskatchewan
+SCA = South Carolina
+SDA = South Dakota
+SIE = Sierra Leone
+SOA = South Australia
+SOM = Somalia
+SWZ = Swaziland
+TAN = Tanzania
+TEN = Tennessee
+TEX = Texas
+TOG = Togo
+TRT = Trinidad-Tobago
+TVL = Northern Provinces
+UGA = Uganda
+URU = Uruguay
+UTA = Utah
+VEN = Venezuela
+VER = Vermont
+VIC = Victoria
+VRG = Virginia
+WAS = Washington
+WAU = Western Australia
+WIS = Wisconsin
+WVA = West Virginia
+WYO = Wyoming
+YUK = Yukon
+ZAI = ZaÃ¯re
+ZAM = Zambia
+ZIM = Zimbabwe

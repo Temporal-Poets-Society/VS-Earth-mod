@@ -1,0 +1,386 @@
+{
+  "hematite": {
+    "parent_commodity": "Fe",
+    "explicit_ore_mentions": 2655,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bhematite\\b|\\bhaematite\\b"
+  },
+  "magnetite": {
+    "parent_commodity": "Fe",
+    "explicit_ore_mentions": 3314,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bmagnetite\\b"
+  },
+  "limonite": {
+    "parent_commodity": "Fe",
+    "explicit_ore_mentions": 1828,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\blimonite\\b"
+  },
+  "goethite": {
+    "parent_commodity": "Fe",
+    "explicit_ore_mentions": 552,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bgoethite\\b"
+  },
+  "bogiron": {
+    "parent_commodity": "Fe",
+    "explicit_ore_mentions": 0,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bbog[ -]iron\\b|\\bbog[ -]ore\\b"
+  },
+  "nativegold": {
+    "parent_commodity": "Au",
+    "explicit_ore_mentions": 0,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bnative gold\\b"
+  },
+  "nativesilver": {
+    "parent_commodity": "Ag",
+    "explicit_ore_mentions": 0,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bnative silver\\b"
+  },
+  "galena": {
+    "parent_commodity": "Pb",
+    "explicit_ore_mentions": 10383,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bgalena\\b"
+  },
+  "cerussite": {
+    "parent_commodity": "Pb",
+    "explicit_ore_mentions": 127,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bcerussite\\b"
+  },
+  "sphalerite": {
+    "parent_commodity": "Zn",
+    "explicit_ore_mentions": 7867,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bsphalerite\\b"
+  },
+  "smithsonite": {
+    "parent_commodity": "Zn",
+    "explicit_ore_mentions": 542,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bsmithsonite\\b"
+  },
+  "hemimorphite": {
+    "parent_commodity": "Zn",
+    "explicit_ore_mentions": 156,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bhemimorphite\\b"
+  },
+  "bismuthinite": {
+    "parent_commodity": "Bi",
+    "explicit_ore_mentions": 152,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bbismuthinite\\b"
+  },
+  "pentlandite": {
+    "parent_commodity": "Ni",
+    "explicit_ore_mentions": 361,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bpentlandite\\b"
+  },
+  "chromite": {
+    "parent_commodity": "Cr",
+    "explicit_ore_mentions": 2135,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bchromite\\b"
+  },
+  "ilmenite": {
+    "parent_commodity": "Ti",
+    "explicit_ore_mentions": 736,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bilmenite\\b"
+  },
+  "rutile": {
+    "parent_commodity": "Ti",
+    "explicit_ore_mentions": 287,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\brutile\\b"
+  },
+  "rhodochrosite": {
+    "parent_commodity": "Mn",
+    "explicit_ore_mentions": 180,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\brhodochrosite\\b"
+  },
+  "cinnabar": {
+    "parent_commodity": "Hg",
+    "explicit_ore_mentions": 1553,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bcinnabar\\b"
+  },
+  "wolframite": {
+    "parent_commodity": "W",
+    "explicit_ore_mentions": 474,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bwolframite\\b"
+  },
+  "scheelite": {
+    "parent_commodity": "W",
+    "explicit_ore_mentions": 2726,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bscheelite\\b"
+  },
+  "uraninite": {
+    "parent_commodity": "U",
+    "explicit_ore_mentions": 808,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\buraninite\\b|\\bpitchblende\\b"
+  },
+  "nativeplatinum": {
+    "parent_commodity": "Pt",
+    "explicit_ore_mentions": 0,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bnative platinum\\b"
+  },
+  "sperrylite": {
+    "parent_commodity": "Pt",
+    "explicit_ore_mentions": 80,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bsperrylite\\b"
+  },
+  "vanadinite": {
+    "parent_commodity": "V",
+    "explicit_ore_mentions": 103,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bvanadinite\\b"
+  },
+  "wulfenite": {
+    "parent_commodity": "Mo",
+    "explicit_ore_mentions": 259,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bwulfenite\\b"
+  },
+  "freibergite": {
+    "parent_commodity": "Ag",
+    "explicit_ore_mentions": 62,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bfreibergite\\b"
+  },
+  "tetrahedrite": {
+    "parent_commodity": "Sb",
+    "explicit_ore_mentions": 1932,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\btetrahedrite\\b"
+  },
+  "franckeite": {
+    "parent_commodity": "Pb",
+    "explicit_ore_mentions": 1,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bfranckeite\\b"
+  },
+  "teallite": {
+    "parent_commodity": "Pb",
+    "explicit_ore_mentions": 1,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bteallite\\b"
+  },
+  "pyrite": {
+    "parent_commodity": "S",
+    "explicit_ore_mentions": 8237,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bpyrite\\b"
+  },
+  "borax": {
+    "parent_commodity": "B",
+    "explicit_ore_mentions": 36,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bborax\\b|\\btincal\\b"
+  },
+  "kernite": {
+    "parent_commodity": "B",
+    "explicit_ore_mentions": 3,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bkernite\\b"
+  },
+  "phosphorite": {
+    "parent_commodity": "P",
+    "explicit_ore_mentions": 0,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bphosphorite\\b"
+  },
+  "apatite": {
+    "parent_commodity": "P",
+    "explicit_ore_mentions": 100,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bapatite\\b|\\bfluorapatite\\b"
+  },
+  "niter": {
+    "parent_commodity": "N",
+    "explicit_ore_mentions": 5,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bniter\\b|\\bnitre\\b|\\bsaltpeter\\b|\\bsaltpetre\\b"
+  },
+  "nitratine": {
+    "parent_commodity": "N",
+    "explicit_ore_mentions": 0,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bnitratine\\b|\\bnitratite\\b|\\bsoda niter\\b"
+  },
+  "sylvite": {
+    "parent_commodity": "K",
+    "explicit_ore_mentions": 47,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bsylvite\\b|\\bsylvinite\\b"
+  },
+  "halite": {
+    "parent_commodity": "NaCl",
+    "explicit_ore_mentions": 299,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bhalite\\b|\\brock salt\\b"
+  },
+  "sulfur": {
+    "parent_commodity": "S",
+    "explicit_ore_mentions": 0,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bnative sul[fp]hur\\b"
+  },
+  "graphite": {
+    "parent_commodity": "C_graphite",
+    "explicit_ore_mentions": 170,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bgraphite\\b"
+  },
+  "lignite": {
+    "parent_commodity": "C_coal",
+    "explicit_ore_mentions": 4,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\blignite\\b|\\bbrown coal\\b"
+  },
+  "anthracite": {
+    "parent_commodity": "C_coal",
+    "explicit_ore_mentions": 0,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\banthracite\\b"
+  },
+  "bituminouscoal": {
+    "parent_commodity": "C_coal",
+    "explicit_ore_mentions": 0,
+    "confirmed_unique_deposits": null,
+    "pattern": "(?<!sub)\\bbituminous\\b"
+  },
+  "fluorite": {
+    "parent_commodity": "F",
+    "explicit_ore_mentions": 1257,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bfluorite\\b|\\bfluorspar\\b"
+  },
+  "quartz": {
+    "parent_commodity": "SiO2",
+    "explicit_ore_mentions": 982,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bquartz\\b"
+  },
+  "bauxite": {
+    "parent_commodity": "Al",
+    "explicit_ore_mentions": 501,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bbauxite\\b"
+  },
+  "gypsum": {
+    "parent_commodity": "gypsum",
+    "explicit_ore_mentions": 485,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bgypsum\\b"
+  },
+  "anhydrite": {
+    "parent_commodity": "gypsum",
+    "explicit_ore_mentions": 66,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\banhydrite\\b"
+  },
+  "diamond": {
+    "parent_commodity": "diamond",
+    "explicit_ore_mentions": 168,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bdiamonds?\\b"
+  },
+  "corundum": {
+    "parent_commodity": "corundum",
+    "explicit_ore_mentions": 59,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bcorundum\\b"
+  },
+  "ruby": {
+    "parent_commodity": "corundum",
+    "explicit_ore_mentions": 4,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bruby\\b|\\brubies\\b"
+  },
+  "sapphire": {
+    "parent_commodity": "corundum",
+    "explicit_ore_mentions": 12,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bsapphires?\\b"
+  },
+  "emerald": {
+    "parent_commodity": "emerald",
+    "explicit_ore_mentions": 9,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bemeralds?\\b"
+  },
+  "olivine": {
+    "parent_commodity": "olivine",
+    "explicit_ore_mentions": 40,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bolivine\\b"
+  },
+  "peridot": {
+    "parent_commodity": "olivine",
+    "explicit_ore_mentions": 2,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bperidot\\b"
+  },
+  "garnet": {
+    "parent_commodity": "garnet",
+    "explicit_ore_mentions": 241,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bgarnets?\\b|\\balmandine\\b|\\bandradite\\b|\\bgrossular\\b|\\bpyrope\\b|\\bspessartine\\b|\\buvarovite\\b"
+  },
+  "lapislazuli": {
+    "parent_commodity": "lapis",
+    "explicit_ore_mentions": 2,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\blapis[ -]lazuli\\b|\\blazurite\\b"
+  },
+  "alum": {
+    "parent_commodity": "alum",
+    "explicit_ore_mentions": 0,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\balum\\b"
+  },
+  "alunite": {
+    "parent_commodity": "alum",
+    "explicit_ore_mentions": 149,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\balunite\\b"
+  },
+  "topaz": {
+    "parent_commodity": "topaz",
+    "explicit_ore_mentions": 37,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\btopaz\\b"
+  },
+  "tourmaline": {
+    "parent_commodity": "tourmaline",
+    "explicit_ore_mentions": 69,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\btourmaline\\b|\\bschorl\\b|\\brubellite\\b|\\belbaite\\b"
+  },
+  "beryl": {
+    "parent_commodity": "beryl",
+    "explicit_ore_mentions": 588,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bberyl\\b|\\baquamarine\\b|\\bred beryl\\b|\\bbixbite\\b"
+  },
+  "spinel": {
+    "parent_commodity": "spinel",
+    "explicit_ore_mentions": 16,
+    "confirmed_unique_deposits": null,
+    "pattern": "\\bspinel\\b"
+  }
+}

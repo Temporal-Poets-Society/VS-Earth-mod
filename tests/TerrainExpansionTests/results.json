@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checks": 2331950,
+  "columnComparisons": 129938,
+  "wetColumnComparisons": 15972,
+  "flowDerivativeComparisons": 516,
+  "nativeSettlementComparisons": 40960,
+  "canonicalSegments": 826332,
+  "elapsedMilliseconds": 12358,
+  "sites": [
+    {
+      "Id": "giza",
+      "CenterX": 137553,
+      "CenterZ": 34162,
+      "InnerRadius": 439,
+      "OuterRadius": 1317,
+      "Magnification": 8
+    },
+    {
+      "Id": "colosseum",
+      "CenterX": 127065,
+      "CenterZ": 27391,
+      "InnerRadius": 237,
+      "OuterRadius": 711,
+      "Magnification": 32
+    }
+  ],
+  "limits": "Offline model/settlement checks; native game generation and geometry placement are separately tested by the companion harness."
+}

@@ -1,0 +1,55 @@
+Sea referee (tools/sea_referee.py): Earth sea (GSHHG) that the GLO-90 water body mask and heights say is land, made land
+rule: Earth sea ∩ WBM not ocean ∩ (GLO-90 ≥ 15 m or RGI glacier over half the 30" cell), opened 3x3, enclosed low land filled, areas ≥ 0.2 km²; not Greenland/high Arctic, not south of 60°S
+areas: 10515, 22031.3 km² made land (candidate pixels 32096.2 km², left as sea 10073.1 km²: strips, specks)
+WBM sea opened beside them (GSHHG land, WBM ocean, within 2.5 km): 28476.7 km², 16569.9 km² of it on islands.bin's small islands
+terrain.bin: 111 2' cells from ocean to land, 1268 from land to ocean, in 89 6° tiles
+outlines: {'groups': 4266, 'big_land_groups': 130, 'island_groups': 4136, 'new_islands': 248, 'islands_changed': 3637, 'islands_removed': 3723, 'slivers': 5447, 'rings_replaced': 143, 'rings_added': 7850, 'removes_unused_km2': 0.0, 'islands_before': 179541, 'islands_after': 177815, 'rings_dropped_degenerate': 1962}
+patch files holding changed cells (their values win where the option is on): {'islands.bin': 612, 'lakes.bin': 0, 'shores.bin': 0, 'outlets.bin': 0}
+HydroRIVERS segments (100 m³/s+) ending on the new land: 123
+
+per region:
+    11143.6 km²   4124 areas  Patagonia and Tierra del Fuego
+     3603.0 km²   2841 areas  New Guinea north, Indonesia, Philippines
+     3525.5 km²   1796 areas  elsewhere
+     2179.0 km²    736 areas  Melanesia and the Pacific islands
+      547.5 km²    332 areas  Kamchatka, Kurils, Russian Far East
+      278.1 km²    147 areas  New Zealand
+      230.2 km²    162 areas  Mediterranean and Black Sea
+      195.2 km²     98 areas  Chukotka and Bering Sea
+      160.4 km²     73 areas  Alaska and British Columbia
+      102.0 km²    140 areas  Norway, Svalbard, northern Europe
+       28.8 km²     17 areas  Southern Andes coast (Chile, 40°S-18°S)
+       24.7 km²     37 areas  Arctic Canada and Labrador
+       13.3 km²     12 areas  Japan and Korea
+
+top 30 areas:
+   -15.1347,  168.1086    208.77 km²  mean  261.8 m, max   809 m, glacier   0%  Melanesia and the Pacific islands
+   -51.6093,  -72.8685    146.12 km²  mean  553.0 m, max  1494 m, glacier   3%  Patagonia and Tierra del Fuego
+   -51.5063,  -73.2398    123.52 km²  mean  479.9 m, max  1474 m, glacier   9%  Patagonia and Tierra del Fuego
+   -43.7321,  172.0000    119.00 km²  mean  116.2 m, max   348 m, glacier   0%  New Zealand
+   -48.2973,  -75.1866    112.67 km²  mean  241.7 m, max   787 m, glacier   0%  Patagonia and Tierra del Fuego
+   -48.0310,  -73.9527    110.75 km²  mean  297.5 m, max  1180 m, glacier   0%  Patagonia and Tierra del Fuego
+     6.5536,  -77.3530    109.65 km²  mean  229.1 m, max   547 m, glacier   0%  elsewhere
+   -52.7741,  -72.2837    107.50 km²  mean  313.9 m, max   999 m, glacier   4%  Patagonia and Tierra del Fuego
+   -48.0310,  -74.3541    102.55 km²  mean  294.1 m, max  1014 m, glacier   0%  Patagonia and Tierra del Fuego
+   -48.1638,  -73.6228     96.03 km²  mean  467.6 m, max  1410 m, glacier   3%  Patagonia and Tierra del Fuego
+   -48.5191,  -74.5772     78.17 km²  mean  328.4 m, max   984 m, glacier   0%  Patagonia and Tierra del Fuego
+   -48.3159,  -74.6051     74.70 km²  mean  263.4 m, max   800 m, glacier   0%  Patagonia and Tierra del Fuego
+    -8.8168,  120.3706     74.50 km²  mean   90.7 m, max   432 m, glacier   0%  New Guinea north, Indonesia, Philippines
+   -14.9914,  166.7827     71.46 km²  mean  105.8 m, max   501 m, glacier   0%  Melanesia and the Pacific islands
+   -47.8776,  -73.8605     70.86 km²  mean  473.9 m, max  1148 m, glacier   0%  Patagonia and Tierra del Fuego
+   -42.3511,  -72.5107     69.14 km²  mean  471.2 m, max  1127 m, glacier   0%  Patagonia and Tierra del Fuego
+   -49.3721,  -74.1404     67.15 km²  mean  304.8 m, max   908 m, glacier   0%  Patagonia and Tierra del Fuego
+    -9.4915,  161.4759     65.42 km²  mean  103.3 m, max   356 m, glacier   0%  Melanesia and the Pacific islands
+   -48.7964,  -74.4874     65.23 km²  mean  434.1 m, max  1042 m, glacier   0%  Patagonia and Tierra del Fuego
+   -46.5868,  -74.9587     65.13 km²  mean  120.5 m, max   637 m, glacier   0%  Patagonia and Tierra del Fuego
+   -11.8015,  160.5599     62.26 km²  mean   63.5 m, max   133 m, glacier   0%  Melanesia and the Pacific islands
+   -20.1955,  169.8613     60.57 km²  mean  234.1 m, max   785 m, glacier   0%  Melanesia and the Pacific islands
+   -15.3519,  167.8006     59.83 km²  mean  153.8 m, max   672 m, glacier   0%  Melanesia and the Pacific islands
+   -24.8112,   43.9972     58.66 km²  mean   33.8 m, max    81 m, glacier   0%  elsewhere
+   -52.0052,  -73.3027     55.86 km²  mean  335.0 m, max  1010 m, glacier   3%  Patagonia and Tierra del Fuego
+   -11.6588,  160.2146     54.21 km²  mean   84.6 m, max   195 m, glacier   0%  Melanesia and the Pacific islands
+   -48.5434,  -75.0385     53.75 km²  mean  303.9 m, max   913 m, glacier   0%  Patagonia and Tierra del Fuego
+    29.1868, -113.1845     53.14 km²  mean  148.8 m, max   714 m, glacier   0%  elsewhere
+    -1.0549,  136.2731     52.99 km²  mean   86.7 m, max   188 m, glacier   0%  New Guinea north, Indonesia, Philippines
+   -14.3448,  167.5160     52.98 km²  mean  175.6 m, max   545 m, glacier   0%  Melanesia and the Pacific islands

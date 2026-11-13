@@ -1,0 +1,279 @@
+{
+  "mod": {
+    "modid": 3424,
+    "assetid": 20235,
+    "name": "Fauna of the Stone Age: Cervinae",
+    "text": "<p><span style=\"font-weight: 400;\">A collection of deer from the subfamily Cervinae, these shy animals will act as a challenging prey source and potential danger for players and their crops. Currently this mod only has the giant deer, the rest will come at a later date!</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" style=\"height: 29px; width: 2222px; border-spacing: 0px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col width=\"183\" /><col width=\"183\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"123\" /><col width=\"72\" /><col width=\"54\" /><col width=\"81\" /><col width=\"100\" /><col width=\"69\" /><col width=\"139\" /><col width=\"122\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /></colgroup>\n<tbody>\n<tr style=\"height: 17px;\">\n<td style=\"height: 17px; width: 189px;\">Name</td>\n<td style=\"height: 17px; width: 191px;\">Scientific Name</td>\n<td style=\"height: 17px; width: 104px;\">Category</td>\n<td style=\"height: 17px; width: 104px;\">Weight</td>\n<td style=\"height: 17px; width: 104px;\">Health</td>\n<td style=\"height: 17px; width: 127px;\">Height</td>\n<td style=\"height: 17px; width: 74px;\">Damage</td>\n<td style=\"height: 17px; width: 55px;\">Temp</td>\n<td style=\"height: 17px; width: 84px;\">Preciptation</td>\n<td style=\"height: 17px; width: 103px;\">Foliage Needs</td>\n<td style=\"height: 17px; width: 71px;\">Altitude</td>\n<td style=\"height: 17px; width: 144px;\">Group Size</td>\n<td style=\"height: 17px; width: 126px;\">Meat Drops</td>\n<td style=\"height: 17px; width: 103px;\">Fat Drops</td>\n<td style=\"height: 17px; width: 103px;\">Hide Drops</td>\n<td style=\"height: 17px; width: 103px;\">Other Drops</td>\n<td style=\"height: 17px; width: 99.3333px;\">Behaviors</td>\n<td style=\"height: 17px; width: 99.3333px;\">Notes</td>\n<td style=\"height: 17px; width: 225px;\">Eats</td>\n</tr>\n<tr style=\"height: 12px;\">\n<td style=\"height: 12px; width: 189px;\">Giant deer &dagger;</td>\n<td style=\"height: 12px; width: 191px;\">Megaloceros giganteus</td>\n<td style=\"height: 12px; width: 104px;\">&nbsp;</td>\n<td style=\"height: 12px; width: 104px;\">600/500/50</td>\n<td style=\"height: 12px; width: 104px;\">34/30/12</td>\n<td style=\"height: 12px; width: 127px;\">2.1/1.9 shoulders</td>\n<td style=\"height: 12px; width: 74px;\">15 tier 2</td>\n<td style=\"height: 12px; width: 55px;\">-4-10</td>\n<td style=\"height: 12px; width: 84px;\">10-100</td>\n<td style=\"height: 12px; width: 103px;\">10-90 forest</td>\n<td style=\"height: 12px; width: 71px;\">1-1.6</td>\n<td style=\"height: 12px; width: 144px;\">1 F&amp;M, 1-12 M&amp;F&amp;B</td>\n<td style=\"height: 12px; width: 126px;\">41-45, 34-37, 5-7</td>\n<td style=\"height: 12px; width: 103px;\">5-6,4-5,1+-0.3</td>\n<td style=\"height: 12px; width: 103px;\">4 H, 3H, 1 M</td>\n<td style=\"height: 12px; width: 103px;\">Antlers</td>\n<td style=\"height: 12px; width: 99.3333px;\">Milk</td>\n<td style=\"height: 12px; width: 99.3333px;\">Step 3</td>\n<td style=\"height: 12px; width: 225px;\">\n<div>\n<div>Fruit, Vegetable, fruitmash, nibblecrops, sweetBerryBush</div>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p><span style=\"font-weight: 400;\"><br /><br /></span><span style=\"font-weight: 400;\">Features:</span></p>\n<p><span style=\"font-weight: 400;\">Deer are faster than most prey animals Vintage Story players are familiar with, many sleeping during the day in thick foliage making them harder to detect and catch. They can be lured with certain crops and berry bushes, as well as filled food troughs with suitable foods. Using creative hunting techniques is recommended for deer both big and small.<br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Those who are able to catch a pair of deer can domesticate them, and the larger species can be milked, with different species requiring different amounts of food and pregnancy length. </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Most species have a unique pelt drop as well that can be used to craft hide, taxidermied full body and head mounts.<br /><br /></span><span style=\"font-weight: 400;\"><br /><br /><br />A big thanks to an anonymous donor for commissioning the Giant Deer!<br />And a big thanks to everyone who gave feedback and assistance!<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong> How do I domesticate the animals in this pack?<br /><br /><strong>A:</strong> Get a male and female adult of a given species within 10 blocks, wait until the female is ready to mate and feed her the sufficient number of portions and the male at least one. Different species require different amounts and can be found in the entity file under the multiply section. Animals can be fed either by dropping items on the ground or by using the large trough. The small trough is not supported at this time due to patching formats. Each species diet can be found in this mod's description or in their entity file under the diet section. After 10 generations, entities stop attacking the player and after 10 generations they will no longer flee the player. Only the mother's generation matters for progressing generations.<br /><br /><br /><strong>Q:</strong> Why so many animal packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain clade file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><br /><strong>Q:</strong> Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> Yes, this mod series is safe to add and remove. Items from this mod that have been placed will be invisible or appear as question blocks if the mod is removed but can be safely broken.</div>\n</div>\n<p><span style=\"font-weight: 400;\"> <br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "cervinae",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_8f776698b0f81ff70efe23ba070aadc7.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_8f776698b0f81ff70efe23ba070aadc7.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_8f776698b0f81ff70efe23ba070aadc7.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 123857,
+    "follows": 1035,
+    "trendingpoints": 0,
+    "comments": 151,
+    "side": "both",
+    "type": "mod",
+    "created": "2025-02-26 18:11:13",
+    "lastreleased": "2026-08-14 16:41:10",
+    "lastmodified": "2026-09-28 19:44:40",
+    "tags": [
+      "Crafting",
+      "Furniture",
+      "Creatures"
+    ],
+    "releases": [
+      {
+        "releaseid": 52942,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._0d5422335b765692e9daf0ec73dccde8.zip?dl=FotSA-Cervinae-v0.1.14.zip",
+        "filename": "FotSA-Cervinae-v0.1.14.zip",
+        "fileid": 114677,
+        "downloads": 9823,
+        "tags": [
+          "1.22.6"
+        ],
+        "modidstr": "cervinae",
+        "modversion": "0.1.14",
+        "created": "2026-08-14 16:41:10",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-Change chance and wanderChance to executionChance</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Animal interaction patches</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Note-This is a quick a dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22</span></p>"
+      },
+      {
+        "releaseid": 32125,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._4cccde632143e6df95ab5e3b55459e72.zip?dl=FotSA-Cervinae-v0.1.13.zip",
+        "filename": "FotSA-Cervinae-v0.1.13.zip",
+        "fileid": 70694,
+        "downloads": 27855,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "cervinae",
+        "modversion": "0.1.13",
+        "created": "2026-01-07 00:10:51",
+        "changelog": "<p>Updated-1 hide is always dropped from killed animals</p>"
+      },
+      {
+        "releaseid": 31629,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._23b86b0f293e28c0cfab9e1dc917595c.zip?dl=FotSA-Cervinae-v0.1.12.zip",
+        "filename": "FotSA-Cervinae-v0.1.12.zip",
+        "fileid": 69665,
+        "downloads": 3096,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "cervinae",
+        "modversion": "0.1.12",
+        "created": "2025-12-30 17:40:27",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-French Translation (Thanks Laerinok!)</span></p>"
+      },
+      {
+        "releaseid": 29760,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._bd0b12e057aa9345a0cf82a533b088fd.zip?dl=FotSA-Cervinae-v0.1.11.zip",
+        "filename": "FotSA-Cervinae-v0.1.11.zip",
+        "fileid": 65706,
+        "downloads": 7741,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "cervinae",
+        "modversion": "0.1.11",
+        "created": "2025-11-23 21:36:42",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Russian Translation (Thanks Nikuksis!)</span></p>"
+      },
+      {
+        "releaseid": 28306,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._ff99cc1601954b972b5d77471a223f4c.zip?dl=FotSA-Cervinae-v0.1.10.zip",
+        "filename": "FotSA-Cervinae-v0.1.10.zip",
+        "fileid": 62294,
+        "downloads": 14618,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "cervinae",
+        "modversion": "0.1.10",
+        "created": "2025-10-28 21:27:04",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Weighted diet </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Trappable format for 1.21</span></p>"
+      },
+      {
+        "releaseid": 27293,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._0bce732dbff0cdddbffa45e46282e23e.zip?dl=FotSA-Cervinae-v0.1.9.zip",
+        "filename": "FotSA-Cervinae-v0.1.9.zip",
+        "fileid": 59780,
+        "downloads": 5511,
+        "tags": [
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "cervinae",
+        "modversion": "0.1.9",
+        "created": "2025-10-13 21:49:15",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Bedroll patch causing conflicts</span></p>"
+      },
+      {
+        "releaseid": 25919,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._680910f0a4c4dd7a47eff7f7f9c5d7bd.zip?dl=FotSA-Cervinae-v0.1.8.zip",
+        "filename": "FotSA-Cervinae-v0.1.8.zip",
+        "fileid": 56941,
+        "downloads": 10382,
+        "tags": [
+          "1.21.1",
+          "1.21.2-rc.2",
+          "1.21.2",
+          "1.21.4"
+        ],
+        "modidstr": "cervinae",
+        "modversion": "0.1.8",
+        "created": "2025-09-25 16:24:15",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Riding attachable patches</span></p>"
+      },
+      {
+        "releaseid": 25803,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._0a5dd4dd04fe706122b2529c72a68b2c.zip?dl=FotSA-Cervinae-v0.1.7.zip",
+        "filename": "FotSA-Cervinae-v0.1.7.zip",
+        "fileid": 56733,
+        "downloads": 1978,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "cervinae",
+        "modversion": "0.1.7",
+        "created": "2025-09-23 15:34:24",
+        "changelog": "<p><br /><span style=\"font-weight: 400;\">Added- Creature tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Antler patches format</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Missing closed bracket in animal file</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Disabled riding until overhaul</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 19503,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._277e6cc1d1980a7fa2ad34adbdfe3a22.zip?dl=FotSA-Cervinae-v0.1.6.zip",
+        "filename": "FotSA-Cervinae-v0.1.6.zip",
+        "fileid": 42158,
+        "downloads": 24627,
+        "tags": [
+          "1.20.9",
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "cervinae",
+        "modversion": "0.1.6",
+        "created": "2025-04-30 20:30:51",
+        "changelog": "<p>Added-Devil interactions</p>"
+      },
+      {
+        "releaseid": 19208,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._866136a303f7e3d41021b58b30cb25cd.zip?dl=FotSA-Cervinae-v0.1.5.zip",
+        "filename": "FotSA-Cervinae-v0.1.5.zip",
+        "fileid": 41532,
+        "downloads": 1876,
+        "tags": [
+          "1.20.9"
+        ],
+        "modidstr": "cervinae",
+        "modversion": "0.1.5",
+        "created": "2025-04-22 16:40:10",
+        "changelog": "<p>Fixed-Milking not set up correctly</p>"
+      },
+      {
+        "releaseid": 18527,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._c507e5dab6cf972ba81062baff35d9d2.zip?dl=FotSA-Cervinae-v0.1.4.zip",
+        "filename": "FotSA-Cervinae-v0.1.4.zip",
+        "fileid": 40034,
+        "downloads": 5689,
+        "tags": [
+          "1.20.7",
+          "1.20.8"
+        ],
+        "modidstr": "cervinae",
+        "modversion": "0.1.4",
+        "created": "2025-04-05 00:04:45",
+        "changelog": "<p>Added-Worldgen spawn<br />Added-Woolandmore drops<br />Fixed-Texture variants not appearing</p>"
+      },
+      {
+        "releaseid": 17346,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._374c5609e67ff3cf90dc4aa21f777839.zip?dl=FotSA-Cervinae-v0.1.3.zip",
+        "filename": "FotSA-Cervinae-v0.1.3.zip",
+        "fileid": 36796,
+        "downloads": 5918,
+        "tags": [
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7"
+        ],
+        "modidstr": "cervinae",
+        "modversion": "0.1.3",
+        "created": "2025-03-10 16:06:23",
+        "changelog": "<p>Added-Thylacoleo interactions</p>"
+      },
+      {
+        "releaseid": 17107,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._e1668a3e20e21cd85f10a8305372b58f.zip?dl=FotSA-Cervinae-v0.1.2.zip",
+        "filename": "FotSA-Cervinae-v0.1.2.zip",
+        "fileid": 35974,
+        "downloads": 1915,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "cervinae",
+        "modversion": "0.1.2",
+        "created": "2025-03-04 17:37:45",
+        "changelog": "<p>Fixed-Crash relating to hides</p>"
+      },
+      {
+        "releaseid": 16856,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._7ba5676777040cb2d92a3bec7f01dc10.zip?dl=FotSA-Cervinae-v0.1.1.zip",
+        "filename": "FotSA-Cervinae-v0.1.1.zip",
+        "fileid": 35121,
+        "downloads": 2006,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "cervinae",
+        "modversion": "0.1.1",
+        "created": "2025-02-27 16:38:28",
+        "changelog": "<p>Fixed-Crash when placing face slot items on base game elk<br />Added- French translation (Thanks Laerinok!)</p>"
+      },
+      {
+        "releaseid": 16811,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._ed5bb4de1da0838a34fe37493546c49e.zip?dl=FotSA-Cervinae-v0.1.0.zip",
+        "filename": "FotSA-Cervinae-v0.1.0.zip",
+        "fileid": 34968,
+        "downloads": 822,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "cervinae",
+        "modversion": "0.1.0",
+        "created": "2025-02-26 18:12:13",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 34975,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-02-21_16-14-41_d733d41219cc9b8578b271a3a6653f58.png",
+        "filename": "2025-02-21_16-14-41.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-02-21_16-14-41_d733d41219cc9b8578b271a3a6653f58_55_60.png",
+        "created": "2025-02-26 18:21:17"
+      },
+      {
+        "fileid": 34976,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-02-26_10-01-56_6996f8e9f289f86549a889204a11ba14.png",
+        "filename": "2025-02-26_10-01-56.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-02-26_10-01-56_6996f8e9f289f86549a889204a11ba14_55_60.png",
+        "created": "2025-02-26 18:21:23"
+      },
+      {
+        "fileid": 34977,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-02-26_09-16-07_9a88e9d999f6b3ff0131828f888ceeed.png",
+        "filename": "2025-02-26_09-16-07.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-02-26_09-16-07_9a88e9d999f6b3ff0131828f888ceeed_55_60.png",
+        "created": "2025-02-26 18:21:23"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

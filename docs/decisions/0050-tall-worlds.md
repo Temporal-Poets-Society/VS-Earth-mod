@@ -1,0 +1,186 @@
+# 0050: Tall Earth worlds: an Earth-tab world height up to 1024 and a rock floor
+
+Date: 3 November 2026. Status: **agreed** (the author, below); **implemented** on `claude/tall-1to10` (from `release/1.0`
+`bbd00c0`), playtest version Earth 1.0.3-tall.3, installed. Headless servers checked (below); not played, committed or
+released. New worlds only. Combined test build 1.0.3-tall.4 on `claude/tall-glo90` (with 0051's GLO-90 prototype and the
+river speed-up; built and server-checked, installed 4 November, not committed; History).
+
+## Context
+
+The author wants a 1:10 Earth: about 10 m per block horizontally and vertically, at world width 5,120,000 (ring
+4,096,000). Their numbers (3 November): the Dead Sea is about 440 m below sea level, so 44 blocks; 160 blocks below
+sea level is 1.6 km, "more than enough", and no mine of the period was deeper; the Mariana Trench "does not add anything
+to gameplay"; Everest at 8,850 m is 885 blocks, so 885 + 160 = 1045, rounded to 1024.
+
+Two things stood in the way:
+
+- **The menu stops at 512.** Vanilla's create-world screen (`GuiScreenWorldCustomize.updateWorldHeightSlider`) caps the
+  World height slider at 512 for every play style except creative building (2048). The screen runs no mod code, so Earth
+  cannot change that slider. A dedicated server's `serverconfig.json` can set any height.
+- **Deep rock costs memory.** A server-side measurement ([tall-world cost](../research/tall-world-cost-2026-11-03.md))
+  found that a 1024-high world costs about +65 % memory per chunk column in use and +60 % compressed compared with 512,
+  almost all of it in mixed rock chunks between the surface and the bottom. With a single block type from 160 blocks
+  below the surface down, 1024 cost about the same as 512 (+9 % in use, −26 % compressed).
+
+The author's direction: "Can we make UI changes that allow 1024 world height with bare rock generated below 160
+surface", then "can we then have Earth tab have setting to override it?" and "we just place own slider in tab".
+
+## Decision
+
+1. **World height on the Earth tab** (`earthWorldHeight`, creation only). A slider: "World generation tab" (0, the
+   default) or 256 to 1024 in steps of 64; above 512 its tooltip warns that this is a test setting. When set, it
+   overrules the World generation tab's height, as Earth size already overrules width and length.
+   - Applied for a new Earth world only (`CreatesEarth`: new save, standard world type, Earth play style, Earth
+     enabled, no saved EarthParams), in `EarthVerticalBootstrap.StartPre`. It sets the save's `MapSizeY` and rebuilds the
+     server's map (`ServerWorldMap.Init`) by reflection. StartPre runs before AssetsFinalize, so vanilla's sea level and
+     everything after it see the final height, as on a server started at that height. The game builds the map from the
+     save again after the start phase.
+   - A value that isn't 256–1024 in steps of 32 (a hand-written server config) keeps the World generation tab's
+     height and is logged.
+2. **Rock floor on the Earth tab** (`earthRockFloor`, creation only): Automatic (default), None, or 96 / 128 / 160 / 192
+   / 256 blocks. Automatic is 160 in worlds taller than 512 and none otherwise, so worlds at the usual heights are
+   unchanged. Frozen in `EarthParams.RockFloorDepth` (proto 93); older saves read 0 (no floor).
+   - **Depth:** per chunk column, from the given number of blocks below its lowest surface (rock top or ice bottom)
+     down to y 1. The floor steps at chunk borders.
+   - **Material:** plain rock ("bare rock", the author's words): in each column the rock just above the floor, the
+     deepest stratum there. No caves, ores, lava or water below the floor. y 0 stays mantle.
+   - **How:** the terrain pass lays mantle up to the floor, so vanilla rock strata and ore deposits (which replace only
+     their host rock) skip it. Caves still carve it. After caves and ores, in the Vegetation pass, `FillRockFloor` turns
+     it into the column rocks. Chunks wholly below the floor are rebuilt from empty, so their block list holds only those
+     rocks. The floor's top travels in the map chunk's moddata (`earthRockFloor`, 0 where the column has none), which is
+     saved with chunks still generating, and stays there for prospecting (since tall.3; tall.2 removed it once filled).
+   - **Prospecting** (tall.3, the author: "Yes, fix the pick", with "only consider that there might be prospecting
+     mods"): readings leave out the floor, where no deposit was placed. Earth's ore layer empties its rock column and coal
+     beds there (`OreSession.EarthColumn`, `SeamBlocks`); vanilla's disc deposits, also other mods' and those Earth leaves
+     to vanilla, get the pick's simulated column with that part emptied (a prefix on
+     `DiscDepositGenerator.GetPropickReading`). The fix sits in the deposits' readings, which vanilla's pick, its ore map
+     and prospecting mods that ask the deposits use; mods that count placed blocks see the floor anyway. The simulated
+     column itself is unchanged, so a mod reading rock types from it still sees rock there. Not covered: another mod's
+     deposit generator with its own reading. Chunks generated by tall.2 have no record; their floor is taken from the
+     chunk's lowest terrain height, which is approximate (readings within 2 % in the test) and too high under ice.
+   - **Structures:** a generated structure in the map region whose box reaches below the floor in this chunk column (a
+     story location) lowers the floor there to below the structure. The mantle laid around it becomes rock.
+3. **Sea level 160** (`earthVerticalBudget` "160") and the **linear** mountain curve stay separate Earth-tab choices. For
+   1:10 the author picks World height 1024, Sea level 160, Mountain heights Linear: Everest at y 1022 (about 10.3 m per
+   block above sea level), the deepest sea floor at y 112.
+
+## Alternatives
+
+- **Patch the vanilla slider.** Not possible from a mod: the create-world screen loads mod info and world-config files
+  but runs no mod code.
+- **Only dedicated servers.** Works today (the first 1:10 test world), but singleplayer worlds would have no way in.
+- **Mantle below the floor** (the cost test's prototype). The author asked for bare rock. Mantle can't be mined.
+- **One rock per chunk column below the floor.** Cheapest (one block type per chunk), but shows straight seams of
+  different rock along chunk borders. Rejected in favour of each column's own rock. Chunks with several rocks take 8 KB
+  instead of 4 KB unpacked; see Verification.
+- **Skip caves and ores below the floor instead of refilling.** Would also save generation time, but needs patches into
+  vanilla's cave and deposit generators. Not done.
+
+## Consequences
+
+- **New worlds only.** Height and rock floor are fixed at creation.
+- Below the floor there are no ores, caves or lava, about 1.6 km down at 1:10. Companions are not affected (the author,
+  3 November: Underground Cities "does not care about ores and have more than enough room", Hydrology "deals only with
+  water"). The code agrees: Underground Cities carves its cities in the TerrainFeatures pass with levels 11 blocks apart
+  from 2 (at most three) under a varying cover, tens of blocks deep; Hydrology registers no world generation. Earth's own
+  ore depths below the floor are simply cut off.
+- **Ores** ([tall-world ores](../research/tall-world-ores-2026-11-03.md)): sea-level deposits follow sea level 160
+  (decision 0045); no saltpeter above the ground. Sea-level deposits (iron, coal, chromite, saltpeter and the rest) sit at
+  y 0–145, so under ground above about y 300 (1,450 m) the floor removes all of them; in a 512 world they are already
+  160–640 blocks down there. The floor leaves 19–43 % of the deposit blocks in the Alps, Ethiopia and Tibet.
+- **Prospecting pick:** tall.2's readings ignored the floor and reported ore it removed; tall.3 leaves the floor out
+  (Decision 2).
+- The 2′ elevation data gives smooth relief at 10 m per block; summits are 390–1,390 m low (the fork session's
+  [elevation sources note](../research/coast-and-elevation-sources-2026-11-03.md), not on this branch). Finer data is
+  separate work.
+- Generation still runs caves and ores through the floor before refilling it.
+- Client cost (meshing, memory, sending) is not measured.
+
+## Implementation
+
+Earth 1.0.3-tall.2 on `claude/tall-1to10`:
+
+- `worldconfig.json`, `assets/game/lang/worldconfig-en.json`: `earthWorldHeight` (intRange slider) and `earthRockFloor`
+  (dropdown); Sea level gains "160 (test: tall worlds)".
+- `src/EarthWorldOptions.cs`: `Height`, `ApplyHeight`, `RockFloorDepth`; `Freeze` stores the rock floor.
+- `src/EarthVerticalBootstrap.cs`: `StartPre` applies the height. `src/EarthMapSystem.cs`: `ConfigEnabled`.
+- `src/EarthParams.cs`: `RockFloorDepth` (proto 93).
+- `src/EarthWorldGen.cs`: mantle to the floor in `GenerateTerrain`, `FillRockFloor` in the Vegetation pass;
+  `RockFloorTop` and the `RockFloorReading` prefix for prospecting (tall.3).
+- `src/EarthOres.cs`, `src/EarthOreGenerator.cs`: Earth's readings leave out the floor (tall.3).
+- `src/Core/VerticalTerrainOptions.cs`: budget "160" (sea level min(160, height / 2)).
+- `src/SelfTest.cs`, `src/EarthMapConfig.cs`: `SelfTest.MeasureStorage` logs how chunks are stored.
+- `tests/EarthWorldOptionsTests`: height slider values (int and string, bad values), rock floor choices and
+  serialisation, older saves.
+- `tools/setup-1to10-world.py`: a dedicated-server data folder for a 1:10 test world through the Earth-tab path.
+
+## Verification
+
+3 November, a dedicated server (VS 1.22.7) built by `tools/setup-1to10-world.py`: Earth 1.0.3-tall.2 (packaged by hand
+from the Release build with the installed 1.0.3-placement.1's file list and data-pack index, because the packaging script
+refuses a test version against data packs 1.0.2), data packs 1.0.2, Cylinder World 1.0.4, Hydrology 0.6.2-rivers.7 and the
+author's other mods. World 5,120,000 × 2,048,000, seed 12345, the **World generation tab's height 256** and the **Earth
+tab's 1024** (stored as an int, as the menu's slider stores it), Sea level 160, Linear, Rock floor Automatic, spawn
+46.02° N 7.75° E (near Zermatt).
+
+- The save loaded at 256, then "Earth height: world height 1024 from the Earth tab (the World generation tab's was 256)".
+  Vanilla's sea level for the height was 441, so vanilla saw 1024 at AssetsFinalize.
+- Self-test: world 5120000 × 2048000 × 1024; sea level 160 in Earth and Cylinder World (PASS); 38 sea-level deposit
+  generators scaled for 160 (PASS); real lapse (PASS). Layout: 11,377.8 blocks per degree, Everest y 1022, deepest sea
+  floor y 112.
+- Spawn: 289 chunk columns in 58.9 s; terrain y 321–436, height as the model in 99.8 %. A sample column: granite from
+  y 1 to 222 with no caves or ores, ores and cracked rock above.
+- Storage (`MeasureStorage`), per column of 32 chunks: 4.7 one-block chunks, 7.7 mixed; **223.3 KB unpacked, 11.3 KB
+  compressed**. The mantle floor of the first 1:10 world (tall.1, same place and seed) gave 219.6 KB and 11.3 KB: about
+  one more mixed chunk per column (mantle at y 0 under rock) and the same compressed size.
+- No errors in the server log.
+
+Ores, 3 November ([tall-world ores](../research/tall-world-ores-2026-11-03.md)): four servers (1024 with and without
+the floor, 1024 vanilla ores, 512), the ore audit at eight sites. Every run: sea-level deposits rescaled (441 → 160, 512:
+220 → 110) and `deposit sea agreement: PASS`; no saltpeter above the ground; sea-level deposits at most y 160 with ground
+from y 165. The floor removes sea-level ores under highlands and deep parts of others (Consequences). Prospecting readings
+are identical with and without the floor.
+
+Prospecting, 4 November (tall.3, Release build, same servers and sites; regional and vanilla ores, floor on and off, and
+the tall.2 floor world reopened): with the floor, ores entirely below it read 0 (Zermatt hematite 6.60 → 0, Atacama
+magnetite 4.71 → 0, Alps magnetite with vanilla ores 0.58 → 0); others keep their share above it (Alps native copper
+6.97 → 0.44); sites without a floor read as before. Deposits placed are tall.2's (counts and Y ranges per family at all
+sites, apart from one loose surface block). Reopened tall.2 chunks read as fresh tall.3 or within 2 %. The prefix bound;
+no errors. World-option checks pass up to the data-pack check (no release zips here); regional ore tests pass (464,715
+checks). Not checked: a prospecting mod in the game.
+
+Not checked: the create-world screen itself (the slider's look and tooltips), a graphical client, rock seams between
+columns below the floor, structures below the floor, generation time without two other servers running.
+
+## History
+
+- 3 November 2026: agreed by the author; implemented as Earth 1.0.3-tall.2. Release build passes. The world-option checks
+  pass up to the data-pack check, which stops because this worktree has no release data-pack zips. Headless server
+  checked through the Earth-tab path (Verification).
+- 3 November 2026, 22:56 Europe/Riga: installed at the author's request ("Yes, install it"). `earth-1.0.3-tall.2.zip`
+  (sha256 `03417855…bfad25f7`) replaces `earth-1.0.3-placement.1.zip` (sha256 `d0676427…100b9fef`) in
+  `VintagestoryData/Mods`; placement.1 moved to `VintagestoryData/Backups/earth-before-1.0.3-tall.2-20261103-225603`.
+  Data packs 1.0.2, Cylinder World 1.0.4 and Hydrology 0.6.2-rivers.7 already installed; `ModConfig/earth.json`,
+  client settings and saves unchanged. The game was not running.
+- 3 November 2026: ores checked at the author's question ("does new heights work correct with ores?"): saltpeter
+  correct; the floor removes highland sea-level ores; the prospecting pick doesn't know the floor.
+- 4 November 2026: the author: "Yes, fix the pick", then "only consider that there might be prospecting mods". Readings
+  leave out the floor in 1.0.3-tall.3 (Decision 2, Verification).
+- 4 November 2026, 18:29 Europe/Riga: installed at the author's request ("Yes, install it"). `earth-1.0.3-tall.3.zip`
+  (sha256 `ca7a9c06…89294b1f`; packaged by hand like tall.2: tall.2's file list and data-pack index, the Release
+  build's `EarthMap.dll`, `EarthMap.pdb` and `modinfo.json`, the only files that differ) replaces tall.2 in
+  `VintagestoryData/Mods`; tall.2 moved to `VintagestoryData/Backups/earth-before-1.0.3-tall.3-20261104-182926`. Data
+  packs, companions, settings and saves unchanged; the game was not running. The installed zip itself was not started.
+- 4 November 2026: at the author's word ("Get terrain match GLO data and sample different locations"; earlier "Can we
+  speed up loading?"), combined test build 1.0.3-tall.4 on `claude/tall-glo90` (from `claude/glo90-elevation`
+  `d570834`): this branch's changes (tall.3), 0051's GLO-90 prototype (glo90.4) and `claude/river-index-speed`
+  (`12b7fe7`). Its Earth tab has both World height and Land heights. On the author's world settings (4,096,000, height
+  1024, sea level 110, linear) the start-up model takes 14–16 s instead of 79–93 s, with byte-identical terrain;
+  [terrain-vs-glo90-2026-11-04](../research/terrain-vs-glo90-2026-11-04.md). `release/earth-1.0.3-tall.4.zip` (sha256
+  `3020ca8d…8c373534`) packaged like tall.3; not installed.
+- 4 November 2026, 22:27 Europe/Riga: installed at the author's request ("Yes, install tall.4").
+  `earth-1.0.3-tall.4.zip` (sha256 `3020ca8d…8c373534`, the same file the test servers ran) replaces tall.3 in
+  `VintagestoryData/Mods`. tall.3 moved to `VintagestoryData/Backups/earth-before-1.0.3-tall.4-20261104-222709`.
+  Data packs, companions, settings and saves unchanged; the game was not running. GLO-90 tiles come from the
+  author's converted store (all 26,475 tiles), so new worlds on GLO-90 need no downloads.
+- 5 November 2026: [0053](0053-scales-included-glo90-and-glo90-rivers.md) (proposed, test build tall.5) adds exact scales with Automatic settings, included GLO-90 heights and rivers on GLO-90.

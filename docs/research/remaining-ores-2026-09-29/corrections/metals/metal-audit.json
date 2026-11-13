@@ -1,0 +1,680 @@
+[
+  {
+    "commodity": "Fe",
+    "label": "Iron",
+    "existing_mrds_records": 23286,
+    "existing_specialist_records": 1675,
+    "new_complement_records": 328,
+    "country_checks": 14,
+    "named_province_checks": 11,
+    "missing_country_witnesses": [
+      "Latvia"
+    ],
+    "empty_province_windows": [
+      "Staicele"
+    ],
+    "verdict": "INCOMPLETE - explicit geographic alarms remain",
+    "mineral_systems": "Banded iron formations, iron-oxide apatite, skarn, sedimentary ironstone; bog iron is a separate wetland/peat system.",
+    "mineral_form_and_depth_caveat": "Deep concealed and low-grade iron remains evidence; do not replace Staicele basement ore with shallow limonite.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=113",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://mrdata.usgs.gov/major-deposits/"
+    ],
+    "mrds_source_status_counts": {
+      "Occurrence": 5754,
+      "Past Producer": 9690,
+      "Prospect": 3807,
+      "Producer": 1743,
+      "Unknown": 2292
+    },
+    "existing_us_record_share": 0.8219,
+    "post_complement_us_record_share": 0.8112,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Au",
+    "label": "Gold",
+    "existing_mrds_records": 83770,
+    "existing_specialist_records": 4488,
+    "new_complement_records": 1482,
+    "country_checks": 12,
+    "named_province_checks": 11,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "Orogenic, epithermal, intrusion-related and paleoplacer systems; alluvial gold requires a source and sediment transport.",
+    "mineral_form_and_depth_caveat": "Historic/exhausted placers and districts matter even when absent from modern mine lists; native gold is not guaranteed by every elemental record.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=95",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://mrdata.usgs.gov/major-deposits/"
+    ],
+    "mrds_source_status_counts": {
+      "Occurrence": 19357,
+      "Producer": 6732,
+      "Prospect": 13605,
+      "Unknown": 8149,
+      "Past Producer": 35927
+    },
+    "existing_us_record_share": 0.8689,
+    "post_complement_us_record_share": 0.8545,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Ag",
+    "label": "Silver",
+    "existing_mrds_records": 50070,
+    "existing_specialist_records": 2716,
+    "new_complement_records": 288,
+    "country_checks": 12,
+    "named_province_checks": 7,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "Epithermal veins and Pb-Zn-Cu polymetallic systems; some sediment-hosted deposits.",
+    "mineral_form_and_depth_caveat": "Byproduct silver is not necessarily native silver or freibergite; historical workings and obsolete production must remain.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=177",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://mrdata.usgs.gov/major-deposits/"
+    ],
+    "mrds_source_status_counts": {
+      "Prospect": 8334,
+      "Occurrence": 10497,
+      "Unknown": 2571,
+      "Past Producer": 24153,
+      "Producer": 4515
+    },
+    "existing_us_record_share": 0.8348,
+    "post_complement_us_record_share": 0.8303,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Pb",
+    "label": "Lead",
+    "existing_mrds_records": 38525,
+    "existing_specialist_records": 1744,
+    "new_complement_records": 307,
+    "country_checks": 11,
+    "named_province_checks": 10,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "MVT, sedimentary-exhalative, Irish-type, VMS, vein and skarn Pb-Zn.",
+    "mineral_form_and_depth_caveat": "Galena versus weathered cerussite requires mineral evidence; deep concealed districts cannot be promoted to surface resources.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=119",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://mrdata.usgs.gov/major-deposits/"
+    ],
+    "mrds_source_status_counts": {
+      "Producer": 3388,
+      "Unknown": 2103,
+      "Occurrence": 7839,
+      "Past Producer": 20254,
+      "Prospect": 4941
+    },
+    "existing_us_record_share": 0.8237,
+    "post_complement_us_record_share": 0.8175,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Zn",
+    "label": "Zinc",
+    "existing_mrds_records": 28050,
+    "existing_specialist_records": 2205,
+    "new_complement_records": 295,
+    "country_checks": 12,
+    "named_province_checks": 8,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "MVT, sedimentary-exhalative, Irish-type and VMS Pb-Zn; weathering zones differ.",
+    "mineral_form_and_depth_caveat": "Elemental zinc is not proof of sphalerite, smithsonite or hemimorphite; trace zinc is not a zinc orebody.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=217",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://mrdata.usgs.gov/major-deposits/"
+    ],
+    "mrds_source_status_counts": {
+      "Unknown": 1524,
+      "Occurrence": 5500,
+      "Prospect": 3763,
+      "Past Producer": 14499,
+      "Producer": 2764
+    },
+    "existing_us_record_share": 0.7819,
+    "post_complement_us_record_share": 0.7743,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Bi",
+    "label": "Bismuth",
+    "existing_mrds_records": 1016,
+    "existing_specialist_records": 167,
+    "new_complement_records": 19,
+    "country_checks": 3,
+    "named_province_checks": 6,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "Granite-related W-Sn-Mo, intrusion-related Au and polymetallic sulfide systems.",
+    "mineral_form_and_depth_caveat": "MCS refinery countries are not local ore locations; common unreported byproduct/trace Bi makes pure commodity mapping underinclusive.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=59",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://mrdata.usgs.gov/major-deposits/"
+    ],
+    "mrds_source_status_counts": {
+      "Past Producer": 439,
+      "Prospect": 133,
+      "Occurrence": 229,
+      "Producer": 190,
+      "Unknown": 25
+    },
+    "existing_us_record_share": 0.6923,
+    "post_complement_us_record_share": 0.6814,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Ni",
+    "label": "Nickel",
+    "existing_mrds_records": 2702,
+    "existing_specialist_records": 8954,
+    "new_complement_records": 186,
+    "country_checks": 13,
+    "named_province_checks": 11,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "Magmatic Ni-Cu sulfides and ultramafic laterites are separate mineral systems.",
+    "mineral_form_and_depth_caveat": "Laterite cannot become pentlandite. Retain exploration showings, depleted sulfide workings and uneconomic disseminated ore.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=137",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://mrdata.usgs.gov/major-deposits/"
+    ],
+    "mrds_source_status_counts": {
+      "Producer": 498,
+      "Occurrence": 994,
+      "Prospect": 595,
+      "Past Producer": 497,
+      "Unknown": 118
+    },
+    "existing_us_record_share": 0.2387,
+    "post_complement_us_record_share": 0.2349,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Cr",
+    "label": "Chromium",
+    "existing_mrds_records": 5640,
+    "existing_specialist_records": 8225,
+    "new_complement_records": 13,
+    "country_checks": 9,
+    "named_province_checks": 9,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "Podiform ophiolitic chromite versus stratiform layered-intrusion chromite.",
+    "mineral_form_and_depth_caveat": "Do not mark all ultramafic rock as chromite; small pods and subeconomic disseminations differ from giant layered deposits.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=71",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://mrdata.usgs.gov/major-deposits/"
+    ],
+    "mrds_source_status_counts": {
+      "Producer": 772,
+      "Occurrence": 2026,
+      "Past Producer": 1674,
+      "Prospect": 827,
+      "Unknown": 341
+    },
+    "existing_us_record_share": 0.7099,
+    "post_complement_us_record_share": 0.7093,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Ti",
+    "label": "Titanium",
+    "existing_mrds_records": 2304,
+    "existing_specialist_records": 322,
+    "new_complement_records": 299,
+    "country_checks": 13,
+    "named_province_checks": 10,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "Anorthosite/mafic Fe-Ti oxides, weathering and source-linked heavy-mineral sands.",
+    "mineral_form_and_depth_caveat": "Titanium minerals/concentrates not titanium sponge/refinery production; mineral sands do not identify ilmenite versus rutile.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=203",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://doi.org/10.3133/pp1802"
+    ],
+    "mrds_source_status_counts": {
+      "Occurrence": 934,
+      "Prospect": 444,
+      "Producer": 343,
+      "Past Producer": 408,
+      "Unknown": 175
+    },
+    "existing_us_record_share": 0.6645,
+    "post_complement_us_record_share": 0.6085,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Mn",
+    "label": "Manganese",
+    "existing_mrds_records": 10061,
+    "existing_specialist_records": 221,
+    "new_complement_records": 90,
+    "country_checks": 8,
+    "named_province_checks": 8,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "Sedimentary, weathered/enriched manganese and some hydrothermal systems.",
+    "mineral_form_and_depth_caveat": "Most Mn evidence is oxide ore, not rhodochrosite; Latvia Mn-oxide assays are associated mineralization, not a separate proven Mn mine.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=129",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://doi.org/10.3133/pp1802"
+    ],
+    "mrds_source_status_counts": {
+      "Past Producer": 3807,
+      "Occurrence": 3142,
+      "Prospect": 1744,
+      "Producer": 795,
+      "Unknown": 573
+    },
+    "existing_us_record_share": 0.81,
+    "post_complement_us_record_share": 0.8036,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Hg",
+    "label": "Mercury",
+    "existing_mrds_records": 4062,
+    "existing_specialist_records": 148,
+    "new_complement_records": 31,
+    "country_checks": 9,
+    "named_province_checks": 9,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [
+      "Pulganbar"
+    ],
+    "verdict": "INCOMPLETE - explicit geographic alarms remain",
+    "mineral_systems": "Low-temperature hydrothermal cinnabar in volcanic/structural belts.",
+    "mineral_form_and_depth_caveat": "A modern production filter erases Almaden/Idrija and other closed historic sources. Recycled Hg, export and byproduct recovery are not new cinnabar deposits.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=131",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://mrdata.usgs.gov/major-deposits/"
+    ],
+    "mrds_source_status_counts": {
+      "Unknown": 411,
+      "Prospect": 599,
+      "Occurrence": 1249,
+      "Past Producer": 1477,
+      "Producer": 326
+    },
+    "existing_us_record_share": 0.8846,
+    "post_complement_us_record_share": 0.8781,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "W",
+    "label": "Tungsten",
+    "existing_mrds_records": 8144,
+    "existing_specialist_records": 203,
+    "new_complement_records": 84,
+    "country_checks": 13,
+    "named_province_checks": 10,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "Evolved intrusive greisen/veins and contact skarns.",
+    "mineral_form_and_depth_caveat": "Scheelite is not wolframite. Granite fertility, contacts, veins, depth and weathered/placer derivatives must be kept separately.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "GSC World Tin and Tungsten OF7688; national survey veins/placers and historical inventories",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=205",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://mrdata.usgs.gov/major-deposits/"
+    ],
+    "mrds_source_status_counts": {
+      "Occurrence": 2396,
+      "Prospect": 1145,
+      "Unknown": 502,
+      "Producer": 876,
+      "Past Producer": 3225
+    },
+    "existing_us_record_share": 0.8434,
+    "post_complement_us_record_share": 0.835,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "U",
+    "label": "Uranium",
+    "existing_mrds_records": 15364,
+    "existing_specialist_records": 278,
+    "new_complement_records": 99,
+    "country_checks": 13,
+    "named_province_checks": 14,
+    "missing_country_witnesses": [
+      "Ukraine",
+      "Uzbekistan"
+    ],
+    "empty_province_windows": [
+      "Chu Sarysu",
+      "Lagoa Real",
+      "Kirovohrad",
+      "Kyzylkum"
+    ],
+    "verdict": "INCOMPLETE - explicit geographic alarms remain",
+    "mineral_systems": "Sandstone redox, unconformity-related, IOCG, alaskite and sedimentary/phosphate systems.",
+    "mineral_form_and_depth_caveat": "MCS nonfuel tables do not supply a full U inventory; UDEPO includes occurrences and low-grade/unconventional resources, but is not acquired here.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "IAEA UDEPO/NEA and national surveys including unconventional/low-grade/deep resources",
+    "source_urls": [
+      "https://infcis.iaea.org/UTHDEPO/Deposits",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://mrdata.usgs.gov/major-deposits/"
+    ],
+    "mrds_source_status_counts": {
+      "Occurrence": 5102,
+      "Unknown": 1482,
+      "Past Producer": 5267,
+      "Prospect": 1832,
+      "Producer": 1681
+    },
+    "existing_us_record_share": 0.9527,
+    "post_complement_us_record_share": 0.9467,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Pt",
+    "label": "Platinum/PGE",
+    "existing_mrds_records": 2933,
+    "existing_specialist_records": 5381,
+    "new_complement_records": 181,
+    "country_checks": 5,
+    "named_province_checks": 8,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "Layered mafic intrusions, Ni-Cu sulfide systems and derived placers.",
+    "mineral_form_and_depth_caveat": "PGE or Pd-only evidence is not native platinum/sperrylite; historical alluvials need their own source-to-placer evidence.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=149",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://doi.org/10.3133/pp1802"
+    ],
+    "mrds_source_status_counts": {
+      "Occurrence": 806,
+      "Past Producer": 1077,
+      "Prospect": 291,
+      "Unknown": 70,
+      "Producer": 689
+    },
+    "existing_us_record_share": 0.299,
+    "post_complement_us_record_share": 0.2943,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "V",
+    "label": "Vanadium",
+    "existing_mrds_records": 4837,
+    "existing_specialist_records": 207,
+    "new_complement_records": 114,
+    "country_checks": 6,
+    "named_province_checks": 8,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "Titaniferous magnetite, U-V sandstone and some weathered lead vanadates.",
+    "mineral_form_and_depth_caveat": "Vanadium in oil/ash/phosphate is not vanadinite. Australia has reserves despite zero production in the cited table.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=207",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://doi.org/10.3133/pp1802"
+    ],
+    "mrds_source_status_counts": {
+      "Producer": 532,
+      "Past Producer": 2680,
+      "Occurrence": 956,
+      "Prospect": 293,
+      "Unknown": 376
+    },
+    "existing_us_record_share": 0.9114,
+    "post_complement_us_record_share": 0.8947,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Mo",
+    "label": "Molybdenum",
+    "existing_mrds_records": 4797,
+    "existing_specialist_records": 307,
+    "new_complement_records": 40,
+    "country_checks": 15,
+    "named_province_checks": 9,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "Porphyry Mo and porphyry Cu-Mo; granite-related skarn/vein systems.",
+    "mineral_form_and_depth_caveat": "Low-grade bulk-mined porphyry presence does not prove hand-recoverable ore. Associated Mo can be missed when source commodities are primary-only.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=135",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://mrdata.usgs.gov/major-deposits/"
+    ],
+    "mrds_source_status_counts": {
+      "Occurrence": 1775,
+      "Past Producer": 1393,
+      "Prospect": 958,
+      "Unknown": 201,
+      "Producer": 470
+    },
+    "existing_us_record_share": 0.7925,
+    "post_complement_us_record_share": 0.7864,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Sb",
+    "label": "Antimony",
+    "existing_mrds_records": 5326,
+    "existing_specialist_records": 448,
+    "new_complement_records": 48,
+    "country_checks": 18,
+    "named_province_checks": 10,
+    "missing_country_witnesses": [
+      "Pakistan"
+    ],
+    "empty_province_windows": [
+      "Krinj"
+    ],
+    "verdict": "INCOMPLETE - explicit geographic alarms remain",
+    "mineral_systems": "Hydrothermal Sb-Au veins, polymetallic replacements and some Pb-Zn byproducts.",
+    "mineral_form_and_depth_caveat": "Stibnite or antimony content does not prove tetrahedrite/freibergite; old workings and unmined resources remain relevant.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=47",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://doi.org/10.3133/pp1802"
+    ],
+    "mrds_source_status_counts": {
+      "Occurrence": 1250,
+      "Past Producer": 2314,
+      "Unknown": 204,
+      "Prospect": 748,
+      "Producer": 810
+    },
+    "existing_us_record_share": 0.765,
+    "post_complement_us_record_share": 0.7595,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Al",
+    "label": "Aluminium/bauxite",
+    "existing_mrds_records": 3102,
+    "existing_specialist_records": 129,
+    "new_complement_records": 46,
+    "country_checks": 13,
+    "named_province_checks": 12,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "Residual lateritic bauxite and karst bauxite; parent material, long weathering history and preservation are required.",
+    "mineral_form_and_depth_caveat": "Exclude refinery-only countries from bauxite alarms. Aluminium-bearing clay/anorthosite/alunite is real subeconomic Al evidence, not bauxite.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=55",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://mrdata.usgs.gov/major-deposits/"
+    ],
+    "mrds_source_status_counts": {
+      "Producer": 348,
+      "Prospect": 724,
+      "Occurrence": 1000,
+      "Past Producer": 772,
+      "Unknown": 258
+    },
+    "existing_us_record_share": 0.5949,
+    "post_complement_us_record_share": 0.5865,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Cu",
+    "label": "Copper",
+    "existing_mrds_records": 44378,
+    "existing_specialist_records": 3420,
+    "new_complement_records": 652,
+    "country_checks": 13,
+    "named_province_checks": 14,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "Porphyry, sediment-hosted, VMS, IOCG, skarn and native-copper volcanic systems.",
+    "mineral_form_and_depth_caveat": "2015 global permissive polygons cover porphyry and sediment-hosted Cu, not all Cu systems. Native copper, oxidized ore and deep sulfide accessibility differ.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "Only Cu porphyry/sediment-hosted expert tracts already available; no universal all-system potential polygon",
+    "next_source": "National geological survey occurrence/mineral-system and historical inventories; PP1802/GA complements remain selective",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=77",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://mrdata.usgs.gov/major-deposits/"
+    ],
+    "mrds_source_status_counts": {
+      "Producer": 3934,
+      "Occurrence": 12159,
+      "Past Producer": 18347,
+      "Prospect": 7564,
+      "Unknown": 2374
+    },
+    "existing_us_record_share": 0.7335,
+    "post_complement_us_record_share": 0.7236,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  },
+  {
+    "commodity": "Sn",
+    "label": "Tin",
+    "existing_mrds_records": 2749,
+    "existing_specialist_records": 0,
+    "new_complement_records": 247,
+    "country_checks": 18,
+    "named_province_checks": 11,
+    "missing_country_witnesses": [],
+    "empty_province_windows": [],
+    "verdict": "PARTIAL - major sampled provinces have witnesses; global completeness NOT established",
+    "mineral_systems": "Tin-fertile evolved granites, greisen/veins/skarn and source-linked alluvial or coastal cassiterite.",
+    "mineral_form_and_depth_caveat": "Modern producers omit historic Cornwall/Erzgebirge and exhausted placers. PP1802 adds global Sn; GSC World Tin/Tungsten OF7688 remains a priority detailed source.",
+    "historical_coverage": "Incomplete; source Past Producer is not proof of ancient extraction and modern inactivity does not erase ore",
+    "subeconomic_coverage": "Incomplete; retain occurrence/exploration/deep concealed evidence, unknown economics stays null, no production/reserve cutoff applied",
+    "permissiveness_coverage": "No comprehensive audited global permissive polygon acquired; country/point buffers are not geological potential",
+    "next_source": "GSC World Tin and Tungsten OF7688; national survey veins/placers and historical inventories",
+    "source_urls": [
+      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf#page=199",
+      "https://www.ga.gov.au/aimr2025/australias-identified-mineral-resources",
+      "https://doi.org/10.3133/pp1802"
+    ],
+    "mrds_source_status_counts": {
+      "Producer": 684,
+      "Past Producer": 852,
+      "Occurrence": 738,
+      "Prospect": 330,
+      "Unknown": 145
+    },
+    "existing_us_record_share": 0.5333,
+    "post_complement_us_record_share": 0.495,
+    "record_share_caveat": "Source-record counts are reporting-density diagnostics, not geological abundance, independent deposits or probability."
+  }
+]

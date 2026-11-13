@@ -1,0 +1,10 @@
+[
+ {"Name":"vienna","Kind":"lowland","Lat":48.17,"Lon":16.9,"Radius":2},
+ {"Name":"pannonia","Kind":"lowland","Lat":47.2,"Lon":19.8,"Radius":2},
+ {"Name":"alps","Kind":"mountain","Lat":46.45,"Lon":8.1,"Radius":2},
+ {"Name":"zermatt","Kind":"mountain","Lat":46.02,"Lon":7.75,"Radius":2},
+ {"Name":"ethiopia","Kind":"highland","Lat":9.0,"Lon":38.7,"Radius":2},
+ {"Name":"tibet","Kind":"highland","Lat":33.0,"Lon":88.0,"Radius":2},
+ {"Name":"atacama","Kind":"highland","Lat":-23.0,"Lon":-69.5,"Radius":2},
+ {"Name":"deadsea","Kind":"below-sea","Lat":31.45,"Lon":35.4,"Radius":2}
+]

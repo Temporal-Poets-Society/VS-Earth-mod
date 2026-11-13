@@ -1,0 +1,816 @@
+{
+  "mod": {
+    "modid": 1438,
+    "assetid": 7545,
+    "name": "Fauna of the Stone Age: Caninae",
+    "text": "<p><span style=\"font-weight: 400;\">A collection of dogs from the subfamily Caninae, these animals will act as possible predators for farm animals and the player, elusive prey sources or even pets.&nbsp;</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:</span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" style=\"border-spacing: 0px; height: 2455px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col width=\"153\" /><col width=\"184\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"132\" /><col width=\"100\" /><col width=\"175\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"189\" /></colgroup>\n<tbody>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 152.998px;\">Common Name</td>\n<td style=\"height: 19px; width: 183.993px;\">Scientific name</td>\n<td style=\"height: 19px; width: 99.9884px;\">Category</td>\n<td style=\"height: 19px; width: 99.9884px;\">Weight</td>\n<td style=\"height: 19px; width: 99.9884px;\">Health</td>\n<td style=\"height: 19px; width: 99.9884px;\">Height</td>\n<td style=\"height: 19px; width: 99.9884px;\">Damage</td>\n<td style=\"height: 19px; width: 99.9884px;\">Temp</td>\n<td style=\"height: 19px; width: 99.9884px;\">Preciptation</td>\n<td style=\"height: 19px; width: 131.991px;\">Foliage Needs</td>\n<td style=\"height: 19px; width: 99.9884px;\">Altitude</td>\n<td style=\"height: 19px; width: 174.988px;\">Group Size</td>\n<td style=\"height: 19px; width: 99.9884px;\">Meat Drops</td>\n<td style=\"height: 19px; width: 99.9884px;\">Fat Drops</td>\n<td style=\"height: 19px; width: 99.9884px;\">Hide Drops</td>\n<td style=\"height: 19px; width: 99.9884px;\">Movement</td>\n<td style=\"height: 19px; width: 188.993px;\">Diet</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Dire Wolf</td>\n<td style=\"height: 39px; width: 183.993px;\">Aenocyon dirus <strong class=\"Yjhzub\" data-processed=\"true\">&dagger;</strong></td>\n<td style=\"height: 39px; width: 99.9884px;\">Canina</td>\n<td style=\"height: 39px; width: 99.9884px;\">68/10</td>\n<td style=\"height: 39px; width: 99.9884px;\">15/5</td>\n<td style=\"height: 39px; width: 99.9884px;\">.97/ .9 shoulders</td>\n<td style=\"height: 39px; width: 99.9884px;\">7 tier 2</td>\n<td style=\"height: 39px; width: 99.9884px;\">4 to 28</td>\n<td style=\"height: 39px; width: 99.9884px;\">.25-1.0</td>\n<td style=\"height: 39px; width: 131.991px;\">all</td>\n<td style=\"height: 39px; width: 99.9884px;\">.9-1.62</td>\n<td style=\"height: 39px; width: 174.988px;\">1-2 (M&amp;F) 2-6 (M&amp;F&amp;B)</td>\n<td style=\"height: 39px; width: 99.9884px;\">6+-2</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">4 Med, 1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">Egg, Meat</td>\n</tr>\n<tr style=\"height: 58px;\">\n<td style=\"height: 58px; width: 152.998px;\">Golden jackal</td>\n<td style=\"height: 58px; width: 183.993px;\">Canis aureus</td>\n<td style=\"height: 58px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 58px; width: 99.9884px;\">10/9/1</td>\n<td style=\"height: 58px; width: 99.9884px;\">5/4/3</td>\n<td style=\"height: 58px; width: 99.9884px;\">.5 shoulders</td>\n<td style=\"height: 58px; width: 99.9884px;\">3 tier 1</td>\n<td style=\"height: 58px; width: 99.9884px;\">12 to 36</td>\n<td style=\"height: 58px; width: 99.9884px;\">.1-1.0</td>\n<td style=\"height: 58px; width: 131.991px;\">.25-1.0 shrub</td>\n<td style=\"height: 58px; width: 99.9884px;\">.9-1.6</td>\n<td style=\"height: 58px; width: 174.988px;\">1-2 (M&amp;F), 2-6 (M&amp;F&amp;B)</td>\n<td style=\"height: 58px; width: 99.9884px;\">1+-0.5</td>\n<td style=\"height: 58px; width: 99.9884px;\">0</td>\n<td style=\"height: 58px; width: 99.9884px;\">1 Med, 1 s</td>\n<td style=\"height: 58px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 58px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grass, Insect, Meat, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 58px;\">\n<td style=\"height: 58px; width: 152.998px;\">Dog</td>\n<td style=\"height: 58px; width: 183.993px;\">Canis familiaris</td>\n<td style=\"height: 58px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 58px; width: 99.9884px;\">40/36/5</td>\n<td style=\"height: 58px; width: 99.9884px;\">10/4</td>\n<td style=\"height: 58px; width: 99.9884px;\">.85/.8 shoulders</td>\n<td style=\"height: 58px; width: 99.9884px;\">6 tier 1</td>\n<td style=\"height: 58px; width: 99.9884px;\">N/A</td>\n<td style=\"height: 58px; width: 99.9884px;\">N/A</td>\n<td style=\"height: 58px; width: 131.991px;\">N/A</td>\n<td style=\"height: 58px; width: 99.9884px;\">N/A</td>\n<td style=\"height: 58px; width: 174.988px;\">N/A</td>\n<td style=\"height: 58px; width: 99.9884px;\">3+-1</td>\n<td style=\"height: 58px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 58px; width: 99.9884px;\">3 M, 1 s</td>\n<td style=\"height: 58px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 58px; width: 188.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 77px;\">\n<td style=\"height: 77px; width: 152.998px;\">Coyote</td>\n<td style=\"height: 77px; width: 183.993px;\">Canis latrans</td>\n<td style=\"height: 77px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 77px; width: 99.9884px;\">14/12/1</td>\n<td style=\"height: 77px; width: 99.9884px;\">5/3</td>\n<td style=\"height: 77px; width: 99.9884px;\">.61 shoulder</td>\n<td style=\"height: 77px; width: 99.9884px;\">4 tier 1</td>\n<td style=\"height: 77px; width: 99.9884px;\">-14 to 36</td>\n<td style=\"height: 77px; width: 99.9884px;\">0.1-1.0</td>\n<td style=\"height: 77px; width: 131.991px;\">0-.75 forest</td>\n<td style=\"height: 77px; width: 99.9884px;\">.9-1.6</td>\n<td style=\"height: 77px; width: 174.988px;\">1 (M&amp;F), 2-6 (M&amp;F)</td>\n<td style=\"height: 77px; width: 99.9884px;\">2+-1</td>\n<td style=\"height: 77px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">1 M, 1 s</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 77px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 152.998px;\">African wolf</td>\n<td style=\"height: 19px; width: 183.993px;\">Canis lupaster</td>\n<td style=\"height: 19px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 99.9884px;\">10/1</td>\n<td style=\"height: 19px; width: 99.9884px;\">5/3</td>\n<td style=\"height: 19px; width: 99.9884px;\">.4 shoulders</td>\n<td style=\"height: 19px; width: 99.9884px;\">3 tier 1</td>\n<td style=\"height: 19px; width: 99.9884px;\">14 to 44</td>\n<td style=\"height: 19px; width: 99.9884px;\">.1-.75</td>\n<td style=\"height: 19px; width: 131.991px;\">0-.45 forest</td>\n<td style=\"height: 19px; width: 99.9884px;\">.9-1.5</td>\n<td style=\"height: 19px; width: 174.988px;\">1-2 (M&amp;F), 2-6 (M&amp;F&amp;B)</td>\n<td style=\"height: 19px; width: 99.9884px;\">1+-0.5</td>\n<td style=\"height: 19px; width: 99.9884px;\">0</td>\n<td style=\"height: 19px; width: 99.9884px;\">1 M, 1 s</td>\n<td style=\"height: 19px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 19px; width: 188.993px;\">Egg, Insect, Meat</td>\n</tr>\n<tr style=\"height: 58px;\">\n<td style=\"height: 58px; width: 152.998px;\">Gray wolf</td>\n<td style=\"height: 58px; width: 183.993px;\">Canis lupus</td>\n<td style=\"height: 58px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 58px; width: 99.9884px;\">40/36/5</td>\n<td style=\"height: 58px; width: 99.9884px;\">11/10/4</td>\n<td style=\"height: 58px; width: 99.9884px;\">.85/.8 shoulders</td>\n<td style=\"height: 58px; width: 99.9884px;\">6 tier 1</td>\n<td style=\"height: 58px; width: 99.9884px;\">-22 to 22</td>\n<td style=\"height: 58px; width: 99.9884px;\">.1-1.0</td>\n<td style=\"height: 58px; width: 131.991px;\">All</td>\n<td style=\"height: 58px; width: 99.9884px;\">.9-1.7</td>\n<td style=\"height: 58px; width: 174.988px;\">1-2 (M&amp;F), 4-12 (M&amp;F&amp;B)</td>\n<td style=\"height: 58px; width: 99.9884px;\">3+-1</td>\n<td style=\"height: 58px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 58px; width: 99.9884px;\">3 Med, 1 s</td>\n<td style=\"height: 58px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 58px; width: 188.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Arctic wolf</td>\n<td style=\"height: 39px; width: 183.993px;\">Canis lupus arctos</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">50/46/5</td>\n<td style=\"height: 39px; width: 99.9884px;\">13/12/4</td>\n<td style=\"height: 39px; width: 99.9884px;\">.85/.8 shoulders</td>\n<td style=\"height: 39px; width: 99.9884px;\">7 tier 2</td>\n<td style=\"height: 39px; width: 99.9884px;\">-30 to -15</td>\n<td style=\"height: 39px; width: 99.9884px;\">.1-1.0</td>\n<td style=\"height: 39px; width: 131.991px;\">All</td>\n<td style=\"height: 39px; width: 99.9884px;\">.9-1.4</td>\n<td style=\"height: 39px; width: 174.988px;\">1-2 (M&amp;F), 4-12 (M&amp;F&amp;B)</td>\n<td style=\"height: 39px; width: 99.9884px;\">4+-1</td>\n<td style=\"height: 39px; width: 99.9884px;\">2+-0.6</td>\n<td style=\"height: 39px; width: 99.9884px;\">3 Med, 1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">Egg, Fish, Insect, Meat</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Dingo</td>\n<td style=\"height: 39px; width: 183.993px;\">Canis lupus dingo</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">16/14/2</td>\n<td style=\"height: 39px; width: 99.9884px;\">6/5/3</td>\n<td style=\"height: 39px; width: 99.9884px;\">.6/.55 shoulders</td>\n<td style=\"height: 39px; width: 99.9884px;\">4 tier 1</td>\n<td style=\"height: 39px; width: 99.9884px;\">10 to 36</td>\n<td style=\"height: 39px; width: 99.9884px;\">.1-0.8</td>\n<td style=\"height: 39px; width: 131.991px;\">All</td>\n<td style=\"height: 39px; width: 99.9884px;\">.9-1.7</td>\n<td style=\"height: 39px; width: 174.988px;\">1-2 (M&amp;F), 4-12 (M&amp;F&amp;B)</td>\n<td style=\"height: 39px; width: 99.9884px;\">2+-1</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">1 Med, 1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">Egg, Fish, Insect, Meat</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Timber wolf</td>\n<td style=\"height: 39px; width: 183.993px;\">Canis lycaon</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">30/23/5</td>\n<td style=\"height: 39px; width: 99.9884px;\">8/7/4</td>\n<td style=\"height: 39px; width: 99.9884px;\">.81/.7 shoulders</td>\n<td style=\"height: 39px; width: 99.9884px;\">5t1/4t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">-8 to 6</td>\n<td style=\"height: 39px; width: 99.9884px;\">.25-1.0</td>\n<td style=\"height: 39px; width: 131.991px;\">All</td>\n<td style=\"height: 39px; width: 99.9884px;\">.9-1.7</td>\n<td style=\"height: 39px; width: 174.988px;\">1-2 (M&amp;F), 4-12 (M&amp;F&amp;B)</td>\n<td style=\"height: 39px; width: 99.9884px;\">2+-1</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">3 M, 1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">Berrybush, Egg, Fruit, Meat</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Red wolf</td>\n<td style=\"height: 39px; width: 183.993px;\">Canis rufus</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">29/25/5</td>\n<td style=\"height: 39px; width: 99.9884px;\">8/7/4</td>\n<td style=\"height: 39px; width: 99.9884px;\">.66 shoulder</td>\n<td style=\"height: 39px; width: 99.9884px;\">5t1, 4t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">8 to 28</td>\n<td style=\"height: 39px; width: 99.9884px;\">0.1-1.0</td>\n<td style=\"height: 39px; width: 131.991px;\">All</td>\n<td style=\"height: 39px; width: 99.9884px;\">.9-1.7</td>\n<td style=\"height: 39px; width: 174.988px;\">1-2 (M&amp;F), 4-12 (M&amp;F&amp;B)</td>\n<td style=\"height: 39px; width: 99.9884px;\">2+-1</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">2 M, 1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">Egg, Fish, Insect, Meat</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Ethiopian wolf</td>\n<td style=\"height: 39px; width: 183.993px;\">Canis simensis</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">17/13/4</td>\n<td style=\"height: 39px; width: 99.9884px;\">6/5/3</td>\n<td style=\"height: 39px; width: 99.9884px;\">.62/.53 shoulders</td>\n<td style=\"height: 39px; width: 99.9884px;\">4t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">12 to 22</td>\n<td style=\"height: 39px; width: 99.9884px;\">.25-1.0</td>\n<td style=\"height: 39px; width: 131.991px;\">0-.5 trees</td>\n<td style=\"height: 39px; width: 99.9884px;\">1.5-1.9</td>\n<td style=\"height: 39px; width: 174.988px;\">1(M&amp;F) 2-20 (M&amp;F&amp;B)</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.5</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">1 M, 1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">Egg, Grass, Meat</td>\n</tr>\n<tr style=\"height: 58px;\">\n<td style=\"height: 58px; width: 152.998px;\">Dhole</td>\n<td style=\"height: 58px; width: 183.993px;\">Cuon alpinus</td>\n<td style=\"height: 58px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 58px; width: 99.9884px;\">18/14/4</td>\n<td style=\"height: 58px; width: 99.9884px;\">6/5/3</td>\n<td style=\"height: 58px; width: 99.9884px;\">.5 shoulders</td>\n<td style=\"height: 58px; width: 99.9884px;\">4t1</td>\n<td style=\"height: 58px; width: 99.9884px;\">12 to 44</td>\n<td style=\"height: 58px; width: 99.9884px;\">.25-1.0</td>\n<td style=\"height: 58px; width: 131.991px;\">.25-1.0</td>\n<td style=\"height: 58px; width: 99.9884px;\">1.4-1.9</td>\n<td style=\"height: 58px; width: 174.988px;\">3-5(M&amp;F), 5-12(M&amp;F&amp;B)</td>\n<td style=\"height: 58px; width: 99.9884px;\">1+-0.5</td>\n<td style=\"height: 58px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 58px; width: 99.9884px;\">1 m, 1 s</td>\n<td style=\"height: 58px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 58px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grass, Insect, Meat, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 58px;\">\n<td style=\"height: 58px; width: 152.998px;\">Sardinian dhole</td>\n<td style=\"height: 58px; width: 183.993px;\">Cynotherium sardous <strong class=\"Yjhzub\" data-processed=\"true\">&dagger;</strong></td>\n<td style=\"height: 58px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 58px; width: 99.9884px;\">10/1</td>\n<td style=\"height: 58px; width: 99.9884px;\">5/3</td>\n<td style=\"height: 58px; width: 99.9884px;\">.44 shoulders</td>\n<td style=\"height: 58px; width: 99.9884px;\">4t1</td>\n<td style=\"height: 58px; width: 99.9884px;\">16 to 20</td>\n<td style=\"height: 58px; width: 99.9884px;\">.25-.75</td>\n<td style=\"height: 58px; width: 131.991px;\">.25-1.0</td>\n<td style=\"height: 58px; width: 99.9884px;\">.9-1.4</td>\n<td style=\"height: 58px; width: 174.988px;\">3-5(M&amp;F), 5-12(M&amp;F&amp;B)</td>\n<td style=\"height: 58px; width: 99.9884px;\">1+-0.5</td>\n<td style=\"height: 58px; width: 99.9884px;\">0</td>\n<td style=\"height: 58px; width: 99.9884px;\">1m, 1 s</td>\n<td style=\"height: 58px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 58px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grass, Insect, Meat, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Side-striped jackal</td>\n<td style=\"height: 39px; width: 183.993px;\">Lupulella adusta</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">12/10/3</td>\n<td style=\"height: 39px; width: 99.9884px;\">5/3</td>\n<td style=\"height: 39px; width: 99.9884px;\">.5/.45 shoulders</td>\n<td style=\"height: 39px; width: 99.9884px;\">4t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">18-44</td>\n<td style=\"height: 39px; width: 99.9884px;\">.25-.75</td>\n<td style=\"height: 39px; width: 131.991px;\">.5-1.0 combined</td>\n<td style=\"height: 39px; width: 99.9884px;\">.9-1.4</td>\n<td style=\"height: 39px; width: 174.988px;\">1(M&amp;F), 2-12(M&amp;F&amp;B)</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.5</td>\n<td style=\"height: 39px; width: 99.9884px;\">0</td>\n<td style=\"height: 39px; width: 99.9884px;\">1m, 1s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">\n<div>\n<div>Berry bush, Egg, Fish, Fruit, Insect, Meat</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Black-backed jackal</td>\n<td style=\"height: 39px; width: 183.993px;\">Lupulella mesomelas</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">12/10/3</td>\n<td style=\"height: 39px; width: 99.9884px;\">5/3</td>\n<td style=\"height: 39px; width: 99.9884px;\">.48/.4 shoulders</td>\n<td style=\"height: 39px; width: 99.9884px;\">4t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">12-44</td>\n<td style=\"height: 39px; width: 99.9884px;\">.01-.9</td>\n<td style=\"height: 39px; width: 131.991px;\">0-.5 combined</td>\n<td style=\"height: 39px; width: 99.9884px;\">.9-1.7</td>\n<td style=\"height: 39px; width: 174.988px;\">2(M&amp;F), 2-6(M&amp;F&amp;B)</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.5</td>\n<td style=\"height: 39px; width: 99.9884px;\">0</td>\n<td style=\"height: 39px; width: 99.9884px;\">1m, 1s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">\n<div>\n<div>Berry bush, Egg, Fish, Fruit, Insect, Meat</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">African wild dog</td>\n<td style=\"height: 39px; width: 183.993px;\">Lycaon pictus</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">32/24/2</td>\n<td style=\"height: 39px; width: 99.9884px;\">9/7/3</td>\n<td style=\"height: 39px; width: 99.9884px;\">.75/.7 shoulder</td>\n<td style=\"height: 39px; width: 99.9884px;\">5 t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">24-44</td>\n<td style=\"height: 39px; width: 99.9884px;\">.2-0.75</td>\n<td style=\"height: 39px; width: 131.991px;\">0-.9 forest</td>\n<td style=\"height: 39px; width: 99.9884px;\">1.0-1.8</td>\n<td style=\"height: 39px; width: 174.988px;\">4-9(M&amp;F), 2-20 (M&amp;F&amp;B)</td>\n<td style=\"height: 39px; width: 99.9884px;\">3+-1, 2+-1, 0</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">3M, 1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">Egg, Meat</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Short-eared dog</td>\n<td style=\"height: 39px; width: 183.993px;\">Atelocynus microtis</td>\n<td style=\"height: 39px; width: 99.9884px;\">Cerdocyonina</td>\n<td style=\"height: 39px; width: 99.9884px;\">10/1</td>\n<td style=\"height: 39px; width: 99.9884px;\">5/3</td>\n<td style=\"height: 39px; width: 99.9884px;\">.225/.3 shoulders</td>\n<td style=\"height: 39px; width: 99.9884px;\">3t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">22-44</td>\n<td style=\"height: 39px; width: 99.9884px;\">.75-1.0</td>\n<td style=\"height: 39px; width: 131.991px;\">.5-1.0</td>\n<td style=\"height: 39px; width: 99.9884px;\">1.1-1.8</td>\n<td style=\"height: 39px; width: 174.988px;\">1(M&amp;F)</td>\n<td style=\"height: 39px; width: 99.9884px;\">2+-0.6</td>\n<td style=\"height: 39px; width: 99.9884px;\">0</td>\n<td style=\"height: 39px; width: 99.9884px;\">2 m, 1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Insect, Meat</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Crab-eating fox</td>\n<td style=\"height: 39px; width: 183.993px;\">Cerdocyon thous</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">6/.5</td>\n<td style=\"height: 39px; width: 99.9884px;\">4/2</td>\n<td style=\"height: 39px; width: 99.9884px;\">.4 shoulder</td>\n<td style=\"height: 39px; width: 99.9884px;\">3t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">16-36</td>\n<td style=\"height: 39px; width: 99.9884px;\">.2-.75</td>\n<td style=\"height: 39px; width: 131.991px;\">0-.75 forest</td>\n<td style=\"height: 39px; width: 99.9884px;\">.9-1.2</td>\n<td style=\"height: 39px; width: 174.988px;\">1(M&amp;F), 2(M&amp;F)</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">0</td>\n<td style=\"height: 39px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Insect, Meat</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 58px;\">\n<td style=\"height: 58px; width: 152.998px;\">Maned wolf</td>\n<td style=\"height: 58px; width: 183.993px;\">Chrysocyon brachyurus</td>\n<td style=\"height: 58px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 58px; width: 99.9884px;\">23/5</td>\n<td style=\"height: 58px; width: 99.9884px;\">7/4</td>\n<td style=\"height: 58px; width: 99.9884px;\">1.1 shoulders</td>\n<td style=\"height: 58px; width: 99.9884px;\">4t1</td>\n<td style=\"height: 58px; width: 99.9884px;\">16-36</td>\n<td style=\"height: 58px; width: 99.9884px;\">.25-1.0</td>\n<td style=\"height: 58px; width: 131.991px;\">0-.5 forest</td>\n<td style=\"height: 58px; width: 99.9884px;\">.9-1.6</td>\n<td style=\"height: 58px; width: 174.988px;\">1(M&amp;F)</td>\n<td style=\"height: 58px; width: 99.9884px;\">2+1, 1+-0.3</td>\n<td style=\"height: 58px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 58px; width: 99.9884px;\">2 m, 1 s</td>\n<td style=\"height: 58px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 58px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 152.998px;\">Warrah</td>\n<td style=\"height: 19px; width: 183.993px;\">Dusicyon australis <strong class=\"Yjhzub\" data-processed=\"true\">&dagger;</strong></td>\n<td style=\"height: 19px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 99.9884px;\">20/4</td>\n<td style=\"height: 19px; width: 99.9884px;\">7/3</td>\n<td style=\"height: 19px; width: 99.9884px;\">.6 shoulders</td>\n<td style=\"height: 19px; width: 99.9884px;\">4t1</td>\n<td style=\"height: 19px; width: 99.9884px;\">-2-8</td>\n<td style=\"height: 19px; width: 99.9884px;\">.6-.8</td>\n<td style=\"height: 19px; width: 131.991px;\">0-.1 forest</td>\n<td style=\"height: 19px; width: 99.9884px;\">.9-1.2</td>\n<td style=\"height: 19px; width: 174.988px;\">1(M&amp;F)</td>\n<td style=\"height: 19px; width: 99.9884px;\">2+-1</td>\n<td style=\"height: 19px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 19px; width: 99.9884px;\">2 m, 1 s</td>\n<td style=\"height: 19px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 19px; width: 188.993px;\">Egg, Fish, Insect, Meat</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">South American Wolf</td>\n<td style=\"height: 39px; width: 183.993px;\">Dusicyon avus <strong class=\"Yjhzub\" data-processed=\"true\">&dagger;</strong></td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">35/27/5</td>\n<td style=\"height: 39px; width: 99.9884px;\">10/8/4</td>\n<td style=\"height: 39px; width: 99.9884px;\">.65/.6 shoulders</td>\n<td style=\"height: 39px; width: 99.9884px;\">5t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">4-22</td>\n<td style=\"height: 39px; width: 99.9884px;\">.1-1.0</td>\n<td style=\"height: 39px; width: 131.991px;\">All</td>\n<td style=\"height: 39px; width: 99.9884px;\">.9-1.8</td>\n<td style=\"height: 39px; width: 174.988px;\">1(M&amp;F)</td>\n<td style=\"height: 39px; width: 99.9884px;\">3+-1, 2+-1, 1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">2 m, 1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">Egg, Fish, Insect, Meat</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Culpeo</td>\n<td style=\"height: 39px; width: 183.993px;\">Lycalopex culpaeus</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">11/8/1</td>\n<td style=\"height: 39px; width: 99.9884px;\">5/4/3</td>\n<td style=\"height: 39px; width: 99.9884px;\">.55 shoulder</td>\n<td style=\"height: 39px; width: 99.9884px;\">3t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">0-28</td>\n<td style=\"height: 39px; width: 99.9884px;\">0.05-1.0</td>\n<td style=\"height: 39px; width: 131.991px;\">All</td>\n<td style=\"height: 39px; width: 99.9884px;\">.9-1.8</td>\n<td style=\"height: 39px; width: 174.988px;\">1-2(M&amp;F)</td>\n<td style=\"height: 39px; width: 99.9884px;\">2+-0.6</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">1 m, 1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Insect, Meat</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Darwin's fox</td>\n<td style=\"height: 39px; width: 183.993px;\">Lycalopex fulvipes</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">3/.2</td>\n<td style=\"height: 39px; width: 99.9884px;\">3/2</td>\n<td style=\"height: 39px; width: 99.9884px;\">.59/.5 nose to butt</td>\n<td style=\"height: 39px; width: 99.9884px;\">2t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">10-14</td>\n<td style=\"height: 39px; width: 99.9884px;\">.75-1.0</td>\n<td style=\"height: 39px; width: 131.991px;\">.5-.75 forest</td>\n<td style=\"height: 39px; width: 99.9884px;\">.9-1.4</td>\n<td style=\"height: 39px; width: 174.988px;\">1 (M&amp;F)</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">0</td>\n<td style=\"height: 39px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Insect, Meat</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Patagonian fox</td>\n<td style=\"height: 39px; width: 183.993px;\">Lycalopex griseus</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">4/.2</td>\n<td style=\"height: 39px; width: 99.9884px;\">3/2</td>\n<td style=\"height: 39px; width: 99.9884px;\">.45 shoulder</td>\n<td style=\"height: 39px; width: 99.9884px;\">2t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">0-20</td>\n<td style=\"height: 39px; width: 99.9884px;\">0.1-.5</td>\n<td style=\"height: 39px; width: 131.991px;\">All</td>\n<td style=\"height: 39px; width: 99.9884px;\">.9-1.8</td>\n<td style=\"height: 39px; width: 174.988px;\">1-2(M&amp;F)</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">0</td>\n<td style=\"height: 39px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Insect, Meat</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Pampas fox</td>\n<td style=\"height: 39px; width: 183.993px;\">Lycalopex gymnocercus</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">6/5.5/.5</td>\n<td style=\"height: 39px; width: 99.9884px;\">4/2</td>\n<td style=\"height: 39px; width: 99.9884px;\">.4 shoulder</td>\n<td style=\"height: 39px; width: 99.9884px;\">3t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">14-26</td>\n<td style=\"height: 39px; width: 99.9884px;\">0.1-1</td>\n<td style=\"height: 39px; width: 131.991px;\">All</td>\n<td style=\"height: 39px; width: 99.9884px;\">.9-1.7</td>\n<td style=\"height: 39px; width: 174.988px;\">1(M&amp;F)</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">0</td>\n<td style=\"height: 39px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Insect, Meat</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Sechuran fox</td>\n<td style=\"height: 39px; width: 183.993px;\">Lycalopex sechurae</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">4/.5</td>\n<td style=\"height: 39px; width: 99.9884px;\">3/2</td>\n<td style=\"height: 39px; width: 99.9884px;\">.35 shoulder</td>\n<td style=\"height: 39px; width: 99.9884px;\">2t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">14-36</td>\n<td style=\"height: 39px; width: 99.9884px;\">0-.25</td>\n<td style=\"height: 39px; width: 131.991px;\">0-.5 forest</td>\n<td style=\"height: 39px; width: 99.9884px;\">.9-1.4</td>\n<td style=\"height: 39px; width: 174.988px;\">1(M&amp;F)</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">0</td>\n<td style=\"height: 39px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Insect, Meat</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Hoary fox</td>\n<td style=\"height: 39px; width: 183.993px;\">Lycalopex vetulus</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">3.5/.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">3/2</td>\n<td style=\"height: 39px; width: 99.9884px;\">.3 shoulder</td>\n<td style=\"height: 39px; width: 99.9884px;\">2t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">20-28</td>\n<td style=\"height: 39px; width: 99.9884px;\">.75-1.0</td>\n<td style=\"height: 39px; width: 131.991px;\">0-.5 forest</td>\n<td style=\"height: 39px; width: 99.9884px;\">.95-1.3</td>\n<td style=\"height: 39px; width: 174.988px;\">1(M&amp;F)</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">0</td>\n<td style=\"height: 39px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Insect, Meat</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 152.998px;\">Greater Bush dog</td>\n<td style=\"height: 19px; width: 183.993px;\">Speothos pacivorus <strong class=\"Yjhzub\" data-processed=\"true\">&dagger;</strong></td>\n<td style=\"height: 19px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 99.9884px;\">40/35/5</td>\n<td style=\"height: 19px; width: 99.9884px;\">11/10/4</td>\n<td style=\"height: 19px; width: 99.9884px;\">.6 shoulder</td>\n<td style=\"height: 19px; width: 99.9884px;\">5t1</td>\n<td style=\"height: 19px; width: 99.9884px;\">18-38</td>\n<td style=\"height: 19px; width: 99.9884px;\">.25-1.0</td>\n<td style=\"height: 19px; width: 131.991px;\">.25-1.0 forest</td>\n<td style=\"height: 19px; width: 99.9884px;\">.9-1.5</td>\n<td style=\"height: 19px; width: 174.988px;\">1(M&amp;F), 2-6 (M&amp;F)</td>\n<td style=\"height: 19px; width: 99.9884px;\">3+-1, 1+-0.3</td>\n<td style=\"height: 19px; width: 99.9884px;\">1+-0.6</td>\n<td style=\"height: 19px; width: 99.9884px;\">3 Med, 1 s</td>\n<td style=\"height: 19px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 19px; width: 188.993px;\">Egg, Fish, Insect, Meat</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 152.998px;\">Bush dog</td>\n<td style=\"height: 19px; width: 183.993px;\">Speothos venaticus</td>\n<td style=\"height: 19px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 99.9884px;\">7/6/1</td>\n<td style=\"height: 19px; width: 99.9884px;\">4/3</td>\n<td style=\"height: 19px; width: 99.9884px;\">.3 shoulder</td>\n<td style=\"height: 19px; width: 99.9884px;\">3t1</td>\n<td style=\"height: 19px; width: 99.9884px;\">16-36</td>\n<td style=\"height: 19px; width: 99.9884px;\">.25-1.0</td>\n<td style=\"height: 19px; width: 131.991px;\">.25-1.0 forest</td>\n<td style=\"height: 19px; width: 99.9884px;\">.9-1.6</td>\n<td style=\"height: 19px; width: 174.988px;\">1(M&amp;F), 2-6 (M&amp;F)</td>\n<td style=\"height: 19px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 19px; width: 99.9884px;\">0</td>\n<td style=\"height: 19px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 19px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 19px; width: 188.993px;\">Egg, Fish, Insect, Meat</td>\n</tr>\n<tr style=\"height: 58px;\">\n<td style=\"height: 58px; width: 152.998px;\">Gray fox</td>\n<td style=\"height: 58px; width: 183.993px;\">Urocyon cinereoargenteus</td>\n<td style=\"height: 58px; width: 99.9884px;\">Urocyonini</td>\n<td style=\"height: 58px; width: 99.9884px;\">6/5/.5</td>\n<td style=\"height: 58px; width: 99.9884px;\">4/2</td>\n<td style=\"height: 58px; width: 99.9884px;\">.43 shoulder</td>\n<td style=\"height: 58px; width: 99.9884px;\">3t1</td>\n<td style=\"height: 58px; width: 99.9884px;\">6 to 36</td>\n<td style=\"height: 58px; width: 99.9884px;\">All</td>\n<td style=\"height: 58px; width: 131.991px;\">0-1.0 forest</td>\n<td style=\"height: 58px; width: 99.9884px;\">.9-1.7</td>\n<td style=\"height: 58px; width: 174.988px;\">1-2 (M&amp;F)</td>\n<td style=\"height: 58px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 58px; width: 99.9884px;\">0</td>\n<td style=\"height: 58px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 58px; width: 99.9884px;\">Climbing</td>\n<td style=\"height: 58px; width: 188.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 58px;\">\n<td style=\"height: 58px; width: 152.998px;\">Island fox</td>\n<td style=\"height: 58px; width: 183.993px;\">Urocyon littoralis</td>\n<td style=\"height: 58px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 58px; width: 99.9884px;\">2.5/2/.2</td>\n<td style=\"height: 58px; width: 99.9884px;\">3/2</td>\n<td style=\"height: 58px; width: 99.9884px;\">.15 shoulder</td>\n<td style=\"height: 58px; width: 99.9884px;\">1t1</td>\n<td style=\"height: 58px; width: 99.9884px;\">11-17</td>\n<td style=\"height: 58px; width: 99.9884px;\">.4-.7</td>\n<td style=\"height: 58px; width: 131.991px;\">0-.6 forest</td>\n<td style=\"height: 58px; width: 99.9884px;\">.9-1.1</td>\n<td style=\"height: 58px; width: 174.988px;\">1-2(M&amp;F)</td>\n<td style=\"height: 58px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 58px; width: 99.9884px;\">0</td>\n<td style=\"height: 58px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 58px; width: 99.9884px;\">Climbing</td>\n<td style=\"height: 58px; width: 188.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 77px;\">\n<td style=\"height: 77px; width: 152.998px;\">Common raccoon dog</td>\n<td style=\"height: 77px; width: 183.993px;\">Nyctereutes procyonoides</td>\n<td style=\"height: 77px; width: 99.9884px;\">Vulpini</td>\n<td style=\"height: 77px; width: 99.9884px;\">6/4/.5</td>\n<td style=\"height: 77px; width: 99.9884px;\">4/3/2</td>\n<td style=\"height: 77px; width: 99.9884px;\">.71 length</td>\n<td style=\"height: 77px; width: 99.9884px;\">3t1</td>\n<td style=\"height: 77px; width: 99.9884px;\">-12 to 24</td>\n<td style=\"height: 77px; width: 99.9884px;\">.2-0.9</td>\n<td style=\"height: 77px; width: 131.991px;\">.All</td>\n<td style=\"height: 77px; width: 99.9884px;\">.9-1.6</td>\n<td style=\"height: 77px; width: 174.988px;\">1-2 (M&amp;F)</td>\n<td style=\"height: 77px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 77px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 77px;\">\n<td style=\"height: 77px; width: 152.998px;\">Japanese raccoon dog</td>\n<td style=\"height: 77px; width: 183.993px;\">Nyctereutes viverrinus</td>\n<td style=\"height: 77px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 77px; width: 99.9884px;\">6/4/.5</td>\n<td style=\"height: 77px; width: 99.9884px;\">4/3/2</td>\n<td style=\"height: 77px; width: 99.9884px;\">.71 length</td>\n<td style=\"height: 77px; width: 99.9884px;\">3t1</td>\n<td style=\"height: 77px; width: 99.9884px;\">-6 to 12</td>\n<td style=\"height: 77px; width: 99.9884px;\">.25-0.9</td>\n<td style=\"height: 77px; width: 131.991px;\">All</td>\n<td style=\"height: 77px; width: 99.9884px;\">.9-1.6</td>\n<td style=\"height: 77px; width: 174.988px;\">1-2 (M&amp;F), 2-6 (M&amp;F)</td>\n<td style=\"height: 77px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 77px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 152.998px;\">Bat-eared fox</td>\n<td style=\"height: 39px; width: 183.993px;\">Otocyon megalotis</td>\n<td style=\"height: 39px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 99.9884px;\">5/.5</td>\n<td style=\"height: 39px; width: 99.9884px;\">4/2</td>\n<td style=\"height: 39px; width: 99.9884px;\">.4 shoulder</td>\n<td style=\"height: 39px; width: 99.9884px;\">3t1</td>\n<td style=\"height: 39px; width: 99.9884px;\">12-44</td>\n<td style=\"height: 39px; width: 99.9884px;\">0.1-.5</td>\n<td style=\"height: 39px; width: 131.991px;\">0-.75 forest</td>\n<td style=\"height: 39px; width: 99.9884px;\">.9-1.6</td>\n<td style=\"height: 39px; width: 174.988px;\">1-2 (M&amp;F), 2-6 (M&amp;F)</td>\n<td style=\"height: 39px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 39px; width: 99.9884px;\">0</td>\n<td style=\"height: 39px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 39px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 39px; width: 188.993px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Insect, Meat</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 77px;\">\n<td style=\"height: 77px; width: 152.998px;\">Bengal fox</td>\n<td style=\"height: 77px; width: 183.993px;\">Vulpes bengalensis</td>\n<td style=\"height: 77px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 77px; width: 99.9884px;\">3/.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">3/2</td>\n<td style=\"height: 77px; width: 99.9884px;\">.46 nose to butt</td>\n<td style=\"height: 77px; width: 99.9884px;\">2t1</td>\n<td style=\"height: 77px; width: 99.9884px;\">18-36</td>\n<td style=\"height: 77px; width: 99.9884px;\">.25-.5</td>\n<td style=\"height: 77px; width: 131.991px;\">0-.75 forest</td>\n<td style=\"height: 77px; width: 99.9884px;\">.9-1.4</td>\n<td style=\"height: 77px; width: 174.988px;\">1-2 (M&amp;F), 2-4 (M&amp;F)</td>\n<td style=\"height: 77px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">0</td>\n<td style=\"height: 77px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 77px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 77px;\">\n<td style=\"height: 77px; width: 152.998px;\">Blanford's fox</td>\n<td style=\"height: 77px; width: 183.993px;\">Vulpes cana</td>\n<td style=\"height: 77px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 77px; width: 99.9884px;\">.8/.1</td>\n<td style=\"height: 77px; width: 99.9884px;\">3/1</td>\n<td style=\"height: 77px; width: 99.9884px;\">.8 nose to butt</td>\n<td style=\"height: 77px; width: 99.9884px;\">1t1</td>\n<td style=\"height: 77px; width: 99.9884px;\">14-44</td>\n<td style=\"height: 77px; width: 99.9884px;\">0.1-.3</td>\n<td style=\"height: 77px; width: 131.991px;\">0-.5 forest</td>\n<td style=\"height: 77px; width: 99.9884px;\">.9-1.45</td>\n<td style=\"height: 77px; width: 174.988px;\">1 (M&amp;F), 1-2 (M&amp;F)</td>\n<td style=\"height: 77px; width: 99.9884px;\">0</td>\n<td style=\"height: 77px; width: 99.9884px;\">0</td>\n<td style=\"height: 77px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 77px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 77px;\">\n<td style=\"height: 77px; width: 152.998px;\">Cape fox</td>\n<td style=\"height: 77px; width: 183.993px;\">Vulpes chama</td>\n<td style=\"height: 77px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 77px; width: 99.9884px;\">4/.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">3/2</td>\n<td style=\"height: 77px; width: 99.9884px;\">.35 shoulders</td>\n<td style=\"height: 77px; width: 99.9884px;\">2t1</td>\n<td style=\"height: 77px; width: 99.9884px;\">12-20</td>\n<td style=\"height: 77px; width: 99.9884px;\">0.1-.75</td>\n<td style=\"height: 77px; width: 131.991px;\">0-.5 forest</td>\n<td style=\"height: 77px; width: 99.9884px;\">.9-1.4</td>\n<td style=\"height: 77px; width: 174.988px;\">1 (M&amp;F), 1-2 (M&amp;F)</td>\n<td style=\"height: 77px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">0</td>\n<td style=\"height: 77px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 77px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 77px;\">\n<td style=\"height: 77px; width: 152.998px;\">Corsac fox</td>\n<td style=\"height: 77px; width: 183.993px;\">Vulpes corsac</td>\n<td style=\"height: 77px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.5/.2</td>\n<td style=\"height: 77px; width: 99.9884px;\">3/2</td>\n<td style=\"height: 77px; width: 99.9884px;\">.65 nose to butt</td>\n<td style=\"height: 77px; width: 99.9884px;\">1t1</td>\n<td style=\"height: 77px; width: 99.9884px;\">-8 to 16</td>\n<td style=\"height: 77px; width: 99.9884px;\">0.1-.3</td>\n<td style=\"height: 77px; width: 131.991px;\">0-.5 forest</td>\n<td style=\"height: 77px; width: 99.9884px;\">1.1-1.8</td>\n<td style=\"height: 77px; width: 174.988px;\">1(M&amp;F), 3-6 (M&amp;F)</td>\n<td style=\"height: 77px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">0</td>\n<td style=\"height: 77px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 77px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 77px;\">\n<td style=\"height: 77px; width: 152.998px;\">Tibetan fox</td>\n<td style=\"height: 77px; width: 183.993px;\">Vulpes ferrilata</td>\n<td style=\"height: 77px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 77px; width: 99.9884px;\">5/.5</td>\n<td style=\"height: 77px; width: 99.9884px;\">4/2</td>\n<td style=\"height: 77px; width: 99.9884px;\">.7 nose to butt</td>\n<td style=\"height: 77px; width: 99.9884px;\">3t1</td>\n<td style=\"height: 77px; width: 99.9884px;\">-12 to 8</td>\n<td style=\"height: 77px; width: 99.9884px;\">0.1-.5</td>\n<td style=\"height: 77px; width: 131.991px;\">0-.25 forest</td>\n<td style=\"height: 77px; width: 99.9884px;\">1.6-1.9</td>\n<td style=\"height: 77px; width: 174.988px;\">1(M&amp;F), 1-2(M&amp;F)</td>\n<td style=\"height: 77px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 77px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 77px;\">\n<td style=\"height: 77px; width: 152.998px;\">Arctic fox</td>\n<td style=\"height: 77px; width: 183.993px;\">Vulpes lagopus</td>\n<td style=\"height: 77px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 77px; width: 99.9884px;\">3.5/2.9/.2</td>\n<td style=\"height: 77px; width: 99.9884px;\">3/2</td>\n<td style=\"height: 77px; width: 99.9884px;\">.68/.55 nose to butt</td>\n<td style=\"height: 77px; width: 99.9884px;\">2t1</td>\n<td style=\"height: 77px; width: 99.9884px;\">-30 to -4</td>\n<td style=\"height: 77px; width: 99.9884px;\">0.1-1.0</td>\n<td style=\"height: 77px; width: 131.991px;\">All</td>\n<td style=\"height: 77px; width: 99.9884px;\">.9-1.4</td>\n<td style=\"height: 77px; width: 174.988px;\">1(M&amp;F), 2-6(M&amp;F)</td>\n<td style=\"height: 77px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">0</td>\n<td style=\"height: 77px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 77px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 77px;\">\n<td style=\"height: 77px; width: 152.998px;\">Kit fox</td>\n<td style=\"height: 77px; width: 183.993px;\">Vulpes macrotis</td>\n<td style=\"height: 77px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 77px; width: 99.9884px;\">2/.2</td>\n<td style=\"height: 77px; width: 99.9884px;\">3/2</td>\n<td style=\"height: 77px; width: 99.9884px;\">.53 nose to butt</td>\n<td style=\"height: 77px; width: 99.9884px;\">1t1</td>\n<td style=\"height: 77px; width: 99.9884px;\">10 to 22</td>\n<td style=\"height: 77px; width: 99.9884px;\">0.1-.4</td>\n<td style=\"height: 77px; width: 131.991px;\">0-.25 forest</td>\n<td style=\"height: 77px; width: 99.9884px;\">1.1-1.6</td>\n<td style=\"height: 77px; width: 174.988px;\">1(M&amp;F), 1-2(M&amp;F)</td>\n<td style=\"height: 77px; width: 99.9884px;\">0</td>\n<td style=\"height: 77px; width: 99.9884px;\">0</td>\n<td style=\"height: 77px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 77px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 77px;\">\n<td style=\"height: 77px; width: 152.998px;\">Pale fox</td>\n<td style=\"height: 77px; width: 183.993px;\">Vulpes pallida</td>\n<td style=\"height: 77px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 77px; width: 99.9884px;\">3/.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">3/2</td>\n<td style=\"height: 77px; width: 99.9884px;\">.55 nose to butt</td>\n<td style=\"height: 77px; width: 99.9884px;\">2t1</td>\n<td style=\"height: 77px; width: 99.9884px;\">22 to 44</td>\n<td style=\"height: 77px; width: 99.9884px;\">.1-.4</td>\n<td style=\"height: 77px; width: 131.991px;\">0-.25 forest, shrub</td>\n<td style=\"height: 77px; width: 99.9884px;\">.9-1.4</td>\n<td style=\"height: 77px; width: 174.988px;\">1(M&amp;F), 2(M&amp;F)</td>\n<td style=\"height: 77px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">0</td>\n<td style=\"height: 77px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 77px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 77px;\">\n<td style=\"height: 77px; width: 152.998px;\">Ruppell's fox</td>\n<td style=\"height: 77px; width: 183.993px;\">Vulpes rueppellii</td>\n<td style=\"height: 77px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 77px; width: 99.9884px;\">1.7/.2</td>\n<td style=\"height: 77px; width: 99.9884px;\">3/2</td>\n<td style=\"height: 77px; width: 99.9884px;\">.74 length</td>\n<td style=\"height: 77px; width: 99.9884px;\">1t1</td>\n<td style=\"height: 77px; width: 99.9884px;\">18-44</td>\n<td style=\"height: 77px; width: 99.9884px;\">.1-.25</td>\n<td style=\"height: 77px; width: 131.991px;\">0-.25 forest</td>\n<td style=\"height: 77px; width: 99.9884px;\">.9-1.6</td>\n<td style=\"height: 77px; width: 174.988px;\">1(M&amp;F), 1-2(M&amp;F)</td>\n<td style=\"height: 77px; width: 99.9884px;\">0</td>\n<td style=\"height: 77px; width: 99.9884px;\">0</td>\n<td style=\"height: 77px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 77px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 77px;\">\n<td style=\"height: 77px; width: 152.998px;\">Swift fox</td>\n<td style=\"height: 77px; width: 183.993px;\">Vulpes velox</td>\n<td style=\"height: 77px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 77px; width: 99.9884px;\">3/.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">3/2</td>\n<td style=\"height: 77px; width: 99.9884px;\">.3 shoulder</td>\n<td style=\"height: 77px; width: 99.9884px;\">2t1</td>\n<td style=\"height: 77px; width: 99.9884px;\">4 to 16</td>\n<td style=\"height: 77px; width: 99.9884px;\">.25-.75</td>\n<td style=\"height: 77px; width: 131.991px;\">0-.25 forest</td>\n<td style=\"height: 77px; width: 99.9884px;\">1.1-1.6</td>\n<td style=\"height: 77px; width: 174.988px;\">1(M&amp;F), 1-2(M&amp;F)</td>\n<td style=\"height: 77px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">0</td>\n<td style=\"height: 77px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 77px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 77px;\">\n<td style=\"height: 77px; width: 152.998px;\">Red fox</td>\n<td style=\"height: 77px; width: 183.993px;\">Vulpes vulpes</td>\n<td style=\"height: 77px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 77px; width: 99.9884px;\">10/8/1</td>\n<td style=\"height: 77px; width: 99.9884px;\">5/4/3</td>\n<td style=\"height: 77px; width: 99.9884px;\">.5 shoulders</td>\n<td style=\"height: 77px; width: 99.9884px;\">3t1</td>\n<td style=\"height: 77px; width: 99.9884px;\">-18 to 28</td>\n<td style=\"height: 77px; width: 99.9884px;\">.1-1.0</td>\n<td style=\"height: 77px; width: 131.991px;\">All</td>\n<td style=\"height: 77px; width: 99.9884px;\">.9-1.8</td>\n<td style=\"height: 77px; width: 174.988px;\">1(M&amp;F), 1-2(M&amp;F)</td>\n<td style=\"height: 77px; width: 99.9884px;\">2+-0.6</td>\n<td style=\"height: 77px; width: 99.9884px;\">1+-0.3</td>\n<td style=\"height: 77px; width: 99.9884px;\">1 m, 1 s</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 77px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n<tr style=\"height: 77px;\">\n<td style=\"height: 77px; width: 152.998px;\">Fennec fox</td>\n<td style=\"height: 77px; width: 183.993px;\">Vulpes zerda</td>\n<td style=\"height: 77px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 77px; width: 99.9884px;\">1.5/.1</td>\n<td style=\"height: 77px; width: 99.9884px;\">3/1</td>\n<td style=\"height: 77px; width: 99.9884px;\">.39/.35 nose to butt</td>\n<td style=\"height: 77px; width: 99.9884px;\">1t1</td>\n<td style=\"height: 77px; width: 99.9884px;\">18-44</td>\n<td style=\"height: 77px; width: 99.9884px;\">0.05-.2</td>\n<td style=\"height: 77px; width: 131.991px;\">0-.25 forest, shrub</td>\n<td style=\"height: 77px; width: 99.9884px;\">.9-1.6</td>\n<td style=\"height: 77px; width: 174.988px;\">1(M&amp;F), 1-2(M&amp;F)</td>\n<td style=\"height: 77px; width: 99.9884px;\">0</td>\n<td style=\"height: 77px; width: 99.9884px;\">&nbsp;</td>\n<td style=\"height: 77px; width: 99.9884px;\">1 s</td>\n<td style=\"height: 77px; width: 99.9884px;\">2.125 step</td>\n<td style=\"height: 77px; width: 188.993px;\">\n<div>\n<div>Berrybush, Crops, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Peanut, Vegetables</div>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p>&nbsp;</p>\n<p><span style=\"font-weight: 400;\"><br /><br /></span><span style=\"font-weight: 400;\">Features:</span></p>\n<p><span style=\"font-weight: 400;\">Red fox and arctic fox of the base game have their spawning disabled, and in their place the Vulpini tribe members will spawn. Foxes will bite if cornered but will not actively hunt the player. Some will eat berries off of bushes and leaving berries, insects and meats on the ground will attract foxes and can be used to breed and domesticate them over time. </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">South American dogs will also bite if cornered, though some are unfamiliar with humans and will not run away as a result. They can also be bred and domesticated, with later generations no longer having a chance to bite players.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Wolves of the base game have their spawning disabled, and in their place the Canina sub-tribe members will spawn. Gray wolves, arctic wolves and dire wolves will pursue the player in a similar way to the base game wolves, while the rest of this sub-tribe will avoid or flee the player, only attacking if cornered or hurt. Because of the spawn rates of this mod, you&rsquo;ll encounter far fewer hostile wolves than the base game, but they can spawn outside of forests.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">While all Canina members can be domesticated over generations by dropping meats for them to eat, gray wolves have a chance to grow into a domestic dog when bred. These individuals will follow the player, bark or attack dangerous animals and won&rsquo;t attack the player unless directly attacked by the player. They aren&rsquo;t fully domesticated however and will flee players if injured, but will return to following the player when they recover. Treasure hunter merchants also have a chance to sell domestic dog puppies, so you can bypass the process of breeding gray wolves.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">All species have a unique pelt that can be used to craft hide, taxidermied full body and head mounts.</span></p>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">On occasion a </span><span style=\"font-weight: 400;\">fly covered dog, southern dog, fox or gray fox carcass will spawn, preventing animals of their respective tribe from spawning in the area around them. They have a chance to spawn when a player first arrives in an area or when all dogs of that tribe&nbsp; have been killed off from the area, allowing players to locally wipe out dogs. Destroying the dog carcass will allow more dogs to spawn again and some carnivores and scavengers may destroy them as well, so if you want dog spawns prevented in an area protect these carcasses.</span></p>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">All the animals in this mod have a strict population cap and will only spawn on runtime, not world gen. This is to make the mod more server friendly so as to not add an overwhelming number of entities.&nbsp;</span></p>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Links:</span><span style=\"font-weight: 400;\"><br /></span><a href=\"https://ko-fi.com/tentharchitect\"><span style=\"font-weight: 400;\">https://ko-fi.com/tentharchitect</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span></a><span style=\"font-weight: 400;\">And a big thanks to everyone who gave feedback and assistance!<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong> How do I domesticate the animals in this pack?<br /><br /><strong>A:</strong> Get a male and female adult of a given species within 10 blocks, wait until the female is ready to mate and feed her the sufficient number of portions and the male at least one. Different species require different amounts and can be found in the entity file under the multiply section. Animals can be fed either by dropping items on the ground or by using the right trough. Each species diet can be found in this mod's description or in their entity file under the diet section. Only the mother's generation matters for progressing generations.<br /><br /><strong>Q</strong>: How do I tame the gray wolves?<br /><strong>A</strong>: Feed the babies enough portions before they'd naturally grow up, and they will become a semi-tamed adult. Breeding semi-tamed gray wolves will occasionally result in domestic dogs being born.<br /><br /><br /><strong>Q:</strong> Why so many animal packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain clade file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><strong>Q:</strong> Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> Yes, this mod series is safe to add and remove. Items from this mod that have been placed will be invisible or appear as question blocks if the mod is removed but can be safely broken.</div>\n</div>\n<p><span style=\"font-weight: 400;\"> <br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "caninae",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_d3760fe6452f0e98014b36ef583ac73a.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_d3760fe6452f0e98014b36ef583ac73a.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_d3760fe6452f0e98014b36ef583ac73a.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 225318,
+    "follows": 1666,
+    "trendingpoints": 1,
+    "comments": 341,
+    "side": "both",
+    "type": "mod",
+    "created": "2023-08-01 17:49:12",
+    "lastreleased": "2026-09-11 15:44:42",
+    "lastmodified": "2026-09-28 20:15:41",
+    "tags": [
+      "Crafting",
+      "Furniture",
+      "Creatures",
+      "Animals"
+    ],
+    "releases": [
+      {
+        "releaseid": 56519,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.1.9_c457e26492b790db4967293276f8800b.zip?dl=FotSA-Caninae-v1.1.9.zip",
+        "filename": "FotSA-Caninae-v1.1.9.zip",
+        "fileid": 121538,
+        "downloads": 4325,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.1.9",
+        "created": "2026-09-11 15:44:42",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Pelts grouped in handbook</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Wolves attacking baby domestic dogs and baby domestic dogs fleeing from their wolf parents</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Dingo and gray wolf pack size distribution</span></p>"
+      },
+      {
+        "releaseid": 48465,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.1.8_b005379abaee7a1303af0a791c78c5af.zip?dl=FotSA-Caninae-v1.1.8.zip",
+        "filename": "FotSA-Caninae-v1.1.8.zip",
+        "fileid": 105948,
+        "downloads": 20822,
+        "tags": [
+          "1.22.3",
+          "1.22.5",
+          "1.22.7"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.1.8",
+        "created": "2026-07-08 22:20:21",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Changed case of fleeDurationMs </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of MaxCooldownHours</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of MaxCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of MinCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of soundRange </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of soundRepeatMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted duringDayTimeFramesHours to duringDayTimeFrames</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted maxcooldown to MaxCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted mincooldown to MinCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted maxFollowTimeSec to maxFollowTime</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted tamingGenerations to maxGeneration</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted JumpHeightFactor to leapHeightMul</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unneeded mingenerations &amp; maxgenerations</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused After Jump Speed Reduction</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Distance To Target To Jump</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused DontExecuteIfRecentlyAttacked </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Eat after kill</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused fleeDurationWhenTargetLost</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Herd Alarm Range</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Ignore dead entities</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused lookAtEntities AI tasks</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused MaxBlocksChecked</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused min and maxduration from non-Idle tasks</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Player is meal</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Range Search Attempts Factors</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Sound volume</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused target light levels</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused wander range vertical max</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused when feet in liquid</span></p>"
+      },
+      {
+        "releaseid": 46993,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.1.6_bb6ac343e0d1b827f2bb0a160229c576.zip?dl=FotSA-Caninae-v1.1.6.zip",
+        "filename": "FotSA-Caninae-v1.1.6.zip",
+        "fileid": 102972,
+        "downloads": 5061,
+        "tags": [
+          "1.22.3"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.1.6",
+        "created": "2026-06-24 18:26:02",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Recipe for new base game fox hats<br />Updated-Changed oiled hide recipe to use rendered fat</span></p>"
+      },
+      {
+        "releaseid": 35817,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.1.5_eb6160b0c2e2f9154852ee42dc26d77d.zip?dl=FotSA-Caninae-v1.1.5.zip",
+        "filename": "FotSA-Caninae-v1.1.5.zip",
+        "fileid": 79030,
+        "downloads": 19036,
+        "tags": [
+          "1.22.0-pre.4",
+          "1.22.0-pre.5",
+          "1.22.0-rc.1"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.1.5",
+        "created": "2026-03-05 16:47:50",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Ancient Tools Brain drops (Thanks Whiskey Sunshine!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Slot 1 to melee attacks, should increase attack responsiveness</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Canina dogs using slot 0 emotion state for fleeondamage</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Removed-Attack for UI display</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Ai task time frames over midnight</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-ai tasks tag formats</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-changed jump to leap </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-min and max durationMs to duration</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Stayclose to entity format</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 34493,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.1.4_1910681b0a97b85e03f2c41b5f8041cc.zip?dl=FotSA-Caninae-v1.1.4.zip",
+        "filename": "FotSA-Caninae-v1.1.4.zip",
+        "fileid": 76012,
+        "downloads": 559,
+        "tags": [
+          "1.22.0-pre.2"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.1.4",
+        "created": "2026-02-13 20:50:04",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Carcass Recipe</span></p>"
+      },
+      {
+        "releaseid": 34212,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.1.3_325cfa386de947b27e715922123a727c.zip?dl=FotSA-Caninae-v1.1.3.zip",
+        "filename": "FotSA-Caninae-v1.1.3.zip",
+        "fileid": 75445,
+        "downloads": 324,
+        "tags": [
+          "1.22.0-pre.1"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.1.3",
+        "created": "2026-02-09 01:27:30",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Adjusted Frost overlay thresholds for cold weather dogs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Footstep sounds to adult canina dogs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Freshwater fish interaction</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-rolled back refactored ai tasks to main ai tasks </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Change chance and wanderChance to executionChance</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Changed inEmotionStates format</span></p>"
+      },
+      {
+        "releaseid": 32482,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.1.2_e6deac5f33404390677774624327edfa.zip?dl=FotSA-Caninae-v1.1.2.zip",
+        "filename": "FotSA-Caninae-v1.1.2.zip",
+        "fileid": 71469,
+        "downloads": 22266,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.1.2",
+        "created": "2026-01-13 01:30:17",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Biomes patch</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Mortally wounded behavior causing crashes</span></p>"
+      },
+      {
+        "releaseid": 32158,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.1.1_7fb195e7d991ee48f8c38d584bcca5a0.zip?dl=FotSA-Caninae-v1.1.1.zip",
+        "filename": "FotSA-Caninae-v1.1.1.zip",
+        "fileid": 70774,
+        "downloads": 2703,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.1.1",
+        "created": "2026-01-07 18:51:03",
+        "changelog": "<p>Added-Dog Collar (functions like elk medallion for tamed wolves and domestic dogs)<br />Tweak-Ai task order for domestic dog and tamed wolves</p>"
+      },
+      {
+        "releaseid": 32105,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.1.0_8e1fdc65ff93b55858f6827ce1fd219b.zip?dl=FotSA-Caninae-v1.1.0.zip",
+        "filename": "FotSA-Caninae-v1.1.0.zip",
+        "fileid": 70671,
+        "downloads": 571,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.1.0",
+        "created": "2026-01-06 21:23:25",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Oiled, Raw, Salted hides and associated recipes (old hides will break)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Entity state tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Russian translation (Thanks Nikuksis!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Large troughs can&rsquo;t be used for dog feeding<br /></span><span style=\"font-weight: 400;\">Tweak-Adjusted hitboxes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Changed spawn conditions to have no amount of artificial light block spawns</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Cleaned up audio</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Climate conditions changed due to 1.21 changes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Domestic dogs will only be born from tamed wolves</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-scale and movement speeds</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Large Troughs can&rsquo;t be used for dog feeding</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Removed minimum altitude from most spawn conditions</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-1 hide is always dropped from killed animals</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Refactored AI tasks to the new versions in 1.21 Foxes &amp; South American Dogs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Reformated AI tasks to a more intricate version Canina dogs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Reformatted folders to match base game&rsquo;s folder layout</span></p>"
+      },
+      {
+        "releaseid": 28227,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.3_11e7a989492d8b06e9bf4b6722cd3386.zip?dl=FotSA-Caninae-v1.0.35.zip",
+        "filename": "FotSA-Caninae-v1.0.35.zip",
+        "fileid": 62105,
+        "downloads": 21996,
+        "tags": [
+          "1.21.5",
+          "1.21.6"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.35",
+        "created": "2025-10-27 20:12:40",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Weighted diet <br />Updated-Trappable format for 1.21</span></p>"
+      },
+      {
+        "releaseid": 25431,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.3_807ff468ce4444ea5aa342d1eeceb262.zip?dl=FotSA-Caninae-v1.0.34.zip",
+        "filename": "FotSA-Caninae-v1.0.34.zip",
+        "fileid": 56030,
+        "downloads": 15738,
+        "tags": [
+          "1.21.1",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.34",
+        "created": "2025-09-18 16:35:23",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span></p>"
+      },
+      {
+        "releaseid": 25346,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.3_f603029c9c56b876e3968218f111529d.zip?dl=FotSA-Caninae-v1.0.33.zip",
+        "filename": "FotSA-Caninae-v1.0.33.zip",
+        "fileid": 55850,
+        "downloads": 919,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.33",
+        "created": "2025-09-17 15:02:56",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added- Creature tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Gray fox group spawn ID and spawn ID</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Missing closed bracket in animal file</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Spawn blocking patches</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 19461,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.3_0f2a0d68edcfb44fcc5b0e0c5bfc60b5.zip?dl=FotSA-Caninae-v1.0.32.zip",
+        "filename": "FotSA-Caninae-v1.0.32.zip",
+        "fileid": 42084,
+        "downloads": 28274,
+        "tags": [
+          "1.20.9",
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.32",
+        "created": "2025-04-29 21:48:35",
+        "changelog": "<p>Added-Devil interactions<br />Added-Mihirung interactions<br />Added-Diprotodon interactions<br />Refactored-combined male and female entity files into one to adhere to new game standard</p>"
+      },
+      {
+        "releaseid": 18528,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.3_0988cf856b2ddc5b54db4f20cb3cdb59.zip?dl=FotSA-Caninae-v1.0.31.zip",
+        "filename": "FotSA-Caninae-v1.0.31.zip",
+        "fileid": 40035,
+        "downloads": 6432,
+        "tags": [
+          "1.20.7",
+          "1.20.8"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.31",
+        "created": "2025-04-05 00:08:08",
+        "changelog": "<p>Added-Worldgen spawn</p>"
+      },
+      {
+        "releaseid": 17547,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.3_815733b41d67abc9f09571568c349ee6.zip?dl=FotSA-Caninae-v1.0.30.zip",
+        "filename": "FotSA-Caninae-v1.0.30.zip",
+        "fileid": 37345,
+        "downloads": 5955,
+        "tags": [
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.30",
+        "created": "2025-03-13 20:13:26",
+        "changelog": "<p>Added-Thylacoleo interactions<br />Tweak-Spawn temperature ranges<br />Tweak-Grey fox seek behaviors</p>"
+      },
+      {
+        "releaseid": 16569,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSa-Caninae-v1.0.2_f9b6493ee34d4c387529f641600b1c44.zip?dl=FotSa-Caninae-v1.0.29.zip",
+        "filename": "FotSa-Caninae-v1.0.29.zip",
+        "fileid": 34138,
+        "downloads": 6185,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.29",
+        "created": "2025-02-20 16:41:03",
+        "changelog": "<p>Added-Civet and Genet Interactions</p>"
+      },
+      {
+        "releaseid": 16225,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.2_55f61ea4392022c545722fc2ed5fa7f8.zip?dl=FotSA-Caninae-v1.0.28.zip",
+        "filename": "FotSA-Caninae-v1.0.28.zip",
+        "fileid": 33364,
+        "downloads": 3026,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.28",
+        "created": "2025-02-14 17:53:16",
+        "changelog": "<p>Fixed-Base game animal patch format updated to 1.20.4</p>"
+      },
+      {
+        "releaseid": 15941,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.2_67972c0a5d06bd353c6462bfaac00e2b.zip?dl=FotSA-Caninae-v1.0.27.zip",
+        "filename": "FotSA-Caninae-v1.0.27.zip",
+        "fileid": 32801,
+        "downloads": 2097,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.27",
+        "created": "2025-02-09 17:44:18",
+        "changelog": "<p>Added-Horned turtle interactions</p>"
+      },
+      {
+        "releaseid": 15308,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.2_88d88d351526f9c813a6f974ed78ea5d.zip?dl=FotSA-Caninae-v1.0.26.zip",
+        "filename": "FotSA-Caninae-v1.0.26.zip",
+        "fileid": 31644,
+        "downloads": 5030,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.26",
+        "created": "2025-01-28 00:23:29",
+        "changelog": "<p>Added-Bovine compatibility</p>"
+      },
+      {
+        "releaseid": 14971,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.2_805153af5400400b8a6f2ff31845486c.zip?dl=FotSA-Caninae-v1.0.25.zip",
+        "filename": "FotSA-Caninae-v1.0.25.zip",
+        "fileid": 31026,
+        "downloads": 2843,
+        "tags": [
+          "1.20.1",
+          "1.20.3"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.25",
+        "created": "2025-01-22 20:34:31",
+        "changelog": "<p>Added-Wombat compatibility<br />Added- Ukrainian translation (Thanks Deanbro!)</p>"
+      },
+      {
+        "releaseid": 14607,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.2_57d68531b9e47bce166a53fcbb18be74.zip?dl=FotSA-Caninae-v1.0.24.zip",
+        "filename": "FotSA-Caninae-v1.0.24.zip",
+        "fileid": 30380,
+        "downloads": 3231,
+        "tags": [
+          "1.20.0",
+          "1.20.1"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.24",
+        "created": "2025-01-17 18:38:43",
+        "changelog": "<p>Added-Elephant compatibility<br />Removed-Berry bushes from fox diet to prevent population explosions</p>"
+      },
+      {
+        "releaseid": 14123,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.2_dfc67a7e4bcf7b9d5a95cfa6c27919f4.zip?dl=FotSA-Caninae-v1.0.23.zip",
+        "filename": "FotSA-Caninae-v1.0.23.zip",
+        "fileid": 29434,
+        "downloads": 2135,
+        "tags": [
+          "1.20.0-rc.6",
+          "1.20.0-rc.8",
+          "1.20.0-rc.9"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.23",
+        "created": "2025-01-01 23:46:48",
+        "changelog": "<p>Added-Felinae compatibility<br />Updated-1.20 land entity pathfinding<br />Updated-1.20 blending for movement animations</p>"
+      },
+      {
+        "releaseid": 13461,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.2_f59b4a97ee11f10aad1333519eeccad7.zip?dl=FotSA-Caninae-v1.0.22.zip",
+        "filename": "FotSA-Caninae-v1.0.22.zip",
+        "fileid": 28207,
+        "downloads": 3124,
+        "tags": [
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.22",
+        "created": "2024-12-05 20:42:31",
+        "changelog": "<p>Fixed-trader patch to buy domestice dogs<br />Fixed-Headmount gui&nbsp;<br />Fixed-Canina puppies not spawning<br />Tweak-Male to female ratio in canina group spawns<br />Tweak-Combat Overhaul damage resistance</p>"
+      },
+      {
+        "releaseid": 13167,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.2_dac7dd68636e750ef1f86e3a86278c64.zip?dl=FotSA-Caninae-v1.0.21.zip",
+        "filename": "FotSA-Caninae-v1.0.21.zip",
+        "fileid": 27599,
+        "downloads": 1114,
+        "tags": [
+          "1.20.0-pre.0",
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.21",
+        "created": "2024-11-21 18:11:12",
+        "changelog": "<p>Adjusted-Combat Overhaul damage resistances</p>"
+      },
+      {
+        "releaseid": 12980,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.2_bd0620a1ac77203b18e1c85551de7229.zip?dl=FotSA-Caninae-v1.0.20.zip",
+        "filename": "FotSA-Caninae-v1.0.20.zip",
+        "fileid": 27252,
+        "downloads": 654,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.20",
+        "created": "2024-11-11 19:28:55",
+        "changelog": "<p>Added-Penguin interactions<br />Added- Wool and More compatibility for the domestic dog</p>"
+      },
+      {
+        "releaseid": 12671,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.1_a2d5fcd1c213f9f62d4e2d2f2566c26d.zip?dl=FotSA-Caninae-v1.0.19.zip",
+        "filename": "FotSA-Caninae-v1.0.19.zip",
+        "fileid": 26645,
+        "downloads": 906,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.19",
+        "created": "2024-10-24 18:49:31",
+        "changelog": "<p>Added-Combat Overhaul compatibility (Thanks Maltiez)<br />Added-Dinornithidae plus bird interactions</p>"
+      },
+      {
+        "releaseid": 12555,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.1_e44509c48ec7bb762a605fda7cb6ddd0.zip?dl=FotSA-Caninae-v1.0.18.zip",
+        "filename": "FotSA-Caninae-v1.0.18.zip",
+        "fileid": 26340,
+        "downloads": 710,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.18",
+        "created": "2024-10-16 15:42:04",
+        "changelog": "<p>Added-French translation (Thanks Laerinok)<br />Fixed-Elk interaction patch</p>"
+      },
+      {
+        "releaseid": 12334,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.1_630ddbc72b289ebfff1ab59782a782e4.zip?dl=FotSA-Caninae-v1.0.17.zip",
+        "filename": "FotSA-Caninae-v1.0.17.zip",
+        "fileid": 25881,
+        "downloads": 918,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.17",
+        "created": "2024-10-03 18:13:08",
+        "changelog": "<p>Fixed-Trough diet tags<br />Refactored-Taxidermies and headmounts are now items, should reduce mod's texture impact by 33%<br />Refactored-Pelts are now only items, cuts down on mod size and memory impact. Place pelts on antler mounts or tool racks to get the wallmounted version<br />Updated-Animal patches, powdered item in recipe and various tweaks for 1.20's changes</p>"
+      },
+      {
+        "releaseid": 10686,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.1_2994969e106b2e12076ef302a4281a2d.zip?dl=FotSA-Caninae-v1.0.16.zip",
+        "filename": "FotSA-Caninae-v1.0.16.zip",
+        "fileid": 22274,
+        "downloads": 9747,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.16",
+        "created": "2024-06-05 15:20:26",
+        "changelog": "<p>Removed-Protein from some diets to make them more precise<br />Fixed-their family tags for troughs</p>"
+      },
+      {
+        "releaseid": 10382,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.1_3ac71a07a6dc65e6981aad44f7bbf815.zip?dl=FotSA-Caninae-v1.0.15.zip",
+        "filename": "FotSA-Caninae-v1.0.15.zip",
+        "fileid": 21720,
+        "downloads": 1884,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.15",
+        "created": "2024-05-18 20:08:11",
+        "changelog": "<p>Added-Crafting recipe for dog carcass and southern dog carcass, placing them will block spawns within render radius<br />Updated-fly covered carcass looks<br />Fixed-Typo in Kit fox strings<br />Tweak-Reduced spawn rate considerably<br />Tweak-Stopped fox and gray fox carcasses from spawning, making them impossible to completely erradicate from an area<br />Tweak-Added a 100 minimum distance for spawning near player for wolves and dogs, 50 minimum distance for other tribes<br />Tweak-Added a maximum light level to prevent dogs spawning near illuminating blocks<br />Tweak-readded spawn cap player scaling set to 0, to make sure it isn't scaling&nbsp;</p>"
+      },
+      {
+        "releaseid": 10212,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.1_3d6688007377817b3ebe3cfdef76995f.zip?dl=FotSA-Caninae-v1.0.14.zip",
+        "filename": "FotSA-Caninae-v1.0.14.zip",
+        "fileid": 21402,
+        "downloads": 1457,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.14",
+        "created": "2024-05-05 20:56:46",
+        "changelog": "<p>Added-Compatibility with Pangolins<br />Added-dire wolves, Arctic wolves and gray wolves will now only hunt the player if another adult is nearby and they are hungry, after gen 2 they will no longer do so<br />Tweak-dingo and coyote will now also hunt the player in groups<br />Tweak-Adjusted audio range of Maned wolf call<br />Tweak-Adjusted targets of some seek and attack behaviors<br />Tweak-added emotion state criteria to almost all aitasks, to prevent dogs from doing idle behaviors in combat<br />Tweak-fixed diets and patched base game eggs, fish and insects so they are eaten by the appropriate animals<br />Fixed-dogs will only use one attack instead of both when damaged<br />Fixed-removed a number of errors about patches being server side only<br /><br /></p>"
+      },
+      {
+        "releaseid": 10042,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.1_13e1c750d19a03dd66ec38b0123728d4.zip?dl=FotSA-Caninae-v1.0.13.zip",
+        "filename": "FotSA-Caninae-v1.0.13.zip",
+        "fileid": 21125,
+        "downloads": 1234,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.13",
+        "created": "2024-04-26 00:21:29",
+        "changelog": "<p>Added-Compatibility with rhinos</p>"
+      },
+      {
+        "releaseid": 9922,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.1_be66a61adc721722f284a4d6ca0e7d0e.zip?dl=FotSA-Caninae-v1.0.12.zip",
+        "filename": "FotSA-Caninae-v1.0.12.zip",
+        "fileid": 20922,
+        "downloads": 999,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.12",
+        "created": "2024-04-19 18:40:24",
+        "changelog": "<p>Added-Killed by text (Thanks MadGnome)<br />Added-Diet strings<br />Fixed-emotion states using the same slot, fleeing or aggroing should no longer reset satiety<br />Fixed-Capreolinae compatibility<br />Tweaked-Reduced audio range of Cerdocyonina dogs</p>"
+      },
+      {
+        "releaseid": 9631,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.1_322bbd7e90195e65acdadc7d4c528e20.zip?dl=FotSA-Caninae-v1.0.11.zip",
+        "filename": "FotSA-Caninae-v1.0.11.zip",
+        "fileid": 20440,
+        "downloads": 2011,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.11",
+        "created": "2024-04-01 20:18:08",
+        "changelog": "<p>Added-Compatibility with Casuariidae<br />Added-reduced fall damage for babies, gray and true foxes<br />Fixed-some interaction IDs<br /><br /></p>"
+      },
+      {
+        "releaseid": 8694,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.1_dd7fe73fd84aadbedbffe83ca3523c3f.zip?dl=FotSA-Caninae-v1.0.10.zip",
+        "filename": "FotSA-Caninae-v1.0.10.zip",
+        "fileid": 18788,
+        "downloads": 3522,
+        "tags": [
+          "1.19.3",
+          "1.19.4",
+          "1.19.5",
+          "1.19.6",
+          "1.19.7"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.10",
+        "created": "2024-02-05 17:43:16",
+        "changelog": "<p>Fixed-wolf howl not playing<br />Tweaked-reduced Canina pop cap to 2</p>"
+      },
+      {
+        "releaseid": 8378,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.9_4b4dd499e3424db82ccd84d1e3cd8e2b.zip?dl=FotSA-Caninae-v1.0.9.zip",
+        "filename": "FotSA-Caninae-v1.0.9.zip",
+        "fileid": 18112,
+        "downloads": 1141,
+        "tags": [
+          "1.19.2"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.9",
+        "created": "2024-01-26 00:11:51",
+        "changelog": "<p>Added-interactions with saber cats<br />Fixed- diets not being unique within dog tribes<br />Fixed- strings of pup blocks and items<br />Adjusted- population cap now in line with base game. Canina is 4, Cerdocyonina is 4, Urocyonini is 2 and Vulpini is 4<br /><br /></p>"
+      },
+      {
+        "releaseid": 8020,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.8_a2d8932931632ab29678dc8bf18b0236.zip?dl=FotSA-Caninae-v1.0.8.zip",
+        "filename": "FotSA-Caninae-v1.0.8.zip",
+        "fileid": 17434,
+        "downloads": 1284,
+        "tags": [
+          "1.19.0-rc.6",
+          "1.19.0"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.8",
+        "created": "2024-01-07 17:36:02",
+        "changelog": "<p>Adjusted-audio range for canina sounds, to make them easier to locate<br />Fixed-Females not getting pregnant when around males</p>"
+      },
+      {
+        "releaseid": 7859,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.7_1db20df6661199a4630f242bd829d61f.zip?dl=FotSA-Caninae-v1.0.7.zip",
+        "filename": "FotSA-Caninae-v1.0.7.zip",
+        "fileid": 17099,
+        "downloads": 963,
+        "tags": [
+          "1.19.0-rc.1"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.7",
+        "created": "2023-12-22 21:23:00",
+        "changelog": "<p>Updated-format of diets to work with latest update<br /><br /></p>"
+      },
+      {
+        "releaseid": 7736,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.6_9b63878f0ec1732762dd6582c0f206ab.zip?dl=FotSA-Caninae-v1.0.6.zip",
+        "filename": "FotSA-Caninae-v1.0.6.zip",
+        "fileid": 16843,
+        "downloads": 630,
+        "tags": [
+          "1.19.0-pre.0"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.6",
+        "created": "2023-12-11 22:31:24",
+        "changelog": "<p>Refactored-All entity files to match new animal standards, babies now have genders. Old Canines will disappear and will need creative mod and console commands to replace domesticated ones.<br />Added-Basketable to all babies and some adults weighing 10kg or less<br />Updated-interaction IDs (will be missing interactions with Capreolinae and Pantherinae animals until those are refactored)<br />Fixed-errors due to redundant textures in models</p>"
+      },
+      {
+        "releaseid": 7212,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.5_a443b8cc677ea01db59d96408c7f9786.zip?dl=FotSA-Caninae-v1.0.5.zip",
+        "filename": "FotSA-Caninae-v1.0.5.zip",
+        "fileid": 15723,
+        "downloads": 2291,
+        "tags": [
+          "1.19.0-pre.0"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.5",
+        "created": "2023-10-31 19:06:39",
+        "changelog": "<p>Changed-Updated the fox patch to work with 1.19<br />Removed- Venison from accepted diet<br />Added-Compatibility with the mod Biome</p>"
+      },
+      {
+        "releaseid": 7024,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.4_cf535b6a5d71c5a8ace4e406a3a0bf07.zip?dl=FotSA-Caninae-v1.0.4.zip",
+        "filename": "FotSA-Caninae-v1.0.4.zip",
+        "fileid": 15277,
+        "downloads": 2194,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.4",
+        "created": "2023-10-18 18:29:50",
+        "changelog": "<p>Removed-Butter from Gray fox diet<br />Fixed- error logs from foods</p>"
+      },
+      {
+        "releaseid": 6982,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.3_5c333338cbbea0217fd580eb90cd6246.zip?dl=FotSA-Caninae-v1.0.3.zip",
+        "filename": "FotSA-Caninae-v1.0.3.zip",
+        "fileid": 15218,
+        "downloads": 582,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.3",
+        "created": "2023-10-16 01:41:58",
+        "changelog": "<p>Fixed- Canina pelts not being convertable to hide</p>"
+      },
+      {
+        "releaseid": 6952,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.2_cb75ad6a08ffcd133206f6547c8b99ca.zip?dl=FotSA-Caninae-v1.0.2.zip",
+        "filename": "FotSA-Caninae-v1.0.2.zip",
+        "fileid": 15111,
+        "downloads": 590,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.2",
+        "created": "2023-10-13 17:01:41",
+        "changelog": "<p>Fixed-Canina adults now drop pelts.</p>"
+      },
+      {
+        "releaseid": 6819,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.1_b2073eba1eb21bb2b1412db4235d1738.zip?dl=FotSA-Caninae-v1.0.1.zip",
+        "filename": "FotSA-Caninae-v1.0.1.zip",
+        "fileid": 14797,
+        "downloads": 3273,
+        "tags": [
+          "1.18.13",
+          "1.18.14",
+          "1.18.15"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.1",
+        "created": "2023-09-29 23:09:09",
+        "changelog": "<p>Fixed: Pelts to hide recipes not working</p>"
+      },
+      {
+        "releaseid": 6818,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.0.0_a8f14cb6136e27213e43a55f0ae39c68.zip?dl=FotSA-Caninae-v1.0.0.zip",
+        "filename": "FotSA-Caninae-v1.0.0.zip",
+        "fileid": 14790,
+        "downloads": 391,
+        "tags": [
+          "1.18.13"
+        ],
+        "modidstr": "caninae",
+        "modversion": "1.0.0",
+        "created": "2023-09-29 22:10:10",
+        "changelog": "<p>Feature- 16 new species of Canina dogs! Wolves, jackals and wild dogs are added.<br />Feature- Domestic dog puppies can be purchased from Treasure hunter traders.<br />Feature- base game wolf spawns are disabled.<br />Bug fix- Stay close to entity behaviors fixed, dogs should stick closer to their packs.</p>"
+      },
+      {
+        "releaseid": 6530,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v0.2.0_5f1e1e0f5726abf3e4366be0daa50e09.zip?dl=FotSA-Caninae-v0.2.0.zip",
+        "filename": "FotSA-Caninae-v0.2.0.zip",
+        "fileid": 14078,
+        "downloads": 1331,
+        "tags": [
+          "1.18.10"
+        ],
+        "modidstr": "caninae",
+        "modversion": "0.2.0",
+        "created": "2023-09-05 20:10:06",
+        "changelog": "<p>Fixed- some fox babies are no longer fearless and will flee predators and large animals.<br />Fixed- some foxes will no longer flee carcasses of predators or large animals.<br />Added- 13 new species and their associated drops and decoration items.</p>"
+      },
+      {
+        "releaseid": 6130,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v0.1.1_ec78ffd1a2e54c05c7531a1ce3ee7ba9.zip?dl=FotSA-Caninae-v0.1.1.zip",
+        "filename": "FotSA-Caninae-v0.1.1.zip",
+        "fileid": 13191,
+        "downloads": 2081,
+        "tags": [
+          "1.18.0",
+          "1.18.1",
+          "1.18.2",
+          "1.18.3",
+          "1.18.4",
+          "1.18.5",
+          "1.18.6",
+          "1.18.7",
+          "1.18.8-rc.1"
+        ],
+        "modidstr": "caninae",
+        "modversion": "0.1.1",
+        "created": "2023-08-03 17:38:44",
+        "changelog": "<p>Fixed: Tibetan fox's spawn rate too high<br />Fixed: Missing male Arctic fox pelt model<br />Fixed: Pelts not dropping correctly</p>"
+      },
+      {
+        "releaseid": 6107,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v0.1.0_ab83375c5e3b3d2871351c93b26dcad5.zip?dl=FotSA-Caninae-v0.1.0.zip",
+        "filename": "FotSA-Caninae-v0.1.0.zip",
+        "fileid": 13150,
+        "downloads": 751,
+        "tags": [
+          "1.18.0",
+          "1.18.1",
+          "1.18.2",
+          "1.18.3",
+          "1.18.4",
+          "1.18.5",
+          "1.18.6",
+          "1.18.7",
+          "1.18.8-rc.1"
+        ],
+        "modidstr": "caninae",
+        "modversion": "0.1.0",
+        "created": "2023-08-01 17:49:55",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 13151,
+        "mainfile": "https://moddbcdn.vintagestory.at/2023-07-30_10-36-02_5ac64017a4dcc85e36c76909453f04f2.png",
+        "filename": "2023-07-30_10-36-02.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2023-07-30_10-36-02_5ac64017a4dcc85e36c76909453f04f2_55_60.png",
+        "created": "2023-08-01 18:06:02"
+      },
+      {
+        "fileid": 13152,
+        "mainfile": "https://moddbcdn.vintagestory.at/2023-07-31_17-59-32_a52fbee88da939ec79960f5bbf1b570e.png",
+        "filename": "2023-07-31_17-59-32.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2023-07-31_17-59-32_a52fbee88da939ec79960f5bbf1b570e_55_60.png",
+        "created": "2023-08-01 18:06:04"
+      },
+      {
+        "fileid": 14079,
+        "mainfile": "https://moddbcdn.vintagestory.at/2023-09-05_11-24-15_b2f11be1249fa8c7562fc6ee9cda00c0.png",
+        "filename": "2023-09-05_11-24-15.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2023-09-05_11-24-15_b2f11be1249fa8c7562fc6ee9cda00c0_55_60.png",
+        "created": "2023-09-05 20:12:19"
+      },
+      {
+        "fileid": 14791,
+        "mainfile": "https://moddbcdn.vintagestory.at/2023-09-29_09-34-11_137f1da716d55b7ea5bee3a7a6e9df8b.png",
+        "filename": "2023-09-29_09-34-11.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2023-09-29_09-34-11_137f1da716d55b7ea5bee3a7a6e9df8b_55_60.png",
+        "created": "2023-09-29 22:14:25"
+      },
+      {
+        "fileid": 14792,
+        "mainfile": "https://moddbcdn.vintagestory.at/2023-09-15_17-59-31_878731d660bd6d61ba0224b98fa5f42f.png",
+        "filename": "2023-09-15_17-59-31.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2023-09-15_17-59-31_878731d660bd6d61ba0224b98fa5f42f_55_60.png",
+        "created": "2023-09-29 22:16:31"
+      },
+      {
+        "fileid": 14793,
+        "mainfile": "https://moddbcdn.vintagestory.at/2023-09-17_15-42-47_f7c1b13d48bff7643fae24a8f20cf8f2.png",
+        "filename": "2023-09-17_15-42-47.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2023-09-17_15-42-47_f7c1b13d48bff7643fae24a8f20cf8f2_55_60.png",
+        "created": "2023-09-29 22:16:58"
+      },
+      {
+        "fileid": 14794,
+        "mainfile": "https://moddbcdn.vintagestory.at/2023-08-19_12-37-08_7b73277cec40821428f9a57d213a6a71.png",
+        "filename": "2023-08-19_12-37-08.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2023-08-19_12-37-08_7b73277cec40821428f9a57d213a6a71_55_60.png",
+        "created": "2023-09-29 22:18:00"
+      },
+      {
+        "fileid": 14795,
+        "mainfile": "https://moddbcdn.vintagestory.at/2023-09-08_12-51-58_d81aebec5c5e69cd631f9a1f8dbca7bf.png",
+        "filename": "2023-09-08_12-51-58.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2023-09-08_12-51-58_d81aebec5c5e69cd631f9a1f8dbca7bf_55_60.png",
+        "created": "2023-09-29 22:18:34"
+      },
+      {
+        "fileid": 14796,
+        "mainfile": "https://moddbcdn.vintagestory.at/2023-09-13_17-32-38_9d911e81635b3850274bcfec8c853cbf.png",
+        "filename": "2023-09-13_17-32-38.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2023-09-13_17-32-38_9d911e81635b3850274bcfec8c853cbf_55_60.png",
+        "created": "2023-09-29 22:19:09"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

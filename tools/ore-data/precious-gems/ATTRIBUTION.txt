@@ -1,0 +1,43 @@
+Earth ore deposits, group "precious-gems" (decision 0065): attribution and licences
+==================================================================================
+
+What is in git here and in assets/earth/config/ore-deposits-v1/precious-gems.json is derived values only:
+positions, tonnages, grades, depths, sizes and ages of named deposits, written by hand into deposits-*.csv,
+areas.json and extra-evidence.json, plus the scripts that check them. No third-party table, text, map or image is
+copied. Downloads used for checking stay in C:\VS mods\Earth\rawdata\ore\precious-gems\ (never in git).
+
+Every deposit row names its source id (column "src"); the full list with URLs is sources.json and
+sources-industrial.json, copied into the catalogue's sources[]. They fall into three kinds:
+
+1. Public domain (U.S. Government works)
+   - U.S. Geological Survey, Major Mineral Deposits of the World (Schulz and Briskey 2005, Open-File Report
+     2005-1294), https://mrdata.usgs.gov/major-deposits/ : positions and sizes of many lode deposits (source id
+     usgs-major-deposits). Five of its positions are wrong; see proposed-coordinate-corrections.csv.
+   - U.S. Geological Survey, Mineral Commodity Summaries 2025 and 2026 (gold; gemstones), https://pubs.usgs.gov/
+     periodicals/mcs2026/ : world mine production and reserves used only for validation
+     (reference-mcs2026.json, made by fetch_reference.py; ids usgs-mcs-2025).
+   - Berger et al. 2014, sediment-hosted gold deposits of the world (USGS) (lit-berger-2014); USGS Professional
+     Paper 1802 chapters H (fluorine) and J (graphite); USGS Minerals Yearbook quartz crystal; USGS/AGS Afghanistan
+     non-fuel mineral assessments (Sar-e-Sang lapis).
+   - The heat-map bake's own MRDS-derived evidence (public domain, USGS Mineral Resources Data System) is not
+     changed by this group; heatmap-overrides.json drops nothing.
+
+2. Public statistics and well-known published figures, used as facts (confidence q B or C)
+   Total tonnage, grade or contained metal of named deposits as published by geological surveys, company reserve and
+   resource statements, and peer-reviewed literature. Figures are facts, not creative expression; only the number is
+   used, and each row cites where it was published. These include World Gold Council above-ground stocks, Kimberley
+   Process statistics, OECD-NEA/IAEA "Red Book", the national surveys (BGS, GEUS, CPRM, Servicio Geologico
+   Colombiano, Geological Survey of India, GeoSphere Austria, Czech Geological Survey, State Geological Institute of
+   Slovakia, IGME, Bayerisches LfU, Yukon Geological Survey, Montana BMG, Arkansas GS, Wyoming SGS, NMBGMR, Ontario
+   GS), the company statements (Barrick, Newmont, AngloGold Ashanti, Gold Fields, Polyus, Kinross, Agnico Eagle,
+   B2Gold, IAMGOLD, Centamin, Evolution, Lundin Gold, Sumitomo Metal Mining, Eldorado, OceanaGold, De Beers/Anglo
+   American, ALROSA, Rio Tinto, Petra, Lucara, Gem Diamonds, Namdeb, Gemfields, Cameco, NexGen, ERA,
+   Kazatomprom, Rossing, Swakop Uranium, Paladin, Orano, DIAMO, Wismut, UCIL, Syrah, Black Rock, Triton, Graphit
+   Kropfmuehl, Mineral Commodities, Sibelco), and the literature listed in sources.json (Goldfarb et al. 2005,
+   Frimmel 2014, Phillips and Hughes 1996, Wall et al. 2004, Deng et al. 2020, Klemm and Klemm 2013, Levtzion,
+   Hughes, Themelis, Gems and Gemology papers and others).
+
+3. Natural Earth (public domain), https://www.naturalearthdata.com/ : 1:10m admin-0 countries, used by the build
+   (through the bake's CountryCheck) to check that each deposit is on land and inside its country.
+
+Not used: Mindat, GEMDATA/DIADATA rows marked research-only, and any NC, ND or SA licensed data.

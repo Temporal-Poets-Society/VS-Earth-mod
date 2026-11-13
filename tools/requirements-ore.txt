@@ -1,0 +1,11 @@
+# Python dependencies for the ore evidence heat-map bake, renderer, research
+# normalisers and the RegionalOresTests Python checks.
+# Install into the project venv (PyPI only):
+#   .venv\Scripts\python.exe -m pip install -r tools/requirements-ore.txt
+# Versions are the ones the 2026-10-02 v2 bake was produced with.
+numpy==2.5.3
+shapely==2.1.2
+pyogrio==0.13.0
+pyproj==3.8.0
+matplotlib==3.11.2
+xlrd==2.0.2

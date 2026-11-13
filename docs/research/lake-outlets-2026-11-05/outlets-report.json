@@ -1,0 +1,2656 @@
+[
+ {
+  "lake": "Lake Winnipeg",
+  "id": 9,
+  "hydrolakes": 4,
+  "pour": [
+   53.6964,
+   -97.8635
+  ],
+  "gate_km": 8.0,
+  "tongue_km2": 963.6,
+  "course_km": 52.4,
+  "width_km": 18.37,
+  "lakes_in_km2": 768.7,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2123,
+   2389,
+   4832,
+   5037
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lake Erie",
+  "id": 10,
+  "hydrolakes": 9,
+  "pour": [
+   42.9043,
+   -78.9081
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 65.4,
+  "course_km": 20.0,
+  "width_km": 3.27,
+  "lakes_in_km2": 10.2,
+  "pieces_km2": 22.6,
+  "pieces_inner_km": [
+   1.85
+  ],
+  "box": [
+   2801,
+   2929,
+   5780,
+   6080
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Lake of the Woods",
+  "id": 18,
+  "hydrolakes": 57,
+  "pour": [
+   49.7644,
+   -94.5184
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 181.9,
+  "course_km": 33.4,
+  "width_km": 5.45,
+  "lakes_in_km2": 75.8,
+  "pieces_km2": 2.2,
+  "pieces_inner_km": [
+   1.2
+  ],
+  "box": [
+   2386,
+   2481,
+   5068,
+   5172
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lake Athabasca",
+  "id": 22,
+  "hydrolakes": 33,
+  "pour": [
+   58.7045,
+   -111.2005
+  ],
+  "gate_km": 4.5,
+  "tongue_km2": 76.7,
+  "course_km": 11.2,
+  "width_km": 6.86,
+  "lakes_in_km2": 6.2,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1811,
+   1904,
+   4108,
+   4451
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 45,
+  "hydrolakes": 453,
+  "pour": [
+   57.5656,
+   -156.7883
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 221.0,
+  "course_km": 20.6,
+  "width_km": 10.74,
+  "lakes_in_km2": 205.5,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1920,
+   1967,
+   1358,
+   1419
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lago de Izabal",
+  "id": 59,
+  "hydrolakes": 867,
+  "pour": [
+   15.6554,
+   -88.9992
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 109.1,
+  "course_km": 25.1,
+  "width_km": 4.34,
+  "lakes_in_km2": 57.4,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   4440,
+   4491,
+   5423,
+   5485
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lake Bienville",
+  "id": 67,
+  "hydrolakes": 530,
+  "pour": [
+   54.9748,
+   -73.2752
+  ],
+  "gate_km": 6.0,
+  "tongue_km2": 53.2,
+  "course_km": 20.8,
+  "width_km": 2.56,
+  "lakes_in_km2": 16.2,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2069,
+   2118,
+   6368,
+   6485
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lake Louise",
+  "id": 82,
+  "hydrolakes": 4006,
+  "pour": [
+   62.3591,
+   -146.6281
+  ],
+  "gate_km": 4.5,
+  "tongue_km2": 23.9,
+  "course_km": 17.6,
+  "width_km": 1.36,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1636,
+   1675,
+   1983,
+   2026
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Lake Naococane",
+  "id": 91,
+  "hydrolakes": 611,
+  "pour": [
+   52.9335,
+   -70.7462
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 99.3,
+  "course_km": 30.0,
+  "width_km": 3.32,
+  "lakes_in_km2": 95.2,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2203,
+   2258,
+   6528,
+   6591
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 102,
+  "hydrolakes": 262,
+  "pour": [
+   65.1592,
+   -165.9341
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 2.9,
+  "course_km": 6.1,
+  "width_km": 0.47,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 1.4,
+  "pieces_inner_km": [
+   0.78
+  ],
+  "box": [
+   1474,
+   1509,
+   826,
+   891
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Lake George",
+  "id": 114,
+  "hydrolakes": 849,
+  "pour": [
+   29.3892,
+   -81.6564
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 32.9,
+  "course_km": 18.7,
+  "width_km": 1.76,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 3.0,
+  "pieces_inner_km": [
+   1.61
+  ],
+  "box": [
+   3615,
+   3661,
+   5886,
+   5921
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "",
+  "id": 140,
+  "hydrolakes": 516,
+  "pour": [
+   55.3726,
+   -95.6996
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 9.8,
+  "course_km": 7.6,
+  "width_km": 1.28,
+  "lakes_in_km2": 35.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2063,
+   2100,
+   5009,
+   5073
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 144,
+  "hydrolakes": 7158,
+  "pour": [
+   52.5705,
+   -61.0159
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 43.8,
+  "course_km": 24.2,
+  "width_km": 1.81,
+  "lakes_in_km2": 11.2,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2230,
+   2274,
+   7106,
+   7178
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 164,
+  "hydrolakes": 637,
+  "pour": [
+   51.5914,
+   -91.9118
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 49.1,
+  "course_km": 12.2,
+  "width_km": 4.01,
+  "lakes_in_km2": 47.5,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2281,
+   2326,
+   5269,
+   5317
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 168,
+  "hydrolakes": 708,
+  "pour": [
+   48.7221,
+   -77.0438
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 15.9,
+  "course_km": 14.5,
+  "width_km": 1.09,
+  "lakes_in_km2": 13.4,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2455,
+   2507,
+   6156,
+   6199
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 173,
+  "hydrolakes": 737,
+  "pour": [
+   47.2871,
+   -79.462
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 163.0,
+  "course_km": 59.6,
+  "width_km": 2.73,
+  "lakes_in_km2": 64.5,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2533,
+   2605,
+   6008,
+   6064
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 181,
+  "hydrolakes": 44466,
+  "pour": [
+   64.4912,
+   -101.6312
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 14.8,
+  "course_km": 10.3,
+  "width_km": 1.44,
+  "lakes_in_km2": 1.1,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1515,
+   1548,
+   4671,
+   4724
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "",
+  "id": 198,
+  "hydrolakes": 237,
+  "pour": [
+   66.3773,
+   -97.5312
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 191.2,
+  "course_km": 20.3,
+  "width_km": 9.42,
+  "lakes_in_km2": 166.1,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1389,
+   1440,
+   4912,
+   4996
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 204,
+  "hydrolakes": 625,
+  "pour": [
+   52.1614,
+   -87.5931
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 8.4,
+  "course_km": 5.6,
+  "width_km": 1.51,
+  "lakes_in_km2": 10.9,
+  "pieces_km2": 14.7,
+  "pieces_inner_km": [
+   1.85
+  ],
+  "box": [
+   2247,
+   2285,
+   5505,
+   5565
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 205,
+  "hydrolakes": 664,
+  "pour": [
+   50.4437,
+   -75.2062
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 185.9,
+  "course_km": 29.0,
+  "width_km": 6.4,
+  "lakes_in_km2": 119.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2352,
+   2405,
+   6261,
+   6325
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 209,
+  "hydrolakes": 488,
+  "pour": [
+   55.9921,
+   -64.2989
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 74.9,
+  "course_km": 21.7,
+  "width_km": 3.45,
+  "lakes_in_km2": 42.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2018,
+   2064,
+   6910,
+   6987
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 214,
+  "hydrolakes": 6824,
+  "pour": [
+   53.526,
+   -71.8854
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 40.8,
+  "course_km": 12.0,
+  "width_km": 3.4,
+  "lakes_in_km2": 55.4,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2169,
+   2207,
+   6462,
+   6509
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 220,
+  "hydrolakes": 487,
+  "pour": [
+   56.0018,
+   -73.2601
+  ],
+  "gate_km": 6.0,
+  "tongue_km2": 107.5,
+  "course_km": 27.3,
+  "width_km": 3.94,
+  "lakes_in_km2": 157.6,
+  "pieces_km2": 1.9,
+  "pieces_inner_km": [
+   1.04
+  ],
+  "box": [
+   2014,
+   2064,
+   6381,
+   6426
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 224,
+  "hydrolakes": 5911,
+  "pour": [
+   55.8513,
+   -101.8744
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 7.7,
+  "course_km": 5.8,
+  "width_km": 1.33,
+  "lakes_in_km2": 1.8,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2033,
+   2067,
+   4660,
+   4707
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "",
+  "id": 234,
+  "hydrolakes": 393,
+  "pour": [
+   60.4544,
+   -73.4571
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 42.3,
+  "course_km": 9.0,
+  "width_km": 4.71,
+  "lakes_in_km2": 38.6,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1741,
+   1788,
+   6284,
+   6418
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 239,
+  "hydrolakes": 360,
+  "pour": [
+   61.6146,
+   -105.2861
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 359.1,
+  "course_km": 40.8,
+  "width_km": 8.8,
+  "lakes_in_km2": 223.1,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1669,
+   1738,
+   4438,
+   4533
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 252,
+  "hydrolakes": 6005,
+  "pour": [
+   55.5863,
+   -104.5945
+  ],
+  "gate_km": 8.0,
+  "tongue_km2": 56.3,
+  "course_km": 17.7,
+  "width_km": 3.18,
+  "lakes_in_km2": 12.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [
+   2.8
+  ],
+  "box": [
+   2049,
+   2088,
+   4505,
+   4552
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "",
+  "id": 253,
+  "hydrolakes": 512,
+  "pour": [
+   55.4071,
+   -104.2746
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 17.5,
+  "course_km": 10.6,
+  "width_km": 1.66,
+  "lakes_in_km2": 26.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2060,
+   2089,
+   4518,
+   4568
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 276,
+  "hydrolakes": 2781,
+  "pour": [
+   66.6607,
+   -88.5025
+  ],
+  "gate_km": 4.5,
+  "tongue_km2": 65.3,
+  "course_km": 22.0,
+  "width_km": 2.97,
+  "lakes_in_km2": 52.3,
+  "pieces_km2": 6.8,
+  "pieces_inner_km": [
+   1.85
+  ],
+  "box": [
+   1382,
+   1419,
+   5463,
+   5527
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 279,
+  "hydrolakes": 7969,
+  "pour": [
+   49.9599,
+   -90.9351
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 17.7,
+  "course_km": 16.0,
+  "width_km": 1.11,
+  "lakes_in_km2": 8.1,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2388,
+   2422,
+   5317,
+   5367
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Minnitaki Lake",
+  "id": 283,
+  "hydrolakes": 677,
+  "pour": [
+   50.0437,
+   -91.8936
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 28.7,
+  "course_km": 6.9,
+  "width_km": 4.15,
+  "lakes_in_km2": 47.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2379,
+   2419,
+   5254,
+   5308
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Nueltin Lake",
+  "id": 291,
+  "hydrolakes": 29,
+  "pour": [
+   60.8268,
+   -98.9653
+  ],
+  "gate_km": 4.5,
+  "tongue_km2": 66.9,
+  "course_km": 14.7,
+  "width_km": 4.56,
+  "lakes_in_km2": 110.9,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1735,
+   1838,
+   4772,
+   4891
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 295,
+  "hydrolakes": 401,
+  "pour": [
+   60.2562,
+   -134.2813
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 139.7,
+  "course_km": 43.3,
+  "width_km": 3.22,
+  "lakes_in_km2": 94.9,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1754,
+   1848,
+   2677,
+   2782
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 296,
+  "hydrolakes": 115065,
+  "pour": [
+   21.8924,
+   -105.4617
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 19.1,
+  "course_km": 9.7,
+  "width_km": 1.96,
+  "lakes_in_km2": 1.8,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   4071,
+   4106,
+   4457,
+   4488
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Garry Lake",
+  "id": 307,
+  "hydrolakes": 244,
+  "pour": [
+   65.907,
+   -100.0312
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 542.4,
+  "course_km": 123.4,
+  "width_km": 4.4,
+  "lakes_in_km2": 711.7,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1416,
+   1469,
+   4681,
+   4898
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lac Chavigny",
+  "id": 315,
+  "hydrolakes": 447,
+  "pour": [
+   58.355,
+   -75.174
+  ],
+  "gate_km": 4.5,
+  "tongue_km2": 52.2,
+  "course_km": 21.5,
+  "width_km": 2.43,
+  "lakes_in_km2": 54.1,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1878,
+   1933,
+   6268,
+   6316
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 410,
+  "hydrolakes": 332,
+  "pour": [
+   62.7703,
+   -95.7932
+  ],
+  "gate_km": 4.5,
+  "tongue_km2": 45.6,
+  "course_km": 16.7,
+  "width_km": 2.73,
+  "lakes_in_km2": 33.7,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1596,
+   1656,
+   5029,
+   5089
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 451,
+  "hydrolakes": 5851,
+  "pour": [
+   56.0323,
+   -65.4934
+  ],
+  "gate_km": 6.0,
+  "tongue_km2": 120.9,
+  "course_km": 18.1,
+  "width_km": 6.66,
+  "lakes_in_km2": 31.4,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2026,
+   2069,
+   6826,
+   6889
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 452,
+  "hydrolakes": 474,
+  "pour": [
+   56.4199,
+   -68.5736
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 5.7,
+  "course_km": 7.9,
+  "width_km": 0.72,
+  "lakes_in_km2": 12.9,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1997,
+   2051,
+   6666,
+   6728
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 456,
+  "hydrolakes": 404,
+  "pour": [
+   60.0407,
+   -73.5759
+  ],
+  "gate_km": 4.5,
+  "tongue_km2": 37.7,
+  "course_km": 11.5,
+  "width_km": 3.28,
+  "lakes_in_km2": 40.4,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1778,
+   1818,
+   6347,
+   6416
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lago Buenos Aires",
+  "id": 487,
+  "hydrolakes": 87,
+  "pour": [
+   -46.8397,
+   -72.8015
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 91.6,
+  "course_km": 20.3,
+  "width_km": 4.5,
+  "lakes_in_km2": 67.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   8164,
+   8235,
+   6411,
+   6544
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Päijänne",
+  "id": 491,
+  "hydrolakes": 98,
+  "pour": [
+   61.2838,
+   25.5964
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 452.0,
+  "course_km": 59.9,
+  "width_km": 7.55,
+  "lakes_in_km2": 187.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1592,
+   1757,
+   12296,
+   12444
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Tonlé Sap",
+  "id": 494,
+  "hydrolakes": 153,
+  "pour": [
+   12.5337,
+   104.3971
+  ],
+  "gate_km": 8.0,
+  "tongue_km2": 117.3,
+  "course_km": 25.8,
+  "width_km": 4.55,
+  "lakes_in_km2": 23.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   4591,
+   4670,
+   17009,
+   17090
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Inarijrvi",
+  "id": 501,
+  "hydrolakes": 92,
+  "pour": [
+   68.8813,
+   28.2812
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 2.5,
+  "course_km": 3.1,
+  "width_km": 0.79,
+  "lakes_in_km2": 1.4,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1221,
+   1290,
+   12408,
+   12542
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Pielinen",
+  "id": 522,
+  "hydrolakes": 1113,
+  "pour": [
+   62.8037,
+   30.1773
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 20.4,
+  "course_km": 12.0,
+  "width_km": 1.7,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1571,
+   1651,
+   12524,
+   12637
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Hjälmaren",
+  "id": 551,
+  "hydrolakes": 1160,
+  "pour": [
+   59.2716,
+   16.2923
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 17.5,
+  "course_km": 13.7,
+  "width_km": 1.28,
+  "lakes_in_km2": 2.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1828,
+   1864,
+   11701,
+   11800
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Po Hu",
+  "id": 567,
+  "hydrolakes": 1461,
+  "pour": [
+   30.0837,
+   116.4693
+  ],
+  "gate_km": 6.0,
+  "tongue_km2": 50.5,
+  "course_km": 15.4,
+  "width_km": 3.27,
+  "lakes_in_km2": 136.8,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   3571,
+   3609,
+   17765,
+   17808
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Chao Hu",
+  "id": 587,
+  "hydrolakes": 1430,
+  "pour": [
+   31.5899,
+   117.8469
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 35.1,
+  "course_km": 16.9,
+  "width_km": 2.08,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   3484,
+   3526,
+   17825,
+   17890
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "",
+  "id": 588,
+  "hydrolakes": 148497,
+  "pour": [
+   63.7368,
+   13.0052
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 82.0,
+  "course_km": 43.3,
+  "width_km": 1.89,
+  "lakes_in_km2": 197.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1563,
+   1609,
+   11559,
+   11616
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 590,
+  "hydrolakes": 15310,
+  "pour": [
+   30.2889,
+   114.7062
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 5.9,
+  "course_km": 7.0,
+  "width_km": 0.85,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   3566,
+   3601,
+   17666,
+   17704
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Ozero Krasnoye",
+  "id": 614,
+  "hydrolakes": 1088,
+  "pour": [
+   64.6011,
+   174.7281
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 11.8,
+  "course_km": 8.1,
+  "width_km": 1.45,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1504,
+   1548,
+   21232,
+   21307
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "",
+  "id": 628,
+  "hydrolakes": 1207,
+  "pour": [
+   51.6856,
+   140.2191
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 253.3,
+  "course_km": 5.0,
+  "width_km": 50.36,
+  "lakes_in_km2": 79.7,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2266,
+   2321,
+   19179,
+   19259
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lake Débo",
+  "id": 630,
+  "hydrolakes": 1525,
+  "pour": [
+   15.438,
+   -4.2604
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 33.1,
+  "course_km": 14.4,
+  "width_km": 2.29,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   4455,
+   4500,
+   10527,
+   10574
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "",
+  "id": 639,
+  "hydrolakes": 12727,
+  "pour": [
+   60.4089,
+   17.2009
+  ],
+  "gate_km": 4.5,
+  "tongue_km2": 86.5,
+  "course_km": 24.5,
+  "width_km": 3.53,
+  "lakes_in_km2": 28.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1754,
+   1804,
+   11776,
+   11858
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 640,
+  "hydrolakes": 12677,
+  "pour": [
+   60.6751,
+   29.9948
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 75.7,
+  "course_km": 31.4,
+  "width_km": 2.41,
+  "lakes_in_km2": 40.6,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1736,
+   1778,
+   12563,
+   12641
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 645,
+  "hydrolakes": 1470,
+  "pour": [
+   29.3482,
+   112.9929
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 131.7,
+  "course_km": 10.8,
+  "width_km": 12.19,
+  "lakes_in_km2": 32.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   3618,
+   3664,
+   17554,
+   17599
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Torneträsk",
+  "id": 647,
+  "hydrolakes": 1043,
+  "pour": [
+   68.2038,
+   19.9883
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 183.6,
+  "course_km": 66.0,
+  "width_km": 2.78,
+  "lakes_in_km2": 83.9,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1279,
+   1346,
+   11901,
+   12067
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Dongting Hu",
+  "id": 651,
+  "hydrolakes": 15398,
+  "pour": [
+   28.8433,
+   112.5591
+  ],
+  "gate_km": 8.0,
+  "tongue_km2": 195.5,
+  "course_km": 46.1,
+  "width_km": 4.24,
+  "lakes_in_km2": 120.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   3642,
+   3687,
+   17505,
+   17588
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Virihaure",
+  "id": 652,
+  "hydrolakes": 1054,
+  "pour": [
+   67.417,
+   16.5192
+  ],
+  "gate_km": 4.5,
+  "tongue_km2": 122.6,
+  "course_km": 21.6,
+  "width_km": 5.69,
+  "lakes_in_km2": 112.9,
+  "pieces_km2": 23.7,
+  "pieces_inner_km": [
+   1.98
+  ],
+  "box": [
+   1332,
+   1374,
+   11766,
+   11843
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lake Kwania",
+  "id": 665,
+  "hydrolakes": 161,
+  "pour": [
+   1.6134,
+   32.349
+  ],
+  "gate_km": 6.0,
+  "tongue_km2": 34.3,
+  "course_km": 17.2,
+  "width_km": 1.99,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   5272,
+   5319,
+   12720,
+   12794
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "",
+  "id": 679,
+  "hydrolakes": 177322,
+  "pour": [
+   24.1613,
+   90.9714
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 78.3,
+  "course_km": 21.1,
+  "width_km": 3.71,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   3925,
+   3975,
+   16244,
+   16287
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lake Xau",
+  "id": 681,
+  "hydrolakes": 16276,
+  "pour": [
+   -21.3022,
+   24.6756
+  ],
+  "gate_km": 6.0,
+  "tongue_km2": 44.8,
+  "course_km": 11.9,
+  "width_km": 3.78,
+  "lakes_in_km2": 21.4,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   6661,
+   6693,
+   12268,
+   12303
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 688,
+  "hydrolakes": 12023,
+  "pour": [
+   64.2068,
+   29.569
+  ],
+  "gate_km": 4.5,
+  "tongue_km2": 124.0,
+  "course_km": 9.5,
+  "width_km": 13.06,
+  "lakes_in_km2": 52.5,
+  "pieces_km2": 1.5,
+  "pieces_inner_km": [
+   0.81
+  ],
+  "box": [
+   1523,
+   1571,
+   12549,
+   12606
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 690,
+  "hydrolakes": 1093,
+  "pour": [
+   64.0998,
+   28.987
+  ],
+  "gate_km": 8.0,
+  "tongue_km2": 198.0,
+  "course_km": 33.7,
+  "width_km": 5.88,
+  "lakes_in_km2": 99.2,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1537,
+   1573,
+   12481,
+   12579
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 704,
+  "hydrolakes": 13836,
+  "pour": [
+   49.4128,
+   27.6296
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 15.6,
+  "course_km": 6.9,
+  "width_km": 2.27,
+  "lakes_in_km2": 1.6,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2418,
+   2449,
+   12436,
+   12476
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Foxen",
+  "id": 732,
+  "hydrolakes": 1159,
+  "pour": [
+   59.3192,
+   11.9011
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 105.1,
+  "course_km": 42.7,
+  "width_km": 2.46,
+  "lakes_in_km2": 115.6,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1818,
+   1878,
+   11490,
+   11547
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Wuchang Hu",
+  "id": 790,
+  "hydrolakes": 15312,
+  "pour": [
+   30.2812,
+   116.6967
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 74.1,
+  "course_km": 14.7,
+  "width_km": 5.06,
+  "lakes_in_km2": 38.1,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   3567,
+   3599,
+   17780,
+   17824
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Ozero Ergipskiy Sor",
+  "id": 917,
+  "hydrolakes": 12678,
+  "pour": [
+   60.6721,
+   69.0769
+  ],
+  "gate_km": 8.0,
+  "tongue_km2": 74.0,
+  "course_km": 21.3,
+  "width_km": 3.48,
+  "lakes_in_km2": 181.5,
+  "pieces_km2": 10.1,
+  "pieces_inner_km": [
+   1.85
+  ],
+  "box": [
+   1740,
+   1777,
+   14923,
+   14983
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 963,
+  "hydrolakes": 12186,
+  "pour": [
+   63.2031,
+   28.2008
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 133.1,
+  "course_km": 18.9,
+  "width_km": 7.03,
+  "lakes_in_km2": 79.6,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1582,
+   1630,
+   12455,
+   12519
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 999,
+  "hydrolakes": 11920,
+  "pour": [
+   65.0089,
+   13.5366
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 5.8,
+  "course_km": 5.5,
+  "width_km": 1.05,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1483,
+   1516,
+   11591,
+   11642
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Ajaure",
+  "id": 1146,
+  "hydrolakes": 11868,
+  "pour": [
+   65.5115,
+   15.6271
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 8.5,
+  "course_km": 10.8,
+  "width_km": 0.79,
+  "lakes_in_km2": 81.6,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1448,
+   1485,
+   11696,
+   11769
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 1150,
+  "hydrolakes": 11943,
+  "pour": [
+   64.8332,
+   18.0678
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 4.4,
+  "course_km": 5.0,
+  "width_km": 0.87,
+  "lakes_in_km2": 9.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1488,
+   1527,
+   11853,
+   11904
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 1217,
+  "hydrolakes": 12465,
+  "pour": [
+   61.8652,
+   16.6438
+  ],
+  "gate_km": 6.0,
+  "tongue_km2": 29.1,
+  "course_km": 10.4,
+  "width_km": 2.81,
+  "lakes_in_km2": 49.9,
+  "pieces_km2": 4.9,
+  "pieces_inner_km": [
+   1.75
+  ],
+  "box": [
+   1676,
+   1707,
+   11783,
+   11825
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lago di Lugano - Ceresio",
+  "id": 1428,
+  "hydrolakes": 14140,
+  "pour": [
+   45.9564,
+   8.9563
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 21.5,
+  "course_km": 11.0,
+  "width_km": 1.96,
+  "lakes_in_km2": 18.5,
+  "pieces_km2": 2.4,
+  "pieces_inner_km": [
+   1.29
+  ],
+  "box": [
+   2625,
+   2658,
+   11318,
+   11360
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 1519,
+  "hydrolakes": 11405,
+  "pour": [
+   68.4128,
+   36.3994
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 18.9,
+  "course_km": 10.2,
+  "width_km": 1.86,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1278,
+   1310,
+   12964,
+   13004
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "",
+  "id": 1590,
+  "hydrolakes": 11950,
+  "pour": [
+   64.7852,
+   33.6437
+  ],
+  "gate_km": 4.5,
+  "tongue_km2": 26.3,
+  "course_km": 9.2,
+  "width_km": 2.87,
+  "lakes_in_km2": 13.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1493,
+   1529,
+   12798,
+   12843
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 1697,
+  "hydrolakes": 13077,
+  "pour": [
+   56.9286,
+   32.751
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 93.7,
+  "course_km": 40.5,
+  "width_km": 2.31,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1953,
+   1999,
+   12742,
+   12811
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Pitt Lake",
+  "id": 1897,
+  "hydrolakes": 8116,
+  "pour": [
+   49.3513,
+   -122.6131
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 35.8,
+  "course_km": 20.3,
+  "width_km": 1.76,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2415,
+   2460,
+   3419,
+   3462
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Harrison Lake",
+  "id": 1899,
+  "hydrolakes": 700,
+  "pour": [
+   49.3146,
+   -121.8021
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 47.0,
+  "course_km": 22.8,
+  "width_km": 2.06,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2402,
+   2461,
+   3458,
+   3508
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Helika Lake",
+  "id": 1910,
+  "hydrolakes": 338,
+  "pour": [
+   62.3815,
+   -94.1437
+  ],
+  "gate_km": 4.5,
+  "tongue_km2": 14.3,
+  "course_km": 11.4,
+  "width_km": 1.26,
+  "lakes_in_km2": 9.8,
+  "pieces_km2": 3.2,
+  "pieces_inner_km": [
+   0.86
+  ],
+  "box": [
+   1641,
+   1674,
+   5138,
+   5177
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 2036,
+  "hydrolakes": 2821,
+  "pour": [
+   66.5021,
+   -93.9271
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 16.4,
+  "course_km": 9.2,
+  "width_km": 1.78,
+  "lakes_in_km2": 1.8,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1395,
+   1426,
+   5137,
+   5187
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "",
+  "id": 2038,
+  "hydrolakes": 3105,
+  "pour": [
+   65.3162,
+   -97.1046
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 43.0,
+  "course_km": 13.6,
+  "width_km": 3.16,
+  "lakes_in_km2": 29.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1467,
+   1497,
+   4949,
+   5004
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 2044,
+  "hydrolakes": 2424,
+  "pour": [
+   68.1247,
+   -72.7241
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 10.2,
+  "course_km": 6.9,
+  "width_km": 1.48,
+  "lakes_in_km2": 13.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1294,
+   1330,
+   6416,
+   6460
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lac Cabot",
+  "id": 2148,
+  "hydrolakes": 6232,
+  "pour": [
+   54.9268,
+   -64.4312
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 3.9,
+  "course_km": 4.1,
+  "width_km": 0.96,
+  "lakes_in_km2": 4.7,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2088,
+   2124,
+   6919,
+   6951
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lac Châtelain",
+  "id": 2174,
+  "hydrolakes": 398,
+  "pour": [
+   60.3115,
+   -73.8384
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 56.1,
+  "course_km": 11.4,
+  "width_km": 4.91,
+  "lakes_in_km2": 54.5,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1762,
+   1799,
+   6314,
+   6392
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lac Tasialujjuaq",
+  "id": 2182,
+  "hydrolakes": 4864,
+  "pour": [
+   59.6413,
+   -71.9319
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 53.8,
+  "course_km": 17.6,
+  "width_km": 3.05,
+  "lakes_in_km2": 8.4,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1800,
+   1850,
+   6463,
+   6507
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Lac Guenyveau",
+  "id": 2188,
+  "hydrolakes": 5117,
+  "pour": [
+   58.8214,
+   -71.0244
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 14.2,
+  "course_km": 6.9,
+  "width_km": 2.07,
+  "lakes_in_km2": 13.5,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1855,
+   1887,
+   6493,
+   6560
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 2190,
+  "hydrolakes": 5173,
+  "pour": [
+   58.6352,
+   -77.4546
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 7.1,
+  "course_km": 4.7,
+  "width_km": 1.53,
+  "lakes_in_km2": 3.8,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1865,
+   1899,
+   6132,
+   6190
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lac Duvert",
+  "id": 2198,
+  "hydrolakes": 5411,
+  "pour": [
+   57.638,
+   -72.07
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 20.2,
+  "course_km": 6.8,
+  "width_km": 2.98,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1927,
+   1957,
+   6456,
+   6496
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Lac Roz",
+  "id": 2205,
+  "hydrolakes": 6281,
+  "pour": [
+   54.7987,
+   -72.9462
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 29.7,
+  "course_km": 17.8,
+  "width_km": 1.67,
+  "lakes_in_km2": 10.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2095,
+   2128,
+   6399,
+   6466
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lac Opiscotiche",
+  "id": 2210,
+  "hydrolakes": 6953,
+  "pour": [
+   53.1172,
+   -67.808
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 14.4,
+  "course_km": 10.1,
+  "width_km": 1.43,
+  "lakes_in_km2": 5.8,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2196,
+   2226,
+   6712,
+   6748
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lac Giffard",
+  "id": 2227,
+  "hydrolakes": 7567,
+  "pour": [
+   51.1759,
+   -76.9437
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 17.2,
+  "course_km": 14.3,
+  "width_km": 1.2,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2313,
+   2345,
+   6165,
+   6202
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Lac Woollett",
+  "id": 2234,
+  "hydrolakes": 7485,
+  "pour": [
+   51.4175,
+   -73.8308
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 27.8,
+  "course_km": 7.2,
+  "width_km": 3.87,
+  "lakes_in_km2": 19.7,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2298,
+   2332,
+   6349,
+   6389
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Ramsey Lake",
+  "id": 2270,
+  "hydrolakes": 8536,
+  "pour": [
+   47.2385,
+   -82.131
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 62.9,
+  "course_km": 23.6,
+  "width_km": 2.67,
+  "lakes_in_km2": 3.1,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2543,
+   2585,
+   5846,
+   5893
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Lake Panache",
+  "id": 2278,
+  "hydrolakes": 8707,
+  "pour": [
+   46.2078,
+   -81.5097
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 33.3,
+  "course_km": 11.8,
+  "width_km": 2.81,
+  "lakes_in_km2": 22.6,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2611,
+   2643,
+   5891,
+   5940
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "",
+  "id": 2302,
+  "hydrolakes": 515,
+  "pour": [
+   55.3962,
+   -101.9641
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 66.3,
+  "course_km": 17.5,
+  "width_km": 3.78,
+  "lakes_in_km2": 3.4,
+  "pieces_km2": 1.9,
+  "pieces_inner_km": [
+   1.05
+  ],
+  "box": [
+   2056,
+   2100,
+   4657,
+   4703
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Shibogama Lake",
+  "id": 2326,
+  "hydrolakes": 595,
+  "pour": [
+   53.5154,
+   -88.0857
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 6.1,
+  "course_km": 5.2,
+  "width_km": 1.19,
+  "lakes_in_km2": 20.2,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2172,
+   2203,
+   5500,
+   5532
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Kanuchuan Lake",
+  "id": 2330,
+  "hydrolakes": 609,
+  "pour": [
+   52.9572,
+   -87.6945
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 8.3,
+  "course_km": 9.2,
+  "width_km": 0.89,
+  "lakes_in_km2": 25.8,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2206,
+   2243,
+   5510,
+   5558
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Clay Lake",
+  "id": 2343,
+  "hydrolakes": 7938,
+  "pour": [
+   50.0618,
+   -93.5675
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 46.3,
+  "course_km": 28.0,
+  "width_km": 1.66,
+  "lakes_in_km2": 10.5,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2375,
+   2410,
+   5157,
+   5207
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Manitou Lake",
+  "id": 2350,
+  "hydrolakes": 8150,
+  "pour": [
+   49.216,
+   -93.0336
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 53.8,
+  "course_km": 23.6,
+  "width_km": 2.28,
+  "lakes_in_km2": 47.8,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2421,
+   2468,
+   5190,
+   5250
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Little Quill Lake",
+  "id": 2416,
+  "hydrolakes": 629,
+  "pour": [
+   51.9186,
+   -104.1793
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 16.9,
+  "course_km": 8.4,
+  "width_km": 2.02,
+  "lakes_in_km2": 6.1,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2270,
+   2302,
+   4530,
+   4580
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Pakwash Lake",
+  "id": 2421,
+  "hydrolakes": 7721,
+  "pour": [
+   50.6859,
+   -93.5146
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 21.8,
+  "course_km": 11.8,
+  "width_km": 1.84,
+  "lakes_in_km2": 15.7,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2338,
+   2378,
+   5174,
+   5210
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Nejanilini Lake",
+  "id": 2423,
+  "hydrolakes": 420,
+  "pour": [
+   59.4952,
+   -97.7735
+  ],
+  "gate_km": 3.0,
+  "tongue_km2": 10.5,
+  "course_km": 9.1,
+  "width_km": 1.14,
+  "lakes_in_km2": 21.1,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1799,
+   1851,
+   4900,
+   4957
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Waskaiowaka Lake",
+  "id": 2448,
+  "hydrolakes": 468,
+  "pour": [
+   56.5878,
+   -96.2665
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 18.9,
+  "course_km": 7.0,
+  "width_km": 2.72,
+  "lakes_in_km2": 12.4,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1988,
+   2024,
+   4989,
+   5045
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Nowyak Lake",
+  "id": 2498,
+  "hydrolakes": 4163,
+  "pour": [
+   61.8115,
+   -98.2354
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 19.5,
+  "course_km": 9.8,
+  "width_km": 1.99,
+  "lakes_in_km2": 3.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1673,
+   1710,
+   4879,
+   4924
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Hyde Lake",
+  "id": 2511,
+  "hydrolakes": 4539,
+  "pour": [
+   60.6035,
+   -95.1698
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 5.1,
+  "course_km": 5.0,
+  "width_km": 1.02,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1749,
+   1779,
+   5065,
+   5112
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Parker Lake",
+  "id": 2521,
+  "hydrolakes": 3732,
+  "pour": [
+   63.3989,
+   -95.1461
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 12.3,
+  "course_km": 9.4,
+  "width_km": 1.31,
+  "lakes_in_km2": 0.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1570,
+   1615,
+   5062,
+   5105
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Hill Island Lake",
+  "id": 2629,
+  "hydrolakes": 4543,
+  "pour": [
+   60.5919,
+   -109.9505
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 10.1,
+  "course_km": 3.0,
+  "width_km": 3.4,
+  "lakes_in_km2": 8.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1750,
+   1792,
+   4179,
+   4226
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Clearwater Lake",
+  "id": 2696,
+  "hydrolakes": 7230,
+  "pour": [
+   52.3582,
+   -120.2753
+  ],
+  "gate_km": 8.0,
+  "tongue_km2": 21.0,
+  "course_km": 14.1,
+  "width_km": 1.49,
+  "lakes_in_km2": 34.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2246,
+   2285,
+   3571,
+   3601
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Chignik Lake",
+  "id": 2730,
+  "hydrolakes": 5735,
+  "pour": [
+   56.419,
+   -158.9437
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 57.0,
+  "course_km": 23.3,
+  "width_km": 2.44,
+  "lakes_in_km2": 20.3,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   1999,
+   2039,
+   1243,
+   1288
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lake Sinclair",
+  "id": 2948,
+  "hydrolakes": 9439,
+  "pour": [
+   33.1865,
+   -83.2949
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 14.4,
+  "course_km": 10.1,
+  "width_km": 1.42,
+  "lakes_in_km2": 38.0,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   3369,
+   3426,
+   5783,
+   5824
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lake Griffin",
+  "id": 2954,
+  "hydrolakes": 9597,
+  "pour": [
+   28.8043,
+   -81.8741
+  ],
+  "gate_km": 4.5,
+  "tongue_km2": 24.1,
+  "course_km": 9.9,
+  "width_km": 2.44,
+  "lakes_in_km2": 3.6,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   3650,
+   3684,
+   5875,
+   5903
+  ],
+  "trimmed": true
+ },
+ {
+  "lake": "Pemadumcook Lake",
+  "id": 2969,
+  "hydrolakes": 8800,
+  "pour": [
+   45.6802,
+   -68.9437
+  ],
+  "gate_km": 4.5,
+  "tongue_km2": 52.8,
+  "course_km": 11.6,
+  "width_km": 4.54,
+  "lakes_in_km2": 78.5,
+  "pieces_km2": 2.4,
+  "pieces_inner_km": [
+   1.29
+  ],
+  "box": [
+   2641,
+   2676,
+   6646,
+   6687
+  ],
+  "trimmed": false
+ },
+ {
+  "lake": "Lac la Croix",
+  "id": 2978,
+  "hydrolakes": 718,
+  "pour": [
+   48.2788,
+   -92.2955
+  ],
+  "gate_km": 2.0,
+  "tongue_km2": 22.9,
+  "course_km": 9.5,
+  "width_km": 2.42,
+  "lakes_in_km2": 11.5,
+  "pieces_km2": 0.0,
+  "pieces_inner_km": [],
+  "box": [
+   2480,
+   2523,
+   5246,
+   5310
+  ],
+  "trimmed": false
+ }
+]

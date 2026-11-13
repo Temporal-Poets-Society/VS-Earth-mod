@@ -1,0 +1,73 @@
+Earth regional fauna, rules version 3 (2026-11-05)
+
+What the ranges mean
+Living mammal ranges are PHYLACINE "present-natural" ranges: an estimate of each
+species' natural range without human impact. They are counterfactual by design:
+they include places the species has lost to people (for example leopards in
+Scotland, tigers in Japan, dholes in Florida). They are not today's ranges and
+not dated historical maps. An optional "current" profile uses PHYLACINE's
+current ranges for the same mammals instead (157 rules); other rules are
+identical in both profiles. The "1318" profile (decision 0054), used by worlds
+placed as around 1318, removes from the present-natural range the regions each
+species no longer lived in around 1318, by historical and archaeozoological
+sources listed per rule (evidence1318), and never removes its current range.
+Extinct taxa use documented regions or coarse boxes for their last natural
+range before human-driven range loss or extinction (late Pleistocene to
+Holocene); each rule states its period. PHYLACINE rasters are never used for
+extinct taxa. Taxonomic splits absent from PHYLACINE (e.g. African golden wolf,
+forest elephant, forest buffalo, eastern wolf) use the parent species' raster
+restricted to the split taxon's documented regions.
+
+Mammal range data:
+Faurby, S., Davis, M., Pedersen, R. O., Schowanek, S. D., Antonelli, A.,
+and Svenning, J.-C. (2018). PHYLACINE 1.2: The Phylogenetic Atlas of
+Mammal Macroecology. Ecology. https://doi.org/10.1002/ecy.2443
+Faurby, S., Pedersen, R. O., Davis, M., Schowanek, S. D., Jarvie, S.,
+Antonelli, A., and Svenning, J.-C. (2020). PHYLACINE 1.2.1: An update
+to the Phylogenetic Atlas of Mammal Macroecology.
+https://doi.org/10.5281/zenodo.3690867
+Pinned source: https://github.com/MegaPast2Future/PHYLACINE_1.2/tree/v1.2.1
+The pinned v1.2.1 README states Creative Commons Zero (CC0):
+https://github.com/MegaPast2Future/PHYLACINE_1.2/blob/v1.2.1/README.md
+https://creativecommons.org/publicdomain/zero/1.0/
+Zenodo release metadata uses the less specific label other-open. Original archive:
+https://doi.org/10.5061/dryad.bp26v20
+Underlying range sources are retained per taxon in the source repository's
+spatial-metadata.csv. Many PHYLACINE ranges derive from IUCN Red List range
+maps (IUCN, The IUCN Red List of Threatened Species, https://www.iucnredlist.org);
+PHYLACINE's current ranges in particular are based on those IUCN maps. Earth uses
+only PHYLACINE's CC0 derived rasters, not IUCN spatial data or pages.
+PHYLACINE's requested original and update citations are preserved above.
+
+Changes: a subset of PHYLACINE present-natural and current rasters is converted from
+142 x 360 Behrmann cells to packed occupancy bits; resolution is unchanged
+(about 96 km). Aliases, subspecies and split mappings are explicit in source.
+
+Region boundaries reuse Earth's treeregions.json. Boundary provenance and
+underlying credits are in TREE-DATA-ATTRIBUTION.txt in this directory. Every
+site south of 60 S counts as Antarctica, because the polygons do not follow the
+whole terrain coastline.
+
+Additional factual range sources (facts only; no text, maps or images copied):
+New Zealand Birds Online (Te Papa, DOC and Birds New Zealand):
+https://www.nzbirdsonline.org.nz/
+New Zealand Department of Conservation: https://www.doc.govt.nz/
+Australian Antarctic Program penguin accounts:
+https://www.antarctica.gov.au/about-antarctica/animals/penguins/
+NOAA Fisheries sea-turtle species accounts:
+https://www.fisheries.noaa.gov/sea-turtles
+Australian Museum, Queensland Museum, Natural History Museum and US National
+Park Service species/fossil accounts; Wikipedia species articles for
+cassowaries and several fossil taxa; primary literature (e.g. Koepfli et al.
+2015 for the African golden wolf, Peres et al. 2021 for Mazama rufa, Crerar et
+al. 2014 for Steller's sea cow, Gaffney 1992 for Ninjemys). Exact rule-level
+links, periods and notes are in tools/fauna-taxa.json, tools/fauna-birds.json
+and docs/regional-fauna-implementation.md in the Earth source repository.
+
+Earth's historical boxes and island-group rules are approximate, and the
+combination of extinct animals with today's climate is not a paleoclimate
+reconstruction. Taxa without a defensible range are held from spawning.
+Provider animal models, textures, sounds and behaviour remain in the original
+optional mods and are not included in this derived range catalogue.
+Source hashes, provider versions, coverage tests and held taxa:
+docs/research/regional-fauna-2026-09-29/ in the Earth source repository.

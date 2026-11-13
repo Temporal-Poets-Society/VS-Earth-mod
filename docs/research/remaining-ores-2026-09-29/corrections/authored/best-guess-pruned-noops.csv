@@ -1,0 +1,599 @@
+name,country,lat,lon,commodities,size,confidence,authored_peak,v2_value_at_point,reason
+Realmonte rock salt,Italy,37.31,13.48,NaCl,major,high,0.75,NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Racalmuto rock salt,Italy,37.41,13.73,NaCl,medium,high,0.65,NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Pasquasia potash (kainite),Italy,37.53,14.20,K,medium,medium,0.6,K=0.85,v2 grid already >= authored weight in every kernel cell
+Kempirsai chromite (Donskoye-Khromtau),Kazakhstan,50.27,58.43,Cr,world-class,high,0.85,Cr=0.95,v2 grid already >= authored weight in every kernel cell
+Jwaneng diamonds,Botswana,-24.53,24.73,diamond,world-class,high,0.85,diamond=0.85,v2 grid already >= authored weight in every kernel cell
+Orapa-Letlhakane-Karowe diamonds,Botswana,-21.38,25.45,diamond,world-class,high,0.85,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Key Lake uranium,Canada,57.20,-105.60,U,major,high,0.75,U=0.85,v2 grid already >= authored weight in every kernel cell
+Witbank coalfield,South Africa,-25.87,29.23,C_coal,world-class,high,0.85,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Highveld coalfield (Secunda),South Africa,-26.52,29.17,C_coal,world-class,high,0.85,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Waterberg coalfield (Grootegeluk),South Africa,-23.67,27.60,C_coal,world-class,high,0.85,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Bulyanhulu gold,Tanzania,-3.23,32.48,Au,major,high,0.75,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Buzwagi gold (Kahama),Tanzania,-3.85,32.65,Au,medium,medium,0.6,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Lihir gold,Papua New Guinea,-3.12,152.64,Au,world-class,high,0.85,Au=0.85,v2 grid already >= authored weight in every kernel cell
+Kalima tin (Maniema),Congo (Kinshasa),-2.52,26.60,Sn,major,medium,0.7,Sn=0.95,v2 grid already >= authored weight in every kernel cell
+Manono tin-tantalum,Congo (Kinshasa),-7.30,27.42,Sn,major,high,0.75,Sn=0.95,v2 grid already >= authored weight in every kernel cell
+Kamituga gold (South Kivu),Congo (Kinshasa),-3.06,28.18,Au,major,medium,0.7,Au=0.85,v2 grid already >= authored weight in every kernel cell
+Al-Hasa and Al-Abiad phosphate,Jordan,30.85,36.05,P,major,high,0.75,P=0.95,v2 grid already >= authored weight in every kernel cell
+Eshidiya phosphate,Jordan,29.95,36.05,P,world-class,high,0.85,P=0.95,v2 grid already >= authored weight in every kernel cell
+Arab Potash (Ghor al-Safi),Jordan,31.05,35.50,K;NaCl,world-class,high,0.85,K=0.95 NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Dead Sea Works (Sdom),Israel,31.05,35.39,K;NaCl,world-class,high,0.85,K=0.95 NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Negev phosphates (Oron-Zin-Rotem),Israel,30.95,35.10,P,major,high,0.75,P=0.95,v2 grid already >= authored weight in every kernel cell
+Timna copper,Israel,29.78,34.95,Cu,medium,high,0.65,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Sossego copper-gold (Carajas),Brazil,-6.43,-50.07,Cu;Au,major,high,0.75,Cu=0.95 Au=0.95,v2 grid already >= authored weight in every kernel cell
+Azul manganese (Carajas),Brazil,-6.05,-50.33,Mn,major,high,0.75,Mn=0.95,v2 grid already >= authored weight in every kernel cell
+Onca Puma nickel,Brazil,-6.70,-51.10,Ni,major,medium,0.7,Ni=0.85,v2 grid already >= authored weight in every kernel cell
+Serra Pelada gold,Brazil,-5.95,-49.65,Au,medium,high,0.65,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Berezniki-Solikamsk potash (Verkhnekamskoye),Russia,59.55,56.80,K;NaCl,world-class,high,0.85,K=0.85 NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Rocanville potash,Canada,50.42,-101.70,K;NaCl,major,high,0.75,K=0.95 NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Lanigan potash,Canada,51.85,-105.03,K;NaCl,major,high,0.75,K=0.95 NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Allan potash,Canada,51.90,-106.07,K;NaCl,major,high,0.75,K=0.95 NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Belle Plaine potash,Canada,50.42,-105.17,K;NaCl,major,high,0.75,K=0.95 NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Jansen potash,Canada,51.80,-104.72,K;NaCl,major,medium,0.7,K=0.85 NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Vanscoy-Cory potash,Canada,52.05,-106.90,K;NaCl,major,high,0.75,K=0.85 NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Siguiri gold,Guinea,11.42,-9.17,Au,world-class,high,0.85,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Poura gold,Burkina Faso,11.62,-2.75,Au,medium,medium,0.6,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Tambao manganese,Burkina Faso,14.79,0.05,Mn,major,medium,0.7,Mn=0.95,v2 grid already >= authored weight in every kernel cell
+Ity gold,Cote D'Ivoire,6.87,-8.12,Au,major,medium,0.7,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Sipilou-Biankouma nickel laterite,Cote D'Ivoire,7.85,-7.95,Ni,medium,low,0.45,Ni=0.95,v2 grid already >= authored weight in every kernel cell
+Obuasi gold (Ashanti belt),Ghana,6.20,-1.67,Au,world-class,high,0.85,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Tarkwa-Damang gold,Ghana,5.35,-1.98,Au,world-class,high,0.85,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Prestea-Bogoso gold,Ghana,5.45,-2.12,Au,major,high,0.75,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Chirano gold,Ghana,6.30,-2.38,Au,major,medium,0.7,Au=0.85,v2 grid already >= authored weight in every kernel cell
+Akyem gold,Ghana,6.35,-1.00,Au,major,medium,0.7,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Konongo gold,Ghana,6.62,-1.22,Au,medium,medium,0.6,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Nsuta manganese,Ghana,5.27,-1.97,Mn,major,high,0.75,Mn=0.95,v2 grid already >= authored weight in every kernel cell
+Awaso bauxite,Ghana,6.23,-2.27,Al,major,high,0.75,Al=0.95,v2 grid already >= authored weight in every kernel cell
+Nyinahin bauxite,Ghana,6.60,-2.10,Al,major,medium,0.7,Al=0.95,v2 grid already >= authored weight in every kernel cell
+Akwatia diamonds (Birim field),Ghana,6.05,-0.80,diamond,major,high,0.75,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Kono diamond field (Koidu),Sierra Leone,8.63,-10.97,diamond,world-class,high,0.85,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Sierra Rutile (Gbangbama-Mogbwemo),Sierra Leone,7.68,-12.15,Ti,world-class,medium,0.75,Ti=0.95,v2 grid already >= authored weight in every kernel cell
+Nimba iron (Guinea side),Guinea,7.68,-8.40,Fe,major,medium,0.7,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Simandou iron,Guinea,8.60,-8.90,Fe,world-class,high,0.85,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Fria bauxite,Guinea,10.37,-13.58,Al,major,high,0.75,Al=0.95,v2 grid already >= authored weight in every kernel cell
+Kindia (Debele) bauxite,Guinea,10.10,-12.85,Al,major,medium,0.7,Al=0.95,v2 grid already >= authored weight in every kernel cell
+Taiba phosphate,Senegal,15.05,-16.82,P,major,high,0.75,P=0.85,v2 grid already >= authored weight in every kernel cell
+Thies (Lam-Lam) phosphate,Senegal,14.85,-16.90,P,medium,medium,0.6,P=0.95,v2 grid already >= authored weight in every kernel cell
+Grande Cote mineral sands,Senegal,15.30,-16.70,Ti,medium,medium,0.6,Ti=0.75,v2 grid already >= authored weight in every kernel cell
+Hahotoe-Kpogame phosphate,Togo,6.38,1.45,P,major,high,0.75,P=0.95,v2 grid already >= authored weight in every kernel cell
+Jos Plateau tin,Nigeria,9.75,8.85,Sn,world-class,high,0.85,Sn=0.95,v2 grid already >= authored weight in every kernel cell
+Itakpe iron,Nigeria,7.62,6.30,Fe,major,high,0.75,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Arlit-Akokan uranium,Niger,18.72,7.37,U,world-class,high,0.85,U=0.95,v2 grid already >= authored weight in every kernel cell
+Tchirozerine coal (Anou Araren),Niger,17.27,7.98,C_coal,medium,medium,0.6,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Zouerat iron (Kedia d'Idjil),Mauritania,22.73,-12.47,Fe,world-class,high,0.85,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Youssoufia phosphate (Gantour),Morocco,32.25,-8.53,P,world-class,high,0.85,P=0.95,v2 grid already >= authored weight in every kernel cell
+Benguerir phosphate (Gantour),Morocco,32.24,-7.95,P,world-class,high,0.85,P=0.95,v2 grid already >= authored weight in every kernel cell
+Bou Craa phosphate,Western Sahara,26.32,-12.85,P,major,high,0.75,P=0.95,v2 grid already >= authored weight in every kernel cell
+Imiter silver,Morocco,31.37,-5.80,Ag,major,high,0.75,Ag=0.95,v2 grid already >= authored weight in every kernel cell
+Bou Azzer cobalt-nickel,Morocco,30.50,-6.90,Ni,medium,medium,0.6,Ni=0.75,v2 grid already >= authored weight in every kernel cell
+Touissit lead-zinc,Morocco,34.48,-1.77,Pb;Zn,major,high,0.75,Pb=0.95 Zn=0.95,v2 grid already >= authored weight in every kernel cell
+Imini manganese,Morocco,31.15,-7.25,Mn,medium,medium,0.6,Mn=0.65,v2 grid already >= authored weight in every kernel cell
+Hajar zinc-lead-copper (Guemassa),Morocco,31.38,-8.18,Zn;Pb;Cu,medium,medium,0.6,Zn=0.85 Pb=0.85 Cu=0.85,v2 grid already >= authored weight in every kernel cell
+Djebel Onk phosphate,Algeria,34.70,7.95,P,major,high,0.75,P=0.95,v2 grid already >= authored weight in every kernel cell
+Ouenza iron,Algeria,35.95,8.13,Fe,major,high,0.75,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Boukhadra iron,Algeria,35.75,8.03,Fe,medium,high,0.65,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Gara Djebilet iron,Algeria,26.75,-7.33,Fe,world-class,medium,0.75,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Azzaba (Ismail) mercury,Algeria,36.73,7.10,Hg,medium,medium,0.6,Hg=0.95,v2 grid already >= authored weight in every kernel cell
+Gafsa phosphate basin,Tunisia,34.35,8.40,P,world-class,high,0.85,P=0.95,v2 grid already >= authored weight in every kernel cell
+Djerissa iron,Tunisia,35.85,8.63,Fe,medium,medium,0.6,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Abu Tartur phosphate,Egypt,25.30,30.10,P,major,medium,0.7,P=0.95,v2 grid already >= authored weight in every kernel cell
+Red Sea phosphates (Safaga-Quseir),Egypt,26.25,34.05,P,major,medium,0.7,P=0.95,v2 grid already >= authored weight in every kernel cell
+Nile Valley phosphates (Sebaiya),Egypt,25.20,32.65,P,medium,medium,0.6,P=0.95,v2 grid already >= authored weight in every kernel cell
+Sukari gold,Egypt,24.95,34.70,Au,major,high,0.75,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Bahariya iron (El-Gedida),Egypt,28.33,28.90,Fe,major,medium,0.7,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Um Bogma manganese (Sinai),Egypt,29.00,33.38,Mn,medium,medium,0.6,Mn=0.95,v2 grid already >= authored weight in every kernel cell
+Ingessana Hills chromite,Sudan,11.40,34.10,Cr,medium,medium,0.6,Cr=0.95,v2 grid already >= authored weight in every kernel cell
+Dallol potash (Danakil),Ethiopia,14.24,40.30,K;NaCl,major,medium,0.7,K=0.95 NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Lega Dembi gold,Ethiopia,5.72,38.95,Au,medium,medium,0.6,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Bisha copper-zinc-gold,Eritrea,15.47,37.53,Cu;Zn;Au,major,medium,0.7,Cu=0.95 Zn=0.95 Au=0.95,v2 grid already >= authored weight in every kernel cell
+Kilembe copper,Uganda,0.20,30.00,Cu,major,high,0.75,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Sukulu phosphate (Tororo),Uganda,0.65,34.15,P,medium,high,0.65,P=0.95,v2 grid already >= authored weight in every kernel cell
+Kwale mineral sands,Kenya,-4.35,39.45,Ti,major,medium,0.7,Ti=0.95,v2 grid already >= authored weight in every kernel cell
+Kerio Valley fluorite (Kimwarer),Kenya,0.33,35.62,F,medium,medium,0.6,F=0.95,v2 grid already >= authored weight in every kernel cell
+Longido ruby,Tanzania,-2.70,36.70,corundum,medium,medium,0.6,corundum=0.95,v2 grid already >= authored weight in every kernel cell
+Williamson diamond (Mwadui),Tanzania,-3.55,33.60,diamond,major,high,0.75,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Kabanga nickel,Tanzania,-2.88,30.67,Ni,major,medium,0.7,Ni=0.75,v2 grid already >= authored weight in every kernel cell
+Minjingu phosphate,Tanzania,-3.72,35.93,P,medium,medium,0.6,P=0.95,v2 grid already >= authored weight in every kernel cell
+Rutongo tin,Rwanda,-1.85,30.05,Sn,medium,medium,0.6,Sn=0.95,v2 grid already >= authored weight in every kernel cell
+Nyakabingo tungsten,Rwanda,-1.82,30.00,W,medium,low,0.45,W=0.95,v2 grid already >= authored weight in every kernel cell
+Musongati nickel,Burundi,-3.75,30.15,Ni,medium,low,0.45,Ni=0.95,v2 grid already >= authored weight in every kernel cell
+Tenke Fungurume copper-cobalt,Congo (Kinshasa),-10.60,26.20,Cu,world-class,high,0.85,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Likasi copper-cobalt,Congo (Kinshasa),-10.98,26.73,Cu,major,high,0.75,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Lubumbashi (Etoile) copper,Congo (Kinshasa),-11.63,27.55,Cu,major,high,0.75,Cu=0.85,v2 grid already >= authored weight in every kernel cell
+Kipushi zinc-copper,Congo (Kinshasa),-11.76,27.25,Zn;Cu;Pb,major,high,0.75,Zn=0.95 Cu=0.95 Pb=0.95,v2 grid already >= authored weight in every kernel cell
+Kamoa-Kakula copper,Congo (Kinshasa),-10.80,25.30,Cu,world-class,high,0.85,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Mbuji-Mayi diamonds,Congo (Kinshasa),-6.15,23.60,diamond,world-class,high,0.85,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Kisenge manganese,Congo (Kinshasa),-10.70,23.15,Mn,medium,medium,0.6,Mn=0.95,v2 grid already >= authored weight in every kernel cell
+Mindouli copper-lead-zinc,Congo (Brazzaville),-4.28,14.35,Cu;Pb;Zn,medium,medium,0.6,Cu=0.95 Pb=0.95 Zn=0.95,v2 grid already >= authored weight in every kernel cell
+Kouilou potash (Holle-Mengo),Congo (Brazzaville),-4.45,11.95,K;NaCl,major,medium,0.7,K=0.85 NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Minim-Martap bauxite,Cameroon,6.90,13.20,Al,major,medium,0.7,Al=0.95,v2 grid already >= authored weight in every kernel cell
+Catoca diamonds,Angola,-9.40,20.30,diamond,world-class,high,0.85,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Cuango diamond placers (Cafunfo),Angola,-8.80,17.95,diamond,major,medium,0.7,diamond=0.85,v2 grid already >= authored weight in every kernel cell
+Cassinga iron,Angola,-15.12,16.08,Fe,medium,medium,0.6,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Nkana copper (Kitwe),Zambia,-12.82,28.20,Cu,world-class,high,0.85,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Mufulira copper,Zambia,-12.55,28.24,Cu,major,high,0.75,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Luanshya copper,Zambia,-13.13,28.40,Cu,major,high,0.75,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Konkola copper (Chililabombwe),Zambia,-12.37,27.83,Cu,world-class,high,0.85,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Kansanshi copper (Solwezi),Zambia,-12.10,26.43,Cu,world-class,high,0.85,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Lumwana copper,Zambia,-12.25,25.83,Cu,major,high,0.75,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Kabwe lead-zinc,Zambia,-14.45,28.45,Pb;Zn,major,high,0.75,Pb=0.95 Zn=0.95,v2 grid already >= authored weight in every kernel cell
+Maamba coal,Zambia,-17.37,27.18,C_coal,major,high,0.75,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Kwekwe gold (Globe and Phoenix),Zimbabwe,-18.93,29.82,Au,major,high,0.75,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Kadoma gold,Zimbabwe,-18.35,29.92,Au,major,high,0.75,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Bindura gold-nickel (Freda Rebecca-Trojan),Zimbabwe,-17.32,31.33,Au;Ni,major,high,0.75,Au=0.95 Ni=0.95,v2 grid already >= authored weight in every kernel cell
+Shurugwi gold-chromite,Zimbabwe,-19.67,30.00,Au;Cr,major,high,0.75,Au=0.85 Cr=0.95,v2 grid already >= authored weight in every kernel cell
+Moma heavy mineral sands,Mozambique,-16.40,39.65,Ti,major,low,0.5,Ti=0.95,v2 grid already >= authored weight in every kernel cell
+Ambatovy nickel,Madagascar,-18.85,48.32,Ni,world-class,high,0.85,Ni=0.95,v2 grid already >= authored weight in every kernel cell
+Andriamena chromite,Madagascar,-17.40,47.50,Cr,major,medium,0.7,Cr=0.95,v2 grid already >= authored weight in every kernel cell
+Ilakaka sapphire,Madagascar,-22.68,45.21,corundum,world-class,high,0.85,corundum=0.85,v2 grid already >= authored weight in every kernel cell
+Brickaville-Vatomandry graphite belt,Madagascar,-18.60,48.85,C_graphite,major,medium,0.7,C_graphite=0.95,v2 grid already >= authored weight in every kernel cell
+Kalahari manganese field (Hotazel),South Africa,-27.20,22.95,Mn,world-class,high,0.85,Mn=0.95,v2 grid already >= authored weight in every kernel cell
+Sishen iron,South Africa,-27.75,22.98,Fe,world-class,high,0.85,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Postmasburg manganese-iron,South Africa,-28.33,23.07,Mn;Fe,major,high,0.75,Mn=0.95 Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Thabazimbi iron,South Africa,-24.60,27.40,Fe,major,high,0.75,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Phalaborwa copper-phosphate,South Africa,-23.95,31.12,Cu;P,major,high,0.75,Cu=0.85 P=0.75,v2 grid already >= authored weight in every kernel cell
+Aggeneys-Gamsberg lead-zinc,South Africa,-29.22,18.88,Pb;Zn;Ag;Cu,world-class,high,0.85,Pb=0.95 Zn=0.95 Ag=0.95 Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Okiep copper,South Africa,-29.60,17.88,Cu,major,high,0.75,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Richards Bay mineral sands,South Africa,-28.65,32.15,Ti,major,high,0.75,Ti=0.75,v2 grid already >= authored weight in every kernel cell
+Namakwa Sands (Brand-se-Baai),South Africa,-31.30,17.95,Ti,major,medium,0.7,Ti=0.95,v2 grid already >= authored weight in every kernel cell
+Venetia diamonds,South Africa,-22.43,29.33,diamond,world-class,high,0.85,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Finsch diamonds,South Africa,-28.38,23.45,diamond,major,high,0.75,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Cullinan diamonds,South Africa,-25.67,28.52,diamond,world-class,high,0.85,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Namaqualand coastal diamonds (Kleinzee),South Africa,-29.68,17.10,diamond,major,high,0.75,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Barberton gold,South Africa,-25.78,31.05,Au,major,high,0.75,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Vergenoeg fluorite,South Africa,-25.25,28.58,F,major,medium,0.7,F=0.75,v2 grid already >= authored weight in every kernel cell
+Bushveld vanadium (Brits-Rhovan),South Africa,-25.60,27.75,V;Fe;Ti,major,high,0.75,V=0.95 Fe=0.95 Ti=0.95,v2 grid already >= authored weight in every kernel cell
+Mapochs vanadium magnetite (Roossenekal),South Africa,-25.20,29.93,V;Fe;Ti,major,medium,0.7,V=0.95 Fe=0.95 Ti=0.95,v2 grid already >= authored weight in every kernel cell
+Murchison antimony-gold (Gravelotte),South Africa,-23.95,30.70,Sb;Au,major,high,0.75,Sb=0.95 Au=0.95,v2 grid already >= authored weight in every kernel cell
+Zaaiplaats tin,South Africa,-24.05,28.65,Sn,medium,low,0.45,Sn=0.95,v2 grid already >= authored weight in every kernel cell
+Rossing uranium,Namibia,-22.48,15.05,U,world-class,high,0.85,U=0.95,v2 grid already >= authored weight in every kernel cell
+Tsumeb copper-lead-zinc,Namibia,-19.25,17.72,Cu;Pb;Zn;Ag,world-class,high,0.85,Cu=0.95 Pb=0.95 Zn=0.95 Ag=0.95,v2 grid already >= authored weight in every kernel cell
+Kombat copper,Namibia,-19.72,17.70,Cu;Pb,medium,high,0.65,Cu=0.95 Pb=0.95,v2 grid already >= authored weight in every kernel cell
+Rosh Pinah zinc-lead,Namibia,-27.95,16.75,Zn;Pb,major,high,0.75,Zn=0.95 Pb=0.95,v2 grid already >= authored weight in every kernel cell
+Skorpion zinc,Namibia,-27.85,16.62,Zn,major,high,0.75,Zn=0.95,v2 grid already >= authored weight in every kernel cell
+Uis tin,Namibia,-21.22,14.87,Sn,major,high,0.75,Sn=0.95,v2 grid already >= authored weight in every kernel cell
+Navachab gold,Namibia,-21.98,15.78,Au,medium,high,0.65,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Okorusu fluorite,Namibia,-20.05,16.75,F,medium,high,0.65,F=0.95,v2 grid already >= authored weight in every kernel cell
+Walvis Bay salt,Namibia,-22.98,14.55,NaCl,medium,high,0.65,NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Otjihase copper,Namibia,-22.45,17.30,Cu,medium,medium,0.6,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Selebi-Phikwe nickel-copper,Botswana,-22.00,27.85,Ni;Cu,major,high,0.75,Ni=0.85 Cu=0.85,v2 grid already >= authored weight in every kernel cell
+Sua Pan salt,Botswana,-20.57,26.15,NaCl,medium,high,0.65,NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Letseng diamonds,Lesotho,-29.00,28.87,diamond,major,high,0.75,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Ngwenya iron,Swaziland,-26.20,31.03,Fe,medium,high,0.65,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Al Jalamid phosphate,Saudi Arabia,31.30,39.95,P,major,medium,0.7,P=0.85,v2 grid already >= authored weight in every kernel cell
+Umm Wu'al phosphate,Saudi Arabia,31.15,38.95,P,major,low,0.5,P=0.55,v2 grid already >= authored weight in every kernel cell
+Mahd adh Dhahab gold,Saudi Arabia,23.50,40.86,Au;Ag;Cu;Zn,major,high,0.75,Au=0.95 Ag=0.95 Cu=0.95 Zn=0.95,v2 grid already >= authored weight in every kernel cell
+Al Amar gold-zinc,Saudi Arabia,23.78,45.08,Au;Zn,medium,medium,0.6,Au=0.95 Zn=0.95,v2 grid already >= authored weight in every kernel cell
+Jabal Sayid copper,Saudi Arabia,23.83,40.94,Cu,medium,medium,0.6,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Mishraq native sulfur,Iraq,35.97,43.32,S,major,high,0.75,S=0.95,v2 grid already >= authored weight in every kernel cell
+Khneifis phosphate,Syria,34.20,37.85,P,major,low,0.5,P=0.85,v2 grid already >= authored weight in every kernel cell
+Sarcheshmeh copper,Iran,29.95,55.87,Cu;Mo,world-class,high,0.85,Cu=0.95 Mo=0.95,v2 grid already >= authored weight in every kernel cell
+Miduk copper,Iran,30.42,55.17,Cu,medium,medium,0.6,Cu=0.85,v2 grid already >= authored weight in every kernel cell
+Chadormalu iron,Iran,32.30,55.50,Fe,major,medium,0.7,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Bafq iron (Choghart),Iran,31.70,55.47,Fe,major,high,0.75,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Irankuh zinc-lead,Iran,32.55,51.60,Zn;Pb,medium,medium,0.6,Zn=0.85 Pb=0.85,v2 grid already >= authored weight in every kernel cell
+Faryab chromite,Iran,27.50,57.30,Cr,major,medium,0.7,Cr=0.95,v2 grid already >= authored weight in every kernel cell
+Sabzevar chromite,Iran,36.15,57.60,Cr,medium,medium,0.6,Cr=0.75,v2 grid already >= authored weight in every kernel cell
+Guleman chromite,Turkey,38.45,39.80,Cr,major,high,0.75,Cr=0.95,v2 grid already >= authored weight in every kernel cell
+Fethiye-Koycegiz chromite,Turkey,36.85,28.85,Cr,medium,medium,0.6,Cr=0.95,v2 grid already >= authored weight in every kernel cell
+Emet borates,Turkey,39.35,29.25,B,world-class,high,0.85,B=0.95,v2 grid already >= authored weight in every kernel cell
+Kestelek borates,Turkey,39.85,28.85,B,medium,low,0.45,B=0.95,v2 grid already >= authored weight in every kernel cell
+Cayeli copper-zinc,Turkey,41.08,40.73,Cu;Zn,medium,high,0.65,Cu=0.95 Zn=0.95,v2 grid already >= authored weight in every kernel cell
+Murgul copper,Turkey,41.27,41.57,Cu,medium,medium,0.6,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Kure copper,Turkey,41.80,33.70,Cu,medium,medium,0.6,Cu=0.85,v2 grid already >= authored weight in every kernel cell
+Kisladag gold,Turkey,38.48,29.15,Au,major,medium,0.7,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Divrigi iron,Turkey,39.38,38.12,Fe,major,high,0.75,Fe=0.85,v2 grid already >= authored weight in every kernel cell
+Chiatura manganese,Georgia,42.29,43.28,Mn,world-class,high,0.85,Mn=0.95,v2 grid already >= authored weight in every kernel cell
+Madneuli copper-gold,Georgia,41.48,44.37,Cu;Au,medium,high,0.65,Cu=0.85 Au=0.85,v2 grid already >= authored weight in every kernel cell
+Tkibuli coal,Georgia,42.35,42.98,C_coal,medium,high,0.65,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Kajaran copper-molybdenum,Armenia,39.15,46.15,Cu;Mo,world-class,high,0.85,Cu=0.95 Mo=0.85,v2 grid already >= authored weight in every kernel cell
+Sotk (Zod) gold,Armenia,40.20,45.93,Au,medium,high,0.65,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Dashkasan iron,Azerbaijan,40.53,46.08,Fe,major,high,0.75,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Hajigak iron,Afghanistan,34.65,68.10,Fe,major,high,0.75,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Panjshir emeralds,Afghanistan,35.40,69.65,emerald,major,high,0.75,emerald=0.95,v2 grid already >= authored weight in every kernel cell
+Jegdalek ruby,Afghanistan,34.43,69.75,corundum,medium,high,0.65,corundum=0.95,v2 grid already >= authored weight in every kernel cell
+Aynak copper,Afghanistan,34.27,69.30,Cu,world-class,high,0.85,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Saindak copper,Pakistan,29.27,61.56,Cu,major,medium,0.7,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Reko Diq copper-gold,Pakistan,29.13,62.05,Cu;Au,world-class,medium,0.75,Cu=0.95 Au=0.95,v2 grid already >= authored weight in every kernel cell
+Khewra salt (Salt Range),Pakistan,32.65,73.00,NaCl,world-class,high,0.85,NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Lakhra coal,Pakistan,25.60,68.20,C_coal,medium,medium,0.6,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Swat emeralds (Mingora),Pakistan,34.78,72.36,emerald,major,high,0.75,emerald=0.95,v2 grid already >= authored weight in every kernel cell
+Anzob antimony-mercury,Tajikistan,39.10,68.85,Sb;Hg,medium,medium,0.6,Sb=0.95 Hg=0.95,v2 grid already >= authored weight in every kernel cell
+Almalyk copper-gold,Uzbekistan,40.85,69.60,Cu;Au;Mo;Pb;Zn,world-class,high,0.85,Cu=0.95 Au=0.85 Mo=0.95 Pb=0.85 Zn=0.85,v2 grid already >= authored weight in every kernel cell
+Kokpatas gold,Uzbekistan,42.42,63.50,Au,medium,medium,0.6,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Kadamjai antimony,Kyrgyzstan,40.13,71.72,Sb,major,high,0.75,Sb=0.95,v2 grid already >= authored weight in every kernel cell
+Jerooy gold,Kyrgyzstan,42.35,73.05,Au,medium,medium,0.6,Au=0.63,v2 grid already >= authored weight in every kernel cell
+Karlyuk potash,Turkmenistan,37.55,66.20,K;NaCl,medium,medium,0.6,K=0.95 NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Kounrad copper (Balkhash),Kazakhstan,46.95,75.00,Cu,world-class,high,0.85,Cu=0.85,v2 grid already >= authored weight in every kernel cell
+Aktogay copper,Kazakhstan,46.95,79.60,Cu,major,high,0.75,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Bozshakol copper,Kazakhstan,51.85,74.30,Cu,major,medium,0.7,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Ekibastuz coal,Kazakhstan,51.73,75.32,C_coal,world-class,high,0.85,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Ridder lead-zinc,Kazakhstan,50.35,83.50,Pb;Zn;Cu;Ag,major,high,0.75,Pb=0.95 Zn=0.85 Cu=0.85 Ag=0.85,v2 grid already >= authored weight in every kernel cell
+Zyryanovsk (Altai) lead-zinc,Kazakhstan,49.73,84.27,Pb;Zn;Cu,major,high,0.75,Pb=0.95 Zn=0.85 Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Belousovka-Irtysh copper-zinc,Kazakhstan,50.10,82.55,Cu;Zn;Pb,medium,medium,0.6,Cu=0.85 Zn=0.85 Pb=0.85,v2 grid already >= authored weight in every kernel cell
+Lisakovsk iron,Kazakhstan,52.53,62.50,Fe,major,high,0.75,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Arkalyk bauxite,Kazakhstan,50.25,66.90,Al,medium,medium,0.6,Al=0.95,v2 grid already >= authored weight in every kernel cell
+Batamshinsky nickel,Kazakhstan,50.60,58.30,Ni,medium,medium,0.6,Ni=0.95,v2 grid already >= authored weight in every kernel cell
+Zhayrem lead-zinc,Kazakhstan,48.35,70.20,Pb;Zn,medium,medium,0.6,Pb=0.95 Zn=0.60,v2 grid already >= authored weight in every kernel cell
+Karatau phosphate (Zhanatas),Kazakhstan,43.60,69.75,P,world-class,high,0.85,P=0.95,v2 grid already >= authored weight in every kernel cell
+Inder borates and salt,Kazakhstan,48.50,51.85,B;NaCl,major,medium,0.7,B=0.70 NaCl=0.70,v2 grid already >= authored weight in every kernel cell
+Vasilkovskoye gold,Kazakhstan,53.25,69.40,Au,major,medium,0.7,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Bakyrchik gold,Kazakhstan,49.70,81.60,Au,medium,medium,0.6,Au=0.75,v2 grid already >= authored weight in every kernel cell
+Stepnogorsk uranium,Kazakhstan,52.35,71.90,U,medium,medium,0.6,U=0.85,v2 grid already >= authored weight in every kernel cell
+Erdenet copper-molybdenum,Mongolia,49.03,104.07,Cu;Mo,world-class,high,0.85,Cu=0.95 Mo=0.95,v2 grid already >= authored weight in every kernel cell
+Baganuur coal,Mongolia,47.75,108.33,C_coal,major,high,0.75,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Shivee Ovoo coal,Mongolia,46.10,108.65,C_coal,medium,medium,0.6,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Bor-Ondor fluorite,Mongolia,46.25,109.40,F,major,medium,0.7,F=0.95,v2 grid already >= authored weight in every kernel cell
+Boroo gold,Mongolia,48.72,106.17,Au,medium,medium,0.6,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Tsagaan Suvarga copper,Mongolia,43.87,108.33,Cu;Mo,medium,medium,0.6,Cu=0.95 Mo=0.95,v2 grid already >= authored weight in every kernel cell
+Sol-Iletsk salt,Russia,51.17,54.98,NaCl,major,high,0.75,NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Baskunchak salt,Russia,48.20,46.85,NaCl,major,high,0.75,NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Elton salt,Russia,49.13,46.65,NaCl,major,high,0.75,NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Gremyachinskoye potash,Russia,47.75,43.35,K;NaCl,medium,low,0.45,K=0.55 NaCl=0.55,v2 grid already >= authored weight in every kernel cell
+Magnitogorsk iron,Russia,53.43,59.05,Fe,major,high,0.75,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Kachkanar titanomagnetite,Russia,58.70,59.50,Fe;Ti;V,world-class,high,0.85,Fe=0.85 Ti=0.95 V=0.85,v2 grid already >= authored weight in every kernel cell
+Gai copper,Russia,51.47,58.45,Cu;Zn,major,high,0.75,Cu=0.95 Zn=0.85,v2 grid already >= authored weight in every kernel cell
+Uchaly copper-zinc,Russia,54.30,59.40,Cu;Zn,major,high,0.75,Cu=0.95 Zn=0.85,v2 grid already >= authored weight in every kernel cell
+Sibai copper-zinc,Russia,52.72,58.65,Cu;Zn,medium,high,0.65,Cu=0.95 Zn=0.85,v2 grid already >= authored weight in every kernel cell
+Karabash copper,Russia,55.48,60.20,Cu,medium,high,0.65,Cu=0.85,v2 grid already >= authored weight in every kernel cell
+Kirovgrad-Krasnouralsk copper,Russia,57.55,60.05,Cu,medium,medium,0.6,Cu=0.60,v2 grid already >= authored weight in every kernel cell
+Saranovskoye chromite,Russia,58.50,58.85,Cr,medium,medium,0.6,Cr=0.75,v2 grid already >= authored weight in every kernel cell
+Rai-Iz chromite (Polar Urals),Russia,66.85,65.40,Cr,medium,low,0.45,Cr=0.75,v2 grid already >= authored weight in every kernel cell
+Ufaley nickel,Russia,55.90,60.20,Ni,medium,medium,0.6,Ni=0.75,v2 grid already >= authored weight in every kernel cell
+Orsk-Khalilovo nickel laterite,Russia,51.30,58.20,Ni,medium,medium,0.6,Ni=0.85,v2 grid already >= authored weight in every kernel cell
+Ural platinum placers (Is-Nizhny Tagil),Russia,58.40,59.80,Pt,medium,medium,0.6,Pt=0.75,v2 grid already >= authored weight in every kernel cell
+Berezovsky gold,Russia,56.90,60.80,Au,medium,high,0.65,Au=0.75,v2 grid already >= authored weight in every kernel cell
+Severouralsk bauxite,Russia,60.15,59.95,Al,major,high,0.75,Al=0.95,v2 grid already >= authored weight in every kernel cell
+Khibiny apatite,Russia,67.65,33.70,P,world-class,high,0.85,P=0.95,v2 grid already >= authored weight in every kernel cell
+Kovdor iron-apatite,Russia,67.57,30.45,Fe;P,major,high,0.75,Fe=0.95 P=0.85,v2 grid already >= authored weight in every kernel cell
+Monchegorsk nickel-copper,Russia,67.93,32.92,Ni;Cu,major,high,0.75,Ni=0.95 Cu=0.75,v2 grid already >= authored weight in every kernel cell
+Pechenga nickel-copper,Russia,69.40,30.80,Ni;Cu,major,high,0.75,Ni=0.75 Cu=0.75,v2 grid already >= authored weight in every kernel cell
+Olenegorsk iron,Russia,68.15,33.25,Fe,major,high,0.75,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Kostomuksha iron,Russia,64.60,30.60,Fe,major,high,0.75,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+KMA iron (Gubkin-Stary Oskol),Russia,51.28,37.55,Fe,world-class,high,0.85,Fe=0.85,v2 grid already >= authored weight in every kernel cell
+KMA iron (Zheleznogorsk-Mikhailovsky),Russia,52.35,35.35,Fe,world-class,high,0.85,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Kingisepp phosphorite,Russia,59.37,28.60,P,medium,high,0.65,P=0.85,v2 grid already >= authored weight in every kernel cell
+South Yakutian coal (Neryungri),Russia,56.66,124.70,C_coal,major,high,0.75,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Udachny diamonds,Russia,66.42,112.40,diamond,world-class,high,0.85,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Aikhal-Jubilee diamonds,Russia,65.95,111.50,diamond,major,high,0.75,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Bodaibo goldfield,Russia,57.85,114.20,Au,world-class,high,0.85,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Sukhoi Log gold,Russia,58.60,115.15,Au,world-class,high,0.85,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Olimpiada gold (Yenisei Ridge),Russia,59.98,92.90,Au,world-class,high,0.85,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Kolyma goldfields (Susuman),Russia,62.78,148.15,Au,major,high,0.75,Au=0.85,v2 grid already >= authored weight in every kernel cell
+Aldan goldfield (Kuranakh),Russia,58.60,125.40,Au,major,high,0.75,Au=0.85,v2 grid already >= authored weight in every kernel cell
+Dukat silver,Russia,62.55,155.37,Ag,world-class,medium,0.75,Ag=0.85,v2 grid already >= authored weight in every kernel cell
+Nezhdaninskoye gold,Russia,62.50,139.00,Au,medium,low,0.45,Au=0.62,v2 grid already >= authored weight in every kernel cell
+Balei gold,Russia,51.58,116.63,Au,major,high,0.75,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Kavalerovo tin,Russia,44.27,135.05,Sn,major,high,0.75,Sn=0.85,v2 grid already >= authored weight in every kernel cell
+Vostok-2 tungsten,Russia,46.30,135.70,W,medium,medium,0.6,W=0.61,v2 grid already >= authored weight in every kernel cell
+Yaroslavsky fluorite (Voznesenka),Russia,44.17,132.20,F,major,medium,0.7,F=0.95,v2 grid already >= authored weight in every kernel cell
+Khingan tin,Russia,49.10,131.00,Sn,medium,medium,0.6,Sn=0.70,v2 grid already >= authored weight in every kernel cell
+Deputatsky tin,Russia,69.30,139.90,Sn,major,medium,0.7,Sn=0.95,v2 grid already >= authored weight in every kernel cell
+Iultin tin-tungsten,Russia,67.85,178.75,Sn;W,medium,medium,0.6,Sn=0.70 W=0.70,v2 grid already >= authored weight in every kernel cell
+Tyrnyauz tungsten-molybdenum,Russia,43.40,42.92,W;Mo,major,high,0.75,W=0.85 Mo=0.85,v2 grid already >= authored weight in every kernel cell
+Sadon lead-zinc,Russia,42.85,44.00,Pb;Zn,medium,high,0.65,Pb=0.65 Zn=0.65,v2 grid already >= authored weight in every kernel cell
+Tashtagol iron,Russia,52.77,87.87,Fe,medium,high,0.65,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Abaza iron,Russia,52.65,90.10,Fe,medium,high,0.65,Fe=0.85,v2 grid already >= authored weight in every kernel cell
+Zhireken molybdenum,Russia,52.80,117.40,Mo,medium,medium,0.6,Mo=0.95,v2 grid already >= authored weight in every kernel cell
+Kondyor platinum,Russia,57.60,134.65,Pt,major,medium,0.7,Pt=0.95,v2 grid already >= authored weight in every kernel cell
+North Onega bauxite (Plesetsk),Russia,62.70,40.30,Al,medium,medium,0.6,Al=0.60,v2 grid already >= authored weight in every kernel cell
+Kremenchuk iron,Ukraine,49.05,33.65,Fe,major,high,0.75,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Nikopol manganese (Marhanets-Pokrov),Ukraine,47.62,34.35,Mn,world-class,high,0.85,Mn=0.85,v2 grid already >= authored weight in every kernel cell
+Velykyi Tokmak manganese,Ukraine,47.25,35.70,Mn,medium,medium,0.6,Mn=0.95,v2 grid already >= authored weight in every kernel cell
+Vilnohirsk mineral sands,Ukraine,48.48,34.00,Ti,major,high,0.75,Ti=0.95,v2 grid already >= authored weight in every kernel cell
+Zavallia graphite,Ukraine,48.20,30.00,C_graphite,major,high,0.75,C_graphite=0.95,v2 grid already >= authored weight in every kernel cell
+Mykytivka mercury,Ukraine,48.33,38.00,Hg,medium,high,0.65,Hg=0.85,v2 grid already >= authored weight in every kernel cell
+Kalush potash,Ukraine,49.02,24.37,K;NaCl,major,high,0.75,K=0.85 NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Stebnyk potash,Ukraine,49.30,23.57,K;NaCl,major,medium,0.7,K=0.95 NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Rozdol native sulfur,Ukraine,49.47,24.05,S,major,high,0.75,S=0.85,v2 grid already >= authored weight in every kernel cell
+Soligorsk potash,Belarus,52.80,27.55,K;NaCl,world-class,high,0.85,K=0.85 NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Mozyr salt,Belarus,52.05,29.25,NaCl,medium,high,0.65,NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Lorraine coal (Forbach-Freyming),France,49.12,6.72,C_coal,major,high,0.75,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Alsace potash (Wittelsheim),France,47.80,7.25,K;NaCl,major,high,0.75,K=0.85 NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Lorraine salt (Varangeville-Dombasle),France,48.62,6.35,NaCl,major,high,0.75,NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Les Baux bauxite,France,43.75,4.80,Al,medium,high,0.65,Al=0.65,v2 grid already >= authored weight in every kernel cell
+Salsigne gold,France,43.33,2.35,Au,medium,high,0.65,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Limousin uranium (Bessines),France,46.10,1.37,U,major,high,0.75,U=0.85,v2 grid already >= authored weight in every kernel cell
+Salau tungsten,France,42.77,1.18,W,medium,medium,0.6,W=0.70,v2 grid already >= authored weight in every kernel cell
+Les Malines zinc-lead,France,43.92,3.60,Zn;Pb,medium,medium,0.6,Zn=0.65 Pb=0.65,v2 grid already >= authored weight in every kernel cell
+Twente salt (Hengelo),Netherlands,52.27,6.80,NaCl,medium,high,0.65,NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Saar coal,Germany,49.30,6.95,C_coal,major,high,0.75,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Aachen coal,Germany,50.83,6.17,C_coal,medium,high,0.65,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Rhenish lignite (Garzweiler-Hambach),Germany,50.95,6.50,C_coal,world-class,high,0.85,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Lusatian lignite,Germany,51.55,14.35,C_coal,world-class,high,0.85,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Ibbenburen coal,Germany,52.28,7.72,C_coal,medium,high,0.65,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Werra potash,Germany,50.88,10.00,K;NaCl,major,high,0.75,K=0.85 NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Harz lead-zinc-silver (Rammelsberg-Clausthal),Germany,51.85,10.40,Pb;Zn;Ag;Cu,major,high,0.75,Pb=0.85 Zn=0.95 Ag=0.85 Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Kropfmuhl graphite,Germany,48.60,13.65,C_graphite,medium,high,0.65,C_graphite=0.95,v2 grid already >= authored weight in every kernel cell
+Meggen zinc-lead,Germany,51.13,8.10,Zn;Pb,medium,high,0.65,Zn=0.95 Pb=0.85,v2 grid already >= authored weight in every kernel cell
+Erzberg iron,Austria,47.52,14.90,Fe,major,high,0.75,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Hallstatt-Salzkammergut salt,Austria,47.56,13.64,NaCl,major,high,0.75,NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Bleiberg lead-zinc,Austria,46.62,13.70,Pb;Zn,medium,high,0.65,Pb=0.85 Zn=0.85,v2 grid already >= authored weight in every kernel cell
+Felbertal tungsten (Mittersill),Austria,47.22,12.50,W,major,high,0.75,W=0.85,v2 grid already >= authored weight in every kernel cell
+Sokolov lignite,Czech Republic,50.18,12.65,C_coal,medium,high,0.65,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Rudnany iron,Slovakia,48.88,20.68,Fe,medium,medium,0.6,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Pezinok antimony,Slovakia,48.30,17.27,Sb,medium,medium,0.6,Sb=0.70,v2 grid already >= authored weight in every kernel cell
+Belchatow lignite,Poland,51.25,19.33,C_coal,world-class,high,0.85,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Turow lignite,Poland,50.90,14.90,C_coal,major,high,0.75,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Konin lignite,Poland,52.25,18.25,C_coal,medium,high,0.65,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Olkusz-Bytom zinc-lead,Poland,50.28,19.57,Zn;Pb,major,high,0.75,Zn=0.85 Pb=0.85,v2 grid already >= authored weight in every kernel cell
+Wieliczka-Bochnia salt,Poland,49.98,20.06,NaCl,major,high,0.75,NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Klodawa salt,Poland,52.25,18.90,NaCl,medium,high,0.65,NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Bakony bauxite (Halimba),Hungary,47.03,17.53,Al,major,high,0.75,Al=0.95,v2 grid already >= authored weight in every kernel cell
+Mecsek coal,Hungary,46.12,18.25,C_coal,medium,high,0.65,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Visonta lignite,Hungary,47.78,20.02,C_coal,medium,medium,0.6,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Recsk copper,Hungary,47.93,20.10,Cu,medium,medium,0.6,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Urkut manganese,Hungary,47.08,17.65,Mn,medium,high,0.65,Mn=0.95,v2 grid already >= authored weight in every kernel cell
+Moldova Noua copper,Romania,44.73,21.67,Cu,medium,medium,0.6,Cu=0.85,v2 grid already >= authored weight in every kernel cell
+Madan lead-zinc,Bulgaria,41.50,24.95,Pb;Zn,major,high,0.75,Pb=0.95 Zn=0.85,v2 grid already >= authored weight in every kernel cell
+Kolubara lignite,Serbia,44.45,20.25,C_coal,major,high,0.75,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Kostolac lignite,Serbia,44.72,21.20,C_coal,medium,high,0.65,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Zajaca antimony,Serbia,44.45,19.25,Sb,medium,medium,0.6,Sb=0.85,v2 grid already >= authored weight in every kernel cell
+Ljubija iron,Bosnia and Herzegovina,44.93,16.60,Fe,medium,high,0.65,Fe=0.85,v2 grid already >= authored weight in every kernel cell
+Herzegovina bauxite,Bosnia and Herzegovina,43.40,17.40,Al,medium,medium,0.6,Al=0.85,v2 grid already >= authored weight in every kernel cell
+Pljevlja coal,Montenegro,43.36,19.36,C_coal,medium,high,0.65,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Velenje lignite,Slovenia,46.37,15.10,C_coal,major,high,0.75,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Ptolemaida lignite,Greece,40.50,21.70,C_coal,world-class,high,0.85,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Megalopolis lignite,Greece,37.40,22.10,C_coal,medium,high,0.65,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Parnassos-Giona bauxite,Greece,38.50,22.40,Al,major,high,0.75,Al=0.85,v2 grid already >= authored weight in every kernel cell
+Vourinos chromite,Greece,40.20,21.65,Cr,medium,high,0.65,Cr=0.75,v2 grid already >= authored weight in every kernel cell
+Euboea-Larymna nickel laterite,Greece,38.55,23.25,Ni,medium,medium,0.6,Ni=0.85,v2 grid already >= authored weight in every kernel cell
+Volterra salt,Italy,43.40,10.86,NaCl,medium,high,0.65,NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Raibl lead-zinc,Italy,46.44,13.57,Pb;Zn,medium,high,0.65,Pb=0.85 Zn=0.85,v2 grid already >= authored weight in every kernel cell
+Cogne iron,Italy,45.60,7.36,Fe,medium,medium,0.6,Fe=0.60,v2 grid already >= authored weight in every kernel cell
+Teruel lignite (Andorra),Spain,40.98,-0.45,C_coal,medium,medium,0.6,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Catalan potash (Suria-Sallent-Cardona),Spain,41.85,1.75,K;NaCl,major,high,0.75,K=0.95 NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Asturias fluorite,Spain,43.47,-5.20,F,medium,high,0.65,F=0.85,v2 grid already >= authored weight in every kernel cell
+Vizcaya iron (Bilbao),Spain,43.25,-2.95,Fe,medium,high,0.65,Fe=0.65,v2 grid already >= authored weight in every kernel cell
+Reocin zinc,Spain,43.35,-4.08,Zn;Pb,medium,high,0.65,Zn=0.95 Pb=0.85,v2 grid already >= authored weight in every kernel cell
+Galicia tin-tungsten (San Finx),Spain,42.85,-8.90,W;Sn,medium,medium,0.6,W=0.60 Sn=0.60,v2 grid already >= authored weight in every kernel cell
+Aljustrel copper-zinc,Portugal,37.88,-8.17,Cu;Zn,medium,high,0.65,Cu=0.85 Zn=0.95,v2 grid already >= authored weight in every kernel cell
+Navan zinc-lead (Tara),Ireland,53.66,-6.72,Zn;Pb,world-class,high,0.85,Zn=0.95 Pb=0.85,v2 grid already >= authored weight in every kernel cell
+Lisheen-Galmoy zinc,Ireland,52.75,-7.65,Zn;Pb,medium,high,0.65,Zn=0.95 Pb=0.85,v2 grid already >= authored weight in every kernel cell
+Silvermines zinc-lead,Ireland,52.80,-8.23,Zn;Pb;Ag,medium,high,0.65,Zn=0.95 Pb=0.85 Ag=0.85,v2 grid already >= authored weight in every kernel cell
+Boulby potash,United Kingdom,54.55,-0.85,K;NaCl,major,high,0.75,K=0.95 NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Malmberget iron,Sweden,67.18,20.67,Fe,major,high,0.75,Fe=0.85,v2 grid already >= authored weight in every kernel cell
+Skellefte field (Boliden),Sweden,64.87,20.40,Cu;Zn;Au;Pb,major,high,0.75,Cu=0.95 Zn=0.85 Au=0.95 Pb=0.85,v2 grid already >= authored weight in every kernel cell
+Zinkgruvan zinc-lead,Sweden,58.82,15.10,Zn;Pb,major,high,0.75,Zn=0.95 Pb=0.85,v2 grid already >= authored weight in every kernel cell
+Dannemora iron,Sweden,60.20,17.85,Fe,medium,medium,0.6,Fe=0.65,v2 grid already >= authored weight in every kernel cell
+Sydvaranger iron (Bjornevatn),Norway,69.67,29.98,Fe,major,high,0.75,Fe=0.75,v2 grid already >= authored weight in every kernel cell
+Rana iron,Norway,66.30,14.15,Fe,medium,high,0.65,Fe=0.85,v2 grid already >= authored weight in every kernel cell
+Roros copper,Norway,62.57,11.38,Cu,medium,high,0.65,Cu=0.85,v2 grid already >= authored weight in every kernel cell
+Kongsberg silver,Norway,59.67,9.65,Ag,major,high,0.75,Ag=0.95,v2 grid already >= authored weight in every kernel cell
+Tellnes ilmenite,Norway,58.33,6.42,Ti,world-class,high,0.85,Ti=0.95,v2 grid already >= authored weight in every kernel cell
+Aheim olivine (dunite),Norway,62.03,5.53,olivine,world-class,high,0.85,olivine=0.95,v2 grid already >= authored weight in every kernel cell
+Knaben molybdenum,Norway,58.65,7.07,Mo,medium,high,0.65,Mo=0.95,v2 grid already >= authored weight in every kernel cell
+Outokumpu copper,Finland,62.73,29.02,Cu;Zn;Ni,medium,high,0.65,Cu=0.75 Zn=0.75 Ni=0.75,v2 grid already >= authored weight in every kernel cell
+Kittila gold (Suurikuusikko),Finland,67.90,25.40,Au,major,medium,0.7,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Terrafame nickel (Talvivaara),Finland,63.97,28.00,Ni;Zn,medium,high,0.65,Ni=0.75 Zn=0.75,v2 grid already >= authored weight in every kernel cell
+Kemi chromite,Finland,65.78,24.60,Cr,major,high,0.75,Cr=0.95,v2 grid already >= authored weight in every kernel cell
+Pyhasalmi zinc-copper,Finland,63.66,26.04,Zn;Cu,medium,high,0.65,Zn=0.85 Cu=0.85,v2 grid already >= authored weight in every kernel cell
+Siilinjarvi phosphate,Finland,63.10,27.70,P,major,high,0.75,P=0.95,v2 grid already >= authored weight in every kernel cell
+Bailadila iron,India,18.65,81.25,Fe,world-class,high,0.85,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Bellary-Hospet iron-manganese,India,15.15,76.60,Fe;Mn,major,high,0.75,Fe=0.85 Mn=0.85,v2 grid already >= authored weight in every kernel cell
+Goa iron,India,15.35,74.10,Fe,major,high,0.75,Fe=0.85,v2 grid already >= authored weight in every kernel cell
+Kudremukh iron,India,13.15,75.25,Fe,medium,high,0.65,Fe=0.85,v2 grid already >= authored weight in every kernel cell
+Sukinda chromite,India,21.00,85.80,Cr,world-class,high,0.85,Cr=0.85,v2 grid already >= authored weight in every kernel cell
+Lohardaga bauxite,India,23.43,84.68,Al,medium,high,0.65,Al=0.85,v2 grid already >= authored weight in every kernel cell
+Rampura Agucha zinc-lead,India,25.83,74.73,Zn;Pb,world-class,high,0.85,Zn=0.95 Pb=0.95,v2 grid already >= authored weight in every kernel cell
+Zawar zinc-lead,India,24.35,73.70,Zn;Pb,major,high,0.75,Zn=0.95 Pb=0.95,v2 grid already >= authored weight in every kernel cell
+Sindesar Khurd-Dariba zinc,India,24.95,74.13,Zn;Pb;Ag,major,high,0.75,Zn=0.95 Pb=0.95 Ag=0.85,v2 grid already >= authored weight in every kernel cell
+Hutti gold,India,16.20,76.65,Au,medium,high,0.65,Au=0.85,v2 grid already >= authored weight in every kernel cell
+Singhbhum copper belt (Ghatsila),India,22.58,86.48,Cu,major,high,0.75,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Chavara mineral sands,India,8.97,76.62,Ti,world-class,high,0.85,Ti=0.95,v2 grid already >= authored weight in every kernel cell
+Manavalakurichi mineral sands,India,8.15,77.33,Ti,medium,high,0.65,Ti=0.95,v2 grid already >= authored weight in every kernel cell
+Balaghat manganese,India,21.80,80.18,Mn,major,high,0.75,Mn=0.85,v2 grid already >= authored weight in every kernel cell
+Nagpur-Bhandara manganese,India,21.40,79.40,Mn,medium,medium,0.6,Mn=0.65,v2 grid already >= authored weight in every kernel cell
+Panna diamonds (Majhgawan),India,24.72,80.18,diamond,major,high,0.75,diamond=0.85,v2 grid already >= authored weight in every kernel cell
+Jhamarkotra phosphate,India,24.47,73.83,P,major,high,0.75,P=0.85,v2 grid already >= authored weight in every kernel cell
+Amba Dongar fluorite,India,22.00,74.05,F,medium,high,0.65,F=0.95,v2 grid already >= authored weight in every kernel cell
+Degana tungsten,India,26.90,74.30,W,medium,medium,0.6,W=0.70,v2 grid already >= authored weight in every kernel cell
+Titlagarh graphite,India,20.30,83.15,C_graphite,medium,medium,0.6,C_graphite=0.75,v2 grid already >= authored weight in every kernel cell
+Bogala-Kahatagaha graphite,Sri Lanka,7.20,80.25,C_graphite,major,high,0.75,C_graphite=0.85,v2 grid already >= authored weight in every kernel cell
+Pulmoddai mineral sands,Sri Lanka,8.93,80.98,Ti,major,medium,0.7,Ti=0.95,v2 grid already >= authored weight in every kernel cell
+Eppawala phosphate,Sri Lanka,8.15,80.40,P,medium,high,0.65,P=0.85,v2 grid already >= authored weight in every kernel cell
+Monywa (Letpadaung) copper,Burma,22.12,95.08,Cu,major,high,0.75,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Bawdwin lead-zinc-silver,Burma,23.10,97.30,Pb;Zn;Ag,world-class,high,0.85,Pb=0.95 Zn=0.95 Ag=0.85,v2 grid already >= authored weight in every kernel cell
+Hermyingyi tungsten-tin (Dawei),Burma,14.30,98.40,W;Sn,medium,medium,0.6,W=0.60 Sn=0.95,v2 grid already >= authored weight in every kernel cell
+Bo Ploi sapphire (Kanchanaburi),Thailand,14.30,99.40,corundum,medium,high,0.65,corundum=0.68,v2 grid already >= authored weight in every kernel cell
+Mae Moh lignite,Thailand,18.30,99.73,C_coal,world-class,high,0.85,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Udon Thani potash (Khorat basin),Thailand,17.40,102.80,K;NaCl,major,high,0.75,K=0.95 NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Khorat basin salt (Bamnet Narong),Thailand,15.50,101.70,K;NaCl,medium,medium,0.6,K=0.95 NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Mae Sot zinc,Thailand,16.70,98.62,Zn,medium,medium,0.6,Zn=0.95,v2 grid already >= authored weight in every kernel cell
+Vientiane basin potash,Laos,18.20,102.70,K;NaCl,medium,medium,0.6,K=0.85 NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Pailin sapphire,Cambodia,12.85,102.60,corundum,major,high,0.75,corundum=0.95,v2 grid already >= authored weight in every kernel cell
+Tinh Tuc tin,Vietnam,22.67,105.88,Sn,medium,high,0.65,Sn=0.85,v2 grid already >= authored weight in every kernel cell
+Co Dinh chromite,Vietnam,19.70,105.65,Cr,medium,high,0.65,Cr=0.85,v2 grid already >= authored weight in every kernel cell
+Thach Khe iron,Vietnam,18.40,105.85,Fe,medium,medium,0.6,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Kinta Valley tin (Ipoh),Malaysia,4.60,101.08,Sn,world-class,high,0.85,Sn=0.85,v2 grid already >= authored weight in every kernel cell
+Sungai Lembing tin,Malaysia,3.92,103.03,Sn,medium,high,0.65,Sn=0.95,v2 grid already >= authored weight in every kernel cell
+Belitung tin,Indonesia,-2.85,107.90,Sn,major,high,0.75,Sn=0.85,v2 grid already >= authored weight in every kernel cell
+Batu Hijau copper-gold (Sumbawa),Indonesia,-8.97,116.87,Cu;Au,world-class,high,0.85,Cu=0.95 Au=0.95,v2 grid already >= authored weight in every kernel cell
+Pongkor gold,Indonesia,-6.65,106.55,Au,medium,medium,0.6,Au=0.85,v2 grid already >= authored weight in every kernel cell
+Bukit Asam coal (Tanjung Enim),Indonesia,-3.75,103.80,C_coal,world-class,high,0.85,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Martapura-Cempaka diamonds,Indonesia,-3.45,114.85,diamond,medium,high,0.65,diamond=0.75,v2 grid already >= authored weight in every kernel cell
+Surigao nickel (Taganito-Nonoc),Philippines,9.50,125.80,Ni,major,high,0.75,Ni=0.85,v2 grid already >= authored weight in every kernel cell
+Rio Tuba nickel (Palawan),Philippines,8.50,117.40,Ni,major,medium,0.7,Ni=0.85,v2 grid already >= authored weight in every kernel cell
+Zambales chromite (Coto-Masinloc),Philippines,15.55,120.10,Cr,major,high,0.75,Cr=0.85,v2 grid already >= authored weight in every kernel cell
+Baguio gold-copper,Philippines,16.40,120.60,Au;Cu,major,high,0.75,Au=0.95 Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Toledo copper (Cebu),Philippines,10.35,123.65,Cu,major,high,0.75,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Masbate gold,Philippines,12.30,123.60,Au,medium,medium,0.6,Au=0.70,v2 grid already >= authored weight in every kernel cell
+Diwalwal gold,Philippines,7.83,126.17,Au,medium,medium,0.6,Au=0.85,v2 grid already >= authored weight in every kernel cell
+Ok Tedi copper-gold,Papua New Guinea,-5.20,141.13,Cu;Au,world-class,high,0.85,Cu=0.95 Au=0.95,v2 grid already >= authored weight in every kernel cell
+Porgera gold,Papua New Guinea,-5.47,143.08,Au,world-class,high,0.85,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Ramu nickel (Kurumbukari),Papua New Guinea,-5.55,145.25,Ni,medium,medium,0.6,Ni=0.85,v2 grid already >= authored weight in every kernel cell
+Frieda River copper,Papua New Guinea,-4.70,141.75,Cu,medium,medium,0.6,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Thio nickel,New Caledonia,-21.60,166.20,Ni,major,high,0.75,Ni=0.95,v2 grid already >= authored weight in every kernel cell
+Koniambo nickel,New Caledonia,-21.00,164.85,Ni,major,high,0.75,Ni=0.85,v2 grid already >= authored weight in every kernel cell
+Goro nickel,New Caledonia,-22.28,166.90,Ni,major,high,0.75,Ni=0.85,v2 grid already >= authored weight in every kernel cell
+Tiebaghi chromite,New Caledonia,-20.45,164.20,Cr,major,high,0.75,Cr=0.75,v2 grid already >= authored weight in every kernel cell
+Huaibei coal,China,33.95,116.80,C_coal,major,high,0.75,C_coal=0.80,v2 grid already >= authored weight in every kernel cell
+Xuzhou coal,China,34.25,117.20,C_coal,medium,high,0.65,C_coal=0.95,v2 grid already >= authored weight in every kernel cell
+Tongling copper,China,30.93,117.82,Cu;Au,major,high,0.75,Cu=0.95 Au=0.95,v2 grid already >= authored weight in every kernel cell
+Yulong copper,China,31.40,97.73,Cu;Mo,major,medium,0.7,Cu=0.95 Mo=0.95,v2 grid already >= authored weight in every kernel cell
+Dongchuan copper,China,26.10,103.17,Cu,major,high,0.75,Cu=0.85,v2 grid already >= authored weight in every kernel cell
+Xikuangshan antimony,China,27.75,111.48,Sb,world-class,high,0.85,Sb=0.85,v2 grid already >= authored weight in every kernel cell
+Fankou lead-zinc,China,25.05,113.60,Pb;Zn,major,high,0.75,Pb=0.85 Zn=0.85,v2 grid already >= authored weight in every kernel cell
+Jinding zinc-lead (Lanping),China,26.40,99.42,Zn;Pb,world-class,high,0.85,Zn=0.95 Pb=0.95,v2 grid already >= authored weight in every kernel cell
+Anshan iron,China,41.10,122.98,Fe,world-class,high,0.85,Fe=0.85,v2 grid already >= authored weight in every kernel cell
+Benxi iron,China,41.30,123.75,Fe,major,high,0.75,Fe=0.85,v2 grid already >= authored weight in every kernel cell
+Liaodong boron (Kuandian-Fengcheng),China,40.60,124.40,B,major,high,0.75,B=0.95,v2 grid already >= authored weight in every kernel cell
+Da Qaidam borates,China,37.85,95.30,B,medium,medium,0.6,B=0.61,v2 grid already >= authored weight in every kernel cell
+Kaiyang phosphate,China,27.05,106.95,P,major,high,0.75,P=0.95,v2 grid already >= authored weight in every kernel cell
+Kunyang phosphate (Dianchi),China,24.73,102.60,P,major,high,0.75,P=0.85,v2 grid already >= authored weight in every kernel cell
+Wuyi fluorite (Zhejiang),China,28.90,119.80,F,major,medium,0.7,F=0.75,v2 grid already >= authored weight in every kernel cell
+Shanxi bauxite (Xiaoyi),China,37.15,111.75,Al,major,medium,0.7,Al=0.95,v2 grid already >= authored weight in every kernel cell
+Zunyi manganese,China,27.70,106.90,Mn,medium,medium,0.6,Mn=0.75,v2 grid already >= authored weight in every kernel cell
+Zigong brine salt,China,29.35,104.78,NaCl,major,high,0.75,NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Musan iron,North Korea,42.20,129.20,Fe,world-class,high,0.85,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Komdok zinc-lead,North Korea,40.88,128.85,Zn;Pb,major,medium,0.7,Zn=0.85 Pb=0.85,v2 grid already >= authored weight in every kernel cell
+Anju coal,North Korea,39.60,125.70,C_coal,medium,medium,0.6,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Hishikari gold,Japan,32.00,130.70,Au,major,high,0.75,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Kamioka zinc-lead,Japan,36.33,137.30,Zn;Pb,major,high,0.75,Zn=0.95 Pb=0.95,v2 grid already >= authored weight in every kernel cell
+Besshi copper,Japan,33.90,133.30,Cu,medium,high,0.65,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Ashio copper,Japan,36.63,139.45,Cu,medium,high,0.65,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Ikuno silver-copper,Japan,35.17,134.80,Ag;Cu,medium,medium,0.6,Ag=0.95 Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Sado gold-silver,Japan,38.04,138.27,Au;Ag,medium,high,0.65,Au=0.95 Ag=0.95,v2 grid already >= authored weight in every kernel cell
+Hokuroku kuroko (Kosaka-Hanaoka),Japan,40.30,140.75,Cu;Zn;Pb,major,high,0.75,Cu=0.95 Zn=0.95 Pb=0.95,v2 grid already >= authored weight in every kernel cell
+Zacatecas silver,Mexico,22.77,-102.58,Ag;Pb;Zn,world-class,high,0.85,Ag=0.95 Pb=0.95 Zn=0.95,v2 grid already >= authored weight in every kernel cell
+Fresnillo silver,Mexico,23.17,-102.87,Ag;Pb;Zn,world-class,high,0.85,Ag=0.95 Pb=0.95 Zn=0.95,v2 grid already >= authored weight in every kernel cell
+Guanajuato silver-gold,Mexico,21.02,-101.26,Ag;Au,major,high,0.75,Ag=0.95 Au=0.95,v2 grid already >= authored weight in every kernel cell
+Pachuca-Real del Monte silver,Mexico,20.13,-98.73,Ag;Au,major,high,0.75,Ag=0.95 Au=0.95,v2 grid already >= authored weight in every kernel cell
+Taxco silver,Mexico,18.55,-99.60,Ag;Pb;Zn,medium,high,0.65,Ag=0.95 Pb=0.75 Zn=0.75,v2 grid already >= authored weight in every kernel cell
+Penasquito gold-silver-zinc,Mexico,24.65,-101.70,Au;Ag;Pb;Zn,major,high,0.75,Au=0.95 Ag=0.95 Pb=0.95 Zn=0.95,v2 grid already >= authored weight in every kernel cell
+Cananea copper,Mexico,30.98,-110.30,Cu;Mo,world-class,high,0.85,Cu=0.95 Mo=0.95,v2 grid already >= authored weight in every kernel cell
+Naica lead-zinc-silver,Mexico,27.85,-105.50,Pb;Zn;Ag,major,high,0.75,Pb=0.95 Zn=0.95 Ag=0.95,v2 grid already >= authored weight in every kernel cell
+Santa Eulalia lead-zinc-silver,Mexico,28.60,-105.88,Pb;Zn;Ag,major,high,0.75,Pb=0.95 Zn=0.95 Ag=0.95,v2 grid already >= authored weight in every kernel cell
+Sabinas coal basin,Mexico,27.85,-101.12,C_coal,major,high,0.75,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Pena Colorada iron,Mexico,19.30,-104.10,Fe,medium,medium,0.6,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Molango manganese,Mexico,20.80,-98.73,Mn,major,high,0.75,Mn=0.95,v2 grid already >= authored weight in every kernel cell
+Guerrero Negro salt,Mexico,27.95,-114.05,NaCl,world-class,high,0.85,NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+San Juan de la Costa phosphate,Mexico,24.38,-110.70,P,medium,medium,0.6,P=0.95,v2 grid already >= authored weight in every kernel cell
+El Boleo copper (Santa Rosalia),Mexico,27.33,-112.27,Cu,medium,high,0.65,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Charcas zinc-lead-silver,Mexico,23.13,-101.12,Zn;Pb;Ag,medium,medium,0.6,Zn=0.85 Pb=0.85 Ag=0.63,v2 grid already >= authored weight in every kernel cell
+Moa nickel,Cuba,20.65,-74.90,Ni,world-class,high,0.85,Ni=0.95,v2 grid already >= authored weight in every kernel cell
+Nicaro nickel,Cuba,20.70,-75.55,Ni,major,high,0.75,Ni=0.95,v2 grid already >= authored weight in every kernel cell
+Matahambre copper,Cuba,22.58,-83.95,Cu,medium,medium,0.6,Cu=0.65,v2 grid already >= authored weight in every kernel cell
+Falcondo nickel (Bonao),Dominican Republic,18.93,-70.40,Ni,major,high,0.75,Ni=0.85,v2 grid already >= authored weight in every kernel cell
+Pueblo Viejo gold,Dominican Republic,18.93,-70.18,Au;Ag,world-class,high,0.85,Au=0.95 Ag=0.95,v2 grid already >= authored weight in every kernel cell
+Chivor emeralds,Colombia,4.88,-73.37,emerald,major,high,0.75,emerald=0.95,v2 grid already >= authored weight in every kernel cell
+Coscuez emeralds,Colombia,5.60,-74.17,emerald,medium,medium,0.6,emerald=0.95,v2 grid already >= authored weight in every kernel cell
+Cerro Matoso nickel,Colombia,7.90,-75.60,Ni,major,high,0.75,Ni=0.95,v2 grid already >= authored weight in every kernel cell
+Boyaca coal,Colombia,5.80,-73.00,C_coal,medium,medium,0.6,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Segovia-Remedios gold,Colombia,7.08,-74.70,Au,major,high,0.75,Au=0.85,v2 grid already >= authored weight in every kernel cell
+Choco platinum (Condoto),Colombia,5.10,-76.65,Pt;Au,major,medium,0.7,Pt=0.95 Au=0.95,v2 grid already >= authored weight in every kernel cell
+Cerro Bolivar iron,Venezuela,7.45,-63.32,Fe,world-class,high,0.85,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Los Pijiguaos bauxite,Venezuela,6.50,-66.75,Al,major,high,0.75,Al=0.75,v2 grid already >= authored weight in every kernel cell
+El Callao gold,Venezuela,7.35,-61.82,Au,major,high,0.75,Au=0.85,v2 grid already >= authored weight in every kernel cell
+Loma de Niquel,Venezuela,10.15,-67.15,Ni,medium,medium,0.6,Ni=0.95,v2 grid already >= authored weight in every kernel cell
+Linden bauxite,Guyana,6.00,-58.30,Al,major,high,0.75,Al=0.95,v2 grid already >= authored weight in every kernel cell
+Kwakwani bauxite,Guyana,5.28,-58.05,Al,medium,high,0.65,Al=0.85,v2 grid already >= authored weight in every kernel cell
+Omai gold,Guyana,5.43,-58.75,Au,medium,high,0.65,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Moengo bauxite,Suriname,5.62,-54.40,Al,major,high,0.75,Al=0.95,v2 grid already >= authored weight in every kernel cell
+Paranam bauxite,Suriname,5.60,-55.10,Al,major,high,0.75,Al=0.85,v2 grid already >= authored weight in every kernel cell
+Itabira iron,Brazil,-19.62,-43.22,Fe,world-class,high,0.85,Fe=0.95,v2 grid already >= authored weight in every kernel cell
+Nova Lima gold (Morro Velho),Brazil,-19.98,-43.85,Au,major,high,0.75,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Paracatu gold,Brazil,-17.20,-46.87,Au,major,high,0.75,Au=0.85,v2 grid already >= authored weight in every kernel cell
+Juruti bauxite,Brazil,-2.15,-56.10,Al,major,high,0.75,Al=0.85,v2 grid already >= authored weight in every kernel cell
+Itabira-Nova Era emeralds,Brazil,-19.73,-43.10,emerald,major,high,0.75,emerald=0.95,v2 grid already >= authored weight in every kernel cell
+Campo Formoso chromite,Brazil,-10.50,-40.32,Cr,major,high,0.75,Cr=0.75,v2 grid already >= authored weight in every kernel cell
+Jacobina gold,Brazil,-11.18,-40.52,Au,major,high,0.75,Au=0.85,v2 grid already >= authored weight in every kernel cell
+Caraiba copper,Brazil,-9.95,-40.00,Cu,medium,low,0.45,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Niquelandia nickel,Brazil,-14.47,-48.46,Ni,major,high,0.75,Ni=0.85,v2 grid already >= authored weight in every kernel cell
+Barro Alto nickel,Brazil,-15.07,-48.92,Ni,major,high,0.75,Ni=0.95,v2 grid already >= authored weight in every kernel cell
+Catalao phosphate,Brazil,-18.12,-47.82,P,major,high,0.75,P=0.95,v2 grid already >= authored weight in every kernel cell
+Araxa phosphate,Brazil,-19.65,-46.95,P,major,high,0.75,P=0.95,v2 grid already >= authored weight in every kernel cell
+Tapira phosphate,Brazil,-19.90,-46.83,P,major,medium,0.7,P=0.95,v2 grid already >= authored weight in every kernel cell
+Urucum manganese-iron,Brazil,-19.15,-57.60,Mn;Fe,major,high,0.75,Mn=0.95 Fe=0.75,v2 grid already >= authored weight in every kernel cell
+Criciuma coal (Santa Catarina),Brazil,-28.68,-49.37,C_coal,major,high,0.75,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Taquari-Vassouras potash (Sergipe),Brazil,-10.75,-37.10,K;NaCl,medium,high,0.65,K=0.95 NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Vazante zinc,Brazil,-17.98,-46.90,Zn,major,high,0.75,Zn=0.95,v2 grid already >= authored weight in every kernel cell
+Pedra Azul graphite,Brazil,-16.00,-41.30,C_graphite,major,medium,0.7,C_graphite=0.85,v2 grid already >= authored weight in every kernel cell
+Diamantina diamonds,Brazil,-18.25,-43.60,diamond,major,high,0.75,diamond=0.85,v2 grid already >= authored weight in every kernel cell
+Coromandel diamonds,Brazil,-18.47,-47.20,diamond,medium,medium,0.6,diamond=0.60,v2 grid already >= authored weight in every kernel cell
+Toquepala-Cuajone copper,Peru,-17.15,-70.65,Cu;Mo,world-class,high,0.85,Cu=0.95 Mo=0.95,v2 grid already >= authored weight in every kernel cell
+Tintaya-Antapaccay copper,Peru,-14.90,-71.33,Cu,major,high,0.75,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Uchucchacua silver,Peru,-10.60,-76.65,Ag;Pb;Zn,major,medium,0.7,Ag=0.85 Pb=0.85 Zn=0.85,v2 grid already >= authored weight in every kernel cell
+Bayovar phosphate (Sechura),Peru,-5.85,-80.85,P;NaCl,major,high,0.75,P=0.95 NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Llallagua-Catavi tin,Bolivia,-18.42,-66.58,Sn,world-class,high,0.85,Sn=0.95,v2 grid already >= authored weight in every kernel cell
+Huanuni tin,Bolivia,-18.28,-66.83,Sn,major,high,0.75,Sn=0.95,v2 grid already >= authored weight in every kernel cell
+Oruro tin-silver,Bolivia,-17.97,-67.10,Sn;Ag,major,high,0.75,Sn=0.95 Ag=0.95,v2 grid already >= authored weight in every kernel cell
+Colquiri tin-zinc,Bolivia,-17.40,-67.13,Sn;Zn,medium,high,0.65,Sn=0.95 Zn=0.95,v2 grid already >= authored weight in every kernel cell
+San Cristobal silver-zinc-lead,Bolivia,-21.10,-67.20,Ag;Zn;Pb,world-class,high,0.85,Ag=0.95 Zn=0.85 Pb=0.95,v2 grid already >= authored weight in every kernel cell
+Salar de Uyuni brine potash,Bolivia,-20.40,-67.40,K,medium,medium,0.6,K=0.85,v2 grid already >= authored weight in every kernel cell
+Mutun iron-manganese,Bolivia,-19.15,-57.85,Fe;Mn,major,medium,0.7,Fe=0.75 Mn=0.95,v2 grid already >= authored weight in every kernel cell
+Chojlla tungsten,Bolivia,-16.40,-67.75,W,medium,medium,0.6,W=0.95,v2 grid already >= authored weight in every kernel cell
+Bolivian antimony belt (Caracota),Bolivia,-19.80,-65.60,Sb,medium,low,0.45,Sb=0.75,v2 grid already >= authored weight in every kernel cell
+El Teniente copper,Chile,-34.08,-70.35,Cu;Mo,world-class,high,0.85,Cu=0.95 Mo=0.95,v2 grid already >= authored weight in every kernel cell
+Los Bronces-Andina copper,Chile,-33.15,-70.28,Cu;Mo,world-class,high,0.85,Cu=0.95 Mo=0.95,v2 grid already >= authored weight in every kernel cell
+Los Pelambres copper,Chile,-31.72,-70.50,Cu;Mo,world-class,high,0.85,Cu=0.95 Mo=0.95,v2 grid already >= authored weight in every kernel cell
+Collahuasi copper,Chile,-20.98,-68.70,Cu;Mo,world-class,high,0.85,Cu=0.95 Mo=0.95,v2 grid already >= authored weight in every kernel cell
+El Salvador copper,Chile,-26.25,-69.62,Cu,major,high,0.75,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Candelaria copper-gold,Chile,-27.50,-70.30,Cu;Au,major,high,0.75,Cu=0.95 Au=0.95,v2 grid already >= authored weight in every kernel cell
+Nueva Victoria nitrates-iodine,Chile,-20.73,-69.60,N,major,high,0.75,N=0.75,v2 grid already >= authored weight in every kernel cell
+Tarapaca nitrate pampa (Humberstone),Chile,-20.20,-69.80,N,major,high,0.75,N=0.75,v2 grid already >= authored weight in every kernel cell
+Taltal-Aguas Blancas nitrates,Chile,-24.20,-69.90,N,medium,medium,0.6,N=0.95,v2 grid already >= authored weight in every kernel cell
+Lota coal,Chile,-37.10,-73.15,C_coal,medium,high,0.65,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Bajo de la Alumbrera copper-gold,Argentina,-27.33,-66.60,Cu;Au,major,high,0.75,Cu=0.95 Au=0.95,v2 grid already >= authored weight in every kernel cell
+Capillitas rhodochrosite,Argentina,-27.35,-66.38,Mn;Cu,medium,high,0.65,Mn=0.95 Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Veladero gold,Argentina,-29.37,-69.95,Au;Ag,medium,high,0.65,Au=0.85 Ag=0.85,v2 grid already >= authored weight in every kernel cell
+Aguilar lead-zinc-silver,Argentina,-23.20,-65.70,Pb;Zn;Ag,major,high,0.75,Pb=0.95 Zn=0.85 Ag=0.95,v2 grid already >= authored weight in every kernel cell
+Pirquitas silver-tin,Argentina,-22.68,-66.48,Ag;Sn,medium,medium,0.6,Ag=0.67 Sn=0.75,v2 grid already >= authored weight in every kernel cell
+Rio Turbio coal,Argentina,-51.53,-72.30,C_coal,medium,high,0.65,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Sijes borates,Argentina,-24.50,-66.70,B,medium,medium,0.6,B=0.95,v2 grid already >= authored weight in every kernel cell
+Portovelo-Zaruma gold,Ecuador,-3.70,-79.62,Au,major,high,0.75,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Mirador copper,Ecuador,-3.58,-78.45,Cu,medium,medium,0.6,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Artigas amethyst,Uruguay,-30.40,-56.47,SiO2,medium,medium,0.6,SiO2=0.60,v2 grid already >= authored weight in every kernel cell
+Thompson nickel,Canada,55.75,-97.85,Ni,major,high,0.75,Ni=0.95,v2 grid already >= authored weight in every kernel cell
+Raglan nickel,Canada,61.65,-73.65,Ni;Cu,major,high,0.75,Ni=0.85 Cu=0.85,v2 grid already >= authored weight in every kernel cell
+Timmins gold (Porcupine),Canada,48.48,-81.33,Au,world-class,high,0.85,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Kirkland Lake gold,Canada,48.15,-80.03,Au,major,high,0.75,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Red Lake gold,Canada,51.03,-93.83,Au,major,high,0.75,Au=0.95,v2 grid already >= authored weight in every kernel cell
+Hemlo gold,Canada,48.68,-85.90,Au;Mo,major,high,0.75,Au=0.95 Mo=0.95,v2 grid already >= authored weight in every kernel cell
+Val-d'Or gold,Canada,48.10,-77.78,Au;Cu,major,high,0.75,Au=0.95 Cu=0.85,v2 grid already >= authored weight in every kernel cell
+Rouyn-Noranda copper,Canada,48.25,-79.00,Cu;Zn;Au,major,high,0.75,Cu=0.95 Zn=0.95 Au=0.95,v2 grid already >= authored weight in every kernel cell
+Flin Flon copper-zinc,Canada,54.77,-101.88,Cu;Zn,major,high,0.75,Cu=0.95 Zn=0.95,v2 grid already >= authored weight in every kernel cell
+Lac Tio ilmenite,Canada,50.55,-63.43,Ti,world-class,high,0.85,Ti=0.95,v2 grid already >= authored weight in every kernel cell
+Highland Valley copper,Canada,50.48,-121.00,Cu;Mo,major,high,0.75,Cu=0.95 Mo=0.95,v2 grid already >= authored weight in every kernel cell
+Elk Valley coal,Canada,49.75,-114.85,C_coal,world-class,high,0.85,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Pugwash salt,Canada,45.85,-63.65,NaCl,medium,high,0.65,NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Sussex potash,Canada,45.73,-65.50,K;NaCl,medium,high,0.65,K=0.85 NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Goderich salt,Canada,43.75,-81.70,NaCl,major,high,0.75,NaCl=0.95,v2 grid already >= authored weight in every kernel cell
+Bathurst zinc-lead,Canada,47.50,-65.85,Zn;Pb;Ag,major,high,0.75,Zn=0.95 Pb=0.95 Ag=0.95,v2 grid already >= authored weight in every kernel cell
+Yellowknife gold,Canada,62.45,-114.37,Au,major,high,0.75,Au=0.85,v2 grid already >= authored weight in every kernel cell
+Ekati diamonds,Canada,64.72,-110.62,diamond,world-class,high,0.85,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Diavik diamonds,Canada,64.50,-110.27,diamond,world-class,high,0.85,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Pine Point zinc-lead,Canada,60.85,-114.40,Zn;Pb,major,high,0.75,Zn=0.78 Pb=0.78,v2 grid already >= authored weight in every kernel cell
+Faro zinc-lead,Canada,62.35,-133.38,Zn;Pb,medium,high,0.65,Zn=0.95 Pb=0.95,v2 grid already >= authored weight in every kernel cell
+Keno Hill silver,Canada,63.90,-135.30,Ag;Pb;Zn,major,high,0.75,Ag=0.95 Pb=0.95 Zn=0.95,v2 grid already >= authored weight in every kernel cell
+Sullivan lead-zinc,Canada,49.70,-116.00,Pb;Zn;Ag,world-class,high,0.85,Pb=0.95 Zn=0.95 Ag=0.95,v2 grid already >= authored weight in every kernel cell
+Lac des Iles palladium,Canada,49.18,-89.62,Pt,medium,high,0.65,Pt=0.95,v2 grid already >= authored weight in every kernel cell
+Estevan lignite,Canada,49.13,-102.98,C_coal,medium,high,0.65,C_coal=0.79,v2 grid already >= authored weight in every kernel cell
+St. Lawrence fluorspar,Canada,46.92,-55.40,F,major,high,0.75,F=0.75,v2 grid already >= authored weight in every kernel cell
+Argyle diamonds,Australia,-16.72,128.40,diamond,world-class,high,0.85,diamond=0.95,v2 grid already >= authored weight in every kernel cell
+Ellendale diamonds,Australia,-17.95,124.80,diamond,medium,medium,0.6,diamond=0.85,v2 grid already >= authored weight in every kernel cell
+Capel mineral sands,Australia,-33.55,115.55,Ti,major,high,0.75,Ti=0.85,v2 grid already >= authored weight in every kernel cell
+Eneabba mineral sands,Australia,-29.82,115.27,Ti,major,high,0.75,Ti=0.95,v2 grid already >= authored weight in every kernel cell
+Port Gregory garnet sands,Australia,-28.18,114.25,garnet,medium,high,0.65,garnet=0.85,v2 grid already >= authored weight in every kernel cell
+Greenbushes tin-tantalum,Australia,-33.86,116.06,Sn,major,high,0.75,Sn=0.85,v2 grid already >= authored weight in every kernel cell
+Mount Keith-Leinster nickel,Australia,-27.25,120.55,Ni,major,high,0.75,Ni=0.95,v2 grid already >= authored weight in every kernel cell
+Kambalda nickel,Australia,-31.20,121.67,Ni,major,high,0.75,Ni=0.95,v2 grid already >= authored weight in every kernel cell
+Mount Lyell copper,Australia,-42.07,145.57,Cu,major,high,0.75,Cu=0.95,v2 grid already >= authored weight in every kernel cell
+Rosebery zinc-lead,Australia,-41.78,145.53,Zn;Pb;Ag,major,high,0.75,Zn=0.95 Pb=0.95 Ag=0.85,v2 grid already >= authored weight in every kernel cell
+Savage River iron,Australia,-41.50,145.20,Fe,medium,high,0.65,Fe=0.75,v2 grid already >= authored weight in every kernel cell
+Gove bauxite,Australia,-12.27,136.82,Al,world-class,high,0.85,Al=0.95,v2 grid already >= authored weight in every kernel cell
+Groote Eylandt manganese,Australia,-13.98,136.45,Mn,world-class,high,0.85,Mn=0.85,v2 grid already >= authored weight in every kernel cell
+Iron Knob (Middleback Ranges),Australia,-32.73,137.15,Fe,major,high,0.75,Fe=0.85,v2 grid already >= authored weight in every kernel cell
+Cobar copper-gold,Australia,-31.50,145.83,Cu;Au,major,high,0.75,Cu=0.85 Au=0.85,v2 grid already >= authored weight in every kernel cell
+Cadia copper-gold,Australia,-33.45,149.00,Cu;Au,major,high,0.75,Cu=0.95 Au=0.95,v2 grid already >= authored weight in every kernel cell
+Phosphate Hill,Australia,-21.87,139.98,P,major,high,0.75,P=0.95,v2 grid already >= authored weight in every kernel cell
+Latrobe Valley lignite,Australia,-38.23,146.40,C_coal,world-class,high,0.85,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Collie coal,Australia,-33.35,116.15,C_coal,medium,high,0.65,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Dampier solar salt,Australia,-20.70,116.75,NaCl,major,high,0.75,NaCl=0.85,v2 grid already >= authored weight in every kernel cell
+Lake MacLeod salt-gypsum,Australia,-24.00,113.70,NaCl;gypsum,major,high,0.75,NaCl=0.95 gypsum=0.95,v2 grid already >= authored weight in every kernel cell
+Beverley uranium,Australia,-30.18,139.60,U,medium,medium,0.6,U=0.85,v2 grid already >= authored weight in every kernel cell
+Waihi gold-silver,New Zealand,-37.39,175.84,Au;Ag,major,high,0.75,Au=0.95 Ag=0.85,v2 grid already >= authored weight in every kernel cell
+Macraes gold,New Zealand,-45.38,170.43,Au,major,high,0.75,Au=0.95,v2 grid already >= authored weight in every kernel cell
+West Coast coal (Greymouth-Stockton),New Zealand,-41.75,171.85,C_coal,major,high,0.75,C_coal=0.85,v2 grid already >= authored weight in every kernel cell
+Huntly coal,New Zealand,-37.55,175.15,C_coal,medium,high,0.65,C_coal=0.85,v2 grid already >= authored weight in every kernel cell

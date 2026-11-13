@@ -1,0 +1,807 @@
+{
+  "mod": {
+    "modid": 1254,
+    "assetid": 6597,
+    "name": "Fauna of the Stone Age: Capreolinae",
+    "text": "<p><span style=\"font-weight: 400;\">A collection of deer from the subfamily Capreolinae, these shy animals will act as a challenging prey source and potential danger for players and their crops.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:</span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" style=\"border-spacing: 0px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col width=\"210\" /><col width=\"148\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"128\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"187\" /><col width=\"100\" /><col width=\"169\" /><col width=\"157\" /><col width=\"100\" /><col width=\"121\" /><col width=\"100\" /><col width=\"156\" /><col width=\"100\" /><col width=\"346\" /></colgroup>\n<tbody>\n<tr>\n<td>Name</td>\n<td>Scientific name</td>\n<td>Category</td>\n<td>Weight</td>\n<td>Health</td>\n<td>Height</td>\n<td>Damage</td>\n<td>Temp</td>\n<td>Preciptation</td>\n<td>Foliage Needs</td>\n<td>Altitude</td>\n<td>Group Size</td>\n<td>Meat Drops</td>\n<td>Fat Drops</td>\n<td>Hide Drops</td>\n<td>Other Drops</td>\n<td>Behaviors</td>\n<td>Movement</td>\n<td>Diet</td>\n</tr>\n<tr>\n<td>Moose</td>\n<td>Alces alces</td>\n<td>Alceini</td>\n<td>635/480/45</td>\n<td>36/29/11</td>\n<td>2.33/1.85 shoulders</td>\n<td>16/14t2</td>\n<td>-12-8</td>\n<td>25-100%</td>\n<td>10-90% Forest,10-80% Shrub</td>\n<td>1-1.6</td>\n<td>1M 1-2F&amp;B</td>\n<td>37-47, 29-37,6-7</td>\n<td>7-9,5-6,1</td>\n<td>6H,4H,1L</td>\n<td>M Antler</td>\n<td>Milkable, Riding, Taming</td>\n<td>3.125 Step</td>\n<td>Fruit, Vegetable, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Stag-Moose</td>\n<td>Cervalces scotti &dagger;</td>\n<td>&nbsp;</td>\n<td>700/500/50</td>\n<td>38/30/12</td>\n<td>2.1/1.8 shoulders</td>\n<td>17/15t2</td>\n<td>3-9</td>\n<td>60-85%</td>\n<td>55-95% Forest</td>\n<td>1-1.4</td>\n<td>1M, 1-2F&amp;B</td>\n<td>42-52,30-37,6-7</td>\n<td>7-9,5-6,1</td>\n<td>6H,4H,1L</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>3.125 Step</td>\n<td>Fruit, Vegetable, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Western Roe Deer</td>\n<td>Capreolus capreolus</td>\n<td>Capreolini</td>\n<td>40/30/5</td>\n<td>10/9/3</td>\n<td>0.85/.75 shoulders</td>\n<td>5t1</td>\n<td>2-16</td>\n<td>25-100%</td>\n<td>All</td>\n<td>1-1.6</td>\n<td>1-30M&amp;F, 2-4F&amp;B</td>\n<td>5-6,4-5,1</td>\n<td>1-2,0</td>\n<td>2M, 1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>2.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Eastern Roe Deer</td>\n<td>Capreolus pygargus</td>\n<td>&nbsp;</td>\n<td>50/40/5</td>\n<td>12/11/3</td>\n<td>0.95/.9 shoulders</td>\n<td>5t1</td>\n<td>-6-16</td>\n<td>10-100%</td>\n<td>All</td>\n<td>1-1.6</td>\n<td>1-30M&amp;F, 2-4F&amp;B</td>\n<td>6-7, 5-6,1</td>\n<td>1-2,0</td>\n<td>2M, 1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>2.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Water Deer</td>\n<td>Hydropotes inermis</td>\n<td>&nbsp;</td>\n<td>14/10/2</td>\n<td>5/3</td>\n<td>0.65 shoulders</td>\n<td>4t1</td>\n<td>6-18</td>\n<td>45-80%</td>\n<td>All</td>\n<td>1-1.6</td>\n<td>1M 2-7F&amp;B</td>\n<td>2-3, 0</td>\n<td>0</td>\n<td>1M, 1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>2.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Antifer's Deer</td>\n<td>Antifer ultra &dagger;</td>\n<td>Odocoileini</td>\n<td>200/150/15</td>\n<td>19/16/5</td>\n<td>1.35/1.2 shoulders</td>\n<td>9/8t2</td>\n<td>7-21</td>\n<td>30-85%</td>\n<td>0-65% Forest</td>\n<td>1-1.5</td>\n<td>1-2 M&amp;F, 2-12 M&amp;F&amp;B</td>\n<td>21-26,17-21,2-3</td>\n<td>4-5,3-4,0</td>\n<td>5L,4L,1M</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>2.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Marsh Deer</td>\n<td>Blastocerus dichotomus</td>\n<td>&nbsp;</td>\n<td>120/80/10</td>\n<td>16/15/4</td>\n<td>1.27/1.1 shoulder</td>\n<td>8/7t2</td>\n<td>15-26</td>\n<td>65-95%</td>\n<td>All</td>\n<td>1-1.1</td>\n<td>1-2 M&amp;F, 1-6 M&amp;F&amp;B</td>\n<td>15-18,9-12,2-3</td>\n<td>3-4,2-3,0</td>\n<td>4L,3L,1M</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>2.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Dakota Palm Deer</td>\n<td>Bretzia nebrascensis &dagger;</td>\n<td>&nbsp;</td>\n<td>90/70/10</td>\n<td>15/14/4</td>\n<td>1.05/.9 shoulder</td>\n<td>7t2/6t1</td>\n<td>3-9</td>\n<td>25-45%</td>\n<td>0-60% Forest</td>\n<td>1.05-1.5</td>\n<td>1-5 M, 2-8F&amp;B</td>\n<td>11-14,7-9,2-3</td>\n<td>2-3,0</td>\n<td>3L,2L,1M</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>2.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Taruca</td>\n<td>\n<div>\n<div>Hippocamelus antisensis</div>\n</div>\n</td>\n<td>&nbsp;</td>\n<td>70/45/10</td>\n<td>14/11/4</td>\n<td>.8/.7 shoulders</td>\n<td>6/5t1</td>\n<td>16-28</td>\n<td>0-60%</td>\n<td>0-45% Forest</td>\n<td>1.5-1.8</td>\n<td>1-5 M&amp;F&amp;B</td>\n<td>9-11,5-7,2-3</td>\n<td>2-3,0</td>\n<td>2L, 1M</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>2.125 Step</td>\n<td>Vegetable, Grass Nibble Crop</td>\n</tr>\n<tr>\n<td>Huemul</td>\n<td>Hippocamelus bisulcus</td>\n<td>&nbsp;</td>\n<td>90/70/10</td>\n<td>15/14/4</td>\n<td>.9/.8 shoulders</td>\n<td>7t2/6t1</td>\n<td>4-10</td>\n<td>20-85%</td>\n<td>All</td>\n<td>1.05-1.8</td>\n<td>1-10 M&amp;F&amp;B</td>\n<td>11-14,9-11,2-3</td>\n<td>2-3,0</td>\n<td>3L,2L,1M</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>2.125 Step</td>\n<td>Vegetable, Grass Nibble Crop</td>\n</tr>\n<tr>\n<td>Red Brocket</td>\n<td>Mazama americana</td>\n<td>&nbsp;</td>\n<td>48/36/5</td>\n<td>12/10/3</td>\n<td>.8/.7 shoulders</td>\n<td>5t1</td>\n<td>26-40</td>\n<td>25-100%</td>\n<td>45-100% Forest</td>\n<td>1-1.3</td>\n<td>1-2M&amp;F, 1-2F&amp;B</td>\n<td>6-7, 4-5, 1</td>\n<td>1,0</td>\n<td>2M,1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>1.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Merida Brocket</td>\n<td>Mazama bricenii</td>\n<td>&nbsp;</td>\n<td>13/11/2</td>\n<td>5/3</td>\n<td>.5 shoulders</td>\n<td>4t1</td>\n<td>28-40</td>\n<td>55-100%</td>\n<td>5-100% Forest</td>\n<td>1.3-1.6</td>\n<td>1-2M&amp;F, 1-2F&amp;B</td>\n<td>2-3,0</td>\n<td>0</td>\n<td>2S, 1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>1.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Small Red Brocket</td>\n<td>Mazama jucunda</td>\n<td>&nbsp;</td>\n<td>20/16/2</td>\n<td>6/3</td>\n<td>.45 shoulders</td>\n<td>4t1</td>\n<td>16-22</td>\n<td>50-75%</td>\n<td>55-100% Forest</td>\n<td>1-1.3</td>\n<td>1-2M&amp;F, 1-2F&amp;B</td>\n<td>2-3,0</td>\n<td>0</td>\n<td>2S, 1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>1.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Pygmy Brocket</td>\n<td>Mazama nana</td>\n<td>&nbsp;</td>\n<td>20/16/2</td>\n<td>6/3</td>\n<td>.45 shoulders</td>\n<td>4t1</td>\n<td>16-22</td>\n<td>65-95%</td>\n<td>55-100% Forest</td>\n<td>1-1.3</td>\n<td>1-2M&amp;F, 1-2F&amp;B</td>\n<td>2-3,0</td>\n<td>0</td>\n<td>2S, 1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>1.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Southeastern Red Brocket</td>\n<td>Mazama rufa</td>\n<td>&nbsp;</td>\n<td>40/28/3</td>\n<td>10/8/3</td>\n<td>.8/.7 shoulders</td>\n<td>5/4t1</td>\n<td>18-26</td>\n<td>25-100%</td>\n<td>45-100% Forest</td>\n<td>1-1.3</td>\n<td>1-2M&amp;F, 1-2F&amp;B</td>\n<td>5-6,4-5, 1</td>\n<td>1,0</td>\n<td>2M,1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>1.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>North Andean Red Brocket</td>\n<td>Mazama rufina</td>\n<td>&nbsp;</td>\n<td>15/13/2</td>\n<td>5/3</td>\n<td>.45 shoulders</td>\n<td>4t1</td>\n<td>26-40</td>\n<td>50-100%</td>\n<td>45-100%</td>\n<td>1.45-1.75</td>\n<td>1-2M&amp;F, 1-2F&amp;B</td>\n<td>2-3,0</td>\n<td>0</td>\n<td>2S, 1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>1.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Central American Red Brocket</td>\n<td>Mazama temama</td>\n<td>&nbsp;</td>\n<td>22/20/2</td>\n<td>6/3</td>\n<td>.7 shoulders</td>\n<td>4t1</td>\n<td>20-28</td>\n<td>60-100%</td>\n<td>70-100% Forest</td>\n<td>1-1.5</td>\n<td>1-2M&amp;F, 1-2F&amp;B</td>\n<td>2-3,0</td>\n<td>0</td>\n<td>2S, 1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>1.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Fair Brocket</td>\n<td>Mazama tienhoveni</td>\n<td>&nbsp;</td>\n<td>16/13/2</td>\n<td>5/3</td>\n<td>.5 shoulders</td>\n<td>4t1</td>\n<td>24-28</td>\n<td>75-100%</td>\n<td>70-100% Forest</td>\n<td>1-1.3</td>\n<td>1-2M&amp;F, 1-2F&amp;B</td>\n<td>2-3,0</td>\n<td>0</td>\n<td>2S, 1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>1.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Mule Deer</td>\n<td>Odocoileus hemionus</td>\n<td>&nbsp;</td>\n<td>92/68/10</td>\n<td>15/14/4</td>\n<td>1.06/.9 shoulder</td>\n<td>7t2/6t1</td>\n<td>-8-22</td>\n<td>5-100%</td>\n<td>All</td>\n<td>1-1.8</td>\n<td>1M&amp;F, 1-7 M&amp;F&amp;B</td>\n<td>11-14,7-9,2-3</td>\n<td>2-3,0</td>\n<td>3L,2L,1M</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>3.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>American Mountain Deer</td>\n<td>Odocoileus lucasi &dagger;</td>\n<td>&nbsp;</td>\n<td>270/175/20</td>\n<td>22/18/6</td>\n<td>1.3/1.1 shoulder</td>\n<td>11/9t2</td>\n<td>-3-15</td>\n<td>5-100%</td>\n<td>All</td>\n<td>1.3-1.8</td>\n<td>1M&amp;F, 1-7 M&amp;F&amp;B</td>\n<td>25-28,18-22,2-3</td>\n<td>5-7,4-5,0</td>\n<td>6L,4L,1M</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>3.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Yucatan Brown Brocket</td>\n<td>Odocoileus pandora</td>\n<td>&nbsp;</td>\n<td>20/17/4</td>\n<td>6/3</td>\n<td>.7 shoulders</td>\n<td>4t1</td>\n<td>24-28</td>\n<td>65-85%</td>\n<td>45-100% Forest</td>\n<td>1-1.1</td>\n<td>1M 1-2 F&amp;B</td>\n<td>2-3,1</td>\n<td>0</td>\n<td>2S, 1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>1.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>White-Tailed Deer</td>\n<td>Odocoileus virginianus</td>\n<td>&nbsp;</td>\n<td>102/65/10</td>\n<td>16/14/4</td>\n<td>1.2/.95 shoulders</td>\n<td>8t2/6t1</td>\n<td>-2-40</td>\n<td>5-100%</td>\n<td>All</td>\n<td>1-1.8</td>\n<td>3-5 M, 2-40F&amp;B</td>\n<td>12-15,8-10,2-3</td>\n<td>2-3,0</td>\n<td>3L, 2L,1M</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>3.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Pampas Deer</td>\n<td>Ozotoceros bezoarticus</td>\n<td>&nbsp;</td>\n<td>34/29/5</td>\n<td>9/8/3</td>\n<td>.7/.65 shoulders</td>\n<td>5t1</td>\n<td>12-26</td>\n<td>20-100%</td>\n<td>0-65% Forest</td>\n<td>1-1.4</td>\n<td>2-6 M&amp;F&amp;B, 1-50 M&amp;F&amp;B</td>\n<td>3-5,3-4, 1</td>\n<td>1-2,0</td>\n<td>2M, 1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>2.125 Step</td>\n<td>Vegetable, Grass Nibble Crop</td>\n</tr>\n<tr>\n<td>Amazonian Brown Brocket</td>\n<td>Passalites nemorivaga</td>\n<td>&nbsp;</td>\n<td>16/13/2</td>\n<td>5/3</td>\n<td>.5 shoulders</td>\n<td>4t1</td>\n<td>24-40</td>\n<td>60-100%</td>\n<td>All</td>\n<td>1-1.5</td>\n<td>1-2M&amp;F, 1-2F&amp;B</td>\n<td>2-3,0</td>\n<td>0</td>\n<td>2S, 1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>1.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Peruvian Yungas Pudu</td>\n<td>Pudella carlae</td>\n<td>&nbsp;</td>\n<td>9/7/1</td>\n<td>4/3</td>\n<td>.38 shoulders</td>\n<td>3t1</td>\n<td>24-32</td>\n<td>60-100%</td>\n<td>60-100% Forest or Shrub</td>\n<td>1.3-1.8</td>\n<td>1 M, 1-2F&amp;B</td>\n<td>1,0</td>\n<td>0</td>\n<td>1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>1.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Northern Pudu</td>\n<td>Pudella mephistophiles</td>\n<td>&nbsp;</td>\n<td>6/5/1</td>\n<td>4/3</td>\n<td>.35 shoulders</td>\n<td>3t1</td>\n<td>24-36</td>\n<td>40-100%</td>\n<td>40-100% Forest or Shrub</td>\n<td>1.3-1.8</td>\n<td>1 M, 1-2F&amp;B</td>\n<td>1,0</td>\n<td>0</td>\n<td>1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>1.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Southern Pudu</td>\n<td>Pudu puda</td>\n<td>&nbsp;</td>\n<td>10/9/2</td>\n<td>4/3</td>\n<td>.45 shoulders</td>\n<td>3t1</td>\n<td>8-12</td>\n<td>40-85%</td>\n<td>60-100% Shrub</td>\n<td>1-1.5</td>\n<td>1 M&amp;F, 3 M&amp;F&amp;B</td>\n<td>1-3,0</td>\n<td>0</td>\n<td>2S,1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>1.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Arctic Caribou</td>\n<td>Rangifer arcticus</td>\n<td>&nbsp;</td>\n<td>150/90/10</td>\n<td>17/15/4</td>\n<td>1.25/1.1 shoulders</td>\n<td>8/7t2</td>\n<td>-30--8</td>\n<td>10-95%</td>\n<td>0-60% Forest</td>\n<td>1-1.6</td>\n<td>20-60 M&amp;F&amp;B</td>\n<td>17-21, 11-14, 2-3</td>\n<td>3-4,2-3,0</td>\n<td>4L, 3L, 1M</td>\n<td>M&amp;F Antler</td>\n<td>Milkable</td>\n<td>2.125 Step</td>\n<td>Vegetable, Grass Nibble Crop</td>\n</tr>\n<tr>\n<td>Woodland Caribou</td>\n<td>Rangifer caribou</td>\n<td>&nbsp;</td>\n<td>180/130/10</td>\n<td>19/17/4</td>\n<td>1.4/1.2 shoulder</td>\n<td>9/8t2</td>\n<td>-12-4</td>\n<td>20-75%</td>\n<td>60-100% Forest</td>\n<td>1-1.4</td>\n<td>2-5 M&amp;F, 12-25 M&amp;F&amp;B</td>\n<td>18-22, 15-18, 2-3</td>\n<td>3-4,2-3,0</td>\n<td>5L, 4L, 1M</td>\n<td>M&amp;F Antler</td>\n<td>Milkable</td>\n<td>2.125 Step</td>\n<td>Vegetable, Grass Nibble Crop</td>\n</tr>\n<tr>\n<td>Forest Reindeer</td>\n<td>Rangifer fennicus</td>\n<td>&nbsp;</td>\n<td>200/100/10</td>\n<td>19/15/4</td>\n<td>1.4/1.2 shoulder</td>\n<td>9/7t2</td>\n<td>0-4</td>\n<td>50-75%</td>\n<td>50-90% Forest</td>\n<td>1-1.3</td>\n<td>3-7 M&amp;F, 7-23 M&amp;F&amp;B</td>\n<td>21-26,12-15,2-3</td>\n<td>4-5,2-3,0</td>\n<td>5L,3L,1M</td>\n<td>M&amp;F Antler</td>\n<td>Milkable</td>\n<td>2.125 Step</td>\n<td>Vegetable, Grass Nibble Crop</td>\n</tr>\n<tr>\n<td>Greenland Caribou</td>\n<td>Rangifer groenlandicus</td>\n<td>&nbsp;</td>\n<td>150/90/10</td>\n<td>17/15/4</td>\n<td>1.2/1.1 shoulder</td>\n<td>8/7t2</td>\n<td>-16--8</td>\n<td>10-75%</td>\n<td>0-60% Forest</td>\n<td>1-1.5</td>\n<td>3-5 M&amp;F, 3-16 M&amp;F&amp;B</td>\n<td>17-21, 11-14, 2-3</td>\n<td>3-4,2-3,0</td>\n<td>4L, 3L, 1M</td>\n<td>M&amp;F Antler</td>\n<td>Milkable</td>\n<td>2.125 Step</td>\n<td>Vegetable, Grass Nibble Crop</td>\n</tr>\n<tr>\n<td>Svalbard Reindeer</td>\n<td>Rangifer platyrhynchus</td>\n<td>&nbsp;</td>\n<td>77/60/10</td>\n<td>15/13/4</td>\n<td>0.9/0.8 shoulders</td>\n<td>7t2/6t1</td>\n<td>-10--4</td>\n<td>20-65%</td>\n<td>0-60% Forest</td>\n<td>1-1.5</td>\n<td>3-5 M&amp;F, 3-16 M&amp;F&amp;B</td>\n<td>9-11,7-9,2-3</td>\n<td>2-3,0</td>\n<td>2L, 1M</td>\n<td>M&amp;F Antler</td>\n<td>Milkable</td>\n<td>2.125 Step</td>\n<td>Vegetable, Grass Nibble Crop</td>\n</tr>\n<tr>\n<td>Domestic Reindeer</td>\n<td>\n<div>\n<div>Rangifer tarandus domesticus</div>\n</div>\n</td>\n<td>&nbsp;</td>\n<td>135/90/10</td>\n<td>17/15/4</td>\n<td>1.2/1.0 shoulders</td>\n<td>8/7t2</td>\n<td>NA</td>\n<td>NA</td>\n<td>NA</td>\n<td>NA</td>\n<td>NA</td>\n<td>16-20,11-14,2-3</td>\n<td>3-4,2-3,0</td>\n<td>4L, 3L, 1M</td>\n<td>M&amp;F Antler</td>\n<td>Milkable, Riding</td>\n<td>2.125 Step</td>\n<td>Vegetable, Grass Nibble Crop</td>\n</tr>\n<tr>\n<td>Tundra Reindeer</td>\n<td>Rangifer tarandus</td>\n<td>&nbsp;</td>\n<td>105/75/10</td>\n<td>16/15/4</td>\n<td>1.2/1.0 shoulders</td>\n<td>8/7t2</td>\n<td>-20-0</td>\n<td>5-80%</td>\n<td>0-60% Forest</td>\n<td>1-1.6</td>\n<td>1-10 M&amp;F, 20-40M&amp;F&amp;B</td>\n<td>12-15,9-11,2-3</td>\n<td>2-3,0</td>\n<td>3L, 2L, 1M</td>\n<td>M&amp;F Antler</td>\n<td>Milkable, Riding, Taming</td>\n<td>2.125 Step</td>\n<td>Vegetable, Grass Nibble Crop</td>\n</tr>\n<tr>\n<td>South Andean Red Brocket</td>\n<td>Subulo chunyi</td>\n<td>&nbsp;</td>\n<td>11/10/2</td>\n<td>5/3</td>\n<td>.37 shoulder</td>\n<td>4t1</td>\n<td>20-24</td>\n<td>55-100%</td>\n<td>25-100% Forest</td>\n<td>1.2-1.8</td>\n<td>1-2M&amp;F, 1-2F&amp;B</td>\n<td>2-3, 0</td>\n<td>0</td>\n<td>2S, 1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>1.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Southern Brown Brocket</td>\n<td>Subulo gouazoubira</td>\n<td>&nbsp;</td>\n<td>17/2</td>\n<td>5/3</td>\n<td>.65 shoulder</td>\n<td>4t1</td>\n<td>16-30</td>\n<td>25-90%</td>\n<td>25-75% Forest</td>\n<td>1-1.3</td>\n<td>1-2M&amp;F, 1-2F&amp;B</td>\n<td>2-3,0</td>\n<td>0</td>\n<td>2S, 1S</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>1.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n<tr>\n<td>Toronto Deer</td>\n<td>\n<div>\n<div>Torontoceros hypnogeos &dagger;</div>\n</div>\n</td>\n<td>&nbsp;</td>\n<td>150/90/10</td>\n<td>16/15/4</td>\n<td>1.25/1.1 shoulders</td>\n<td>8/7t2</td>\n<td>-1-5</td>\n<td>55-85%</td>\n<td>40-90% Forest</td>\n<td>1-1.4</td>\n<td>1-7 M, 2-40F&amp;B</td>\n<td>17-21, 11-14, 2-3</td>\n<td>3-4,2-3,0</td>\n<td>4L, 3L, 1M</td>\n<td>M Antler</td>\n<td>Milkable</td>\n<td>2.125 Step</td>\n<td>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Features:<br /></span></p>\n<p><span style=\"font-weight: 400;\">Deer are faster than most prey animals Vintage Story players are familiar with, many sleeping during the day in thick foliage making them harder to detect and catch. They can be lured with certain crops and berry bushes, as well as filled food troughs with suitable foods. The largest among them are deadly, the moose especially will attack players that get too close and can be hard to take down. Using creative hunting techniques is recommended for deer both big and small.<br /><br /></span><span style=\"font-weight: 400;\">Base game deer of the same species as these are blocked from spawning, but not disabled. Deer that had already spawned will still exist.<br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Those who are able to catch a pair of deer can domesticate them, and they can be milked, with different species requiring different amounts of food and pregnancy length. Moose and Tundra reindeer can be tamed and ridden, and tamed Tundra reindeer have a chance of birthing domestic reindeer, that grow into semi-tamed adults without needing to go through the taming process.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Most species have a unique pelt drop as well that can be used to craft hide, taxidermied full body and head mounts.</span></p>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">On occasion a </span><span style=\"font-weight: 400;\">fly covered deer carcass will spawn, preventing moose spawning in the area around them. They have a chance to spawn when a player first arrives in an area or when all moose have been killed off from the area, allowing players to locally wipe out moose. Destroying the moose carcass will allow more moose to spawn again and some carnivores and scavengers may destroy them as well, so if you want moose spawns prevented in an area protect these carcasses. The carcass can be crafted with a moose pelt, bones and red meat, blocking spawns when placed.</span></p>\n<p><span style=\"font-weight: 400;\">&nbsp;</span></p>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Links:</span><span style=\"font-weight: 400;\"><br /></span><a href=\"https://ko-fi.com/tentharchitect\"><span style=\"font-weight: 400;\">https://ko-fi.com/tentharchitect</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span></a><span style=\"font-weight: 400;\">And a big thanks to everyone who gave feedback and assistance!<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong> How do I domesticate the animals in this pack?<br /><br /><strong>A:</strong> Get a male and female adult of a given species within 10 blocks, wait until the female is ready to mate and feed her the sufficient number of portions and the male at least one. Different species require different amounts and can be found in the entity file under the multiply section. Animals can be fed either by dropping items on the ground or by using the right trough. Each species diet can be found in this mod's description or in their entity file under the diet section. Only the mother's generation matters for progressing generations.<br /><br /><strong>Q</strong>: How do I tame the moose and tundra reindeer?<br /><strong>A</strong>: Feed the babies enough portions before they'd naturally grow up, and they will become a semi-tamed adult. Saddle break the sem-tamed adult to get a tamed adult. Breeding semi-tamed or tamed tundra reindeer will occasionally result in domestic reindeer being born.<br /><br /><br /><strong>Q:</strong> Why so many animal packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain clade file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><strong>Q:</strong> Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> Yes, this mod series is safe to add and remove. Items from this mod that have been placed will be invisible or appear as question blocks if the mod is removed but can be safely broken.</div>\n</div>\n<p><span style=\"font-weight: 400;\"> <br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "capreolinae",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_2f365d8c3c187329bf01adafb0f51773.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_2f365d8c3c187329bf01adafb0f51773.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_2f365d8c3c187329bf01adafb0f51773.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 243336,
+    "follows": 1787,
+    "trendingpoints": 0,
+    "comments": 308,
+    "side": "both",
+    "type": "mod",
+    "created": "2023-05-22 15:36:24",
+    "lastreleased": "2026-09-23 19:14:28",
+    "lastmodified": "2026-09-28 20:17:22",
+    "tags": [
+      "Crafting",
+      "Food",
+      "Furniture",
+      "Creatures"
+    ],
+    "releases": [
+      {
+        "releaseid": 58157,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_8e55da692c8081acb78b9b152d8870c5.zip?dl=FotSA-Capreolinae-v2.0.18.zip",
+        "filename": "FotSA-Capreolinae-v2.0.18.zip",
+        "fileid": 124637,
+        "downloads": 2243,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.18",
+        "created": "2026-09-23 19:14:28",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-baby deer not dropping fat correctly</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-baby roe deer scared sound not playing</span></p>"
+      },
+      {
+        "releaseid": 56518,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_794b809aab5fdc92c8651e887e3b9dbf.zip?dl=FotSA-Capreolinae-v2.0.17.zip",
+        "filename": "FotSA-Capreolinae-v2.0.17.zip",
+        "fileid": 121537,
+        "downloads": 5066,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.17",
+        "created": "2026-09-11 15:43:43",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Baby pelts not rotting into the correct amount of rot</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Pelts grouped in handbook</span></p>"
+      },
+      {
+        "releaseid": 48700,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_6f021a607101f920ff658fb094b6dc5b.zip?dl=FotSA-Capreolinae-v2.0.16.zip",
+        "filename": "FotSA-Capreolinae-v2.0.16.zip",
+        "fileid": 106385,
+        "downloads": 24464,
+        "tags": [
+          "1.22.3",
+          "1.22.5",
+          "1.22.7"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.16",
+        "created": "2026-07-10 23:40:29",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Converted maxFollowTimeSec to maxFollowTime</span></p>"
+      },
+      {
+        "releaseid": 48447,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_516b4c35ba64c4dc2400682b1fe45048.zip?dl=FotSA-Capreolinae-v2.0.15.zip",
+        "filename": "FotSA-Capreolinae-v2.0.15.zip",
+        "fileid": 105920,
+        "downloads": 1731,
+        "tags": [
+          "1.22.3"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.15",
+        "created": "2026-07-08 18:34:58",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Changed case of fleeDurationMs </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of MaxCooldownHours</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of MaxCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of MinCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of soundRange </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Changed case of soundRepeatMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted damageWindowMs to damagePlayerAtMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted duringDayTimeFramesHours to duringDayTimeFrames</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted maxcooldown to MaxCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted mincooldown to MinCooldownMs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Converted tamingGenerations to maxGeneration</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unneeded mingenerations &amp; maxgenerations</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused DontExecuteIfRecentlyAttacked </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Eat after kill</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Herd Alarm Range</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Ignore dead entities</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused MaxBlocksChecked</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused min and maxduration from non-Idle tasks</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Player is meal</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Range Search Attempts Factors</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused Sound volume</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused target entity with same herd ID</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused target light levels</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused wander range vertical max</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed unused when feet in liquid</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Singular emotion state format</span></p>"
+      },
+      {
+        "releaseid": 48246,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_f1c7f017104f075a5a6231edacce4ac5.zip?dl=FotSA-Capreolinae-v2.0.14.zip",
+        "filename": "FotSA-Capreolinae-v2.0.14.zip",
+        "fileid": 105473,
+        "downloads": 981,
+        "tags": [
+          "1.22.3"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.14",
+        "created": "2026-07-06 19:22:26",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Combat Overhaul patches</span></p>"
+      },
+      {
+        "releaseid": 46897,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_9e6db1be5e384e0f58b45b616c6cc6d9.zip?dl=FotSA-Capreolinae-v2.0.13.zip",
+        "filename": "FotSA-Capreolinae-v2.0.13.zip",
+        "fileid": 102778,
+        "downloads": 6075,
+        "tags": [
+          "1.22.3"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.13",
+        "created": "2026-06-23 16:53:18",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Malformed hide drop on tamed reindeer</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Changed oiled hide recipe to use rendered fat</span></p>"
+      },
+      {
+        "releaseid": 35816,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_81f29034957f1bef751f5eb3075ba9b3.zip?dl=FotSA-Capreolinae-v2.0.12.zip",
+        "filename": "FotSA-Capreolinae-v2.0.12.zip",
+        "fileid": 79029,
+        "downloads": 21602,
+        "tags": [
+          "1.22.0-pre.4",
+          "1.22.0-pre.5",
+          "1.22.0-rc.1"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.12",
+        "created": "2026-03-05 16:43:31",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Slot 1 to melee attacks, should increase attack responsiveness</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Removed-Attack for UI display</span></p>"
+      },
+      {
+        "releaseid": 35689,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_d9d6f5540443ed5c559ef4742273fa8d.zip?dl=FotSA-Capreolinae-v2.0.11.zip",
+        "filename": "FotSA-Capreolinae-v2.0.11.zip",
+        "fileid": 78748,
+        "downloads": 120,
+        "tags": [
+          "1.22.0-pre.4"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.11",
+        "created": "2026-03-03 17:45:45",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-ai tasks tag formats for adult moose</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-changed jump to leap</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-min and max durationMs to duration</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Rider offset</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Stayclose to entity format</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 34492,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_3be138cd316172279e95f31dd78332c3.zip?dl=FotSA-Capreolinae-v2.0.10.zip",
+        "filename": "FotSA-Capreolinae-v2.0.10.zip",
+        "fileid": 76011,
+        "downloads": 510,
+        "tags": [
+          "1.22.0-pre.2"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.10",
+        "created": "2026-02-13 20:48:57",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed- Male American Mountain Deer oiled pelt recipe</span></p>"
+      },
+      {
+        "releaseid": 34211,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_d15db458e8104cd48050284708f73706.zip?dl=FotSA-Capreolinae-v2.0.9.zip",
+        "filename": "FotSA-Capreolinae-v2.0.9.zip",
+        "fileid": 75444,
+        "downloads": 342,
+        "tags": [
+          "1.22.0-pre.1"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.9",
+        "created": "2026-02-09 01:26:48",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-changed swim wander format for pre.2</span></p>"
+      },
+      {
+        "releaseid": 34108,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_fb31ca216ee03f736a7a1f425cc08c84.zip?dl=FotSA-Capreolinae-v2.0.8.zip",
+        "filename": "FotSA-Capreolinae-v2.0.8.zip",
+        "fileid": 75202,
+        "downloads": 140,
+        "tags": [
+          "1.22.0-pre.1"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.8",
+        "created": "2026-02-07 22:50:59",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Adjusted Frost overlay thresholds for cold weather deer</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Antlers appear on ui of deer</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Freshwater fish interaction</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Reindeer click audio synced with foot steps</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-rolled back refactored ai tasks to main ai tasks </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Changed inEmotionStates format</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Change chance and wanderChance to executionChance</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-New riding format for moose and tameable reindeer</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 32151,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_8e9f4ecc62320f00a025e802159faa60.zip?dl=FotSA-Capreolinae-v2.0.7.zip",
+        "filename": "FotSA-Capreolinae-v2.0.7.zip",
+        "fileid": 70759,
+        "downloads": 27252,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.7",
+        "created": "2026-01-07 16:32:04",
+        "changelog": "<p>Fixed-Tamed moose being unable to breed with wild moose</p>"
+      },
+      {
+        "releaseid": 32103,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_c98e68f83c297602f5372d4ee8ee9440.zip?dl=FotSA-Capreolinae-v2.0.6.zip",
+        "filename": "FotSA-Capreolinae-v2.0.6.zip",
+        "fileid": 70669,
+        "downloads": 532,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.6",
+        "created": "2026-01-06 21:14:57",
+        "changelog": "<p>Updated-1 hide is always dropped from killed animals</p>"
+      },
+      {
+        "releaseid": 31624,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_cfc9b112559c9fad0ec2c93981f03851.zip?dl=FotSA-Capreolinae-v2.0.5.zip",
+        "filename": "FotSA-Capreolinae-v2.0.5.zip",
+        "fileid": 69660,
+        "downloads": 3965,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.5",
+        "created": "2025-12-30 17:34:17",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Removed redundant animal patch</span></p>"
+      },
+      {
+        "releaseid": 29694,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_4faf9f4656c31a8a14b6c9bc7e61726c.zip?dl=FotSA-Capreolinae-v2.0.4.zip",
+        "filename": "FotSA-Capreolinae-v2.0.4.zip",
+        "fileid": 65541,
+        "downloads": 14082,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.4",
+        "created": "2025-11-22 20:57:16",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Cheeses going into the wrong meal slot in scrambled eggs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Moose using huge carcass instead of large</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-consolidated respawns into single entry to reduce spawn checks</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-enabled sitting in shade again for Odocoileini adults</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 28423,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_dfcef679b25a6f34f0c04880d896fa00.zip?dl=FotSA-Capreolinae-v2.0.3.zip",
+        "filename": "FotSA-Capreolinae-v2.0.3.zip",
+        "fileid": 62651,
+        "downloads": 15356,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.3",
+        "created": "2025-10-30 21:21:10",
+        "changelog": "<p>Fixed-Babies not dropping the new raw hide pelt</p>"
+      },
+      {
+        "releaseid": 28220,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_3e22746ec1b7de3c6a413c4700c998a1.zip?dl=FotSA-Capreolinae-v2.0.2.zip",
+        "filename": "FotSA-Capreolinae-v2.0.2.zip",
+        "fileid": 62087,
+        "downloads": 1717,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.2",
+        "created": "2025-10-27 15:59:11",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Adult Capreolini deer having mismatched emotion state format for seekentity ai task</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Carcasses missing tags and spawn conditions for Capreolini and Odocoileini versions</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Enabled Moose combat seeking behaviors<br /></span><span style=\"font-weight: 400;\">Fixed-Melee attacks using old ai task cooldown format</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Added predator tag to close up flee and mid range flee ai task, instead of just ferocious predator</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Moose and Stag moose adult trot speed raised 40 percent</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Reduced Moose sprint speed with rider by 10%</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 28037,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_5bfba82ea75c0d2922f651ddbc5d10d8.zip?dl=FotSA-Capreolinae-v2.0.1.zip",
+        "filename": "FotSA-Capreolinae-v2.0.1.zip",
+        "fileid": 61688,
+        "downloads": 1847,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.1",
+        "created": "2025-10-24 23:32:19",
+        "changelog": "<p>Fixed-Missing saddlebreak animation causing crash<br />Fixed-Semitamed Moose and reindeer not using the correct saddle and bridle models</p>"
+      },
+      {
+        "releaseid": 28036,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_59a6290800bd2796605fcccf533566dc.zip?dl=FotSA-Capreolinae-v2.0.0.zip",
+        "filename": "FotSA-Capreolinae-v2.0.0.zip",
+        "fileid": 61677,
+        "downloads": 244,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "2.0.0",
+        "created": "2025-10-24 22:19:03",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-15 new species and taxonomic splits</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-3 new milk and cottage cheese types</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Ancient Tools Brain drops (Thanks Whiskey Sunshine!)<br />Added-Capreolini and Odocoileini carcasses</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added- Creature tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Oiled, Raw, Salted hides and associated recipes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Riding to Moose, Tundra reindeer and Domestic reindeer</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Taming to Moose and Tundra reindeer</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Tundra reindeer that are tamed have a chance to birth Domestic reindeer</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Weighted diet&nbsp;<br /></span><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Antler patches format</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Missing closed bracket in animal file</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Spawn blocking patches</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Small troughs can&rsquo;t be used for deer feeding</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Changed spawn conditions to have any amount of artificial light block spawns</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Cleaned up audio</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Climate conditions changed due to 1.21 changes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Removed minimum altitude from most spawn conditions</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Art for all existing animals, taxidermies, headmounts and pelts</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Refactored AI tasks to the new versions in 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Reformatted folders to match base game&rsquo;s folder layout</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Trappable format for 1.21</span></p>"
+      },
+      {
+        "releaseid": 20067,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_48918c3193f61fbe8816cf701cbdae82.zip?dl=FotSA-Capreolinae-v1.2.9.zip",
+        "filename": "FotSA-Capreolinae-v1.2.9.zip",
+        "fileid": 43496,
+        "downloads": 30440,
+        "tags": [
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.2.9",
+        "created": "2025-05-15 19:21:01",
+        "changelog": "<p>Fixed-Combat Overhaul moose patch</p>"
+      },
+      {
+        "releaseid": 19451,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_ecbe3f91dfb36e40883c1e7e48649ea6.zip?dl=FotSA-Capreolinae-v1.2.8.zip",
+        "filename": "FotSA-Capreolinae-v1.2.8.zip",
+        "fileid": 42066,
+        "downloads": 4667,
+        "tags": [
+          "1.20.9",
+          "1.20.10"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.2.8",
+        "created": "2025-04-29 19:33:01",
+        "changelog": "<p>Added-Devil interactions<br />Tweak-White-tailed deer group ratio<br />Tweak-spawn group distribution type, switched Odocoileini deer from very narrow gausian to gausian</p>"
+      },
+      {
+        "releaseid": 19205,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_4d460942d2b6e96ecfab8d5ebd8b398f.zip?dl=FotSA-Capreolinae-v1.2.7.zip",
+        "filename": "FotSA-Capreolinae-v1.2.7.zip",
+        "fileid": 41527,
+        "downloads": 2054,
+        "tags": [
+          "1.20.9"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.2.7",
+        "created": "2025-04-22 15:54:14",
+        "changelog": "<p>Fixed-Milking not set up correctly</p>"
+      },
+      {
+        "releaseid": 18513,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_501de0f0b16e8928a423224c20d27a16.zip?dl=FotSA-Capreolinae-v1.2.6.zip",
+        "filename": "FotSA-Capreolinae-v1.2.6.zip",
+        "fileid": 40011,
+        "downloads": 6264,
+        "tags": [
+          "1.20.7",
+          "1.20.8"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.2.6",
+        "created": "2025-04-04 23:41:27",
+        "changelog": "<p>Added-Worldgen spawn<br />Added-Woolandmore drops</p>"
+      },
+      {
+        "releaseid": 17548,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_227a908fc555ccb49d2d8e5458c84ece.zip?dl=FotSA-Capreolinae-v1.2.5.zip",
+        "filename": "FotSA-Capreolinae-v1.2.5.zip",
+        "fileid": 37346,
+        "downloads": 6483,
+        "tags": [
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.2.5",
+        "created": "2025-03-13 20:14:42",
+        "changelog": "<p>Added-Thylacoleo interactions<br />Tweak-Spawn temperature ranges<br />Fixed-Graze behavior not playing</p>"
+      },
+      {
+        "releaseid": 16570,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_d89840da4c33127e44aca71b006d1833.zip?dl=FotSA-Capreolinae-v1.2.4.zip",
+        "filename": "FotSA-Capreolinae-v1.2.4.zip",
+        "fileid": 34139,
+        "downloads": 7792,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.2.4",
+        "created": "2025-02-20 16:41:57",
+        "changelog": "<p>Fixed-Male Moose Pelt placement</p>"
+      },
+      {
+        "releaseid": 16224,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_8ccaa48d36921c74709cfad8b6faa967.zip?dl=FotSA-Capreolinae-v1.2.3.zip",
+        "filename": "FotSA-Capreolinae-v1.2.3.zip",
+        "fileid": 33363,
+        "downloads": 3175,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.2.3",
+        "created": "2025-02-14 17:52:31",
+        "changelog": "<p>Fixed-Base game animal patch format updated to 1.20.4<br />Tweak-Doubled Capreolini baby models</p>"
+      },
+      {
+        "releaseid": 15307,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_a9b12ef81cafb008a63636e92b209988.zip?dl=FotSA-Capreolinae-v1.2.2.zip",
+        "filename": "FotSA-Capreolinae-v1.2.2.zip",
+        "fileid": 31642,
+        "downloads": 6868,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.2.2",
+        "created": "2025-01-28 00:21:56",
+        "changelog": "<p>Added-Bovine compatibility</p>"
+      },
+      {
+        "releaseid": 14606,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_40ecb13010d3cecfa9e245ce8a809429.zip?dl=FotSA-Capreolinae-v1.2.1.zip",
+        "filename": "FotSA-Capreolinae-v1.2.1.zip",
+        "fileid": 30379,
+        "downloads": 5440,
+        "tags": [
+          "1.20.0",
+          "1.20.1",
+          "1.20.3"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.2.1",
+        "created": "2025-01-17 18:36:33",
+        "changelog": "<p>Added-Elephant compatibility</p>"
+      },
+      {
+        "releaseid": 14122,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_6ad8544dcd40fe86b6301a2998a00db1.zip?dl=FotSA-Capreolinae-v1.2.0.zip",
+        "filename": "FotSA-Capreolinae-v1.2.0.zip",
+        "fileid": 29433,
+        "downloads": 2266,
+        "tags": [
+          "1.20.0-rc.6",
+          "1.20.0-rc.8",
+          "1.20.0-rc.9"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.2.0",
+        "created": "2025-01-01 23:45:44",
+        "changelog": "<p>Updated-Roe deer and water deer models<br />Updated-Roe deer and water deer grow antlers and tusks over time and will shed their antlers as base game deer do<br />Updated-Roe deer and water deer placeable items<br />Added-Felinae compatibility<br />Updated-1.20 land entity pathfinding<br />Updated-1.20 blending for movement animations<br />Fixed-Moose combat overhaul patch<br />Fixed-Wool and More Patch error</p>"
+      },
+      {
+        "releaseid": 13460,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_663beac43f360ace46e3fabea69376ce.zip?dl=FotSA-Capreolinae-v1.1.11.zip",
+        "filename": "FotSA-Capreolinae-v1.1.11.zip",
+        "fileid": 28206,
+        "downloads": 2932,
+        "tags": [
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.1.11",
+        "created": "2024-12-05 20:19:15",
+        "changelog": "<p>Tweak-Combat overhaul damage resistances</p>"
+      },
+      {
+        "releaseid": 13166,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_fc3184fabb3c91b0f6a455f8b45256cc.zip?dl=FotSA-Capreolinae-v1.1.10.zip",
+        "filename": "FotSA-Capreolinae-v1.1.10.zip",
+        "fileid": 27598,
+        "downloads": 1032,
+        "tags": [
+          "1.20.0-pre.0",
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.1.10",
+        "created": "2024-11-21 18:07:00",
+        "changelog": "<p>Adjusted-Combat Overhaul damage resistances</p>"
+      },
+      {
+        "releaseid": 12979,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_ddd1afc2c01e1b7e6225f8e5f72e5aca.zip?dl=FotSA-Capreolinae-v1.1.9.zip",
+        "filename": "FotSA-Capreolinae-v1.1.9.zip",
+        "fileid": 27251,
+        "downloads": 524,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.1.9",
+        "created": "2024-11-11 18:32:48",
+        "changelog": "<p>Added- Wool &amp; More compatibility</p>"
+      },
+      {
+        "releaseid": 12669,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_9523691e341eeb0981bc3a5cc99233b2.zip?dl=FotSA-Capreolinae-v1.1.8.zip",
+        "filename": "FotSA-Capreolinae-v1.1.8.zip",
+        "fileid": 26642,
+        "downloads": 777,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.1.8",
+        "created": "2024-10-24 16:44:13",
+        "changelog": "<p>Added-Combat Overhaul compatibility</p>"
+      },
+      {
+        "releaseid": 12554,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_c0ab54a4e9aad7a2c63d9f378fbce308.zip?dl=FotSA-Capreolinae-v1.1.7.zip",
+        "filename": "FotSA-Capreolinae-v1.1.7.zip",
+        "fileid": 26339,
+        "downloads": 569,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.1.7",
+        "created": "2024-10-16 15:38:14",
+        "changelog": "<p>Added-French translation (Thanks Laerinok)</p>"
+      },
+      {
+        "releaseid": 12323,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_2ff5c0e52e4ce76fa84c123c7ee44ef5.zip?dl=FotSA-Capreolinae-v1.1.6.zip",
+        "filename": "FotSA-Capreolinae-v1.1.6.zip",
+        "fileid": 25842,
+        "downloads": 843,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.1.6",
+        "created": "2024-10-02 19:44:20",
+        "changelog": "<p>Fixed-Trough diet tags<br />Refactored-Taxidermies and headmounts are now items, should reduce mod's texture impact by 33%. Headmounts use antler mounts<br />Refactored-Pelts are now only items, cuts down on mod size and memory impact. Place pelts on antler mounts or tool racks to get the wallmounted version<br />Added-Moose antler variants for taxidermy and head mounts<br />Updated-Animal patches, powdered item in recipe and various tweaks for 1.20's changes</p>"
+      },
+      {
+        "releaseid": 10680,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_7e82f1653f3d63c781fb5bde640d1911.zip?dl=FotSA-Capreolinae-v1.1.5.zip",
+        "filename": "FotSA-Capreolinae-v1.1.5.zip",
+        "fileid": 22267,
+        "downloads": 9622,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.1.5",
+        "created": "2024-06-04 15:36:42",
+        "changelog": "<p>Fixed-Babies only growing up into females<br />Recalculated-meat drops on all animals over 100kg<br />Tweaked-female to baby ratio for white-tailed deer spawnings</p>"
+      },
+      {
+        "releaseid": 10381,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_a7d4e8fb807bebab4848e2fcbef94a6d.zip?dl=FotSA-Capreolinae-v1.1.4.zip",
+        "filename": "FotSA-Capreolinae-v1.1.4.zip",
+        "fileid": 21719,
+        "downloads": 1614,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.1.4",
+        "created": "2024-05-18 19:28:49",
+        "changelog": "<p>Added-Crafting recipe for moose carcass, placing them will block spawns within render radius<br />Updated-fly covered carcass look<br />Fixed-Baby odocoileini deer not playing a flee animation<br />Tweak-Reduced spawn rate considerably<br />Tweak-adusted walk and animation speeds for some deer<br />Tweak-Added a 100 minimum distance for spawning near player<br />Tweak-Added a maximum light level to prevent deer spawning near illuminating blocks<br />Tweak-readded spawn cap player scaling set to 0, to make sure it isn't scaling&nbsp;</p>"
+      },
+      {
+        "releaseid": 10218,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_5b70e4d41a0647dea9319b0956038ed4.zip?dl=FotSA-Capreolinae-v1.1.3.zip",
+        "filename": "FotSA-Capreolinae-v1.1.3.zip",
+        "fileid": 21419,
+        "downloads": 1118,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.1.3",
+        "created": "2024-05-06 16:03:29",
+        "changelog": "<p><br />Fixed-typo where moose wouldn't become hostile around their young<br />Fixed-removed a number of errors relating to the change from Pudu <span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Pudella mephistophiles&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:515,&quot;3&quot;:{&quot;1&quot;:0},&quot;4&quot;:{&quot;1&quot;:2,&quot;2&quot;:16770457},&quot;12&quot;:0}\">mephistophiles to </span><span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Pudella mephistophiles&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:515,&quot;3&quot;:{&quot;1&quot;:0},&quot;4&quot;:{&quot;1&quot;:2,&quot;2&quot;:16770457},&quot;12&quot;:0}\">Pudella mephistophiles</span><br />Fixed-removed a number of errors about patches being server side only</p>"
+      },
+      {
+        "releaseid": 10040,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_993f62ba78f8dc848de6139a1d74e8a7.zip?dl=FotSA-Capreolinae-v1.1.2.zip",
+        "filename": "FotSA-Capreolinae-v1.1.2.zip",
+        "fileid": 21122,
+        "downloads": 1045,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.1.2",
+        "created": "2024-04-25 23:46:31",
+        "changelog": "<p>Added-Compatibility with rhinos, will now walk away from the adults if too close<br />Tweak-deer will walk away from drifters and bells if too close</p>"
+      },
+      {
+        "releaseid": 9912,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_737bf4e27965e2a6138881ea74bb8760.zip?dl=FotSA-Capreolinae-v1.1.1.zip",
+        "filename": "FotSA-Capreolinae-v1.1.1.zip",
+        "fileid": 20910,
+        "downloads": 840,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.1.1",
+        "created": "2024-04-19 15:25:12",
+        "changelog": "<p>Added-Killed by text (Thanks MadGnome for figuring that out)<br />Added-Creature group name for troughs<br />Fixed-Moose skin drops</p>"
+      },
+      {
+        "releaseid": 9818,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_79558a4218df9fc07ce8521f7e67b707.zip?dl=FotSA-Capreolinae-v1.1.0.zip",
+        "filename": "FotSA-Capreolinae-v1.1.0.zip",
+        "fileid": 20774,
+        "downloads": 904,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.1.0",
+        "created": "2024-04-12 19:14:36",
+        "changelog": "<p>Update to 1.19<br />Refactored entity IDs to make antler system work, old deer will disappear<br />Refactored entity files for faster compatibility patching and updates<br />Refactored block and item IDs, breaking them into item form will allow them to cure into new versions or bones<br />Removed - vension, antlers, skulls and skull mounts in preparation for converting over to the new antler system<br />Added- Antler system to Moose and updated model to basegame version<br />Added-compatibility with new trough system<br />Added-behavior interaction with dogs, updated cats and saber cats<br />Added-fall damage multipliers<br />Added-block based feeding animations, deer will only graze when on plants or digging into snow<br />Adjusted - health, weight and other stats to be more in line with base game deer, while keeping nuance across species<br />Adjusted - spawn conditions to reflect real world habitat conditions of deer more accurately<br />Many more minor tweaks and adjustments<br /><br /><br /></p>"
+      },
+      {
+        "releaseid": 6773,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_3a4b8491c985e5b34b67d6f23704d168.zip?dl=FotSA-Capreolinae-v1.0.5.zip",
+        "filename": "FotSA-Capreolinae-v1.0.5.zip",
+        "fileid": 14678,
+        "downloads": 8150,
+        "tags": [
+          "1.18.13",
+          "1.18.14",
+          "1.18.15"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.0.5",
+        "created": "2023-09-24 19:48:29",
+        "changelog": "<p>Tweak-Moose max spawning temperature raised to 8<br />Tweak-Moose speed raised to be in line with irl speed<br />Tweak-Moose maim attack damages sooner, harder to kite infinitely<br />Fix-Swim animation fixed on most deer to no longer stop and restart every second</p>"
+      },
+      {
+        "releaseid": 6105,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_389a0c826a012d13bed9912e5705d31d.zip?dl=FotSA-Capreolinae-v1.0.4.zip",
+        "filename": "FotSA-Capreolinae-v1.0.4.zip",
+        "fileid": 13145,
+        "downloads": 4258,
+        "tags": [
+          "1.18.0",
+          "1.18.1",
+          "1.18.2",
+          "1.18.3",
+          "1.18.4",
+          "1.18.5",
+          "1.18.6",
+          "1.18.7",
+          "1.18.8-rc.1"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.0.4",
+        "created": "2023-08-01 16:55:41",
+        "changelog": "<p>Tweak: Increased pelt UI size for some species.<br />Tweak: Stopped some deer from fleeing from cat carcasses and babies.<br />Fix: changed baby Capreolini deer from hostile to neutral.<br />Fix: added missing pie strings.<br />Added: behavior compatibility with FotSA: Caninae.</p>"
+      },
+      {
+        "releaseid": 5872,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_352355c4e9dcc7e52f4a6392ac517e91.zip?dl=FotSA-Capreolinae-v1.0.3.zip",
+        "filename": "FotSA-Capreolinae-v1.0.3.zip",
+        "fileid": 12670,
+        "downloads": 2201,
+        "tags": [
+          "1.18.0",
+          "1.18.1",
+          "1.18.2",
+          "1.18.3",
+          "1.18.4",
+          "1.18.5",
+          "1.18.6"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.0.3",
+        "created": "2023-07-08 17:05:08",
+        "changelog": "<p>Tweak: Adjusted spawn criteria to only spawn on soil, sand, gravel, snow and grass<br />Added: Japanese Translation- Thanks macoto_hino!</p>"
+      },
+      {
+        "releaseid": 5496,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_41c6a4dc856da5cfda7074aa3a980e3e.zip?dl=FotSA-Capreolinae-v1.0.2.zip",
+        "filename": "FotSA-Capreolinae-v1.0.2.zip",
+        "fileid": 11853,
+        "downloads": 1572,
+        "tags": [
+          "1.18.0",
+          "1.18.1",
+          "1.18.2",
+          "1.18.3",
+          "1.18.4",
+          "1.18.5",
+          "1.18.6-rc.1"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.0.2",
+        "created": "2023-06-06 15:30:40",
+        "changelog": "<p>Fixed: Female deer now recognize male deer as acceptable mating partners and can breed</p>"
+      },
+      {
+        "releaseid": 5369,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_5b5b45d316032aa1742871848fc8e480.zip?dl=FotSA-Capreolinae-v1.0.1.zip",
+        "filename": "FotSA-Capreolinae-v1.0.1.zip",
+        "fileid": 11578,
+        "downloads": 905,
+        "tags": [
+          "1.18.0",
+          "1.18.1",
+          "1.18.2",
+          "1.18.3",
+          "1.18.4",
+          "1.18.5"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.0.1",
+        "created": "2023-05-24 15:41:33",
+        "changelog": "<p>Fixed: Cured venison recipe overwriting all base game curing recipes, all should be working properly now.</p>"
+      },
+      {
+        "releaseid": 5343,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v1_fd7efe277c4193d7f017eb0286e7e63a.zip?dl=FotSA-Capreolinae-v1.0.0.zip",
+        "filename": "FotSA-Capreolinae-v1.0.0.zip",
+        "fileid": 11505,
+        "downloads": 712,
+        "tags": [
+          "1.18.0",
+          "1.18.1",
+          "1.18.2",
+          "1.18.3",
+          "1.18.4",
+          "1.18.5"
+        ],
+        "modidstr": "capreolinae",
+        "modversion": "1.0.0",
+        "created": "2023-05-22 15:46:04",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 61678,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-10-24_14-37-37_9c5cad6e219e16c53d88c12ab29006d2.png",
+        "filename": "2025-10-24_14-37-37.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-10-24_14-37-37_9c5cad6e219e16c53d88c12ab29006d2_55_60.png",
+        "created": "2025-10-24 22:19:38"
+      },
+      {
+        "fileid": 61679,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-10-24_14-51-13_935f7499b04b15a1cb6c34927e1e4abc.png",
+        "filename": "2025-10-24_14-51-13.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-10-24_14-51-13_935f7499b04b15a1cb6c34927e1e4abc_55_60.png",
+        "created": "2025-10-24 22:19:46"
+      },
+      {
+        "fileid": 61680,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-10-24_14-54-46_8a178d370352b8772d4503ce79ad94c4.png",
+        "filename": "2025-10-24_14-54-46.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-10-24_14-54-46_8a178d370352b8772d4503ce79ad94c4_55_60.png",
+        "created": "2025-10-24 22:19:56"
+      },
+      {
+        "fileid": 61681,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-10-24_14-58-33_eaf4d04755958d69121fcc623d3e649d.png",
+        "filename": "2025-10-24_14-58-33.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-10-24_14-58-33_eaf4d04755958d69121fcc623d3e649d_55_60.png",
+        "created": "2025-10-24 22:20:01"
+      },
+      {
+        "fileid": 61682,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-10-24_14-52-28_cd1e8f8341464682ea77dab455913d93.png",
+        "filename": "2025-10-24_14-52-28.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-10-24_14-52-28_cd1e8f8341464682ea77dab455913d93_55_60.png",
+        "created": "2025-10-24 22:20:05"
+      },
+      {
+        "fileid": 61683,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-10-24_14-59-24_cc505fc6c01bcbe129030ea6a8d464db.png",
+        "filename": "2025-10-24_14-59-24.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-10-24_14-59-24_cc505fc6c01bcbe129030ea6a8d464db_55_60.png",
+        "created": "2025-10-24 22:20:09"
+      },
+      {
+        "fileid": 61684,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-10-24_14-46-40_c1e2bd24f0b82f4c820033c6e9443013.png",
+        "filename": "2025-10-24_14-46-40.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-10-24_14-46-40_c1e2bd24f0b82f4c820033c6e9443013_55_60.png",
+        "created": "2025-10-24 22:20:16"
+      },
+      {
+        "fileid": 61685,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-10-24_14-48-32_c243bdee98c3bda065996785257af4ab.png",
+        "filename": "2025-10-24_14-48-32.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-10-24_14-48-32_c243bdee98c3bda065996785257af4ab_55_60.png",
+        "created": "2025-10-24 22:20:18"
+      },
+      {
+        "fileid": 61686,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-10-24_15-00-47_d67e44e281e853f8fda44798d7b48fc0.png",
+        "filename": "2025-10-24_15-00-47.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-10-24_15-00-47_d67e44e281e853f8fda44798d7b48fc0_55_60.png",
+        "created": "2025-10-24 22:20:18"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

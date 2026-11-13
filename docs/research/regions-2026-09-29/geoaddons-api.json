@@ -1,0 +1,404 @@
+{
+  "mod": {
+    "modid": 1518,
+    "assetid": 8054,
+    "name": "Geology Additions ",
+    "text": "<p style=\"text-align: left;\">A Vintage Story Geology Mod, Created By small_fern and Catasteroid.</p>\n<p style=\"text-align: left;\">Contributors: <strong>lazorgurl</strong> - revised tool scripts <strong>JXI</strong> - Stone Brick Texture Revamp, <strong>M00n</strong> - Wavy Sand Textures</p>\n<p style=\"text-align: left;\"><strong>---Do NOT use Geology Additions in an old world, ESPECIALLY VERSIONS 1.4.0 AND UP, it MUST be installed at the start of a new world to work properly---<br /></strong></p>\n<p style=\"text-align: left;\">Geology Additions aims to add a more complete set of rock and mineral types into vintage story to make the world feel more geologically diverse. The mod currently adds 14 new rock types, 33 new minerals, and 5 new tool sets.&nbsp;</p>\n<p>Additions ( as of 1.4.8 )</p>\n<ul>\n<li>14 New Rock Types\n<ul>\n<li>Dolostone</li>\n<li>Siltstone</li>\n<li>Mudstone</li>\n<li>Rhyolite</li>\n<li>Pumice</li>\n<li>Diorite</li>\n<li>Gabbro</li>\n<li>Schist</li>\n<li>Gneiss</li>\n<li>Migmatite</li>\n<li>Amphibolite</li>\n<li>Quartzite</li>\n<li>Jade ( decorative mineral/rock )</li>\n<li>Jasper ( decorative mineral/rock )<br /><br /></li>\n</ul>\n</li>\n<li>15 New Minerals/Ores\n<ul>\n<li>Pyrite (Iron)</li>\n<li>Bog Iron ( Iron, from MoreMinerals)</li>\n<li>Azurite (Copper)</li>\n<li>Chalcopyrite (Copper)</li>\n<li>Chalcocite (Copper, from MoreMinerals)</li>\n<li>Tetrahedrite (Copper, from MoreMinerals)</li>\n<li>Vanadanite (Lead)</li>\n<li>Wulfenite (Lead)</li>\n<li>Cerussite (Lead, from MoreMinerals)</li>\n<li>Franckeite (Tin)</li>\n<li>Teallite (Tin)</li>\n<li>Smithsonite (Zinc, from MoreMinerals)</li>\n<li>Hemimorphite (Zinc, from MoreMinerals)</li>\n<li>Freiburgite (Silver, from MoreMinerals)</li>\n<li>Sperrylite (Platinum)<br /><br /></li>\n</ul>\n</li>\n<li>18 New Gemstone Minerals\n<ul>\n<li>Spessartine</li>\n<li>Grossular</li>\n<li>Pyrope</li>\n<li>Uvarovite</li>\n<li>Andradite</li>\n<li>Almandine&nbsp;</li>\n<li>Schorl Tourmaline</li>\n<li>Rubellite Tourmaline</li>\n<li>Verdelite Tourmaline</li>\n<li>Watermelon Tourmaline</li>\n<li>Topaz ( Amber var )</li>\n<li>Topaz ( Pink var )</li>\n<li>Topaz ( Blue Var )</li>\n<li>Ruby</li>\n<li>Sapphire</li>\n<li>Bixbite</li>\n<li>Aquamarine</li>\n<li>Spinel<br /><br /></li>\n</ul>\n</li>\n<li>A Richer World\n<ul>\n<li>Surface boulders now dot the world</li>\n<li><span style=\"text-decoration: line-through;\">caves can now spawn new sodastraw speleothems</span></li>\n<li>A new, rare, forge ruin is now present</li>\n</ul>\n</li>\n</ul>\n<p>&nbsp;</p>\n<ul>\n<li>3 New Knappable Tool Sets\n<ul>\n<li>Quartzite: higher durability and damage than other stone tools, roughly equivalent with flint</li>\n<li>Gabbro: standard stone tool set</li>\n<li>Diorite: standard stone tool set&nbsp;<br /><br /></li>\n</ul>\n</li>\n<li>New Building Blocks\n<ul>\n<li>All rock types have their corresponding cobble/drystone/polished/brick/cobbleskull variants<br /><br /></li>\n</ul>\n</li>\n<li>Fully Implemented Into Worldgen\n<ul>\n<li>Each new rock types generates in the world with proper ore and mineral distributions</li>\n</ul>\n</li>\n</ul>\n<p>&nbsp;</p>\n<ul>\n<li>Balanced For Survival\n<ul>\n<li>Dolostone can be used as a lime substitute and a pigment</li>\n<li>Mudstone can be used as a bauxite substitute and a pigment</li>\n<li>Quartzite can be crushed into quartz</li>\n<li>Rhyolite, Diorite, and Gabbro can be used in the construction of Querns</li>\n</ul>\n</li>\n</ul>\n<p>&nbsp;</p>\n<p style=\"text-align: left;\">If you have any questions/comments/suggestions about the mod, please feel free to reach out here, on the forum, or in the VS Discord.&nbsp;</p>\n<p style=\"text-align: left;\">&nbsp;</p>\n<p style=\"text-align: left;\">Recommended Mods:</p>\n<p style=\"text-align: left;\"><a href=\"https://mods.vintagestory.at/materialneedsgeology\">Material Needs - Geology</a> ( by Nephelangelo )</p>\n<p style=\"text-align: left;\"><a href=\"https://mods.vintagestory.at/rockstratavariety\">Rock Strata Variety</a> ( by chisps )</p>\n<p style=\"text-align: left;\"><a href=\"https://mods.vintagestory.at/interestingoregen\">Interesting Ore Gen</a> ( by RosstheGreat )</p>",
+    "author": "small_fern",
+    "urlalias": "geologyaddons",
+    "logofilename": "https://moddbcdn.vintagestory.at/Untitled-1_e8d831dda28ccc2bd5bf283067c6967e.png",
+    "logofile": "https://moddbcdn.vintagestory.at/Untitled-1_e8d831dda28ccc2bd5bf283067c6967e.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/Untitled-1_e8d831dda28ccc2bd5bf283067c6967e.png",
+    "homepageurl": "https://www.vintagestory.at/forums/topic/11278-geology-additions-11810-v100/",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 109987,
+    "follows": 1765,
+    "trendingpoints": 0,
+    "comments": 365,
+    "side": "both",
+    "type": "mod",
+    "created": "2023-09-06 14:01:57",
+    "lastreleased": "2026-06-17 16:44:48",
+    "lastmodified": "2026-09-29 05:13:15",
+    "tags": [
+      "Worldgen"
+    ],
+    "releases": [
+      {
+        "releaseid": 46229,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAdditions+1.4_086917d9079e3bba4832e0a848cc7fae.zip?dl=GeologyAdditions 1.4.8.zip",
+        "filename": "GeologyAdditions 1.4.8.zip",
+        "fileid": 101411,
+        "downloads": 18813,
+        "tags": [
+          "1.22.0-pre.1",
+          "1.22.0-pre.2",
+          "1.22.0-pre.3",
+          "1.22.0-pre.4",
+          "1.22.0-pre.5",
+          "1.22.0-rc.1",
+          "1.22.0-rc.2",
+          "1.22.0-rc.3",
+          "1.22.0-rc.4",
+          "1.22.0-rc.5",
+          "1.22.0-rc.6",
+          "1.22.0-rc.7",
+          "1.22.0-rc.8",
+          "1.22.0-rc.9",
+          "1.22.0-rc.10",
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.4.8",
+        "created": "2026-06-17 16:32:06",
+        "changelog": "<p>--Added--</p>\n<p>-Korean Translation</p>\n<p>-Wilderlands Geology Compatibility</p>\n<p>&nbsp;</p>\n<p>--Fixed--</p>\n<p>-Spear texture issues (thanks Pineas :3)</p>"
+      },
+      {
+        "releaseid": 39637,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAdditions+1.4_9747b7280441789492853161902812cb.zip?dl=GeologyAdditions 1.4.7.zip",
+        "filename": "GeologyAdditions 1.4.7.zip",
+        "fileid": 88238,
+        "downloads": 14468,
+        "tags": [
+          "1.22.0"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.4.7",
+        "created": "2026-04-28 18:59:49",
+        "changelog": "<p>--Added--<br /><br />-Added gem trades to lux trader<br />-Added stone coffin/lid variants for gabbro, diorite, and rhyolite<br /><br />--Fixed--<br /><br /></p>\n<p>-Sodastraw speleothems spawning has been fixed</p>"
+      },
+      {
+        "releaseid": 32545,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAdditions+1.4_3e2c7e5de724396122f0481a1d36f07a.zip?dl=GeologyAdditions 1.4.6.zip",
+        "filename": "GeologyAdditions 1.4.6.zip",
+        "fileid": 71593,
+        "downloads": 14442,
+        "tags": [
+          "1.21.0-pre.1",
+          "1.21.0-pre.2",
+          "1.21.0-pre.3",
+          "1.21.0-rc.1",
+          "1.21.0-rc.2",
+          "1.21.0-rc.3",
+          "1.21.0-rc.4",
+          "1.21.0-rc.5",
+          "1.21.0-rc.6",
+          "1.21.0-rc.7",
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5",
+          "1.21.6-rc.1",
+          "1.21.6"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.4.6",
+        "created": "2026-01-14 03:56:16",
+        "changelog": "<p>-Fixed-<br /><br />Stones/boulders covered by snow now have en.lang entries<br />Bone knives have damage/durability attributes<br />ru.lang file updated<br />Additional tool fixes implemented (Thanks Droseran!!)<br /><br /></p>"
+      },
+      {
+        "releaseid": 31068,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAdditions+1.4_21fcaff33d2862ed254504b35cea5a62.zip?dl=GeologyAdditions 1.4.5.zip",
+        "filename": "GeologyAdditions 1.4.5.zip",
+        "fileid": 68399,
+        "downloads": 5703,
+        "tags": [
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5",
+          "1.21.6-rc.1",
+          "1.21.6"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.4.5",
+        "created": "2025-12-20 19:15:22",
+        "changelog": "<p>--Added--<br />-Added fire clay spawning to mudstone #Thank you Shaetsu!<br />-Added jade and jasper spears #Thank you Shaetsu!</p>\n<p>--Fixed--</p>\n<p>-fixed spear crash when thrown #Thank you Shaetsu!<br />-fixed bogiron crash when thrown</p>"
+      },
+      {
+        "releaseid": 25252,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAdditions+1.4_4180ae4b64472869f779f51d8ccfa261.zip?dl=GeologyAdditions 1.4.4.zip",
+        "filename": "GeologyAdditions 1.4.4.zip",
+        "fileid": 55603,
+        "downloads": 12677,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.4.4",
+        "created": "2025-09-16 00:11:04",
+        "changelog": "<p>--Added--<br /><br />Added Wavy Sand to english and russian translations.&nbsp;</p>"
+      },
+      {
+        "releaseid": 24959,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAdditions+1.4_bcf19d4c795956241eb5f083b1be1600.zip?dl=GeologyAdditions 1.4.3.zip",
+        "filename": "GeologyAdditions 1.4.3.zip",
+        "fileid": 54836,
+        "downloads": 1328,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.4.3",
+        "created": "2025-09-12 01:12:46",
+        "changelog": "<p>-Added-</p>\n<p>Wavy Sand Textures (Thank you M00n!)<br /><br />-Changed-</p>\n<p>Modified how common certain ores are to generate</p>\n<p>Reverted gem models to vanilla shape to improve mineral continuity</p>"
+      },
+      {
+        "releaseid": 20670,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAdditions+1.4_54257a81251e8df00087c93407c6bbcc.zip?dl=GeologyAdditions 1.4.2.zip",
+        "filename": "GeologyAdditions 1.4.2.zip",
+        "fileid": 44637,
+        "downloads": 8873,
+        "tags": [
+          "1.20.11"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.4.2",
+        "created": "2025-05-31 22:07:26",
+        "changelog": "<p>--Added--</p>\n<p>Jasper and Jade tools</p>\n<p>&nbsp;</p>\n<p>--Fixed--</p>\n<p>GA no longer throws snowball errors in server log.</p>"
+      },
+      {
+        "releaseid": 18046,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAdditions+1.4_9787c311bd32e8526bf3a60ff3af2f3c.zip?dl=GeologyAdditions 1.4.1.zip",
+        "filename": "GeologyAdditions 1.4.1.zip",
+        "fileid": 38785,
+        "downloads": 5777,
+        "tags": [
+          "1.20.4",
+          "1.20.5",
+          "1.20.6"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.4.1",
+        "created": "2025-03-25 14:36:21",
+        "changelog": "<p>Putative new version for 1.20.4 to 1.20.6, will recompile and update to 1.4.2 if the soda straws fail to generate. Anyway here's some of the changes:<br />- Daub recipes added using sand from the mod's rock types<br />- Reduced the rate at which boulders spawn (which should prevent them crowding out structure mods with lower spawn chances or that boost structure spawn rates in general)<br />- Reduced the size of chalcopyrite deposits to be in line with native copper<br />- Reduduced the variance of the depth at which the mod's copper minerals will spawn at, which should prevent deep deposits from spawning at the surface and being misinterpreted as surface deposits<br />- A couple of other misc changes<br /><br />If anything misbehaves feel free to comment here, on the mod's thread on the VS discord or to DM Catasteroid directly about it, if you're not seeing soda straws generating then please do contact him- it means the mod needs it's code recompiled.</p>"
+      },
+      {
+        "releaseid": 14917,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAdditions+1.4_7d31705c56c5423fd9bb2a5f0260e634.zip?dl=GeologyAdditions 1.4.0.zip",
+        "filename": "GeologyAdditions 1.4.0.zip",
+        "fileid": 31160,
+        "downloads": 6120,
+        "tags": [
+          "1.20.1"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.4.0",
+        "created": "2025-01-21 23:07:41",
+        "changelog": "<p>WILL BREAK WORLDS BELOW 1.20!&nbsp;</p>\n<p>-Added-</p>\n<p>Cobblestone fan variants</p>\n<p>Russian Translation Added</p>\n<p>Rebalanced Stratigraphy Generation</p>\n<p>&nbsp;</p>"
+      },
+      {
+        "releaseid": 12495,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAdditions+1.3_14dc657d4cddec5610019572711ec343.zip?dl=GeologyAdditions 1.3.6.zip",
+        "filename": "GeologyAdditions 1.3.6.zip",
+        "fileid": 26181,
+        "downloads": 3403,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.3.6",
+        "created": "2024-10-12 03:51:24",
+        "changelog": "<p>-Fixed-</p>\n<p>Drystone blocks are craftable again</p>\n<p>Stone Brick changed to Ashlar Block</p>\n<p>Boneknives for the new tool types are now craftable</p>\n<p>Several texture contrast revamps, mainly Gabbro, Mudstone, and Dolostone</p>"
+      },
+      {
+        "releaseid": 11677,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAdditions+1.3_dd1e5a7ef1c610edc8a324b1b8bb357b.zip?dl=GeologyAdditions 1.3.5.zip",
+        "filename": "GeologyAdditions 1.3.5.zip",
+        "fileid": 24462,
+        "downloads": 2857,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.3.5",
+        "created": "2024-08-14 23:31:05",
+        "changelog": "<p>-Fixed-</p>\n<p>mortar can be made with GA sands<br />Increased Bogiron ore drop average<br />Fixed crash when throwing bogiron<br />Fixed Jasper/Jade bricks recipie and handbook name<br />Jasper/Jade Missing textures added</p>"
+      },
+      {
+        "releaseid": 10441,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAddons+1.3.4_e3c4462d2dfb7cb5c6dfc45941b6ab67.zip?dl=GeologyAddons 1.3.4.zip",
+        "filename": "GeologyAddons 1.3.4.zip",
+        "fileid": 21812,
+        "downloads": 4574,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.3.4",
+        "created": "2024-05-21 21:36:54",
+        "changelog": "<p>-Fixed-</p>\n<p>Tool Animation issues should be fixed (Thanks Chisps!)</p>\n<p>Mortar can now be made with Geoaddons Sand</p>\n<p>Chalcopyrite Nugget lang issue fixed</p>"
+      },
+      {
+        "releaseid": 8840,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAdditions+1.3_e67ed012005dcc1c2d590b41379066e5.zip?dl=GeologyAdditions 1.3.3.zip",
+        "filename": "GeologyAdditions 1.3.3.zip",
+        "fileid": 19035,
+        "downloads": 4539,
+        "tags": [
+          "1.19.3"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.3.3",
+        "created": "2024-02-13 05:09:31",
+        "changelog": "<p>Reupload of 1.3.3</p>\n<p>&nbsp;</p>\n<p>-Added-</p>\n<p>New Quern Recipes</p>\n<p>&nbsp;</p>\n<p>-Fixed-</p>\n<p>Bone Tool en.lang issue</p>"
+      },
+      {
+        "releaseid": 8664,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAdditions+1.3_b04822d89314c1e3ab786e3dd74942e3.zip?dl=GeologyAdditions 1.3.2.zip",
+        "filename": "GeologyAdditions 1.3.2.zip",
+        "fileid": 18718,
+        "downloads": 905,
+        "tags": [
+          "1.19.3"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.3.2",
+        "created": "2024-02-04 21:09:10",
+        "changelog": "<p>Updated Mod to 1.19, Backing up 1.18.x saves is recommended!</p>"
+      },
+      {
+        "releaseid": 8168,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAdditions+1.3_f3526bcbf6678d0dfeeda5427c9d0c28.zip?dl=GeologyAdditions 1.3.1.zip",
+        "filename": "GeologyAdditions 1.3.1.zip",
+        "fileid": 17727,
+        "downloads": 668,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.3.1",
+        "created": "2024-01-17 17:26:56",
+        "changelog": "<p>-Fixed-</p>\n<p>Stone Tools are now craftable again.&nbsp;</p>"
+      },
+      {
+        "releaseid": 7921,
+        "mainfile": "https://moddbcdn.vintagestory.at/GeologyAdditions+1.3_85db3f636ded0204ccc48175edf8b6d8.zip?dl=GeologyAdditions 1.3.0.zip",
+        "filename": "GeologyAdditions 1.3.0.zip",
+        "fileid": 17257,
+        "downloads": 791,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.3.0",
+        "created": "2023-12-30 19:38:53",
+        "changelog": "<p>-Added-<br /><br />18 New Gem Types with custom shapes</p>\n<p>- 6 Types of Garnet ( Spessartine, Grossular, Andradite, Uvarovite, Almandine, Pyrope )<br />- 4 Types of Tourmaline ( Schorl, Rubellite, Verdelite, Watermelon )<br />- 3 Types of Topaz ( Amber, Pink, Blue )<br />- 2 Types of Beryl ( Bixbite, Aquarmarine )<br />- 2 Types of Corundum ( Ruby, Sapphire )<br />- Spinel ( Red )</p>\n<p>World Enhancements<br />- SodaStraw Speleothems<br />- Surface Boulders<br />- A New Forge Ruin</p>\n<p>A few bugfixes still need to be done, but nothing that interferes with gameplay on any level. 1.3.0 is not compatible with 1.19 yet!!!</p>"
+      },
+      {
+        "releaseid": 7377,
+        "mainfile": "https://moddbcdn.vintagestory.at/Geology+Additions-v1_aa59aa4136d41649213238bd5b4a4e3c.zip?dl=Geology Additions-v1.2.0.zip",
+        "filename": "Geology Additions-v1.2.0.zip",
+        "fileid": 16120,
+        "downloads": 1433,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.2.0",
+        "created": "2023-11-15 00:05:36",
+        "changelog": "<p>Merged Geology Additions and MoreMinerals together! 😄<br /><br />-Added-</p>\n<p>8 New Minerals<br />- Chalcocite ( copper )<br />- Tetrahedrite ( copper )<br />- Hemimorphite ( zinc )<br />- Smithsonite ( zinc )<br />- Freiburgite ( silver )<br />- Cerussite ( lead )<br />- Bog Iron ( iron ): Iron source found in lakes and ponds<br />- Sperrylite ( platinum )<br /><br /></p>\n<p>2 Decorative Stones<br />- Jade: Found primarily in metamorphic rocks, very common in Amphibolite.<br />- Jasper: Red chert/flint found exclusively in Chert.<br /><br />-Changed-</p>\n<p>- Vanadinite, Wulfenite, Franckeite and Teallite now have a 20:1 nugget to ratio instead of 40:1<br />- Sand, Gravel and Stonebrick textures for new rocks tweaked to be closer to vanilla textures<br />- Minor rockstrata tweaks<br />- Some ore bodies have been tweaked to be smaller/less common ( game balance )<br /><br />-Fixed-<br /><br />- Missing flint language file definitions are now properly displaying</p>"
+      },
+      {
+        "releaseid": 7235,
+        "mainfile": "https://moddbcdn.vintagestory.at/Geology+Additions-v1_39dbb4f16cb519c9bd28104e0841b800.zip?dl=Geology Additions-v1.1.1.zip",
+        "filename": "Geology Additions-v1.1.1.zip",
+        "fileid": 15814,
+        "downloads": 608,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.1.1",
+        "created": "2023-11-02 21:01:08",
+        "changelog": "<p>Added 7 new minerals to the game<br /><br />-Added-</p>\n<p>Azurite - Alternate copper ore</p>\n<p>Pyrite - Softer and more common secondary iron ore. 1/3rd as efficient than other iron ores but can be mined with copper tools</p>\n<p>Chalcopyrite - Alternate copper ore, 1/2 as efficient as other copper ores</p>\n<p>Vanadinite - Alternate lead ore, 1/2 as efficient as galena</p>\n<p>Wulfenite - Alternate lead ore, 1/2 as efficient as galena</p>\n<p>Franckeite - Alternate tin ore, 1/2 as efficient as casserite but generates more commonly</p>\n<p>Teallite - Alternate tin ore, 1/2 as efficient as casserite but generates much more commonly</p>\n<p>Many added ores are less useful than their vanilla counterparts; I wanted to represent that while many of these ores were exploited for their respective metals, the actual chemical composition of the minerals contained less of that element.&nbsp;</p>"
+      },
+      {
+        "releaseid": 6948,
+        "mainfile": "https://moddbcdn.vintagestory.at/Geology+Additions-v1_27c1247efeb091d745776956d146813f.zip?dl=Geology Additions-v1.1.0.zip",
+        "filename": "Geology Additions-v1.1.0.zip",
+        "fileid": 15100,
+        "downloads": 569,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.1.0",
+        "created": "2023-10-13 01:28:38",
+        "changelog": "<p>Rewrote the entire mod to improve compatability.<br /><br /></p>\n<p>-Added-</p>\n<p>Mudstone can be used as a pigment and as a bauxite substitute for refractory bricks</p>\n<p>Aged Bricks now have textures ( for those using TheDungeon Mod )</p>\n<p>&nbsp;</p>\n<p>-Fixed-</p>\n<p>Copper not spawning properly for surface deposits</p>\n<p><em>Most</em> compatibility issues (&nbsp; Conquest Nature Pack + Geology additions not compatible, other mods should be. )</p>\n<p>Missing lang definitions for aged bricks and panned gravel stages</p>"
+      },
+      {
+        "releaseid": 6537,
+        "mainfile": "https://moddbcdn.vintagestory.at/Geology+Additions-v1_ca593673e7cec20cfc2c00f643713eed.zip?dl=Geology Additions-v1.0.0.zip",
+        "filename": "Geology Additions-v1.0.0.zip",
+        "fileid": 14132,
+        "downloads": 745,
+        "tags": [
+          "1.18.10"
+        ],
+        "modidstr": "geoaddons",
+        "modversion": "1.0.0",
+        "created": "2023-09-06 14:16:20",
+        "changelog": "<div>\n<div>Adds 12 new rock types to better represent real-world lithologies in VS.</div>\n</div>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 16127,
+        "mainfile": "https://moddbcdn.vintagestory.at/2023-11-14_17-34-31_150434e63d26fdb6b4f21e32745df1c1.jpg",
+        "filename": "2023-11-14_17-34-31.jpg",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2023-11-14_17-34-31_150434e63d26fdb6b4f21e32745df1c1_55_60.jpg",
+        "created": "2023-11-15 00:19:13"
+      },
+      {
+        "fileid": 16128,
+        "mainfile": "https://moddbcdn.vintagestory.at/2023-11-14_17-341-31_081601eefed18d4b3525a99bbe78b9ac.jpg",
+        "filename": "2023-11-14_17-341-31.jpg",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2023-11-14_17-341-31_081601eefed18d4b3525a99bbe78b9ac_55_60.jpg",
+        "created": "2023-11-15 00:19:56"
+      },
+      {
+        "fileid": 16129,
+        "mainfile": "https://moddbcdn.vintagestory.at/2023-11-14_17-34-321_c241060779eda5e45252ac279fe484ef.jpg",
+        "filename": "2023-11-14_17-34-321.jpg",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2023-11-14_17-34-321_c241060779eda5e45252ac279fe484ef_55_60.jpg",
+        "created": "2023-11-15 00:20:33"
+      },
+      {
+        "fileid": 17258,
+        "mainfile": "https://moddbcdn.vintagestory.at/2023-12-30_12-21-59_2e2f073911d803c3c91c6ca345b62874.png",
+        "filename": "2023-12-30_12-21-59.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2023-12-30_12-21-59_2e2f073911d803c3c91c6ca345b62874_55_60.png",
+        "created": "2023-12-30 19:45:25"
+      },
+      {
+        "fileid": 22532,
+        "mainfile": "https://moddbcdn.vintagestory.at/2023-11-11_16-38-39_d5ca98af8ff928a3965c42bb23574184.jpg",
+        "filename": "2023-11-11_16-38-39.jpg",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2023-11-11_16-38-39_d5ca98af8ff928a3965c42bb23574184_55_60.jpg",
+        "created": "2024-06-15 02:11:33"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

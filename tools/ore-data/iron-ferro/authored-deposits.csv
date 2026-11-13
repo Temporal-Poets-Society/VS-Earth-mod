@@ -1,0 +1,247 @@
+id,name,country,lat,lon,layer,ores,shape,mt,grade,density,topM,baseM,lenKm,widKm,strikeDeg,dipDeg,age,q,ref
+fe-kiirunavaara,Kiirunavaara (Kiruna),Sweden,67.835,20.195,Fe,magnetite:0.9;hematite:0.1,lens,2800,63,4.6,0,2000,4.0,0.08,10,60,Precambrian,C,about 950 Mt mined by 2013 said to be one third of the resource (mining-technology.com); ore body 4 km x 80 m average dipping 60 E to at least 2 km
+fe-malmberget,Malmberget,Sweden,67.18,20.70,Fe,magnetite:0.85;hematite:0.15,lens,1200,55,4.4,0,1500,5.0,0.08,90,45,Precambrian,C,LKAB; about 20 magnetite-hematite ore bodies over 5 x 2.5 km
+fe-svappavaara,Svappavaara (Leveaniemi-Gruvberget),Sweden,67.64,21.05,Fe,magnetite:0.9;hematite:0.1,lens,450,50,4.3,0,600,,,,,Precambrian,C,LKAB Svappavaara field
+fe-grangesberg,Grangesberg,Sweden,60.08,14.98,Fe,magnetite:0.7;hematite:0.3,lens,270,45,4.2,0,1000,2.5,0.1,45,70,Precambrian,C,mined 1550s-1989 about 150 Mt; remaining resource about 115 Mt at 40 % Fe (Grangesberg Iron)
+fe-dannemora,Dannemora,Sweden,60.2,17.86,Fe,magnetite:1,lens,100,40,4.0,0,800,,,,,Precambrian,C,historic Swedish bar-iron ore field
+fe-sydvaranger,Sydvaranger (Bjornevatn),Norway,69.67,30.0,Fe,magnetite:1,lens,1000,31,3.4,0,500,,,,,Precambrian,C,banded magnetite quartzite; Sydvaranger resource statements
+fe-rana,Dunderland (Rana),Norway,66.33,14.55,Fe,hematite:0.6;magnetite:0.4,lens,500,33,3.4,0,400,,,,,Paleozoic,C,Rana Gruber; Neoproterozoic-Cambrian iron formation in Caledonian nappes
+fe-kostomuksha,Kostomuksha,Russia,64.62,30.62,Fe,magnetite:1,lens,2200,32,3.4,0,600,15,0.8,330,70,Precambrian,C,Archean BIF; Karelsky Okatysh
+fe-olenegorsk,Olenegorsk,Russia,68.13,33.27,Fe,magnetite:0.6;hematite:0.4,lens,1000,30,3.4,0,600,,,,,Precambrian,C,Archean BIF; Olcon
+fe-kovdor,Kovdor,Russia,67.56,30.46,Fe,magnetite:1,stock,1000,26,3.5,0,1200,,,,,Paleozoic,C,Devonian carbonatite magnetite-apatite-baddeleyite pipe
+fe-magnitnaya,Magnitnaya Gora (Magnitogorsk),Russia,53.43,59.07,Fe,magnetite:0.8;limonite:0.2:top,stock,500,50,4.0,0,500,,,,,Paleozoic,C,Carboniferous skarn magnetite; worked out by 1990s
+fe-vysokogorsk,Vysokaya and Goroblagodat (Nizhny Tagil),Russia,57.9,59.95,Fe,magnetite:1,stock,400,40,3.8,0,800,,,,,Paleozoic,C,Ural skarn magnetite
+fe-bakal,Bakal,Russia,54.94,58.81,Fe,limonite:1,lens,1000,32,3.6,0,500,,,,,Precambrian,C,Riphean siderite with limonite cap (siderite has no game ore; limonite is its weathering product)
+fe-korshunovsky,Korshunovsky (Angara-Ilim),Russia,56.58,104.1,Fe,magnetite:1,stock,450,32,3.6,0,700,,,,,Paleozoic,C,trap-related magnetite skarn
+fe-sokolov-sarbai,Sokolov-Sarbai and Kachar (Rudny),Kazakhstan,52.97,63.12,Fe,magnetite:0.9;limonite:0.1:top,lens,3500,42,3.9,60,1200,25,1.5,20,60,Paleozoic,C,Turgai skarn-magnetite belt (Sokolov Sarbai Kachar Kurzhunkul); ERG
+fe-lisakovsk,Lisakovsk,Kazakhstan,52.55,62.50,Fe,limonite:1,lens,1700,35,2.9,10,40,,,,,Mesozoic,C,Cretaceous-Paleogene oolitic goethite ironstone
+fe-kerch,Kerch ironstone,Ukraine,45.32,36.35,Fe,limonite:1,lens,1800,37,2.8,0,40,,,,,Cenozoic,C,Pliocene oolitic brown iron ore (Kerch basin)
+fe-kremenchuk,Kremenchuk (Horishni Plavni),Ukraine,49.1,33.43,Fe,magnetite:0.8;hematite:0.2,lens,4000,33,3.4,0,700,45,1.5,340,80,Precambrian,C,Ferrexpo; Paleoproterozoic BIF
+fe-bilozerka,Bilozerka,Ukraine,47.35,34.95,Fe,hematite:1,lens,300,58,4.0,300,1200,,,,,Precambrian,C,rich hematite under sedimentary cover
+fe-erzberg,Erzberg,Austria,47.52,14.90,Fe,limonite:1,stock,350,33,3.6,0,500,1.6,1.0,,,Devonian,C,siderite-ankerite in Devonian limestone; >230 Mt mined since antiquity (VA Erzberg)
+fe-huttenberg,Huttenberg,Austria,46.94,14.55,Fe,limonite:1,lens,30,35,3.6,0,300,,,,,Paleozoic,C,Noric siderite; worked since the Iron Age
+fe-siegerland,Siegerland siderite veins,Germany,50.87,8.02,Fe,limonite:1,veins,200,35,3.6,0,1000,25,15,45,80,Devonian,C,about 150 Mt of siderite mined 1100-1965
+fe-lahn-dill,Lahn-Dill hematite,Germany,50.55,8.30,Fe,hematite:1,lens,150,40,3.8,0,400,30,10,45,40,Devonian,C,Devonian volcanic-sedimentary (Lahn-Dill type) hematite
+fe-salzgitter,Salzgitter-Peine (Konrad),Germany,52.15,10.33,Fe,limonite:0.8;hematite:0.2,lens,2000,30,2.9,0,1200,25,6,320,20,Mesozoic,C,Cretaceous-Jurassic oolitic ironstone; Salzgitter AG
+fe-bilbao,Bilbao (Somorrostro),Spain,43.29,-3.08,Fe,hematite:0.6;limonite:0.4:top,lens,250,50,3.8,0,300,12,2,300,30,Mesozoic,C,Cretaceous replacement siderite with rubio hematite; about 200 Mt mined 1850-1990
+fe-alquife,Alquife (Marquesado),Spain,37.18,-3.12,Fe,hematite:0.7;limonite:0.3,lens,200,50,3.8,0,300,,,,,Paleozoic,C,Triassic-hosted replacement iron (Nevado-Filabride)
+fe-ojos-negros,Ojos Negros,Spain,40.73,-1.50,Fe,hematite:0.6;limonite:0.4,lens,100,50,3.8,0,150,,,,,Paleozoic,C,Iberian Range siderite-hematite
+fe-elba,Elba (Rio Marina-Calamita),Italy,42.80,10.42,Fe,hematite:0.7;magnetite:0.3,lens,60,50,4.2,0,200,8,1,0,50,Cenozoic,C,Etruscan to 1981; Miocene-Pliocene skarn and replacement hematite
+fe-cumbria,West Cumbria hematite (Egremont),United Kingdom,54.48,-3.52,Fe,hematite:1,lens,100,55,4.2,0,400,,,,,Carboniferous,C,kidney-ore replacement of Carboniferous limestone
+fe-furness,Furness hematite (Hodbarrow),United Kingdom,54.2,-3.27,Fe,hematite:1,lens,50,55,4.2,0,200,,,,,Carboniferous,C,Carboniferous limestone replacement hematite
+fe-northampton,Northampton Sand ironstone,United Kingdom,52.45,-0.70,Fe,limonite:1,lens,1000,28,2.8,0,40,40,15,45,2,Mesozoic,C,Jurassic oolitic ironstone; worked open-cast 1850-1980
+fe-frodingham,Frodingham ironstone (Scunthorpe),United Kingdom,53.58,-0.65,Fe,limonite:1,lens,500,22,2.8,0,60,15,5,0,2,Mesozoic,C,Lower Jurassic ironstone
+fe-normandy,Normandy iron basin (May-sur-Orne-Soumont),France,48.98,-0.30,Fe,hematite:0.7;limonite:0.3,lens,500,45,3.6,0,400,,,,,Paleozoic,C,Ordovician oolitic ironstone
+fe-divrigi,Divrigi,Turkey,39.36,38.10,Fe,magnetite:0.8;hematite:0.2,stock,150,55,4.2,0,400,,,,,Mesozoic,C,skarn-type magnetite
+fe-gol-e-gohar,Gol-e-Gohar,Iran,29.08,55.33,Fe,magnetite:0.9;hematite:0.1,lens,1200,53,4.2,0,600,,,,,Precambrian,C,Gol-e-Gohar company resource (six anomalies)
+fe-chadormalu,Chadormalu (Bafq),Iran,31.71,55.29,Fe,magnetite:0.9;hematite:0.1,stock,400,55,4.3,0,600,,,,,Precambrian,C,Kiruna-type magnetite-apatite
+fe-hajigak,Hajigak,Afghanistan,34.67,68.05,Fe,hematite:0.6;magnetite:0.4,lens,1800,62,4.5,0,450,9,0.1,45,60,Precambrian,C,Afghan Geological Survey and BGS: about 1.8 Gt at 62 % Fe (1960s estimate in the Russian classification); 16 ore bodies up to 3 km long along 9 km
+fe-choghart,Choghart (Bafq),Iran,31.70,55.47,Fe,magnetite:0.9;hematite:0.1,stock,220,55,4.3,0,500,,,,,Precambrian,C,Kiruna-type magnetite-apatite
+fe-sangan,Sangan,Iran,34.40,60.25,Fe,magnetite:0.9;limonite:0.1:top,lens,1000,45,4.0,0,400,,,,,Cenozoic,C,Eocene skarn magnetite
+fe-bayan-obo,Bayan Obo,China,41.78,109.97,Fe,magnetite:0.5;hematite:0.35;fluorite:0.15,lens,1500,35,3.8,0,800,18,1.5,80,70,Precambrian,C,Fe-REE-Nb (iron ore resource about 1.5 Gt); fluorite (about 10 % of the ore) is a share here, so precious-gems lists no separate body
+fe-anshan,Anshan-Benxi BIF,China,41.07,123.0,Fe,magnetite:0.8;hematite:0.2,lens,10000,31,3.4,0,1000,40,2,45,80,Precambrian,C,Archean Anshan Group iron quartzites
+fe-qianan,Qian'an (eastern Hebei BIF),China,40.0,118.70,Fe,magnetite:1,lens,3000,30,3.4,0,800,,,,,Precambrian,C,Archean BIF
+fe-daye,Daye (Tieshan),China,30.20,114.90,Fe,magnetite:0.8;hematite:0.2,stock,150,50,4.2,0,600,,,,,Mesozoic,C,Cretaceous skarn
+fe-ningwu,Ningwu-Luhe porphyry iron (Ma'anshan),China,31.70,118.50,Fe,magnetite:0.9;hematite:0.1,stock,2000,35,3.8,0,800,,,,,Mesozoic,C,Cretaceous Kiruna-type (porphyrite iron)
+fe-shilu,Shilu,China,19.25,109.05,Fe,hematite:1,lens,300,51,4.2,0,600,,,,,Precambrian,C,Neoproterozoic hematite
+fe-musan,Musan,North Korea,42.17,129.20,Fe,magnetite:1,lens,3000,39,3.6,0,800,,,,,Precambrian,C,Archean BIF magnetite
+fe-bailadila,Bailadila,India,18.70,81.22,Fe,hematite:1,lens,2000,65,4.3,0,300,40,2,0,60,Precambrian,C,NMDC Bailadila range deposits
+fe-bellary,Bellary-Hospet (Sandur),India,15.10,76.55,Fe,hematite:0.8;limonite:0.2:top,lens,1000,60,4.2,0,200,,,,,Precambrian,C,Dharwar BIF-hosted hematite
+fe-goa,Goa iron belt,India,15.40,74.10,Fe,hematite:0.5;limonite:0.5:top,lens,1000,55,3.8,0,150,,,,,Precambrian,C,lateritised Dharwar BIF
+fe-kudremukh,Kudremukh,India,13.20,75.20,Fe,magnetite:1,lens,700,38,3.6,0,400,,,,,Precambrian,C,magnetite quartzite
+fe-simandou,Simandou (blocks 1-4),Guinea,8.60,-8.95,Fe,hematite:0.8;limonite:0.2:top,lens,4600,65,4.2,0,400,100,1,0,70,Precambrian,C,Rio Tinto and WCS resource statements
+fe-nimba,Nimba,Guinea,7.62,-8.48,Fe,hematite:1,lens,1000,62,4.2,0,400,,,,,Precambrian,C,Mount Nimba itabirite-hosted hematite (Liberia-Guinea)
+fe-bong,Bong,Liberia,6.83,-10.30,Fe,magnetite:0.7;hematite:0.3,lens,1000,38,3.5,0,400,,,,,Precambrian,C,itabirite
+fe-tonkolili,Tonkolili,Sierra Leone,9.05,-11.75,Fe,magnetite:0.7;hematite:0.3,lens,10000,30,3.5,0,500,25,1.5,30,70,Precambrian,C,Tonkolili resource (about 12.8 Gt at 30 % Fe)
+fe-marampa,Marampa,Sierra Leone,8.68,-12.47,Fe,hematite:1,lens,1000,33,3.4,0,300,,,,,Precambrian,C,specular hematite schist
+fe-kedia,Kedia d'Idjil (F'Derik-Zouerat),Mauritania,22.68,-12.70,Fe,hematite:1,lens,400,63,4.3,0,300,,,,,Precambrian,C,SNIM high-grade hematite
+fe-guelbs,Guelbs magnetite (El Rhein-El Aouj),Mauritania,22.80,-12.40,Fe,magnetite:1,lens,4000,36,3.5,0,400,25,0.15,30,70,Precambrian,C,SNIM magnetite quartzites
+fe-gara-djebilet,Gara Djebilet,Algeria,26.75,-7.33,Fe,limonite:0.5;hematite:0.5,lens,1700,57,3.6,0,60,60,4,90,2,Devonian,C,Devonian oolitic ironstone (high phosphorus)
+fe-ouenza,Ouenza,Algeria,35.95,8.12,Fe,hematite:0.7;limonite:0.3,lens,100,50,3.9,0,300,,,,,Mesozoic,C,Cretaceous replacement
+fe-bahariya,Bahariya (El Gedida),Egypt,28.30,28.95,Fe,limonite:0.5;hematite:0.5,lens,300,50,3.5,0,60,,,,,Cenozoic,C,Eocene karst-replacement iron
+fe-belinga,Belinga,Gabon,1.10,13.20,Fe,hematite:1,lens,1000,60,4.2,0,300,,,,,Precambrian,C,itabirite cap hematite
+fe-zanaga,Zanaga,Congo,-2.75,13.70,Fe,hematite:0.5;magnetite:0.5,lens,6900,32,3.4,0,300,25,0.3,0,60,Precambrian,C,Zanaga Iron Ore Co JORC resource 6.9 Gt at 32 % Fe over 25 of 47 km strike (reserve 2.07 Gt at 33.9 %); itabirite with a hematite cap
+fe-wadi-shatti,Wadi Shatti ironstone,Libya,27.40,13.60,Fe,hematite:0.5;limonite:0.3;magnetite:0.2,lens,3500,47,3.3,0,30,40,10,90,2,Devonian,C,US Bureau of Mines Minerals Yearbook 1973: 3.6 Gt in three oolitic horizons (over half at 50 % Fe; rest 40-50 %); USGS cites 795 Mt at 52 % for the best part
+fe-sishen,Sishen,South Africa,-27.78,22.99,Fe,hematite:1,lens,2000,64,4.3,0,400,14,3,0,20,Precambrian,C,Kumba Iron Ore; Paleoproterozoic BIF-hosted hematite
+fe-kolomela,Kolomela,South Africa,-28.38,22.95,Fe,hematite:1,lens,500,64,4.3,0,350,,,,,Precambrian,C,Kumba Iron Ore
+fe-thabazimbi,Thabazimbi,South Africa,-24.60,27.40,Fe,hematite:1,lens,200,60,4.2,0,300,,,,,Precambrian,C,Penge iron formation hematite
+fe-whaleback,Mount Whaleback (Newman),Australia,-23.36,119.67,Fe,hematite:0.9;limonite:0.1:top,lens,1700,62,3.9,0,400,5.5,1.5,100,30,Precambrian,C,BHP; Brockman-hosted martite-microplaty hematite
+fe-tom-price,Mount Tom Price,Australia,-22.70,117.78,Fe,hematite:0.9;limonite:0.1:top,lens,1000,63,3.9,0,350,7,1,110,20,Precambrian,C,Rio Tinto
+fe-paraburdoo,Paraburdoo-Channar-Eastern Range,Australia,-23.22,117.66,Fe,hematite:0.9;limonite:0.1:top,lens,800,62,3.9,0,300,,,,,Precambrian,C,Rio Tinto
+fe-mining-area-c,Mining Area C and South Flank,Australia,-22.95,118.95,Fe,hematite:0.7;limonite:0.3,lens,4000,61,3.6,0,120,45,12,90,5,Precambrian,C,BHP Marra Mamba hematite-goethite
+fe-hope-downs,Hope Downs,Australia,-22.95,119.50,Fe,hematite:0.7;limonite:0.3,lens,1500,61,3.6,0,200,,,,,Precambrian,C,Rio Tinto-Hancock
+fe-yandi,Yandicoogina channel iron,Australia,-22.75,119.10,Fe,limonite:0.8;hematite:0.2,lens,2000,58,3.2,0,70,40,1,90,2,Cenozoic,C,Miocene pisolitic channel-iron deposit
+fe-robe,Robe Valley channel iron (Mesa J-Mesa A),Australia,-21.70,116.20,Fe,limonite:0.8;hematite:0.2,lens,1500,56,3.2,0,60,60,1.5,110,2,Cenozoic,C,Rio Tinto pisolite mesas
+fe-solomon,Solomon (Firetail-Kings),Australia,-22.15,117.95,Fe,limonite:0.6;hematite:0.4,lens,2500,57,3.4,0,80,,,,,Cenozoic,C,Fortescue; channel iron and Brockman detrital
+fe-chichester,Chichester Hub (Cloudbreak-Christmas Creek),Australia,-22.40,119.40,Fe,hematite:0.6;limonite:0.4,lens,3000,57,3.4,0,80,60,4,90,5,Precambrian,C,Fortescue Marra Mamba ore
+fe-sino-iron,Cape Preston (Sino Iron),Australia,-21.10,116.10,Fe,magnetite:1,lens,2000,25,3.3,0,500,,,,,Precambrian,C,magnetite BIF
+fe-karara,Karara,Australia,-29.20,116.75,Fe,magnetite:0.9;hematite:0.1,lens,2400,36,3.4,0,500,,,,,Precambrian,C,Karara Mining magnetite
+fe-koolyanobbing,Koolyanobbing,Australia,-30.80,119.50,Fe,hematite:1,lens,300,60,4.0,0,300,,,,,Precambrian,C,Yilgarn BIF-hosted hematite
+fe-middleback,Middleback Ranges (Iron Knob-Iron Duke),Australia,-33.00,137.10,Fe,hematite:0.7;magnetite:0.3,lens,500,60,4.0,0,300,,,,,Precambrian,C,Paleoproterozoic BIF
+fe-savage-river,Savage River,Australia,-41.50,145.20,Fe,magnetite:1,lens,400,35,3.6,0,600,,,,,Precambrian,C,Neoproterozoic magnetite in mafic schist
+fe-mary-river,Mary River,Canada,71.30,-79.30,Fe,hematite:0.7;magnetite:0.3,lens,1500,64,4.4,0,500,,,,,Precambrian,C,Baffinland high-grade iron
+fe-carol-lake,Carol Lake (IOC Labrador City),Canada,52.97,-66.93,Fe,hematite:0.7;magnetite:0.3,lens,3000,38,3.6,0,400,12,4,30,30,Precambrian,C,Sokoman Formation specularite-magnetite
+fe-mont-wright,Mont-Wright and Fire Lake (Fermont),Canada,52.77,-67.35,Fe,hematite:0.8;magnetite:0.2,lens,2500,30,3.5,0,400,,,,,Precambrian,C,ArcelorMittal Mining Canada
+fe-schefferville,Schefferville direct-shipping ore,Canada,54.80,-66.82,Fe,hematite:0.6;limonite:0.4,lens,400,55,3.8,0,150,,,,,Precambrian,C,IOC-Tata DSO lenses
+fe-wabana,Wabana (Bell Island),Canada,47.63,-52.95,Fe,hematite:1,lens,2000,50,3.8,0,600,15,10,60,10,Paleozoic,C,Ordovician oolitic hematite; extends under Conception Bay
+fe-marquette,Marquette Range (Empire-Tilden),United States,46.45,-87.65,Fe,magnetite:0.5;hematite:0.5,lens,2500,35,3.5,0,400,30,6,90,60,Precambrian,C,Negaunee Iron Formation; Cleveland-Cliffs
+fe-pea-ridge,Pea Ridge,United States,38.12,-91.05,Fe,magnetite:0.9;hematite:0.1,stock,200,55,4.3,400,1300,,,,,Precambrian,C,Mesoproterozoic iron oxide-apatite under Paleozoic cover
+fe-pilot-knob,Iron Mountain and Pilot Knob,United States,37.60,-90.63,Fe,hematite:0.6;magnetite:0.4,stock,70,50,4.2,0,400,,,,,Precambrian,C,St. Francois Mountains
+fe-cornwall-pa,Cornwall (Pennsylvania),United States,40.27,-76.41,Fe,magnetite:1,lens,100,40,3.9,0,500,,,,,Mesozoic,C,Triassic diabase skarn; mined 1742-1973
+fe-iron-springs,Iron Springs district,United States,37.70,-113.30,Fe,magnetite:0.7;hematite:0.3,stock,200,50,4.2,0,400,,,,,Cenozoic,C,Miocene laccolith-replacement magnetite
+fe-eagle-mountain,Eagle Mountain,United States,33.85,-115.50,Fe,magnetite:0.6;hematite:0.4,lens,400,40,3.9,0,400,,,,,Precambrian,C,Kaiser Steel skarn
+fe-adirondack,Adirondack magnetite (Mineville),United States,44.10,-73.50,Fe,magnetite:1,lens,150,40,4.0,0,700,,,,,Precambrian,C,Grenville magnetite-apatite
+fe-cerro-mercado,Cerro de Mercado,Mexico,24.05,-104.67,Fe,hematite:0.6;magnetite:0.4,stock,100,60,4.4,0,200,,,,,Cenozoic,C,Oligocene Kiruna-type
+fe-pena-colorada,Pena Colorada,Mexico,19.40,-104.10,Fe,magnetite:1,lens,600,40,3.9,0,400,,,,,Mesozoic,C,Cretaceous magnetite
+fe-las-truchas,Las Truchas,Mexico,18.00,-102.10,Fe,magnetite:0.8;hematite:0.2,stock,150,50,4.1,0,400,,,,,Cenozoic,C,skarn
+fe-cerro-bolivar,Cerro Bolivar,Venezuela,7.47,-63.40,Fe,hematite:1,lens,800,63,4.3,0,300,,,,,Precambrian,C,Imataca BIF-hosted hematite
+fe-el-pao,El Pao,Venezuela,8.00,-62.65,Fe,hematite:1,lens,200,64,4.3,0,200,,,,,Precambrian,C,Imataca hematite
+fe-marcona,Marcona,Peru,-15.20,-75.10,Fe,magnetite:0.9;hematite:0.1,lens,1800,54,4.2,0,600,,,,,Mesozoic,C,Shougang Hierro Peru; Jurassic IOCG-magnetite
+fe-el-laco,El Laco,Chile,-23.80,-67.48,Fe,magnetite:0.7;hematite:0.3,lens,734,49,4.4,0,150,,,,,Cenozoic,B,Andes Iron/CAP resource 734 Mt at 49 % Fe; Pliocene magnetite flows
+fe-los-colorados,Los Colorados,Chile,-28.30,-70.80,Fe,magnetite:1,lens,900,42,4.0,0,600,,,,,Mesozoic,C,CAP Mineria; Chilean iron belt
+fe-el-romeral,El Romeral,Chile,-29.75,-71.25,Fe,magnetite:1,lens,300,45,4.1,0,400,,,,,Mesozoic,C,CAP Mineria
+fe-cerro-negro-norte,Cerro Negro Norte,Chile,-27.25,-70.35,Fe,magnetite:1,lens,600,30,3.8,0,500,,,,,Mesozoic,C,CAP Mineria
+fe-sierra-grande,Sierra Grande,Argentina,-41.60,-65.37,Fe,hematite:0.6;magnetite:0.4,lens,200,55,4.0,0,400,,,,,Paleozoic,C,Silurian-Devonian oolitic hematite
+fe-mutun,El Mutun,Bolivia,-18.85,-57.85,Fe,hematite:0.8;limonite:0.2:top,lens,40000,50,3.8,0,300,13,6,30,15,Precambrian,C,Sergeotecmin 2006: 40.2 Gt of iron ore at about 50 % Fe; Neoproterozoic Jacadigo-type banded iron formation
+fe-urucum,Urucum-Corumba,Brazil,-19.20,-57.60,Fe,hematite:1,lens,5000,55,3.9,0,300,25,8,45,10,Precambrian,C,Jacadigo Group iron formation (Mn beds listed separately)
+fe-carajas-n,Carajas Serra Norte (N4-N5),Brazil,-6.06,-50.17,Fe,hematite:0.9;limonite:0.1:top,lens,3500,66,4.3,0,400,12,1.5,0,70,Precambrian,C,Vale; jaspilite-hosted soft hematite
+fe-s11d,S11D (Serra Sul),Brazil,-6.40,-50.35,Fe,hematite:0.9;limonite:0.1:top,lens,10000,66.5,4.3,0,400,16,2,90,60,Precambrian,C,Vale S11D resource about 10 Gt
+fe-serra-leste,Serra Leste,Brazil,-6.05,-49.92,Fe,hematite:1,lens,1000,65,4.3,0,300,,,,,Precambrian,C,Vale
+fe-itabira,Itabira (Caue-Conceicao),Brazil,-19.62,-43.22,Fe,hematite:1,lens,3000,50,3.8,0,500,,,,,Precambrian,C,Vale; itabirite and compact hematite
+fe-mesabi-natural,Mesabi Range natural ores,United States,47.495,-92.65,Fe,hematite:0.6;limonite:0.4,lens,2500,55,3.6,0,100,170,1.0,65,8,Precambrian,C,about 2.5 Gt of direct-shipping ore mined 1892-1980s from the Biwabik Iron Formation
+mn-groote,Groote Eylandt,Australia,-14.00,136.45,Mn,rhodochrosite:1,lens,400,45,3.0,3,15,20,8,0,0,Mesozoic,C,GEMCO; Cretaceous pisolitic oxide ore (rhodochrosite is the game's Mn ore)
+mn-woodie,Woodie Woodie,Australia,-21.65,121.20,Mn,rhodochrosite:1,lens,50,40,3.5,0,150,,,,,Precambrian,C,Consolidated Minerals
+mn-moanda,Moanda (Bangombe),Gabon,-1.53,13.20,Mn,rhodochrosite:1,lens,450,46,3.2,5,15,15,10,0,0,Precambrian,C,COMILOG; supergene oxide ore on Francevillian Mn protore
+mn-nsuta,Nsuta,Ghana,5.28,-1.98,Mn,rhodochrosite:1,lens,100,35,3.3,0,200,,,,,Precambrian,C,Birimian Mn carbonate with oxide cap
+mn-serra-navio,Serra do Navio,Brazil,0.90,-52.00,Mn,rhodochrosite:1,lens,40,46,3.4,0,150,,,,,Precambrian,C,mined 1957-1997
+mn-azul,Azul (Carajas),Brazil,-6.05,-50.30,Mn,rhodochrosite:1,lens,60,40,3.3,0,150,,,,,Precambrian,C,Vale
+mn-urucum,Urucum manganese,Brazil,-19.25,-57.55,Mn,rhodochrosite:1,lens,100,45,3.6,0,300,,,,,Precambrian,C,Mn beds in Jacadigo iron formation
+mn-molango,Molango,Mexico,20.80,-98.72,Mn,rhodochrosite:1,lens,1500,27,3.3,0,500,,,,,Mesozoic,C,Jurassic Mn carbonate (Autlan)
+mn-tokmak,Bolshoi Tokmak,Ukraine,47.25,35.70,Mn,rhodochrosite:1,lens,2500,22,3.0,50,150,35,15,90,1,Cenozoic,C,Oligocene Mn carbonate (largest European Mn resource)
+mn-sandur,Sandur manganese,India,15.08,76.55,Mn,rhodochrosite:1,lens,100,40,3.5,0,150,,,,,Precambrian,C,Dharwar Mn
+mn-balaghat,Balaghat-Nagpur belt,India,21.60,79.80,Mn,rhodochrosite:1,lens,150,40,3.8,0,300,,,,,Precambrian,C,Sausar Group gondites (MOIL)
+mn-daxin,Daxin,China,22.83,107.20,Mn,rhodochrosite:1,lens,100,22,3.3,0,300,,,,,Devonian,C,Devonian Mn carbonate
+mn-huayuan,Huayuan (Xiangchaoxi),China,28.55,109.48,Mn,rhodochrosite:1,lens,300,20,3.2,0,600,,,,,Precambrian,C,Neoproterozoic Datangpo Mn carbonate
+mn-ushkatyn,Ushkatyn-Atasu,Kazakhstan,48.40,71.00,Mn,rhodochrosite:1,lens,300,25,3.6,0,500,,,,,Devonian,C,Devonian Atasu Fe-Mn
+mn-usinsk,Usinsk,Russia,53.55,88.25,Mn,rhodochrosite:1,lens,100,20,3.2,0,400,,,,,Paleozoic,C,Cambrian Mn carbonate
+mn-imini,Imini,Morocco,31.20,-7.10,Mn,rhodochrosite:1,lens,30,50,3.6,0,100,,,,,Mesozoic,C,Cretaceous oxide Mn
+mn-tongren-songtao,Tongren-Songtao Datangpo manganese (Pujue-Gaodi-Daotuo-Taoziping),China,28.10,109.10,Mn,rhodochrosite:1,lens,708,20,3.0,500,1400,40,15,30,10,Precambrian,C,Guizhou government 2019 (via SMM news): Pujue 203 + Gaodi 161 + Daotuo 142 + Taoziping 106 Mt; Neoproterozoic Datangpo Formation rhodochrosite ore at about 20 % Mn mostly 500-1400 m deep
+cr-sukinda,Sukinda,India,21.00,85.80,Cr,chromite:1,lens,200,45,4.0,0,300,20,1,60,60,Precambrian,C,Sukinda Valley ultramafic complex (about 95 % of India's chromite)
+cr-kemi,Kemi,Finland,65.78,24.60,Cr,chromite:1,lens,150,26,3.6,0,1000,15,0.08,40,70,Precambrian,C,Outokumpu Kemi layered intrusion
+cr-black-thor,Ring of Fire (Black Thor-Big Daddy),Canada,52.75,-86.30,Cr,chromite:1,lens,230,31,3.8,0,800,4,0.1,45,80,Precambrian,C,Noront resource statements
+cr-campo-formoso,Campo Formoso,Brazil,-10.50,-40.33,Cr,chromite:1,lens,50,40,4.0,0,300,,,,,Precambrian,C,layered ultramafic sill
+cr-shurugwi,Shurugwi (Selukwe),Zimbabwe,-19.67,30.00,Cr,chromite:1,lens,40,48,4.2,0,400,,,,,Precambrian,C,Archean greenstone chromitite
+ni-talnakh,Talnakh-Oktyabrsky-Kharaelakh,Russia,69.50,88.40,Ni,pentlandite:0.35;chalcopyrite:0.6;sperrylite:0.05,lens,2200,1.0,3.6,500,1500,15,1.0,0,5,Permian,B,Nornickel 2024: Norilsk Division proved and probable reserves 1203 Mt at 0.71 % Ni 1.31 % Cu 4.52 g/t PGM; plus resources and about 80 years of production; flat sill-hosted disseminated and massive ore
+ni-sudbury-creighton,Sudbury South Range West (Creighton-Copper Cliff),Canada,46.47,-81.12,Ni,pentlandite:0.55;chalcopyrite:0.4;sperrylite:0.05,lens,500,1.4,3.6,0,3000,15,0.15,60,60,Precambrian,C,Sudbury total endowment about 1.65 Gt at 1.2 % Ni and 1.1 % Cu (Lightfoot 2017)
+ni-sudbury-frood,Sudbury Frood-Stobie,Canada,46.53,-80.99,Ni,pentlandite:0.55;chalcopyrite:0.4;sperrylite:0.05,lens,350,1.1,3.6,0,1500,4,0.15,45,80,Precambrian,C,offset dyke ores
+ni-sudbury-garson,Sudbury Garson-Falconbridge,Canada,46.58,-80.85,Ni,pentlandite:0.55;chalcopyrite:0.4;sperrylite:0.05,lens,250,1.4,3.6,0,2000,12,0.15,70,70,Precambrian,C,South Range East
+ni-sudbury-north,Sudbury North Range (Levack-Coleman-Strathcona),Canada,46.64,-81.37,Ni,pentlandite:0.5;chalcopyrite:0.45;sperrylite:0.05,lens,400,1.2,3.6,0,2000,15,0.15,60,40,Precambrian,C,North Range contact and footwall ores
+ni-sudbury-east,Sudbury East Range (Nickel Rim-Victor),Canada,46.67,-80.78,Ni,pentlandite:0.55;chalcopyrite:0.4;sperrylite:0.05,lens,150,1.5,3.6,500,2000,8,0.15,0,60,Precambrian,C,East Range deep ores
+ni-voiseys-bay,Voisey's Bay,Canada,56.33,-62.10,Ni,pentlandite:0.7;chalcopyrite:0.3,lens,141,1.6,4.2,0,1000,6,0.3,90,30,Precambrian,B,Vale resource 141 Mt at 1.6 % Ni (Ovoid 32 Mt at 2.8 % Ni)
+ni-thompson,Thompson nickel belt,Canada,55.73,-97.86,Ni,pentlandite:0.9;chalcopyrite:0.1,lens,150,2.3,3.8,0,1500,10,0.05,30,75,Precambrian,C,Vale Thompson
+ni-raglan,Raglan,Canada,61.70,-73.60,Ni,pentlandite:0.8;chalcopyrite:0.2,lens,50,2.8,3.8,0,800,,,,,Precambrian,C,Glencore komatiite-hosted Ni
+ni-kambalda,Kambalda dome,Australia,-31.20,121.67,Ni,pentlandite:0.95;chalcopyrite:0.05,lens,50,3.0,4.2,0,1000,10,0.05,0,45,Precambrian,C,about 1.2 Mt Ni produced from komatiite contact ores
+ni-mt-keith,Mount Keith,Australia,-27.24,120.54,Ni,pentlandite:1,stock,470,0.57,2.9,0,700,,,,,Precambrian,C,BHP disseminated komatiite Ni
+ni-leinster,Leinster (Perseverance-Rocky's Reward),Australia,-27.80,120.70,Ni,pentlandite:1,lens,60,2.0,3.5,0,1200,,,,,Precambrian,C,BHP Nickel West
+ni-jinchuan,Jinchuan,China,38.50,102.20,Ni,pentlandite:0.6;chalcopyrite:0.35;sperrylite:0.05,lens,515,1.06,3.4,0,1000,6.5,0.3,300,60,Precambrian,B,Naldrett (2004) 515 Mt at 1.06 % Ni
+ni-pechenga,Pechenga (Nikel-Zapolyarny),Russia,69.40,30.90,Ni,pentlandite:0.7;chalcopyrite:0.3,lens,340,0.7,3.3,0,1500,,,,,Precambrian,C,Kola MMC
+ni-monchegorsk,Monchegorsk (Nittis-Kumuzhya),Russia,67.92,32.90,Ni,pentlandite:0.7;chalcopyrite:0.3,lens,50,1.0,3.4,0,600,,,,,Precambrian,C,Monchepluton veins and layers
+ni-kabanga,Kabanga,Tanzania,-2.88,30.55,Ni,pentlandite:1,lens,58,2.6,3.9,0,1200,,,,,Precambrian,C,Kabanga resource
+ni-selebi,Selebi-Phikwe,Botswana,-22.00,27.83,Ni,pentlandite:0.5;chalcopyrite:0.5,lens,100,0.7,3.6,0,1000,,,,,Precambrian,C,BCL
+ni-nkomati,Nkomati,South Africa,-25.70,30.55,Ni,pentlandite:0.7;chalcopyrite:0.3,lens,300,0.35,3.2,0,500,,,,,Precambrian,C,Uitkomst complex
+ni-kevitsa,Kevitsa,Finland,67.70,26.98,Ni,pentlandite:0.5;chalcopyrite:0.5,stock,300,0.3,3.0,0,700,,,,,Precambrian,C,Boliden Kevitsa
+ni-duluth,Duluth Complex (Babbitt-NorthMet),United States,47.70,-91.95,Ni,pentlandite:0.3;chalcopyrite:0.7,lens,4000,0.2,3.0,0,800,50,3,45,25,Precambrian,C,low-grade Cu-Ni-PGE along the basal contact
+ni-eagle,Eagle,United States,46.75,-87.90,Ni,pentlandite:0.7;chalcopyrite:0.3,lens,5,3.5,4.0,0,400,,,,,Precambrian,C,Lundin Eagle
+ti-tellnes,Tellnes,Norway,58.33,6.42,Ti,ilmenite:1,stock,550,18,3.6,0,500,2.7,0.4,315,90,Precambrian,C,Titania AS; ilmenite norite dyke 2.7 km x 400 m
+ti-lac-tio,Lac Tio (Allard Lake),Canada,50.55,-63.40,Ti,ilmenite:1,stock,125,34,4.5,0,300,1.1,1.0,,,Precambrian,B,Rio Tinto Fer et Titane; hemo-ilmenite in anorthosite (Allard Lake)
+ti-tahawus,Tahawus (Sanford Lake),United States,44.08,-74.05,Ti,ilmenite:0.6;magnetite:0.4,lens,100,18,4.0,0,500,,,,,Precambrian,C,anorthosite-hosted ilmenite-magnetite
+ti-panzhihua,Panzhihua,China,26.58,101.72,Ti,magnetite:0.62;ilmenite:0.33;vanadinite:0.05,lens,1300,11,3.9,0,1000,19,0.5,45,50,Permian,C,Panxi V-Ti magnetite (ore about 33 % Fe 11 % TiO2 0.3 % V2O5); vanadinite stands for the V in magnetite
+ti-hongge,Hongge,China,26.65,102.05,Ti,magnetite:0.65;ilmenite:0.3;vanadinite:0.05,lens,4500,9,3.7,0,1200,16,1,0,40,Permian,C,Panxi V-Ti magnetite
+ti-yarega,Yarega,Russia,63.43,53.50,Ti,ilmenite:1,lens,640,10,2.6,150,250,20,8,0,0,Devonian,C,Devonian leucoxene sandstone (petroleum-bearing)
+ti-krzemianka,Suwalki (Krzemianka-Udryn),Poland,54.25,22.90,Ti,magnetite:0.6;ilmenite:0.35;vanadinite:0.05,stock,1500,7,3.9,850,2300,,,,,Precambrian,C,Fe-Ti-V ores in anorthosite under 850 m of cover (PGI)
+v-kachkanar,Kachkanar (Gusevogorsk),Russia,58.70,59.45,V,magnetite:0.8;ilmenite:0.15;vanadinite:0.05,stock,9000,0.13,3.3,0,800,,,,,Paleozoic,C,EVRAZ KGOK low-grade titanomagnetite clinopyroxenite (16 % Fe)
+v-chengde,Chengde (Damiao-Heishan),China,40.97,117.95,V,magnetite:0.7;ilmenite:0.25;vanadinite:0.05,lens,300,0.4,3.8,0,600,,,,,Precambrian,C,anorthosite-hosted V-Ti magnetite
+v-windimurra,Windimurra,Australia,-28.25,118.62,V,magnetite:0.8;ilmenite:0.15;vanadinite:0.05,lens,240,0.47,3.6,0,300,,,,,Precambrian,C,layered intrusion V magnetite
+v-barrambie,Barrambie,Australia,-27.40,119.15,V,magnetite:0.75;ilmenite:0.2;vanadinite:0.05,lens,280,0.45,3.6,0,300,,,,,Precambrian,C,layered intrusion V-Ti magnetite
+v-otanmaki,Otanmaki,Finland,64.12,27.08,V,magnetite:0.7;ilmenite:0.25;vanadinite:0.05,lens,30,0.26,3.9,0,500,,,,,Precambrian,C,mined 1953-1985
+v-abenab,Abenab,Namibia,-19.30,18.12,V,vanadinite:1,stock,0.4,2.0,3.5,0,200,,,,,Precambrian,C,descloizite-vanadinite pipe
+v-mibladen,Mibladen-Aouli,Morocco,32.77,-4.75,V,vanadinite:1,veins,1.0,0.5,3.0,0,200,,,,,Mesozoic,C,vanadinite in Pb lodes
+pt-stillwater,Stillwater J-M Reef,United States,45.40,-109.95,Pt,sperrylite:1,lens,250,16,3.2,0,1500,40,0.0015,110,70,Precambrian,C,Sibanye-Stillwater; J-M Reef about 40 km by 1-3 m
+pt-norilsk1,Norilsk-1 disseminated ore,Russia,69.30,88.10,Pt,sperrylite:0.6;pentlandite:0.15;chalcopyrite:0.25,lens,250,4.7,3.4,0,600,,,,,Permian,C,Nornickel 2022: 39 Mt reserves at 4.71 g/t PGM 0.25 % Ni left after about 80 years of open-pit and underground mining
+pt-lac-des-iles,Lac des Iles,Canada,49.17,-89.60,Pt,sperrylite:1,stock,100,1.5,3.0,0,800,,,,,Precambrian,C,Pd-dominant
+pt-fedorova,Fedorova Tundra,Russia,67.95,34.20,Pt,sperrylite:1,lens,300,1.4,3.0,0,500,,,,,Precambrian,C,Kola Pd-Pt
+pt-iss,Iss and Tura PGE placers,Russia,59.10,59.40,Pt,earth-placerplatinum:1,blanket,100,1.5,2.0,0,6,,,,,Cenozoic,C,Ural platinum placers worked from 1824 (about 300 t Pt from the Urals)
+pt-tagil,Nizhny Tagil PGE placers,Russia,57.85,59.85,Pt,earth-placerplatinum:1,blanket,50,3,2.0,0,6,,,,,Cenozoic,C,placers from the Nizhny Tagil dunite massif
+pt-kondyor,Kondyor placers,Russia,57.60,134.65,Pt,earth-placerplatinum:1,blanket,60,2,2.0,0,8,,,,,Cenozoic,C,placers of the Kondyor ring massif
+pt-goodnews,Goodnews Bay placers,United States,59.08,-161.55,Pt,earth-placerplatinum:1,blanket,10,2,2.0,0,8,,,,,Cenozoic,C,Salmon River Pt placers
+pt-choco,Choco platinum placers,Colombia,5.10,-76.65,Pt,earth-placerplatinum:1,blanket,25,2,2.0,0,8,,,,,Cenozoic,C,worked by pre-Columbian smiths
+al-sangaredi,Sangaredi (CBG),Guinea,11.13,-13.83,Al,earth-bauxite:1,blanket,1500,52,2.1,1,12,,,,,Cenozoic,C,CBG Boke plateau bauxite
+al-boke-smb,Boke SMB plateaux (Katougouma),Guinea,10.90,-14.15,Al,earth-bauxite:1,blanket,3000,47,2.1,1,10,,,,,Cenozoic,C,SMB-Winning
+al-dian-dian,Dian-Dian,Guinea,10.75,-13.60,Al,earth-bauxite:1,blanket,1000,45,2.1,1,10,,,,,Cenozoic,C,
+al-fria,Fria (Kimbo),Guinea,10.40,-13.55,Al,earth-bauxite:1,blanket,1000,45,2.1,1,10,,,,,Cenozoic,C,
+al-kindia,Kindia (Debele),Guinea,10.10,-12.85,Al,earth-bauxite:1,blanket,300,45,2.1,1,8,,,,,Cenozoic,C,
+al-dabola,Dabola-Tougue,Guinea,10.90,-11.10,Al,earth-bauxite:1,blanket,1000,45,2.1,1,8,,,,,Cenozoic,C,
+al-weipa,Weipa (Andoom-East Weipa),Australia,-12.65,141.90,Al,earth-bauxite:1,blanket,3000,52,2.0,1,8,,,,,Cenozoic,C,Rio Tinto Weipa
+al-amrun,Amrun (South of Embley),Australia,-13.00,141.75,Al,earth-bauxite:1,blanket,1400,52,2.0,1,8,,,,,Cenozoic,C,Rio Tinto
+al-gove,Gove,Australia,-12.25,136.85,Al,earth-bauxite:1,blanket,300,50,2.0,1,6,,,,,Cenozoic,C,
+al-darling,Darling Range (Huntly-Willowdale),Australia,-32.60,116.10,Al,earth-bauxite:1,blanket,2500,40,2.0,1,6,,,,,Cenozoic,C,low-grade gibbsitic laterite (Alcoa)
+al-jamaica-manchester,Jamaica Manchester plateau,Jamaica,18.05,-77.50,Al,earth-bauxite:1,blanket,1000,47,2.0,0,10,,,,,Cenozoic,C,karst bauxite on White Limestone
+al-jamaica-st-ann,Jamaica St Ann plateau,Jamaica,18.35,-77.25,Al,earth-bauxite:1,blanket,1000,47,2.0,0,10,,,,,Cenozoic,C,karst bauxite
+al-jamaica-nain,Jamaica St Elizabeth (Nain),Jamaica,17.98,-77.62,Al,earth-bauxite:1,blanket,500,46,2.0,0,10,,,,,Cenozoic,C,karst bauxite
+al-trombetas,Trombetas (MRN plateaux),Brazil,-1.60,-56.40,Al,earth-bauxite:1,blanket,1500,50,2.0,8,16,,,,,Cenozoic,C,under Belterra clay
+al-juruti,Juruti,Brazil,-2.15,-56.10,Al,earth-bauxite:1,blanket,700,47,2.0,8,16,,,,,Cenozoic,C,Alcoa
+al-paragominas,Paragominas,Brazil,-3.00,-47.35,Al,earth-bauxite:1,blanket,2000,48,2.0,10,16,,,,,Cenozoic,C,Hydro
+al-pocos,Pocos de Caldas,Brazil,-21.80,-46.57,Al,earth-bauxite:1,blanket,100,45,2.0,0,8,,,,,Cenozoic,C,alkaline-massif bauxite
+al-les-baux,Les Baux,France,43.74,4.80,Al,earth-bauxite:1,blanket,5,55,2.4,0,15,,,,,Mesozoic,C,type locality; Cretaceous karst bauxite
+al-brignoles,Brignoles (Var),France,43.40,6.06,Al,earth-bauxite:1,blanket,100,55,2.4,0,40,,,,,Mesozoic,C,Cretaceous karst bauxite
+al-parnassos,Parnassos-Giona,Greece,38.55,22.45,Al,earth-bauxite:1,blanket,100,57,2.6,0,60,,,,,Mesozoic,C,Cretaceous karst bauxite (Mytilineos)
+al-halimba,Halimba-Gant (Bakony-Vertes),Hungary,47.10,17.55,Al,earth-bauxite:1,blanket,100,50,2.3,0,50,,,,,Cenozoic,C,Eocene karst bauxite
+al-niksic,Niksic,Montenegro,42.78,18.95,Al,earth-bauxite:1,blanket,50,52,2.4,0,30,,,,,Mesozoic,C,karst bauxite
+al-panchpatmali,Panchpatmali (Koraput),India,18.82,82.90,Al,earth-bauxite:1,blanket,300,45,2.1,0,15,,,,,Cenozoic,C,NALCO East Coast plateau bauxite
+al-tan-rai,Tan Rai (Lam Dong),Vietnam,11.85,107.85,Al,earth-bauxite:1,blanket,1000,40,2.0,0,10,,,,,Cenozoic,C,bauxite on Neogene basalt
+al-dak-nong,Dak Nong (Nhan Co),Vietnam,12.15,107.60,Al,earth-bauxite:1,blanket,3000,40,2.0,0,10,,,,,Cenozoic,C,Central Highlands bauxite
+al-tayan,Tayan,Indonesia,0.00,110.10,Al,earth-bauxite:1,blanket,300,45,2.0,0,6,,,,,Cenozoic,C,West Kalimantan
+al-pingguo,Pingguo,China,23.33,107.58,Al,earth-bauxite:1,blanket,300,55,2.4,0,20,,,,,Cenozoic,C,karst accumulation bauxite on Permian
+al-gongyi,Gongyi-Mianchi (Henan),China,34.75,113.00,Al,earth-bauxite:1,lens,300,60,2.6,10,200,,,,,Carboniferous,C,buried Carboniferous diaspore bauxite (bed in Carboniferous)
+al-krasnooktyabrsk,Krasnooktyabrsk,Kazakhstan,52.65,63.70,Al,earth-bauxite:1,blanket,200,40,2.2,20,70,,,,,Mesozoic,C,Cretaceous karst-lateritic bauxite
+al-north-urals,North Urals bauxite (SUBR),Russia,60.05,60.00,Al,earth-bauxite:1,lens,300,52,2.8,300,1000,15,4,0,30,Devonian,C,buried Devonian bauxite beds (underground mines)
+al-middle-timan,Middle Timan,Russia,63.80,52.00,Al,earth-bauxite:1,blanket,250,49,2.4,0,30,,,,,Devonian,C,lateritic bauxite on Riphean
+al-az-zabirah,Az Zabirah (Al Ba'itha),Saudi Arabia,27.60,44.00,Al,earth-bauxite:1,blanket,200,50,2.3,10,30,,,,,Mesozoic,C,Cretaceous karst bauxite
+al-moengo,Moengo-Lelydorp,Suriname,5.60,-54.40,Al,earth-bauxite:1,blanket,300,52,2.1,10,20,,,,,Cenozoic,C,coastal-plain bauxite
+al-linden,Linden,Guyana,6.00,-58.30,Al,earth-bauxite:1,blanket,300,55,2.1,30,50,,,,,Cenozoic,C,under white sands
+al-pijiguaos,Los Pijiguaos,Venezuela,6.60,-66.75,Al,earth-bauxite:1,blanket,200,48,2.0,0,10,,,,,Cenozoic,C,
+al-awaso,Awaso,Ghana,6.20,-2.27,Al,earth-bauxite:1,blanket,100,50,2.0,0,8,,,,,Cenozoic,C,
+al-nyinahin,Nyinahin,Ghana,6.60,-2.10,Al,earth-bauxite:1,blanket,300,45,2.0,0,8,,,,,Cenozoic,C,
+al-mokanji,Mokanji,Sierra Leone,7.92,-11.97,Al,earth-bauxite:1,blanket,30,50,2.0,0,6,,,,,Cenozoic,C,
+al-minim-martap,Minim-Martap,Cameroon,7.00,12.80,Al,earth-bauxite:1,blanket,1000,45,2.0,0,8,,,,,Cenozoic,C,Adamaoua plateau
+al-arkansas,Arkansas bauxite (Saline County),United States,34.60,-92.55,Al,earth-bauxite:1,blanket,100,50,2.1,0,30,,,,,Cenozoic,C,Eocene bauxite on nepheline syenite
+fe-conakry,Conakry laterite iron (Kaloum),Guinea,9.55,-13.65,Fe,limonite:1,blanket,1000,50,2.8,0,15,,,,,Cenozoic,C,lateritic iron crust on Kaloum dunite; mined 1953-1966
+fe-moa-limonite,Moa-Mayari limonite cap,Cuba,20.60,-74.90,Fe,limonite:1,blanket,2000,45,1.8,0,15,,,,,Cenozoic,C,iron-rich limonite zone of the Mayari-Baracoa laterites (Ni counted in the laterite entries)
+fe-goldsworthy,Mount Goldsworthy hematite cap,Australia,-20.33,119.52,Fe,hematite:0.6;limonite:0.4,lens,100,62,3.8,0,100,,,,,Precambrian,C,Goldsworthy hematite cap (worked 1966-1992)
+fe-clinton-ny,Clinton ironstone (Oneida County),United States,43.05,-75.38,Fe,hematite:1,lens,20,40,3.5,0,40,,,,,Paleozoic,C,Silurian Clinton Group oolitic hematite (type area)
+fe-taharoa,Taharoa ironsand,New Zealand,-38.17,174.75,Fe,magnetite:0.85;ilmenite:0.15,blanket,300,20,2.4,0,30,,,,,Cenozoic,C,titanomagnetite dune sand (NZ Steel)
+fe-waikato-north-head,Waikato North Head ironsand,New Zealand,-37.35,174.73,Fe,magnetite:0.85;ilmenite:0.15,blanket,150,20,2.4,0,30,,,,,Cenozoic,C,titanomagnetite dune sand (NZ Steel)
+ti-richards-bay,Richards Bay dunes (Hillendale-Zulti),South Africa,-28.65,32.20,Ti,ilmenite:1,blanket,2000,2.0,1.8,0,60,,,,,Cenozoic,C,Richards Bay Minerals coastal dune heavy-mineral sands
+ti-moma,Moma (Namalope-Pilivili),Mozambique,-16.45,39.65,Ti,ilmenite:1,blanket,8000,1.2,1.8,0,20,,,,,Cenozoic,C,Kenmare resource (about 3 % heavy minerals mostly ilmenite)
+ti-kwale,Kwale,Kenya,-4.30,39.50,Ti,ilmenite:1,blanket,150,2.5,1.8,0,30,,,,,Cenozoic,C,Base Resources
+ti-grande-cote,Grande Cote,Senegal,15.35,-16.75,Ti,ilmenite:1,blanket,2800,0.6,1.8,0,40,,,,,Cenozoic,C,Eramet; dune sands about 1.6 % heavy minerals
+ti-mandena,Mandena (Fort-Dauphin),Madagascar,-24.95,46.98,Ti,ilmenite:1,blanket,300,2.5,1.8,0,20,,,,,Cenozoic,C,QIT Madagascar Minerals
+ti-chavara,Chavara-Neendakara beach sands,India,9.00,76.53,Ti,ilmenite:1,blanket,100,25,2.6,0,10,,,,,Cenozoic,C,Kerala beach placers (40-70 % heavy minerals)
+ti-manavalakurichi,Manavalakurichi beach sands,India,8.15,77.30,Ti,ilmenite:1,blanket,20,20,2.6,0,8,,,,,Cenozoic,C,IREL
+ti-chatrapur,Chatrapur (OSCOM),India,19.35,84.98,Ti,ilmenite:1,blanket,200,8,2.2,0,15,,,,,Cenozoic,C,Odisha coastal sands (IREL)
+ti-pulmoddai,Pulmoddai beach sands,Sri Lanka,8.93,80.98,Ti,ilmenite:1,blanket,10,30,2.6,0,6,,,,,Cenozoic,C,Lanka Mineral Sands
+ti-eneabba,Eneabba strandlines,Australia,-29.80,115.30,Ti,ilmenite:1,blanket,500,2.5,1.9,0,20,,,,,Cenozoic,C,Iluka; Pliocene-Pleistocene strandlines
+ti-capel,Capel-Yoganup strandlines,Australia,-33.55,115.55,Ti,ilmenite:1,blanket,200,3,1.9,0,15,,,,,Cenozoic,C,Swan Coastal Plain shorelines
+ti-murray,Murray Basin strandlines (WIM150-Douglas),Australia,-36.70,142.00,Ti,ilmenite:1,blanket,2000,1.5,1.9,10,30,,,,,Cenozoic,C,Pliocene Loxton-Parilla sands
+ti-trail-ridge,Trail Ridge,United States,30.00,-82.05,Ti,ilmenite:1,blanket,500,2.0,1.8,0,15,,,,,Cenozoic,C,Chemours; Pleistocene beach ridge
+ti-sierra-rutile,Sierra Rutile (Gangama-Lanti),Sierra Leone,7.80,-12.30,Ti,ilmenite:1,blanket,600,1.1,1.8,0,15,,,,,Cenozoic,C,rutile placers (ilmenite stands for rutile)
+ti-irshansk,Irshansk ilmenite placers,Ukraine,50.73,28.68,Ti,ilmenite:1,blanket,500,3,2.0,0,20,,,,,Cenozoic,C,weathered-gabbro and alluvial ilmenite placers
+cr-kempirsai,Kempirsai (Donskoye: Molodezhnoye-40 Years KazSSR-Millionnoye),Kazakhstan,50.25,58.43,Cr,chromite:1,lens,800,48,4.2,100,1200,20,0.1,0,40,Paleozoic,C,TNK Kazchrome; podiform giant of the Kempirsai ophiolite (world's largest podiform chromite district)
+cr-saranovskoye,Saranovskoye,Russia,58.52,58.83,Cr,chromite:1,lens,50,35,4.0,0,600,,,,,Paleozoic,C,Ural stratiform chromitite
+ni-morowali,Morowali-Bahodopi laterites,Indonesia,-2.85,122.10,Ni,limonite:0.5:top;pentlandite:0.5:bottom,blanket,2500,1.4,1.6,0,25,,,,,Cenozoic,C,Indonesian Ni ore resources (MEMR 2023) beyond the 2011 USGS entries
+ni-konawe,Konawe Utara laterites,Indonesia,-3.40,122.20,Ni,limonite:0.5:top;pentlandite:0.5:bottom,blanket,2500,1.5,1.6,0,25,,,,,Cenozoic,C,Indonesian Ni ore resources (MEMR 2023)
+ni-weda-ext,Weda Bay extension (Tanjung Ulie-Santa Monica),Indonesia,0.40,127.85,Ni,limonite:0.5:top;pentlandite:0.5:bottom,blanket,2000,1.3,1.6,0,25,,,,,Cenozoic,C,Eramet-Tsingshan resource beyond the 2011 USGS entry
+ni-kolaka-ext,Kolaka-Pomalaa extension,Indonesia,-4.00,121.65,Ni,limonite:0.5:top;pentlandite:0.5:bottom,blanket,1000,1.4,1.6,0,25,,,,,Cenozoic,C,ANTAM resources beyond the 2011 USGS entry
+al-ketapang,Ketapang-Kendawangan bauxite,Indonesia,-2.00,110.30,Al,earth-bauxite:1,blanket,1500,47,2.0,0,6,,,,,Cenozoic,C,West Kalimantan bauxite belt
+al-mempawah,Mempawah-Landak bauxite,Indonesia,0.40,109.30,Al,earth-bauxite:1,blanket,500,47,2.0,0,6,,,,,Cenozoic,C,West Kalimantan bauxite belt
+al-odisha-east-coast,East Coast bauxite (Sijimali-Kodingamali-Gandhamardan),India,19.45,83.25,Al,earth-bauxite:1,blanket,1200,44,2.1,0,15,,,,,Cenozoic,C,Eastern Ghats plateau bauxites (IBM)

@@ -1,0 +1,124 @@
+{
+  "note": "Authoritative latest attempt per URL; initial download-manifest.json records the earlier failed Python attempt.",
+  "downloads": [
+    {
+      "file": "raw/copper-assessment-gis.zip",
+      "url": "https://pubs.usgs.gov/sir/2010/5090/z/sir20105090z_gis.zip",
+      "retrieved_utc": "2026-09-29T16:17:54.3361223Z",
+      "status": "downloaded",
+      "bytes": 69609908,
+      "sha256": "37c57c2d9b1ff6b07b65eaf6556ad514c85a4e35ac886dbe62a48c29d853af21",
+      "content_type": [
+        "application/zip"
+      ],
+      "last_modified": [
+        "Wed, 13 Jul 2016 12:06:14 GMT"
+      ]
+    },
+    {
+      "file": "raw/copper-assessment-report.pdf",
+      "url": "https://pubs.usgs.gov/sir/2010/5090/z/sir20105090z.pdf",
+      "retrieved_utc": "2026-09-29T16:17:58.3837857Z",
+      "status": "downloaded",
+      "bytes": 2051040,
+      "sha256": "87af1031db99c833ff8c6f625ced45d69637bd51900399187199c04b5b100c04",
+      "content_type": [
+        "application/pdf"
+      ],
+      "last_modified": [
+        "Tue, 12 Jul 2016 22:38:32 GMT"
+      ]
+    },
+    {
+      "file": "raw/mrds-csv.zip",
+      "url": "https://mrdata.usgs.gov/mrds/mrds-csv.zip",
+      "retrieved_utc": "2026-09-29T16:18:01.5623390Z",
+      "status": "downloaded",
+      "bytes": 25791223,
+      "sha256": "31be4baaa86b082787bc74989146183db21badf7157db39b3f0a6fe0b38a5477",
+      "content_type": [
+        "application/zip"
+      ],
+      "last_modified": [
+        "Tue, 23 Aug 2022 21:10:12 GMT"
+      ]
+    },
+    {
+      "file": "raw/mrds-metadata.xml",
+      "url": "https://mrdata.usgs.gov/metadata/mrds.xml",
+      "retrieved_utc": "2026-09-29T16:18:03.2425726Z",
+      "status": "downloaded",
+      "bytes": 134887,
+      "sha256": "6dd489a5be94207a470d76e9e92bb8c47c5226612b707b21f22e020e0e187206",
+      "content_type": [
+        "text/xml"
+      ],
+      "last_modified": [
+        "Tue, 10 Aug 2021 18:01:49 GMT"
+      ]
+    },
+    {
+      "file": "raw/mrds-about.html",
+      "url": "https://mrdata.usgs.gov/mrds/about.php",
+      "retrieved_utc": "2026-09-29T16:17:53.1785625Z",
+      "status": "downloaded",
+      "bytes": 17049,
+      "sha256": "567d4211ad97a002dc5cc2e73fb3830fd3bd17b8084995766a73a0ac5bba5bd8",
+      "content_type": [
+        "text/html; charset=UTF-8"
+      ],
+      "last_modified": null
+    },
+    {
+      "file": "raw/sedcu-csv.zip",
+      "url": "https://mrdata.usgs.gov/sedcu/sedcu-csv.zip",
+      "retrieved_utc": "2026-09-29T16:17:53.7041464Z",
+      "status": "downloaded",
+      "bytes": 119999,
+      "sha256": "903e1c57acef6caf2a6afeb670ddeeb3bfd033fd0017ae7dac46bb0b7b95b1d4",
+      "content_type": [
+        "application/zip"
+      ],
+      "last_modified": [
+        "Fri, 17 Jun 2016 21:51:23 GMT"
+      ]
+    },
+    {
+      "file": "raw/sedcu-metadata.xml",
+      "url": "https://mrdata.usgs.gov/metadata/ofr-2003-of03-107.xml",
+      "retrieved_utc": "2026-09-29T16:17:52.6537460Z",
+      "status": "failed",
+      "error": "Response status code does not indicate success: 404 (Not Found)."
+    },
+    {
+      "file": "raw/gsc-tin-tungsten-report-response.html",
+      "url": "https://publications.gc.ca/collections/collection_2016/rncan-nrcan/M183-2-7688-eng.pdf",
+      "retrieved_utc": "2026-09-29T16:17:18.753053+00:00",
+      "final_url": "https://publications.gc.ca/site/archivee-archived.html?url=https%3A%2F%2Fpublications.gc.ca%2Fcollections%2Fcollection_2016%2Frncan-nrcan%2FM183-2-7688-eng.pdf",
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": null,
+      "status": "not_acquired_expected_pdf",
+      "bytes": 19284,
+      "sha256": "5eec22c478138cc2f5115840c2e026970e602654d5b89b43e55b02e4bd153009",
+      "validation": "Server returned HTML archive notice, not the report or dataset."
+    },
+    {
+      "file": "raw\\gsc-doi-metadata.json",
+      "url": "https://api.datacite.org/dois/10.4095/295581",
+      "retrieved_utc": "2026-09-29T16:17:18.783612+00:00",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "file": "raw\\porphyry-2025-doi-metadata.json",
+      "url": "https://api.datacite.org/dois/10.5066/P14CCESQ",
+      "retrieved_utc": "2026-09-29T16:17:18.785619+00:00",
+      "final_url": "https://api.datacite.org/dois/10.5066/P14CCESQ",
+      "content_type": "application/json; charset=utf-8",
+      "last_modified": null,
+      "status": "downloaded",
+      "bytes": 12613,
+      "sha256": "ec7516349c4618b78a16b21c61ad95929bf8c0acbc71309c5f21517c5fa4cc22"
+    }
+  ]
+}

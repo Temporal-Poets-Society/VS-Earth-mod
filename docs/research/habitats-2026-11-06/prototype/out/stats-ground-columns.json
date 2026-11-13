@@ -1,0 +1,116 @@
+{
+ "grid": [
+  1470,
+  2920
+ ],
+ "cell_m": [
+  186,
+  152
+ ],
+ "stream_km2": 3.0,
+ "land_cells": 2289306,
+ "osm_elements_by_wetland_tag": {
+  "marsh": 2282,
+  "swamp": 569,
+  "unspecified": 2468,
+  "bog": 1220,
+  "reedbed": 685,
+  "wet_meadow": 151,
+  "tidalflat": 7,
+  "saltmarsh": 5,
+  "fen": 54,
+  "mangrove": 1,
+  "shapefile_wetland_polygons": 7442
+ },
+ "habitat_percent_of_land": {
+  "sils": 2.23,
+  "metrajs": 6.13,
+  "lans": 14.09,
+  "veris": 33.22,
+  "garsa": 12.27,
+  "wetpoor": 4.92,
+  "wetrich": 16.07,
+  "bog": 3.97,
+  "fen": 0.11,
+  "carr": 3.03,
+  "marsh": 0.95,
+  "swampforest": 0.04,
+  "meadow": 2.27,
+  "dunepine": 0.55,
+  "foredune": 0.16
+ },
+ "moisture_percent_of_land": {
+  "0": 2.32,
+  "1": 6.65,
+  "2": 39.9,
+  "3": 19.82,
+  "4": 23.08,
+  "5": 5.82,
+  "6": 2.42
+ },
+ "predicted_wetland_percent": 8.1,
+ "config": {
+  "model": "mound",
+  "k_mul": 1000.0,
+  "mapped_wetlands_input": true
+ },
+ "unmapped_small_mire_percent": 3.24,
+ "moisture_percent_outside_mapped": {
+  "0": 2.43,
+  "1": 6.99,
+  "2": 41.96,
+  "3": 20.84,
+  "4": 24.27,
+  "5": 3.24,
+  "6": 0.27
+ },
+ "osm_wetland_percent": 4.9,
+ "wetland_precision": 0.6,
+ "wetland_recall": 0.992,
+ "wetland_precision_500m": 0.642,
+ "wetland_recall_500m": 0.995,
+ "what_the_model_says_inside_osm_wetlands_percent": {
+  "osm_bog": {
+   "cells": 80916,
+   "bog": 100.0
+  },
+  "osm_swamp": {
+   "cells": 3625,
+   "carr": 73.0,
+   "swampforest": 27.0
+  },
+  "osm_marsh": {
+   "cells": 19189,
+   "marsh": 100.0
+  },
+  "osm_fen": {
+   "cells": 168,
+   "fen": 100.0
+  },
+  "osm_wet_meadow": {
+   "cells": 834,
+   "meadow": 100.0
+  },
+  "osm_other": {
+   "cells": 7524,
+   "bog": 5.3,
+   "fen": 23.0,
+   "carr": 58.4,
+   "marsh": 12.0
+  }
+ },
+ "wt_depth_m_percentiles_land": {
+  "5": -0.4,
+  "25": 0.49,
+  "50": 5.49,
+  "75": 12.37,
+  "95": 26.49
+ },
+ "hand_m_percentiles_land": {
+  "5": 0.0,
+  "25": 1.85,
+  "50": 6.6,
+  "75": 13.47,
+  "95": 27.76
+ }
+}

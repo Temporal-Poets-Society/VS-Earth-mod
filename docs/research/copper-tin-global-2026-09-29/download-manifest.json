@@ -1,0 +1,80 @@
+[
+  {
+    "file": "raw\\copper-assessment-gis.zip",
+    "url": "https://pubs.usgs.gov/sir/2010/5090/z/sir20105090z_gis.zip",
+    "retrieved_utc": "2026-09-29T16:17:18.334551+00:00",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "raw\\copper-assessment-report.pdf",
+    "url": "https://pubs.usgs.gov/sir/2010/5090/z/sir20105090z.pdf",
+    "retrieved_utc": "2026-09-29T16:17:18.335551+00:00",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "raw\\mrds-csv.zip",
+    "url": "https://mrdata.usgs.gov/mrds/mrds-csv.zip",
+    "retrieved_utc": "2026-09-29T16:17:18.335551+00:00",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "raw\\mrds-metadata.xml",
+    "url": "https://mrdata.usgs.gov/metadata/mrds.xml",
+    "retrieved_utc": "2026-09-29T16:17:18.335551+00:00",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "raw\\mrds-about.html",
+    "url": "https://mrdata.usgs.gov/mrds/about.php",
+    "retrieved_utc": "2026-09-29T16:17:18.412613+00:00",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "raw\\sedcu-csv.zip",
+    "url": "https://mrdata.usgs.gov/sedcu/sedcu-csv.zip",
+    "retrieved_utc": "2026-09-29T16:17:18.423613+00:00",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "raw\\sedcu-metadata.xml",
+    "url": "https://mrdata.usgs.gov/metadata/ofr-2003-of03-107.xml",
+    "retrieved_utc": "2026-09-29T16:17:18.728043+00:00",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "raw\\gsc-tin-tungsten-report.pdf",
+    "url": "https://publications.gc.ca/collections/collection_2016/rncan-nrcan/M183-2-7688-eng.pdf",
+    "retrieved_utc": "2026-09-29T16:17:18.753053+00:00",
+    "final_url": "https://publications.gc.ca/site/archivee-archived.html?url=https%3A%2F%2Fpublications.gc.ca%2Fcollections%2Fcollection_2016%2Frncan-nrcan%2FM183-2-7688-eng.pdf",
+    "content_type": "text/html; charset=utf-8",
+    "last_modified": null,
+    "status": "downloaded",
+    "bytes": 19284,
+    "sha256": "5eec22c478138cc2f5115840c2e026970e602654d5b89b43e55b02e4bd153009"
+  },
+  {
+    "file": "raw\\gsc-doi-metadata.json",
+    "url": "https://api.datacite.org/dois/10.4095/295581",
+    "retrieved_utc": "2026-09-29T16:17:18.783612+00:00",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "raw\\porphyry-2025-doi-metadata.json",
+    "url": "https://api.datacite.org/dois/10.5066/P14CCESQ",
+    "retrieved_utc": "2026-09-29T16:17:18.785619+00:00",
+    "final_url": "https://api.datacite.org/dois/10.5066/P14CCESQ",
+    "content_type": "application/json; charset=utf-8",
+    "last_modified": null,
+    "status": "downloaded",
+    "bytes": 12613,
+    "sha256": "ec7516349c4618b78a16b21c61ad95929bf8c0acbc71309c5f21517c5fa4cc22"
+  }
+]

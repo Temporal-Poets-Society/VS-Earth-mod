@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "datasetId": "earth-resource-evidence-2026-10-02-v2",
+  "layers": 44,
+  "inputHashesChecked": 114,
+  "runtimeSha256": "3d3c9e1b5eefd0d2c3f43257e92820b5df91c34a66ed41ce4a2722750f2d0fd2",
+  "offlinePreview": "44 grids, defaults, source hashes; node not found; JavaScript syntax not checked; live browser UI not tested.",
+  "contentRegression": "test_ore_regression.py, test_bake_geometry.py and test_bake_depths.py passed",
+  "release": "not checked (run with --release after rebuilding the release archive)"
+}

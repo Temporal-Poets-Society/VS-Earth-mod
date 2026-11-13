@@ -1,0 +1,64 @@
+[
+  {
+    "source_id":"usgs_mrds_digest", "title":"Mineral Resources Data System compact CSV", "publisher":"USGS", "source_date":"Metadata snapshot 2016-03-15; ZIP HTTP last-modified 2022-08-23; individual observations vary and are often older",
+    "coverage":"Worldwide multiple commodities; strong US bias; includes mines, prospects, occurrences and plants", "crs":"EPSG:4326 / WGS84", "resolution":"Points with highly variable accuracy; decimal coordinates are not precision guarantees",
+    "portal_url":"https://mrdata.usgs.gov/mrds/", "download_or_api":"https://mrdata.usgs.gov/mrds/mrds-csv.zip", "status":"Acquired; normalized Cu/Sn subset; plant rows excluded separately", "local_raw":"raw/mrds-csv.zip",
+    "license":"Metadata access/use constraints: none. Attribute USGS and retain record references; no USGS endorsement implied.", "biases":"Incomplete discovery/reporting, major geography bias, sparse fields, duplicate district/site records. Source A-E score measures information quality/completeness, not a calibrated ore probability. No numeric grades in this compact digest.",
+    "role":"Broad reported occurrence baseline including small/undeveloped sites; not a grade or historical-accessibility map"
+  },
+  {
+    "source_id":"usgs_global_copper_assessment_2016", "title":"Spatial Database for a Global Assessment of Undiscovered Copper Resources, SIR 2010-5090-Z", "publisher":"USGS and collaborating geological surveys", "source_date":"2016 compilation of regional assessments; individual assessment years preserved",
+    "coverage":"Global porphyry and selected sediment-hosted copper systems: 192 + 48 permissive tracts, 2199 + 1200 observed points, plus 21 Precambrian reference points", "crs":"EPSG:4326", "resolution":"Source warns against use/display at scales more detailed than 1:1,000,000",
+    "portal_url":"https://pubs.usgs.gov/sir/2010/5090/z/", "download_or_api":"https://pubs.usgs.gov/sir/2010/5090/z/sir20105090z_gis.zip", "status":"Acquired and exported with metadata, source references and topology flags", "local_raw":"raw/copper-assessment-gis.zip",
+    "license":"USGS data. Metadata requires describing modifications and not misrepresenting USGS approval; acknowledgment appreciated. Preserve scale and accuracy disclaimers.", "biases":"Only two major Cu systems, incomplete global geological coverage and discovery bias. Potential may be assessed to 1 km (porphyry) or deeper sediment-hosted scopes, not surface availability. Eleven source polygon geometries fail the local validity check.",
+    "role":"Expert permissive background eligibility and observed hotspots; do not reuse economic filtering or model resource probabilities as spawn probabilities"
+  },
+  {
+    "source_id":"usgs_sedcu_2003", "title":"Sediment-hosted copper deposits of the world, OFR 03-107", "publisher":"USGS", "source_date":"2003 source compilation; hosted archive last-modified 2016-06-17",
+    "coverage":"Worldwide sediment-hosted copper points, host units, minerals, deposit grades and references", "crs":"EPSG:4326 verified from included .prj", "resolution":"Source point locations; varying accuracy",
+    "portal_url":"https://mrdata.usgs.gov/sedcu/", "download_or_api":"https://mrdata.usgs.gov/sedcu/sedcu-csv.zip", "status":"Acquired as supplementary raw CSV/shapefile tables; not merged to avoid duplicate inflation", "local_raw":"raw/sedcu-csv.zip",
+    "license":"USGS; included of03-107.met is the authoritative metadata. Website-linked standalone metadata XML returned 404.", "biases":"Older and overlaps the 2016 assessment; do not stack independent weights for copied records", "role":"Cross-check minerals, host rocks and references, especially source discrepancies"
+  },
+  {
+    "source_id":"usgs_porphyry_2025", "title":"A global database of porphyry copper deposits and prospects", "publisher":"USGS", "source_date":"2025-03-04 release; information through spring 2024",
+    "coverage":"Global porphyry copper sites with tectonic origin, age and available grade-tonnage", "crs":"Not verified from data attachment", "resolution":"Deposit/prospect points; attachment metadata not acquired",
+    "portal_url":"https://www.usgs.gov/data/a-global-database-porphyry-copper-deposits-and-prospects", "download_or_api":"https://www.sciencebase.gov/catalog/item/67210ae5d34ed0f827eaa791", "metadata_api":"https://api.datacite.org/dois/10.5066/P14CCESQ", "status":"Release and DOI metadata verified; ScienceBase attachment access returned HTTP 403; NOT acquired", "local_raw":"raw/porphyry-2025-doi-metadata.json",
+    "license":"Official release explicitly CC0 1.0", "biases":"Porphyry only; grade/tonnage availability varies; contemporary economic estimates are not early ore grades", "role":"Priority newer replacement/augmentation after attachment download is available"
+  },
+  {
+    "source_id":"gsc_world_sn_w_2014", "title":"World Tin and Tungsten Deposit Database, Open File 7688", "publisher":"Geological Survey of Canada / IAGOD working group", "source_date":"2014 publication; mostly current to early 2008 with limited 2014 Canadian updates",
+    "coverage":"Worldwide primary, placer and volcanic-associated tin/tungsten deposits; detailed host rocks, mineralization style, tectonics and historic resource figures", "crs":"Not verified from archive", "resolution":"Deposit/group points; per-record accuracy requires archive",
+    "portal_url":"https://ostrnrcan-dostrncan.canada.ca/entities/publication/2f973f05-ccc3-442e-a815-6d2eeb0e88ae?useLang=en", "download_or_api":"https://doi.org/10.4095/295581", "report_url":"https://publications.gc.ca/collections/collection_2016/rncan-nrcan/M183-2-7688-eng.pdf", "status":"Publication contents verified via indexed government PDF; archive NOT acquired. Old GEOSCAN DNS unavailable, new repository SSL failed; direct PDF download yielded an HTML archive notice.", "local_raw":"raw/gsc-tin-tungsten-report-response.html",
+    "license":"Crown copyright stated; free download is not an explicit redistribution license. Confirm archive terms before shipping derived data.", "biases":"Literature/expert compilation, dated and weighted toward significant known deposits; resource estimates are historical and not necessarily modern reporting-code compliant", "role":"Highest priority global tin geology source, but no acquired geometry or probability claimed"
+  },
+  {
+    "source_id":"usgs_us_tin_2020", "title":"Tin Deposits in the United States", "publisher":"USGS", "source_date":"2020-06-01",
+    "coverage":"More than 120 US mineral regions, mines and deposits with tin enrichment, including sites without demonstrated economic potential", "crs":"Not checked from attachment", "resolution":"Mixed deposit/district granularity; verify attachment before use",
+    "portal_url":"https://www.usgs.gov/data/tin-deposits-united-states", "download_or_api":"https://doi.org/10.5066/P97JYNJL", "status":"Release metadata verified; data attachment not acquired in this pass", "local_raw":null,
+    "license":"USGS release; verify exact attachment metadata before redistribution", "biases":"US only; inclusion explicitly does not establish economic potential", "role":"Targeted measured tin enrichment/low-grade study rather than assuming every occurrence has recoverable tin"
+  },
+  {
+    "source_id":"usgs_tin_model_2017", "title":"Tin, Professional Paper 1802-S", "publisher":"USGS", "source_date":"2017 publication",
+    "coverage":"Global tin mineral systems and metallogenic provinces; primary and secondary sources", "crs":"Not a GIS dataset", "resolution":"Regional synthesis",
+    "portal_url":"https://www.usgs.gov/publications/tin", "download_or_api":"https://pubs.usgs.gov/pp/1802/s/pp1802s.pdf", "status":"Official abstract/model description reviewed; spatial polygons not supplied here", "local_raw":null,
+    "license":"USGS publication; preserve attribution and any figure-specific third-party credits", "biases":"A geological model supports inference, not proof of ore in every granite or every stream", "role":"Review tin-fertile evolved intrusions, contacts, veins, greisen/skarn/replacement systems and source-linked placers"
+  },
+  {
+    "source_id":"gtk_nodd", "title":"Nordic Ore Deposit Database and metallogenic belts", "publisher":"GTK and Nordic geological surveys", "source_date":"Current portal; update dates must be checked per downloaded release; Russia updates suspended since 2022-02-24",
+    "coverage":"Nordic region including Estonia and Greenland; mines, occurrences, grades, host geology and metallogenic belts", "crs":"Older FODD map service reports EPSG:25834; newer download CRS not verified", "resolution":"Deposit points and regional belts",
+    "portal_url":"https://www.gtk.fi/en/fennoscandian-mineral-deposits-application-ore-deposits-database-and-maps/", "download_or_api":"https://hakku.gtk.fi/en/locations?id=109", "belts_download":"https://hakku.gtk.fi/en/locations?id=110", "older_feature_service":"https://gtkdata.gtk.fi/arcgis/rest/services/Fodd/fodd_FDM_MASTER/MapServer/0", "status":"Portal, service metadata and download landing URLs verified; files not acquired", "local_raw":null,
+    "license":"Specific NODD terms permit non-profit extracts with owner acknowledgment, prohibit sale of data and request additional permission for extended uses; not a blanket open redistribution license. https://www.gtk.fi/en/disclaimer-read-this-first/", "biases":"Regional and mixed-age estimates; online service and downloadable vintage may differ", "role":"Useful northern-Europe refinement; keep separate from automatically redistributable USGS baseline"
+  },
+  {
+    "source_id":"ga_ozmin", "title":"OZMIN mineral deposits and Australian geoscience data discovery", "publisher":"Geoscience Australia and state surveys", "source_date":"Live services and dated downloadable snapshots differ",
+    "coverage":"Australian mineral deposits, occurrences, resources and related geological context", "crs":"Not verified for current distribution", "resolution":"Deposit/occurrence data and heterogeneous regional geological layers",
+    "portal_url":"https://www.ga.gov.au/data-pubs/Geoscientific-Datasets-and-Reports", "download_or_api":"https://data.gov.au/data/dataset/34247a24-d3cf-4a98-bb9d-81671ddb99de", "status":"Official discovery path verified; catalog request blocked and no current file/API layer acquired", "local_raw":null,
+    "license":"Check selected current release and component dataset terms; no blanket license inferred", "biases":"National rather than global; major-resource and map-label filters omit smaller occurrences", "role":"Priority Australian tin/copper supplement including subeconomic demonstrated resources where explicitly recorded"
+  },
+  {
+    "source_id":"bgs_penwith_geology", "title":"Penzance geological memoir, sheets 351 and 358", "publisher":"British Geological Survey", "source_date":"1988 memoir",
+    "coverage":"Detailed Cornwall geology, mineralization, historical extraction and weathering", "crs":"Text/figures; no polygons acquired", "resolution":"Memoir for 1:50,000 geological sheets",
+    "portal_url":"https://webapps.bgs.ac.uk/memoirs/docs/B01737.html", "download_or_api":"https://webapps.bgs.ac.uk/memoirs/docs/B01737.html", "status":"Primary text reviewed; historical overlay references, no map copied", "local_raw":null,
+    "license":"Cite source; map/figure reuse requires checking BGS terms rather than treating this as an open GIS package", "biases":"One well-studied district cannot calibrate the whole world", "role":"Prototype historical and source-to-placer logic; do not infer entire-country fertility"
+  }
+]

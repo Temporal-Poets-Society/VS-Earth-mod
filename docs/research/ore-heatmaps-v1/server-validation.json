@@ -1,0 +1,463 @@
+{
+  "created": "2026-09-29T23:27:41.8849227+03:00",
+  "runs": [
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-vanilla-historical-20260929-230127",
+      "earthVersion": "0.11.0",
+      "earthDllSha256": "F1EB6576C7C074E15E76C5925B1E43A0CD34810DEB9FAD7633F2526C0F694D70",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "ore-heatmaps-v1.json": "20C02C4032446EC96E71721BCCD8D42CBD483316159989939906F4E8560F2BC9",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=True",
+      "oreSettings": "",
+      "bogPeatAdapter": "",
+      "prospectingPassSites": 0,
+      "maximumBogPeatPlacementEvents": null,
+      "siteCount": 5,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "saltMapSamples": [
+        {
+          "place": "57,25",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 2057
+        },
+        {
+          "place": "50.2,-5.2",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 2054
+        },
+        {
+          "place": "-22.3,-68.9",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 14
+        },
+        {
+          "place": "50.3,19",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 1232
+        },
+        {
+          "place": "-32.8,151.5",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 1042
+        }
+      ],
+      "controlledFaunaObserved": 0,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    },
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-full-historical-20260929-230124",
+      "earthVersion": "0.11.0",
+      "earthDllSha256": "F1EB6576C7C074E15E76C5925B1E43A0CD34810DEB9FAD7633F2526C0F694D70",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "ore-heatmaps-v1.json": "20C02C4032446EC96E71721BCCD8D42CBD483316159989939906F4E8560F2BC9",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=True",
+      "oreSettings": "",
+      "bogPeatAdapter": "",
+      "prospectingPassSites": 0,
+      "maximumBogPeatPlacementEvents": null,
+      "siteCount": 5,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "saltMapSamples": [
+        {
+          "place": "57,25",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 2057
+        },
+        {
+          "place": "50.2,-5.2",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 2054
+        },
+        {
+          "place": "-22.3,-68.9",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 14
+        },
+        {
+          "place": "50.3,19",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 1232
+        },
+        {
+          "place": "-32.8,151.5",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 1042
+        }
+      ],
+      "controlledFaunaObserved": 0,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    },
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-vanilla-historical-20260929-231334",
+      "earthVersion": "0.11.0",
+      "earthDllSha256": "07DF9BC11DDA099025DBD7F5940504A43E9681900D27E1DC3C2CEA25ED7A9FED",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "ore-heatmaps-v1.json": "20C02C4032446EC96E71721BCCD8D42CBD483316159989939906F4E8560F2BC9",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=True",
+      "oreSettings": "ore rules: enabled=True/v1, contact half-width=96",
+      "bogPeatAdapter": "bog peat adapter: PASS; iron provider=False, rocky bog disabled=True, drops=game:peatbrick=2",
+      "prospectingPassSites": 2,
+      "maximumBogPeatPlacementEvents": 0.0,
+      "siteCount": 2,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "saltMapSamples": [
+        {
+          "place": "57,25",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 2057
+        },
+        {
+          "place": "50.2,-5.2",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 2054
+        }
+      ],
+      "controlledFaunaObserved": 0,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    },
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-full-historical-20260929-231330",
+      "earthVersion": "0.11.0",
+      "earthDllSha256": "07DF9BC11DDA099025DBD7F5940504A43E9681900D27E1DC3C2CEA25ED7A9FED",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "ore-heatmaps-v1.json": "20C02C4032446EC96E71721BCCD8D42CBD483316159989939906F4E8560F2BC9",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=True",
+      "oreSettings": "ore rules: enabled=True/v1, contact half-width=96",
+      "bogPeatAdapter": "bog peat adapter: PASS; iron provider=True, rocky bog disabled=True, drops=game:peatbrick=2,game:stone-bogiron=1",
+      "prospectingPassSites": 6,
+      "maximumBogPeatPlacementEvents": 27887.0,
+      "siteCount": 6,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "saltMapSamples": [
+        {
+          "place": "58.25,24.75",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 2057
+        },
+        {
+          "place": "58.75,25.25",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 2061
+        },
+        {
+          "place": "58.25,26.75",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 2068
+        },
+        {
+          "place": "54.75,26.75",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 1030
+        },
+        {
+          "place": "55.75,22.25",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 1031
+        },
+        {
+          "place": "60.75,25.25",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 19
+        }
+      ],
+      "controlledFaunaObserved": 0,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    },
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-vanilla-historical-20260929-231740",
+      "earthVersion": "0.11.0",
+      "earthDllSha256": "A7515111173257A75C0F73CDD5CB20FD7E971BE055F010C05BA8965504E71E47",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "ore-heatmaps-v1.json": "20C02C4032446EC96E71721BCCD8D42CBD483316159989939906F4E8560F2BC9",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=True",
+      "oreSettings": "ore rules: enabled=False/v0, contact half-width=0",
+      "bogPeatAdapter": "",
+      "prospectingPassSites": 0,
+      "maximumBogPeatPlacementEvents": null,
+      "siteCount": 1,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "saltMapSamples": [
+        {
+          "place": "57,25",
+          "positiveCells": 581,
+          "totalCells": 1089,
+          "maximumNativeValue": 2132
+        }
+      ],
+      "controlledFaunaObserved": 0,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    },
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-full-historical-20260929-231745",
+      "earthVersion": "0.11.0",
+      "earthDllSha256": "A7515111173257A75C0F73CDD5CB20FD7E971BE055F010C05BA8965504E71E47",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "ore-heatmaps-v1.json": "20C02C4032446EC96E71721BCCD8D42CBD483316159989939906F4E8560F2BC9",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=True",
+      "oreSettings": "ore rules: enabled=True/v1, contact half-width=96",
+      "bogPeatAdapter": "bog peat adapter: PASS; iron provider=True, rocky bog disabled=True, drops=game:peatbrick=2,game:stone-bogiron=1",
+      "prospectingPassSites": 3,
+      "maximumBogPeatPlacementEvents": 13.0,
+      "siteCount": 3,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "saltMapSamples": [
+        {
+          "place": "58.25,24.75",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 2057
+        },
+        {
+          "place": "50.2,-5.2",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 2054
+        },
+        {
+          "place": "-32.8,151.5",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 1042
+        }
+      ],
+      "controlledFaunaObserved": 2,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    },
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-vanilla-historical-20260929-232402",
+      "earthVersion": "0.12.0",
+      "earthDllSha256": "47E462F3A9C90B8A8235B8172FD16D3F6307217FB80307DB315708269E797F4E",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "ore-heatmaps-v1.json": "20C02C4032446EC96E71721BCCD8D42CBD483316159989939906F4E8560F2BC9",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=True",
+      "oreSettings": "ore rules: enabled=True/v1, contact half-width=96",
+      "bogPeatAdapter": "bog peat adapter: PASS; iron provider=False, rocky bog disabled=True, drops=game:peatbrick=2",
+      "prospectingPassSites": 2,
+      "maximumBogPeatPlacementEvents": 0.0,
+      "siteCount": 2,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "saltMapSamples": [
+        {
+          "place": "50.3,19",
+          "positiveCells": 1001,
+          "totalCells": 1089,
+          "maximumNativeValue": 1279
+        },
+        {
+          "place": "58.25,24.75",
+          "positiveCells": 623,
+          "totalCells": 1089,
+          "maximumNativeValue": 2128
+        }
+      ],
+      "controlledFaunaObserved": 0,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    },
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-full-historical-20260929-232405",
+      "earthVersion": "0.12.0",
+      "earthDllSha256": "47E462F3A9C90B8A8235B8172FD16D3F6307217FB80307DB315708269E797F4E",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "ore-heatmaps-v1.json": "20C02C4032446EC96E71721BCCD8D42CBD483316159989939906F4E8560F2BC9",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=True",
+      "oreSettings": "ore rules: enabled=True/v1, contact half-width=96",
+      "bogPeatAdapter": "bog peat adapter: PASS; iron provider=True, rocky bog disabled=True, drops=game:peatbrick=2,game:stone-bogiron=1",
+      "prospectingPassSites": 2,
+      "maximumBogPeatPlacementEvents": 0.0,
+      "siteCount": 2,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "saltMapSamples": [
+        {
+          "place": "58.25,24.75",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 2057
+        },
+        {
+          "place": "-22.3,-68.9",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 14
+        }
+      ],
+      "controlledFaunaObserved": 0,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    },
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-vanilla-historical-20260929-232610",
+      "earthVersion": "0.12.0",
+      "earthDllSha256": "625319579729C15C8BA015C84550910365D0EDFD75378243CA64A0299A388318",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "ore-heatmaps-v1.json": "20C02C4032446EC96E71721BCCD8D42CBD483316159989939906F4E8560F2BC9",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=True",
+      "oreSettings": "ore rules: enabled=True/v1, contact half-width=96",
+      "bogPeatAdapter": "bog peat adapter: PASS; iron provider=False, rocky bog disabled=True, drops=game:peatbrick=2",
+      "prospectingPassSites": 1,
+      "maximumBogPeatPlacementEvents": 0.0,
+      "siteCount": 1,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "saltMapSamples": [
+        {
+          "place": "58.25,24.75",
+          "positiveCells": 623,
+          "totalCells": 1089,
+          "maximumNativeValue": 2128
+        }
+      ],
+      "controlledFaunaObserved": 0,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    },
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-full-historical-20260929-232614",
+      "earthVersion": "0.12.0",
+      "earthDllSha256": "625319579729C15C8BA015C84550910365D0EDFD75378243CA64A0299A388318",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "ore-heatmaps-v1.json": "20C02C4032446EC96E71721BCCD8D42CBD483316159989939906F4E8560F2BC9",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=True",
+      "oreSettings": "ore rules: enabled=True/v1, contact half-width=96",
+      "bogPeatAdapter": "bog peat adapter: PASS; iron provider=True, rocky bog disabled=True, drops=game:peatbrick=2,game:stone-bogiron=1",
+      "prospectingPassSites": 1,
+      "maximumBogPeatPlacementEvents": 0.0,
+      "siteCount": 1,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "saltMapSamples": [
+        {
+          "place": "58.25,24.75",
+          "positiveCells": 1089,
+          "totalCells": 1089,
+          "maximumNativeValue": 2057
+        }
+      ],
+      "controlledFaunaObserved": 0,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    }
+  ]
+}

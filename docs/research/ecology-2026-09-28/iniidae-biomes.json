@@ -1,0 +1,38 @@
+[
+  {
+    "file": "iniidae:entities/water/iniidae-adult.json",
+    "op": "add",
+    "path": "/attributesByType",
+    "side": "Server",
+    "value": {
+      "*-lipotesvexillifer": {
+        "biorealm": [
+         "eastern palearctic"
+        ]
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "biomes"
+      }
+    ]
+  },
+  {
+    "file": "iniidae:entities/water/iniidae-baby.json",
+    "op": "add",
+    "path": "/attributesByType",
+    "side": "Server",
+    "value": {
+      "*-lipotesvexillifer": {
+        "biorealm": [
+         "eastern palearctic"
+        ]
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "biomes"
+      }
+    ]
+  }
+]

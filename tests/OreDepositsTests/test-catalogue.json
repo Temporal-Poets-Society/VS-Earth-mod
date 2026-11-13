@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "group": "test",
+  "sources": [{"id": "test", "title": "Offline test catalogue (not real data)", "url": "", "licence": "n/a", "retrieved": "2026-11-08"}],
+  "gradeBands": {
+    "Cu": {"unit": "%", "medium": 0.6, "rich": 1.5, "bountiful": 4.0},
+    "Au": {"unit": "g/t", "medium": 2, "rich": 8, "bountiful": 30},
+    "Zn": {"unit": "%", "medium": 3, "rich": 7, "bountiful": 15}
+  },
+  "oreMetal": {"chalcopyrite": "Cu", "malachite": "Cu", "sphalerite": "Zn"},
+  "deposits": [
+    {"id": "t:stock", "name": "Test porphyry", "lat": 40.52, "lon": -112.15, "layer": "Cu",
+     "ores": [{"code": "chalcopyrite", "share": 0.85}, {"code": "malachite", "share": 0.15, "zone": "top"}],
+     "shape": "stock", "mt": 3230, "grade": 0.88, "unit": "%", "density": 2.7,
+     "topM": 0, "baseM": 1500, "lenKm": 3.0, "widKm": 2.0, "strikeDeg": 30, "dipDeg": 90, "age": "Cenozoic", "src": "test", "q": "A"},
+    {"id": "t:lens", "name": "Test massive sulphide", "lat": 37.6, "lon": -7.1, "layer": "Cu",
+     "ores": [{"code": "chalcopyrite", "share": 0.4}, {"code": "sphalerite", "share": 0.6, "zone": "bottom"}],
+     "shape": "lens", "mt": 250, "grade": 2.1, "unit": "%", "grades": {"Cu": 2.1, "Zn": 12},
+     "topM": 100, "baseM": 700, "lenKm": 4.0, "widKm": 0.4, "strikeDeg": 110, "dipDeg": 60, "age": "Paleozoic", "src": "test", "q": "B"},
+    {"id": "t:veins", "name": "Test lode gold", "lat": -30.75, "lon": 121.5, "layer": "Au",
+     "ores": [{"code": "quartz_nativegold", "share": 1}],
+     "shape": "veins", "mt": 180, "grade": 9.5, "unit": "g/t",
+     "topM": 0, "baseM": 1200, "lenKm": 5.0, "widKm": 1.5, "strikeDeg": 330, "dipDeg": 75, "age": "Precambrian", "src": "test", "q": "A"},
+    {"id": "t:blanket", "name": "Test placer", "lat": 64.0, "lon": -139.4, "layer": "Au",
+     "ores": [{"code": "earth-placergold", "share": 1}],
+     "shape": "blanket", "mt": 40, "grade": 1.2, "unit": "g/t",
+     "topM": 0, "baseM": 8, "lenKm": 12, "widKm": 1.5, "strikeDeg": 45, "age": "Cenozoic", "src": "test", "q": "B", "est": ["baseM"]},
+    {"id": "t:dome", "name": "Test salt dome", "lat": 29.9, "lon": -93.9, "layer": "NaCl",
+     "ores": [{"code": "halite", "share": 0.97}, {"code": "sulfur", "share": 0.03, "zone": "top"}],
+     "shape": "dome", "mt": 30000, "topM": 300, "baseM": 6000, "lenKm": 2.5, "widKm": 2.5, "age": "Mesozoic", "src": "test", "q": "C"},
+    {"id": "t:coal-lens", "name": "Test coal outside a basin", "lat": 51.1, "lon": 16.0, "layer": "C_coal",
+     "ores": [{"code": "bituminouscoal", "share": 1}],
+     "shape": "lens", "mt": 50, "topM": 20, "baseM": 120, "lenKm": 3, "widKm": 2, "dipDeg": 5, "src": "test", "q": "C"},
+    {"id": "t:bad-mt", "name": "No tonnage", "lat": 10, "lon": 10, "layer": "Cu", "ores": [{"code": "malachite", "share": 1}], "shape": "stock"},
+    {"id": "t:bad-shape", "name": "Unknown shape", "lat": 10, "lon": 10, "layer": "Cu", "ores": [{"code": "malachite", "share": 1}], "shape": "blob", "mt": 1},
+    {"id": "t:bad-lat", "name": "Out of range", "lat": 100, "lon": 10, "layer": "Cu", "ores": [{"code": "malachite", "share": 1}], "shape": "stock", "mt": 1},
+    {"id": "t:stock", "name": "Duplicate id", "lat": 10, "lon": 10, "layer": "Cu", "ores": [{"code": "malachite", "share": 1}], "shape": "stock", "mt": 1}
+  ],
+  "areas": [
+    {"id": "t:basin", "name": "Test coal basin", "layer": "C_coal", "age": "Carboniferous", "src": "test",
+     "geometry": {"type": "Polygon", "coordinates": [[[7.0, 51.3], [7.6, 51.3], [7.6, 51.6], [7.0, 51.6], [7.0, 51.3]]]},
+     "beds": [{"code": "bituminouscoal", "topM": 30, "thickM": 6.0, "cover": 0.8},
+              {"code": "anthracite", "topM": 600, "thickM": 3.0, "cover": 0.6}],
+     "mt": 50000},
+    {"id": "t:bad-area", "name": "Line, not a polygon", "layer": "C_coal", "src": "test",
+     "geometry": {"type": "LineString", "coordinates": [[7.0, 51.3], [7.6, 51.3]]},
+     "beds": [{"code": "lignite", "topM": 10, "thickM": 5}]}
+  ]
+}

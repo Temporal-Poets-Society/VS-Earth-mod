@@ -1,0 +1,100 @@
+floodplains.bin: 2707673 bytes, 37411 blocks, 6153008 flooded 15" cells, 591045 ring cells
+settings: fall 0.15 m/km, flood height 1.2·Q^0.3 within 1.5..15 m, down to 1 flood heights below the water, seeds where the aridity index is below 0.3
+seeds: 13455 reaches, 94068 pieces, 264516 7.5" cells; flood: 23635004 7.5" cells, 4552 tiles
+flooded area: 1079937 km² (cells whose flood level is set; the game floods only the ground at or below it)
+   40.. 50 N   60..  70 E     104071 km²
+   20.. 30 N   60..  70 E     100710 km²
+   30.. 40 N   40..  50 E      93819 km²
+   40.. 50 N   80..  90 E      71456 km²
+   30.. 40 N   70..  80 E      69873 km²
+   30.. 40 N   60..  70 E      56515 km²
+   10.. 20 N  -10..   0 E      49630 km²
+    0.. 10 N   40..  50 E      46313 km²
+   20.. 30 N   70..  80 E      44509 km²
+   40.. 50 N   50..  60 E      41515 km²
+   10.. 20 N   30..  40 E      41200 km²
+   40.. 50 N   40..  50 E      36399 km²
+  -40..-30 N  140.. 150 E      33669 km²
+   10.. 20 N   10..  20 E      28192 km²
+  -20..-10 N   20..  30 E      26341 km²
+   30.. 40 N   30..  40 E      22922 km²
+  -40..-30 N  -70.. -60 E      17825 km²
+   20.. 30 N   30..  40 E      15718 km²
+   40.. 50 N  100.. 110 E      15606 km²
+   10.. 20 N  -20.. -10 E      13459 km²
+   40.. 50 N   70..  80 E      10855 km²
+  -20..-10 N  -70.. -60 E      10012 km²
+   30.. 40 N   80..  90 E       9649 km²
+   30.. 40 N -120..-110 E       9626 km²
+   60.. 70 N -150..-140 E       8570 km²
+  -30..-20 N   20..  30 E       8255 km²
+   60.. 70 N  160.. 170 E       7701 km²
+    0.. 10 N   30..  40 E       7385 km²
+   30.. 40 N  100.. 110 E       6333 km²
+  -50..-40 N  -70.. -60 E       5971 km²
+   30.. 40 N -130..-120 E       5691 km²
+   10.. 20 N    0..  10 E       5030 km²
+   30.. 40 N -110..-100 E       4971 km²
+   40.. 50 N   20..  30 E       4627 km²
+  -20..-10 N  -50.. -40 E       4192 km²
+   50.. 60 N   70..  80 E       4118 km²
+   40.. 50 N -120..-110 E       3683 km²
+  -10..  0 N  -50.. -40 E       3127 km²
+  -20..-10 N   10..  20 E       2604 km²
+   20.. 30 N -110..-100 E       2498 km²
+   10.. 20 N   40..  50 E       2310 km²
+  -10..  0 N  -40.. -30 E       1877 km²
+  -10..  0 N   30..  40 E       1836 km²
+  -10..  0 N   40..  50 E       1760 km²
+   30.. 40 N   90.. 100 E       1755 km²
+  -50..-40 N  -80.. -70 E       1702 km²
+   60.. 70 N  150.. 160 E       1191 km²
+  -40..-30 N  130.. 140 E       1103 km²
+  -30..-20 N   40..  50 E       1088 km²
+   40.. 50 N -110..-100 E        994 km²
+   40.. 50 N -130..-120 E        790 km²
+  -30..-20 N   10..  20 E        782 km²
+   50.. 60 N   50..  60 E        763 km²
+  -10..  0 N  -90.. -80 E        733 km²
+   20.. 30 N -100.. -90 E        693 km²
+   10.. 20 N   70..  80 E        685 km²
+   40.. 50 N  -10..   0 E        578 km²
+  -20..-10 N  -80.. -70 E        561 km²
+   40.. 50 N   90.. 100 E        528 km²
+  -60..-50 N  -70.. -60 E        506 km²
+  -60..-50 N  -80.. -70 E        440 km²
+   20.. 30 N   40..  50 E        433 km²
+   30.. 40 N   20..  30 E        412 km²
+  -30..-20 N  -70.. -60 E        380 km²
+  -20..-10 N   30..  40 E        345 km²
+  -40..-30 N   20..  30 E        298 km²
+  -40..-30 N  -80.. -70 E        254 km²
+   20.. 30 N   90.. 100 E        250 km²
+  -10..  0 N  -80.. -70 E        175 km²
+   50.. 60 N -130..-120 E         29 km²
+   40.. 50 N  110.. 120 E         26 km²
+   40.. 50 N    0..  10 E         23 km²
+places (level, ground, ambient aridity index; soil where the ground is at or below the level):
+  Luxor, west bank                25.7N    32.6E  level    82.2  ground    76.0  AI 0.00  SOIL
+  Luxor, east bank                25.7N    32.7E  level    82.2  ground    75.0  AI 0.00  SOIL
+  Asyut, east bank                27.2N    31.3E  level    58.9  ground    53.0  AI 0.00  SOIL
+  Beni Suef                       29.1N    31.1E  level    36.3  ground    29.0  AI 0.01  SOIL
+  Delta, Rosetta side             31.1N    30.8E  level    10.3  ground     4.0  AI 0.07  SOIL
+  Delta, middle                   30.9N    31.2E  level     8.6  ground     7.0  AI 0.04  SOIL
+  Delta, Damietta side            31.1N    31.5E  level     5.9  ground     3.0  AI 0.05  SOIL
+  Delta, west                     31.0N    30.5E  level     8.6  ground     4.0  AI 0.07  SOIL
+  Delta, east                     30.7N    31.7E  level    12.8  ground     5.0  AI 0.03  SOIL
+  Mesopotamia, Hilla              32.5N    44.6E  level    30.2  ground    26.0  AI 0.06  SOIL
+  Mesopotamia, south              31.2N    46.5E  level     8.2  ground     5.0  AI 0.06  SOIL
+  Indus, Sindh                    26.0N    68.6E  level    35.4  ground    26.0  AI 0.07  SOIL
+  Khorezm                         41.5N    60.3E  level   102.1  ground    91.0  AI 0.08  SOIL
+  Suez spot                       31.0N    32.3E  level     NaN  ground     0.0  AI 0.05  bare
+  Western Desert                  26.5N    28.5E  level     NaN  ground   176.0  AI 0.00  bare
+  Wadi Natrun                     30.4N    30.3E  level     NaN  ground   -19.0  AI 0.04  bare
+  Negev                           30.6N    34.8E  level     NaN  ground   655.0  AI 0.09  bare
+  Gobi                            43.0N   105.0E  level     NaN  ground  1644.0  AI 0.09  bare
+  Central Sahara                  23.0N    10.0E  level     NaN  ground   754.0  AI 0.01  bare
+  Rub' al Khali                   20.0N    50.0E  level     NaN  ground   280.0  AI 0.03  bare
+  Atacama                        -23.5N   -69.5E  level     NaN  ground  2002.0  AI 0.00  bare
+  Namib                          -24.5N    15.2E  level     NaN  ground   598.0  AI 0.06  bare
+  Karakum, 140 km from the Amu Darya    39.2N    62.0E  level     NaN  ground   172.0  AI 0.08  bare

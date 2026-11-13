@@ -1,0 +1,555 @@
+// Frozen Earth0.11 implementation used only as an independent query/index oracle.
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+namespace EarthMap.Core
+{
+    public sealed class LegacyRiverNetwork
+    {
+        public readonly double WidthScale;
+        /// <summary>Smallest navigable river (m³/s): full width and depth from here.</summary>
+        public readonly double MinQ;
+        /// <summary>Streams: "ends" (each river continued upstream along its main branch), "all" or "none".</summary>
+        public readonly string StreamMode;
+        /// <summary>Smallest stream (m³/s), one block wide.</summary>
+        public readonly double StreamMinQ;
+        public readonly int MinPool;
+        /// <summary>World size relative to the standard 256k world (Cylinder World ring 204 800): widths scale with it.</summary>
+        public readonly double SizeScale;
+        /// <summary>0..1: how much the courses are straightened for the widths (loop cut-offs, smoothing).</summary>
+        public readonly double Straighten;
+        bool[] kept;
+        double[][] lineX, lineZ;
+        /// <summary>A reach's course in world coordinates as laid out (straightened), null if not kept.</summary>
+        public bool ReachLine(int reach, out double[] x, out double[] z)
+        {
+            x = lineX != null && reach >= 0 && reach < lineX.Length ? lineX[reach] : null;
+            z = x != null ? lineZ[reach] : null;
+            return x != null;
+        }
+        /// <summary>Whether a reach is part of this world's rivers (navigable, or a stream).</summary>
+        public bool Kept(int reach) => kept != null && reach >= 0 && reach < kept.Length && kept[reach];
+        public const int RampLength = 6;
+
+        struct Seg
+        {
+            public float X1, Z1, X2, Z2, Q, Len;
+            /// <summary>Reach index, and the distance along the reach at the segment start.</summary>
+            public int Reach;
+            public float S0;
+            /// <summary>Prolongs a river mouth out to open water (the river data can stop short of the coastline).</summary>
+            public bool Mouth;
+        }
+
+        /// <summary>
+        /// Per reach: pool top at its start, distance from the last step upstream to its start, its steps; its length, the
+        /// reach downstream and the inflow it continues (the river's own upstream reach, -1 at a source).
+        /// </summary>
+        sealed class Pools
+        {
+            public int P0;
+            public float D0;
+            public float[] Drops;
+            public bool[] Rapid;
+            public double Len;
+            public int Next = -1, MainIn = -1;
+        }
+
+        Seg[] segs;
+        Pools[] pools;
+        double[] dbgCap;
+        double[][] dbgBound;
+        readonly Dictionary<long, int[]> grid = new Dictionary<long, int[]>();
+        const double Cell = 128;
+        readonly EarthGeometry geo;
+        public int SegmentCount => segs?.Length ?? 0;
+
+        public LegacyRiverNetwork(List<RiverReach> reaches, EarthGeometry geo, double minQ, double widthScale, Func<double, int> waterTop,
+            string streamMode = "none", double streamMinQ = 20, double sizeScale = 1, double straighten = 0, double smoothWidths = 0, int minPool = 32)
+        {
+            this.geo = geo;
+            MinQ = minQ;
+            WidthScale = widthScale;
+            SizeScale = sizeScale > 0 ? sizeScale : 1;
+            Straighten = Math.Clamp(straighten, 0, 1);
+            StreamMode = streamMode ?? "none";
+            StreamMinQ = Math.Min(streamMinQ, minQ);
+            MinPool = Math.Max(RampLength, (int)Math.Round(minPool * SizeScale));
+
+            int nr = reaches.Count;
+            var keep = kept = SelectReaches(reaches, minQ, StreamMode, StreamMinQ);
+            // world positions, levels and lake/sea flags per reach
+            var xs = new double[nr][];
+            var zs = new double[nr][];
+            var lev = new double[nr][];
+            var fix = new bool[nr][];
+            for (int r = 0; r < nr; r++)
+            {
+                var re = reaches[r];
+                if (!keep[r]) continue;
+                int n = re.Lon.Length;
+                xs[r] = new double[n]; zs[r] = new double[n]; lev[r] = new double[n]; fix[r] = new bool[n];
+                for (int k = 0; k < n; k++)
+                {
+                    geo.FromGeo(re.Lat[k], re.Lon[k], out xs[r][k], out zs[r][k]);
+                    lev[r][k] = re.Level[k];
+                    fix[r][k] = re.Fixed[k];
+                }
+            }
+            // straighter courses for the exaggerated widths (loop cut-offs, smoothing)
+            RiverStraighten.Apply(reaches, keep, xs, zs, lev, fix, HalfWidth, Straighten, Math.Max(0, smoothWidths));
+            lineX = xs;
+            lineZ = zs;
+            var lens = new double[nr][];
+            for (int r = 0; r < nr; r++)
+            {
+                if (!keep[r]) continue;
+                int n = xs[r].Length;
+                lens[r] = new double[Math.Max(0, n - 1)];
+                for (int k = 1; k < n; k++)
+                {
+                    double len = Math.Sqrt(Sq(xs[r][k] - xs[r][k - 1]) + Sq(zs[r][k] - zs[r][k - 1]));
+                    lens[r][k - 1] = len > 4000 ? 1 : len; // across the seam
+                }
+            }
+            var inflows = new List<int>[nr];
+            for (int r = 0; r < nr; r++)
+            {
+                if (!keep[r]) continue;
+                int nx = reaches[r].Next;
+                if (nx >= 0 && nx < nr && keep[nx]) (inflows[nx] ??= new List<int>()).Add(r);
+            }
+
+            // Backward bounds (how high a pool may still be to reach a fixed level downstream with a step every
+            // RampLength blocks) and a forward pass placing the steps. Iterated so tributaries descend to the level the
+            // main river actually has at the confluence.
+            var bound = new double[nr][];
+            var endP = new int[nr];
+            var endD = new double[nr];
+            var junctionCap = new double[nr];
+            var holdAtStart = new double[nr];
+            for (int r = 0; r < nr; r++) junctionCap[r] = double.PositiveInfinity;
+            pools = new Pools[nr];
+            var drops = new List<float>();
+            for (int iter = 0; iter < 4; iter++)
+            {
+                // backward: reaches are in topological order (sources first), so walk from the end
+                for (int r = nr - 1; r >= 0; r--)
+                {
+                    if (!keep[r]) continue;
+                    var re = reaches[r];
+                    int n = xs[r].Length;
+                    var bd = bound[r] ??= new double[n];
+                    int nx = re.Next;
+                    double b = junctionCap[r];
+                    if (nx >= 0 && nx < nr && keep[nx] && bound[nx] != null) b = Math.Min(b, bound[nx][0]);
+                    // arrive at a lake's or the sea's level a little before the first vertex in it (the drawn shore can
+                    // be up to a data cell ahead of it)
+                    double hold = nx >= 0 && nx < nr && keep[nx] ? holdAtStart[nx] : 0, margin = 16 + 2 * HalfWidth(re.Q);
+                    for (int k = n - 1; k >= 0; k--)
+                    {
+                        if (k < n - 1)
+                        {
+                            double len = lens[r][k], held = Math.Min(hold, len);
+                            hold -= held;
+                            b += (len - held) / RampLength;
+                        }
+                        if (fix[r][k])
+                        {
+                            // a lake or the sea has its own level: what lies downstream (a fall out of it) never lowers it
+                            b = waterTop(lev[r][k]);
+                            hold = margin;
+                        }
+                        bd[k] = b;
+                    }
+                    holdAtStart[r] = hold;
+                }
+                // forward, one block at a time along each reach
+                for (int r = 0; r < nr; r++)
+                {
+                    if (!keep[r]) continue;
+                    var re = reaches[r];
+                    int n = xs[r].Length;
+                    int P;
+                    double dsd;
+                    var ins = inflows[r];
+                    int mainIn = -1;
+                    if (ins != null && ins.Count > 0)
+                    {
+                        // the lowest inflow sets the level (the others step down to it); of equals, the biggest river
+                        int best = ins[0];
+                        foreach (int i in ins)
+                        {
+                            if (endP[i] < endP[best] || (endP[i] == endP[best] && reaches[i].Q > reaches[best].Q)) best = i;
+                        }
+                        P = endP[best];
+                        dsd = endD[best];
+                        mainIn = best;
+                    }
+                    else
+                    {
+                        P = (int)Math.Min(waterTop(lev[r][0]), Math.Floor(bound[r][0]));
+                        dsd = 1e6;
+                    }
+                    if (fix[r][0]) P = Math.Min(P, waterTop(lev[r][0]));
+                    var pl = pools[r] ??= new Pools();
+                    pl.MainIn = mainIn;
+                    pl.Next = re.Next >= 0 && re.Next < nr && keep[re.Next] ? re.Next : -1;
+                    pl.P0 = P;
+                    pl.D0 = (float)Math.Min(dsd, 1e6);
+                    drops.Clear();
+                    double s0 = 0;
+                    for (int k = 1; k < n; k++)
+                    {
+                        double L = lens[r][k - 1];
+                        int steps = Math.Max(1, (int)Math.Ceiling(L));
+                        for (int u = 1; u <= steps; u++)
+                        {
+                            double f = (double)u / steps, s = s0 + f * L;
+                            dsd += L / steps;
+                            // the valley floor here, and how high the pool may be to still meet the levels downstream
+                            int valley = waterTop(lev[r][k - 1] + (lev[r][k] - lev[r][k - 1]) * f);
+                            double cap = Math.Floor(bound[r][k] + (1 - f) * L / RampLength); // may be infinite
+                            if (P > cap && dsd >= 1)
+                            {
+                                P--; dsd = 0; drops.Add((float)s); // forced (a lake, the sea, the main river ahead)
+                            }
+                            else if (P > valley && (dsd >= MinPool || (P > valley + 1 && dsd >= RampLength)))
+                            {
+                                P--; dsd = 0; drops.Add((float)s);
+                            }
+                        }
+                        // a lake or the sea: exactly its level
+                        if (fix[r][k])
+                        {
+                            int t = waterTop(lev[r][k]);
+                            while (P > t)
+                            {
+                                P--; dsd = 0; drops.Add((float)(s0 + L));
+                            }
+                        }
+                        s0 += L;
+                    }
+                    pl.Drops = drops.ToArray();
+                    pl.Len = s0;
+                    endP[r] = P;
+                    endD[r] = dsd;
+                }
+                // tributaries whose last pool is above the main river at the confluence descend to it next round
+                bool changed = false;
+                for (int r = 0; r < nr; r++)
+                {
+                    var ins = inflows[r];
+                    if (ins == null || ins.Count < 2) continue;
+                    int pm = int.MaxValue;
+                    foreach (int i in ins) pm = Math.Min(pm, endP[i]);
+                    foreach (int i in ins)
+                    {
+                        if (endP[i] > pm && junctionCap[i] > pm) { junctionCap[i] = pm; changed = true; }
+                    }
+                }
+                if (!changed) break;
+            }
+            dbgCap = junctionCap;
+            dbgBound = bound;
+            // rapids: steps closer together than three quarters of a normal pool
+            for (int r = 0; r < nr; r++)
+            {
+                var pl = pools[r];
+                if (pl == null) continue;
+                var d = pl.Drops;
+                pl.Rapid = new bool[d.Length];
+                for (int i = 0; i < d.Length; i++)
+                {
+                    double gapUp = i > 0 ? d[i] - d[i - 1] : pl.D0 + d[i];
+                    double gapDown = i + 1 < d.Length ? d[i + 1] - d[i] : double.MaxValue;
+                    pl.Rapid[i] = Math.Min(gapUp, gapDown) < MinPool * 0.75;
+                }
+            }
+
+            var list = new List<Seg>();
+            for (int r = 0; r < nr; r++)
+            {
+                if (!keep[r]) continue;
+                var re = reaches[r];
+                double s0 = 0;
+                for (int k = 1; k < xs[r].Length; k++)
+                {
+                    double x1 = xs[r][k - 1], z1 = zs[r][k - 1], x2 = xs[r][k], z2 = zs[r][k];
+                    if (Math.Abs(x2 - x1) <= 4000 && Math.Abs(z2 - z1) <= 4000)
+                    {
+                        list.Add(new Seg
+                        {
+                            X1 = (float)x1, Z1 = (float)z1, X2 = (float)x2, Z2 = (float)z2, Q = re.Q, Len = (float)lens[r][k - 1],
+                            Reach = r, S0 = (float)s0,
+                        });
+                    }
+                    s0 += lens[r][k - 1];
+                }
+            }
+            // river mouths: HydroRIVERS lines can end a few km short of the coast in ETOPO (the Daugava stops ~15 blocks
+            // before the Gulf of Riga), so every river ending in the sea or a lake gets prolonged along its last
+            // direction; the terrain only lets it cut through low ground
+            for (int r = 0; r < nr; r++)
+            {
+                if (!keep[r] || pools[r].Next >= 0) continue;
+                var re = reaches[r];
+                int n = xs[r].Length;
+                if (n < 2 || !(fix[r][n - 1] || lev[r][n - 1] <= 5)) continue; // into a lake, or at sea level
+                int k = n - 2;
+                double back = lens[r][k];
+                while (k > 0 && back < 24) back += lens[r][--k];
+                double ex = xs[r][n - 1], ez = zs[r][n - 1];
+                double dx = ex - xs[r][k], dz = ez - zs[r][k], dl = Math.Sqrt(dx * dx + dz * dz);
+                if (dl < 1 || dl > 4000) continue;
+                double ext = 2 * HalfWidth(re.Q) + 40;
+                list.Add(new Seg
+                {
+                    X1 = (float)ex, Z1 = (float)ez, X2 = (float)(ex + dx / dl * ext), Z2 = (float)(ez + dz / dl * ext), Q = re.Q, Len = (float)ext,
+                    Reach = r, S0 = (float)pools[r].Len, Mouth = true,
+                });
+            }
+            segs = list.ToArray();
+            var cells = new Dictionary<long, List<int>>();
+            for (int i = 0; i < segs.Length; i++)
+            {
+                var s = segs[i];
+                double reach = Reach(s.Q);
+                int cx0 = (int)Math.Floor((Math.Min(s.X1, s.X2) - reach) / Cell), cx1 = (int)Math.Floor((Math.Max(s.X1, s.X2) + reach) / Cell);
+                int cz0 = (int)Math.Floor((Math.Min(s.Z1, s.Z2) - reach) / Cell), cz1 = (int)Math.Floor((Math.Max(s.Z1, s.Z2) + reach) / Cell);
+                for (int cz = cz0; cz <= cz1; cz++)
+                {
+                    for (int cx = cx0; cx <= cx1; cx++)
+                    {
+                        long key = Key(cx, cz);
+                        if (!cells.TryGetValue(key, out var l)) cells[key] = l = new List<int>(4);
+                        l.Add(i);
+                    }
+                }
+            }
+            foreach (var kv in cells) grid[kv.Key] = kv.Value.ToArray();
+        }
+
+        static double Sq(double v) => v * v;
+        static long Key(int cx, int cz) => ((long)cx << 32) | (uint)cz;
+
+        /// <summary>Half the water width (blocks).</summary>
+        public double HalfWidth(double q)
+        {
+            double nav = 0.5 * Math.Clamp(2.0 * Math.Pow(Math.Max(q, MinQ), 0.3), 5, 48) * WidthScale * SizeScale;
+            if (q >= MinQ) return nav;
+            // streams narrow towards the smallest, one block wide (0.8: still continuous along a diagonal)
+            return 0.8 + (nav - 0.8) * Math.Pow(StreamT(q), 1.5);
+        }
+        /// <summary>Channel depth at the centre (blocks): a block more for wider rivers (bigger ships); streams shallower.</summary>
+        public double Depth(double q)
+        {
+            double nav = Math.Clamp(2 + 0.6 * Math.Log(Math.Max(q, MinQ)), 4, 9) + Math.Max(0, WidthScale - 1) * 2;
+            if (q >= MinQ) return nav;
+            return 1 + (nav - 1) * Math.Pow(StreamT(q), 1.5);
+        }
+        /// <summary>Width of the flat bank strip beyond the water (blocks).</summary>
+        public double Bank(double q) => (1 + StreamT(q)) * SizeScale + 0.25 * HalfWidth(q);
+        /// <summary>How far beyond the bank the valley eases back into the natural terrain (blocks); streams cut small valleys.</summary>
+        public double Valley(double q) => (4 + 12 * StreamT(q)) * SizeScale + 1.5 * HalfWidth(q);
+        /// <summary>0 at the smallest stream, 1 from the navigable size on (by the logarithm of the discharge).</summary>
+        public double StreamT(double q) => q >= MinQ ? 1 : Math.Clamp(Math.Log(Math.Max(q, 1e-3) / StreamMinQ) / Math.Log(MinQ / StreamMinQ), 0, 1);
+
+        /// <summary>
+        /// The reaches this world shows: the navigable rivers (discharge from minQ), and streams by mode: "all" down to
+        /// streamMinQ, "ends" only the continuation of each river upstream from where it drops below minQ, along its
+        /// biggest branch, down to streamMinQ.
+        /// </summary>
+        static bool[] SelectReaches(List<RiverReach> reaches, double minQ, string mode, double streamMinQ)
+        {
+            int nr = reaches.Count;
+            var keep = new bool[nr];
+            for (int r = 0; r < nr; r++)
+            {
+                double q = reaches[r].Q;
+                keep[r] = q >= minQ || (mode == "all" && q >= streamMinQ);
+            }
+            if (mode != "ends") return keep;
+            // the biggest inflow of each reach
+            var bigIn = new int[nr];
+            var bigQ = new double[nr];
+            for (int r = 0; r < nr; r++) bigIn[r] = -1;
+            for (int r = 0; r < nr; r++)
+            {
+                int nx = reaches[r].Next;
+                if (nx < 0 || nx >= nr) continue;
+                if (reaches[r].Q > bigQ[nx]) { bigQ[nx] = reaches[r].Q; bigIn[nx] = r; }
+            }
+            for (int r = 0; r < nr; r++)
+            {
+                // the upper end of a navigable river: its biggest inflow is below the navigable size
+                if (reaches[r].Q < minQ) continue;
+                int up = bigIn[r];
+                if (up < 0 || reaches[up].Q >= minQ) continue;
+                for (int guard = 0; up >= 0 && guard < 100000 && reaches[up].Q >= streamMinQ && !keep[up]; guard++)
+                {
+                    keep[up] = true;
+                    up = bigIn[up];
+                }
+            }
+            return keep;
+        }
+        public double Reach(double q) => HalfWidth(q) + Bank(q) + Valley(q);
+
+        public struct Hit
+        {
+            public double Dist, Q, DirX, DirZ;
+            /// <summary>Top block of the still water here.</summary>
+            public int WaterTop;
+            /// <summary>0, or 1..6: height of the flowing layer on top of the pool (just after a step down).</summary>
+            public int Ramp;
+            /// <summary>The ramp is part of rapids (steps close together).</summary>
+            public bool Rapid;
+            /// <summary>On the prolongation of a river mouth (only low ground is cut).</summary>
+            public bool Mouth;
+        }
+
+        /// <summary>For tests: a reach's pools (start level, steps, neighbours).</summary>
+        public string DebugReach(int r)
+        {
+            var p = pools != null && r >= 0 && r < pools.Length ? pools[r] : null;
+            if (p == null) return "no pools";
+            return $"P0 {p.P0} D0 {p.D0:0} len {p.Len:0} next {p.Next} mainIn {p.MainIn} cap {dbgCap?[r]:0.#} bound0 {dbgBound?[r]?[0]:0.#} drops [{string.Join(", ", p.Drops.Select(d => d.ToString("0")))}]";
+        }
+
+        /// <summary>For tests: every step (world x, z of the centre line, pool top below it).</summary>
+        public IEnumerable<(double X, double Z, int Top)> Drops()
+        {
+            if (segs == null) yield break;
+            foreach (var s in segs)
+            {
+                var pl = pools[s.Reach];
+                for (int i = 0; i < pl.Drops.Length; i++)
+                {
+                    double a = pl.Drops[i] - s.S0;
+                    if (a < 0 || a >= s.Len) continue;
+                    double f = a / Math.Max(1e-6, s.Len);
+                    yield return (s.X1 + f * (s.X2 - s.X1), s.Z1 + f * (s.Z2 - s.Z1), pl.P0 - i - 1);
+                }
+            }
+        }
+
+        /// <summary>The river closest to (x, z) whose influence (water, bank, valley) reaches it.</summary>
+        public bool Nearest(double x, double z, out Hit hit)
+        {
+            hit = default;
+            if (segs == null || segs.Length == 0) return false;
+            x = geo.WrapX(x);
+            if (!grid.TryGetValue(Key((int)Math.Floor(x / Cell), (int)Math.Floor(z / Cell)), out var ids)) return false;
+            double best = double.MaxValue, bestD = 0, bestS = 0;
+            int bi = -1;
+            foreach (int i in ids)
+            {
+                ref readonly var s = ref segs[i];
+                double d = Project(in s, x, z, out double t);
+                if (d > Reach(s.Q)) continue;
+                // prefer the bigger river where two influence zones overlap (confluences)
+                double score = d - HalfWidth(s.Q);
+                if (score >= best) continue;
+                best = score;
+                bi = i;
+                bestD = d;
+                bestS = s.S0 + t * s.Len;
+            }
+            if (bi < 0) return false;
+            var b = segs[bi];
+            double hw = HalfWidth(b.Q);
+            // position along the reach, blended over the pieces of its centre line nearly as close as the nearest one (in a
+            // bend two pieces are about equally close), also those of the river's reaches just upstream and downstream,
+            // leaving out other loops of the same river (meanders)
+            var bp = pools[b.Reach];
+            double W = hw + 6, sum = 0, ws = 0;
+            foreach (int i in ids)
+            {
+                ref readonly var s = ref segs[i];
+                double offset;
+                if (s.Reach == b.Reach) offset = 0;
+                else if (s.Reach == bp.Next) offset = bp.Len;
+                else if (s.Reach == bp.MainIn) offset = -pools[s.Reach].Len;
+                else continue;
+                double d = Project(in s, x, z, out double t);
+                if (d >= bestD + W) continue;
+                double si = offset + s.S0 + t * s.Len;
+                if (Math.Abs(si - bestS) > 4 * hw + 24) continue;
+                double w = 1 - (d - bestD) / W;
+                w *= w;
+                sum += w * si;
+                ws += w;
+            }
+            double along = ws > 0 ? sum / ws : bestS;
+            // past either end of the reach: the pools of the reach there
+            int reach = b.Reach;
+            for (int guard = 0; guard < 8; guard++)
+            {
+                var p = pools[reach];
+                if (along > p.Len && p.Next >= 0) { along -= p.Len; reach = p.Next; }
+                else if (along < 0 && p.MainIn >= 0) { reach = p.MainIn; along += pools[reach].Len; }
+                else break;
+            }
+            var pl = pools[reach];
+            var drops = pl.Drops;
+            // steps at or before this position
+            int lo = 0, hi = drops.Length;
+            while (lo < hi)
+            {
+                int mid = (lo + hi) >> 1;
+                if (drops[mid] <= along) lo = mid + 1; else hi = mid;
+            }
+            int nDrops = lo;
+            double since = nDrops == 0 ? pl.D0 + along : along - drops[nDrops - 1];
+            double len = b.Len;
+            hit = new Hit
+            {
+                Dist = bestD, Q = b.Q,
+                DirX = len > 0 ? (b.X2 - b.X1) / len : 0, DirZ = len > 0 ? (b.Z2 - b.Z1) / len : 0,
+                WaterTop = pl.P0 - nDrops,
+                Ramp = since >= 0 && since < RampLength ? RampLength - (int)Math.Floor(since) : 0,
+                Rapid = nDrops > 0 && pl.Rapid[nDrops - 1],
+                Mouth = b.Mouth,
+            };
+            return true;
+        }
+
+        /// <summary>
+        /// Distance from (x, z) to the nearest river water (its edge), looking only within the given distance; infinity
+        /// if there is none that close.
+        /// </summary>
+        public double DistanceToWater(double x, double z, double within)
+        {
+            if (segs == null || segs.Length == 0) return double.PositiveInfinity;
+            x = geo.WrapX(x);
+            double best = double.PositiveInfinity;
+            int cx0 = (int)Math.Floor((x - within) / Cell), cx1 = (int)Math.Floor((x + within) / Cell);
+            int cz0 = (int)Math.Floor((z - within) / Cell), cz1 = (int)Math.Floor((z + within) / Cell);
+            for (int cz = cz0; cz <= cz1; cz++)
+            {
+                for (int cx = cx0; cx <= cx1; cx++)
+                {
+                    if (!grid.TryGetValue(Key(cx, cz), out var ids)) continue;
+                    foreach (int i in ids)
+                    {
+                        ref readonly var s = ref segs[i];
+                        double d = Project(in s, x, z, out _) - HalfWidth(s.Q);
+                        if (d < best) best = d;
+                    }
+                }
+            }
+            return best <= within ? Math.Max(0, best) : double.PositiveInfinity;
+        }
+
+        static double Project(in Seg s, double x, double z, out double t)
+        {
+            double dx = s.X2 - s.X1, dz = s.Z2 - s.Z1;
+            double len2 = dx * dx + dz * dz;
+            t = len2 > 0 ? Math.Clamp(((x - s.X1) * dx + (z - s.Z1) * dz) / len2, 0, 1) : 0;
+            double px = s.X1 + t * dx, pz = s.Z1 + t * dz;
+            return Math.Sqrt((x - px) * (x - px) + (z - pz) * (z - pz));
+        }
+    }
+}

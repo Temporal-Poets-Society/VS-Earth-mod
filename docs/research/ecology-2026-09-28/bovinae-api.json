@@ -1,0 +1,322 @@
+{
+  "mod": {
+    "modid": 3103,
+    "assetid": 18395,
+    "name": "Fauna of the Stone Age: Bovinae",
+    "text": "<p><span style=\"font-weight: 400;\">A collection of Antelope, Bison, Buffalo and Cattle from the subfamily Bovinae, these powerful animals will act as a challenging prey source and potential danger for players and their crops. Currently this mod is missing Bos and Bison species, save for the Eurasian Auroch, the rest will come at a later date!</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" style=\"width: 2196px; border-spacing: 0px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col width=\"181\" /><col width=\"160\" /><col width=\"29\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"192\" /><col width=\"100\" /><col width=\"156\" /><col width=\"135\" /><col width=\"117\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /></colgroup>\n<tbody>\n<tr>\n<td style=\"width: 159.236px;\">Name</td>\n<td style=\"width: 176.123px;\">Scientific name</td>\n<td style=\"width: 89.6875px;\">Weight</td>\n<td style=\"width: 91.5046px;\">Health</td>\n<td style=\"width: 93.125px;\">Height</td>\n<td style=\"width: 91.088px;\">Damage</td>\n<td style=\"width: 86.1921px;\">Temp</td>\n<td style=\"width: 96.5857px;\">Preciptation</td>\n<td style=\"width: 89.8611px;\">Foliage Needs</td>\n<td style=\"width: 160.359px;\">Altitude</td>\n<td style=\"width: 89.8611px;\">Group Size</td>\n<td style=\"width: 130.787px;\">Meat Drops</td>\n<td style=\"width: 113.981px;\">Fat Drops</td>\n<td style=\"width: 102.558px;\">Hide Drops</td>\n<td style=\"width: 87.0023px;\">Other Drops</td>\n<td style=\"width: 93.5301px;\">Behaviors</td>\n<td style=\"width: 366.62px;\">Eats</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Eurasian aurochs</td>\n<td style=\"width: 176.123px;\">\n<div>\n<div>Bos primigenius primigenius &dagger;</div>\n</div>\n</td>\n<td style=\"width: 89.6875px;\">800/500/40</td>\n<td style=\"width: 91.5046px;\">42/30/10</td>\n<td style=\"width: 93.125px;\">1.8/1.5 shoulder</td>\n<td style=\"width: 91.088px;\">17/15 t2</td>\n<td style=\"width: 86.1921px;\">2-14</td>\n<td style=\"width: 96.5857px;\">25-80</td>\n<td style=\"width: 89.8611px;\">0-60% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.3</td>\n<td style=\"width: 89.8611px;\">1-6 M&amp;F, 4-10 M&amp;F&amp;B</td>\n<td style=\"width: 130.787px;\">48-60/31-37/4-6</td>\n<td style=\"width: 113.981px;\">9-11,6-8,1-3</td>\n<td style=\"width: 102.558px;\">6 H, 5H, 1L</td>\n<td style=\"width: 87.0023px;\">M&amp;F horns</td>\n<td style=\"width: 93.5301px;\">2 Block step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Nilgai</td>\n<td style=\"width: 176.123px;\">Boselaphus tragocamelus</td>\n<td style=\"width: 89.6875px;\">200/155/30</td>\n<td style=\"width: 91.5046px;\">20/18/9</td>\n<td style=\"width: 93.125px;\">1.5/1.25 shoulder</td>\n<td style=\"width: 91.088px;\">9 t2</td>\n<td style=\"width: 86.1921px;\">24-34</td>\n<td style=\"width: 96.5857px;\">40-85%</td>\n<td style=\"width: 89.8611px;\">40-100% Shrubs</td>\n<td style=\"width: 160.359px;\">1.0-1.4</td>\n<td style=\"width: 89.8611px;\">2-18 M, 2-12 F&amp;B</td>\n<td style=\"width: 130.787px;\">22-26/17-19/4-6</td>\n<td style=\"width: 113.981px;\">4-5,3-4,1</td>\n<td style=\"width: 102.558px;\">4L,3L, 1L</td>\n<td style=\"width: 87.0023px;\">M Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Water buffalo</td>\n<td style=\"width: 176.123px;\">Bubalus arnee</td>\n<td style=\"width: 89.6875px;\">900/500/40</td>\n<td style=\"width: 91.5046px;\">44/30/10</td>\n<td style=\"width: 93.125px;\">1.9/1.5 shoulder</td>\n<td style=\"width: 91.088px;\">17/15 t2</td>\n<td style=\"width: 86.1921px;\">20-34</td>\n<td style=\"width: 96.5857px;\">50-100%</td>\n<td style=\"width: 89.8611px;\">0-70% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.3</td>\n<td style=\"width: 89.8611px;\">1-10 M, 12-30 F&amp;B</td>\n<td style=\"width: 130.787px;\">55-67/31-37/4-6</td>\n<td style=\"width: 113.981px;\">10-12/6-8/1-3</td>\n<td style=\"width: 102.558px;\">6H, 5H, 1L</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Short-Horned Buffalo</td>\n<td style=\"width: 176.123px;\">Bubalus brevicornis &dagger;</td>\n<td style=\"width: 89.6875px;\">300/260/30</td>\n<td style=\"width: 91.5046px;\">24/22/9</td>\n<td style=\"width: 93.125px;\">1.45/1.35 shoulder</td>\n<td style=\"width: 91.088px;\">10/11 t2</td>\n<td style=\"width: 86.1921px;\">4-22</td>\n<td style=\"width: 96.5857px;\">50-100%</td>\n<td style=\"width: 89.8611px;\">0-70% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.3</td>\n<td style=\"width: 89.8611px;\">1-10 M, 12-30 F&amp;B</td>\n<td style=\"width: 130.787px;\">27-33/25-31/4-6</td>\n<td style=\"width: 113.981px;\">4-5,1-3</td>\n<td style=\"width: 102.558px;\">5L, 4L, 1L</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Domestic water buffalo</td>\n<td style=\"width: 176.123px;\">Bubalus bubalis</td>\n<td style=\"width: 89.6875px;\">450/350/40</td>\n<td style=\"width: 91.5046px;\">28/24/10</td>\n<td style=\"width: 93.125px;\">1.45/1.35 shoulder</td>\n<td style=\"width: 91.088px;\">14/12 t2</td>\n<td style=\"width: 86.1921px;\">NA</td>\n<td style=\"width: 96.5857px;\">NA</td>\n<td style=\"width: 89.8611px;\">NA</td>\n<td style=\"width: 160.359px;\">NA</td>\n<td style=\"width: 89.8611px;\">NA</td>\n<td style=\"width: 130.787px;\">31-37/26-32/3-5</td>\n<td style=\"width: 113.981px;\">4-5,1</td>\n<td style=\"width: 102.558px;\">7L, 5L 1L</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Cebu tamaraw</td>\n<td style=\"width: 176.123px;\">Bubalus cebuensis &dagger;</td>\n<td style=\"width: 89.6875px;\">150/125/15</td>\n<td style=\"width: 91.5046px;\">17/16/5</td>\n<td style=\"width: 93.125px;\">0.75/0.7 shoulder</td>\n<td style=\"width: 91.088px;\">8 t2</td>\n<td style=\"width: 86.1921px;\">24-30</td>\n<td style=\"width: 96.5857px;\">85-100%</td>\n<td style=\"width: 89.8611px;\">60-90% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.3</td>\n<td style=\"width: 89.8611px;\">1 M&amp;F, 1-2 F&amp;B</td>\n<td style=\"width: 130.787px;\">17-21/15-18/1-2</td>\n<td style=\"width: 113.981px;\">3-4,2-4,1</td>\n<td style=\"width: 102.558px;\">5M, 4M, 1M</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Lowland anoa</td>\n<td style=\"width: 176.123px;\">Bubalus depressicornis</td>\n<td style=\"width: 89.6875px;\">225/175/30</td>\n<td style=\"width: 91.5046px;\">20/18/5</td>\n<td style=\"width: 93.125px;\">0.9/0.85 shoulder</td>\n<td style=\"width: 91.088px;\">10/9 t2</td>\n<td style=\"width: 86.1921px;\">22-28</td>\n<td style=\"width: 96.5857px;\">75-100%</td>\n<td style=\"width: 89.8611px;\">40-100% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.4</td>\n<td style=\"width: 89.8611px;\">1-2 M&amp;F, 1-2 F&amp;B</td>\n<td style=\"width: 130.787px;\">24-30/20-24/3-5</td>\n<td style=\"width: 113.981px;\">4-5,2-3,1</td>\n<td style=\"width: 102.558px;\">4L,3L, 1L</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Groves's Anoa</td>\n<td style=\"width: 176.123px;\">Bubalus grovesi &dagger;</td>\n<td style=\"width: 89.6875px;\">225/175/30</td>\n<td style=\"width: 91.5046px;\">20/18/9</td>\n<td style=\"width: 93.125px;\">1/0.95 shoulder</td>\n<td style=\"width: 91.088px;\">10/9 t2</td>\n<td style=\"width: 86.1921px;\">22-28</td>\n<td style=\"width: 96.5857px;\">75-100%</td>\n<td style=\"width: 89.8611px;\">40-100% Forest</td>\n<td style=\"width: 160.359px;\">1.3-1.7</td>\n<td style=\"width: 89.8611px;\">1-2 M&amp;F, 1-2 F&amp;B</td>\n<td style=\"width: 130.787px;\">24-30/20-24/3-5</td>\n<td style=\"width: 113.981px;\">4-5,2-3,1</td>\n<td style=\"width: 102.558px;\">4L,3L, 1L</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Chinese Water Buffalo</td>\n<td style=\"width: 176.123px;\">Bubalus mephistopheles &dagger;</td>\n<td style=\"width: 89.6875px;\">450/350/40</td>\n<td style=\"width: 91.5046px;\">28/24/10</td>\n<td style=\"width: 93.125px;\">1.45/1.35 shoulder</td>\n<td style=\"width: 91.088px;\">14/12 t2</td>\n<td style=\"width: 86.1921px;\">12-22</td>\n<td style=\"width: 96.5857px;\">45-85%</td>\n<td style=\"width: 89.8611px;\">0-70% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.3</td>\n<td style=\"width: 89.8611px;\">1-10 M, 12-30 F&amp;B</td>\n<td style=\"width: 130.787px;\">30-36/25-31/4-6</td>\n<td style=\"width: 113.981px;\">6-8,4-5,1-3</td>\n<td style=\"width: 102.558px;\">7L, 5L, 1L</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Tamaraw</td>\n<td style=\"width: 176.123px;\">Bubalus mindorensis</td>\n<td style=\"width: 89.6875px;\">240/220/30</td>\n<td style=\"width: 91.5046px;\">21/20/9</td>\n<td style=\"width: 93.125px;\">1.05/1 shoulder</td>\n<td style=\"width: 91.088px;\">10 t2</td>\n<td style=\"width: 86.1921px;\">28-34</td>\n<td style=\"width: 96.5857px;\">85-100%</td>\n<td style=\"width: 89.8611px;\">60-100% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.6</td>\n<td style=\"width: 89.8611px;\">1 M&amp;F, 1-2 F&amp;B</td>\n<td style=\"width: 130.787px;\">25-31/23-29/3-5</td>\n<td style=\"width: 113.981px;\">4-5,1</td>\n<td style=\"width: 102.558px;\">4L, 1L</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">European water buffalo</td>\n<td style=\"width: 176.123px;\">Bubalus murrensis &dagger;</td>\n<td style=\"width: 89.6875px;\">450/350/40</td>\n<td style=\"width: 91.5046px;\">28/24/10</td>\n<td style=\"width: 93.125px;\">1.45/1.35 shoulder</td>\n<td style=\"width: 91.088px;\">14/12 t2</td>\n<td style=\"width: 86.1921px;\">8-14</td>\n<td style=\"width: 96.5857px;\">55-80%</td>\n<td style=\"width: 89.8611px;\">0-70% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.3</td>\n<td style=\"width: 89.8611px;\">1-10 M, 12-30 F&amp;B</td>\n<td style=\"width: 130.787px;\">30-36/25-31/4-6</td>\n<td style=\"width: 113.981px;\">6-8,4-5,1-3</td>\n<td style=\"width: 102.558px;\">7L, 5L, 1L</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Mountain anoa</td>\n<td style=\"width: 176.123px;\">Bubalus quarlesi</td>\n<td style=\"width: 89.6875px;\">125/100/10</td>\n<td style=\"width: 91.5046px;\">16/14/9</td>\n<td style=\"width: 93.125px;\">0.7/0.65 shoulder</td>\n<td style=\"width: 91.088px;\">10/9 t2</td>\n<td style=\"width: 86.1921px;\">22-28</td>\n<td style=\"width: 96.5857px;\">75-100%</td>\n<td style=\"width: 89.8611px;\">40-100% Forest</td>\n<td style=\"width: 160.359px;\">1.3-1.7</td>\n<td style=\"width: 89.8611px;\">1-2 M&amp;F, 1-2 F&amp;B</td>\n<td style=\"width: 130.787px;\">13-16/12-15/1-2</td>\n<td style=\"width: 113.981px;\">2-3,1</td>\n<td style=\"width: 102.558px;\">4M,3M, 1M</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Saola</td>\n<td style=\"width: 176.123px;\">Pseudoryx nghetinhensis</td>\n<td style=\"width: 89.6875px;\">90/85/10</td>\n<td style=\"width: 91.5046px;\">15/5</td>\n<td style=\"width: 93.125px;\">0.89/0.84 shoulders</td>\n<td style=\"width: 91.088px;\">7 t2</td>\n<td style=\"width: 86.1921px;\">22-26</td>\n<td style=\"width: 96.5857px;\">75-100%</td>\n<td style=\"width: 89.8611px;\">75-100% Forest</td>\n<td style=\"width: 160.359px;\">1.06-1.55</td>\n<td style=\"width: 89.8611px;\">1-3 M&amp;F, 1-7 M&amp;F&amp;B</td>\n<td style=\"width: 130.787px;\">12-14/11-13/1</td>\n<td style=\"width: 113.981px;\">2,1</td>\n<td style=\"width: 102.558px;\">4M, 1M</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Giant buffalo</td>\n<td style=\"width: 176.123px;\">Syncerus antiquus &dagger;</td>\n<td style=\"width: 89.6875px;\">1200/600/50</td>\n<td style=\"width: 91.5046px;\">59/34/12</td>\n<td style=\"width: 93.125px;\">1.85/1.5 shoulder</td>\n<td style=\"width: 91.088px;\">18 t3/ 17 t2</td>\n<td style=\"width: 86.1921px;\">14-34</td>\n<td style=\"width: 96.5857px;\">30-90%</td>\n<td style=\"width: 89.8611px;\">0-60% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.4</td>\n<td style=\"width: 89.8611px;\">1-12 M, 20-40 M&amp;F&amp;B</td>\n<td style=\"width: 130.787px;\">72-90/43-53/5-7</td>\n<td style=\"width: 113.981px;\">10-12,5-8,2</td>\n<td style=\"width: 102.558px;\">12H, 5H, 1L</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">African buffalo</td>\n<td style=\"width: 176.123px;\">Syncerus caffer</td>\n<td style=\"width: 89.6875px;\">750/500/50</td>\n<td style=\"width: 91.5046px;\">41/30/12</td>\n<td style=\"width: 93.125px;\">1.7/1.4 shoulder</td>\n<td style=\"width: 91.088px;\">16/15 t2</td>\n<td style=\"width: 86.1921px;\">14-34</td>\n<td style=\"width: 96.5857px;\">30-90%</td>\n<td style=\"width: 89.8611px;\">10-90% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.8</td>\n<td style=\"width: 89.8611px;\">1-12 M, 20-40 M&amp;F&amp;B</td>\n<td style=\"width: 130.787px;\">46-56/31-37/5-7</td>\n<td style=\"width: 113.981px;\">6-8,5-6,2</td>\n<td style=\"width: 102.558px;\">5H, 4H, 1L</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Forest buffalo</td>\n<td style=\"width: 176.123px;\">Syncerus nanus</td>\n<td style=\"width: 89.6875px;\">300/260/30</td>\n<td style=\"width: 91.5046px;\">24/22/9</td>\n<td style=\"width: 93.125px;\">1.2/1.0 shoulder</td>\n<td style=\"width: 91.088px;\">11/10 t2</td>\n<td style=\"width: 86.1921px;\">22-34</td>\n<td style=\"width: 96.5857px;\">75-100%</td>\n<td style=\"width: 89.8611px;\">20-80% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.5</td>\n<td style=\"width: 89.8611px;\">3-10 M&amp;F, 3-30 M&amp;F&amp;B</td>\n<td style=\"width: 130.787px;\">31-37/26-32/3-5</td>\n<td style=\"width: 113.981px;\">4-5,1</td>\n<td style=\"width: 102.558px;\">4L, 1L</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Grass, Nibble crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Giant Eland</td>\n<td style=\"width: 176.123px;\">Taurotragus derbianus</td>\n<td style=\"width: 89.6875px;\">800/450/50</td>\n<td style=\"width: 91.5046px;\">42/28/12</td>\n<td style=\"width: 93.125px;\">1.8/1.4 shoulder</td>\n<td style=\"width: 91.088px;\">17/14 t2</td>\n<td style=\"width: 86.1921px;\">22-34</td>\n<td style=\"width: 96.5857px;\">20-75%</td>\n<td style=\"width: 89.8611px;\">0-75% Shrubs, 40-90% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.85</td>\n<td style=\"width: 89.8611px;\">1 M, 15-25 F&amp;B</td>\n<td style=\"width: 130.787px;\">48-60/32-40/5-7</td>\n<td style=\"width: 113.981px;\">6-8,5-6,2</td>\n<td style=\"width: 102.558px;\">5H, 4H, 1L</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">3 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Common Eland</td>\n<td style=\"width: 176.123px;\">Taurotragus oryx</td>\n<td style=\"width: 89.6875px;\">550/390/50</td>\n<td style=\"width: 91.5046px;\">32/27/12</td>\n<td style=\"width: 93.125px;\">1.6/1.4 shoulder</td>\n<td style=\"width: 91.088px;\">16/12 t2</td>\n<td style=\"width: 86.1921px;\">14-28</td>\n<td style=\"width: 96.5857px;\">20-75%</td>\n<td style=\"width: 89.8611px;\">0-75% Shrubs, 40-90% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.85</td>\n<td style=\"width: 89.8611px;\">1-10 M, 20-40 F&amp;B</td>\n<td style=\"width: 130.787px;\">33-41/32-40/5-7</td>\n<td style=\"width: 113.981px;\">5-6,4-5,2</td>\n<td style=\"width: 102.558px;\">4H, 1L</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">3 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Chousingha</td>\n<td style=\"width: 176.123px;\">Tetracerus quadricornis</td>\n<td style=\"width: 89.6875px;\">20/4</td>\n<td style=\"width: 91.5046px;\">6/3</td>\n<td style=\"width: 93.125px;\">0.65 shoulder</td>\n<td style=\"width: 91.088px;\">4t1</td>\n<td style=\"width: 86.1921px;\">24-34</td>\n<td style=\"width: 96.5857px;\">40-90%</td>\n<td style=\"width: 89.8611px;\">40-100% Shrubs</td>\n<td style=\"width: 160.359px;\">1.0-1.35</td>\n<td style=\"width: 89.8611px;\">1 M&amp;F, 2-5 M&amp;F&amp;B</td>\n<td style=\"width: 130.787px;\">2-3,0-1</td>\n<td style=\"width: 113.981px;\">1,0</td>\n<td style=\"width: 102.558px;\">1M, 1S</td>\n<td style=\"width: 87.0023px;\">M Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Lowland Nyala</td>\n<td style=\"width: 176.123px;\">Tragelaphus angasii</td>\n<td style=\"width: 89.6875px;\">110/60/15</td>\n<td style=\"width: 91.5046px;\">15/13/5</td>\n<td style=\"width: 93.125px;\">1.1/.9 shoulder</td>\n<td style=\"width: 91.088px;\">7 t2/6 t1</td>\n<td style=\"width: 86.1921px;\">20-26</td>\n<td style=\"width: 96.5857px;\">50-75%</td>\n<td style=\"width: 89.8611px;\">40-100% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.5</td>\n<td style=\"width: 89.8611px;\">1-10M, 1-10F&amp;B</td>\n<td style=\"width: 130.787px;\">12-15/8-10/1-2</td>\n<td style=\"width: 113.981px;\">2,1</td>\n<td style=\"width: 102.558px;\">4M, 3M, 1M</td>\n<td style=\"width: 87.0023px;\">M Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Mountain Nyala</td>\n<td style=\"width: 176.123px;\">Tragelaphus buxtoni</td>\n<td style=\"width: 89.6875px;\">240/175/30</td>\n<td style=\"width: 91.5046px;\">21/19/9</td>\n<td style=\"width: 93.125px;\">1.35/1 shoulder</td>\n<td style=\"width: 91.088px;\">10/9 t2</td>\n<td style=\"width: 86.1921px;\">28-34</td>\n<td style=\"width: 96.5857px;\">55-100%</td>\n<td style=\"width: 89.8611px;\">20-100% Forest or Shrubs</td>\n<td style=\"width: 160.359px;\">1.5-1.9</td>\n<td style=\"width: 89.8611px;\">1-13M 2-12 M&amp;F&amp;B</td>\n<td style=\"width: 130.787px;\">25-31/20-24/3-5</td>\n<td style=\"width: 113.981px;\">4-5,2-3,1</td>\n<td style=\"width: 102.558px;\">4L, 3L, 1L</td>\n<td style=\"width: 87.0023px;\">M Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Bongo</td>\n<td style=\"width: 176.123px;\">Tragelaphus eurycerus</td>\n<td style=\"width: 89.6875px;\">310/190/30</td>\n<td style=\"width: 91.5046px;\">24/19/9</td>\n<td style=\"width: 93.125px;\">1.3/1.1 shoulder</td>\n<td style=\"width: 91.088px;\">11/9 t2</td>\n<td style=\"width: 86.1921px;\">21-34</td>\n<td style=\"width: 96.5857px;\">65-100%</td>\n<td style=\"width: 89.8611px;\">60-100% Forest</td>\n<td style=\"width: 160.359px;\">1.1-1.8</td>\n<td style=\"width: 89.8611px;\">1M, 6-8 F&amp;B</td>\n<td style=\"width: 130.787px;\">31-37/20-24/3-5</td>\n<td style=\"width: 113.981px;\">4-5,2-3,1</td>\n<td style=\"width: 102.558px;\">4L, 3L, 1L</td>\n<td style=\"width: 87.0023px;\">M&amp;F Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Lesser Kudu</td>\n<td style=\"width: 176.123px;\">Tragelaphus imberbis</td>\n<td style=\"width: 89.6875px;\">100/65/15</td>\n<td style=\"width: 91.5046px;\">15/13/5</td>\n<td style=\"width: 93.125px;\">1.05/1 shoulder</td>\n<td style=\"width: 91.088px;\">7 t2/6 t1</td>\n<td style=\"width: 86.1921px;\">22-36</td>\n<td style=\"width: 96.5857px;\">20-65%</td>\n<td style=\"width: 89.8611px;\">40-100% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.5</td>\n<td style=\"width: 89.8611px;\">1M&amp;F, 2-6F&amp;B</td>\n<td style=\"width: 130.787px;\">12-15/8-10/1-2</td>\n<td style=\"width: 113.981px;\">2,1</td>\n<td style=\"width: 102.558px;\">4M, 3M, 1M</td>\n<td style=\"width: 87.0023px;\">M Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Harnessed bushbuck</td>\n<td style=\"width: 176.123px;\">Tragelaphus scriptus</td>\n<td style=\"width: 89.6875px;\">70/45/10</td>\n<td style=\"width: 91.5046px;\">14/12/5</td>\n<td style=\"width: 93.125px;\">.9 shoulder</td>\n<td style=\"width: 91.088px;\">6/5 t1</td>\n<td style=\"width: 86.1921px;\">14-34</td>\n<td style=\"width: 96.5857px;\">40-90%</td>\n<td style=\"width: 89.8611px;\">10-90% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.8</td>\n<td style=\"width: 89.8611px;\">1 M&amp;F</td>\n<td style=\"width: 130.787px;\">8-10/5-7/1-2</td>\n<td style=\"width: 113.981px;\">2,1</td>\n<td style=\"width: 102.558px;\">4M, 3M, 1M</td>\n<td style=\"width: 87.0023px;\">M Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Nibble Crop</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Sitatunga</td>\n<td style=\"width: 176.123px;\">Tragelaphus spekii</td>\n<td style=\"width: 89.6875px;\">100/45/10</td>\n<td style=\"width: 91.5046px;\">15/12/5</td>\n<td style=\"width: 93.125px;\">1.15/.9 shoulder</td>\n<td style=\"width: 91.088px;\">7 t2/5 t1</td>\n<td style=\"width: 86.1921px;\">22-34</td>\n<td style=\"width: 96.5857px;\">55-100%</td>\n<td style=\"width: 89.8611px;\">All</td>\n<td style=\"width: 160.359px;\">1.0-1.5</td>\n<td style=\"width: 89.8611px;\">1-2M&amp;F, 2-9 M&amp;F&amp;B</td>\n<td style=\"width: 130.787px;\">12-15/5-7/1-2</td>\n<td style=\"width: 113.981px;\">2,1</td>\n<td style=\"width: 102.558px;\">4M, 3M, 1M</td>\n<td style=\"width: 87.0023px;\">M Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Greater kudu</td>\n<td style=\"width: 176.123px;\">Tragelaphus strepsiceros</td>\n<td style=\"width: 89.6875px;\">230/160/30</td>\n<td style=\"width: 91.5046px;\">21/18/9</td>\n<td style=\"width: 93.125px;\">1.6/1.25 shoulder</td>\n<td style=\"width: 91.088px;\">10/9t2</td>\n<td style=\"width: 86.1921px;\">14-34</td>\n<td style=\"width: 96.5857px;\">20-65%</td>\n<td style=\"width: 89.8611px;\">40-100% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.65</td>\n<td style=\"width: 89.8611px;\">1-6M, 6-20F&amp;B</td>\n<td style=\"width: 130.787px;\">24-30/19-23/3-5</td>\n<td style=\"width: 113.981px;\">4-5,2-3,1</td>\n<td style=\"width: 102.558px;\">4L, 3L, 1L</td>\n<td style=\"width: 87.0023px;\">M Horns</td>\n<td style=\"width: 93.5301px;\">3 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Fruit, Grain, Vegetable, Grass, Nibble crop, Berry bush</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 159.236px;\">Cape Bushbuck</td>\n<td style=\"width: 176.123px;\">Tragelaphus sylvaticus</td>\n<td style=\"width: 89.6875px;\">70/45/10</td>\n<td style=\"width: 91.5046px;\">14/12/5</td>\n<td style=\"width: 93.125px;\">.9 shoulder</td>\n<td style=\"width: 91.088px;\">6/5 t1</td>\n<td style=\"width: 86.1921px;\">14-28</td>\n<td style=\"width: 96.5857px;\">30-90%</td>\n<td style=\"width: 89.8611px;\">10-90% Forest</td>\n<td style=\"width: 160.359px;\">1.0-1.8</td>\n<td style=\"width: 89.8611px;\">1 M&amp;F</td>\n<td style=\"width: 130.787px;\">8-10/5-7/1-2</td>\n<td style=\"width: 113.981px;\">2,1</td>\n<td style=\"width: 102.558px;\">4M, 3M, 1M</td>\n<td style=\"width: 87.0023px;\">M Horns</td>\n<td style=\"width: 93.5301px;\">2 step</td>\n<td style=\"width: 366.62px;\">\n<div>\n<div>Grain, Vegetable, Nibble Crop</div>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Features:</span></p>\n<p><span style=\"font-weight: 400;\">Those who are able to catch a pair of bovines can domesticate them, and the larger species can be milked, with different species requiring different amounts of food and pregnancy length. </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Most species have a unique pelt drop and horns as well that can be used to craft hide, taxidermied full body and head mounts.</span></p>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">On occasion a </span><span style=\"font-weight: 400;\">fly covered bovine carcass will spawn, preventing bovines from spawning in the area around them. They have a chance to spawn when a player first arrives in an area or when all bovines have been killed off from the area, allowing players to locally wipe out bovines. Destroying the bovine carcass will allow more bovines to spawn again and some carnivores and scavengers may destroy them as well, so if you want bovines spawns prevented in an area protect these carcasses.</span></p>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">A big thanks to my brother for commissioning the Bongo!<br />A big thanks to Bram for commissioning the Eurasian Auroch!</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">And a big thanks to everyone who gave feedback and assistance!<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong> How do I domesticate the animals in this pack?<br /><br /><strong>A:</strong> Get a male and female adult of a given species within 10 blocks, wait until the female is ready to mate and feed her the sufficient number of portions and the male at least one. Different species require different amounts and can be found in the entity file under the multiply section. Animals can be fed either by dropping items on the ground or by using the large trough. The small trough is not supported at this time due to patching formats. Each species diet can be found in this mod's description or in their entity file under the diet section. After 10 generations, entities stop attacking the player and after 10 generations they will no longer flee the player. Only the mother's generation matters for progressing generations.<br /><br /><br /><strong>Q:</strong> Why so many animal packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain clade file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><br /><strong>Q:</strong> Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> Yes, this mod series is safe to add and remove. Items from this mod that have been placed will be invisible or appear as question blocks if the mod is removed but can be safely broken.</div>\n</div>\n<p><span style=\"font-weight: 400;\"> <br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "bovinae",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_da6a74e94ac4d9b78d858349df5f6f58.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_da6a74e94ac4d9b78d858349df5f6f58.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_da6a74e94ac4d9b78d858349df5f6f58.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 191051,
+    "follows": 1579,
+    "trendingpoints": 0,
+    "comments": 280,
+    "side": "both",
+    "type": "mod",
+    "created": "2025-01-27 21:02:37",
+    "lastreleased": "2026-08-14 17:08:42",
+    "lastmodified": "2026-09-28 20:16:17",
+    "tags": [
+      "Crafting",
+      "Furniture",
+      "Creatures"
+    ],
+    "releases": [
+      {
+        "releaseid": 52951,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.3.6_b5f28fb3f8a5e6a85431aa4cb548e470.zip?dl=FotSA-Bovinae-v0.3.6.zip",
+        "filename": "FotSA-Bovinae-v0.3.6.zip",
+        "fileid": 114685,
+        "downloads": 16568,
+        "tags": [
+          "1.22.6"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.3.6",
+        "created": "2026-08-14 17:08:42",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-Change chance and wanderChance to executionChance</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Animal interaction patches</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Note-This is a quick and dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22</span><br />There will be bugs reported due to WIP taurine cow implementation, I left it half finished rather than gutting it for this quick update</p>"
+      },
+      {
+        "releaseid": 32122,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.3.5_03d4ca207124ffc4a305f6077fd5d327.zip?dl=FotSA-Bovinae-v0.3.5.zip",
+        "filename": "FotSA-Bovinae-v0.3.5.zip",
+        "fileid": 70691,
+        "downloads": 49617,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.3.5",
+        "created": "2026-01-07 00:06:34",
+        "changelog": "<p>Tweak-Meat and fat restored to one entry in drop list for easier config additions<br />Updated-1 hide is always dropped from killed animals</p>"
+      },
+      {
+        "releaseid": 29759,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.3.4_cd496610e80492d8c4d75029b1df22aa.zip?dl=FotSA-Bovinae-v0.3.4.zip",
+        "filename": "FotSA-Bovinae-v0.3.4.zip",
+        "fileid": 65705,
+        "downloads": 17517,
+        "tags": [
+          "1.21.5",
+          "1.21.6"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.3.4",
+        "created": "2025-11-23 21:35:51",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Russian Translation (Thanks Nikuksis!)</span></p>"
+      },
+      {
+        "releaseid": 28315,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.3.3_d70184a2e0a3f38796b02da65d2bef7c.zip?dl=FotSA-Bovinae-v0.3.3.zip",
+        "filename": "FotSA-Bovinae-v0.3.3.zip",
+        "fileid": 62321,
+        "downloads": 10470,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.3.3",
+        "created": "2025-10-28 23:07:50",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Weighted diet </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Trappable format for 1.21</span></p>"
+      },
+      {
+        "releaseid": 27405,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.3.2_27398c78776b96cd655aa314a27a3848.zip?dl=FotSA-Bovinae-v0.3.2.zip",
+        "filename": "FotSA-Bovinae-v0.3.2.zip",
+        "fileid": 60098,
+        "downloads": 7344,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.3.2",
+        "created": "2025-10-15 20:28:41",
+        "changelog": "<p>Fixed-Wild water buffalo horn section malformed, causing semi-tamed and tamed water buffalo to despawn</p>"
+      },
+      {
+        "releaseid": 25918,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.3.1_b18d6df6674ae5f4d688f1b333aded9d.zip?dl=FotSA-Bovinae-v0.3.1.zip",
+        "filename": "FotSA-Bovinae-v0.3.1.zip",
+        "fileid": 56940,
+        "downloads": 15889,
+        "tags": [
+          "1.21.1",
+          "1.21.2-rc.2",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.3.1",
+        "created": "2025-09-25 16:23:32",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Removed old Animal interaction patches</span></p>\n<p><span style=\"font-weight: 400;\">Fixed-Removed redundant CO patches</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Semitamed growth transition</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 25720,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.3.0_058f338b0d7dbeda36f965422e157e50.zip?dl=FotSA-Bovinae-v0.3.0.zip",
+        "filename": "FotSA-Bovinae-v0.3.0.zip",
+        "fileid": 56599,
+        "downloads": 3361,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.3.0",
+        "created": "2025-09-22 16:00:43",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Aurochs animation tweaks</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added- Bongo art update</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added- Creature tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Ukrainian translation (Thanks Deanbro!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added- 7 genera, ask me before 9/26</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Antler patches format</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Knockback resistance</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Missing closed bracket in animal file</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Aurochs speed</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Disabled riding until overhaul</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Split drop stacks that exceeded 64 units</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 19944,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.2.4_5d412f8f9132c27925f0df4460992723.zip?dl=FotSA-Bovinae-v0.2.4.zip",
+        "filename": "FotSA-Bovinae-v0.2.4.zip",
+        "fileid": 43206,
+        "downloads": 32944,
+        "tags": [
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.2.4",
+        "created": "2025-05-12 16:48:18",
+        "changelog": "<p>Added-UK translation (Thanks Deanbro!)<br />Tweak-Adjusted baby auroch seek food and eat movement speed</p>"
+      },
+      {
+        "releaseid": 19500,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.2.3_80e1e858d7c3172bb5aa4e74d95b4c04.zip?dl=FotSA-Bovinae-v0.2.3.zip",
+        "filename": "FotSA-Bovinae-v0.2.3.zip",
+        "fileid": 42154,
+        "downloads": 4230,
+        "tags": [
+          "1.20.9",
+          "1.20.10"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.2.3",
+        "created": "2025-04-30 20:12:23",
+        "changelog": "<p>Fixed-Bongo diet not specified, was defaulting to Auroch's</p>"
+      },
+      {
+        "releaseid": 19210,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.2.2_83d58c7cf925546cbb0208c3792ca48c.zip?dl=FotSA-Bovinae-v0.2.2.zip",
+        "filename": "FotSA-Bovinae-v0.2.2.zip",
+        "fileid": 41533,
+        "downloads": 2564,
+        "tags": [
+          "1.20.9"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.2.2",
+        "created": "2025-04-22 16:41:17",
+        "changelog": "<p>Fixed-Milking not set up correctly<br />Tweak-Animation speed when walking to food</p>"
+      },
+      {
+        "releaseid": 19045,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.2.1_d58821c18b97bb2470fea3a5a7410825.zip?dl=FotSA-Bovinae-v0.2.1.zip",
+        "filename": "FotSA-Bovinae-v0.2.1.zip",
+        "fileid": 41182,
+        "downloads": 3169,
+        "tags": [
+          "1.20.7",
+          "1.20.8"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.2.1",
+        "created": "2025-04-17 23:05:45",
+        "changelog": "<p>Tweak-Flee animation speed<br />Added-French Translation for Auroch (Thanks Laerinok!)</p>"
+      },
+      {
+        "releaseid": 18739,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.2.0_96a2ed8c9c30c39d73119636a6fc3920.zip?dl=FotSA-Bovinae-v0.2.0.zip",
+        "filename": "FotSA-Bovinae-v0.2.0.zip",
+        "fileid": 40561,
+        "downloads": 3452,
+        "tags": [
+          "1.20.7"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.2.0",
+        "created": "2025-04-08 22:04:23",
+        "changelog": "<p>Added-The Eurasian Auroch: <span data-sheets-root=\"1\">Bos primigenius primigenius<br />Refactor-Split adults and baby entity file to bring to base game's new standard</span></p>"
+      },
+      {
+        "releaseid": 18524,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.1.5_d579ee1e7a3ab71779013db07a22ec08.zip?dl=FotSA-Bovinae-v0.1.5.zip",
+        "filename": "FotSA-Bovinae-v0.1.5.zip",
+        "fileid": 40028,
+        "downloads": 1467,
+        "tags": [
+          "1.20.7"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.1.5",
+        "created": "2025-04-04 23:58:59",
+        "changelog": "<p>Added-Worldgen spawn<br />Tweak-Made bongos more skittish</p>"
+      },
+      {
+        "releaseid": 17349,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.1.4_81d0a26b4052710031645743f5b798c4.zip?dl=FotSA-Bovinae-v0.1.4.zip",
+        "filename": "FotSA-Bovinae-v0.1.4.zip",
+        "fileid": 36799,
+        "downloads": 7128,
+        "tags": [
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.1.4",
+        "created": "2025-03-10 16:15:34",
+        "changelog": "<p>Added-Thylacoleo interactions</p>"
+      },
+      {
+        "releaseid": 16562,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.1.3_1d4e9981dd17094e79da8edb393b364e.zip?dl=FotSA-Bovinae-v0.1.3.zip",
+        "filename": "FotSA-Bovinae-v0.1.3.zip",
+        "fileid": 34130,
+        "downloads": 5747,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.1.3",
+        "created": "2025-02-20 16:33:41",
+        "changelog": "<p>Tweak-Split seek entity when aggressive on damage and aggressive around entity into two separate tasks.<br />Tweak-Bovines will seek entities from 28 meters away when injured<br />Tweak-Bovines will seek entities from 14 meters away to protect babies<br />Fixed-Combat Overhaul patch</p>"
+      },
+      {
+        "releaseid": 16236,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.1.2_6e60e1360f731c5e319eeaab8a6acb70.zip?dl=FotSA-Bovinae-v0.1.2.zip",
+        "filename": "FotSA-Bovinae-v0.1.2.zip",
+        "fileid": 33375,
+        "downloads": 2801,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.1.2",
+        "created": "2025-02-14 18:08:21",
+        "changelog": "<p>Fixed-Base game animal patch format updated to 1.20.4</p>"
+      },
+      {
+        "releaseid": 15659,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.1.1_fb69ffdd901c0784f4b0372cc3603e28.zip?dl=FotSA-Bovinae-v0.1.1.zip",
+        "filename": "FotSA-Bovinae-v0.1.1.zip",
+        "fileid": 32294,
+        "downloads": 3450,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.1.1",
+        "created": "2025-02-03 19:27:57",
+        "changelog": "<p>Added-French Translation (Thanks Laerinok!)<br />Fixed-Carcass string</p>"
+      },
+      {
+        "releaseid": 15293,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.1.0_5f9acab8d7fa5e5472dde7bc46b7e776.zip?dl=FotSA-Bovinae-v0.1.0.zip",
+        "filename": "FotSA-Bovinae-v0.1.0.zip",
+        "fileid": 31620,
+        "downloads": 3333,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "bovinae",
+        "modversion": "0.1.0",
+        "created": "2025-01-27 21:03:33",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 31617,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-01-27_12-58-35_8a74ac44abeab33a92cadb01b5a53a05.png",
+        "filename": "2025-01-27_12-58-35.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-01-27_12-58-35_8a74ac44abeab33a92cadb01b5a53a05_55_60.png",
+        "created": "2025-01-27 21:02:17"
+      },
+      {
+        "fileid": 40562,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-08_15-00-30_cdc646e225ef6b3f487513d9200945e5.png",
+        "filename": "2025-04-08_15-00-30.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-08_15-00-30_cdc646e225ef6b3f487513d9200945e5_55_60.png",
+        "created": "2025-04-08 22:04:40"
+      },
+      {
+        "fileid": 40563,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-08_14-38-35_0fb37e96ae07c58447017baebc83f629.png",
+        "filename": "2025-04-08_14-38-35.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-08_14-38-35_0fb37e96ae07c58447017baebc83f629_55_60.png",
+        "created": "2025-04-08 22:04:51"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

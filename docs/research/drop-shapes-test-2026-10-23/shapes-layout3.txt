@@ -1,0 +1,16 @@
+== congo_rapids
+   drop blocks: {'d6': 474, 'd7': 17, 'dir7': 65, 'rapid dir1': 549, 'rapid dir2': 469, 'rapid dir3': 469, 'rapid dir4': 1187, 'rapid dir5': 1315, 'rapid dir6': 1302}
+   drops (upper pool beside a lower one): sill 233, no sill 978 [(129562, 54284, 192, 189), (129568, 54283, 192, 184), (129573, 54282, 192, 183), (129579, 54281, 192, 183), (129580, 54321, 190, 188)]
+   water beside open air: {'rapid dir1': 507, 'rapid dir4': 445, 'd6': 364, 'rapid dir6': 281, 'dir3': 66, 'rapid dir5': 58, 'dir4': 39, 'dir1': 22, 'dir6': 13, 'rapid dir2': 12, 'rapid dir3': 12, 'dir5': 6, 'still7': 4, 'dir7': 3, 'dir2': 2}
+== victoria_falls
+   drop blocks: {'d6': 439, 'd7': 4, 'dir7': 16, 'rapid dir1': 21, 'rapid dir2': 22, 'rapid dir3': 21, 'rapid dir4': 22, 'rapid dir5': 22, 'rapid dir6': 21, 'rapid still7': 1}
+   drops (upper pool beside a lower one): sill 31, no sill 0 []
+   water beside open air: {'d6': 637, 'rapid dir6': 32, 'rapid dir1': 32, 'dir1': 13, 'dir6': 3, 'rapid still7': 1}
+== niagara_falls
+   drop blocks: {'d6': 630, 'd7': 5, 'dir7': 10, 'rapid dir1': 66, 'rapid dir2': 69, 'rapid dir3': 71, 'rapid dir4': 74, 'rapid dir5': 77, 'rapid dir6': 84, 'rapid dir7': 1}
+   drops (upper pool beside a lower one): sill 90, no sill 242 [(77481, 26657, 181, 179), (77481, 26675, 184, 182), (77482, 26662, 182, 179), (77483, 26670, 183, 180), (77484, 26658, 181, 176)]
+   water beside open air: {'d6': 963, 'dir1': 202, 'rapid dir6': 92, 'rapid dir1': 88, 'dir2': 42, 'dir6': 4, 'dir7': 3, 'rapid dir2': 3, 'still7': 2, 'dir3': 2, 'rapid dir3': 1, 'rapid dir5': 1, 'rapid dir4': 1}
+== rhine_gorge
+   drop blocks: {'d6': 60, 'd7': 7, 'dir7': 34, 'rapid dir1': 28, 'rapid dir2': 32, 'rapid dir3': 35, 'rapid dir4': 85, 'rapid dir5': 95, 'rapid dir6': 87, 'rapid still7': 1}
+   drops (upper pool beside a lower one): sill 28, no sill 331 [(126139, 22629, 188, 182), (126141, 22630, 188, 182), (126143, 22631, 188, 182), (126144, 22632, 188, 182), (126148, 22633, 188, 182)]
+   water beside open air: {'dir1': 231, 'rapid dir4': 58, 'dir6': 54, 'rapid dir1': 40, 'd6': 35, 'dir2': 14, 'rapid dir5': 10, 'dir3': 10, 'dir4': 9, 'dir5': 5, 'rapid dir2': 1, 'rapid still7': 1}

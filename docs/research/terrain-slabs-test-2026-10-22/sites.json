@@ -1,0 +1,16 @@
+[
+  {"Name": "rhine_falls", "Kind": "falls", "Lat": 47.6779, "Lon": 8.6153},
+  {"Name": "niagara_falls", "Kind": "falls", "Lat": 43.0775, "Lon": -79.0753},
+  {"Name": "victoria_falls", "Kind": "falls", "Lat": -17.9243, "Lon": 25.8572},
+  {"Name": "lake_bracciano", "Kind": "lake", "Lat": 42.12, "Lon": 12.23},
+  {"Name": "lake_geneva_north", "Kind": "lake", "Lat": 46.47, "Lon": 6.60},
+  {"Name": "lisbon_coast", "Kind": "coast", "Lat": 38.78, "Lon": -9.48},
+  {"Name": "dutch_coast", "Kind": "coast", "Lat": 52.35, "Lon": 4.53},
+  {"Name": "dover_cliffs", "Kind": "coast", "Lat": 51.13, "Lon": 1.36},
+  {"Name": "mont_blanc", "Kind": "mountain", "Lat": 45.83, "Lon": 6.86},
+  {"Name": "aconcagua", "Kind": "mountain", "Lat": -32.65, "Lon": -70.01},
+  {"Name": "bog_of_allen", "Kind": "bog", "Lat": 53.27, "Lon": -6.95},
+  {"Name": "teici_bog", "Kind": "bog", "Lat": 56.62, "Lon": 26.03},
+  {"Name": "finland_bogs", "Kind": "bog", "Lat": 62.5, "Lon": 25.5},
+  {"Name": "daugava_riga", "Kind": "river", "Lat": 56.95, "Lon": 24.10}
+]

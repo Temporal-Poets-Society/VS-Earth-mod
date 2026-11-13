@@ -1,0 +1,151 @@
+{
+  "mod": {
+    "modid": 11383,
+    "assetid": 66286,
+    "name": "Floral Zones: Circumboreal Region",
+    "text": "<p><span style=\"font-weight: 400;\">This mod adds plants from the Circumboreal floristic region, filling out the roster of polar, boreal and temperate plants.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" style=\"border-spacing: 0px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col width=\"156\" /><col width=\"177\" /><col width=\"104\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"265\" /><col width=\"162\" /><col width=\"765\" /></colgroup>\n<tbody>\n<tr>\n<td>Common Name</td>\n<td>Scientific name</td>\n<td>Size</td>\n<td>Temperature</td>\n<td>Precipitation</td>\n<td>Fertility</td>\n<td>Forest</td>\n<td>Altitude</td>\n<td>Additional spawn conditions</td>\n<td>Resources</td>\n<td>Ecoregions</td>\n</tr>\n<tr>\n<td>Creeping Dogwood</td>\n<td>Cornus canadensis</td>\n<td>0.2 m H</td>\n<td>-8-6</td>\n<td>14-100%</td>\n<td>0-0.75</td>\n<td>0.2-0.75</td>\n<td>0-0.74</td>\n<td>&nbsp;</td>\n<td>Fruit</td>\n<td>Pacific Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr>\n<td>Arctic Cotton</td>\n<td>Eriophorum callitrix</td>\n<td>0.5 m H</td>\n<td>-14--2</td>\n<td>16-58%</td>\n<td>0.05-1</td>\n<td>0-0.2</td>\n<td>0-0.66</td>\n<td>&nbsp;</td>\n<td>Candle whicks, Parchment</td>\n<td>Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr>\n<td>Common Hops</td>\n<td>Humulus lupulus</td>\n<td>1+ m W</td>\n<td>0-14</td>\n<td>17-100%</td>\n<td>0.4-1</td>\n<td>0.4-0.8</td>\n<td>0-0.3</td>\n<td>&nbsp;</td>\n<td>Hops, Vegetable</td>\n<td>Atlantic Palearctic, Central Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr>\n<td>French Rose</td>\n<td>Rosa gallica</td>\n<td>1-3 m H</td>\n<td>7-12</td>\n<td>49-65%</td>\n<td>0-1</td>\n<td>0.2-0.7</td>\n<td>0-0.58</td>\n<td>&nbsp;</td>\n<td>Fruit</td>\n<td>Alantic Palearctic</td>\n</tr>\n<tr>\n<td>Cinnamon Rose</td>\n<td>Rosa majalis</td>\n<td>2-2.7 m H</td>\n<td>-2-10</td>\n<td>23-61%</td>\n<td>0.3-1</td>\n<td>0.1-0.7</td>\n<td>0-0.65</td>\n<td>&nbsp;</td>\n<td>Fruit</td>\n<td>Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic</td>\n</tr>\n<tr>\n<td>Garden Angelica</td>\n<td>Angelica archangelica</td>\n<td>2.5 m H</td>\n<td>-6-10</td>\n<td>46-100%</td>\n<td>0.5-1</td>\n<td>0.4-0.8</td>\n<td>0-0.3</td>\n<td>Near Water</td>\n<td>Vegetable</td>\n<td>Atlantic Palearctic, Central Palearctic</td>\n</tr>\n<tr>\n<td>Lettuce</td>\n<td>Lactuca sativa</td>\n<td>0.75 m H</td>\n<td>4-18</td>\n<td>18-58%</td>\n<td>0.3-1</td>\n<td>0.1-0.4</td>\n<td>0-0.61</td>\n<td>&nbsp;</td>\n<td>Vegetable</td>\n<td>Atlantic Palearctic, Central Palearctic</td>\n</tr>\n<tr>\n<td>Iceland Lichen</td>\n<td>Cetraria islandica</td>\n<td>0.1 m H</td>\n<td>-10-0</td>\n<td>12-100%</td>\n<td>0-1</td>\n<td>0-0.3</td>\n<td>0-0.7</td>\n<td>&nbsp;</td>\n<td>Grain</td>\n<td>Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr>\n<td>Creeping Juniper</td>\n<td>Juniperus horizontalis</td>\n<td>1m W +</td>\n<td>-6-9</td>\n<td>26-78%</td>\n<td>0-0.4</td>\n<td>0-0.2</td>\n<td>0-0.65</td>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n<td>Atlantic Nearctic, Pacific Nearctic</td>\n</tr>\n<tr>\n<td>Austin's Sphagnum</td>\n<td>Sphagnum austinii</td>\n<td>0.5 m H, 1m W+</td>\n<td>3-9</td>\n<td>27-100%</td>\n<td>0-0.5</td>\n<td>0-0.3</td>\n<td>0-0.12</td>\n<td>Near Water</td>\n<td>&nbsp;</td>\n<td>Atlantic Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr>\n<td>Northern Sphagnum</td>\n<td>Sphagnum capillifolium</td>\n<td>1 m W+</td>\n<td>-2-12</td>\n<td>12-100%</td>\n<td>0-0.5</td>\n<td>0-0.6</td>\n<td>0-0.3</td>\n<td>Near Water</td>\n<td>&nbsp;</td>\n<td>Atlantic Palearctic, Central Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr>\n<td>Leather Bergenia</td>\n<td>Bergenia crassifolia</td>\n<td>0.5-1 m H</td>\n<td>-4-2</td>\n<td>35-65%</td>\n<td>0-1</td>\n<td>0-0.7</td>\n<td>0.04-0.6</td>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n<td>Eastern Palearctic</td>\n</tr>\n<tr>\n<td>Melancholy Thistle</td>\n<td>Cirsium helenioides</td>\n<td>1.2 m H</td>\n<td>-6-6</td>\n<td>28-75%</td>\n<td>0.35-1</td>\n<td>0-0.6</td>\n<td>0-0.3</td>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n<td>Atlantic Palearctic, Central Palearctic</td>\n</tr>\n<tr>\n<td>Foxglove</td>\n<td>Digitalis purpurea</td>\n<td>1-2 m H</td>\n<td>2-14</td>\n<td>45-100%</td>\n<td>0.05-1</td>\n<td>0.4-1</td>\n<td>0-0.3</td>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n<td>Atlantic Palearctic</td>\n</tr>\n<tr>\n<td>Lemon Daylily</td>\n<td>Hemerocallis lilioasphodelus</td>\n<td>0.6-0.9 m H</td>\n<td>-8-17</td>\n<td>29-64%</td>\n<td>0-1</td>\n<td>0.1-0.7</td>\n<td>0-0.1</td>\n<td>&nbsp;</td>\n<td>Vegetable</td>\n<td>Central Palearctic, Eastern Palearctic, Pacific Palearctic</td>\n</tr>\n<tr>\n<td>Iberian Flag</td>\n<td>Iris iberica</td>\n<td>0.3 m H</td>\n<td>9-12</td>\n<td>20-55%</td>\n<td>0-0.6</td>\n<td>0-0.1</td>\n<td>0.1-0.7</td>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n<td>Central Palearctic</td>\n</tr>\n<tr>\n<td>Lapland Poppy</td>\n<td>Oreomecon lapponica</td>\n<td>0.35 m H</td>\n<td>-17--8</td>\n<td>12-55%</td>\n<td>0-0.35</td>\n<td>0-0.5</td>\n<td>0-0.3</td>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n<td>Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr>\n<td>Whorled lousewort</td>\n<td>Pedicularis verticillata</td>\n<td>0.25-0.4 M H</td>\n<td>-11-4</td>\n<td>15-93%</td>\n<td>0.05-1</td>\n<td>0-0.6</td>\n<td>0.05-0.85</td>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n<td>Eastern Palearctic, Pacific Palearctic, Pacific Nearctic</td>\n</tr>\n<tr>\n<td>Yellow-flowered Rosebay</td>\n<td>Rhododendron aureum</td>\n<td>1 m H</td>\n<td>-7-7</td>\n<td>45-75%</td>\n<td>0.2-1</td>\n<td>0-0.9</td>\n<td>0.3-0.7</td>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n<td>Eastern Palearctic, Pacific Palearctic</td>\n</tr>\n<tr>\n<td>Common Rhododendron</td>\n<td>Rhododendron ponticum</td>\n<td>3-5 m H</td>\n<td>12-16</td>\n<td>55-100%</td>\n<td>0.4-0.8</td>\n<td>0.4-0.9</td>\n<td>0-0.6</td>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n<td>Atlantic Palearctic</td>\n</tr>\n<tr>\n<td>Arctic Willow</td>\n<td>Salix arctica</td>\n<td>0.15-0.5 m H</td>\n<td>-19-0</td>\n<td>21-100%</td>\n<td>0-0.4</td>\n<td>0-0.4</td>\n<td>0-0.6</td>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n<td>Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr>\n<td>Purple Pitcher Plant</td>\n<td>Sarracenia purpurea</td>\n<td>0.4 m H</td>\n<td>-6-18</td>\n<td>23-78%</td>\n<td>0-0.5</td>\n<td>0-0.3</td>\n<td>0-0.3</td>\n<td>Near Water</td>\n<td>&nbsp;</td>\n<td>Atlantic Nearctic, Pacific Nearctic</td>\n</tr>\n<tr>\n<td>Moss Campion</td>\n<td>Silene acaulis</td>\n<td>0.6-1.8 m W</td>\n<td>-18-4</td>\n<td>9-75%</td>\n<td>0-1</td>\n<td>0-0.2</td>\n<td>0-0.7</td>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n<td>Atlantic Palearctic, Central Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr>\n<td>Common Dandelion</td>\n<td>Taraxacum officinale</td>\n<td>0.4-0.7 m H</td>\n<td>0-18</td>\n<td>9-95%</td>\n<td>0-1</td>\n<td>0-1</td>\n<td>0-0.75</td>\n<td>&nbsp;</td>\n<td>Vegetable</td>\n<td>Atlantic Palearctic, Central Palearctic, Eastern Palearctic</td>\n</tr>\n<tr>\n<td>Red Clover</td>\n<td>Trifolium pratense</td>\n<td>0.2-0.8 m H</td>\n<td>-1-15</td>\n<td>29-100%</td>\n<td>0.25-1</td>\n<td>0-0.6</td>\n<td>0-0.72</td>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n<td>Atlantic Palearctic, Central Palearctic</td>\n</tr>\n<tr>\n<td>Dwarf Bulrush</td>\n<td>Typha minima</td>\n<td>0.3-0.8 m H</td>\n<td>6-14</td>\n<td>16-75%</td>\n<td>0-0.8</td>\n<td>0-0.7</td>\n<td>0-0.2</td>\n<td>Near Water</td>\n<td>&nbsp;</td>\n<td>Atlantic Palearctic, Central Palearctic, Eastern Palearctic</td>\n</tr>\n<tr>\n<td>Wild Pansy</td>\n<td>Viola tricolor</td>\n<td>0.15 m H</td>\n<td>3-14</td>\n<td>23-72%</td>\n<td>0-1</td>\n<td>0-0.4</td>\n<td>0-0.67</td>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n<td>Atlantic Palearctic, Central Palearctic, Eastern Palearctic</td>\n</tr>\n<tr>\n<td>Egg Wrack</td>\n<td>Ascophyllum nodosum</td>\n<td>1-2.5 m H</td>\n<td>-6-12</td>\n<td>0-100%</td>\n<td>0-1</td>\n<td>0-1</td>\n<td>8-0 m D</td>\n<td>In Water</td>\n<td>Vegetable</td>\n<td>Atlantic Palearctic, Atlantic Nearctic</td>\n</tr>\n<tr>\n<td>Floating Marsh Marigold</td>\n<td>Caltha natans</td>\n<td>0.5 m H</td>\n<td>-10-6</td>\n<td>21-90%</td>\n<td>0-1</td>\n<td>0-0.6</td>\n<td>0-0.15</td>\n<td>In Water, Near Water</td>\n<td>&nbsp;</td>\n<td>Central Palearctic, Eastern Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr>\n<td>Oarweed</td>\n<td>Laminaria digitata</td>\n<td>2-3 m H</td>\n<td>-2-12</td>\n<td>0-100%</td>\n<td>0-1</td>\n<td>0-1</td>\n<td>24-0 m D</td>\n<td>In Water</td>\n<td>Potash</td>\n<td>Atlantic Palearctic, Atlantic Nearctic</td>\n</tr>\n<tr>\n<td>European Feather Grass</td>\n<td>Stipa pennata</td>\n<td>.9-1.2 m H</td>\n<td>4-9</td>\n<td>35-65%</td>\n<td>0.2-1</td>\n<td>0-0.05</td>\n<td>0.02-0.65</td>\n<td>&nbsp;</td>\n<td>Grass</td>\n<td>Atlantic Palearctic, Central Palearctic, Eastern Palearctic</td>\n</tr>\n<tr>\n<td>Balsam Fir</td>\n<td>Abies balsamea</td>\n<td>14-20 m H</td>\n<td>-4-6</td>\n<td>31-100%</td>\n<td>0-0.9</td>\n<td>0.2-1</td>\n<td>0-0.58 (0.68)</td>\n<td>&nbsp;</td>\n<td>Wood, Resin, Seeds</td>\n<td>Atlantic Nearctic</td>\n</tr>\n<tr>\n<td>European Alder</td>\n<td>Alnus glutinosa</td>\n<td>20-30 m H</td>\n<td>2-16</td>\n<td>50-100%</td>\n<td>0-1</td>\n<td>0.6-1</td>\n<td>0-0.56 (0.7)</td>\n<td>&nbsp;</td>\n<td>Wood, Seeds</td>\n<td>Atlantic Palearctic</td>\n</tr>\n<tr>\n<td>Tamarack</td>\n<td>Larix laricina</td>\n<td>15-23 m H</td>\n<td>-10-8</td>\n<td>20-100%</td>\n<td>0-0.85</td>\n<td>0-0.7</td>\n<td>0-0.5 (0.6)</td>\n<td>&nbsp;</td>\n<td>Wood, Seeds</td>\n<td>Atlantic Nearctic, Pacific Nearctic</td>\n</tr>\n<tr>\n<td>White Spruce</td>\n<td>Picea glauca</td>\n<td>15-39 m H</td>\n<td>-8-8</td>\n<td>20-78%</td>\n<td>0-1</td>\n<td>0-1</td>\n<td>0-0.5 (0.6)</td>\n<td>&nbsp;</td>\n<td>Wood, Seeds</td>\n<td>Atlantic Nearctic, Pacific Nearctic</td>\n</tr>\n<tr>\n<td>Black Spruce</td>\n<td>Picea mariana</td>\n<td>5-15 m H</td>\n<td>-8-9</td>\n<td>15-100%</td>\n<td>0.4-1</td>\n<td>0.2-1</td>\n<td>0-0.5 (0.53)</td>\n<td>&nbsp;</td>\n<td>Firewood, Seeds</td>\n<td>Atlantic Nearctic, Pacific Nearctic</td>\n</tr>\n<tr>\n<td>Siberian Pine</td>\n<td>Pinus sibirica</td>\n<td>30-40 m H</td>\n<td>-10-6</td>\n<td>24-62%</td>\n<td>0-0.7</td>\n<td>0-1</td>\n<td>0-0.64 (0.84)</td>\n<td>&nbsp;</td>\n<td>Wood, Seeds, Resin</td>\n<td>Central Palearctic, Eastern Palearctic</td>\n</tr>\n<tr>\n<td>Trembling Aspen</td>\n<td>Populus tremuloides</td>\n<td>15-18 m H</td>\n<td>-8-12</td>\n<td>7-100%</td>\n<td>0-0.8</td>\n<td>0.3-1</td>\n<td>0-0.8 (0.9)</td>\n<td>&nbsp;</td>\n<td>Firewood, Seeds</td>\n<td>Atlantic Nearctic, Pacific Nearctic</td>\n</tr>\n<tr>\n<td>Sessile Oak</td>\n<td>Quercus petraea</td>\n<td>20-40 m H</td>\n<td>4-16</td>\n<td>61-92%</td>\n<td>0.4-1</td>\n<td>0.2-1</td>\n<td>0-0.56 (0.7)</td>\n<td>&nbsp;</td>\n<td>Wood, Tannin, Seeds</td>\n<td>Atlantic Palearctic, Central Palearctic</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p><span style=\"font-weight: 400;\">&nbsp;</span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Compatibility</div>\n<div class=\"spoiler-text\"><a href=\"https://mods.vintagestory.at/show/mod/8785\">Biomes</a>: This mod adds plant life to both Nearctic and all four Palearctic Realms<br /><a href=\"https://mods.vintagestory.at/show/mod/247\">XSkills</a>: Experience from berry bushes and trees</div>\n</div>\n<p><span style=\"font-weight: 400;\">&nbsp;</span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong> Why so many plant packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain plant pack file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><strong>Q:</strong>&nbsp;Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> It is safe to add, plants will only appear in chunks not previously generated. Removing this mod from an existing world will leave many broken blocks and is not recommended, but manually regenerating chunks via in game commands affecting can work.<br /><br /><br /><strong>Q:</strong> Can you add X plant?<br /><br /><strong>A:</strong> We are focusing on getting a core 30 plants into all 36 planned Floral Regions first before any plans to add more content, if ever. That said, we occasionally do commissions and would be open to adding plants that way. Check Tenth Architect's Discord or Author profile to see if any commission slots are open.<br /><br /><br /><strong>Q:</strong> Can you add X compatibility?<br /><br /><strong>A:</strong> Maintenance and our own planned content is our priority, and almost all our existing compatibilty files were those sent to us by community members. If you'd like to see compatibility added, you are welcome to make the patches, test to ensure they work and send them our way and we will add them. The exception to this would be if the size of the compatibility files would have significant performance impact for most users of this series, as performance is a higher priority of ours than cross compatibility.</div>\n</div>\n<p><span style=\"font-weight: 400;\"><br /><br /><br />Features:<br />The plants in this mod primarily spawn between 85 and 40 degrees latitude in a normal world climate.&nbsp;<br /><br />Links:<br /><a href=\"https://ko-fi.com/tentharchitect\">https://ko-fi.com/tentharchitect<br /><br /></a>And a big thanks to everyone who gave feedback and assistance!<br /><br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "floralzonescircumborealregion",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_0d1c17171801817ee3fd9b9fec7afda7_480_320.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_0d1c17171801817ee3fd9b9fec7afda7_480_320.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_0d1c17171801817ee3fd9b9fec7afda7.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 5152,
+    "follows": 178,
+    "trendingpoints": 0,
+    "comments": 38,
+    "side": "both",
+    "type": "mod",
+    "created": "2026-08-28 16:20:28",
+    "lastreleased": "2026-09-23 19:51:27",
+    "lastmodified": "2026-09-28 20:17:55",
+    "tags": [
+      "Worldgen",
+      "Food",
+      "Alcohol",
+      "Flora",
+      "Ocean"
+    ],
+    "releases": [
+      {
+        "releaseid": 58174,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCircumbor_ea084a92b198ae61c28623749cd8fc8e.zip?dl=FloralZonesCircumborealRegion-v1.0.2.zip",
+        "filename": "FloralZonesCircumborealRegion-v1.0.2.zip",
+        "fileid": 124654,
+        "downloads": 854,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "floralzonescircumborealregion",
+        "modversion": "1.0.2",
+        "created": "2026-09-23 19:51:27",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Useful Traders patch (Thanks Droseran!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Broken patch for Cosmopolitan Floral Zone wine<br /></span><span style=\"font-weight: 400;\">Fixed-Missing in-log beehives</span></p>"
+      },
+      {
+        "releaseid": 56450,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCircumbor_4d96693158828b0119dcfdd4a828e30b.zip?dl=FloralZonesCircumborealRegion-v1.0.1.zip",
+        "filename": "FloralZonesCircumborealRegion-v1.0.1.zip",
+        "fileid": 121415,
+        "downloads": 2049,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "floralzonescircumborealregion",
+        "modversion": "1.0.1",
+        "created": "2026-09-10 23:25:59",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Crash related to dogwood berries in fruit press</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Glass pane textures and audio</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed- xskills patch referring to ripe berry bushes</span></p>"
+      },
+      {
+        "releaseid": 54765,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCircumbor_807b99708ae01d92c5b95fe4ffbea542.zip?dl=FloralZonesCircumborealRegion-v1.0.0.zip",
+        "filename": "FloralZonesCircumborealRegion-v1.0.0.zip",
+        "fileid": 118265,
+        "downloads": 2249,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "floralzonescircumborealregion",
+        "modversion": "1.0.0",
+        "created": "2026-08-28 16:22:26",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 118253,
+        "mainfile": "https://moddbcdn.vintagestory.at/2026-08-28_08-55-35_5f8c2b47c2c4b69df557d792f6aab333.png",
+        "filename": "2026-08-28_08-55-35.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2026-08-28_08-55-35_5f8c2b47c2c4b69df557d792f6aab333_55_60.png",
+        "created": "2026-08-28 16:16:31"
+      },
+      {
+        "fileid": 118254,
+        "mainfile": "https://moddbcdn.vintagestory.at/2026-08-28_08-38-16_e7dd4dfe0d675b5bb4e5cbd2f716032d.png",
+        "filename": "2026-08-28_08-38-16.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2026-08-28_08-38-16_e7dd4dfe0d675b5bb4e5cbd2f716032d_55_60.png",
+        "created": "2026-08-28 16:16:38"
+      },
+      {
+        "fileid": 118255,
+        "mainfile": "https://moddbcdn.vintagestory.at/2026-08-28_08-00-53_9702ebcb857424801fa1e6b8ea1e7afe.png",
+        "filename": "2026-08-28_08-00-53.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2026-08-28_08-00-53_9702ebcb857424801fa1e6b8ea1e7afe_55_60.png",
+        "created": "2026-08-28 16:16:45"
+      },
+      {
+        "fileid": 118257,
+        "mainfile": "https://moddbcdn.vintagestory.at/2026-08-28_08-02-46_9041b11b819623301983f94f06266212.png",
+        "filename": "2026-08-28_08-02-46.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2026-08-28_08-02-46_9041b11b819623301983f94f06266212_55_60.png",
+        "created": "2026-08-28 16:16:45"
+      },
+      {
+        "fileid": 118258,
+        "mainfile": "https://moddbcdn.vintagestory.at/2026-08-28_08-39-34_593e76b793ce141c751ec1eb6e0200cb.png",
+        "filename": "2026-08-28_08-39-34.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2026-08-28_08-39-34_593e76b793ce141c751ec1eb6e0200cb_55_60.png",
+        "created": "2026-08-28 16:16:47"
+      },
+      {
+        "fileid": 118259,
+        "mainfile": "https://moddbcdn.vintagestory.at/2026-08-28_08-42-06_11e20e50f2b6265dbcf802303087d767.png",
+        "filename": "2026-08-28_08-42-06.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2026-08-28_08-42-06_11e20e50f2b6265dbcf802303087d767_55_60.png",
+        "created": "2026-08-28 16:16:53"
+      },
+      {
+        "fileid": 118260,
+        "mainfile": "https://moddbcdn.vintagestory.at/2026-08-28_09-02-24_45e64d921054400c1e1b362a21642023.png",
+        "filename": "2026-08-28_09-02-24.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2026-08-28_09-02-24_45e64d921054400c1e1b362a21642023_55_60.png",
+        "created": "2026-08-28 16:16:58"
+      },
+      {
+        "fileid": 118261,
+        "mainfile": "https://moddbcdn.vintagestory.at/2026-08-28_09-04-11_b74a866a5b878fcd02709d8cbc9a27b5.png",
+        "filename": "2026-08-28_09-04-11.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2026-08-28_09-04-11_b74a866a5b878fcd02709d8cbc9a27b5_55_60.png",
+        "created": "2026-08-28 16:17:00"
+      },
+      {
+        "fileid": 118263,
+        "mainfile": "https://moddbcdn.vintagestory.at/modicon_0d1c17171801817ee3fd9b9fec7afda7_480_320.png",
+        "filename": "modicon_480_320.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/modicon_0d1c17171801817ee3fd9b9fec7afda7_480_320_55_60.png",
+        "created": "2026-08-28 16:21:28"
+      },
+      {
+        "fileid": 118267,
+        "mainfile": "https://moddbcdn.vintagestory.at/2026-08-28_09-33-53_6597e30f812cdd2e4018f8733fbc3672.png",
+        "filename": "2026-08-28_09-33-53.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2026-08-28_09-33-53_6597e30f812cdd2e4018f8733fbc3672_55_60.png",
+        "created": "2026-08-28 16:35:09"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

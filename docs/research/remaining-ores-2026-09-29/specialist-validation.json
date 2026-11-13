@@ -1,0 +1,94 @@
+{
+  "major-deposits": {
+    "source_records": 3161,
+    "missing_coordinates": 7,
+    "raw_main_records": 3168,
+    "processing_types_excluded": {},
+    "source_table_names": [
+      "deposit",
+      "commodity",
+      "ref",
+      "reflink",
+      "datadxny"
+    ]
+  },
+  "nicrpge": {
+    "source_records": 17914,
+    "raw_main_records": 17954,
+    "processing_types_excluded": {
+      "Cross Reference": 39,
+      "HANDLING": 1
+    },
+    "source_table_names": [
+      "commodity",
+      "datadxny",
+      "main"
+    ]
+  },
+  "phosphate": {
+    "source_records": 1187,
+    "missing_coordinates": 448,
+    "raw_main_records": 1635,
+    "processing_types_excluded": {},
+    "source_table_names": [
+      "commodity",
+      "datadxny",
+      "main",
+      "minerals",
+      "other_db",
+      "ref",
+      "reflink"
+    ]
+  },
+  "sedexmvt": {
+    "source_records": 240,
+    "raw_main_records": 240,
+    "processing_types_excluded": {},
+    "source_table_names": [
+      "main",
+      "reference",
+      "datadxny"
+    ]
+  },
+  "laterite": {
+    "source_records": 120,
+    "raw_main_records": 120,
+    "processing_types_excluded": {},
+    "source_table_names": [
+      "main",
+      "minerals",
+      "latrxprof",
+      "ref"
+    ]
+  },
+  "podchrome": {
+    "source_records": 1045,
+    "missing_coordinates": 79,
+    "raw_main_records": 1124,
+    "processing_types_excluded": {},
+    "source_table_names": [
+      "datadxny",
+      "main",
+      "minerals",
+      "ref",
+      "rocks5km"
+    ]
+  },
+  "vms": {
+    "source_records": 1090,
+    "raw_main_records": 1090,
+    "processing_types_excluded": {},
+    "source_table_names": [
+      "main",
+      "mineral",
+      "host_rock",
+      "rocks_up",
+      "rocks_down",
+      "rocks_5km",
+      "dep_5km",
+      "dep_10km",
+      "reference",
+      "datadxny"
+    ]
+  }
+}

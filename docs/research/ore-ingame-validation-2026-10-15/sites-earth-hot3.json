@@ -1,0 +1,1262 @@
+[
+{
+"Name": "cornwall-Sn#00",
+"Kind": "hotspot:Sn",
+"Lat": 50.115,
+"Lon": -5.385,
+"Radius": 1
+},
+{
+"Name": "cornwall-Sn#01",
+"Kind": "hotspot:Sn",
+"Lat": 50.115,
+"Lon": -5.25,
+"Radius": 1
+},
+{
+"Name": "cornwall-Sn#02",
+"Kind": "hotspot:Sn",
+"Lat": 50.115,
+"Lon": -5.115,
+"Radius": 1
+},
+{
+"Name": "cornwall-Sn#10",
+"Kind": "hotspot:Sn",
+"Lat": 50.25,
+"Lon": -5.385,
+"Radius": 1
+},
+{
+"Name": "cornwall-Sn#11",
+"Kind": "hotspot:Sn",
+"Lat": 50.25,
+"Lon": -5.25,
+"Radius": 1
+},
+{
+"Name": "cornwall-Sn#12",
+"Kind": "hotspot:Sn",
+"Lat": 50.25,
+"Lon": -5.115,
+"Radius": 1
+},
+{
+"Name": "cornwall-Sn#20",
+"Kind": "hotspot:Sn",
+"Lat": 50.385,
+"Lon": -5.385,
+"Radius": 1
+},
+{
+"Name": "cornwall-Sn#21",
+"Kind": "hotspot:Sn",
+"Lat": 50.385,
+"Lon": -5.25,
+"Radius": 1
+},
+{
+"Name": "cornwall-Sn#22",
+"Kind": "hotspot:Sn",
+"Lat": 50.385,
+"Lon": -5.115,
+"Radius": 1
+},
+{
+"Name": "chuquicamata-Cu#00",
+"Kind": "hotspot:Cu",
+"Lat": -22.435,
+"Lon": -69.035,
+"Radius": 1
+},
+{
+"Name": "chuquicamata-Cu#01",
+"Kind": "hotspot:Cu",
+"Lat": -22.435,
+"Lon": -68.9,
+"Radius": 1
+},
+{
+"Name": "chuquicamata-Cu#02",
+"Kind": "hotspot:Cu",
+"Lat": -22.435,
+"Lon": -68.765,
+"Radius": 1
+},
+{
+"Name": "chuquicamata-Cu#10",
+"Kind": "hotspot:Cu",
+"Lat": -22.3,
+"Lon": -69.035,
+"Radius": 1
+},
+{
+"Name": "chuquicamata-Cu#11",
+"Kind": "hotspot:Cu",
+"Lat": -22.3,
+"Lon": -68.9,
+"Radius": 1
+},
+{
+"Name": "chuquicamata-Cu#12",
+"Kind": "hotspot:Cu",
+"Lat": -22.3,
+"Lon": -68.765,
+"Radius": 1
+},
+{
+"Name": "chuquicamata-Cu#20",
+"Kind": "hotspot:Cu",
+"Lat": -22.165,
+"Lon": -69.035,
+"Radius": 1
+},
+{
+"Name": "chuquicamata-Cu#21",
+"Kind": "hotspot:Cu",
+"Lat": -22.165,
+"Lon": -68.9,
+"Radius": 1
+},
+{
+"Name": "chuquicamata-Cu#22",
+"Kind": "hotspot:Cu",
+"Lat": -22.165,
+"Lon": -68.765,
+"Radius": 1
+},
+{
+"Name": "escondida-Cu#00",
+"Kind": "hotspot:Cu",
+"Lat": -21.935,
+"Lon": -68.885,
+"Radius": 1
+},
+{
+"Name": "escondida-Cu#01",
+"Kind": "hotspot:Cu",
+"Lat": -21.935,
+"Lon": -68.75,
+"Radius": 1
+},
+{
+"Name": "escondida-Cu#02",
+"Kind": "hotspot:Cu",
+"Lat": -21.935,
+"Lon": -68.615,
+"Radius": 1
+},
+{
+"Name": "escondida-Cu#10",
+"Kind": "hotspot:Cu",
+"Lat": -21.8,
+"Lon": -68.885,
+"Radius": 1
+},
+{
+"Name": "escondida-Cu#11",
+"Kind": "hotspot:Cu",
+"Lat": -21.8,
+"Lon": -68.75,
+"Radius": 1
+},
+{
+"Name": "escondida-Cu#12",
+"Kind": "hotspot:Cu",
+"Lat": -21.8,
+"Lon": -68.615,
+"Radius": 1
+},
+{
+"Name": "escondida-Cu#20",
+"Kind": "hotspot:Cu",
+"Lat": -21.665,
+"Lon": -68.885,
+"Radius": 1
+},
+{
+"Name": "escondida-Cu#21",
+"Kind": "hotspot:Cu",
+"Lat": -21.665,
+"Lon": -68.75,
+"Radius": 1
+},
+{
+"Name": "escondida-Cu#22",
+"Kind": "hotspot:Cu",
+"Lat": -21.665,
+"Lon": -68.615,
+"Radius": 1
+},
+{
+"Name": "pilbara-Fe#00",
+"Kind": "hotspot:Fe",
+"Lat": -22.385,
+"Lon": 118.865,
+"Radius": 1
+},
+{
+"Name": "pilbara-Fe#01",
+"Kind": "hotspot:Fe",
+"Lat": -22.385,
+"Lon": 119.0,
+"Radius": 1
+},
+{
+"Name": "pilbara-Fe#02",
+"Kind": "hotspot:Fe",
+"Lat": -22.385,
+"Lon": 119.135,
+"Radius": 1
+},
+{
+"Name": "pilbara-Fe#10",
+"Kind": "hotspot:Fe",
+"Lat": -22.25,
+"Lon": 118.865,
+"Radius": 1
+},
+{
+"Name": "pilbara-Fe#11",
+"Kind": "hotspot:Fe",
+"Lat": -22.25,
+"Lon": 119.0,
+"Radius": 1
+},
+{
+"Name": "pilbara-Fe#12",
+"Kind": "hotspot:Fe",
+"Lat": -22.25,
+"Lon": 119.135,
+"Radius": 1
+},
+{
+"Name": "pilbara-Fe#20",
+"Kind": "hotspot:Fe",
+"Lat": -22.115,
+"Lon": 118.865,
+"Radius": 1
+},
+{
+"Name": "pilbara-Fe#21",
+"Kind": "hotspot:Fe",
+"Lat": -22.115,
+"Lon": 119.0,
+"Radius": 1
+},
+{
+"Name": "pilbara-Fe#22",
+"Kind": "hotspot:Fe",
+"Lat": -22.115,
+"Lon": 119.135,
+"Radius": 1
+},
+{
+"Name": "ruhr-coal#00",
+"Kind": "hotspot:C_coal",
+"Lat": 51.615,
+"Lon": 7.115,
+"Radius": 1
+},
+{
+"Name": "ruhr-coal#01",
+"Kind": "hotspot:C_coal",
+"Lat": 51.615,
+"Lon": 7.25,
+"Radius": 1
+},
+{
+"Name": "ruhr-coal#02",
+"Kind": "hotspot:C_coal",
+"Lat": 51.615,
+"Lon": 7.385,
+"Radius": 1
+},
+{
+"Name": "ruhr-coal#10",
+"Kind": "hotspot:C_coal",
+"Lat": 51.75,
+"Lon": 7.115,
+"Radius": 1
+},
+{
+"Name": "ruhr-coal#11",
+"Kind": "hotspot:C_coal",
+"Lat": 51.75,
+"Lon": 7.25,
+"Radius": 1
+},
+{
+"Name": "ruhr-coal#12",
+"Kind": "hotspot:C_coal",
+"Lat": 51.75,
+"Lon": 7.385,
+"Radius": 1
+},
+{
+"Name": "ruhr-coal#20",
+"Kind": "hotspot:C_coal",
+"Lat": 51.885,
+"Lon": 7.115,
+"Radius": 1
+},
+{
+"Name": "ruhr-coal#21",
+"Kind": "hotspot:C_coal",
+"Lat": 51.885,
+"Lon": 7.25,
+"Radius": 1
+},
+{
+"Name": "ruhr-coal#22",
+"Kind": "hotspot:C_coal",
+"Lat": 51.885,
+"Lon": 7.385,
+"Radius": 1
+},
+{
+"Name": "kimberley-diamond#00",
+"Kind": "hotspot:diamond",
+"Lat": -28.885,
+"Lon": 24.615,
+"Radius": 1
+},
+{
+"Name": "kimberley-diamond#01",
+"Kind": "hotspot:diamond",
+"Lat": -28.885,
+"Lon": 24.75,
+"Radius": 1
+},
+{
+"Name": "kimberley-diamond#02",
+"Kind": "hotspot:diamond",
+"Lat": -28.885,
+"Lon": 24.885,
+"Radius": 1
+},
+{
+"Name": "kimberley-diamond#10",
+"Kind": "hotspot:diamond",
+"Lat": -28.75,
+"Lon": 24.615,
+"Radius": 1
+},
+{
+"Name": "kimberley-diamond#11",
+"Kind": "hotspot:diamond",
+"Lat": -28.75,
+"Lon": 24.75,
+"Radius": 1
+},
+{
+"Name": "kimberley-diamond#12",
+"Kind": "hotspot:diamond",
+"Lat": -28.75,
+"Lon": 24.885,
+"Radius": 1
+},
+{
+"Name": "kimberley-diamond#20",
+"Kind": "hotspot:diamond",
+"Lat": -28.615,
+"Lon": 24.615,
+"Radius": 1
+},
+{
+"Name": "kimberley-diamond#21",
+"Kind": "hotspot:diamond",
+"Lat": -28.615,
+"Lon": 24.75,
+"Radius": 1
+},
+{
+"Name": "kimberley-diamond#22",
+"Kind": "hotspot:diamond",
+"Lat": -28.615,
+"Lon": 24.885,
+"Radius": 1
+},
+{
+"Name": "witwatersrand-Au#00",
+"Kind": "hotspot:Au",
+"Lat": -26.335,
+"Lon": 27.865,
+"Radius": 1
+},
+{
+"Name": "witwatersrand-Au#01",
+"Kind": "hotspot:Au",
+"Lat": -26.335,
+"Lon": 28.0,
+"Radius": 1
+},
+{
+"Name": "witwatersrand-Au#02",
+"Kind": "hotspot:Au",
+"Lat": -26.335,
+"Lon": 28.135,
+"Radius": 1
+},
+{
+"Name": "witwatersrand-Au#10",
+"Kind": "hotspot:Au",
+"Lat": -26.2,
+"Lon": 27.865,
+"Radius": 1
+},
+{
+"Name": "witwatersrand-Au#11",
+"Kind": "hotspot:Au",
+"Lat": -26.2,
+"Lon": 28.0,
+"Radius": 1
+},
+{
+"Name": "witwatersrand-Au#12",
+"Kind": "hotspot:Au",
+"Lat": -26.2,
+"Lon": 28.135,
+"Radius": 1
+},
+{
+"Name": "witwatersrand-Au#20",
+"Kind": "hotspot:Au",
+"Lat": -26.065,
+"Lon": 27.865,
+"Radius": 1
+},
+{
+"Name": "witwatersrand-Au#21",
+"Kind": "hotspot:Au",
+"Lat": -26.065,
+"Lon": 28.0,
+"Radius": 1
+},
+{
+"Name": "witwatersrand-Au#22",
+"Kind": "hotspot:Au",
+"Lat": -26.065,
+"Lon": 28.135,
+"Radius": 1
+},
+{
+"Name": "gulf-salt#00",
+"Kind": "hotspot:NaCl",
+"Lat": 30.115,
+"Lon": -93.885,
+"Radius": 1
+},
+{
+"Name": "gulf-salt#01",
+"Kind": "hotspot:NaCl",
+"Lat": 30.115,
+"Lon": -93.75,
+"Radius": 1
+},
+{
+"Name": "gulf-salt#02",
+"Kind": "hotspot:NaCl",
+"Lat": 30.115,
+"Lon": -93.615,
+"Radius": 1
+},
+{
+"Name": "gulf-salt#10",
+"Kind": "hotspot:NaCl",
+"Lat": 30.25,
+"Lon": -93.885,
+"Radius": 1
+},
+{
+"Name": "gulf-salt#11",
+"Kind": "hotspot:NaCl",
+"Lat": 30.25,
+"Lon": -93.75,
+"Radius": 1
+},
+{
+"Name": "gulf-salt#12",
+"Kind": "hotspot:NaCl",
+"Lat": 30.25,
+"Lon": -93.615,
+"Radius": 1
+},
+{
+"Name": "gulf-salt#20",
+"Kind": "hotspot:NaCl",
+"Lat": 30.385,
+"Lon": -93.885,
+"Radius": 1
+},
+{
+"Name": "gulf-salt#21",
+"Kind": "hotspot:NaCl",
+"Lat": 30.385,
+"Lon": -93.75,
+"Radius": 1
+},
+{
+"Name": "gulf-salt#22",
+"Kind": "hotspot:NaCl",
+"Lat": 30.385,
+"Lon": -93.615,
+"Radius": 1
+},
+{
+"Name": "zechstein-salt#00",
+"Kind": "hotspot:NaCl",
+"Lat": 52.615,
+"Lon": 10.115,
+"Radius": 1
+},
+{
+"Name": "zechstein-salt#01",
+"Kind": "hotspot:NaCl",
+"Lat": 52.615,
+"Lon": 10.25,
+"Radius": 1
+},
+{
+"Name": "zechstein-salt#02",
+"Kind": "hotspot:NaCl",
+"Lat": 52.615,
+"Lon": 10.385,
+"Radius": 1
+},
+{
+"Name": "zechstein-salt#10",
+"Kind": "hotspot:NaCl",
+"Lat": 52.75,
+"Lon": 10.115,
+"Radius": 1
+},
+{
+"Name": "zechstein-salt#11",
+"Kind": "hotspot:NaCl",
+"Lat": 52.75,
+"Lon": 10.25,
+"Radius": 1
+},
+{
+"Name": "zechstein-salt#12",
+"Kind": "hotspot:NaCl",
+"Lat": 52.75,
+"Lon": 10.385,
+"Radius": 1
+},
+{
+"Name": "zechstein-salt#20",
+"Kind": "hotspot:NaCl",
+"Lat": 52.885,
+"Lon": 10.115,
+"Radius": 1
+},
+{
+"Name": "zechstein-salt#21",
+"Kind": "hotspot:NaCl",
+"Lat": 52.885,
+"Lon": 10.25,
+"Radius": 1
+},
+{
+"Name": "zechstein-salt#22",
+"Kind": "hotspot:NaCl",
+"Lat": 52.885,
+"Lon": 10.385,
+"Radius": 1
+},
+{
+"Name": "saskatchewan-potash#00",
+"Kind": "hotspot:K",
+"Lat": 51.615,
+"Lon": -105.385,
+"Radius": 1
+},
+{
+"Name": "saskatchewan-potash#01",
+"Kind": "hotspot:K",
+"Lat": 51.615,
+"Lon": -105.25,
+"Radius": 1
+},
+{
+"Name": "saskatchewan-potash#02",
+"Kind": "hotspot:K",
+"Lat": 51.615,
+"Lon": -105.115,
+"Radius": 1
+},
+{
+"Name": "saskatchewan-potash#10",
+"Kind": "hotspot:K",
+"Lat": 51.75,
+"Lon": -105.385,
+"Radius": 1
+},
+{
+"Name": "saskatchewan-potash#11",
+"Kind": "hotspot:K",
+"Lat": 51.75,
+"Lon": -105.25,
+"Radius": 1
+},
+{
+"Name": "saskatchewan-potash#12",
+"Kind": "hotspot:K",
+"Lat": 51.75,
+"Lon": -105.115,
+"Radius": 1
+},
+{
+"Name": "saskatchewan-potash#20",
+"Kind": "hotspot:K",
+"Lat": 51.885,
+"Lon": -105.385,
+"Radius": 1
+},
+{
+"Name": "saskatchewan-potash#21",
+"Kind": "hotspot:K",
+"Lat": 51.885,
+"Lon": -105.25,
+"Radius": 1
+},
+{
+"Name": "saskatchewan-potash#22",
+"Kind": "hotspot:K",
+"Lat": 51.885,
+"Lon": -105.115,
+"Radius": 1
+},
+{
+"Name": "brokenhill-PbZn#00",
+"Kind": "hotspot:Pb",
+"Lat": -32.385,
+"Lon": 141.115,
+"Radius": 1
+},
+{
+"Name": "brokenhill-PbZn#01",
+"Kind": "hotspot:Pb",
+"Lat": -32.385,
+"Lon": 141.25,
+"Radius": 1
+},
+{
+"Name": "brokenhill-PbZn#02",
+"Kind": "hotspot:Pb",
+"Lat": -32.385,
+"Lon": 141.385,
+"Radius": 1
+},
+{
+"Name": "brokenhill-PbZn#10",
+"Kind": "hotspot:Pb",
+"Lat": -32.25,
+"Lon": 141.115,
+"Radius": 1
+},
+{
+"Name": "brokenhill-PbZn#11",
+"Kind": "hotspot:Pb",
+"Lat": -32.25,
+"Lon": 141.25,
+"Radius": 1
+},
+{
+"Name": "brokenhill-PbZn#12",
+"Kind": "hotspot:Pb",
+"Lat": -32.25,
+"Lon": 141.385,
+"Radius": 1
+},
+{
+"Name": "brokenhill-PbZn#20",
+"Kind": "hotspot:Pb",
+"Lat": -32.115,
+"Lon": 141.115,
+"Radius": 1
+},
+{
+"Name": "brokenhill-PbZn#21",
+"Kind": "hotspot:Pb",
+"Lat": -32.115,
+"Lon": 141.25,
+"Radius": 1
+},
+{
+"Name": "brokenhill-PbZn#22",
+"Kind": "hotspot:Pb",
+"Lat": -32.115,
+"Lon": 141.385,
+"Radius": 1
+},
+{
+"Name": "sudbury-Ni#00",
+"Kind": "hotspot:Ni",
+"Lat": 46.615,
+"Lon": -80.885,
+"Radius": 1
+},
+{
+"Name": "sudbury-Ni#01",
+"Kind": "hotspot:Ni",
+"Lat": 46.615,
+"Lon": -80.75,
+"Radius": 1
+},
+{
+"Name": "sudbury-Ni#02",
+"Kind": "hotspot:Ni",
+"Lat": 46.615,
+"Lon": -80.615,
+"Radius": 1
+},
+{
+"Name": "sudbury-Ni#10",
+"Kind": "hotspot:Ni",
+"Lat": 46.75,
+"Lon": -80.885,
+"Radius": 1
+},
+{
+"Name": "sudbury-Ni#11",
+"Kind": "hotspot:Ni",
+"Lat": 46.75,
+"Lon": -80.75,
+"Radius": 1
+},
+{
+"Name": "sudbury-Ni#12",
+"Kind": "hotspot:Ni",
+"Lat": 46.75,
+"Lon": -80.615,
+"Radius": 1
+},
+{
+"Name": "sudbury-Ni#20",
+"Kind": "hotspot:Ni",
+"Lat": 46.885,
+"Lon": -80.885,
+"Radius": 1
+},
+{
+"Name": "sudbury-Ni#21",
+"Kind": "hotspot:Ni",
+"Lat": 46.885,
+"Lon": -80.75,
+"Radius": 1
+},
+{
+"Name": "sudbury-Ni#22",
+"Kind": "hotspot:Ni",
+"Lat": 46.885,
+"Lon": -80.615,
+"Radius": 1
+},
+{
+"Name": "bushveld-Cr#00",
+"Kind": "hotspot:Cr",
+"Lat": -24.385,
+"Lon": 30.115,
+"Radius": 1
+},
+{
+"Name": "bushveld-Cr#01",
+"Kind": "hotspot:Cr",
+"Lat": -24.385,
+"Lon": 30.25,
+"Radius": 1
+},
+{
+"Name": "bushveld-Cr#02",
+"Kind": "hotspot:Cr",
+"Lat": -24.385,
+"Lon": 30.385,
+"Radius": 1
+},
+{
+"Name": "bushveld-Cr#10",
+"Kind": "hotspot:Cr",
+"Lat": -24.25,
+"Lon": 30.115,
+"Radius": 1
+},
+{
+"Name": "bushveld-Cr#11",
+"Kind": "hotspot:Cr",
+"Lat": -24.25,
+"Lon": 30.25,
+"Radius": 1
+},
+{
+"Name": "bushveld-Cr#12",
+"Kind": "hotspot:Cr",
+"Lat": -24.25,
+"Lon": 30.385,
+"Radius": 1
+},
+{
+"Name": "bushveld-Cr#20",
+"Kind": "hotspot:Cr",
+"Lat": -24.115,
+"Lon": 30.115,
+"Radius": 1
+},
+{
+"Name": "bushveld-Cr#21",
+"Kind": "hotspot:Cr",
+"Lat": -24.115,
+"Lon": 30.25,
+"Radius": 1
+},
+{
+"Name": "bushveld-Cr#22",
+"Kind": "hotspot:Cr",
+"Lat": -24.115,
+"Lon": 30.385,
+"Radius": 1
+},
+{
+"Name": "sarsang-lapis#00",
+"Kind": "hotspot:lapis",
+"Lat": 36.115,
+"Lon": 70.615,
+"Radius": 1
+},
+{
+"Name": "sarsang-lapis#01",
+"Kind": "hotspot:lapis",
+"Lat": 36.115,
+"Lon": 70.75,
+"Radius": 1
+},
+{
+"Name": "sarsang-lapis#02",
+"Kind": "hotspot:lapis",
+"Lat": 36.115,
+"Lon": 70.885,
+"Radius": 1
+},
+{
+"Name": "sarsang-lapis#10",
+"Kind": "hotspot:lapis",
+"Lat": 36.25,
+"Lon": 70.615,
+"Radius": 1
+},
+{
+"Name": "sarsang-lapis#11",
+"Kind": "hotspot:lapis",
+"Lat": 36.25,
+"Lon": 70.75,
+"Radius": 1
+},
+{
+"Name": "sarsang-lapis#12",
+"Kind": "hotspot:lapis",
+"Lat": 36.25,
+"Lon": 70.885,
+"Radius": 1
+},
+{
+"Name": "sarsang-lapis#20",
+"Kind": "hotspot:lapis",
+"Lat": 36.385,
+"Lon": 70.615,
+"Radius": 1
+},
+{
+"Name": "sarsang-lapis#21",
+"Kind": "hotspot:lapis",
+"Lat": 36.385,
+"Lon": 70.75,
+"Radius": 1
+},
+{
+"Name": "sarsang-lapis#22",
+"Kind": "hotspot:lapis",
+"Lat": 36.385,
+"Lon": 70.885,
+"Radius": 1
+},
+{
+"Name": "sicily-S#00",
+"Kind": "hotspot:S",
+"Lat": 37.115,
+"Lon": 14.115,
+"Radius": 1
+},
+{
+"Name": "sicily-S#01",
+"Kind": "hotspot:S",
+"Lat": 37.115,
+"Lon": 14.25,
+"Radius": 1
+},
+{
+"Name": "sicily-S#02",
+"Kind": "hotspot:S",
+"Lat": 37.115,
+"Lon": 14.385,
+"Radius": 1
+},
+{
+"Name": "sicily-S#10",
+"Kind": "hotspot:S",
+"Lat": 37.25,
+"Lon": 14.115,
+"Radius": 1
+},
+{
+"Name": "sicily-S#11",
+"Kind": "hotspot:S",
+"Lat": 37.25,
+"Lon": 14.25,
+"Radius": 1
+},
+{
+"Name": "sicily-S#12",
+"Kind": "hotspot:S",
+"Lat": 37.25,
+"Lon": 14.385,
+"Radius": 1
+},
+{
+"Name": "sicily-S#20",
+"Kind": "hotspot:S",
+"Lat": 37.385,
+"Lon": 14.115,
+"Radius": 1
+},
+{
+"Name": "sicily-S#21",
+"Kind": "hotspot:S",
+"Lat": 37.385,
+"Lon": 14.25,
+"Radius": 1
+},
+{
+"Name": "sicily-S#22",
+"Kind": "hotspot:S",
+"Lat": 37.385,
+"Lon": 14.385,
+"Radius": 1
+},
+{
+"Name": "khouribga-P#00",
+"Kind": "hotspot:P",
+"Lat": 32.615,
+"Lon": -6.885,
+"Radius": 1
+},
+{
+"Name": "khouribga-P#01",
+"Kind": "hotspot:P",
+"Lat": 32.615,
+"Lon": -6.75,
+"Radius": 1
+},
+{
+"Name": "khouribga-P#02",
+"Kind": "hotspot:P",
+"Lat": 32.615,
+"Lon": -6.615,
+"Radius": 1
+},
+{
+"Name": "khouribga-P#10",
+"Kind": "hotspot:P",
+"Lat": 32.75,
+"Lon": -6.885,
+"Radius": 1
+},
+{
+"Name": "khouribga-P#11",
+"Kind": "hotspot:P",
+"Lat": 32.75,
+"Lon": -6.75,
+"Radius": 1
+},
+{
+"Name": "khouribga-P#12",
+"Kind": "hotspot:P",
+"Lat": 32.75,
+"Lon": -6.615,
+"Radius": 1
+},
+{
+"Name": "khouribga-P#20",
+"Kind": "hotspot:P",
+"Lat": 32.885,
+"Lon": -6.885,
+"Radius": 1
+},
+{
+"Name": "khouribga-P#21",
+"Kind": "hotspot:P",
+"Lat": 32.885,
+"Lon": -6.75,
+"Radius": 1
+},
+{
+"Name": "khouribga-P#22",
+"Kind": "hotspot:P",
+"Lat": 32.885,
+"Lon": -6.615,
+"Radius": 1
+},
+{
+"Name": "almaden-Hg#00",
+"Kind": "hotspot:Hg",
+"Lat": 38.635,
+"Lon": -4.875,
+"Radius": 1
+},
+{
+"Name": "almaden-Hg#01",
+"Kind": "hotspot:Hg",
+"Lat": 38.635,
+"Lon": -4.74,
+"Radius": 1
+},
+{
+"Name": "almaden-Hg#02",
+"Kind": "hotspot:Hg",
+"Lat": 38.635,
+"Lon": -4.605,
+"Radius": 1
+},
+{
+"Name": "almaden-Hg#10",
+"Kind": "hotspot:Hg",
+"Lat": 38.77,
+"Lon": -4.875,
+"Radius": 1
+},
+{
+"Name": "almaden-Hg#11",
+"Kind": "hotspot:Hg",
+"Lat": 38.77,
+"Lon": -4.74,
+"Radius": 1
+},
+{
+"Name": "almaden-Hg#12",
+"Kind": "hotspot:Hg",
+"Lat": 38.77,
+"Lon": -4.605,
+"Radius": 1
+},
+{
+"Name": "almaden-Hg#20",
+"Kind": "hotspot:Hg",
+"Lat": 38.905,
+"Lon": -4.875,
+"Radius": 1
+},
+{
+"Name": "almaden-Hg#21",
+"Kind": "hotspot:Hg",
+"Lat": 38.905,
+"Lon": -4.74,
+"Radius": 1
+},
+{
+"Name": "almaden-Hg#22",
+"Kind": "hotspot:Hg",
+"Lat": 38.905,
+"Lon": -4.605,
+"Radius": 1
+},
+{
+"Name": "boron-B#00",
+"Kind": "hotspot:B",
+"Lat": 35.615,
+"Lon": -118.385,
+"Radius": 1
+},
+{
+"Name": "boron-B#01",
+"Kind": "hotspot:B",
+"Lat": 35.615,
+"Lon": -118.25,
+"Radius": 1
+},
+{
+"Name": "boron-B#02",
+"Kind": "hotspot:B",
+"Lat": 35.615,
+"Lon": -118.115,
+"Radius": 1
+},
+{
+"Name": "boron-B#10",
+"Kind": "hotspot:B",
+"Lat": 35.75,
+"Lon": -118.385,
+"Radius": 1
+},
+{
+"Name": "boron-B#11",
+"Kind": "hotspot:B",
+"Lat": 35.75,
+"Lon": -118.25,
+"Radius": 1
+},
+{
+"Name": "boron-B#12",
+"Kind": "hotspot:B",
+"Lat": 35.75,
+"Lon": -118.115,
+"Radius": 1
+},
+{
+"Name": "boron-B#20",
+"Kind": "hotspot:B",
+"Lat": 35.885,
+"Lon": -118.385,
+"Radius": 1
+},
+{
+"Name": "boron-B#21",
+"Kind": "hotspot:B",
+"Lat": 35.885,
+"Lon": -118.25,
+"Radius": 1
+},
+{
+"Name": "boron-B#22",
+"Kind": "hotspot:B",
+"Lat": 35.885,
+"Lon": -118.115,
+"Radius": 1
+},
+{
+"Name": "kiruna-Fe#00",
+"Kind": "hotspot:Fe",
+"Lat": 67.115,
+"Lon": 20.115,
+"Radius": 1
+},
+{
+"Name": "kiruna-Fe#01",
+"Kind": "hotspot:Fe",
+"Lat": 67.115,
+"Lon": 20.25,
+"Radius": 1
+},
+{
+"Name": "kiruna-Fe#02",
+"Kind": "hotspot:Fe",
+"Lat": 67.115,
+"Lon": 20.385,
+"Radius": 1
+},
+{
+"Name": "kiruna-Fe#10",
+"Kind": "hotspot:Fe",
+"Lat": 67.25,
+"Lon": 20.115,
+"Radius": 1
+},
+{
+"Name": "kiruna-Fe#11",
+"Kind": "hotspot:Fe",
+"Lat": 67.25,
+"Lon": 20.25,
+"Radius": 1
+},
+{
+"Name": "kiruna-Fe#12",
+"Kind": "hotspot:Fe",
+"Lat": 67.25,
+"Lon": 20.385,
+"Radius": 1
+},
+{
+"Name": "kiruna-Fe#20",
+"Kind": "hotspot:Fe",
+"Lat": 67.385,
+"Lon": 20.115,
+"Radius": 1
+},
+{
+"Name": "kiruna-Fe#21",
+"Kind": "hotspot:Fe",
+"Lat": 67.385,
+"Lon": 20.25,
+"Radius": 1
+},
+{
+"Name": "kiruna-Fe#22",
+"Kind": "hotspot:Fe",
+"Lat": 67.385,
+"Lon": 20.385,
+"Radius": 1
+},
+{
+"Name": "colombia-emerald#00",
+"Kind": "hotspot:emerald",
+"Lat": 5.615,
+"Lon": -74.385,
+"Radius": 1
+},
+{
+"Name": "colombia-emerald#01",
+"Kind": "hotspot:emerald",
+"Lat": 5.615,
+"Lon": -74.25,
+"Radius": 1
+},
+{
+"Name": "colombia-emerald#02",
+"Kind": "hotspot:emerald",
+"Lat": 5.615,
+"Lon": -74.115,
+"Radius": 1
+},
+{
+"Name": "colombia-emerald#10",
+"Kind": "hotspot:emerald",
+"Lat": 5.75,
+"Lon": -74.385,
+"Radius": 1
+},
+{
+"Name": "colombia-emerald#11",
+"Kind": "hotspot:emerald",
+"Lat": 5.75,
+"Lon": -74.25,
+"Radius": 1
+},
+{
+"Name": "colombia-emerald#12",
+"Kind": "hotspot:emerald",
+"Lat": 5.75,
+"Lon": -74.115,
+"Radius": 1
+},
+{
+"Name": "colombia-emerald#20",
+"Kind": "hotspot:emerald",
+"Lat": 5.885,
+"Lon": -74.385,
+"Radius": 1
+},
+{
+"Name": "colombia-emerald#21",
+"Kind": "hotspot:emerald",
+"Lat": 5.885,
+"Lon": -74.25,
+"Radius": 1
+},
+{
+"Name": "colombia-emerald#22",
+"Kind": "hotspot:emerald",
+"Lat": 5.885,
+"Lon": -74.115,
+"Radius": 1
+}
+]

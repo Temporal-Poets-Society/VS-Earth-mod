@@ -1,0 +1,53 @@
+{
+  "input_counts": {
+    "mrds-copper-tin-occurrences.csv": 47127,
+    "global-copper-assessment-occurrences.csv": 3420
+  },
+  "source_point_counts": {
+    "Cu": 47798,
+    "Sn": 2749
+  },
+  "plotted_presence_cells": {
+    "Cu": 2747,
+    "Sn": 592
+  },
+  "presence_cell_degrees": 1,
+  "plotted_tracts": {
+    "porphyry_tracts": {
+      "shown": 182,
+      "invalid_source_geometry_withheld": 10
+    },
+    "sediment_hosted_tracts": {
+      "shown": 47,
+      "invalid_source_geometry_withheld": 1
+    }
+  },
+  "matplotlib_version": "3.11.2",
+  "numpy_version": "2.5.3",
+  "map_extent": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "semantics": "fixed-strength cell evidence; not unique deposits, country-normalized abundance or spawn probabilities",
+  "inputs": [
+    {
+      "file": "docs\\research\\copper-tin-global-2026-09-29\\normalized\\pCu_tracts-display-only.geojson",
+      "sha256": "b9c6c162254a9df169c3eea1d03874debaeb450456d8a9994011a9cad2d2bbd8"
+    },
+    {
+      "file": "docs\\research\\copper-tin-global-2026-09-29\\normalized\\sedCu_tracts-display-only.geojson",
+      "sha256": "0929085a0297102e30d7b76a3ded3d1014cd70a8ec53c917cc73351ea5536ff8"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\copper-tin-global-2026-09-29\\normalized\\mrds-copper-tin-occurrences.csv",
+      "sha256": "8fa8037a2c5460c518a76bcaf49ec18d8ee478322f0869f366ccd8e2ecd6e04d"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\docs\\research\\copper-tin-global-2026-09-29\\normalized\\global-copper-assessment-occurrences.csv",
+      "sha256": "0ae1833710d9cf80d61ac5ab0863d1edc81bf7af3d48737c95c3e2b0992194e0"
+    }
+  ],
+  "output": "C:\\VS mods\\Earth\\docs\\research\\copper-tin-preview-2026-09-29\\copper-tin-evidence-preview.png"
+}

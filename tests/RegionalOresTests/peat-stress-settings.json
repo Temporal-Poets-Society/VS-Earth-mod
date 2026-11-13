@@ -1,0 +1,11 @@
+{
+  "BogIronChance": 1.0,
+  "Resources": {
+    "peat": {
+      "BackgroundChance": 1.0,
+      "HotspotChance": 1.0,
+      "FrequencyMultiplier": 5.0,
+      "Concentration": 1.0
+    }
+  }
+}

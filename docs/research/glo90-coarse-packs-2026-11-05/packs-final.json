@@ -1,0 +1,46 @@
+{
+  "limit_bytes": 40000000,
+  "archives": [
+    {
+      "file": "earthheightdata1-1.0.3-tall.5.zip",
+      "bytes": 39780474,
+      "sha256": "fadecfe94ef49d291211cd101fb5479ab132d814e3e8f209b439d078d59d944f",
+      "files": {
+        "modinfo.json": 440,
+        "earthdata/ATTRIBUTION.txt": 2276,
+        "earthdata/glo90c-index.bin": 177324,
+        "earthdata/glo90c-1.bin": 39594940
+      }
+    },
+    {
+      "file": "earthheightdata2-1.0.3-tall.5.zip",
+      "bytes": 39798036,
+      "sha256": "e7069cab6c0d29ac06e83cda0455cb388aa02d0e784d5ccf8f26a54c7902a581",
+      "files": {
+        "modinfo.json": 440,
+        "earthdata/ATTRIBUTION.txt": 2276,
+        "earthdata/glo90c-2.bin": 39791138
+      }
+    },
+    {
+      "file": "earthheightdata3-1.0.3-tall.5.zip",
+      "bytes": 39790762,
+      "sha256": "d26aeb93de91cc626492de319f149eed9e3497f5a990d6fc2c467792783fc016",
+      "files": {
+        "modinfo.json": 440,
+        "earthdata/ATTRIBUTION.txt": 2276,
+        "earthdata/glo90c-3.bin": 39796380
+      }
+    },
+    {
+      "file": "earthheightdata4-1.0.3-tall.5.zip",
+      "bytes": 9979718,
+      "sha256": "e85e41190b143c6dc5890d3835054bc1b68a9baa4eb151b3d28860f1324e8ce1",
+      "files": {
+        "modinfo.json": 440,
+        "earthdata/ATTRIBUTION.txt": 2276,
+        "earthdata/glo90c-4.bin": 9984522
+      }
+    }
+  ]
+}

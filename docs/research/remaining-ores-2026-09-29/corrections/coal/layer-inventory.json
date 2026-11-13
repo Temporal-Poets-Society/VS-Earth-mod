@@ -1,0 +1,281 @@
+[
+  {
+    "source": "bgs_coal_2004",
+    "archive": "bgs-coal-gpkg.zip",
+    "member": "Coal Resources For New Technologies/Coal_Resources_For_New_Technologies_GB.gpkg",
+    "layer": "Coal-bearing strata",
+    "source_crs": "EPSG:27700",
+    "records": 622,
+    "feature_kind": "mapped_coal_bearing_strata"
+  },
+  {
+    "source": "bgs_coal_2004",
+    "archive": "bgs-coal-gpkg.zip",
+    "member": "Coal Resources For New Technologies/Coal_Resources_For_New_Technologies_GB.gpkg",
+    "layer": "Area with technical potential for opencast workings (source Coal Resource Map of Great Britain BGS/Coal Authority 1999)",
+    "source_crs": "EPSG:27700",
+    "records": 351,
+    "feature_kind": "technical_surface_working_potential"
+  },
+  {
+    "source": "bgs_coal_2004",
+    "archive": "bgs-coal-gpkg.zip",
+    "member": "Coal Resources For New Technologies/Coal_Resources_For_New_Technologies_GB.gpkg",
+    "layer": "Extent of underground workings with 500m buffer zone (based on Coal Authority data, May 2002)",
+    "source_crs": "EPSG:27700",
+    "records": 340,
+    "feature_kind": "historical_workings_with_source_buffer"
+  },
+  {
+    "source": "bgs_coal_2004",
+    "archive": "bgs-coal-gpkg.zip",
+    "member": "Coal Resources For New Technologies/Coal_Resources_For_New_Technologies_NI.gpkg",
+    "layer": "Coal-bearing strata",
+    "source_crs": "EPSG:29902",
+    "records": 16,
+    "feature_kind": "mapped_coal_bearing_strata"
+  },
+  {
+    "source": "bgs_coal_2004",
+    "archive": "bgs-coal-gpkg.zip",
+    "member": "Coal Resources For New Technologies/Coal_Resources_For_New_Technologies_NI.gpkg",
+    "layer": "Area with technical potential for opencast workings (source Coal Resource Map of Great Britain BGS/Coal Authority 1999)",
+    "source_crs": "EPSG:29902",
+    "records": 9,
+    "feature_kind": "technical_surface_working_potential"
+  },
+  {
+    "source": "pgi_midas",
+    "file": "pgi-current-coal.geojson",
+    "records": 315,
+    "feature_kind": "documented_deposit_boundary"
+  },
+  {
+    "source": "pgi_midas",
+    "file": "pgi-archive-coal.geojson",
+    "records": 28,
+    "feature_kind": "archived_deposit_boundary"
+  },
+  {
+    "source": "saxony_ruk400",
+    "archive": "saxony-coal400.zip",
+    "member": "boehlener_Oberfloez_Floez_Groebers.shp",
+    "layer": null,
+    "source_crs": "EPSG:25833",
+    "records": 24,
+    "feature_kind": "mapped_coal_seam_distribution"
+  },
+  {
+    "source": "saxony_ruk400",
+    "archive": "saxony-coal400.zip",
+    "member": "bornaer_und_thuer_Hauptfloez.shp",
+    "layer": null,
+    "source_crs": "EPSG:25833",
+    "records": 21,
+    "feature_kind": "mapped_coal_seam_distribution"
+  },
+  {
+    "source": "saxony_ruk400",
+    "archive": "saxony-coal400.zip",
+    "member": "erster_miozaener_Floezhorizont.shp",
+    "layer": null,
+    "source_crs": "EPSG:25833",
+    "records": 13,
+    "feature_kind": "mapped_coal_seam_distribution"
+  },
+  {
+    "source": "saxony_ruk400",
+    "archive": "saxony-coal400.zip",
+    "member": "Saechs_thuer_Unterfloez.shp",
+    "layer": null,
+    "source_crs": "EPSG:25833",
+    "records": 12,
+    "feature_kind": "mapped_coal_seam_distribution"
+  },
+  {
+    "source": "saxony_ruk400",
+    "archive": "saxony-coal400.zip",
+    "member": "vierter_miozaener_und_bitterfelder_Floezhorizont.shp",
+    "layer": null,
+    "source_crs": "EPSG:25833",
+    "records": 50,
+    "feature_kind": "mapped_coal_seam_distribution"
+  },
+  {
+    "source": "saxony_ruk400",
+    "archive": "saxony-coal400.zip",
+    "member": "zweiter_miozaener_Floezhorizont_Floeze_Berzdorf_Zittau.shp",
+    "layer": null,
+    "source_crs": "EPSG:25833",
+    "records": 50,
+    "feature_kind": "mapped_coal_seam_distribution"
+  },
+  {
+    "source": "saxony_lignite50",
+    "archive": "saxony-lignite50.zip",
+    "member": "Feld_Elbe_Zwischengebirge.shp",
+    "layer": null,
+    "source_crs": "EPSG:25833",
+    "records": 6,
+    "feature_kind": "mapped_lignite_field"
+  },
+  {
+    "source": "saxony_lignite50",
+    "archive": "saxony-lignite50.zip",
+    "member": "Feld_Leipzig_Nord.shp",
+    "layer": null,
+    "source_crs": "EPSG:25833",
+    "records": 9,
+    "feature_kind": "mapped_lignite_field"
+  },
+  {
+    "source": "saxony_lignite50",
+    "archive": "saxony-lignite50.zip",
+    "member": "Feld_Leipzig_Sued.shp",
+    "layer": null,
+    "source_crs": "EPSG:25833",
+    "records": 31,
+    "feature_kind": "mapped_lignite_field"
+  },
+  {
+    "source": "saxony_lignite50",
+    "archive": "saxony-lignite50.zip",
+    "member": "Feld_Mittelsachsen.shp",
+    "layer": null,
+    "source_crs": "EPSG:25833",
+    "records": 23,
+    "feature_kind": "mapped_lignite_field"
+  },
+  {
+    "source": "saxony_lignite50",
+    "archive": "saxony-lignite50.zip",
+    "member": "Feld_Oberlausitz_Nord.shp",
+    "layer": null,
+    "source_crs": "EPSG:25833",
+    "records": 47,
+    "feature_kind": "mapped_lignite_field"
+  },
+  {
+    "source": "saxony_lignite50",
+    "archive": "saxony-lignite50.zip",
+    "member": "Feld_Oberlausitz_Sued.shp",
+    "layer": null,
+    "source_crs": "EPSG:25833",
+    "records": 3,
+    "feature_kind": "mapped_lignite_field"
+  },
+  {
+    "source": "nrw_rk500",
+    "archive": "nrw500-gpkg.zip",
+    "member": "IS_RK500.gpkg",
+    "layer": "RK500_Steinkohle_2000m",
+    "source_crs": "EPSG:25832",
+    "records": 5,
+    "feature_kind": "generalized_resource_area"
+  },
+  {
+    "source": "nrw_rk500",
+    "archive": "nrw500-gpkg.zip",
+    "member": "IS_RK500.gpkg",
+    "layer": "RK500_Braunkohle",
+    "source_crs": "EPSG:25832",
+    "records": 1,
+    "feature_kind": "generalized_resource_area"
+  },
+  {
+    "source": "nrw_rk500",
+    "archive": "nrw500-gpkg.zip",
+    "member": "IS_RK500.gpkg",
+    "layer": "RK500_Steinsalz",
+    "source_crs": "EPSG:25832",
+    "records": 4,
+    "feature_kind": "generalized_rock_salt_resource_area"
+  },
+  {
+    "source": "ga_basins_2013",
+    "archive": "ga-coal-basins.zip",
+    "member": "Coal_Basin_Outlines_v01_20130729/Coal_Basin_Outlines.gdb",
+    "layer": "Coal_Basin_Outlines",
+    "source_crs": "EPSG:4283",
+    "records": 29,
+    "feature_kind": "broad_coal_basin_context"
+  },
+  {
+    "source": "nsw_coalfields",
+    "file": "nsw-coalfields.geojson",
+    "records": 5,
+    "feature_kind": "mapped_coalfield"
+  },
+  {
+    "source": "victoria_coalfields",
+    "file": "victoria-coalfields.geojson",
+    "records": 46,
+    "feature_kind": "mapped_coalfield"
+  },
+  {
+    "source": "ga_aimr_2025",
+    "file": "ga-aimr-coal32.geojson",
+    "records": 350,
+    "feature_kind": "resource_site"
+  },
+  {
+    "source": "ga_aimr_2025",
+    "file": "ga-aimr-coal33.geojson",
+    "records": 71,
+    "feature_kind": "resource_site"
+  },
+  {
+    "source": "usgs_india_2011",
+    "archive": "india-bangladesh-coal.zip",
+    "member": "IndiaCoalfields/IndiaCoalfields.shp",
+    "layer": null,
+    "source_crs": "EPSG:4240",
+    "records": 305,
+    "feature_kind": "mapped_coal_bearing_area"
+  },
+  {
+    "source": "usgs_india_2011",
+    "archive": "india-bangladesh-coal.zip",
+    "member": "BangladeshCoalfields/BangladeshCoalfields.shp",
+    "layer": null,
+    "source_crs": "EPSG:4240",
+    "records": 8,
+    "feature_kind": "mapped_coal_bearing_area"
+  },
+  {
+    "source": "usgs_china_2014",
+    "archive": "china-coal-areas.zip",
+    "member": "AllChinaCoalMiningAreas.shp",
+    "layer": null,
+    "source_crs": "EPSG:4214",
+    "records": 906,
+    "feature_kind": "mapped_coal_mining_area_2001"
+  },
+  {
+    "source": "usgs_americas_2008",
+    "archive": "americas-coal.zip",
+    "member": "Americas_coal/spatial/shape/Americas_coalply.shp",
+    "layer": null,
+    "source_crs": "EPSG:4326",
+    "records": 770,
+    "feature_kind": "generalized_coal_bearing_area"
+  },
+  {
+    "source": "usgs_americas_2008",
+    "archive": "americas-coal.zip",
+    "member": "Americas_coal/spatial/shape/Central_American_coalpt.shp",
+    "layer": null,
+    "source_crs": "EPSG:4326",
+    "records": 99,
+    "feature_kind": "coal_occurrence_point"
+  },
+  {
+    "source": "usgs_us_2012",
+    "archive": "us-coal2012.zip",
+    "member": "GIS/Updated Coal Fields/Coal_Fields.shp",
+    "layer": null,
+    "source_crs": "EPSG:4269",
+    "records": 602,
+    "feature_kind": "mapped_coalfield"
+  }
+]

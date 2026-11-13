@@ -1,0 +1,2784 @@
+{
+ "codes": {
+  "Au": {
+   "before": {
+    "observedCells": 13667,
+    "potentialCells": 9927,
+    "observedWeight": 5446.0,
+    "usShareOfObservedWeight": 0.154,
+    "cellsAbove05": 3685
+   },
+   "after": {
+    "observedCells": 13752,
+    "potentialCells": 9927,
+    "observedWeight": 5513.1,
+    "usShareOfObservedWeight": 0.152,
+    "cellsAbove05": 3756
+   }
+  },
+  "diamond": {
+   "before": {
+    "observedCells": 1207,
+    "potentialCells": 0,
+    "observedWeight": 506.0,
+    "usShareOfObservedWeight": 0.018,
+    "cellsAbove05": 389
+   },
+   "after": {
+    "observedCells": 1252,
+    "potentialCells": 0,
+    "observedWeight": 531.6,
+    "usShareOfObservedWeight": 0.017,
+    "cellsAbove05": 412
+   }
+  },
+  "corundum": {
+   "before": {
+    "observedCells": 319,
+    "potentialCells": 0,
+    "observedWeight": 106.3,
+    "usShareOfObservedWeight": 0.282,
+    "cellsAbove05": 57
+   },
+   "after": {
+    "observedCells": 351,
+    "potentialCells": 0,
+    "observedWeight": 122.8,
+    "usShareOfObservedWeight": 0.26,
+    "cellsAbove05": 70
+   }
+  },
+  "emerald": {
+   "before": {
+    "observedCells": 111,
+    "potentialCells": 0,
+    "observedWeight": 43.0,
+    "usShareOfObservedWeight": 0.034,
+    "cellsAbove05": 27
+   },
+   "after": {
+    "observedCells": 118,
+    "potentialCells": 0,
+    "observedWeight": 48.9,
+    "usShareOfObservedWeight": 0.03,
+    "cellsAbove05": 32
+   }
+  },
+  "olivine": {
+   "before": {
+    "observedCells": 103,
+    "potentialCells": 0,
+    "observedWeight": 36.9,
+    "usShareOfObservedWeight": 0.366,
+    "cellsAbove05": 22
+   },
+   "after": {
+    "observedCells": 118,
+    "potentialCells": 0,
+    "observedWeight": 44.3,
+    "usShareOfObservedWeight": 0.367,
+    "cellsAbove05": 27
+   }
+  },
+  "garnet": {
+   "before": {
+    "observedCells": 567,
+    "potentialCells": 0,
+    "observedWeight": 150.5,
+    "usShareOfObservedWeight": 0.492,
+    "cellsAbove05": 51
+   },
+   "after": {
+    "observedCells": 590,
+    "potentialCells": 0,
+    "observedWeight": 161.8,
+    "usShareOfObservedWeight": 0.463,
+    "cellsAbove05": 61
+   }
+  },
+  "lapis": {
+   "before": {
+    "observedCells": 20,
+    "potentialCells": 0,
+    "observedWeight": 8.3,
+    "usShareOfObservedWeight": 0.0,
+    "cellsAbove05": 7
+   },
+   "after": {
+    "observedCells": 26,
+    "potentialCells": 0,
+    "observedWeight": 12.1,
+    "usShareOfObservedWeight": 0.0,
+    "cellsAbove05": 10
+   }
+  },
+  "topaz": {
+   "before": {
+    "observedCells": 116,
+    "potentialCells": 0,
+    "observedWeight": 37.1,
+    "usShareOfObservedWeight": 0.102,
+    "cellsAbove05": 24
+   },
+   "after": {
+    "observedCells": 140,
+    "potentialCells": 0,
+    "observedWeight": 48.0,
+    "usShareOfObservedWeight": 0.133,
+    "cellsAbove05": 31
+   }
+  },
+  "tourmaline": {
+   "before": {
+    "observedCells": 163,
+    "potentialCells": 0,
+    "observedWeight": 46.0,
+    "usShareOfObservedWeight": 0.135,
+    "cellsAbove05": 22
+   },
+   "after": {
+    "observedCells": 186,
+    "potentialCells": 0,
+    "observedWeight": 58.3,
+    "usShareOfObservedWeight": 0.173,
+    "cellsAbove05": 35
+   }
+  },
+  "beryl": {
+   "before": {
+    "observedCells": 360,
+    "potentialCells": 0,
+    "observedWeight": 88.1,
+    "usShareOfObservedWeight": 0.187,
+    "cellsAbove05": 34
+   },
+   "after": {
+    "observedCells": 396,
+    "potentialCells": 0,
+    "observedWeight": 105.0,
+    "usShareOfObservedWeight": 0.194,
+    "cellsAbove05": 48
+   }
+  },
+  "spinel": {
+   "before": {
+    "observedCells": 56,
+    "potentialCells": 0,
+    "observedWeight": 17.2,
+    "usShareOfObservedWeight": 0.134,
+    "cellsAbove05": 10
+   },
+   "after": {
+    "observedCells": 64,
+    "potentialCells": 0,
+    "observedWeight": 21.3,
+    "usShareOfObservedWeight": 0.108,
+    "cellsAbove05": 12
+   }
+  },
+  "C_graphite": {
+   "before": {
+    "observedCells": 1172,
+    "potentialCells": 7875,
+    "observedWeight": 435.4,
+    "usShareOfObservedWeight": 0.197,
+    "cellsAbove05": 260
+   },
+   "after": {
+    "observedCells": 1188,
+    "potentialCells": 7875,
+    "observedWeight": 444.4,
+    "usShareOfObservedWeight": 0.193,
+    "cellsAbove05": 266
+   }
+  },
+  "F": {
+   "before": {
+    "observedCells": 2020,
+    "potentialCells": 8699,
+    "observedWeight": 724.7,
+    "usShareOfObservedWeight": 0.251,
+    "cellsAbove05": 406
+   },
+   "after": {
+    "observedCells": 2032,
+    "potentialCells": 8699,
+    "observedWeight": 734.0,
+    "usShareOfObservedWeight": 0.248,
+    "cellsAbove05": 418
+   }
+  },
+  "SiO2": {
+   "before": {
+    "observedCells": 2779,
+    "potentialCells": 0,
+    "observedWeight": 827.7,
+    "usShareOfObservedWeight": 0.371,
+    "cellsAbove05": 350
+   },
+   "after": {
+    "observedCells": 2793,
+    "potentialCells": 0,
+    "observedWeight": 837.3,
+    "usShareOfObservedWeight": 0.368,
+    "cellsAbove05": 359
+   }
+  },
+  "U": {
+   "before": {
+    "observedCells": 2287,
+    "potentialCells": 3934,
+    "observedWeight": 715.4,
+    "usShareOfObservedWeight": 0.448,
+    "cellsAbove05": 348
+   },
+   "after": {
+    "observedCells": 2356,
+    "potentialCells": 3934,
+    "observedWeight": 753.2,
+    "usShareOfObservedWeight": 0.429,
+    "cellsAbove05": 385
+   }
+  }
+ },
+ "deposits": [
+  {
+   "id": "pg:dia-kimberley",
+   "name": "Kimberley (Big Hole)",
+   "layer": "diamond",
+   "country": "South Africa",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-kimberley-cluster",
+   "name": "Kimberley pipes (De Beers, Dutoitspan, Bultfontein, Wesselton)",
+   "layer": "diamond",
+   "country": "South Africa",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-cullinan",
+   "name": "Cullinan (Premier)",
+   "layer": "diamond",
+   "country": "South Africa",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-venetia",
+   "name": "Venetia",
+   "layer": "diamond",
+   "country": "South Africa",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-finsch",
+   "name": "Finsch",
+   "layer": "diamond",
+   "country": "South Africa",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-jwaneng",
+   "name": "Jwaneng",
+   "layer": "diamond",
+   "country": "Botswana",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-orapa",
+   "name": "Orapa (AK1)",
+   "layer": "diamond",
+   "country": "Botswana",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-karowe",
+   "name": "Karowe (AK6)",
+   "layer": "diamond",
+   "country": "Botswana",
+   "before": 0.447,
+   "after": 0.749
+  },
+  {
+   "id": "pg:dia-letseng",
+   "name": "Letseng",
+   "layer": "diamond",
+   "country": "Lesotho",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-catoca",
+   "name": "Catoca",
+   "layer": "diamond",
+   "country": "Angola",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-mbuji-mayi",
+   "name": "Mbuji-Mayi (MIBA)",
+   "layer": "diamond",
+   "country": "Congo (Kinshasa)",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-tshikapa",
+   "name": "Tshikapa alluvial diamonds (Kasai)",
+   "layer": "diamond",
+   "country": "Congo (Kinshasa)",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-mwadui",
+   "name": "Mwadui (Williamson)",
+   "layer": "diamond",
+   "country": "Tanzania",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-koidu",
+   "name": "Koidu kimberlites",
+   "layer": "diamond",
+   "country": "Sierra Leone",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-kono",
+   "name": "Kono and Tongo alluvial diamonds",
+   "layer": "diamond",
+   "country": "Sierra Leone",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-namibia-coast",
+   "name": "Sperrgebiet coastal diamonds (Oranjemund)",
+   "layer": "diamond",
+   "country": "Namibia",
+   "before": 0.369,
+   "after": 0.851
+  },
+  {
+   "id": "pg:dia-elizabeth-bay",
+   "name": "Elizabeth Bay",
+   "layer": "diamond",
+   "country": "Namibia",
+   "before": 0.698,
+   "after": 0.749
+  },
+  {
+   "id": "pg:dia-marange",
+   "name": "Marange",
+   "layer": "diamond",
+   "country": "Zimbabwe",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-mir",
+   "name": "Mir",
+   "layer": "diamond",
+   "country": "Russia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-internatsionalnaya",
+   "name": "Internatsionalnaya",
+   "layer": "diamond",
+   "country": "Russia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-udachnaya",
+   "name": "Udachnaya",
+   "layer": "diamond",
+   "country": "Russia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-aikhal-jubilee",
+   "name": "Aikhal and Yubileynaya",
+   "layer": "diamond",
+   "country": "Russia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-nyurba",
+   "name": "Nyurba and Botuobinskaya (Nakyn field)",
+   "layer": "diamond",
+   "country": "Russia",
+   "before": 0.502,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-lomonosov",
+   "name": "Lomonosov field (Arkhangelsk)",
+   "layer": "diamond",
+   "country": "Russia",
+   "before": 0.698,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-argyle",
+   "name": "Argyle (AK1 lamproite)",
+   "layer": "diamond",
+   "country": "Australia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-ekati",
+   "name": "Ekati (Panda-Koala-Misery-Fox)",
+   "layer": "diamond",
+   "country": "Canada",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-diavik",
+   "name": "Diavik",
+   "layer": "diamond",
+   "country": "Canada",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-gahcho-kue",
+   "name": "Gahcho Kue",
+   "layer": "diamond",
+   "country": "Canada",
+   "before": 0.0,
+   "after": 0.851
+  },
+  {
+   "id": "pg:dia-panna",
+   "name": "Majhgawan (Panna)",
+   "layer": "diamond",
+   "country": "India",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:dia-golconda-krishna",
+   "name": "Golconda diamonds (Kollur and the Krishna gravels)",
+   "layer": "diamond",
+   "country": "India",
+   "before": 0.6,
+   "after": 0.851
+  },
+  {
+   "id": "pg:dia-banganapalle",
+   "name": "Banganapalle conglomerate (Kurnool)",
+   "layer": "diamond",
+   "country": "India",
+   "before": 0.0,
+   "after": 0.749
+  },
+  {
+   "id": "pg:dia-diamantina",
+   "name": "Diamantina (Minas Gerais)",
+   "layer": "diamond",
+   "country": "Brazil",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:dia-chapada-diamantina",
+   "name": "Chapada Diamantina (Lencois)",
+   "layer": "diamond",
+   "country": "Brazil",
+   "before": 0.651,
+   "after": 0.749
+  },
+  {
+   "id": "pg:dia-juina",
+   "name": "Juina",
+   "layer": "diamond",
+   "country": "Brazil",
+   "before": 0.6,
+   "after": 0.851
+  },
+  {
+   "id": "pg:em-muzo",
+   "name": "Muzo",
+   "layer": "emerald",
+   "country": "Colombia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:em-coscuez",
+   "name": "Coscuez",
+   "layer": "emerald",
+   "country": "Colombia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:em-chivor",
+   "name": "Chivor",
+   "layer": "emerald",
+   "country": "Colombia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:em-sikait",
+   "name": "Wadi Sikait (Mons Smaragdus)",
+   "layer": "emerald",
+   "country": "Egypt",
+   "before": 0.651,
+   "after": 0.749
+  },
+  {
+   "id": "pg:em-habachtal",
+   "name": "Habachtal",
+   "layer": "emerald",
+   "country": "Austria",
+   "before": 0.651,
+   "after": 0.749
+  },
+  {
+   "id": "pg:em-panjshir",
+   "name": "Panjshir (Darkhenj)",
+   "layer": "emerald",
+   "country": "Afghanistan",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:em-swat",
+   "name": "Swat (Mingora)",
+   "layer": "emerald",
+   "country": "Pakistan",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:em-sandawana",
+   "name": "Sandawana",
+   "layer": "emerald",
+   "country": "Zimbabwe",
+   "before": 0.698,
+   "after": 0.851
+  },
+  {
+   "id": "pg:em-kagem",
+   "name": "Kagem (Kafubu)",
+   "layer": "emerald",
+   "country": "Zambia",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:em-ural",
+   "name": "Ural emerald mines (Malyshevo)",
+   "layer": "emerald",
+   "country": "Russia",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:em-carnaiba",
+   "name": "Carnaiba",
+   "layer": "emerald",
+   "country": "Brazil",
+   "before": 0.6,
+   "after": 0.851
+  },
+  {
+   "id": "pg:la-sar-e-sang",
+   "name": "Sar-e-Sang",
+   "layer": "lapis",
+   "country": "Afghanistan",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:la-malaya-bystraya",
+   "name": "Malaya Bystraya",
+   "layer": "lapis",
+   "country": "Russia",
+   "before": 0.6,
+   "after": 0.851
+  },
+  {
+   "id": "pg:la-ovalle",
+   "name": "Flor de los Andes (Ovalle)",
+   "layer": "lapis",
+   "country": "Chile",
+   "before": 0.0,
+   "after": 0.851
+  },
+  {
+   "id": "pg:co-mogok-marble",
+   "name": "Mogok marble rubies",
+   "layer": "corundum",
+   "country": "Burma",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:co-mogok-byon",
+   "name": "Mogok gem gravels (byon)",
+   "layer": "corundum",
+   "country": "Burma",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:co-ratnapura",
+   "name": "Ratnapura gem gravels (illam)",
+   "layer": "corundum",
+   "country": "Sri Lanka",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:co-kashmir",
+   "name": "Kashmir sapphire (Kudi Nala)",
+   "layer": "corundum",
+   "country": "India",
+   "before": 0.698,
+   "after": 0.851
+  },
+  {
+   "id": "pg:co-montepuez",
+   "name": "Montepuez",
+   "layer": "corundum",
+   "country": "Mozambique",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:co-chanthaburi",
+   "name": "Chanthaburi-Trat gem field",
+   "layer": "corundum",
+   "country": "Thailand",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:co-jegdalek",
+   "name": "Jegdalek",
+   "layer": "corundum",
+   "country": "Afghanistan",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:co-luc-yen",
+   "name": "Luc Yen",
+   "layer": "corundum",
+   "country": "Vietnam",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:co-mong-hsu",
+   "name": "Mong Hsu",
+   "layer": "corundum",
+   "country": "Burma",
+   "before": 0.6,
+   "after": 0.851
+  },
+  {
+   "id": "pg:co-ilakaka",
+   "name": "Ilakaka",
+   "layer": "corundum",
+   "country": "Madagascar",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:co-yogo",
+   "name": "Yogo Gulch",
+   "layer": "corundum",
+   "country": "United States",
+   "before": 0.412,
+   "after": 0.851
+  },
+  {
+   "id": "pg:co-naxos",
+   "name": "Naxos emery",
+   "layer": "corundum",
+   "country": "Greece",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:co-milas",
+   "name": "Milas-Mugla emery",
+   "layer": "corundum",
+   "country": "Turkey",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:sp-kuh-i-lal",
+   "name": "Kuh-i-Lal (Badakhshan balas rubies)",
+   "layer": "spinel",
+   "country": "Tajikistan",
+   "before": 0.698,
+   "after": 0.851
+  },
+  {
+   "id": "pg:ol-zabargad",
+   "name": "Zabargad (St John's Island) peridot",
+   "layer": "olivine",
+   "country": "Egypt",
+   "before": 0.0,
+   "after": 0.851
+  },
+  {
+   "id": "pg:ol-san-carlos",
+   "name": "San Carlos peridot",
+   "layer": "olivine",
+   "country": "United States",
+   "before": 0.42,
+   "after": 0.949
+  },
+  {
+   "id": "pg:ol-pyaung-gaung",
+   "name": "Pyaung Gaung peridot",
+   "layer": "olivine",
+   "country": "Burma",
+   "before": 0.451,
+   "after": 0.851
+  },
+  {
+   "id": "pg:ol-kohistan",
+   "name": "Sapat (Kohistan) peridot",
+   "layer": "olivine",
+   "country": "Pakistan",
+   "before": 0.451,
+   "after": 0.851
+  },
+  {
+   "id": "pg:ol-aheim",
+   "name": "Aheim (Gusdal) dunite",
+   "layer": "olivine",
+   "country": "Norway",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:ga-bohemian-pyrope",
+   "name": "Bohemian pyrope (Trebenice-Podsedice)",
+   "layer": "garnet",
+   "country": "Czech Republic",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:ga-gore-mountain",
+   "name": "Gore Mountain and Ruby Mountain (Barton)",
+   "layer": "garnet",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:ga-merelani",
+   "name": "Merelani tsavorite",
+   "layer": "garnet",
+   "country": "Tanzania",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:ga-val-malenco",
+   "name": "Val Malenco demantoid",
+   "layer": "garnet",
+   "country": "Italy",
+   "before": 0.0,
+   "after": 0.749
+  },
+  {
+   "id": "pg:ga-outokumpu",
+   "name": "Outokumpu uvarovite",
+   "layer": "garnet",
+   "country": "Finland",
+   "before": 0.0,
+   "after": 0.749
+  },
+  {
+   "id": "pg:ga-amelia",
+   "name": "Amelia (Rutherford mines) spessartine",
+   "layer": "garnet",
+   "country": "United States",
+   "before": 0.169,
+   "after": 0.749
+  },
+  {
+   "id": "pg:to-ouro-preto",
+   "name": "Ouro Preto imperial topaz",
+   "layer": "topaz",
+   "country": "Brazil",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:to-schneckenstein",
+   "name": "Schneckenstein",
+   "layer": "topaz",
+   "country": "Germany",
+   "before": 0.651,
+   "after": 0.851
+  },
+  {
+   "id": "pg:to-volyn",
+   "name": "Volyn pegmatites (Khoroshiv)",
+   "layer": "topaz",
+   "country": "Ukraine",
+   "before": 0.651,
+   "after": 0.851
+  },
+  {
+   "id": "pg:to-mursinka",
+   "name": "Mursinka pegmatites",
+   "layer": "topaz",
+   "country": "Russia",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:to-katlang",
+   "name": "Katlang pink topaz",
+   "layer": "topaz",
+   "country": "Pakistan",
+   "before": 0.6,
+   "after": 0.749
+  },
+  {
+   "id": "pg:to-thomas-range",
+   "name": "Thomas Range topaz",
+   "layer": "topaz",
+   "country": "United States",
+   "before": 0.09,
+   "after": 0.851
+  },
+  {
+   "id": "pg:tu-paraiba",
+   "name": "Paraiba tourmaline (Sao Jose da Batalha)",
+   "layer": "tourmaline",
+   "country": "Brazil",
+   "before": 0.651,
+   "after": 0.749
+  },
+  {
+   "id": "pg:tu-minas-pegmatites",
+   "name": "Eastern Brazilian pegmatite province (Governador Valadares-Teofilo Otoni)",
+   "layer": "tourmaline",
+   "country": "Brazil",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:tu-himalaya-pala",
+   "name": "Pala and Mesa Grande pegmatites",
+   "layer": "tourmaline",
+   "country": "United States",
+   "before": 0.078,
+   "after": 0.851
+  },
+  {
+   "id": "pg:tu-maine",
+   "name": "Oxford County pegmatites (Mount Mica)",
+   "layer": "tourmaline",
+   "country": "United States",
+   "before": 0.216,
+   "after": 0.851
+  },
+  {
+   "id": "pg:tu-elba",
+   "name": "Elba pegmatites (San Piero in Campo)",
+   "layer": "tourmaline",
+   "country": "Italy",
+   "before": 0.0,
+   "after": 0.749
+  },
+  {
+   "id": "pg:tu-nuristan",
+   "name": "Nuristan pegmatites",
+   "layer": "tourmaline",
+   "country": "Afghanistan",
+   "before": 0.369,
+   "after": 0.851
+  },
+  {
+   "id": "pg:tu-zschorlau",
+   "name": "Zschorlau (schorl)",
+   "layer": "tourmaline",
+   "country": "Germany",
+   "before": 0.0,
+   "after": 0.949
+  },
+  {
+   "id": "pg:be-sherlova-gora",
+   "name": "Sherlova Gora and Adun-Chilon",
+   "layer": "beryl",
+   "country": "Russia",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:be-shigar",
+   "name": "Shigar valley (Skardu)",
+   "layer": "beryl",
+   "country": "Pakistan",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:be-wah-wah",
+   "name": "Wah Wah Mountains red beryl (Ruby-Violet)",
+   "layer": "beryl",
+   "country": "United States",
+   "before": 0.0,
+   "after": 0.749
+  },
+  {
+   "id": "pg:dia-namaqualand",
+   "name": "Namaqualand coastal diamonds (Kleinzee-Alexander Bay)",
+   "layer": "diamond",
+   "country": "South Africa",
+   "before": 0.522,
+   "after": 0.851
+  },
+  {
+   "id": "pg:dia-vaal-alluvials",
+   "name": "Vaal River alluvial diamonds (Barkly West-Windsorton)",
+   "layer": "diamond",
+   "country": "South Africa",
+   "before": 0.553,
+   "after": 0.851
+  },
+  {
+   "id": "pg:dia-jagersfontein",
+   "name": "Jagersfontein",
+   "layer": "diamond",
+   "country": "South Africa",
+   "before": 0.553,
+   "after": 0.749
+  },
+  {
+   "id": "pg:dia-lunda-alluvials",
+   "name": "Lunda Norte alluvial diamonds (Lucapa-Chitotolo)",
+   "layer": "diamond",
+   "country": "Angola",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-cuango",
+   "name": "Cuango valley alluvial diamonds (Cafunfo)",
+   "layer": "diamond",
+   "country": "Angola",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:dia-akwatia",
+   "name": "Akwatia (Birim) alluvial diamonds",
+   "layer": "diamond",
+   "country": "Ghana",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:dia-carnot",
+   "name": "Carnot-Berberati alluvial diamonds",
+   "layer": "diamond",
+   "country": "Central African Republic",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-golden-mile",
+   "name": "Golden Mile (Kalgoorlie Super Pit and Mt Charlotte)",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-st-ives",
+   "name": "St Ives (Kambalda)",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-sunrise-dam",
+   "name": "Sunrise Dam",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-tropicana",
+   "name": "Tropicana",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-telfer",
+   "name": "Telfer",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-boddington",
+   "name": "Boddington",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-norseman",
+   "name": "Norseman",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-tanami-callie",
+   "name": "Tanami (Callie)",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-bendigo",
+   "name": "Bendigo reefs",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-ballarat-lode",
+   "name": "Ballarat reefs",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-charters-towers",
+   "name": "Charters Towers",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-mount-morgan",
+   "name": "Mount Morgan",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-macraes",
+   "name": "Macraes",
+   "layer": "Au",
+   "country": "New Zealand",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-waihi",
+   "name": "Waihi (Martha)",
+   "layer": "Au",
+   "country": "New Zealand",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-muruntau",
+   "name": "Muruntau",
+   "layer": "Au",
+   "country": "Uzbekistan",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-kumtor",
+   "name": "Kumtor",
+   "layer": "Au",
+   "country": "Kyrgyzstan",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-vasilkovskoye",
+   "name": "Vasilkovskoye",
+   "layer": "Au",
+   "country": "Kazakhstan",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-sukhoi-log",
+   "name": "Sukhoi Log",
+   "layer": "Au",
+   "country": "Russia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-olimpiada",
+   "name": "Olimpiada",
+   "layer": "Au",
+   "country": "Russia",
+   "before": 0.294,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-natalka",
+   "name": "Natalka",
+   "layer": "Au",
+   "country": "Russia",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-kupol",
+   "name": "Kupol",
+   "layer": "Au",
+   "country": "Russia",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-berezovsk",
+   "name": "Berezovsk",
+   "layer": "Au",
+   "country": "Russia",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-kochkar",
+   "name": "Kochkar (Plast)",
+   "layer": "Au",
+   "country": "Russia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-balei",
+   "name": "Balei-Taseyevo",
+   "layer": "Au",
+   "country": "Russia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-jiaodong-linglong",
+   "name": "Linglong (Jiaodong)",
+   "layer": "Au",
+   "country": "China",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-jiaodong-jiaojia",
+   "name": "Jiaojia-Xincheng (Jiaodong)",
+   "layer": "Au",
+   "country": "China",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-jiaodong-sanshandao",
+   "name": "Sanshandao (Jiaodong)",
+   "layer": "Au",
+   "country": "China",
+   "before": 0.6,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-kolar",
+   "name": "Kolar Gold Fields",
+   "layer": "Au",
+   "country": "India",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-hutti",
+   "name": "Hutti",
+   "layer": "Au",
+   "country": "India",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-kibali",
+   "name": "Kibali (KCD)",
+   "layer": "Au",
+   "country": "Congo (Kinshasa)",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-geita",
+   "name": "Geita",
+   "layer": "Au",
+   "country": "Tanzania",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-bulyanhulu",
+   "name": "Bulyanhulu",
+   "layer": "Au",
+   "country": "Tanzania",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-north-mara",
+   "name": "North Mara",
+   "layer": "Au",
+   "country": "Tanzania",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-sadiola",
+   "name": "Sadiola",
+   "layer": "Au",
+   "country": "Mali",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-loulo-gounkoto",
+   "name": "Loulo-Gounkoto",
+   "layer": "Au",
+   "country": "Mali",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-fekola",
+   "name": "Fekola",
+   "layer": "Au",
+   "country": "Mali",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-essakane",
+   "name": "Essakane",
+   "layer": "Au",
+   "country": "Burkina Faso",
+   "before": 0.698,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-tasiast",
+   "name": "Tasiast",
+   "layer": "Au",
+   "country": "Mauritania",
+   "before": 0.698,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-siguiri",
+   "name": "Siguiri",
+   "layer": "Au",
+   "country": "Guinea",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-obuasi",
+   "name": "Obuasi",
+   "layer": "Au",
+   "country": "Ghana",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-ahafo",
+   "name": "Ahafo",
+   "layer": "Au",
+   "country": "Ghana",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-prestea-bogoso",
+   "name": "Prestea-Bogoso",
+   "layer": "Au",
+   "country": "Ghana",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-tarkwa",
+   "name": "Tarkwa banket reefs",
+   "layer": "Au",
+   "country": "Ghana",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-sukari",
+   "name": "Sukari",
+   "layer": "Au",
+   "country": "Egypt",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-wadi-allaqi",
+   "name": "Wadi Allaqi and Umm Garayat (Nubian goldfields)",
+   "layer": "Au",
+   "country": "Egypt",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-mahd-adh-dhahab",
+   "name": "Mahd adh Dhahab",
+   "layer": "Au",
+   "country": "Saudi Arabia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-barberton",
+   "name": "Barberton (Fairview-Sheba-New Consort)",
+   "layer": "Au",
+   "country": "South Africa",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-pilgrims-rest",
+   "name": "Pilgrim's Rest and Sabie",
+   "layer": "Au",
+   "country": "South Africa",
+   "before": 0.651,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-cam-motor",
+   "name": "Cam and Motor (Kadoma)",
+   "layer": "Au",
+   "country": "Zimbabwe",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-globe-phoenix",
+   "name": "Globe and Phoenix (Kwekwe)",
+   "layer": "Au",
+   "country": "Zimbabwe",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-freda-rebecca",
+   "name": "Freda Rebecca (Bindura)",
+   "layer": "Au",
+   "country": "Zimbabwe",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-hemlo",
+   "name": "Hemlo (Williams-David Bell-Golden Giant)",
+   "layer": "Au",
+   "country": "Canada",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-porcupine",
+   "name": "Porcupine camp (Hollinger-McIntyre-Dome)",
+   "layer": "Au",
+   "country": "Canada",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-kirkland-lake",
+   "name": "Kirkland Lake (Macassa and the Main Break)",
+   "layer": "Au",
+   "country": "Canada",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-red-lake",
+   "name": "Red Lake (Campbell-Red Lake)",
+   "layer": "Au",
+   "country": "Canada",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-malartic",
+   "name": "Canadian Malartic and Odyssey",
+   "layer": "Au",
+   "country": "Canada",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-detour",
+   "name": "Detour Lake",
+   "layer": "Au",
+   "country": "Canada",
+   "before": 0.651,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-yellowknife",
+   "name": "Yellowknife (Giant and Con)",
+   "layer": "Au",
+   "country": "Canada",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-eskay-creek",
+   "name": "Eskay Creek",
+   "layer": "Au",
+   "country": "Canada",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-homestake",
+   "name": "Homestake",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-mother-lode",
+   "name": "Mother Lode belt",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-grass-valley",
+   "name": "Grass Valley (Empire-North Star-Idaho Maryland)",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-juneau",
+   "name": "Juneau (Alaska-Juneau and Treadwell)",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-fort-knox",
+   "name": "Fort Knox",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-donlin",
+   "name": "Donlin",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-goldstrike",
+   "name": "Goldstrike (Betze-Post-Meikle)",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-gold-quarry",
+   "name": "Gold Quarry (Maggie Creek)",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-carlin",
+   "name": "Carlin (Carlin-Hardie)",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-cortez",
+   "name": "Cortez (Pipeline-Cortez Hills-Goldrush)",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-turquoise-ridge",
+   "name": "Turquoise Ridge (Getchell)",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-twin-creeks",
+   "name": "Twin Creeks",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-jerritt-canyon",
+   "name": "Jerritt Canyon",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.722,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-round-mountain",
+   "name": "Round Mountain",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-cripple-creek",
+   "name": "Cripple Creek and Victor",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-goldfield",
+   "name": "Goldfield",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-el-oro",
+   "name": "El Oro-Tlalpujahua",
+   "layer": "Au",
+   "country": "Mexico",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-pueblo-viejo",
+   "name": "Pueblo Viejo",
+   "layer": "Au",
+   "country": "Dominican Republic",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-segovia",
+   "name": "Segovia-Remedios",
+   "layer": "Au",
+   "country": "Colombia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-el-callao",
+   "name": "El Callao",
+   "layer": "Au",
+   "country": "Venezuela",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-las-cristinas",
+   "name": "Las Cristinas",
+   "layer": "Au",
+   "country": "Venezuela",
+   "before": 0.518,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-rosebel",
+   "name": "Rosebel",
+   "layer": "Au",
+   "country": "Suriname",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-fruta-del-norte",
+   "name": "Fruta del Norte",
+   "layer": "Au",
+   "country": "Ecuador",
+   "before": 0.612,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-yanacocha",
+   "name": "Yanacocha",
+   "layer": "Au",
+   "country": "Peru",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-lagunas-norte",
+   "name": "Lagunas Norte (Alto Chicama)",
+   "layer": "Au",
+   "country": "Peru",
+   "before": 0.6,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-veladero",
+   "name": "Veladero",
+   "layer": "Au",
+   "country": "Argentina",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-pascua-lama",
+   "name": "Pascua-Lama",
+   "layer": "Au",
+   "country": "Chile",
+   "before": 0.592,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-el-indio",
+   "name": "El Indio",
+   "layer": "Au",
+   "country": "Chile",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-cerro-vanguardia",
+   "name": "Cerro Vanguardia",
+   "layer": "Au",
+   "country": "Argentina",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-morro-velho",
+   "name": "Morro Velho (Nova Lima)",
+   "layer": "Au",
+   "country": "Brazil",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-cuiaba",
+   "name": "Cuiaba",
+   "layer": "Au",
+   "country": "Brazil",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-paracatu",
+   "name": "Paracatu (Morro do Ouro)",
+   "layer": "Au",
+   "country": "Brazil",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-serra-pelada",
+   "name": "Serra Pelada",
+   "layer": "Au",
+   "country": "Brazil",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-lihir",
+   "name": "Lihir (Ladolam)",
+   "layer": "Au",
+   "country": "Papua New Guinea",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-porgera",
+   "name": "Porgera",
+   "layer": "Au",
+   "country": "Papua New Guinea",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-baguio",
+   "name": "Baguio district",
+   "layer": "Au",
+   "country": "Philippines",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-hishikari",
+   "name": "Hishikari",
+   "layer": "Au",
+   "country": "Japan",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-sado",
+   "name": "Sado",
+   "layer": "Au",
+   "country": "Japan",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-rosia-montana",
+   "name": "Rosia Montana (Alburnus Maior)",
+   "layer": "Au",
+   "country": "Romania",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-barza-brad",
+   "name": "Barza-Brad (Ruda-Musariu)",
+   "layer": "Au",
+   "country": "Romania",
+   "before": 0.333,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-sacaramb",
+   "name": "Sacaramb (Nagyag) tellurides",
+   "layer": "Au",
+   "country": "Romania",
+   "before": 0.0,
+   "after": 0.749
+  },
+  {
+   "id": "pg:au-kremnica",
+   "name": "Kremnica",
+   "layer": "Au",
+   "country": "Slovakia",
+   "before": 0.651,
+   "after": 0.749
+  },
+  {
+   "id": "pg:au-jilove",
+   "name": "Jilove",
+   "layer": "Au",
+   "country": "Czech Republic",
+   "before": 0.2,
+   "after": 0.749
+  },
+  {
+   "id": "pg:au-tauern",
+   "name": "Tauern gold (Gastein-Rauris)",
+   "layer": "Au",
+   "country": "Austria",
+   "before": 0.0,
+   "after": 0.749
+  },
+  {
+   "id": "pg:au-salsigne",
+   "name": "Salsigne",
+   "layer": "Au",
+   "country": "France",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-kisladag",
+   "name": "Kisladag",
+   "layer": "Au",
+   "country": "Turkey",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-nezhdaninskoye",
+   "name": "Nezhdaninskoye",
+   "layer": "Au",
+   "country": "Russia",
+   "before": 0.62,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-kuranakh",
+   "name": "Kuranakh (Aldan)",
+   "layer": "Au",
+   "country": "Russia",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-mayskoye",
+   "name": "Mayskoye",
+   "layer": "Au",
+   "country": "Russia",
+   "before": 0.173,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-pavlik",
+   "name": "Pavlik",
+   "layer": "Au",
+   "country": "Russia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-bakyrchik",
+   "name": "Bakyrchik",
+   "layer": "Au",
+   "country": "Kazakhstan",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-jundee",
+   "name": "Jundee",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-agnew-lawlers",
+   "name": "Agnew-Lawlers",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-granny-smith",
+   "name": "Granny Smith-Wallaby",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-mount-magnet",
+   "name": "Mount Magnet",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-fosterville",
+   "name": "Fosterville",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-cowal",
+   "name": "Cowal",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-zijinshan",
+   "name": "Zijinshan",
+   "layer": "Au",
+   "country": "China",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-shuiyindong",
+   "name": "Shuiyindong (Guizhou Carlin-type)",
+   "layer": "Au",
+   "country": "China",
+   "before": 0.525,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-xiaoqinling",
+   "name": "Xiaoqinling",
+   "layer": "Au",
+   "country": "China",
+   "before": 0.6,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-los-filos",
+   "name": "Los Filos-Bermejal",
+   "layer": "Au",
+   "country": "Mexico",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-buritica",
+   "name": "Buritica",
+   "layer": "Au",
+   "country": "Colombia",
+   "before": 0.451,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-pataz",
+   "name": "Pataz gold belt",
+   "layer": "Au",
+   "country": "Peru",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-gwalia",
+   "name": "Gwalia (Leonora)",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-kelian",
+   "name": "Kelian",
+   "layer": "Au",
+   "country": "Indonesia",
+   "before": 0.322,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-martabe",
+   "name": "Martabe",
+   "layer": "Au",
+   "country": "Indonesia",
+   "before": 0.6,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-gosowong",
+   "name": "Gosowong-Kencana-Toguraci",
+   "layer": "Au",
+   "country": "Indonesia",
+   "before": 0.49,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-pongkor",
+   "name": "Pongkor",
+   "layer": "Au",
+   "country": "Indonesia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:au-herradura",
+   "name": "La Herradura",
+   "layer": "Au",
+   "country": "Mexico",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:au-mulatos",
+   "name": "Mulatos",
+   "layer": "Au",
+   "country": "Mexico",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-mcarthur-river",
+   "name": "McArthur River",
+   "layer": "U",
+   "country": "Canada",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-cigar-lake",
+   "name": "Cigar Lake",
+   "layer": "U",
+   "country": "Canada",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-key-lake",
+   "name": "Key Lake (Gaertner and Deilmann)",
+   "layer": "U",
+   "country": "Canada",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:u-rabbit-lake",
+   "name": "Rabbit Lake (Rabbit Lake + Collins Bay + Eagle Point)",
+   "layer": "U",
+   "country": "Canada",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:u-arrow",
+   "name": "Arrow (Rook I)",
+   "layer": "U",
+   "country": "Canada",
+   "before": 0.0,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-ranger",
+   "name": "Ranger (Nos 1 and 3)",
+   "layer": "U",
+   "country": "Australia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-jabiluka",
+   "name": "Jabiluka",
+   "layer": "U",
+   "country": "Australia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-beverley",
+   "name": "Beverley",
+   "layer": "U",
+   "country": "Australia",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:u-inkai",
+   "name": "Inkai (Chu-Sarysu)",
+   "layer": "U",
+   "country": "Kazakhstan",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-budenovskoye",
+   "name": "Budenovskoye and Mynkuduk (Chu-Sarysu north)",
+   "layer": "U",
+   "country": "Kazakhstan",
+   "before": 0.698,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-uchkuduk",
+   "name": "Uchkuduk",
+   "layer": "U",
+   "country": "Uzbekistan",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:u-rossing",
+   "name": "Rossing",
+   "layer": "U",
+   "country": "Namibia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-husab",
+   "name": "Husab (Rossing South)",
+   "layer": "U",
+   "country": "Namibia",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-langer-heinrich",
+   "name": "Langer Heinrich",
+   "layer": "U",
+   "country": "Namibia",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-arlit-akouta",
+   "name": "Arlit and Akouta (Tim Mersoi basin)",
+   "layer": "U",
+   "country": "Niger",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-imouraren",
+   "name": "Imouraren",
+   "layer": "U",
+   "country": "Niger",
+   "before": 0.698,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-elliot-lake",
+   "name": "Elliot Lake (Blind River)",
+   "layer": "U",
+   "country": "Canada",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-streltsovsky",
+   "name": "Streltsovsky ore field (Krasnokamensk)",
+   "layer": "U",
+   "country": "Russia",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-jachymov",
+   "name": "Jachymov (Joachimsthal)",
+   "layer": "U",
+   "country": "Czech Republic",
+   "before": 0.4,
+   "after": 0.749
+  },
+  {
+   "id": "pg:u-schlema-alberoda",
+   "name": "Schlema-Alberoda",
+   "layer": "U",
+   "country": "Germany",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-pribram",
+   "name": "Pribram",
+   "layer": "U",
+   "country": "Czech Republic",
+   "before": 0.514,
+   "after": 0.851
+  },
+  {
+   "id": "pg:u-shinkolobwe",
+   "name": "Shinkolobwe",
+   "layer": "U",
+   "country": "Congo (Kinshasa)",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:u-oklo-mounana",
+   "name": "Oklo and Mounana (Franceville basin)",
+   "layer": "U",
+   "country": "Gabon",
+   "before": 0.651,
+   "after": 0.851
+  },
+  {
+   "id": "pg:u-jaduguda",
+   "name": "Jaduguda",
+   "layer": "U",
+   "country": "India",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:u-ambrosia-lake",
+   "name": "Ambrosia Lake (Grants mineral belt)",
+   "layer": "U",
+   "country": "United States",
+   "before": 0.42,
+   "after": 0.851
+  },
+  {
+   "id": "pg:u-uravan",
+   "name": "Uravan mineral belt",
+   "layer": "U",
+   "country": "United States",
+   "before": 0.451,
+   "after": 0.851
+  },
+  {
+   "id": "pg:u-gas-hills",
+   "name": "Gas Hills",
+   "layer": "U",
+   "country": "United States",
+   "before": 0.361,
+   "after": 0.851
+  },
+  {
+   "id": "pg:u-smith-ranch",
+   "name": "Smith Ranch-Highland (Powder River basin)",
+   "layer": "U",
+   "country": "United States",
+   "before": 0.388,
+   "after": 0.851
+  },
+  {
+   "id": "pg:u-zhovti-vody",
+   "name": "Zhovti Vody (Kryvyi Rih-Kremenchuk belt)",
+   "layer": "U",
+   "country": "Ukraine",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:u-kvanefjeld",
+   "name": "Kvanefjeld (Ilimaussaq)",
+   "layer": "U",
+   "country": "Greenland",
+   "before": 0.0,
+   "after": 0.949
+  },
+  {
+   "id": "pg:gr-borrowdale",
+   "name": "Borrowdale wad mine (Seathwaite)",
+   "layer": "C_graphite",
+   "country": "United Kingdom",
+   "before": 0.0,
+   "after": 0.749
+  },
+  {
+   "id": "pg:gr-bogala",
+   "name": "Bogala",
+   "layer": "C_graphite",
+   "country": "Sri Lanka",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:gr-kahatagaha",
+   "name": "Kahatagaha-Kolongaha",
+   "layer": "C_graphite",
+   "country": "Sri Lanka",
+   "before": 0.749,
+   "after": 0.749
+  },
+  {
+   "id": "pg:gr-balama",
+   "name": "Balama",
+   "layer": "C_graphite",
+   "country": "Mozambique",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:gr-mahenge",
+   "name": "Mahenge (Epanko-Ulanzi)",
+   "layer": "C_graphite",
+   "country": "Tanzania",
+   "before": 0.6,
+   "after": 0.949
+  },
+  {
+   "id": "pg:gr-ancuabe",
+   "name": "Ancuabe",
+   "layer": "C_graphite",
+   "country": "Mozambique",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:gr-jixi",
+   "name": "Jixi (Liumao)",
+   "layer": "C_graphite",
+   "country": "China",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:gr-luobei",
+   "name": "Luobei (Yunshan)",
+   "layer": "C_graphite",
+   "country": "China",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:gr-pingdu",
+   "name": "Pingdu (Nanshu)",
+   "layer": "C_graphite",
+   "country": "China",
+   "before": 0.698,
+   "after": 0.851
+  },
+  {
+   "id": "pg:gr-kropfmuehl",
+   "name": "Kropfmuehl (Passau)",
+   "layer": "C_graphite",
+   "country": "Germany",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:gr-kaisersberg",
+   "name": "Kaisersberg (Styria)",
+   "layer": "C_graphite",
+   "country": "Austria",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:gr-skaland",
+   "name": "Skaland (Traelen)",
+   "layer": "C_graphite",
+   "country": "Norway",
+   "before": 0.749,
+   "after": 0.749
+  },
+  {
+   "id": "pg:f-weardale",
+   "name": "Weardale (North Pennine orefield)",
+   "layer": "F",
+   "country": "United Kingdom",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:f-derbyshire",
+   "name": "Derbyshire (Peak District orefield)",
+   "layer": "F",
+   "country": "United Kingdom",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:f-illinois-kentucky",
+   "name": "Illinois-Kentucky fluorspar district (Cave-in-Rock and Rosiclare)",
+   "layer": "F",
+   "country": "United States",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:f-muzquiz",
+   "name": "Muzquiz district (Coahuila)",
+   "layer": "F",
+   "country": "Mexico",
+   "before": 0.698,
+   "after": 0.949
+  },
+  {
+   "id": "pg:f-las-cuevas",
+   "name": "Las Cuevas (Villa de Zaragoza)",
+   "layer": "F",
+   "country": "Mexico",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:f-wolsendorf",
+   "name": "Woelsendorf",
+   "layer": "F",
+   "country": "Germany",
+   "before": 0.651,
+   "after": 0.851
+  },
+  {
+   "id": "pg:f-ivittuut",
+   "name": "Ivittuut cryolite",
+   "layer": "F",
+   "country": "Greenland",
+   "before": 0.651,
+   "after": 0.851
+  },
+  {
+   "id": "pg:f-vergenoeg",
+   "name": "Vergenoeg",
+   "layer": "F",
+   "country": "South Africa",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:f-witkop",
+   "name": "Marico fluorspar field (Witkop)",
+   "layer": "F",
+   "country": "South Africa",
+   "before": 0.431,
+   "after": 0.949
+  },
+  {
+   "id": "pg:f-okorusu",
+   "name": "Okorusu",
+   "layer": "F",
+   "country": "Namibia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:f-wuyi",
+   "name": "Wuyi fluorite district (Zhejiang)",
+   "layer": "F",
+   "country": "China",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:f-asturias",
+   "name": "Asturias fluorspar district (Caravia-Berbes)",
+   "layer": "F",
+   "country": "Spain",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:f-st-lawrence",
+   "name": "St. Lawrence (Newfoundland)",
+   "layer": "F",
+   "country": "Canada",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:q-cristalina",
+   "name": "Cristalina rock crystal",
+   "layer": "SiO2",
+   "country": "Brazil",
+   "before": 0.651,
+   "after": 0.949
+  },
+  {
+   "id": "pg:q-diamantina",
+   "name": "Diamantina rock crystal (Serra do Espinhaco)",
+   "layer": "SiO2",
+   "country": "Brazil",
+   "before": 0.0,
+   "after": 0.949
+  },
+  {
+   "id": "pg:q-ametista-do-sul",
+   "name": "Ametista do Sul amethyst",
+   "layer": "SiO2",
+   "country": "Brazil",
+   "before": 0.651,
+   "after": 0.851
+  },
+  {
+   "id": "pg:q-artigas",
+   "name": "Artigas amethyst",
+   "layer": "SiO2",
+   "country": "Uruguay",
+   "before": 0.6,
+   "after": 0.851
+  },
+  {
+   "id": "pg:q-spruce-pine",
+   "name": "Spruce Pine high-purity quartz",
+   "layer": "SiO2",
+   "country": "United States",
+   "before": 0.749,
+   "after": 0.851
+  },
+  {
+   "id": "pg:q-ouachita",
+   "name": "Ouachita quartz crystal belt (Mount Ida-Hot Springs)",
+   "layer": "SiO2",
+   "country": "United States",
+   "before": 0.408,
+   "after": 0.949
+  },
+  {
+   "id": "pg:q-aar-massif",
+   "name": "Aar massif cleft crystals (Grimsel-Goescheneralp)",
+   "layer": "SiO2",
+   "country": "Switzerland",
+   "before": 0.0,
+   "after": 0.749
+  },
+  {
+   "id": "pg:q-idar-oberstein",
+   "name": "Idar-Oberstein agate",
+   "layer": "SiO2",
+   "country": "Germany",
+   "before": 0.0,
+   "after": 0.851
+  },
+  {
+   "id": "pg:pl-klondike",
+   "name": "Klondike placers (Bonanza-Eldorado-Hunker-Dominion)",
+   "layer": "Au",
+   "country": "Canada",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:pl-cariboo",
+   "name": "Cariboo placers (Barkerville)",
+   "layer": "Au",
+   "country": "Canada",
+   "before": 0.6,
+   "after": 0.851
+  },
+  {
+   "id": "pg:pl-fairbanks",
+   "name": "Fairbanks placers",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.663,
+   "after": 0.851
+  },
+  {
+   "id": "pg:pl-nome",
+   "name": "Nome beach placers",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.663,
+   "after": 0.851
+  },
+  {
+   "id": "pg:pl-sierra-tertiary",
+   "name": "Sierra Nevada Tertiary gravels and river placers",
+   "layer": "Au",
+   "country": "United States",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:pl-victoria",
+   "name": "Victorian alluvials and deep leads (Ballarat-Castlemaine-Bendigo)",
+   "layer": "Au",
+   "country": "Australia",
+   "before": 0.749,
+   "after": 0.949
+  },
+  {
+   "id": "pg:pl-otago",
+   "name": "Otago goldfields placers",
+   "layer": "Au",
+   "country": "New Zealand",
+   "before": 0.498,
+   "after": 0.851
+  },
+  {
+   "id": "pg:pl-lena",
+   "name": "Lena goldfields (Bodaibo)",
+   "layer": "Au",
+   "country": "Russia",
+   "before": 0.51,
+   "after": 0.949
+  },
+  {
+   "id": "pg:pl-kolyma",
+   "name": "Kolyma placers (Susuman-Yagodnoye)",
+   "layer": "Au",
+   "country": "Russia",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:pl-aldan",
+   "name": "Aldan placers",
+   "layer": "Au",
+   "country": "Russia",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:pl-urals",
+   "name": "Ural placers (Miass and the eastern slope)",
+   "layer": "Au",
+   "country": "Russia",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:pl-bambuk",
+   "name": "Bambuk placers (Faleme and Kenieba)",
+   "layer": "Au",
+   "country": "Mali",
+   "before": 0.851,
+   "after": 0.851
+  },
+  {
+   "id": "pg:pl-bure",
+   "name": "Bure placers (upper Niger and Tinkisso)",
+   "layer": "Au",
+   "country": "Guinea",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:pl-lobi",
+   "name": "Lobi placers",
+   "layer": "Au",
+   "country": "Burkina Faso",
+   "before": 0.0,
+   "after": 0.851
+  },
+  {
+   "id": "pg:pl-akan",
+   "name": "Akan placers (Pra-Ofin-Birim)",
+   "layer": "Au",
+   "country": "Ghana",
+   "before": 0.627,
+   "after": 0.949
+  },
+  {
+   "id": "pg:pl-adola",
+   "name": "Adola placers",
+   "layer": "Au",
+   "country": "Ethiopia",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:pl-nubia",
+   "name": "Nubian wadi placers (Allaqi-Gabgaba)",
+   "layer": "Au",
+   "country": "Sudan",
+   "before": 0.0,
+   "after": 0.851
+  },
+  {
+   "id": "pg:pl-antioquia",
+   "name": "Antioquia placers (Nechi-Cauca)",
+   "layer": "Au",
+   "country": "Colombia",
+   "before": 0.851,
+   "after": 0.949
+  },
+  {
+   "id": "pg:pl-minas",
+   "name": "Minas Gerais placers (Ouro Preto-Mariana-Sabara)",
+   "layer": "Au",
+   "country": "Brazil",
+   "before": 0.62,
+   "after": 0.949
+  },
+  {
+   "id": "pg:pl-tapajos",
+   "name": "Tapajos garimpos",
+   "layer": "Au",
+   "country": "Brazil",
+   "before": 0.6,
+   "after": 0.949
+  },
+  {
+   "id": "pg:pl-madre-de-dios",
+   "name": "Madre de Dios placers",
+   "layer": "Au",
+   "country": "Peru",
+   "before": 0.569,
+   "after": 0.851
+  },
+  {
+   "id": "pg:pl-las-medulas",
+   "name": "Las Medulas",
+   "layer": "Au",
+   "country": "Spain",
+   "before": 0.651,
+   "after": 0.749
+  },
+  {
+   "id": "pg:wits-west-rand",
+   "name": "Witwatersrand: West Rand goldfield (Randfontein-Krugersdorp)",
+   "layer": "Au",
+   "country": "South Africa",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:wits-central-rand",
+   "name": "Witwatersrand: Central Rand goldfield (Johannesburg)",
+   "layer": "Au",
+   "country": "South Africa",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:wits-east-rand",
+   "name": "Witwatersrand: East Rand goldfield (Benoni-Springs-Nigel)",
+   "layer": "Au",
+   "country": "South Africa",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:wits-far-west-rand",
+   "name": "Witwatersrand: Far West Rand (West Wits Line, Carletonville)",
+   "layer": "Au",
+   "country": "South Africa",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:wits-klerksdorp",
+   "name": "Witwatersrand: Klerksdorp goldfield (Vaal Reefs, KOSH)",
+   "layer": "Au",
+   "country": "South Africa",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:wits-free-state",
+   "name": "Witwatersrand: Free State goldfield (Welkom-Odendaalsrus-Virginia)",
+   "layer": "Au",
+   "country": "South Africa",
+   "before": 0.949,
+   "after": 0.949
+  },
+  {
+   "id": "pg:wits-evander",
+   "name": "Witwatersrand: Evander goldfield (Kinross-Winkelhaak)",
+   "layer": "Au",
+   "country": "South Africa",
+   "before": 0.949,
+   "after": 0.949
+  }
+ ],
+ "missedBefore": 45,
+ "missedAfter": 0
+}

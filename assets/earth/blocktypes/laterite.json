@@ -1,0 +1,88 @@
+{
+	"code": "laterite",
+	"variantgroups": [
+		{
+			"code": "type",
+			"states": [
+				"mottled",
+				"hard"
+			]
+		}
+	],
+	"attributes": {
+		"handbook": {"extraSections": [{"title": "earth:handbooktitle-geology", "text": "earth:handbooktext-laterite-{type}"}]},
+		"mapColorCode": "land",
+		"preventsDecay": true
+	},
+	"shape": {
+		"base": "game:block/basic/cube"
+	},
+	"drawtype": "Cube",
+	"creativeinventory": {
+		"general": [
+			"*"
+		],
+		"earthplus": [
+			"*"
+		],
+		"terrain": [
+			"*"
+		]
+	},
+	"blockmaterialByType": {
+		"*-mottled": "Soil",
+		"*-hard": "Stone"
+	},
+	"replaceable": 300,
+	"resistanceByType": {
+		"*-mottled": 3.5,
+		"*-hard": 6
+	},
+	"fertility": 0,
+	"textures": {
+		"all": {
+			"base": "earth:block/ground/laterite-{type}*"
+		}
+	},
+	"soundsByType": {
+		"*-mottled": {
+			"place": "game:block/dirt",
+			"break": "game:block/dirt",
+			"hit": "game:block/dirt"
+		},
+		"*-hard": {
+			"walk": "game:walk/stone",
+			"byTool": {
+				"Pickaxe": {
+					"hit": "game:block/rock-hit-pickaxe",
+					"break": "game:block/rock-break-pickaxe"
+				}
+			}
+		}
+	},
+	"drops": [
+		{
+			"type": "block",
+			"code": "earth:laterite-{type}",
+			"quantity": {
+				"avg": 1
+			}
+		}
+	],
+	"heldTpIdleAnimation": "holdbothhandslarge",
+	"heldRightReadyAnimation": "heldblockready",
+	"heldTpUseAnimation": "twohandplaceblock",
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.23,
+			"y": -0.91,
+			"z": -0.8
+		},
+		"rotation": {
+			"x": -2,
+			"y": 25,
+			"z": -78
+		},
+		"scale": 0.4
+	}
+}

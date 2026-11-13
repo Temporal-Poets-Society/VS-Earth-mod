@@ -1,0 +1,91 @@
+{
+  "mod": {
+    "modid": 2087,
+    "assetid": 11830,
+    "name": "Rock Strata Variety",
+    "text": "<p><span style=\"color: #2fcc71;\"><strong>Updated for 1.22!</strong></span></p>\n<p>This mod alters vanilla rock strata worldgen to allow more varied (and more numerous) rock layers to generate. In vanilla worldgen, some rock types dominate and prevent others from spawning because they have precedence during generation. This mod allocates a piece of the column to each rock type that is queued for generation in a given area, rather than allowing a few to fill up the column before the others get a chance.</p>\n<p>This mod should increase the likelihood of rarer rock types like limestone or chalk generating, and will especially improve the distribution of modded rock types appended to the end of the rock strata variants list (and therefore at the end of the line to generate).</p>\n<p>This mod should be compatible with mods that add new rock types, ores, etc. It will be incompatible with any mod that specifically alters the GenRockStrata.genBlockColumn method, as that method is changed and overwritten by this mod.</p>\n<p>This mod is best used with new worlds, but shouldn't cause any issues when installed mid playthrough (back up first!), except that newly generated chunks may have some abrupt layer transitions. It doesn't affect terrain shape or modify the heightmap in any way, so you shouldn't get any ugly cliff chunk boundaries. You may regenerate old chunks to repopulate rock types with /wgen regen [radius around you in chunks]. Take care, as this will delete anything you've built in the area! Back up your save before trying it.</p>\n<p>Note: This mod does not make specific rock groups (e.g. sedimentary, metamorphic) more common, or adjust the likelihood for any rock type to be <em>able</em> to generate. It isn't a targeted buff to limestone or bauxite spawn rates. Rather, they will show up where they should have been all along.</p>",
+    "author": "chisps",
+    "urlalias": "rockstratavariety",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_updated_09d5eaee9ebe25038aadcbd5c94f873c.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_updated_09d5eaee9ebe25038aadcbd5c94f873c.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_updated_09d5eaee9ebe25038aadcbd5c94f873c.png",
+    "homepageurl": "",
+    "sourcecodeurl": "https://github.com/chisps427/Rock-Strata-Variety",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 30010,
+    "follows": 1079,
+    "trendingpoints": 0,
+    "comments": 60,
+    "side": "server",
+    "type": "mod",
+    "created": "2024-04-09 05:54:39",
+    "lastreleased": "2026-04-23 07:17:22",
+    "lastmodified": "2026-09-29 05:29:17",
+    "tags": [
+      "Worldgen"
+    ],
+    "releases": [
+      {
+        "releaseid": 38861,
+        "mainfile": "https://moddbcdn.vintagestory.at/rockstratavariety_0._1b4de983682f2c3eec000c044acfd20a.zip?dl=rockstratavariety_0.0.4.zip",
+        "filename": "rockstratavariety_0.0.4.zip",
+        "fileid": 86591,
+        "downloads": 13479,
+        "tags": [
+          "1.22.0"
+        ],
+        "modidstr": "rockstratavariety",
+        "modversion": "0.0.4",
+        "created": "2026-04-23 07:17:22",
+        "changelog": "<p>Updated for 1.22. Fix for rare crash on prospecting chunks generated before adding a mod that introduces new rock types (prospecting results will be inaccurate in this case, but this is true in vanilla too).</p>"
+      },
+      {
+        "releaseid": 25989,
+        "mainfile": "https://moddbcdn.vintagestory.at/rockstratavariety_0._f0ebf5c6edf4549dcc7f70881f3d3503.zip?dl=rockstratavariety_0.0.3.zip",
+        "filename": "rockstratavariety_0.0.3.zip",
+        "fileid": 57099,
+        "downloads": 8167,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "rockstratavariety",
+        "modversion": "0.0.3",
+        "created": "2025-09-26 20:17:38",
+        "changelog": "<p>Minor changes to speed up worldgen (hopefully), rolled in 1.20 chunk border tweak, and fixed typo in 0.0.2</p>"
+      },
+      {
+        "releaseid": 9743,
+        "mainfile": "https://moddbcdn.vintagestory.at/rockstratavariety_0._59ce5aa6302c0c4b579614dfbcf05df4.zip?dl=rockstratavariety_0.0.1.zip",
+        "filename": "rockstratavariety_0.0.1.zip",
+        "fileid": 20655,
+        "downloads": 8356,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "rockstratavariety",
+        "modversion": "0.0.1",
+        "created": "2024-04-09 05:58:00",
+        "changelog": "<p>Initial release.</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 20653,
+        "mainfile": "https://moddbcdn.vintagestory.at/before_0ff3be329b19b601bfd6adfa2a65492e.jpg",
+        "filename": "before.jpg",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/before_0ff3be329b19b601bfd6adfa2a65492e_55_60.jpg",
+        "created": "2024-04-09 05:55:48"
+      },
+      {
+        "fileid": 20654,
+        "mainfile": "https://moddbcdn.vintagestory.at/after_0c854ff6289c8af73beb6e6abec87a2f.jpg",
+        "filename": "after.jpg",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/after_0c854ff6289c8af73beb6e6abec87a2f_55_60.jpg",
+        "created": "2024-04-09 05:55:50"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

@@ -1,0 +1,1512 @@
+{
+ "deposits": 1232,
+ "areas": 20,
+ "countryTotals": [
+  {
+   "layer": "Fe",
+   "country": "Australia",
+   "entries": 16,
+   "oreMt": 78700.0,
+   "catalogue": 78700.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": 58000,
+   "ratio": 1.36
+  },
+  {
+   "layer": "Fe",
+   "country": "Russia",
+   "entries": 8,
+   "oreMt": 61550.0,
+   "catalogue": 61550.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": 35000,
+   "ratio": 1.76
+  },
+  {
+   "layer": "Fe",
+   "country": "Brazil",
+   "entries": 7,
+   "oreMt": 52500.0,
+   "catalogue": 52500.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": 34000,
+   "ratio": 1.54
+  },
+  {
+   "layer": "Fe",
+   "country": "United States",
+   "entries": 11,
+   "oreMt": 47640.0,
+   "catalogue": 47640.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": 3600,
+   "ratio": 13.23
+  },
+  {
+   "layer": "Fe",
+   "country": "Bolivia",
+   "entries": 1,
+   "oreMt": 40000.0,
+   "catalogue": 40000.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": null,
+   "ratio": null
+  },
+  {
+   "layer": "Fe",
+   "country": "Canada",
+   "entries": 6,
+   "oreMt": 29400.0,
+   "catalogue": 29400.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": 6000,
+   "ratio": 4.9
+  },
+  {
+   "layer": "Fe",
+   "country": "Ukraine",
+   "entries": 4,
+   "oreMt": 26600.0,
+   "catalogue": 26600.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": 6500,
+   "ratio": 4.09
+  },
+  {
+   "layer": "Fe",
+   "country": "China",
+   "entries": 6,
+   "oreMt": 16950.0,
+   "catalogue": 16950.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": 20000,
+   "ratio": 0.85
+  },
+  {
+   "layer": "Fe",
+   "country": "India",
+   "entries": 5,
+   "oreMt": 16700.0,
+   "catalogue": 16700.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": 5500,
+   "ratio": 3.04
+  },
+  {
+   "layer": "Fe",
+   "country": "Sierra Leone",
+   "entries": 2,
+   "oreMt": 11000.0,
+   "catalogue": 11000.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": null,
+   "ratio": null
+  },
+  {
+   "layer": "Fe",
+   "country": "Kazakhstan",
+   "entries": 2,
+   "oreMt": 5200.0,
+   "catalogue": 5200.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": 2500,
+   "ratio": 2.08
+  },
+  {
+   "layer": "Fe",
+   "country": "Sweden",
+   "entries": 5,
+   "oreMt": 4820.0,
+   "catalogue": 4820.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": 1300,
+   "ratio": 3.71
+  },
+  {
+   "layer": "Fe",
+   "country": "Iran",
+   "entries": 4,
+   "oreMt": 2820.0,
+   "catalogue": 2820.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": 3800,
+   "ratio": 0.74
+  },
+  {
+   "layer": "Fe",
+   "country": "South Africa",
+   "entries": 3,
+   "oreMt": 2700.0,
+   "catalogue": 2700.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": 930,
+   "ratio": 2.9
+  },
+  {
+   "layer": "Fe",
+   "country": "Peru",
+   "entries": 1,
+   "oreMt": 1800.0,
+   "catalogue": 1800.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": 2600,
+   "ratio": 0.69
+  },
+  {
+   "layer": "Fe",
+   "country": "Turkey",
+   "entries": 1,
+   "oreMt": 150.0,
+   "catalogue": 150.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": 150,
+   "ratio": 1.0
+  },
+  {
+   "layer": "Fe",
+   "country": "World",
+   "entries": 127,
+   "oreMt": 449454.0,
+   "catalogue": 449454.0,
+   "unit": "Mt crude ore",
+   "mcsReserves": 200000,
+   "ratio": 2.25,
+   "worldResources": ">800 Gt ore (>230 Gt Fe)"
+  },
+  {
+   "layer": "Mn",
+   "country": "South Africa",
+   "entries": 1,
+   "oreMt": 13600.0,
+   "catalogue": 5104000.0,
+   "unit": "kt Mn",
+   "mcsReserves": 560000,
+   "ratio": 9.11
+  },
+  {
+   "layer": "Mn",
+   "country": "Ukraine",
+   "entries": 2,
+   "oreMt": 4700.0,
+   "catalogue": 1100000.0,
+   "unit": "kt Mn",
+   "mcsReserves": null,
+   "ratio": null
+  },
+  {
+   "layer": "Mn",
+   "country": "Mexico",
+   "entries": 1,
+   "oreMt": 1500.0,
+   "catalogue": 405000.0,
+   "unit": "kt Mn",
+   "mcsReserves": null,
+   "ratio": null
+  },
+  {
+   "layer": "Mn",
+   "country": "China",
+   "entries": 3,
+   "oreMt": 1108.0,
+   "catalogue": 223600.0,
+   "unit": "kt Mn",
+   "mcsReserves": 280000,
+   "ratio": 0.8
+  },
+  {
+   "layer": "Mn",
+   "country": "Gabon",
+   "entries": 1,
+   "oreMt": 450.0,
+   "catalogue": 207000.0,
+   "unit": "kt Mn",
+   "mcsReserves": 61000,
+   "ratio": 3.39
+  },
+  {
+   "layer": "Mn",
+   "country": "Australia",
+   "entries": 2,
+   "oreMt": 450.0,
+   "catalogue": 200000.0,
+   "unit": "kt Mn",
+   "mcsReserves": 500000,
+   "ratio": 0.4
+  },
+  {
+   "layer": "Mn",
+   "country": "India",
+   "entries": 2,
+   "oreMt": 250.0,
+   "catalogue": 100000.0,
+   "unit": "kt Mn",
+   "mcsReserves": 34000,
+   "ratio": 2.94
+  },
+  {
+   "layer": "Mn",
+   "country": "Brazil",
+   "entries": 3,
+   "oreMt": 200.0,
+   "catalogue": 87400.0,
+   "unit": "kt Mn",
+   "mcsReserves": 270000,
+   "ratio": 0.32
+  },
+  {
+   "layer": "Mn",
+   "country": "Ghana",
+   "entries": 1,
+   "oreMt": 100.0,
+   "catalogue": 35000.0,
+   "unit": "kt Mn",
+   "mcsReserves": 13000,
+   "ratio": 2.69
+  },
+  {
+   "layer": "Mn",
+   "country": "World",
+   "entries": 20,
+   "oreMt": 23188.0,
+   "catalogue": 7676000.0,
+   "unit": "kt Mn",
+   "mcsReserves": 1700000,
+   "ratio": 4.52,
+   "worldResources": "large; South Africa about 70 %"
+  },
+  {
+   "layer": "Cr",
+   "country": "South Africa",
+   "entries": 1,
+   "oreMt": 8600.0,
+   "catalogue": 8313333.3,
+   "unit": "kt chromite at 45 % Cr2O3",
+   "mcsReserves": 200000,
+   "ratio": 41.57
+  },
+  {
+   "layer": "Cr",
+   "country": "Zimbabwe",
+   "entries": 2,
+   "oreMt": 5040.0,
+   "catalogue": 5264888.9,
+   "unit": "kt chromite at 45 % Cr2O3",
+   "mcsReserves": 540000,
+   "ratio": 9.75
+  },
+  {
+   "layer": "Cr",
+   "country": "Kazakhstan",
+   "entries": 1,
+   "oreMt": 800.0,
+   "catalogue": 853333.3,
+   "unit": "kt chromite at 45 % Cr2O3",
+   "mcsReserves": 320000,
+   "ratio": 2.67
+  },
+  {
+   "layer": "Cr",
+   "country": "India",
+   "entries": 1,
+   "oreMt": 200.0,
+   "catalogue": 200000.0,
+   "unit": "kt chromite at 45 % Cr2O3",
+   "mcsReserves": 79000,
+   "ratio": 2.53
+  },
+  {
+   "layer": "Cr",
+   "country": "Finland",
+   "entries": 1,
+   "oreMt": 150.0,
+   "catalogue": 86666.7,
+   "unit": "kt chromite at 45 % Cr2O3",
+   "mcsReserves": 8300,
+   "ratio": 10.44
+  },
+  {
+   "layer": "Cr",
+   "country": "Brazil",
+   "entries": 1,
+   "oreMt": 50.0,
+   "catalogue": 44444.4,
+   "unit": "kt chromite at 45 % Cr2O3",
+   "mcsReserves": 6600,
+   "ratio": 6.73
+  },
+  {
+   "layer": "Cr",
+   "country": "United States",
+   "entries": 564,
+   "oreMt": 84.7,
+   "catalogue": 17672.5,
+   "unit": "kt chromite at 45 % Cr2O3",
+   "mcsReserves": 630,
+   "ratio": 28.05
+  },
+  {
+   "layer": "Cr",
+   "country": "Turkey",
+   "entries": 127,
+   "oreMt": 11.6,
+   "catalogue": 10992.1,
+   "unit": "kt chromite at 45 % Cr2O3",
+   "mcsReserves": 27000,
+   "ratio": 0.41
+  },
+  {
+   "layer": "Cr",
+   "country": "World",
+   "entries": 878,
+   "oreMt": 15321.2,
+   "catalogue": 15063297.1,
+   "unit": "kt chromite at 45 % Cr2O3",
+   "mcsReserves": 1200000,
+   "ratio": 12.55,
+   "worldResources": ">12 Gt shipping-grade chromite"
+  },
+  {
+   "layer": "Ni",
+   "country": "Indonesia",
+   "entries": 14,
+   "oreMt": 9451.6,
+   "catalogue": 133586200.0,
+   "unit": "t Ni",
+   "mcsReserves": 55000000,
+   "ratio": 2.43
+  },
+  {
+   "layer": "Ni",
+   "country": "New Caledonia",
+   "entries": 10,
+   "oreMt": 1813.0,
+   "catalogue": 31542760.0,
+   "unit": "t Ni",
+   "mcsReserves": 7100000,
+   "ratio": 4.44
+  },
+  {
+   "layer": "Ni",
+   "country": "Russia",
+   "entries": 11,
+   "oreMt": 3114.0,
+   "catalogue": 30444730.0,
+   "unit": "t Ni",
+   "mcsReserves": 8300000,
+   "ratio": 3.67
+  },
+  {
+   "layer": "Ni",
+   "country": "Canada",
+   "entries": 8,
+   "oreMt": 1991.0,
+   "catalogue": 28506000.0,
+   "unit": "t Ni",
+   "mcsReserves": 2200000,
+   "ratio": 12.96
+  },
+  {
+   "layer": "Ni",
+   "country": "Cuba",
+   "entries": 7,
+   "oreMt": 1501.4,
+   "catalogue": 19447300.0,
+   "unit": "t Ni",
+   "mcsReserves": null,
+   "ratio": null
+  },
+  {
+   "layer": "Ni",
+   "country": "Philippines",
+   "entries": 17,
+   "oreMt": 1493.2,
+   "catalogue": 17488613.0,
+   "unit": "t Ni",
+   "mcsReserves": 4800000,
+   "ratio": 3.64
+  },
+  {
+   "layer": "Ni",
+   "country": "Australia",
+   "entries": 12,
+   "oreMt": 1821.4,
+   "catalogue": 15927408.0,
+   "unit": "t Ni",
+   "mcsReserves": 24000000,
+   "ratio": 0.66
+  },
+  {
+   "layer": "Ni",
+   "country": "Brazil",
+   "entries": 14,
+   "oreMt": 1228.7,
+   "catalogue": 14554290.0,
+   "unit": "t Ni",
+   "mcsReserves": 16000000,
+   "ratio": 0.91
+  },
+  {
+   "layer": "Ni",
+   "country": "United States",
+   "entries": 2,
+   "oreMt": 4005.0,
+   "catalogue": 8175000.0,
+   "unit": "t Ni",
+   "mcsReserves": 310000,
+   "ratio": 26.37
+  },
+  {
+   "layer": "Ni",
+   "country": "China",
+   "entries": 1,
+   "oreMt": 515.0,
+   "catalogue": 5459000.0,
+   "unit": "t Ni",
+   "mcsReserves": 4400000,
+   "ratio": 1.24
+  },
+  {
+   "layer": "Ni",
+   "country": "World",
+   "entries": 142,
+   "oreMt": 31023.7,
+   "catalogue": 344548331.0,
+   "unit": "t Ni",
+   "mcsReserves": 130000000,
+   "ratio": 2.65,
+   "worldResources": ">350 Mt Ni"
+  },
+  {
+   "layer": "Ti",
+   "country": "China",
+   "entries": 2,
+   "oreMt": 5800.0,
+   "catalogue": 548000.0,
+   "unit": "kt TiO2",
+   "mcsReserves": 110000,
+   "ratio": 4.98
+  },
+  {
+   "layer": "Ti",
+   "country": "Poland",
+   "entries": 1,
+   "oreMt": 1500.0,
+   "catalogue": 105000.0,
+   "unit": "kt TiO2",
+   "mcsReserves": null,
+   "ratio": null
+  },
+  {
+   "layer": "Ti",
+   "country": "Norway",
+   "entries": 1,
+   "oreMt": 550.0,
+   "catalogue": 99000.0,
+   "unit": "kt TiO2",
+   "mcsReserves": 37000,
+   "ratio": 2.68
+  },
+  {
+   "layer": "Ti",
+   "country": "Mozambique",
+   "entries": 1,
+   "oreMt": 8000.0,
+   "catalogue": 96000.0,
+   "unit": "kt TiO2",
+   "mcsReserves": 720,
+   "ratio": 133.33
+  },
+  {
+   "layer": "Ti",
+   "country": "Russia",
+   "entries": 1,
+   "oreMt": 640.0,
+   "catalogue": 64000.0,
+   "unit": "kt TiO2",
+   "mcsReserves": null,
+   "ratio": null
+  },
+  {
+   "layer": "Ti",
+   "country": "Australia",
+   "entries": 3,
+   "oreMt": 2700.0,
+   "catalogue": 48500.0,
+   "unit": "kt TiO2",
+   "mcsReserves": 215000,
+   "ratio": 0.23
+  },
+  {
+   "layer": "Ti",
+   "country": "India",
+   "entries": 3,
+   "oreMt": 320.0,
+   "catalogue": 45000.0,
+   "unit": "kt TiO2",
+   "mcsReserves": 15670,
+   "ratio": 2.87
+  },
+  {
+   "layer": "Ti",
+   "country": "Canada",
+   "entries": 1,
+   "oreMt": 125.0,
+   "catalogue": 42500.0,
+   "unit": "kt TiO2",
+   "mcsReserves": 51000,
+   "ratio": 0.83
+  },
+  {
+   "layer": "Ti",
+   "country": "South Africa",
+   "entries": 1,
+   "oreMt": 2000.0,
+   "catalogue": 40000.0,
+   "unit": "kt TiO2",
+   "mcsReserves": 34100,
+   "ratio": 1.17
+  },
+  {
+   "layer": "Ti",
+   "country": "United States",
+   "entries": 2,
+   "oreMt": 600.0,
+   "catalogue": 28000.0,
+   "unit": "kt TiO2",
+   "mcsReserves": 2000,
+   "ratio": 14.0
+  },
+  {
+   "layer": "Ti",
+   "country": "Ukraine",
+   "entries": 1,
+   "oreMt": 500.0,
+   "catalogue": 15000.0,
+   "unit": "kt TiO2",
+   "mcsReserves": 5900,
+   "ratio": 2.54
+  },
+  {
+   "layer": "Ti",
+   "country": "Madagascar",
+   "entries": 1,
+   "oreMt": 300.0,
+   "catalogue": 7500.0,
+   "unit": "kt TiO2",
+   "mcsReserves": 30000,
+   "ratio": 0.25
+  },
+  {
+   "layer": "Ti",
+   "country": "Sierra Leone",
+   "entries": 1,
+   "oreMt": 600.0,
+   "catalogue": 6600.0,
+   "unit": "kt TiO2",
+   "mcsReserves": 2900,
+   "ratio": 2.28
+  },
+  {
+   "layer": "Ti",
+   "country": "World",
+   "entries": 22,
+   "oreMt": 26595.0,
+   "catalogue": 1168650.0,
+   "unit": "kt TiO2",
+   "mcsReserves": 556000,
+   "ratio": 2.1,
+   "worldResources": ">2 Gt of Ti minerals"
+  },
+  {
+   "layer": "V",
+   "country": "South Africa",
+   "entries": 1,
+   "oreMt": 1000.0,
+   "catalogue": 8960.0,
+   "unit": "kt V",
+   "mcsReserves": 430,
+   "ratio": 20.84
+  },
+  {
+   "layer": "V",
+   "country": "Russia",
+   "entries": 1,
+   "oreMt": 9000.0,
+   "catalogue": 6552.0,
+   "unit": "kt V",
+   "mcsReserves": 5000,
+   "ratio": 1.31
+  },
+  {
+   "layer": "V",
+   "country": "Australia",
+   "entries": 2,
+   "oreMt": 520.0,
+   "catalogue": 1337.3,
+   "unit": "kt V",
+   "mcsReserves": 8500,
+   "ratio": 0.16
+  },
+  {
+   "layer": "V",
+   "country": "China",
+   "entries": 1,
+   "oreMt": 300.0,
+   "catalogue": 672.0,
+   "unit": "kt V",
+   "mcsReserves": 4100,
+   "ratio": 0.16
+  },
+  {
+   "layer": "V",
+   "country": "World",
+   "entries": 8,
+   "oreMt": 10851.4,
+   "catalogue": 17572.2,
+   "unit": "kt V",
+   "mcsReserves": 18000,
+   "ratio": 0.98,
+   "worldResources": ">63 Mt V"
+  },
+  {
+   "layer": "Pt",
+   "country": "South Africa",
+   "entries": 2,
+   "oreMt": 21000.0,
+   "catalogue": 88800000.0,
+   "unit": "kg PGM",
+   "mcsReserves": 63000000,
+   "ratio": 1.41
+  },
+  {
+   "layer": "Pt",
+   "country": "Zimbabwe",
+   "entries": 1,
+   "oreMt": 2500.0,
+   "catalogue": 8750000.0,
+   "unit": "kg PGM",
+   "mcsReserves": 1200000,
+   "ratio": 7.29
+  },
+  {
+   "layer": "Pt",
+   "country": "United States",
+   "entries": 2,
+   "oreMt": 260.0,
+   "catalogue": 4020000.0,
+   "unit": "kg PGM",
+   "mcsReserves": 820000,
+   "ratio": 4.9
+  },
+  {
+   "layer": "Pt",
+   "country": "Russia",
+   "entries": 5,
+   "oreMt": 760.0,
+   "catalogue": 2015000.0,
+   "unit": "kg PGM",
+   "mcsReserves": 16000000,
+   "ratio": 0.13
+  },
+  {
+   "layer": "Pt",
+   "country": "Canada",
+   "entries": 1,
+   "oreMt": 100.0,
+   "catalogue": 150000.0,
+   "unit": "kg PGM",
+   "mcsReserves": 310000,
+   "ratio": 0.48
+  },
+  {
+   "layer": "Pt",
+   "country": "World",
+   "entries": 12,
+   "oreMt": 24645.0,
+   "catalogue": 103785000.0,
+   "unit": "kg PGM",
+   "mcsReserves": 81000000,
+   "ratio": 1.28,
+   "worldResources": ">100,000 t PGM"
+  },
+  {
+   "layer": "Al",
+   "country": "Guinea",
+   "entries": 6,
+   "oreMt": 7800.0,
+   "catalogue": 7800000.0,
+   "unit": "kt bauxite",
+   "mcsReserves": 7400000,
+   "ratio": 1.05
+  },
+  {
+   "layer": "Al",
+   "country": "Australia",
+   "entries": 4,
+   "oreMt": 7200.0,
+   "catalogue": 7200000.0,
+   "unit": "kt bauxite",
+   "mcsReserves": 3500000,
+   "ratio": 2.06
+  },
+  {
+   "layer": "Al",
+   "country": "Brazil",
+   "entries": 4,
+   "oreMt": 4300.0,
+   "catalogue": 4300000.0,
+   "unit": "kt bauxite",
+   "mcsReserves": 2700000,
+   "ratio": 1.59
+  },
+  {
+   "layer": "Al",
+   "country": "Vietnam",
+   "entries": 2,
+   "oreMt": 4000.0,
+   "catalogue": 4000000.0,
+   "unit": "kt bauxite",
+   "mcsReserves": 3100000,
+   "ratio": 1.29
+  },
+  {
+   "layer": "Al",
+   "country": "Jamaica",
+   "entries": 3,
+   "oreMt": 2500.0,
+   "catalogue": 2500000.0,
+   "unit": "kt bauxite",
+   "mcsReserves": 2000000,
+   "ratio": 1.25
+  },
+  {
+   "layer": "Al",
+   "country": "Indonesia",
+   "entries": 3,
+   "oreMt": 2300.0,
+   "catalogue": 2300000.0,
+   "unit": "kt bauxite",
+   "mcsReserves": 2800000,
+   "ratio": 0.82
+  },
+  {
+   "layer": "Al",
+   "country": "India",
+   "entries": 2,
+   "oreMt": 1500.0,
+   "catalogue": 1500000.0,
+   "unit": "kt bauxite",
+   "mcsReserves": 650000,
+   "ratio": 2.31
+  },
+  {
+   "layer": "Al",
+   "country": "Cameroon",
+   "entries": 1,
+   "oreMt": 1000.0,
+   "catalogue": 1000000.0,
+   "unit": "kt bauxite",
+   "mcsReserves": null,
+   "ratio": null
+  },
+  {
+   "layer": "Al",
+   "country": "China",
+   "entries": 2,
+   "oreMt": 600.0,
+   "catalogue": 600000.0,
+   "unit": "kt bauxite",
+   "mcsReserves": 680000,
+   "ratio": 0.88
+  },
+  {
+   "layer": "Al",
+   "country": "Russia",
+   "entries": 2,
+   "oreMt": 550.0,
+   "catalogue": 550000.0,
+   "unit": "kt bauxite",
+   "mcsReserves": 480000,
+   "ratio": 1.15
+  },
+  {
+   "layer": "Al",
+   "country": "Kazakhstan",
+   "entries": 1,
+   "oreMt": 200.0,
+   "catalogue": 200000.0,
+   "unit": "kt bauxite",
+   "mcsReserves": 280000,
+   "ratio": 0.71
+  },
+  {
+   "layer": "Al",
+   "country": "Saudi Arabia",
+   "entries": 1,
+   "oreMt": 200.0,
+   "catalogue": 200000.0,
+   "unit": "kt bauxite",
+   "mcsReserves": 180000,
+   "ratio": 1.11
+  },
+  {
+   "layer": "Al",
+   "country": "United States",
+   "entries": 1,
+   "oreMt": 100.0,
+   "catalogue": 100000.0,
+   "unit": "kt bauxite",
+   "mcsReserves": 20000,
+   "ratio": 5.0
+  },
+  {
+   "layer": "Al",
+   "country": "World",
+   "entries": 43,
+   "oreMt": 33835.0,
+   "catalogue": 33835000.0,
+   "unit": "kt bauxite",
+   "mcsReserves": 29000000,
+   "ratio": 1.17,
+   "worldResources": "55-75 Gt bauxite"
+  }
+ ],
+ "largest20": [
+  {
+   "oreMt": 55000,
+   "layer": "Fe",
+   "name": "Hamersley iron province (Brockman and Marra Mamba iron formations) (area)",
+   "country": "Australia",
+   "grade": 58,
+   "unit": "%",
+   "shape": "area",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 55000,
+   "layer": "Fe",
+   "name": "Kursk Magnetic Anomaly (Belgorod-Stary Oskol and Mikhailovsky districts) (area)",
+   "country": "Russia",
+   "grade": 34,
+   "unit": "%",
+   "shape": "area",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 40000.0,
+   "layer": "Fe",
+   "name": "El Mutun",
+   "country": "Bolivia",
+   "grade": 50.0,
+   "unit": "%",
+   "shape": "lens",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 40000,
+   "layer": "Fe",
+   "name": "Mesabi Range taconite (Biwabik Iron Formation) (area)",
+   "country": "United States",
+   "grade": 28,
+   "unit": "%",
+   "shape": "area",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 25000,
+   "layer": "Fe",
+   "name": "Quadrilatero Ferrifero itabirites (Caue Formation) (area)",
+   "country": "Brazil",
+   "grade": 45,
+   "unit": "%",
+   "shape": "area",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 20500,
+   "layer": "Fe",
+   "name": "Kryvyi Rih iron basin (Saksagan suite) (area)",
+   "country": "Ukraine",
+   "grade": 35,
+   "unit": "%",
+   "shape": "area",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 20000,
+   "layer": "Fe",
+   "name": "Labrador Trough (Sokoman Formation) (area)",
+   "country": "Canada",
+   "grade": 32,
+   "unit": "%",
+   "shape": "area",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 15000,
+   "layer": "Pt",
+   "name": "Bushveld Merensky Reef and UG2 chromitite (area)",
+   "country": "South Africa",
+   "grade": 5.5,
+   "unit": "g/t",
+   "shape": "area",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 13600,
+   "layer": "Mn",
+   "name": "Kalahari manganese field (Hotazel Formation) (area)",
+   "country": "South Africa",
+   "grade": 38,
+   "unit": "%",
+   "shape": "area",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 12000,
+   "layer": "Fe",
+   "name": "Singhbhum-Bonai-Keonjhar iron ore group (horseshoe synclinorium) (area)",
+   "country": "India",
+   "grade": 60,
+   "unit": "%",
+   "shape": "area",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 10000.0,
+   "layer": "Fe",
+   "name": "Anshan-Benxi BIF",
+   "country": "China",
+   "grade": 31.0,
+   "unit": "%",
+   "shape": "lens",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 10000.0,
+   "layer": "Fe",
+   "name": "Tonkolili",
+   "country": "Sierra Leone",
+   "grade": 30.0,
+   "unit": "%",
+   "shape": "lens",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 10000.0,
+   "layer": "Fe",
+   "name": "S11D (Serra Sul)",
+   "country": "Brazil",
+   "grade": 66.5,
+   "unit": "%",
+   "shape": "lens",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 9000.0,
+   "layer": "V",
+   "name": "Kachkanar (Gusevogorsk)",
+   "country": "Russia",
+   "grade": 0.13,
+   "unit": "%",
+   "shape": "stock",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 8600,
+   "layer": "Cr",
+   "name": "Bushveld Critical Zone chromitites (LG6, MG1-MG4) (area)",
+   "country": "South Africa",
+   "grade": 45,
+   "unit": "%",
+   "shape": "area",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 8000.0,
+   "layer": "Ti",
+   "name": "Moma (Namalope-Pilivili)",
+   "country": "Mozambique",
+   "grade": 1.2,
+   "unit": "%",
+   "shape": "blanket",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 6900.0,
+   "layer": "Fe",
+   "name": "Zanaga",
+   "country": "Congo",
+   "grade": 32.0,
+   "unit": "%",
+   "shape": "lens",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 6000,
+   "layer": "Fe",
+   "name": "Lorraine-Luxembourg minette (Aalenian oolitic ironstone) (area)",
+   "country": "France",
+   "grade": 32,
+   "unit": "%",
+   "shape": "area",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 6000,
+   "layer": "Pt",
+   "name": "Platreef (Bushveld northern limb) (area)",
+   "country": "South Africa",
+   "grade": 1.8,
+   "unit": "g/t",
+   "shape": "area",
+   "src": "published-endowment",
+   "q": "C"
+  },
+  {
+   "oreMt": 5000.0,
+   "layer": "Fe",
+   "name": "Urucum-Corumba",
+   "country": "Brazil",
+   "grade": 55.0,
+   "unit": "%",
+   "shape": "lens",
+   "src": "published-endowment",
+   "q": "C"
+  }
+ ],
+ "pointsOffLandOrOutsideCountry": [
+  {
+   "id": "iron-ferro:fe-kerch",
+   "name": "Kerch ironstone",
+   "country": "Ukraine",
+   "lat": 45.32,
+   "lon": 36.35,
+   "ne": "Russia",
+   "offshoreKm": 0.0
+  },
+  {
+   "id": "usgs-laterite-2011:95",
+   "name": "Manicani",
+   "country": "Philippines",
+   "lat": 10.9911,
+   "lon": 125.6394,
+   "ne": "Philippines",
+   "offshoreKm": 11.0
+  },
+  {
+   "id": "usgs-laterite-2011:99",
+   "name": "Nonoc",
+   "country": "Philippines",
+   "lat": 9.8428,
+   "lon": 125.6194,
+   "ne": "Philippines",
+   "offshoreKm": 7.1
+  },
+  {
+   "id": "usgs-podchrome-2012:567",
+   "name": "La Constancia",
+   "country": "Cuba",
+   "lat": 20.4511,
+   "lon": -74.5825,
+   "ne": "Cuba",
+   "offshoreKm": 0.0
+  },
+  {
+   "id": "usgs-podchrome-2012:911",
+   "name": "Claim Point 1",
+   "country": "United States",
+   "lat": 59.2017,
+   "lon": -151.8161,
+   "ne": "United States of America",
+   "offshoreKm": 1.7
+  },
+  {
+   "id": "usgs-podchrome-2012:912",
+   "name": "Claim Point 2",
+   "country": "United States",
+   "lat": 59.2033,
+   "lon": -151.8158,
+   "ne": "United States of America",
+   "offshoreKm": 1.5
+  },
+  {
+   "id": "usgs-podchrome-2012:913",
+   "name": "Claim Point 3-4-5-6",
+   "country": "United States",
+   "lat": 59.2058,
+   "lon": -151.8169,
+   "ne": "United States of America",
+   "offshoreKm": 1.2
+  },
+  {
+   "id": "usgs-podchrome-2012:914",
+   "name": "Claim Point 7-8a-8b-9",
+   "country": "United States",
+   "lat": 59.2061,
+   "lon": -151.8194,
+   "ne": "United States of America",
+   "offshoreKm": 1.1
+  },
+  {
+   "id": "usgs-podchrome-2012:915",
+   "name": "Claim Point 10",
+   "country": "United States",
+   "lat": 59.2064,
+   "lon": -151.8217,
+   "ne": "United States of America",
+   "offshoreKm": 1.1
+  },
+  {
+   "id": "usgs-podchrome-2012:916",
+   "name": "Claim Point 11",
+   "country": "United States",
+   "lat": 59.2064,
+   "lon": -151.8322,
+   "ne": "United States of America",
+   "offshoreKm": 0.9
+  },
+  {
+   "id": "usgs-podchrome-2012:917",
+   "name": "Claim Point 12-16",
+   "country": "United States",
+   "lat": 59.2042,
+   "lon": -151.8278,
+   "ne": "United States of America",
+   "offshoreKm": 1.2
+  },
+  {
+   "id": "usgs-podchrome-2012:918",
+   "name": "Claim Point 15",
+   "country": "United States",
+   "lat": 59.2042,
+   "lon": -151.8144,
+   "ne": "United States of America",
+   "offshoreKm": 1.4
+  },
+  {
+   "id": "usgs-podchrome-2012:1009",
+   "name": "Mindoro Mineral Enterprises",
+   "country": "Philippines",
+   "lat": 13.8058,
+   "lon": 120.2919,
+   "ne": "Philippines",
+   "offshoreKm": 5.1
+  },
+  {
+   "id": "usgs-podchrome-2012:1027",
+   "name": "Omasdang",
+   "country": "Philippines",
+   "lat": 10.4592,
+   "lon": 125.6303,
+   "ne": "Philippines",
+   "offshoreKm": 0.4
+  }
+ ],
+ "areasLand": [
+  {
+   "id": "iron-ferro:fe-hamersley",
+   "country": "Australia",
+   "ne": "Australia",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:fe-carajas",
+   "country": "Brazil",
+   "ne": "Brazil",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:fe-quadrilatero",
+   "country": "Brazil",
+   "ne": "Brazil",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:fe-kryvbas",
+   "country": "Ukraine",
+   "ne": "Ukraine",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:fe-kma",
+   "country": "Russia",
+   "ne": "Russia",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:fe-mesabi",
+   "country": "United States",
+   "ne": "United States of America",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:fe-labrador-trough",
+   "country": "Canada",
+   "ne": "Canada",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:fe-singhbhum",
+   "country": "India",
+   "ne": "India",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:fe-lorraine",
+   "country": "France",
+   "ne": "France",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:fe-cleveland",
+   "country": "United Kingdom",
+   "ne": "United Kingdom",
+   "landShare": 0.997
+  },
+  {
+   "id": "iron-ferro:fe-clinton-birmingham",
+   "country": "United States",
+   "ne": "United States of America",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:mn-kalahari",
+   "country": "South Africa",
+   "ne": "South Africa",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:mn-nikopol",
+   "country": "Ukraine",
+   "ne": "Ukraine",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:mn-chiatura",
+   "country": "Georgia",
+   "ne": "Georgia",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:cr-bushveld",
+   "country": "South Africa",
+   "ne": "South Africa",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:cr-great-dyke",
+   "country": "Zimbabwe",
+   "ne": "Zimbabwe",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:pt-bushveld-reefs",
+   "country": "South Africa",
+   "ne": "South Africa",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:pt-platreef",
+   "country": "South Africa",
+   "ne": "South Africa",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:pt-great-dyke",
+   "country": "Zimbabwe",
+   "ne": "Zimbabwe",
+   "landShare": 1.0
+  },
+  {
+   "id": "iron-ferro:v-bushveld-mml",
+   "country": "South Africa",
+   "ne": "South Africa",
+   "landShare": 1.0
+  }
+ ],
+ "layerRuleNotes": [
+  {
+   "id": "usgs-laterite-2011:1",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:6",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:7",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:12",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:13",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:14",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:15",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:16",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:17",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:18",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:20",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:21",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:23",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:24",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:25",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:26",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:43",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:44",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:45",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:49",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:50",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:51",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:52",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:53",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:64",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:65",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:66",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:67",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:68",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:69",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:106",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:107",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:108",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:109",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:110",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:111",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:112",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:113",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:114",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:115",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  },
+  {
+   "id": "usgs-laterite-2011:118",
+   "issue": "cover blanket with pre-Cenozoic weathering age Mesozoic (kept: old laterite still at the surface)"
+  }
+ ]
+}

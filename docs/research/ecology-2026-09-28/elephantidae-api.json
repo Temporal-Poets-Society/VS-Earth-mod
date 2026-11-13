@@ -1,0 +1,408 @@
+{
+  "mod": {
+    "modid": 2989,
+    "assetid": 17568,
+    "name": "Fauna of the Stone Age: Elephantidae",
+    "text": "<p><span style=\"font-weight: 400;\">A collection of large herbivores from the family Elephantidae, these powerful herbivores will roam the steppe and forests of your world. Equally a resource and a threat, they are a tremendous source of meat, hide and fat for those able to hunt them.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" style=\"width: 72.1893%; border-spacing: 0px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col style=\"width: 8.45525%;\" width=\"173\" /><col style=\"width: 9.69029%;\" width=\"100\" /><col style=\"width: 4.98765%;\" width=\"100\" /><col style=\"width: 5.03515%;\" width=\"100\" /><col style=\"width: 4.94015%;\" width=\"100\" /><col style=\"width: 3.65761%;\" width=\"71\" /><col style=\"width: 2.51758%;\" width=\"50\" /><col style=\"width: 2.94509%;\" width=\"58\" /><col style=\"width: 4.94015%;\" width=\"100\" /><col style=\"width: 3.04009%;\" width=\"60\" /><col style=\"width: 6.31769%;\" width=\"130\" /><col style=\"width: 9.12027%;\" width=\"189\" /><col style=\"width: 9.21528%;\" width=\"192\" /><col style=\"width: 4.89265%;\" width=\"100\" /><col style=\"width: 10.1653%;\" width=\"210\" /><col style=\"width: 10.1653%;\" width=\"210\" /></colgroup>\n<tbody>\n<tr>\n<td>Common Name</td>\n<td>Scientific name</td>\n<td>Weight</td>\n<td>Health</td>\n<td>Height</td>\n<td>Damage</td>\n<td>Temp</td>\n<td>Precip</td>\n<td>Foliage Needs</td>\n<td>Altitude</td>\n<td>Group Size</td>\n<td>Meat Drops</td>\n<td>Fat Drops</td>\n<td>Hide Drops</td>\n<td>Behaviors</td>\n<td>Diets</td>\n</tr>\n<tr>\n<td>Asian elephant</td>\n<td>Elephas maximus</td>\n<td>4k/2.7k/250</td>\n<td>110/84/21</td>\n<td>3.7/2.8 S</td>\n<td>29/24t3</td>\n<td>20-40</td>\n<td>15-100</td>\n<td>0-100</td>\n<td>1.0-1.7</td>\n<td>1-5 M, 5-15 F&amp;B</td>\n<td>270-300, 180-202,25-28</td>\n<td>54-60, 36-40, 3-4</td>\n<td>20H, 14H, 1H</td>\n<td>Milkable, Riding, Taming</td>\n<td>\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td>Bornean elephant</td>\n<td>\n<div>\n<div>Elephas maximus borneensis</div>\n</div>\n</td>\n<td>3.5k/2.3k/250</td>\n<td>100/76/21</td>\n<td>3.6/2.5 S</td>\n<td>27/22t3</td>\n<td>26-40</td>\n<td>65-100</td>\n<td>20-100 forest</td>\n<td>1.0-1.7</td>\n<td>1-5 M, 5-15 F&amp;B</td>\n<td>236-262,155-172,25-28</td>\n<td>46-52,30-34,3-4</td>\n<td>18H, 12H, 1H</td>\n<td>Milkable, Riding, Taming</td>\n<td>\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td>African bush elephant</td>\n<td>\n<div>\n<div>Loxodonta africana</div>\n</div>\n</td>\n<td>6k/3k/300</td>\n<td>150/90/23</td>\n<td>3.96/3 S</td>\n<td>37t4/25t3</td>\n<td>18-40</td>\n<td>5-100</td>\n<td>0-80 forest</td>\n<td>1.0-1.65</td>\n<td>1-3 M, 3-25 F&amp;B</td>\n<td>405-450,200-225,30-33</td>\n<td>80-90, 41-45, 4-5</td>\n<td>22H, 16H, 2H</td>\n<td>Milkable, Riding, Taming</td>\n<td>\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td>African forest elephant</td>\n<td>\n<div>\n<div>Loxodonta cyclotis</div>\n</div>\n</td>\n<td>2K/1K/150</td>\n<td>70/50/17</td>\n<td>3/2.2 S</td>\n<td>21/17t3</td>\n<td>25-40</td>\n<td>65-100</td>\n<td>70-100 forest</td>\n<td>1.0-1.5</td>\n<td>1-3M, 3-20 F&amp;B</td>\n<td>135-150,67-75,19-21</td>\n<td>26-30, 13-15, 2-3</td>\n<td>12H, 10H, 1H</td>\n<td>Milkable, Riding, Taming</td>\n<td>\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td>Columbian mammoth &dagger;</td>\n<td>\n<div>\n<div>Mammuthus columbi</div>\n</div>\n</td>\n<td>9.5K/5K/400</td>\n<td>220/130/27</td>\n<td>4.2/3.4 S</td>\n<td>51/33t4</td>\n<td>10-24</td>\n<td>5-100</td>\n<td>0-70 forest</td>\n<td>1.0-1.7</td>\n<td>1-5 M, 5-15 F&amp;B</td>\n<td>640-710, 340-375,32-36</td>\n<td>128-142, 67-75,5-6</td>\n<td>24H, 20H, 2H</td>\n<td>Milkable, Riding, Taming</td>\n<td>\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td>Pygmy mammoth &dagger;</td>\n<td>\n<div>\n<div>Mammuthus exilis</div>\n</div>\n</td>\n<td>1.3k/750/50</td>\n<td>56/40/12</td>\n<td>2.3/1.7 S</td>\n<td>19t3/16t2</td>\n<td>10-15</td>\n<td>22-42</td>\n<td>0-60 forest</td>\n<td>1.0-1.1</td>\n<td>1-5 M, 5-15 F&amp;B</td>\n<td>89-98, 50-56, 6-8</td>\n<td>17-19, 9-11, 1-2</td>\n<td>6H, 4H, 1L</td>\n<td>Milkable, Riding, Taming</td>\n<td>\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td>Woolly mammoth &dagger;</td>\n<td>\n<div>\n<div>Mammuthus primigenius</div>\n</div>\n</td>\n<td>6k/4k/200</td>\n<td>150/110/19</td>\n<td>3.5/2.9 S</td>\n<td>37t4/29t3</td>\n<td>-20-5</td>\n<td>5-100</td>\n<td>0-70 forest</td>\n<td>1.0-1.7</td>\n<td>1-5 M, 5-15 F&amp;B</td>\n<td>405-450,270-300, 22-24</td>\n<td>80-90, 54-60, 2-3</td>\n<td>22H, 16H, 1H</td>\n<td>Milkable, Riding, Taming</td>\n<td>\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td>Cyprus dwarf elephant &dagger;</td>\n<td>\n<div>\n<div>Palaeoloxodon cypriotes</div>\n</div>\n</td>\n<td>350/170/20</td>\n<td>25/17/7</td>\n<td>1/.8/.4 S</td>\n<td>12/9t2</td>\n<td>14-19</td>\n<td>30-65</td>\n<td>0-70</td>\n<td>1.0-1.5</td>\n<td>1-5 M, 5-15 F&amp;B</td>\n<td>32-35, 20-22, 2-3</td>\n<td>5-6, 2-3, 1</td>\n<td>3L, 2L, 1M</td>\n<td>Milkable</td>\n<td>\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Due to their large size, these animals have a high amount of health and a large amount of resources, hunting them head on is not recommended. However, falls are especially hazardous to these animals and luring them over cliffs and into pits is an effective way of harming them.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Features:</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">All species have a unique pelt and tusks that can be used to craft hide, head mounts and taxidermied full body.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Elephants can be domesticated over generations or tamed from babies.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Occasionally a fly covered elephant carcass will spawn, blocking elephant spawns in the area. They have a chance to spawn when first arriving in an area or when all elephants have been killed off from the area, allowing players to locally wipe out elephants. Destroying the carcass of the respective type will allow more elephants to spawn again and some carnivores and scavengers may destroy them as well, so if you want elephant spawns prevented in an area protect these carcasses.</span><span style=\"font-weight: 400;\"><br /></span></p>\n<p><span style=\"font-weight: 400;\">And a big thanks to everyone who gave feedback and assistance!<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong> How do I domesticate the animals in this pack?<br /><br /><strong>A:</strong> Get a male and female adult of a given species within 10 blocks, wait until the female is ready to mate and feed her the sufficient number of portions and the male at least one. Different species require different amounts and can be found in the entity file under the multiply section. Animals can be fed either by dropping items on the ground or by using the large trough. The small trough is not supported at this time due to patching formats. Each species diet can be found in this mod's description or in their entity file under the diet section. After 10 generations, entities stop attacking the player and after 10 generations they will no longer flee the player. Only the mother's generation matters for progressing generations.<br /><br /><br /><strong>Q:</strong> Why so many animal packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain clade file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><br /><strong>Q:</strong> Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> Yes, this mod series is safe to add and remove. Items from this mod that have been placed will be invisible or appear as question blocks if the mod is removed but can be safely broken.</div>\n</div>\n<p><span style=\"font-weight: 400;\"> <br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "elephantidae",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_befcffdf8e5e0caff34874eaaa2e95ba.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_befcffdf8e5e0caff34874eaaa2e95ba.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_befcffdf8e5e0caff34874eaaa2e95ba.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 187303,
+    "follows": 1449,
+    "trendingpoints": 2,
+    "comments": 267,
+    "side": "both",
+    "type": "mod",
+    "created": "2025-01-16 22:09:14",
+    "lastreleased": "2026-09-23 19:23:51",
+    "lastmodified": "2026-09-28 20:17:28",
+    "tags": [
+      "Crafting",
+      "Furniture",
+      "Creatures"
+    ],
+    "releases": [
+      {
+        "releaseid": 58164,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_26e684e9bf699ef3c31d766f7b0d7f0a.zip?dl=FotSA-Elephantidae-v1.0.20.zip",
+        "filename": "FotSA-Elephantidae-v1.0.20.zip",
+        "fileid": 124644,
+        "downloads": 1801,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.20",
+        "created": "2026-09-23 19:23:51",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Crash related to elephants not dropping new raw hides</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Shearing patch for tamed elephants</span></p>"
+      },
+      {
+        "releaseid": 58130,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_fca6cfdaaf51ea24728552bce743526b.zip?dl=FotSA-Elephantidae-v1.0.19.zip",
+        "filename": "FotSA-Elephantidae-v1.0.19.zip",
+        "fileid": 124586,
+        "downloads": 120,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.19",
+        "created": "2026-09-23 16:12:40",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Adjusted Frost overlay thresholds for woolly mammoth</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Ancient Tools Brain drops (Thanks Whiskey Sunshine!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-bedroll slot to tamed elephants</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Footstep sounds to elephants</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Freshwater fish interactions</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-New milk types, elephants and mammoths produce higher satiety milk</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-New cheese types, only cottage cheese can be crafted in game for now</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Oiled, Raw, Salted hides and associated recipes<br /></span><span style=\"font-weight: 400;\">Added-Riding returns with the semi-tamed and tamed elephants</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Temporal gear slots to tamed elephants</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-utility slot to tamed elephant's right and left side<br /></span><span style=\"font-weight: 400;\">Fixed-Missing center point in carcass<br /></span><span style=\"font-weight: 400;\">Fixed-Small troughs can&rsquo;t be used for elephant feeding</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Changed spawn conditions to not allow any amount of artificial light block spawns</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Climate spawn conditions changed due to 1.21 changes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Elephant hit box size</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Elephants in the UI have tusks</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Elephant lactation duration and quantity</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Elephant movement speeds</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Elephants sized to largest recorded, instead of upper average</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Reduced despawn light threshold to 2</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Reduced spawn checks to single per species for optimization</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Removed minimum altitude from most spawn conditions</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-GUI positioning of elephant assets<br /></span><span style=\"font-weight: 400;\">Updated-Ai task time frames go over midnight</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Reformatted folders to match base game&rsquo;s folder layout</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Split entity files into adult and babies</span></p>"
+      },
+      {
+        "releaseid": 52929,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_b58c3df5550beefb760409bf2cb07ff9.zip?dl=FotSA-Elephantidae-v1.0.18.zip",
+        "filename": "FotSA-Elephantidae-v1.0.18.zip",
+        "fileid": 114660,
+        "downloads": 12028,
+        "tags": [
+          "1.22.6"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.18",
+        "created": "2026-08-14 15:28:30",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-Change chance and wanderChance to executionChance</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Animal interaction patches</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Note-This is a quick a dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22</span></p>"
+      },
+      {
+        "releaseid": 32119,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_77eae91bd7f5caba76799d69c36919d2.zip?dl=FotSA-Elephantidae-v1.0.17.zip",
+        "filename": "FotSA-Elephantidae-v1.0.17.zip",
+        "fileid": 70688,
+        "downloads": 42850,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.17",
+        "created": "2026-01-06 23:30:43",
+        "changelog": "<p>Tweak-Meat and fat restored to one entry in drop list for easier config additions<br />Updated-1 hide is always dropped from killed animals</p>"
+      },
+      {
+        "releaseid": 28298,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_39cf3dc997ebd4159285c2068906d4ca.zip?dl=FotSA-Elephantidae-v1.0.16.zip",
+        "filename": "FotSA-Elephantidae-v1.0.16.zip",
+        "fileid": 62281,
+        "downloads": 26457,
+        "tags": [
+          "1.21.5",
+          "1.21.6"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.16",
+        "created": "2025-10-28 21:04:07",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Weighted diet </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Trappable format for 1.21</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 25915,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_6e9ccc3dc539cbc0b7d9f9e597779428.zip?dl=FotSA-Elephantidae-v1.0.15.zip",
+        "filename": "FotSA-Elephantidae-v1.0.15.zip",
+        "fileid": 56937,
+        "downloads": 20501,
+        "tags": [
+          "1.21.1",
+          "1.21.2-rc.2",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.15",
+        "created": "2025-09-25 16:21:07",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Removed old Animal interaction patches</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Riding attachable patches</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 25663,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_18e6387199ab5f77741eb82f6875059c.zip?dl=FotSA-Elephantidae-v1.0.14.zip",
+        "filename": "FotSA-Elephantidae-v1.0.14.zip",
+        "fileid": 56491,
+        "downloads": 4271,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.14",
+        "created": "2025-09-21 16:49:34",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added- Creature tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Ukrainian translation (Thanks Deanbro!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Antler patches format<br />Fixed-Knockback resistance</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Disabled riding until overhaul</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Split drop stacks that exceeded 64 units</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 20071,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_e80fdc7f829cb9cf776f63da2c62ef1c.zip?dl=FotSA-Elephantidae-v1.0.13.zip",
+        "filename": "FotSA-Elephantidae-v1.0.13.zip",
+        "fileid": 43501,
+        "downloads": 28685,
+        "tags": [
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.13",
+        "created": "2025-05-15 19:28:08",
+        "changelog": "<p>Added-Medallions can now be placed in Elephant's face slot<br />Tweak-Elephants take ten times longer to respawn, meant to offset their high meat yields.</p>"
+      },
+      {
+        "releaseid": 19942,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_00a91e9e66a0571996a24e61e82f61a3.zip?dl=FotSA-Elephantidae-v1.0.12.zip",
+        "filename": "FotSA-Elephantidae-v1.0.12.zip",
+        "fileid": 43204,
+        "downloads": 1495,
+        "tags": [
+          "1.20.10"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.12",
+        "created": "2025-05-12 16:43:14",
+        "changelog": "<p>Tweak-Raised elephants seek entity when in aggressive on damage range to 60 meters</p>"
+      },
+      {
+        "releaseid": 19498,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_1470cfa1a974cb40e78d3273864a0321.zip?dl=FotSA-Elephantidae-v1.0.11.zip",
+        "filename": "FotSA-Elephantidae-v1.0.11.zip",
+        "fileid": 42151,
+        "downloads": 4084,
+        "tags": [
+          "1.20.9",
+          "1.20.10"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.11",
+        "created": "2025-04-30 19:09:27",
+        "changelog": "<p>Added-Devil interactions<br />Tweak-Increased dead hitbox size</p>"
+      },
+      {
+        "releaseid": 19207,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_76ddc8b221333dd15280070e97f0f896.zip?dl=FotSA-Elephantidae-v1.0.10.zip",
+        "filename": "FotSA-Elephantidae-v1.0.10.zip",
+        "fileid": 41530,
+        "downloads": 2310,
+        "tags": [
+          "1.20.9"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.10",
+        "created": "2025-04-22 16:39:20",
+        "changelog": "<p>Fixed-Milking not set up correctly</p>"
+      },
+      {
+        "releaseid": 18522,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_f845f138ec41a4bec66b5e679e636a60.zip?dl=FotSA-Elephantidae-v1.0.9.zip",
+        "filename": "FotSA-Elephantidae-v1.0.9.zip",
+        "fileid": 40024,
+        "downloads": 6599,
+        "tags": [
+          "1.20.7",
+          "1.20.8"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.9",
+        "created": "2025-04-04 23:55:54",
+        "changelog": "<p>Added-Worldgen spawn<br />Added-Woolandmore drops</p>"
+      },
+      {
+        "releaseid": 17410,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_c4fbe9e9c5b97f60d021fda4ca007193.zip?dl=FotSA-Elephantidae-v1.0.8.zip",
+        "filename": "FotSA-Elephantidae-v1.0.8.zip",
+        "fileid": 37076,
+        "downloads": 7490,
+        "tags": [
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.8",
+        "created": "2025-03-11 19:47:08",
+        "changelog": "<p>Added-Thylacoleo interactions</p>"
+      },
+      {
+        "releaseid": 16543,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_e4a23d7e9d39245cba399feef57aebc9.zip?dl=FotSA-Elephantidae-v1.0.7.zip",
+        "filename": "FotSA-Elephantidae-v1.0.7.zip",
+        "fileid": 34075,
+        "downloads": 7210,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.7",
+        "created": "2025-02-19 23:06:15",
+        "changelog": "<p>Fixed-Combat Overhaul patch<br />Fixed-Added missing bridle shape&nbsp;</p>"
+      },
+      {
+        "releaseid": 16234,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_a6dfa734a8434148ca34f04fd1e5cd52.zip?dl=FotSA-Elephantidae-v1.0.6.zip",
+        "filename": "FotSA-Elephantidae-v1.0.6.zip",
+        "fileid": 33373,
+        "downloads": 3320,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.6",
+        "created": "2025-02-14 18:06:38",
+        "changelog": "<p>Added-Face slots<br />Fixed-Base game animal patch format updated to 1.20.4</p>"
+      },
+      {
+        "releaseid": 15947,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_2594ed3579b8974976df15693f7390a4.zip?dl=FotSA-Elephantidae-v1.0.5.zip",
+        "filename": "FotSA-Elephantidae-v1.0.5.zip",
+        "fileid": 32807,
+        "downloads": 3010,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.5",
+        "created": "2025-02-09 17:59:06",
+        "changelog": "<p>Tweak-Disabled mortally wounded state until it can be troubleshot<br />Tweak-Split seek entity when aggressive on damage and aggressive around entity into two separate tasks.<br />Tweak-Elephants will seek entities from 45 meters away when injured<br />Tweak-Elephants will seek entities from 15 meters away to protect babies<br />Tweak-Elephants will seek entities from 9 meters away when not otherwise aggitated<br />Tweak-slowed feed animation by 50%</p>"
+      },
+      {
+        "releaseid": 15657,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_a29b4fab2460ebf6398412e2435a7af1.zip?dl=FotSA-Elephantidae-v1.0.4.zip",
+        "filename": "FotSA-Elephantidae-v1.0.4.zip",
+        "fileid": 32292,
+        "downloads": 2906,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.4",
+        "created": "2025-02-03 19:25:12",
+        "changelog": "<p>Added-Ukrainian translation (Thanks Deanbro!)</p>"
+      },
+      {
+        "releaseid": 15313,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_67f313bc2f5db68f104249e2eeb567f9.zip?dl=FotSA-Elephantidae-v1.0.3.zip",
+        "filename": "FotSA-Elephantidae-v1.0.3.zip",
+        "fileid": 31649,
+        "downloads": 3997,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.3",
+        "created": "2025-01-28 00:32:35",
+        "changelog": "<p>Added-Recipe for elephant blankets<br />Fixed-Health Points being wrong, had been reverted to rhino hp<br />Fixed-Removed elk saddle from neck slot<br />Fixed-spawn patches for Biomes were malformed, should now spawn with the Biomes mod<br /><br /></p>"
+      },
+      {
+        "releaseid": 14980,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_1d77f34987abd2ff5e43cb534b422034.zip?dl=FotSA-Elephantidae-v1.0.2.zip",
+        "filename": "FotSA-Elephantidae-v1.0.2.zip",
+        "fileid": 31036,
+        "downloads": 3357,
+        "tags": [
+          "1.20.1",
+          "1.20.3"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.2",
+        "created": "2025-01-22 20:54:07",
+        "changelog": "<p>Tweak-Changed bushmeat to redmeat ratio from 3:1 to 1:1<br />Tweak-Removed many ear, trunk, tail, head and neck key frames from the run and charge animations, making those animations smoother<br />Tweak-Removed flee chance from most adults until below 75% health<br />Tweak-Raised seek entity range from 32 to 45 meters when aggressive on damage<br />Tweak-Disabled flee entity behavior for all adults except the dwarf elephant<br />Tweak-Reduced the flee entity distance to 10 meters<br />Tweak-Increased the flee entity distance when damaged to 40 meters</p>"
+      },
+      {
+        "releaseid": 14617,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_7d41b7559fb76b1c464e83efd0427f3c.zip?dl=FotSA-Elephantidae-v1.0.1.zip",
+        "filename": "FotSA-Elephantidae-v1.0.1.zip",
+        "fileid": 30391,
+        "downloads": 4081,
+        "tags": [
+          "1.20.0",
+          "1.20.1"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.1",
+        "created": "2025-01-17 18:52:11",
+        "changelog": "<p>Added-French Translation (Thanks Laerinok!)<br />Tweak-Reduced flee on damage chance for adults from 25% per hit to 1% per hit<br />Fixed-Added missing flee targets to adults, which previously was causing adults to flee from players&nbsp;</p>"
+      },
+      {
+        "releaseid": 14579,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_4b59345ed60be0bdf626b54bf25bcc16.zip?dl=FotSA-Elephantidae-v1.0.0.zip",
+        "filename": "FotSA-Elephantidae-v1.0.0.zip",
+        "fileid": 30328,
+        "downloads": 732,
+        "tags": [
+          "1.20.0-rc.9"
+        ],
+        "modidstr": "elephantidae",
+        "modversion": "1.0.0",
+        "created": "2025-01-16 22:14:38",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 30319,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-01-13_10-06-28_1fe1a68dcc72c767d2a1838d60b0a0b9.png",
+        "filename": "2025-01-13_10-06-28.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-01-13_10-06-28_1fe1a68dcc72c767d2a1838d60b0a0b9_55_60.png",
+        "created": "2025-01-16 22:11:52"
+      },
+      {
+        "fileid": 30320,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-01-10_08-14-11_ff092611d58bda23e57f4e405728f93e.png",
+        "filename": "2025-01-10_08-14-11.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-01-10_08-14-11_ff092611d58bda23e57f4e405728f93e_55_60.png",
+        "created": "2025-01-16 22:12:02"
+      },
+      {
+        "fileid": 30321,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-01-08_09-19-44_f9dc9c8e2c914a6d8ede64c60dfc2a49.png",
+        "filename": "2025-01-08_09-19-44.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-01-08_09-19-44_f9dc9c8e2c914a6d8ede64c60dfc2a49_55_60.png",
+        "created": "2025-01-16 22:12:03"
+      },
+      {
+        "fileid": 30322,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-01-06_11-49-53_18062c05ccb0cd9da842ed4e8dfd5c03.png",
+        "filename": "2025-01-06_11-49-53.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-01-06_11-49-53_18062c05ccb0cd9da842ed4e8dfd5c03_55_60.png",
+        "created": "2025-01-16 22:12:07"
+      },
+      {
+        "fileid": 30323,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-12-17_15-01-32_f8d23a6a60d531f4d88b73dfb1c8f361.png",
+        "filename": "2024-12-17_15-01-32.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-12-17_15-01-32_f8d23a6a60d531f4d88b73dfb1c8f361_55_60.png",
+        "created": "2025-01-16 22:12:10"
+      },
+      {
+        "fileid": 30324,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-01-01_10-31-57_e609286fc6ee97bd4ed2e54254147d66.png",
+        "filename": "2025-01-01_10-31-57.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-01-01_10-31-57_e609286fc6ee97bd4ed2e54254147d66_55_60.png",
+        "created": "2025-01-16 22:12:15"
+      },
+      {
+        "fileid": 30325,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-12-30_16-21-43_68972fb5260e0bf134817d8168e3909f.png",
+        "filename": "2024-12-30_16-21-43.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-12-30_16-21-43_68972fb5260e0bf134817d8168e3909f_55_60.png",
+        "created": "2025-01-16 22:12:17"
+      },
+      {
+        "fileid": 30326,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-01-16_14-03-43_f316f3f4941dfb0e5bb23d2308d85cf8.png",
+        "filename": "2025-01-16_14-03-43.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-01-16_14-03-43_f316f3f4941dfb0e5bb23d2308d85cf8_55_60.png",
+        "created": "2025-01-16 22:12:21"
+      },
+      {
+        "fileid": 30327,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-01-10_15-50-20_07244030cd0e79321cca36d866e21385.png",
+        "filename": "2025-01-10_15-50-20.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-01-10_15-50-20_07244030cd0e79321cca36d866e21385_55_60.png",
+        "created": "2025-01-16 22:12:22"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "name": "GUM_v1.0/classnames.txt",
+    "size": 632,
+    "compressed": 345
+  },
+  {
+    "name": "GUM_v1.0/GUM_v1.0.cpg",
+    "size": 5,
+    "compressed": 5
+  },
+  {
+    "name": "GUM_v1.0/GUM_v1.0.dbf",
+    "size": 1665404031,
+    "compressed": 32339632
+  },
+  {
+    "name": "GUM_v1.0/GUM_v1.0.prj",
+    "size": 145,
+    "compressed": 121
+  },
+  {
+    "name": "GUM_v1.0/GUM_v1.0.sbn",
+    "size": 7845396,
+    "compressed": 2432876
+  },
+  {
+    "name": "GUM_v1.0/GUM_v1.0.sbx",
+    "size": 114788,
+    "compressed": 55041
+  },
+  {
+    "name": "GUM_v1.0/GUM_v1.0.shp",
+    "size": 1890990900,
+    "compressed": 1358461515
+  },
+  {
+    "name": "GUM_v1.0/GUM_v1.0.shp.xml",
+    "size": 7271,
+    "compressed": 1913
+  },
+  {
+    "name": "GUM_v1.0/GUM_v1.0.shx",
+    "size": 7292508,
+    "compressed": 4385852
+  },
+  {
+    "name": "GUM_v1.0/gum_v1.0_0point5deg.txt.asc",
+    "size": 1284128,
+    "compressed": 35449
+  },
+  {
+    "name": "GUM_v1.0/GUM_v1.0_0point5deg.txt.asc.prj",
+    "size": 120,
+    "compressed": 83
+  }
+]

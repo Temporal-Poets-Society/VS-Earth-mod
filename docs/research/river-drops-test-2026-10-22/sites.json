@@ -1,0 +1,7 @@
+[
+  {"Name": "daugava_step1", "Kind": "1-block steps", "Lat": 56.6103, "Lon": 25.3453, "Radius": 2},
+  {"Name": "rhine_gorge_drop2", "Kind": "2-block drop", "Lat": 50.3199, "Lon": 7.5307, "Radius": 2},
+  {"Name": "congo_drop3", "Kind": "3-block drop, 2-block drops nearby", "Lat": -5.5432, "Lon": 13.6052, "Radius": 3},
+  {"Name": "iguazu_falls", "Kind": "listed waterfall, 5 blocks", "Lat": -25.6755, "Lon": -54.4332, "Radius": 2},
+  {"Name": "iguazu_drop3", "Kind": "3-block drop", "Lat": -25.6070, "Lon": -54.5999, "Radius": 2}
+]

@@ -1,0 +1,331 @@
+{
+  "date": "2026-09-29",
+  "map_units": "binary 1-degree evidence presence; not calibrated probability",
+  "country_normalization": false,
+  "maps": {
+    "Fe": {
+      "mrds_records": 23286,
+      "specialist_record_links": 1675,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 1946,
+      "specialist_cells": 772,
+      "map": "maps/Fe.png"
+    },
+    "Au": {
+      "mrds_records": 83770,
+      "specialist_record_links": 4488,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 2327,
+      "specialist_cells": 1379,
+      "map": "maps/Au.png"
+    },
+    "Ag": {
+      "mrds_records": 50070,
+      "specialist_record_links": 2716,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 1635,
+      "specialist_cells": 911,
+      "map": "maps/Ag.png"
+    },
+    "Pb": {
+      "mrds_records": 38525,
+      "specialist_record_links": 1744,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 1710,
+      "specialist_cells": 779,
+      "map": "maps/Pb.png"
+    },
+    "Zn": {
+      "mrds_records": 28050,
+      "specialist_record_links": 2205,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 1691,
+      "specialist_cells": 888,
+      "map": "maps/Zn.png"
+    },
+    "Bi": {
+      "mrds_records": 1016,
+      "specialist_record_links": 167,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 299,
+      "specialist_cells": 90,
+      "map": "maps/Bi.png"
+    },
+    "Ni": {
+      "mrds_records": 2702,
+      "specialist_record_links": 8954,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 742,
+      "specialist_cells": 1550,
+      "map": "maps/Ni.png"
+    },
+    "Cr": {
+      "mrds_records": 5640,
+      "specialist_record_links": 8225,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 519,
+      "specialist_cells": 949,
+      "map": "maps/Cr.png"
+    },
+    "Ti": {
+      "mrds_records": 2304,
+      "specialist_record_links": 322,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 733,
+      "specialist_cells": 195,
+      "map": "maps/Ti.png"
+    },
+    "Mn": {
+      "mrds_records": 10061,
+      "specialist_record_links": 221,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 1013,
+      "specialist_cells": 132,
+      "map": "maps/Mn.png"
+    },
+    "Hg": {
+      "mrds_records": 4062,
+      "specialist_record_links": 148,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 433,
+      "specialist_cells": 75,
+      "map": "maps/Hg.png"
+    },
+    "W": {
+      "mrds_records": 8144,
+      "specialist_record_links": 203,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 716,
+      "specialist_cells": 129,
+      "map": "maps/W.png"
+    },
+    "U": {
+      "mrds_records": 15364,
+      "specialist_record_links": 278,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 605,
+      "specialist_cells": 109,
+      "map": "maps/U.png"
+    },
+    "Pt": {
+      "mrds_records": 2933,
+      "specialist_record_links": 5381,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 840,
+      "specialist_cells": 1317,
+      "map": "maps/Pt.png"
+    },
+    "V": {
+      "mrds_records": 4837,
+      "specialist_record_links": 207,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 431,
+      "specialist_cells": 112,
+      "map": "maps/V.png"
+    },
+    "Mo": {
+      "mrds_records": 4797,
+      "specialist_record_links": 307,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 775,
+      "specialist_cells": 218,
+      "map": "maps/Mo.png"
+    },
+    "Sb": {
+      "mrds_records": 5326,
+      "specialist_record_links": 448,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 629,
+      "specialist_cells": 232,
+      "map": "maps/Sb.png"
+    },
+    "B": {
+      "mrds_records": 612,
+      "specialist_record_links": 43,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 132,
+      "specialist_cells": 34,
+      "map": "maps/B.png"
+    },
+    "P": {
+      "mrds_records": 2823,
+      "specialist_record_links": 1447,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 593,
+      "specialist_cells": 715,
+      "map": "maps/P.png"
+    },
+    "N": {
+      "mrds_records": 110,
+      "specialist_record_links": 12,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 40,
+      "specialist_cells": 7,
+      "map": "maps/N.png"
+    },
+    "K": {
+      "mrds_records": 383,
+      "specialist_record_links": 72,
+      "additional_potash_or_coal_records": 642,
+      "mrds_cells": 144,
+      "specialist_cells": 276,
+      "map": "maps/K.png"
+    },
+    "NaCl": {
+      "mrds_records": 922,
+      "specialist_record_links": 100,
+      "additional_potash_or_coal_records": 541,
+      "mrds_cells": 287,
+      "specialist_cells": 274,
+      "map": "maps/NaCl.png"
+    },
+    "S": {
+      "mrds_records": 10000,
+      "specialist_record_links": 1323,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 1281,
+      "specialist_cells": 465,
+      "map": "maps/S.png"
+    },
+    "C_graphite": {
+      "mrds_records": 760,
+      "specialist_record_links": 60,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 266,
+      "specialist_cells": 44,
+      "map": "maps/C_graphite.png"
+    },
+    "C_coal": {
+      "mrds_records": 240,
+      "specialist_record_links": 6,
+      "additional_potash_or_coal_records": 446,
+      "mrds_cells": 92,
+      "specialist_cells": 271,
+      "map": "maps/C_coal.png"
+    },
+    "F": {
+      "mrds_records": 4155,
+      "specialist_record_links": 115,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 466,
+      "specialist_cells": 57,
+      "map": "maps/F.png"
+    },
+    "SiO2": {
+      "mrds_records": 3622,
+      "specialist_record_links": 87,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 775,
+      "specialist_cells": 51,
+      "map": "maps/SiO2.png"
+    },
+    "Al": {
+      "mrds_records": 3102,
+      "specialist_record_links": 129,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 673,
+      "specialist_cells": 99,
+      "map": "maps/Al.png"
+    },
+    "gypsum": {
+      "mrds_records": 1948,
+      "specialist_record_links": 44,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 397,
+      "specialist_cells": 39,
+      "map": "maps/gypsum.png"
+    },
+    "diamond": {
+      "mrds_records": 494,
+      "specialist_record_links": 89,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 171,
+      "specialist_cells": 67,
+      "map": "maps/diamond.png"
+    },
+    "corundum": {
+      "mrds_records": 229,
+      "specialist_record_links": 17,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 78,
+      "specialist_cells": 13,
+      "map": "maps/corundum.png"
+    },
+    "emerald": {
+      "mrds_records": 15,
+      "specialist_record_links": 9,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 10,
+      "specialist_cells": 7,
+      "map": "maps/emerald.png"
+    },
+    "olivine": {
+      "mrds_records": 45,
+      "specialist_record_links": 23,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 18,
+      "specialist_cells": 8,
+      "map": "maps/olivine.png"
+    },
+    "garnet": {
+      "mrds_records": 564,
+      "specialist_record_links": 17,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 182,
+      "specialist_cells": 14,
+      "map": "maps/garnet.png"
+    },
+    "lapis": {
+      "mrds_records": 2,
+      "specialist_record_links": 1,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 1,
+      "specialist_cells": 1,
+      "map": "maps/lapis.png"
+    },
+    "alum": {
+      "mrds_records": 149,
+      "specialist_record_links": 1,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 47,
+      "specialist_cells": 1,
+      "map": "maps/alum.png"
+    },
+    "topaz": {
+      "mrds_records": 37,
+      "specialist_record_links": 2,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 22,
+      "specialist_cells": 2,
+      "map": "maps/topaz.png"
+    },
+    "tourmaline": {
+      "mrds_records": 69,
+      "specialist_record_links": 3,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 40,
+      "specialist_cells": 3,
+      "map": "maps/tourmaline.png"
+    },
+    "beryl": {
+      "mrds_records": 588,
+      "specialist_record_links": 4,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 112,
+      "specialist_cells": 4,
+      "map": "maps/beryl.png"
+    },
+    "spinel": {
+      "mrds_records": 16,
+      "specialist_record_links": 1,
+      "additional_potash_or_coal_records": 0,
+      "mrds_cells": 11,
+      "specialist_cells": 1,
+      "map": "maps/spinel.png"
+    }
+  },
+  "individual_commodity_maps": 40,
+  "commodity_contact_sheets": 5,
+  "mineral_form_contact_sheets": 3,
+  "source_attribution": "USGS MRDS and cited USGS specialist/regional sources; base land/water from Earth preview grids. Aggregation performed by Earth research; no USGS endorsement."
+}

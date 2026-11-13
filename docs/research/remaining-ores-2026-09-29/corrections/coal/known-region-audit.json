@@ -1,0 +1,623 @@
+{
+  "snapshot_date": "2026-09-29",
+  "scope": "Coal evidence coverage correction; global review is incomplete",
+  "counts_are": "Source features, not unique deposits; overlaps, segmentation and differing map purposes prohibit abundance inference.",
+  "baseline_mrds_by_country": {
+    "United States": 204,
+    "China": 16,
+    "Brazil": 1,
+    "Argentina": 1,
+    "South Africa": 4,
+    "Mexico": 10,
+    "Hungary": 1,
+    "Iran": 2,
+    "Serbia": 1
+  },
+  "baseline_specialist_by_country": {
+    "China": 1,
+    "South Africa": 4,
+    "Argentina": 1
+  },
+  "correction_polygons_by_country_label": {
+    "United Kingdom": 638,
+    "Poland": 343,
+    "Germany": 295,
+    "Australia": 51,
+    "India": 305,
+    "Bangladesh": 8,
+    "China": 906,
+    "United States": 1098,
+    "Canada": 141,
+    "Cuba": 1,
+    "Haiti": 1,
+    "Guatemala": 13,
+    "Costa Rica": 4,
+    "Costa Rica Panama": 1,
+    "Panama": 10,
+    "Nicaragua": 2,
+    "Honduras": 8,
+    "Greenland": 3,
+    "Mexico": 13,
+    "Chile": 6,
+    "Argentina Chile": 5,
+    "Peru": 6,
+    "Colombia": 24,
+    "Paraguay": 1,
+    "Uraguay Brazil": 1,
+    "Argentina": 12,
+    "Brazil": 6,
+    "Bolivia": 1,
+    "Brazil French Guiana": 1,
+    "Ecuador Peru": 1,
+    "Jamaica": 1,
+    "Dominican Republic": 1,
+    "Ecuador": 5,
+    "Colombia Venezuela": 3,
+    "Venezuela": 2,
+    "Peru Ecuador": 1
+  },
+  "correction_polygons_by_source": {
+    "bgs_coal_2004": 638,
+    "pgi_midas": 343,
+    "saxony_ruk400": 170,
+    "saxony_lignite50": 119,
+    "nrw_rk500": 6,
+    "nsw_coalfields": 5,
+    "victoria_coalfields": 46,
+    "usgs_india_2011": 313,
+    "usgs_china_2014": 906,
+    "usgs_americas_2008": 770,
+    "usgs_us_2012": 602
+  },
+  "unique_deposit_count": null,
+  "audit_geometry_policy": "No coordinates or buffers generated for narrative unresolved records.",
+  "regions": [
+    {
+      "region_id": "britain",
+      "region": "Britain and Northern Ireland",
+      "country_labels": [
+        "United Kingdom"
+      ],
+      "coverage_status": "legacy national polygons acquired",
+      "evidence_summary": "638 strata polygons include surface coal-bearing strata, lignite and concealed coal, including a greater-than-1200 m depth category.",
+      "baseline_mrds_source_rows": 0,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 638,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [
+        "bgs_coal_2004"
+      ],
+      "primary_urls": [
+        "https://www.bgs.ac.uk/datasets/coal-resources-for-new-technologies/"
+      ],
+      "unresolved": "Source is 1:1 million; no individual seam continuity, coal quality or universal shallow-access claim. Republic of Ireland is outside this layer.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "poland",
+      "region": "Poland: documented hard coal and brown coal",
+      "country_labels": [
+        "Poland"
+      ],
+      "coverage_status": "national register plus selected archive polygons acquired",
+      "evidence_summary": "315 current deposit boundaries and 28 archived deposit boundaries; no operating-status or reserve-size filter.",
+      "baseline_mrds_source_rows": 0,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 343,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [
+        "pgi_midas"
+      ],
+      "primary_urls": [
+        "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer"
+      ],
+      "unresolved": "Selected archives are incomplete; some deposit bounds reconstructed from mining areas. Current register does not imply operating mine.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "germany",
+      "region": "Germany: NRW and Saxony acquired; national coverage incomplete",
+      "country_labels": [
+        "Germany"
+      ],
+      "coverage_status": "partial state polygons acquired",
+      "evidence_summary": "NRW hard-coal resource areas extend to 2000 m in actual source layer; also NRW lignite and Saxon coal seams/fields.",
+      "baseline_mrds_source_rows": 0,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 295,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [
+        "nrw_rk500",
+        "saxony_ruk400",
+        "saxony_lignite50"
+      ],
+      "primary_urls": [
+        "https://www.gd.nrw.de/pr_kd_rohstoffkarte-500000.php",
+        "https://luis.sachsen.de/geologie/rohstoffgeologische-karten.html",
+        "https://luis.sachsen.de/geologie/rohstoffgeologische-karten.html"
+      ],
+      "unresolved": "No claim of full German coverage: Saar hard coal, Brandenburg and other state lignite fields still require spatial acquisition. Vertically overlapping Saxon seam layers are not separate abundance increments.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "france_saar",
+      "region": "Nord–Pas-de-Calais, Lorraine and Saar",
+      "country_labels": [
+        "France"
+      ],
+      "coverage_status": "historically verified; polygon gap remains",
+      "evidence_summary": "BRGM documents historical coal mining in Nord–Pas-de-Calais and Lorraine, including Lorraine–Saar continuity. Closure is not geological absence.",
+      "baseline_mrds_source_rows": 0,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 0,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [],
+      "primary_urls": [
+        "https://www.brgm.fr/fr/reference-projet-acheve/nord-pas-calais-surveillance-travaux-urgence-deux-anciens-puits-charbon",
+        "https://sigesrm.brgm.fr/Reservoir-minier-du-bassin-houiller-lorrain",
+        "https://dpsm.brgm.fr/actualite/liens-franco-allemands-lapres-mine-en-lorraine-en-sarre"
+      ],
+      "unresolved": "No reviewed coal-body GIS imported. Do not construct a bounding rectangle from narrative dimensions or fill the entire Saar–Lorraine sedimentary basin.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "czech",
+      "region": "Czech hard coal and lignite districts",
+      "country_labels": [
+        "Czech Republic"
+      ],
+      "coverage_status": "primary national review found; polygon gap remains",
+      "evidence_summary": "Czech Geological Survey commodity summary distinguishes registered, other and exhausted coal/lignite resources.",
+      "baseline_mrds_source_rows": 0,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 0,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [],
+      "primary_urls": [
+        "https://cgs.gov.cz/sites/geology/files/extranet-eng/publications/online/mineral-commodity-summaries/MINERAL-COMMODITY-SUMMARIES-OF-THE-CZECH-REPUBLIC-2011.pdf"
+      ],
+      "unresolved": "No Czech national polygons imported; Saxon data do not establish national Czech coverage. Retain exhausted districts in a future acquisition.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "australia",
+      "region": "Australia, including Queensland and western/southern basins",
+      "country_labels": [
+        "Australia"
+      ],
+      "coverage_status": "national basin context and sites; partial true coalfield polygons",
+      "evidence_summary": "51 coalfield polygons, 29 full-basin context polygons and 421 resource points. NSW has Western, Southern, Newcastle, Hunter and Gunnedah fields; Victoria includes historical fields.",
+      "baseline_mrds_source_rows": 0,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 51,
+      "correction_point_records": 421,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [
+        "ga_basins_2013",
+        "nsw_coalfields",
+        "victoria_coalfields",
+        "ga_aimr_2025"
+      ],
+      "primary_urls": [
+        "https://data.gov.au/data/dataset/9d5a8d74-a201-42bd-9d49-3c392244be16",
+        "https://data.nsw.gov.au/data/dataset/nsw-mining-coalfieds",
+        "https://discover.data.vic.gov.au/en_AU/dataset/victorian-coal-fields",
+        "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer"
+      ],
+      "unresolved": "Only NSW and Victoria have coalfield polygons here. Queensland, Western Australia and other states have broad basin context plus resource sites, not a demonstrated continuous coal area.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "india",
+      "region": "India",
+      "country_labels": [
+        "India"
+      ],
+      "coverage_status": "legacy coal-bearing-area polygons acquired",
+      "evidence_summary": "305 coal-bearing formation polygons from USGS compilation of GSI and cited sources; not restricted to modern production.",
+      "baseline_mrds_source_rows": 0,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 305,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [
+        "usgs_india_2011"
+      ],
+      "primary_urls": [
+        "https://pubs.usgs.gov/of/2011/1296/"
+      ],
+      "unresolved": "Coal rank absent in feature attributes; no inferred bituminous/lignite assignment. Some mapped contacts interpreted beneath alluvium; local depth and early access unknown.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "bangladesh",
+      "region": "Bangladesh",
+      "country_labels": [
+        "Bangladesh"
+      ],
+      "coverage_status": "legacy coal-bearing-area polygons acquired",
+      "evidence_summary": null,
+      "baseline_mrds_source_rows": 0,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 8,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [
+        "usgs_india_2011"
+      ],
+      "primary_urls": [
+        "https://pubs.usgs.gov/of/2011/1296/"
+      ],
+      "unresolved": "Eight mapped areas do not establish national completeness or shallow access; source coal rank absent.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "china",
+      "region": "China",
+      "country_labels": [
+        "China"
+      ],
+      "coverage_status": "historical atlas coal-area polygons acquired",
+      "evidence_summary": "550 bituminous, 249 anthracite and 107 lignite polygons with source rank. No present-operation filter.",
+      "baseline_mrds_source_rows": 16,
+      "baseline_specialist_source_rows": 1,
+      "correction_polygon_records": 906,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [
+        "usgs_china_2014"
+      ],
+      "primary_urls": [
+        "https://pubs.usgs.gov/of/2014/1219/"
+      ],
+      "unresolved": "906 areas represent the source atlas coal-mining areas as of 2001, not all coal-bearing formations. Some datum conversions are approximate. Older 2000 coalfield shapefile withheld because its CRS is not declared.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "indonesia",
+      "region": "Indonesia: Sumatra and Kalimantan",
+      "country_labels": [
+        "Indonesia"
+      ],
+      "coverage_status": "major verified gap; source map acquired without reusable polygons",
+      "evidence_summary": "Geological Agency 2025 inventory explicitly identifies Kalimantan and Sumatra as major coal regions and reports coal by basin, calorific value and quality.",
+      "baseline_mrds_source_rows": 0,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 0,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [],
+      "primary_urls": [
+        "https://geologi.esdm.go.id/media-center/indonesia-s-mineral-and-coal-resources-and-reserves-2025",
+        "https://geologi.esdm.go.id/storage/publikasi/gIY50hqnqkYEtdjToQsEpJrOVBVnNDZa8k0rOUXz.pdf"
+      ],
+      "unresolved": "2021 government coal-distribution PDF retained; no georeferenced coalfield vectors normalized. Do not replace coal formations with island/basin-wide eligibility.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "south_africa",
+      "region": "South Africa coalfields",
+      "country_labels": [
+        "South Africa"
+      ],
+      "coverage_status": "major verified gap; national survey map located",
+      "evidence_summary": "CGS national coalfield map and CSIR coalfield geology chapter include economic and subeconomic coal districts; no current producer filter is appropriate.",
+      "baseline_mrds_source_rows": 4,
+      "baseline_specialist_source_rows": 4,
+      "correction_polygon_records": 0,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [],
+      "primary_urls": [
+        "https://www.geoscience.org.za/cgs/systems/publications/downloadable-material/",
+        "https://researchspace.csir.co.za/server/api/core/bitstreams/2f13ac0c-d434-4fe7-ade2-cbb62baf495a/content"
+      ],
+      "unresolved": "Existing point records do not represent coalfield coverage. CGS provides a coalfield map, but no reusable georeferenced coalfield polygons imported in this pass.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "southern_africa",
+      "region": "Botswana, Zimbabwe and Zambia: Kalahari and Zambezi coal-bearing successions",
+      "country_labels": [
+        "Botswana",
+        "Zimbabwe",
+        "Zambia"
+      ],
+      "coverage_status": "primary geological evidence; coal-body polygons unresolved",
+      "evidence_summary": "USGS assessment documents Permian coal-bearing successions in the regional geological setting; remaining geometry gap is explicit.",
+      "baseline_mrds_source_rows": 0,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 0,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [],
+      "primary_urls": [
+        "https://www.usgs.gov/publications/assessment-coalbed-gas-resources-kalahari-basin-province-botswana-zimbabwe-and-zambia",
+        "https://pubs.usgs.gov/fs/2017/3003/fs20173003.pdf"
+      ],
+      "unresolved": "USGS coalbed-gas assessment provinces are not coal-body boundaries and have not been imported as coalfields.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "usa",
+      "region": "United States",
+      "country_labels": [
+        "United States"
+      ],
+      "coverage_status": "overlapping generalized national compilations acquired",
+      "evidence_summary": "Source counts can exceed other countries because of segmentation, source overlap and surveying history, not inherently greater coal abundance.",
+      "baseline_mrds_source_rows": 204,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 1098,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [
+        "usgs_americas_2008",
+        "usgs_us_2012"
+      ],
+      "primary_urls": [
+        "https://pubs.usgs.gov/of/2008/1257/",
+        "https://pubs.usgs.gov/of/2012/1205/"
+      ],
+      "unresolved": "602 updated conterminous coalfields overlap 496 Americas polygons. Do not add feature density; deep NCRA thickness/overburden layers remain raw rather than generalized into shallow availability.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "canada",
+      "region": "Canada",
+      "country_labels": [
+        "Canada"
+      ],
+      "coverage_status": "generalized coal-bearing-area polygons acquired",
+      "evidence_summary": null,
+      "baseline_mrds_source_rows": 0,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 141,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [
+        "usgs_americas_2008"
+      ],
+      "primary_urls": [
+        "https://pubs.usgs.gov/of/2008/1257/"
+      ],
+      "unresolved": "141 small-scale polygons; source uses surficial geology and coal references, so concealed coal is underrepresented. Not a reserve or seam-volume map.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "mexico",
+      "region": "Mexico",
+      "country_labels": [
+        "Mexico"
+      ],
+      "coverage_status": "generalized coal-bearing-area polygons acquired",
+      "evidence_summary": null,
+      "baseline_mrds_source_rows": 10,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 13,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [
+        "usgs_americas_2008"
+      ],
+      "primary_urls": [
+        "https://pubs.usgs.gov/of/2008/1257/"
+      ],
+      "unresolved": "Thirteen country-labelled polygons; local seam, quality, depth and historical access require regional evidence.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "colombia",
+      "region": "Colombia and border coal areas",
+      "country_labels": [
+        "Colombia",
+        "Colombia Venezuela"
+      ],
+      "coverage_status": "generalized coal-bearing-area polygons acquired",
+      "evidence_summary": null,
+      "baseline_mrds_source_rows": 0,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 27,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [
+        "usgs_americas_2008"
+      ],
+      "primary_urls": [
+        "https://pubs.usgs.gov/of/2008/1257/"
+      ],
+      "unresolved": "24 Colombia and three cross-border-labelled polygons; not a national deposit census. Preserve cross-border labels and source rank/age.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "brazil",
+      "region": "Brazil and border coal areas",
+      "country_labels": [
+        "Brazil",
+        "Uraguay Brazil",
+        "Brazil French Guiana"
+      ],
+      "coverage_status": "generalized coal-bearing-area polygons acquired",
+      "evidence_summary": null,
+      "baseline_mrds_source_rows": 1,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 8,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [
+        "usgs_americas_2008"
+      ],
+      "primary_urls": [
+        "https://pubs.usgs.gov/of/2008/1257/"
+      ],
+      "unresolved": "Six Brazil and two cross-border-labelled polygons; original misspelt source labels retained. No concealed-coal completeness claim.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "southern_americas",
+      "region": "Chile, Argentina, Peru and neighbouring coal areas",
+      "country_labels": [
+        "Chile",
+        "Argentina",
+        "Peru",
+        "Argentina Chile",
+        "Ecuador Peru",
+        "Peru Ecuador"
+      ],
+      "coverage_status": "generalized coal-bearing-area polygons acquired",
+      "evidence_summary": null,
+      "baseline_mrds_source_rows": 1,
+      "baseline_specialist_source_rows": 1,
+      "correction_polygon_records": 31,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [
+        "usgs_americas_2008"
+      ],
+      "primary_urls": [
+        "https://pubs.usgs.gov/of/2008/1257/"
+      ],
+      "unresolved": "Some cross-border labels represent single geometry records. Generalized surface geology does not capture all buried coal, low-grade resources or historical small workings.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "central_america",
+      "region": "Central America and Caribbean",
+      "country_labels": [
+        "El Salvador",
+        "Guatemala",
+        "Costa Rica",
+        "Costa Rica Panama",
+        "Panama",
+        "Nicaragua",
+        "Honduras",
+        "Cuba",
+        "Haiti",
+        "Jamaica",
+        "Dominican Republic"
+      ],
+      "coverage_status": "mixed generalized polygons and literature points acquired",
+      "evidence_summary": null,
+      "baseline_mrds_source_rows": 0,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 42,
+      "correction_point_records": 99,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [
+        "usgs_americas_2008"
+      ],
+      "primary_urls": [
+        "https://pubs.usgs.gov/of/2008/1257/"
+      ],
+      "unresolved": "99 supplementary point records across the source study region remain points. No buffers invented where source could not delineate coal-bearing area.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "former_soviet",
+      "region": "Former Soviet Union",
+      "country_labels": [
+        "Russia",
+        "Kazakhstan",
+        "Ukraine",
+        "Russian Federation"
+      ],
+      "coverage_status": "existing regional point layer only; polygons unresolved",
+      "evidence_summary": "Legacy USGS regional coal data exist separately at ../../normalized/fsu-coal-points.geojson; this correction does not alter them.",
+      "baseline_mrds_source_rows": 0,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 0,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [],
+      "primary_urls": [
+        "https://pubs.usgs.gov/of/2001/ofr-01-104/"
+      ],
+      "unresolved": "Earlier package contains 446 source points across the former Soviet region; country attribution is not joined here. No coalfield polygon completeness claim or country-specific point count inferred.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    },
+    {
+      "region_id": "global_unassessed",
+      "region": "All other regions",
+      "country_labels": [],
+      "coverage_status": "unassessed or spatially incomplete",
+      "evidence_summary": "Not importing a source is not evidence that a region lacks coal.",
+      "baseline_mrds_source_rows": 0,
+      "baseline_specialist_source_rows": 0,
+      "correction_polygon_records": 0,
+      "correction_point_records": 0,
+      "count_scope": "Exact source country labels across whole listed countries, not the named subregion; overlaps and invalid geometries included.",
+      "imported_sources": [],
+      "primary_urls": [],
+      "unresolved": "No global completeness claim: additional European states, Mongolia, Pakistan, Turkey, Southeast Asia, Africa beyond the reviewed sources, New Zealand and other regions require their own primary evidence checks. This row does not assert occurrence in every listed location.",
+      "geometry": null,
+      "early_accessibility": null,
+      "geological_deposit_count": null,
+      "blank_means_absent": false
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+[
+ {
+  "_comment": "Decision 0060: deposits of the ground column's own layers. Only in worlds with EarthParams.OreLayers (EarthOres removes them from every other world) and only where ground columns own the column (EarthGeology's deposit filter); the layer pass keeps each to its layer class (ore-layers-v1.json). No maxYRoughness here: vanilla measures it from the centre's y, which it sets only for deposits with a climate check, so it would skip every block.",
+  "code": "earth-placergold",
+  "handbookPageCode": "item-nugget-nativegold",
+  "triesPerChunk": 0.4,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {"code": "game:gravel-granite"},
+   "placeblock": {"code": "earth:placer-gravel-gold"},
+   "radius": {"dist": "uniform", "avg": 7, "var": 3},
+   "thickness": {"dist": "uniform", "avg": 2, "var": 1},
+   "depth": {"dist": "uniform", "avg": 8, "var": 7}
+  }
+ },
+ {
+  "code": "earth-placergold",
+  "handbookPageCode": "item-nugget-nativegold",
+  "triesPerChunk": 0.25,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {"code": "game:sand-sandstone"},
+   "placeblock": {"code": "earth:placer-sand-gold"},
+   "radius": {"dist": "uniform", "avg": 7, "var": 3},
+   "thickness": {"dist": "uniform", "avg": 2, "var": 1},
+   "depth": {"dist": "uniform", "avg": 8, "var": 7}
+  }
+ },
+ {
+  "code": "earth-placertin",
+  "handbookPageCode": "item-nugget-cassiterite",
+  "triesPerChunk": 0.4,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {"code": "game:gravel-granite"},
+   "placeblock": {"code": "earth:placer-gravel-tin"},
+   "radius": {"dist": "uniform", "avg": 8, "var": 3},
+   "thickness": {"dist": "uniform", "avg": 2, "var": 1},
+   "depth": {"dist": "uniform", "avg": 8, "var": 7}
+  }
+ },
+ {
+  "code": "earth-placertin",
+  "handbookPageCode": "item-nugget-cassiterite",
+  "triesPerChunk": 0.25,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {"code": "game:sand-sandstone"},
+   "placeblock": {"code": "earth:placer-sand-tin"},
+   "radius": {"dist": "uniform", "avg": 8, "var": 3},
+   "thickness": {"dist": "uniform", "avg": 2, "var": 1},
+   "depth": {"dist": "uniform", "avg": 8, "var": 7}
+  }
+ },
+ {
+  "_comment": "Native platinum placers (0065): the catalogue's Ural, Kondyor, Goodnews Bay and Choco placers, and a rare background at a fiftieth of the gold placers' attempts. Platinum grains reach the gravels only from ultramafic rock and are rare beside gold in placers; Geology Additions' hard-rock nativeplatinum is a different deposit.",
+  "code": "earth-placerplatinum",
+  "handbookPageCode": "item-earth:nugget-nativeplatinum",
+  "triesPerChunk": 0.008,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {"code": "game:gravel-granite"},
+   "placeblock": {"code": "earth:placer-gravel-platinum"},
+   "radius": {"dist": "uniform", "avg": 7, "var": 3},
+   "thickness": {"dist": "uniform", "avg": 2, "var": 1},
+   "depth": {"dist": "uniform", "avg": 8, "var": 7}
+  }
+ },
+ {
+  "code": "earth-placerplatinum",
+  "handbookPageCode": "item-earth:nugget-nativeplatinum",
+  "triesPerChunk": 0.005,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {"code": "game:sand-sandstone"},
+   "placeblock": {"code": "earth:placer-sand-platinum"},
+   "radius": {"dist": "uniform", "avg": 7, "var": 3},
+   "thickness": {"dist": "uniform", "avg": 2, "var": 1},
+   "depth": {"dist": "uniform", "avg": 8, "var": 7}
+  }
+ },
+ {
+  "code": "earth-saltflat",
+  "handbookPageCode": "block-rock-halite",
+  "triesPerChunk": 2.0,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {"code": "earth:silt"},
+   "placeblock": {"code": "game:rock-halite"},
+   "radius": {"dist": "uniform", "avg": 14, "var": 4},
+   "thickness": {"dist": "uniform", "avg": 2, "var": 1},
+   "depth": {"dist": "uniform", "avg": 2, "var": 1}
+  },
+  "childDeposits": [
+   {
+    "code": "earth-saltflat-sylvite",
+    "handbookPageCode": "block-ore-sylvite-halite",
+    "triesPerChunk": 1,
+    "generator": "childdeposit-pointcloud",
+    "attributes": {
+     "randomTries": {"avg": 20},
+     "placeblock": {"code": "game:ore-sylvite-halite"},
+     "radius": {"dist": "gaussian", "avg": 3, "var": 2},
+     "thickness": {"dist": "invexp", "avg": 2, "var": 1}
+    }
+   }
+  ]
+ },
+ {
+  "code": "earth-saltflat",
+  "handbookPageCode": "block-rock-halite",
+  "triesPerChunk": 1.0,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {"code": "game:rawclay-blue-none"},
+   "placeblock": {"code": "game:rock-halite"},
+   "radius": {"dist": "uniform", "avg": 14, "var": 4},
+   "thickness": {"dist": "uniform", "avg": 2, "var": 1},
+   "depth": {"dist": "uniform", "avg": 4, "var": 2}
+  }
+ },
+ {
+  "code": "earth-bogiron",
+  "handbookPageCode": "block-earth:bogpeat",
+  "triesPerChunk": 2.0,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {"code": "game:peat-none"},
+   "placeblock": {"code": "earth:bogpeat"},
+   "radius": {"dist": "uniform", "avg": 4, "var": 2},
+   "thickness": {"dist": "uniform", "avg": 2, "var": 1},
+   "depth": {"dist": "uniform", "avg": 1, "var": 1}
+  }
+ },
+ {
+  "code": "earth-bauxite",
+  "handbookPageCode": "block-rock-bauxite",
+  "triesPerChunk": 1.5,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {"code": "earth:laterite-*", "name": "type", "allowedVariants": ["mottled", "hard"]},
+   "placeblock": {"code": "game:rock-bauxite"},
+   "radius": {"dist": "uniform", "avg": 10, "var": 4},
+   "thickness": {"dist": "uniform", "avg": 3, "var": 1},
+   "depth": {"dist": "uniform", "avg": 4, "var": 3}
+  }
+ },
+ {
+  "_comment": "Karst bauxite: in the terra rossa over limestone (Jamaica, the Mediterranean).",
+  "code": "earth-bauxite",
+  "handbookPageCode": "block-rock-bauxite",
+  "triesPerChunk": 1.5,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {"code": "earth:terrarossa"},
+   "placeblock": {"code": "game:rock-bauxite"},
+   "radius": {"dist": "uniform", "avg": 8, "var": 3},
+   "thickness": {"dist": "uniform", "avg": 2, "var": 1},
+   "depth": {"dist": "uniform", "avg": 1.5, "var": 0.5}
+  }
+ },
+ {
+  "code": "earth-kaolin",
+  "handbookPageCode": "block-rawclay-fire-none",
+  "triesPerChunk": 1.0,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {"code": "earth:saprolite-*", "name": "type", "allowedVariants": ["felsic", "mafic"]},
+   "placeblock": {"code": "game:rawclay-fire-none"},
+   "radius": {"dist": "uniform", "avg": 6, "var": 2},
+   "thickness": {"dist": "uniform", "avg": 2, "var": 1},
+   "depth": {"dist": "uniform", "avg": 6, "var": 5}
+  }
+ },
+ {
+  "code": "earth-gypsum",
+  "handbookPageCode": "block-rock-gypsum",
+  "triesPerChunk": 0.6,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {"code": "game:rock-*", "name": "rock", "allowedVariants": ["limestone", "dolostone", "claystone", "shale"]},
+   "placeblock": {"code": "game:rock-gypsum"},
+   "radius": {"dist": "uniform", "avg": 10, "var": 4},
+   "thickness": {"dist": "uniform", "avg": 3, "var": 1},
+   "depth": {"dist": "uniform", "avg": 30, "var": 25}
+  }
+ }
+]

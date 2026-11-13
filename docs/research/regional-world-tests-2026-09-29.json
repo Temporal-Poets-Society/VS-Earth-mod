@@ -1,0 +1,137 @@
+{
+  "created": "2026-09-29T21:24:47.8284715+03:00",
+  "runs": [
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-vanilla-historical-20260929-205604",
+      "earthVersion": "0.10.0",
+      "earthDllSha256": "AC59C3100ED95E276E105AC76EC43DF3B23D8D58B5B1CB2D6799652C03B0697A",
+      "assetSha256": {
+        "fauna-species.json": "B55EFD6C528C2464F087C147DF9D13E61CE3FFF5D87194623DA295F66F1DE1BF",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "7B5BB62FA2AB4916D0898892A5A225C20D9101975455553666168485D9D5404C"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=True",
+      "siteCount": 18,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "controlledFaunaObserved": 0,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    },
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-vanilla-historical-20260929-205822",
+      "earthVersion": "0.10.0",
+      "earthDllSha256": "2DDCBF04816F9AD8CA3693CCD2EC8CC91DC5CE1200437ED8879534ECA42074BB",
+      "assetSha256": {
+        "fauna-species.json": "B55EFD6C528C2464F087C147DF9D13E61CE3FFF5D87194623DA295F66F1DE1BF",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "7B5BB62FA2AB4916D0898892A5A225C20D9101975455553666168485D9D5404C"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=False/v0, fauna=False/v0, extinct=False",
+      "siteCount": 1,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "controlledFaunaObserved": 0,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    },
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-full-historical-20260929-210529",
+      "earthVersion": "0.10.0",
+      "earthDllSha256": "B0D9F8B4955FED1FE44C17153A82656FF129D5C76BB0A767FB9E318303C546DA",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=True",
+      "siteCount": 18,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "controlledFaunaObserved": 2,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    },
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-full-living-20260929-211101",
+      "earthVersion": "0.10.0",
+      "earthDllSha256": "C31B1882B8E37AABC15E90084F19D5D61C6395C54C7507CD51EBF40A8D40FB4F",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=False",
+      "siteCount": 10,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "controlledFaunaObserved": 2,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    },
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-full-historical-20260929-211756",
+      "earthVersion": "0.10.0",
+      "earthDllSha256": "EF4FCECA8550DDCBC0886C7E16AE02F1D06FA3E96A3D6B01D73CA055C4E45653",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=True",
+      "siteCount": 8,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "controlledFaunaObserved": 11,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    },
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-full-living-20260929-212118",
+      "earthVersion": "0.10.0",
+      "earthDllSha256": "9764B48F408A3C1E00C302033567CAF96A8FE26B4E7DAE30410ABB9E553D008E",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=False",
+      "siteCount": 3,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "controlledFaunaObserved": 0,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    }
+  ]
+}

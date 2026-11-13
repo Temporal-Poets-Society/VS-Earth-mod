@@ -1,0 +1,113 @@
+{
+  "created": "2026-09-29T22:17:36.1317691+03:00",
+  "runs": [
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-vanilla-historical-20260929-221307",
+      "earthVersion": "0.11.0",
+      "earthDllSha256": "7D03F669CA131205B09D0746B20F68B106221652A4595A656E9B33EBA090C2A8",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=True",
+      "siteCount": 5,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "saltMapSamples": [
+        {
+          "place": "57,25",
+          "positiveCells": 581,
+          "totalCells": 1089,
+          "maximumNativeValue": 2132
+        },
+        {
+          "place": "53,-1",
+          "positiveCells": 426,
+          "totalCells": 1089,
+          "maximumNativeValue": 2212
+        },
+        {
+          "place": "50.3,19",
+          "positiveCells": 1001,
+          "totalCells": 1089,
+          "maximumNativeValue": 1279
+        },
+        {
+          "place": "-32.8,151.5",
+          "positiveCells": 275,
+          "totalCells": 1089,
+          "maximumNativeValue": 1239
+        },
+        {
+          "place": "49.983,20.054",
+          "positiveCells": 907,
+          "totalCells": 1089,
+          "maximumNativeValue": 2125
+        }
+      ],
+      "controlledFaunaObserved": 0,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    },
+    {
+      "runPath": "C:\\VS mods\\Earth\\testruns\\regional-world-full-historical-20260929-221306",
+      "earthVersion": "0.11.0",
+      "earthDllSha256": "7D03F669CA131205B09D0746B20F68B106221652A4595A656E9B33EBA090C2A8",
+      "assetSha256": {
+        "fauna-species.json": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+        "geology-grids-v1.json": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+        "geology-rules-v1.json": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E"
+      },
+      "completed": true,
+      "stoppedGracefully": true,
+      "regionalSettings": "regional rules: trees=True/v1, geology=True/v1, fauna=True/v1, extinct=True",
+      "siteCount": 5,
+      "analysisFailures": 0,
+      "timedOutSites": 0,
+      "worldgenErrors": 0,
+      "serverErrors": 0,
+      "criticalErrors": 0,
+      "saltMapSamples": [
+        {
+          "place": "57,25",
+          "positiveCells": 581,
+          "totalCells": 1089,
+          "maximumNativeValue": 2132
+        },
+        {
+          "place": "53,-1",
+          "positiveCells": 426,
+          "totalCells": 1089,
+          "maximumNativeValue": 2212
+        },
+        {
+          "place": "50.3,19",
+          "positiveCells": 1001,
+          "totalCells": 1089,
+          "maximumNativeValue": 1279
+        },
+        {
+          "place": "-32.8,151.5",
+          "positiveCells": 275,
+          "totalCells": 1089,
+          "maximumNativeValue": 1239
+        },
+        {
+          "place": "49.983,20.054",
+          "positiveCells": 907,
+          "totalCells": 1089,
+          "maximumNativeValue": 2125
+        }
+      ],
+      "controlledFaunaObserved": 5,
+      "controlledOutsideCurrentRange": 0,
+      "observationCaveat": "Counts are local snapshots, not population estimates. Animals can move beyond their spawn range."
+    }
+  ]
+}

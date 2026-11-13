@@ -1,0 +1,1375 @@
+{
+  "snapshot_date": "2026-09-29",
+  "hash_algorithm": "sha256",
+  "files": [
+    {
+      "file": "acquire_supplements.py",
+      "bytes": 2504,
+      "sha256": "e161aab4303477bcdcf7107ae9058db1179bffb4484fbfc0dc082799fabd5f40"
+    },
+    {
+      "file": "acquisition-manifest.json",
+      "bytes": 10614,
+      "sha256": "b278560a0423386e34d6242eb4ec750a3ec820a1580445ad7f8d28eddd7bed7c"
+    },
+    {
+      "file": "audit_game_assets.py",
+      "bytes": 2968,
+      "sha256": "e3cd2e58243b92abcd9f9c554d883fba45324f0d9ade1004ea522f09d208032d"
+    },
+    {
+      "file": "build_mrds.py",
+      "bytes": 16071,
+      "sha256": "0d46dcd33ccbc6bf291925f749091e78b5ea248256424493476d956ab71311b4"
+    },
+    {
+      "file": "build_review_catalogues.py",
+      "bytes": 13671,
+      "sha256": "0257ec7fd0513c770e83ba46857a230bbb14a34402d3f99f634912bd337e5f53"
+    },
+    {
+      "file": "coal-acquisition-manifest.json",
+      "bytes": 7932,
+      "sha256": "7eab48a99f5668514dbe24bfcb4b202153ef84a95960c37dcbea8dac6c74e74a"
+    },
+    {
+      "file": "coal-validation.json",
+      "bytes": 465,
+      "sha256": "b238eb2be83cc3b17af0b95e3ee7efe9a7262e1cdf7a2f926d8ace6639d65383"
+    },
+    {
+      "file": "commodity-catalogue.json",
+      "bytes": 9534,
+      "sha256": "2471e29fdd3638393fe648cba3c1f015f5988684751912285f10fe9f553b13a5"
+    },
+    {
+      "file": "explicit-mineral-coverage.json",
+      "bytes": 10935,
+      "sha256": "5105293ee60c3f118821e8c69a90034611ce90aefd6da79fc880a11d09bf7c88"
+    },
+    {
+      "file": "export_coal.py",
+      "bytes": 2475,
+      "sha256": "9c417a1fe9b83a99750dd06b655ed0e4d399b2c0b869e16e61ecee14152d7382"
+    },
+    {
+      "file": "export_potash.py",
+      "bytes": 3856,
+      "sha256": "3c0368bc93be214ecd509507f44a55f98f0d1e08a7e175904f29e1d8461f3b50"
+    },
+    {
+      "file": "finalize.py",
+      "bytes": 19370,
+      "sha256": "187046d4dca4323e11f97813bd285ee26139d9deb072818d01bff05485f5ea38"
+    },
+    {
+      "file": "game-asset-audit.json",
+      "bytes": 165594,
+      "sha256": "cb869234b46bfa2e8a555fef54e08d8c37aa71d2ce572960a0e7bf5fe02d1b09"
+    },
+    {
+      "file": "game-mineral-scope.csv",
+      "bytes": 12753,
+      "sha256": "0c99fc92d42675f4a48c6efcadbae04ad68952816e13e0972a073700b783f4fc"
+    },
+    {
+      "file": "historical-evidence.json",
+      "bytes": 4746,
+      "sha256": "abd4ad23f9bcb0bf766d83207b489c5165de32dbf9943567240e7485ea183d6c"
+    },
+    {
+      "file": "index.html",
+      "bytes": 15052,
+      "sha256": "cf41d5cef4620680bacdece9f1d7f79cbcf71afde6e08a4e276e2a7868b75894"
+    },
+    {
+      "file": "map-validation.json",
+      "bytes": 9397,
+      "sha256": "d4adea4fd0706ef03b98c29598be5c19384ebaf4f879949a411a365c1c213d31"
+    },
+    {
+      "file": "maps/Ag.png",
+      "bytes": 110261,
+      "sha256": "c83b1f85ed13ae0e46cf0c9ad3e05d19627ae3cbfdcb03a6edc1ce83fc07bf8a"
+    },
+    {
+      "file": "maps/Al.png",
+      "bytes": 112456,
+      "sha256": "1a76f3845460b534b9522c0cdf6681e3eaf3c4eaf859abf40e32873b059fa490"
+    },
+    {
+      "file": "maps/alum.png",
+      "bytes": 105915,
+      "sha256": "2dfe2cbb9a8a072e049b030694cdd232550436ea45df2714bcebf7cf610d26f2"
+    },
+    {
+      "file": "maps/Au.png",
+      "bytes": 111797,
+      "sha256": "f8fce906ff9aec798c2646dfc8080dc5e749925651716331f005b0584b22055a"
+    },
+    {
+      "file": "maps/B.png",
+      "bytes": 106490,
+      "sha256": "ccd66a53f2758f7aabc9c08994f514c19c1b8eda7b50a24441fcda3051e794e6"
+    },
+    {
+      "file": "maps/beryl.png",
+      "bytes": 109474,
+      "sha256": "8725b0a60751c70b931f7cb3e0f434f870886acd77cfb8cf2738ef70215716a9"
+    },
+    {
+      "file": "maps/Bi.png",
+      "bytes": 105020,
+      "sha256": "3316e0da031d39ea50a532fd11aafa6e1651a072afeb118a3c4901b29e4fa187"
+    },
+    {
+      "file": "maps/C_coal.png",
+      "bytes": 106242,
+      "sha256": "47371e2d0d58fb854d577b2c4cb2450bb61d4fc98d1cbe131968fc252bda23e3"
+    },
+    {
+      "file": "maps/C_graphite.png",
+      "bytes": 105933,
+      "sha256": "1d6bbc46386d69c2c0949dfbdbf336c266791d8fc87ab3a54af3c896c30508fe"
+    },
+    {
+      "file": "maps/contact-sheet-1.png",
+      "bytes": 281086,
+      "sha256": "0804f84970eb0ce5c3c7e94c7a8bc12dacbcdab124824f21efe58d7d78dd728a"
+    },
+    {
+      "file": "maps/contact-sheet-2.png",
+      "bytes": 265387,
+      "sha256": "5b91df30540cb950f0adace34dc7fa883aa5a08330a51eab3e82a5683d63c4b0"
+    },
+    {
+      "file": "maps/contact-sheet-3.png",
+      "bytes": 261483,
+      "sha256": "626ddfe8f3b293847957903d9603d7b2fc40e73b31687c2b1845edcb38002b40"
+    },
+    {
+      "file": "maps/contact-sheet-4.png",
+      "bytes": 253726,
+      "sha256": "8fdb83de7e4179a682d3dc2b6efd521464e8caaa4b6f3684ebf30040d35043e1"
+    },
+    {
+      "file": "maps/contact-sheet-5.png",
+      "bytes": 246962,
+      "sha256": "9dfc29bb22cb2e4c77e314dff1de644de24c9e61293c6a9a5262525e47aa96e2"
+    },
+    {
+      "file": "maps/corundum.png",
+      "bytes": 109821,
+      "sha256": "992c08802218d1ebaf9b827bc07b1bf0b8a0ce2a8882676453b2fe8e3b9b8b60"
+    },
+    {
+      "file": "maps/Cr.png",
+      "bytes": 109348,
+      "sha256": "f84690e250b6e9a3cc1303373a8c834539d8590a99012d966fba73a73311e5ed"
+    },
+    {
+      "file": "maps/diamond.png",
+      "bytes": 105038,
+      "sha256": "8e65a51064c70536f9b6558f82c33f987be17424ec5de736001ed7843ecc9ff3"
+    },
+    {
+      "file": "maps/emerald.png",
+      "bytes": 102423,
+      "sha256": "ca6657be221af95e68045caf961c6047ac1917c446d87ea0c2e4743d75514153"
+    },
+    {
+      "file": "maps/evaporite-permissive.png",
+      "bytes": 151122,
+      "sha256": "673eb6c7aaa57ccbb17266beb1c4321089412ca703218fec1b83af88d6db0667"
+    },
+    {
+      "file": "maps/F.png",
+      "bytes": 104829,
+      "sha256": "8ec6a17f4be9ce2093ad094859f8470666b31f1ecaa432bc5250645c12ed0a98"
+    },
+    {
+      "file": "maps/Fe.png",
+      "bytes": 109969,
+      "sha256": "0fa4a21faece7d1413ab9353dd2ca4fd6168291d7ac8395998354de3450866bb"
+    },
+    {
+      "file": "maps/garnet.png",
+      "bytes": 110338,
+      "sha256": "2cf9366b8460c3dc5a9ac85950075e62b6e4543e2bccf55bec561be3dab7ff2a"
+    },
+    {
+      "file": "maps/gypsum.png",
+      "bytes": 109273,
+      "sha256": "cd1253a2056b09100dfd3d0af89dd448de96d253c0c0e182877d268d7b0b2a11"
+    },
+    {
+      "file": "maps/Hg.png",
+      "bytes": 106590,
+      "sha256": "ec8f6fadf235bdc3b819b31b192506c082875419ef577475de2877f1be9a7076"
+    },
+    {
+      "file": "maps/K.png",
+      "bytes": 108079,
+      "sha256": "d9d82bfcf713b13c44ae6498a95c5e1286a6cc6288eed4315464bb3b3af654ad"
+    },
+    {
+      "file": "maps/lapis.png",
+      "bytes": 101662,
+      "sha256": "84f94f8b9a398d46c4136483432608e63ef48abe40aabe483c81d15f0102bc1b"
+    },
+    {
+      "file": "maps/mineral-forms-1.png",
+      "bytes": 226966,
+      "sha256": "848d9df22a3aeb5e6c649810323a7d8d464ad2475480e365b7b6acd189eb391a"
+    },
+    {
+      "file": "maps/mineral-forms-2.png",
+      "bytes": 218187,
+      "sha256": "1bbd1a9d8b2892cae4a27ed48a0308e2da664a65286678f36ea72c337e5e8782"
+    },
+    {
+      "file": "maps/mineral-forms-3.png",
+      "bytes": 215496,
+      "sha256": "2906fc7679371da76d1dcd49d588710fa9f9bbe8166bed890c8929c8ea068704"
+    },
+    {
+      "file": "maps/Mn.png",
+      "bytes": 108710,
+      "sha256": "8718a1bb2d3d962e07e9a00c0690b376c8253e75740ab34f66e30943038a4dcc"
+    },
+    {
+      "file": "maps/Mo.png",
+      "bytes": 109301,
+      "sha256": "406a9dc80b05b009ae169e301e87d73f83e9b137d3a0624bf4b75bdd3c24c6ee"
+    },
+    {
+      "file": "maps/N.png",
+      "bytes": 103060,
+      "sha256": "9ae844005152abec888d1ed10d593068157662f461042c9bac70747a2c011168"
+    },
+    {
+      "file": "maps/NaCl.png",
+      "bytes": 106422,
+      "sha256": "00c2e1a7fcda40ef5dcaa71b4ac3ab2298360d736205816d821e07051129bd23"
+    },
+    {
+      "file": "maps/Ni.png",
+      "bytes": 109843,
+      "sha256": "8bfc7b60bb6afbb2300e36ff55470d9c1606d73614c838b4bd32dacd5e7fb416"
+    },
+    {
+      "file": "maps/olivine.png",
+      "bytes": 108085,
+      "sha256": "20fec0d9984bea73adbac2548e587f360118d2ebb0cd6e7642eb4ca9777b4322"
+    },
+    {
+      "file": "maps/P.png",
+      "bytes": 111032,
+      "sha256": "98d2c4d38ad72c77e979d76ae9651f0dc3c13ef5a2b6cbdbfc6afb7d82a969b3"
+    },
+    {
+      "file": "maps/Pb.png",
+      "bytes": 110074,
+      "sha256": "2dd94b00d01ef291ddf2042bddca2065453671d18cd3d0c7bbe2d571bbc4f6b4"
+    },
+    {
+      "file": "maps/Pt.png",
+      "bytes": 113233,
+      "sha256": "5d3614024c771a403e01ebcefc3619664c05163f3c0ad9d8e56577545cda954a"
+    },
+    {
+      "file": "maps/S.png",
+      "bytes": 112549,
+      "sha256": "cea35533630562f0bf799a8c823692251beff100aa4f6409ee590d92b3af580f"
+    },
+    {
+      "file": "maps/Sb.png",
+      "bytes": 108087,
+      "sha256": "c8bfd56ab62502536fe9cf569d001d6289c644c2d9e156fe8cdf9a6cd3324a71"
+    },
+    {
+      "file": "maps/SiO2.png",
+      "bytes": 108252,
+      "sha256": "a6cdd8b02d2b97f12ad652d1ca5a346ea0c3a26c598964dbbbfd1046144ebfa1"
+    },
+    {
+      "file": "maps/spinel.png",
+      "bytes": 108601,
+      "sha256": "d718d3af27c235c1ae7c7eac15f1c92c0be9417e43c6b1b0a4ffc6d54093ad94"
+    },
+    {
+      "file": "maps/Ti.png",
+      "bytes": 107001,
+      "sha256": "08a9904e40ea400fcd718961ad7eb5ce454804dfe8369e80020cf0be8f29a7a0"
+    },
+    {
+      "file": "maps/topaz.png",
+      "bytes": 108564,
+      "sha256": "5a4bc654a5c180c2f36754a0c2eab460b271e451613e10984774b6317d463b27"
+    },
+    {
+      "file": "maps/tourmaline.png",
+      "bytes": 108959,
+      "sha256": "260169177edadae09664467edec8d16fd7ba4967fc12add3b1368644ca3e8d83"
+    },
+    {
+      "file": "maps/U.png",
+      "bytes": 106665,
+      "sha256": "3d5e165258ecd8be872e437a949a5e373123c57c8205f4feab5042f424e9eeb1"
+    },
+    {
+      "file": "maps/V.png",
+      "bytes": 107217,
+      "sha256": "6aa4663facc2724227ba33e765d21c13995b5bdd31e5c9d498bae0f49a70c919"
+    },
+    {
+      "file": "maps/W.png",
+      "bytes": 107283,
+      "sha256": "8b03315e46a5701f4efd75cd85e1c4a3e1bbe61b08d5ad6689404555b26a3ee3"
+    },
+    {
+      "file": "maps/Zn.png",
+      "bytes": 110057,
+      "sha256": "243b78d77c30752b3d029cd368033166313e605894b74a8108d56721eacd2886"
+    },
+    {
+      "file": "normalize_supplements.py",
+      "bytes": 11353,
+      "sha256": "671fcb51d324590b03b92a399a50c9e99a7483f5ac70b1e3f411e25d0654dbf5"
+    },
+    {
+      "file": "normalized/Ag-occurrences.csv.gz",
+      "bytes": 5189533,
+      "sha256": "1c01a8202d397a99f03c93d84ad353634d965f8e128f7ef653e526244a2aecef"
+    },
+    {
+      "file": "normalized/Ag-occurrences.geojson.gz",
+      "bytes": 1513104,
+      "sha256": "acd1b674d6b3524e9a79034e3e8e38ad78ef3fa1d19bfd34aebefe1852828d6a"
+    },
+    {
+      "file": "normalized/Ag-specialist.geojson",
+      "bytes": 5364330,
+      "sha256": "c6965f0bc49da6d970b7131a11250fbee6d25627e0c153343068caf105a65340"
+    },
+    {
+      "file": "normalized/Al-occurrences.csv.gz",
+      "bytes": 343771,
+      "sha256": "1436e2baa24ab6c7168ef75ad2d7f480414cbac3fb1df42d0ecc04bdc8377db1"
+    },
+    {
+      "file": "normalized/Al-occurrences.geojson.gz",
+      "bytes": 102657,
+      "sha256": "a3ab2e4b58eaafab5a64a78b703aeeecc2e63113cb9d232905ccfd6f48255b64"
+    },
+    {
+      "file": "normalized/Al-specialist.geojson",
+      "bytes": 203905,
+      "sha256": "15834b62e77f0f8fe963069ce26fd53ddc503e6c0bd2aa8496bc06788247aae5"
+    },
+    {
+      "file": "normalized/alum-occurrences.csv.gz",
+      "bytes": 49117,
+      "sha256": "c93de3be9e65653c72551c4b5380d7d35291fa6fc7c00e940ac4a2910e1abe22"
+    },
+    {
+      "file": "normalized/alum-occurrences.geojson.gz",
+      "bytes": 5451,
+      "sha256": "c77d503b7286a172c669cee10a8ed38197b5293346a533109b16d35eb6d8a092"
+    },
+    {
+      "file": "normalized/alum-specialist.geojson",
+      "bytes": 1643,
+      "sha256": "4ce6c0bd290ff1d0919add113e1fb7d2151ca8e583abdd62d1a0dc0e96d994cb"
+    },
+    {
+      "file": "normalized/Au-occurrences.csv.gz",
+      "bytes": 6921448,
+      "sha256": "bbca49d88f8fad3acb147fdcde6078418244fd277f0945932873e1991a56523c"
+    },
+    {
+      "file": "normalized/Au-occurrences.geojson.gz",
+      "bytes": 2485917,
+      "sha256": "b988cfa9f1c117bedd8a852afd7907bf3cb6c36c3c0ead1a90bbf611441508d4"
+    },
+    {
+      "file": "normalized/Au-specialist.geojson",
+      "bytes": 8225856,
+      "sha256": "ce59fe79578d07df9020006ee0dc9995bb35a3d97b2d4eae7dfb54498a97a39d"
+    },
+    {
+      "file": "normalized/B-occurrences.csv.gz",
+      "bytes": 70888,
+      "sha256": "116f056ebc7e721826fb7f3a0c34abb4b15dacaba60185910080bb458780d33e"
+    },
+    {
+      "file": "normalized/B-occurrences.geojson.gz",
+      "bytes": 20255,
+      "sha256": "b3776dc47bccdfc89c570484fc921c6782fc0f871114f3b6f879a671b35ebec9"
+    },
+    {
+      "file": "normalized/B-specialist.geojson",
+      "bytes": 69110,
+      "sha256": "2c4a8d643447cd68fbbacf0bf100949db74202bdd92cca49a1c4b3690960d00f"
+    },
+    {
+      "file": "normalized/beryl-occurrences.csv.gz",
+      "bytes": 77999,
+      "sha256": "be98b9325afa75eeac0b13638a6cf752f43fd5ac98d8a219dbd8d7c7f9af69e0"
+    },
+    {
+      "file": "normalized/beryl-occurrences.geojson.gz",
+      "bytes": 19531,
+      "sha256": "607ee8cb41babdba3c9b36825de424075f4e301d3f1093e33e47f89a28523592"
+    },
+    {
+      "file": "normalized/beryl-specialist.geojson",
+      "bytes": 6225,
+      "sha256": "1e43e3347e493a9c8e0f6aca003239afca62bf42c11826602ca13ce6bd939438"
+    },
+    {
+      "file": "normalized/Bi-occurrences.csv.gz",
+      "bytes": 246215,
+      "sha256": "dd284f98a45191f5455aece7453f399a67ee9fc36cad57e6383f90a47cf3cce7"
+    },
+    {
+      "file": "normalized/Bi-occurrences.geojson.gz",
+      "bytes": 35978,
+      "sha256": "dc86047583efc1dc8fe16a5752f6b6d612a92eff49bfe5cb4f31f27013467024"
+    },
+    {
+      "file": "normalized/Bi-specialist.geojson",
+      "bytes": 425107,
+      "sha256": "793c186ea46aa12a7ae3b468fd8012f4404dbd9e7880a4e48b4f639898cb81f9"
+    },
+    {
+      "file": "normalized/C_coal-occurrences.csv.gz",
+      "bytes": 24790,
+      "sha256": "c8559408be95cbdeda9fe17623fd2b884c2d625f19841298b59e4c238b8a7134"
+    },
+    {
+      "file": "normalized/C_coal-occurrences.geojson.gz",
+      "bytes": 8648,
+      "sha256": "304a65a560c7705ec13348eddac213d08cb847dc4db7bccdb4c0a3b24a77074f"
+    },
+    {
+      "file": "normalized/C_coal-specialist.geojson",
+      "bytes": 10111,
+      "sha256": "e0f0478cf4c44e502e0638df21d3986f25a38ce61147f6204232e68cc17fbe4a"
+    },
+    {
+      "file": "normalized/C_graphite-occurrences.csv.gz",
+      "bytes": 90010,
+      "sha256": "dbe4fd44249a10fd3432340230e7038e481632b76ea0369f8ef32fbde8a2bb0f"
+    },
+    {
+      "file": "normalized/C_graphite-occurrences.geojson.gz",
+      "bytes": 27477,
+      "sha256": "8ef2dfcec8d9e74b812fe2732a74982470a67ab5e0ecc3348df8b491b0bc2d06"
+    },
+    {
+      "file": "normalized/C_graphite-specialist.geojson",
+      "bytes": 94053,
+      "sha256": "2d442d2a7d0c7954e8bc2aeb0be083b08225a38033c7199a7b79f5611d881421"
+    },
+    {
+      "file": "normalized/commodity-coverage.csv",
+      "bytes": 5139,
+      "sha256": "b37b141740f5a78c014107c1e868d6ac52e2e497a15b87f1b37037d54bf0144e"
+    },
+    {
+      "file": "normalized/corundum-occurrences.csv.gz",
+      "bytes": 26332,
+      "sha256": "60dc93501f2060eaad630b96938b3a49dfb4fae7c84aff27d95c0c9fdb6d5c87"
+    },
+    {
+      "file": "normalized/corundum-occurrences.geojson.gz",
+      "bytes": 8554,
+      "sha256": "68745802acd853659175117cf3ee9f545bb34d0cfd6a4f2bfc955711780a956f"
+    },
+    {
+      "file": "normalized/corundum-specialist.geojson",
+      "bytes": 27493,
+      "sha256": "c3b15d896bc2e30dbcd61cb7fac66e0cc58432c8727a9345021682911483a8ca"
+    },
+    {
+      "file": "normalized/country-coverage.csv",
+      "bytes": 68910,
+      "sha256": "de5e6527eb66b46f599d192241fdb88cc36973627a96b505672f810fe4c0e47a"
+    },
+    {
+      "file": "normalized/Cr-occurrences.csv.gz",
+      "bytes": 490947,
+      "sha256": "1bf98bfec9e5aad60608757ced9cc79f1162f884331561385e6aa3e60eef2495"
+    },
+    {
+      "file": "normalized/Cr-occurrences.geojson.gz",
+      "bytes": 181716,
+      "sha256": "35fd8b98a710541f6217aad93b08a33b7f374faa381bb2f9cfcac850dff722ad"
+    },
+    {
+      "file": "normalized/Cr-specialist.geojson",
+      "bytes": 14774590,
+      "sha256": "78a0d6181e6cace16fe1b67f755bcc41143ac40f3a8c7ea1884bde231c4ff168"
+    },
+    {
+      "file": "normalized/cross-source-duplicate-candidates.json",
+      "bytes": 433,
+      "sha256": "4857a873ae2e7d2248b3976ddd869e6da213defe838e9d6d81a9031cfcbe65fd"
+    },
+    {
+      "file": "normalized/diamond-occurrences.csv.gz",
+      "bytes": 43116,
+      "sha256": "1f242d6dae9a47571775e971a83815548ba87620a35708fc51ae6d530b47f083"
+    },
+    {
+      "file": "normalized/diamond-occurrences.geojson.gz",
+      "bytes": 16679,
+      "sha256": "f1e6fd6fef7e543b7e66571fc7970782348bab59f608d30e19c0c990f3d659c1"
+    },
+    {
+      "file": "normalized/diamond-specialist.geojson",
+      "bytes": 140864,
+      "sha256": "e1952a1fdbef9774525530a09575b0ce4156b6d2d83b070e461ace9d0f91f0ea"
+    },
+    {
+      "file": "normalized/duplicate-candidates.json",
+      "bytes": 309765,
+      "sha256": "6bad0502bd4fa1ad774562ec00ea26823458049485b49ef3ced65c2df61cdc62"
+    },
+    {
+      "file": "normalized/emerald-occurrences.csv.gz",
+      "bytes": 3539,
+      "sha256": "c76911eb17807997f0781d00601995da377618bd91e776c68ae65a1d7ea5ba87"
+    },
+    {
+      "file": "normalized/emerald-occurrences.geojson.gz",
+      "bytes": 1048,
+      "sha256": "9eeac357df8a5a757665a73fce94691c52a894f3aefe59ec95c3c52bce8c0a5a"
+    },
+    {
+      "file": "normalized/emerald-specialist.geojson",
+      "bytes": 13804,
+      "sha256": "3eed1b0ba69bc1be32ee992e36a2ef18192bca381b48d932ed61ac5c302db8d9"
+    },
+    {
+      "file": "normalized/evidence-presence-cells.csv.gz",
+      "bytes": 103446,
+      "sha256": "baaf48d791591a301a1c10d092f19ec39bf64aa251f967567f994fdb7322746a"
+    },
+    {
+      "file": "normalized/F-occurrences.csv.gz",
+      "bytes": 556381,
+      "sha256": "b98258cd25e389542e90078a5f0977c0c251ef3b50fcede3fef9441d84bf91e5"
+    },
+    {
+      "file": "normalized/F-occurrences.geojson.gz",
+      "bytes": 138791,
+      "sha256": "46a910fb26d1d11bc752f5a167d1bf24e3a17de60ba733d5d1c55a44ca68ff57"
+    },
+    {
+      "file": "normalized/F-specialist.geojson",
+      "bytes": 184126,
+      "sha256": "189c69eee9c1fec5c28ed628f89cd55244a07accc521f61bc4ef55ba4668e070"
+    },
+    {
+      "file": "normalized/Fe-occurrences.csv.gz",
+      "bytes": 2170954,
+      "sha256": "6a2c4b52c7b70a281e6fd283c425a091fc57098806e2b8313ab2597a79ed7c9f"
+    },
+    {
+      "file": "normalized/Fe-occurrences.geojson.gz",
+      "bytes": 720854,
+      "sha256": "6eb9a36b5ef5fb4d0bb8f8683bc666cb97c449e294af8edd91485dfde16d6356"
+    },
+    {
+      "file": "normalized/Fe-specialist.geojson",
+      "bytes": 3538420,
+      "sha256": "b168b743b2761c017ded9e91eb8b02dd47f512be35fba64f9bbf4c6bc1dfd64f"
+    },
+    {
+      "file": "normalized/fsu-coal-points.geojson",
+      "bytes": 416501,
+      "sha256": "00d4b631ca983e7e45a01f5011621fed17c93569da6046607fffcfb54b7012a9"
+    },
+    {
+      "file": "normalized/garnet-occurrences.csv.gz",
+      "bytes": 84389,
+      "sha256": "7ce2421795a31348f0933b64eebc377c01912c800e9c8436623b682e9f86b6b2"
+    },
+    {
+      "file": "normalized/garnet-occurrences.geojson.gz",
+      "bytes": 20426,
+      "sha256": "1ef1a6daeb190e331cdbb7b7b166856b69eef20c544066e0bfc006e0c0f96c9e"
+    },
+    {
+      "file": "normalized/garnet-specialist.geojson",
+      "bytes": 28015,
+      "sha256": "9e3d216d35a70367d8857ed90be5e7537bc417246dc470fca2a629641bdda611"
+    },
+    {
+      "file": "normalized/gypsum-occurrences.csv.gz",
+      "bytes": 174685,
+      "sha256": "013247d8481f18d5f40807d45187a5cbc5b08f9a3749e5d4e953f1f742277bc9"
+    },
+    {
+      "file": "normalized/gypsum-occurrences.geojson.gz",
+      "bytes": 66096,
+      "sha256": "fca674f02c8cf9e367e6e0c6384f5abdda49323b5dde5a4c4a725222e04876d9"
+    },
+    {
+      "file": "normalized/gypsum-specialist.geojson",
+      "bytes": 67707,
+      "sha256": "391fe4bd5f41772bbab2c6bd9e8d472695cab84017652ac98e8792f8496e445e"
+    },
+    {
+      "file": "normalized/Hg-occurrences.csv.gz",
+      "bytes": 532573,
+      "sha256": "8f0aab0817386235c8cfba2582642fa6a9db01ec2fd0c4f0ee2fff275bba476e"
+    },
+    {
+      "file": "normalized/Hg-occurrences.geojson.gz",
+      "bytes": 128388,
+      "sha256": "2346c7eb68c5218bdf3c712f42e444e5c05031292688296173636a9cf713a915"
+    },
+    {
+      "file": "normalized/Hg-specialist.geojson",
+      "bytes": 245564,
+      "sha256": "3e989917214854f2c827fb1c3f0e95b0df43a8c1c0225367d7ef9e5e12bf3beb"
+    },
+    {
+      "file": "normalized/K-occurrences.csv.gz",
+      "bytes": 65699,
+      "sha256": "fd297aebf5fefc2335d1b5137f17664b7ca3ebc824e0a7897f645fb3c1a95209"
+    },
+    {
+      "file": "normalized/K-occurrences.geojson.gz",
+      "bytes": 13970,
+      "sha256": "dcf8e1ad20c0a70abd3035ca85a8a8578760b5f24d5415d052746f6070c390a3"
+    },
+    {
+      "file": "normalized/K-specialist.geojson",
+      "bytes": 110465,
+      "sha256": "24877c9ac232f998085fb8ea74df83b58744938a94a35d3ff05c552629feab04"
+    },
+    {
+      "file": "normalized/lapis-occurrences.csv.gz",
+      "bytes": 812,
+      "sha256": "c1255609b514ba6cdb47e20ba15ce2d8c77e18cf4217a479883d32447a7d02a6"
+    },
+    {
+      "file": "normalized/lapis-occurrences.geojson.gz",
+      "bytes": 429,
+      "sha256": "c5af3e15685424f4775791d1c70e87dfca29bbf1a897192032b6a9d7fb1e234a"
+    },
+    {
+      "file": "normalized/lapis-specialist.geojson",
+      "bytes": 1642,
+      "sha256": "553f21ea0ad2f22d3ec8d2f19fbb830849a30015466d0241f9502880e79c0972"
+    },
+    {
+      "file": "normalized/Mn-occurrences.csv.gz",
+      "bytes": 904222,
+      "sha256": "952ab9f7679cb86f66e51546d08c4ee3181db6377cdaa8057dd1687fad6cffeb"
+    },
+    {
+      "file": "normalized/Mn-occurrences.geojson.gz",
+      "bytes": 324113,
+      "sha256": "f60644e3bb70555f9289430d8b280699883b12bee8805a7a1146fc0a64c0518a"
+    },
+    {
+      "file": "normalized/Mn-specialist.geojson",
+      "bytes": 363333,
+      "sha256": "14b9e4730253523736bb25f464c962982c14997cc1a2a16470921b4271d394fc"
+    },
+    {
+      "file": "normalized/Mo-occurrences.csv.gz",
+      "bytes": 904999,
+      "sha256": "3c11b55152bb413f708fec2cf214c1e177985509ad3008c15e290c942f08340d"
+    },
+    {
+      "file": "normalized/Mo-occurrences.geojson.gz",
+      "bytes": 162838,
+      "sha256": "7674a3dbbb626423995fbae2e1d78a77b07b249e9f2f9da31e46b83fc95113d9"
+    },
+    {
+      "file": "normalized/Mo-specialist.geojson",
+      "bytes": 509508,
+      "sha256": "bc80ca1ab8d3d0c32aab61270e27aa19143a295149bcaaa209441d1c74eb8007"
+    },
+    {
+      "file": "normalized/mrds-excluded-plants.csv.gz",
+      "bytes": 452864,
+      "sha256": "bfe02c5cdaf35e9d2b8c3bb8e34c43e4aae09d13379ed93cdf724caf7e483d34"
+    },
+    {
+      "file": "normalized/mrds-records.csv.gz",
+      "bytes": 14915104,
+      "sha256": "eacb754c98c6dbc8140102a7f9cdab07ba48fd522d2b717e8cc19023ec005dbd"
+    },
+    {
+      "file": "normalized/mrds-source-subset.csv.gz",
+      "bytes": 17834386,
+      "sha256": "cb34c30aa4a67b34377a54ae971593919da9514eeb71fa6dcdfa528478c0daf4"
+    },
+    {
+      "file": "normalized/N-occurrences.csv.gz",
+      "bytes": 8126,
+      "sha256": "5e6ed80733209ebf6303c3e94ed51b03d842a6ef5db139002cf1b9d48c322700"
+    },
+    {
+      "file": "normalized/N-occurrences.geojson.gz",
+      "bytes": 4052,
+      "sha256": "d2d87034a2ec1bb4ca0dfa44ec1fee96fc97bd3d8e8e0691c5c05b36e73286b5"
+    },
+    {
+      "file": "normalized/N-specialist.geojson",
+      "bytes": 19648,
+      "sha256": "4779bfb694dfc4965426c4718e4a47dc5198b725a64ccf8a0cdc88e1afa086f2"
+    },
+    {
+      "file": "normalized/NaCl-occurrences.csv.gz",
+      "bytes": 92586,
+      "sha256": "a7eaacc5c6d66d56c598944cb88b5d2f69c050d40cb2e0cebe8d0159e430aee1"
+    },
+    {
+      "file": "normalized/NaCl-occurrences.geojson.gz",
+      "bytes": 32181,
+      "sha256": "c5c5cbf88377bfaf684abd742e3ac85aea6f676a6d71718eee8e82be3de7b829"
+    },
+    {
+      "file": "normalized/NaCl-specialist.geojson",
+      "bytes": 152952,
+      "sha256": "bba4926be95e4c1d57448640d5307f465306e9ad7435ecccfaeddde4e5db6ed2"
+    },
+    {
+      "file": "normalized/Ni-occurrences.csv.gz",
+      "bytes": 474669,
+      "sha256": "0d9723ceb1eb4a8463c6aec2d71be8b4b9b6efb9f6dc5b0e57225be4d6e8f5a1"
+    },
+    {
+      "file": "normalized/Ni-occurrences.geojson.gz",
+      "bytes": 97886,
+      "sha256": "6dde2261874e67ab67e32fc1b342a4f48d0622d3244cf2dacbc5858337f42246"
+    },
+    {
+      "file": "normalized/Ni-specialist.geojson",
+      "bytes": 15713980,
+      "sha256": "f47d62075ab48178fa7a906e69d9b8cbfb3ed91f8c4937484c7e209d03452ae0"
+    },
+    {
+      "file": "normalized/olivine-occurrences.csv.gz",
+      "bytes": 8144,
+      "sha256": "9af7470583172a13393c27e43349009c42fee449e1c0b2030a43a47b65dd8d0f"
+    },
+    {
+      "file": "normalized/olivine-occurrences.geojson.gz",
+      "bytes": 2062,
+      "sha256": "40fd0f23ac1792dda9bcf2c7b80dfdfa5940b186d383329e978ed60e8e074dd6"
+    },
+    {
+      "file": "normalized/olivine-specialist.geojson",
+      "bytes": 38254,
+      "sha256": "2e828f308faeaeefb50c4d93f0ce533d586eee79e2649b06ebff89d3eb61ff60"
+    },
+    {
+      "file": "normalized/P-occurrences.csv.gz",
+      "bytes": 400711,
+      "sha256": "659fb7faaee0b43064cfda72b19f107c91e1e27c6139321c686b8cfbd41d245d"
+    },
+    {
+      "file": "normalized/P-occurrences.geojson.gz",
+      "bytes": 97113,
+      "sha256": "ec65ebc2364b6dfe46d5ab76afcdda1f8411728dcb5415eba9c71a7d2ac0ffe0"
+    },
+    {
+      "file": "normalized/P-specialist.geojson",
+      "bytes": 2297261,
+      "sha256": "7071650641d189ec0ac11d2addc9d26035155bff0f2dd18e0ba7fe61880af5f0"
+    },
+    {
+      "file": "normalized/Pb-occurrences.csv.gz",
+      "bytes": 3930928,
+      "sha256": "6e272d38130a9f23172c6f8b2c4704651aa94d21fb4341947ccad6e98fd320b5"
+    },
+    {
+      "file": "normalized/Pb-occurrences.geojson.gz",
+      "bytes": 1171128,
+      "sha256": "190c15943aca88d4d10599573bee1989932b45b99f26452225640938e6396797"
+    },
+    {
+      "file": "normalized/Pb-specialist.geojson",
+      "bytes": 3990610,
+      "sha256": "dc1c687573ff858c17c690702f513be987603eb94cd20772552998a9bfe52241"
+    },
+    {
+      "file": "normalized/PotashDeps-source.csv",
+      "bytes": 449433,
+      "sha256": "34d48944e8ff7c9883e00adc2216c3284d44a0546ce4bbc0abc8c51065fb237d"
+    },
+    {
+      "file": "normalized/PotashDeps.geojson",
+      "bytes": 1731018,
+      "sha256": "756b5ba929910b3b73a7a576776b8f044cc807d3dad651a7d7bfbe814c299f70"
+    },
+    {
+      "file": "normalized/PotashTracts-display-only.geojson",
+      "bytes": 2112138,
+      "sha256": "3cd16293cf1e96adb9e95a3e78af7de5298b47854e419d32b01ceb87cf8195b6"
+    },
+    {
+      "file": "normalized/PotashTracts-source.csv",
+      "bytes": 120026,
+      "sha256": "150dc07964c69d36227a7cea6120169e6d3e58152b6ebb128898c035e5e22bd3"
+    },
+    {
+      "file": "normalized/PotashTracts.geojson",
+      "bytes": 24983421,
+      "sha256": "187d7ea338233a7a26a68aa83d6790418821dfc96bf386f128359f350cbea725"
+    },
+    {
+      "file": "normalized/Pt-occurrences.csv.gz",
+      "bytes": 434270,
+      "sha256": "cb32f5b56a9831af0ee6cee0a76b8a2f52d0e998fec382e13226143195fd75bc"
+    },
+    {
+      "file": "normalized/Pt-occurrences.geojson.gz",
+      "bytes": 97918,
+      "sha256": "229aa9d72dc7694b48733e7c4694899c3efca4bf52413e96308970cfa376f785"
+    },
+    {
+      "file": "normalized/Pt-specialist.geojson",
+      "bytes": 9347706,
+      "sha256": "500d114354379ed8fbbe6cb25d9eb2e50b702241ca51bcd7f434c41babe9476c"
+    },
+    {
+      "file": "normalized/record-commodities.csv.gz",
+      "bytes": 1098358,
+      "sha256": "ebba8bd86fc74bc539aaae7f8488be090915d0b919b3137f6a2aa9fafb5bb682"
+    },
+    {
+      "file": "normalized/record-explicit-minerals.csv.gz",
+      "bytes": 174900,
+      "sha256": "6ad7c1995082fc330377d9b68a3649dc575050f3cbf1f84a1f637086a123faa6"
+    },
+    {
+      "file": "normalized/S-occurrences.csv.gz",
+      "bytes": 1679634,
+      "sha256": "22439cd8defbde4ffd1df4516329355d6957a0f72df0eea8cb3dc00f030e4a92"
+    },
+    {
+      "file": "normalized/S-occurrences.geojson.gz",
+      "bytes": 318289,
+      "sha256": "26e5349f62d758493b6b054299bf66f282179021b1538fac5e8aa108effd2b86"
+    },
+    {
+      "file": "normalized/S-specialist.geojson",
+      "bytes": 3492847,
+      "sha256": "dd388cf9c4f59adb56a55e5746a71e1d01637341713c5ceef4194ba91abc2229"
+    },
+    {
+      "file": "normalized/Sb-occurrences.csv.gz",
+      "bytes": 996700,
+      "sha256": "870b8154849c243febe4a53cf681370aac7a737b34b4fa0ecd9b0eabea2121bf"
+    },
+    {
+      "file": "normalized/Sb-occurrences.geojson.gz",
+      "bytes": 174689,
+      "sha256": "bbc8df9cd8db096826cfe48a8ec73a3bc8d4b28555450e747aaf1cf2f9e8ee75"
+    },
+    {
+      "file": "normalized/Sb-specialist.geojson",
+      "bytes": 1264912,
+      "sha256": "9b1fd1c7803ea017563768fa68193b03a741a81a4d2cf607d946d9302ab7355f"
+    },
+    {
+      "file": "normalized/SiO2-occurrences.csv.gz",
+      "bytes": 428042,
+      "sha256": "eb0e3ba0bda92f929548427965bb0552d1146e81061d0c661477b7af7359da36"
+    },
+    {
+      "file": "normalized/SiO2-occurrences.geojson.gz",
+      "bytes": 127160,
+      "sha256": "31a5636a5be4d1c36e83ca1217dd3d31d6e2880a123cc923a05456d6b5391440"
+    },
+    {
+      "file": "normalized/SiO2-specialist.geojson",
+      "bytes": 144512,
+      "sha256": "c85bdf1505ea3226dc1f62296abea2148804bdf888fe2e19b1a903c243b10ebb"
+    },
+    {
+      "file": "normalized/specialist-commodity-links.csv",
+      "bytes": 3245515,
+      "sha256": "c6f1b888701696dab236a6dda436c96f6de81909a4768ccba9dd4b58271a72ef"
+    },
+    {
+      "file": "normalized/specialist-country-coverage.csv",
+      "bytes": 23398,
+      "sha256": "768c407c3e110fbf98a9a53313399cf1042a4d7df11c86f5bc8fffba11cce66f"
+    },
+    {
+      "file": "normalized/specialist-coverage.csv",
+      "bytes": 845,
+      "sha256": "44346cec6e16f10512e7c7d8ea042b2d45664fe8564579964df28e6bea2ea36a"
+    },
+    {
+      "file": "normalized/specialist-exclusions.json",
+      "bytes": 639099,
+      "sha256": "564599f70499f41a2f3196a738eff46b62b12aab1c25a33509ca7bb55d1a446b"
+    },
+    {
+      "file": "normalized/specialist-grades.csv",
+      "bytes": 771689,
+      "sha256": "c0445aa3c813bcbb5996d725944efb0cd16bca6fd8873fff61b942b557b7c700"
+    },
+    {
+      "file": "normalized/specialist-records.csv",
+      "bytes": 17428194,
+      "sha256": "8fc604f42ce1bc7920c252a17b31992ba62de9ce06215d52b99347cfa4c9b99b"
+    },
+    {
+      "file": "normalized/spinel-occurrences.csv.gz",
+      "bytes": 5010,
+      "sha256": "7c12ea8bf3b7c11c61e4e75eac02a8af93943dbda184ac9dba0455ceeb58fb15"
+    },
+    {
+      "file": "normalized/spinel-occurrences.geojson.gz",
+      "bytes": 1092,
+      "sha256": "a8be71fc4a08f4a988f6cbbebaa3523ce9ca736ab10b59b13bdd81f2400a8f1d"
+    },
+    {
+      "file": "normalized/spinel-specialist.geojson",
+      "bytes": 1695,
+      "sha256": "520ef21fe620ae4f2d7f4f4433d48265a54ab91a8880b2afabab7d3ad9151361"
+    },
+    {
+      "file": "normalized/Ti-occurrences.csv.gz",
+      "bytes": 365837,
+      "sha256": "ef77f32189db2fb7a5cf04381e04e68db433c93b2fe4b5db21e8dc02b831ece5"
+    },
+    {
+      "file": "normalized/Ti-occurrences.geojson.gz",
+      "bytes": 84142,
+      "sha256": "fa9aabb75100abccf05b592e6dd4cb2f6a6ce363882d678fefab5b13d327a858"
+    },
+    {
+      "file": "normalized/Ti-specialist.geojson",
+      "bytes": 534707,
+      "sha256": "0eb11acfc918494002b3e119ea67989d9b9dbf61190966a01fb50a68e2e8f149"
+    },
+    {
+      "file": "normalized/topaz-occurrences.csv.gz",
+      "bytes": 7807,
+      "sha256": "0c3fa743a5d0dbd8bc9a2215be9373a112000f174c3ea7e73576022c9229646c"
+    },
+    {
+      "file": "normalized/topaz-occurrences.geojson.gz",
+      "bytes": 1886,
+      "sha256": "660eb9cfe869e9194e73b185a93cbc2641e0a7ff9b1b709b7e7ce25170bc27d2"
+    },
+    {
+      "file": "normalized/topaz-specialist.geojson",
+      "bytes": 3200,
+      "sha256": "f2d4a000bf16703beb492a0989550c5c4f66e19d40595347c846c42bdbd7197d"
+    },
+    {
+      "file": "normalized/tourmaline-occurrences.csv.gz",
+      "bytes": 18287,
+      "sha256": "652206a4e05fae110f08783f63e6a8b45e4492802b1c5391ae38ce474113313b"
+    },
+    {
+      "file": "normalized/tourmaline-occurrences.geojson.gz",
+      "bytes": 3096,
+      "sha256": "093271a970d16c33d076d30f8638dd3ec0bf47c8ccd0fe2ed506f5e74d3ffb33"
+    },
+    {
+      "file": "normalized/tourmaline-specialist.geojson",
+      "bytes": 4916,
+      "sha256": "12b6df64c03c39324e73e4d09628feab2ab58b9e59f8bddbe4530b925d19836e"
+    },
+    {
+      "file": "normalized/U-occurrences.csv.gz",
+      "bytes": 1226435,
+      "sha256": "e2fdddfab8b600f99ec34a224bd9db7d01f2ed780c842534dcebbfa8faead6e8"
+    },
+    {
+      "file": "normalized/U-occurrences.geojson.gz",
+      "bytes": 457044,
+      "sha256": "a7a4ed570d8f0c28dc68304e1ef135ea21847aa1253528b110b64695879edebc"
+    },
+    {
+      "file": "normalized/U-specialist.geojson",
+      "bytes": 463873,
+      "sha256": "f59432dc8697e09885ca3b7e8c86977022cfc19e65a1892b7298e18fe1a7485e"
+    },
+    {
+      "file": "normalized/V-occurrences.csv.gz",
+      "bytes": 427080,
+      "sha256": "d1acd5d0fe57e4fe79bc4562e8a64bba139bd2e114b71492190f0c62dc6dea0f"
+    },
+    {
+      "file": "normalized/V-occurrences.geojson.gz",
+      "bytes": 147999,
+      "sha256": "90d72a0576b04126ef1680494c54ec2e826b1c1bebd460446a7c97cbb48e4f56"
+    },
+    {
+      "file": "normalized/V-specialist.geojson",
+      "bytes": 353872,
+      "sha256": "6af21f4c0cc174e3938fe324077d7b760c2890176fd73fb13529acffefa3fdf6"
+    },
+    {
+      "file": "normalized/W-occurrences.csv.gz",
+      "bytes": 1020000,
+      "sha256": "3a0aaa741070e917ff4ea5ea44708d0ce23bbb3a040fc9b2bc36944b09e8a1fd"
+    },
+    {
+      "file": "normalized/W-occurrences.geojson.gz",
+      "bytes": 267626,
+      "sha256": "1abb293c3f60866781b1224a6e376b42b21a4a74f0eec68ea2de80c8934953d1"
+    },
+    {
+      "file": "normalized/W-specialist.geojson",
+      "bytes": 331268,
+      "sha256": "727e70ed99a1cea9d94a79fd0c16d638170f5598afa8bc4c4fa1de1b732f0181"
+    },
+    {
+      "file": "normalized/Zn-occurrences.csv.gz",
+      "bytes": 3160570,
+      "sha256": "972e8c5515292c927122b94c7609a4ba41f4bad82d6919a7a0efc7a0c56797ca"
+    },
+    {
+      "file": "normalized/Zn-occurrences.geojson.gz",
+      "bytes": 866997,
+      "sha256": "2fb9b63a984fda996710d2359d951f2d5c8c5863626f9e057c4b30e885f32618"
+    },
+    {
+      "file": "normalized/Zn-specialist.geojson",
+      "bytes": 5010085,
+      "sha256": "37fb2544da6f9d0abc20483f5bcae493c29f2cf67fec3a3b4b0b3e1f9247db55"
+    },
+    {
+      "file": "permissiveness-review-catalogue.json",
+      "bytes": 31192,
+      "sha256": "93824cfbb65a74a31cbc3c47c53a504769262489814de51582f26521abb66337"
+    },
+    {
+      "file": "potash-validation.json",
+      "bytes": 1078,
+      "sha256": "ffd73be60c49f4cb7065cdd48ca4997ff03d1426c9ad7e084239d454cd058732"
+    },
+    {
+      "file": "raw/AssemblyInfo.cs",
+      "bytes": 26172,
+      "sha256": "c45f93625c1047b1665764f2bf1d8b831907833b539c395293d206a9ec5c4552"
+    },
+    {
+      "file": "raw/deposit-models-toc.html",
+      "bytes": 20290,
+      "sha256": "fb8c06472f1bc826d316a6144f0097080a51b2c9d1ed4f78de9bfca28ddfd24f"
+    },
+    {
+      "file": "raw/Deposits.cs",
+      "bytes": 175,
+      "sha256": "037560f9c293ed93fa8459f9381671db542f12449fca5b1fd6df28d5b829331b"
+    },
+    {
+      "file": "raw/DepositVariant.cs",
+      "bytes": 7396,
+      "sha256": "bbd3a4dd7c92c7050eb65c0362a035513081e8367f887801a599f5631dc5551a"
+    },
+    {
+      "file": "raw/Disc-ChildDeposit.cs",
+      "bytes": 5218,
+      "sha256": "3e718d3c44cb632a63e69de36df7b73efd9fbd3cdf74f74de4a03075c8084f2c"
+    },
+    {
+      "file": "raw/DiscGenerator.cs",
+      "bytes": 21224,
+      "sha256": "7f3573ad84b311a52d9fc68189d55669f068d250dd9ab56a86703aa1f05c07f7"
+    },
+    {
+      "file": "raw/fsu-coal.html",
+      "bytes": 9047,
+      "sha256": "425c8746827dba9ca3b454de3b9cc302d79091662479362031b14001a87872a0"
+    },
+    {
+      "file": "raw/fsu-coal_dep-metadata.html",
+      "bytes": 21125,
+      "sha256": "77af9a4aa21cd34c16310af655b8d0d0cb1bd4614772a7a721a69c9073a7752d"
+    },
+    {
+      "file": "raw/fsu-coal_dep.csv",
+      "bytes": 12732,
+      "sha256": "dbb9850ad4d5a483c10809bc8c0c7f0684a4237ebd75522ac69cd1235d7edef5"
+    },
+    {
+      "file": "raw/fsu-coal_dep.gen",
+      "bytes": 12773,
+      "sha256": "ba8b604e46219d16ac7fc79c2d416851074247d43ab3a3fa3d5bc79a63dab5ab"
+    },
+    {
+      "file": "raw/fsu-coal_dep.shp",
+      "bytes": 7548,
+      "sha256": "267d1f561982c164a328c917bbaccbf75734544ab9ae7016f67799a920529b36"
+    },
+    {
+      "file": "raw/fsu-coal_pt-metadata.html",
+      "bytes": 20620,
+      "sha256": "d71a362926f86fa1200e4d4bf00301e83642111ed88753967167c277a3327bc5"
+    },
+    {
+      "file": "raw/fsu-coal_pt.csv",
+      "bytes": 4176,
+      "sha256": "0090593cbcf43704071c28ee0ff0a54608b135a5cd9da4ce856364c2148fc544"
+    },
+    {
+      "file": "raw/fsu-coal_pt.gen",
+      "bytes": 8645,
+      "sha256": "a26709522b9286756511b4f621744363efe2263edc0b96c4dc9f81c6a1aeded6"
+    },
+    {
+      "file": "raw/fsu-coal_pt.shp",
+      "bytes": 5140,
+      "sha256": "e5dfbbd928c06d3d480ba67bf75849008c42afbd1a365818615be34e84b10821"
+    },
+    {
+      "file": "raw/fsu-coalbnd-metadata.html",
+      "bytes": 22038,
+      "sha256": "a1f3025607e8b0acd3f0aa1e31f296f078b31b09a8e51733601a8dd76a2e15e7"
+    },
+    {
+      "file": "raw/fsu-coalbnd.shp",
+      "bytes": 521908,
+      "sha256": "0b5cc648cf7e39357296e4dcadd65680e8f2bb02f3d9fa89cbce6735b54e3d0c"
+    },
+    {
+      "file": "raw/fsu-data.html",
+      "bytes": 18918,
+      "sha256": "4027092ceb2a7a7382059a9eb53d2f03cb90deb428ea1393c5f7fcb103679ad1"
+    },
+    {
+      "file": "raw/gem-coal-download.html",
+      "bytes": 111452,
+      "sha256": "31919194cf157dee5d3bd1c75484f0916e0087dda7734330af4d6a4ed4f39063"
+    },
+    {
+      "file": "raw/GenDeposits.cs",
+      "bytes": 11955,
+      "sha256": "58a6dfb5527fc6d144d99859916e8c3a9dc6b13dfee50cbe10a9b017c63f9268"
+    },
+    {
+      "file": "raw/industrial-models.html",
+      "bytes": 5338,
+      "sha256": "bf5d7b151d2c53c41967042734a58dd799b6b220ceaf05dc1345b3522e010841"
+    },
+    {
+      "file": "raw/laterite-laterite-csv.zip",
+      "bytes": 89359,
+      "sha256": "e8fe1282fcabada49141c19c8c7ba756092715ed5cf55e88fe3e722063b3b916"
+    },
+    {
+      "file": "raw/laterite-metadata.xml",
+      "bytes": 56678,
+      "sha256": "5e9f3f44cf9e37f77ef8f46a9494a8a2b3dc9215aef9afc4068dab46662cdae3"
+    },
+    {
+      "file": "raw/laterite-page.html",
+      "bytes": 15287,
+      "sha256": "b752e66f0c208ec6061e1ef60d48bebdcc5a5fcfa922f2114d551790157cda35"
+    },
+    {
+      "file": "raw/major-deposits-metadata.xml",
+      "bytes": 25727,
+      "sha256": "e3d6b9bb92f3bccb07b38c3f1f4c17be1c9116cc83d2841da3a2696af514c493"
+    },
+    {
+      "file": "raw/major-deposits-ofr20051294-csv.zip",
+      "bytes": 311703,
+      "sha256": "76456294a5d96b90f49ce88371e0be3ee8ab03ff6afcaa3c2de53d962a369685"
+    },
+    {
+      "file": "raw/major-deposits-page.html",
+      "bytes": 14943,
+      "sha256": "f89785472012f37b94ea2d03659c75301aa06ec35407b656180472faf98330fd"
+    },
+    {
+      "file": "raw/models-index.html",
+      "bytes": 2231,
+      "sha256": "9cf2106381e5c47f5db54dbb9f2113e3ddde3dab57fff81cacf6ff09a45ef541"
+    },
+    {
+      "file": "raw/mrdata-index.html",
+      "bytes": 62803,
+      "sha256": "b236ef33818f237d886124704d0d034fc70cb1e5b33b783408d4c7af4431b9b2"
+    },
+    {
+      "file": "raw/nicrpge-metadata.xml",
+      "bytes": 24723,
+      "sha256": "634c624203c19e3808f1894aeca515de846a17b68eff003b98f6ca083470e2a0"
+    },
+    {
+      "file": "raw/nicrpge-nicrpge-csv.zip",
+      "bytes": 1429169,
+      "sha256": "eda55996566a1859e4765a94edc7d0e645d5f13d45a6bce246a1f55cd5bc1d1e"
+    },
+    {
+      "file": "raw/nicrpge-page.html",
+      "bytes": 15611,
+      "sha256": "2136e7f0cab97afbef8c00f290db9368f64c1766cf72e95af9d50a949e22e618"
+    },
+    {
+      "file": "raw/pbzn-page.html",
+      "bytes": 10812,
+      "sha256": "71bf0bcdcf1e0888c658a02bb293c4a8dc60c10d16097ea6d2bb5d013b1875f6"
+    },
+    {
+      "file": "raw/phosphate-metadata.xml",
+      "bytes": 54924,
+      "sha256": "3eb0846933e3074142048af91706632854f57617426a8f4d59894f6e549cf854"
+    },
+    {
+      "file": "raw/phosphate-page.html",
+      "bytes": 14397,
+      "sha256": "5489a2ea924362c544d4c5e192cdae0cfdc02c1c722bc944a8e6135b6f59d92e"
+    },
+    {
+      "file": "raw/phosphate-phosphate-csv.zip",
+      "bytes": 239270,
+      "sha256": "a5db4dd27848ef8abb5711ae11578c92247b822d6ffbc7a7aeecb645ffb2daf7"
+    },
+    {
+      "file": "raw/podchrome-metadata.xml",
+      "bytes": 42500,
+      "sha256": "6faec9f228c051406c0946444a22f0269d943e32ce9ca3f355941545e7cdb46e"
+    },
+    {
+      "file": "raw/podchrome-page.html",
+      "bytes": 15404,
+      "sha256": "416453a2c1bd429c52702298d53f5fa2c8883fc4773a02360f5a070d4aa65a94"
+    },
+    {
+      "file": "raw/podchrome-podchrome-csv.zip",
+      "bytes": 265471,
+      "sha256": "c48854340208f9c920016d366b8531986a0f1c5c7a0c3fa75ecd540389bc4dc5"
+    },
+    {
+      "file": "raw/potash-page.html",
+      "bytes": 14641,
+      "sha256": "f57a5b6e78d5fb25744bbad86e5a33a0bd75f41972a13e9ca4a05ce53fbd6554"
+    },
+    {
+      "file": "raw/potash-PotashGIS.zip",
+      "bytes": 77474782,
+      "sha256": "3cb4b000142f86e55d6ccf7edb9586d87e6173d566102080fe9c63c3bf190220"
+    },
+    {
+      "file": "raw/potash-service-metadata.json",
+      "bytes": 2787,
+      "sha256": "7118d6bb1f3977ea7e7e8e8b59de874c9f899b039728e94f48150ca27414a179"
+    },
+    {
+      "file": "raw/Potash_Deposits_metadata.xml",
+      "bytes": 43076,
+      "sha256": "aa1ae7a4adde9d66c6afdac10aff1f2ba4998aeb4469c50a5339aa2fe668c499"
+    },
+    {
+      "file": "raw/Potash_Tracts_metadata.xml",
+      "bytes": 114317,
+      "sha256": "ead89c9dc91dda644aa9373b4c7fa21be322f1f04a75aa9ffc01842dbd6bd99f"
+    },
+    {
+      "file": "raw/pp1802-page.html",
+      "bytes": 35150,
+      "sha256": "722495eac272c650fc0a84fe129b514b6572a3af1473176d1b894baeb2aba303"
+    },
+    {
+      "file": "raw/sedexmvt-metadata.xml",
+      "bytes": 32064,
+      "sha256": "b30460e8f5fd61da833f5af2ff3b68f3d45aec93ee3d6140f7ada1fba29ee425"
+    },
+    {
+      "file": "raw/sedexmvt-page.html",
+      "bytes": 15781,
+      "sha256": "28ffe85fbb9d9072794a38958479228e9cd742a87c5907944e56d8e817c85a54"
+    },
+    {
+      "file": "raw/sedexmvt-sedexmvt-csv.zip",
+      "bytes": 71438,
+      "sha256": "185cfb718cbb987d767f7a90c58bc46dfaf8412314abaf0315c5b69f319c936b"
+    },
+    {
+      "file": "raw/vms-metadata.xml",
+      "bytes": 75046,
+      "sha256": "31948ba3d9d1013bc6e8d76148c94e8b76b4f98400ce11fbe0c7c073ba9a8655"
+    },
+    {
+      "file": "raw/vms-page.html",
+      "bytes": 15467,
+      "sha256": "5cf1e2a964fb3eebf0bc1d993708355bf00b00deb820757b8c60fba6a864f3d3"
+    },
+    {
+      "file": "raw/vms-vms-csv.zip",
+      "bytes": 498641,
+      "sha256": "8ae145689bb5137d5332e7927d31ed997541381dfa3ff876103702bf398b35be"
+    },
+    {
+      "file": "raw/vsessentials-tree.json",
+      "bytes": 96939,
+      "sha256": "1e0fa4abda5bacee931d516076350be819b0758da81e4b13ea5847415118d89b"
+    },
+    {
+      "file": "raw/vssurvival-tree.json",
+      "bytes": 243477,
+      "sha256": "c4d2fcdd4df1be768e07c7e7e23980f172fe1989d2ac529e5875c9974d214867"
+    },
+    {
+      "file": "README.md",
+      "bytes": 6494,
+      "sha256": "ad826c5e049298ae95d0be53521f48163f6e83376f32d6dd847bddebacd1ae1b"
+    },
+    {
+      "file": "render_maps.py",
+      "bytes": 10433,
+      "sha256": "8e509dd055492841c8f3aea0584de78ca245408b56224ff09dc09f1e393cc0e1"
+    },
+    {
+      "file": "render_potential.py",
+      "bytes": 2198,
+      "sha256": "a58531c9276440e6147e6c14437ce4ab0d507772d8cc0f04d2ecb0be27288986"
+    },
+    {
+      "file": "source-inventory.csv",
+      "bytes": 13061,
+      "sha256": "9bc1032733939ea8eb60f24d76bb8e78011be073bdcd9a087331392a1ae2c019"
+    },
+    {
+      "file": "source-inventory.json",
+      "bytes": 21279,
+      "sha256": "efe68a949bf99d4e008b9851d720bfd92ed832beb6b70a4a97f87ecb0c538278"
+    },
+    {
+      "file": "specialist-source-inventory.json",
+      "bytes": 4583,
+      "sha256": "688fb334ac3339b91ad6e245048654b2032a4de9d56207464e3b8eba14c6c5e3"
+    },
+    {
+      "file": "specialist-validation.json",
+      "bytes": 1912,
+      "sha256": "371d3058e48db352728ea97e5d91f3b364ef41d91db85d2daf9d4f124e31a22b"
+    },
+    {
+      "file": "validation-summary.json",
+      "bytes": 56350,
+      "sha256": "f77325f300cbe2251e824f5e5d1c9e90aacf1b33668277dfe4607b2dde15bc9f"
+    }
+  ],
+  "report": {
+    "file": "../../remaining-ore-evidence.md",
+    "bytes": 16771,
+    "sha256": "f8ebe5098ba21035519c4b311c7b5f347a01cc603e4659a92861818bd734137d"
+  },
+  "exclusions": [
+    "package-manifest.json and final-validation.json avoid recursive hashes",
+    "__pycache__ is not research output"
+  ]
+}

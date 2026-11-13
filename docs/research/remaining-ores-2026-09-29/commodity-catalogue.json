@@ -1,0 +1,433 @@
+[
+  {
+    "code": "Fe",
+    "label": "Iron",
+    "mrds_labels": [
+      "Iron",
+      "Iron-Pyrite",
+      "Iron Oxide Pigments"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "hematite": "\\bhematite\\b|\\bhaematite\\b",
+      "magnetite": "\\bmagnetite\\b",
+      "limonite": "\\blimonite\\b",
+      "goethite": "\\bgoethite\\b",
+      "bogiron": "\\bbog[ -]iron\\b|\\bbog[ -]ore\\b"
+    }
+  },
+  {
+    "code": "Au",
+    "label": "Gold",
+    "mrds_labels": [
+      "Gold"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "nativegold": "\\bnative gold\\b"
+    }
+  },
+  {
+    "code": "Ag",
+    "label": "Silver",
+    "mrds_labels": [
+      "Silver"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "nativesilver": "\\bnative silver\\b",
+      "freibergite": "\\bfreibergite\\b"
+    }
+  },
+  {
+    "code": "Pb",
+    "label": "Lead",
+    "mrds_labels": [
+      "Lead"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "galena": "\\bgalena\\b",
+      "cerussite": "\\bcerussite\\b",
+      "franckeite": "\\bfranckeite\\b",
+      "teallite": "\\bteallite\\b"
+    }
+  },
+  {
+    "code": "Zn",
+    "label": "Zinc",
+    "mrds_labels": [
+      "Zinc"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "sphalerite": "\\bsphalerite\\b",
+      "smithsonite": "\\bsmithsonite\\b",
+      "hemimorphite": "\\bhemimorphite\\b"
+    }
+  },
+  {
+    "code": "Bi",
+    "label": "Bismuth",
+    "mrds_labels": [
+      "Bismuth"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "bismuthinite": "\\bbismuthinite\\b"
+    }
+  },
+  {
+    "code": "Ni",
+    "label": "Nickel",
+    "mrds_labels": [
+      "Nickel",
+      "Nickel Laterite"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "pentlandite": "\\bpentlandite\\b"
+    }
+  },
+  {
+    "code": "Cr",
+    "label": "Chromium",
+    "mrds_labels": [
+      "Chromium"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "chromite": "\\bchromite\\b"
+    }
+  },
+  {
+    "code": "Ti",
+    "label": "Titanium",
+    "mrds_labels": [
+      "Titanium",
+      "Titanium-Ilmenite",
+      "Titanium-Rutile",
+      "Titanium-Heavy Minerals"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "ilmenite": "\\bilmenite\\b",
+      "rutile": "\\brutile\\b"
+    }
+  },
+  {
+    "code": "Mn",
+    "label": "Manganese",
+    "mrds_labels": [
+      "Manganese"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "rhodochrosite": "\\brhodochrosite\\b"
+    }
+  },
+  {
+    "code": "Hg",
+    "label": "Mercury",
+    "mrds_labels": [
+      "Mercury"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "cinnabar": "\\bcinnabar\\b"
+    }
+  },
+  {
+    "code": "W",
+    "label": "Tungsten",
+    "mrds_labels": [
+      "Tungsten"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "wolframite": "\\bwolframite\\b",
+      "scheelite": "\\bscheelite\\b"
+    }
+  },
+  {
+    "code": "U",
+    "label": "Uranium",
+    "mrds_labels": [
+      "Uranium"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "uraninite": "\\buraninite\\b|\\bpitchblende\\b"
+    }
+  },
+  {
+    "code": "Pt",
+    "label": "Platinum and PGE evidence",
+    "mrds_labels": [
+      "Platinum",
+      "PGE"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "nativeplatinum": "\\bnative platinum\\b",
+      "sperrylite": "\\bsperrylite\\b"
+    }
+  },
+  {
+    "code": "V",
+    "label": "Vanadium",
+    "mrds_labels": [
+      "Vanadium"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "vanadinite": "\\bvanadinite\\b"
+    }
+  },
+  {
+    "code": "Mo",
+    "label": "Molybdenum",
+    "mrds_labels": [
+      "Molybdenum"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "wulfenite": "\\bwulfenite\\b"
+    }
+  },
+  {
+    "code": "Sb",
+    "label": "Antimony",
+    "mrds_labels": [
+      "Antimony"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "tetrahedrite": "\\btetrahedrite\\b"
+    }
+  },
+  {
+    "code": "B",
+    "label": "Boron / borates",
+    "mrds_labels": [
+      "Boron-Borates"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "borax": "\\bborax\\b|\\btincal\\b",
+      "kernite": "\\bkernite\\b"
+    }
+  },
+  {
+    "code": "P",
+    "label": "Phosphates",
+    "mrds_labels": [
+      "Phosphorus-Phosphates"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "phosphorite": "\\bphosphorite\\b",
+      "apatite": "\\bapatite\\b|\\bfluorapatite\\b"
+    }
+  },
+  {
+    "code": "N",
+    "label": "Nitrates",
+    "mrds_labels": [
+      "Nitrogen-Nitrates"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "niter": "\\bniter\\b|\\bnitre\\b|\\bsaltpeter\\b|\\bsaltpetre\\b",
+      "nitratine": "\\bnitratine\\b|\\bnitratite\\b|\\bsoda niter\\b"
+    }
+  },
+  {
+    "code": "K",
+    "label": "Potassium / potash",
+    "mrds_labels": [
+      "Potassium",
+      "Potash"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "sylvite": "\\bsylvite\\b|\\bsylvinite\\b"
+    }
+  },
+  {
+    "code": "NaCl",
+    "label": "Salt / halite",
+    "mrds_labels": [
+      "Salt",
+      "Halite"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "halite": "\\bhalite\\b|\\brock salt\\b"
+    }
+  },
+  {
+    "code": "S",
+    "label": "Sulfur, including sulfide feed",
+    "mrds_labels": [
+      "Sulfur",
+      "Sulfur-Pyrite",
+      "Pyrite"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "pyrite": "\\bpyrite\\b",
+      "sulfur": "\\bnative sul[fp]hur\\b"
+    }
+  },
+  {
+    "code": "C_graphite",
+    "label": "Graphite",
+    "mrds_labels": [
+      "Graphite"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "graphite": "\\bgraphite\\b"
+    }
+  },
+  {
+    "code": "C_coal",
+    "label": "Coal, all ranks",
+    "mrds_labels": [
+      "Coal",
+      "Lignite",
+      "Anthracite",
+      "Bituminous",
+      "Subbituminous"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "lignite": "\\blignite\\b|\\bbrown coal\\b",
+      "anthracite": "\\banthracite\\b",
+      "bituminouscoal": "(?<!sub)\\bbituminous\\b"
+    }
+  },
+  {
+    "code": "F",
+    "label": "Fluorite",
+    "mrds_labels": [
+      "Fluorine-Fluorite"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "fluorite": "\\bfluorite\\b|\\bfluorspar\\b"
+    }
+  },
+  {
+    "code": "SiO2",
+    "label": "Quartz / silica",
+    "mrds_labels": [
+      "Quartz",
+      "Silica"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "quartz": "\\bquartz\\b"
+    }
+  },
+  {
+    "code": "Al",
+    "label": "Aluminium evidence; bauxite not assured",
+    "mrds_labels": [
+      "Aluminum"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "bauxite": "\\bbauxite\\b"
+    }
+  },
+  {
+    "code": "gypsum",
+    "label": "Gypsum / anhydrite",
+    "mrds_labels": [
+      "Gypsum-Anhydrite"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "gypsum": "\\bgypsum\\b",
+      "anhydrite": "\\banhydrite\\b"
+    }
+  },
+  {
+    "code": "diamond",
+    "label": "Diamond",
+    "mrds_labels": [
+      "Diamond"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "diamond": "\\bdiamonds?\\b"
+    }
+  },
+  {
+    "code": "corundum",
+    "label": "Corundum, including ruby / sapphire",
+    "mrds_labels": [
+      "Corundum",
+      "Ruby",
+      "Sapphire",
+      "Emery"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "corundum": "\\bcorundum\\b",
+      "ruby": "\\bruby\\b|\\brubies\\b",
+      "sapphire": "\\bsapphires?\\b"
+    }
+  },
+  {
+    "code": "emerald",
+    "label": "Emerald",
+    "mrds_labels": [
+      "Emerald"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "emerald": "\\bemeralds?\\b"
+    }
+  },
+  {
+    "code": "olivine",
+    "label": "Olivine; gem grade not assured",
+    "mrds_labels": [
+      "Olivine"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "olivine": "\\bolivine\\b",
+      "peridot": "\\bperidot\\b"
+    }
+  },
+  {
+    "code": "garnet",
+    "label": "Garnet; species / gem grade not assured",
+    "mrds_labels": [
+      "Garnet"
+    ],
+    "explicit_ore_mineral_patterns": {
+      "garnet": "\\bgarnets?\\b|\\balmandine\\b|\\bandradite\\b|\\bgrossular\\b|\\bpyrope\\b|\\bspessartine\\b|\\buvarovite\\b"
+    }
+  },
+  {
+    "code": "lapis",
+    "label": "Lapis lazuli",
+    "mrds_labels": [],
+    "explicit_ore_mineral_patterns": {
+      "lapislazuli": "\\blapis[ -]lazuli\\b|\\blazurite\\b"
+    }
+  },
+  {
+    "code": "alum",
+    "label": "Alum / alunite evidence",
+    "mrds_labels": [],
+    "explicit_ore_mineral_patterns": {
+      "alum": "\\balum\\b",
+      "alunite": "\\balunite\\b"
+    }
+  },
+  {
+    "code": "topaz",
+    "label": "Topaz; colour / gem grade not assured",
+    "mrds_labels": [],
+    "explicit_ore_mineral_patterns": {
+      "topaz": "\\btopaz\\b"
+    }
+  },
+  {
+    "code": "tourmaline",
+    "label": "Tourmaline; species / gem grade not assured",
+    "mrds_labels": [],
+    "explicit_ore_mineral_patterns": {
+      "tourmaline": "\\btourmaline\\b|\\bschorl\\b|\\brubellite\\b|\\belbaite\\b"
+    }
+  },
+  {
+    "code": "beryl",
+    "label": "Beryl; colour / gem grade not assured",
+    "mrds_labels": [],
+    "explicit_ore_mineral_patterns": {
+      "beryl": "\\bberyl\\b|\\baquamarine\\b|\\bred beryl\\b|\\bbixbite\\b"
+    }
+  },
+  {
+    "code": "spinel",
+    "label": "Spinel; colour / gem grade not assured",
+    "mrds_labels": [],
+    "explicit_ore_mineral_patterns": {
+      "spinel": "\\bspinel\\b"
+    }
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "version": 2,
+  "datasetId": "earth-resource-evidence-2026-11-08-v4",
+  "gridDegrees": 0.5,
+  "combination": "maximum; duplicate records never add strength (polygon area fractions of one source layer are summed per cell, capped at 1)",
+  "note": "Authored spawning suitability, not measured discovery probability. Evidence tiers, kernels, survey-density normalisation and host-rock priors are documented in docs/remaining-ore-evidence.md (section 'v2 evidence model').",
+  "kernelFloor": 0.25,
+  "minimumStampValue": 0.06,
+  "tiers": {
+    "major":       {"peak": 0.95, "radiusKm": 75, "meaning": "USGS Major Mineral Deposits of the World entry (world-class or nationally significant)"},
+    "deposit_large": {"peak": 0.85, "radiusKm": 70, "meaning": "specialist-compilation deposit with tonnage/grade or a producing mine in a national resource inventory"},
+    "deposit":     {"peak": 0.75, "radiusKm": 60, "meaning": "specialist-compilation deposit or mine without size, documented deposit boundary"},
+    "prospect":    {"peak": 0.55, "radiusKm": 45, "meaning": "specialist-compilation prospect, potash drill-hole/structure, coal sample site"},
+    "occurrence":  {"peak": 0.4,  "radiusKm": 35, "meaning": "specialist-compilation occurrence/showing/unknown status"}
+  },
+  "mrds": {
+    "comment": "MRDS records: peak by development status x MRDS score. MRDS 'score' is the USGS estimate of how much information a record holds (A most, E least), used here as a documentation-quality proxy, not deposit size.",
+    "peak": {
+      "Producer":      {"A": 0.75, "B": 0.7,  "C": 0.65, "D": 0.6,  "E": 0.55, "": 0.55},
+      "Past Producer": {"A": 0.7,  "B": 0.65, "C": 0.6,  "D": 0.55, "E": 0.5,  "": 0.5},
+      "Prospect":      {"A": 0.55, "B": 0.55, "C": 0.5,  "D": 0.45, "E": 0.4,  "": 0.4},
+      "Occurrence":    {"A": 0.5,  "B": 0.5,  "C": 0.4,  "D": 0.3,  "E": 0.25, "": 0.25},
+      "Unknown":       {"A": 0.45, "B": 0.4,  "C": 0.35, "D": 0.3,  "E": 0.25, "": 0.25}
+    },
+    "radiusKm": {"Producer": 45, "Past Producer": 45, "Prospect": 35, "Occurrence": 25, "Unknown": 25},
+    "mineralMentionOnlyCap": 0.3,
+    "placeholderStackMinNames": 5
+  },
+  "surveyDensity": {
+    "comment": "Applies to MRDS records only. Kernel radius is widened by (effortReference / window records)^sparseRadiusExponent up to maxRadiusKm where surveys are sparse. Enrichment = local share of the commodity among all MRDS records in a window / its global MRDS share, with pseudo-counts; the multiplier is clipped to [floor, 1]. In densely surveyed regions incidental mentions of a commodity no longer saturate, while a lone record in a sparsely surveyed region keeps its full tier weight. An additional effort damping lowers low-tier MRDS weights where the window holds very many records.",
+    "windowCells": 5,
+    "pseudoCount": 5,
+    "enrichmentFloor": 0.35,
+    "effortReference": 60,
+    "effortExponent": 0.2,
+    "effortFloor": 0.6,
+    "sparseRadiusExponent": 0.5,
+    "maxRadiusKm": 75
+  },
+  "polygons": {
+    "formationWeight": 0.6,
+    "surveyedAreaWeight": 0.8,
+    "tractWeight": 0.35,
+    "contextWeight": 0.25,
+    "minimumFractionWeight": 0.3,
+    "siteMaxAreaDeg2": 0.02,
+    "samplesPerCellSide": 8,
+    "comment": "Cell value = weight x (minimumFractionWeight + (1 - minimumFractionWeight) x covered fraction). Invalid polygons are repaired with shapely.make_valid; MultiPolygons are split; parts spanning > 180 degrees of longitude are unwrapped to 0..360 and rasterised modulo 360."
+  },
+  "priors": {
+    "comment": "Low-weight host-rock and climate priors written only to the POTENTIAL plane. Lithology is the dominant 0.5-degree GLiM class (geology-grids-v1.json). Codes: 2 vb basic volcanic, 4 pb basic plutonic, 6 sc carbonate, 7 va acid volcanic, 8 mt metamorphic, 9 pa acid plutonic, 10 vi intermediate volcanic, 13 pi intermediate plutonic, 14 ev evaporite.",
+    "lithology": [
+      {"glim": [14], "codes": {"NaCl": 0.25, "gypsum": 0.25, "K": 0.15}, "why": "evaporite outcrop: halite, gypsum/anhydrite, potash"},
+      {"glim": [6], "codes": {"Pb": 0.15, "Zn": 0.15, "F": 0.15}, "why": "carbonate platforms host Mississippi-Valley-type Pb-Zn and fluorite"},
+      {"glim": [4], "codes": {"Cr": 0.2, "Ni": 0.2, "Pt": 0.15, "Ti": 0.15, "V": 0.15}, "why": "mafic/ultramafic plutonic rocks host chromite, Ni-Cu-PGE sulfides and Ti-V magnetite"},
+      {"glim": [2], "codes": {"Cu": 0.15}, "why": "basic volcanics host volcanogenic massive sulfide and basalt-hosted copper"},
+      {"glim": [7, 10, 13], "codes": {"Cu": 0.2, "Au": 0.15, "Ag": 0.15, "Mo": 0.15}, "why": "intermediate/acid volcanic and intermediate plutonic arcs host porphyry Cu-Mo-Au and epithermal Au-Ag"},
+      {"glim": [9], "codes": {"U": 0.15, "F": 0.15, "Mo": 0.1}, "why": "granites host granite-related U, fluorite and Mo; Sn and W removed 8 Nov 2026 (decision 0065): they sit in a few granite belts, given as province polygons by tools/ore-data/base-metals/evidence.geojson"}
+    ],
+    "graniteAureole": {"glimHost": [8, 3, 5, 6], "nearGlim": [9], "codes": {}, "why": "metasediments/sediments within one cell of a granite cell (contact aureole, greisen and skarn Sn-W); no codes since 8 Nov 2026 (decision 0065): Sn-W potential comes from the base-metals province polygons"},
+    "metamorphic": {"glim": [8], "codes": {"Au": 0.12, "C_graphite": 0.1}, "why": "orogenic gold is hosted almost exclusively in metamorphic terranes; graphite in graphitic schist/gneiss"},
+    "crystallineGold": {"glimHost": [8], "nearGlim": [9, 4, 2, 13], "codes": {"Au": 0.15, "C_graphite": 0.1}, "why": "metamorphic terrain within one cell of granite or mafic rocks (orogenic gold in greenstone/schist belts; graphitic schist)"},
+    "bauxite": {"code": "Al", "weight": 0.2, "minTempC": 22, "minRain": 150, "glim": [2, 3, 4, 5, 6, 7, 8, 9, 10, 13], "why": "lateritic/karst bauxite forms by intense humid-tropical weathering of most bedrock types; unconsolidated cover, evaporites, ice and water excluded"},
+    "peat": {"weight": 0.2, "rainSmoothingCells": 5, "boreal": {"minTempC": -8, "maxTempC": 10.5, "rainLow": 105, "rainHigh": 125, "roughLow": 8, "roughHigh": 16, "maxElevM": 400},
+             "tropical": {"minTempC": 24, "rainLow": 180, "rainHigh": 195, "roughLow": 3, "roughHigh": 6, "maxElevM": 60},
+             "why": "peat accumulates where precipitation exceeds evapotranspiration on flat, poorly drained ground: boreal/temperate lowlands and humid tropical coastal/fluvial lowlands. Climate = earthdata 0.25-degree sea-level-equivalent mean temperature and VS rainfall (aridity based); relief = median 2-arc-minute roughness and mean elevation from the same bake."}
+  },
+  "authoredBestGuess": {
+    "comment": "Registry entries with tierRule 'authored' (docs/research/remaining-ores-2026-09-29/corrections/authored/best-guess-districts.csv): districts/basins authored for this project from general knowledge of world mining geography where no openly licensed survey layer is on disk. Best guesses, not survey data. Peak by size x confidence, never above the deposit_large tier (0.85) and so always below USGS Major Deposits (0.95); kernel radius per entry (point 40-75 km, district 45-120 km, basin 50-150 km; at least the MRDS producer radius because authored positions carry 10-30 km uncertainty) with the normal kernel floor; observed plane only, no depth.",
+    "maxPeak": 0.85,
+    "maxRadiusKm": 150,
+    "peak": {
+      "world-class": {"high": 0.85, "medium": 0.75, "low": 0.55},
+      "major":       {"high": 0.75, "medium": 0.7,  "low": 0.5},
+      "medium":      {"high": 0.65, "medium": 0.6,  "low": 0.45}
+    }
+  },
+  "observedLayers": {
+    "gumPeatClasses": [24, 25],
+    "gumPeatWeight": 0.78,
+    "gumClayClasses": [3, 10, 12, 13, 16, 22, 23, 34, 35, 36, 37],
+    "gumClayWeight": 0.59
+  },
+  "coordinateCheck": {"naturalEarth": "docs/research/remaining-ores-2026-09-29/raw/naturalearth/ne_10m_admin_0_countries.zip", "polygonToleranceDegrees": 0.5, "marginDegrees": 1.5, "table": "docs/research/ore-heatmaps-v1/country-bboxes.csv", "corrections": "docs/research/remaining-ores-2026-09-29/corrections/coordinate-corrections.csv"}
+}

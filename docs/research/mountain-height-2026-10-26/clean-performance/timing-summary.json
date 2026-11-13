@@ -1,0 +1,122 @@
+{
+  "fresh_world": [
+    {
+      "height": 384,
+      "case": "A",
+      "repeats": 3,
+      "median_seconds": 77.01,
+      "min_seconds": 76.62,
+      "max_seconds": 77.88,
+      "assembly_hashes": [
+        "2BA62FEC81B1226E856070C34AE7B118F4C8DF0FD57DD3FC3F4C5A824C4059BF"
+      ],
+      "median_target_region_seconds": 33.5,
+      "mean_save_mib": 91.273,
+      "peak_working_set_range_mib": [
+        4788.7,
+        7396.5
+      ]
+    },
+    {
+      "height": 384,
+      "case": "B",
+      "repeats": 3,
+      "median_seconds": 78.83,
+      "min_seconds": 78.17,
+      "max_seconds": 79.15,
+      "assembly_hashes": [
+        "2BA62FEC81B1226E856070C34AE7B118F4C8DF0FD57DD3FC3F4C5A824C4059BF"
+      ],
+      "median_target_region_seconds": 34.6,
+      "mean_save_mib": 91.533,
+      "peak_working_set_range_mib": [
+        6808.0,
+        7202.2
+      ]
+    },
+    {
+      "height": 512,
+      "case": "A",
+      "repeats": 3,
+      "median_seconds": 82.7,
+      "min_seconds": 82.11,
+      "max_seconds": 82.85,
+      "assembly_hashes": [
+        "2BA62FEC81B1226E856070C34AE7B118F4C8DF0FD57DD3FC3F4C5A824C4059BF"
+      ],
+      "median_target_region_seconds": 39.1,
+      "mean_save_mib": 96.233,
+      "peak_working_set_range_mib": [
+        4728.7,
+        6981.4
+      ]
+    },
+    {
+      "height": 512,
+      "case": "B",
+      "repeats": 3,
+      "median_seconds": 84.52,
+      "min_seconds": 84.36,
+      "max_seconds": 84.61,
+      "assembly_hashes": [
+        "2BA62FEC81B1226E856070C34AE7B118F4C8DF0FD57DD3FC3F4C5A824C4059BF"
+      ],
+      "median_target_region_seconds": 39.1,
+      "mean_save_mib": 95.514,
+      "peak_working_set_range_mib": [
+        4640.6,
+        4836.1
+      ]
+    }
+  ],
+  "existing_save_reload": [
+    {
+      "height": 384,
+      "case": "A",
+      "repeats": 3,
+      "median_seconds": 37.41,
+      "min_seconds": 37.15,
+      "max_seconds": 37.46,
+      "assembly_hashes": [
+        "00754FC478DA9FA8FD851538B0A002879C9E06099EED0B07ABD8E46839720CFC"
+      ],
+      "median_target_region_seconds": 1.1
+    },
+    {
+      "height": 384,
+      "case": "B",
+      "repeats": 3,
+      "median_seconds": 38.02,
+      "min_seconds": 37.79,
+      "max_seconds": 38.52,
+      "assembly_hashes": [
+        "00754FC478DA9FA8FD851538B0A002879C9E06099EED0B07ABD8E46839720CFC"
+      ],
+      "median_target_region_seconds": 1.1
+    },
+    {
+      "height": 512,
+      "case": "A",
+      "repeats": 3,
+      "median_seconds": 37.18,
+      "min_seconds": 36.51,
+      "max_seconds": 37.37,
+      "assembly_hashes": [
+        "00754FC478DA9FA8FD851538B0A002879C9E06099EED0B07ABD8E46839720CFC"
+      ],
+      "median_target_region_seconds": 1.0
+    },
+    {
+      "height": 512,
+      "case": "B",
+      "repeats": 3,
+      "median_seconds": 38.09,
+      "min_seconds": 38.05,
+      "max_seconds": 38.59,
+      "assembly_hashes": [
+        "00754FC478DA9FA8FD851538B0A002879C9E06099EED0B07ABD8E46839720CFC"
+      ],
+      "median_target_region_seconds": 1.1
+    }
+  ]
+}

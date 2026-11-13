@@ -1,0 +1,20 @@
+== congo_rapids
+   drop blocks: {'d6': 7, 'd7': 17, 'dir7': 207, 'rapid d1': 59, 'rapid d2': 34, 'rapid d3': 23, 'rapid d4': 37, 'rapid d5': 36, 'rapid d6': 461, 'rapid dir1': 568, 'rapid dir2': 628, 'rapid dir3': 663, 'rapid dir4': 687, 'rapid dir5': 724, 'rapid dir6': 764, 'rapid dir7': 958}
+   drops (upper pool beside a lower one): sill 1211, no sill 0 []
+   flowing cells beside one a height higher (or under water): 4845, not: 0 []
+   water beside open air: {'rapid dir1': 754, 'rapid d6': 562, 'dir1': 181, 'rapid d1': 88, 'rapid d4': 59, 'rapid d5': 50, 'rapid d2': 40, 'rapid d3': 33, 'd6': 19, 'dir6': 12, 'still7': 4, 'dir5': 4, 'dir7': 3, 'rapid dir2': 2}
+== victoria_falls
+   drop blocks: {'d6': 1, 'd7': 4, 'dir7': 17, 'rapid d6': 438, 'rapid dir1': 21, 'rapid dir2': 22, 'rapid dir3': 21, 'rapid dir4': 22, 'rapid dir5': 22, 'rapid dir6': 22, 'rapid dir7': 42, 'rapid still7': 1}
+   drops (upper pool beside a lower one): sill 31, no sill 0 []
+   flowing cells beside one a height higher (or under water): 164, not: 0 []
+   water beside open air: {'rapid d6': 668, 'rapid dir1': 32, 'dir1': 13, 'rapid dir6': 2, 'd6': 1, 'dir6': 1, 'rapid still7': 1}
+== niagara_falls
+   drop blocks: {'d7': 5, 'dir7': 190, 'rapid d6': 550, 'rapid dir1': 56, 'rapid dir2': 56, 'rapid dir3': 56, 'rapid dir4': 56, 'rapid dir5': 56, 'rapid dir6': 56, 'rapid dir7': 109}
+   drops (upper pool beside a lower one): sill 318, no sill 0 []
+   flowing cells beside one a height higher (or under water): 1386, not: 0 []
+   water beside open air: {'rapid d6': 770, 'dir1': 201, 'rapid dir1': 79, 'dir2': 36, 'dir6': 4, 'dir7': 3, 'rapid dir3': 2, 'still7': 2, 'dir3': 2, 'rapid dir4': 1}
+== rhine_gorge
+   drop blocks: {'d6': 7, 'd7': 7, 'dir7': 173, 'rapid d1': 4, 'rapid d2': 11, 'rapid d3': 24, 'rapid d4': 8, 'rapid d6': 53, 'rapid dir1': 63, 'rapid dir2': 65, 'rapid dir3': 77, 'rapid dir4': 99, 'rapid dir5': 107, 'rapid dir6': 106, 'rapid dir7': 145, 'rapid still7': 1}
+   drops (upper pool beside a lower one): sill 359, no sill 0 []
+   flowing cells beside one a height higher (or under water): 1348, not: 0 []
+   water beside open air: {'dir1': 206, 'rapid dir1': 96, 'rapid d6': 80, 'rapid d3': 42, 'rapid d2': 17, 'rapid d4': 10, 'rapid d1': 8, 'dir4': 8, 'dir3': 7, 'd6': 5, 'dir5': 5, 'dir2': 4, 'dir6': 3, 'rapid still7': 1}

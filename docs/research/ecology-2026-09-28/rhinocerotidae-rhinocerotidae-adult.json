@@ -1,0 +1,1831 @@
+{
+	"code": "rhinocerotidae",
+	"class": "EntityAgent",
+	"tags": ["animal", "huntable", "adult", "habitat-land"],
+	"fallDamageMultiplier": 5,
+	"variantgroups": [
+		{"code": "age","states": [ "adult" ]},
+		{"code": "gender","states": [ "female","male"]},
+		{"code": "type","states": [ "ceratotheriumsimum","coelodontaantiquitatis","dicerorhinussumatrensis","dicerosbicornis","rhinocerossondaicus","rhinocerosunicornis"]}
+	],
+	"hitBoxSizeByType": {
+		"*-adult-female-ceratotheriumsimum": {	"x": 1.5,"y": 1.6},
+		"*-adult-male-ceratotheriumsimum": {	"x": 1.75,"y": 1.8},
+		"*-adult-female-coelodontaantiquitatis": {	"x": 1.3,"y": 1.5},
+		"*-adult-male-coelodontaantiquitatis": {	"x": 1.5,"y": 1.7},
+		"*-adult-female-dicerorhinussumatrensis": {	"x": 1.1,"y": 1.3},
+		"*-adult-male-dicerorhinussumatrensis": {	"x": 1.3,"y": 1.4},
+		"*-adult-female-dicerosbicornis": {	"x": 1.3,"y": 1.5},
+		"*-adult-male-dicerosbicornis": {	"x": 1.5,"y": 1.7},
+		"*-adult-female-rhinocerossondaicus": {	"x": 1.3,"y": 1.5},
+		"*-adult-male-rhinocerossondaicus": {	"x": 1.5,"y": 1.7},
+		"*-adult-female-rhinocerosunicornis": {	"x": 1.5,"y": 1.6},
+		"*-adult-male-rhinocerosunicornis": {	"x": 1.7,"y": 1.8}
+	},
+	"deadhitBoxSizeByType": {
+		"*-adult-female-ceratotheriumsimum": {	"x": 1.5,"y": 0.75},
+		"*-adult-male-ceratotheriumsimum": {	"x": 1.75,"y": 0.8},
+		"*-adult-female-coelodontaantiquitatis": {	"x": 1.3,"y": 0.75},
+		"*-adult-male-coelodontaantiquitatis": {	"x": 1.5,"y": 0.85},
+		"*-adult-female-dicerorhinussumatrensis": {	"x": 1.1,"y": 0.65},
+		"*-adult-male-dicerorhinussumatrensis": {	"x": 1.3,"y": 0.7},
+		"*-adult-female-dicerosbicornis": {	"x": 1.3,"y": 0.75},
+		"*-adult-male-dicerosbicornis": {	"x": 1.5,"y": 0.85},
+		"*-adult-female-rhinocerossondaicus": {	"x": 1.3,"y": 0.75},
+		"*-adult-male-rhinocerossondaicus": {	"x": 1.5,"y": 0.85},
+		"*-adult-female-rhinocerosunicornis": {	"x": 1.5,"y": 0.8},
+		"*-adult-male-rhinocerosunicornis": {	"x": 1.7,"y": 0.9}
+	},
+	"eyeHeightByType": {
+		"*-adult-female-ceratotheriumsimum": 1.2,
+		"*-adult-male-ceratotheriumsimum": 1.3,
+		"*-adult-female-coelodontaantiquitatis": 1.1,
+		"*-adult-male-coelodontaantiquitatis": 1.2,
+		"*-adult-female-dicerorhinussumatrensis": 1.1,
+		"*-adult-male-dicerorhinussumatrensis": 1.2,
+		"*-adult-female-dicerosbicornis": 1.1,
+		"*-adult-male-dicerosbicornis": 1.2,
+		"*-adult-female-rhinocerossondaicus": 1.1,
+		"*-adult-male-rhinocerossondaicus": 1.2,
+		"*-adult-female-rhinocerosunicornis": 1.1,
+		"*-adult-male-rhinocerosunicornis": 1.2
+	},
+	"weightByType": {
+		"*-adult-female-ceratotheriumsimum": 1700,
+		"*-adult-male-ceratotheriumsimum": 2300,
+		"*-adult-female-coelodontaantiquitatis": 1500,
+		"*-adult-male-coelodontaantiquitatis": 2000,
+		"*-adult-female-dicerorhinussumatrensis": 600,
+		"*-adult-male-dicerorhinussumatrensis": 800,
+		"*-adult-female-dicerosbicornis": 1100,
+		"*-adult-male-dicerosbicornis": 1400,
+		"*-adult-female-rhinocerossondaicus": 1100,
+		"*-adult-male-rhinocerossondaicus": 1400,
+		"*-adult-female-rhinocerosunicornis": 1600,
+		"*-adult-male-rhinocerosunicornis": 2100
+	},	
+	"knockbackResistanceByType": {
+		"*-adult-*": 1	},	
+	"attributes": {
+		"killedByInfoText": "deadcreature-killed",
+		"trappableByType": {
+			"*-adult-*": {
+				"small": { "trapChance": 0,	"trapDestroyChance": 0.95 },
+				"large": { "trapChance": 0,	"trapDestroyChance": 0.25 }
+			}
+		},
+		"creatureDietByType": {
+			"*":{
+			"foodCategories": ["Fruit","Grain","Vegetable"],
+			"weightedFoodTags": [
+				{ "weight": 0.2, "code": "fruit" },
+				{ "weight": 0.1, "code": "fruitmash" },
+				{ "weight": 0.5, "code": "grain" },
+				{ "weight": 1, "code": "grass" },
+				{ "weight": 0.5, "code": "nibbleCrop" },
+				{ "weight": 0.2, "code": "peanut" },
+				{ "weight": 0.2, "code": "sweetBerryBush" },
+				{ "weight": 1, "code": "tastyvegetable" }
+			]
+		}},
+		"handbook": {
+			"groupcode": "creaturegroup-rhinocerotidae"
+		},
+		"frostOverlayThresholdByType": {"*-coelodontaantiquitatis": -10}
+	},
+	"drops": [],
+	"client": {
+		"renderer": "Shape",
+		"shapeByType": {
+			"*-adult-*": { "base": "entity/animal/mammal/hooved/rhinocerotidae/{type}/adult" }
+		},
+		"textureByType": {
+			"*-adult-*": { "base": "entity/animal/mammal/hooved/rhinocerotidae/{type}-adult" }
+		},
+		"sizeByType": {
+			"*-adult-female-rhinocerosunicornis": 1,
+			"*-adult-male-rhinocerosunicornis": 1.1,
+			"*-adult-female-*": 0.9,
+			"*-adult-male-*": 1.0
+		},
+		"behaviors": [
+			{"code": "repulseagents" },
+			{"code": "controlledphysics","stepHeight": 1.1251},
+			{"code": "floatupwhenstuck","onlyWhenDead": true},
+			{"code": "interpolateposition" },
+			{"code": "harvestable","quantitySlots": 8},
+			{ "code": "multiply", "enabledByType": { "*-adult-female-*": true, "*": false } },
+			{"code": "despawn","minPlayerDistance": 8,"belowLightLevel": 1,"minSeconds": 300},
+			{ "code": "antlergrowth", "enabledByType": {"*-adult-female-rhinocerossondaicus": false,"*": true }},
+			{"code": "ropetieable","minGeneration": 1}
+		],
+		"animations": [
+			{"code": "attack","animation": "Attack","animationSpeed": 1.2,"weight": 10,"blendMode": "AddAverage"},
+			{"code": "charge","animation": "Charge","easeInSpeed": 10,"easeOutSpeed": 2,"animationSpeed": 2.2,"weight": 10,"blendMode": "Average", "animationSounds": [{"frame": 2, "range": 15, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 0.5, "var": 0.15 }, "volume": {"avg": 1.6}}, {"frame": 4, "range": 15, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 0.5, "var": 0.15 }, "volume": {"avg": 1.6}}, {"frame": 32, "range": 15, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 0.5, "var": 0.15 }, "volume": {"avg": 1.6}}, {"frame": 34, "range": 15, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 0.5, "var": 0.15 }, "volume": {"avg": 1.6}}]},
+			{"code": "die","animation": "Die","easeInSpeed": 3,"animationSpeed": 1,"weight": 10,"blendMode": "Average","triggeredBy": { "onControls": [ "dead" ] }},
+			{"code": "eat","animation": "Eat","easeInSpeed": 4,"easeOutSpeed": 4,"blendMode": "Average"},
+			{"code": "gallop","animation": "Gallop","easeInSpeed": 20,"easeOutSpeed": 2,"weight": 5,"supressDefaultAnimation": true,"blendMode": "Average", "animationSounds": [{"frame": 30, "range": 20, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 0.5, "var": 0.15 }, "volume": {"avg": 2.2}}, {"frame": 40, "range": 20, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 0.5, "var": 0.15 }, "volume": {"avg": 2.2}}, {"frame": 44, "range": 20, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 0.5, "var": 0.15 }, "volume": {"avg": 2.2}}, {"frame": 60, "range": 20, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 0.5, "var": 0.15 }, "volume": {"avg": 2.2}}]},
+			{"code": "graze","animation": "Graze","supressDefaultAnimation": true,"weight": 5,"blendMode": "Average", "animationSounds": [{"frame": 5, "range": 10, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 1.0, "var": 0.15 }, "volume": {"avg": 1.2}}, {"frame": 22, "range": 10, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 1.0, "var": 0.15 }, "volume": {"avg": 1.2}}, {"frame": 35, "range": 10, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 1.0, "var": 0.15 }, "volume": {"avg": 1.2}}, {"frame": 52, "range": 10, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 1.0, "var": 0.15 }, "volume": {"avg": 1.2}}]},
+			{"code": "hurt","animation": "Hurt","animationSpeed": 2.2,"weight": 10,"blendMode": "AddAverage"},
+			{"code": "idle","animation": "Idle","animationSpeed": 0.5,"blendMode": "AddAverage","easeOutSpeed": 4,"triggeredBy": { "defaultAnim": true }},
+			{"code": "look","animation": "Look", "blendMode": "AddAverage","easeOutSpeed": 0.25},
+			{"code": "alert","animation": "Alert","animationSpeed": 1.2,"weight": 10,"blendMode": "AddAverage"},
+			{"code": "roar","animation": "Roar","animationSpeed": 2.2,"weight": 10,"blendMode": "AddAverage"},
+			{"code": "trot","animation": "Trot","easeInSpeed": 10,"easeOutSpeed": 2,"weight": 5,"supressDefaultAnimation": true,"blendMode": "Average", "animationSounds": [{"frame": 2, "range": 15, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 0.5, "var": 0.15 }, "volume": {"avg": 1.6}}, {"frame": 4, "range": 15, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 0.5, "var": 0.15 }, "volume": {"avg": 1.6}}, {"frame": 32, "range": 15, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 0.5, "var": 0.15 }, "volume": {"avg": 1.6}}, {"frame": 34, "range": 15, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 0.5, "var": 0.15 }, "volume": {"avg": 1.6}}]},
+			{"code": "sit","animation": "Sit","easeInSpeed": 0.1,"easeOutSpeed": 0.5,"blendMode": "Average"},
+			{"code": "lie","animation": "Lie","easeInSpeed": 0.1,"easeOutSpeed": 0.5,"weight": 5,"blendMode": "Average"},
+			{"code": "sleep","animation": "Sleep","easeInSpeed": 2,"easeOutSpeed": 2,"weight": 2,"blendMode": "Average"},
+			{"code": "swim","animation": "Swim","supressDefaultAnimation": true,"blendMode": "Average"},
+			{"code": "walk","animation": "Walk","easeInSpeed": 10,"supressDefaultAnimation": true,"weight": 5,"blendMode": "Average", "animationSounds": [{"frame": 5, "range": 10, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 1.0, "var": 0.15 }, "volume": {"avg": 1.2}}, {"frame": 22, "range": 10, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 1.0, "var": 0.15 }, "volume": {"avg": 1.2}}, {"frame": 35, "range": 10, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 1.0, "var": 0.15 }, "volume": {"avg": 1.2}}, {"frame": 52, "range": 10, "location": "game:creature/bear/footsteps/dirt/bear-footstep-dirt*", "pitch": { "avg": 1.0, "var": 0.15 }, "volume": {"avg": 1.2}}]}
+			]
+	},
+	"server": {
+		"attributes": {
+			"pathfinder": {
+				"minTurnAnglePerSec": 0,
+				"maxTurnAnglePerSec": 320
+			}
+		},
+		"behaviors": [
+			{ "code": "repulseagents" },
+			{"code": "controlledphysics","stepHeight": 1.1251},
+			{"code": "despawn","minPlayerDistance": 8,"belowLightLevel": 1,"minSeconds": 300},
+			{"code": "health",
+				"maxhealthByType": {
+					"*-adult-female-ceratotheriumsimum": 65,"*-adult-male-ceratotheriumsimum": 77,
+					"*-adult-female-coelodontaantiquitatis": 61,"*-adult-male-coelodontaantiquitatis": 71,
+					"*-adult-female-dicerorhinussumatrensis": 35,"*-adult-male-dicerorhinussumatrensis": 43,
+					"*-adult-female-dicerosbicornis": 53,"*-adult-male-dicerosbicornis": 59,
+					"*-adult-female-rhinocerossondaicus": 53,"*-adult-male-rhinocerossondaicus": 59,
+					"*-adult-female-rhinocerosunicornis": 63,"*-adult-male-rhinocerosunicornis": 73
+				}
+			},
+			{"code": "deaddecay",
+				"hoursToDecay": 96,
+				"decayedBlockByType": {
+				"*-adult-*": "carcass-large"
+				}
+			},
+			{"code": "floatupwhenstuck","onlyWhenDead": true},
+			{"code": "harvestable",
+				"quantitySlots": 8,
+				"drops": [
+					{
+						"type": "item",
+						"code": "game:bushmeat-raw",
+						"quantityByType": {
+							"*-adult-female-ceratotheriumsimum": {"avg": 56,"var": 6},
+							"*-adult-male-ceratotheriumsimum": {"avg": 76,"var": 8},
+							"*-adult-female-coelodontaantiquitatis": {"avg": 50,"var": 5},
+							"*-adult-male-coelodontaantiquitatis": {"avg": 68,"var": 7},
+							"*-adult-female-dicerorhinussumatrensis": {"avg": 20,"var": 2},
+							"*-adult-male-dicerorhinussumatrensis": {"avg": 28,"var": 3},
+							"*-adult-female-dicerosbicornis": {"avg": 38,"var": 4},
+							"*-adult-male-dicerosbicornis": {"avg": 48,"var": 5},
+							"*-adult-female-rhinocerossondaicus": {"avg": 38,"var": 4},
+							"*-adult-male-rhinocerossondaicus": {"avg": 48,"var": 4},
+							"*-adult-female-rhinocerosunicornis": {"avg": 54,"var": 6},
+							"*-adult-male-rhinocerosunicornis": {"avg": 70,"var": 8}
+						}
+					},
+					{
+						"type": "item",
+						"code": "game:redmeat-raw",
+						"quantityByType": {
+							"*-adult-female-ceratotheriumsimum": {"avg": 56,"var": 6},
+							"*-adult-male-ceratotheriumsimum": {"avg": 76,"var": 8},
+							"*-adult-female-coelodontaantiquitatis": {"avg": 50,"var": 5},
+							"*-adult-male-coelodontaantiquitatis": {"avg": 68,"var": 7},
+							"*-adult-female-dicerorhinussumatrensis": {"avg": 20,"var": 2},
+							"*-adult-male-dicerorhinussumatrensis": {"avg": 28,"var": 3},
+							"*-adult-female-dicerosbicornis": {"avg": 38,"var": 4},
+							"*-adult-male-dicerosbicornis": {"avg": 48,"var": 5},
+							"*-adult-female-rhinocerossondaicus": {"avg": 38,"var": 4},
+							"*-adult-male-rhinocerossondaicus": {"avg": 48,"var": 4},
+							"*-adult-female-rhinocerosunicornis": {"avg": 54,"var": 6},
+							"*-adult-male-rhinocerosunicornis": {"avg": 70,"var": 8}
+						}
+					},
+					{
+						"type": "item",
+						"code": "game:fat",
+						"quantityByType": {
+							"*-adult-female-ceratotheriumsimum": {"avg": 23,"var": 2},
+							"*-adult-male-ceratotheriumsimum": {"avg": 31,"var": 3},
+							"*-adult-female-coelodontaantiquitatis": {"avg": 20,"var": 2},
+							"*-adult-male-coelodontaantiquitatis": {"avg": 27,"var": 3},
+							"*-adult-female-dicerorhinussumatrensis": {"avg": 8,"var": 1},
+							"*-adult-male-dicerorhinussumatrensis": {"avg": 10,"var": 1},
+							"*-adult-female-dicerosbicornis": {"avg": 15,"var": 1},
+							"*-adult-male-dicerosbicornis": {"avg": 19,"var": 2},
+							"*-adult-female-rhinocerossondaicus": {"avg": 15,"var": 1},
+							"*-adult-male-rhinocerossondaicus": {"avg": 19,"var": 2},
+							"*-adult-female-rhinocerosunicornis": {"avg": 21,"var": 2},
+							"*-adult-male-rhinocerosunicornis": {"avg": 28,"var": 3}
+						}
+					},
+					{
+						"type": "item",
+						"code": "rhinocerotidae:pelt-raw-{gender}-{type}",
+						"quantityByType": {
+							"*-adult-*": { "offset": 1, "avg": 0, "var": 0 },
+							"*": {"avg": 0.0,"var": 0.0}
+						}
+					}
+				]
+			},
+			{"code": "breathe" },
+			{"code": "multiply",
+				"enabledByType": {
+					"*-adult-female-*": true,
+					"*": false
+				},
+				"spawnEntityCodesByType": {
+				"*-adult-female-*": [ { "code":"rhinocerotidae:rhinocerotidae-baby-female-{type}"}, {"code": "rhinocerotidae:rhinocerotidae-baby-male-{type}"} ]},
+				"requiresNearbyEntityCodeByType": {
+					"*-adult-female-*": "rhinocerotidae:rhinocerotidae-adult-male-{type}"},
+				"requiresNearbyEntityRange": 10,
+				"spawnQuantityMin": 1,
+				"spawnQuantityMaxByType": {"*": 1},
+				"pregnancyDaysByType": {"*-ceratotheriumsimum": 97,"*-coelodontaantiquitatis": 100,"*-dicerorhinussumatrensis": 91,"*-dicerosbicornis": 91,"*-rhinocerossondaicus": 91,"*-rhinocerosunicornis": 95},
+				"multiplyCooldownDaysMinByType": {"*": 54},
+				"multiplyCooldownDaysMaxByType": {"*": 90},
+				"portionsEatenForMultiplyByType": {"*-ceratotheriumsimum": 42,"*-coelodontaantiquitatis": 40,"*-dicerorhinussumatrensis": 31,"*-dicerosbicornis": 36,"*-rhinocerossondaicus": 36,"*-rhinocerosunicornis": 41}
+			},
+			{"code": "emotionstates",
+				"states": [
+					{"code": "fleeondamage","duration": 60,"chance": 1,"slot": 2,"priority": 4,"accumType": "max","whenHealthRelBelow": 0.5},
+					{"code": "aggressiveondamage","duration": 10,"chance": 1,"slot": 2,"priority": 3,"accumType": "noaccum"},
+					{"code": "fleeondamage","duration": 60,"slot": 2,"chance": 0.25,"priority": 1,"accumType": "max"},
+					{"code": "alarmherdondamage","chance": 1,"slot": 1,"priority": 1.5,"accumType": "max"},
+					{"code": "saturated","duration": 1200,"Ccance": 1,"slot": 0,"priority": 1,"accumType": "sum"},
+					{ "code": "aggressivearoundentities", "duration": 10, "chanceByType": {"*-female-*": 1,"*-male-*": 0}, "slot": 2, "priority": 5, "entityCodes": ["rhinocerotidae:rhinocerotidae-baby-male-{type}","rhinocerotidae:rhinocerotidae-baby-female-{type}"], "maxGeneration": 2 }
+				]
+			},
+			{
+				"code": "taskai",
+				"aiCreatureType": "LandCreature",
+				"aitasks": [
+					//-------------------------Movement Speed tests-------------------------//
+						//wandering Gallop at any time
+					{
+						"code": "wander",
+						"enabled":  false,
+						"priority": 10.8,
+						"priorityForCancel": 12.0,
+						"animation": "Gallop",
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.1042,
+							"*-adult-*-coelodontaantiquitatis": 0.0938,
+							"*-adult-*-dicerorhinussumatrensis": 0.0833,
+							"*-adult-*-dicerosbicornis": 0.1146,
+							"*-adult-*-rhinocerossondaicus": 0.1000,
+							"*-adult-*-rhinocerosunicornis": 0.1146
+						},
+						"animationSpeedByType": {
+							"*-female-*-ceratotheriumsimum": 7.64,
+							"*-adult-*-ceratotheriumsimum": 6.94,
+							"*-female-*-coelodontaantiquitatis": 6.88,
+							"*-adult-*-coelodontaantiquitatis": 6.25,
+							"*-female-*-dicerorhinussumatrensis": 6.11,
+							"*-adult-*-dicerorhinussumatrensis": 5.56,
+							"*-female-*-dicerosbicornis": 8.40,
+							"*-adult-*-dicerosbicornis": 7.64,
+							"*-female-*-rhinocerossondaicus": 7.33,
+							"*-adult-*-rhinocerossondaicus": 6.67,
+							"*-female-*-rhinocerosunicornis": 8.40,
+							"*-adult-*-rhinocerosunicornis": 7.64
+						},
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//wandering charge at any time
+					{
+						"code": "wander",
+						"enabled":  false,
+						"priority": 10.8,
+						"priorityForCancel": 12.0,
+						"animation": "Charge",
+						"movespeedByType": {
+							"*-adult-female-ceratotheriumsimum": 0.036,
+							"*-adult-male-ceratotheriumsimum": 0.04,
+							"*-adult-female-coelodontaantiquitatis": 0.033,
+							"*-adult-male-coelodontaantiquitatis": 0.036,
+							"*-adult-female-dicerorhinussumatrensis": 0.029,
+							"*-adult-male-dicerorhinussumatrensis": 0.032,
+							"*-adult-female-dicerosbicornis": 0.033,
+							"*-adult-male-dicerosbicornis": 0.036,
+							"*-adult-female-rhinocerossondaicus": 0.033,
+							"*-adult-male-rhinocerossondaicus": 0.036,
+							"*-adult-female-rhinocerosunicornis": 0.036,
+							"*-adult-male-rhinocerosunicornis": 0.04
+						},
+						"animationSpeed": 4,
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//wandering trot at any time
+					{
+						"code": "wander",
+						"enabled":  false,
+						"priority": 10.8,
+						"priorityForCancel": 12.0,
+						"animation": "Trot",
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//wandering walk at any time
+					{
+						"code": "wander",
+						"enabled":  false,
+						"priority": 10.8,
+						"priorityForCancel": 12.0,
+						"animation": "Walk",
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0045,
+							"*-adult-*-coelodontaantiquitatis": 0.00405,
+							"*-adult-*-dicerorhinussumatrensis": 0.0036,
+							"*-adult-*-dicerosbicornis": 0.00405,
+							"*-adult-*-rhinocerossondaicus": 0.00405,
+							"*-adult-*-rhinocerosunicornis": 0.0045
+						},
+						"animationSpeedByType": {
+							"*-adult-female-*": 0.82,
+							"*": 0.75
+						},
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+					//-------------------------Leave Deadly Conditions-------------------------//
+						//fleeing when injured
+					{
+						"code": "fleeentity",
+						"priority": 9.41,
+						"priorityForCancel": 9.42,
+						"animation": "Gallop",
+						"entityCodes": [ "placeholder"],
+            "entityTags": {"anyOf": ["boss","defended","ferocious","mechanical","player","prickly","projectile","rust-creature","swarm","threatening","vehicle","venomous","has-open-fire","state-armed"], "noneOf":["carcass","egg","nest","state-burrowed","state-sneaking"]},
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.1042,
+							"*-adult-*-coelodontaantiquitatis": 0.0938,
+							"*-adult-*-dicerorhinussumatrensis": 0.0833,
+							"*-adult-*-dicerosbicornis": 0.1146,
+							"*-adult-*-rhinocerossondaicus": 0.1000,
+							"*-adult-*-rhinocerosunicornis": 0.1146
+						},
+						"animationSpeedByType": {
+							"*-female-*-ceratotheriumsimum": 7.64,
+							"*-adult-*-ceratotheriumsimum": 6.94,
+							"*-female-*-coelodontaantiquitatis": 6.88,
+							"*-adult-*-coelodontaantiquitatis": 6.25,
+							"*-female-*-dicerorhinussumatrensis": 6.11,
+							"*-adult-*-dicerorhinussumatrensis": 5.56,
+							"*-female-*-dicerosbicornis": 8.40,
+							"*-adult-*-dicerosbicornis": 7.64,
+							"*-female-*-rhinocerossondaicus": 7.33,
+							"*-adult-*-rhinocerossondaicus": 6.67,
+							"*-female-*-rhinocerosunicornis": 8.40,
+							"*-adult-*-rhinocerosunicornis": 7.64
+						},
+						"seekingRange": 20,
+						"fleeingDistance" : 50,
+						"fleeDurationMs": 20000,
+						"whenInEmotionStates": ["fleeondamage"],
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"],
+						"whenSwimming": false
+
+					},
+						//fleeing when injured in water
+					{
+						"code": "fleeentity",
+						"priority": 9.41,
+						"priorityForCancel": 9.42,
+						"animation": "Swim",
+						"entityCodes": [ "placeholder"],
+            "entityTags": {"anyOf": ["boss","defended","ferocious","mechanical","player","prickly","projectile","rust-creature","swarm","threatening","vehicle","venomous","has-open-fire","state-armed"], "noneOf":["carcass","egg","nest","state-burrowed","state-sneaking"]},
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.045,
+							"*-adult-*-coelodontaantiquitatis": 0.04,
+							"*-adult-*-dicerorhinussumatrensis": 0.04,
+							"*-adult-*-dicerosbicornis": 0.04,
+							"*-adult-*-rhinocerossondaicus": 0.04,
+							"*-adult-*-rhinocerosunicornis": 0.045
+						},
+						"animationSpeed": 1.5,
+						"seekingRange": 60,
+						"fleeingDistance" : 120,
+						"fleeDurationMs": 60000,
+						"whenSwimming": true,
+						"whenInEmotionStates": ["fleeondamage"],
+						"tagsAppliedToEntity": ["state-feet-in-liquid","state-moving","state-swimming"]
+
+					},
+						//fleeing when injured slower to finish flee on damage emotion state
+					{
+						"code": "fleeentity",
+						"priority": 9.4,
+						"priorityForCancel": 9.41,
+						"animation": "Trot",
+						"entityCodes": [ "placeholder"],
+            "entityTags": {"anyOf": ["boss","defended","ferocious","mechanical","player","prickly","projectile","rust-creature","swarm","threatening","vehicle","venomous","has-open-fire","state-armed"], "noneOf":["carcass","egg","nest","state-burrowed","state-sneaking"]},
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"seekingRange": 60,
+						"fleeingDistance" : 120,
+						"fleeDurationMs": 60000,
+						"whenSwimming": false,
+						"whenInEmotionStates": ["fleeondamage"],
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"]
+					},
+					//-------------------------Combat-------------------------//
+						//standard attack, when aggressive
+					{
+						"code": "meleeattack",
+						"priority": 7.5,
+						"priorityForCancel": 8.0,
+						"animation": "Attack",
+						"slot": 1,
+						"minTargetWeight": 0.01,
+						"maxTargetWeight": 5.125, 
+            "entityTags": { "anyOf":["animal","humanoid","mechanical","rust-creature","vehicle"],"noneOf":["carcass","egg","ferocious","nest","threatening","state-burrowed","state-sneaking"] },
+						"entityCodes": [ "placeholder"],
+						"skipEntityCodesByType": {"*-male-*":["rhinocerotidae-adult-female-{type}"],"*":["rhinocerotidae-adult-female-{type}","rhinocerotidae-baby-female-{type}","rhinocerotidae-baby-male-{type}"]},
+						"animationSpeed": 1.25,
+						"damageByType": {
+							"*-adult-female-ceratotheriumsimum":20,
+							"*-adult-male-ceratotheriumsimum":23,
+							"*-adult-female-coelodontaantiquitatis":20,
+							"*-adult-male-coelodontaantiquitatis":22,
+							"*-adult-female-dicerorhinussumatrensis":16,
+							"*-adult-male-dicerorhinussumatrensis":17,
+							"*-adult-female-dicerosbicornis":18,
+							"*-adult-male-dicerosbicornis":19,
+							"*-adult-female-rhinocerossondaicus":18,
+							"*-adult-male-rhinocerossondaicus":19,
+							"*-adult-female-rhinocerosunicornis":20,
+							"*-adult-male-rhinocerosunicornis":22
+						},
+						"damageType": "SlashingAttack",
+						"minDist": 3.5,
+						"damageTierByType": {"*-dicerorhinussumatrensis":2,"*":3},
+						"MinCooldownMs": 500,
+						"MaxCooldownMs": 1500,
+						"attackDurationMs": 1250,
+						"damagePlayerAtMs": 400,
+						"alarmHerd": false,
+						"soundByType": {"*-adult-*":"rhinocerotidae:creature/rhinocerotidae/roar*"},
+						"tagsAppliedToEntity": ["threatening"],
+						"whenInEmotionStates": ["aggressiveondamage","aggressivearoundentities"],
+						"whenNotInEmotionStates": ["fleeondamage"]
+					},
+						//low damage, ferocious vs ferocious fight
+					{
+						"code": "meleeattack",
+						"priority": 7.4,
+						"priorityForCancel": 7.5,
+						"animation": "Attack",
+						"slot": 1,
+						"minTargetWeight": 0.01,
+						"maxTargetWeight": 5.125,
+            "entityTags": { "anyOf":["ferocious","threatening"],"noneOf":["state-burrowed","state-sneaking"] },
+						"skipEntityCodesByType": {"*-male-*":["rhinocerotidae-adult-female-{type}"],"*":["rhinocerotidae-adult-female-{type}","rhinocerotidae-baby-female-{type}","rhinocerotidae-baby-male-{type}"]},
+						"entityCodes": [ "placeholder"],
+						"animationSpeed": 2.5,
+						"damageByType": {
+							"*-adult-female-ceratotheriumsimum":4,
+							"*-adult-male-ceratotheriumsimum":4.6,
+							"*-adult-female-coelodontaantiquitatis":4,
+							"*-adult-male-coelodontaantiquitatis":4.4,
+							"*-adult-female-dicerorhinussumatrensis":3.2,
+							"*-adult-male-dicerorhinussumatrensis":3.4,
+							"*-adult-female-dicerosbicornis":3.6,
+							"*-adult-male-dicerosbicornis":3.8,
+							"*-adult-female-rhinocerossondaicus":3.6,
+							"*-adult-male-rhinocerossondaicus":3.8,
+							"*-adult-female-rhinocerosunicornis":4,
+							"*-adult-male-rhinocerosunicornis":4.4
+						},
+						"damageType": "SlashingAttack",
+						"minDist": 3.5,
+						"damageTierByType": {"*-dicerorhinussumatrensis":2,"*":3},
+						"MinCooldownMs": 500,
+						"MaxCooldownMs": 1500,
+						"attackDurationMs": 1250,
+						"damagePlayerAtMs": 500,
+						"alarmHerd": false,
+						"stopOnHurt": false,
+						"tagsAppliedToEntity": ["threatening"],
+						"whenNotInEmotionStates": ["fleeondamage"]
+					},
+						//stay in fight
+					{
+						"code": "seekentity",
+						"priority": 7.2,
+						"priorityForCancel": 7.3,
+						"animation": "Charge",
+						"minTargetWeight": 0.01,
+						"maxTargetWeight": 5.125,
+            "entityTags": { "anyOf":["animal" ],"noneOf":["state-burrowed","state-sneaking"] },
+						"skipEntityCodesByType": {"*-male-*":["rhinocerotidae-adult-female-{type}"],"*":["rhinocerotidae-adult-female-{type}","rhinocerotidae-baby-female-{type}","rhinocerotidae-baby-male-{type}"]},
+						"entityCodes": [ "placeholder"],
+						"alarmHerd": false,
+						"maxFollowTime": 20, 
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"seekingRange": 5,
+						"leapAtTarget": false,
+						"soundByType": {
+							"*-adult-*":"rhinocerotidae:creature/rhinocerotidae/roar*"},
+						"soundRangeByType": {"*": 60},
+						"stopOnHurt": false,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["threatening","state-moving"],
+						"whenInEmotionStates": ["aggressiveondamage","aggressivearoundentity"],
+						"whenNotInEmotionStates": ["fleeondamage"]
+					},
+						//stay in fight long range
+					{
+						"code": "seekentity",
+						"priority": 7.1,
+						"priorityForCancel": 7.2,
+						"animation": "Charge",
+						"minTargetWeight": 0.01,
+						"maxTargetWeight": 5.125,
+            "entityTags": { "anyOf":["humanoid"],"noneOf":["state-burrowed","state-sneaking"] },
+						"skipEntityCodesByType": {"*-male-*":["rhinocerotidae-adult-female-{type}"],"*":["rhinocerotidae-adult-female-{type}","rhinocerotidae-baby-female-{type}","rhinocerotidae-baby-male-{type}"]},
+						"entityCodes": [ "placeholder"],
+						"alarmHerd": false,
+						"maxFollowTime": 20, 
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"seekingRange": 60,
+						"leapAtTarget": false,
+						"soundByType": {
+							"*-adult-*":"rhinocerotidae:creature/rhinocerotidae/roar*"},
+						"soundRangeByType": {"*": 60},
+						"stopOnHurt": false,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["threatening","state-moving"],
+						"whenInEmotionStates": ["aggressiveondamage"],
+						"whenNotInEmotionStates": ["fleeondamage"]
+					},
+						//low damage warning attack fight
+					{
+						"code": "meleeattack",
+						"priority": 7.0,
+						"priorityForCancel": 7.1,
+						"animation": "Attack",
+						"slot": 1,
+						"minTargetWeight": 0.001,
+						"maxTargetWeight": 5,
+            "entityTags": { "anyOf":["animal","humanoid","mechanical","rust-creature","vehicle"],"noneOf":["state-burrowed","state-sneaking"] },
+						"skipEntityCodesByType": {"*-male-*":["rhinocerotidae-adult-female-{type}"],"*":["rhinocerotidae-adult-female-{type}","rhinocerotidae-baby-female-{type}","rhinocerotidae-baby-male-{type}"]},
+						"entityCodes": [ "placeholder"],
+						"animationSpeed": 2.5,
+						"damageByType": {
+							"*-adult-female-ceratotheriumsimum":4,
+							"*-adult-male-ceratotheriumsimum":4.6,
+							"*-adult-female-coelodontaantiquitatis":4,
+							"*-adult-male-coelodontaantiquitatis":4.4,
+							"*-adult-female-dicerorhinussumatrensis":3.2,
+							"*-adult-male-dicerorhinussumatrensis":3.4,
+							"*-adult-female-dicerosbicornis":3.6,
+							"*-adult-male-dicerosbicornis":3.8,
+							"*-adult-female-rhinocerossondaicus":3.6,
+							"*-adult-male-rhinocerossondaicus":3.8,
+							"*-adult-female-rhinocerosunicornis":4,
+							"*-adult-male-rhinocerosunicornis":4.4
+						},
+						"damageType": "SlashingAttack",
+						"minDist": 3.5,
+						"damageTierByType": {"*-dicerorhinussumatrensis":2,"*":3},
+						"MinCooldownMs": 500,
+						"MaxCooldownMs": 1500,
+						"attackDurationMs": 1250,
+						"damagePlayerAtMs": 500,
+						"retaliateAttacks": false,
+						"stopOnHurt": true,
+						"tagsAppliedToEntity": ["threatening"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+					//-------------------------Avoid Dangerous Entities-------------------------//		
+						//fleeing due to dangerous entity immediate
+					{
+						"code": "fleeentity",
+						"priority": 5.81,
+						"priorityForCancel": 6.0,
+						"animation": "Gallop",
+						"minTargetWeight": 0.5,
+						"maxTargetWeight": 9999,
+            "entityTags": {"anyOf": ["humanoid","predator","threatening","has-open-fire"],"noneOf":["carcass","egg","nest","state-burrowed","state-sneaking"] },
+						"entityCodes": [ "placeholder"],
+						"skipEntityCodesByType": {"*-male-*":["rhinocerotidae-adult-female-{type}"],"*":["rhinocerotidae-adult-female-{type}","rhinocerotidae-baby-female-{type}","rhinocerotidae-baby-male-{type}"]},
+						"executionChance": 0.125,
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.1042,
+							"*-adult-*-coelodontaantiquitatis": 0.0938,
+							"*-adult-*-dicerorhinussumatrensis": 0.0833,
+							"*-adult-*-dicerosbicornis": 0.1146,
+							"*-adult-*-rhinocerossondaicus": 0.1000,
+							"*-adult-*-rhinocerosunicornis": 0.1146
+						},
+						"animationSpeedByType": {
+							"*-female-*-ceratotheriumsimum": 7.64,
+							"*-adult-*-ceratotheriumsimum": 6.94,
+							"*-female-*-coelodontaantiquitatis": 6.88,
+							"*-adult-*-coelodontaantiquitatis": 6.25,
+							"*-female-*-dicerorhinussumatrensis": 6.11,
+							"*-adult-*-dicerorhinussumatrensis": 5.56,
+							"*-female-*-dicerosbicornis": 8.40,
+							"*-adult-*-dicerosbicornis": 7.64,
+							"*-female-*-rhinocerossondaicus": 7.33,
+							"*-adult-*-rhinocerossondaicus": 6.67,
+							"*-female-*-rhinocerosunicornis": 8.40,
+							"*-adult-*-rhinocerosunicornis": 7.64
+						},
+						"seekingRange": 6,
+						"fleeingDistance" : 100,
+						"fleeDurationMs": 20000,
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"],
+						"whenSwimming": false,
+						"whenNotInEmotionStates": ["aggressiveondamage"]
+					},
+						//be aggressive due to threat
+					{
+						"code": "seekentity",
+						"priority": 5.8,
+						"priorityForCancel": 6.0,
+						"animation": "Charge",
+						"minTargetWeight": 0.01,
+						"maxTargetWeight": 5.125,
+            "entityTags": { "anyOf": ["humanoid","predator","threatening","has-open-fire"],"noneOf":["carcass","egg","nest","state-burrowed","state-sneaking"] },
+						"entityCodes": [ "placeholder"],
+						"skipEntityCodesByType": {"*-male-*":["rhinocerotidae-adult-female-{type}"],"*":["rhinocerotidae-adult-female-{type}","rhinocerotidae-baby-female-{type}","rhinocerotidae-baby-male-{type}"]},
+						"executionChance": 0.5,
+						"alarmHerd": false,
+						"maxFollowTime": 20, 
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"seekingRange": 30,
+						"leapAtTarget": false,
+						"leapAnimationCode": null,
+						"soundByType": {
+							"*-adult-*":"rhinocerotidae:creature/rhinocerotidae/roar*"},
+						"soundRangeByType": {"*": 60},
+						"stopOnHurt": false,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["threatening","state-moving"],
+						"triggerEmotionStates": [ "aggressiveondamage"],
+						"whenNotInEmotionStates": ["fleeondamage"]
+					},
+						//dart away from projectiles/vehicles
+					{
+						"code": "fleeentity",
+						"priority": 5.6,
+						"priorityForCancel": 6.0,
+						"animation": "Trot",
+						"entityCodes": [ "placeholder"],
+            "entityTags": {"anyOf": ["projectile","vehicle"] },
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"fleeDurationMs": 500,
+						"seekingRange": 5,
+						"fleeingDistance": 100,
+						"soundByType": {
+							"*-adult-*":"rhinocerotidae:creature/rhinocerotidae/roar*"},
+						"SoundChance" : 0.125,
+						"soundRangeByType": {"*": 60},
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"],
+						"triggerEmotionStates": [ "aggressiveondamage" ],
+						"whenNotInEmotionStates": ["fleeondamage"]
+					},
+						//avoid larger dangerous entities at close range
+					{
+						"code": "fleeentity",
+						"priority": 5.6,
+						"priorityForCancel": 6.0,
+						"animation": "Gallop",
+						"minTargetWeight": 1.25,
+						"maxTargetWeight": 9999,
+						"entityCodes": [ "placeholder"],
+            "entityTags": { "anyOf": ["ferocious","predator","threatening"],"noneOf":["carcass","egg","nest","state-burrowed","state-sneaking"]},
+						"skipEntityCodesByType": {"*-male-*":["rhinocerotidae-adult-female-{type}"],"*":["rhinocerotidae-adult-male-{type}","rhinocerotidae-adult-female-{type}","rhinocerotidae-baby-female-{type}","rhinocerotidae-baby-male-{type}"]},
+						"executionChance": 0.25,
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.1042,
+							"*-adult-*-coelodontaantiquitatis": 0.0938,
+							"*-adult-*-dicerorhinussumatrensis": 0.0833,
+							"*-adult-*-dicerosbicornis": 0.1146,
+							"*-adult-*-rhinocerossondaicus": 0.1000,
+							"*-adult-*-rhinocerosunicornis": 0.1146
+						},
+						"animationSpeedByType": {
+							"*-female-*-ceratotheriumsimum": 7.64,
+							"*-adult-*-ceratotheriumsimum": 6.94,
+							"*-female-*-coelodontaantiquitatis": 6.88,
+							"*-adult-*-coelodontaantiquitatis": 6.25,
+							"*-female-*-dicerorhinussumatrensis": 6.11,
+							"*-adult-*-dicerorhinussumatrensis": 5.56,
+							"*-female-*-dicerosbicornis": 8.40,
+							"*-adult-*-dicerosbicornis": 7.64,
+							"*-female-*-rhinocerossondaicus": 7.33,
+							"*-adult-*-rhinocerossondaicus": 6.67,
+							"*-female-*-rhinocerosunicornis": 8.40,
+							"*-adult-*-rhinocerosunicornis": 7.64
+						},
+						"fleeDurationMs": 20000,
+						"seekingRange": 30,
+						"fleeingDistance" : 100,
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"],
+						"whenNotInEmotionStates": ["aggressiveondamage"]
+					},
+						//avoid dangerous entities at close range
+					{
+						"code": "fleeentity",
+						"priority": 5.6,
+						"priorityForCancel": 6.0,
+						"animation": "Gallop",
+						"minTargetWeight": 0.01,
+						"maxTargetWeight": 9999,
+						"entityCodes": [ "placeholder"],
+            "entityTags": {"anyOf": ["boss","mechanical","rust-creature","swarm","venomous"],"noneOf":["state-burrowed","state-sneaking"] },
+						"skipEntityCodesByType": {"*-male-*":["rhinocerotidae-adult-female-{type}"],"*":["rhinocerotidae-adult-male-{type}","rhinocerotidae-adult-female-{type}","rhinocerotidae-baby-female-{type}","rhinocerotidae-baby-male-{type}"]},
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.1042,
+							"*-adult-*-coelodontaantiquitatis": 0.0938,
+							"*-adult-*-dicerorhinussumatrensis": 0.0833,
+							"*-adult-*-dicerosbicornis": 0.1146,
+							"*-adult-*-rhinocerossondaicus": 0.1000,
+							"*-adult-*-rhinocerosunicornis": 0.1146
+						},
+						"animationSpeedByType": {
+							"*-female-*-ceratotheriumsimum": 7.64,
+							"*-adult-*-ceratotheriumsimum": 6.94,
+							"*-female-*-coelodontaantiquitatis": 6.88,
+							"*-adult-*-coelodontaantiquitatis": 6.25,
+							"*-female-*-dicerorhinussumatrensis": 6.11,
+							"*-adult-*-dicerorhinussumatrensis": 5.56,
+							"*-female-*-dicerosbicornis": 8.40,
+							"*-adult-*-dicerosbicornis": 7.64,
+							"*-female-*-rhinocerossondaicus": 7.33,
+							"*-adult-*-rhinocerossondaicus": 6.67,
+							"*-female-*-rhinocerosunicornis": 8.40,
+							"*-adult-*-rhinocerosunicornis": 7.64
+						},
+						"fleeDurationMs": 20000,
+						"seekingRange": 10,
+						"fleeingDistance" : 20,
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"],
+						"whenNotInEmotionStates": ["aggressiveondamage"]
+					},
+						//fleeing dangerous entity at long range (mother with baby)
+					{
+						"code": "fleeentity",
+						"priority": 5.2,
+						"priorityForCancel": 5.4,
+						"animation": "Trot",
+						"minTargetWeight": 0.01,
+						"maxTargetWeight": 9999,
+						"entityCodes": [ "placeholder"],
+            "entityTags": {"anyOf": ["humanoid","ferocious","predator","has-open-fire"],"noneOf":["state-burrowed","state-sneaking"] },
+						"skipEntityCodesByType": {"*-male-*":["rhinocerotidae-adult-female-{type}"],"*":["rhinocerotidae-adult-female-{type}","rhinocerotidae-baby-female-{type}","rhinocerotidae-baby-male-{type}"]},
+						"executionChance": 0.25,
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"seekingRange": 30,
+						"fleeingDistance" : 100,
+						"fleeDurationMs": 20000,
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"],
+						"whenInEmotionStates": ["aggressivearoundentities"]
+					},
+						//fleeing dangerous entity at long range
+					{
+						"code": "fleeentity",
+						"priority": 5.2,
+						"priorityForCancel": 5.4,
+						"animation": "Trot",
+						"minTargetWeight": 5,
+						"maxTargetWeight": 9999,
+						"entityCodes": [ "placeholder"],
+            "entityTags": {"anyOf": ["humanoid","ferocious","predator","has-open-fire"],"noneOf":["state-burrowed","state-sneaking"] },
+						"skipEntityCodesByType": {"*-male-*":["rhinocerotidae-adult-female-{type}"],"*":["rhinocerotidae-adult-male-{type}","rhinocerotidae-adult-female-{type}","rhinocerotidae-baby-female-{type}","rhinocerotidae-baby-male-{type}"]},
+						"executionChance": 0.5,
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"seekingRange": 50,
+						"fleeingDistance" : 100,
+						"fleeDurationMs": 20000,
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//fleeing dangerous entity at long range (mother with baby)
+					{
+						"code": "fleeentity",
+						"priority": 5.2,
+						"priorityForCancel": 5.4,
+						"animation": "Trot",
+						"minTargetWeight": 0.5,
+						"maxTargetWeight": 9999,
+						"entityCodes": [ "placeholder"],
+            "entityTags": {"anyOf": ["animal","humanoid","ferocious","predator","threatening","has-open-fire"],"noneOf":["state-burrowed","state-sneaking"] },
+						"skipEntityCodesByType": {"*-male-*":["rhinocerotidae-adult-female-{type}"],"*":["rhinocerotidae-adult-female-{type}","rhinocerotidae-baby-female-{type}","rhinocerotidae-baby-male-{type}"]},
+						"executionChance": 0.25,
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"seekingRange": 30,
+						"fleeingDistance" : 100,
+						"fleeDurationMs": 20000,
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"],
+						"whenInEmotionStates": ["aggressivearoundentities"]
+					},
+						//fleeing dangerous entity at long range (artificial)
+					{
+						"code": "fleeentity",
+						"priority": 5.2,
+						"priorityForCancel": 5.4,
+						"animation": "Trot",
+						"minTargetWeight": 0.1,
+						"maxTargetWeight": 9999,
+						"entityCodes": [ "placeholder"],
+            "entityTags": {"anyOf": ["boss","mechanical","rust-creature","has-open-fire"],"noneOf":["state-burrowed","state-sneaking"] },
+						"skipEntityCodesByType": {"*-male-*":["rhinocerotidae-adult-female-{type}"],"*":["rhinocerotidae-adult-male-{type}","rhinocerotidae-adult-female-{type}","rhinocerotidae-baby-female-{type}","rhinocerotidae-baby-male-{type}"]},
+						"executionChance": 0.5,
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"seekingRange": 50,
+						"fleeingDistance" : 100,
+						"fleeDurationMs": 20000,
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//alert to dangerous entity
+					{
+						"code": "fleeentity",
+						"priority": 5.0,
+						"priorityForCancel": 5.2,
+						"animation": "Alert",
+						"maxduration": 12000,
+						"MinCooldownMs": 12000,
+						"MaxCooldownMs": 36000,
+						"minTargetWeight": 0.01,
+						"maxTargetWeight": 9999,
+						"entityCodes": [ "placeholder"],
+            "entityTags": {"anyOf": ["boss","ferocious","humanoid","mechanical","predator","rust-creature","has-open-fire"],"noneOf":["carcass","nest","state-burrowed","state-sneaking"] },
+						"skipEntityCodesByType": {"*-male-*":["rhinocerotidae-adult-female-{type}"],"*":["rhinocerotidae-adult-male-{type}","rhinocerotidae-adult-female-{type}","rhinocerotidae-baby-female-{type}","rhinocerotidae-baby-male-{type}"]},
+						"movespeed": 0,
+						"animationSpeed": 1.0,
+						"seekingRange": 60,
+						"fleeingDistance" : 101,
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+					//-------------------------Food Seeking-------------------------//
+						//if hungry eat favorite foods from POI
+					{
+						"code": "seekfoodandeat",
+						"priority": 4.7,
+						"priorityForCancel": 5.0,
+						"animation": "Walk",
+						"eatAnimation": "Eat",
+						"eatAnimationLooseItems": "Eat",
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0045,
+							"*-adult-*-coelodontaantiquitatis": 0.00405,
+							"*-adult-*-dicerorhinussumatrensis": 0.0036,
+							"*-adult-*-dicerosbicornis": 0.00405,
+							"*-adult-*-rhinocerossondaicus": 0.00405,
+							"*-adult-*-rhinocerosunicornis": 0.0045
+						},
+						"animationSpeedByType": {
+							"*-adult-female-*": 0.82,
+							"*": 0.75
+						},
+						"mincooldownHours": 1,
+						"MaxCooldownHours": 4,
+						"eatTime": 2,
+						"eatLooseItems": true,
+						"eatSound" : "game:creature/animal-eat1",
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+					//-------------------------Leave Hazardous condtions-------------------------//
+						//getting out of water
+					{
+						"code": "getoutofwater",
+						"priority": 3.61,
+						"priorityForCancel": 5.0,
+						"animation": "Swim",
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.045,
+							"*-adult-*-coelodontaantiquitatis": 0.04,
+							"*-adult-*-dicerorhinussumatrensis": 0.04,
+							"*-adult-*-dicerosbicornis": 0.04,
+							"*-adult-*-rhinocerossondaicus": 0.04,
+							"*-adult-*-rhinocerosunicornis": 0.045
+						},
+						"animationSpeed": 1.5,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving","state-swimming"]
+					},		
+						//swim wandering to find the shore			
+					{
+						"code": "wander",
+						"priority": 3.6,
+						"priorityForCancel": 5.0,
+						"animation": "Swim",
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.045,
+							"*-adult-*-coelodontaantiquitatis": 0.04,
+							"*-adult-*-dicerorhinussumatrensis": 0.04,
+							"*-adult-*-dicerosbicornis": 0.04,
+							"*-adult-*-rhinocerossondaicus": 0.04,
+							"*-adult-*-rhinocerosunicornis": 0.045
+						},
+						"animationSpeed": 1.5,
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving","state-swimming"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},	
+						//stay close to family in the dark male			
+					{
+						"code": "stayclosetoentity",
+						"enabledByType": {"*-male-*": false},
+						"priority": 3.51,
+						"priorityForCancel": 5.0,
+						"animation": "Trot",
+						"entityCode": "rhinocerotidae-baby-male-{type}",
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"searchRange": 240,
+						"maxDistance": 4,
+						"minSeekSeconds": 240, 
+						"EntityLightLevels": [0,18],
+						"EntityLightLevelType": "TimeOfDaySunLight",
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},		
+						//stay close to family in the dark female			
+					{
+						"code": "stayclosetoentity",
+						"enabledByType": {"*-male-*": false},
+						"priority": 3.51,
+						"priorityForCancel": 5.0,
+						"animation": "Trot",
+						"entityCode": "rhinocerotidae-baby-female-{type}",
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"searchRange": 240,
+						"maxDistance": 4,
+						"minSeekSeconds": 240, 
+						"EntityLightLevels": [0,18],
+						"EntityLightLevelType": "TimeOfDaySunLight",
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},		
+						//stay close to family all times female			
+					{
+						"code": "stayclosetoentity",
+						"enabledByType": {"*-male-*": false},
+						"priority": 3.51,
+						"priorityForCancel": 5.0,
+						"animation": "Trot",
+						"entityCode": "rhinocerotidae-baby-female-{type}",
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"searchRange": 240,
+						"maxDistance": 12,
+						"minSeekSeconds": 240, 
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},	
+						//stay close to family all times male			
+					{
+						"code": "stayclosetoentity",
+						"enabledByType": {"*-male-*": false},
+						"priority": 3.51,
+						"priorityForCancel": 5.0,
+						"animation": "Trot",
+						"entityCode": "rhinocerotidae-baby-male-{type}",
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"searchRange": 240,
+						"maxDistance": 12,
+						"minSeekSeconds": 240, 
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},	
+						//wander out of darkness		
+					{
+						"code": "wander",
+						"priority": 3.42,
+						"priorityForCancel": 5.0,
+						"animation": "Walk",
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0045,
+							"*-adult-*-coelodontaantiquitatis": 0.00405,
+							"*-adult-*-dicerorhinussumatrensis": 0.0036,
+							"*-adult-*-dicerosbicornis": 0.00405,
+							"*-adult-*-rhinocerossondaicus": 0.00405,
+							"*-adult-*-rhinocerosunicornis": 0.0045
+						},
+						"animationSpeedByType": {
+							"*-adult-female-*": 0.82,
+							"*": 0.75
+						},
+						"EntityLightLevels": [0,8],
+						"EntityLightLevelType": "MaxLight",
+						"PreferredLightLevel": 32,
+						"PreferredLightLevelType": "MaxLight",
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},			
+						//wander out of cover below a certain temp to get into direct sunlight, should be full spawn range for open space dwelling deer, quarter for both, min spawn range for forest dwelling deer
+					{
+						"code": "wander",
+						"priority": 3.41,
+						"priorityForCancel": 5.0,
+						"animation": "Trot",
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"TemperatureRangeByType": {
+							"*ceratotheriumsimum":[-40,30],
+							"*coelodontaantiquitatis":[-40,12],
+							"*dicerorhinussumatrensis":[-40,18],
+							"*dicerosbicornis":[-40,30],
+							"*rhinocerossondaicus":[-40,24],
+							"*rhinocerosunicornis":[-40,18]
+						},
+						"EntityLightLevels": [0,20],
+						"EntityLightLevelType": "MaxTimeOfDayLight",
+						"PreferredLightLevel": 32,
+						"PreferredLightLevelType": "MaxTimeOfDayLight",
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},	
+					//-------------------------Domestic Behaviors-------------------------//
+						//follow lead holder
+					{
+						"code": "followleadholder",
+						"priority": 2.5,
+						"priorityForCancel": 3.0,
+						"animation": "Trot",
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"minGeneration": 2,
+						"stopOnHurt": true,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+					//-------------------------Conditional Down Time-------------------------//
+					//sitting times
+					{
+						"code": "idle",
+						"priority": 1.52,
+						"priorityForCancel": 6,
+						"animation": "Sit",
+						"minduration": 20000,
+						"maxduration": 240000,
+						"MinCooldownMs": 6000,
+						"MaxCooldownMs": 24000,
+						"animationSpeed": 0.5,
+						"duringDayTimeFramesByType": {
+							"*-ceratotheriumsimum":[{"fromHour": 22.25,"toHour": 4},{"fromHour": 12.25,"toHour": 15}],
+							"*-coelodontaantiquitatis":[{"fromHour": 19.25,"toHour": 6}],
+							"*-dicerorhinussumatrensis":[{"fromHour": 21.25,"toHour": 4},{"fromHour": 11.25,"toHour": 16}],
+							"*-dicerosbicornis":[{"fromHour": 22.25,"toHour": 5},{"fromHour": 12.25,"toHour": 17}],
+							"*-rhinocerossondaicus":[{"fromHour": 21.25,"toHour": 4},{"fromHour": 11.25,"toHour": 16}],
+							"*-rhinocerosunicornis":[{"fromHour": 21.25,"toHour": 4},{"fromHour": 11.25,"toHour": 16}]},
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-sneaking"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+					//lying times
+					{
+						"code": "idle",
+						"priority": 1.51,
+						"priorityForCancel": 6,
+						"animation": "Lie",
+						"minduration": 30000,
+						"maxduration": 240000,
+						"MinCooldownMs": 6000,
+						"MaxCooldownMs": 24000,
+						"animationSpeed": 0.5,
+						"duringDayTimeFramesByType": {
+							"*-ceratotheriumsimum":[{"fromHour": 22.5,"toHour": 4},{"fromHour": 12.5,"toHour": 15}],
+							"*-coelodontaantiquitatis":[{"fromHour": 19.5,"toHour": 6}],
+							"*-dicerorhinussumatrensis":[{"fromHour": 21.5,"toHour": 4},{"fromHour": 11.5,"toHour": 16}],
+							"*-dicerosbicornis":[{"fromHour": 22.5,"toHour": 5},{"fromHour": 12.5,"toHour": 17}],
+							"*-rhinocerossondaicus":[{"fromHour": 21.5,"toHour": 4},{"fromHour": 11.5,"toHour": 16}],
+							"*-rhinocerosunicornis":[{"fromHour": 21.5,"toHour": 4},{"fromHour": 11.5,"toHour": 16}]},
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-sneaking"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+					//sleeping times
+					{
+						"code": "idle",
+						"priority": 1.5,
+						"priorityForCancel": 6,
+						"animation": "Sleep",
+						"minduration": 200000,
+						"maxduration": 800000,
+						"MinCooldownMs": 1000,
+						"MaxCooldownMs": 3000,
+						"animationSpeed": 0.3,
+						"duringDayTimeFramesByType": {
+							"*-ceratotheriumsimum":[{"fromHour": 22.75,"toHour": 4},{"fromHour": 12.75,"toHour": 15}],
+							"*-coelodontaantiquitatis":[{"fromHour": 20,"toHour": 6}],
+							"*-dicerorhinussumatrensis":[{"fromHour": 22,"toHour": 4},{"fromHour": 12,"toHour": 16}],
+							"*-dicerosbicornis":[{"fromHour": 23,"toHour": 5},{"fromHour": 13,"toHour": 17}],
+							"*-rhinocerossondaicus":[{"fromHour": 22,"toHour": 4},{"fromHour": 12,"toHour": 16}],
+							"*-rhinocerosunicornis":[{"fromHour": 22,"toHour": 4},{"fromHour": 12,"toHour": 16}]},
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-sneaking"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//rare chance of call all day
+					{
+						"code": "idle",
+						"priority": 1.41,
+						"priorityForCancel": 2.0,
+						"animation": "Roar",
+						"executionChance": 0.0125,
+						"minduration": 3000,
+						"maxduration": 9000,
+						"mincooldownHours": 0.125,
+						"MaxCooldownHours": 2,
+						"animationSpeed": 1,
+						"soundByType": {
+							"*-dicerorhinussumatrensis": "rhinocerotidae:creature/rhinocerotidae/chirp*",
+							"*-adult-*": "rhinocerotidae:creature/rhinocerotidae/roar*"
+						},
+						"soundRepeatMs": 5000,
+						"soundRange": 120,
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//sitting when in shade over certain temp
+					{
+						"code": "idle",
+						"priority": 1.41,
+						"priorityForCancel": 5.0,
+						"animation": "Sit",
+						"minduration": 60000,
+						"maxduration": 480000,
+						"minCooldownhours": 0.25,
+						"MaxCooldownHours": 1,
+						"TemperatureRangeByType": {
+							"*ceratotheriumsimum":[30,99],
+							"*coelodontaantiquitatis":[12,99],
+							"*dicerorhinussumatrensis":[18,99],
+							"*dicerosbicornis":[30,99],
+							"*rhinocerossondaicus":[24,99],
+							"*rhinocerosunicornis":[18,99]
+						},
+						"EntityLightLevels": [8,21],
+						"EntityLightLevelType": "OnlyBlockLight",
+						"duringDayTimeFrames": [{ "fromHour": 12, "toHour": 16 }],
+				  	"DayTimeFrameInaccuracy": 0.75,
+						"StopIfOutOfDayTimeFrames" : true,
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},	
+						//grazing on certain blocks
+					{
+						"code": "idle",
+						"priority": 1.4,
+						"priorityForCancel": 2.0,
+						"animation": "Eat",
+						"minduration": 5000,
+						"maxduration": 20000,
+						"MinCooldownMs": 5000,
+						"MaxCooldownMs": 20000,
+						//"onBlockBelowCode": ["crop-*","fern-*","flower-*","forestfloor-*","mushroom-*","tallfern-*","tallgrass-*","tallplant-*"],
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//grazing on certain blocks
+					{
+						"code": "idle",
+						"priority": 1.4,
+						"priorityForCancel": 2.0,
+						"animation": "Eat",
+						"minduration": 5000,
+						"maxduration": 20000,
+						"MinCooldownMs": 5000,
+						"MaxCooldownMs": 20000,
+						//"onBlockBelowCode": ["snow-*"],
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//wander into cover above a certain light level
+					{
+						"code": "wander",
+						"priority": 1.3,
+						"priorityForCancel": 1.4,
+						"animation": "Trot",
+						"minCooldownhours": 0.125,
+						"MaxCooldownHours": 1,
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"TemperatureRangeByType": {
+							"*ceratotheriumsimum":[30,99],
+							"*coelodontaantiquitatis":[12,99],
+							"*dicerorhinussumatrensis":[18,99],
+							"*dicerosbicornis":[30,99],
+							"*rhinocerossondaicus":[24,99],
+							"*rhinocerosunicornis":[18,99]
+						},
+						"EntityLightLevels": [22,32],
+						"EntityLightLevelType": "TimeOfDaySunLight",
+						"PreferredLightLevel": 20,
+						"PreferredLightLevelType": "MaxTimeOfDayLight",
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//wander at peak light levels
+					{
+						"code": "wander",
+						"priority": 1.3,
+						"priorityForCancel": 2.0,
+						"animation": "Trot",
+						"mincooldownHours": 0.125,
+						"MaxCooldownHours": 1.25,
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"EntityLightLevelsByType": {
+							"@.*-(coelodontaantiquitatis)":[19,21],
+							"*":[20,20]
+						},
+						"EntityLightLevelType": "TimeOfDaySunLight",
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+					//-------------------------Down Time-------------------------//
+						//wandering gallop at any time
+					{
+						"code": "wander",
+						"priority": 0.8,
+						"priorityForCancel": 2.0,
+						"animation": "Gallop",
+						"executionChance": 0.025,
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.1042,
+							"*-adult-*-coelodontaantiquitatis": 0.0938,
+							"*-adult-*-dicerorhinussumatrensis": 0.0833,
+							"*-adult-*-dicerosbicornis": 0.1146,
+							"*-adult-*-rhinocerossondaicus": 0.1000,
+							"*-adult-*-rhinocerosunicornis": 0.1146
+						},
+						"animationSpeedByType": {
+							"*-female-*-ceratotheriumsimum": 7.64,
+							"*-adult-*-ceratotheriumsimum": 6.94,
+							"*-female-*-coelodontaantiquitatis": 6.88,
+							"*-adult-*-coelodontaantiquitatis": 6.25,
+							"*-female-*-dicerorhinussumatrensis": 6.11,
+							"*-adult-*-dicerorhinussumatrensis": 5.56,
+							"*-female-*-dicerosbicornis": 8.40,
+							"*-adult-*-dicerosbicornis": 7.64,
+							"*-female-*-rhinocerossondaicus": 7.33,
+							"*-adult-*-rhinocerossondaicus": 6.67,
+							"*-female-*-rhinocerosunicornis": 8.40,
+							"*-adult-*-rhinocerosunicornis": 7.64
+						},
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//wandering trot at any time
+					{
+						"code": "wander",
+						"priority": 0.8,
+						"priorityForCancel": 2.0,
+						"animation": "Trot",
+						"executionChance": 0.05,
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0825,
+							"*-adult-*-coelodontaantiquitatis": 0.0715,
+							"*-adult-*-dicerorhinussumatrensis": 0.066,
+							"*-adult-*-dicerosbicornis": 0.0715,
+							"*-adult-*-rhinocerossondaicus": 0.0715,
+							"*-adult-*-rhinocerosunicornis": 0.0825
+						},
+						"animationSpeedByType": {
+							"*-female-*": 5.5,
+							"*": 5.0
+						},
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//wandering walk at any time
+					{
+						"code": "wander",
+						"priority": 0.8,
+						"priorityForCancel": 2.0,
+						"animation": "Walk",
+						"executionChance": 0.1,
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0045,
+							"*-adult-*-coelodontaantiquitatis": 0.00405,
+							"*-adult-*-dicerorhinussumatrensis": 0.0036,
+							"*-adult-*-dicerosbicornis": 0.00405,
+							"*-adult-*-rhinocerossondaicus": 0.00405,
+							"*-adult-*-rhinocerosunicornis": 0.0045
+						},
+						"animationSpeedByType": {
+							"*-adult-female-*": 0.82,
+							"*": 0.75
+						},
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//wandering graze at any time
+					{
+						"code": "wander",
+						"priority": 0.8,
+						"priorityForCancel": 2.0,
+						"animation": "Graze",
+						"executionChance": 0.25,
+						"movespeedByType": {
+							"*-adult-*-ceratotheriumsimum": 0.0045,
+							"*-adult-*-coelodontaantiquitatis": 0.00405,
+							"*-adult-*-dicerorhinussumatrensis": 0.0036,
+							"*-adult-*-dicerosbicornis": 0.00405,
+							"*-adult-*-rhinocerossondaicus": 0.00405,
+							"*-adult-*-rhinocerosunicornis": 0.0045
+						},
+						"animationSpeedByType": {
+							"*-adult-female-*": 0.82,
+							"*": 0.75
+						},
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"soundByType": {"*":"game:creature/animal-eat*"},
+						"soundRepeatMs": 5000,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//sitting at any time
+					{
+						"code": "idle",
+						"priority": 0.7,
+						"priorityForCancel": 2.0,
+						"animation": "Sit",
+						"minduration": 12000,
+						"maxduration": 120000,
+						"executionChance": 0.25,
+						"MinCooldownMs": 12000,
+						"MaxCooldownMs": 120000,
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//standing at any time
+					{
+						"code": "idle",
+						"priority": 0.7,
+						"priorityForCancel": 2.0,
+						"animation": "Idle",
+						"minduration": 2000,
+						"maxduration": 12000,
+						"MinCooldownMs": 12000,
+						"MaxCooldownMs": 120000,
+						"stopOnHurt": true,
+						"whenSwimming": false,
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//looking around
+					{
+						"code": "lookaround",
+						"priority": 0.5,
+						"priorityForCancel": 2.0,
+						"stopOnHurt": true,
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"],
+						"turnSpeedMul": 0.5
+					}
+				]
+			},
+			{"code": "ropetieable","minGeneration": 1},
+			{"code": "pettable","minGeneration": 1},
+			{
+				"code": "antlergrowth",
+				"enabledByType": {"*-adult-female-rhinocerossondaicus": false,"*": true },
+				"variantsByType": {
+					"*-adult-*-ceratotheriumsimum":["01", "02", "03", "04", "05", "06", "07", "08"],
+					"*-adult-*-coelodontaantiquitatis":["01", "02", "03", "04", "05", "06", "07", "08", "09"],
+					"*-adult-female-dicerorhinussumatrensis":["01", "02", "03"],
+					"*-adult-*-dicerorhinussumatrensis":["01", "02", "03", "04", "05"],
+					"*-adult-*-dicerosbicornis":["01", "02", "03", "04", "05", "06", "07", "08", "09"],
+					"*-adult-male-rhinocerossondaicus":["01", "02", "03", "04", "05"],
+					"*-adult-*-rhinocerosunicornis":["01", "02", "03", "04", "05", "06", "07", "08", "09"]},
+				"beginGrowMonth": -1,				
+				"growDurationMonths": 12
+			}
+		],
+		"spawnconditions": {
+			"worldgen": {
+				"tryOnlySurface": true,
+				"triesPerChunk": { "avg": 0, "var": 0 },
+				"groupSizeByType": {
+					"*-adult-female-dicerorhinussumatrensis": { "dist": "uniform", "avg": 2.0, "var": 1.0 },
+					"*-adult-female-dicerosbicornis": { "dist": "uniform", "avg": 1.5, "var": 0.5 },
+					"*-adult-female-rhinocerossondaicus": { "dist": "uniform", "avg": 1.5, "var": 0.5 },
+					"*-adult-female-*": { "dist": "uniform", "avg": 4.0, "var": 2.0 },
+					"*-adult-male-*": { "dist": "uniform", "avg": 1.0, "var": 0.0 }
+				},
+				"insideBlockCodes": [ "game:air", "game:gravel-*",  "game:sand-*","game:snowlayer-1","game:soil-*","game:tallgrass-*" ],
+				"companionsByType": {
+				"*-adult-male-dicerorhinussumatrensis":["rhinocerotidae:rhinocerotidae-adult-female-{type}"],
+				"*-adult-female-dicerorhinussumatrensis":["rhinocerotidae:rhinocerotidae-adult-female-{type}","rhinocerotidae:rhinocerotidae-adult-male-{type}","rhinocerotidae:rhinocerotidae-baby-female-{type}","rhinocerotidae:rhinocerotidae-baby-male-{type}"],
+				"*-adult-male-dicerosbicornis":["rhinocerotidae:rhinocerotidae-adult-female-{type}"],
+				"*-adult-female-dicerosbicornis":["rhinocerotidae:rhinocerotidae-adult-female-{type}","rhinocerotidae:rhinocerotidae-adult-male-{type}","rhinocerotidae:rhinocerotidae-baby-female-{type}","rhinocerotidae:rhinocerotidae-baby-male-{type}"],
+				"*-adult-male-rhinocerossondaicus":["rhinocerotidae:rhinocerotidae-adult-female-{type}"],
+				"*-adult-female-rhinocerossondaicus":["rhinocerotidae:rhinocerotidae-adult-female-{type}","rhinocerotidae:rhinocerotidae-adult-male-{type}","rhinocerotidae:rhinocerotidae-baby-female-{type}","rhinocerotidae:rhinocerotidae-baby-male-{type}"],
+				"*-adult-female-*":["rhinocerotidae:rhinocerotidae-adult-female-{type}","rhinocerotidae:rhinocerotidae-baby-female-{type}","rhinocerotidae:rhinocerotidae-baby-male-{type}"]}
+			},
+			"runtime": {
+				"group": "neutral",
+				"tryOnlySurface": true,
+				"chanceByType": {
+					"*-adult-female-ceratotheriumsimum": 0.000001,"*-adult-male-ceratotheriumsimum": 0.000001,
+					"*-adult-female-coelodontaantiquitatis": 0.000001,"*-adult-male-coelodontaantiquitatis": 0.000001,
+					"*-adult-female-dicerorhinussumatrensis": 0.000001,"*-adult-male-dicerorhinussumatrensis": 0.000001,
+					"*-adult-female-dicerosbicornis": 0.000001,"*-adult-male-dicerosbicornis": 0.000001,
+					"*-adult-female-rhinocerossondaicus": 0.000001,"*-adult-male-rhinocerossondaicus": 0.000001,
+					"*-adult-female-rhinocerosunicornis": 0.000001,"*-adult-male-rhinocerosunicornis": 0.000001,
+					"*": 0.0
+				},
+				"mindistancetoplayer": 100,
+				"maxLightLevel": 1,
+				"lightLevelType": "onlyBlockLight",	
+				"spawnCapPlayerScaling": 0.0,	
+				"groupSizeByType": {
+					"*-adult-female-dicerorhinussumatrensis": { "dist": "uniform", "avg": 2.0, "var": 1.0 },
+					"*-adult-female-dicerosbicornis": { "dist": "uniform", "avg": 1.5, "var": 0.5 },
+					"*-adult-female-rhinocerossondaicus": { "dist": "uniform", "avg": 1.5, "var": 0.5 },
+					"*-adult-female-*": { "dist": "uniform", "avg": 4.0, "var": 2.0 },
+					"*-adult-male-*": { "dist": "uniform", "avg": 1.0, "var": 0.0 }
+				},
+				"insideBlockCodes": [ "game:air", "game:gravel-*",  "game:sand-*","game:snowlayer-1","game:soil-*","game:tallgrass-*" ],
+				"companionsByType": {
+				"*-adult-male-dicerorhinussumatrensis":["rhinocerotidae:rhinocerotidae-adult-female-{type}"],
+				"*-adult-female-dicerorhinussumatrensis":["rhinocerotidae:rhinocerotidae-adult-female-{type}","rhinocerotidae:rhinocerotidae-adult-male-{type}","rhinocerotidae:rhinocerotidae-baby-female-{type}","rhinocerotidae:rhinocerotidae-baby-male-{type}"],
+				"*-adult-male-dicerosbicornis":["rhinocerotidae:rhinocerotidae-adult-female-{type}"],
+				"*-adult-female-dicerosbicornis":["rhinocerotidae:rhinocerotidae-adult-female-{type}","rhinocerotidae:rhinocerotidae-adult-male-{type}","rhinocerotidae:rhinocerotidae-baby-female-{type}","rhinocerotidae:rhinocerotidae-baby-male-{type}"],
+				"*-adult-male-rhinocerossondaicus":["rhinocerotidae:rhinocerotidae-adult-female-{type}"],
+				"*-adult-female-rhinocerossondaicus":["rhinocerotidae:rhinocerotidae-adult-female-{type}","rhinocerotidae:rhinocerotidae-adult-male-{type}","rhinocerotidae:rhinocerotidae-baby-female-{type}","rhinocerotidae:rhinocerotidae-baby-male-{type}"],
+				"*-adult-female-*":["rhinocerotidae:rhinocerotidae-adult-female-{type}","rhinocerotidae:rhinocerotidae-baby-female-{type}","rhinocerotidae:rhinocerotidae-baby-male-{type}"]}
+			}
+		},
+		"spawnconditionsByType": {
+			"rhinocerotidae-adult-*-ceratotheriumsimum": {
+				"climate": {
+					"minTemp": 16,
+					"maxTemp": 40,
+					"minRain": 0.05,
+					"maxRain": 0.75,
+					"minForestOrShrubs": 0.0,
+					"maxForest": 0.5,
+					"maxShrubs": 0.75,
+					"maxY": 1.5				
+				},
+				"worldgen": {
+					"triesPerChunk": { "avg": 0.0005, "var": 0}
+				},
+				"runtime": {
+					"maxQuantityByGroup": { "code": "rhinocerotidae-*", "maxQuantity": 1 }
+				}
+			},
+			"rhinocerotidae-adult-*-coelodontaantiquitatis": {
+				"climate": {
+					"minTemp": -15,
+					"maxTemp": 0,
+					"minRain": 0.1,
+					"maxRain": 0.75,
+					"minForestOrShrubs": 0.0,
+					"maxForest": 0.5,
+					"maxShrubs": 0.75,
+					"maxY": 1.6				
+				},
+				"worldgen": {
+					"triesPerChunk": { "avg": 0.0005, "var": 0}
+				},
+				"runtime": {
+					"maxQuantityByGroup": { "code": "rhinocerotidae-*", "maxQuantity": 1 }
+				}
+			},
+			"rhinocerotidae-adult-*-dicerorhinussumatrensis": {
+				"climate": {
+					"minTemp": 18,
+					"maxTemp": 42,
+					"minRain": 0.55,
+					"maxRain": 1.0,
+					"minForestOrShrubs": 0.5,
+					"maxForest": 1.0,
+					"maxShrubs": 0.75,
+					"minY": 1.1,
+					"maxY": 1.5				
+				},
+				"worldgen": {
+					"triesPerChunk": { "avg": 0.0005, "var": 0}
+				},
+				"runtime": {
+					"maxQuantityByGroup": { "code": "rhinocerotidae-*", "maxQuantity": 1 }
+				}
+			},
+			"rhinocerotidae-adult-*-dicerosbicornis": {
+				"climate": {
+					"minTemp": 12,
+					"maxTemp": 40,
+					"minRain": 0.05,
+					"maxRain": 0.75,
+					"minForestOrShrubs": 0.0,
+					"maxForest": 0.5,
+					"maxShrubs": 0.75,
+					"maxY": 1.5				
+				},
+				"worldgen": {
+					"triesPerChunk": { "avg": 0.0005, "var": 0}
+				},
+				"runtime": {
+					"maxQuantityByGroup": { "code": "rhinocerotidae-*", "maxQuantity": 1 }
+				}
+			},
+			"rhinocerotidae-adult-*-rhinocerossondaicus": {
+				"climate": {
+					"minTemp": 24,
+					"maxTemp": 44,
+					"minRain": 0.55,
+					"maxRain": 1.0,
+					"minForestOrShrubs": 0.0,
+					"maxForest": 1.0,
+					"maxShrubs": 0.75,
+					"maxY": 1.6				
+				},
+				"worldgen": {
+					"triesPerChunk": { "avg": 0.0005, "var": 0}
+				},
+				"runtime": {
+					"maxQuantityByGroup": { "code": "rhinocerotidae-*", "maxQuantity": 1 }
+				}
+			},
+			"rhinocerotidae-adult-*-rhinocerosunicornis": {
+				"climate": {
+					"minTemp": 18,
+					"maxTemp": 36,
+					"minRain": 0.2,
+					"maxRain": 1.0,
+					"minForestOrShrubs": 0.0,
+					"maxForest": 1.0,
+					"maxShrubs": 0.75,
+					"minY": 1.1,
+					"maxY": 1.7				
+				},
+				"worldgen": {
+					"triesPerChunk": { "avg": 0.0005, "var": 0}
+				},
+				"runtime": {
+					"maxQuantityByGroup": { "code": "rhinocerotidae-*", "maxQuantity": 1 }
+				}
+			}
+		}
+	},
+	"soundsByType": {
+"*-adult-*":{"hurt": "rhinocerotidae:creature/rhinocerotidae/roar*","death": "rhinocerotidae:creature/rhinocerotidae/roar*","idle": "rhinocerotidae:creature/rhinocerotidae/idle*"}},
+	"idleSoundChance": 0.05
+}

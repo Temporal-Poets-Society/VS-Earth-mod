@@ -1,0 +1,4 @@
+== niagara_falls_1m
+   drop blocks: {'d6': 43, 'd7': 34, 'dir7': 132, 'rapid d6': 610, 'rapid dir1': 105, 'rapid dir2': 80, 'rapid dir3': 71, 'rapid dir4': 67, 'rapid dir5': 62, 'rapid dir6': 61, 'rapid dir7': 120, 'still6': 2}
+   drops (upper pool beside a lower one): sill 95, no sill 3 [(308201, 106741, 184, 182), (308200, 106740, 184, 182), (308200, 106742, 184, 182)]
+   water beside open air: {'rapid d6': 960, 'd6': 120, 'rapid dir1': 106, 'dir5': 55, 'dir6': 46, 'dir4': 21, 'dir3': 14, 'dir1': 14, 'still7': 8, 'dir7': 3, 'dir2': 3}

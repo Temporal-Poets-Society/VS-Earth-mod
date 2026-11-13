@@ -1,0 +1,220 @@
+[
+  {
+    "file": "raw\\gemdata.zip",
+    "url": "https://www.paivilujala.com/uploads/4/7/2/1/47215405/gemdata.zip",
+    "retrieved_utc": "2026-09-29T18:45:36.231382+00:00",
+    "status": "acquired",
+    "bytes": 425526,
+    "sha256": "4e66b10bd35bebc5703d9c848d00e2773b4ff04ff76cd1ed46a9ae8f9f9f47fa"
+  },
+  {
+    "file": "raw\\gemdata-page.html",
+    "url": "https://www.paivilujala.com/gemdata.html",
+    "retrieved_utc": "2026-09-29T18:45:36.231382+00:00",
+    "status": "acquired",
+    "bytes": 26253,
+    "sha256": "2208c11f78d9bc71d807aa79c064844ff0ff57220ad0f10a202e79fd3e2cd3e1"
+  },
+  {
+    "file": "raw\\diadata-page.html",
+    "url": "https://www.prio.org/data/10",
+    "retrieved_utc": "2026-09-29T18:45:36.231382+00:00",
+    "status": "acquired",
+    "bytes": 24722,
+    "sha256": "43990e4fe0c6c3864d6008a1a80f86d7d8a104a15f30891516c4858a0b6def2d"
+  },
+  {
+    "file": "raw\\afghanistan-page.html",
+    "url": "https://pubs.usgs.gov/of/2002/0110/",
+    "retrieved_utc": "2026-09-29T18:45:36.231382+00:00",
+    "status": "acquired",
+    "bytes": 10328,
+    "sha256": "c3aaf4db7bf811652bdab37fdf89f84d874269da26458e5612dfdb0ce448ca5c"
+  },
+  {
+    "file": "raw\\mcs2026.pdf",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf",
+    "retrieved_utc": "2026-09-29T18:45:36.232885+00:00",
+    "status": "acquired",
+    "bytes": 17646709,
+    "sha256": "595e6e66674236dea40125a03eb1ea6b347f331c0bcf3411a1e77eba53c0d391"
+  },
+  {
+    "file": "raw\\ga-service.json",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer?f=pjson",
+    "retrieved_utc": "2026-09-29T18:45:36.232885+00:00",
+    "status": "acquired",
+    "bytes": 11946,
+    "sha256": "8ec7e4e0e70c4d7cd03178c14099bafe2e30a336f25fdf9e6e013e835eeaa5dc"
+  },
+  {
+    "file": "raw\\ga-layer-36.json",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/36?f=pjson",
+    "retrieved_utc": "2026-09-29T18:45:36.232885+00:00",
+    "status": "acquired",
+    "bytes": 10414,
+    "sha256": "de1c50420b1f016de26b6c59fa1b2f1fd65313a625504f543f0d27a65f9056cb"
+  },
+  {
+    "file": "raw\\ga-layer-36-points.geojson",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/36/query?where=1%3D1&outFields=%2A&outSR=4326&f=geojson",
+    "retrieved_utc": "2026-09-29T18:45:36.232885+00:00",
+    "status": "acquired",
+    "bytes": 3228,
+    "sha256": "de3f4faf9c1ab656427d6b624c508a2b263fabaf86737301b57d1c9df0131c20"
+  },
+  {
+    "file": "raw\\ga-layer-36-count.json",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/36/query?where=1%3D1&returnCountOnly=true&f=json",
+    "retrieved_utc": "2026-09-29T18:45:36.232885+00:00",
+    "status": "acquired",
+    "bytes": 11,
+    "sha256": "b0beaf5a3dbe82ae841ac88bdc3b1174d7e4dec57454b6539e556e58eaadc600"
+  },
+  {
+    "file": "raw\\ga-layer-37.json",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/37?f=pjson",
+    "retrieved_utc": "2026-09-29T18:45:36.233890+00:00",
+    "status": "acquired",
+    "bytes": 10848,
+    "sha256": "474df4774d775f368359741f0ec3f53b8e6831f12281d06f26bf85ba70dabdca"
+  },
+  {
+    "file": "raw\\ga-layer-37-points.geojson",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/37/query?where=1%3D1&outFields=%2A&outSR=4326&f=geojson",
+    "retrieved_utc": "2026-09-29T18:45:36.233890+00:00",
+    "status": "acquired",
+    "bytes": 3263,
+    "sha256": "ef6def9a0f038f254a1b38b65e3b69480ce7f0b93f8696c19358ad1e879df5c9"
+  },
+  {
+    "file": "raw\\ga-layer-37-count.json",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/37/query?where=1%3D1&returnCountOnly=true&f=json",
+    "retrieved_utc": "2026-09-29T18:45:36.233890+00:00",
+    "status": "acquired",
+    "bytes": 11,
+    "sha256": "b0beaf5a3dbe82ae841ac88bdc3b1174d7e4dec57454b6539e556e58eaadc600"
+  },
+  {
+    "file": "raw\\ga-layer-39.json",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/39?f=pjson",
+    "retrieved_utc": "2026-09-29T18:45:36.233890+00:00",
+    "status": "acquired",
+    "bytes": 11263,
+    "sha256": "6c0b09343599457b97cee28cc6456878ff86245eb8a71f63382d5b7a25c8fd6b"
+  },
+  {
+    "file": "raw\\ga-layer-39-points.geojson",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/39/query?where=1%3D1&outFields=%2A&outSR=4326&f=geojson",
+    "retrieved_utc": "2026-09-29T18:45:36.233890+00:00",
+    "status": "acquired",
+    "bytes": 10197,
+    "sha256": "fef63c3886b12df34c9ae3628eb41901518350cc40fee93d772b0ba5b613611c"
+  },
+  {
+    "file": "raw\\ga-layer-39-count.json",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/39/query?where=1%3D1&returnCountOnly=true&f=json",
+    "retrieved_utc": "2026-09-29T18:45:36.233890+00:00",
+    "status": "acquired",
+    "bytes": 12,
+    "sha256": "bd067fc23d73cdd4d33068cde59fdb859d185e3ebdcfa796a120af35c24d27f3"
+  },
+  {
+    "file": "raw\\ga-layer-49.json",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/49?f=pjson",
+    "retrieved_utc": "2026-09-29T18:45:36.233890+00:00",
+    "status": "acquired",
+    "bytes": 13381,
+    "sha256": "abf621d2711c67dc0e435a24ec65a2ed52591605e33e1115f22da62f33ad80b3"
+  },
+  {
+    "file": "raw\\ga-layer-49-points.geojson",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/49/query?where=1%3D1&outFields=%2A&outSR=4326&f=geojson",
+    "retrieved_utc": "2026-09-29T18:45:36.234890+00:00",
+    "status": "acquired",
+    "bytes": 17700,
+    "sha256": "09448359880d16419dbfec44a9c5a873a120d7a7294a99096a40a2e7e33f3d32"
+  },
+  {
+    "file": "raw\\ga-layer-49-count.json",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/49/query?where=1%3D1&returnCountOnly=true&f=json",
+    "retrieved_utc": "2026-09-29T18:45:36.234890+00:00",
+    "status": "acquired",
+    "bytes": 12,
+    "sha256": "950072743b2e284780cb2947b5722bce58ec2570843e37381a6b078d9e22c4c5"
+  },
+  {
+    "file": "raw\\ga-layer-51.json",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/51?f=pjson",
+    "retrieved_utc": "2026-09-29T18:45:36.234890+00:00",
+    "status": "acquired",
+    "bytes": 13165,
+    "sha256": "eee47df1ce8f0b9d6d982f0abae8f2cd62e34b22d952536a1b6be747c6b3d429"
+  },
+  {
+    "file": "raw\\ga-layer-51-points.geojson",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/51/query?where=1%3D1&outFields=%2A&outSR=4326&f=geojson",
+    "retrieved_utc": "2026-09-29T18:45:36.235394+00:00",
+    "status": "acquired",
+    "bytes": 7040,
+    "sha256": "69af5a084becee5dcb9d016efedfcba0a797f3e7df45f9fde9ba4efa598c5332"
+  },
+  {
+    "file": "raw\\ga-layer-51-count.json",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer/51/query?where=1%3D1&returnCountOnly=true&f=json",
+    "retrieved_utc": "2026-09-29T18:45:36.235394+00:00",
+    "status": "acquired",
+    "bytes": 12,
+    "sha256": "6ee8a36b3a4c997cf095a065def85314b843303c136e2a9b281fe6e130575905"
+  },
+  {
+    "file": "raw\\diadata-DIADATA Codebook.pdf",
+    "url": "https://cdn.cloud.prio.org/files/3600c16d-1c66-42c0-bcf7-8b3733acca5b/DIADATA%20Codebook.pdf?inline=true",
+    "retrieved_utc": "2026-09-29T18:45:36.245903+00:00",
+    "final_url": "https://cdn.cloud.prio.org/files/3600c16d-1c66-42c0-bcf7-8b3733acca5b/DIADATA%20Codebook.pdf?inline=true",
+    "status": "acquired",
+    "bytes": 1612225,
+    "sha256": "8414d6059b32aa24a52b62be1e56ade06c4df93c7dfde152fa4b8f61020f5a23"
+  },
+  {
+    "file": "raw\\diadata-DIADATA Data.zip",
+    "url": "https://cdn.cloud.prio.org/files/d042fc6a-ce8a-4c74-b555-e84d68365b99/DIADATA%20Data.zip?inline=true",
+    "retrieved_utc": "2026-09-29T18:45:36.246903+00:00",
+    "final_url": "https://cdn.cloud.prio.org/files/d042fc6a-ce8a-4c74-b555-e84d68365b99/DIADATA%20Data.zip?inline=true",
+    "status": "acquired",
+    "bytes": 338124,
+    "sha256": "c81b48dc5e68e67a0a286332c6720727eb27a8ab45feaf686e01645ecd3d07d3"
+  },
+  {
+    "file": "raw\\afghanistan-of02-110.pdf",
+    "url": "https://pubs.usgs.gov/of/2002/0110/pdf/of02-110.pdf",
+    "retrieved_utc": "2026-09-29T18:45:36.246903+00:00",
+    "status": "acquired",
+    "bytes": 518949,
+    "sha256": "4786a7084551ccf0cf35ce4cc3cb5ac14e399d6bc2223556adaa1aa4811066a3"
+  },
+  {
+    "file": "raw\\afghanistan-README.TXT",
+    "url": "https://pubs.usgs.gov/of/2002/0110/README.TXT",
+    "retrieved_utc": "2026-09-29T18:45:36.246903+00:00",
+    "status": "acquired",
+    "bytes": 972,
+    "sha256": "350c24cc017500fdbed15e2b713d2ad82af41d0e5390b7055f6b577ecfdb60e6"
+  },
+  {
+    "file": "raw\\afghanistan-Afmetadata.txt",
+    "url": "https://pubs.usgs.gov/of/2002/0110/Afmetadata.txt",
+    "retrieved_utc": "2026-09-29T18:45:36.247903+00:00",
+    "status": "acquired",
+    "bytes": 9711,
+    "sha256": "6a6140840c31a5f4a467d8d2b46a5787347ceb672c98338a805bbbe4e669934e"
+  },
+  {
+    "file": "raw\\afghanistan-of02-110.xls",
+    "url": "https://pubs.usgs.gov/of/2002/0110/of02-110.xls",
+    "retrieved_utc": "2026-09-29T18:45:36.247903+00:00",
+    "status": "acquired",
+    "bytes": 410624,
+    "sha256": "8afa60d1836b5741a83915185bc55d529decd5c23be6040966e10bd16d3c1ba7"
+  }
+]

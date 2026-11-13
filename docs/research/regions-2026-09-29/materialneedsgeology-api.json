@@ -1,0 +1,413 @@
+{
+  "mod": {
+    "modid": 6340,
+    "assetid": 37407,
+    "name": "Material Needs: Geology",
+    "text": "<p><span style=\"font-size: 18pt;\"><strong><span style=\"color: #e74c3c; font-size: 18pt;\"><span style=\"color: #000000;\"><span style=\"color: #e74c3c;\"><span style=\"color: #000000;\">OBLIGATORY PLUGS:</span><br /><br /><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/materialneeds\">Material Needs</a><br /><span style=\"color: #000000;\">Material Needs: Geology</span><br /><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/materialneedsflowers\">Material Needs: Flowers</a><br /><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/morefogplease\">More Fog Please</a><br /><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/terraprety\">Terra Prety</a><br /></span></span></span><span style=\"color: #e74c3c; font-size: 18pt;\"><span style=\"color: #e74c3c; font-size: 18pt;\"><span style=\"color: #000000;\"><span style=\"color: #e74c3c; font-size: 18pt;\"><span style=\"color: #000000;\"><span style=\"color: #e74c3c;\"><span style=\"color: #000000;\">Neph's </span></span></span></span><a style=\"color: #e74c3c;\" href=\"https://youtube.com/@nephelangelo?si=Pw2cQn6yoqeMgiPn\">Let's Play Series</a></span></span><br /><span style=\"color: #e74c3c; font-size: 18pt;\"><span style=\"color: #e74c3c;\"><span style=\"color: #e74c3c; font-size: 18pt;\"><span style=\"color: #000000;\"><span style=\"color: #e74c3c; font-size: 18pt;\"><span style=\"color: #000000;\"><span style=\"color: #e74c3c;\"><span style=\"color: #000000;\">Neph's </span></span></span></span></span></span></span><a style=\"color: #e74c3c;\" href=\"https://ko-fi.com/nephelangelo\">Donation Page</a><br /><br /><span style=\"color: #000000;\">Check out Material Needs: Geology on my Let's Play series <span style=\"color: #e03e2d;\"><a style=\"color: #e03e2d;\" href=\"https://youtu.be/ce4Xu7mezMA?si=li1eCqoKy5IuXQX4\">The Blocky Place</a></span>!&nbsp;</span><br /><br /><iframe src=\"//www.youtube-nocookie.com/embed/ce4Xu7mezMA\" width=\"800\" height=\"449\" allowfullscreen=\"allowfullscreen\" allow=\"encrypted-media; picture-in-picture; web-share; clipboard-write\"></iframe></span></span><br /><br /><span style=\"color: #e74c3c;\">2.0.10 UPDATE NOTES</span>: Adds recipes for Aged Ashlar and Cracked Ashlar block varieties which I somehow missed.</strong></span></p>\n<p><br />I strongly recommend checking this mod out with the latest release of <strong><a href=\"https://mods.vintagestory.at/terraprety\">Terra Prety 7.10.2</a></strong> and its recommended worldgen settings for the full geological experience, in combination with <strong><a href=\"https://mods.vintagestory.at/rockstratavariety\">Rock Strata Variety</a></strong> to prevent vanilla rock regions from taking priority in spawning and making the new rocks hard to find, <strong><a href=\"https://mods.vintagestory.at/betterforest\">Better Forest</a></strong> for much more open and breathable forest exploration, and of course the flagship <a href=\"https://mods.vintagestory.at/materialneeds\"><strong>Material Needs</strong></a> mod. This mod is compatible with <a href=\"https://mods.vintagestory.at/geologyaddons\"><strong>Geology Additions</strong></a>.<br /><br />This mod introduces 10 new stone varieties to add more color and life to the landscape. These stones and their colors, classifications and physical formations are based on known real world rock varieties, and are equipped with geologically accurate ore generation balanced for gameplay, thanks to the consultation of geologists small_fern and Calamity2000, and geology enthusiast Illuminati. Several of the new stone varieties serve as geologically accurate alternative sources of Lime, Olivine, and Crushed Corundum as substitution for Crushed Bauxite.<br /><br /></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">New Rock Varieties</div>\n<div class=\"spoiler-text\"><strong>Arenite</strong> - Sedimentary<br /><strong>Arkose</strong> - Sedimentary<br /><strong>Komatiite</strong> - Igneous - Source of Olivine. Source of Corundum (substitute for Crushed Bauxite).<br /><strong>Marl</strong> - Sedimentary - Source of Lime.<br /><strong>Monzonite</strong> - Igneous - Source of Corundum (substitute for Crushed Bauxite).<br /><strong>Pyroxenite</strong> - Igneous - Source of Olivine. Source of Corundum (substitute for Crushed Bauxite).<br /><strong>Serpentinite</strong> - Metamorphic - Source of Olivine. Source of Corundum (substitute for Crushed Bauxite).<br /><strong>Syenite</strong> - Igneous - Source of Corundum (substitute for Crushed Bauxite).<br /><strong>Tufa</strong> - Sedimentary - Source of Lime.<br /><strong>Wacke</strong> - Sedimentary</div>\n</div>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\"><strong>Compatibility</strong></div>\n<div class=\"spoiler-text\"><strong>Material Needs: Geology is now compatible with:<br /><br /><a href=\"https://mods.vintagestory.at/geologyaddons\">Geology Additions</a></strong> - Fully compatible!<br /><strong><a href=\"https://mods.vintagestory.at/rockstratavariety\">Rock Strata Variety</a>&nbsp;</strong>- Fully compatible!<strong><br /><a href=\"https://mods.vintagestory.at/interestingoregen\">Interesting Ore Gen</a>&nbsp;</strong>- Fully compatible!<br /><a href=\"https://mods.vintagestory.at/em\"><strong>Expanded Matter</strong></a> - Fully compatible!&nbsp;<br /><strong><a href=\"https://mods.vintagestory.at/terraprety\">Terra Prety</a>&nbsp;</strong>- Fully compatible!<br /><a href=\"https://mods.vintagestory.at/materialneeds\"><strong>Material Needs</strong></a> - Mostly compatible, still need to incorporate recipes.</div>\n</div>\n<p><strong><br /></strong>Enormous thank you to <a class=\"mention username mceNonEditable\" href=\"https://mods.vintagestory.at/show/user/413BE49987B43F55BF2D\" data-user-hash=\"413BE49987B43F55BF2D\">small_fern</a> of the <a href=\"https://mods.vintagestory.at/geologyaddons\"><strong>Geology Additions</strong></a> mod, geologist <strong>Calamity2000</strong> and enthusiast <strong>Illuminati</strong> from the Discord for consulting me on this to make Material Needs Geology as geologically accurate and faithful to the spirit of Vintage Story as possible.</p>",
+    "author": "Nephelangelo",
+    "urlalias": "materialneedsgeology",
+    "logofilename": "https://moddbcdn.vintagestory.at/materialneedsgeology_8db16bbe02e5ad0002a17e93af3deeba.png",
+    "logofile": "https://moddbcdn.vintagestory.at/materialneedsgeology_8db16bbe02e5ad0002a17e93af3deeba.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/materialneedsgeology_8db16bbe02e5ad0002a17e93af3deeba.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 69539,
+    "follows": 834,
+    "trendingpoints": 0,
+    "comments": 105,
+    "side": "both",
+    "type": "mod",
+    "created": "2025-12-17 06:16:05",
+    "lastreleased": "2026-06-26 01:46:38",
+    "lastmodified": "2026-09-29 05:29:40",
+    "tags": [],
+    "releases": [
+      {
+        "releaseid": 47113,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_96da3d705228d448c4708f73b899aa63.zip?dl=MaterialNeedsGeology_2.0.10.zip",
+        "filename": "MaterialNeedsGeology_2.0.10.zip",
+        "fileid": 103178,
+        "downloads": 23655,
+        "tags": [
+          "1.22.3"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "2.0.10",
+        "created": "2026-06-26 01:46:38",
+        "changelog": "<p>Adds recipes for Aged Ashlar and Cracked Ashlar block varieties which I somehow missed.</p>"
+      },
+      {
+        "releaseid": 45488,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_7b7ab1c75564258af359826caa5764ee.zip?dl=MaterialNeedsGeology_2.0.9.zip",
+        "filename": "MaterialNeedsGeology_2.0.9.zip",
+        "fileid": 100031,
+        "downloads": 6569,
+        "tags": [
+          "1.22.3"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "2.0.9",
+        "created": "2026-06-12 01:34:46",
+        "changelog": "<p>Fixed Spear Head textures not showing up.<br />Tweaked Mortar recipe output to now match vanilla at 4.<br />Tweaked slight darkening of Arkose to distinguish it more from Arenite.</p>"
+      },
+      {
+        "releaseid": 44467,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_0b78d0e14b669c4524922a2d1aef68ea.zip?dl=MaterialNeedsGeology_2.0.8.zip",
+        "filename": "MaterialNeedsGeology_2.0.8.zip",
+        "fileid": 97873,
+        "downloads": 4100,
+        "tags": [
+          "1.22.3"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "2.0.8",
+        "created": "2026-06-03 06:57:22",
+        "changelog": "<p>Fix for a sneaky bug Anego introduced in 1.22, causing Stone Spear textures to not render properly. Be gone, trecherous bug!</p>"
+      },
+      {
+        "releaseid": 43840,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_7ccb3b2da6ef93628e213a3bbd207a6d.zip?dl=MaterialNeedsGeology_2.0.7.zip",
+        "filename": "MaterialNeedsGeology_2.0.7.zip",
+        "fileid": 96552,
+        "downloads": 3539,
+        "tags": [
+          "1.22.2"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "2.0.7",
+        "created": "2026-05-30 02:03:04",
+        "changelog": "<p>Fixed Tufa not crushing into Lime.<br /><br />Slight softening to Syenite, Pyroxenite, and Komatiite textures. Because I can't help myself apparently. :D</p>"
+      },
+      {
+        "releaseid": 42576,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_933e03b208e07ed9b67385414f0d6c94.zip?dl=MaterialNeedsGeology_2.0.6.zip",
+        "filename": "MaterialNeedsGeology_2.0.6.zip",
+        "fileid": 93992,
+        "downloads": 4699,
+        "tags": [
+          "1.22.2"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "2.0.6",
+        "created": "2026-05-21 00:49:48",
+        "changelog": "<p>Slight softening of the grain texture of Komatiite, Monzonite, Pyroxenite, Serpentinite, and Syenite since the last release.<br /><br />I must now stop obsessing about this and go look at something else lol. :D<br /><br />This release should be safe to update for a 2.0 world, as it is just a texture rework. But always make a backup just in case!</p>"
+      },
+      {
+        "releaseid": 42559,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_97e33c3deb200563b7b931aa115deb94.zip?dl=MaterialNeedsGeology_2.0.5.zip",
+        "filename": "MaterialNeedsGeology_2.0.5.zip",
+        "fileid": 93960,
+        "downloads": 138,
+        "tags": [
+          "1.22.2"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "2.0.5",
+        "created": "2026-05-20 22:43:59",
+        "changelog": "<p>Reworked Komatiite, Monzonite, Pyroxenite, Serpentinite, and Syenite stone textures to fit more in line with vanilla design aesthetics, adding grain levels to the stone based on their material composition.</p>"
+      },
+      {
+        "releaseid": 41354,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_15c85ae1a66715c4b3389a575912c43b.zip?dl=MaterialNeedsGeology_2.0.4.zip",
+        "filename": "MaterialNeedsGeology_2.0.4.zip",
+        "fileid": 91707,
+        "downloads": 3928,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "2.0.4",
+        "created": "2026-05-11 06:40:19",
+        "changelog": "<p>Adds Fanned Cobblestone variants to all new stones.<br />Reworked Arenite textures for more consistent saturation.<br />Various little texture reworks to Marl, Komatiite, Pyroxenite, Serpentinite, Tufa, Monzonite.</p>"
+      },
+      {
+        "releaseid": 39194,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_b347f73254827b41f75ebc4c4f3ec35f.zip?dl=MaterialNeedsGeology_2.0.3.zip",
+        "filename": "MaterialNeedsGeology_2.0.3.zip",
+        "fileid": 87251,
+        "downloads": 4177,
+        "tags": [
+          "1.22.0"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "2.0.3",
+        "created": "2026-04-25 06:39:47",
+        "changelog": "<p><span style=\"font-size: 18pt;\"><strong><span style=\"color: #e74c3c;\">2.0.3 UPDATE NOTES</span>: Adds compatibility for 1.22. Should no longer spit out errors. As always, this being a worldgen mod, make sure to <em><span style=\"text-decoration: underline;\"><span style=\"color: #e74c3c; text-decoration: underline;\">BACKUP YOUR WORLD</span></span></em> before updating.</strong></span></p>"
+      },
+      {
+        "releaseid": 38263,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_0502de35eb3ae4ae09857c6df52103b3.zip?dl=MaterialNeedsGeology_2.0.2.zip",
+        "filename": "MaterialNeedsGeology_2.0.2.zip",
+        "fileid": 85209,
+        "downloads": 817,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "2.0.2",
+        "created": "2026-04-15 18:32:39",
+        "changelog": "<p><span style=\"text-decoration: underline; color: #e74c3c;\"><strong>ATTENTION</strong></span>: This update is <span style=\"text-decoration: underline;\"><strong>not immediately compatible</strong></span> with older pre 2.0 versions of MNG without a <strong>block/item remapping</strong>. I will be releasing an <strong>unstable pre-release</strong> of a <strong>Remapping Mod</strong> shortly, you will need to <span style=\"text-decoration: underline; color: #e74c3c;\"><strong>BACKUP YOUR WORLD</strong></span>, then read the full instructions here on the Mod DB to execute a safe remapping of your world.<br /><br />This 2.0 series update replaces <strong>Travertine</strong> stone type with <strong>Tufa</strong> to make room for vanilla's new Travertine stone in 1.22.</p>\n<p><br />This 2.0.2 update adds original textures to better reflect the texture of their real world stones for Komatiite, Monzonite, Pyroxenite, Syenite, and Serpentinite, and adds some subtle texture adjustments to Arkose.</p>"
+      },
+      {
+        "releaseid": 36430,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_642607903ac378865c6d74a9bb4bb45f.zip?dl=MaterialNeedsGeology_2.0.1.zip",
+        "filename": "MaterialNeedsGeology_2.0.1.zip",
+        "fileid": 80422,
+        "downloads": 2399,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "2.0.1",
+        "created": "2026-03-14 06:15:38",
+        "changelog": "<p>Very tiny update from <strong>2.0.0</strong> which adds a richer consistency of saturation to the Arenite rock texture. This update is compatible with <strong>2.0.0</strong> worlds.<br /><br /></p>\n<p><span style=\"text-decoration: underline; color: #e74c3c;\"><strong>ATTENTION</strong></span>: This update is <span style=\"text-decoration: underline;\"><strong>not immediately compatible</strong></span> with older pre 2.0 versions of MNG without a <strong>block/item remapping</strong>. I will be releasing an <strong>unstable pre-release</strong> of a <strong>Remapping Mod</strong> shortly, you will need to <span style=\"text-decoration: underline; color: #e74c3c;\"><strong>BACKUP YOUR WORLD</strong></span>, then read the full instructions here on the Mod DB to execute a safe remapping of your world.<br /><br />This 2.0 series update replaces <strong>Travertine</strong> stone type with <strong>Tufa</strong> to make room for vanilla's new Travertine stone in 1.22.<br />This 2.0 series update also updates <strong>Tufa</strong> and <strong>Marl</strong> textures to incorporate some of the porous texture of vanilla's new Travertine stone.</p>"
+      },
+      {
+        "releaseid": 35974,
+        "mainfile": "https://moddbcdn.vintagestory.at/MNG_GA_REMAP_2.0.0-p_3e5ba8b733e626d9561c01d3a0c106e7.zip?dl=MNG_GA_REMAP_2.0.0-pre.1.zip",
+        "filename": "MNG_GA_REMAP_2.0.0-pre.1.zip",
+        "fileid": 79408,
+        "downloads": 121,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mnggaremap",
+        "modversion": "2.0.0-pre.1",
+        "created": "2026-03-07 23:41:18",
+        "changelog": "<p><strong><span style=\"color: #e74c3c;\">This Remap Mod is an <span style=\"text-decoration: underline;\">UNSTABLE PRE-RELEASE</span> test for updating worlds which use both MNG 1.0.7 and Geology Additions to MNG 2.0.0 in preparation for Vintage Story 1.22. If your world does not use Geology Additions then you can use MNG_REMAP_2.0.0 (though using this one should be fine as well, it will just spit a bunch of \"errors\" at you when it fails to find Geology Additions blocks and items). Because vanilla is now adding its own Travertine stone, this remapping is necessary to make room for it by changing MNG's Travertine stone to Tufa.</span><br /><br />ATTENTION: Material Needs: Geology 2.0.0 is NOT IMMEDIATELY COMPATIBLE with older worlds without a block/item remap. I will be releasing an unstable pre-release of a Remapping Mod shortly to update your worlds. You will need to <u>BACKUP YOUR WORLDS</u> first before attempting to remap your world, and follow these instructions to attempt a safe remapping. Please be advised that this Remapping Mods are UNSTABLE PRE-RELEASE tests for remapping, and I will need your feedback on them. Please follow these instructions exactly, and report your results in the comments below. If these instructions are not followed correctly, there is a potential to damage world chunks which can crash your world. When these instructions are followed correctly, I have not been able to reproduce any issues, but I will need this feedback to assess any potential issues with the Remapping Mod. Thank you!<br /><br />REMAP INSTRUCTIONS:<br /><br />1. As always, !!! BACKUP YOUR WORLD !!! before attempting a remap or updating your world.<br />2. You must make sure you are running this remap in 1.21.6, as this remap WILL NOT WORK&nbsp;in 1.22.<br />3. You must ensure you are the only player on this world. It may be best to do this remap on a singleplayer world.<br />4. You must travel to a location far away from any ungenerated / unexplored chunks. Your base is likely a good location, as it will likely be deep inside your explored regions.<br />5. You must deactivate Farseer, because this can inadvertently load new chunks, which can break chunks.<br />6. You must lower render distance to 32, because this can inadvertently load new chunks, which can break chunks.<br />7. Download the correct Remap Mod for your world. If your world uses Geology Additions you will need to use MNG_GA_REMAP_2.0.0. If your world does not use Geology Additions you can use MNG_REMAP_2.0.0.<br />8. Log out of your world, remove MNG 1.0.7 from your mods folder, and add MNG 2.0.0 as well as add the correct Remap Mod&nbsp;to your mods folder.<br />9. Log back into your world. You should immediately be prompted to remap your world. (You can also backup your world here if you haven't already, which you should do.) Select \"Okay, Apply now\".<br />10. Wait for the client to finish remapping every block/item in your world. When It has finished, it will tell you that you can restart your game/server in the General text chat on the left.<br />11. Log out of your world and remove the remapping mod from your mods folder.<br />12. To test to see if the remap worked safely, reactivate Farseer, restore your render distance, log into your world, enter Creative mode and fly around exploring formerly \"Travertine\" regions to see if there is any crash. Please report your findings in the comments below.</strong></p>"
+      },
+      {
+        "releaseid": 35973,
+        "mainfile": "https://moddbcdn.vintagestory.at/MNG_REMAP_2.0.0-pre._dfb36e56e837036f88d85dbbea35e03f.zip?dl=MNG_REMAP_2.0.0-pre.1.zip",
+        "filename": "MNG_REMAP_2.0.0-pre.1.zip",
+        "fileid": 79405,
+        "downloads": 83,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mngremap",
+        "modversion": "2.0.0-pre.1",
+        "created": "2026-03-07 23:39:09",
+        "changelog": "<p><strong><span style=\"color: #e74c3c;\">This Remap Mod is an <span style=\"text-decoration: underline;\">UNSTABLE PRE-RELEASE</span> test for updating standard MNG 1.0.7 worlds to MNG 2.0.0 in preparation for Vintage Story 1.22. If your world uses Geology Additions you will instead need to use MNG_GA_REMAP_2.0.0. Because vanilla is now adding its own Travertine stone, this remapping is necessary to make room for it by changing MNG's Travertine stone to Tufa.</span><br /><br />ATTENTION: Material Needs: Geology 2.0.0 is NOT IMMEDIATELY COMPATIBLE with older worlds without a block/item remap. I will be releasing an unstable pre-release of a Remapping Mod shortly to update your worlds. You will need to <u>BACKUP YOUR WORLDS</u> first before attempting to remap your world, and follow these instructions to attempt a safe remapping. Please be advised that this Remapping Mods are UNSTABLE PRE-RELEASE tests for remapping, and I will need your feedback on them. Please follow these instructions exactly, and report your results in the comments below. If these instructions are not followed correctly, there is a potential to damage world chunks which can crash your world. When these instructions are followed correctly, I have not been able to reproduce any issues, but I will need this feedback to assess any potential issues with the Remapping Mod. Thank you!<br /><br />REMAP INSTRUCTIONS:<br /><br />1. As always, !!! BACKUP YOUR WORLD !!! before attempting a remap or updating your world.<br />2. You must make sure you are running this remap in 1.21.6, as this remap WILL NOT WORK&nbsp;in 1.22.<br />3. You must ensure you are the only player on this world. It may be best to do this remap on a singleplayer world.<br />4. You must travel to a location far away from any ungenerated / unexplored chunks. Your base is likely a good location, as it will likely be deep inside your explored regions.<br />5. You must deactivate Farseer, because this can inadvertently load new chunks, which can break chunks.<br />6. You must lower render distance to 32, because this can inadvertently load new chunks, which can break chunks.<br />7. Download the correct Remap Mod for your world. If your world uses Geology Additions you will need to use MNG_GA_REMAP_2.0.0. If your world does not use Geology Additions you can use MNG_REMAP_2.0.0.<br />8. Log out of your world, remove MNG 1.0.7 from your mods folder, and add MNG 2.0.0 as well as add the correct Remap Mod&nbsp;to your mods folder.<br />9. Log back into your world. You should immediately be prompted to remap your world. (You can also backup your world here if you haven't already, which you should do.) Select \"Okay, Apply now\".<br />10. Wait for the client to finish remapping every block/item in your world. When It has finished, it will tell you that you can restart your game/server in the General text chat on the left.<br />11. Log out of your world and remove the remapping mod from your mods folder.<br />12. To test to see if the remap worked safely, reactivate Farseer, restore your render distance, log into your world, enter Creative mode and fly around exploring formerly \"Travertine\" regions to see if there is any crash. Please report your findings in the comments below.</strong></p>"
+      },
+      {
+        "releaseid": 35968,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_041b1feee44317b643cde9358b9d0254.zip?dl=MaterialNeedsGeology_2.0.0.zip",
+        "filename": "MaterialNeedsGeology_2.0.0.zip",
+        "fileid": 79399,
+        "downloads": 479,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "2.0.0",
+        "created": "2026-03-07 22:38:09",
+        "changelog": "<p><span style=\"text-decoration: underline; color: #e74c3c;\"><strong>ATTENTION</strong></span>: This update is <span style=\"text-decoration: underline;\"><strong>not immediately compatible</strong></span> with older versions of MNG without a <strong>block/item remapping</strong>. I will be releasing an <strong>unstable pre-release</strong> of a <strong>Remapping Mod</strong> shortly, you will need to <span style=\"text-decoration: underline; color: #e74c3c;\"><strong>BACKUP YOUR WORLD</strong></span>, then read the full instructions here on the Mod DB to execute a safe remapping of your world.<br /><br />This update replaces <strong>Travertine</strong> stone type with <strong>Tufa</strong> to make room for vanilla's new Travertine stone in 1.22.<br />This update also updates <strong>Tufa</strong> and <strong>Marl</strong> textures to incorporate some of the porous texture of vanilla's new Travertine stone.</p>"
+      },
+      {
+        "releaseid": 34218,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_c9de77f8f9766a70c857a0ed8ae0385d.zip?dl=MaterialNeedsGeology_1.0.7.zip",
+        "filename": "MaterialNeedsGeology_1.0.7.zip",
+        "fileid": 75451,
+        "downloads": 4371,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "1.0.7",
+        "created": "2026-02-09 02:00:53",
+        "changelog": "<p>Fixes compatibility for Expanded Matter.</p>"
+      },
+      {
+        "releaseid": 34128,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_c93986edf31b02c94750e37103d875f7.zip?dl=MaterialNeedsGeology_1.0.6.zip",
+        "filename": "MaterialNeedsGeology_1.0.6.zip",
+        "fileid": 75235,
+        "downloads": 291,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "1.0.6",
+        "created": "2026-02-08 04:10:35",
+        "changelog": "<p>Adds compatibility for Expanded Matter courtesy of Droseran!&nbsp;</p>"
+      },
+      {
+        "releaseid": 32408,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_6941840701c3ea00711d3d53f65c83d1.zip?dl=MaterialNeedsGeology_1.0.5.zip",
+        "filename": "MaterialNeedsGeology_1.0.5.zip",
+        "fileid": 71314,
+        "downloads": 4958,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "1.0.5",
+        "created": "2026-01-11 20:05:01",
+        "changelog": "<p>Added full compatibility for all <strong>Geology Additions</strong> ores, which should now make <strong>Material Needs: Geology</strong>, <strong>Geology Additions</strong> and <strong>Interesting Ore Gen</strong> all totally compatible and functionally harmonious together in any combination. Thanks to Droseran, N_Azurik, and Arybeki for helping to put together these cross compatibility patches!</p>"
+      },
+      {
+        "releaseid": 31880,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_303d3239fd70b62c65f2627538b903ec.zip?dl=MaterialNeedsGeology_1.0.4.zip",
+        "filename": "MaterialNeedsGeology_1.0.4.zip",
+        "fileid": 70203,
+        "downloads": 1833,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "1.0.4",
+        "created": "2026-01-03 05:26:06",
+        "changelog": "<p>Fixed Corundum Ore not generating in stones.<br />Fixed all server-main.log warnings.<br />Fixed stone knives using metal knife item shape instead of stone knife shape.<br />Added Quartz Native Silver and Quartz Native Gold to Marl, Wacke and Monzonite.<br />Slight adjustment to Marl colors.<br /><br />Preparing for Interesting Ore Gen compatibility, should come in the next update after some testing.</p>"
+      },
+      {
+        "releaseid": 31289,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_d217e6d94480bf16c83a180ad0de7852.zip?dl=MaterialNeedsGeology_1.0.3.zip",
+        "filename": "MaterialNeedsGeology_1.0.3.zip",
+        "fileid": 68861,
+        "downloads": 1651,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "1.0.3",
+        "created": "2025-12-24 22:50:22",
+        "changelog": "<p>Fix for Bone Knife recipes.<br />Fix for Spear recipes.</p>"
+      },
+      {
+        "releaseid": 31229,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_c8ede02249f1c9917f45f7c2985ca73e.zip?dl=MaterialNeedsGeology_1.0.2.zip",
+        "filename": "MaterialNeedsGeology_1.0.2.zip",
+        "fileid": 68749,
+        "downloads": 257,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "1.0.2",
+        "created": "2025-12-24 01:31:58",
+        "changelog": "<p>Fixed Monzonite and Syenite not being knappable.<br />Fixed Peridot ore blocks not generating.<br />Cleaned up a number of benign warnings in the server-main log.&nbsp;</p>"
+      },
+      {
+        "releaseid": 31158,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_404bb2dc72cad5253aa8c96e85b283ae.zip?dl=MaterialNeedsGeology_1.0.1.zip",
+        "filename": "MaterialNeedsGeology_1.0.1.zip",
+        "fileid": 68580,
+        "downloads": 402,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "1.0.1",
+        "created": "2025-12-22 21:41:42",
+        "changelog": "<p>This update should be safe to update from 1.0.0, but as standard precaution, it's always recommended to backup your world first, just in case.<br /><br />* Removed Olivine deposits from Syenite because Geology&trade;️, though the blocks should remain unchanged in any already generated worlds.<br />* Hue adjustments to many textures to more accurately fit their real world rock varieties (Komatiite and Monzonite).<br />* Fixed all metal shovels showing copper shovel texture.<br />* Added nifty mod icon.</p>"
+      },
+      {
+        "releaseid": 31140,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_548c47f44ec042d83aa3785721bd9edc.zip?dl=MaterialNeedsGeology_1.0.0.zip",
+        "filename": "MaterialNeedsGeology_1.0.0.zip",
+        "fileid": 68552,
+        "downloads": 280,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "1.0.0",
+        "created": "2025-12-22 03:12:49",
+        "changelog": "<p>This is the official release of <strong>Material Needs: Geology 1.0.0</strong>. Everything should be generating properly and fully playable now.&nbsp;<br /><br />Added ability to display Crushed Corundum on shelves and in display cases.<br />Removed tools for Arenite, Arkose, Marl, Travertine and Wacke as they are too soft.<br />Rebalanced ore distributions, nerfed a couple stone types that were op.<br />Countless tiny color adjustments and refinements across the board.<br />Activated Cracked Stone variants, which should now generate in the terrain.<br />Gave instability properties to Arenite, Arkose, Marl, Travertine and Wacke.<br />Slightly adjusted vanilla's Bauxite cobblestone textures to tone down some of the saturation in the shadows.<br />Countless other little tweaks trying to get it as geologically accurate and balanced for gameplay as possible.</p>"
+      },
+      {
+        "releaseid": 31092,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_4a9820860b8d9bb9b6c19f2807c8dd1a.zip?dl=MaterialNeedsGeology_0.0.3.zip",
+        "filename": "MaterialNeedsGeology_0.0.3.zip",
+        "fileid": 68453,
+        "downloads": 202,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "0.0.3",
+        "created": "2025-12-21 05:45:41",
+        "changelog": "<p>This remains a test release, and will very likely be the last test release before official release. Almost everything seems to be implemented and working properly.<br /><br />Added Monzonite stone variety.<br />Added Syenite stone variety.<br />Changed Komatiite textures.<br />Added stone tools.<br />Added ores.<br />Caught a few bugs.&nbsp;</p>"
+      },
+      {
+        "releaseid": 31019,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_46bb7520f94f662d44a4e455c4c4ec43.zip?dl=MaterialNeedsGeology_0.0.2.zip",
+        "filename": "MaterialNeedsGeology_0.0.2.zip",
+        "fileid": 68289,
+        "downloads": 295,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "0.0.2",
+        "created": "2025-12-19 08:41:13",
+        "changelog": "<p>Added recipes for almost all core gameplay needs.<br />Removed tools for Arenite, Marl and Travertine as they are too soft.<br /><br />This release is now almost complete, I believe all that is left is a few recipes here and there. Please let me know if you find something unfinished. If I don't find any issues, I will be releasing soon. Speak now or forever hold your peace.</p>"
+      },
+      {
+        "releaseid": 31008,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_b05c00a7a1d61106fd54633058b7e9ca.zip?dl=MaterialNeedsGeology_0.0.1.zip",
+        "filename": "MaterialNeedsGeology_0.0.1.zip",
+        "fileid": 68264,
+        "downloads": 94,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "mngeology",
+        "modversion": "0.0.1",
+        "created": "2025-12-19 01:33:38",
+        "changelog": "<p>This update remains a <span style=\"text-decoration: underline;\"><strong>TEST VERSION</strong></span> but should now be semi-playable. The only thing left to add should be recipes. This may be the last version before full release.<br /><br />Added all ore items.<br />Added all tools.<br />Added Komatiite and Pyroxenite querns.<br />Added Crushed Corundum as a substitute for Crushed Bauxite in Refractory Bricks.<br />Added language file naming almost all of the new blocks and items.</p>"
+      },
+      {
+        "releaseid": 30938,
+        "mainfile": "https://moddbcdn.vintagestory.at/MaterialNeedsGeology_747596754cac36d70dfa325dae771eb9.zip?dl=MaterialNeedsGeology_0.0.0.zip",
+        "filename": "MaterialNeedsGeology_0.0.0.zip",
+        "fileid": 68133,
+        "downloads": 201,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "materialneedsgeology",
+        "modversion": "0.0.0",
+        "created": "2025-12-17 06:18:55",
+        "changelog": "<p>This is a bare bones <strong>test release</strong>, it is <strong>not yet functional for gameplay</strong>, but all rock types are implemented and generating. Strongly recommend checking it out with <strong>Terra Prety</strong> and its recommended worldgen settings, as well as the main <strong>Material Needs</strong> mod. This version will very likely not be compatible for long term play as I will be adjusting balance for the full gameplay ready release, which will be released as 1.0.0.<br /><br />This mod introduces 8 new stone types to add more color and life to the landscape. These stones are:<br /><br /><strong>Arenite</strong><br /><strong>Arkose</strong><br /><strong>Komatiite</strong><br /><strong>Marl</strong><br /><strong>Pyroxenite</strong><br /><strong>Serpentine</strong><br /><strong>Travertine</strong><br /><strong>Wacke&nbsp;</strong></p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 68462,
+        "mainfile": "https://moddbcdn.vintagestory.at/gallery4_17c5dd06ae0221f68384c78d4da6de76.jpg",
+        "filename": "gallery4.jpg",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/gallery4_17c5dd06ae0221f68384c78d4da6de76_55_60.jpg",
+        "created": "2025-12-21 06:48:16"
+      },
+      {
+        "fileid": 68586,
+        "mainfile": "https://moddbcdn.vintagestory.at/gallery8_4d0105a10055a45593ef23addd5b084d.jpg",
+        "filename": "gallery8.jpg",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/gallery8_4d0105a10055a45593ef23addd5b084d_55_60.jpg",
+        "created": "2025-12-22 21:44:49"
+      },
+      {
+        "fileid": 85210,
+        "mainfile": "https://moddbcdn.vintagestory.at/gallery_stones_14fb02bcaa6112edde09c8bff3bbddc7.jpg",
+        "filename": "gallery_stones.jpg",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/gallery_stones_14fb02bcaa6112edde09c8bff3bbddc7_55_60.jpg",
+        "created": "2026-04-15 18:34:33"
+      },
+      {
+        "fileid": 92158,
+        "mainfile": "https://moddbcdn.vintagestory.at/tp_gallery1_85fe9759213dc177602ec4865f1fb251.jpg",
+        "filename": "tp_gallery1.jpg",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/tp_gallery1_85fe9759213dc177602ec4865f1fb251_55_60.jpg",
+        "created": "2026-05-13 02:00:33"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

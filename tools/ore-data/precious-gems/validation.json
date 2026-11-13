@@ -1,0 +1,8923 @@
+{
+ "errors": [],
+ "warnings": [
+  "pg:ol-zabargad: within 0.05 deg of the coast but not inside a land polygon (island or coast)",
+  "pg:f-ivittuut: fluorite (bed-only in 0060) with a Precambrian host; the runtime uses a similar bed host or drops it",
+  "pg:f-vergenoeg: fluorite (bed-only in 0060) with a Precambrian host; the runtime uses a similar bed host or drops it",
+  "pg:f-witkop: fluorite (bed-only in 0060) with a Precambrian host; the runtime uses a similar bed host or drops it",
+  "pg:f-okorusu: fluorite (bed-only in 0060) with a Precambrian host; the runtime uses a similar bed host or drops it"
+ ],
+ "counts": {
+  "diamond": 41,
+  "emerald": 11,
+  "lapis": 3,
+  "corundum": 13,
+  "spinel": 1,
+  "olivine": 5,
+  "garnet": 6,
+  "topaz": 6,
+  "tourmaline": 7,
+  "beryl": 3,
+  "Au": 151,
+  "U": 30,
+  "C_graphite": 12,
+  "F": 13,
+  "SiO2": 8,
+  "areas": 7
+ },
+ "totals": {
+  "counts": {
+   "diamond": 41,
+   "emerald": 11,
+   "lapis": 3,
+   "corundum": 13,
+   "spinel": 1,
+   "olivine": 5,
+   "garnet": 6,
+   "topaz": 6,
+   "tourmaline": 7,
+   "beryl": 3,
+   "Au": 151,
+   "U": 30,
+   "C_graphite": 12,
+   "F": 13,
+   "SiO2": 8,
+   "areas": 7
+  },
+  "goldTonnesByCountry": {
+   "South Africa": 81590.0,
+   "United States": 12351.0,
+   "Russia": 11905.0,
+   "Australia": 9971.0,
+   "Canada": 7088.5,
+   "Uzbekistan": 5280.0,
+   "China": 4930.0,
+   "Ghana": 4360.0,
+   "Brazil": 3031.0,
+   "Papua New Guinea": 2600.0,
+   "Peru": 2544.0,
+   "Dominican Republic": 1560.0,
+   "Tanzania": 1530.0,
+   "Mali": 1472.0,
+   "Mexico": 969.0,
+   "Colombia": 950.0,
+   "India": 890.0,
+   "Venezuela": 850.0,
+   "New Zealand": 808.0,
+   "Congo (Kinshasa)": 805.0,
+   "Kazakhstan": 775.0,
+   "Argentina": 748.0,
+   "Chile": 740.0,
+   "Romania": 705.0,
+   "Indonesia": 705.0,
+   "Egypt": 651.0,
+   "Kyrgyzstan": 630.0,
+   "Guinea": 570.0,
+   "Turkey": 525.0,
+   "Japan": 495.0,
+   "Philippines": 480.0,
+   "Burkina Faso": 450.0,
+   "Mauritania": 450.0,
+   "Zimbabwe": 370.0,
+   "Ecuador": 315.0,
+   "Suriname": 310.0,
+   "France": 120.0,
+   "Sudan": 100.0,
+   "Saudi Arabia": 68.0,
+   "Ethiopia": 60.0,
+   "Slovakia": 45.5,
+   "Austria": 40.0,
+   "Czech Republic": 20.0,
+   "Spain": 5.3999999999999995
+  },
+  "goldTonnesByKind": {
+   "lode": 71257.0,
+   "placer": 12605.4,
+   "Witwatersrand": 81000.0
+  },
+  "goldTonnesTotal": 164862,
+  "diamondMctByCountry": {
+   "Botswana": 1521.0,
+   "Russia": 1345.0,
+   "Congo (Kinshasa)": 900.0,
+   "Australia": 870.0,
+   "South Africa": 764.4,
+   "Angola": 760.0,
+   "Canada": 316.0,
+   "Zimbabwe": 150.0,
+   "Ghana": 90.0,
+   "Namibia": 85.0,
+   "Sierra Leone": 56.0,
+   "Brazil": 26.0,
+   "Central African Republic": 25.0,
+   "Tanzania": 21.000000000000004,
+   "India": 14.5,
+   "Lesotho": 5.1000000000000005
+  },
+  "diamondMctTotal": 6949,
+  "uraniumKtU3O8ByCountry": {
+   "Canada": 984.22,
+   "Kazakhstan": 865.0,
+   "Namibia": 506.5,
+   "Niger": 414.0,
+   "Australia": 332.1,
+   "Russia": 330.0,
+   "Greenland": 268.66,
+   "United States": 215.5,
+   "Germany": 100.0,
+   "Czech Republic": 65.00000000000001,
+   "Uzbekistan": 60.0,
+   "Ukraine": 36.0,
+   "Gabon": 31.5,
+   "Congo (Kinshasa)": 30.0,
+   "India": 12.0
+  },
+  "uraniumKtU3O8Total": 4250,
+  "top20GoldTonnes": [
+   [
+    22000,
+    "Witwatersrand: Far West Rand (West Wits Line, Carletonville)"
+   ],
+   [
+    17000,
+    "Witwatersrand: Free State goldfield (Welkom-Odendaalsrus-Virginia)"
+   ],
+   [
+    12500,
+    "Witwatersrand: Central Rand goldfield (Johannesburg)"
+   ],
+   [
+    11000,
+    "Witwatersrand: East Rand goldfield (Benoni-Springs-Nigel)"
+   ],
+   [
+    10500,
+    "Witwatersrand: Klerksdorp goldfield (Vaal Reefs, KOSH)"
+   ],
+   [
+    5280.0,
+    "Muruntau"
+   ],
+   [
+    5000,
+    "Witwatersrand: West Rand goldfield (Randfontein-Krugersdorp)"
+   ],
+   [
+    3000,
+    "Witwatersrand: Evander goldfield (Kinross-Winkelhaak)"
+   ],
+   [
+    2500.0,
+    "Kolyma placers (Susuman-Yagodnoye)"
+   ],
+   [
+    2160.0,
+    "Porcupine camp (Hollinger-McIntyre-Dome)"
+   ],
+   [
+    2160.0,
+    "Golden Mile (Kalgoorlie Super Pit and Mt Charlotte)"
+   ],
+   [
+    1960.0,
+    "Obuasi"
+   ],
+   [
+    1800.0,
+    "Sukhoi Log"
+   ],
+   [
+    1800.0,
+    "Goldstrike (Betze-Post-Meikle)"
+   ],
+   [
+    1760.0000000000002,
+    "Lihir (Ladolam)"
+   ],
+   [
+    1560.0,
+    "Pueblo Viejo"
+   ],
+   [
+    1500.0,
+    "Lena goldfields (Bodaibo)"
+   ],
+   [
+    1440.0,
+    "Yanacocha"
+   ],
+   [
+    1407.0,
+    "Donlin"
+   ],
+   [
+    1400.0,
+    "Sanshandao (Jiaodong)"
+   ]
+  ],
+  "top20OreMt": [
+   [
+    4100.0,
+    "Sierra Nevada Tertiary gravels and river placers",
+    "Au"
+   ],
+   [
+    2500.0,
+    "Kolyma placers (Susuman-Yagodnoye)",
+    "Au"
+   ],
+   [
+    2125.0,
+    "Witwatersrand: Free State goldfield (Welkom-Odendaalsrus-Virginia)",
+    "Au"
+   ],
+   [
+    2000.0,
+    "Sperrgebiet coastal diamonds (Oranjemund)",
+    "diamond"
+   ],
+   [
+    2000.0,
+    "Aheim (Gusdal) dunite",
+    "olivine"
+   ],
+   [
+    1950.0,
+    "Paracatu (Morro do Ouro)",
+    "Au"
+   ],
+   [
+    1833.3,
+    "Witwatersrand: Far West Rand (West Wits Line, Carletonville)",
+    "Au"
+   ],
+   [
+    1760.0,
+    "Muruntau",
+    "Au"
+   ],
+   [
+    1600.0,
+    "Yanacocha",
+    "Au"
+   ],
+   [
+    1570.0,
+    "Boddington",
+    "Au"
+   ],
+   [
+    1500.0,
+    "Namaqualand coastal diamonds (Kleinzee-Alexander Bay)",
+    "diamond"
+   ],
+   [
+    1500.0,
+    "Lena goldfields (Bodaibo)",
+    "Au"
+   ],
+   [
+    1388.9,
+    "Witwatersrand: Central Rand goldfield (Johannesburg)",
+    "Au"
+   ],
+   [
+    1375.0,
+    "Witwatersrand: East Rand goldfield (Benoni-Springs-Nigel)",
+    "Au"
+   ],
+   [
+    1240.0,
+    "Klondike placers (Bonanza-Eldorado-Hunker-Dominion)",
+    "Au"
+   ],
+   [
+    1152.4,
+    "Witwatersrand: Klerksdorp goldfield (Vaal Reefs, KOSH)",
+    "Au"
+   ],
+   [
+    1150.0,
+    "Balama",
+    "C_graphite"
+   ],
+   [
+    1010.0,
+    "Kvanefjeld (Ilimaussaq)",
+    "U"
+   ],
+   [
+    1000.0,
+    "Victorian alluvials and deep leads (Ballarat-Castlemaine-Bendigo)",
+    "Au"
+   ],
+   [
+    1000.0,
+    "Vaal River alluvial diamonds (Barkly West-Windsorton)",
+    "diamond"
+   ]
+  ],
+  "top20DiamondMct": [
+   [
+    870.0,
+    "Argyle (AK1 lamproite)"
+   ],
+   [
+    810.0,
+    "Orapa (AK1)"
+   ],
+   [
+    750.0,
+    "Mbuji-Mayi (MIBA)"
+   ],
+   [
+    702.0,
+    "Jwaneng"
+   ],
+   [
+    560.0,
+    "Catoca"
+   ],
+   [
+    400.0,
+    "Udachnaya"
+   ],
+   [
+    315.0,
+    "Aikhal and Yubileynaya"
+   ],
+   [
+    260.0,
+    "Cullinan (Premier)"
+   ],
+   [
+    176.0,
+    "Venetia"
+   ],
+   [
+    175.0,
+    "Mir"
+   ],
+   [
+    175.0,
+    "Internatsionalnaya"
+   ],
+   [
+    150.0,
+    "Tshikapa alluvial diamonds (Kasai)"
+   ],
+   [
+    150.0,
+    "Marange"
+   ],
+   [
+    150.0,
+    "Lunda Norte alluvial diamonds (Lucapa-Chitotolo)"
+   ],
+   [
+    150.0,
+    "Lomonosov field (Arkhangelsk)"
+   ],
+   [
+    150.0,
+    "Finsch"
+   ],
+   [
+    140.0,
+    "Diavik"
+   ],
+   [
+    130.0,
+    "Nyurba and Botuobinskaya (Nakyn field)"
+   ],
+   [
+    120.0,
+    "Ekati (Panda-Koala-Misery-Fox)"
+   ],
+   [
+    90.0,
+    "Kimberley pipes (De Beers, Dutoitspan, Bultfontein, Wesselton)"
+   ]
+  ]
+ },
+ "reference": {
+  "source": "USGS Mineral Commodity Summaries 2026 (reference-mcs2026.json); cumulative production figures in GOLD_CUMULATIVE_T",
+  "gold": {
+   "byCountry": [
+    {
+     "country": "South Africa",
+     "catalogueT": 81590,
+     "cumulativeT": 53000,
+     "reservesT": 5000.0,
+     "coverage": 1.41
+    },
+    {
+     "country": "United States",
+     "catalogueT": 12351,
+     "cumulativeT": 24000,
+     "reservesT": 3000.0,
+     "coverage": 0.46
+    },
+    {
+     "country": "Russia",
+     "catalogueT": 11905,
+     "cumulativeT": 18000,
+     "reservesT": 12000.0,
+     "coverage": 0.4
+    },
+    {
+     "country": "Australia",
+     "catalogueT": 9971,
+     "cumulativeT": 15000,
+     "reservesT": 13000.0,
+     "coverage": 0.36
+    },
+    {
+     "country": "Canada",
+     "catalogueT": 7088,
+     "cumulativeT": 12000,
+     "reservesT": 3200.0,
+     "coverage": 0.47
+    },
+    {
+     "country": "China",
+     "catalogueT": 4930,
+     "cumulativeT": 10000,
+     "reservesT": 3200.0,
+     "coverage": 0.37
+    },
+    {
+     "country": "Uzbekistan",
+     "catalogueT": 5280,
+     "cumulativeT": 5000,
+     "reservesT": 2200.0,
+     "coverage": 0.73
+    },
+    {
+     "country": "Ghana",
+     "catalogueT": 4360,
+     "cumulativeT": 5000,
+     "reservesT": 1000.0,
+     "coverage": 0.73
+    },
+    {
+     "country": "Brazil",
+     "catalogueT": 3031,
+     "cumulativeT": 3500,
+     "reservesT": 2500.0,
+     "coverage": 0.51
+    },
+    {
+     "country": "Peru",
+     "catalogueT": 2544,
+     "cumulativeT": 5000,
+     "reservesT": 2200.0,
+     "coverage": 0.35
+    },
+    {
+     "country": "Indonesia",
+     "catalogueT": 705,
+     "cumulativeT": 3500,
+     "reservesT": 3600.0,
+     "coverage": 0.1
+    },
+    {
+     "country": "Kazakhstan",
+     "catalogueT": 775,
+     "cumulativeT": 1500,
+     "reservesT": 2300.0,
+     "coverage": 0.2
+    },
+    {
+     "country": "Mexico",
+     "catalogueT": 969,
+     "cumulativeT": 3500,
+     "reservesT": 1400.0,
+     "coverage": 0.2
+    }
+   ],
+   "world": {
+    "catalogueT": 164862,
+    "wgcAboveGroundT": 216265,
+    "mcsReservesT": 66000.0,
+    "coverage": 0.58
+   }
+  },
+  "diamond": {
+   "byCountry": [
+    {
+     "country": "Angola",
+     "catalogueMct": 760,
+     "gemProduction2024Mct": 12.6,
+     "gemReservesMct": 150.0
+    },
+    {
+     "country": "Botswana",
+     "catalogueMct": 1521,
+     "gemProduction2024Mct": 12.7,
+     "gemReservesMct": 250.0
+    },
+    {
+     "country": "Canada",
+     "catalogueMct": 316,
+     "gemProduction2024Mct": 13.3,
+     "gemReservesMct": 110.0
+    },
+    {
+     "country": "Congo (Kinshasa)",
+     "catalogueMct": 900,
+     "gemProduction2024Mct": 1.96,
+     "gemReservesMct": 150.0
+    },
+    {
+     "country": "Ghana",
+     "catalogueMct": 90,
+     "gemProduction2024Mct": 0.333,
+     "gemReservesMct": null
+    },
+    {
+     "country": "Lesotho",
+     "catalogueMct": 5,
+     "gemProduction2024Mct": 0.696,
+     "gemReservesMct": null
+    },
+    {
+     "country": "Namibia",
+     "catalogueMct": 85,
+     "gemProduction2024Mct": 2.32,
+     "gemReservesMct": null
+    },
+    {
+     "country": "Russia",
+     "catalogueMct": 1345,
+     "gemProduction2024Mct": 20.9,
+     "gemReservesMct": 750.0
+    },
+    {
+     "country": "Sierra Leone",
+     "catalogueMct": 56,
+     "gemProduction2024Mct": 0.459,
+     "gemReservesMct": null
+    },
+    {
+     "country": "South Africa",
+     "catalogueMct": 764,
+     "gemProduction2024Mct": 2.14,
+     "gemReservesMct": 87.0
+    },
+    {
+     "country": "Tanzania",
+     "catalogueMct": 21,
+     "gemProduction2024Mct": 0.318,
+     "gemReservesMct": null
+    },
+    {
+     "country": "Zimbabwe",
+     "catalogueMct": 150,
+     "gemProduction2024Mct": 0.529,
+     "gemReservesMct": 56.0
+    },
+    {
+     "country": "Australia",
+     "catalogueMct": 870,
+     "gemProduction2024Mct": null,
+     "gemReservesMct": null
+    },
+    {
+     "country": "Brazil",
+     "catalogueMct": 26,
+     "gemProduction2024Mct": null,
+     "gemReservesMct": null
+    },
+    {
+     "country": "Central African Republic",
+     "catalogueMct": 25,
+     "gemProduction2024Mct": null,
+     "gemReservesMct": null
+    },
+    {
+     "country": "India",
+     "catalogueMct": 14,
+     "gemProduction2024Mct": null,
+     "gemReservesMct": null
+    }
+   ],
+   "world": {
+    "catalogueMct": 6949,
+    "gemProduction2024Mct": 68.6,
+    "gemReservesMct": 2000.0,
+    "kpAllRough2023Mct": 111.5
+   }
+  }
+ },
+ "deposits": [
+  {
+   "id": "pg:dia-kimberley",
+   "name": "Kimberley (Big Hole)",
+   "country": "South Africa",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 22.5,
+   "grade": 0.64,
+   "unit": "ct/t",
+   "contained": 14.4,
+   "fill": 0.0358,
+   "q": "A",
+   "age": "Permian",
+   "lat": -28.738,
+   "lon": 24.758,
+   "onLand": true,
+   "lenKm": 0.46,
+   "widKm": 0.46,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-kimberley-cluster",
+   "name": "Kimberley pipes (De Beers, Dutoitspan, Bultfontein, Wesselton)",
+   "country": "South Africa",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 300.0,
+   "grade": 0.3,
+   "unit": "ct/t",
+   "contained": 90.0,
+   "fill": 0.1736,
+   "q": "C",
+   "age": "Permian",
+   "lat": -28.755,
+   "lon": 24.795,
+   "onLand": true,
+   "lenKm": 0.8,
+   "widKm": 0.8,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-cullinan",
+   "name": "Cullinan (Premier)",
+   "country": "South Africa",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 650.0,
+   "grade": 0.4,
+   "unit": "ct/t",
+   "contained": 260.0,
+   "fill": 0.5066,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -25.67,
+   "lon": 28.52,
+   "onLand": true,
+   "lenKm": 0.88,
+   "widKm": 0.45,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-venetia",
+   "name": "Venetia",
+   "country": "South Africa",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 160.0,
+   "grade": 1.1,
+   "unit": "ct/t",
+   "contained": 176.0,
+   "fill": 0.1975,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -22.44,
+   "lon": 29.31,
+   "onLand": true,
+   "lenKm": 0.6,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-finsch",
+   "name": "Finsch",
+   "country": "South Africa",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 300.0,
+   "grade": 0.5,
+   "unit": "ct/t",
+   "contained": 150.0,
+   "fill": 0.5935,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -28.38,
+   "lon": 23.45,
+   "onLand": true,
+   "lenKm": 0.52,
+   "widKm": 0.36,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-jwaneng",
+   "name": "Jwaneng",
+   "country": "Botswana",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 540.0,
+   "grade": 1.3,
+   "unit": "ct/t",
+   "contained": 702.0,
+   "fill": 0.2205,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": -24.53,
+   "lon": 24.7,
+   "onLand": true,
+   "lenKm": 1.2,
+   "widKm": 0.6,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-orapa",
+   "name": "Orapa (AK1)",
+   "country": "Botswana",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 900.0,
+   "grade": 0.9,
+   "unit": "ct/t",
+   "contained": 810.0,
+   "fill": 0.2604,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": -21.31,
+   "lon": 25.37,
+   "onLand": true,
+   "lenKm": 1.6,
+   "widKm": 0.8,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-karowe",
+   "name": "Karowe (AK6)",
+   "country": "Botswana",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 60.0,
+   "grade": 0.15,
+   "unit": "ct/t",
+   "contained": 9.0,
+   "fill": 0.1481,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": -21.5,
+   "lon": 25.48,
+   "onLand": true,
+   "lenKm": 0.5,
+   "widKm": 0.4,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-letseng",
+   "name": "Letseng",
+   "country": "Lesotho",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 300.0,
+   "grade": 0.017,
+   "unit": "ct/t",
+   "contained": 5.1000000000000005,
+   "fill": 0.9259,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": -29.0,
+   "lon": 28.86,
+   "onLand": true,
+   "lenKm": 0.5,
+   "widKm": 0.4,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-catoca",
+   "name": "Catoca",
+   "country": "Angola",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 800.0,
+   "grade": 0.7,
+   "unit": "ct/t",
+   "contained": 560.0,
+   "fill": 0.3658,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -9.41,
+   "lon": 20.3,
+   "onLand": true,
+   "lenKm": 0.9,
+   "widKm": 0.9,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-mbuji-mayi",
+   "name": "Mbuji-Mayi (MIBA)",
+   "country": "Congo (Kinshasa)",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 300.0,
+   "grade": 2.5,
+   "unit": "ct/t",
+   "contained": 750.0,
+   "fill": 0.0392,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -6.15,
+   "lon": 23.6,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-tshikapa",
+   "name": "Tshikapa alluvial diamonds (Kasai)",
+   "country": "Congo (Kinshasa)",
+   "layer": "diamond",
+   "shape": "blanket",
+   "mt": 500.0,
+   "grade": 0.3,
+   "unit": "ct/t",
+   "contained": 150.0,
+   "fill": 0.2083,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -6.42,
+   "lon": 20.8,
+   "onLand": true,
+   "lenKm": 80.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-mwadui",
+   "name": "Mwadui (Williamson)",
+   "country": "Tanzania",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 300.0,
+   "grade": 0.07,
+   "unit": "ct/t",
+   "contained": 21.000000000000004,
+   "fill": 0.2778,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -3.55,
+   "lon": 33.6,
+   "onLand": true,
+   "lenKm": 1.5,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-koidu",
+   "name": "Koidu kimberlites",
+   "country": "Sierra Leone",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 10.0,
+   "grade": 0.6,
+   "unit": "ct/t",
+   "contained": 6.0,
+   "fill": 0.3704,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 8.65,
+   "lon": -10.97,
+   "onLand": true,
+   "lenKm": 0.2,
+   "widKm": 0.1,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-kono",
+   "name": "Kono and Tongo alluvial diamonds",
+   "country": "Sierra Leone",
+   "layer": "diamond",
+   "shape": "blanket",
+   "mt": 200.0,
+   "grade": 0.25,
+   "unit": "ct/t",
+   "contained": 50.0,
+   "fill": 0.0833,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 8.4,
+   "lon": -11.0,
+   "onLand": true,
+   "lenKm": 60.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-namibia-coast",
+   "name": "Sperrgebiet coastal diamonds (Oranjemund)",
+   "country": "Namibia",
+   "layer": "diamond",
+   "shape": "blanket",
+   "mt": 2000.0,
+   "grade": 0.04,
+   "unit": "ct/t",
+   "contained": 80.0,
+   "fill": 0.3333,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -28.3,
+   "lon": 16.3,
+   "onLand": true,
+   "lenKm": 100.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-elizabeth-bay",
+   "name": "Elizabeth Bay",
+   "country": "Namibia",
+   "layer": "diamond",
+   "shape": "blanket",
+   "mt": 50.0,
+   "grade": 0.1,
+   "unit": "ct/t",
+   "contained": 5.0,
+   "fill": 0.5208,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -26.93,
+   "lon": 15.25,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-marange",
+   "name": "Marange",
+   "country": "Zimbabwe",
+   "layer": "diamond",
+   "shape": "lens",
+   "mt": 300.0,
+   "grade": 0.5,
+   "unit": "ct/t",
+   "contained": 150.0,
+   "fill": 0.0385,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -19.98,
+   "lon": 32.37,
+   "onLand": true,
+   "lenKm": 20.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-mir",
+   "name": "Mir",
+   "country": "Russia",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 70.0,
+   "grade": 2.5,
+   "unit": "ct/t",
+   "contained": 175.0,
+   "fill": 0.1067,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 62.528,
+   "lon": 113.993,
+   "onLand": true,
+   "lenKm": 0.45,
+   "widKm": 0.45,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-internatsionalnaya",
+   "name": "Internatsionalnaya",
+   "country": "Russia",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 25.0,
+   "grade": 7.0,
+   "unit": "ct/t",
+   "contained": 175.0,
+   "fill": 0.1235,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 62.555,
+   "lon": 113.95,
+   "onLand": true,
+   "lenKm": 0.25,
+   "widKm": 0.25,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-udachnaya",
+   "name": "Udachnaya",
+   "country": "Russia",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 400.0,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 400.0,
+   "fill": 0.1323,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 66.43,
+   "lon": 112.32,
+   "onLand": true,
+   "lenKm": 1.0,
+   "widKm": 0.8,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-aikhal-jubilee",
+   "name": "Aikhal and Yubileynaya",
+   "country": "Russia",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 350.0,
+   "grade": 0.9,
+   "unit": "ct/t",
+   "contained": 315.0,
+   "fill": 0.162,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 66.0,
+   "lon": 111.9,
+   "onLand": true,
+   "lenKm": 1.0,
+   "widKm": 0.8,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-nyurba",
+   "name": "Nyurba and Botuobinskaya (Nakyn field)",
+   "country": "Russia",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 50.0,
+   "grade": 2.6,
+   "unit": "ct/t",
+   "contained": 130.0,
+   "fill": 0.1543,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 64.5,
+   "lon": 117.3,
+   "onLand": true,
+   "lenKm": 0.5,
+   "widKm": 0.4,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-lomonosov",
+   "name": "Lomonosov field (Arkhangelsk)",
+   "country": "Russia",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 250.0,
+   "grade": 0.6,
+   "unit": "ct/t",
+   "contained": 150.0,
+   "fill": 0.2003,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 65.4,
+   "lon": 41.6,
+   "onLand": true,
+   "lenKm": 1.0,
+   "widKm": 0.6,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-argyle",
+   "name": "Argyle (AK1 lamproite)",
+   "country": "Australia",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 290.0,
+   "grade": 3.0,
+   "unit": "ct/t",
+   "contained": 870.0,
+   "fill": 0.1743,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": -16.714,
+   "lon": 128.384,
+   "onLand": true,
+   "lenKm": 1.6,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-ekati",
+   "name": "Ekati (Panda-Koala-Misery-Fox)",
+   "country": "Canada",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 150.0,
+   "grade": 0.8,
+   "unit": "ct/t",
+   "contained": 120.0,
+   "fill": 0.2003,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 64.72,
+   "lon": -110.62,
+   "onLand": true,
+   "lenKm": 0.8,
+   "widKm": 0.6,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-diavik",
+   "name": "Diavik",
+   "country": "Canada",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 40.0,
+   "grade": 3.5,
+   "unit": "ct/t",
+   "contained": 140.0,
+   "fill": 0.1099,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 64.5,
+   "lon": -110.28,
+   "onLand": true,
+   "lenKm": 0.5,
+   "widKm": 0.4,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-gahcho-kue",
+   "name": "Gahcho Kue",
+   "country": "Canada",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 35.0,
+   "grade": 1.6,
+   "unit": "ct/t",
+   "contained": 56.0,
+   "fill": 0.2244,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 63.43,
+   "lon": -109.2,
+   "onLand": true,
+   "lenKm": 0.4,
+   "widKm": 0.3,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-panna",
+   "name": "Majhgawan (Panna)",
+   "country": "India",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 20.0,
+   "grade": 0.1,
+   "unit": "ct/t",
+   "contained": 2.0,
+   "fill": 0.1709,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 24.73,
+   "lon": 80.04,
+   "onLand": true,
+   "lenKm": 0.5,
+   "widKm": 0.3,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-golconda-krishna",
+   "name": "Golconda diamonds (Kollur and the Krishna gravels)",
+   "country": "India",
+   "layer": "diamond",
+   "shape": "blanket",
+   "mt": 200.0,
+   "grade": 0.05,
+   "unit": "ct/t",
+   "contained": 10.0,
+   "fill": 0.119,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 16.7,
+   "lon": 80.05,
+   "onLand": true,
+   "lenKm": 60.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-banganapalle",
+   "name": "Banganapalle conglomerate (Kurnool)",
+   "country": "India",
+   "layer": "diamond",
+   "shape": "lens",
+   "mt": 50.0,
+   "grade": 0.05,
+   "unit": "ct/t",
+   "contained": 2.5,
+   "fill": 0.0026,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 15.32,
+   "lon": 78.23,
+   "onLand": true,
+   "lenKm": 25.0,
+   "widKm": 10.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-diamantina",
+   "name": "Diamantina (Minas Gerais)",
+   "country": "Brazil",
+   "layer": "diamond",
+   "shape": "blanket",
+   "mt": 500.0,
+   "grade": 0.02,
+   "unit": "ct/t",
+   "contained": 10.0,
+   "fill": 0.0421,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -18.24,
+   "lon": -43.6,
+   "onLand": true,
+   "lenKm": 60.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-chapada-diamantina",
+   "name": "Chapada Diamantina (Lencois)",
+   "country": "Brazil",
+   "layer": "diamond",
+   "shape": "lens",
+   "mt": 300.0,
+   "grade": 0.02,
+   "unit": "ct/t",
+   "contained": 6.0,
+   "fill": 0.0072,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -12.55,
+   "lon": -41.4,
+   "onLand": true,
+   "lenKm": 40.0,
+   "widKm": 10.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-juina",
+   "name": "Juina",
+   "country": "Brazil",
+   "layer": "diamond",
+   "shape": "blanket",
+   "mt": 100.0,
+   "grade": 0.1,
+   "unit": "ct/t",
+   "contained": 10.0,
+   "fill": 0.0521,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -11.4,
+   "lon": -58.75,
+   "onLand": true,
+   "lenKm": 40.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:em-muzo",
+   "name": "Muzo",
+   "country": "Colombia",
+   "layer": "emerald",
+   "shape": "veins",
+   "mt": 5.0,
+   "grade": 5.0,
+   "unit": "ct/t",
+   "contained": 25.0,
+   "fill": 0.001,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 5.55,
+   "lon": -74.11,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "emerald",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:em-coscuez",
+   "name": "Coscuez",
+   "country": "Colombia",
+   "layer": "emerald",
+   "shape": "veins",
+   "mt": 2.0,
+   "grade": 4.0,
+   "unit": "ct/t",
+   "contained": 8.0,
+   "fill": 0.0009,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 5.65,
+   "lon": -74.2,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "emerald",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:em-chivor",
+   "name": "Chivor",
+   "country": "Colombia",
+   "layer": "emerald",
+   "shape": "veins",
+   "mt": 2.0,
+   "grade": 3.0,
+   "unit": "ct/t",
+   "contained": 6.0,
+   "fill": 0.0009,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 4.88,
+   "lon": -73.37,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "emerald",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:em-sikait",
+   "name": "Wadi Sikait (Mons Smaragdus)",
+   "country": "Egypt",
+   "layer": "emerald",
+   "shape": "veins",
+   "mt": 0.5,
+   "grade": 0.5,
+   "unit": "ct/t",
+   "contained": 0.25,
+   "fill": 0.0005,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 24.65,
+   "lon": 34.8,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "emerald",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:em-habachtal",
+   "name": "Habachtal",
+   "country": "Austria",
+   "layer": "emerald",
+   "shape": "lens",
+   "mt": 0.2,
+   "grade": 2.0,
+   "unit": "ct/t",
+   "contained": 0.4,
+   "fill": 0.0036,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 47.2,
+   "lon": 12.35,
+   "onLand": true,
+   "lenKm": 1.0,
+   "widKm": 0.1,
+   "ores": [
+    {
+     "code": "emerald",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:em-panjshir",
+   "name": "Panjshir (Darkhenj)",
+   "country": "Afghanistan",
+   "layer": "emerald",
+   "shape": "veins",
+   "mt": 3.0,
+   "grade": 2.0,
+   "unit": "ct/t",
+   "contained": 6.0,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 35.41,
+   "lon": 69.76,
+   "onLand": true,
+   "lenKm": 10.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "emerald",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:em-swat",
+   "name": "Swat (Mingora)",
+   "country": "Pakistan",
+   "layer": "emerald",
+   "shape": "veins",
+   "mt": 1.0,
+   "grade": 2.0,
+   "unit": "ct/t",
+   "contained": 2.0,
+   "fill": 0.0006,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 34.79,
+   "lon": 72.36,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "emerald",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:em-sandawana",
+   "name": "Sandawana",
+   "country": "Zimbabwe",
+   "layer": "emerald",
+   "shape": "lens",
+   "mt": 1.0,
+   "grade": 3.0,
+   "unit": "ct/t",
+   "contained": 3.0,
+   "fill": 0.0015,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -20.93,
+   "lon": 29.98,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 0.2,
+   "ores": [
+    {
+     "code": "emerald",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:em-kagem",
+   "name": "Kagem (Kafubu)",
+   "country": "Zambia",
+   "layer": "emerald",
+   "shape": "lens",
+   "mt": 10.0,
+   "grade": 150.0,
+   "unit": "ct/t",
+   "contained": 1500.0,
+   "fill": 0.0132,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -12.97,
+   "lon": 28.2,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 0.3,
+   "ores": [
+    {
+     "code": "emerald",
+     "share": 0.9
+    },
+    {
+     "code": "berylaquamarine",
+     "share": 0.1
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:em-ural",
+   "name": "Ural emerald mines (Malyshevo)",
+   "country": "Russia",
+   "layer": "emerald",
+   "shape": "lens",
+   "mt": 10.0,
+   "grade": 3.0,
+   "unit": "ct/t",
+   "contained": 30.0,
+   "fill": 0.0003,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 57.1,
+   "lon": 61.4,
+   "onLand": true,
+   "lenKm": 25.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "emerald",
+     "share": 0.8
+    },
+    {
+     "code": "berylaquamarine",
+     "share": 0.2
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:em-carnaiba",
+   "name": "Carnaiba",
+   "country": "Brazil",
+   "layer": "emerald",
+   "shape": "lens",
+   "mt": 2.0,
+   "grade": 2.0,
+   "unit": "ct/t",
+   "contained": 4.0,
+   "fill": 0.0008,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -10.62,
+   "lon": -40.4,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "emerald",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:la-sar-e-sang",
+   "name": "Sar-e-Sang",
+   "country": "Afghanistan",
+   "layer": "lapis",
+   "shape": "lens",
+   "mt": 0.5,
+   "grade": null,
+   "unit": "ct/t",
+   "contained": null,
+   "fill": 0.0091,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 36.2,
+   "lon": 70.79,
+   "onLand": true,
+   "lenKm": 1.0,
+   "widKm": 0.1,
+   "ores": [
+    {
+     "code": "lapis",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:la-malaya-bystraya",
+   "name": "Malaya Bystraya",
+   "country": "Russia",
+   "layer": "lapis",
+   "shape": "lens",
+   "mt": 0.3,
+   "grade": null,
+   "unit": "ct/t",
+   "contained": null,
+   "fill": 0.0055,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 51.55,
+   "lon": 103.65,
+   "onLand": true,
+   "lenKm": 1.0,
+   "widKm": 0.1,
+   "ores": [
+    {
+     "code": "lapis",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:la-ovalle",
+   "name": "Flor de los Andes (Ovalle)",
+   "country": "Chile",
+   "layer": "lapis",
+   "shape": "lens",
+   "mt": 0.2,
+   "grade": null,
+   "unit": "ct/t",
+   "contained": null,
+   "fill": 0.0036,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": -30.65,
+   "lon": -70.55,
+   "onLand": true,
+   "lenKm": 1.0,
+   "widKm": 0.1,
+   "ores": [
+    {
+     "code": "lapis",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:co-mogok-marble",
+   "name": "Mogok marble rubies",
+   "country": "Burma",
+   "layer": "corundum",
+   "shape": "lens",
+   "mt": 50.0,
+   "grade": 0.5,
+   "unit": "ct/t",
+   "contained": 25.0,
+   "fill": 0.0002,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 22.92,
+   "lon": 96.51,
+   "onLand": true,
+   "lenKm": 25.0,
+   "widKm": 8.0,
+   "ores": [
+    {
+     "code": "corundumruby",
+     "share": 0.8
+    },
+    {
+     "code": "corundumsapphire",
+     "share": 0.1
+    },
+    {
+     "code": "spinelred",
+     "share": 0.1
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:co-mogok-byon",
+   "name": "Mogok gem gravels (byon)",
+   "country": "Burma",
+   "layer": "corundum",
+   "shape": "blanket",
+   "mt": 300.0,
+   "grade": 0.3,
+   "unit": "ct/t",
+   "contained": 90.0,
+   "fill": 0.1667,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 22.92,
+   "lon": 96.51,
+   "onLand": true,
+   "lenKm": 25.0,
+   "widKm": 6.0,
+   "ores": [
+    {
+     "code": "corundumruby",
+     "share": 0.6
+    },
+    {
+     "code": "corundumsapphire",
+     "share": 0.25
+    },
+    {
+     "code": "spinelred",
+     "share": 0.15
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:co-ratnapura",
+   "name": "Ratnapura gem gravels (illam)",
+   "country": "Sri Lanka",
+   "layer": "corundum",
+   "shape": "blanket",
+   "mt": 1000.0,
+   "grade": 0.05,
+   "unit": "ct/t",
+   "contained": 50.0,
+   "fill": 0.1429,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 6.68,
+   "lon": 80.4,
+   "onLand": true,
+   "lenKm": 50.0,
+   "widKm": 10.0,
+   "ores": [
+    {
+     "code": "corundumsapphire",
+     "share": 0.5
+    },
+    {
+     "code": "corundumruby",
+     "share": 0.1
+    },
+    {
+     "code": "spinelred",
+     "share": 0.1
+    },
+    {
+     "code": "garnetalmandine",
+     "share": 0.15
+    },
+    {
+     "code": "topazblue",
+     "share": 0.05
+    },
+    {
+     "code": "tourmalineverdelite",
+     "share": 0.05
+    },
+    {
+     "code": "berylaquamarine",
+     "share": 0.05
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:co-kashmir",
+   "name": "Kashmir sapphire (Kudi Nala)",
+   "country": "India",
+   "layer": "corundum",
+   "shape": "veins",
+   "mt": 0.05,
+   "grade": 20.0,
+   "unit": "ct/t",
+   "contained": 1.0,
+   "fill": 0.0006,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 33.42,
+   "lon": 76.25,
+   "onLand": true,
+   "lenKm": 1.0,
+   "widKm": 0.3,
+   "ores": [
+    {
+     "code": "corundumsapphire",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:co-montepuez",
+   "name": "Montepuez",
+   "country": "Mozambique",
+   "layer": "corundum",
+   "shape": "blanket",
+   "mt": 30.0,
+   "grade": 15.0,
+   "unit": "ct/t",
+   "contained": 450.0,
+   "fill": 0.0833,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -13.17,
+   "lon": 39.25,
+   "onLand": true,
+   "lenKm": 15.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "corundumruby",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:co-chanthaburi",
+   "name": "Chanthaburi-Trat gem field",
+   "country": "Thailand",
+   "layer": "corundum",
+   "shape": "blanket",
+   "mt": 300.0,
+   "grade": 0.3,
+   "unit": "ct/t",
+   "contained": 90.0,
+   "fill": 0.0625,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 12.6,
+   "lon": 102.35,
+   "onLand": true,
+   "lenKm": 40.0,
+   "widKm": 10.0,
+   "ores": [
+    {
+     "code": "corundumsapphire",
+     "share": 0.6
+    },
+    {
+     "code": "corundumruby",
+     "share": 0.4
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:co-jegdalek",
+   "name": "Jegdalek",
+   "country": "Afghanistan",
+   "layer": "corundum",
+   "shape": "lens",
+   "mt": 1.0,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 1.0,
+   "fill": 0.0013,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 34.43,
+   "lon": 69.82,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 0.3,
+   "ores": [
+    {
+     "code": "corundumruby",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:co-luc-yen",
+   "name": "Luc Yen",
+   "country": "Vietnam",
+   "layer": "corundum",
+   "shape": "lens",
+   "mt": 5.0,
+   "grade": 0.5,
+   "unit": "ct/t",
+   "contained": 2.5,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 22.1,
+   "lon": 104.75,
+   "onLand": true,
+   "lenKm": 15.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "corundumruby",
+     "share": 0.6
+    },
+    {
+     "code": "spinelred",
+     "share": 0.4
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:co-mong-hsu",
+   "name": "Mong Hsu",
+   "country": "Burma",
+   "layer": "corundum",
+   "shape": "lens",
+   "mt": 5.0,
+   "grade": 0.5,
+   "unit": "ct/t",
+   "contained": 2.5,
+   "fill": 0.0009,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 21.9,
+   "lon": 98.1,
+   "onLand": true,
+   "lenKm": 5.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "corundumruby",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:co-ilakaka",
+   "name": "Ilakaka",
+   "country": "Madagascar",
+   "layer": "corundum",
+   "shape": "lens",
+   "mt": 200.0,
+   "grade": 0.1,
+   "unit": "ct/t",
+   "contained": 20.0,
+   "fill": 0.0069,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": -22.68,
+   "lon": 45.2,
+   "onLand": true,
+   "lenKm": 40.0,
+   "widKm": 10.0,
+   "ores": [
+    {
+     "code": "corundumsapphire",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:co-yogo",
+   "name": "Yogo Gulch",
+   "country": "United States",
+   "layer": "corundum",
+   "shape": "veins",
+   "mt": 1.0,
+   "grade": 2.0,
+   "unit": "ct/t",
+   "contained": 2.0,
+   "fill": 0.0154,
+   "q": "C",
+   "age": "Carboniferous",
+   "lat": 46.99,
+   "lon": -110.2,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 0.01,
+   "ores": [
+    {
+     "code": "corundumsapphire",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:co-naxos",
+   "name": "Naxos emery",
+   "country": "Greece",
+   "layer": "corundum",
+   "shape": "lens",
+   "mt": 10.0,
+   "grade": null,
+   "unit": null,
+   "contained": null,
+   "fill": 0.0064,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 37.08,
+   "lon": 25.5,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "corundum",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:co-milas",
+   "name": "Milas-Mugla emery",
+   "country": "Turkey",
+   "layer": "corundum",
+   "shape": "lens",
+   "mt": 30.0,
+   "grade": null,
+   "unit": null,
+   "contained": null,
+   "fill": 0.0004,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 37.3,
+   "lon": 27.8,
+   "onLand": true,
+   "lenKm": 30.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "corundum",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:sp-kuh-i-lal",
+   "name": "Kuh-i-Lal (Badakhshan balas rubies)",
+   "country": "Tajikistan",
+   "layer": "spinel",
+   "shape": "lens",
+   "mt": 0.2,
+   "grade": 5.0,
+   "unit": "ct/t",
+   "contained": 1.0,
+   "fill": 0.0036,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 36.98,
+   "lon": 71.58,
+   "onLand": true,
+   "lenKm": 1.0,
+   "widKm": 0.1,
+   "ores": [
+    {
+     "code": "spinelred",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:ol-zabargad",
+   "name": "Zabargad (St John's Island) peridot",
+   "country": "Egypt",
+   "layer": "olivine",
+   "shape": "lens",
+   "mt": 0.5,
+   "grade": 5.0,
+   "unit": "ct/t",
+   "contained": 2.5,
+   "fill": 0.0005,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 23.61,
+   "lon": 36.2,
+   "onLand": false,
+   "lenKm": 1.5,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "peridot",
+     "share": 0.2
+    },
+    {
+     "code": "olivine",
+     "share": 0.8
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:ol-san-carlos",
+   "name": "San Carlos peridot",
+   "country": "United States",
+   "layer": "olivine",
+   "shape": "lens",
+   "mt": 5.0,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 5.0,
+   "fill": 0.0027,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 33.35,
+   "lon": -110.45,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "peridot",
+     "share": 0.3
+    },
+    {
+     "code": "olivine",
+     "share": 0.7
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:ol-pyaung-gaung",
+   "name": "Pyaung Gaung peridot",
+   "country": "Burma",
+   "layer": "olivine",
+   "shape": "lens",
+   "mt": 0.5,
+   "grade": 2.0,
+   "unit": "ct/t",
+   "contained": 1.0,
+   "fill": 0.0008,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 22.85,
+   "lon": 96.3,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "peridot",
+     "share": 0.3
+    },
+    {
+     "code": "olivine",
+     "share": 0.7
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:ol-kohistan",
+   "name": "Sapat (Kohistan) peridot",
+   "country": "Pakistan",
+   "layer": "olivine",
+   "shape": "lens",
+   "mt": 0.5,
+   "grade": 2.0,
+   "unit": "ct/t",
+   "contained": 1.0,
+   "fill": 0.0008,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 35.3,
+   "lon": 73.7,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "peridot",
+     "share": 0.3
+    },
+    {
+     "code": "olivine",
+     "share": 0.7
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:ol-aheim",
+   "name": "Aheim (Gusdal) dunite",
+   "country": "Norway",
+   "layer": "olivine",
+   "shape": "stock",
+   "mt": 2000.0,
+   "grade": null,
+   "unit": null,
+   "contained": null,
+   "fill": 0.202,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 62.05,
+   "lon": 5.53,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "olivine",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:ga-bohemian-pyrope",
+   "name": "Bohemian pyrope (Trebenice-Podsedice)",
+   "country": "Czech Republic",
+   "layer": "garnet",
+   "shape": "blanket",
+   "mt": 50.0,
+   "grade": 10.0,
+   "unit": "ct/t",
+   "contained": 500.0,
+   "fill": 0.037,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 50.48,
+   "lon": 13.98,
+   "onLand": true,
+   "lenKm": 15.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "garnetpyrope",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:ga-gore-mountain",
+   "name": "Gore Mountain and Ruby Mountain (Barton)",
+   "country": "United States",
+   "layer": "garnet",
+   "shape": "stock",
+   "mt": 30.0,
+   "grade": null,
+   "unit": null,
+   "contained": null,
+   "fill": 0.0645,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 43.68,
+   "lon": -74.05,
+   "onLand": true,
+   "lenKm": 1.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "garnetalmandine",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:ga-merelani",
+   "name": "Merelani tsavorite",
+   "country": "Tanzania",
+   "layer": "garnet",
+   "shape": "lens",
+   "mt": 1.0,
+   "grade": 2.0,
+   "unit": "ct/t",
+   "contained": 2.0,
+   "fill": 0.0005,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -3.58,
+   "lon": 36.98,
+   "onLand": true,
+   "lenKm": 5.0,
+   "widKm": 0.3,
+   "ores": [
+    {
+     "code": "garnetgrossular",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:ga-val-malenco",
+   "name": "Val Malenco demantoid",
+   "country": "Italy",
+   "layer": "garnet",
+   "shape": "veins",
+   "mt": 0.1,
+   "grade": 2.0,
+   "unit": "ct/t",
+   "contained": 0.2,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 46.3,
+   "lon": 9.85,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "garnetandradite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:ga-outokumpu",
+   "name": "Outokumpu uvarovite",
+   "country": "Finland",
+   "layer": "garnet",
+   "shape": "lens",
+   "mt": 0.1,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 0.1,
+   "fill": 0.0003,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 62.73,
+   "lon": 29.02,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 0.2,
+   "ores": [
+    {
+     "code": "garnetuvarovite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:ga-amelia",
+   "name": "Amelia (Rutherford mines) spessartine",
+   "country": "United States",
+   "layer": "garnet",
+   "shape": "veins",
+   "mt": 0.2,
+   "grade": 2.0,
+   "unit": "ct/t",
+   "contained": 0.4,
+   "fill": 0.0007,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 37.35,
+   "lon": -77.98,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "garnetspessartine",
+     "share": 0.7
+    },
+    {
+     "code": "berylaquamarine",
+     "share": 0.3
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:to-ouro-preto",
+   "name": "Ouro Preto imperial topaz",
+   "country": "Brazil",
+   "layer": "topaz",
+   "shape": "veins",
+   "mt": 1.0,
+   "grade": 2.0,
+   "unit": "ct/t",
+   "contained": 2.0,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -20.42,
+   "lon": -43.58,
+   "onLand": true,
+   "lenKm": 15.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "topazamber",
+     "share": 0.6
+    },
+    {
+     "code": "topazpink",
+     "share": 0.4
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:to-schneckenstein",
+   "name": "Schneckenstein",
+   "country": "Germany",
+   "layer": "topaz",
+   "shape": "stock",
+   "mt": 0.1,
+   "grade": 10.0,
+   "unit": "ct/t",
+   "contained": 1.0,
+   "fill": 0.4762,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 50.42,
+   "lon": 12.38,
+   "onLand": true,
+   "lenKm": 0.05,
+   "widKm": 0.03,
+   "ores": [
+    {
+     "code": "topazamber",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:to-volyn",
+   "name": "Volyn pegmatites (Khoroshiv)",
+   "country": "Ukraine",
+   "layer": "topaz",
+   "shape": "veins",
+   "mt": 2.0,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 2.0,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 50.6,
+   "lon": 28.45,
+   "onLand": true,
+   "lenKm": 20.0,
+   "widKm": 10.0,
+   "ores": [
+    {
+     "code": "topazblue",
+     "share": 0.6
+    },
+    {
+     "code": "berylaquamarine",
+     "share": 0.4
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:to-mursinka",
+   "name": "Mursinka pegmatites",
+   "country": "Russia",
+   "layer": "topaz",
+   "shape": "veins",
+   "mt": 1.0,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 1.0,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 57.67,
+   "lon": 61.27,
+   "onLand": true,
+   "lenKm": 20.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "topazblue",
+     "share": 0.4
+    },
+    {
+     "code": "berylaquamarine",
+     "share": 0.3
+    },
+    {
+     "code": "tourmalinerubellite",
+     "share": 0.3
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:to-katlang",
+   "name": "Katlang pink topaz",
+   "country": "Pakistan",
+   "layer": "topaz",
+   "shape": "veins",
+   "mt": 0.1,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 0.1,
+   "fill": 0.0004,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 34.4,
+   "lon": 72.1,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "topazpink",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:to-thomas-range",
+   "name": "Thomas Range topaz",
+   "country": "United States",
+   "layer": "topaz",
+   "shape": "lens",
+   "mt": 0.5,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 0.5,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 39.7,
+   "lon": -113.15,
+   "onLand": true,
+   "lenKm": 10.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "topazamber",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:tu-paraiba",
+   "name": "Paraiba tourmaline (Sao Jose da Batalha)",
+   "country": "Brazil",
+   "layer": "tourmaline",
+   "shape": "veins",
+   "mt": 0.1,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 0.1,
+   "fill": 0.0006,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -6.97,
+   "lon": -36.82,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 0.3,
+   "ores": [
+    {
+     "code": "tourmalineverdelite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:tu-minas-pegmatites",
+   "name": "Eastern Brazilian pegmatite province (Governador Valadares-Teofilo Otoni)",
+   "country": "Brazil",
+   "layer": "tourmaline",
+   "shape": "veins",
+   "mt": 20.0,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 20.0,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -18.3,
+   "lon": -41.8,
+   "onLand": true,
+   "lenKm": 120.0,
+   "widKm": 40.0,
+   "ores": [
+    {
+     "code": "tourmalineverdelite",
+     "share": 0.35
+    },
+    {
+     "code": "tourmalinerubellite",
+     "share": 0.2
+    },
+    {
+     "code": "tourmalinewatermelon",
+     "share": 0.1
+    },
+    {
+     "code": "berylaquamarine",
+     "share": 0.35
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:tu-himalaya-pala",
+   "name": "Pala and Mesa Grande pegmatites",
+   "country": "United States",
+   "layer": "tourmaline",
+   "shape": "veins",
+   "mt": 0.5,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 0.5,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 33.3,
+   "lon": -116.85,
+   "onLand": true,
+   "lenKm": 25.0,
+   "widKm": 8.0,
+   "ores": [
+    {
+     "code": "tourmalinerubellite",
+     "share": 0.6
+    },
+    {
+     "code": "tourmalinewatermelon",
+     "share": 0.2
+    },
+    {
+     "code": "topazblue",
+     "share": 0.1
+    },
+    {
+     "code": "berylaquamarine",
+     "share": 0.1
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:tu-maine",
+   "name": "Oxford County pegmatites (Mount Mica)",
+   "country": "United States",
+   "layer": "tourmaline",
+   "shape": "veins",
+   "mt": 0.5,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 0.5,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 44.25,
+   "lon": -70.48,
+   "onLand": true,
+   "lenKm": 20.0,
+   "widKm": 10.0,
+   "ores": [
+    {
+     "code": "tourmalinewatermelon",
+     "share": 0.4
+    },
+    {
+     "code": "tourmalineverdelite",
+     "share": 0.4
+    },
+    {
+     "code": "berylaquamarine",
+     "share": 0.2
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:tu-elba",
+   "name": "Elba pegmatites (San Piero in Campo)",
+   "country": "Italy",
+   "layer": "tourmaline",
+   "shape": "veins",
+   "mt": 0.1,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 0.1,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 42.75,
+   "lon": 10.2,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "tourmalinerubellite",
+     "share": 0.4
+    },
+    {
+     "code": "tourmalineverdelite",
+     "share": 0.3
+    },
+    {
+     "code": "berylaquamarine",
+     "share": 0.3
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:tu-nuristan",
+   "name": "Nuristan pegmatites",
+   "country": "Afghanistan",
+   "layer": "tourmaline",
+   "shape": "veins",
+   "mt": 1.0,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 1.0,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 35.2,
+   "lon": 71.0,
+   "onLand": true,
+   "lenKm": 40.0,
+   "widKm": 10.0,
+   "ores": [
+    {
+     "code": "tourmalinerubellite",
+     "share": 0.4
+    },
+    {
+     "code": "tourmalineverdelite",
+     "share": 0.3
+    },
+    {
+     "code": "berylaquamarine",
+     "share": 0.3
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:tu-zschorlau",
+   "name": "Zschorlau (schorl)",
+   "country": "Germany",
+   "layer": "tourmaline",
+   "shape": "veins",
+   "mt": 1.0,
+   "grade": 100.0,
+   "unit": "ct/t",
+   "contained": 100.0,
+   "fill": 0.0006,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 50.57,
+   "lon": 12.65,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "tourmalineschorl",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:be-sherlova-gora",
+   "name": "Sherlova Gora and Adun-Chilon",
+   "country": "Russia",
+   "layer": "beryl",
+   "shape": "veins",
+   "mt": 1.0,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 1.0,
+   "fill": 0.0002,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 50.53,
+   "lon": 116.28,
+   "onLand": true,
+   "lenKm": 5.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "berylaquamarine",
+     "share": 0.8
+    },
+    {
+     "code": "topazblue",
+     "share": 0.2
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:be-shigar",
+   "name": "Shigar valley (Skardu)",
+   "country": "Pakistan",
+   "layer": "beryl",
+   "shape": "veins",
+   "mt": 0.5,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 0.5,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 35.43,
+   "lon": 75.73,
+   "onLand": true,
+   "lenKm": 20.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "berylaquamarine",
+     "share": 0.7
+    },
+    {
+     "code": "tourmalineverdelite",
+     "share": 0.15
+    },
+    {
+     "code": "topazblue",
+     "share": 0.15
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:be-wah-wah",
+   "name": "Wah Wah Mountains red beryl (Ruby-Violet)",
+   "country": "United States",
+   "layer": "beryl",
+   "shape": "veins",
+   "mt": 0.05,
+   "grade": 1.0,
+   "unit": "ct/t",
+   "contained": 0.05,
+   "fill": 0.002,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 38.53,
+   "lon": -113.53,
+   "onLand": true,
+   "lenKm": 0.5,
+   "widKm": 0.2,
+   "ores": [
+    {
+     "code": "berylbixbite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-namaqualand",
+   "name": "Namaqualand coastal diamonds (Kleinzee-Alexander Bay)",
+   "country": "South Africa",
+   "layer": "diamond",
+   "shape": "blanket",
+   "mt": 1500.0,
+   "grade": 0.03,
+   "unit": "ct/t",
+   "contained": 45.0,
+   "fill": 0.25,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -29.3,
+   "lon": 16.95,
+   "onLand": true,
+   "lenKm": 100.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-vaal-alluvials",
+   "name": "Vaal River alluvial diamonds (Barkly West-Windsorton)",
+   "country": "South Africa",
+   "layer": "diamond",
+   "shape": "blanket",
+   "mt": 1000.0,
+   "grade": 0.02,
+   "unit": "ct/t",
+   "contained": 20.0,
+   "fill": 0.0855,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -28.45,
+   "lon": 24.55,
+   "onLand": true,
+   "lenKm": 150.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-jagersfontein",
+   "name": "Jagersfontein",
+   "country": "South Africa",
+   "layer": "diamond",
+   "shape": "stock",
+   "mt": 60.0,
+   "grade": 0.15,
+   "unit": "ct/t",
+   "contained": 9.0,
+   "fill": 0.1157,
+   "q": "C",
+   "age": "Permian",
+   "lat": -29.77,
+   "lon": 25.43,
+   "onLand": true,
+   "lenKm": 0.6,
+   "widKm": 0.4,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-lunda-alluvials",
+   "name": "Lunda Norte alluvial diamonds (Lucapa-Chitotolo)",
+   "country": "Angola",
+   "layer": "diamond",
+   "shape": "blanket",
+   "mt": 750.0,
+   "grade": 0.2,
+   "unit": "ct/t",
+   "contained": 150.0,
+   "fill": 0.0868,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -8.42,
+   "lon": 20.74,
+   "onLand": true,
+   "lenKm": 120.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-cuango",
+   "name": "Cuango valley alluvial diamonds (Cafunfo)",
+   "country": "Angola",
+   "layer": "diamond",
+   "shape": "blanket",
+   "mt": 500.0,
+   "grade": 0.1,
+   "unit": "ct/t",
+   "contained": 50.0,
+   "fill": 0.0579,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -8.75,
+   "lon": 17.98,
+   "onLand": true,
+   "lenKm": 120.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-akwatia",
+   "name": "Akwatia (Birim) alluvial diamonds",
+   "country": "Ghana",
+   "layer": "diamond",
+   "shape": "blanket",
+   "mt": 300.0,
+   "grade": 0.3,
+   "unit": "ct/t",
+   "contained": 90.0,
+   "fill": 0.1339,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 6.05,
+   "lon": -0.8,
+   "onLand": true,
+   "lenKm": 40.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:dia-carnot",
+   "name": "Carnot-Berberati alluvial diamonds",
+   "country": "Central African Republic",
+   "layer": "diamond",
+   "shape": "blanket",
+   "mt": 250.0,
+   "grade": 0.1,
+   "unit": "ct/t",
+   "contained": 25.0,
+   "fill": 0.0558,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 4.95,
+   "lon": 15.9,
+   "onLand": true,
+   "lenKm": 80.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "diamond",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gems.csv"
+  },
+  {
+   "id": "pg:au-golden-mile",
+   "name": "Golden Mile (Kalgoorlie Super Pit and Mt Charlotte)",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 480.0,
+   "grade": 4.5,
+   "unit": "g/t",
+   "contained": 2160.0,
+   "fill": 0.0152,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": -30.773,
+   "lon": 121.505,
+   "onLand": true,
+   "lenKm": 5.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-st-ives",
+   "name": "St Ives (Kambalda)",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 120.0,
+   "grade": 4.0,
+   "unit": "g/t",
+   "contained": 480.0,
+   "fill": 0.0006,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -31.2,
+   "lon": 121.7,
+   "onLand": true,
+   "lenKm": 15.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-sunrise-dam",
+   "name": "Sunrise Dam",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 80.0,
+   "grade": 4.0,
+   "unit": "g/t",
+   "contained": 320.0,
+   "fill": 0.0063,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -29.1,
+   "lon": 122.43,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-tropicana",
+   "name": "Tropicana",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 190.0,
+   "grade": 2.0,
+   "unit": "g/t",
+   "contained": 380.0,
+   "fill": 0.0212,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": -29.24,
+   "lon": 124.55,
+   "onLand": true,
+   "lenKm": 5.0,
+   "widKm": 0.8,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-telfer",
+   "name": "Telfer",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 800.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 800.0,
+   "fill": 0.0309,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -21.71,
+   "lon": 122.21,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 0.9
+    },
+    {
+     "code": "chalcopyrite",
+     "share": 0.1
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-boddington",
+   "name": "Boddington",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 1570.0,
+   "grade": 0.75,
+   "unit": "g/t",
+   "contained": 1177.5,
+   "fill": 0.1168,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": -32.75,
+   "lon": 116.37,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-norseman",
+   "name": "Norseman",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 13.0,
+   "grade": 14.0,
+   "unit": "g/t",
+   "contained": 182.0,
+   "fill": 0.0006,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -32.2,
+   "lon": 121.78,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-tanami-callie",
+   "name": "Tanami (Callie)",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 90.0,
+   "grade": 5.5,
+   "unit": "g/t",
+   "contained": 495.0,
+   "fill": 0.0071,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -20.58,
+   "lon": 129.53,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-bendigo",
+   "name": "Bendigo reefs",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 45.0,
+   "grade": 15.0,
+   "unit": "g/t",
+   "contained": 675.0,
+   "fill": 0.0002,
+   "q": "B",
+   "age": "Paleozoic",
+   "lat": -36.76,
+   "lon": 144.28,
+   "onLand": true,
+   "lenKm": 15.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-ballarat-lode",
+   "name": "Ballarat reefs",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 10.0,
+   "grade": 9.0,
+   "unit": "g/t",
+   "contained": 90.0,
+   "fill": 0.0003,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": -37.56,
+   "lon": 143.86,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-charters-towers",
+   "name": "Charters Towers",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 6.0,
+   "grade": 34.0,
+   "unit": "g/t",
+   "contained": 204.0,
+   "fill": 0.0001,
+   "q": "B",
+   "age": "Paleozoic",
+   "lat": -20.08,
+   "lon": 146.27,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-mount-morgan",
+   "name": "Mount Morgan",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 50.0,
+   "grade": 4.7,
+   "unit": "g/t",
+   "contained": 235.0,
+   "fill": 0.0833,
+   "q": "A",
+   "age": "Devonian",
+   "lat": -23.645,
+   "lon": 150.39,
+   "onLand": true,
+   "lenKm": 0.8,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 0.9
+    },
+    {
+     "code": "chalcopyrite",
+     "share": 0.1
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-macraes",
+   "name": "Macraes",
+   "country": "New Zealand",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 280.0,
+   "grade": 1.1,
+   "unit": "g/t",
+   "contained": 308.0,
+   "fill": 0.0204,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": -45.38,
+   "lon": 170.43,
+   "onLand": true,
+   "lenKm": 10.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-waihi",
+   "name": "Waihi (Martha)",
+   "country": "New Zealand",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 30.0,
+   "grade": 8.0,
+   "unit": "g/t",
+   "contained": 240.0,
+   "fill": 0.0055,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": -37.39,
+   "lon": 175.84,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-muruntau",
+   "name": "Muruntau",
+   "country": "Uzbekistan",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 1760.0,
+   "grade": 3.0,
+   "unit": "g/t",
+   "contained": 5280.0,
+   "fill": 0.0356,
+   "q": "B",
+   "age": "Paleozoic",
+   "lat": 41.508,
+   "lon": 64.578,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-kumtor",
+   "name": "Kumtor",
+   "country": "Kyrgyzstan",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 180.0,
+   "grade": 3.5,
+   "unit": "g/t",
+   "contained": 630.0,
+   "fill": 0.026,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 41.865,
+   "lon": 78.19,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 0.7,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-vasilkovskoye",
+   "name": "Vasilkovskoye",
+   "country": "Kazakhstan",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 150.0,
+   "grade": 2.5,
+   "unit": "g/t",
+   "contained": 375.0,
+   "fill": 0.0519,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 53.27,
+   "lon": 69.16,
+   "onLand": true,
+   "lenKm": 1.5,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-sukhoi-log",
+   "name": "Sukhoi Log",
+   "country": "Russia",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 900.0,
+   "grade": 2.0,
+   "unit": "g/t",
+   "contained": 1800.0,
+   "fill": 0.0909,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 58.73,
+   "lon": 115.17,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-olimpiada",
+   "name": "Olimpiada",
+   "country": "Russia",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 400.0,
+   "grade": 3.5,
+   "unit": "g/t",
+   "contained": 1400.0,
+   "fill": 0.0727,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 59.3,
+   "lon": 92.9,
+   "onLand": true,
+   "lenKm": 2.5,
+   "widKm": 0.8,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-natalka",
+   "name": "Natalka",
+   "country": "Russia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 600.0,
+   "grade": 1.6,
+   "unit": "g/t",
+   "contained": 960.0,
+   "fill": 0.0291,
+   "q": "B",
+   "age": "Permian",
+   "lat": 61.85,
+   "lon": 148.1,
+   "onLand": true,
+   "lenKm": 5.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-kupol",
+   "name": "Kupol",
+   "country": "Russia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 21.0,
+   "grade": 15.0,
+   "unit": "g/t",
+   "contained": 315.0,
+   "fill": 0.0112,
+   "q": "B",
+   "age": "Mesozoic",
+   "lat": 66.78,
+   "lon": 169.55,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 0.3,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-berezovsk",
+   "name": "Berezovsk",
+   "country": "Russia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 30.0,
+   "grade": 6.0,
+   "unit": "g/t",
+   "contained": 180.0,
+   "fill": 0.0011,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 56.91,
+   "lon": 60.81,
+   "onLand": true,
+   "lenKm": 7.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-kochkar",
+   "name": "Kochkar (Plast)",
+   "country": "Russia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 30.0,
+   "grade": 8.0,
+   "unit": "g/t",
+   "contained": 240.0,
+   "fill": 0.0008,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 54.37,
+   "lon": 60.85,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-balei",
+   "name": "Balei-Taseyevo",
+   "country": "Russia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 40.0,
+   "grade": 10.0,
+   "unit": "g/t",
+   "contained": 400.0,
+   "fill": 0.0031,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 51.58,
+   "lon": 116.63,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-jiaodong-linglong",
+   "name": "Linglong (Jiaodong)",
+   "country": "China",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 160.0,
+   "grade": 6.0,
+   "unit": "g/t",
+   "contained": 960.0,
+   "fill": 0.0013,
+   "q": "B",
+   "age": "Mesozoic",
+   "lat": 37.43,
+   "lon": 120.44,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-jiaodong-jiaojia",
+   "name": "Jiaojia-Xincheng (Jiaodong)",
+   "country": "China",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 300.0,
+   "grade": 4.0,
+   "unit": "g/t",
+   "contained": 1200.0,
+   "fill": 0.0023,
+   "q": "B",
+   "age": "Mesozoic",
+   "lat": 37.38,
+   "lon": 120.06,
+   "onLand": true,
+   "lenKm": 20.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-jiaodong-sanshandao",
+   "name": "Sanshandao (Jiaodong)",
+   "country": "China",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 400.0,
+   "grade": 3.5,
+   "unit": "g/t",
+   "contained": 1400.0,
+   "fill": 0.005,
+   "q": "B",
+   "age": "Mesozoic",
+   "lat": 37.39,
+   "lon": 119.95,
+   "onLand": true,
+   "lenKm": 12.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-kolar",
+   "name": "Kolar Gold Fields",
+   "country": "India",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 50.0,
+   "grade": 16.0,
+   "unit": "g/t",
+   "contained": 800.0,
+   "fill": 0.0013,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 12.955,
+   "lon": 78.265,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-hutti",
+   "name": "Hutti",
+   "country": "India",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 15.0,
+   "grade": 6.0,
+   "unit": "g/t",
+   "contained": 90.0,
+   "fill": 0.0034,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 16.2,
+   "lon": 76.65,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-kibali",
+   "name": "Kibali (KCD)",
+   "country": "Congo (Kinshasa)",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 230.0,
+   "grade": 3.5,
+   "unit": "g/t",
+   "contained": 805.0,
+   "fill": 0.0114,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 3.13,
+   "lon": 29.58,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-geita",
+   "name": "Geita",
+   "country": "Tanzania",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 200.0,
+   "grade": 3.0,
+   "unit": "g/t",
+   "contained": 600.0,
+   "fill": 0.0043,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -2.87,
+   "lon": 32.22,
+   "onLand": true,
+   "lenKm": 10.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-bulyanhulu",
+   "name": "Bulyanhulu",
+   "country": "Tanzania",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 60.0,
+   "grade": 10.0,
+   "unit": "g/t",
+   "contained": 600.0,
+   "fill": 0.0115,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -3.23,
+   "lon": 32.48,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 0.3,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-north-mara",
+   "name": "North Mara",
+   "country": "Tanzania",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 110.0,
+   "grade": 3.0,
+   "unit": "g/t",
+   "contained": 330.0,
+   "fill": 0.0123,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -1.47,
+   "lon": 34.55,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-sadiola",
+   "name": "Sadiola",
+   "country": "Mali",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 150.0,
+   "grade": 2.0,
+   "unit": "g/t",
+   "contained": 300.0,
+   "fill": 0.0309,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 13.9,
+   "lon": -11.7,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-loulo-gounkoto",
+   "name": "Loulo-Gounkoto",
+   "country": "Mali",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 140.0,
+   "grade": 4.5,
+   "unit": "g/t",
+   "contained": 630.0,
+   "fill": 0.0032,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 13.0,
+   "lon": -11.35,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-fekola",
+   "name": "Fekola",
+   "country": "Mali",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 110.0,
+   "grade": 2.2,
+   "unit": "g/t",
+   "contained": 242.00000000000003,
+   "fill": 0.0444,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 12.62,
+   "lon": -11.37,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-essakane",
+   "name": "Essakane",
+   "country": "Burkina Faso",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 300.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 300.0,
+   "fill": 0.0741,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 14.38,
+   "lon": -0.08,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-tasiast",
+   "name": "Tasiast",
+   "country": "Mauritania",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 300.0,
+   "grade": 1.5,
+   "unit": "g/t",
+   "contained": 450.0,
+   "fill": 0.0223,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 20.57,
+   "lon": -15.53,
+   "onLand": true,
+   "lenKm": 10.0,
+   "widKm": 0.6,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-siguiri",
+   "name": "Siguiri",
+   "country": "Guinea",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 300.0,
+   "grade": 0.9,
+   "unit": "g/t",
+   "contained": 270.0,
+   "fill": 0.0051,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 11.6,
+   "lon": -9.25,
+   "onLand": true,
+   "lenKm": 15.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-obuasi",
+   "name": "Obuasi",
+   "country": "Ghana",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 280.0,
+   "grade": 7.0,
+   "unit": "g/t",
+   "contained": 1960.0,
+   "fill": 0.013,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 6.195,
+   "lon": -1.665,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 0.6,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-ahafo",
+   "name": "Ahafo",
+   "country": "Ghana",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 300.0,
+   "grade": 2.4,
+   "unit": "g/t",
+   "contained": 720.0,
+   "fill": 0.0036,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 7.0,
+   "lon": -2.35,
+   "onLand": true,
+   "lenKm": 15.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-prestea-bogoso",
+   "name": "Prestea-Bogoso",
+   "country": "Ghana",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 80.0,
+   "grade": 5.0,
+   "unit": "g/t",
+   "contained": 400.0,
+   "fill": 0.0025,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 5.45,
+   "lon": -2.14,
+   "onLand": true,
+   "lenKm": 15.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-tarkwa",
+   "name": "Tarkwa banket reefs",
+   "country": "Ghana",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 600.0,
+   "grade": 1.3,
+   "unit": "g/t",
+   "contained": 780.0,
+   "fill": 0.0121,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 5.3,
+   "lon": -1.99,
+   "onLand": true,
+   "lenKm": 10.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-sukari",
+   "name": "Sukari",
+   "country": "Egypt",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 410.0,
+   "grade": 1.1,
+   "unit": "g/t",
+   "contained": 451.00000000000006,
+   "fill": 0.0868,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 24.95,
+   "lon": 34.71,
+   "onLand": true,
+   "lenKm": 2.5,
+   "widKm": 0.7,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-wadi-allaqi",
+   "name": "Wadi Allaqi and Umm Garayat (Nubian goldfields)",
+   "country": "Egypt",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 20.0,
+   "grade": 10.0,
+   "unit": "g/t",
+   "contained": 200.0,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 22.6,
+   "lon": 33.4,
+   "onLand": true,
+   "lenKm": 40.0,
+   "widKm": 10.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-mahd-adh-dhahab",
+   "name": "Mahd adh Dhahab",
+   "country": "Saudi Arabia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 4.0,
+   "grade": 17.0,
+   "unit": "g/t",
+   "contained": 68.0,
+   "fill": 0.0074,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 23.5,
+   "lon": 40.86,
+   "onLand": true,
+   "lenKm": 1.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-barberton",
+   "name": "Barberton (Fairview-Sheba-New Consort)",
+   "country": "South Africa",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 40.0,
+   "grade": 10.0,
+   "unit": "g/t",
+   "contained": 400.0,
+   "fill": 0.0002,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -25.75,
+   "lon": 31.1,
+   "onLand": true,
+   "lenKm": 20.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-pilgrims-rest",
+   "name": "Pilgrim's Rest and Sabie",
+   "country": "South Africa",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 19.0,
+   "grade": 10.0,
+   "unit": "g/t",
+   "contained": 190.0,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -24.9,
+   "lon": 30.75,
+   "onLand": true,
+   "lenKm": 30.0,
+   "widKm": 10.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-cam-motor",
+   "name": "Cam and Motor (Kadoma)",
+   "country": "Zimbabwe",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 25.0,
+   "grade": 6.0,
+   "unit": "g/t",
+   "contained": 150.0,
+   "fill": 0.0019,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -18.33,
+   "lon": 29.95,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-globe-phoenix",
+   "name": "Globe and Phoenix (Kwekwe)",
+   "country": "Zimbabwe",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 8.0,
+   "grade": 15.0,
+   "unit": "g/t",
+   "contained": 120.0,
+   "fill": 0.0023,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -18.93,
+   "lon": 29.81,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-freda-rebecca",
+   "name": "Freda Rebecca (Bindura)",
+   "country": "Zimbabwe",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 40.0,
+   "grade": 2.5,
+   "unit": "g/t",
+   "contained": 100.0,
+   "fill": 0.0057,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -17.42,
+   "lon": 31.39,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-hemlo",
+   "name": "Hemlo (Williams-David Bell-Golden Giant)",
+   "country": "Canada",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 100.0,
+   "grade": 6.5,
+   "unit": "g/t",
+   "contained": 650.0,
+   "fill": 0.0331,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 48.69,
+   "lon": -85.9,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 0.2,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-porcupine",
+   "name": "Porcupine camp (Hollinger-McIntyre-Dome)",
+   "country": "Canada",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 270.0,
+   "grade": 8.0,
+   "unit": "g/t",
+   "contained": 2160.0,
+   "fill": 0.0008,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 48.47,
+   "lon": -81.3,
+   "onLand": true,
+   "lenKm": 15.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-kirkland-lake",
+   "name": "Kirkland Lake (Macassa and the Main Break)",
+   "country": "Canada",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 52.0,
+   "grade": 15.0,
+   "unit": "g/t",
+   "contained": 780.0,
+   "fill": 0.0026,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 48.15,
+   "lon": -80.03,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-red-lake",
+   "name": "Red Lake (Campbell-Red Lake)",
+   "country": "Canada",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 60.0,
+   "grade": 15.0,
+   "unit": "g/t",
+   "contained": 900.0,
+   "fill": 0.0004,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 51.05,
+   "lon": -93.75,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-malartic",
+   "name": "Canadian Malartic and Odyssey",
+   "country": "Canada",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 560.0,
+   "grade": 1.1,
+   "unit": "g/t",
+   "contained": 616.0,
+   "fill": 0.0453,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 48.135,
+   "lon": -78.13,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-detour",
+   "name": "Detour Lake",
+   "country": "Canada",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 860.0,
+   "grade": 0.9,
+   "unit": "g/t",
+   "contained": 774.0,
+   "fill": 0.12,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 50.02,
+   "lon": -79.7,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 0.8,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-yellowknife",
+   "name": "Yellowknife (Giant and Con)",
+   "country": "Canada",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 27.0,
+   "grade": 15.0,
+   "unit": "g/t",
+   "contained": 405.0,
+   "fill": 0.0006,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 62.5,
+   "lon": -114.37,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-eskay-creek",
+   "name": "Eskay Creek",
+   "country": "Canada",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 2.3,
+   "grade": 45.0,
+   "unit": "g/t",
+   "contained": 103.49999999999999,
+   "fill": 0.0059,
+   "q": "B",
+   "age": "Mesozoic",
+   "lat": 56.62,
+   "lon": -130.45,
+   "onLand": true,
+   "lenKm": 1.5,
+   "widKm": 0.3,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-homestake",
+   "name": "Homestake",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 160.0,
+   "grade": 7.8,
+   "unit": "g/t",
+   "contained": 1248.0,
+   "fill": 0.006,
+   "q": "A",
+   "age": "Precambrian",
+   "lat": 44.353,
+   "lon": -103.753,
+   "onLand": true,
+   "lenKm": 2.5,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-mother-lode",
+   "name": "Mother Lode belt",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 45.0,
+   "grade": 9.0,
+   "unit": "g/t",
+   "contained": 405.0,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 38.1,
+   "lon": -120.55,
+   "onLand": true,
+   "lenKm": 190.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-grass-valley",
+   "name": "Grass Valley (Empire-North Star-Idaho Maryland)",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 30.0,
+   "grade": 13.0,
+   "unit": "g/t",
+   "contained": 390.0,
+   "fill": 0.0003,
+   "q": "B",
+   "age": "Mesozoic",
+   "lat": 39.205,
+   "lon": -121.045,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-juneau",
+   "name": "Juneau (Alaska-Juneau and Treadwell)",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 110.0,
+   "grade": 1.9,
+   "unit": "g/t",
+   "contained": 209.0,
+   "fill": 0.0082,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 58.3,
+   "lon": -134.4,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-fort-knox",
+   "name": "Fort Knox",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 500.0,
+   "grade": 0.6,
+   "unit": "g/t",
+   "contained": 300.0,
+   "fill": 0.2516,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 65.0,
+   "lon": -147.36,
+   "onLand": true,
+   "lenKm": 1.5,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-donlin",
+   "name": "Donlin",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 670.0,
+   "grade": 2.1,
+   "unit": "g/t",
+   "contained": 1407.0,
+   "fill": 0.0148,
+   "q": "B",
+   "age": "Mesozoic",
+   "lat": 62.07,
+   "lon": -158.22,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-goldstrike",
+   "name": "Goldstrike (Betze-Post-Meikle)",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 400.0,
+   "grade": 4.5,
+   "unit": "g/t",
+   "contained": 1800.0,
+   "fill": 0.016,
+   "q": "B",
+   "age": "Paleozoic",
+   "lat": 40.98,
+   "lon": -116.36,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-gold-quarry",
+   "name": "Gold Quarry (Maggie Creek)",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 350.0,
+   "grade": 1.8,
+   "unit": "g/t",
+   "contained": 630.0,
+   "fill": 0.0321,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 40.825,
+   "lon": -116.225,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-carlin",
+   "name": "Carlin (Carlin-Hardie)",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 40.0,
+   "grade": 3.0,
+   "unit": "g/t",
+   "contained": 120.0,
+   "fill": 0.0192,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 40.912,
+   "lon": -116.32,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-cortez",
+   "name": "Cortez (Pipeline-Cortez Hills-Goldrush)",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 450.0,
+   "grade": 2.8,
+   "unit": "g/t",
+   "contained": 1260.0,
+   "fill": 0.0096,
+   "q": "B",
+   "age": "Paleozoic",
+   "lat": 40.25,
+   "lon": -116.7,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-turquoise-ridge",
+   "name": "Turquoise Ridge (Getchell)",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 70.0,
+   "grade": 10.0,
+   "unit": "g/t",
+   "contained": 700.0,
+   "fill": 0.0135,
+   "q": "B",
+   "age": "Paleozoic",
+   "lat": 41.21,
+   "lon": -117.26,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-twin-creeks",
+   "name": "Twin Creeks",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 120.0,
+   "grade": 2.5,
+   "unit": "g/t",
+   "contained": 300.0,
+   "fill": 0.0205,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 41.28,
+   "lon": -117.17,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-jerritt-canyon",
+   "name": "Jerritt Canyon",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 47.0,
+   "grade": 6.0,
+   "unit": "g/t",
+   "contained": 282.0,
+   "fill": 0.003,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 41.37,
+   "lon": -116.0,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-round-mountain",
+   "name": "Round Mountain",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 700.0,
+   "grade": 0.9,
+   "unit": "g/t",
+   "contained": 630.0,
+   "fill": 0.0778,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": 38.7,
+   "lon": -117.08,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-cripple-creek",
+   "name": "Cripple Creek and Victor",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 700.0,
+   "grade": 1.3,
+   "unit": "g/t",
+   "contained": 910.0,
+   "fill": 0.015,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": 38.73,
+   "lon": -105.15,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-goldfield",
+   "name": "Goldfield",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 6.5,
+   "grade": 20.0,
+   "unit": "g/t",
+   "contained": 130.0,
+   "fill": 0.0011,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": 37.71,
+   "lon": -117.21,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-el-oro",
+   "name": "El Oro-Tlalpujahua",
+   "country": "Mexico",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 20.0,
+   "grade": 10.0,
+   "unit": "g/t",
+   "contained": 200.0,
+   "fill": 0.0011,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 19.8,
+   "lon": -100.13,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-pueblo-viejo",
+   "name": "Pueblo Viejo",
+   "country": "Dominican Republic",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 600.0,
+   "grade": 2.6,
+   "unit": "g/t",
+   "contained": 1560.0,
+   "fill": 0.0617,
+   "q": "B",
+   "age": "Mesozoic",
+   "lat": 18.94,
+   "lon": -70.18,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-segovia",
+   "name": "Segovia-Remedios",
+   "country": "Colombia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 20.0,
+   "grade": 12.0,
+   "unit": "g/t",
+   "contained": 240.0,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 7.08,
+   "lon": -74.7,
+   "onLand": true,
+   "lenKm": 15.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-el-callao",
+   "name": "El Callao",
+   "country": "Venezuela",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 30.0,
+   "grade": 10.0,
+   "unit": "g/t",
+   "contained": 300.0,
+   "fill": 0.0003,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 7.35,
+   "lon": -61.82,
+   "onLand": true,
+   "lenKm": 10.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-las-cristinas",
+   "name": "Las Cristinas",
+   "country": "Venezuela",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 500.0,
+   "grade": 1.1,
+   "unit": "g/t",
+   "contained": 550.0,
+   "fill": 0.0823,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 6.27,
+   "lon": -61.38,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-rosebel",
+   "name": "Rosebel",
+   "country": "Suriname",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 310.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 310.0,
+   "fill": 0.0113,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 5.1,
+   "lon": -55.2,
+   "onLand": true,
+   "lenKm": 10.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-fruta-del-norte",
+   "name": "Fruta del Norte",
+   "country": "Ecuador",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 35.0,
+   "grade": 9.0,
+   "unit": "g/t",
+   "contained": 315.0,
+   "fill": 0.0275,
+   "q": "B",
+   "age": "Mesozoic",
+   "lat": -3.83,
+   "lon": -78.52,
+   "onLand": true,
+   "lenKm": 1.5,
+   "widKm": 0.4,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-yanacocha",
+   "name": "Yanacocha",
+   "country": "Peru",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 1600.0,
+   "grade": 0.9,
+   "unit": "g/t",
+   "contained": 1440.0,
+   "fill": 0.0222,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": -6.98,
+   "lon": -78.52,
+   "onLand": true,
+   "lenKm": 10.0,
+   "widKm": 6.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-lagunas-norte",
+   "name": "Lagunas Norte (Alto Chicama)",
+   "country": "Peru",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 320.0,
+   "grade": 1.2,
+   "unit": "g/t",
+   "contained": 384.0,
+   "fill": 0.1067,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -7.95,
+   "lon": -78.25,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-veladero",
+   "name": "Veladero",
+   "country": "Argentina",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 620.0,
+   "grade": 0.8,
+   "unit": "g/t",
+   "contained": 496.0,
+   "fill": 0.0827,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": -29.37,
+   "lon": -69.95,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-pascua-lama",
+   "name": "Pascua-Lama",
+   "country": "Chile",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 350.0,
+   "grade": 1.6,
+   "unit": "g/t",
+   "contained": 560.0,
+   "fill": 0.0897,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": -29.32,
+   "lon": -70.03,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-el-indio",
+   "name": "El Indio",
+   "country": "Chile",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 18.0,
+   "grade": 10.0,
+   "unit": "g/t",
+   "contained": 180.0,
+   "fill": 0.0072,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -29.77,
+   "lon": -69.98,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-cerro-vanguardia",
+   "name": "Cerro Vanguardia",
+   "country": "Argentina",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 36.0,
+   "grade": 7.0,
+   "unit": "g/t",
+   "contained": 252.0,
+   "fill": 0.001,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": -48.39,
+   "lon": -68.31,
+   "onLand": true,
+   "lenKm": 10.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-morro-velho",
+   "name": "Morro Velho (Nova Lima)",
+   "country": "Brazil",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 55.0,
+   "grade": 9.0,
+   "unit": "g/t",
+   "contained": 495.0,
+   "fill": 0.0052,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -19.95,
+   "lon": -43.85,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-cuiaba",
+   "name": "Cuiaba",
+   "country": "Brazil",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 44.0,
+   "grade": 7.0,
+   "unit": "g/t",
+   "contained": 308.0,
+   "fill": 0.0202,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -19.88,
+   "lon": -43.8,
+   "onLand": true,
+   "lenKm": 1.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-paracatu",
+   "name": "Paracatu (Morro do Ouro)",
+   "country": "Brazil",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 1950.0,
+   "grade": 0.4,
+   "unit": "g/t",
+   "contained": 780.0,
+   "fill": 0.2407,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": -17.2,
+   "lon": -46.87,
+   "onLand": true,
+   "lenKm": 5.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-serra-pelada",
+   "name": "Serra Pelada",
+   "country": "Brazil",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 4.0,
+   "grade": 12.0,
+   "unit": "g/t",
+   "contained": 48.0,
+   "fill": 0.0412,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -5.95,
+   "lon": -49.65,
+   "onLand": true,
+   "lenKm": 0.4,
+   "widKm": 0.3,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-lihir",
+   "name": "Lihir (Ladolam)",
+   "country": "Papua New Guinea",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 800.0,
+   "grade": 2.2,
+   "unit": "g/t",
+   "contained": 1760.0000000000002,
+   "fill": 0.0853,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": -3.12,
+   "lon": 152.64,
+   "onLand": true,
+   "lenKm": 2.5,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-porgera",
+   "name": "Porgera",
+   "country": "Papua New Guinea",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 210.0,
+   "grade": 4.0,
+   "unit": "g/t",
+   "contained": 840.0,
+   "fill": 0.0389,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": -5.47,
+   "lon": 143.08,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-baguio",
+   "name": "Baguio district",
+   "country": "Philippines",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 80.0,
+   "grade": 6.0,
+   "unit": "g/t",
+   "contained": 480.0,
+   "fill": 0.0003,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 16.38,
+   "lon": 120.65,
+   "onLand": true,
+   "lenKm": 15.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-hishikari",
+   "name": "Hishikari",
+   "country": "Japan",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 14.0,
+   "grade": 30.0,
+   "unit": "g/t",
+   "contained": 420.0,
+   "fill": 0.0056,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": 32.0,
+   "lon": 130.67,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-sado",
+   "name": "Sado",
+   "country": "Japan",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 15.0,
+   "grade": 5.0,
+   "unit": "g/t",
+   "contained": 75.0,
+   "fill": 0.0033,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": 38.04,
+   "lon": 138.26,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-rosia-montana",
+   "name": "Rosia Montana (Alburnus Maior)",
+   "country": "Romania",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 400.0,
+   "grade": 1.4,
+   "unit": "g/t",
+   "contained": 560.0,
+   "fill": 0.0889,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": 46.3,
+   "lon": 23.13,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-barza-brad",
+   "name": "Barza-Brad (Ruda-Musariu)",
+   "country": "Romania",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 20.0,
+   "grade": 5.0,
+   "unit": "g/t",
+   "contained": 100.0,
+   "fill": 0.0006,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 46.13,
+   "lon": 22.79,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-sacaramb",
+   "name": "Sacaramb (Nagyag) tellurides",
+   "country": "Romania",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 3.0,
+   "grade": 15.0,
+   "unit": "g/t",
+   "contained": 45.0,
+   "fill": 0.0012,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 45.97,
+   "lon": 22.97,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-kremnica",
+   "name": "Kremnica",
+   "country": "Slovakia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 7.0,
+   "grade": 6.5,
+   "unit": "g/t",
+   "contained": 45.5,
+   "fill": 0.0011,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": 48.705,
+   "lon": 18.915,
+   "onLand": true,
+   "lenKm": 5.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-jilove",
+   "name": "Jilove",
+   "country": "Czech Republic",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 2.0,
+   "grade": 10.0,
+   "unit": "g/t",
+   "contained": 20.0,
+   "fill": 0.0005,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 49.89,
+   "lon": 14.49,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-tauern",
+   "name": "Tauern gold (Gastein-Rauris)",
+   "country": "Austria",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 4.0,
+   "grade": 10.0,
+   "unit": "g/t",
+   "contained": 40.0,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 47.07,
+   "lon": 13.05,
+   "onLand": true,
+   "lenKm": 15.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-salsigne",
+   "name": "Salsigne",
+   "country": "France",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 10.0,
+   "grade": 12.0,
+   "unit": "g/t",
+   "contained": 120.0,
+   "fill": 0.002,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 43.33,
+   "lon": 2.36,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-kisladag",
+   "name": "Kisladag",
+   "country": "Turkey",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 750.0,
+   "grade": 0.7,
+   "unit": "g/t",
+   "contained": 525.0,
+   "fill": 0.2671,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": 38.48,
+   "lon": 29.15,
+   "onLand": true,
+   "lenKm": 1.5,
+   "widKm": 1.2,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-nezhdaninskoye",
+   "name": "Nezhdaninskoye",
+   "country": "Russia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 100.0,
+   "grade": 5.0,
+   "unit": "g/t",
+   "contained": 500.0,
+   "fill": 0.0031,
+   "q": "C",
+   "age": "Permian",
+   "lat": 62.47,
+   "lon": 139.0,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-kuranakh",
+   "name": "Kuranakh (Aldan)",
+   "country": "Russia",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 150.0,
+   "grade": 2.0,
+   "unit": "g/t",
+   "contained": 300.0,
+   "fill": 0.0085,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 58.62,
+   "lon": 125.47,
+   "onLand": true,
+   "lenKm": 15.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-mayskoye",
+   "name": "Mayskoye",
+   "country": "Russia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 30.0,
+   "grade": 10.0,
+   "unit": "g/t",
+   "contained": 300.0,
+   "fill": 0.0028,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 66.62,
+   "lon": 170.6,
+   "onLand": true,
+   "lenKm": 5.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-pavlik",
+   "name": "Pavlik",
+   "country": "Russia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 140.0,
+   "grade": 1.5,
+   "unit": "g/t",
+   "contained": 210.0,
+   "fill": 0.0346,
+   "q": "C",
+   "age": "Permian",
+   "lat": 61.9,
+   "lon": 147.7,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-bakyrchik",
+   "name": "Bakyrchik",
+   "country": "Kazakhstan",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 50.0,
+   "grade": 8.0,
+   "unit": "g/t",
+   "contained": 400.0,
+   "fill": 0.0051,
+   "q": "C",
+   "age": "Carboniferous",
+   "lat": 49.7,
+   "lon": 81.5,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-jundee",
+   "name": "Jundee",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 45.0,
+   "grade": 5.0,
+   "unit": "g/t",
+   "contained": 225.0,
+   "fill": 0.002,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -26.35,
+   "lon": 120.62,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-agnew-lawlers",
+   "name": "Agnew-Lawlers",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 55.0,
+   "grade": 5.5,
+   "unit": "g/t",
+   "contained": 302.5,
+   "fill": 0.0008,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -28.0,
+   "lon": 120.5,
+   "onLand": true,
+   "lenKm": 10.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-granny-smith",
+   "name": "Granny Smith-Wallaby",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 60.0,
+   "grade": 4.5,
+   "unit": "g/t",
+   "contained": 270.0,
+   "fill": 0.0048,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -28.78,
+   "lon": 122.4,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-mount-magnet",
+   "name": "Mount Magnet",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 60.0,
+   "grade": 4.0,
+   "unit": "g/t",
+   "contained": 240.0,
+   "fill": 0.0005,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -28.06,
+   "lon": 117.85,
+   "onLand": true,
+   "lenKm": 10.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-fosterville",
+   "name": "Fosterville",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 25.0,
+   "grade": 9.0,
+   "unit": "g/t",
+   "contained": 225.0,
+   "fill": 0.0031,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": -36.7,
+   "lon": 144.5,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-cowal",
+   "name": "Cowal",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 250.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 250.0,
+   "fill": 0.0579,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": -33.65,
+   "lon": 147.4,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-zijinshan",
+   "name": "Zijinshan",
+   "country": "China",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 600.0,
+   "grade": 0.5,
+   "unit": "g/t",
+   "contained": 300.0,
+   "fill": 0.1923,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 25.18,
+   "lon": 116.4,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 0.7
+    },
+    {
+     "code": "chalcopyrite",
+     "share": 0.3,
+     "zone": "bottom"
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-shuiyindong",
+   "name": "Shuiyindong (Guizhou Carlin-type)",
+   "country": "China",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 45.0,
+   "grade": 6.0,
+   "unit": "g/t",
+   "contained": 270.0,
+   "fill": 0.0057,
+   "q": "C",
+   "age": "Permian",
+   "lat": 25.53,
+   "lon": 105.85,
+   "onLand": true,
+   "lenKm": 5.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-xiaoqinling",
+   "name": "Xiaoqinling",
+   "country": "China",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 100.0,
+   "grade": 8.0,
+   "unit": "g/t",
+   "contained": 800.0,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 34.4,
+   "lon": 110.5,
+   "onLand": true,
+   "lenKm": 40.0,
+   "widKm": 10.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-los-filos",
+   "name": "Los Filos-Bermejal",
+   "country": "Mexico",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 350.0,
+   "grade": 0.9,
+   "unit": "g/t",
+   "contained": 315.0,
+   "fill": 0.0432,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 17.85,
+   "lon": -99.7,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-buritica",
+   "name": "Buritica",
+   "country": "Colombia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 30.0,
+   "grade": 7.0,
+   "unit": "g/t",
+   "contained": 210.0,
+   "fill": 0.0049,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 6.72,
+   "lon": -75.92,
+   "onLand": true,
+   "lenKm": 1.5,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-pataz",
+   "name": "Pataz gold belt",
+   "country": "Peru",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 40.0,
+   "grade": 8.0,
+   "unit": "g/t",
+   "contained": 320.0,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": -7.78,
+   "lon": -77.47,
+   "onLand": true,
+   "lenKm": 40.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-gwalia",
+   "name": "Gwalia (Leonora)",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 40.0,
+   "grade": 6.5,
+   "unit": "g/t",
+   "contained": 260.0,
+   "fill": 0.0125,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -28.91,
+   "lon": 121.33,
+   "onLand": true,
+   "lenKm": 2.0,
+   "widKm": 0.3,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-kelian",
+   "name": "Kelian",
+   "country": "Indonesia",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 100.0,
+   "grade": 2.0,
+   "unit": "g/t",
+   "contained": 200.0,
+   "fill": 0.0641,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -0.05,
+   "lon": 115.6,
+   "onLand": true,
+   "lenKm": 1.5,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-martabe",
+   "name": "Martabe",
+   "country": "Indonesia",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 140.0,
+   "grade": 1.8,
+   "unit": "g/t",
+   "contained": 252.0,
+   "fill": 0.0233,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 1.52,
+   "lon": 99.05,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-gosowong",
+   "name": "Gosowong-Kencana-Toguraci",
+   "country": "Indonesia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 9.0,
+   "grade": 17.0,
+   "unit": "g/t",
+   "contained": 153.0,
+   "fill": 0.0012,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 1.05,
+   "lon": 127.65,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-pongkor",
+   "name": "Pongkor",
+   "country": "Indonesia",
+   "layer": "Au",
+   "shape": "veins",
+   "mt": 10.0,
+   "grade": 10.0,
+   "unit": "g/t",
+   "contained": 100.0,
+   "fill": 0.002,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -6.65,
+   "lon": 106.55,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-herradura",
+   "name": "La Herradura",
+   "country": "Mexico",
+   "layer": "Au",
+   "shape": "lens",
+   "mt": 380.0,
+   "grade": 0.8,
+   "unit": "g/t",
+   "contained": 304.0,
+   "fill": 0.0391,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 31.1,
+   "lon": -112.7,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:au-mulatos",
+   "name": "Mulatos",
+   "country": "Mexico",
+   "layer": "Au",
+   "shape": "stock",
+   "mt": 125.0,
+   "grade": 1.2,
+   "unit": "g/t",
+   "contained": 150.0,
+   "fill": 0.0278,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 28.65,
+   "lon": -108.73,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "gold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-gold.csv"
+  },
+  {
+   "id": "pg:u-mcarthur-river",
+   "name": "McArthur River",
+   "country": "Canada",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 3.4,
+   "grade": 10.0,
+   "unit": "%",
+   "contained": 0.34,
+   "fill": 0.0476,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 57.762,
+   "lon": -105.05,
+   "onLand": true,
+   "lenKm": 1.7,
+   "widKm": 0.1,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-cigar-lake",
+   "name": "Cigar Lake",
+   "country": "Canada",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 0.9,
+   "grade": 15.0,
+   "unit": "%",
+   "contained": 0.135,
+   "fill": 0.0601,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 58.068,
+   "lon": -104.538,
+   "onLand": true,
+   "lenKm": 1.95,
+   "widKm": 0.06,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-key-lake",
+   "name": "Key Lake (Gaertner and Deilmann)",
+   "country": "Canada",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 4.8,
+   "grade": 2.0,
+   "unit": "%",
+   "contained": 0.096,
+   "fill": 0.041,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 57.21,
+   "lon": -105.62,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 0.1,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-rabbit-lake",
+   "name": "Rabbit Lake (Rabbit Lake + Collins Bay + Eagle Point)",
+   "country": "Canada",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 10.0,
+   "grade": 0.9,
+   "unit": "%",
+   "contained": 0.09,
+   "fill": 0.0033,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 58.2,
+   "lon": -103.7,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 0.3,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-arrow",
+   "name": "Arrow (Rook I)",
+   "country": "Canada",
+   "layer": "U",
+   "shape": "veins",
+   "mt": 8.15,
+   "grade": 1.88,
+   "unit": "%",
+   "contained": 0.15322,
+   "fill": 0.0175,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 57.66,
+   "lon": -109.33,
+   "onLand": true,
+   "lenKm": 0.98,
+   "widKm": 0.22,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-ranger",
+   "name": "Ranger (Nos 1 and 3)",
+   "country": "Australia",
+   "layer": "U",
+   "shape": "stock",
+   "mt": 60.0,
+   "grade": 0.27,
+   "unit": "%",
+   "contained": 0.16200000000000003,
+   "fill": 0.0231,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": -12.68,
+   "lon": 132.91,
+   "onLand": true,
+   "lenKm": 2.5,
+   "widKm": 0.8,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-jabiluka",
+   "name": "Jabiluka",
+   "country": "Australia",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 33.0,
+   "grade": 0.45,
+   "unit": "%",
+   "contained": 0.1485,
+   "fill": 0.0501,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -12.52,
+   "lon": 132.9,
+   "onLand": true,
+   "lenKm": 1.3,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-beverley",
+   "name": "Beverley",
+   "country": "Australia",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 12.0,
+   "grade": 0.18,
+   "unit": "%",
+   "contained": 0.0216,
+   "fill": 0.075,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -30.18,
+   "lon": 139.6,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-inkai",
+   "name": "Inkai (Chu-Sarysu)",
+   "country": "Kazakhstan",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 500.0,
+   "grade": 0.075,
+   "unit": "%",
+   "contained": 0.375,
+   "fill": 0.0231,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 45.33,
+   "lon": 67.4,
+   "onLand": true,
+   "lenKm": 60.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-budenovskoye",
+   "name": "Budenovskoye and Mynkuduk (Chu-Sarysu north)",
+   "country": "Kazakhstan",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 700.0,
+   "grade": 0.07,
+   "unit": "%",
+   "contained": 0.49000000000000005,
+   "fill": 0.0097,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 45.45,
+   "lon": 66.7,
+   "onLand": true,
+   "lenKm": 80.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-uchkuduk",
+   "name": "Uchkuduk",
+   "country": "Uzbekistan",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 100.0,
+   "grade": 0.06,
+   "unit": "%",
+   "contained": 0.06,
+   "fill": 0.0159,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 42.15,
+   "lon": 63.55,
+   "onLand": true,
+   "lenKm": 20.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-rossing",
+   "name": "Rossing",
+   "country": "Namibia",
+   "layer": "U",
+   "shape": "stock",
+   "mt": 750.0,
+   "grade": 0.035,
+   "unit": "%",
+   "contained": 0.2625,
+   "fill": 0.1078,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": -22.475,
+   "lon": 15.04,
+   "onLand": true,
+   "lenKm": 3.5,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-husab",
+   "name": "Husab (Rossing South)",
+   "country": "Namibia",
+   "layer": "U",
+   "shape": "stock",
+   "mt": 400.0,
+   "grade": 0.043,
+   "unit": "%",
+   "contained": 0.172,
+   "fill": 0.0671,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -22.61,
+   "lon": 15.04,
+   "onLand": true,
+   "lenKm": 5.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-langer-heinrich",
+   "name": "Langer Heinrich",
+   "country": "Namibia",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 160.0,
+   "grade": 0.045,
+   "unit": "%",
+   "contained": 0.072,
+   "fill": 0.1212,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": -22.8,
+   "lon": 15.33,
+   "onLand": true,
+   "lenKm": 15.0,
+   "widKm": 0.8,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-arlit-akouta",
+   "name": "Arlit and Akouta (Tim Mersoi basin)",
+   "country": "Niger",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 60.0,
+   "grade": 0.33,
+   "unit": "%",
+   "contained": 0.198,
+   "fill": 0.0028,
+   "q": "B",
+   "age": "Carboniferous",
+   "lat": 18.7,
+   "lon": 7.35,
+   "onLand": true,
+   "lenKm": 20.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-imouraren",
+   "name": "Imouraren",
+   "country": "Niger",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 270.0,
+   "grade": 0.08,
+   "unit": "%",
+   "contained": 0.21600000000000003,
+   "fill": 0.0391,
+   "q": "B",
+   "age": "Mesozoic",
+   "lat": 18.05,
+   "lon": 7.45,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 2.5,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-elliot-lake",
+   "name": "Elliot Lake (Blind River)",
+   "country": "Canada",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 170.0,
+   "grade": 0.1,
+   "unit": "%",
+   "contained": 0.17,
+   "fill": 0.0002,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 46.38,
+   "lon": -82.65,
+   "onLand": true,
+   "lenKm": 30.0,
+   "widKm": 8.0,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-streltsovsky",
+   "name": "Streltsovsky ore field (Krasnokamensk)",
+   "country": "Russia",
+   "layer": "U",
+   "shape": "veins",
+   "mt": 150.0,
+   "grade": 0.22,
+   "unit": "%",
+   "contained": 0.33,
+   "fill": 0.0002,
+   "q": "B",
+   "age": "Mesozoic",
+   "lat": 50.1,
+   "lon": 118.0,
+   "onLand": true,
+   "lenKm": 16.0,
+   "widKm": 10.0,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-jachymov",
+   "name": "Jachymov (Joachimsthal)",
+   "country": "Czech Republic",
+   "layer": "U",
+   "shape": "veins",
+   "mt": 2.0,
+   "grade": 0.45,
+   "unit": "%",
+   "contained": 0.009000000000000001,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 50.37,
+   "lon": 12.92,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-schlema-alberoda",
+   "name": "Schlema-Alberoda",
+   "country": "Germany",
+   "layer": "U",
+   "shape": "veins",
+   "mt": 25.0,
+   "grade": 0.4,
+   "unit": "%",
+   "contained": 0.1,
+   "fill": 0.0002,
+   "q": "B",
+   "age": "Paleozoic",
+   "lat": 50.6,
+   "lon": 12.67,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-pribram",
+   "name": "Pribram",
+   "country": "Czech Republic",
+   "layer": "U",
+   "shape": "veins",
+   "mt": 14.0,
+   "grade": 0.4,
+   "unit": "%",
+   "contained": 0.05600000000000001,
+   "fill": 0.0001,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 49.67,
+   "lon": 13.96,
+   "onLand": true,
+   "lenKm": 25.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-shinkolobwe",
+   "name": "Shinkolobwe",
+   "country": "Congo (Kinshasa)",
+   "layer": "U",
+   "shape": "veins",
+   "mt": 3.0,
+   "grade": 1.0,
+   "unit": "%",
+   "contained": 0.03,
+   "fill": 0.0074,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -11.05,
+   "lon": 26.55,
+   "onLand": true,
+   "lenKm": 1.2,
+   "widKm": 0.4,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-oklo-mounana",
+   "name": "Oklo and Mounana (Franceville basin)",
+   "country": "Gabon",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 7.0,
+   "grade": 0.45,
+   "unit": "%",
+   "contained": 0.0315,
+   "fill": 0.0041,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -1.4,
+   "lon": 13.16,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 0.6,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-jaduguda",
+   "name": "Jaduguda",
+   "country": "India",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 20.0,
+   "grade": 0.06,
+   "unit": "%",
+   "contained": 0.012,
+   "fill": 0.0099,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 22.65,
+   "lon": 86.35,
+   "onLand": true,
+   "lenKm": 0.8,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-ambrosia-lake",
+   "name": "Ambrosia Lake (Grants mineral belt)",
+   "country": "United States",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 40.0,
+   "grade": 0.22,
+   "unit": "%",
+   "contained": 0.08800000000000001,
+   "fill": 0.0003,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 35.4,
+   "lon": -107.8,
+   "onLand": true,
+   "lenKm": 20.0,
+   "widKm": 6.0,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-uravan",
+   "name": "Uravan mineral belt",
+   "country": "United States",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 15.0,
+   "grade": 0.25,
+   "unit": "%",
+   "contained": 0.0375,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 38.37,
+   "lon": -108.74,
+   "onLand": true,
+   "lenKm": 60.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 0.4
+    },
+    {
+     "code": "vanadinite",
+     "share": 0.6
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-gas-hills",
+   "name": "Gas Hills",
+   "country": "United States",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 40.0,
+   "grade": 0.15,
+   "unit": "%",
+   "contained": 0.06,
+   "fill": 0.0007,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 42.83,
+   "lon": -107.5,
+   "onLand": true,
+   "lenKm": 25.0,
+   "widKm": 6.0,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-smith-ranch",
+   "name": "Smith Ranch-Highland (Powder River basin)",
+   "country": "United States",
+   "layer": "U",
+   "shape": "lens",
+   "mt": 30.0,
+   "grade": 0.1,
+   "unit": "%",
+   "contained": 0.03,
+   "fill": 0.0008,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 43.05,
+   "lon": -105.7,
+   "onLand": true,
+   "lenKm": 25.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-zhovti-vody",
+   "name": "Zhovti Vody (Kryvyi Rih-Kremenchuk belt)",
+   "country": "Ukraine",
+   "layer": "U",
+   "shape": "veins",
+   "mt": 30.0,
+   "grade": 0.12,
+   "unit": "%",
+   "contained": 0.036,
+   "fill": 0.0015,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 48.35,
+   "lon": 33.5,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:u-kvanefjeld",
+   "name": "Kvanefjeld (Ilimaussaq)",
+   "country": "Greenland",
+   "layer": "U",
+   "shape": "stock",
+   "mt": 1010.0,
+   "grade": 0.0266,
+   "unit": "%",
+   "contained": 0.26866,
+   "fill": 0.1603,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 60.97,
+   "lon": -45.98,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "uranium",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:gr-borrowdale",
+   "name": "Borrowdale wad mine (Seathwaite)",
+   "country": "United Kingdom",
+   "layer": "C_graphite",
+   "shape": "veins",
+   "mt": 0.002,
+   "grade": 50.0,
+   "unit": "%",
+   "contained": 0.001,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 54.495,
+   "lon": -3.186,
+   "onLand": true,
+   "lenKm": 0.4,
+   "widKm": 0.1,
+   "ores": [
+    {
+     "code": "graphite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:gr-bogala",
+   "name": "Bogala",
+   "country": "Sri Lanka",
+   "layer": "C_graphite",
+   "shape": "veins",
+   "mt": 0.2,
+   "grade": 75.0,
+   "unit": "%",
+   "contained": 0.15,
+   "fill": 0.0002,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 7.13,
+   "lon": 80.23,
+   "onLand": true,
+   "lenKm": 1.5,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "graphite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:gr-kahatagaha",
+   "name": "Kahatagaha-Kolongaha",
+   "country": "Sri Lanka",
+   "layer": "C_graphite",
+   "shape": "veins",
+   "mt": 0.15,
+   "grade": 75.0,
+   "unit": "%",
+   "contained": 0.1125,
+   "fill": 0.0003,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 7.6,
+   "lon": 80.5,
+   "onLand": true,
+   "lenKm": 1.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "graphite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:gr-balama",
+   "name": "Balama",
+   "country": "Mozambique",
+   "layer": "C_graphite",
+   "shape": "lens",
+   "mt": 1150.0,
+   "grade": 10.2,
+   "unit": "%",
+   "contained": 117.3,
+   "fill": 0.0852,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": -13.33,
+   "lon": 38.65,
+   "onLand": true,
+   "lenKm": 6.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "graphite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:gr-mahenge",
+   "name": "Mahenge (Epanko-Ulanzi)",
+   "country": "Tanzania",
+   "layer": "C_graphite",
+   "shape": "lens",
+   "mt": 212.0,
+   "grade": 7.8,
+   "unit": "%",
+   "contained": 16.535999999999998,
+   "fill": 0.0283,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": -8.75,
+   "lon": 36.7,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 1.5,
+   "ores": [
+    {
+     "code": "graphite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:gr-ancuabe",
+   "name": "Ancuabe",
+   "country": "Mozambique",
+   "layer": "C_graphite",
+   "shape": "lens",
+   "mt": 30.0,
+   "grade": 6.5,
+   "unit": "%",
+   "contained": 1.95,
+   "fill": 0.0267,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -12.95,
+   "lon": 39.82,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "graphite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:gr-jixi",
+   "name": "Jixi (Liumao)",
+   "country": "China",
+   "layer": "C_graphite",
+   "shape": "lens",
+   "mt": 300.0,
+   "grade": 9.0,
+   "unit": "%",
+   "contained": 27.0,
+   "fill": 0.01,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 45.25,
+   "lon": 131.05,
+   "onLand": true,
+   "lenKm": 10.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "graphite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:gr-luobei",
+   "name": "Luobei (Yunshan)",
+   "country": "China",
+   "layer": "C_graphite",
+   "shape": "lens",
+   "mt": 200.0,
+   "grade": 10.0,
+   "unit": "%",
+   "contained": 20.0,
+   "fill": 0.0111,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 47.6,
+   "lon": 130.85,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "graphite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:gr-pingdu",
+   "name": "Pingdu (Nanshu)",
+   "country": "China",
+   "layer": "C_graphite",
+   "shape": "lens",
+   "mt": 40.0,
+   "grade": 4.0,
+   "unit": "%",
+   "contained": 1.6,
+   "fill": 0.008,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 36.8,
+   "lon": 119.95,
+   "onLand": true,
+   "lenKm": 5.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "graphite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:gr-kropfmuehl",
+   "name": "Kropfmuehl (Passau)",
+   "country": "Germany",
+   "layer": "C_graphite",
+   "shape": "lens",
+   "mt": 5.0,
+   "grade": 20.0,
+   "unit": "%",
+   "contained": 1.0,
+   "fill": 0.0044,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": 48.578,
+   "lon": 13.663,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "graphite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:gr-kaisersberg",
+   "name": "Kaisersberg (Styria)",
+   "country": "Austria",
+   "layer": "C_graphite",
+   "shape": "lens",
+   "mt": 3.0,
+   "grade": 60.0,
+   "unit": "%",
+   "contained": 1.8,
+   "fill": 0.0027,
+   "q": "C",
+   "age": "Carboniferous",
+   "lat": 47.33,
+   "lon": 14.94,
+   "onLand": true,
+   "lenKm": 4.0,
+   "widKm": 0.3,
+   "ores": [
+    {
+     "code": "graphite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:gr-skaland",
+   "name": "Skaland (Traelen)",
+   "country": "Norway",
+   "layer": "C_graphite",
+   "shape": "lens",
+   "mt": 2.0,
+   "grade": 25.0,
+   "unit": "%",
+   "contained": 0.5,
+   "fill": 0.02,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 69.45,
+   "lon": 17.3,
+   "onLand": true,
+   "lenKm": 1.0,
+   "widKm": 0.2,
+   "ores": [
+    {
+     "code": "graphite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:f-weardale",
+   "name": "Weardale (North Pennine orefield)",
+   "country": "United Kingdom",
+   "layer": "F",
+   "shape": "veins",
+   "mt": 8.0,
+   "grade": 40.0,
+   "unit": "%",
+   "contained": 3.2,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Carboniferous",
+   "lat": 54.74,
+   "lon": -2.1,
+   "onLand": true,
+   "lenKm": 25.0,
+   "widKm": 15.0,
+   "ores": [
+    {
+     "code": "fluorite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:f-derbyshire",
+   "name": "Derbyshire (Peak District orefield)",
+   "country": "United Kingdom",
+   "layer": "F",
+   "shape": "veins",
+   "mt": 15.0,
+   "grade": 35.0,
+   "unit": "%",
+   "contained": 5.25,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Carboniferous",
+   "lat": 53.3,
+   "lon": -1.72,
+   "onLand": true,
+   "lenKm": 25.0,
+   "widKm": 10.0,
+   "ores": [
+    {
+     "code": "fluorite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:f-illinois-kentucky",
+   "name": "Illinois-Kentucky fluorspar district (Cave-in-Rock and Rosiclare)",
+   "country": "United States",
+   "layer": "F",
+   "shape": "veins",
+   "mt": 40.0,
+   "grade": 30.0,
+   "unit": "%",
+   "contained": 12.0,
+   "fill": 0.0,
+   "q": "B",
+   "age": "Carboniferous",
+   "lat": 37.45,
+   "lon": -88.25,
+   "onLand": true,
+   "lenKm": 50.0,
+   "widKm": 25.0,
+   "ores": [
+    {
+     "code": "fluorite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:f-muzquiz",
+   "name": "Muzquiz district (Coahuila)",
+   "country": "Mexico",
+   "layer": "F",
+   "shape": "lens",
+   "mt": 30.0,
+   "grade": 45.0,
+   "unit": "%",
+   "contained": 13.5,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 28.1,
+   "lon": -101.6,
+   "onLand": true,
+   "lenKm": 40.0,
+   "widKm": 20.0,
+   "ores": [
+    {
+     "code": "fluorite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:f-las-cuevas",
+   "name": "Las Cuevas (Villa de Zaragoza)",
+   "country": "Mexico",
+   "layer": "F",
+   "shape": "lens",
+   "mt": 20.0,
+   "grade": 80.0,
+   "unit": "%",
+   "contained": 16.0,
+   "fill": 0.0296,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 21.98,
+   "lon": -100.67,
+   "onLand": true,
+   "lenKm": 1.5,
+   "widKm": 0.5,
+   "ores": [
+    {
+     "code": "fluorite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:f-wolsendorf",
+   "name": "Woelsendorf",
+   "country": "Germany",
+   "layer": "F",
+   "shape": "veins",
+   "mt": 6.0,
+   "grade": 50.0,
+   "unit": "%",
+   "contained": 3.0,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 49.38,
+   "lon": 12.15,
+   "onLand": true,
+   "lenKm": 10.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "fluorite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:f-ivittuut",
+   "name": "Ivittuut cryolite",
+   "country": "Greenland",
+   "layer": "F",
+   "shape": "stock",
+   "mt": 3.8,
+   "grade": null,
+   "unit": null,
+   "contained": null,
+   "fill": 0.1422,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": 61.21,
+   "lon": -48.17,
+   "onLand": true,
+   "lenKm": 0.3,
+   "widKm": 0.15,
+   "ores": [
+    {
+     "code": "fluorite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:f-vergenoeg",
+   "name": "Vergenoeg",
+   "country": "South Africa",
+   "layer": "F",
+   "shape": "stock",
+   "mt": 200.0,
+   "grade": 28.0,
+   "unit": "%",
+   "contained": 56.0,
+   "fill": 0.1102,
+   "q": "B",
+   "age": "Precambrian",
+   "lat": -25.26,
+   "lon": 28.6,
+   "onLand": true,
+   "lenKm": 0.9,
+   "widKm": 0.9,
+   "ores": [
+    {
+     "code": "fluorite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:f-witkop",
+   "name": "Marico fluorspar field (Witkop)",
+   "country": "South Africa",
+   "layer": "F",
+   "shape": "lens",
+   "mt": 40.0,
+   "grade": 25.0,
+   "unit": "%",
+   "contained": 10.0,
+   "fill": 0.0007,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -25.45,
+   "lon": 26.2,
+   "onLand": true,
+   "lenKm": 20.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "fluorite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:f-okorusu",
+   "name": "Okorusu",
+   "country": "Namibia",
+   "layer": "F",
+   "shape": "lens",
+   "mt": 20.0,
+   "grade": 35.0,
+   "unit": "%",
+   "contained": 7.0,
+   "fill": 0.037,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -20.06,
+   "lon": 16.75,
+   "onLand": true,
+   "lenKm": 1.5,
+   "widKm": 0.6,
+   "ores": [
+    {
+     "code": "fluorite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:f-wuyi",
+   "name": "Wuyi fluorite district (Zhejiang)",
+   "country": "China",
+   "layer": "F",
+   "shape": "veins",
+   "mt": 30.0,
+   "grade": 50.0,
+   "unit": "%",
+   "contained": 15.0,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": 28.89,
+   "lon": 119.81,
+   "onLand": true,
+   "lenKm": 30.0,
+   "widKm": 15.0,
+   "ores": [
+    {
+     "code": "fluorite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:f-asturias",
+   "name": "Asturias fluorspar district (Caravia-Berbes)",
+   "country": "Spain",
+   "layer": "F",
+   "shape": "lens",
+   "mt": 20.0,
+   "grade": 40.0,
+   "unit": "%",
+   "contained": 8.0,
+   "fill": 0.0002,
+   "q": "C",
+   "age": "Carboniferous",
+   "lat": 43.46,
+   "lon": -5.2,
+   "onLand": true,
+   "lenKm": 30.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "fluorite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:f-st-lawrence",
+   "name": "St. Lawrence (Newfoundland)",
+   "country": "Canada",
+   "layer": "F",
+   "shape": "veins",
+   "mt": 10.0,
+   "grade": 50.0,
+   "unit": "%",
+   "contained": 5.0,
+   "fill": 0.0005,
+   "q": "C",
+   "age": "Devonian",
+   "lat": 46.92,
+   "lon": -55.38,
+   "onLand": true,
+   "lenKm": 8.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "fluorite",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:q-cristalina",
+   "name": "Cristalina rock crystal",
+   "country": "Brazil",
+   "layer": "SiO2",
+   "shape": "veins",
+   "mt": 2.0,
+   "grade": 99.0,
+   "unit": "%",
+   "contained": 1.98,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -16.77,
+   "lon": -47.6,
+   "onLand": true,
+   "lenKm": 20.0,
+   "widKm": 15.0,
+   "ores": [
+    {
+     "code": "quartz",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:q-diamantina",
+   "name": "Diamantina rock crystal (Serra do Espinhaco)",
+   "country": "Brazil",
+   "layer": "SiO2",
+   "shape": "veins",
+   "mt": 5.0,
+   "grade": 99.0,
+   "unit": "%",
+   "contained": 4.95,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Precambrian",
+   "lat": -18.24,
+   "lon": -43.6,
+   "onLand": true,
+   "lenKm": 40.0,
+   "widKm": 15.0,
+   "ores": [
+    {
+     "code": "quartz",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:q-ametista-do-sul",
+   "name": "Ametista do Sul amethyst",
+   "country": "Brazil",
+   "layer": "SiO2",
+   "shape": "lens",
+   "mt": 5.0,
+   "grade": null,
+   "unit": null,
+   "contained": null,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": -27.35,
+   "lon": -53.18,
+   "onLand": true,
+   "lenKm": 25.0,
+   "widKm": 20.0,
+   "ores": [
+    {
+     "code": "quartz",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:q-artigas",
+   "name": "Artigas amethyst",
+   "country": "Uruguay",
+   "layer": "SiO2",
+   "shape": "lens",
+   "mt": 3.0,
+   "grade": null,
+   "unit": null,
+   "contained": null,
+   "fill": 0.0001,
+   "q": "C",
+   "age": "Mesozoic",
+   "lat": -30.4,
+   "lon": -56.47,
+   "onLand": true,
+   "lenKm": 20.0,
+   "widKm": 15.0,
+   "ores": [
+    {
+     "code": "quartz",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:q-spruce-pine",
+   "name": "Spruce Pine high-purity quartz",
+   "country": "United States",
+   "layer": "SiO2",
+   "shape": "veins",
+   "mt": 200.0,
+   "grade": null,
+   "unit": null,
+   "contained": null,
+   "fill": 0.0013,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 35.91,
+   "lon": -82.07,
+   "onLand": true,
+   "lenKm": 25.0,
+   "widKm": 8.0,
+   "ores": [
+    {
+     "code": "quartz",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:q-ouachita",
+   "name": "Ouachita quartz crystal belt (Mount Ida-Hot Springs)",
+   "country": "United States",
+   "layer": "SiO2",
+   "shape": "veins",
+   "mt": 2.0,
+   "grade": 99.0,
+   "unit": "%",
+   "contained": 1.98,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 34.55,
+   "lon": -93.45,
+   "onLand": true,
+   "lenKm": 80.0,
+   "widKm": 20.0,
+   "ores": [
+    {
+     "code": "quartz",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:q-aar-massif",
+   "name": "Aar massif cleft crystals (Grimsel-Goescheneralp)",
+   "country": "Switzerland",
+   "layer": "SiO2",
+   "shape": "veins",
+   "mt": 0.005,
+   "grade": 99.0,
+   "unit": "%",
+   "contained": 0.0049499999999999995,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Paleozoic",
+   "lat": 46.6,
+   "lon": 8.42,
+   "onLand": true,
+   "lenKm": 30.0,
+   "widKm": 10.0,
+   "ores": [
+    {
+     "code": "quartz",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:q-idar-oberstein",
+   "name": "Idar-Oberstein agate",
+   "country": "Germany",
+   "layer": "SiO2",
+   "shape": "lens",
+   "mt": 0.05,
+   "grade": null,
+   "unit": null,
+   "contained": null,
+   "fill": 0.0,
+   "q": "C",
+   "age": "Permian",
+   "lat": 49.71,
+   "lon": 7.31,
+   "onLand": true,
+   "lenKm": 10.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "quartz",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-industrial.csv"
+  },
+  {
+   "id": "pg:pl-klondike",
+   "name": "Klondike placers (Bonanza-Eldorado-Hunker-Dominion)",
+   "country": "Canada",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 1240.0,
+   "grade": 0.5,
+   "unit": "g/t",
+   "contained": 620.0,
+   "fill": 0.3444,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": 63.95,
+   "lon": -139.15,
+   "onLand": true,
+   "lenKm": 50.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-cariboo",
+   "name": "Cariboo placers (Barkerville)",
+   "country": "Canada",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 160.0,
+   "grade": 0.5,
+   "unit": "g/t",
+   "contained": 80.0,
+   "fill": 0.1067,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 53.08,
+   "lon": -121.53,
+   "onLand": true,
+   "lenKm": 30.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-fairbanks",
+   "name": "Fairbanks placers",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 500.0,
+   "grade": 0.5,
+   "unit": "g/t",
+   "contained": 250.0,
+   "fill": 0.1042,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": 64.95,
+   "lon": -147.6,
+   "onLand": true,
+   "lenKm": 40.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-nome",
+   "name": "Nome beach placers",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 300.0,
+   "grade": 0.5,
+   "unit": "g/t",
+   "contained": 150.0,
+   "fill": 0.0877,
+   "q": "B",
+   "age": "Cenozoic",
+   "lat": 64.55,
+   "lon": -165.4,
+   "onLand": true,
+   "lenKm": 30.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-sierra-tertiary",
+   "name": "Sierra Nevada Tertiary gravels and river placers",
+   "country": "United States",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 4100.0,
+   "grade": 0.3,
+   "unit": "g/t",
+   "contained": 1230.0,
+   "fill": 0.0828,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 39.3,
+   "lon": -120.9,
+   "onLand": true,
+   "lenKm": 150.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-victoria",
+   "name": "Victorian alluvials and deep leads (Ballarat-Castlemaine-Bendigo)",
+   "country": "Australia",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 1000.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 1000.0,
+   "fill": 0.0114,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -37.0,
+   "lon": 144.0,
+   "onLand": true,
+   "lenKm": 200.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-otago",
+   "name": "Otago goldfields placers",
+   "country": "New Zealand",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 260.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 260.0,
+   "fill": 0.0451,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -45.2,
+   "lon": 169.4,
+   "onLand": true,
+   "lenKm": 80.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-lena",
+   "name": "Lena goldfields (Bodaibo)",
+   "country": "Russia",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 1500.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 1500.0,
+   "fill": 0.1042,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 58.1,
+   "lon": 114.6,
+   "onLand": true,
+   "lenKm": 120.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-kolyma",
+   "name": "Kolyma placers (Susuman-Yagodnoye)",
+   "country": "Russia",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 2500.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 2500.0,
+   "fill": 0.1389,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 62.78,
+   "lon": 148.15,
+   "onLand": true,
+   "lenKm": 300.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-aldan",
+   "name": "Aldan placers",
+   "country": "Russia",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 600.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 600.0,
+   "fill": 0.125,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 58.6,
+   "lon": 125.4,
+   "onLand": true,
+   "lenKm": 80.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-urals",
+   "name": "Ural placers (Miass and the eastern slope)",
+   "country": "Russia",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 700.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 700.0,
+   "fill": 0.0897,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 55.05,
+   "lon": 60.1,
+   "onLand": true,
+   "lenKm": 300.0,
+   "widKm": 1.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-bambuk",
+   "name": "Bambuk placers (Faleme and Kenieba)",
+   "country": "Mali",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 300.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 300.0,
+   "fill": 0.0357,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 13.2,
+   "lon": -11.5,
+   "onLand": true,
+   "lenKm": 100.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-bure",
+   "name": "Bure placers (upper Niger and Tinkisso)",
+   "country": "Guinea",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 300.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 300.0,
+   "fill": 0.0335,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 11.55,
+   "lon": -9.1,
+   "onLand": true,
+   "lenKm": 80.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-lobi",
+   "name": "Lobi placers",
+   "country": "Burkina Faso",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 150.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 150.0,
+   "fill": 0.0298,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 10.3,
+   "lon": -3.2,
+   "onLand": true,
+   "lenKm": 60.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-akan",
+   "name": "Akan placers (Pra-Ofin-Birim)",
+   "country": "Ghana",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 500.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 500.0,
+   "fill": 0.0372,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 6.0,
+   "lon": -1.8,
+   "onLand": true,
+   "lenKm": 120.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-adola",
+   "name": "Adola placers",
+   "country": "Ethiopia",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 60.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 60.0,
+   "fill": 0.0556,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 5.85,
+   "lon": 38.98,
+   "onLand": true,
+   "lenKm": 30.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-nubia",
+   "name": "Nubian wadi placers (Allaqi-Gabgaba)",
+   "country": "Sudan",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 100.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 100.0,
+   "fill": 0.0208,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 21.3,
+   "lon": 34.2,
+   "onLand": true,
+   "lenKm": 150.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-antioquia",
+   "name": "Antioquia placers (Nechi-Cauca)",
+   "country": "Colombia",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 500.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 500.0,
+   "fill": 0.0309,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 7.6,
+   "lon": -74.9,
+   "onLand": true,
+   "lenKm": 150.0,
+   "widKm": 3.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-minas",
+   "name": "Minas Gerais placers (Ouro Preto-Mariana-Sabara)",
+   "country": "Brazil",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 800.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 800.0,
+   "fill": 0.2222,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -20.3,
+   "lon": -43.6,
+   "onLand": true,
+   "lenKm": 100.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-tapajos",
+   "name": "Tapajos garimpos",
+   "country": "Brazil",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 600.0,
+   "grade": 1.0,
+   "unit": "g/t",
+   "contained": 600.0,
+   "fill": 0.0556,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -6.0,
+   "lon": -56.5,
+   "onLand": true,
+   "lenKm": 150.0,
+   "widKm": 4.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-madre-de-dios",
+   "name": "Madre de Dios placers",
+   "country": "Peru",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 800.0,
+   "grade": 0.5,
+   "unit": "g/t",
+   "contained": 400.0,
+   "fill": 0.041,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": -12.8,
+   "lon": -70.0,
+   "onLand": true,
+   "lenKm": 150.0,
+   "widKm": 5.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  },
+  {
+   "id": "pg:pl-las-medulas",
+   "name": "Las Medulas",
+   "country": "Spain",
+   "layer": "Au",
+   "shape": "blanket",
+   "mt": 180.0,
+   "grade": 0.03,
+   "unit": "g/t",
+   "contained": 5.3999999999999995,
+   "fill": 0.15,
+   "q": "C",
+   "age": "Cenozoic",
+   "lat": 42.46,
+   "lon": -6.77,
+   "onLand": true,
+   "lenKm": 3.0,
+   "widKm": 2.0,
+   "ores": [
+    {
+     "code": "earth-placergold",
+     "share": 1.0
+    }
+   ],
+   "file": "deposits-placers.csv"
+  }
+ ],
+ "areas": [
+  {
+   "id": "pg:wits-west-rand",
+   "name": "Witwatersrand: West Rand goldfield (Randfontein-Krugersdorp)",
+   "country": "South Africa",
+   "areaKm2": 397.7,
+   "cover": 0.653,
+   "mt": 714.3,
+   "goldT": 5000,
+   "lon": 27.740000000000002,
+   "lat": -26.17
+  },
+  {
+   "id": "pg:wits-central-rand",
+   "name": "Witwatersrand: Central Rand goldfield (Johannesburg)",
+   "country": "South Africa",
+   "areaKm2": 640.4,
+   "cover": 0.657,
+   "mt": 1388.9,
+   "goldT": 12500,
+   "lon": 28.060000000000002,
+   "lat": -26.235
+  },
+  {
+   "id": "pg:wits-east-rand",
+   "name": "Witwatersrand: East Rand goldfield (Benoni-Springs-Nigel)",
+   "country": "South Africa",
+   "areaKm2": 1583.6,
+   "cover": 0.316,
+   "mt": 1375.0,
+   "goldT": 11000,
+   "lon": 28.44,
+   "lat": -26.225
+  },
+  {
+   "id": "pg:wits-far-west-rand",
+   "name": "Witwatersrand: Far West Rand (West Wits Line, Carletonville)",
+   "country": "South Africa",
+   "areaKm2": 963.6,
+   "cover": 0.461,
+   "mt": 1833.3,
+   "goldT": 22000,
+   "lon": 27.53,
+   "lat": -26.41
+  },
+  {
+   "id": "pg:wits-klerksdorp",
+   "name": "Witwatersrand: Klerksdorp goldfield (Vaal Reefs, KOSH)",
+   "country": "South Africa",
+   "areaKm2": 1581.1,
+   "cover": 0.147,
+   "mt": 1152.4,
+   "goldT": 10500,
+   "lon": 26.775,
+   "lat": -26.9
+  },
+  {
+   "id": "pg:wits-free-state",
+   "name": "Witwatersrand: Free State goldfield (Welkom-Odendaalsrus-Virginia)",
+   "country": "South Africa",
+   "areaKm2": 3201.5,
+   "cover": 0.161,
+   "mt": 2125.0,
+   "goldT": 17000,
+   "lon": 26.7725,
+   "lat": -28.095
+  },
+  {
+   "id": "pg:wits-evander",
+   "name": "Witwatersrand: Evander goldfield (Kinross-Winkelhaak)",
+   "country": "South Africa",
+   "areaKm2": 727.1,
+   "cover": 0.214,
+   "mt": 428.6,
+   "goldT": 3000,
+   "lon": 29.15,
+   "lat": -26.509999999999998
+  }
+ ]
+}

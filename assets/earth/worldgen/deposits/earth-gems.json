@@ -1,0 +1,773 @@
+[
+ {
+  "code": "topazamber",
+  "triesPerChunk": 10.67,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-topaz",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "granite"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-topaz-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 42.5,
+    "var": 27.5
+   }
+  }
+ },
+ {
+  "code": "topazblue",
+  "triesPerChunk": 10.67,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-topaz",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "granite"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-topaz-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 42.5,
+    "var": 27.5
+   }
+  }
+ },
+ {
+  "code": "topazpink",
+  "triesPerChunk": 10.67,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-topaz",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "granite"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-topaz-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 42.5,
+    "var": 27.5
+   }
+  }
+ },
+ {
+  "code": "tourmalinerubellite",
+  "triesPerChunk": 8.0,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-tourmaline",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "granite",
+     "schist",
+     "gneiss"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-tourmaline-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 37.5,
+    "var": 22.5
+   }
+  }
+ },
+ {
+  "code": "tourmalineschorl",
+  "triesPerChunk": 8.0,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-tourmaline",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "granite",
+     "schist",
+     "gneiss"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-tourmaline-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 37.5,
+    "var": 22.5
+   }
+  }
+ },
+ {
+  "code": "tourmalineverdelite",
+  "triesPerChunk": 8.0,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-tourmaline",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "granite",
+     "schist",
+     "gneiss"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-tourmaline-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 37.5,
+    "var": 22.5
+   }
+  }
+ },
+ {
+  "code": "tourmalinewatermelon",
+  "triesPerChunk": 8.0,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-tourmaline",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "granite",
+     "schist",
+     "gneiss"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-tourmaline-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 37.5,
+    "var": 22.5
+   }
+  }
+ },
+ {
+  "code": "berylaquamarine",
+  "triesPerChunk": 16.01,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-beryl",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "granite",
+     "schist"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-beryl-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 37.5,
+    "var": 22.5
+   }
+  }
+ },
+ {
+  "code": "berylbixbite",
+  "triesPerChunk": 16.01,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-beryl",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "granite",
+     "schist"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-beryl-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 37.5,
+    "var": 22.5
+   }
+  }
+ },
+ {
+  "code": "spinelred",
+  "triesPerChunk": 32.02,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-spinel",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "limestone",
+     "dolostone",
+     "peridotite"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-spinel-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 45.0,
+    "var": 25.0
+   }
+  }
+ },
+ {
+  "code": "garnetalmandine",
+  "triesPerChunk": 5.34,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-garnet",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "schist",
+     "gneiss",
+     "peridotite",
+     "granite"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-garnet-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 55.0,
+    "var": 35.0
+   }
+  }
+ },
+ {
+  "code": "garnetandradite",
+  "triesPerChunk": 5.34,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-garnet",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "schist",
+     "gneiss",
+     "peridotite",
+     "granite"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-garnet-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 55.0,
+    "var": 35.0
+   }
+  }
+ },
+ {
+  "code": "garnetgrossular",
+  "triesPerChunk": 5.34,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-garnet",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "schist",
+     "gneiss",
+     "peridotite",
+     "granite"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-garnet-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 55.0,
+    "var": 35.0
+   }
+  }
+ },
+ {
+  "code": "garnetpyrope",
+  "triesPerChunk": 5.34,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-garnet",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "schist",
+     "gneiss",
+     "peridotite",
+     "granite"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-garnet-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 55.0,
+    "var": 35.0
+   }
+  }
+ },
+ {
+  "code": "garnetspessartine",
+  "triesPerChunk": 5.34,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-garnet",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "schist",
+     "gneiss",
+     "peridotite",
+     "granite"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-garnet-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 55.0,
+    "var": 35.0
+   }
+  }
+ },
+ {
+  "code": "garnetuvarovite",
+  "triesPerChunk": 5.34,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-garnet",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "schist",
+     "gneiss",
+     "peridotite",
+     "granite"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-garnet-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 55.0,
+    "var": 35.0
+   }
+  }
+ },
+ {
+  "code": "corundumruby",
+  "triesPerChunk": 32.02,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-ruby",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "limestone",
+     "dolostone",
+     "gneiss"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-ruby-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 57.5,
+    "var": 32.5
+   }
+  }
+ },
+ {
+  "code": "corundumsapphire",
+  "triesPerChunk": 32.02,
+  "scaleWithWorldheight": false,
+  "withOreMap": true,
+  "handbookPageCode": "item-earth:gem-rough-sapphire",
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "basalt",
+     "gneiss"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-*-sapphire-{rock}",
+    "name": "potential",
+    "allowedVariants": [
+     "low",
+     "medium",
+     "high"
+    ]
+   },
+   "radius": {
+    "dist": "uniform",
+    "avg": 1.5,
+    "var": 0.5
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 1,
+    "var": 0
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 60.0,
+    "var": 30.0
+   }
+  }
+ }
+]

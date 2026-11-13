@@ -1,0 +1,521 @@
+[
+  {
+    "commodity": "Fe",
+    "label": "Iron",
+    "mineral_system_candidates": "Banded iron formations; iron skarns; volcanic magnetite; weathered iron oxides; wetland iron as a separate hydrological system",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull1h45.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull971h.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull86em.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull7mn9.htm"
+    ],
+    "interpretation_limit": "Identify mineral and formation; bog iron must use groundwater/peat conditions, not generic bedrock iron.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "Au",
+    "label": "Gold",
+    "mineral_system_candidates": "Hydrothermal veins and several other primary gold systems; source-linked placers",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull8x2r.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull6945.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull7m7b.htm"
+    ],
+    "interpretation_limit": "Gold need not be enclosed in quartz. Placer pathways require source and sediment history.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "Ag",
+    "label": "Silver",
+    "mineral_system_candidates": "Polymetallic and epithermal veins; replacement and sulfide associations",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull7kdv.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull7a0j.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull7q0k.htm"
+    ],
+    "interpretation_limit": "Silver-bearing sulfides are not proof of native silver or quartz/galena-hosted game variants.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "Pb",
+    "label": "Lead",
+    "mineral_system_candidates": "Carbonate-hosted MVT, sediment-hosted, skarn and vein systems",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull6mem.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull5nmq.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull4u7i.htm"
+    ],
+    "interpretation_limit": "Galena and weathered cerussite need different mineral/oxidation rules.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "Zn",
+    "label": "Zinc",
+    "mineral_system_candidates": "MVT, sediment-hosted, VMS, skarn and vein systems",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull6mem.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull5nmq.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull4u7i.htm"
+    ],
+    "interpretation_limit": "Sphalerite is distinct from oxidized smithsonite/hemimorphite; carbonate host alone is insufficient.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "Bi",
+    "label": "Bismuth",
+    "mineral_system_candidates": "Association with reviewed polymetallic and evolved intrusive mineral systems",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull7kdv.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull9qer.htm"
+    ],
+    "interpretation_limit": "Bismuthinite distribution needs mineral evidence; an elemental by-product report is insufficient.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "Ni",
+    "label": "Nickel",
+    "mineral_system_candidates": "Mafic/ultramafic sulfide systems OR lateritic weathering systems",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull46k5.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull6sol.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull40rt.htm"
+    ],
+    "interpretation_limit": "Never convert laterite nickel automatically into pentlandite. Weathering age and exposure matter.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "Cr",
+    "label": "Chromium",
+    "mineral_system_candidates": "Podiform chromitite in ophiolites; stratiform chromitite in layered intrusions",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull3lr9.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull8c6q.htm"
+    ],
+    "interpretation_limit": "Not every peridotite/serpentinite block contains chromite ore.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "Ti",
+    "label": "Titanium",
+    "mineral_system_candidates": "Fe-Ti oxide-bearing intrusions; anorthosite systems; heavy-mineral shoreline placers",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull5vsm.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull473d.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull273d.htm"
+    ],
+    "interpretation_limit": "Ilmenite and rutile must be distinguished. Ordinary beach sand is not an ore deposit.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "Mn",
+    "label": "Manganese",
+    "mineral_system_candidates": "Sedimentary, volcanic, epithermal and replacement systems",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull7rji.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull4exx.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull1rqm.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull3cq6.htm"
+    ],
+    "interpretation_limit": "Rhodochrosite is one manganese mineral, not a substitute for all manganese ores.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "Hg",
+    "label": "Mercury",
+    "mineral_system_candidates": "Almaden-type, hot-spring and silica-carbonate mercury systems",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull56g7.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull4von.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull69rb.htm"
+    ],
+    "interpretation_limit": "Cinnabar requires mineral-system and mineral identification.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "W",
+    "label": "Tungsten",
+    "mineral_system_candidates": "Tungsten veins and skarns",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull8pv7.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull2y9a.htm"
+    ],
+    "interpretation_limit": "Wolframite is distinct from scheelite; not all granite is fertile.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "U",
+    "label": "Uranium",
+    "mineral_system_candidates": "Sandstone redox, unconformity, volcanic and other uranium systems",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull1ghh.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull0zw5.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull2shh.htm"
+    ],
+    "interpretation_limit": "Vanilla definition exists but no standalone natural deposit JSON was found in installed assets.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "Pt",
+    "label": "Platinum and PGE evidence",
+    "mineral_system_candidates": "Layered intrusion reefs, mafic/ultramafic systems and derived placers",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull75et.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull4cdh.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull0wc5.htm"
+    ],
+    "interpretation_limit": "PGE group evidence may not identify platinum; native platinum and sperrylite need explicit mineral rules.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "V",
+    "label": "Vanadium",
+    "mineral_system_candidates": "Fe-Ti-V intrusion associations and other reviewed vanadium systems",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull5vsm.htm"
+    ],
+    "interpretation_limit": "Vanadinite is an oxidized lead-vanadium mineral; do not place it from every elemental V occurrence.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "Mo",
+    "label": "Molybdenum",
+    "mineral_system_candidates": "Porphyry molybdenum systems and polymetallic contexts",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull56zz.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull0pwm.htm"
+    ],
+    "interpretation_limit": "Wulfenite is not molybdenite; elemental Mo occurrence alone cannot choose the GA mineral.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "Sb",
+    "label": "Antimony",
+    "mineral_system_candidates": "Antimony and polymetallic veins",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull40bm.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull7kdv.htm"
+    ],
+    "interpretation_limit": "Tetrahedrite and silver-rich freibergite require species/chemistry and associated deposits.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "B",
+    "label": "Boron / borates",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Specific borate basin chemistry, evaporative setting and thermal/diagenetic history; borax and kernite cannot be selected from generic boron records.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "P",
+    "label": "Phosphates",
+    "mineral_system_candidates": "Marine sedimentary phosphorites; igneous phosphate; secondary phosphate sources",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull74kl.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull6nl1.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull5rsj.htm"
+    ],
+    "interpretation_limit": "Apatite-bearing intrusion is not automatically sedimentary phosphorite.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "N",
+    "label": "Nitrates",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Separate arid natural nitrate accumulations, cave-associated nitrates and historical manufactured saltpeter. Generic N occurrence does not prove potassium nitrate.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "K",
+    "label": "Potassium / potash",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [
+      "https://pubs.usgs.gov/sir/2010/5090/s/"
+    ],
+    "interpretation_limit": "Expert potash basin tracts acquired, but salt beds versus brines, minerals and depth remain distinct. No unrestricted global eligibility.",
+    "spatial_permissive_layer": "normalized/PotashTracts.geojson",
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Expert polygons acquired; 7 invalid geometries withheld pending review; depth/mineral interpretation required"
+  },
+  {
+    "commodity": "NaCl",
+    "label": "Salt / halite",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Halite/rock-salt layers, saline basins and surface brines are distinct; potash tracts are useful context but not a complete halite footprint.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "S",
+    "label": "Sulfur, including sulfide feed",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Native sulfur, sulfide minerals and industrial recovered sulfur are distinct. Volcanic and sedimentary sulfur systems need separate regional models.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "C_graphite",
+    "label": "Graphite",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Graphite-bearing metamorphic or vein systems require carbon-rich protolith/metamorphic context and flake/amorphous/lump distinctions.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "C_coal",
+    "label": "Coal, all ranks",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Coal-bearing stratigraphic formations, basin history and coalification/rank; modern peat and generic sedimentary rocks are insufficient.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "F",
+    "label": "Fluorite",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Fluorite veins/replacement and selected igneous associations require regional hydrothermal evidence; no blanket limestone eligibility.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "SiO2",
+    "label": "Quartz / silica",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Quartz veins, pegmatites, silica sands and ordinary rock-forming quartz have different useful material forms.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "Al",
+    "label": "Aluminium evidence; bauxite not assured",
+    "mineral_system_candidates": "Lateritic bauxite and karst bauxite",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull21ut.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull20dh.htm"
+    ],
+    "interpretation_limit": "Regional weathering history, drainage and substrate chemistry are required; aluminium is common without bauxite ore.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "gypsum",
+    "label": "Gypsum / anhydrite",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Evaporitic sulfate units; gypsum versus anhydrite depends on geological/dehydration history, not modern rainfall alone.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "diamond",
+    "label": "Diamond",
+    "mineral_system_candidates": "Diamond-bearing pipes and source-linked placers",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull9fhv.htm",
+      "https://pubs.usgs.gov/bul/b1693/html/bull2xv7.htm"
+    ],
+    "interpretation_limit": "Not every ultramafic rock or kimberlite is diamondiferous.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "corundum",
+    "label": "Corundum, including ruby / sapphire",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Specific metamorphic/igneous corundum sources and derived placers; aluminium and ordinary corundum do not establish ruby/sapphire quality.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "emerald",
+    "label": "Emerald",
+    "mineral_system_candidates": "Reviewed emerald-bearing vein systems",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull51tf.htm"
+    ],
+    "interpretation_limit": "Beryl/beryllium evidence does not establish emerald or gem quality.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "olivine",
+    "label": "Olivine; gem grade not assured",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Suitable mafic/ultramafic mineralogy may support ordinary olivine; gem peridot requires additional evidence.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "garnet",
+    "label": "Garnet; species / gem grade not assured",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Metamorphic/skarn/igneous systems by garnet species and chemistry, then possible derived placers; gem grade not implied.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "lapis",
+    "label": "Lapis lazuli",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Specific lazurite-bearing metamorphic carbonate systems; generic limestone or bauxite does not establish lapis.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "alum",
+    "label": "Alum / alunite evidence",
+    "mineral_system_candidates": "Alunite alteration or separately documented alum-bearing shale feedstocks",
+    "source_urls": [
+      "https://pubs.usgs.gov/bul/b1693/html/bull0vxx.htm"
+    ],
+    "interpretation_limit": "Manufactured alum from shale is not a deposit of native alum crystals.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Named primary model references identified; province/local eligibility not delineated"
+  },
+  {
+    "commodity": "topaz",
+    "label": "Topaz; colour / gem grade not assured",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Reviewed evolved intrusive or volcanic systems; colour variants and gem grade cannot be inferred from granite alone.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "tourmaline",
+    "label": "Tourmaline; species / gem grade not assured",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Boron-bearing intrusive/metamorphic systems; tourmaline species and colour are not interchangeable.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "beryl",
+    "label": "Beryl; colour / gem grade not assured",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Reviewed beryl-bearing pegmatitic or other systems; aquamarine/red beryl are not equivalent to generic beryl.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  },
+  {
+    "commodity": "spinel",
+    "label": "Spinel; colour / gem grade not assured",
+    "mineral_system_candidates": "Model and regional review pending",
+    "source_urls": [],
+    "interpretation_limit": "Specific metamorphic/igneous gem sources and derived placers; ordinary spinel occurrence does not establish red gem spinel.",
+    "spatial_permissive_layer": null,
+    "low_chance_background_allowed_now": false,
+    "reason": "Future Earth generation must first validate regional process, compatible host and source-scale limitations; these research maps do not authorize runtime probabilities",
+    "readiness": "Evidence gap; conceptual checklist only, not a reviewed permissive layer"
+  }
+]

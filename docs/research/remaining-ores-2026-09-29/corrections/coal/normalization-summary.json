@@ -1,0 +1,33 @@
+{
+  "polygons": 3918,
+  "context_polygons": 729,
+  "points": 520,
+  "by_source": {
+    "bgs_coal_2004": 638,
+    "pgi_midas": 343,
+    "saxony_ruk400": 170,
+    "saxony_lignite50": 119,
+    "nrw_rk500": 6,
+    "nsw_coalfields": 5,
+    "victoria_coalfields": 46,
+    "usgs_india_2011": 313,
+    "usgs_china_2014": 906,
+    "usgs_americas_2008": 770,
+    "usgs_us_2012": 602
+  },
+  "by_kind": {
+    "mapped_coal_bearing_strata": 638,
+    "documented_deposit_boundary": 315,
+    "archived_deposit_boundary": 28,
+    "mapped_coal_seam_distribution": 170,
+    "mapped_lignite_field": 119,
+    "generalized_resource_area": 6,
+    "mapped_coalfield": 653,
+    "mapped_coal_bearing_area": 313,
+    "mapped_coal_mining_area_2001": 906,
+    "generalized_coal_bearing_area": 770
+  },
+  "unassessed_global_regions_remain": true,
+  "do_not_sum_overlapping_layers": true,
+  "geological_deposit_count": null
+}

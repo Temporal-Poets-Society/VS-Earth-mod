@@ -1,0 +1,42 @@
+# build output
+bin/
+obj/
+release/
+tests/**/bin/
+tests/**/obj/
+tests/out/
+__pycache__/
+
+# large working data (re-create with tools/download_data.sh and tools/bake_earth.py)
+rawdata/
+preview/grids.npz
+.venv/
+backups/
+
+# local test server and runs (tools/run_selftest.sh)
+testserver/
+testruns/
+testserver-run.log
+tools/*.log
+
+# research downloads and intermediate data (large; kept locally, not versioned)
+docs/research/**/raw/
+docs/research/**/normalized/
+docs/research/**/*.zip
+docs/research/**/*.gz
+docs/research/**/*.pdf
+docs/research/**/*.tif
+docs/research/**/*.gpkg
+docs/research/**/*.xml
+docs/research/**/*.geojson
+
+# third-party code and assets kept only for local inspection; never publish
+docs/research/regional-fauna-2026-09-29/il/
+docs/research/regional-fauna-2026-09-29/felinae-source.json
+
+# editor / agent state
+.claude/worktrees/
+
+# installer cache and generated previews
+modpack/*.zip
+preview/

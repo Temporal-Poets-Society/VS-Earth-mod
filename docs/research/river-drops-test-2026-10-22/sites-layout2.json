@@ -1,0 +1,6 @@
+[
+  {"Name": "congo_rapids", "Kind": "Congo, Livingstone rapids", "Lat": -5.60, "Lon": 13.60, "Radius": 3},
+  {"Name": "victoria_falls", "Kind": "listed waterfall, 22 blocks", "Lat": -17.9243, "Lon": 25.8572, "Radius": 2},
+  {"Name": "niagara_falls", "Kind": "listed waterfall, 11 blocks", "Lat": 43.0797, "Lon": -79.0734, "Radius": 2},
+  {"Name": "rhine_gorge", "Kind": "Rhine gorge", "Lat": 50.3199, "Lon": 7.5307, "Radius": 2}
+]

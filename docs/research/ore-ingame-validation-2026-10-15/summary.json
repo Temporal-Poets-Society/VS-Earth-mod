@@ -1,0 +1,3088 @@
+{
+ "counts": {
+  "E": 349,
+  "B": 349,
+  "V": 640,
+  "vanillaLand": 585,
+  "randomLand": 149
+ },
+ "vanillaPerChunk": {
+  "alum": {
+   "perChunk": 0.10088168794842664,
+   "raw": 0.12022792022792023,
+   "rawSE": 0.09216896839575382,
+   "blocks": 633,
+   "depth": 3.786729857819905
+  },
+  "anthracite": {
+   "perChunk": 1.5976097167839698,
+   "raw": 1.7680911680911682,
+   "rawSE": 0.6156773084655273,
+   "blocks": 9309,
+   "depth": 50.65431303040069
+  },
+  "bauxite": {
+   "perChunk": 1450.1646723646725,
+   "raw": 1450.1646723646725,
+   "rawSE": 173.3651887060602,
+   "blocks": 7635117,
+   "depth": 43.22280955223083
+  },
+  "bismuthinite": {
+   "perChunk": 36.66325454870901,
+   "raw": 38.1679012345679,
+   "rawSE": 3.324761166839506,
+   "blocks": 200954,
+   "depth": 105.76380664231615
+  },
+  "bituminouscoal": {
+   "perChunk": 14.740933297804878,
+   "raw": 13.80968660968661,
+   "rawSE": 2.379722543894437,
+   "blocks": 72708,
+   "depth": 39.6989739781042
+  },
+  "borax": {
+   "perChunk": 9.111094490612905,
+   "raw": 8.804938271604938,
+   "rawSE": 1.3259082877572905,
+   "blocks": 46358,
+   "depth": 30.813063548902022
+  },
+  "cassiterite": {
+   "perChunk": 28.060931138200523,
+   "raw": 25.57644824311491,
+   "rawSE": 2.132455490355,
+   "blocks": 134660,
+   "depth": 84.688868260805
+  },
+  "chromite": {
+   "perChunk": 11.458691130690493,
+   "raw": 13.88281101614435,
+   "rawSE": 2.0647306656559703,
+   "blocks": 73093,
+   "depth": 144.3946342331003
+  },
+  "cinnabar": {
+   "perChunk": 9.632530901959797,
+   "raw": 10.892877492877492,
+   "rawSE": 0.930547927139145,
+   "blocks": 57351,
+   "depth": 150.93874561908248
+  },
+  "clay-blue": {
+   "perChunk": 0.5614434681096875,
+   "raw": 0.5614434947768281,
+   "rawSE": 0.22658138438467323,
+   "blocks": 2956,
+   "depth": 1.074086603518268
+  },
+  "clay-red": {
+   "perChunk": 7.195821657694599,
+   "raw": 7.195821462488129,
+   "rawSE": 0.9575345188149406,
+   "blocks": 37886,
+   "depth": 1.0437628675500186
+  },
+  "corundum": {
+   "perChunk": 0.0,
+   "raw": 0.0,
+   "rawSE": 0.0,
+   "blocks": 0,
+   "depth": null
+  },
+  "diamond": {
+   "perChunk": 0.0003967535735756371,
+   "raw": 0.0003798670465337132,
+   "rawSE": 0.0003798670465337132,
+   "blocks": 2,
+   "depth": 139.0
+  },
+  "emerald": {
+   "perChunk": 1.1146202196899353,
+   "raw": 1.3329534662867997,
+   "rawSE": 0.19365574449839063,
+   "blocks": 7018,
+   "depth": 162.90538614990027
+  },
+  "fluorite": {
+   "perChunk": 0.07003182906887774,
+   "raw": 0.05660018993352327,
+   "rawSE": 0.04010089882590144,
+   "blocks": 298,
+   "depth": 60.600671140939596
+  },
+  "galena": {
+   "perChunk": 11.42139641239239,
+   "raw": 10.807977207977208,
+   "rawSE": 1.517748647400446,
+   "blocks": 56904,
+   "depth": 27.644488963868973
+  },
+  "galena_nativesilver": {
+   "perChunk": 0.0005698005698005698,
+   "raw": 0.0005698005698005698,
+   "rawSE": 0.0004244132762063425,
+   "blocks": 3,
+   "depth": 19.666666666666668
+  },
+  "graphite": {
+   "perChunk": 1.1590738400377818,
+   "raw": 1.1327635327635328,
+   "rawSE": 0.2758931097987516,
+   "blocks": 5964,
+   "depth": 95.3420523138833
+  },
+  "halite": {
+   "perChunk": 137.33887785951853,
+   "raw": 142.89192782526115,
+   "rawSE": 35.48639009148821,
+   "blocks": 752326,
+   "depth": 100.16744735659807
+  },
+  "hematite": {
+   "perChunk": 40.97673104294796,
+   "raw": 41.41158594491928,
+   "rawSE": 4.663305332603149,
+   "blocks": 218032,
+   "depth": 108.14645556615542
+  },
+  "ilmenite": {
+   "perChunk": 9.604367524153782,
+   "raw": 9.026400759734093,
+   "rawSE": 1.624732087895335,
+   "blocks": 47524,
+   "depth": 109.95366551637068
+  },
+  "kernite": {
+   "perChunk": 0.08813181470759901,
+   "raw": 0.0962962962962963,
+   "rawSE": 0.061623856113103635,
+   "blocks": 507,
+   "depth": 71.94674556213018
+  },
+  "lapislazuli": {
+   "perChunk": 0.07319553929104246,
+   "raw": 0.07825261158594492,
+   "rawSE": 0.04094875781079707,
+   "blocks": 412,
+   "depth": 42.01456310679612
+  },
+  "lignite": {
+   "perChunk": 47.1770331477229,
+   "raw": 51.07597340930674,
+   "rawSE": 7.033762937724679,
+   "blocks": 268915,
+   "depth": 34.498358217280554
+  },
+  "limonite": {
+   "perChunk": 1.0312276565260885,
+   "raw": 0.9397910731244065,
+   "rawSE": 0.3446610637857792,
+   "blocks": 4948,
+   "depth": 50.18552950687146
+  },
+  "magnetite": {
+   "perChunk": 13.67114421249608,
+   "raw": 14.19696106362773,
+   "rawSE": 2.4898368831240636,
+   "blocks": 74747,
+   "depth": 116.28161665351118
+  },
+  "malachite": {
+   "perChunk": 0.8037336400055463,
+   "raw": 0.8750237416904083,
+   "rawSE": 0.28114353020452343,
+   "blocks": 4607,
+   "depth": 34.42999782939006
+  },
+  "nativecopper": {
+   "perChunk": 239.97780328578398,
+   "raw": 239.5908831908832,
+   "rawSE": 19.193865041460626,
+   "blocks": 1261446,
+   "depth": 126.99474254149602
+  },
+  "olivine": {
+   "perChunk": 280.68566001899336,
+   "raw": 280.68566001899336,
+   "rawSE": 22.285291787579485,
+   "blocks": 1477810,
+   "depth": 112.76356635832752
+  },
+  "olivine_peridot": {
+   "perChunk": 1.3718467858449268,
+   "raw": 1.350997150997151,
+   "rawSE": 0.25891420937887394,
+   "blocks": 7113,
+   "depth": 130.62181920427386
+  },
+  "peat": {
+   "perChunk": 7.275973300886368,
+   "raw": 7.275973409306743,
+   "rawSE": 1.0536507031761806,
+   "blocks": 38308,
+   "depth": 1.1949201211235252
+  },
+  "pentlandite": {
+   "perChunk": 33.91161948663264,
+   "raw": 26.724976258309592,
+   "rawSE": 4.584239292892878,
+   "blocks": 140707,
+   "depth": 145.48938574484566
+  },
+  "phosphorite": {
+   "perChunk": 0.017942009880462975,
+   "raw": 0.01728395061728395,
+   "rawSE": 0.016360242845717996,
+   "blocks": 91,
+   "depth": 86.15384615384616
+  },
+  "quartz": {
+   "perChunk": 1217.6083570750238,
+   "raw": 1217.6083570750238,
+   "rawSE": 27.325395766472546,
+   "blocks": 6410708,
+   "depth": 93.55991428715829
+  },
+  "quartz_nativegold": {
+   "perChunk": 2.107122507122507,
+   "raw": 2.107122507122507,
+   "rawSE": 0.23978057077875553,
+   "blocks": 11094,
+   "depth": 94.48765098251307
+  },
+  "quartz_nativesilver": {
+   "perChunk": 8.373029439696106,
+   "raw": 8.373029439696106,
+   "rawSE": 0.8802614793798,
+   "blocks": 44084,
+   "depth": 99.97327828690682
+  },
+  "rhodochrosite": {
+   "perChunk": 0.6698772174623472,
+   "raw": 0.6548907882241216,
+   "rawSE": 0.19795157568358965,
+   "blocks": 3448,
+   "depth": 170.55133410672855
+  },
+  "saltpeter": {
+   "perChunk": 18.527635327635327,
+   "raw": 18.527635327635327,
+   "rawSE": 0.8906730925401332,
+   "blocks": 97548,
+   "depth": 118.88655841226883
+  },
+  "sphalerite": {
+   "perChunk": 28.664872847592303,
+   "raw": 28.89002849002849,
+   "rawSE": 2.3943025457664784,
+   "blocks": 152106,
+   "depth": 96.70655989901779
+  },
+  "sulfur": {
+   "perChunk": 13.227967233307362,
+   "raw": 15.929344729344729,
+   "rawSE": 2.5214320926467533,
+   "blocks": 83868,
+   "depth": 38.418800972957506
+  },
+  "sylvite": {
+   "perChunk": 1.2921177587844255,
+   "raw": 1.2921177587844255,
+   "rawSE": 0.33580052106948877,
+   "blocks": 6803,
+   "depth": 101.09877995002205
+  },
+  "uranium": {
+   "perChunk": 0.0,
+   "raw": 0.0,
+   "rawSE": 0.0,
+   "blocks": 0,
+   "depth": null
+  }
+ },
+ "groups": {
+  "alum": {
+   "resource": "alum",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 2257,
+    "blocksB": 0.0,
+    "attemptsB": 36.247060268561306,
+    "earthAttempts": 0.11641509660346487,
+    "xSameRocks": null,
+    "xVanilla": 16.683625822552415,
+    "volPerAttempt": null
+   },
+   "noEvidence": {
+    "sites": 157,
+    "chunks": 1685,
+    "blocksE": 4860,
+    "blocksB": 0.0,
+    "attemptsB": 41.47294284623774,
+    "earthAttempts": 0.11777848851581196,
+    "xSameRocks": null,
+    "xVanilla": 28.590649657915687,
+    "volPerAttempt": null
+   },
+   "hotspot": null
+  },
+  "anthracite": {
+   "resource": "C_coal",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 11854,
+    "blocksB": 0.0,
+    "attemptsB": 392.3294190745801,
+    "earthAttempts": 0.2450349249632296,
+    "xSameRocks": null,
+    "xVanilla": 5.53306091831129,
+    "volPerAttempt": null
+   },
+   "noEvidence": {
+    "sites": 142,
+    "chunks": 1550,
+    "blocksE": 11644,
+    "blocksB": 0.0,
+    "attemptsB": 408.0000077295117,
+    "earthAttempts": 0.21528371092279913,
+    "xSameRocks": null,
+    "xVanilla": 4.702186013013555,
+    "volPerAttempt": null
+   },
+   "hotspot": {
+    "sites": 13,
+    "chunks": 157,
+    "blocksE": 2318,
+    "blocksB": 0.0,
+    "attemptsB": 0.0,
+    "earthAttempts": 0.6893580733504368,
+    "xSameRocks": null,
+    "xVanilla": 9.241513152481364,
+    "volPerAttempt": null
+   }
+  },
+  "bauxite": {
+   "resource": "Al",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 11158,
+    "blocksB": 1564381.0,
+    "attemptsB": 0.0,
+    "earthAttempts": 0.1737422799036347,
+    "xSameRocks": null,
+    "xVanilla": 0.005737731986760261,
+    "volPerAttempt": null
+   },
+   "noEvidence": {
+    "sites": 135,
+    "chunks": 1487,
+    "blocksE": 10408,
+    "blocksB": 2064651.0,
+    "attemptsB": 0.0,
+    "earthAttempts": 0.13572284210472252,
+    "xSameRocks": null,
+    "xVanilla": 0.004826574276996036,
+    "volPerAttempt": null
+   },
+   "hotspot": null
+  },
+  "bismuthinite": {
+   "resource": "Bi",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 18213,
+    "blocksB": 40356.0,
+    "attemptsB": 1839.9059216603637,
+    "earthAttempts": 0.11871371340276508,
+    "xSameRocks": 0.3659652547617865,
+    "xVanilla": 0.37044325846578663,
+    "volPerAttempt": 3.0827546731704074
+   },
+   "noEvidence": {
+    "sites": 156,
+    "chunks": 1676,
+    "blocksE": 20605,
+    "blocksB": 53464.0,
+    "attemptsB": 2571.670643426478,
+    "earthAttempts": 0.10783630700852204,
+    "xSameRocks": 0.34950399556510064,
+    "xVanilla": 0.33532627956682515,
+    "volPerAttempt": 3.2410605042092198
+   },
+   "hotspot": null
+  },
+  "bituminouscoal": {
+   "resource": "C_coal",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 82630,
+    "blocksB": 11030.0,
+    "attemptsB": 1316.1647386627737,
+    "earthAttempts": 0.2974343197755726,
+    "xSameRocks": 9.932653784749585,
+    "xVanilla": 4.1800742281196275,
+    "volPerAttempt": 33.39444416583874
+   },
+   "noEvidence": {
+    "sites": 142,
+    "chunks": 1550,
+    "blocksE": 91911,
+    "blocksB": 11820.0,
+    "attemptsB": 1375.1706223832443,
+    "earthAttempts": 0.26523439444173763,
+    "xSameRocks": 9.319583128889208,
+    "xVanilla": 4.0226367053481535,
+    "volPerAttempt": 35.13715914749655
+   },
+   "hotspot": {
+    "sites": 13,
+    "chunks": 157,
+    "blocksE": 52563,
+    "blocksB": 489.0,
+    "attemptsB": 57.152942903805524,
+    "earthAttempts": 1.5575919644793947,
+    "xSameRocks": 52.860566686084795,
+    "xVanilla": 22.712006870949256,
+    "volPerAttempt": 33.93736478587494
+   }
+  },
+  "borax": {
+   "resource": "B",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 13361,
+    "blocksB": 5357.0,
+    "attemptsB": 774.67060636729,
+    "earthAttempts": 0.1314113684339703,
+    "xSameRocks": 2.2707744080064325,
+    "xVanilla": 1.09355249412296,
+    "volPerAttempt": 17.279893171095157
+   },
+   "noEvidence": {
+    "sites": 156,
+    "chunks": 1676,
+    "blocksE": 15938,
+    "blocksB": 12088.0,
+    "attemptsB": 1060.9764954680577,
+    "earthAttempts": 0.12998233259822117,
+    "xSameRocks": 1.3154655928550767,
+    "xVanilla": 1.0437326217148875,
+    "volPerAttempt": 10.12034148457095
+   },
+   "hotspot": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 0,
+    "blocksB": 0.0,
+    "attemptsB": 94.02353117521852,
+    "earthAttempts": 1.8000191958436371,
+    "xSameRocks": null,
+    "xVanilla": 0.0,
+    "volPerAttempt": null
+   }
+  },
+  "cassiterite": {
+   "resource": "Sn",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 33130,
+    "blocksB": 35908.0,
+    "attemptsB": 1065.841115205261,
+    "earthAttempts": 0.2786684481540031,
+    "xSameRocks": 0.963216291870207,
+    "xVanilla": 0.8804213793568572,
+    "volPerAttempt": 3.456495696771153
+   },
+   "noEvidence": {
+    "sites": 134,
+    "chunks": 1478,
+    "blocksE": 32640,
+    "blocksB": 31308.0,
+    "attemptsB": 954.514906359608,
+    "earthAttempts": 0.249389617892149,
+    "xSameRocks": 0.884367989952415,
+    "xVanilla": 0.7869980169067989,
+    "volPerAttempt": 3.5461299368719854
+   },
+   "hotspot": {
+    "sites": 8,
+    "chunks": 112,
+    "blocksE": 20392,
+    "blocksB": 1250.0,
+    "attemptsB": 59.93894285542645,
+    "earthAttempts": 2.55996881308863,
+    "xSameRocks": 11.467553491871374,
+    "xVanilla": 6.488431466323194,
+    "volPerAttempt": 4.479567654590155
+   }
+  },
+  "chromite": {
+   "resource": "Cr",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 6325,
+    "blocksB": 9851.0,
+    "attemptsB": 124.94117936468683,
+    "earthAttempts": 0.1555830604162301,
+    "xSameRocks": 0.43873460620869925,
+    "xVanilla": 0.41162025638566013,
+    "volPerAttempt": 2.8199381413050766
+   },
+   "noEvidence": {
+    "sites": 150,
+    "chunks": 1622,
+    "blocksE": 6475,
+    "blocksB": 9946.0,
+    "attemptsB": 125.24117937195115,
+    "earthAttempts": 0.12829237071702668,
+    "xSameRocks": 0.36866547999886873,
+    "xVanilla": 0.34838055742340035,
+    "volPerAttempt": 2.8736352593563868
+   },
+   "hotspot": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 4938,
+    "blocksB": 0.0,
+    "attemptsB": 0.0,
+    "earthAttempts": 2.333318816684391,
+    "xSameRocks": null,
+    "xVanilla": 5.32023791091482,
+    "volPerAttempt": null
+   }
+  },
+  "cinnabar": {
+   "resource": "Hg",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 6528,
+    "blocksB": 16869.0,
+    "attemptsB": 195.24118113471195,
+    "earthAttempts": 0.12865564413306618,
+    "xSameRocks": 0.5327863380481183,
+    "xVanilla": 0.5053717447774224,
+    "volPerAttempt": 4.141181225575048
+   },
+   "noEvidence": {
+    "sites": 156,
+    "chunks": 1676,
+    "blocksE": 7544,
+    "blocksB": 21068.0,
+    "attemptsB": 251.1705942673143,
+    "earthAttempts": 0.12452992859176788,
+    "xSameRocks": 0.5074494344549768,
+    "xVanilla": 0.46729082556139423,
+    "volPerAttempt": 4.074919500825298
+   },
+   "hotspot": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 2822,
+    "blocksB": 1193.0,
+    "attemptsB": 13.235294436570257,
+    "earthAttempts": 1.0991274929539294,
+    "xSameRocks": 3.65497809104915,
+    "xVanilla": 3.6168590090638792,
+    "volPerAttempt": 3.3253449799770864
+   }
+  },
+  "clay-blue": {
+   "resource": "clay",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 0,
+    "blocksB": 0.0,
+    "attemptsB": 8.046000382164493,
+    "earthAttempts": 1.0759436336479007,
+    "xSameRocks": null,
+    "xVanilla": 0.0,
+    "volPerAttempt": null
+   },
+   "noEvidence": {
+    "sites": 140,
+    "chunks": 1532,
+    "blocksE": 0,
+    "blocksB": 0.0,
+    "attemptsB": 9.192000436596572,
+    "earthAttempts": 1.0414162138257668,
+    "xSameRocks": null,
+    "xVanilla": 0.0,
+    "volPerAttempt": null
+   },
+   "hotspot": {
+    "sites": 1,
+    "chunks": 9,
+    "blocksE": 0,
+    "blocksB": 0.0,
+    "attemptsB": 0.05400000256486237,
+    "earthAttempts": 1.5610990073681303,
+    "xSameRocks": null,
+    "xVanilla": 0.0,
+    "volPerAttempt": null
+   }
+  },
+  "clay-red": {
+   "resource": "clay",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 23910,
+    "blocksB": 16381.0,
+    "attemptsB": 78.44849787186831,
+    "earthAttempts": 1.062750990763729,
+    "xSameRocks": 1.4596178103519581,
+    "xVanilla": 2.477823725601855,
+    "volPerAttempt": 1.3734334976277247
+   },
+   "noEvidence": {
+    "sites": 140,
+    "chunks": 1532,
+    "blocksE": 23306,
+    "blocksB": 20555.0,
+    "attemptsB": 89.62199756875634,
+    "earthAttempts": 1.0241818154476643,
+    "xSameRocks": 1.1338360188645373,
+    "xVanilla": 2.1141148929690603,
+    "volPerAttempt": 1.1070651731586778
+   },
+   "hotspot": {
+    "sites": 1,
+    "chunks": 9,
+    "blocksE": 0,
+    "blocksB": 0.0,
+    "attemptsB": 0.526499985717237,
+    "earthAttempts": 1.623951950022538,
+    "xSameRocks": null,
+    "xVanilla": 0.0,
+    "volPerAttempt": null
+   }
+  },
+  "corundum": {
+   "resource": "corundum",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 299,
+    "blocksB": 0.0,
+    "attemptsB": 0.0,
+    "earthAttempts": 0.10435923787664154,
+    "xSameRocks": null,
+    "xVanilla": null,
+    "volPerAttempt": null
+   },
+   "noEvidence": {
+    "sites": 157,
+    "chunks": 1685,
+    "blocksE": 299,
+    "blocksB": 0.0,
+    "attemptsB": 0.0,
+    "earthAttempts": 0.10679665605249351,
+    "xSameRocks": null,
+    "xVanilla": null,
+    "volPerAttempt": null
+   },
+   "hotspot": null
+  },
+  "diamond": {
+   "resource": "diamond",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 0,
+    "blocksB": 0.0,
+    "attemptsB": 2062.1647660159506,
+    "earthAttempts": 0.10765944859767226,
+    "xSameRocks": null,
+    "xVanilla": 0.0,
+    "volPerAttempt": null
+   },
+   "noEvidence": {
+    "sites": 154,
+    "chunks": 1658,
+    "blocksE": 0,
+    "blocksB": 0.0,
+    "attemptsB": 2866.4471362461336,
+    "earthAttempts": 0.1168897384579354,
+    "xSameRocks": null,
+    "xVanilla": 0.0,
+    "volPerAttempt": null
+   },
+   "hotspot": {
+    "sites": 23,
+    "chunks": 247,
+    "blocksE": 0,
+    "blocksB": 0.0,
+    "attemptsB": 83.85882550897077,
+    "earthAttempts": 1.276394763332102,
+    "xSameRocks": null,
+    "xVanilla": 0.0,
+    "volPerAttempt": null
+   }
+  },
+  "emerald": {
+   "resource": "emerald",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 795,
+    "blocksB": 946.0,
+    "attemptsB": 8183.34139354527,
+    "earthAttempts": 0.11598075264435875,
+    "xSameRocks": 0.757735324471852,
+    "xVanilla": 0.5318772733872335,
+    "volPerAttempt": 6.5332851114991275
+   },
+   "noEvidence": {
+    "sites": 157,
+    "chunks": 1685,
+    "blocksE": 910,
+    "blocksB": 1207.0,
+    "attemptsB": 9341.364949464798,
+    "earthAttempts": 0.12874357121420665,
+    "xSameRocks": 0.6175671781123497,
+    "xVanilla": 0.484523192420861,
+    "volPerAttempt": 4.796877795822727
+   },
+   "hotspot": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 666,
+    "blocksB": 0.0,
+    "attemptsB": 793.6000153273344,
+    "earthAttempts": 1.2357065987591154,
+    "xSameRocks": null,
+    "xVanilla": 7.376702913669982,
+    "volPerAttempt": null
+   }
+  },
+  "fluorite": {
+   "resource": "F",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 3773,
+    "blocksB": 0.0,
+    "attemptsB": 397.56471510976553,
+    "earthAttempts": 0.1708830839109178,
+    "xSameRocks": null,
+    "xVanilla": 40.175617267625015,
+    "volPerAttempt": null
+   },
+   "noEvidence": {
+    "sites": 140,
+    "chunks": 1532,
+    "blocksE": 2806,
+    "blocksB": 0.0,
+    "attemptsB": 434.51765731489286,
+    "earthAttempts": 0.14114710792227636,
+    "xSameRocks": null,
+    "xVanilla": 26.153717725887613,
+    "volPerAttempt": null
+   },
+   "hotspot": {
+    "sites": 10,
+    "chunks": 90,
+    "blocksE": 5031,
+    "blocksB": 0.0,
+    "attemptsB": 47.6823543375358,
+    "earthAttempts": 1.7579137756422436,
+    "xSameRocks": null,
+    "xVanilla": 798.2084823890749,
+    "volPerAttempt": null
+   }
+  },
+  "galena": {
+   "resource": "Pb",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 31932,
+    "blocksB": 19574.0,
+    "attemptsB": 6436.706045558676,
+    "earthAttempts": 0.23177149906180716,
+    "xSameRocks": 1.851147681421326,
+    "xVanilla": 2.0848659548386115,
+    "volPerAttempt": 7.986951324535701
+   },
+   "noEvidence": {
+    "sites": 132,
+    "chunks": 1460,
+    "blocksE": 19967,
+    "blocksB": 41636.0,
+    "attemptsB": 9887.29435457848,
+    "earthAttempts": 0.12239584194433474,
+    "xSameRocks": 0.7677645554389991,
+    "xVanilla": 1.1974041442447068,
+    "volPerAttempt": 6.272799330782627
+   },
+   "hotspot": {
+    "sites": 11,
+    "chunks": 99,
+    "blocksE": 7499,
+    "blocksB": 0.0,
+    "attemptsB": 1516.0000300593674,
+    "earthAttempts": 1.2737471097643274,
+    "xSameRocks": null,
+    "xVanilla": 6.63206774482388,
+    "volPerAttempt": null
+   }
+  },
+  "galena_nativesilver": {
+   "resource": "Ag",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 35,
+    "blocksB": 2.0,
+    "attemptsB": 0.0,
+    "earthAttempts": null,
+    "xSameRocks": null,
+    "xVanilla": 45.805369127516784,
+    "volPerAttempt": null
+   },
+   "noEvidence": {
+    "sites": 133,
+    "chunks": 1469,
+    "blocksE": 29,
+    "blocksB": 3.0,
+    "attemptsB": 0.0,
+    "earthAttempts": null,
+    "xSameRocks": null,
+    "xVanilla": 34.64601769911504,
+    "volPerAttempt": null
+   },
+   "hotspot": {
+    "sites": 30,
+    "chunks": 310,
+    "blocksE": 40,
+    "blocksB": 0.0,
+    "attemptsB": 0.0,
+    "earthAttempts": null,
+    "xSameRocks": null,
+    "xVanilla": 226.45161290322582,
+    "volPerAttempt": null
+   }
+  },
+  "graphite": {
+   "resource": "C_graphite",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 18092,
+    "blocksB": 8381.0,
+    "attemptsB": 654.1411919714883,
+    "earthAttempts": 0.1570231119033329,
+    "xSameRocks": 1.6595939085975173,
+    "xVanilla": 11.639831600182161,
+    "volPerAttempt": 10.569105964599672
+   },
+   "noEvidence": {
+    "sites": 139,
+    "chunks": 1523,
+    "blocksE": 13942,
+    "blocksB": 8381.0,
+    "attemptsB": 772.6235483572818,
+    "earthAttempts": 0.1297003657395565,
+    "xSameRocks": 1.3300428982176806,
+    "xVanilla": 7.897944381145123,
+    "volPerAttempt": 10.25473513997994
+   },
+   "hotspot": null
+  },
+  "halite": {
+   "resource": "NaCl",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 14630,
+    "blocksB": 194819.0,
+    "attemptsB": 178.07735599948754,
+    "earthAttempts": 0.2026477487074341,
+    "xSameRocks": 0.07293651448997072,
+    "xVanilla": 0.07943685720507578,
+    "volPerAttempt": 0.35991771413789736
+   },
+   "noEvidence": {
+    "sites": 139,
+    "chunks": 1523,
+    "blocksE": 12355,
+    "blocksB": 350228.0,
+    "attemptsB": 207.46500377722555,
+    "earthAttempts": 0.12921531524678567,
+    "xSameRocks": 0.035147051566061446,
+    "xVanilla": 0.059067603611824955,
+    "volPerAttempt": 0.2720037597628023
+   },
+   "hotspot": {
+    "sites": 36,
+    "chunks": 324,
+    "blocksE": 69587,
+    "blocksB": 35941.0,
+    "attemptsB": 51.97588363845615,
+    "earthAttempts": 1.3522669358435009,
+    "xSameRocks": 2.271678650790975,
+    "xVanilla": 1.5638302475262238,
+    "volPerAttempt": 1.679904011979687
+   }
+  },
+  "hematite": {
+   "resource": "Fe",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 68047,
+    "blocksB": 58447.0,
+    "attemptsB": 52.908824844053015,
+    "earthAttempts": 0.297711221199838,
+    "xSameRocks": 0.8687517973152125,
+    "xVanilla": 1.2383485389661333,
+    "volPerAttempt": 2.91810229326917
+   },
+   "noEvidence": {
+    "sites": 137,
+    "chunks": 1505,
+    "blocksE": 60959,
+    "blocksB": 54582.0,
+    "attemptsB": 60.13529559771996,
+    "earthAttempts": 0.2440576288088185,
+    "xSameRocks": 0.8439776749038412,
+    "xVanilla": 0.9884712105127238,
+    "volPerAttempt": 3.458108148567515
+   },
+   "hotspot": {
+    "sites": 18,
+    "chunks": 202,
+    "blocksE": 28141,
+    "blocksB": 863.0,
+    "attemptsB": 8.479411997250281,
+    "earthAttempts": 1.3063615217431355,
+    "xSameRocks": 25.887655338456813,
+    "xVanilla": 3.3997802568024564,
+    "volPerAttempt": 19.816608884739484
+   }
+  },
+  "ilmenite": {
+   "resource": "Ti",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 4825,
+    "blocksB": 17362.0,
+    "attemptsB": 151.14117947034538,
+    "earthAttempts": 0.1153703158110759,
+    "xSameRocks": 0.34457813155616634,
+    "xVanilla": 0.37462759930292605,
+    "volPerAttempt": 2.9867139491966777
+   },
+   "noEvidence": {
+    "sites": 156,
+    "chunks": 1676,
+    "blocksE": 6823,
+    "blocksB": 17437.0,
+    "attemptsB": 151.91765007935464,
+    "earthAttempts": 0.11356835457833166,
+    "xSameRocks": 0.39018802817914994,
+    "xVanilla": 0.42386990880938114,
+    "volPerAttempt": 3.435710851212738
+   },
+   "hotspot": null
+  },
+  "kernite": {
+   "resource": "B",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 4670,
+    "blocksB": 0.0,
+    "attemptsB": 393.83530421135947,
+    "earthAttempts": 0.12960914746983654,
+    "xSameRocks": null,
+    "xVanilla": 39.51439983289813,
+    "volPerAttempt": null
+   },
+   "noEvidence": {
+    "sites": 156,
+    "chunks": 1676,
+    "blocksE": 4929,
+    "blocksB": 0.0,
+    "attemptsB": 454.10589372273535,
+    "earthAttempts": 0.11977545153377683,
+    "xSameRocks": null,
+    "xVanilla": 33.369683778177354,
+    "volPerAttempt": null
+   },
+   "hotspot": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 0,
+    "blocksB": 0.0,
+    "attemptsB": 16.388235712889582,
+    "earthAttempts": 0.5661115150126631,
+    "xSameRocks": null,
+    "xVanilla": 0.0,
+    "volPerAttempt": null
+   }
+  },
+  "lapislazuli": {
+   "resource": "lapis",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 1360,
+    "blocksB": 74.0,
+    "attemptsB": 670.117664351128,
+    "earthAttempts": 0.1130173586045501,
+    "xSameRocks": 17.369171227823287,
+    "xVanilla": 13.855605693599509,
+    "volPerAttempt": 153.6858712881297
+   },
+   "noEvidence": {
+    "sites": 157,
+    "chunks": 1685,
+    "blocksE": 1360,
+    "blocksB": 157.0,
+    "attemptsB": 907.0882590918336,
+    "earthAttempts": 0.10903997111639932,
+    "xSameRocks": 8.81938935424399,
+    "xVanilla": 11.026924175143586,
+    "volPerAttempt": 80.8821688409048
+   },
+   "hotspot": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 0,
+    "blocksB": 0.0,
+    "attemptsB": 192.47059224871919,
+    "earthAttempts": 0.6294615394507991,
+    "xSameRocks": null,
+    "xVanilla": 0.0,
+    "volPerAttempt": null
+   }
+  },
+  "lignite": {
+   "resource": "C_coal",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 123582,
+    "blocksB": 127814.0,
+    "attemptsB": 1433.6941556297243,
+    "earthAttempts": 0.2662586571828386,
+    "xSameRocks": 1.2218957854466503,
+    "xVanilla": 1.9534208364482715,
+    "volPerAttempt": 4.589130728649248
+   },
+   "noEvidence": {
+    "sites": 142,
+    "chunks": 1550,
+    "blocksE": 129565,
+    "blocksB": 138817.0,
+    "attemptsB": 1482.0706277377903,
+    "earthAttempts": 0.23719553839312163,
+    "xSameRocks": 1.0549014370680907,
+    "xVanilla": 1.771843564619744,
+    "volPerAttempt": 4.447391566529911
+   },
+   "hotspot": {
+    "sites": 13,
+    "chunks": 157,
+    "blocksE": 39797,
+    "blocksB": 106305.0,
+    "attemptsB": 784.0941320601851,
+    "earthAttempts": 0.6324523046741307,
+    "xSameRocks": 2.2100130162287357,
+    "xVanilla": 5.37303979331214,
+    "volPerAttempt": 3.494355226308233
+   }
+  },
+  "limonite": {
+   "resource": "Fe",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 31842,
+    "blocksB": 1464.0,
+    "attemptsB": 116.96000450342902,
+    "earthAttempts": 0.2642801874124909,
+    "xSameRocks": 22.423195155776167,
+    "xVanilla": 23.025920894075934,
+    "volPerAttempt": 84.84629655865137
+   },
+   "noEvidence": {
+    "sites": 137,
+    "chunks": 1505,
+    "blocksE": 36154,
+    "blocksB": 1474.0,
+    "attemptsB": 109.6800042114035,
+    "earthAttempts": 0.21819652408492032,
+    "xSameRocks": 21.129025422266785,
+    "xVanilla": 23.295138769892475,
+    "volPerAttempt": 96.83483965144897
+   },
+   "hotspot": {
+    "sites": 18,
+    "chunks": 202,
+    "blocksE": 0,
+    "blocksB": 0.0,
+    "attemptsB": 15.341177086214376,
+    "earthAttempts": 0.9818993420746337,
+    "xSameRocks": null,
+    "xVanilla": 0.0,
+    "volPerAttempt": null
+   }
+  },
+  "magnetite": {
+   "resource": "Fe",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 39663,
+    "blocksB": 16579.0,
+    "attemptsB": 49.55823848136678,
+    "earthAttempts": 0.2823423437998055,
+    "xSameRocks": 2.786844142820694,
+    "xVanilla": 2.163475181617844,
+    "volPerAttempt": 9.870443467015713
+   },
+   "noEvidence": {
+    "sites": 137,
+    "chunks": 1505,
+    "blocksE": 42416,
+    "blocksB": 15704.0,
+    "attemptsB": 61.233533242955474,
+    "earthAttempts": 0.2142260849354908,
+    "xSameRocks": 3.463942007366883,
+    "xVanilla": 2.0615237661349495,
+    "volPerAttempt": 16.169562209989355
+   },
+   "hotspot": {
+    "sites": 18,
+    "chunks": 202,
+    "blocksE": 24617,
+    "blocksB": 8802.0,
+    "attemptsB": 4.798235630034203,
+    "earthAttempts": 1.1639622754454886,
+    "xSameRocks": 2.094027267380439,
+    "xVanilla": 8.91412852790125,
+    "volPerAttempt": 1.7990508039265984
+   }
+  },
+  "malachite": {
+   "resource": "Cu",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 15576,
+    "blocksB": 3216.0,
+    "attemptsB": 1565.2353326487355,
+    "earthAttempts": 0.22897361038869973,
+    "xSameRocks": 5.34577145154659,
+    "xVanilla": 14.451569462594664,
+    "volPerAttempt": 23.346670572524694
+   },
+   "noEvidence": {
+    "sites": 109,
+    "chunks": 1253,
+    "blocksE": 6449,
+    "blocksB": 5518.0,
+    "attemptsB": 1550.4118072707206,
+    "earthAttempts": 0.1296576710269917,
+    "xSameRocks": 1.367496743741559,
+    "xVanilla": 6.40367319427673,
+    "volPerAttempt": 10.546979078907551
+   },
+   "hotspot": {
+    "sites": 36,
+    "chunks": 404,
+    "blocksE": 34124,
+    "blocksB": 2336.0,
+    "attemptsB": 697.9411961766891,
+    "earthAttempts": 0.8326413460558758,
+    "xSameRocks": 23.864052023978545,
+    "xVanilla": 105.09121720234405,
+    "volPerAttempt": 28.660661804773145
+   }
+  },
+  "nativecopper": {
+   "resource": "Cu",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 236492,
+    "blocksB": 284976.0,
+    "attemptsB": 3283.7141919122078,
+    "earthAttempts": 0.26952628342056534,
+    "xSameRocks": 0.7352685402310829,
+    "xVanilla": 0.7348802954738879,
+    "volPerAttempt": 2.7280031130907534
+   },
+   "noEvidence": {
+    "sites": 109,
+    "chunks": 1253,
+    "blocksE": 120492,
+    "blocksB": 282213.0,
+    "attemptsB": 3190.8012567011174,
+    "earthAttempts": 0.1532515396863649,
+    "xSameRocks": 0.3933970741133733,
+    "xVanilla": 0.40071543259883613,
+    "volPerAttempt": 2.5670024256753012
+   },
+   "hotspot": {
+    "sites": 36,
+    "chunks": 404,
+    "blocksE": 209860,
+    "blocksB": 95102.0,
+    "attemptsB": 1040.2447326646652,
+    "earthAttempts": 0.776604000612405,
+    "xSameRocks": 2.0558689290045136,
+    "xVanilla": 2.1645978854383756,
+    "volPerAttempt": 2.6472551356718754
+   }
+  },
+  "olivine": {
+   "resource": "olivine",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 108948,
+    "blocksB": 169149.0,
+    "attemptsB": 1005.75,
+    "earthAttempts": 0.1280376763651835,
+    "xSameRocks": 0.6440948512849618,
+    "xVanilla": 0.2894478038857517,
+    "volPerAttempt": 5.030510312042078
+   },
+   "noEvidence": {
+    "sites": 156,
+    "chunks": 1676,
+    "blocksE": 108645,
+    "blocksB": 197246.0,
+    "attemptsB": 1257.0,
+    "earthAttempts": 0.12552956424582404,
+    "xSameRocks": 0.5508096488648693,
+    "xVanilla": 0.23094869070192056,
+    "volPerAttempt": 4.387887842789137
+   },
+   "hotspot": null
+  },
+  "olivine_peridot": {
+   "resource": "olivine",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 1059,
+    "blocksB": 687.0,
+    "attemptsB": 8919.717848449945,
+    "earthAttempts": 0.1223477899197035,
+    "xSameRocks": 1.5149601599116473,
+    "xVanilla": 0.5756540602113394,
+    "volPerAttempt": 12.382407241732041
+   },
+   "noEvidence": {
+    "sites": 156,
+    "chunks": 1676,
+    "blocksE": 1140,
+    "blocksB": 908.0,
+    "attemptsB": 9880.847287327051,
+    "earthAttempts": 0.12347340316025718,
+    "xSameRocks": 1.0936511793867043,
+    "xVanilla": 0.4958213539631226,
+    "volPerAttempt": 8.857382654038014
+   },
+   "hotspot": null
+  },
+  "peat": {
+   "resource": "peat",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 24553,
+    "blocksB": 22283.0,
+    "attemptsB": 100.57500149868429,
+    "earthAttempts": 1.0663177191225774,
+    "xSameRocks": 1.1018713981900228,
+    "xVanilla": 2.5164290449140863,
+    "volPerAttempt": 1.0333424817292738
+   },
+   "noEvidence": {
+    "sites": 115,
+    "chunks": 1275,
+    "blocksE": 10151,
+    "blocksB": 8817.0,
+    "attemptsB": 95.62500142492354,
+    "earthAttempts": 0.9981122210983344,
+    "xSameRocks": 1.1512986448068172,
+    "xVanilla": 1.0942273010376622,
+    "volPerAttempt": 1.1534761527515558
+   },
+   "hotspot": {
+    "sites": 1,
+    "chunks": 9,
+    "blocksE": 398,
+    "blocksB": 754.0,
+    "attemptsB": 0.6750000100582838,
+    "earthAttempts": 1.5328810840777713,
+    "xSameRocks": 0.5278514667515413,
+    "xVanilla": 6.077842838817869,
+    "volPerAttempt": 0.3443525216889953
+   }
+  },
+  "pentlandite": {
+   "resource": "Ni",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 25335,
+    "blocksB": 50820.0,
+    "attemptsB": 364.94118246948346,
+    "earthAttempts": 0.15258241756947039,
+    "xSameRocks": 0.5970029169171562,
+    "xVanilla": 0.5571133946319362,
+    "volPerAttempt": 3.912658656396911
+   },
+   "noEvidence": {
+    "sites": 147,
+    "chunks": 1595,
+    "blocksE": 23410,
+    "blocksB": 49295.0,
+    "attemptsB": 350.0588291301392,
+    "earthAttempts": 0.13080894403831067,
+    "xSameRocks": 0.45864324266572515,
+    "xVanilla": 0.4328049267374646,
+    "volPerAttempt": 3.5062070566933095
+   },
+   "hotspot": {
+    "sites": 8,
+    "chunks": 72,
+    "blocksE": 10255,
+    "blocksB": 0.0,
+    "attemptsB": 0.0,
+    "earthAttempts": 1.250474616324411,
+    "xSameRocks": null,
+    "xVanilla": 4.200051714183074,
+    "volPerAttempt": null
+   }
+  },
+  "phosphorite": {
+   "resource": "P",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 5092,
+    "blocksB": 304.0,
+    "attemptsB": 289.8941243584268,
+    "earthAttempts": 0.17766642996980742,
+    "xSameRocks": 17.12044602755306,
+    "xVanilla": 211.63550344185893,
+    "volPerAttempt": 96.36286399441079
+   },
+   "noEvidence": {
+    "sites": 145,
+    "chunks": 1577,
+    "blocksE": 4988,
+    "blocksB": 304.0,
+    "attemptsB": 377.0823620148003,
+    "earthAttempts": 0.13526445392817285,
+    "xSameRocks": 18.550132453842618,
+    "xVanilla": 176.2883690950528,
+    "volPerAttempt": 137.13974303768657
+   },
+   "hotspot": {
+    "sites": 11,
+    "chunks": 99,
+    "blocksE": 7177,
+    "blocksB": 0.0,
+    "attemptsB": 5.600000132806599,
+    "earthAttempts": 1.821581174727113,
+    "xSameRocks": null,
+    "xVanilla": 4040.514411592713,
+    "volPerAttempt": null
+   }
+  },
+  "quartz": {
+   "resource": "SiO2",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 2093252,
+    "blocksB": 1976468.0,
+    "attemptsB": 1005.75,
+    "earthAttempts": 1.048192432929472,
+    "xSameRocks": 1.0590872202332646,
+    "xVanilla": 1.2819914145909725,
+    "volPerAttempt": 1.0103938808958428
+   },
+   "noEvidence": {
+    "sites": 151,
+    "chunks": 1631,
+    "blocksE": 2463965,
+    "blocksB": 2279674.0,
+    "attemptsB": 1223.25,
+    "earthAttempts": 1.0417589050798164,
+    "xSameRocks": 1.0808409448017566,
+    "xVanilla": 1.2407176295467512,
+    "volPerAttempt": 1.0375154361833325
+   },
+   "hotspot": {
+    "sites": 10,
+    "chunks": 130,
+    "blocksE": 243023,
+    "blocksB": 165407.0,
+    "attemptsB": 97.5,
+    "earthAttempts": 1.3154380385692304,
+    "xSameRocks": 1.4692425350801357,
+    "xVanilla": 1.5353111543997948,
+    "volPerAttempt": 1.1169226462982587
+   }
+  },
+  "quartz_nativegold": {
+   "resource": "Au",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 2654,
+    "blocksB": 4047.0,
+    "attemptsB": 0.0,
+    "earthAttempts": null,
+    "xSameRocks": null,
+    "xVanilla": 0.939252489101673,
+    "volPerAttempt": null
+   },
+   "noEvidence": {
+    "sites": 119,
+    "chunks": 1343,
+    "blocksE": 1067,
+    "blocksB": 3961.0,
+    "attemptsB": 0.0,
+    "earthAttempts": null,
+    "xSameRocks": null,
+    "xVanilla": 0.37704971836822304,
+    "volPerAttempt": null
+   },
+   "hotspot": {
+    "sites": 20,
+    "chunks": 220,
+    "blocksE": 1358,
+    "blocksB": 2329.0,
+    "attemptsB": 0.0,
+    "earthAttempts": null,
+    "xSameRocks": null,
+    "xVanilla": 2.9294581837848472,
+    "volPerAttempt": null
+   }
+  },
+  "quartz_nativesilver": {
+   "resource": "Ag",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 6905,
+    "blocksB": 16065.0,
+    "attemptsB": 0.0,
+    "earthAttempts": null,
+    "xSameRocks": null,
+    "xVanilla": 0.6149676730634439,
+    "volPerAttempt": null
+   },
+   "noEvidence": {
+    "sites": 133,
+    "chunks": 1469,
+    "blocksE": 4766,
+    "blocksB": 15497.0,
+    "attemptsB": 0.0,
+    "earthAttempts": null,
+    "xSameRocks": null,
+    "xVanilla": 0.38748029706762555,
+    "volPerAttempt": null
+   },
+   "hotspot": {
+    "sites": 30,
+    "chunks": 310,
+    "blocksE": 11668,
+    "blocksB": 1156.0,
+    "attemptsB": 0.0,
+    "earthAttempts": null,
+    "xSameRocks": null,
+    "xVanilla": 4.49523197649063,
+    "volPerAttempt": null
+   }
+  },
+  "rhodochrosite": {
+   "resource": "Mn",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 10127,
+    "blocksB": 1204.0,
+    "attemptsB": 646.1470760009252,
+    "earthAttempts": 0.13854978744659793,
+    "xSameRocks": 7.664900970197004,
+    "xVanilla": 11.273449518686597,
+    "volPerAttempt": 55.32235820391521
+   },
+   "noEvidence": {
+    "sites": 152,
+    "chunks": 1640,
+    "blocksE": 8879,
+    "blocksB": 1781.0,
+    "attemptsB": 848.2353178295307,
+    "earthAttempts": 0.12129020108209045,
+    "xSameRocks": 4.8766575469146956,
+    "xVanilla": 8.082114526529956,
+    "volPerAttempt": 40.206525369795735
+   },
+   "hotspot": null
+  },
+  "saltpeter": {
+   "resource": "N",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 8587,
+    "blocksB": 28117.0,
+    "attemptsB": 14080.5,
+    "earthAttempts": 0.12908259940338526,
+    "xSameRocks": 0.3054024255788313,
+    "xVanilla": 0.345615085933946,
+    "volPerAttempt": 2.365945735446833
+   },
+   "noEvidence": {
+    "sites": 157,
+    "chunks": 1685,
+    "blocksE": 10846,
+    "blocksB": 35739.0,
+    "attemptsB": 17692.5,
+    "earthAttempts": 0.12943520365995895,
+    "xSameRocks": 0.3034779932286858,
+    "xVanilla": 0.34741590809619227,
+    "volPerAttempt": 2.3446325624515345
+   },
+   "hotspot": null
+  },
+  "sphalerite": {
+   "resource": "Zn",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 23714,
+    "blocksB": 52746.0,
+    "attemptsB": 2471.544175312738,
+    "earthAttempts": 0.2155634625669779,
+    "xSameRocks": 0.6268512488741186,
+    "xVanilla": 0.616915977274935,
+    "volPerAttempt": 2.9079661340072835
+   },
+   "noEvidence": {
+    "sites": 133,
+    "chunks": 1469,
+    "blocksE": 17425,
+    "blocksB": 56856.0,
+    "attemptsB": 2665.3677088441327,
+    "earthAttempts": 0.14525738150221737,
+    "xSameRocks": 0.42066989335176325,
+    "xVanilla": 0.4138099903210418,
+    "volPerAttempt": 2.8960310932311666
+   },
+   "hotspot": {
+    "sites": 21,
+    "chunks": 189,
+    "blocksE": 19236,
+    "blocksB": 6940.0,
+    "attemptsB": 312.7205964876339,
+    "earthAttempts": 1.2283459405853603,
+    "xSameRocks": 3.4694416716989287,
+    "xVanilla": 3.5506097766042095,
+    "volPerAttempt": 2.8244825476816318
+   }
+  },
+  "sulfur": {
+   "resource": "S",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 28232,
+    "blocksB": 9559.0,
+    "attemptsB": 1765.9412219189107,
+    "earthAttempts": 0.1594497517290975,
+    "xSameRocks": 2.451912767551071,
+    "xVanilla": 1.5915480581175323,
+    "volPerAttempt": 15.377338258367624
+   },
+   "noEvidence": {
+    "sites": 150,
+    "chunks": 1622,
+    "blocksE": 22981,
+    "blocksB": 9520.0,
+    "attemptsB": 1716.8823978770524,
+    "earthAttempts": 0.13286076657216842,
+    "xSameRocks": 1.610831217308152,
+    "xVanilla": 1.0710875282350123,
+    "volPerAttempt": 12.124205353227188
+   },
+   "hotspot": {
+    "sites": 19,
+    "chunks": 211,
+    "blocksE": 88422,
+    "blocksB": 1119.0,
+    "attemptsB": 433.76471622730605,
+    "earthAttempts": 1.495824590030347,
+    "xSameRocks": 102.40717343151705,
+    "xVanilla": 31.67997047340965,
+    "volPerAttempt": 68.46202028904969
+   }
+  },
+  "sylvite": {
+   "resource": "K",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 210,
+    "blocksB": 1401.0,
+    "attemptsB": 0.0,
+    "earthAttempts": null,
+    "xSameRocks": null,
+    "xVanilla": 0.12119603767386478,
+    "volPerAttempt": null
+   },
+   "noEvidence": {
+    "sites": 142,
+    "chunks": 1550,
+    "blocksE": 121,
+    "blocksB": 2853.0,
+    "attemptsB": 0.0,
+    "earthAttempts": null,
+    "xSameRocks": null,
+    "xVanilla": 0.06041594552687856,
+    "volPerAttempt": null
+   },
+   "hotspot": {
+    "sites": 36,
+    "chunks": 324,
+    "blocksE": 1053,
+    "blocksB": 379.0,
+    "attemptsB": 0.0,
+    "earthAttempts": null,
+    "xSameRocks": null,
+    "xVanilla": 2.5152506247243864,
+    "volPerAttempt": null
+   }
+  },
+  "uranium": {
+   "resource": "U",
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 9508,
+    "blocksB": 0.0,
+    "attemptsB": 0.0,
+    "earthAttempts": 0.15049825881095868,
+    "xSameRocks": null,
+    "xVanilla": null,
+    "volPerAttempt": null
+   },
+   "noEvidence": {
+    "sites": 147,
+    "chunks": 1595,
+    "blocksE": 11048,
+    "blocksB": 0.0,
+    "attemptsB": 0.0,
+    "earthAttempts": 0.13374005695487512,
+    "xSameRocks": null,
+    "xVanilla": null,
+    "volPerAttempt": null
+   },
+   "hotspot": {
+    "sites": 19,
+    "chunks": 211,
+    "blocksE": 8499,
+    "blocksB": 0.0,
+    "attemptsB": 0.0,
+    "earthAttempts": 1.5455286759920863,
+    "xSameRocks": null,
+    "xVanilla": null,
+    "volPerAttempt": null
+   }
+  }
+ },
+ "resources": {
+  "Sn": {
+   "noEvidence": {
+    "sites": 134,
+    "chunks": 1478,
+    "blocksE": 32640,
+    "blocksB": 31308,
+    "perChunkE": 22.083897158322056,
+    "vanillaPerChunk": 28.060931138200523,
+    "xVanilla": 0.7869980169067989,
+    "xSameRocks": 0.884367989952415,
+    "earthAttempts": 0.249389617892149,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 33130,
+    "blocksB": 35908,
+    "perChunkE": 24.70544369873229,
+    "vanillaPerChunk": 28.060931138200523,
+    "xVanilla": 0.8804213793568572,
+    "xSameRocks": 0.963216291870207,
+    "earthAttempts": 0.2786684481540031,
+    "meanHeat": 0.03297802342413476
+   }
+  },
+  "Cu": {
+   "noEvidence": {
+    "sites": 109,
+    "chunks": 1253,
+    "blocksE": 126941,
+    "blocksB": 287731,
+    "perChunkE": 101.3096568236233,
+    "vanillaPerChunk": 240.7815369257895,
+    "xVanilla": 0.42075342701565865,
+    "xSameRocks": 0.40816795734530104,
+    "earthAttempts": 0.14672212755491906,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 252068,
+    "blocksB": 288192,
+    "perChunkE": 187.97017151379566,
+    "vanillaPerChunk": 240.7815369257895,
+    "xVanilla": 0.780666881330396,
+    "xSameRocks": 0.7766596306867508,
+    "earthAttempts": 0.2583036594804423,
+    "meanHeat": 0.12275299381497565
+   }
+  },
+  "Fe": {
+   "noEvidence": {
+    "sites": 137,
+    "chunks": 1505,
+    "blocksE": 139529,
+    "blocksB": 71760,
+    "perChunkE": 92.71029900332226,
+    "vanillaPerChunk": 55.679102911970126,
+    "xVanilla": 1.6650824843550238,
+    "xSameRocks": 1.6189602274331516,
+    "earthAttempts": 0.22553366197061925,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 139552,
+    "blocksB": 76490,
+    "perChunkE": 104.06562266964951,
+    "vanillaPerChunk": 55.679102911970126,
+    "xVanilla": 1.8690247727981453,
+    "xSameRocks": 1.484918083711813,
+    "earthAttempts": 0.2781140397936564,
+    "meanHeat": 0.04729569680221082
+   }
+  },
+  "C_coal": {
+   "noEvidence": {
+    "sites": 142,
+    "chunks": 1550,
+    "blocksE": 233120,
+    "blocksB": 150637,
+    "perChunkE": 150.4,
+    "vanillaPerChunk": 63.51557616231175,
+    "xVanilla": 2.3679230999284058,
+    "xSameRocks": 1.7569558806797625,
+    "earthAttempts": 0.245146482656727,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 218066,
+    "blocksB": 138844,
+    "perChunkE": 162.6144668158091,
+    "vanillaPerChunk": 63.51557616231175,
+    "xVanilla": 2.56022973640755,
+    "xSameRocks": 1.9922238393739502,
+    "earthAttempts": 0.2755596456214638,
+    "meanHeat": 0.041637057507566785
+   }
+  },
+  "diamond": {
+   "noEvidence": {
+    "sites": 154,
+    "chunks": 1658,
+    "blocksE": 0,
+    "blocksB": 0,
+    "perChunkE": 0.0,
+    "vanillaPerChunk": 0.0003967535735756371,
+    "xVanilla": 0.0,
+    "xSameRocks": null,
+    "earthAttempts": 0.1168897384579354,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 0,
+    "blocksB": 0,
+    "perChunkE": 0.0,
+    "vanillaPerChunk": 0.0003967535735756371,
+    "xVanilla": 0.0,
+    "xSameRocks": null,
+    "earthAttempts": 0.10765944859767226,
+    "meanHeat": 0.008764311093564943
+   }
+  },
+  "Au": {
+   "noEvidence": {
+    "sites": 119,
+    "chunks": 1343,
+    "blocksE": 1067,
+    "blocksB": 3961,
+    "perChunkE": 0.7944899478778853,
+    "vanillaPerChunk": 2.107122507122507,
+    "xVanilla": 0.37704971836822304,
+    "xSameRocks": null,
+    "earthAttempts": null,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 2654,
+    "blocksB": 4047,
+    "perChunkE": 1.9791200596569725,
+    "vanillaPerChunk": 2.107122507122507,
+    "xVanilla": 0.939252489101673,
+    "xSameRocks": null,
+    "earthAttempts": null,
+    "meanHeat": 0.060823792604290036
+   }
+  },
+  "NaCl": {
+   "noEvidence": {
+    "sites": 139,
+    "chunks": 1523,
+    "blocksE": 12355,
+    "blocksB": 350228,
+    "perChunkE": 8.112278397898883,
+    "vanillaPerChunk": 137.33887785951853,
+    "xVanilla": 0.059067603611824955,
+    "xSameRocks": 0.035147051566061446,
+    "earthAttempts": 0.12921531524678567,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 14630,
+    "blocksB": 194819,
+    "perChunkE": 10.909768829231917,
+    "vanillaPerChunk": 137.33887785951853,
+    "xVanilla": 0.07943685720507578,
+    "xSameRocks": 0.07293651448997072,
+    "earthAttempts": 0.2026477487074341,
+    "meanHeat": 0.050796157389130146
+   }
+  },
+  "K": {
+   "noEvidence": {
+    "sites": 142,
+    "chunks": 1550,
+    "blocksE": 121,
+    "blocksB": 2853,
+    "perChunkE": 0.07806451612903226,
+    "vanillaPerChunk": 1.2921177587844255,
+    "xVanilla": 0.06041594552687856,
+    "xSameRocks": null,
+    "earthAttempts": null,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 210,
+    "blocksB": 1401,
+    "perChunkE": 0.15659955257270694,
+    "vanillaPerChunk": 1.2921177587844255,
+    "xVanilla": 0.12119603767386478,
+    "xSameRocks": null,
+    "earthAttempts": null,
+    "meanHeat": 0.04074220292143703
+   }
+  },
+  "Pb": {
+   "noEvidence": {
+    "sites": 132,
+    "chunks": 1460,
+    "blocksE": 19967,
+    "blocksB": 41636,
+    "perChunkE": 13.676027397260274,
+    "vanillaPerChunk": 11.42139641239239,
+    "xVanilla": 1.1974041442447068,
+    "xSameRocks": 0.7677645554389991,
+    "earthAttempts": 0.12239584194433474,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 31932,
+    "blocksB": 19574,
+    "perChunkE": 23.812080536912752,
+    "vanillaPerChunk": 11.42139641239239,
+    "xVanilla": 2.0848659548386115,
+    "xSameRocks": 1.851147681421326,
+    "earthAttempts": 0.23177149906180716,
+    "meanHeat": 0.05179628898539282
+   }
+  },
+  "Ni": {
+   "noEvidence": {
+    "sites": 147,
+    "chunks": 1595,
+    "blocksE": 23410,
+    "blocksB": 49295,
+    "perChunkE": 14.677115987460816,
+    "vanillaPerChunk": 33.91161948663264,
+    "xVanilla": 0.4328049267374646,
+    "xSameRocks": 0.45864324266572515,
+    "earthAttempts": 0.13080894403831067,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 25335,
+    "blocksB": 50820,
+    "perChunkE": 18.892617449664428,
+    "vanillaPerChunk": 33.91161948663264,
+    "xVanilla": 0.5571133946319362,
+    "xSameRocks": 0.5970029169171562,
+    "earthAttempts": 0.15258241756947039,
+    "meanHeat": 0.024976970654033426
+   }
+  },
+  "Cr": {
+   "noEvidence": {
+    "sites": 150,
+    "chunks": 1622,
+    "blocksE": 6475,
+    "blocksB": 9946,
+    "perChunkE": 3.991985203452528,
+    "vanillaPerChunk": 11.458691130690493,
+    "xVanilla": 0.34838055742340035,
+    "xSameRocks": 0.36866547999886873,
+    "earthAttempts": 0.12829237071702668,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 6325,
+    "blocksB": 9851,
+    "perChunkE": 4.716629381058911,
+    "vanillaPerChunk": 11.458691130690493,
+    "xVanilla": 0.41162025638566013,
+    "xSameRocks": 0.43873460620869925,
+    "earthAttempts": 0.1555830604162301,
+    "meanHeat": 0.019871035662587182
+   }
+  },
+  "lapis": {
+   "noEvidence": {
+    "sites": 157,
+    "chunks": 1685,
+    "blocksE": 1360,
+    "blocksB": 157,
+    "perChunkE": 0.8071216617210683,
+    "vanillaPerChunk": 0.07319553929104246,
+    "xVanilla": 11.026924175143586,
+    "xSameRocks": 8.81938935424399,
+    "earthAttempts": 0.10903997111639932,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 1360,
+    "blocksB": 74,
+    "perChunkE": 1.0141685309470545,
+    "vanillaPerChunk": 0.07319553929104246,
+    "xVanilla": 13.855605693599509,
+    "xSameRocks": 17.369171227823287,
+    "earthAttempts": 0.1130173586045501,
+    "meanHeat": 0.0
+   }
+  },
+  "S": {
+   "noEvidence": {
+    "sites": 150,
+    "chunks": 1622,
+    "blocksE": 22981,
+    "blocksB": 9520,
+    "perChunkE": 14.168310727496918,
+    "vanillaPerChunk": 13.227967233307362,
+    "xVanilla": 1.0710875282350123,
+    "xSameRocks": 1.610831217308152,
+    "earthAttempts": 0.13286076657216842,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 28232,
+    "blocksB": 9559,
+    "perChunkE": 21.052945563012678,
+    "vanillaPerChunk": 13.227967233307362,
+    "xVanilla": 1.5915480581175323,
+    "xSameRocks": 2.451912767551071,
+    "earthAttempts": 0.1594497517290975,
+    "meanHeat": 0.017949730227661536
+   }
+  },
+  "P": {
+   "noEvidence": {
+    "sites": 145,
+    "chunks": 1577,
+    "blocksE": 4988,
+    "blocksB": 304,
+    "perChunkE": 3.1629676601141408,
+    "vanillaPerChunk": 0.017942009880462975,
+    "xVanilla": 176.2883690950528,
+    "xSameRocks": 18.550132453842618,
+    "earthAttempts": 0.13526445392817285,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 5092,
+    "blocksB": 304,
+    "perChunkE": 3.797166293810589,
+    "vanillaPerChunk": 0.017942009880462975,
+    "xVanilla": 211.63550344185893,
+    "xSameRocks": 17.12044602755306,
+    "earthAttempts": 0.17766642996980742,
+    "meanHeat": 0.03539939465719173
+   }
+  },
+  "Hg": {
+   "noEvidence": {
+    "sites": 156,
+    "chunks": 1676,
+    "blocksE": 7544,
+    "blocksB": 21068,
+    "perChunkE": 4.501193317422435,
+    "vanillaPerChunk": 9.632530901959797,
+    "xVanilla": 0.46729082556139423,
+    "xSameRocks": 0.5074494344549768,
+    "earthAttempts": 0.12452992859176788,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 6528,
+    "blocksB": 16869,
+    "perChunkE": 4.868008948545861,
+    "vanillaPerChunk": 9.632530901959797,
+    "xVanilla": 0.5053717447774224,
+    "xSameRocks": 0.5327863380481183,
+    "earthAttempts": 0.12865564413306618,
+    "meanHeat": 0.0012106856165284906
+   }
+  },
+  "B": {
+   "noEvidence": {
+    "sites": 156,
+    "chunks": 1676,
+    "blocksE": 20867,
+    "blocksB": 12088,
+    "perChunkE": 12.450477326968974,
+    "vanillaPerChunk": 9.199226305320504,
+    "xVanilla": 1.353426572381208,
+    "xSameRocks": 1.722287647515804,
+    "earthAttempts": 0.12743061233211034,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 18031,
+    "blocksB": 5357,
+    "perChunkE": 13.445935868754662,
+    "vanillaPerChunk": 9.199226305320504,
+    "xVanilla": 1.4616376880497017,
+    "xSameRocks": 3.064466233872015,
+    "earthAttempts": 0.13096081319293715,
+    "meanHeat": 0.004026845637583892
+   }
+  },
+  "emerald": {
+   "noEvidence": {
+    "sites": 157,
+    "chunks": 1685,
+    "blocksE": 910,
+    "blocksB": 1207,
+    "perChunkE": 0.5400593471810089,
+    "vanillaPerChunk": 1.1146202196899353,
+    "xVanilla": 0.484523192420861,
+    "xSameRocks": 0.6175671781123497,
+    "earthAttempts": 0.12874357121420665,
+    "meanHeat": 0.0
+   },
+   "landAverage": {
+    "sites": 149,
+    "chunks": 1341,
+    "blocksE": 795,
+    "blocksB": 946,
+    "perChunkE": 0.5928411633109619,
+    "vanillaPerChunk": 1.1146202196899353,
+    "xVanilla": 0.5318772733872335,
+    "xSameRocks": 0.757735324471852,
+    "earthAttempts": 0.11598075264435875,
+    "meanHeat": 0.0
+   }
+  }
+ },
+ "hotspots": {
+  "cornwall-Sn": {
+   "resource": "Sn",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 15433,
+    "blocksB": 743,
+    "perChunkE": 190.53086419753086,
+    "vanillaPerChunk": 28.060931138200523,
+    "xVanilla": 6.789898141981226,
+    "xSameRocks": 15.08544519757344,
+    "earthAttempts": 2.36785496611605,
+    "meanHeat": 0.9490196078431372
+   },
+   "fam": {
+    "cassiterite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 15433,
+     "blocksB": 743.0,
+     "attemptsB": 44.78697177891264,
+     "earthAttempts": 2.36785496611605,
+     "xSameRocks": 15.08544519757344,
+     "xVanilla": 6.789898141981226,
+     "volPerAttempt": 6.3709329386494575
+    }
+   }
+  },
+  "chuquicamata-Cu": {
+   "resource": "Cu",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 57987,
+    "blocksB": 9735,
+    "perChunkE": 715.8888888888889,
+    "vanillaPerChunk": 240.7815369257895,
+    "xVanilla": 2.9731884679743144,
+    "xSameRocks": 3.3772336787467947,
+    "earthAttempts": 0.9678159955489201,
+    "meanHeat": 0.8352941176470589
+   },
+   "fam": {
+    "nativecopper": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 57987,
+     "blocksB": 9735.0,
+     "attemptsB": 126.92588524287567,
+     "earthAttempts": 1.0788517435678378,
+     "xSameRocks": 3.3772336787467947,
+     "xVanilla": 2.983146270558838,
+     "volPerAttempt": 3.1303964598305676
+    },
+    "malachite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 0,
+     "blocksB": 0.0,
+     "attemptsB": 43.29411892220378,
+     "earthAttempts": 0.6776268243079908,
+     "xSameRocks": null,
+     "xVanilla": 0.0,
+     "volPerAttempt": null
+    }
+   }
+  },
+  "escondida-Cu": {
+   "resource": "Cu",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 25266,
+    "blocksB": 340,
+    "perChunkE": 311.9259259259259,
+    "vanillaPerChunk": 240.7815369257895,
+    "xVanilla": 1.2954727754813842,
+    "xSameRocks": 3.2265623031700392,
+    "earthAttempts": 0.5429261166849533,
+    "meanHeat": 0.9490196078431372
+   },
+   "fam": {
+    "nativecopper": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 25266,
+     "blocksB": 340.0,
+     "attemptsB": 9.71999978274107,
+     "earthAttempts": 0.5352692661544577,
+     "xSameRocks": 3.2265623031700392,
+     "xVanilla": 1.2998115727997586,
+     "volPerAttempt": 6.027923714639315
+    },
+    "malachite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 0,
+     "blocksB": 0.0,
+     "attemptsB": 157.17647586017847,
+     "earthAttempts": 0.562937105482738,
+     "xSameRocks": null,
+     "xVanilla": 0.0,
+     "volPerAttempt": null
+    }
+   }
+  },
+  "pilbara-Fe": {
+   "resource": "Fe",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 15514,
+    "blocksB": 2136,
+    "perChunkE": 191.53086419753086,
+    "vanillaPerChunk": 55.679102911970126,
+    "xVanilla": 3.4399057129269006,
+    "xSameRocks": 2.394139701262019,
+    "earthAttempts": 0.9542474340794661,
+    "meanHeat": 0.8169934640522876
+   },
+   "fam": {
+    "limonite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 0,
+     "blocksB": 0.0,
+     "attemptsB": 0.03294117779197063,
+     "earthAttempts": 1.026249679579392,
+     "xSameRocks": null,
+     "xVanilla": 0.0,
+     "volPerAttempt": null
+    },
+    "hematite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 8022,
+     "blocksB": 0.0,
+     "attemptsB": 8.323529645917006,
+     "earthAttempts": 0.7436612529456539,
+     "xSameRocks": null,
+     "xVanilla": 2.416909170554277,
+     "volPerAttempt": null
+    },
+    "magnetite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 7492,
+     "blocksB": 2136.0,
+     "attemptsB": 0.8470588794128759,
+     "earthAttempts": 1.1132184146360171,
+     "xSameRocks": 1.1561747223059846,
+     "xVanilla": 6.76562442198145,
+     "volPerAttempt": 1.0385874928991476
+    }
+   }
+  },
+  "ruhr-coal": {
+   "resource": "C_coal",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 59522,
+    "blocksB": 59071,
+    "perChunkE": 734.8395061728395,
+    "vanillaPerChunk": 63.51557616231175,
+    "xVanilla": 11.569437775310165,
+    "xSameRocks": 6.33316392754183,
+    "earthAttempts": 1.0024653066910618,
+    "meanHeat": 0.8509803921568627
+   },
+   "fam": {
+    "lignite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 23166,
+     "blocksB": 58835.0,
+     "attemptsB": 442.5411852132529,
+     "earthAttempts": 0.7051959266549663,
+     "xSameRocks": 2.5428082215538144,
+     "xVanilla": 6.062271849619361,
+     "volPerAttempt": 3.6058180789775642
+    },
+    "bituminouscoal": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 35109,
+     "blocksB": 236.0,
+     "attemptsB": 49.123530903831124,
+     "earthAttempts": 1.4516767566158773,
+     "xSameRocks": 121.88004259761406,
+     "xVanilla": 29.404138509261834,
+     "volPerAttempt": 83.95811398243961
+    },
+    "anthracite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 1247,
+     "blocksB": 0.0,
+     "attemptsB": 0.0,
+     "earthAttempts": 0.7052930283767691,
+     "xSameRocks": null,
+     "xVanilla": 9.636309523320705,
+     "volPerAttempt": null
+    }
+   }
+  },
+  "kimberley-diamond": {
+   "resource": "diamond",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 0,
+    "blocksB": 0,
+    "perChunkE": 0.0,
+    "vanillaPerChunk": 0.0003967535735756371,
+    "xVanilla": 0.0,
+    "xSameRocks": null,
+    "earthAttempts": 1.0155990661735368,
+    "meanHeat": 0.9490196078431372
+   },
+   "fam": {
+    "diamond": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 0,
+     "blocksB": 0.0,
+     "attemptsB": 0.0,
+     "earthAttempts": 1.0155990661735368,
+     "xSameRocks": null,
+     "xVanilla": 0.0,
+     "volPerAttempt": null
+    }
+   }
+  },
+  "witwatersrand-Au": {
+   "resource": "Au",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 445,
+    "blocksB": 1379,
+    "perChunkE": 5.493827160493828,
+    "vanillaPerChunk": 2.107122507122507,
+    "xVanilla": 2.6072651883901212,
+    "xSameRocks": null,
+    "earthAttempts": null,
+    "meanHeat": 0.9490196078431372
+   },
+   "fam": {
+    "quartz_nativegold": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 445,
+     "blocksB": 1379.0,
+     "attemptsB": 0.0,
+     "earthAttempts": null,
+     "xSameRocks": null,
+     "xVanilla": 2.6072651883901212,
+     "volPerAttempt": null
+    }
+   }
+  },
+  "gulf-salt": {
+   "resource": "NaCl",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 8730,
+    "blocksB": 0,
+    "perChunkE": 107.77777777777777,
+    "vanillaPerChunk": 137.33887785951853,
+    "xVanilla": 0.7847579611653862,
+    "xSameRocks": null,
+    "earthAttempts": 0.8037343631870701,
+    "meanHeat": 0.6980392156862745
+   },
+   "fam": {
+    "halite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 8730,
+     "blocksB": 0.0,
+     "attemptsB": 9.307941264830365,
+     "earthAttempts": 0.8037343631870701,
+     "xSameRocks": null,
+     "xVanilla": 0.7847579611653862,
+     "volPerAttempt": null
+    }
+   }
+  },
+  "zechstein-salt": {
+   "resource": "NaCl",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 8109,
+    "blocksB": 33956,
+    "perChunkE": 100.11111111111111,
+    "vanillaPerChunk": 137.33887785951853,
+    "xVanilla": 0.7289349721752713,
+    "xSameRocks": 0.2619005362330978,
+    "earthAttempts": 1.4590884892978586,
+    "meanHeat": 0.9490196078431372
+   },
+   "fam": {
+    "halite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 8109,
+     "blocksB": 33956.0,
+     "attemptsB": 12.145588504901873,
+     "earthAttempts": 1.4590884892978586,
+     "xSameRocks": 0.2619005362330978,
+     "xVanilla": 0.7289349721752713,
+     "volPerAttempt": 0.17949599229525096
+    }
+   }
+  },
+  "saskatchewan-potash": {
+   "resource": "K",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 140,
+    "blocksB": 0,
+    "perChunkE": 1.728395061728395,
+    "vanillaPerChunk": 1.2921177587844255,
+    "xVanilla": 1.3376451565485814,
+    "xSameRocks": null,
+    "earthAttempts": null,
+    "meanHeat": 0.9490196078431372
+   },
+   "fam": {
+    "sylvite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 140,
+     "blocksB": 0.0,
+     "attemptsB": 0.0,
+     "earthAttempts": null,
+     "xSameRocks": null,
+     "xVanilla": 1.3376451565485814,
+     "volPerAttempt": null
+    }
+   }
+  },
+  "brokenhill-PbZn": {
+   "resource": "Pb",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 0,
+    "blocksB": 0,
+    "perChunkE": 0.0,
+    "vanillaPerChunk": 11.42139641239239,
+    "xVanilla": 0.0,
+    "xSameRocks": null,
+    "earthAttempts": 1.0690125032102111,
+    "meanHeat": 0.9490196078431372
+   },
+   "fam": {
+    "galena": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 0,
+     "blocksB": 0.0,
+     "attemptsB": 1512.0000299066305,
+     "earthAttempts": 1.0690125032102111,
+     "xSameRocks": null,
+     "xVanilla": 0.0,
+     "volPerAttempt": null
+    }
+   }
+  },
+  "sudbury-Ni": {
+   "resource": "Ni",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 10882,
+    "blocksB": 0,
+    "perChunkE": 134.34567901234567,
+    "vanillaPerChunk": 33.91161948663264,
+    "xVanilla": 3.9616414976967516,
+    "xSameRocks": null,
+    "earthAttempts": 1.2989707087884443,
+    "meanHeat": 0.9490196078431372
+   },
+   "fam": {
+    "pentlandite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 10882,
+     "blocksB": 0.0,
+     "attemptsB": 0.0,
+     "earthAttempts": 1.2989707087884443,
+     "xSameRocks": null,
+     "xVanilla": 3.9616414976967516,
+     "volPerAttempt": null
+    }
+   }
+  },
+  "bushveld-Cr": {
+   "resource": "Cr",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 4938,
+    "blocksB": 0,
+    "perChunkE": 60.96296296296296,
+    "vanillaPerChunk": 11.458691130690493,
+    "xVanilla": 5.32023791091482,
+    "xSameRocks": null,
+    "earthAttempts": 2.333318816684391,
+    "meanHeat": 0.9490196078431372
+   },
+   "fam": {
+    "chromite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 4938,
+     "blocksB": 0.0,
+     "attemptsB": 0.0,
+     "earthAttempts": 2.333318816684391,
+     "xSameRocks": null,
+     "xVanilla": 5.32023791091482,
+     "volPerAttempt": null
+    }
+   }
+  },
+  "sarsang-lapis": {
+   "resource": "lapis",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 0,
+    "blocksB": 0,
+    "perChunkE": 0.0,
+    "vanillaPerChunk": 0.07319553929104246,
+    "xVanilla": 0.0,
+    "xSameRocks": null,
+    "earthAttempts": 0.6294615394507991,
+    "meanHeat": 0.9490196078431372
+   },
+   "fam": {
+    "lapislazuli": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 0,
+     "blocksB": 0.0,
+     "attemptsB": 192.47059224871919,
+     "earthAttempts": 0.6294615394507991,
+     "xSameRocks": null,
+     "xVanilla": 0.0,
+     "volPerAttempt": null
+    }
+   }
+  },
+  "sicily-S": {
+   "resource": "S",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 28587,
+    "blocksB": 1119,
+    "perChunkE": 352.9259259259259,
+    "vanillaPerChunk": 13.227967233307362,
+    "xVanilla": 26.68028425692468,
+    "xSameRocks": 10.596467997420804,
+    "earthAttempts": 1.172280374341311,
+    "meanHeat": 0.8509803921568627
+   },
+   "fam": {
+    "sulfur": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 28587,
+     "blocksB": 1119.0,
+     "attemptsB": 53.294119290076196,
+     "earthAttempts": 1.172280374341311,
+     "xSameRocks": 10.596467997420804,
+     "xVanilla": 26.68028425692468,
+     "volPerAttempt": 9.03919252540146
+    }
+   }
+  },
+  "khouribga-P": {
+   "resource": "P",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 7177,
+    "blocksB": 0,
+    "perChunkE": 88.60493827160494,
+    "vanillaPerChunk": 0.017942009880462975,
+    "xVanilla": 4938.406503057759,
+    "xSameRocks": null,
+    "earthAttempts": 1.8883971589562067,
+    "meanHeat": 0.9490196078431372
+   },
+   "fam": {
+    "phosphorite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 7177,
+     "blocksB": 0.0,
+     "attemptsB": 1.635294169653207,
+     "earthAttempts": 1.8883971589562067,
+     "xSameRocks": null,
+     "xVanilla": 4938.406503057759,
+     "volPerAttempt": null
+    }
+   }
+  },
+  "almaden-Hg": {
+   "resource": "Hg",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 2822,
+    "blocksB": 1193,
+    "perChunkE": 34.839506172839506,
+    "vanillaPerChunk": 9.632530901959797,
+    "xVanilla": 3.6168590090638792,
+    "xSameRocks": 3.65497809104915,
+    "earthAttempts": 1.0991274929539294,
+    "meanHeat": 0.9490196078431372
+   },
+   "fam": {
+    "cinnabar": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 2822,
+     "blocksB": 1193.0,
+     "attemptsB": 13.235294436570257,
+     "earthAttempts": 1.0991274929539294,
+     "xSameRocks": 3.65497809104915,
+     "xVanilla": 3.6168590090638792,
+     "volPerAttempt": 3.3253449799770864
+    }
+   }
+  },
+  "boron-B": {
+   "resource": "B",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 0,
+    "blocksB": 0,
+    "perChunkE": 0.0,
+    "vanillaPerChunk": 9.199226305320504,
+    "xVanilla": 0.0,
+    "xSameRocks": null,
+    "earthAttempts": 1.4915422756358934,
+    "meanHeat": 0.9490196078431372
+   },
+   "fam": {
+    "borax": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 0,
+     "blocksB": 0.0,
+     "attemptsB": 94.02353117521852,
+     "earthAttempts": 1.8000191958436371,
+     "xSameRocks": null,
+     "xVanilla": 0.0,
+     "volPerAttempt": null
+    },
+    "kernite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 0,
+     "blocksB": 0.0,
+     "attemptsB": 16.388235712889582,
+     "earthAttempts": 0.5661115150126631,
+     "xSameRocks": null,
+     "xVanilla": 0.0,
+     "volPerAttempt": null
+    }
+   }
+  },
+  "kiruna-Fe": {
+   "resource": "Fe",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 28621,
+    "blocksB": 5999,
+    "perChunkE": 353.34567901234567,
+    "vanillaPerChunk": 55.679102911970126,
+    "xVanilla": 6.346109411478717,
+    "xSameRocks": 7.270243528069614,
+    "earthAttempts": 1.3535911104942442,
+    "meanHeat": 0.9490196078431372
+   },
+   "fam": {
+    "limonite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 0,
+     "blocksB": 0.0,
+     "attemptsB": 13.294118159735469,
+     "earthAttempts": 0.7326530701725595,
+     "xSameRocks": null,
+     "xVanilla": 0.0,
+     "volPerAttempt": null
+    },
+    "hematite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 17112,
+     "blocksB": 0.0,
+     "attemptsB": 0.0,
+     "earthAttempts": 2.237369321308207,
+     "xSameRocks": null,
+     "xVanilla": 5.15559084100284,
+     "volPerAttempt": null
+    },
+    "magnetite": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 11509,
+     "blocksB": 5999.0,
+     "attemptsB": 3.9158826307418306,
+     "earthAttempts": 1.5364621999954677,
+     "xSameRocks": 2.9234908900650987,
+     "xVanilla": 10.393162236063068,
+     "volPerAttempt": 1.9027418247410979
+    }
+   }
+  },
+  "colombia-emerald": {
+   "resource": "emerald",
+   "total": {
+    "sites": 9,
+    "chunks": 81,
+    "blocksE": 666,
+    "blocksB": 0,
+    "perChunkE": 8.222222222222221,
+    "vanillaPerChunk": 1.1146202196899353,
+    "xVanilla": 7.376702913669982,
+    "xSameRocks": null,
+    "earthAttempts": 1.2357065987591154,
+    "meanHeat": 0.9490196078431372
+   },
+   "fam": {
+    "emerald": {
+     "sites": 9,
+     "chunks": 81,
+     "blocksE": 666,
+     "blocksB": 0.0,
+     "attemptsB": 793.6000153273344,
+     "earthAttempts": 1.2357065987591154,
+     "xSameRocks": null,
+     "xVanilla": 7.376702913669982,
+     "volPerAttempt": null
+    }
+   }
+  }
+ },
+ "placement": {
+  "aboveSurface": {
+   "anthracite": 0,
+   "bismuthinite": 0,
+   "bituminouscoal": 0,
+   "borax": 0,
+   "cassiterite": 0,
+   "chromite": 0,
+   "clay-fire": 0,
+   "clay-red": 0,
+   "emerald": 0,
+   "flint": 0,
+   "galena": 0,
+   "galena_nativesilver": 0,
+   "halite": 0,
+   "kernite": 0,
+   "lapislazuli": 0,
+   "lignite": 0,
+   "limonite": 0,
+   "magnetite": 0,
+   "malachite": 0,
+   "nativecopper": 0,
+   "olivine": 0,
+   "peat": 0,
+   "phosphorite": 0,
+   "quartz": 0,
+   "quartz_nativegold": 0,
+   "quartz_nativesilver": 0,
+   "rhodochrosite": 0,
+   "saltpeter": 0,
+   "sphalerite": 0,
+   "sulfur": 0,
+   "sylvite": 0,
+   "uranium": 0,
+   "ilmenite": 0,
+   "olivine_peridot": 0,
+   "pentlandite": 0,
+   "cinnabar": 0,
+   "graphite": 0,
+   "hematite": 0,
+   "bauxite": 0,
+   "fluorite": 0,
+   "corundum": 0,
+   "kimberlite": 0,
+   "alum": 0
+  },
+  "inFluid": {
+   "anthracite": 0,
+   "bismuthinite": 0,
+   "bituminouscoal": 2,
+   "borax": 0,
+   "cassiterite": 0,
+   "chromite": 0,
+   "clay-fire": 0,
+   "clay-red": 0,
+   "emerald": 0,
+   "flint": 0,
+   "galena": 0,
+   "galena_nativesilver": 0,
+   "halite": 2,
+   "kernite": 1,
+   "lapislazuli": 0,
+   "lignite": 0,
+   "limonite": 0,
+   "magnetite": 0,
+   "malachite": 1,
+   "nativecopper": 2,
+   "olivine": 0,
+   "peat": 0,
+   "phosphorite": 0,
+   "quartz": 28,
+   "quartz_nativegold": 0,
+   "quartz_nativesilver": 0,
+   "rhodochrosite": 0,
+   "saltpeter": 30,
+   "sphalerite": 0,
+   "sulfur": 1,
+   "sylvite": 0,
+   "uranium": 0,
+   "ilmenite": 0,
+   "olivine_peridot": 0,
+   "pentlandite": 0,
+   "cinnabar": 0,
+   "graphite": 0,
+   "hematite": 0,
+   "bauxite": 0,
+   "fluorite": 1,
+   "corundum": 0,
+   "kimberlite": 1,
+   "alum": 0
+  }
+ },
+ "propickByCode": {
+  "lignite": {
+   "sites": 217,
+   "meanReadingPpt": 0.24090009322261402,
+   "meanPlacedPpt": 0.85875572190953
+  },
+  "bituminouscoal": {
+   "sites": 217,
+   "meanReadingPpt": 0.22257426344126774,
+   "meanPlacedPpt": 0.6607924407226712
+  },
+  "anthracite": {
+   "sites": 217,
+   "meanReadingPpt": 0.036715484160656044,
+   "meanPlacedPpt": 0.105150995692397
+  },
+  "emerald": {
+   "sites": 324,
+   "meanReadingPpt": 0.0012960944830747963,
+   "meanPlacedPpt": 0.003625704111196576
+  },
+  "bismuthinite": {
+   "sites": 349,
+   "meanReadingPpt": 0.06051645519353571,
+   "meanPlacedPpt": 0.06932528867366602
+  },
+  "cassiterite": {
+   "sites": 349,
+   "meanReadingPpt": 0.052079303719435616,
+   "meanPlacedPpt": 0.15446447702054716
+  },
+  "chromite": {
+   "sites": 349,
+   "meanReadingPpt": 0.011988505594611013,
+   "meanPlacedPpt": 0.03185534075577228
+  },
+  "galena": {
+   "sites": 217,
+   "meanReadingPpt": 0.1400387412534325,
+   "meanPlacedPpt": 0.3021096711728426
+  },
+  "silver": {
+   "sites": 349,
+   "meanReadingPpt": 0.05141888191792772,
+   "meanPlacedPpt": 0.040926231252467846
+  },
+  "ilmenite": {
+   "sites": 349,
+   "meanReadingPpt": 0.015355637689098924,
+   "meanPlacedPpt": 0.031301907688174015
+  },
+  "limonite": {
+   "sites": 197,
+   "meanReadingPpt": 0.03281607097289621,
+   "meanPlacedPpt": 0.2307314164982852
+  },
+  "hematite": {
+   "sites": 338,
+   "meanReadingPpt": 0.1413860210278415,
+   "meanPlacedPpt": 0.2826038478610793
+  },
+  "magnetite": {
+   "sites": 268,
+   "meanReadingPpt": 0.05586665840397878,
+   "meanPlacedPpt": 0.22317850944637563
+  },
+  "malachite": {
+   "sites": 123,
+   "meanReadingPpt": 0.05654061479150467,
+   "meanPlacedPpt": 0.32721813204143835
+  },
+  "nativecopper": {
+   "sites": 349,
+   "meanReadingPpt": 0.8181044008933173,
+   "meanPlacedPpt": 1.1651346651470917
+  },
+  "pentlandite": {
+   "sites": 349,
+   "meanReadingPpt": 0.05543773861641705,
+   "meanPlacedPpt": 0.12129834178703579
+  },
+  "rhodochrosite": {
+   "sites": 290,
+   "meanReadingPpt": 0.021792676044511794,
+   "meanPlacedPpt": 0.042386686425869895
+  },
+  "sphalerite": {
+   "sites": 349,
+   "meanReadingPpt": 0.15800628143748177,
+   "meanPlacedPpt": 0.12588624460382314
+  },
+  "alum": {
+   "sites": 217,
+   "meanReadingPpt": 0.0008785980573114534,
+   "meanPlacedPpt": 0.006731079413063428
+  },
+  "borax": {
+   "sites": 217,
+   "meanReadingPpt": 0.025666850607890042,
+   "meanPlacedPpt": 0.09782892176041431
+  },
+  "cinnabar": {
+   "sites": 349,
+   "meanReadingPpt": 0.0069738320835069185,
+   "meanPlacedPpt": 0.025962073372182932
+  },
+  "fluorite": {
+   "sites": 217,
+   "meanReadingPpt": 0.018095249462286155,
+   "meanPlacedPpt": 0.03390372769640192
+  },
+  "halite": {
+   "sites": 217,
+   "meanReadingPpt": 0.8350751178004169,
+   "meanPlacedPpt": 0.39551867766862164
+  },
+  "kernite": {
+   "sites": 217,
+   "meanReadingPpt": 0.010897726321179045,
+   "meanPlacedPpt": 0.028646100516288003
+  },
+  "lapis": {
+   "sites": 123,
+   "meanReadingPpt": 0.0025876877534096758,
+   "meanPlacedPpt": 0.028362696121247685
+  },
+  "phosphorite": {
+   "sites": 217,
+   "meanReadingPpt": 0.016595318491183345,
+   "meanPlacedPpt": 0.04244616531234395
+  },
+  "gold": {
+   "sites": 349,
+   "meanReadingPpt": 0.01661805949712631,
+   "meanPlacedPpt": 0.013186071017333401
+  },
+  "sulfur": {
+   "sites": 217,
+   "meanReadingPpt": 0.12185514028053672,
+   "meanPlacedPpt": 0.34209500074887766
+  },
+  "uranium": {
+   "sites": 306,
+   "meanReadingPpt": 0.008339035073140854,
+   "meanPlacedPpt": 0.04471318102315367
+  },
+  "earth-bauxite": {
+   "sites": 210,
+   "meanReadingPpt": 0.001984528189370683,
+   "meanPlacedPpt": 0.05332340499201377
+  },
+  "peridot": {
+   "sites": 82,
+   "meanReadingPpt": 0.011630878333897072,
+   "meanPlacedPpt": 0.011435753012839923
+  },
+  "corundum": {
+   "sites": 227,
+   "meanReadingPpt": 0.0004327752332378633,
+   "meanPlacedPpt": 0.0025237150852922413
+  },
+  "graphite": {
+   "sites": 170,
+   "meanReadingPpt": 0.039808879565714314,
+   "meanPlacedPpt": 0.12238106481300949
+  },
+  "diamond": {
+   "sites": 1,
+   "meanReadingPpt": 0.0005640116623622059,
+   "meanPlacedPpt": 0.0
+  }
+ }
+}

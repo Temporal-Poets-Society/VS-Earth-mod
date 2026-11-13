@@ -1,0 +1,453 @@
+{
+  "snapshot_date": "2026-09-29",
+  "errors": [],
+  "passed": true,
+  "files": [
+    {
+      "file": "coal-polygons.geojson",
+      "features": 3918,
+      "valid": 3906,
+      "bounds": [
+        -166.22754443999992,
+        -54.33893966699992,
+        151.99100643344434,
+        82.35585975600003
+      ],
+      "sha256": "89ce937fef3709fd1d4069e0d9d4964b8fe4f52b4c304bb7b3d5ae7d6a1856d4"
+    },
+    {
+      "file": "coal-context-polygons.geojson",
+      "features": 729,
+      "valid": 727,
+      "bounds": [
+        -6.783499340369354,
+        -43.678405540999904,
+        154.20083603500007,
+        58.02252587976849
+      ],
+      "sha256": "b6a1d8a757936df9c2f25f094e389a9aaf13b92d29b7b2bef087d04be4635cf1"
+    },
+    {
+      "file": "coal-supplement-points.geojson",
+      "features": 520,
+      "valid": 520,
+      "bounds": [
+        -91.91004322315804,
+        -42.53409999742338,
+        152.86324402411168,
+        15.64309024810791
+      ],
+      "sha256": "7ec7527816c004ae6c2a244f1add7c78270e3d85bed5c80a9abb6d2b7f859c6e"
+    },
+    {
+      "file": "nrw-halite.geojson",
+      "features": 4,
+      "valid": 4,
+      "bounds": [
+        6.103650209012345,
+        51.441570084674034,
+        9.46162381851141,
+        52.53146848724462
+      ],
+      "sha256": "4c7c6e34c68fd89332cd70e687970c54451ed4c6bb4ec1fe110815b71e5fe392"
+    }
+  ],
+  "invalid_geometries": [
+    {
+      "file": "coal-polygons.geojson",
+      "id": "bgs_coal_2004:Coal Resources For New Technologies/Coal_Resources_For_New_Technologies_GB.gpkg::Coal-bearing strata:70",
+      "reason": "Ring Self-intersection[-2.41421132857667 52.7248607013018]"
+    },
+    {
+      "file": "coal-polygons.geojson",
+      "id": "bgs_coal_2004:Coal Resources For New Technologies/Coal_Resources_For_New_Technologies_GB.gpkg::Coal-bearing strata:113",
+      "reason": "Ring Self-intersection[-2.90718260757389 53.4580351046291]"
+    },
+    {
+      "file": "coal-polygons.geojson",
+      "id": "bgs_coal_2004:Coal Resources For New Technologies/Coal_Resources_For_New_Technologies_GB.gpkg::Coal-bearing strata:135",
+      "reason": "Ring Self-intersection[-2.04446664268856 53.3630319445967]"
+    },
+    {
+      "file": "coal-polygons.geojson",
+      "id": "bgs_coal_2004:Coal Resources For New Technologies/Coal_Resources_For_New_Technologies_GB.gpkg::Coal-bearing strata:169",
+      "reason": "Ring Self-intersection[-3.46309654846145 54.5541002213399]"
+    },
+    {
+      "file": "coal-polygons.geojson",
+      "id": "bgs_coal_2004:Coal Resources For New Technologies/Coal_Resources_For_New_Technologies_GB.gpkg::Coal-bearing strata:583",
+      "reason": "Ring Self-intersection[-4.36916464487997 55.6253047851971]"
+    },
+    {
+      "file": "coal-polygons.geojson",
+      "id": "bgs_coal_2004:Coal Resources For New Technologies/Coal_Resources_For_New_Technologies_GB.gpkg::Coal-bearing strata:607",
+      "reason": "Ring Self-intersection[-3.86764364489555 55.7416671284612]"
+    },
+    {
+      "file": "coal-polygons.geojson",
+      "id": "usgs_americas_2008:Americas_coal/spatial/shape/Americas_coalply.shp:16",
+      "reason": "Ring Self-intersection[-152.974700928 70.56505394]"
+    },
+    {
+      "file": "coal-polygons.geojson",
+      "id": "usgs_americas_2008:Americas_coal/spatial/shape/Americas_coalply.shp:142",
+      "reason": "Ring Self-intersection[-110.256942749 47.0628852840001]"
+    },
+    {
+      "file": "coal-polygons.geojson",
+      "id": "usgs_americas_2008:Americas_coal/spatial/shape/Americas_coalply.shp:688",
+      "reason": "Ring Self-intersection[-84.6670761109999 80.2072544100001]"
+    },
+    {
+      "file": "coal-polygons.geojson",
+      "id": "usgs_americas_2008:Americas_coal/spatial/shape/Americas_coalply.shp:729",
+      "reason": "Ring Self-intersection[-81.9394474029999 78.727918625]"
+    },
+    {
+      "file": "coal-polygons.geojson",
+      "id": "usgs_americas_2008:Americas_coal/spatial/shape/Americas_coalply.shp:745",
+      "reason": "Ring Self-intersection[-92.7865180969999 78.8755130770001]"
+    },
+    {
+      "file": "coal-polygons.geojson",
+      "id": "usgs_us_2012:GIS/Updated Coal Fields/Coal_Fields.shp:94",
+      "reason": "Ring Self-intersection[-110.25617980957 47.0629196166993]"
+    },
+    {
+      "file": "coal-context-polygons.geojson",
+      "id": "bgs_coal_2004:Coal Resources For New Technologies/Coal_Resources_For_New_Technologies_GB.gpkg::Area with technical potential for opencast workings (source Coal Resource Map of Great Britain BGS/Coal Authority 1999):81",
+      "reason": "Ring Self-intersection[-3.46309654205219 54.5541002171519]"
+    },
+    {
+      "file": "coal-context-polygons.geojson",
+      "id": "bgs_coal_2004:Coal Resources For New Technologies/Coal_Resources_For_New_Technologies_GB.gpkg::Area with technical potential for opencast workings (source Coal Resource Map of Great Britain BGS/Coal Authority 1999):316",
+      "reason": "Ring Self-intersection[-4.36916464487997 55.6253047851971]"
+    }
+  ],
+  "invalid_geometry_policy": "Preserved and flagged; consumer must withhold from map/spawn geometry until reviewed.",
+  "coordinate_operations": {
+    "Inverse of British National Grid + OSGB36 to WGS 84 (6) + axis order change (2D)": 1313,
+    "Inverse of Irish Grid + TM65 to WGS 84 (2) + axis order change (2D)": 25,
+    "Provider GeoJSON output requested in WGS84; original source CRS retained in service metadata": 815,
+    "Inverse of UTM zone 33N + ETRS89 to WGS 84 (1) + axis order change (2D)": 289,
+    "Inverse of UTM zone 32N + ETRS89 to WGS 84 (1) + axis order change (2D)": 10,
+    "axis order change (2D) + Indian 1975 to WGS 84 (4) + axis order change (2D)": 313,
+    "axis order change (2D) + Ballpark geographic offset from Beijing 1954 to WGS 84 + axis order change (2D)": 874,
+    "axis order change (2D) + Beijing 1954 to WGS 84 (6) + axis order change (2D)": 8,
+    "axis order change (2D) + Beijing 1954 to WGS 84 (3) + axis order change (2D)": 7,
+    "axis order change (2D) + Beijing 1954 to WGS 84 (5) + axis order change (2D)": 1,
+    "axis order change (2D) + Beijing 1954 to WGS 84 (2) + axis order change (2D)": 10,
+    "axis order change (2D) + Beijing 1954 to WGS 84 (4) + axis order change (2D)": 6,
+    "axis order change (2D) + Null geographic offset from WGS 84 to WGS 84 + axis order change (2D)": 869,
+    "axis order change (2D) + NAD83 to WGS 84 (1) + axis order change (2D)": 602,
+    "axis order change (2D) + GDA94 to WGS 84 (1) + axis order change (2D)": 29
+  },
+  "coordinate_precision_note": "Ballpark operations are explicitly retained; no survey-level precision claimed.",
+  "archive_crc_checks": [
+    {
+      "file": "raw/bgs-coal-shape.zip",
+      "members": 158,
+      "crc_ok": true
+    },
+    {
+      "file": "raw/bgs-coal-gpkg.zip",
+      "members": 4,
+      "crc_ok": true
+    },
+    {
+      "file": "raw/ga-coal-basins.zip",
+      "members": 49,
+      "crc_ok": true
+    },
+    {
+      "file": "raw/saxony-coal400.zip",
+      "members": 65,
+      "crc_ok": true
+    },
+    {
+      "file": "raw/saxony-lignite50.zip",
+      "members": 44,
+      "crc_ok": true
+    },
+    {
+      "file": "raw/nrw500-gpkg.zip",
+      "members": 2,
+      "crc_ok": true
+    },
+    {
+      "file": "raw/china-coal-areas.zip",
+      "members": 8,
+      "crc_ok": true
+    },
+    {
+      "file": "raw/india-bangladesh-coal.zip",
+      "members": 42,
+      "crc_ok": true
+    },
+    {
+      "file": "raw/americas-coal.zip",
+      "members": 39,
+      "crc_ok": true
+    },
+    {
+      "file": "raw/us-coal2012.zip",
+      "members": 914,
+      "crc_ok": true
+    },
+    {
+      "file": "raw/china-coalfields2000.zip",
+      "members": 4,
+      "crc_ok": true
+    }
+  ],
+  "acquisition_hash_checks": [
+    {
+      "file": "raw/bgs-coal-page.html",
+      "matches": true
+    },
+    {
+      "file": "raw/bgs-coal-shape.zip",
+      "matches": true
+    },
+    {
+      "file": "raw/bgs-coal-gpkg.zip",
+      "matches": true
+    },
+    {
+      "file": "raw/pgi-midas-metadata.json",
+      "matches": true
+    },
+    {
+      "file": "raw/pgi-current-layer.json",
+      "matches": true
+    },
+    {
+      "file": "raw/pgi-archive-layer.json",
+      "matches": true
+    },
+    {
+      "file": "raw/ga-coal-basins-metadata.json",
+      "matches": true
+    },
+    {
+      "file": "raw/nsw-hunter-metadata.json",
+      "matches": true
+    },
+    {
+      "file": "raw/ga-coal-basins.zip",
+      "matches": true
+    },
+    {
+      "file": "raw/pgi-commodity-codes.json",
+      "matches": true
+    },
+    {
+      "file": "raw/pgi-data-rights.html",
+      "matches": true
+    },
+    {
+      "file": "raw/pgi-data-attribution.html",
+      "matches": true
+    },
+    {
+      "file": "raw/saxony-coal400.zip",
+      "matches": true
+    },
+    {
+      "file": "raw/saxony-lignite50.zip",
+      "matches": true
+    },
+    {
+      "file": "raw/saxony-page.html",
+      "matches": true
+    },
+    {
+      "file": "raw/ga-aimr-coal32-metadata.json",
+      "matches": true
+    },
+    {
+      "file": "raw/ga-aimr-coal33-metadata.json",
+      "matches": true
+    },
+    {
+      "file": "raw/pgi-current-coal.geojson",
+      "matches": true
+    },
+    {
+      "file": "raw/pgi-current-coal.json",
+      "matches": true
+    },
+    {
+      "file": "raw/pgi-current-coal-count.json",
+      "matches": true
+    },
+    {
+      "file": "raw/pgi-archive-coal.geojson",
+      "matches": true
+    },
+    {
+      "file": "raw/pgi-archive-coal.json",
+      "matches": true
+    },
+    {
+      "file": "raw/pgi-archive-coal-count.json",
+      "matches": true
+    },
+    {
+      "file": "raw/ga-aimr-coal32.geojson",
+      "matches": true
+    },
+    {
+      "file": "raw/ga-aimr-coal33.geojson",
+      "matches": true
+    },
+    {
+      "file": "raw/nrw500-directory.html",
+      "matches": true
+    },
+    {
+      "file": "raw/bgs-coal-report.pdf",
+      "matches": true
+    },
+    {
+      "file": "raw/pgi-wfs-capabilities.xml",
+      "matches": true
+    },
+    {
+      "file": "raw/nrw500-page.html",
+      "matches": true
+    },
+    {
+      "file": "raw/saxony-wfs-capabilities.xml",
+      "matches": true
+    },
+    {
+      "file": "raw/victoria-coal-metadata.json",
+      "matches": true
+    },
+    {
+      "file": "raw/nsw-coal-metadata.json",
+      "matches": true
+    },
+    {
+      "file": "raw/nsw-coal-catalogue.json",
+      "matches": true
+    },
+    {
+      "file": "raw/nrw500-gpkg.zip",
+      "matches": true
+    },
+    {
+      "file": "raw/nsw-coalfields.geojson",
+      "matches": true
+    },
+    {
+      "file": "raw/nsw-coalfields-layer.json",
+      "matches": true
+    },
+    {
+      "file": "raw/victoria-coalfields.geojson",
+      "matches": true
+    },
+    {
+      "file": "raw/victoria-coalfields-schema.xml",
+      "matches": true
+    },
+    {
+      "file": "raw/china-coal-page.html",
+      "matches": true
+    },
+    {
+      "file": "raw/india-coal-page.html",
+      "matches": true
+    },
+    {
+      "file": "raw/pgi-reuse.html",
+      "matches": true
+    },
+    {
+      "file": "raw/pgi-midas-source.html",
+      "matches": true
+    },
+    {
+      "file": "raw/cgs-sa-downloads.html",
+      "matches": true
+    },
+    {
+      "file": "raw/china-downloads.html",
+      "matches": true
+    },
+    {
+      "file": "raw/india-downloads.html",
+      "matches": true
+    },
+    {
+      "file": "raw/india-metadata.html",
+      "matches": true
+    },
+    {
+      "file": "raw/china-coal-areas.zip",
+      "matches": true
+    },
+    {
+      "file": "raw/china-metadata-index.html",
+      "matches": true
+    },
+    {
+      "file": "raw/india-bangladesh-coal.zip",
+      "matches": true
+    },
+    {
+      "file": "raw/americas-page.html",
+      "matches": true
+    },
+    {
+      "file": "raw/us-coal-page.html",
+      "matches": true
+    },
+    {
+      "file": "raw/americas-coal.zip",
+      "matches": true
+    },
+    {
+      "file": "raw/us-coal2012.zip",
+      "matches": true
+    },
+    {
+      "file": "raw/china-coalfields2000.zip",
+      "matches": true
+    },
+    {
+      "file": "raw/china-coalfields2000-metadata.html",
+      "matches": true
+    },
+    {
+      "file": "raw/indonesia-coal-distribution.pdf",
+      "matches": true
+    }
+  ],
+  "response_content_warnings": [
+    {
+      "file": "raw/pgi-data-rights.html",
+      "result": "HTTP response is a WAF/block page, not usable source content"
+    },
+    {
+      "file": "raw/pgi-data-attribution.html",
+      "result": "HTTP response is a WAF/block page, not usable source content"
+    },
+    {
+      "file": "raw/pgi-reuse.html",
+      "result": "HTTP response is a WAF/block page, not usable source content"
+    },
+    {
+      "file": "raw/pgi-midas-source.html",
+      "result": "HTTP response is a WAF/block page, not usable source content"
+    }
+  ],
+  "known_region_rows": 21,
+  "api_count_checks": {
+    "PGI_current": 315,
+    "PGI_archive": 28
+  },
+  "unknown_grade_and_game_generation_checks_passed": true
+}

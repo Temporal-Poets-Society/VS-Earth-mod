@@ -1,0 +1,14 @@
+{
+  "ReportedSites": 14,
+  "FinishedUTC": "2026-10-26T21:45:48.2568654Z",
+  "PackagingErrors": [
+    "26.10.2026 23:44:19 [Error] Failed to find language folder: C:\\Users\\andri\\.codex\\worktrees\\mountain-height-playtest\\Earth\\testruns\\mountain-installed-baseline-world\\Cache\\unpack\\hydrology-0.1.11.zip_baa1f81ca9cd\\assets\\game\\lang\r"
+  ],
+  "OtherErrors": [],
+  "RunPath": "C:\\Users\\andri\\.codex\\worktrees\\mountain-height-playtest\\Earth\\testruns\\mountain-installed-baseline-world",
+  "OriginalEarthSHA256": "3D6CCC7A2F78540A82E8D62EC657B6AFB021DC4547BDDDD405548C71A941136F",
+  "ProcessCompleted": true,
+  "State": "completed",
+  "HydrologyPackagingErrorReproduced": true,
+  "OriginalEarthPackage": "earthmap-0.16.14-rivers.2.zip"
+}

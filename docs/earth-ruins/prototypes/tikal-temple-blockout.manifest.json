@@ -1,0 +1,41 @@
+{
+  "modelId": "tikal-temple-blockout",
+  "title": "Tikal / temple silhouette study",
+  "status": "blockout",
+  "architectureProfile": "earth-ruins-half-v1",
+  "blocksPerMetre": 0.5,
+  "sizeXYZ": [
+    31,
+    25,
+    35
+  ],
+  "groundY": 1,
+  "referenceEnvelopeMetresXYZ": [
+    62,
+    48,
+    70
+  ],
+  "dimensionEvidence": "rough planning envelope; not a survey or approved replica",
+  "axisConvention": "+X east; +Y up; +Z south; local north -Z",
+  "placement": "manual-empty-test-area",
+  "historicalCutoffCE": 1500,
+  "worldgenEnabled": false,
+  "inGameValidated": false,
+  "palette": {
+    "0": "game:air",
+    "1": "game:stonebricks-limestone",
+    "2": "game:stonebricks-granite",
+    "3": "game:stonebricks-travertine"
+  },
+  "notes": [
+    "Tikal-inspired silhouette and rough design envelope, not a replica of a particular temple.",
+    "Includes nine diminishing platform tiers, north stair, small summit room and roof-comb mass.",
+    "Stair uses full-block risers in this massing pass; proper stairs/slabs required before playability approval.",
+    "Final plaza, measured temple plan, vegetation, carving and buried content are pending."
+  ],
+  "voxelCountsByCode": {
+    "game:air": 165,
+    "game:stonebricks-limestone": 10410
+  },
+  "schematicSha256": "818056babe49c9c1f1cb35f2405b3c3edbec5728c85bac8058ef0e91391a1409"
+}

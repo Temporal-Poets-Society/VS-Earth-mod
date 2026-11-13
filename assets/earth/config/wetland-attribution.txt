@@ -1,0 +1,32 @@
+Earth wetland grid (config/wetlands.bin, baked 2026-11-07 by tools/bake_wetlands.py)
+
+Source: Global Lakes and Wetlands Database, version 2 (GLWD v2), combined classes grids (GeoTIFF, 15 arc-seconds).
+Lehner, B., Anand, M., Fluet-Chouinard, E., Tan, F., Aires, F., Allen, G. H., Bousquet, P., Canadell, J. G., Davidson, N.,
+Ding, M., Finlayson, C. M., Gumbricht, T., Hilarides, L., Hugelius, G., Jackson, R. B., Korver, M. C., Liu, L.,
+McIntyre, P. B., Nagy, S., Olefeldt, D., Pavelsky, T. M., Pekel, J.-F., Poulter, B., Prigent, C., Wang, J.,
+Worthington, T. A., Yamazaki, D., Zhang, X., and Thieme, M. (2025): Mapping the world's inland surface waters: an upgrade
+to the Global Lakes and Wetlands Database (GLWD v2). Earth System Science Data 17, 2277-2329.
+https://doi.org/10.5194/essd-17-2277-2025
+Data: https://www.hydrosheds.org/products/glwd (reference information: https://doi.org/10.6084/m9.figshare.28519994)
+(The GLWD v2.0 Technical Documentation of April 2025 also lists Matthews, E. among the authors of this citation.)
+
+Licence: Creative Commons Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/
+The GLWD authors ask that the data are not redistributed whole in their original format; Earth ships only the
+aggregate described below, not the GLWD grids. The data come "as is" and the GLWD authors do not endorse Earth.
+
+Changes made: the per-pixel dominant wetland class (GLWD_v2_0_main_class) and total wetland percentage
+(GLWD_v2_0_area_pct) were combined, each pixel's whole wetland percentage counting for its dominant class, and
+aggregated to the share of each 0.1 degree cell (180 W to 180 E, 84 N to 60 S; sea counts as dry) covered by seven
+groups of GLWD classes, stored as bytes (share x 250):
+  bog          open peatland: 23, 25, 27 (arctic/boreal, temperate, tropical/subtropical peatland, non-forested)
+  peatforest   wooded peatland: 22, 24, 26
+  swampforest  flooded swamp forest: 8, 10, 12, 16 (lacustrine, riverine regularly or seasonally flooded, palustrine
+               regularly flooded; forested)
+  marsh        flooded open marsh and delta: 9, 11, 13, 17 (non-forested), 30 large river delta, 31 other coastal wetland
+  mangrove     28
+  saltmarsh    29
+  damp         seasonally saturated or ephemeral ground: 14, 15, 18, 19, 20, 21, forested or not (GLWD's least certain
+               classes; their wooded or open state is largely today's land use, so Earth reads them as wet ground only)
+Lakes, reservoirs, rivers and streams (1-7), salt pans (32) and rice paddies (33) are left out. Minor classes inside
+mixed 15" pixels are not represented. GLWD v2 maps contemporary conditions; Earth's use of it (for any period) is an
+approximation by Earth, not by the GLWD authors.

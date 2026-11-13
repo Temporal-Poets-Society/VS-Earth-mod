@@ -1,0 +1,47 @@
+{
+ "drop": {
+  "Cu": [
+   "best-guess-districts.geojson"
+  ],
+  "Sn": [
+   "best-guess-districts.geojson",
+   "mrds",
+   "Sn-occurrences.csv.gz"
+  ],
+  "Pb": [
+   "best-guess-districts.geojson"
+  ],
+  "Zn": [
+   "best-guess-districts.geojson"
+  ],
+  "Ag": [
+   "best-guess-districts.geojson"
+  ],
+  "Bi": [
+   "best-guess-districts.geojson",
+   "mrds",
+   "Bi-occurrences.csv.gz"
+  ],
+  "Hg": [
+   "best-guess-districts.geojson",
+   "mrds",
+   "Hg-occurrences.csv.gz"
+  ],
+  "W": [
+   "best-guess-districts.geojson",
+   "mrds",
+   "W-occurrences.csv.gz"
+  ],
+  "Mo": [
+   "best-guess-districts.geojson",
+   "mrds",
+   "Mo-occurrences.csv.gz"
+  ],
+  "Sb": [
+   "best-guess-districts.geojson",
+   "mrds",
+   "Sb-occurrences.csv.gz"
+  ]
+ },
+ "why": "Authored best-guess districts are replaced for these codes by catalogue evidence with real tonnage (evidence.geojson, source \"base-metals catalogue\"); districts the catalogue does not cover are carried over unchanged as source \"best-guess carried (base-metals)\". For the minor metals (Sn, W, Mo, Bi, Hg, Sb) MRDS records are re-stamped per cell with a cap below the district level (source \"base-metals mrds capped\")."
+}

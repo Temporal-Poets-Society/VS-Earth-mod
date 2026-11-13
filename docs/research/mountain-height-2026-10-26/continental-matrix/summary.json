@@ -1,0 +1,223 @@
+{
+  "worlds": 22,
+  "passed": 22,
+  "failed": 0,
+  "sites": 308,
+  "generated_columns": 2838528,
+  "continental_coverage": [
+    "Africa",
+    "Antarctica",
+    "Asia",
+    "Australia",
+    "Europe",
+    "Island control",
+    "Lowland control",
+    "North America",
+    "Oceania",
+    "South America",
+    "Warm highland control"
+  ],
+  "assembly_hashes": [
+    "00754FC478DA9FA8FD851538B0A002879C9E06099EED0B07ABD8E46839720CFC"
+  ],
+  "terrain_seconds_by_case_height": [
+    {
+      "case": "A",
+      "height": 384,
+      "repeat": 1,
+      "total_seconds": 78.75,
+      "site_seconds": 34.3,
+      "save_bytes": 95719424.0,
+      "passed": true
+    },
+    {
+      "case": "B",
+      "height": 384,
+      "repeat": 1,
+      "total_seconds": 78.69,
+      "site_seconds": 34.7,
+      "save_bytes": 95952896.0,
+      "passed": true
+    },
+    {
+      "case": "C",
+      "height": 384,
+      "repeat": 1,
+      "total_seconds": 77.88,
+      "site_seconds": 33.4,
+      "save_bytes": 95326208.0,
+      "passed": true
+    },
+    {
+      "case": "D",
+      "height": 384,
+      "repeat": 1,
+      "total_seconds": 75.67,
+      "site_seconds": 31.4,
+      "save_bytes": 94756864.0,
+      "passed": true
+    },
+    {
+      "case": "E",
+      "height": 384,
+      "repeat": 1,
+      "total_seconds": 75.62,
+      "site_seconds": 31.5,
+      "save_bytes": 93872128.0,
+      "passed": true
+    },
+    {
+      "case": "F",
+      "height": 384,
+      "repeat": 1,
+      "total_seconds": 76.82,
+      "site_seconds": 33.2,
+      "save_bytes": 95383552.0,
+      "passed": true
+    },
+    {
+      "case": "G",
+      "height": 384,
+      "repeat": 1,
+      "total_seconds": 75.13,
+      "site_seconds": 30.8,
+      "save_bytes": 94298112.0,
+      "passed": true
+    },
+    {
+      "case": "H",
+      "height": 384,
+      "repeat": 1,
+      "total_seconds": 75.3,
+      "site_seconds": 31.9,
+      "save_bytes": 94371840.0,
+      "passed": true
+    },
+    {
+      "case": "I",
+      "height": 384,
+      "repeat": 1,
+      "total_seconds": 75.04,
+      "site_seconds": 31.9,
+      "save_bytes": 94322688.0,
+      "passed": true
+    },
+    {
+      "case": "J",
+      "height": 384,
+      "repeat": 1,
+      "total_seconds": 76.41,
+      "site_seconds": 31.6,
+      "save_bytes": 94457856.0,
+      "passed": true
+    },
+    {
+      "case": "K",
+      "height": 384,
+      "repeat": 1,
+      "total_seconds": 77.16,
+      "site_seconds": 32.7,
+      "save_bytes": 94461952.0,
+      "passed": true
+    },
+    {
+      "case": "A",
+      "height": 512,
+      "repeat": 1,
+      "total_seconds": 82.54,
+      "site_seconds": 40.0,
+      "save_bytes": 100872192.0,
+      "passed": true
+    },
+    {
+      "case": "B",
+      "height": 512,
+      "repeat": 1,
+      "total_seconds": 83.25,
+      "site_seconds": 39.1,
+      "save_bytes": 100225024.0,
+      "passed": true
+    },
+    {
+      "case": "C",
+      "height": 512,
+      "repeat": 1,
+      "total_seconds": 81.11,
+      "site_seconds": 37.2,
+      "save_bytes": 99622912.0,
+      "passed": true
+    },
+    {
+      "case": "D",
+      "height": 512,
+      "repeat": 1,
+      "total_seconds": 83.71,
+      "site_seconds": 37.5,
+      "save_bytes": 99176448.0,
+      "passed": true
+    },
+    {
+      "case": "E",
+      "height": 512,
+      "repeat": 1,
+      "total_seconds": 79.03,
+      "site_seconds": 35.1,
+      "save_bytes": 97943552.0,
+      "passed": true
+    },
+    {
+      "case": "F",
+      "height": 512,
+      "repeat": 1,
+      "total_seconds": 80.88,
+      "site_seconds": 36.8,
+      "save_bytes": 99393536.0,
+      "passed": true
+    },
+    {
+      "case": "G",
+      "height": 512,
+      "repeat": 1,
+      "total_seconds": 79.21,
+      "site_seconds": 35.7,
+      "save_bytes": 98701312.0,
+      "passed": true
+    },
+    {
+      "case": "H",
+      "height": 512,
+      "repeat": 1,
+      "total_seconds": 79.51,
+      "site_seconds": 36.1,
+      "save_bytes": 98402304.0,
+      "passed": true
+    },
+    {
+      "case": "I",
+      "height": 512,
+      "repeat": 1,
+      "total_seconds": 81.09,
+      "site_seconds": 36.8,
+      "save_bytes": 98484224.0,
+      "passed": true
+    },
+    {
+      "case": "J",
+      "height": 512,
+      "repeat": 1,
+      "total_seconds": 80.77,
+      "site_seconds": 36.9,
+      "save_bytes": 98721792.0,
+      "passed": true
+    },
+    {
+      "case": "K",
+      "height": 512,
+      "repeat": 1,
+      "total_seconds": 80.75,
+      "site_seconds": 37.0,
+      "save_bytes": 98811904.0,
+      "passed": true
+    }
+  ]
+}

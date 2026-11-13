@@ -1,0 +1,922 @@
+[
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-poor-chalcopyrite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-chalcopyrite",
+   "quantity": 3
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-medium-chalcopyrite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-chalcopyrite",
+   "quantity": 4
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-rich-chalcopyrite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-chalcopyrite",
+   "quantity": 5
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-bountiful-chalcopyrite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-chalcopyrite",
+   "quantity": 7
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-poor-tetrahedrite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-tetrahedrite",
+   "quantity": 3
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-medium-tetrahedrite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-tetrahedrite",
+   "quantity": 4
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-rich-tetrahedrite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-tetrahedrite",
+   "quantity": 5
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-bountiful-tetrahedrite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-tetrahedrite",
+   "quantity": 7
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-poor-azurite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-azurite",
+   "quantity": 3
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-medium-azurite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-azurite",
+   "quantity": 4
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-rich-azurite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-azurite",
+   "quantity": 5
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-bountiful-azurite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-azurite",
+   "quantity": 7
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-poor-cerussite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-cerussite",
+   "quantity": 3
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-medium-cerussite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-cerussite",
+   "quantity": 4
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-rich-cerussite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-cerussite",
+   "quantity": 5
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-bountiful-cerussite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-cerussite",
+   "quantity": 7
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-poor-vanadinite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-vanadinite",
+   "quantity": 3
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-medium-vanadinite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-vanadinite",
+   "quantity": 4
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-rich-vanadinite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-vanadinite",
+   "quantity": 5
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-bountiful-vanadinite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-vanadinite",
+   "quantity": 7
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-poor-wulfenite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-wulfenite",
+   "quantity": 3
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-medium-wulfenite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-wulfenite",
+   "quantity": 4
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-rich-wulfenite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-wulfenite",
+   "quantity": 5
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-bountiful-wulfenite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-wulfenite",
+   "quantity": 7
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-poor-smithsonite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-smithsonite",
+   "quantity": 3
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-medium-smithsonite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-smithsonite",
+   "quantity": 4
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-rich-smithsonite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-smithsonite",
+   "quantity": 5
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-bountiful-smithsonite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-smithsonite",
+   "quantity": 7
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-poor-hemimorphite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-hemimorphite",
+   "quantity": 3
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-medium-hemimorphite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-hemimorphite",
+   "quantity": 4
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-rich-hemimorphite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-hemimorphite",
+   "quantity": 5
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-bountiful-hemimorphite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-hemimorphite",
+   "quantity": 7
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-poor-sperrylite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-sperrylite",
+   "quantity": 3
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-medium-sperrylite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-sperrylite",
+   "quantity": 4
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-rich-sperrylite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-sperrylite",
+   "quantity": 5
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-bountiful-sperrylite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:nugget-sperrylite",
+   "quantity": 7
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-poor-wolframite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "game:nugget-wolframite",
+   "quantity": 3
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-medium-wolframite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "game:nugget-wolframite",
+   "quantity": 4
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-rich-wolframite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "game:nugget-wolframite",
+   "quantity": 5
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-bountiful-wolframite"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "game:nugget-wolframite",
+   "quantity": 7
+  }
+ }
+]

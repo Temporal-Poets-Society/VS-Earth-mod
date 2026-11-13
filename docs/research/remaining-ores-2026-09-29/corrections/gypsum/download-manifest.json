@@ -1,0 +1,730 @@
+[
+  {
+    "file": "raw/bgs-brough-memoir.html",
+    "url": "https://webapps.bgs.ac.uk/Memoirs/docs/B01507.html",
+    "sha256": "3595262b27bf5c310ed66d558daed9683908dfaf8feb76b0c5a380df51f559ea",
+    "bytes": 658486,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/bgs-digital-licensing.html",
+    "url": "https://www.bgs.ac.uk/mineralsuk/exploration-and-maps/digital-licensing/",
+    "sha256": "c8f4223c28b97833f1ad759f7eb8ca9514763cd5207f0f8f048cb24931890d61",
+    "bytes": 94069,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/bgs-gypsum-factsheet-page.html",
+    "url": "https://www.bgs.ac.uk/mineralsuk/planning/mineral-planning-factsheets/",
+    "sha256": "947e4943ad58fb863dca5dc38f5d01dacd580b9f81338ae901dd3ff775a157b6",
+    "bytes": 91382,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/bgs-gypsum-native.json",
+    "url": "https://map.bgs.ac.uk/arcgis/rest/services/GeoIndex_Onshore/minerals_wms/MapServer/28/query?where=1%3D1&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "389e5cd2d1d864d2e0ea5a019f942593ab230211fe0ad885dd66c6f6cc2a196b",
+    "bytes": 172,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/bgs-gypsum-wgs84.geojson",
+    "url": "https://map.bgs.ac.uk/arcgis/rest/services/GeoIndex_Onshore/minerals_wms/MapServer/28/query?where=1%3D1&outFields=%2A&returnGeometry=true&f=geojson&outSR=4326",
+    "sha256": "389e5cd2d1d864d2e0ea5a019f942593ab230211fe0ad885dd66c6f6cc2a196b",
+    "bytes": 172,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/bgs-hastings-memoir.html",
+    "url": "https://webapps.bgs.ac.uk/Memoirs/docs/B01704.html",
+    "sha256": "577e9bda7a8756ff779b4e02232cafa9ee94fdab369539b31de7c1270bab0ddb",
+    "bytes": 435287,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/bgs-melton-memoir.html",
+    "url": "https://webapps.bgs.ac.uk/memoirs/docs/B06079.html",
+    "sha256": "a7e2324e803ffa96f3d6e768eefff8c1b3aec44fac346ede21e9e8f462a90e0b",
+    "bytes": 769572,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/bgs-minerals-layers.json",
+    "url": "https://map.bgs.ac.uk/arcgis/rest/services/GeoIndex_Onshore/minerals_wms/MapServer/layers?f=pjson",
+    "sha256": "2b99e1390dc46e2d21e42a0e57df7d3282df216f2602b695469d39bf6d762c8f",
+    "bytes": 595126,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/bgs-minerals-service.json",
+    "url": "https://map.bgs.ac.uk/arcgis/rest/services/GeoIndex_Onshore/minerals_wms/MapServer?f=pjson",
+    "sha256": "f4e938e2f63ab3894b9b575970e3f66f3e6fd5fdf021287f1ccc929cf8d5aab2",
+    "bytes": 15626,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/bgs-penrith-memoir.html",
+    "url": "https://webapps.bgs.ac.uk/Memoirs/docs/B01503.html",
+    "sha256": "b6945297975728c1fdf0bd4ef90c811fba0edcf6d1252580e1f3753b3cd2e4bc",
+    "bytes": 1012676,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/france-idf-catalog.json",
+    "url": "https://www.data.gouv.fr/api/1/datasets/ressources-geologiques-dile-de-france/",
+    "sha256": "ed460403737e9f6986d37457b9cf67471afd643c650b5ddd5f804edd5b2235ec",
+    "bytes": 17354,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/france-idf-resources.zip",
+    "url": "https://atom.geo-ide.developpement-durable.gouv.fr/atomArchive/GetResource?id=408f119c-8d68-4025-9d4d-8f7e345b64cd&dataType=dataset",
+    "sha256": "45f4e908a2c7c876cc350ad1060feeb67243afdfeea58a5231d5ea2d651b0941",
+    "bytes": 13330202,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/germany-gk50-catalog.html",
+    "url": "https://geoportal.lgrb-bw.de/produkt/dgk50",
+    "sha256": "96e9c2aba54cb8aa61af36529c3b010b7c1b75dc941b8eb103f146609ee1cf71",
+    "bytes": 109666,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/germany-gkbw-catalog.html",
+    "url": "https://geoportal.lgrb-bw.de/produkt/dgkbw",
+    "sha256": "518fda8adae0b784b1fd9d5b41bc192d56a78ab16d8bcf1e7c29285d2374f00f",
+    "bytes": 40446,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/germany-gkbw-gpkg.zip",
+    "url": "https://media.lgrb-bw.de/geoportal/data/dGKBW_gpkg.zip",
+    "sha256": "ec45ae178d2e9e2ddd7fd64f660d5f951e4a13a4882b15f036be552cdc1a98aa",
+    "bytes": 47892398,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/germany-lgrb-geology-catalog.html",
+    "url": "https://geoportal.lgrb-bw.de/produktsuche/thema/geologie",
+    "sha256": "1882ba929ed56930529c92719c47c2a4162f67ff0cae00a47a54ceb9114fa268",
+    "bytes": 60924,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/germany-lgrb-min4eu-catalog.html",
+    "url": "https://data.gov.de/suche/daten/min4eu-lgrb-bw-mining-sites-harmonized-dataset",
+    "sha256": "0b1b352dc4c19f4cacba8ef5574c06af43bc0552adf6821511f8493b13ce6fdd",
+    "bytes": 63321,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/germany-lgrb-portal.html",
+    "url": "https://geoportal.lgrb-bw.de/",
+    "sha256": "48d2f0c63c3d06cf7a446dd62333c56de2cf1dfd7c33efcfe911eef20b4a2c61",
+    "bytes": 65018,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/germany-lgrb-wfs-capabilities.xml",
+    "url": "https://services.lgrb-bw.de/m4eu/services/m4eu?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0",
+    "sha256": "f9bcf40860ad1b89cc968f7159ab7b99ef824a2ebf5830888f9563d6954e80ac",
+    "bytes": 44696,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/germany-min4eu-commodity.xml",
+    "url": "https://services.lgrb-bw.de/m4eu/services/m4eu?service=WFS&request=GetFeature&version=2.0.0&typeNames=mr-m4eu:Commodity_Extension",
+    "sha256": "8d5bc1ada3b17cf34db636eb2c841e6fa50dd41e57c3a9c7c13696c4c0ca2255",
+    "bytes": 3199059,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/germany-min4eu-mappedfeatures.xml",
+    "url": "https://services.lgrb-bw.de/m4eu/services/m4eu?service=WFS&request=GetFeature&version=2.0.0&typeNames=ge:MappedFeature",
+    "sha256": "13b13ce5fe86565dc2e1bc749e6c283899d4009b87dfe696ceac7eaf62b83e83",
+    "bytes": 9270229,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/germany-min4eu-occurrence-sample.xml",
+    "url": "https://services.lgrb-bw.de/m4eu/services/m4eu?service=WFS&request=GetFeature&version=2.0.0&typeNames=mr-m4eu:MineralOccurrence_Extension&count=5",
+    "sha256": "19359763aa44bfddc7b0defdaf6b9e736292134f461a0c97be644fee61bc1d14",
+    "bytes": 31643,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/germany-min4eu-occurrences.xml",
+    "url": "https://services.lgrb-bw.de/m4eu/services/m4eu?service=WFS&request=GetFeature&version=2.0.0&typeNames=mr-m4eu:MineralOccurrence_Extension",
+    "sha256": "42247fd0cd99634e580d5537d25e726457a974830958c87a3a740aef1a564087",
+    "bytes": 12264356,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/igme-data-license.pdf",
+    "url": "https://info.igme.es/ISE/doc/LICENCIA_USO_IGME.pdf",
+    "sha256": "4f6b2ccbb4cc90e79426618d903adc9890ee2a4cde2acb3e9cafb79156d4bc02",
+    "bytes": 425659,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/igme-geological-services.json",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica?f=pjson",
+    "sha256": "17eb2b6d8ab168ea32d2d8e2e9eac269cbe231e87b62947a2998be2a63adf436",
+    "bytes": 1985,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/igme-industry-layer.json",
+    "url": "https://mapas.igme.es/gis/rest/services/BasesDatos/IGME_BDMIN_Explotaciones/MapServer/0?f=pjson",
+    "sha256": "c30a6d0f8c396667e158bd4c57dae8706d3a3f8d58dbebdd5c7d8d3939a5df35",
+    "bytes": 464092,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/igme-industry-service.json",
+    "url": "https://mapas.igme.es/gis/rest/services/BasesDatos/IGME_BDMIN_Explotaciones/MapServer?f=pjson",
+    "sha256": "02aea662edab235ac106141d9586a36847b5664e2e76f783051a1f74512ef589",
+    "bytes": 3749,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/latvia-all-wfs-capabilities.xml",
+    "url": "https://geoserver.lvgmc.lv/geoserver/ows?service=WFS&request=GetCapabilities&version=2.0.0",
+    "sha256": "262935b03bb9aa92c866d582ba168be6cafc0b16259ff8a28e8919c875eb322b",
+    "bytes": 97502,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/latvia-commodity.geojson",
+    "url": "https://geoserver.lvgmc.lv/geoserver/mr/ows?service=WFS&request=GetFeature&version=2.0.0&typeNames=mr%3ACommodity&outputFormat=application%2Fjson",
+    "sha256": "949db34b63f9bdfc0cea4ceb7ec90f8cd29589c944c19d82cf78e5709bee7bfb",
+    "bytes": 306602,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/latvia-data-catalog.json",
+    "url": "https://data.gov.lv/dati/api/3/action/package_show?id=valsts-nozmes-dergo-izrakteu-atradnes-wms1",
+    "sha256": "be3188a38964f7eeb19fd855fd5a4bf38541d7977a7f4fa80dd707e884b1872a",
+    "bytes": 7434,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/latvia-dpps.xml",
+    "url": "https://geo-dpps.viss.gov.lv/api/DPPSPackage/client/Valsts_noz_235_t1kDoc/1576b162-8313-4073-9bce-b7d876447673",
+    "sha256": "0f9a9a7af560ddbdd72d978b6ab47351b48607b017d3b87edf9080dbf1b208d2",
+    "bytes": 13716,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/latvia-mines-native.geojson",
+    "url": "https://geoserver.lvgmc.lv/geoserver/mr/ows?service=WFS&request=GetFeature&version=2.0.0&typeNames=mr%3AMR.Mine&outputFormat=application%2Fjson",
+    "sha256": "b964d25f6068671768c8d4d4500aab80a2d8b3e776fb41c2bac08a28909be7ee",
+    "bytes": 492877,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/latvia-occurrence-native.geojson",
+    "url": "https://geoserver.lvgmc.lv/geoserver/mr/ows?service=WFS&request=GetFeature&version=2.0.0&typeNames=mr%3AmrMineralOccurrence&outputFormat=application%2Fjson",
+    "sha256": "09d8d949e6338b8929922288b0b736ea4375c9d13a16561f010629d576b88db3",
+    "bytes": 1689977,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/latvia-occurrence-points-native.geojson",
+    "url": "https://geoserver.lvgmc.lv/geoserver/mr/ows?service=WFS&request=GetFeature&version=2.0.0&typeNames=mr%3AmrMineralOccurrenceP&outputFormat=application%2Fjson",
+    "sha256": "17ffafd40d92ab330851e2c65c97accad14ce1f865c3696d4db5dd7f49b82b27",
+    "bytes": 1616,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/latvia-occurrence-polygons-native.geojson",
+    "url": "https://geoserver.lvgmc.lv/geoserver/mr/ows?service=WFS&request=GetFeature&version=2.0.0&typeNames=mr%3AMR.MineralOccurrence1&outputFormat=application%2Fjson",
+    "sha256": "2682d6de6aa4d8019e8821f70d949572d2144bd583915cb862016655438fe21f",
+    "bytes": 651797,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/latvia-occurrence-schema.xsd",
+    "url": "https://geoserver.lvgmc.lv/geoserver/mr/ows?service=WFS&request=DescribeFeatureType&version=2.0.0&typeNames=mr:mrMineralOccurrence",
+    "sha256": "89deb16a466bf50bc9b43cef6ea76ec5370ef454aa8c0810bd51bfc1562c56d6",
+    "bytes": 12582,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/latvia-state-deposits-law.html",
+    "url": "https://likumi.lv/ta/id/247498-noteikumi-par-valsts-nozimes-derigo-izraktenu-atradnem",
+    "sha256": "a99b949f70a0856721f253122ac5f6b17b9a83ea16c0dcc3168bf0af080cd390",
+    "bytes": 625686,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/latvia-wfs-capabilities.xml",
+    "url": "https://geoserver.lvgmc.lv/geoserver/mr/ows?service=WFS&request=GetCapabilities&version=2.0.0",
+    "sha256": "4dccda179391d9bbc9f0e33ab784e454156c0a91fcf18df7d9bca8068321cec5",
+    "bytes": 105568,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/poland-archived-gypsum-native.json",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/3/query?where=UPPER%28KOPALINA%29+LIKE+%27%25GIPS%25%27+OR+UPPER%28KOPALINA%29+LIKE+%27%25ANHYDR%25%27&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "7f2aebc948a53a4b1eca87c3c2e417c99f152602b49e352246c19fdfe41d63ef",
+    "bytes": 4612,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/poland-archived-gypsum-wgs84.geojson",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/3/query?where=UPPER%28KOPALINA%29+LIKE+%27%25GIPS%25%27+OR+UPPER%28KOPALINA%29+LIKE+%27%25ANHYDR%25%27&outFields=%2A&returnGeometry=true&f=geojson&outSR=4326",
+    "sha256": "4198e60830c6dba66d2aed538aab097b1f15c5ca10494d35a0a56e86e60bcb59",
+    "bytes": 2391,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/poland-gypsum-native.json",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/0/query?where=UPPER%28KOPALINA_ALL%29+LIKE+%27%25GIPS%25%27+OR+UPPER%28KOPALINA_ALL%29+LIKE+%27%25ANHYDR%25%27&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "78587509fbdfcf10d404e0796eea3c9c84e3b52529c4035c472220e29a2042ab",
+    "bytes": 66172,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/poland-gypsum-survey.html",
+    "url": "https://www.pgi.gov.pl/surowce/skalne-i-inne/gipsy-anhydryty.html",
+    "sha256": "b24bb98431f3d628666eed9a11a32654468d442d0819e02118b353fe074228f2",
+    "bytes": 836,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/poland-gypsum-wgs84.geojson",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/0/query?where=UPPER%28KOPALINA_ALL%29+LIKE+%27%25GIPS%25%27+OR+UPPER%28KOPALINA_ALL%29+LIKE+%27%25ANHYDR%25%27&outFields=%2A&returnGeometry=true&f=geojson&outSR=4326",
+    "sha256": "145d9d51804c1e887d5c74df770d44f878bc621b25216b2ecee67a17a91efc98",
+    "bytes": 65067,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/poland-midas-layers.json",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/layers?f=pjson",
+    "sha256": "51e15f7893a888a75bdef9b4d3559e6995efb482df286454157ba0fd19956b7e",
+    "bytes": 52183,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/poland-reuse-notice.html",
+    "url": "https://www.pgi.gov.pl/aktualnosci/display/11489-nowe-dane-dotyczace-zloz-dostepne-w-internecie.html",
+    "sha256": "5b78f8fadb7cb11cf47f0f7e298705c44b9e49273d6d92b461635bb1933e1aa8",
+    "bytes": 846,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-ids.json",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27&returnIdsOnly=true&f=json",
+    "sha256": "42e544b884d26c5dbe322f40bfd1fd7c59046f4473a278967edebcc976037230",
+    "bytes": 178833,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-000.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+162459+AND+OBJECTID+%3C%3D+176912&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "1832fd9d003d95533979334da85ff64a36dcc204ebee9f971156e6f7c491b95e",
+    "bytes": 891926,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-001.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+176919+AND+OBJECTID+%3C%3D+190171&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "118fbfca1262cbdd65f04fef5e75a2be7254171a2a89cb8fecd11116f3345546",
+    "bytes": 1033132,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-002.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+190180+AND+OBJECTID+%3C%3D+196525&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "efae5821b09160981b2a62bf64e898dbe8acab5be29ed6d4403b85b93ce49153",
+    "bytes": 1197929,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-003.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+196534+AND+OBJECTID+%3C%3D+205687&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "98ad9d1403316aec990c7adc9ff4f846e1795b5c94aac76f06fa2a2f76824582",
+    "bytes": 1160463,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-004.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+205734+AND+OBJECTID+%3C%3D+213671&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "640e53a25a540ca85de0dfc95f00b7270013e18cf3314d7609649b69bdb34171",
+    "bytes": 1053365,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-005.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+213672+AND+OBJECTID+%3C%3D+223350&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "f0fdea647e8301308c8166fee8433549617210c2fd37f1e99af4239294fda98b",
+    "bytes": 1240805,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-006.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+223370+AND+OBJECTID+%3C%3D+229797&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "6dddc7dacff9d889968e51cc62cd7e137b2e2c118ab0d7143aa1372efba91ca3",
+    "bytes": 1614322,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-007.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+229807+AND+OBJECTID+%3C%3D+233588&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "0d86b36c1cc08a4c89b56114319b5f5b90df4f7ac7d590f7a7201ce856271ed3",
+    "bytes": 2476152,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-008.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+233590+AND+OBJECTID+%3C%3D+237622&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "f1459cd191f80a8925e461c45cfd0223e82b6cf06e5d2c44ab594eb6a763c659",
+    "bytes": 2844309,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-009.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+237638+AND+OBJECTID+%3C%3D+240664&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "f60e0d29edf68189a690984d4344edbdc9299002c384d914264779548a439d84",
+    "bytes": 1988834,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-010.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+240686+AND+OBJECTID+%3C%3D+245185&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "334320e9118bd95db67255eccbec9ecd8b5433deaf086413177de130f094d449",
+    "bytes": 1512651,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-011.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+245194+AND+OBJECTID+%3C%3D+254824&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "b3214cb59fb5fe9ceb6732b2c1dd5e0ded3ec1942c8e767851754a012257617d",
+    "bytes": 1961011,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-012.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+254827+AND+OBJECTID+%3C%3D+265544&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "03c93b1fe04e7b47ce16ca18741df63b202949d07c7e010ddd00316b1408227b",
+    "bytes": 1766039,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-013.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+265551+AND+OBJECTID+%3C%3D+272478&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "2d5ac9ba7fae5c404a50e46ef132e0f83b583a985937e1a541081682186b05c0",
+    "bytes": 1207949,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-014.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+272488+AND+OBJECTID+%3C%3D+290075&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "1ebdae6a2a7f6f9c0b2b8405bea913bc3e3f54deca054e4ed38930dc2b94fbda",
+    "bytes": 792046,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-015.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+290097+AND+OBJECTID+%3C%3D+298548&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "bd947317ecfd18d3265cdb212afde0146ffddb0e557e5f301472197a27fdc479",
+    "bytes": 558127,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-016.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+298549+AND+OBJECTID+%3C%3D+303203&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "13f5f41498649fc0ca7fc96934dd96b55bacc80cfb164ecf6fba1c6bba77c669",
+    "bytes": 401770,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-017.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+303206+AND+OBJECTID+%3C%3D+311153&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "34a4d6f704b5fb3b04df39b028c81698b488121525de49f623cf13a0042c47bf",
+    "bytes": 502075,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-018.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+311180+AND+OBJECTID+%3C%3D+320017&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "1c69cf0f874372d7a5c85bbe4107b385faccb20bcc66965217c542703b700609",
+    "bytes": 688003,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-019.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+320027+AND+OBJECTID+%3C%3D+359897&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "3a4f0b6fddcbb8730b60ad96e72ab75423face092aaa7eac681c87aced69644b",
+    "bytes": 2584885,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-020.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+359960+AND+OBJECTID+%3C%3D+366472&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "6e281a0824e989aa61deb8d1401a4bdaee27e0ed8d224b2d2931dc6a77017b9b",
+    "bytes": 2816543,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-021.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+366500+AND+OBJECTID+%3C%3D+374193&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "0b52df2c63e4882bf413735ee694e0188a54ca4aad7d1c6033af38bdd1834c34",
+    "bytes": 2622799,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-022.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+374198+AND+OBJECTID+%3C%3D+380507&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "0739dc64bdb45c6929e564f26cb84ee28b7582d40675088cbda084778a58a26e",
+    "bytes": 2777364,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-023.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+380511+AND+OBJECTID+%3C%3D+392941&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "52a5a611fcb2b4325c61904bae58e19f5f2bf94c354b357086a99cd5cc96e474",
+    "bytes": 2018806,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-024.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+392942+AND+OBJECTID+%3C%3D+414811&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "ee48c2f9665c96df34ba0fcb37b3bed90341bafd49e8b1c94460397f64596f21",
+    "bytes": 1977830,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-025.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+414813+AND+OBJECTID+%3C%3D+418513&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "5d294b18913c4c54e7cfa066292475eda44f15407be51adc5c838050a92b63b7",
+    "bytes": 6153880,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-026.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+418515+AND+OBJECTID+%3C%3D+422531&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "b7bed59edb8c8b3ed28bf3cd213caece41b6ee3be97d34ce60b8b51c11f41635",
+    "bytes": 3767398,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-027.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+422533+AND+OBJECTID+%3C%3D+428706&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "1266101c7f6a611494a29ba2a9b1cd8e449def810f25dc41790aacb142f2820a",
+    "bytes": 2501618,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-028.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+428764+AND+OBJECTID+%3C%3D+432887&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "46cd1f32fd2dc97e75a2661113e831a4ca20b7c828b1219dea4ea5481c6ff0eb",
+    "bytes": 2057008,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-029.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+432889+AND+OBJECTID+%3C%3D+436099&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "fcb7a869ce22b831e43beec8871cccb6f92b052f49a84e95a2a39669a3107f74",
+    "bytes": 2031514,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-030.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+436103+AND+OBJECTID+%3C%3D+439063&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "071fca00fa73103f91425a90d1171f283738cee950764a7466e9172943d4e887",
+    "bytes": 1406281,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-031.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+439069+AND+OBJECTID+%3C%3D+441859&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "08b9dada6ebb4801e44e52aaa320cc69bfb35bb399deaad5d49e1268e5f837d2",
+    "bytes": 1293707,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-032.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+441866+AND+OBJECTID+%3C%3D+443531&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "d209a87f5e5203cde5cf71db5801c2926d8fdc0e5b7d38434bf9e16dc4b1a52c",
+    "bytes": 1143666,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-033.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+443538+AND+OBJECTID+%3C%3D+445424&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "f654c0800ea75b9455c13158d36d1e534db2ed04a120443d66434be166ba0451",
+    "bytes": 964477,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-034.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+445428+AND+OBJECTID+%3C%3D+447839&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "b3787d39d90f4fb60f39a237a267f4d456914d1b82166987642b0a4e0a82ee66",
+    "bytes": 1038539,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-035.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+447841+AND+OBJECTID+%3C%3D+449838&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "a41e71cfdad35fb5ccadc15efcbc44220aae96bcf618c0aaff4ea770f9b0cb51",
+    "bytes": 1509612,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-036.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+449845+AND+OBJECTID+%3C%3D+452493&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "0dc797a5ae94c43ff16de501fefd82b7e29d820b428f515242d11cb14d41c62c",
+    "bytes": 1004924,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-037.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+452496+AND+OBJECTID+%3C%3D+509986&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "1e931ecc31b2191799838cfac580c18deff341cc5c5032b810db5b5ffe551ecc",
+    "bytes": 1081061,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-038.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+510111+AND+OBJECTID+%3C%3D+531159&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "3ecae6ff749d7ba013cfcc0520d1112e154f41872ab423254c0724f8a708c311",
+    "bytes": 2517785,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-039.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+531169+AND+OBJECTID+%3C%3D+532940&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "75a6bd28aba3b83a44f0fb61ce10a21d3885d984a2a81c435a32011a2741769a",
+    "bytes": 1020588,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-040.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+532942+AND+OBJECTID+%3C%3D+534837&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "16c2e55b6c9bcb66088a536cfe2af34068a584f7e6eab91f64010dcde075c92e",
+    "bytes": 810663,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-041.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+534842+AND+OBJECTID+%3C%3D+537269&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "c1fec5f61edada9cec24cb20e015895225ee8327eb35e36faf3e33af5bad7cb7",
+    "bytes": 975500,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-042.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+537285+AND+OBJECTID+%3C%3D+542235&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "b24938c27936967b3b666fe0a9fffa97de88d77eb0d2475af74e06fadcc1243f",
+    "bytes": 1684779,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-043.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+542241+AND+OBJECTID+%3C%3D+544961&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "eb2c7a408a0bddb40feaf096030f6eb9067695e3c42cb918d5972babad3ae6aa",
+    "bytes": 2150071,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-044.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+544964+AND+OBJECTID+%3C%3D+547360&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "6b11acced500bff6c241ab81fcdb428ffe62133d59d52cdee70c10b5cf61b38a",
+    "bytes": 1789989,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-045.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+547362+AND+OBJECTID+%3C%3D+549247&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "18dc724a944c4d3d9b1f87c7a242364edd91bfa36b69cc29032295ed1cc9e163",
+    "bytes": 1890790,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-046.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+549251+AND+OBJECTID+%3C%3D+550861&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "308f27e1bde3ecb6bb92c9d111265ae7f4ac62c4ca671f9919f4a3f6b81575b3",
+    "bytes": 2316624,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-047.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+550866+AND+OBJECTID+%3C%3D+552354&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "11a9fd946a4c902118832661d0668b434ff76a225e78d637aaf6cc4cf1e28623",
+    "bytes": 2151116,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-048.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+552358+AND+OBJECTID+%3C%3D+554715&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "ef80b2182188dad39e9315d7999b78ed345919274eb7ee5b60f80869487a95e6",
+    "bytes": 1588090,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-049.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+554721+AND+OBJECTID+%3C%3D+558814&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "277a09ce37f24ac9e21eb2e50565895ca09923cffae3343c84b4ac95199ef5a0",
+    "bytes": 1632545,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-050.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+558815+AND+OBJECTID+%3C%3D+572120&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "e6cd8f068571c86a5795465e367d3c22d42cba6a1f9f79eb7255edb34398f5dc",
+    "bytes": 1440029,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-gypsum-page-051.json.gz",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/8/query?where=%28UPPER%28DESC_UNIT%29+LIKE+%27%25YES%25%27+OR+UPPER%28DESC_UNIT%29+LIKE+%27%25ANHIDR%25%27%29+AND+OBJECTID+%3E%3D+572123+AND+OBJECTID+%3C%3D+574084&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "f31ccd9f322829987109384e43f3176a501e27aec9dcc12a2a7641ad6ece5fa2",
+    "bytes": 164291,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-geode-layers.json",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Geode_50/MapServer/layers?f=pjson",
+    "sha256": "022ae815a934d921218d538dc4dc4cecd0b48e32ceacc59e57909a3631bd144b",
+    "bytes": 823756,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-gypsum-native.json",
+    "url": "https://mapas.igme.es/gis/rest/services/BasesDatos/IGME_BDMIN_Explotaciones/MapServer/0/query?where=UPPER%28Sustancia%29+LIKE+%27%25YES%25%27+OR+UPPER%28Sustancia%29+LIKE+%27%25ANHIDR%25%27&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "da39d350549ffe76ad2f54cd16024428346601c9ece8d2ce4521153af883fea1",
+    "bytes": 225758,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-gypsum-wgs84.geojson",
+    "url": "https://mapas.igme.es/gis/rest/services/BasesDatos/IGME_BDMIN_Explotaciones/MapServer/0/query?where=UPPER%28Sustancia%29+LIKE+%27%25YES%25%27+OR+UPPER%28Sustancia%29+LIKE+%27%25ANHIDR%25%27&outFields=%2A&returnGeometry=true&f=geojson&outSR=4326",
+    "sha256": "4ad912ebfe298032c577c51d3027190773f232fe25b77b92d0cef3d805b92d74",
+    "bytes": 256309,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-lithology1m-gypsum-native.json",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Litologias_1M/MapServer/0/query?where=UPPER%28Litologia%29+LIKE+%27%25YES%25%27+OR+UPPER%28Litologia%29+LIKE+%27%25ANHIDR%25%27&outFields=%2A&returnGeometry=true&f=json",
+    "sha256": "3c39d0f0cbbbe16efdabbbdcf76be334fdfac1c38c666e89a0b26fb0fa07d319",
+    "bytes": 2399789,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-lithology1m-gypsum-wgs84.geojson",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Litologias_1M/MapServer/0/query?where=UPPER%28Litologia%29+LIKE+%27%25YES%25%27+OR+UPPER%28Litologia%29+LIKE+%27%25ANHIDR%25%27&outFields=%2A&returnGeometry=true&f=geojson&outSR=4326",
+    "sha256": "0e81e008a1598d029524193fd12dc097c52385d8c38a30a5b4618ae451d05905",
+    "bytes": 2455369,
+    "retrieved_utc_date": "2026-09-29"
+  },
+  {
+    "file": "raw/spain-lithology1m-layers.json",
+    "url": "https://mapas.igme.es/gis/rest/services/Cartografia_Geologica/IGME_Litologias_1M/MapServer/layers?f=pjson",
+    "sha256": "a2518f0db544a43f64722bde3db5b48a4e3e552d6cf91526f6f78c055759935b",
+    "bytes": 16273,
+    "retrieved_utc_date": "2026-09-29"
+  }
+]

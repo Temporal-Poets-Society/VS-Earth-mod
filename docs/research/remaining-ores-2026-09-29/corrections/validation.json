@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "checks": 160661,
+  "failures": [],
+  "source_feature_counts": {
+    "corrections/metals/normalized/pp1802-global.geojson": 2125,
+    "corrections/metals/normalized/ga-aimr-metals.geojson": 3205,
+    "corrections/metals/normalized/reviewed-secondary-metals.geojson": 2,
+    "corrections/nonmetals/normalized/additional-evidence.geojson": 2764,
+    "corrections/nonmetals/normalized/poland-minerals.geojson": 147,
+    "corrections/coal/normalized/coal-polygons.geojson": 3918,
+    "corrections/coal/normalized/coal-context-polygons.geojson": 729,
+    "corrections/coal/normalized/coal-supplement-points.geojson": 520,
+    "corrections/coal/normalized/nrw-halite.geojson": 4,
+    "corrections/gypsum/normalized/gypsum-reviewed.geojson": 525,
+    "corrections/gypsum/normalized/gypsum-permissive-formations-display-only.geojson": 28753
+  },
+  "geometries_topology_checked": 42677,
+  "withheld": {
+    "flagged_invalid": 15
+  },
+  "context_only_gypsum_features": 1093,
+  "regional_positive_controls": [
+    {
+      "coal_region": "Britain",
+      "intersecting_source_areas": 632
+    },
+    {
+      "coal_region": "Poland",
+      "intersecting_source_areas": 461
+    },
+    {
+      "coal_region": "Germany",
+      "intersecting_source_areas": 360
+    },
+    {
+      "coal_region": "SE Australia",
+      "intersecting_source_areas": 51
+    }
+  ],
+  "resources_audited": 42,
+  "global_generation_ready": false,
+  "limits": "Validation checks the compilation and selected controls, not global geological completeness, calibrated abundance, grade, accessibility, unique deposits or historical reconstruction."
+}

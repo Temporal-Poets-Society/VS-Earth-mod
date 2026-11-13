@@ -1,0 +1,601 @@
+{
+  "mod": {
+    "modid": 2195,
+    "assetid": 12657,
+    "name": "Fauna of the Stone Age: Dinornithiformes Plus",
+    "text": "<p><span style=\"font-weight: 400;\">A collection of flightless birds of New Zealand, these birds will add life to the temperate and subtropical ecosystems of your world, acting as ambience, food and prey.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" style=\"width: 2488px; border-spacing: 0px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col width=\"256\" /><col width=\"178\" /><col width=\"124\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"140\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /></colgroup>\n<tbody>\n<tr>\n<td style=\"width: 253.785px;\">Common Name</td>\n<td style=\"width: 205.799px;\">Scientific name</td>\n<td style=\"width: 127.882px;\">Category</td>\n<td style=\"width: 99.5949px;\">Weight</td>\n<td style=\"width: 99.3519px;\">Health</td>\n<td style=\"width: 99.6065px;\">Height</td>\n<td style=\"width: 99.4445px;\">Damage</td>\n<td style=\"width: 99.1435px;\">Temp</td>\n<td style=\"width: 99.6875px;\">Precip</td>\n<td style=\"width: 99.8032px;\">Foliage Needs</td>\n<td style=\"width: 99.3403px;\">Altitude</td>\n<td style=\"width: 139.063px;\">Group Size</td>\n<td style=\"width: 99.2708px;\">Meat Drops</td>\n<td style=\"width: 99.2014px;\">Fat Drops</td>\n<td style=\"width: 99.5718px;\">Hide Drops</td>\n<td style=\"width: 99.4097px;\">Other Drops</td>\n<td style=\"width: 99.6412px;\">Movement</td>\n<td style=\"width: 467.662px;\">Diet</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Rifleman</td>\n<td style=\"width: 205.799px;\">Acanthisitta chloris</td>\n<td style=\"width: 127.882px;\">Acanthisittidae</td>\n<td style=\"width: 99.5949px;\">0.07</td>\n<td style=\"width: 99.3519px;\">2</td>\n<td style=\"width: 99.6065px;\">9cm</td>\n<td style=\"width: 99.4445px;\">0.1</td>\n<td style=\"width: 99.1435px;\">2-14</td>\n<td style=\"width: 99.6875px;\">50-100%</td>\n<td style=\"width: 99.8032px;\">40-70% Forest</td>\n<td style=\"width: 99.3403px;\">1.05-1.5</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">0</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">0</td>\n<td style=\"width: 99.4097px;\">3+-1 feathers</td>\n<td style=\"width: 99.6412px;\">Climbing</td>\n<td style=\"width: 467.662px;\">Insects</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Long-billed wren &dagger;</td>\n<td style=\"width: 205.799px;\">Dendroscansor decurvirostris</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">0.3</td>\n<td style=\"width: 99.3519px;\">2</td>\n<td style=\"width: 99.6065px;\">10cm</td>\n<td style=\"width: 99.4445px;\">0.1</td>\n<td style=\"width: 99.1435px;\">6-12</td>\n<td style=\"width: 99.6875px;\">60-100%</td>\n<td style=\"width: 99.8032px;\">60%+Forest</td>\n<td style=\"width: 99.3403px;\">1.05-1.2</td>\n<td style=\"width: 139.063px;\">1M&amp;F</td>\n<td style=\"width: 99.2708px;\">0</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">0</td>\n<td style=\"width: 99.4097px;\">3+-1 feathers</td>\n<td style=\"width: 99.6412px;\">Climbing</td>\n<td style=\"width: 467.662px;\">Insects</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">North Island stout-legged wren &dagger;</td>\n<td style=\"width: 205.799px;\">Pachyplichas jagmi</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">0.5</td>\n<td style=\"width: 99.3519px;\">2</td>\n<td style=\"width: 99.6065px;\">10cm</td>\n<td style=\"width: 99.4445px;\">0.1</td>\n<td style=\"width: 99.1435px;\">6-16</td>\n<td style=\"width: 99.6875px;\">35-100%</td>\n<td style=\"width: 99.8032px;\">All</td>\n<td style=\"width: 99.3403px;\">1.05-1.6</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">0</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">0</td>\n<td style=\"width: 99.4097px;\">3+-1 feathers</td>\n<td style=\"width: 99.6412px;\">Climbing</td>\n<td style=\"width: 467.662px;\">Insects</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">South Island stout-legged wren &dagger;</td>\n<td style=\"width: 205.799px;\">Pachyplichas yaldwyni</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">0.5</td>\n<td style=\"width: 99.3519px;\">2</td>\n<td style=\"width: 99.6065px;\">10cm</td>\n<td style=\"width: 99.4445px;\">0.1</td>\n<td style=\"width: 99.1435px;\">2-12</td>\n<td style=\"width: 99.6875px;\">50-100%</td>\n<td style=\"width: 99.8032px;\">All</td>\n<td style=\"width: 99.3403px;\">1.05-1.6</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">0</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">0</td>\n<td style=\"width: 99.4097px;\">3+-1 feathers</td>\n<td style=\"width: 99.6412px;\">Climbing</td>\n<td style=\"width: 467.662px;\">Insects</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Lyall's wren &dagger;</td>\n<td style=\"width: 205.799px;\">Traversia lyalli</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">0.2</td>\n<td style=\"width: 99.3519px;\">2</td>\n<td style=\"width: 99.6065px;\">9cm</td>\n<td style=\"width: 99.4445px;\">0.1</td>\n<td style=\"width: 99.1435px;\">2-14</td>\n<td style=\"width: 99.6875px;\">50-100%</td>\n<td style=\"width: 99.8032px;\">50-100% Forest</td>\n<td style=\"width: 99.3403px;\">1.05-1.5</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">0</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">0</td>\n<td style=\"width: 99.4097px;\">3+-1 feathers</td>\n<td style=\"width: 99.6412px;\">Climbing</td>\n<td style=\"width: 467.662px;\">Insects</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">New Zealand rockwren</td>\n<td style=\"width: 205.799px;\">Xenicus gilviventris</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">0.2</td>\n<td style=\"width: 99.3519px;\">2</td>\n<td style=\"width: 99.6065px;\">9cm</td>\n<td style=\"width: 99.4445px;\">0.1</td>\n<td style=\"width: 99.1435px;\">2-12</td>\n<td style=\"width: 99.6875px;\">50-100%</td>\n<td style=\"width: 99.8032px;\">0-50% Forest</td>\n<td style=\"width: 99.3403px;\">1.3-1.65</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">0</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">0</td>\n<td style=\"width: 99.4097px;\">3+-1 feathers</td>\n<td style=\"width: 99.6412px;\">Climbing</td>\n<td style=\"width: 467.662px;\">Insects</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Bushwren &dagger;</td>\n<td style=\"width: 205.799px;\">Xenicus longipes</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">0.16</td>\n<td style=\"width: 99.3519px;\">2</td>\n<td style=\"width: 99.6065px;\">9cm</td>\n<td style=\"width: 99.4445px;\">0.1</td>\n<td style=\"width: 99.1435px;\">2-14</td>\n<td style=\"width: 99.6875px;\">25-100%</td>\n<td style=\"width: 99.8032px;\">25%+ Shrub</td>\n<td style=\"width: 99.3403px;\">1.05-1.5</td>\n<td style=\"width: 139.063px;\">1-2 M&amp;F</td>\n<td style=\"width: 99.2708px;\">0</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">0</td>\n<td style=\"width: 99.4097px;\">3+-1 feathers</td>\n<td style=\"width: 99.6412px;\">Climbing</td>\n<td style=\"width: 467.662px;\">Insects</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">New Zealand owlet-nightjar &dagger;</td>\n<td style=\"width: 205.799px;\">Aegotheles novaezealandiae</td>\n<td style=\"width: 127.882px;\">Aegothelidae</td>\n<td style=\"width: 99.5949px;\">0.2/0.05</td>\n<td style=\"width: 99.3519px;\">2/1</td>\n<td style=\"width: 99.6065px;\">0.3H</td>\n<td style=\"width: 99.4445px;\">0.25 t1</td>\n<td style=\"width: 99.1435px;\">6-14</td>\n<td style=\"width: 99.6875px;\">50-100%</td>\n<td style=\"width: 99.8032px;\">75%+ Forest</td>\n<td style=\"width: 99.3403px;\">1.0-1.5</td>\n<td style=\"width: 139.063px;\">1M&amp;F</td>\n<td style=\"width: 99.2708px;\">0</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">0</td>\n<td style=\"width: 99.4097px;\">10+-5 feathers</td>\n<td style=\"width: 99.6412px;\">3meter step</td>\n<td style=\"width: 467.662px;\">Insects</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Auckland teal</td>\n<td style=\"width: 205.799px;\">Anas aucklandica</td>\n<td style=\"width: 127.882px;\">Anatidae</td>\n<td style=\"width: 99.5949px;\">0.5</td>\n<td style=\"width: 99.3519px;\">2</td>\n<td style=\"width: 99.6065px;\">0.35m L</td>\n<td style=\"width: 99.4445px;\">1t1</td>\n<td style=\"width: 99.1435px;\">1-8</td>\n<td style=\"width: 99.6875px;\">30-75%</td>\n<td style=\"width: 99.8032px;\">0-40%</td>\n<td style=\"width: 99.3403px;\">1.0-1.2</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">Float</td>\n<td style=\"width: 467.662px;\">Insects</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Brown teal</td>\n<td style=\"width: 205.799px;\">Anas chlorotis</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">0.7</td>\n<td style=\"width: 99.3519px;\">2</td>\n<td style=\"width: 99.6065px;\">.4M L</td>\n<td style=\"width: 99.4445px;\">1t1</td>\n<td style=\"width: 99.1435px;\">2-14</td>\n<td style=\"width: 99.6875px;\">50-100%</td>\n<td style=\"width: 99.8032px;\">0-40%</td>\n<td style=\"width: 99.3403px;\">1.0-1.2</td>\n<td style=\"width: 139.063px;\">3-6M&amp;F</td>\n<td style=\"width: 99.2708px;\">1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">Float</td>\n<td style=\"width: 467.662px;\">Insects</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Campbell teal</td>\n<td style=\"width: 205.799px;\">Anas nesiotis</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">0.6</td>\n<td style=\"width: 99.3519px;\">2</td>\n<td style=\"width: 99.6065px;\">0.35m L</td>\n<td style=\"width: 99.4445px;\">1t1</td>\n<td style=\"width: 99.1435px;\">4-8</td>\n<td style=\"width: 99.6875px;\">65-73%</td>\n<td style=\"width: 99.8032px;\">0-40%</td>\n<td style=\"width: 99.3403px;\">1.0-1.2</td>\n<td style=\"width: 139.063px;\">3-6M&amp;F</td>\n<td style=\"width: 99.2708px;\">1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">Float</td>\n<td style=\"width: 467.662px;\">Insects</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Finsch's duck &dagger;</td>\n<td style=\"width: 205.799px;\">Chenonetta finschi</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">2</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6065px;\">.5M H</td>\n<td style=\"width: 99.4445px;\">1t1</td>\n<td style=\"width: 99.1435px;\">2-14</td>\n<td style=\"width: 99.6875px;\">35-100%</td>\n<td style=\"width: 99.8032px;\">All</td>\n<td style=\"width: 99.3403px;\">1.0-1.5</td>\n<td style=\"width: 139.063px;\">6-40M&amp;F</td>\n<td style=\"width: 99.2708px;\">1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">Float</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">South Island goose &dagger;</td>\n<td style=\"width: 205.799px;\">Cnemiornis calcitrans</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">18/2</td>\n<td style=\"width: 99.3519px;\">6/3</td>\n<td style=\"width: 99.6065px;\">1M H</td>\n<td style=\"width: 99.4445px;\">4t1</td>\n<td style=\"width: 99.1435px;\">6-12</td>\n<td style=\"width: 99.6875px;\">35-100%</td>\n<td style=\"width: 99.8032px;\">0-40 Forest</td>\n<td style=\"width: 99.3403px;\">1.0-1.5</td>\n<td style=\"width: 139.063px;\">2M&amp;F, 6-40M&amp;F&amp;B</td>\n<td style=\"width: 99.2708px;\">3-4/1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1M</td>\n<td style=\"width: 99.4097px;\">15+-7 feathers</td>\n<td style=\"width: 99.6412px;\">Float</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Grass, Nibble Crop, Peanut</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">North Island goose &dagger;</td>\n<td style=\"width: 205.799px;\">Cnemiornis gracilis</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">15/2</td>\n<td style=\"width: 99.3519px;\">6/3</td>\n<td style=\"width: 99.6065px;\">1M H</td>\n<td style=\"width: 99.4445px;\">4t1</td>\n<td style=\"width: 99.1435px;\">10-16</td>\n<td style=\"width: 99.6875px;\">50-100%</td>\n<td style=\"width: 99.8032px;\">0-40 Forest</td>\n<td style=\"width: 99.3403px;\">1.0-1.5</td>\n<td style=\"width: 139.063px;\">2M&amp;F, 6-40M&amp;F&amp;B</td>\n<td style=\"width: 99.2708px;\">3-4/1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1M</td>\n<td style=\"width: 99.4097px;\">15+-7 feathers</td>\n<td style=\"width: 99.6412px;\">Float</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Grass, Nibble Crop, Peanut</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Southern brown kiwi</td>\n<td style=\"width: 205.799px;\">Apteryx australis</td>\n<td style=\"width: 127.882px;\">Apterygidae</td>\n<td style=\"width: 99.5949px;\">2.2/3.5/.5</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6065px;\">.55 L</td>\n<td style=\"width: 99.4445px;\">1t1</td>\n<td style=\"width: 99.1435px;\">4-12</td>\n<td style=\"width: 99.6875px;\">65%-100%</td>\n<td style=\"width: 99.8032px;\">60%+ Forest</td>\n<td style=\"width: 99.3403px;\">1-1.5</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berry Bush, Fish, Fruit, Insects, Peanut</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Great spotted kiwi</td>\n<td style=\"width: 205.799px;\">Apteryx haastii</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">2/2.5</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6065px;\">.45/.5H</td>\n<td style=\"width: 99.4445px;\">1t1</td>\n<td style=\"width: 99.1435px;\">4-14</td>\n<td style=\"width: 99.6875px;\">25-100%</td>\n<td style=\"width: 99.8032px;\">20+Shrub</td>\n<td style=\"width: 99.3403px;\">1-1.5</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berry Bush, Fish, Fruit, Insects, Peanut</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">North Island brown kiwi</td>\n<td style=\"width: 205.799px;\">Apteryx mantelli</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">2/3</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6065px;\">.35/.4H</td>\n<td style=\"width: 99.4445px;\">1t1</td>\n<td style=\"width: 99.1435px;\">10-16</td>\n<td style=\"width: 99.6875px;\">25-100%</td>\n<td style=\"width: 99.8032px;\">20%+ Shrub</td>\n<td style=\"width: 99.3403px;\">1-1.5</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berry Bush, Fish, Fruit, Insects, Peanut</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Little spotted kiwi</td>\n<td style=\"width: 205.799px;\">Apteryx owenii</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">1/1.5</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6065px;\">.35/.45L</td>\n<td style=\"width: 99.4445px;\">1t1</td>\n<td style=\"width: 99.1435px;\">4-16</td>\n<td style=\"width: 99.6875px;\">25-100%</td>\n<td style=\"width: 99.8032px;\">20%+ Shrub</td>\n<td style=\"width: 99.3403px;\">1-1.4</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berry Bush, Fish, Fruit, Insects, Peanut</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Okarito kiwi</td>\n<td style=\"width: 205.799px;\">Apteryx rowi</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">2.2/3.5/.5</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6065px;\">.55 L</td>\n<td style=\"width: 99.4445px;\">1t1</td>\n<td style=\"width: 99.1435px;\">6-12</td>\n<td style=\"width: 99.6875px;\">80%-100%</td>\n<td style=\"width: 99.8032px;\">80%+ Forest</td>\n<td style=\"width: 99.3403px;\">1-1.4</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1 S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berry Bush, Fish, Fruit, Insects, Peanut</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">South Island adzebill &dagger;</td>\n<td style=\"width: 205.799px;\">Aptornis defossor</td>\n<td style=\"width: 127.882px;\">Aptornithidae</td>\n<td style=\"width: 99.5949px;\">18/2</td>\n<td style=\"width: 99.3519px;\">6/3</td>\n<td style=\"width: 99.6065px;\">1H</td>\n<td style=\"width: 99.4445px;\">4t1</td>\n<td style=\"width: 99.1435px;\">6-12</td>\n<td style=\"width: 99.6875px;\">35-65%</td>\n<td style=\"width: 99.8032px;\">55-100Forest</td>\n<td style=\"width: 99.3403px;\">1.0-1.25</td>\n<td style=\"width: 139.063px;\">1-2 M&amp;F, 2-8 M&amp;F&amp;B</td>\n<td style=\"width: 99.2708px;\">3-4/1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1M</td>\n<td style=\"width: 99.4097px;\">15+-7 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Fish, Insects, Meat</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">North Island adzebill &dagger;</td>\n<td style=\"width: 205.799px;\">Aptornis otidiformis</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">16/2</td>\n<td style=\"width: 99.3519px;\">6/3</td>\n<td style=\"width: 99.6065px;\">0.8H</td>\n<td style=\"width: 99.4445px;\">4t1</td>\n<td style=\"width: 99.1435px;\">10-16</td>\n<td style=\"width: 99.6875px;\">50-75%</td>\n<td style=\"width: 99.8032px;\">55-100Forest</td>\n<td style=\"width: 99.3403px;\">1.0-1.25</td>\n<td style=\"width: 139.063px;\">1-2 M&amp;F, 2-8 M&amp;F&amp;B</td>\n<td style=\"width: 99.2708px;\">3-4/1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1M</td>\n<td style=\"width: 99.4097px;\">15+-7 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Fish, Insects, Meat</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">North Island giant moa &dagger;</td>\n<td style=\"width: 205.799px;\">Dinornis novaezealandiae</td>\n<td style=\"width: 127.882px;\">Dinornithidae</td>\n<td style=\"width: 99.5949px;\">65/180/10</td>\n<td style=\"width: 99.3519px;\">14/19/5</td>\n<td style=\"width: 99.6065px;\">2H/1.5H</td>\n<td style=\"width: 99.4445px;\">6t1/9t2</td>\n<td style=\"width: 99.1435px;\">10-16</td>\n<td style=\"width: 99.6875px;\">50-100%</td>\n<td style=\"width: 99.8032px;\">25-80 Forest</td>\n<td style=\"width: 99.3403px;\">1.0-1.5</td>\n<td style=\"width: 139.063px;\">1-2 M&amp;F</td>\n<td style=\"width: 99.2708px;\">8-10/19-23/3-4</td>\n<td style=\"width: 99.2014px;\">1/3/0</td>\n<td style=\"width: 99.5718px;\">2L/2H/1M</td>\n<td style=\"width: 99.4097px;\">15+-7 feathers</td>\n<td style=\"width: 99.6412px;\">2 meter step</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">South Island giant moa &dagger;</td>\n<td style=\"width: 205.799px;\">Dinornis robustus</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">70/200/10</td>\n<td style=\"width: 99.3519px;\">14/19/5</td>\n<td style=\"width: 99.6065px;\">2.1H/1.6H</td>\n<td style=\"width: 99.4445px;\">6t1/9t2</td>\n<td style=\"width: 99.1435px;\">6-12</td>\n<td style=\"width: 99.6875px;\">35-100%</td>\n<td style=\"width: 99.8032px;\">25-80 Forest</td>\n<td style=\"width: 99.3403px;\">1.0-1.5</td>\n<td style=\"width: 139.063px;\">1-2 M&amp;F</td>\n<td style=\"width: 99.2708px;\">8-10/20-24/3-4</td>\n<td style=\"width: 99.2014px;\">1/3/0</td>\n<td style=\"width: 99.5718px;\">2L/2H/1M</td>\n<td style=\"width: 99.4097px;\">15+-7 feathers</td>\n<td style=\"width: 99.6412px;\">2 meter step</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Bush moa &dagger;</td>\n<td style=\"width: 205.799px;\">Anomalopteryx didiformis</td>\n<td style=\"width: 127.882px;\">Emeidae</td>\n<td style=\"width: 99.5949px;\">25/35/3</td>\n<td style=\"width: 99.3519px;\">7/9/3</td>\n<td style=\"width: 99.6065px;\">.5H/.75</td>\n<td style=\"width: 99.4445px;\">5t1</td>\n<td style=\"width: 99.1435px;\">8-14</td>\n<td style=\"width: 99.6875px;\">50-100%</td>\n<td style=\"width: 99.8032px;\">25+ Shrub</td>\n<td style=\"width: 99.3403px;\">1.0-1.5</td>\n<td style=\"width: 139.063px;\">1-2 M&amp;F</td>\n<td style=\"width: 99.2708px;\">2-4/4-6/1</td>\n<td style=\"width: 99.2014px;\">1</td>\n<td style=\"width: 99.5718px;\">1M/1L</td>\n<td style=\"width: 99.4097px;\">15+-7 feathers</td>\n<td style=\"width: 99.6412px;\">2 meter step</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Eastern moa &dagger;</td>\n<td style=\"width: 205.799px;\">Emeus crassus</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">40/60/5</td>\n<td style=\"width: 99.3519px;\">10/13/3</td>\n<td style=\"width: 99.6065px;\">.67/1H</td>\n<td style=\"width: 99.4445px;\">5t1/6t1</td>\n<td style=\"width: 99.1435px;\">4-10</td>\n<td style=\"width: 99.6875px;\">35-100%</td>\n<td style=\"width: 99.8032px;\">All</td>\n<td style=\"width: 99.3403px;\">1.0-1.2</td>\n<td style=\"width: 139.063px;\">1-2 M&amp;F</td>\n<td style=\"width: 99.2708px;\">4-6/7-9/1</td>\n<td style=\"width: 99.2014px;\">1</td>\n<td style=\"width: 99.5718px;\">1L/2M</td>\n<td style=\"width: 99.4097px;\">15+-7 feathers</td>\n<td style=\"width: 99.6412px;\">2 meter step</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Coastal moa &dagger;</td>\n<td style=\"width: 205.799px;\">Euryapteryx curtus</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">55/110/5</td>\n<td style=\"width: 99.3519px;\">13/16/3</td>\n<td style=\"width: 99.6065px;\">.66/1 H</td>\n<td style=\"width: 99.4445px;\">6t1/8t2</td>\n<td style=\"width: 99.1435px;\">6-18</td>\n<td style=\"width: 99.6875px;\">25-80%</td>\n<td style=\"width: 99.8032px;\">25-80 Forest</td>\n<td style=\"width: 99.3403px;\">1.0-1.2</td>\n<td style=\"width: 139.063px;\">1-2 M&amp;F</td>\n<td style=\"width: 99.2708px;\">7-8/13-15/1</td>\n<td style=\"width: 99.2014px;\">1</td>\n<td style=\"width: 99.5718px;\">2L/3L</td>\n<td style=\"width: 99.4097px;\">15+-7 feathers</td>\n<td style=\"width: 99.6412px;\">2 meter step</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Crested moa &dagger;</td>\n<td style=\"width: 205.799px;\">Pachyornis australis</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">60/90/5</td>\n<td style=\"width: 99.3519px;\">13/15/3</td>\n<td style=\"width: 99.6065px;\">.7/1.05h</td>\n<td style=\"width: 99.4445px;\">6t1/7t2</td>\n<td style=\"width: 99.1435px;\">2-12</td>\n<td style=\"width: 99.6875px;\">60-100%</td>\n<td style=\"width: 99.8032px;\">25-100</td>\n<td style=\"width: 99.3403px;\">1.2-1.5</td>\n<td style=\"width: 139.063px;\">1-2 M&amp;F</td>\n<td style=\"width: 99.2708px;\">7-9/12-14/1</td>\n<td style=\"width: 99.2014px;\">1</td>\n<td style=\"width: 99.5718px;\">2M/2L</td>\n<td style=\"width: 99.4097px;\">15+-7 feathers</td>\n<td style=\"width: 99.6412px;\">2 meter step</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Heavy-footed moa &dagger;</td>\n<td style=\"width: 205.799px;\">Pachyornis elephantopus</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">80/163/10</td>\n<td style=\"width: 99.3519px;\">15/18/4</td>\n<td style=\"width: 99.6065px;\">.8/1.2 H</td>\n<td style=\"width: 99.4445px;\">7t2/9t2</td>\n<td style=\"width: 99.1435px;\">6-14</td>\n<td style=\"width: 99.6875px;\">25-60%</td>\n<td style=\"width: 99.8032px;\">25-75 Forest</td>\n<td style=\"width: 99.3403px;\">1.0-1.2</td>\n<td style=\"width: 139.063px;\">1-2 M&amp;F</td>\n<td style=\"width: 99.2708px;\">10-12/15-17/3-4</td>\n<td style=\"width: 99.2014px;\">1/3</td>\n<td style=\"width: 99.5718px;\">2L/3L</td>\n<td style=\"width: 99.4097px;\">15+-7 feathers</td>\n<td style=\"width: 99.6412px;\">2 meter step</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Mantell's moa &dagger;</td>\n<td style=\"width: 205.799px;\">Pachyornis geranoides</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">18/36/2</td>\n<td style=\"width: 99.3519px;\">6/10/3</td>\n<td style=\"width: 99.6065px;\">.5/.75H</td>\n<td style=\"width: 99.4445px;\">4t1/5t1</td>\n<td style=\"width: 99.1435px;\">8-18</td>\n<td style=\"width: 99.6875px;\">50-100%</td>\n<td style=\"width: 99.8032px;\">25-75 Forest</td>\n<td style=\"width: 99.3403px;\">1.0-1.3</td>\n<td style=\"width: 139.063px;\">1-2 M&amp;F</td>\n<td style=\"width: 99.2708px;\">2-3/4-6/1</td>\n<td style=\"width: 99.2014px;\">1</td>\n<td style=\"width: 99.5718px;\">1M/1L</td>\n<td style=\"width: 99.4097px;\">15+-7 feathers</td>\n<td style=\"width: 99.6412px;\">2 meter step</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Upland moa &dagger;</td>\n<td style=\"width: 205.799px;\">Megalapteryx didinus</td>\n<td style=\"width: 127.882px;\">Megalapterygidae</td>\n<td style=\"width: 99.5949px;\">40/80/5</td>\n<td style=\"width: 99.3519px;\">10/14/3</td>\n<td style=\"width: 99.6065px;\">.6/.95</td>\n<td style=\"width: 99.4445px;\">5/7</td>\n<td style=\"width: 99.1435px;\">2-10</td>\n<td style=\"width: 99.6875px;\">35-100%</td>\n<td style=\"width: 99.8032px;\">All</td>\n<td style=\"width: 99.3403px;\">1.25-1.6</td>\n<td style=\"width: 139.063px;\">1-2 M&amp;F</td>\n<td style=\"width: 99.2708px;\">4-5/8-10/2</td>\n<td style=\"width: 99.2014px;\">1</td>\n<td style=\"width: 99.5718px;\">1L/2L</td>\n<td style=\"width: 99.4097px;\">15+-7 feathers</td>\n<td style=\"width: 99.6412px;\">2 meter step</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berry Bush, Fruit, Grass, Insects, Nibble Crop, Peanuts, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Chatham rail &dagger;</td>\n<td style=\"width: 205.799px;\">Cabalus modestus</td>\n<td style=\"width: 127.882px;\">Rallidae</td>\n<td style=\"width: 99.5949px;\">0.06</td>\n<td style=\"width: 99.3519px;\">1</td>\n<td style=\"width: 99.6065px;\">.25L</td>\n<td style=\"width: 99.4445px;\">.25</td>\n<td style=\"width: 99.1435px;\">10-14</td>\n<td style=\"width: 99.6875px;\">50-60%</td>\n<td style=\"width: 99.8032px;\">All</td>\n<td style=\"width: 99.3403px;\">1.0-1.1</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">0</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1 S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Hawkin's rail &dagger;</td>\n<td style=\"width: 205.799px;\">Diaphorapteryx hawkinsi</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">2/.2</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6065px;\">.4 H</td>\n<td style=\"width: 99.4445px;\">1</td>\n<td style=\"width: 99.1435px;\">10-14</td>\n<td style=\"width: 99.6875px;\">50-60%</td>\n<td style=\"width: 99.8032px;\">All</td>\n<td style=\"width: 99.3403px;\">1.0-1.1</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F, 3-8M&amp;F&amp;B</td>\n<td style=\"width: 99.2708px;\">1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1 S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Weka</td>\n<td style=\"width: 205.799px;\">Gallirallus australis</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">1.5/1/.1</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6065px;\">.6/.5L</td>\n<td style=\"width: 99.4445px;\">1</td>\n<td style=\"width: 99.1435px;\">6-16</td>\n<td style=\"width: 99.6875px;\">60-100%</td>\n<td style=\"width: 99.8032px;\">All</td>\n<td style=\"width: 99.3403px;\">1.0-1.5</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F, 3-5F&amp;B</td>\n<td style=\"width: 99.2708px;\">1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1 S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Dieffenbach's rail &dagger;</td>\n<td style=\"width: 205.799px;\">Hypotaenidia dieffenbachii</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">.34/.1</td>\n<td style=\"width: 99.3519px;\">2</td>\n<td style=\"width: 99.6065px;\">.3L</td>\n<td style=\"width: 99.4445px;\">.25</td>\n<td style=\"width: 99.1435px;\">10-14</td>\n<td style=\"width: 99.6875px;\">50-60%</td>\n<td style=\"width: 99.8032px;\">All</td>\n<td style=\"width: 99.3403px;\">1.0-1.1</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">0</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1 S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Banded rail</td>\n<td style=\"width: 205.799px;\">Hypotaenidia philippensis</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">.34/.1</td>\n<td style=\"width: 99.3519px;\">2</td>\n<td style=\"width: 99.6065px;\">.3L</td>\n<td style=\"width: 99.4445px;\">.25</td>\n<td style=\"width: 99.1435px;\">6-40</td>\n<td style=\"width: 99.6875px;\">30-100%</td>\n<td style=\"width: 99.8032px;\">All</td>\n<td style=\"width: 99.3403px;\">1.0-1.2</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">0</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1 S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Lord Howe woodhen</td>\n<td style=\"width: 205.799px;\">Hypotaenidia sylvestris</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">.34/.1</td>\n<td style=\"width: 99.3519px;\">2</td>\n<td style=\"width: 99.6065px;\">.3L</td>\n<td style=\"width: 99.4445px;\">.25</td>\n<td style=\"width: 99.1435px;\">18-22</td>\n<td style=\"width: 99.6875px;\">62-68%</td>\n<td style=\"width: 99.8032px;\">30-100% Forest</td>\n<td style=\"width: 99.3403px;\">1.0-1.2</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">0</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1 S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Auckland rail</td>\n<td style=\"width: 205.799px;\">Lewinia muelleri</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">.1</td>\n<td style=\"width: 99.3519px;\">2</td>\n<td style=\"width: 99.6065px;\">.2L</td>\n<td style=\"width: 99.4445px;\">.25</td>\n<td style=\"width: 99.1435px;\">5-11</td>\n<td style=\"width: 99.6875px;\">70-80%</td>\n<td style=\"width: 99.8032px;\">0-50% Forest</td>\n<td style=\"width: 99.3403px;\">1.0-1.2</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">0</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1 S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Lord Howe swamphen &dagger;</td>\n<td style=\"width: 205.799px;\">Porphyrio albus</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">1</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6065px;\">.5H</td>\n<td style=\"width: 99.4445px;\">1</td>\n<td style=\"width: 99.1435px;\">18-22</td>\n<td style=\"width: 99.6875px;\">62-68%</td>\n<td style=\"width: 99.8032px;\">30-100% Forest</td>\n<td style=\"width: 99.3403px;\">1.0-1.2</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1 S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">South Island takahē</td>\n<td style=\"width: 205.799px;\">Porphyrio hochstetteri</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">2.5</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6065px;\">.5H</td>\n<td style=\"width: 99.4445px;\">1</td>\n<td style=\"width: 99.1435px;\">4-14</td>\n<td style=\"width: 99.6875px;\">50-100%</td>\n<td style=\"width: 99.8032px;\">0-50% Forest</td>\n<td style=\"width: 99.3403px;\">1.0-1.6</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1 S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">North Island takahē &dagger;</td>\n<td style=\"width: 205.799px;\">Porphyrio mantelli</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">3</td>\n<td style=\"width: 99.3519px;\">3</td>\n<td style=\"width: 99.6065px;\">.6H</td>\n<td style=\"width: 99.4445px;\">1</td>\n<td style=\"width: 99.1435px;\">8-16</td>\n<td style=\"width: 99.6875px;\">50-100%</td>\n<td style=\"width: 99.8032px;\">0-50% Forest</td>\n<td style=\"width: 99.3403px;\">1.0-1.6</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">1</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1 S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Hodgens' waterhen &dagger;</td>\n<td style=\"width: 205.799px;\">Tribonyx hodgenorum</td>\n<td style=\"width: 127.882px;\">&nbsp;</td>\n<td style=\"width: 99.5949px;\">.28/.01</td>\n<td style=\"width: 99.3519px;\">2</td>\n<td style=\"width: 99.6065px;\">.4L</td>\n<td style=\"width: 99.4445px;\">.25</td>\n<td style=\"width: 99.1435px;\">4-14</td>\n<td style=\"width: 99.6875px;\">25-100%</td>\n<td style=\"width: 99.8032px;\">20+Shrub</td>\n<td style=\"width: 99.3403px;\">1.0-1.1</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">0</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1 S</td>\n<td style=\"width: 99.4097px;\">5+-4 feathers</td>\n<td style=\"width: 99.6412px;\">&nbsp;</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berrybush, Egg, Fish, Fruit, Grain, Grass, Insect, Meat, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"width: 253.785px;\">Kākāpō</td>\n<td style=\"width: 205.799px;\">Strigops habroptila</td>\n<td style=\"width: 127.882px;\">Strigopidae</td>\n<td style=\"width: 99.5949px;\">2/1/.2</td>\n<td style=\"width: 99.3519px;\">3/2</td>\n<td style=\"width: 99.6065px;\">.64 L</td>\n<td style=\"width: 99.4445px;\">1 t1</td>\n<td style=\"width: 99.1435px;\">6-14</td>\n<td style=\"width: 99.6875px;\">50-100%</td>\n<td style=\"width: 99.8032px;\">25%+</td>\n<td style=\"width: 99.3403px;\">1.0-1.5</td>\n<td style=\"width: 139.063px;\">1-2M&amp;F</td>\n<td style=\"width: 99.2708px;\">1.1 poultry</td>\n<td style=\"width: 99.2014px;\">0</td>\n<td style=\"width: 99.5718px;\">1S</td>\n<td style=\"width: 99.4097px;\">15+-7 feathers</td>\n<td style=\"width: 99.6412px;\">Climbing</td>\n<td style=\"width: 467.662px;\">\n<div>\n<div>Berrybush, Fruit, Grain, Grass, Nibblecrop, Peanut, Vegetable</div>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">All of the adult birds can be fed in order to get them to place nests. These nests count as entities and can be broken, dropping eggs. While the eggs are in item form they will slowly rot, but can be used for incredibly satiating meals. While on the ground, they slowly grow and will eventually hatch into baby birds. </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Features:</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">All species have a unique pelt that can be used to craft hide, feathers and a taxidermied full body.<br /><br />Occasionally a fly covered giant moa carcass will spawn, blocking giant moa spawns in the area. They have a chance to spawn when first arriving in an area or when all giant moa have been killed off from the area, allowing players to locally wipe out giant moa. Destroying the carcass of the respective type will allow more giant moa to spawn again and some carnivores and scavengers may destroy them as well, so if you want giant moa spawns prevented in an area protect these carcasses.<br /></span></p>\n<p>&nbsp;</p>\n<p><span style=\"font-weight: 400;\">And a big thanks to everyone who gave feedback and assistance!<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong> How do I domesticate the animals in this pack?<br /><br /><strong>A:</strong> The animals in this mod can not be domesticated, as the nest blocks their generation progression. You can breed them however. Get a male and female adult of a given species within 10 blocks, wait until the female is ready to mate and feed her the sufficient number of portions and the male at least one. Different species require different amounts and can be found in the entity file under the multiply section. Animals can be fed either by dropping items on the ground or by using the large trough. The small trough is not supported at this time due to patching formats. Each species diet can be found in this mod's description or in their entity file under the diet section. The female will create a nest that, after a sufficient time will generate babies if loaded in the world, or the nest can be broken for eggs that when placed will guaranteed hatch into babies after a set amount of time.<br /><br /><br /><strong>Q:</strong> Why so many animal packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain clade file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><br /><strong>Q:</strong> Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> Yes, this mod series is safe to add and remove. Items from this mod that have been placed will be invisible or appear as question blocks if the mod is removed but can be safely broken.</div>\n</div>\n<p><span style=\"font-weight: 400;\"> <br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "dinornithidae",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_f18c7f384691f52b5ec84f67ffb751d3.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_f18c7f384691f52b5ec84f67ffb751d3.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_f18c7f384691f52b5ec84f67ffb751d3.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 132634,
+    "follows": 1117,
+    "trendingpoints": 0,
+    "comments": 188,
+    "side": "both",
+    "type": "mod",
+    "created": "2024-05-22 16:47:29",
+    "lastreleased": "2026-09-23 19:22:27",
+    "lastmodified": "2026-09-28 20:16:54",
+    "tags": [
+      "Crafting",
+      "Food",
+      "Furniture",
+      "Creatures"
+    ],
+    "releases": [
+      {
+        "releaseid": 58163,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_3e0dcbff1f413dc375aeb8fd98a27b4d.zip?dl=FotSA-Dinornithidae-v1.0.25.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.25.zip",
+        "fileid": 124643,
+        "downloads": 1133,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.25",
+        "created": "2026-09-23 19:22:27",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Footstep sounds to moa</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Lesser moa babies not able to grow up</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Upland moa’s missing Flee Deadly conditions ai task section</span></p>"
+      },
+      {
+        "releaseid": 57408,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_ca549b9a457d79fd17371f44630e2166.zip?dl=FotSA-Dinornithidae-v1.0.24.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.24.zip",
+        "fileid": 123255,
+        "downloads": 1114,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.24",
+        "created": "2026-09-18 15:41:17",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Ancient Tools Brain drops (Thanks Whiskey Sunshine!)<br></span><span style=\"font-weight: 400;\">Added-Hen Box functionality, birds will now lay eggs in hen boxes and progress generations</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Added-Oiled, Raw, Salted hides and associated recipes<br></span><span style=\"font-weight: 400;\">Fixed-Large troughs can’t be used for wren, owlet-nightjar, duck, goose, kiwi, adzebill, rail or kakapo feeding</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Missing center point in carcass</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Fixed-Small troughs can’t be used for moa feeding</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Ai task time frames go over midnight</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Climate spawn conditions changed due to 1.21 changes</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Changed spawn conditions to not allow any amount of artificial light block spawns</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Changed lesser moa hitboxes</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Hides unused nests from creative and handbook</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Increased population of all bird clades when playing with Biomes</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Reduced flightless wren population cap to 4</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Reduced spawn checks to single per species for optimization</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Tweak-Removed minimum altitude from most spawn conditions<br></span><span style=\"font-weight: 400;\">Updated-Egg meal patch shapes and extra egg slots</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Refactored AI tasks to the new version</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Reformatted folders to match base game’s folder layout</span><span style=\"font-weight: 400;\"><br></span><span style=\"font-weight: 400;\">Updated-Split entity files into adult and babies</span></p>"
+      },
+      {
+        "releaseid": 52920,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_bdc4604251587a6e5383e41961ee1111.zip?dl=FotSA-Dinornithidae-v1.0.23.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.23.zip",
+        "fileid": 114651,
+        "downloads": 6531,
+        "tags": [
+          "1.22.6"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.23",
+        "created": "2026-08-14 15:12:05",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-Change chance and wanderChance to executionChance</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Animal interaction patches</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Note-This is a quick a dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22</span></p>"
+      },
+      {
+        "releaseid": 32116,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_6ec466ef3ade0f35c202c70ebf8e5be5.zip?dl=FotSA-Dinornithidae-v1.0.22.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.22.zip",
+        "fileid": 70685,
+        "downloads": 23619,
+        "tags": [
+          "1.21.6"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.22",
+        "created": "2026-01-06 23:11:12",
+        "changelog": "<p>Updated-1 hide is always dropped from killed animals</p>"
+      },
+      {
+        "releaseid": 29757,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_4dbec566ee1450db4bb3436280acd2c6.zip?dl=FotSA-Dinornithidae-v1.0.21.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.21.zip",
+        "fileid": 65703,
+        "downloads": 8538,
+        "tags": [
+          "1.21.5",
+          "1.21.6"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.21",
+        "created": "2025-11-23 21:33:43",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Kiwi nests and eggs not using correct string</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 28291,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_f392cadfd9371edba718bbcc5d66ca84.zip?dl=FotSA-Dinornithidae-v1.0.20.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.20.zip",
+        "fileid": 62250,
+        "downloads": 6150,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.20",
+        "created": "2025-10-28 19:46:19",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Weighted diet </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Trappable format for 1.21</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 25913,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_6d2ba4e59efd226d478b5e383b2dac81.zip?dl=FotSA-Dinornithidae-v1.0.19.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.19.zip",
+        "fileid": 56935,
+        "downloads": 10988,
+        "tags": [
+          "1.21.1",
+          "1.21.2-rc.2",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.19",
+        "created": "2025-09-25 16:19:49",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Malfored entity code preventing upland moa from spawning in pairs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Malformed entity code preventing nests being &lsquo;born&rsquo;</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 25580,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_041ec3f8e4eee0d1701c7fa8982bf8e9.zip?dl=FotSA-Dinornithidae-v1.0.18.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.18.zip",
+        "fileid": 56342,
+        "downloads": 3016,
+        "tags": [
+          "1.21.1"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.18",
+        "created": "2025-09-20 16:39:41",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added- Creature tags</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Animal interaction patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Meal patches for 1.21</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 19940,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_5effd291961902430202f46849d1d32a.zip?dl=FotSA-Dinornithidae-v1.0.17.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.17.zip",
+        "fileid": 43202,
+        "downloads": 15916,
+        "tags": [
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.17",
+        "created": "2025-05-12 16:38:37",
+        "changelog": "<p>Added-UK translation (Thanks Deanbro!)<br />Fixed-Missing Biome whitelisting for&nbsp;<span data-sheets-root=\"1\">nests</span></p>"
+      },
+      {
+        "releaseid": 19493,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_e444f20a9d5cb4e8c0832159422e88d1.zip?dl=FotSA-Dinornithidae-v1.0.16.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.16.zip",
+        "fileid": 42144,
+        "downloads": 6600,
+        "tags": [
+          "1.20.9",
+          "1.20.10"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.16",
+        "created": "2025-04-30 18:39:58",
+        "changelog": "<p>Added-Devil interactions<br />Added-Diprotodon interactions</p>"
+      },
+      {
+        "releaseid": 18519,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_613915d7d2f8fb9e08b5d9a8e2f3592c.zip?dl=FotSA-Dinornithidae-v1.0.15.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.15.zip",
+        "fileid": 40017,
+        "downloads": 5366,
+        "tags": [
+          "1.20.7",
+          "1.20.8"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.15",
+        "created": "2025-04-04 23:50:05",
+        "changelog": "<p>Added-Worldgen spawn</p>"
+      },
+      {
+        "releaseid": 17413,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_5dd35abf8d83006ec366fb7bd7ab7d26.zip?dl=FotSA-Dinornithidae-v1.0.14.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.14.zip",
+        "fileid": 37079,
+        "downloads": 5473,
+        "tags": [
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.14",
+        "created": "2025-03-11 19:51:45",
+        "changelog": "<p>Added-Thylacoleo interactions</p>"
+      },
+      {
+        "releaseid": 16565,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_1776716436a3f74a3b635d8195705dc4.zip?dl=FotSA-Dinornithidae-v1.0.13.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.13.zip",
+        "fileid": 34134,
+        "downloads": 4562,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.13",
+        "created": "2025-02-20 16:37:17",
+        "changelog": "<p>Added-Civet and Genet Interactions<br />Fixed-Kakapo and Moa pelt drops and emotion states</p>"
+      },
+      {
+        "releaseid": 16231,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_0573e29014a3854500e7d4eeb51ed60a.zip?dl=FotSA-Dinornithidae-v1.0.12.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.12.zip",
+        "fileid": 33370,
+        "downloads": 2460,
+        "tags": [
+          "1.20.4"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.12",
+        "created": "2025-02-14 18:02:22",
+        "changelog": "<p>Fixed-Base game animal patch format updated to 1.20.4</p>"
+      },
+      {
+        "releaseid": 15946,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_d23ae5b1164a89eb57f18ebe0b8d0c9e.zip?dl=FotSA-Dinornithidae-v1.0.11.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.11.zip",
+        "fileid": 32806,
+        "downloads": 1802,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.11",
+        "created": "2025-02-09 17:51:08",
+        "changelog": "<p>Tweak-Adjusted most bird call ranges, bringing birds in line with rooster and hen calls except those notably louder than roosters</p>"
+      },
+      {
+        "releaseid": 15663,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_a434da4351de76a45f9d0c7688eec7ea.zip?dl=FotSA-Dinornithidae-v1.0.10.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.10.zip",
+        "fileid": 32304,
+        "downloads": 2375,
+        "tags": [
+          "1.20.3"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.10",
+        "created": "2025-02-03 19:32:28",
+        "changelog": "<p>Added-Fall damage reduction to Kakapo</p>"
+      },
+      {
+        "releaseid": 14976,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_030daf930c43f252a9e86210fc2fb3a0.zip?dl=FotSA-Dinornithidae-v1.0.9.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.9.zip",
+        "fileid": 31031,
+        "downloads": 4657,
+        "tags": [
+          "1.20.1",
+          "1.20.3"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.9",
+        "created": "2025-01-22 20:41:10",
+        "changelog": "<p>Tweak-Standardized sounds to cap at 60% max audio output</p>"
+      },
+      {
+        "releaseid": 14613,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_d94546222380ca38b21f9b0fc5e70263.zip?dl=FotSA-Dinornithidae-v1.0.8.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.8.zip",
+        "fileid": 30386,
+        "downloads": 2554,
+        "tags": [
+          "1.20.0",
+          "1.20.1"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.8",
+        "created": "2025-01-17 18:46:44",
+        "changelog": "<p>Added-Elephant interactions</p>"
+      },
+      {
+        "releaseid": 14291,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_87c4b19ca994d5e0af792580d1d3a72d.zip?dl=FotSA-Dinornithidae-v1.0.7.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.7.zip",
+        "fileid": 29708,
+        "downloads": 1359,
+        "tags": [
+          "1.20.0-rc.8",
+          "1.20.0-rc.9"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.7",
+        "created": "2025-01-06 21:50:35",
+        "changelog": "<p>Hopefully fixed- Crashes when putting an adult bird into the alarmherdondamage emotion state while nearby a nest, please report any more similar crashes if encountered, there might be a couple overlapping issues here</p>"
+      },
+      {
+        "releaseid": 14129,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_14a160119e3d466d69fad434b84c470e.zip?dl=FotSA-Dinornithidae-v1.0.6.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.6.zip",
+        "fileid": 29440,
+        "downloads": 830,
+        "tags": [
+          "1.20.0-rc.6",
+          "1.20.0-rc.8"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.6",
+        "created": "2025-01-01 23:51:25",
+        "changelog": "<p>Added-Felinae compatibility<br />Updated-1.20 land entity pathfinding<br />Updated-1.20 blending for movement animations<br />Tweak-call range for multiple birds<br />Fixed-Cleaned up emotion states for geese and giant moa</p>"
+      },
+      {
+        "releaseid": 13469,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_61961871727d4c25dc5aacc2f398a575.zip?dl=FotSA-Dinornithidae-v1.0.5.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.5.zip",
+        "fileid": 28215,
+        "downloads": 2581,
+        "tags": [
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.5",
+        "created": "2024-12-05 22:29:08",
+        "changelog": "<p>Tweak-Reduced the pitch of all NZ wren's calls by 10%<br />Tweak-Combat Overhaul damage resistance</p>"
+      },
+      {
+        "releaseid": 13173,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_e50856e4253e11aee23b6d0ab3928fbd.zip?dl=FotSA-Dinornithidae-v1.0.4.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.4.zip",
+        "fileid": 27605,
+        "downloads": 889,
+        "tags": [
+          "1.20.0-pre.0",
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.4",
+        "created": "2024-11-21 19:33:08",
+        "changelog": "<p>Adjusted-Combat Overhaul damage resistances<br />Fixed-Pelts not scaling on toolracks<br />Fixed-Upland moa nest bug</p>"
+      },
+      {
+        "releaseid": 12988,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_fa88bb726981dce2a3c2b0587d65e661.zip?dl=FotSA-Dinornithidae-v1.0.3.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.3.zip",
+        "fileid": 27264,
+        "downloads": 597,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.3",
+        "created": "2024-11-11 22:22:24",
+        "changelog": "<p>Tweak-Reduced geese aggressive around entity duration from 60 sec to 5 sec<br />Tweak-Reduced geese aggressive on damage duration from 30 sec to 10 sec<br />Tweak-Reduced geese aggressive on damage chance from 50% to 25%</p>"
+      },
+      {
+        "releaseid": 12713,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_5153d822fb0363f0b54311c4ebc8a51a.zip?dl=FotSA-Dinornithidae-v1.0.2.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.2.zip",
+        "fileid": 26723,
+        "downloads": 640,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.2",
+        "created": "2024-10-26 16:11:27",
+        "changelog": "<p>Fixed- missing Anatidae decay shapes<br />Fixed- Moa grow into and breeding behaviors not working</p>"
+      },
+      {
+        "releaseid": 12679,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_e776d34d566a31efbb12d0390b982560.zip?dl=FotSA-Dinornithidae-v1.0.1.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.1.zip",
+        "fileid": 26653,
+        "downloads": 356,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.1",
+        "created": "2024-10-24 19:33:59",
+        "changelog": "<p>Updated-French translation (Thanks Laerinok)</p>"
+      },
+      {
+        "releaseid": 12656,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_ebd1c6d1f1d75f0c1c2d94effac9a553.zip?dl=FotSA-Dinornithidae-v1.0.0.zip",
+        "filename": "FotSA-Dinornithidae-v1.0.0.zip",
+        "fileid": 26621,
+        "downloads": 290,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "1.0.0",
+        "created": "2024-10-23 23:34:28",
+        "changelog": "<p>Added-7 new species of moa<br />Added- French translation of most species (Thanks Laerinok)<br />Added-Combat Overhaul compatibility (Thanks Maltiez)</p>"
+      },
+      {
+        "releaseid": 12655,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_639a97e51610badadbc78abf3605bdb7.zip?dl=FotSA-Dinornithidae-0.9.0.zip",
+        "filename": "FotSA-Dinornithidae-0.9.0.zip",
+        "fileid": 26620,
+        "downloads": 2280,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "0.9.0",
+        "created": "2024-10-23 23:32:49",
+        "changelog": "<p>1.19 version of 1.0.0</p>"
+      },
+      {
+        "releaseid": 12546,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_5599055c5732a006118b3295262ebd02.zip?dl=FotSA-Dinornithidae-v0.8.0.zip",
+        "filename": "FotSA-Dinornithidae-v0.8.0.zip",
+        "fileid": 26321,
+        "downloads": 598,
+        "tags": [
+          "1.20.0-pre.0"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "0.8.0",
+        "created": "2024-10-15 23:40:22",
+        "changelog": "<p>Fixed-Trough diet tags<br />Updated-Animal patches, powdered item in recipe and various tweaks for 1.20's changes<br />Added-Smaller bird taxidermy can now be placed in quadrants and the display cases, thanks Burntorrent!<br />Added-11 species of rails</p>"
+      },
+      {
+        "releaseid": 11195,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_41b3b07dcee8f3bc244ef4a3e79ff9f2.zip?dl=FotSA-Dinornithidae-v0.7.0.zip",
+        "filename": "FotSA-Dinornithidae-v0.7.0.zip",
+        "fileid": 23292,
+        "downloads": 4486,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "0.7.0",
+        "created": "2024-07-07 23:13:00",
+        "changelog": "<p>Added-Six new species of flightless teals, ducks and geese</p>"
+      },
+      {
+        "releaseid": 10932,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_c35ae0a5157021cf8a1922e98af0d9af.zip?dl=FotSA-Dinornithidae-v0.6.0.zip",
+        "filename": "FotSA-Dinornithidae-v0.6.0.zip",
+        "fileid": 22797,
+        "downloads": 1059,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "0.6.0",
+        "created": "2024-06-21 17:59:52",
+        "changelog": "<p>Added-Five species of kiwi<br />Tweak-empty and mature nests no longer spawn, only incubating ones</p>"
+      },
+      {
+        "releaseid": 10907,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_d7978ebb51e7d5ed692a5668c0c36133.zip?dl=FotSA-Dinornithidae-v0.5.1.zip",
+        "filename": "FotSA-Dinornithidae-v0.5.1.zip",
+        "fileid": 22763,
+        "downloads": 482,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "0.5.1",
+        "created": "2024-06-19 20:32:24",
+        "changelog": "<p>Fixed-NZ wren nests spawning in all climate conditions and at too high a spawn cap</p>"
+      },
+      {
+        "releaseid": 10901,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_bbea9867e7fc5764725773936d8c2ce6.zip?dl=FotSA-Dinornithidae-v0.5.0.zip",
+        "filename": "FotSA-Dinornithidae-v0.5.0.zip",
+        "fileid": 22750,
+        "downloads": 317,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "0.5.0",
+        "created": "2024-06-19 17:08:25",
+        "changelog": "<p>Added-Seven New Zealand wren speices<br />Added-climbing to Kakapo</p>"
+      },
+      {
+        "releaseid": 10759,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_a240b5b7dce134939fc73601c8541cac.zip?dl=FotSA-Dinornithidae-v0.4.0.zip",
+        "filename": "FotSA-Dinornithidae-v0.4.0.zip",
+        "fileid": 22374,
+        "downloads": 846,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "0.4.0",
+        "created": "2024-06-10 19:25:30",
+        "changelog": "<p>Added-two species of Adzebill, the North Island and South Island Adzebill<br />Fixed-meal recipes for owlet-nightjar and giant moa</p>"
+      },
+      {
+        "releaseid": 10544,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_d8fb846733307f28f6a0b120c708c8f8.zip?dl=FotSA-Dinornithidae-v0.3.0.zip",
+        "filename": "FotSA-Dinornithidae-v0.3.0.zip",
+        "fileid": 22010,
+        "downloads": 1197,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "0.3.0",
+        "created": "2024-05-27 01:41:12",
+        "changelog": "<p>Added-Two species of the <span data-sheets-root=\"1\" data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Dinornithidae&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:515,&quot;3&quot;:{&quot;1&quot;:0},&quot;4&quot;:{&quot;1&quot;:2,&quot;2&quot;:16770457},&quot;12&quot;:0}\">Dinornithidae family, the</span> Giant Moa, as well as a rare carcass and nest spawn<br />Tweak-Removed feathers from baby kakapo and owlet-nightjar drops<br />Fix-Set Kakapo and owlet-nightjar damage to be tier 1</p>"
+      },
+      {
+        "releaseid": 10481,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_9b02280004907c662b1440553e4887f0.zip?dl=FotSA-Dinornithidae-v0.2.0.zip",
+        "filename": "FotSA-Dinornithidae-v0.2.0.zip",
+        "fileid": 21887,
+        "downloads": 517,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "0.2.0",
+        "created": "2024-05-23 22:09:03",
+        "changelog": "<p>Added-New Zealand Owlet-NightJar: a nocturnal insectivore that makes a distinct call. Spawns in dense forests.<br />Added- Flee on damage behavior to Kakapo<br />Fixed-Kakapo nest becoming carcass when destroyed</p>"
+      },
+      {
+        "releaseid": 10462,
+        "mainfile": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_9de39fe38db840bbd621f6d1ec629a63.zip?dl=FotSA-Dinornithidae-v0.1.0.zip",
+        "filename": "FotSA-Dinornithidae-v0.1.0.zip",
+        "fileid": 21854,
+        "downloads": 456,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "dinornithidae",
+        "modversion": "0.1.0",
+        "created": "2024-05-22 16:51:45",
+        "changelog": "<p>Kakapo Testing version</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 21853,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-05-22_09-48-57_c8e04902b45f3f5333430f16732d87ed.png",
+        "filename": "2024-05-22_09-48-57.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-05-22_09-48-57_c8e04902b45f3f5333430f16732d87ed_55_60.png",
+        "created": "2024-05-22 16:49:54"
+      },
+      {
+        "fileid": 21888,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-05-23_09-25-33_c85f393f6d5e5ee6c0a6b227eb07de29.png",
+        "filename": "2024-05-23_09-25-33.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-05-23_09-25-33_c85f393f6d5e5ee6c0a6b227eb07de29_55_60.png",
+        "created": "2024-05-23 22:09:21"
+      },
+      {
+        "fileid": 22011,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-05-26_17-54-14_699b55ef7e8c309607c518e830dddd3e.png",
+        "filename": "2024-05-26_17-54-14.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-05-26_17-54-14_699b55ef7e8c309607c518e830dddd3e_55_60.png",
+        "created": "2024-05-27 01:41:23"
+      },
+      {
+        "fileid": 22375,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-06-10_10-02-24_8f52a3b159e99871576d068c926139a5.png",
+        "filename": "2024-06-10_10-02-24.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-06-10_10-02-24_8f52a3b159e99871576d068c926139a5_55_60.png",
+        "created": "2024-06-10 19:27:04"
+      },
+      {
+        "fileid": 22798,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-06-21_10-58-24_a93936bbe6ba388710175a3f5218bd30.png",
+        "filename": "2024-06-21_10-58-24.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-06-21_10-58-24_a93936bbe6ba388710175a3f5218bd30_55_60.png",
+        "created": "2024-06-21 18:01:58"
+      },
+      {
+        "fileid": 23293,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-07-06_15-01-15_ea85ee798b17432fe55fc945c60a4b15.png",
+        "filename": "2024-07-06_15-01-15.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-07-06_15-01-15_ea85ee798b17432fe55fc945c60a4b15_55_60.png",
+        "created": "2024-07-07 23:13:55"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

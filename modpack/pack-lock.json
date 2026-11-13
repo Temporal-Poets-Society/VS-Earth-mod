@@ -1,0 +1,115 @@
+{
+    "format":  2,
+    "name":  "Earth Regional Trees",
+    "gameVersion":  "1.22.7",
+    "created":  "2026-10-16",
+    "note":  "Bundled archives ship inside the pack; their versions and hashes are written by tools/build-regional-tree-pack.ps1 from release/earthmap-\u003cmodinfo version\u003e.zip and the Cylinder World release. This checked-in lock is not installable until that script has run.",
+    "bundled":  [
+                    {
+                        "id":  "earthmap",
+                        "name":  "Earth Map",
+                        "version":  "0.14.0",
+                        "filename":  "earthmap-0.14.0.zip",
+                        "sha256":  "29cc3b6f914630d1269ec5f268a8f33c9a163b80ed32b0608cecf2b8628885df"
+                    },
+                    {
+                        "id":  "cylinderworld",
+                        "name":  "Cylinder World",
+                        "version":  "0.11.3",
+                        "filename":  "cylinderworld-0.11.3.zip",
+                        "sha256":  "e99bafca2c5a4a95050ad5f817903f7ba482bf7be84dc18b3a92cc7d93f0d5ce"
+                    }
+                ],
+    "mods":  [
+                 {
+                     "id":  "floralzonescaperegion",
+                     "name":  "Floral Zones: Cape Region",
+                     "version":  "1.0.37",
+                     "filename":  "floralzonescaperegion-1.0.37.zip",
+                     "url":  "https://moddbcdn.vintagestory.at/FloralZonesCapeRegio_628832dc44f97f1a2dae25d48baf1215.zip?dl=FloralZonesCapeRegion-v1.0.37.zip",
+                     "sha256":  "8578f688ae58ece0f1214ba85ce2b20692600afcd8e52f5c68576937ad9dda06",
+                     "page":  "https://mods.vintagestory.at/floralzonescaperegion"
+                 },
+                 {
+                     "id":  "floralzonescaribbeanregion",
+                     "name":  "Floral Zones: Caribbean Region",
+                     "version":  "1.0.29",
+                     "filename":  "floralzonescaribbeanregion-1.0.29.zip",
+                     "url":  "https://moddbcdn.vintagestory.at/FloralZonesCaribbean_58ab7382981744d81cb6f1451fec7a48.zip?dl=FloralZonesCaribbeanRegion-v1.0.29.zip",
+                     "sha256":  "6e562ee4d79ef334b79f2a50293cdd7b43fe03813b3aeda0bdc9417c18096e2a",
+                     "page":  "https://mods.vintagestory.at/floralzonescaribbeanregion"
+                 },
+                 {
+                     "id":  "floralzonescentralaustralianregion",
+                     "name":  "Floral Zones: Central Australian Region",
+                     "version":  "1.0.27",
+                     "filename":  "floralzonescentralaustralianregion-1.0.27.zip",
+                     "url":  "https://moddbcdn.vintagestory.at/FloralZonesCentralAu_c32032404793239b0e2b51df35794fe3.zip?dl=FloralZonesCentralAustralianRegion-v1.0.27.zip",
+                     "sha256":  "f7ce76d3a2aaedf595617cc6d42bd1e645afc1550ece82292154d60935f139f3",
+                     "page":  "https://mods.vintagestory.at/floralzonescentralaustralianregion"
+                 },
+                 {
+                     "id":  "floralzonescircumborealregion",
+                     "name":  "Floral Zones: Circumboreal Region",
+                     "version":  "1.0.2",
+                     "filename":  "floralzonescircumborealregion-1.0.2.zip",
+                     "url":  "https://moddbcdn.vintagestory.at/FloralZonesCircumbor_ea084a92b198ae61c28623749cd8fc8e.zip?dl=FloralZonesCircumborealRegion-v1.0.2.zip",
+                     "sha256":  "4cd7ab95eab20dc5e95381f4581a4f3959d2bdd5f963ffcb362fab9f20548e94",
+                     "page":  "https://mods.vintagestory.at/floralzonescircumborealregion"
+                 },
+                 {
+                     "id":  "floralzonescosmopolitanregion",
+                     "name":  "Floral Zones: Cosmopolitan Region",
+                     "version":  "1.0.13",
+                     "filename":  "floralzonescosmopolitanregion-1.0.13.zip",
+                     "url":  "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_2aa0fc4d93e466f4f59afbfbdac570de.zip?dl=FloralZonesCosmopolitanRegion-v1.0.13.zip",
+                     "sha256":  "9ce5aef91a24f3f8b6b7686865163c703fb500a4285f850775576f3ab5283cd4",
+                     "page":  "https://mods.vintagestory.at/floralzonescosmopolitanregion"
+                 },
+                 {
+                     "id":  "floralzoneseastasiaticregion",
+                     "name":  "Floral Zones: East Asiatic Region",
+                     "version":  "1.0.24",
+                     "filename":  "floralzoneseastasiaticregion-1.0.24.zip",
+                     "url":  "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_3dcf2357390c853ec92bfc9ac6e8c9c9.zip?dl=FloralZonesEastAsiaticRegion-v1.0.24.zip",
+                     "sha256":  "cc4e28da7445d16d90d813842bade8426a6fd248e142a82e0b3f6c3b32b9ad3f",
+                     "page":  "https://mods.vintagestory.at/floralzoneseastasiaticregion"
+                 },
+                 {
+                     "id":  "floralzonesmediterraneanregion",
+                     "name":  "Floral Zones: Mediterranean Region",
+                     "version":  "1.0.24",
+                     "filename":  "floralzonesmediterraneanregion-1.0.24.zip",
+                     "url":  "https://moddbcdn.vintagestory.at/FloralZonesMediterra_69bf9114d81bacc87d5e4a8e8a015ba2.zip?dl=FloralZonesMediterraneanRegion-v1.0.24.zip",
+                     "sha256":  "4f3c8b7ced034a2417882ecc131d0891f96ec7544db9a229e53e595adfe02a73",
+                     "page":  "https://mods.vintagestory.at/floralzonesmediterraneanregion"
+                 },
+                 {
+                     "id":  "floralzonesneozeylandicregion",
+                     "name":  "Floral Zones: Neozeylandic Region",
+                     "version":  "1.0.24",
+                     "filename":  "floralzonesneozeylandicregion-1.0.24.zip",
+                     "url":  "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_0e9adae6a15ba1f8519fbfaa025a7c04.zip?dl=FloralZonesNeozeylandicRegion-v1.0.24.zip",
+                     "sha256":  "6836252d2969b3b233636ea07256aa29a26ca4d28050bf87011cf843d7b8562f",
+                     "page":  "https://mods.vintagestory.at/floralzonesneozeylandicregion"
+                 },
+                 {
+                     "id":  "wildcrafttree",
+                     "name":  "Wildcraft: Trees and Shrubs",
+                     "version":  "1.3.4",
+                     "filename":  "wildcrafttree-1.3.4.zip",
+                     "url":  "https://moddbcdn.vintagestory.at/wildcrafttree_1.3.4_3fc7ce78efc1d6d2aa4e933d3feb9d10.zip?dl=wildcrafttree_1.3.4.zip",
+                     "sha256":  "9755515481cbc852cf955a2eff793d9776b110936f530c914bff7ac93643ec8d",
+                     "page":  "https://mods.vintagestory.at/wildcrafttree"
+                 },
+                 {
+                     "id":  "herbarium",
+                     "name":  "Herbarium",
+                     "version":  "1.4.4",
+                     "filename":  "herbarium-1.4.4.zip",
+                     "url":  "https://moddbcdn.vintagestory.at/herbarium_1.4.4_6c770611f8b76c7bee9bdeb89e56ff0b.zip?dl=herbarium_1.4.4.zip",
+                     "sha256":  "afd70a14d92f0c76d602f7409eba64e8aa9019ff5aae98db48793fab71ca59b7",
+                     "page":  "https://mods.vintagestory.at/herbarium"
+                 }
+             ]
+}

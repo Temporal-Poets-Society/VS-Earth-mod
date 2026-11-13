@@ -1,0 +1,42 @@
+{
+ "Sn": {
+  "before": {
+   "obsCells": 1868,
+   "potCells": 12231,
+   "deepCells": 0,
+   "heat>=0.25": 2903,
+   "heat>=0.5": 455,
+   "heat>=0.75": 136,
+   "heatSum": 2838.6
+  },
+  "after": {
+   "obsCells": 1868,
+   "potCells": 2254,
+   "deepCells": 0,
+   "heat>=0.25": 2903,
+   "heat>=0.5": 455,
+   "heat>=0.75": 136,
+   "heatSum": 1236.8
+  }
+ },
+ "W": {
+  "before": {
+   "obsCells": 2006,
+   "potCells": 12387,
+   "deepCells": 5,
+   "heat>=0.25": 3269,
+   "heat>=0.5": 362,
+   "heat>=0.75": 111,
+   "heatSum": 2914.9
+  },
+  "after": {
+   "obsCells": 2006,
+   "potCells": 2416,
+   "deepCells": 5,
+   "heat>=0.25": 3269,
+   "heat>=0.5": 362,
+   "heat>=0.75": 111,
+   "heatSum": 1330.1
+  }
+ }
+}

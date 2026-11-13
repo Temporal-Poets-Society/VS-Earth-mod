@@ -1,0 +1,114 @@
+{
+	// Habitats step 1: vegetation zones from climate alone (docs/research/habitats-2026-11-06, section 1; Core.ClimateZones).
+	// Each zone is a soft envelope over the drivers; its weight is the product of a smooth step at each limit (0.5 at the
+	// limit, 0.98 one "soft" inside, 0.02 one "soft" outside), normalised over all zones, so borders blend.
+	// Drivers at the ground's real elevation: gdd5 (growing degree days above 5 °C), tCold and tWarm (coldest and warmest
+	// monthly means, °C), aridity (precipitation / potential evapotranspiration; "soft" in log10 units), drySummer (0..1),
+	// dryMonths (months dry by Walter and Lieth's climate diagrams, P mm < 2 T °C, from weather.bin; separates savanna, dry
+	// forest and rainforest, where the yearly aridity alone can't), tMean (yearly mean, °C).
+	// Earth's climate as new worlds read it: CHELSA temperatures on the 2' grid (climate rules 2), climate fix v3.
+	// Mountains need no zones of their own: the lapse rate moves them through the same zones as latitude.
+	// Thresholds after the usual bioclimatic limits: the tree line near a 10 °C warmest month; boreal, temperate and
+	// warm-temperate forests by growing degree days and the coldest month (Prentice et al. 1992, "A global biome model");
+	// the tropics by a frost-free coldest month (Köppen); deserts, semi-deserts, steppe and forest-steppe by the aridity
+	// index (UNEP 1992). Values tuned on Earth's own climate at named places (tests/ZoneTests).
+	// Two aridity indices: older worlds' evapotranspiration is the Holdridge estimate behind the rainfall (from the
+	// temperature alone), which runs 15 to 45 % low where sun, wind and dry air drive it (the Pontic and Kazakh steppes,
+	// the Great Plains, Tibet, the East African highlands) and so reads those lands too wet. New worlds (EarthParams.
+	// AridityRules 1) read CHELSA's Penman-Monteith (earthdata/aridity.bin, tools/bake_aridity.py). An aridity limit's
+	// "penman" block holds its values for them, refitted on the same named places (8 November 2026); limits without one
+	// hold for both. On the Penman index the steppe reaches 0.55 and the broadleaf forests start at UNEP's humid boundary,
+	// 0.65; the fire rule (FireRegime) opens the forest zones on the chernozem belt as before.
+	// forest and shrub: the zone's density (0..1), replacing the single rain curve of the forest and shrub potentials.
+	// trees: the zone's tree mix (below), replacing the coded forest-type weights (RegionalTreePicker.ForestTypeFactors).
+	// arable (default true): land people could farm. The placement catalogue's wild and feral crops (placement.json, kind
+	// "crop") grow where arable zones hold at least half the weight, or in a river's green belt (the Nile, oases): its
+	// envelopes span whole botanical countries, and Algeria, Libya and Egypt reach deep into the Sahara.
+	"version": 1,
+	// Tree mixes: a weight per forest-type group of the tree picker (other, fir, pine, larch, birch, oak, maple, walnut,
+	// arid; unlisted groups 1). They shift weight among the species of a forest type (the native species of the region
+	// where the regional catalogue has them, else vanilla's), never adding a species the region lacks. The generic fir also
+	// stands for the native spruces. Values carried over from the pre-zone tables, which were tuned on Latvia (pine 34 %,
+	// birch 31 %, spruce 18 %) and Finland (pine 50 %, spruce 30 %, birch 17 %).
+	"treeMixes": {
+		"boreal":        { "other": 1, "fir": 1.5, "pine": 2.8, "larch": 1.5, "birch": 2.0, "oak": 0.02, "maple": 0.02, "walnut": 0, "arid": 0 },
+		"hemiboreal":    { "other": 1, "fir": 0.8, "pine": 2.1, "larch": 0.3, "birch": 1.5, "oak": 0.9, "maple": 0.6, "walnut": 0.05, "arid": 0 },
+		// humid mountains and coasts: spruce and fir lead (Alps, Black Forest, Carpathians, Caucasus, Appalachian crests, Pacific Northwest)
+		"montane":       { "other": 1, "fir": 3.0, "pine": 1.5, "larch": 1.5, "birch": 0.8, "oak": 0.3, "maple": 0.5, "walnut": 0.1, "arid": 0 },
+		"broadleaf":     { "other": 1, "fir": 0.35, "pine": 0.35, "larch": 0.1, "birch": 0.5, "oak": 5.0, "maple": 1.2, "walnut": 5.0, "arid": 0 },
+		// oak with pine on sand and birch in the north (Ukrainian and Siberian forest-steppe, Anatolian and Iranian oak steppe)
+		"foreststeppe":  { "other": 1, "fir": 0.2, "pine": 1.5, "larch": 0.3, "birch": 1.5, "oak": 3.0, "maple": 0.8, "walnut": 0.5, "arid": 0.1 },
+		"submediterranean": { "other": 1, "fir": 0.3, "pine": 1.5, "larch": 0, "birch": 0.2, "oak": 5.0, "maple": 0.6, "walnut": 1.5, "arid": 0.1 },
+		"mediterranean": { "other": 1, "fir": 0.2, "pine": 2.5, "larch": 0, "birch": 0.1, "oak": 5.0, "maple": 0.2, "walnut": 0.5, "arid": 0.3 },
+		"hotdry":        { "other": 0.3, "fir": 0, "pine": 0.1, "larch": 0, "birch": 0, "oak": 0.05, "maple": 0, "walnut": 0, "arid": 6.0 },
+		"tropicaldry":   { "other": 1, "fir": 0, "pine": 0.1, "larch": 0, "birch": 0, "oak": 0.1, "maple": 0, "walnut": 0, "arid": 2.0 },
+		// rainforest: no forest type; native species keep their own weights, no thorn trees
+		"rainforest":    { "arid": 0.1 }
+	},
+	"zones": [
+		{ "code": "ice", "name": "ice and polar desert", "forest": 0, "shrub": 0, "trees": "boreal", "arable": false,
+		  "limits": { "tWarm": { "max": 0, "soft": 1 } } },
+		{ "code": "tundra", "name": "tundra (polar and alpine)", "forest": 0, "shrub": 0.35, "trees": "boreal", "arable": false,
+		  "limits": { "tWarm": { "min": 0, "max": 10.5, "soft": 1 } } },
+		{ "code": "foresttundra", "name": "forest-tundra and subalpine woodland", "forest": 0.3, "shrub": 0.6, "trees": "boreal",
+		  "limits": { "tWarm": { "min": 10.5, "soft": 1 }, "gdd5": { "max": 700, "soft": 100 }, "aridity": { "min": 0.3, "soft": 0.08 } } },
+		{ "code": "boreal", "name": "boreal forest", "forest": 0.85, "shrub": 0.4, "trees": "boreal",
+		  "limits": { "tWarm": { "min": 11.5, "soft": 1 }, "gdd5": { "min": 700, "max": 1250, "soft": 100 }, "aridity": { "min": 0.42, "max": 1.8, "soft": 0.08, "penman": { "max": 1.5 } } } },
+		// cool and very humid: spruce-fir ("dark") conifer forest. Humid mountains (from about 900 m in the Alps, Black Forest
+		// and Vosges; Carpathians, Caucasus, Appalachian crests, Rocky Mountain subalpine), humid coasts (Pacific Northwest)
+		// and the humid taiga (Quebec and Labrador, the Urals, Altai, Sikhote-Alin). Drier continental taiga and the Baltic
+		// and Russian lowlands (aridity about 0.8-1.2) stay pine, larch and birch (boreal, hemiboreal).
+		{ "code": "montaneconifer", "name": "humid spruce-fir forest (montane, coastal and dark taiga)", "forest": 0.9, "shrub": 0.4, "trees": "montane",
+		  "limits": { "tWarm": { "min": 11.5, "soft": 1 }, "gdd5": { "min": 700, "max": 1950, "soft": 150 }, "tCold": { "max": 1, "soft": 2 }, "aridity": { "min": 1.8, "soft": 0.08, "penman": { "min": 1.5 } } } },
+		{ "code": "hemiboreal", "name": "hemiboreal mixed forest", "forest": 0.9, "shrub": 0.45, "trees": "hemiboreal",
+		  "limits": { "gdd5": { "min": 1150, "max": 1950, "soft": 150 }, "tMean": { "max": 7.7, "soft": 0.4 }, "aridity": { "min": 0.55, "max": 1.8, "soft": 0.08, "penman": { "max": 1.5 } } } },
+		// Temperate broadleaf forest in two climates with one tree mix. Its border with the hemiboreal forest follows a
+		// yearly mean near 7.7 °C, where short summers and cold winters trade off: neither month alone separates Denmark
+		// (coldest month +0.9 °C) and Lviv (-2.9 °C, beech and oak) from Stockholm (-2.1 °C) and Riga (-3.1 °C) on CHELSA's
+		// temperatures. Broadleaf: Denmark, Skåne, Gdańsk, Kaliningrad, Warsaw, Lviv, Bohemia; hemiboreal: Liepāja, Riga,
+		// Kaunas, Vilnius, Białystok (the transition), Stockholm, Tallinn, Minsk. Where summers are long, broadleaf stands
+		// much colder winters, to Prentice's -15 °C summergreen limit (US Midwest, Ukraine, Manchuria).
+		{ "code": "temperate", "name": "temperate broadleaf forest", "forest": 0.9, "shrub": 0.5, "trees": "broadleaf",
+		  "limits": { "gdd5": { "min": 1350, "max": 4000, "soft": 150 }, "tMean": { "min": 7.7, "soft": 0.4 }, "tCold": { "min": -15, "soft": 1.5 }, "tWarm": { "min": 15.5, "soft": 1 }, "aridity": { "min": 0.75, "soft": 0.08, "penman": { "min": 0.65 } }, "drySummer": { "max": 0.42, "soft": 0.08 } } },
+		{ "code": "temperatecontinental", "name": "continental temperate broadleaf forest", "forest": 0.9, "shrub": 0.5, "trees": "broadleaf",
+		  "limits": { "gdd5": { "min": 1950, "max": 4000, "soft": 150 }, "tCold": { "min": -15, "max": -2.5, "soft": 1.5 }, "aridity": { "min": 0.75, "soft": 0.08, "penman": { "min": 0.65 } }, "drySummer": { "max": 0.42, "soft": 0.08 } } },
+		{ "code": "oceanic", "name": "oceanic broadleaf forest and heath", "forest": 0.8, "shrub": 0.6, "trees": "broadleaf",
+		  "limits": { "gdd5": { "min": 900, "soft": 150 }, "tCold": { "min": 1, "soft": 1.5 }, "tWarm": { "max": 18, "soft": 1.5 }, "aridity": { "min": 1.0, "soft": 0.08 }, "drySummer": { "max": 0.42, "soft": 0.08 } } },
+		{ "code": "warmhumid", "name": "warm-temperate humid forest", "forest": 0.9, "shrub": 0.5, "trees": "broadleaf",
+		  "limits": { "gdd5": { "min": 3500, "soft": 300 }, "tCold": { "min": 3, "max": 16, "soft": 1.5 }, "aridity": { "min": 0.75, "soft": 0.08, "penman": { "min": 0.65 } }, "drySummer": { "max": 0.42, "soft": 0.08 } } },
+		{ "code": "summerdryforest", "name": "humid summer-dry forest (Valdivian, Zagros and Caucasus slopes)", "forest": 0.85, "shrub": 0.55, "trees": "broadleaf",
+		  "limits": { "drySummer": { "min": 0.42, "soft": 0.08 }, "tCold": { "min": -6, "soft": 2 }, "gdd5": { "min": 900, "soft": 150 }, "aridity": { "min": 1.3, "soft": 0.08, "penman": { "min": 1.1 } } } },
+		{ "code": "submediterranean", "name": "sub-Mediterranean oak woodland", "forest": 0.6, "shrub": 0.6, "trees": "submediterranean",
+		  "limits": { "drySummer": { "min": 0.42, "soft": 0.08 }, "tCold": { "min": -6, "max": 2, "soft": 1.5 }, "gdd5": { "min": 900, "soft": 150 }, "aridity": { "min": 0.65, "max": 1.3, "soft": 0.08, "penman": { "min": 0.55, "max": 1.1 } } } },
+		// Older worlds: the forest-steppe ends at aridity 0.75 on the Holdridge index, where UNEP's dry sub-humid class ends
+		// at 0.65: Holdridge's evapotranspiration (with its floor) runs low in hot steppe summers, so its index reads about
+		// 0.15 high there (Odesa 0.67, Penman-Monteith 0.50). Broadleaf forests start at the same 0.75 (Kyiv, Vinnytsia,
+		// Bucharest, Belgrade forest; Odesa, Kherson, Chisinau, Saratov forest-steppe).
+		// New worlds (Penman-Monteith): steppe to 0.55 (Kherson 0.51, Odesa 0.50, north Crimea 0.41, Dobruja 0.47, Astana
+		// 0.46, Denver 0.41), forest-steppe 0.55-0.65 (Zaporizhzhia 0.59, Saratov 0.58, Omsk 0.57, the Hungarian puszta 0.59),
+		// broadleaf forest from 0.65 (Vienna 0.79, Belgrade 0.77, Kyiv 0.86; Kharkiv 0.72, Dnipro 0.72, Rostov 0.70 and
+		// Lincoln 0.71 are opened by fire on their chernozems).
+		{ "code": "foreststeppe", "name": "forest-steppe", "forest": 0.35, "shrub": 0.45, "trees": "foreststeppe",
+		  "limits": { "gdd5": { "min": 1000, "soft": 150 }, "tCold": { "max": 5, "soft": 2 }, "aridity": { "min": 0.42, "max": 0.75, "soft": 0.06, "penman": { "min": 0.55, "max": 0.65 } } } },
+		{ "code": "steppe", "name": "steppe", "forest": 0.04, "shrub": 0.2, "trees": "foreststeppe",
+		  "limits": { "gdd5": { "min": 600, "soft": 150 }, "tCold": { "max": 5, "soft": 2 }, "aridity": { "min": 0.17, "max": 0.42, "soft": 0.06, "penman": { "max": 0.55 } } } },
+		{ "code": "subtropicalscrub", "name": "subtropical scrub and dry grassland", "forest": 0.08, "shrub": 0.45, "trees": "hotdry",
+		  "limits": { "tCold": { "min": 4, "max": 15, "soft": 2 }, "aridity": { "min": 0.17, "max": 0.62, "soft": 0.06 }, "drySummer": { "max": 0.42, "soft": 0.08 } } },
+		{ "code": "mediterranean", "name": "Mediterranean woodland and maquis", "forest": 0.4, "shrub": 0.9, "trees": "mediterranean",
+		  "limits": { "drySummer": { "min": 0.42, "soft": 0.08 }, "tCold": { "min": 2, "max": 16, "soft": 1.5 }, "aridity": { "min": 0.2, "max": 1.3, "soft": 0.08, "penman": { "max": 1.1 } } } },
+		{ "code": "semidesert", "name": "semi-desert", "forest": 0.02, "shrub": 0.3, "trees": "hotdry", "arable": false,
+		  "limits": { "tWarm": { "min": 10, "soft": 1 }, "aridity": { "min": 0.05, "max": 0.17, "soft": 0.06 } } },
+		{ "code": "desert", "name": "desert", "forest": 0, "shrub": 0.02, "trees": "hotdry", "arable": false,
+		  "limits": { "tWarm": { "min": 10, "soft": 1 }, "aridity": { "max": 0.05, "soft": 0.06 } } },
+		// Savanna from 4 dry months (Walter and Lieth), tropical dry forest to 4.5: with UDel's complete normals (December
+		// fix), the central Serengeti counts 4.5 dry months (June to September and part of October), as its real rainfall.
+		{ "code": "savanna", "name": "savanna", "forest": 0.15, "shrub": 0.4, "trees": "hotdry",
+		  "limits": { "tCold": { "min": 15, "soft": 1.5 }, "aridity": { "min": 0.17, "soft": 0.07 }, "dryMonths": { "min": 4, "soft": 0.75 } } },
+		{ "code": "tropicaldry", "name": "tropical dry forest and thorn scrub (caatinga)", "forest": 0.6, "shrub": 0.6, "trees": "tropicaldry",
+		  "limits": { "tCold": { "min": 15, "soft": 1.5 }, "aridity": { "min": 0.3, "soft": 0.07 }, "dryMonths": { "min": 2.5, "max": 4.5, "soft": 0.75 } } },
+		{ "code": "rainforest", "name": "tropical rainforest", "forest": 1, "shrub": 0.5, "trees": "rainforest",
+		  "limits": { "tCold": { "min": 15, "soft": 1.5 }, "aridity": { "min": 0.6, "soft": 0.07 }, "dryMonths": { "max": 2.5, "soft": 0.75 } } },
+		{ "code": "highlandgrass", "name": "tropical highland dry grassland (puna)", "forest": 0.05, "shrub": 0.35, "trees": "hotdry",
+		  "limits": { "tCold": { "min": 0, "soft": 1.5 }, "tWarm": { "min": 10.5, "max": 16, "soft": 1 }, "aridity": { "min": 0.17, "soft": 0.06 }, "dryMonths": { "min": 5, "soft": 0.75 } } }
+	]
+}

@@ -1,0 +1,1231 @@
+{
+  "sources": {
+    "mammals": "https://github.com/MegaPast2Future/PHYLACINE_1.2/tree/v1.2.1",
+    "mammalsMetadata": "https://doi.org/10.1002/ecy.2443",
+    "nzBirds": "https://nzbirdsonline.org.nz/",
+    "kiwi": "https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kiwi/",
+    "penguins": "https://www.antarctica.gov.au/about-antarctica/animals/penguins/",
+    "seaTurtles": "https://www.fisheries.noaa.gov/sea-turtles",
+    "australia": "https://australian.museum/learn/animals/",
+    "mammoth": "https://www.nps.gov/bela/learn/historyculture/woolly-mammoth-page-2.htm",
+    "woollyRhino": "https://home.nps.gov/articles/beringiamegafauna.htm",
+    "americanCats": "https://home.nps.gov/articles/000/the-big-cats.htm",
+    "policyExtinct": "Extinct taxa: the last natural range before human-driven range loss or extinction, from late Pleistocene (c. 50-12 ka) to Holocene records. Post-contact relict ranges are not used as the whole range. Each rule's 'period' states the interval.",
+    "africaSplits": "Taxonomic splits mapped onto the parent species' PHYLACINE raster, restricted to the split taxon's regions."
+  },
+  "taxa": {
+    "elephantidae:elephasmaximusborneensis": {
+      "raster": "elephasmaximus",
+      "regions": [
+        "BOR"
+      ],
+      "taxon": "Elephas maximus borneensis"
+    },
+    "elephantidae:mammuthusprimigenius": {
+      "extinct": true,
+      "envelopes": [
+        [
+          -12,
+          42,
+          180,
+          76
+        ],
+        [
+          -170,
+          50,
+          -60,
+          75
+        ]
+      ],
+      "evidence": "NPS Beringia mammoth-steppe account; broad historical envelope, current climate still required",
+      "period": "Late Pleistocene (c. 50-12 ka) mammoth steppe of Eurasia and Beringia"
+    },
+    "elephantidae:mammuthuscolumbi": {
+      "extinct": true,
+      "envelopes": [
+        [
+          -128,
+          10,
+          -78,
+          50
+        ]
+      ],
+      "evidence": "NPS Waco/White Sands fossil records; broad continental envelope",
+      "period": "Late Pleistocene North America"
+    },
+    "elephantidae:mammuthusexilis": {
+      "extinct": true,
+      "regions": [
+        "CAL"
+      ],
+      "envelopes": [
+        [
+          -120.45,
+          33.98,
+          -120.28,
+          34.1
+        ],
+        [
+          -120.27,
+          33.87,
+          -119.9,
+          34.04
+        ],
+        [
+          -119.95,
+          33.93,
+          -119.5,
+          34.1
+        ],
+        [
+          -119.46,
+          34.0,
+          -119.35,
+          34.04
+        ]
+      ],
+      "evidence": "https://www.nps.gov/chis/learn/historyculture/pygmymammoth.htm",
+      "period": "Late Pleistocene northern Channel Islands (Santa Rosae)"
+    },
+    "elephantidae:palaeoloxodoncypriotes": {
+      "taxon": "Palaeoloxodon cypriotes",
+      "extinct": true,
+      "regions": [
+        "CYP"
+      ],
+      "evidence": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11496721/",
+      "period": "Late Pleistocene-early Holocene Cyprus"
+    },
+    "rhinocerotidae:coelodontaantiquitatis": {
+      "extinct": true,
+      "envelopes": [
+        [
+          -12,
+          38,
+          180,
+          75
+        ]
+      ],
+      "evidence": "NPS Beringia: woolly rhinos did not cross to Alaska",
+      "period": "Late Pleistocene northern Eurasia"
+    },
+    "caninae:aenocyondirus": {
+      "raster": "canisdirus",
+      "extinct": true,
+      "envelopes": [
+        [
+          -128,
+          -22,
+          -35,
+          55
+        ]
+      ],
+      "evidence": "https://www.nps.gov/whsa/learn/nature/paleontology.htm",
+      "period": "Late Pleistocene Americas"
+    },
+    "caninae:canislupastor": {
+      "raster": "canisaureus",
+      "taxon": "Canis lupaster",
+      "regions": [
+        "ALG",
+        "EGY",
+        "LBY",
+        "MOR",
+        "TUN",
+        "WSA",
+        "BEN",
+        "BKN",
+        "GAM",
+        "GHA",
+        "GNB",
+        "GUI",
+        "IVO",
+        "LBR",
+        "MLI",
+        "MTN",
+        "NGA",
+        "NGR",
+        "SEN",
+        "SIE",
+        "TOG",
+        "CHA",
+        "DJI",
+        "ERI",
+        "ETH",
+        "SOM",
+        "SUD",
+        "KEN",
+        "TAN",
+        "UGA",
+        "CMN",
+        "CAF"
+      ],
+      "evidence": "Koepfli et al. 2015, Current Biology 25(16): 2158-2165 (African golden wolf distinct from the Eurasian golden jackal; range Senegal-Morocco-Egypt to Kenya/Tanzania per https://en.wikipedia.org/wiki/African_golden_wolf); PHYLACINE Canis aureus raster restricted to its African part",
+      "splitNote": "Canis aureus sensu lato in PHYLACINE; only the African regions are used."
+    },
+    "caninae:canislupusarctos": {
+      "raster": "canislupus",
+      "regions": [
+        "NUN",
+        "GNL"
+      ],
+      "envelopes": [
+        [
+          -125,
+          67,
+          -18,
+          85
+        ]
+      ],
+      "taxon": "Canis lupus arctos"
+    },
+    "caninae:canislupusdingo": {
+      "note": "Introduced to Australia by people about 4,000 years ago (earliest confirmed remains c. 3,250 years old) and wild since; never reached Tasmania. Included as a long-established wild canid of mainland Australia.",
+      "regions": [
+        "WAU",
+        "NTA",
+        "SOA",
+        "QLD",
+        "NSW",
+        "VIC"
+      ],
+      "taxon": "Canis lupus dingo",
+      "evidence": "https://australian.museum/learn/animals/mammals/dingo/"
+    },
+    "caninae:lupulellaadusta": {
+      "raster": "canisadustus"
+    },
+    "caninae:lupulellamesomelas": {
+      "raster": "canismesomelas"
+    },
+    "caninae:cynotheriumsardous": {
+      "extinct": true,
+      "regions": [
+        "SAR",
+        "COR"
+      ],
+      "evidence": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8996844/",
+      "period": "Late Pleistocene-early Holocene Sardinia and Corsica"
+    },
+    "caninae:nyctereutesviverrinus": {
+      "raster": "nyctereutesprocyonoides",
+      "regions": [
+        "JAP"
+      ],
+      "taxon": "Nyctereutes viverrinus"
+    },
+    "caninae:urocyonlittoralis": {
+      "regions": [
+        "CAL"
+      ],
+      "envelopes": [
+        [
+          -120.45,
+          33.98,
+          -120.28,
+          34.1
+        ],
+        [
+          -120.27,
+          33.87,
+          -119.9,
+          34.04
+        ],
+        [
+          -119.95,
+          33.93,
+          -119.5,
+          34.1
+        ],
+        [
+          -118.62,
+          33.29,
+          -118.28,
+          33.49
+        ],
+        [
+          -118.61,
+          32.8,
+          -118.34,
+          33.05
+        ],
+        [
+          -119.59,
+          33.21,
+          -119.43,
+          33.29
+        ]
+      ],
+      "noMask": true,
+      "evidence": "https://www.nps.gov/chis/learn/nature/island-fox.htm"
+    },
+    "caninae:dusicyonaustralis": {
+      "extinct": true,
+      "regions": [
+        "FAL"
+      ],
+      "evidence": "https://doi.org/10.1038/ncomms2570",
+      "period": "Holocene Falkland Islands (extinct 1876)"
+    },
+    "machairodontinae:smilodonfatalis": {
+      "extinct": true,
+      "envelopes": [
+        [
+          -128,
+          -15,
+          -67,
+          55
+        ]
+      ],
+      "evidence": "NPS Big Cats; broad historical envelope",
+      "period": "Late Pleistocene North and western South America"
+    },
+    "machairodontinae:smilodonpopulator": {
+      "extinct": true,
+      "envelopes": [
+        [
+          -82,
+          -56,
+          -34,
+          10
+        ]
+      ],
+      "evidence": "https://ri.conicet.gov.ar/bitstream/handle/11336/69016/CONICET_Digital_Nro.f5b155bf-e6d5-4887-905b-0e84cb38ac0c_A.pdf?isAllowed=y&sequence=2",
+      "period": "Late Pleistocene eastern South America"
+    },
+    "machairodontinae:homotheriumserum": {
+      "extinct": true,
+      "envelopes": [
+        [
+          -170,
+          15,
+          -50,
+          72
+        ]
+      ],
+      "evidence": "https://doi.org/10.1016/j.cub.2017.09.033",
+      "period": "Late Pleistocene North America"
+    },
+    "pantherinae:pantheraatrox": {
+      "extinct": true,
+      "envelopes": [
+        [
+          -155,
+          10,
+          -55,
+          70
+        ]
+      ],
+      "evidence": "NPS Big Cats; historical continental envelope",
+      "period": "Late Pleistocene North America"
+    },
+    "pantherinae:pantheraspelaea": {
+      "extinct": true,
+      "envelopes": [
+        [
+          -12,
+          35,
+          180,
+          75
+        ],
+        [
+          -170,
+          55,
+          -105,
+          73
+        ]
+      ],
+      "evidence": "NPS Beringia megafauna; Europe and northern Asia with Beringian North America",
+      "period": "Late Pleistocene Eurasia and Beringia"
+    },
+    "bovinae:bosprimigeniusprimigenius": {
+      "taxon": "Bos primigenius primigenius",
+      "extinct": true,
+      "regions": [
+        "GRB",
+        "FRA",
+        "SPA",
+        "POR",
+        "GER",
+        "NET",
+        "BGM",
+        "DEN",
+        "SWE",
+        "POL",
+        "BLT",
+        "BLR",
+        "UKR",
+        "RUC",
+        "RUW",
+        "RUS",
+        "RUE",
+        "ROM",
+        "BUL",
+        "HUN",
+        "CZE",
+        "AUT",
+        "SWI",
+        "ITA",
+        "YUG",
+        "ALB",
+        "GRC",
+        "TUE",
+        "TUR",
+        "LBS",
+        "PAL",
+        "IRQ",
+        "IRN",
+        "NCS",
+        "TCS"
+      ],
+      "evidence": "https://www.nature.com/articles/s41586-024-08112-6",
+      "note": "European aurochs subspecies only; no automatic Indian/African aurochs substitution. Ireland excluded: no postglacial aurochs record there.",
+      "period": "Late Pleistocene-Holocene Europe and western Asia (last individual 1627, Poland)"
+    },
+    "sirenia:dugon": {
+      "raster": "dugongdugon",
+      "water": "marine",
+      "maxDepth": 24,
+      "taxon": "Dugong dugon"
+    },
+    "sirenia:gigas": {
+      "extinct": true,
+      "water": "marine",
+      "maxDepth": 20,
+      "envelopes": [
+        [
+          135,
+          33,
+          -117,
+          64
+        ]
+      ],
+      "taxon": "Hydrodamalis gigas",
+      "evidence": "https://www.nhm.ac.uk/discover/stellers-sea-cow-first-historical-extinction-of-marine-mammal-at-human-hands.html; https://en.wikipedia.org/wiki/Steller%27s_sea_cow (Late Pleistocene Monterey Bay and Honshu, Amchitka); Crerar et al. 2014, Biology Letters (St Lawrence Island population c. 800-920 CE; bone provenance later questioned)",
+      "note": "Shallow North Pacific rim waters from Japan to California; the 1741 Commander Islands herd was a relict of this range.",
+      "period": "Late Pleistocene-Holocene North Pacific rim (relict to 1768)"
+    },
+    "sirenia:inunguis": {
+      "raster": "trichechusinunguis",
+      "water": "fresh",
+      "taxon": "Trichechus inunguis"
+    },
+    "sirenia:manatus": {
+      "raster": "trichechusmanatus",
+      "water": "amphibious",
+      "maxDepth": 24,
+      "taxon": "Trichechus manatus"
+    },
+    "sirenia:senegalensis": {
+      "raster": "trichechussenegalensis",
+      "water": "amphibious",
+      "maxDepth": 24,
+      "taxon": "Trichechus senegalensis"
+    },
+    "iniidae:lipotesvexillifer": {
+      "taxon": "Lipotes vexillifer",
+      "extinct": true,
+      "note": "Middle and lower Yangtze main stem with Dongting and Poyang lakes; tributaries inside these boxes are not distinguishable. Functionally extinct since 2006.",
+      "water": "fresh",
+      "envelopes": [
+        [
+          111.0,
+          28.4,
+          117.5,
+          31.0
+        ],
+        [
+          117.5,
+          29.7,
+          122.0,
+          32.2
+        ]
+      ],
+      "evidence": "https://en.wikipedia.org/wiki/Baiji (Yichang to the Yangtze mouth, Dongting and Poyang lakes, Qiantang River; declared functionally extinct 13 Dec 2006)",
+      "period": "20th-century range (last natural range before its human-driven collapse)"
+    },
+    "manidae:crassicaudata": {
+      "raster": "maniscrassicaudata"
+    },
+    "manidae:culionensis": {
+      "raster": "manisculionensis",
+      "regions": [
+        "PHI"
+      ],
+      "envelopes": [
+        [
+          117,
+          8,
+          121,
+          13
+        ]
+      ]
+    },
+    "manidae:gigantea": {
+      "raster": "smutsiagigantea"
+    },
+    "manidae:javanica": {
+      "raster": "manisjavanica"
+    },
+    "manidae:pentadactyla": {
+      "raster": "manispentadactyla"
+    },
+    "manidae:temminckii": {
+      "raster": "smutsiatemminckii"
+    },
+    "manidae:tetradactyla": {
+      "raster": "phataginustetradactyla"
+    },
+    "manidae:tricuspis": {
+      "raster": "phataginustricuspis"
+    },
+    "manidae:mysteria": {
+      "quarantined": true,
+      "note": "Cryptic pangolin described from seized scales; its wild native range is unknown."
+    },
+    "capreolinae:rangiferarcticus": {
+      "raster": "rangifertarandus",
+      "regions": [
+        "ASK",
+        "YUK",
+        "NWT",
+        "NUN"
+      ],
+      "taxon": "Rangifer arcticus (provider taxonomy)"
+    },
+    "capreolinae:rangifercaribou": {
+      "raster": "rangifertarandus",
+      "regions": [
+        "BRC",
+        "ABT",
+        "SAS",
+        "MAN",
+        "ONT",
+        "QUE",
+        "LAB",
+        "NFL"
+      ],
+      "taxon": "Rangifer caribou (provider taxonomy)"
+    },
+    "capreolinae:rangiferfennicus": {
+      "raster": "rangifertarandus",
+      "regions": [
+        "FIN",
+        "RUW",
+        "RUN",
+        "RUC",
+        "RUE"
+      ],
+      "taxon": "Rangifer fennicus (provider taxonomy)"
+    },
+    "capreolinae:rangifergroenlandicus": {
+      "raster": "rangifertarandus",
+      "regions": [
+        "GNL"
+      ],
+      "taxon": "Rangifer groenlandicus (provider taxonomy)"
+    },
+    "capreolinae:rangiferplatyrhynchus": {
+      "regions": [
+        "SVA"
+      ],
+      "taxon": "Rangifer platyrhynchus (provider taxonomy)",
+      "evidence": "https://npolar.no/en/species/svalbard-reindeer/"
+    },
+    "capreolinae:rangifertarandus": {
+      "regions": [
+        "NOR",
+        "SWE",
+        "FIN",
+        "RUN",
+        "RUW",
+        "WSB",
+        "KRA",
+        "YAK",
+        "MAG",
+        "KAM",
+        "KHA",
+        "IRK",
+        "BRY",
+        "CTA"
+      ]
+    },
+    "capreolinae:passalitesnemorivaga": {
+      "raster": "mazamanemorivaga"
+    },
+    "capreolinae:subulochunyi": {
+      "raster": "mazamachunyi"
+    },
+    "capreolinae:subulogouazoubira": {
+      "raster": "mazamagouazoubira"
+    },
+    "capreolinae:pudellamephistophiles": {
+      "raster": "pudumephistophiles",
+      "envelopes": [
+        [
+          -80,
+          -5.3,
+          -70,
+          8
+        ]
+      ],
+      "evidence": "North of the Huancabamba Depression after the 2024 split of Pudella carlae (Barrio, Gutierrez & D'Elia 2024, Journal of Mammalogy 105: 577-588)"
+    },
+    "capreolinae:cervalcesscotti": {
+      "extinct": true,
+      "envelopes": [
+        [
+          -108,
+          30,
+          -60,
+          55
+        ]
+      ],
+      "evidence": "https://www.nps.gov/articles/000/quaternary-period.htm",
+      "note": "Broad eastern North American historical envelope; detailed fossil polygon pending.",
+      "period": "Late Pleistocene eastern North America"
+    },
+    "thylacinidae:sarcophiluslaniarius": {
+      "taxon": "Sarcophilus laniarius",
+      "extinct": true,
+      "regions": [
+        "WAU",
+        "SOA",
+        "VIC",
+        "NSW",
+        "QLD"
+      ],
+      "envelopes": [
+        [
+          113,
+          -39.5,
+          154,
+          -25
+        ]
+      ],
+      "note": "Late Pleistocene fossils from Naracoorte (SA), the Darling Downs (QLD), Western Australia and New South Wales.",
+      "evidence": "https://en.wikipedia.org/wiki/Sarcophilus_laniarius",
+      "period": "Late Pleistocene south-eastern Australia"
+    },
+    "casuariidae:cereopsisnovaehollandiae": {
+      "regions": [
+        "SOA",
+        "VIC",
+        "TAS",
+        "WAU"
+      ],
+      "envelopes": [
+        [
+          115,
+          -44,
+          150,
+          -32
+        ]
+      ],
+      "evidence": "https://australian.museum/learn/animals/birds/cape-barren-goose/"
+    },
+    "casuariidae:bennetti": {
+      "taxon": "Casuarius bennetti",
+      "regions": [
+        "NWG"
+      ],
+      "minElevation": 500,
+      "evidence": "https://en.wikipedia.org/wiki/Dwarf_cassowary (montane and rain forests of New Guinea up to about 3,300 m); Folch et al., Birds of the World account (Cornell Lab of Ornithology)"
+    },
+    "casuariidae:casuarius": {
+      "taxon": "Casuarius casuarius",
+      "regions": [
+        "NWG",
+        "QLD"
+      ],
+      "envelopes": [
+        [
+          130,
+          -19,
+          153,
+          0
+        ]
+      ],
+      "evidence": "https://australian.museum/learn/animals/birds/southern-cassowary/"
+    },
+    "casuariidae:novaehollandiae": {
+      "taxon": "Dromaius novaehollandiae",
+      "regions": [
+        "WAU",
+        "NTA",
+        "SOA",
+        "QLD",
+        "NSW",
+        "VIC"
+      ],
+      "evidence": "https://australian.museum/learn/animals/birds/emu/"
+    },
+    "casuariidae:novaehollandiaediemenensis": {
+      "taxon": "Dromaius novaehollandiae diemenensis",
+      "regions": [
+        "TAS"
+      ],
+      "extinct": true,
+      "evidence": "https://collections.museumsvictoria.com.au/specimens/466054",
+      "period": "Holocene Tasmania (extinct c. 1865)"
+    },
+    "casuariidae:unappendiculatus": {
+      "taxon": "Casuarius unappendiculatus",
+      "regions": [
+        "NWG"
+      ],
+      "envelopes": [
+        [
+          130,
+          -5,
+          146,
+          0
+        ]
+      ],
+      "maxElevation": 1000,
+      "evidence": "https://en.wikipedia.org/wiki/Northern_cassowary (lowland and swamp forest north of the Central Cordillera and west of Cendrawasih Bay, Yapen, Batanta, Salawati; usually below 490 m, recorded to 1,962 m)"
+    },
+    "casuariidae:genyornisnewtoni": {
+      "taxon": "Genyornis newtoni",
+      "extinct": true,
+      "regions": [
+        "SOA",
+        "NSW",
+        "VIC"
+      ],
+      "evidence": "https://australian.museum/learn/australia-over-time/extinct-animals/genyornis-newtoni/",
+      "period": "Late Pleistocene south-eastern Australia"
+    },
+    "casuariidae:tribonyxmortierii": {
+      "regions": [
+        "TAS"
+      ],
+      "evidence": "https://australian.museum/learn/animals/birds/tasmanian-native-hen/",
+      "note": "Secure historical Tasmanian range; older mainland fossil range not yet enabled."
+    },
+    "chelonioidea:carettacaretta": {
+      "water": "marine",
+      "envelopes": [
+        [
+          -180,
+          -50,
+          180,
+          60
+        ]
+      ],
+      "evidence": "https://www.fisheries.noaa.gov/species/loggerhead-turtle"
+    },
+    "chelonioidea:cheloniamydas": {
+      "water": "marine",
+      "envelopes": [
+        [
+          -180,
+          -40,
+          180,
+          45
+        ]
+      ],
+      "evidence": "https://www.fisheries.noaa.gov/species/green-turtle"
+    },
+    "chelonioidea:dermochelyscoriacea": {
+      "water": "marine",
+      "envelopes": [
+        [
+          -180,
+          -60,
+          180,
+          71
+        ]
+      ],
+      "evidence": "https://www.fisheries.noaa.gov/species/leatherback-turtle"
+    },
+    "chelonioidea:eretmochelysimbricata": {
+      "water": "marine",
+      "maxDepth": 40,
+      "envelopes": [
+        [
+          -180,
+          -35,
+          180,
+          35
+        ]
+      ],
+      "evidence": "https://www.fisheries.noaa.gov/species/hawksbill-turtle"
+    },
+    "chelonioidea:lepidochelyskempii": {
+      "water": "marine",
+      "envelopes": [
+        [
+          -100,
+          15,
+          -45,
+          50
+        ]
+      ],
+      "evidence": "https://www.fisheries.noaa.gov/species/kemps-ridley-turtle"
+    },
+    "chelonioidea:lepidochelysolivacea": {
+      "water": "marine",
+      "envelopes": [
+        [
+          -180,
+          -40,
+          180,
+          40
+        ]
+      ],
+      "evidence": "https://www.fisheries.noaa.gov/species/olive-ridley-turtle"
+    },
+    "chelonioidea:natatordepressus": {
+      "water": "marine",
+      "maxDepth": 40,
+      "envelopes": [
+        [
+          110,
+          -28,
+          155,
+          -4
+        ]
+      ],
+      "evidence": "https://www.dcceew.gov.au/environment/marine/marine-species/marine-turtles"
+    },
+    "bovinae:taurotragusderbianus": {
+      "raster": "tragelaphusderbianus"
+    },
+    "bovinae:taurotragusoryx": {
+      "raster": "tragelaphusoryx"
+    },
+    "vombatidae:thylacoleocarnifex": {
+      "evidence": "https://australian.museum/Thylacoleo-carnifex/?s=1&vm=r",
+      "regions": [
+        "WAU",
+        "SOA",
+        "NTA",
+        "QLD",
+        "NSW",
+        "VIC",
+        "TAS"
+      ],
+      "extinct": true,
+      "period": "Late Pleistocene Australia"
+    },
+    "cervinae:megalocerosgiganteus": {
+      "extinct": true,
+      "envelopes": [
+        [
+          -12,
+          36,
+          110,
+          66
+        ]
+      ],
+      "evidence": "https://www.nhm.ac.uk/discover/irish-elk-giant-deer.html",
+      "note": "Broad historical Europe/Central Russia/Siberia envelope; present climate and open-habitat provider limits remain.",
+      "period": "Late Pleistocene-early Holocene Europe to Siberia"
+    },
+    "vombatidae:phascolonusgigas": {
+      "extinct": true,
+      "regions": [
+        "WAU",
+        "SOA",
+        "NTA",
+        "QLD",
+        "NSW",
+        "VIC"
+      ],
+      "evidence": "https://www.museum.qld.gov.au/learn-and-discover/queenslands-ancient-past/meet-the-megafauna/phascolonus-gigas",
+      "period": "Late Pleistocene mainland Australia"
+    },
+    "meiolaniidae:ninjemysoweni": {
+      "taxon": "Ninjemys oweni",
+      "extinct": true,
+      "note": "King's Creek, Darling Downs (Queensland); possible remains from New South Wales.",
+      "regions": [
+        "QLD"
+      ],
+      "envelopes": [
+        [
+          149,
+          -29,
+          153.5,
+          -25
+        ]
+      ],
+      "evidence": "Gaffney 1992, American Museum Novitates 3049: 1-10; https://en.wikipedia.org/wiki/Ninjemys",
+      "period": "Pleistocene south-eastern Queensland (exact age uncertain)"
+    },
+    "capreolinae:bretzianebrascensis": {
+      "extinct": true,
+      "quarantined": true,
+      "note": "Pliocene-early Pleistocene deer outside the late Pleistocene-Holocene policy; no range."
+    },
+    "capreolinae:odocoileuslucasi": {
+      "extinct": true,
+      "quarantined": true,
+      "note": "Fossil deer without a documented late Pleistocene-Holocene range."
+    },
+    "capreolinae:torontoceroshypnogeos": {
+      "extinct": true,
+      "quarantined": true,
+      "note": "Known from a single antler (Toronto, c. 11 ka); one locality is not a range."
+    },
+    "caninae:speothospacivorus": {
+      "extinct": true,
+      "quarantined": true,
+      "note": "Known from the Lagoa Santa caves only; one locality is not a range."
+    },
+    "bovinae:bubalusbrevicornis": {
+      "extinct": true,
+      "quarantined": true,
+      "note": "Chinese Pleistocene buffalo without a documented range."
+    },
+    "bovinae:bubaluscebuensis": {
+      "taxon": "Bubalus cebuensis",
+      "extinct": true,
+      "note": "Cebu Island only.",
+      "regions": [
+        "PHI"
+      ],
+      "envelopes": [
+        [
+          123.25,
+          9.4,
+          124.1,
+          11.3
+        ]
+      ],
+      "evidence": "Croft, Heaney, Flynn & Bautista 2006, Journal of Mammalogy 87: 1037-1051; https://en.wikipedia.org/wiki/Cebu_tamaraw",
+      "period": "Pleistocene or Holocene Cebu (age uncertain)"
+    },
+    "bovinae:bubalusmephistopheles": {
+      "taxon": "Bubalus mephistopheles",
+      "extinct": true,
+      "note": "Neolithic and Bronze Age deposits across southern, central and eastern China, from Yunnan to northern Henan.",
+      "regions": [
+        "CHN",
+        "CHS",
+        "CHC"
+      ],
+      "envelopes": [
+        [
+          97,
+          21,
+          123,
+          37
+        ]
+      ],
+      "evidence": "Yang, Liu, Chen & Speller 2008, Journal of Archaeological Science 35: 2778-2785 (\"Wild or domesticated: DNA analysis of ancient water buffalo remains from north China\"); https://en.wikipedia.org/wiki/Bubalus_mephistopheles",
+      "period": "Holocene southern, central and eastern China (to c. 1200 BC)"
+    },
+    "bovinae:bubalusmurrensis": {
+      "extinct": true,
+      "quarantined": true,
+      "note": "Interglacial European buffalo (last records c. 120 ka) outside the late Pleistocene-Holocene policy."
+    },
+    "bovinae:syncerusantiquus": {
+      "extinct": true,
+      "quarantined": true,
+      "note": "Scattered pan-African fossil record; no defensible late Pleistocene-Holocene range."
+    },
+    "viverridae:genettaplesictoides": {
+      "taxon": "Genetta plesictoides",
+      "extinct": true,
+      "note": "Endemic Cyprus genet of the Late Pleistocene (Aghia Napa).",
+      "regions": [
+        "CYP"
+      ],
+      "evidence": "Theodorou et al. 2007, Bulletin of the Geological Society of Greece 40: 201-208 (doi:10.12681/bgsg.16514); https://en.wikipedia.org/wiki/Genetta_plesictoides",
+      "period": "Late Pleistocene Cyprus (extinct c. 12-10.8 ka)"
+    },
+    "bovinae:bubalusgrovesi": {
+      "extinct": true,
+      "regions": [
+        "SUL"
+      ],
+      "envelopes": [
+        [
+          118.8,
+          -5.9,
+          120.6,
+          -3.0
+        ]
+      ],
+      "taxon": "Bubalus grovesi",
+      "note": "Southern Sulawesi; the box covers the south-western peninsula (exact sites not verified).",
+      "evidence": "Rozzi 2017, Quaternary Science Reviews 157: 188-205; https://en.wikipedia.org/wiki/Bubalus_grovesi",
+      "period": "Late Pleistocene-early Holocene southern Sulawesi"
+    },
+    "vombatidae:vombatushacketti": {
+      "extinct": true,
+      "regions": [
+        "WAU"
+      ],
+      "envelopes": [
+        [
+          114.5,
+          -35.5,
+          118.5,
+          -31.0
+        ]
+      ],
+      "taxon": "Vombatus hacketti",
+      "note": "South-western Western Australia (Mammoth Cave and nearby cave deposits).",
+      "evidence": "https://en.wikipedia.org/wiki/Vombatus_hacketti",
+      "period": "Late Pleistocene south-western Australia"
+    },
+    "caninae:dusicyonavus": {
+      "extinct": true,
+      "regions": [
+        "AGE",
+        "AGS",
+        "URU",
+        "BZS",
+        "CLS"
+      ],
+      "envelopes": [
+        [
+          -76,
+          -56,
+          -49,
+          -29
+        ]
+      ],
+      "taxon": "Dusicyon avus",
+      "note": "Pampas and Patagonia; survived into the late Holocene.",
+      "evidence": "Prevosti et al. 2015, Biological Journal of the Linnean Society 116: 704-720 (fossils from Argentina, Brazil, Chile and Uruguay); https://en.wikipedia.org/wiki/Dusicyon_avus",
+      "period": "Late Pleistocene-late Holocene southern South America (to c. 700 BP in the Pampas, c. 400 BP in southern Patagonia)"
+    },
+    "elephantidae:loxodontacyclotis": {
+      "raster": "loxodontaafricana",
+      "taxon": "Loxodonta cyclotis",
+      "regions": [
+        "LBR",
+        "SIE",
+        "GUI",
+        "IVO",
+        "GHA",
+        "TOG",
+        "BEN",
+        "NGA",
+        "CMN",
+        "GAB",
+        "EQG",
+        "CON",
+        "CAF",
+        "ZAI",
+        "CAB"
+      ],
+      "envelopes": [
+        [
+          -16,
+          -6,
+          31,
+          10.5
+        ]
+      ],
+      "evidence": "Taxonomic split of the African elephant (forest elephant of the West and Central African rainforest belt); PHYLACINE Loxodonta africana present-natural raster restricted to that belt",
+      "splitNote": "PHYLACINE lumps forest and savanna elephants."
+    },
+    "bovinae:syncerusnanus": {
+      "raster": "synceruscaffer",
+      "taxon": "Syncerus caffer nanus",
+      "regions": [
+        "LBR",
+        "SIE",
+        "GUI",
+        "IVO",
+        "GHA",
+        "TOG",
+        "BEN",
+        "NGA",
+        "CMN",
+        "GAB",
+        "EQG",
+        "CON",
+        "CAF",
+        "ZAI",
+        "CAB"
+      ],
+      "envelopes": [
+        [
+          -16,
+          -6,
+          31,
+          10.5
+        ]
+      ],
+      "evidence": "Forest buffalo of the West and Central African rainforest belt; PHYLACINE Syncerus caffer present-natural raster restricted to that belt",
+      "splitNote": "PHYLACINE lumps all African buffalo."
+    },
+    "bovinae:tragelaphussylvaticus": {
+      "raster": "tragelaphusscriptus",
+      "taxon": "Tragelaphus sylvaticus",
+      "regions": [
+        "ETH",
+        "SOM",
+        "KEN",
+        "TAN",
+        "UGA",
+        "RWA",
+        "BUR",
+        "ANG",
+        "MLW",
+        "MOZ",
+        "ZAM",
+        "ZIM",
+        "BOT",
+        "CPP",
+        "CPV",
+        "LES",
+        "NAM",
+        "NAT",
+        "OFS",
+        "SWZ",
+        "TVL"
+      ],
+      "evidence": "Moodley & Bruford 2007, PLoS ONE (\"Molecular biogeography: towards an integrated framework for conserving pan-African biodiversity\"; scriptus lineage North and West Africa, sylvaticus East and southern Africa); PHYLACINE Tragelaphus scriptus raster restricted to East and southern Africa",
+      "splitNote": "Overlaps the provider's T. scriptus rule in East Africa; a 2023 morphological revision argues for a single bushbuck species."
+    },
+    "caninae:canislycaon": {
+      "raster": "canislupus",
+      "taxon": "Canis lycaon",
+      "regions": [
+        "ONT",
+        "QUE"
+      ],
+      "envelopes": [
+        [
+          -92,
+          41.5,
+          -64,
+          50
+        ]
+      ],
+      "evidence": "Eastern wolf of the Great Lakes-St Lawrence region (Ontario, southern Quebec); PHYLACINE Canis lupus present-natural raster restricted to it",
+      "splitNote": "Southern Ontario/Quebec only; north of 50 N remains gray wolf range."
+    },
+    "capreolinae:mazamajucunda": {
+      "raster": "mazamabororo",
+      "taxon": "Mazama jucunda",
+      "evidence": "Mantellatto, Gonzalez & Duarte 2021, Genetics and Molecular Biology (M. bororo Duarte 1996 is a junior synonym of M. jucunda Thomas 1913; restricted to the Atlantic Forest of Sao Paulo, Parana and Santa Catarina); PHYLACINE Mazama bororo raster"
+    },
+    "capreolinae:mazamarufa": {
+      "raster": "mazamaamericana",
+      "taxon": "Mazama rufa",
+      "regions": [
+        "BZL",
+        "BZS",
+        "BZC",
+        "BZE",
+        "BZN",
+        "PAR",
+        "AGE"
+      ],
+      "envelopes": [
+        [
+          -66,
+          -30,
+          -34,
+          -4
+        ]
+      ],
+      "evidence": "Peres et al. 2021, Frontiers in Genetics 12: 742870 (Mazama rufa revalidated; fecal DNA shows it through the Atlantic Forest, Cerrado and southern Amazon); PHYLACINE Mazama americana raster restricted to those regions south of 4 S",
+      "splitNote": "Split from Mazama americana sensu lato."
+    },
+    "capreolinae:odocoileuspandora": {
+      "raster": "mazamapandora",
+      "taxon": "Odocoileus pandora",
+      "evidence": "Gutierrez et al. 2017, ZooKeys 697: 87-131 (transferred pandora to Odocoileus); PHYLACINE Mazama pandora raster (Yucatan Peninsula)"
+    },
+    "capreolinae:pudellacarlae": {
+      "raster": "pudumephistophiles",
+      "taxon": "Pudella carlae",
+      "regions": [
+        "PER"
+      ],
+      "evidence": "Barrio, Gutierrez & D'Elia 2024, Journal of Mammalogy 105(3): 577-588 (southeast of the Huancabamba Depression, Peruvian yungas on the eastern Andean slope, 1,800-3,300 m); https://en.wikipedia.org/wiki/Pudella_carlae; PHYLACINE Pudu mephistophiles raster restricted accordingly",
+      "splitNote": "Northern pudu (P. mephistophiles) is limited to north of the Huancabamba Depression.",
+      "envelopes": [
+        [
+          -79.0,
+          -12.5,
+          -73.5,
+          -5.3
+        ]
+      ],
+      "minElevation": 1800,
+      "maxElevation": 3300
+    },
+    "vombatidae:zygomaturustrilobus": {
+      "extinct": true,
+      "regions": [
+        "WAU",
+        "SOA",
+        "VIC",
+        "NSW",
+        "TAS"
+      ],
+      "envelopes": [
+        [
+          114,
+          -44,
+          154,
+          -30
+        ]
+      ],
+      "taxon": "Zygomaturus trilobus",
+      "note": "Widely distributed in Pleistocene Australia; this rule keeps the southern part, incl. Tasmania (Mowbray Swamp skeleton) and the Willandra Lakes (NSW).",
+      "evidence": "https://en.wikipedia.org/wiki/Zygomaturus; Tasmanian Museum and Art Gallery skull TMAG Z3554, https://shapingtasmania.tmag.tas.gov.au/M/object.aspx?id=46",
+      "period": "Late Pleistocene southern Australia (extinct c. 45-33 ka)"
+    },
+    "capreolinae:antiferultra": {
+      "extinct": true,
+      "regions": [
+        "AGE",
+        "URU",
+        "BZS"
+      ],
+      "envelopes": [
+        [
+          -66,
+          -41,
+          -49,
+          -28
+        ]
+      ],
+      "taxon": "Antifer ultra",
+      "note": "Pampean region; genus-level fossil record from Argentina, Uruguay, southern Brazil and central Chile (species-level localities not verified).",
+      "evidence": "https://en.wikipedia.org/wiki/Antifer",
+      "period": "Late Pleistocene (extinct c. 12 ka)"
+    },
+    "capreolinae:rangifertarandusdomesticus": {
+      "quarantined": true,
+      "note": "Domestic reindeer; no wild native range."
+    },
+    "bovinae:bostaurustaurus": {
+      "quarantined": true,
+      "note": "Domestic cattle; no wild native range (the wild ancestor is mapped as the aurochs)."
+    },
+    "bovinae:bubalusbubalis": {
+      "quarantined": true,
+      "note": "Domestic water buffalo; no wild native range (the wild species is Bubalus arnee)."
+    },
+    "capreolinae:mazamatienhoveni": {
+      "note": "Described by van Roosmalen (2015) from the lower Rio Aripuanã basin; now usually treated as a synonym of Passalites nemorivagus, so the Amazonian brown brocket raster is used, limited to that basin.",
+      "raster": "mazamanemorivaga",
+      "taxon": "Mazama tienhoveni",
+      "regions": [
+        "BZN"
+      ],
+      "envelopes": [
+        [
+          -61.8,
+          -8.5,
+          -59.3,
+          -4.8
+        ]
+      ],
+      "evidence": "https://en.wikipedia.org/wiki/Fair_brocket; PHYLACINE Mazama nemorivaga raster"
+    }
+  }
+}

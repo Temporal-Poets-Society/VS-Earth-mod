@@ -1,0 +1,43 @@
+{
+  "modelId": "giza-khufu-blockout",
+  "title": "Giza / Khufu scale study",
+  "status": "blockout",
+  "architectureProfile": "earth-ruins-half-v1",
+  "blocksPerMetre": 0.5,
+  "sizeXYZ": [
+    115,
+    74,
+    115
+  ],
+  "groundY": 1,
+  "referenceEnvelopeMetresXYZ": [
+    230,
+    146,
+    230
+  ],
+  "dimensionEvidence": "rough planning envelope; not a survey or approved replica",
+  "axisConvention": "+X east; +Y up; +Z south; local north -Z",
+  "placement": "manual-empty-test-area",
+  "historicalCutoffCE": 1500,
+  "worldgenEnabled": false,
+  "inGameValidated": false,
+  "palette": {
+    "0": "game:air",
+    "1": "game:stonebricks-limestone",
+    "2": "game:stonebricks-granite",
+    "3": "game:stonebricks-travertine"
+  },
+  "notes": [
+    "Rounded massing envelope, not a measured reconstruction.",
+    "Original height about 146.5 m documented by Egypt's Ministry of Tourism and Antiquities.",
+    "Masonry palette is a vanilla visual substitute; smooth casing and weathering are unfinished.",
+    "North base entrance, level passage and test chamber are invented gameplay geometry, not Khufu's actual plan.",
+    "Other pyramids, Sphinx, enclosure and local Giza layout are pending."
+  ],
+  "voxelCountsByCode": {
+    "game:air": 1071,
+    "game:stonebricks-limestone": 347147,
+    "game:stonebricks-granite": 99
+  },
+  "schematicSha256": "567e3f05576dad7035e7f42806983c6147b5fc73c0a37741ee9b6b4d8cfd9740"
+}

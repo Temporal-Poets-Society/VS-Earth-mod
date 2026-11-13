@@ -1,0 +1,67 @@
+{
+  "pass": true,
+  "assertions": 16018,
+  "normalized_outputs": {
+    "pp1802-global.geojson": {
+      "features": 2125,
+      "geometry_counts": {
+        "Point": 2121,
+        "MultiPolygon": 4
+      },
+      "sha256": "8e66b6f28eb9ffa1971b0ce32acf9bbb7ce345d8ec05a14b9333f744f757fe38"
+    },
+    "ga-aimr-metals.geojson": {
+      "features": 3205,
+      "geometry_counts": {
+        "Point": 3205
+      },
+      "sha256": "5efa79e7ced5470fdf7e76d16b7baba07d70ef67e0644c86d2f3644dbe180673"
+    },
+    "reviewed-secondary-metals.geojson": {
+      "features": 2,
+      "geometry_counts": {
+        "Point": 2
+      },
+      "sha256": "c80fc9a933b1c3054262a607cc9ef0d83ee7e976d742689904163acce4ff2537"
+    }
+  },
+  "audited_commodities": 20,
+  "named_province_windows": 196,
+  "country_alarms": 230,
+  "known_remaining_spatial_alarms": [
+    [
+      "Fe",
+      "Staicele"
+    ],
+    [
+      "Hg",
+      "Pulganbar"
+    ],
+    [
+      "Sb",
+      "Krinj"
+    ],
+    [
+      "U",
+      "Chu Sarysu"
+    ],
+    [
+      "U",
+      "Kirovohrad"
+    ],
+    [
+      "U",
+      "Kyzylkum"
+    ],
+    [
+      "U",
+      "Lagoa Real"
+    ]
+  ],
+  "notes": [
+    "Source identity, finite coordinates and ring closure checked; general polygon self-intersection/topology not evaluated.",
+    "Source geometry checks do not establish orebody dimensions, grade, depth, mineability or calibrated probability.",
+    "Sentinel windows are search queries, never exported as geological permissive polygons.",
+    "No cross-dataset automatic deduplication or resource-count interpretation."
+  ]
+}

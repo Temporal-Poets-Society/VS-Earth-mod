@@ -1,0 +1,45 @@
+{
+  "note": "Island/country envelopes are conservative coarse native placement, not precise breeding polygons. Provider climate, forest, elevation and population rules still apply. NZ Birds Online is maintained by Te Papa, DOC and Birds New Zealand. Small-island birds with an explicit box use the box only ('regions': null): TDWG polygons put the Snares in NZS and Lord Howe in NFK, so a region name would contradict the box. ANT in a region list matches every site south of 60 S (RegionalFaunaCatalog.AntarcticLatitude), because the TDWG Antarctic polygons miss about half of the terrain coastline.",
+  "periods": {
+    "dinornithidae": "Holocene range before human arrival (New Zealand c. 1280 CE; Chatham Islands c. 1500 CE; Lord Howe 1788)",
+    "spheniscidae": "Holocene range before human arrival (Chatham Islands c. 1500 CE)"
+  },
+  "dinornithidae": {
+    "NZS": ["dendroscansordecurvirostris*","pachyplichasyaldwyni*","xenicusgilviventris","cnemiorniscalcitrans*","apteryxaustralis","apteryxhaastii","apteryxrowi","aptornisdefossor*","dinornisrobustus*","emeuscrassus*","pachyornisaustralis*","pachyorniselephantopus*","megalapteryxdidinus*","porphyriohochstetteri"],
+    "NZN": ["pachyplichasjagmi*","cnemiornisgracilis*","apteryxmantelli","aptornisotidiformis*","dinornisnovaezealandiae*","pachyornisgeranoides*","porphyriomantelli*"],
+    "NZN NZS": ["acanthisittachloris","traversialyalli*","xenicuslongipes*","aegothelesnovaezealandiae*","anaschlorotis","chenonettafinschi*","apteryxowenii","anomalopteryxdidiformis*","euryapteryxcurtus*","gallirallusaustralis","tribonyxhodgenorum*","strigopshabroptila"],
+    "ATP": ["anasaucklandica","anasnesiotis","lewiniamuelleri"],
+    "CTM": ["cabalusmodestus*","diaphorapteryxhawkinsi*","hypotaenidiadieffenbachii*"],
+    "NFK": ["hypotaenidiasylvestris","porphyrioalbus*"],
+    "NZN NZS WAU NTA SOA QLD NSW VIC NWG PHI SUL MOL LSI JAW SUM BOR FIJ VAN NWC SOL": ["hypotaenidiaphilippensis"]
+  },
+  "spheniscidae": {
+    "ANT": ["aptenodytesforsteri","pygoscelisadeliae"],
+    "SGE FAL CRZ KEG MPE HMD MAQ": ["aptenodytespatagonicus"],
+    "FAL CLS ATP CRZ KEG MPE HMD MAQ": ["eudypteschrysocome"],
+    "SGE SSA CRZ KEG MPE HMD FAL": ["eudypteschrysolophus"],
+    "TDC ASP": ["eudyptesmoseleyi"],
+    "NZS": ["eudyptespachyrhynchus","eudyptulaminor","megadyptesantipodes","eudyptesrobustus"],
+    "ATP": ["eudyptessclateri"],
+    "MAQ": ["eudyptesschlegeli"],
+    "CTM": ["eudypteswarhami*"],
+    "NZN TAS VIC NSW SOA WAU": ["eudyptulanovaehollandiae"],
+    "ANT SGE SSA BOU": ["pygoscelisantarcticus"],
+    "ANT SGE FAL KEG MPE CRZ HMD": ["pygoscelispapua"],
+    "NAM CPP": ["spheniscusdemersus"],
+    "PER CLN CLC": ["spheniscushumboldti"],
+    "AGS CLS CLC FAL": ["spheniscusmagellanicus"],
+    "GAL": ["spheniscusmendiculus"]
+  },
+  "overrides": {
+    "anasaucklandica": {"envelopes":[[165.8,-51,166.8,-50.3]],"regions":null,"note":"Auckland Islands."},
+    "anasnesiotis": {"envelopes":[[168.8,-53,169.5,-52.3]],"regions":null,"note":"Campbell Island."},
+    "lewiniamuelleri": {"envelopes":[[165.8,-51,166.8,-50.3]],"regions":null,"note":"Auckland Islands."},
+    "hypotaenidiasylvestris": {"envelopes":[[159,-32,159.2,-31.3]],"regions":null,"note":"Lord Howe Island only (TDWG groups it with Norfolk Island)."},
+    "porphyrioalbus": {"envelopes":[[159,-32,159.2,-31.3]],"regions":null,"note":"Lord Howe Island only (TDWG groups it with Norfolk Island)."},
+    "apteryxrowi": {"envelopes":[[169.5,-43.7,172.8,-40.4]],"note":"Historical western South Island envelope; not limited to present Okarito remnant."},
+    "eudyptesrobustus": {"envelopes":[[166.3,-48.3,166.8,-47.8],[167.4,-47.35,168.3,-46.9]],"regions":null,"note":"Breeds only on the Snares Islands (TDWG NZS, not the Antipodean group). The Snares are below Earth's terrain resolution (source elevation -108 m, no land columns), so the southern Stewart Island coast, the nearest terrain coast about 100 km north where the species comes ashore, stands in for them."},
+    "eudyptessclateri": {"envelopes":[[178.5,-50.1,179.2,-49.3],[178.8,-48,-178.8,-47.3]],"regions":null,"note":"Antipodes and Bounty Islands."},
+    "eudyptulaminor": {"regions":["NZN","NZS"]}
+  }
+}

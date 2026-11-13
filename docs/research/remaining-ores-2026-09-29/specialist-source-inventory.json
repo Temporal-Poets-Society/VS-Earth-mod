@@ -1,0 +1,86 @@
+[
+  {
+    "source_id": "usgs_major-deposits",
+    "title": "Major mineral deposits of the world",
+    "publication_year": "2005",
+    "source_url": "https://mrdata.usgs.gov/major-deposits/",
+    "scope": "Global specialist/major-deposit compilation; not complete mineral inventory",
+    "reuse_terms": "none",
+    "raw_archive": "raw/major-deposits-ofr20051294-csv.zip",
+    "normalization": "Records retained separately by source; zero/nonpositive grade withheld; relation tables remain in raw archive",
+    "global_complete": false,
+    "generation_ready": false
+  },
+  {
+    "source_id": "usgs_nicrpge",
+    "title": "An index to PGE-Ni-Cr deposits and occurrences in selected mineral-occurrence databases",
+    "publication_year": "2009",
+    "source_url": "https://mrdata.usgs.gov/nicrpge/",
+    "scope": "Global specialist/major-deposit compilation; not complete mineral inventory",
+    "reuse_terms": "This spatial database is not meant to be used or displayed at any scale larger than 1:1,000,000 (for example, 1:100,000). Any hardcopies utilizing these datasets shall clearly indicate their source. If the user has modified the data in any way, they are obligated to describe the types of modifications they have performed on the hardcopy map. User specifically agrees not to misrepresent these data sets, nor imply that changes they made were approved by the U.S. Geological Survey.",
+    "raw_archive": "raw/nicrpge-nicrpge-csv.zip",
+    "normalization": "Records retained separately by source; zero/nonpositive grade withheld; relation tables remain in raw archive",
+    "global_complete": false,
+    "generation_ready": false
+  },
+  {
+    "source_id": "usgs_phosphate",
+    "title": "World phosphate mines, deposits, and occurrences",
+    "publication_year": "2002",
+    "source_url": "https://mrdata.usgs.gov/phosphate/",
+    "scope": "Global specialist/major-deposit compilation; not complete mineral inventory",
+    "reuse_terms": "none",
+    "raw_archive": "raw/phosphate-phosphate-csv.zip",
+    "normalization": "Records retained separately by source; zero/nonpositive grade withheld; relation tables remain in raw archive",
+    "global_complete": false,
+    "generation_ready": false
+  },
+  {
+    "source_id": "usgs_sedexmvt",
+    "title": "Mineral resource data for Mississippi Valley-Type and clastic-dominated sediment-hosted lead-zinc deposits",
+    "publication_year": "2009",
+    "source_url": "https://mrdata.usgs.gov/sedexmvt/",
+    "scope": "Global specialist/major-deposit compilation; not complete mineral inventory",
+    "reuse_terms": "none",
+    "raw_archive": "raw/sedexmvt-sedexmvt-csv.zip",
+    "normalization": "Records retained separately by source; zero/nonpositive grade withheld; relation tables remain in raw archive",
+    "global_complete": false,
+    "generation_ready": false
+  },
+  {
+    "source_id": "usgs_laterite",
+    "title": "Ni-Co laterite deposits of the world",
+    "publication_year": "2011",
+    "source_url": "https://mrdata.usgs.gov/laterite/",
+    "scope": "Global specialist/major-deposit compilation; not complete mineral inventory",
+    "reuse_terms": "none",
+    "raw_archive": "raw/laterite-laterite-csv.zip",
+    "normalization": "Records retained separately by source; zero/nonpositive grade withheld; relation tables remain in raw archive",
+    "global_complete": false,
+    "generation_ready": false
+  },
+  {
+    "source_id": "usgs_podchrome",
+    "title": "Podiform chromite deposits",
+    "publication_year": "2012",
+    "source_url": "https://mrdata.usgs.gov/podchrome/",
+    "scope": "Global specialist/major-deposit compilation; not complete mineral inventory",
+    "reuse_terms": "none",
+    "raw_archive": "raw/podchrome-podchrome-csv.zip",
+    "normalization": "Records retained separately by source; zero/nonpositive grade withheld; relation tables remain in raw archive",
+    "global_complete": false,
+    "generation_ready": false
+  },
+  {
+    "source_id": "usgs_vms",
+    "title": "Volcanogenic massive sulfide deposits of the world: Database and\ngrade and tonnage models",
+    "publication_year": "2009",
+    "source_url": "https://mrdata.usgs.gov/vms/",
+    "scope": "Global specialist/major-deposit compilation; not complete mineral inventory",
+    "reuse_terms": "none",
+    "raw_archive": "raw/vms-vms-csv.zip",
+    "normalization": "Records retained separately by source; zero/nonpositive grade withheld; relation tables remain in raw archive",
+    "global_complete": false,
+    "generation_ready": false
+  }
+]

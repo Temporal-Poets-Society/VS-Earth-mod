@@ -1,0 +1,1607 @@
+{
+  "mod": {
+    "modid": 1654,
+    "assetid": 8785,
+    "name": "Biomes",
+    "text": "<h1 style=\"text-align: center;\"><span style=\"text-decoration: underline;\"><strong><span style=\"font-size: 36pt; font-family: book antiqua, palatino, serif;\">BIOMES</span></strong></span></h1>\n<p>&nbsp;</p>\n<p>The Biomes mod makes the game world feel more realistic and alive by sorting flora and fauna into their native real-world biomes. Different regions will have their own flavour and travel will feel more meaningful.</p>\n<p>If an animal or tree is not whitelisted or given a biome, it will not spawn. Story mobs are whitelisted. Trees can still grow outside their native habitat if planted from seed by a player.</p>\n<p>&nbsp;</p>\n<p><strong><em>Requires a new world to be generated.</em></strong></p>\n<h1><strong>FAQ</strong></h1>\n<hr />\n<p>&nbsp;</p>\n<h4>Q: What does this actually do?</h4>\n<p>It divides a world into large sections within which plants and animals allowed to spawn within those sections are the only thing that can spawn. It's less akin to minecraft style biomes of discrete varied climates/regions/etc, and more like an overlay of limited spawns to increase world variety. The regions are very large and are based on the global position in the world, so you may want to generate a smaller world with a centered equator to be able to reasonably travel to multiple biomes. Spawn conditions such as temperature, moisture, etc all also still apply, you can think of the spawn limitation as more of a narrowing of possible candidates within the biome.</p>\n<h4>Q: That sounds like that lowers world variety by having less spawns overall, should I use this by itself?</h4>\n<p>Generally you shouldn't use Biomes by itself. The base game doesn't really have enough global plant and entity variety to make up for that each biome has a limited spawn pool. It's highly recommended to at a minimum use Biomes with <a href=\"https://mods.vintagestory.at/list/mod?sortby=lastReleased&amp;sortdir=d&amp;text=fauna+of+the+stone+age&amp;side=&amp;a=2ABE1C9265B6B2CFEFAE&amp;mv=&amp;c=&amp;t=\">FOSTA</a>, and <a href=\"https://mods.vintagestory.at/list/mod?sortby=lastReleased&amp;sortdir=d&amp;text=floral+zones&amp;side=&amp;a=2ABE1C9265B6B2CFEFAE&amp;mv=&amp;c=&amp;t=\">Floral Zones</a>&nbsp;to get closer to the intended experience. See the compatibility list below for a further reference of what mods are strongly recommended to use with it. However, the more the merrier. Because each Biome is a limited pool, adding many mods that add plants, entities, world gen features, etc. serves much less to clutter up world generation.</p>\n<h4>Q: Do I need to generate a new world for this mod to work?</h4>\n<p>Yes. While technically new chunks will follow biome generation, you may experience all kinds of weird behaviors if the world wasn't generated with Biomes already installed.</p>\n<p>&nbsp;</p>\n<p><strong>Q: Is this compatible with this other world gen mod?</strong></p>\n<p>Generally speaking, yes. This only affects <em>what</em> can spawn with in an area in regards to flora and fauna, and does nothing to touch frequency, how it's spawned, etc. It also doesn't affect terrain generation at all as a result, so terrain-affecting mods such as a Terra Pretty, Continents, Conquest, are de facto compatible.</p>\n<p>&nbsp;</p>\n<p><strong>Q: I'm not seeing this specific plant or animal anywhere near me, what gives?</strong></p>\n<p>As mentioned higher up, the biomes are quite large. They by default take up a full 6th of their given hemisphere! You may not be traveling far enough for the size of your world.</p>\n<h4>Q: Do I need to do anything to update my world to Biomes 2.0?</h4>\n<p>If I did everything right, you shouldn't. There were many internal changes but worlds and config should auto-migrate.</p>\n<p>&nbsp;</p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Suggested world-gen settings</div>\n<div class=\"spoiler-text\">\n<p>For the most Earth-like world, customise your world and set the pole to equator distance to be half the world height. So if your world is 1 million blocks tall, set the pole to equator distance to be 500,000 blocks. This will give you a world with a hot equator and north and south poles.</p>\n<p>Example settings:<br />World height - 256 (default)<br />World width - 102k<br />World length - 102k<br />Polar-Equator distance - 50k</p>\n</div>\n</div>\n<p>&nbsp;</p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Supported mods</div>\n<div class=\"spoiler-text\">\n<p>This list is currently being updated and modernized.</p>\n<p>Key:</p>\n<ul>\n<li><span style=\"color: #2fcc71;\"><span style=\"color: #27ae60;\">☑ Highly Recommended Mod</span></span></li>\n<li>☐ Currently Compatible Mod</li>\n<li><span style=\"color: #e74c3c;\">☒ Outdated Mod</span></li>\n<li>Unknown Status</li>\n</ul>\n<p>&nbsp;</p>\n<ul>\n<li><a href=\"https://mods.vintagestory.at/awhitebellheather\">☐ A Green Lupine / Arctic Willow / White Bell Heather&nbsp;</a></li>\n<li><a href=\"https://mods.vintagestory.at/aldiclasses\">☐ Aldi Classes (Nettles)</a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/28845\">☐ Art of Growing (tall dry grass)</a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/33010\">☐ Boric Alchemy</a></li>\n<li><a href=\"https://mods.vintagestory.at/cats\">☐ Cats</a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/2289\">☐ Creatures and Critters</a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/48465\"><span style=\"color: #2dc26b;\">☐ The Critters Pack Forked</span></a></li>\n<li><a href=\"https://mods.vintagestory.at/deartibusrusticis\">☐ De Artibus Rusticis </a></li>\n<li><a href=\"https://mods.vintagestory.at/draconis\">☐ Draconis</a></li>\n<li><a href=\"https://mods.vintagestory.at/dstnpcadditions\">☐ DTS - NPC Addtions</a></li>\n<li><a href=\"https://mods.vintagestory.at/equus\">☐ Equus: Wild Horses</a></li>\n<li><a href=\"https://mods.vintagestory.at/blackraspberry\">☑ Everything Black Raspberries</a><span style=\"color: #2fcc71;\"><a style=\"color: #2fcc71;\" href=\"https://mods.vintagestory.at/blackraspberry\"> </a></span></li>\n<li><a href=\"https://mods.vintagestory.at/fantasycreaturesreborn\">☐ Fantasy Creatures</a></li>\n<li>Fantasy NPC Series - Humans/Kobolds/Orcs/Goblins/Elves/Halflings</li>\n<li><a href=\"https://mods.vintagestory.at/list/mod?sortby=lastReleased&amp;sortdir=d&amp;text=fauna+of+the+stone+age&amp;side=&amp;a=2ABE1C9265B6B2CFEFAE&amp;mv=&amp;c=&amp;t=\"><span style=\"color: #2fcc71;\"><span style=\"color: #27ae60;\">☑ Fauna of the Stone Age Series</span></span></a></li>\n<li><a href=\"https://mods.vintagestory.at/feverstonehorses\">☐ Feverstone Horses</a></li>\n<li><a href=\"https://mods.vintagestory.at/feverstonewilds\">☐ Feverstone Wilds</a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/19909\">☐ Floating Fish</a></li>\n<li><a href=\"https://mods.vintagestory.at/list/mod?sortby=lastReleased&amp;sortdir=d&amp;text=floral+zones&amp;side=&amp;a=2ABE1C9265B6B2CFEFAE&amp;mv=&amp;c=&amp;t=\"><span style=\"color: #27ae60;\">☑ Floral Zones: Series</span></a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/19909\">☐ </a><a href=\"https://mods.vintagestory.at/foodofbrazil\">Food of Brazil</a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/19909\">☐ </a><a href=\"https://mods.vintagestory.at/grassroots\">Grassroots</a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/19909\">☐ </a><a href=\"https://mods.vintagestory.at/grassrootscoca\">Grassroots: Coca</a></li>\n<li><span style=\"color: #bfedd2;\"><a style=\"color: #bfedd2;\" href=\"https://mods.vintagestory.at/show/mod/62739\"><span style=\"color: #2dc26b;\"><span style=\"color: #169179;\"><span style=\"color: #2dc26b;\">☑ Helianthus</span></span></span></a></span></li>\n<li><a href=\"https://mods.vintagestory.at/hieronymusreptiles\"><span style=\"color: #2dc26b;\">☐ Hieronymus's Reptiles Collection</span></a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/35953\">☐ Just 3 Leaves</a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/35786\">☐ Just 3 Roots</a></li>\n<li><a href=\"https://mods.vintagestory.at/show/user/3CA7155A064584BCBD69\">☐ Legacy of the Phanerozoic Series Forked</a></li>\n<li><a href=\"https://mods.vintagestory.at/monoceros\">☐&nbsp;Monoceros - Ancient Unicorns</a></li>\n<li><a href=\"https://mods.vintagestory.at/moreanimals\"><span style=\"color: #18bc9b;\"><span style=\"color: #2fcc71;\"><span style=\"color: #27ae60;\">☑&nbsp;More Animals</span></span></span></a></li>\n<li><span style=\"color: #27ae60;\"><a style=\"color: #27ae60;\" href=\"https://mods.vintagestory.at/mycodiversity\">☑&nbsp;Mycodiversity</a></span></li>\n<li><a href=\"https://mods.vintagestory.at/newworldcrops\"><span style=\"color: #18bc9b;\"><span style=\"color: #2fcc71;\"><span style=\"color: #27ae60;\">☑ New World Crops</span></span></span></a></li>\n<li><a href=\"https://mods.vintagestory.at/nacatfish\">☐ North American Fish: Catfish</a></li>\n<li><a href=\"https://mods.vintagestory.at/nadarters\">☐ North American Fish: Darters</a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/50189\">☐ Not Enough Invertebrate </a></li>\n<li><a href=\"https://mods.vintagestory.at/ornamentalfish\">☐ Ornamental Fish</a></li>\n<li><a href=\"https://mods.vintagestory.at/pipeleaf\">☐ Pipeleaf</a></li>\n<li><a href=\"https://mods.vintagestory.at/primitivesurvival\">☐ Primitive Survival</a></li>\n<li><a href=\"https://mods.vintagestory.at/realgrapes\">☐&nbsp;Real Grapes</a></li>\n<li><a href=\"https://mods.vintagestory.at/rivers\"><span style=\"color: #27ae60;\">☑ Rivers</span></a></li>\n<li><a href=\"https://mods.vintagestory.at/rivergen\">☐ RiverGen</a></li>\n<li><a href=\"https://mods.vintagestory.at/rustboundmagic\">☐ Rustbound Magic</a></li>\n<li><a href=\"https://mods.vintagestory.at/saltandsands\"><span style=\"color: #27ae60;\">☑ Salt and Sands</span></a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/66149\">☐ Snoopy's Creatures </a></li>\n<li><a href=\"https://mods.vintagestory.at/somethinginthewater\">☐ Something in the Water</a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/59937\">☐ Talonborne</a></li>\n<li><a href=\"https://mods.vintagestory.at/teapotsgiantboar\">☐ Teapot's Giant Boar </a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/51200\">☐ The Pepper Mod</a></li>\n<li><span style=\"color: #27ae60;\"><a style=\"color: #27ae60;\" href=\"https://www.vintagestory.at/\">☑ Vanilla</a></span></li>\n<li><a href=\"https://mods.vintagestory.at/algernonswatersheds\">☐ Watersheds</a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/55446\"><span style=\"color: #2dc26b;\">☐ Wet Crops</span></a></li>\n<li><a href=\"https://mods.vintagestory.at/wildcraftfruit\">☐ Wildcraft: Fruit and Nuts</a></li>\n<li><a href=\"https://mods.vintagestory.at/wildcrafttree\">☐ Wildcraft: Trees and Shrubs</a></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/17655\">☐ Wilderlands Rustbound</a></li>\n<li><a href=\"https://mods.vintagestory.at/wildgrass\">☐</a> <a href=\"https://mods.vintagestory.at/wildgrassfork\">Wildgrass Continued</a></li>\n</ul>\n<p>&nbsp;</p>\n</div>\n</div>\n<p>&nbsp;</p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Compatible but not updated for current versions</div>\n<div class=\"spoiler-text\">\n<p>&nbsp;Many of these are Hieronymus's Reptiles which can be found for modern versions as \"<a href=\"https://mods.vintagestory.at/hieronymusreptiles\">Hieronymus's Reptiles Collection</a>\"</p>\n<ul>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/africanmonitorlizards\">☒ African monitor Lizards</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/asianmonitorlizards\">☒ Asian monitor Lizards</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/balancedthirst\">☒ Balanced Thirst</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/bandedgeckos\">☒ Banded Geckos</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/beardeddragons\">☒ Bearded Dragons</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a href=\"https://mods.vintagestory.at/breedablefish\"><span style=\"color: #e03e2d;\">☒ Breedable Fish</span></a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/ensatinas\">☒ Ensatinas</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/farmcrops\">☒ Farm Crops</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/giantgouramis\">☒ Giant Gouramis</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/show/mod/264\">☒ Golden Wolf</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/hideandfabric\">☒ Hide and Fabric</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/bandedgeckos\">☒ Knob-Tailed Geckos</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/laverace\">☒ La Verace</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/leopardgeckos\">☒ Leopard Geckos</a></span></li>\n<li><a href=\"https://mods.vintagestory.at/lichencontinued\"><span style=\"color: #e74c3c;\">☒ Lichen Continued</span></a></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/newworldgianttortoises\">☒ New World Giant Tortoises</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/pondfrogsiii\">☒ New World Pond Frogs</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/newzealandfrogs\">☒ New Zealand Frogs</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/nasalamanders\">☒ North American Salamanders</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/show/mod/33232\">☒ Northern Fantasy</a></span></li>\n<li><a href=\"https://mods.vintagestory.at/pondfrogsi\"><span style=\"color: #e74c3c;\">☒ Old World Pond Frog</span></a><a href=\"https://mods.vintagestory.at/pondfrogsi\"><span style=\"color: #e74c3c;\">s</span></a></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/pacificnewts\">☒ Pacific Newts</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/peacockbasses\">☒ Peacock Basses</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/rainfrogs\">☒ Rain Frogs</a></span></li>\n<li><span style=\"color: #e03e2d;\"><a style=\"color: #e03e2d;\" href=\"https://mods.vintagestory.at/show/mod/38969\">☒ River Fish</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/rustandrot\">☒ Rust and Rot</a></span></li>\n<li><a href=\"https://mods.vintagestory.at/show/mod/7378\"><span style=\"color: #e74c3c;\">☒ Sam's Humanoid Creatures</span></a></li>\n<li><span style=\"color: #e74c3c;\"><a href=\"https://mods.vintagestory.at/show/mod/25902\"><span style=\"color: #e03e2d;\">☒ Soap and Lye: Bloom and Lather</span></a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/truesunfishes\">☒ True Sunfishes</a></span></li>\n<li><span style=\"color: #e74c3c;\"><a style=\"color: #e74c3c;\" href=\"https://mods.vintagestory.at/untamedwildsursidae\">☒ Untamed Wilds: Ursidae</a></span></li>\n<li><span style=\"color: #e03e2d;\"><a style=\"color: #e03e2d;\" href=\"https://mods.vintagestory.at/show/mod/17660\">☒ Wilderlands Ethology</a></span></li>\n</ul>\n</div>\n</div>\n<h1>Credits</h1>\n<p>Created with a huge amount of effort contributed by Hieronymous, TenthArchitect, Sheepon, Ledyanaya Sonya, Honk Cluwne, Gryfang, Hydromancerx, RaptorMother, <span class=\"username_c19a55 desaturateUserColors__41f68 clickable_c19a55\" tabindex=\"0\" role=\"button\" aria-expanded=\"false\">ComitatensSaxoni, Crumps,</span> n_azurik, ShaeTsu, Clint, H3B, and helpful suggestions from Zelifor. Pull requests gratefully accepted.</p>\n<hr />\n<p style=\"text-align: center;\">Good hunting to the butterfly enthusiasts!</p>",
+    "author": "Crabb",
+    "urlalias": "biomes",
+    "logofilename": "https://moddbcdn.vintagestory.at/thumb_d00df356169db639e8a686cadaf56c43.png",
+    "logofile": "https://moddbcdn.vintagestory.at/thumb_d00df356169db639e8a686cadaf56c43.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/thumb_d00df356169db639e8a686cadaf56c43.png",
+    "homepageurl": "",
+    "sourcecodeurl": "https://github.com/spooq/biomes",
+    "trailervideourl": "",
+    "issuetrackerurl": "https://github.com/spooq/biomes/issues/",
+    "wikiurl": "",
+    "downloads": 51840,
+    "follows": 1297,
+    "trendingpoints": 0,
+    "comments": 523,
+    "side": "server",
+    "type": "mod",
+    "created": "2023-10-27 12:05:41",
+    "lastreleased": "2026-09-28 06:39:34",
+    "lastmodified": "2026-09-28 19:43:44",
+    "tags": [
+      "Worldgen",
+      "Creatures",
+      "Tweak"
+    ],
+    "releases": [
+      {
+        "releaseid": 58862,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.3.1_ff680f274e7fb8a462f7eb1cbd8768d7.zip?dl=biomes_2.3.1.zip",
+        "filename": "biomes_2.3.1.zip",
+        "fileid": 125906,
+        "downloads": 85,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3",
+          "1.22.4",
+          "1.22.5",
+          "1.22.6",
+          "1.22.7"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.3.1",
+        "created": "2026-09-28 06:35:12",
+        "changelog": "<p>- Updated range of Jackfruit and Breadfruit to be more accurate to their native ranges (Hydromancerx)</p>"
+      },
+      {
+        "releaseid": 58540,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.3.0_8565d1c1f2f8435058d88fbb75598610.zip?dl=biomes_2.3.0.zip",
+        "filename": "biomes_2.3.0.zip",
+        "fileid": 125259,
+        "downloads": 204,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3",
+          "1.22.4",
+          "1.22.5",
+          "1.22.6",
+          "1.22.7"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.3.0",
+        "created": "2026-09-26 07:02:44",
+        "changelog": "<p>- Added support for the new Griffons in Feverstone Wilds</p>"
+      },
+      {
+        "releaseid": 54334,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.2.0_da92d0b3c7c2f6df00ced1e12f2d3fc5.zip?dl=biomes_2.2.0.zip",
+        "filename": "biomes_2.2.0.zip",
+        "fileid": 117477,
+        "downloads": 1566,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3",
+          "1.22.4",
+          "1.22.5",
+          "1.22.6",
+          "1.22.7"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.2.0",
+        "created": "2026-08-25 06:17:17",
+        "changelog": "<p>- Added support for Tailored Society (@hydromancerx)</p>"
+      },
+      {
+        "releaseid": 50177,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.1.3_5f4224dbebf6666a72389280c6dbe501.zip?dl=biomes_2.1.3.zip",
+        "filename": "biomes_2.1.3.zip",
+        "fileid": 109273,
+        "downloads": 1351,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3",
+          "1.22.4"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.1.3",
+        "created": "2026-07-22 19:29:03",
+        "changelog": "<p>- ACTUALLY fix sheep this time</p>"
+      },
+      {
+        "releaseid": 49498,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.1.2_956e831862d8ce5c96de637b04bdbb7c.zip?dl=biomes_2.1.2.zip",
+        "filename": "biomes_2.1.2.zip",
+        "fileid": 107884,
+        "downloads": 463,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.1.2",
+        "created": "2026-07-17 08:17:24",
+        "changelog": "<p>- The two sheep variants now only spawn in proper biomes</p>"
+      },
+      {
+        "releaseid": 46771,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.1.1_5c9e4fe4ccd53cc486a831d506b97939.zip?dl=biomes_2.1.1.zip",
+        "filename": "biomes_2.1.1.zip",
+        "fileid": 102511,
+        "downloads": 1444,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.1.1",
+        "created": "2026-06-22 06:02:10",
+        "changelog": "<p>- Fixes for unusual spawn lists for Long Term Food and Just the Pepper from Hydromancerx, resolves issues with weird spawns from some other mods such as New World Crops</p>"
+      },
+      {
+        "releaseid": 46616,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.1.0_f93a656ff8e9ceccfdc6539255895b04.zip?dl=biomes_2.1.0.zip",
+        "filename": "biomes_2.1.0.zip",
+        "fileid": 102172,
+        "downloads": 179,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.1.0",
+        "created": "2026-06-20 20:10:48",
+        "changelog": "<p>- Added support for forked The Critter Pack, Quality Fowl, Just the Pepper, and Long Term Food. Thanks H3B!</p>"
+      },
+      {
+        "releaseid": 45514,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.3_460c39cc7c8bdc1e3f97217b3a81645b.zip?dl=biomes_2.0.3.zip",
+        "filename": "biomes_2.0.3.zip",
+        "fileid": 100073,
+        "downloads": 578,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.3",
+        "created": "2026-06-12 08:20:05",
+        "changelog": "<p>- fixes an issue where runtime spawns weren't respecting biomes, this was a nightmare to debug and the solution was right in front of me the whole time</p>"
+      },
+      {
+        "releaseid": 44344,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.2_1750130811536d6cb630b0860d0aa5b3.zip?dl=biomes_2.0.2.zip",
+        "filename": "biomes_2.0.2.zip",
+        "fileid": 97619,
+        "downloads": 599,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.2",
+        "created": "2026-06-02 07:11:22",
+        "changelog": "<p>- fix an issue causing a lot of log spam</p>"
+      },
+      {
+        "releaseid": 44204,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.1_cde14507aa136d76e70876f9e07fb7e3.zip?dl=biomes_2.0.1.zip",
+        "filename": "biomes_2.0.1.zip",
+        "fileid": 97328,
+        "downloads": 116,
+        "tags": [
+          "1.22.0-pre.1",
+          "1.22.0-pre.2",
+          "1.22.0-pre.3",
+          "1.22.0-pre.4",
+          "1.22.0-pre.5",
+          "1.22.0-rc.1",
+          "1.22.0-rc.2",
+          "1.22.0-rc.3",
+          "1.22.0-rc.4",
+          "1.22.0-rc.5",
+          "1.22.0-rc.6",
+          "1.22.0-rc.7",
+          "1.22.0-rc.8",
+          "1.22.0-rc.9",
+          "1.22.0-rc.10",
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.1",
+        "created": "2026-06-01 09:06:02",
+        "changelog": "<ul><li>fix some minor asset errors that were causing errors in logs</li>\n<li>potentially fix things spawning in the wrong biomes?</li></ul>"
+      },
+      {
+        "releaseid": 40067,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.0_a138566e45afdf8752a08b915acef717.zip?dl=biomes_2.0.0.zip",
+        "filename": "biomes_2.0.0.zip",
+        "fileid": 89141,
+        "downloads": 1559,
+        "tags": [
+          "1.22.0",
+          "1.22.1"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.0",
+        "created": "2026-05-02 01:20:43",
+        "changelog": "<ul>\n<li>Update to 1.22</li>\n<li>Finalize a lot of migration stuff, this version should be stable</li>\n</ul>"
+      },
+      {
+        "releaseid": 33712,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.0-rc.1_6f0ef18bcff24f6e8dc182efee02d3ea.zip?dl=biomes_2.0.0-rc.1.zip",
+        "filename": "biomes_2.0.0-rc.1.zip",
+        "fileid": 74220,
+        "downloads": 1730,
+        "tags": [
+          "1.21.0-pre.1",
+          "1.21.0-pre.2",
+          "1.21.0-pre.3",
+          "1.21.0-rc.1",
+          "1.21.0-rc.2",
+          "1.21.0-rc.3",
+          "1.21.0-rc.4",
+          "1.21.0-rc.5",
+          "1.21.0-rc.6",
+          "1.21.0-rc.7",
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5",
+          "1.21.6-rc.1",
+          "1.21.6"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.0-rc.1",
+        "created": "2026-02-02 00:50:18",
+        "changelog": "<p>Bump to release candidate because I'm basically feature complete now and only one major-ish issue has come up in several weeks.</p>"
+      },
+      {
+        "releaseid": 33711,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.0-dev.13_bf584bef73841d49b4254589264f05b5.zip?dl=biomes_2.0.0-dev.13.zip",
+        "filename": "biomes_2.0.0-dev.13.zip",
+        "fileid": 74216,
+        "downloads": 46,
+        "tags": [
+          "1.21.0-pre.1",
+          "1.21.0-pre.2",
+          "1.21.0-pre.3",
+          "1.21.0-rc.1",
+          "1.21.0-rc.2",
+          "1.21.0-rc.3",
+          "1.21.0-rc.4",
+          "1.21.0-rc.5",
+          "1.21.0-rc.6",
+          "1.21.0-rc.7",
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5",
+          "1.21.6-rc.1",
+          "1.21.6"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.0-dev.13",
+        "created": "2026-02-02 00:46:29",
+        "changelog": "<p>- fix an issue with concurrency that was occasionally corrupting the biome list for animal spawns</p>"
+      },
+      {
+        "releaseid": 30604,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.0-dev.12_2f880dd86d8867c4c86295f7341087ee.zip?dl=biomes_2.0.0-dev.12.zip",
+        "filename": "biomes_2.0.0-dev.12.zip",
+        "fileid": 67486,
+        "downloads": 775,
+        "tags": [
+          "1.21.0-pre.1",
+          "1.21.0-pre.2",
+          "1.21.0-pre.3",
+          "1.21.0-rc.1",
+          "1.21.0-rc.2",
+          "1.21.0-rc.3",
+          "1.21.0-rc.4",
+          "1.21.0-rc.5",
+          "1.21.0-rc.6",
+          "1.21.0-rc.7",
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5",
+          "1.21.6-rc.1"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.0-dev.12",
+        "created": "2025-12-10 23:29:31",
+        "changelog": "<p>- Better handling of errors in compat config</p>"
+      },
+      {
+        "releaseid": 30564,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.0-dev.11_c85fffaad7d5416bd7549a4ea0301c1e.zip?dl=biomes_2.0.0-dev.11.zip",
+        "filename": "biomes_2.0.0-dev.11.zip",
+        "fileid": 67413,
+        "downloads": 100,
+        "tags": [
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5",
+          "1.21.6-rc.1"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.0-dev.11",
+        "created": "2025-12-10 01:39:36",
+        "changelog": "<p>- New API functionality, update to this if you're experiencing crashes with other mods</p>"
+      },
+      {
+        "releaseid": 30563,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.0-dev.10_864f1ea84c0d3326e0680649e5e9b217.zip?dl=biomes_2.0.0-dev.10.zip",
+        "filename": "biomes_2.0.0-dev.10.zip",
+        "fileid": 67412,
+        "downloads": 53,
+        "tags": [
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5",
+          "1.21.6-rc.1"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.0-dev.10",
+        "created": "2025-12-10 01:13:10",
+        "changelog": "<ul>\n<li>Whitelists and Plant config are now (mostly) split by mod. This shouldn't have an outside behavioral change, but report any issues that come up.</li>\n<li>There's now a new stable API for mods to use instead of directly trying to futz around with the data themselves</li>\n<li>Some minor patching corrections such as buzzy bees compat and no errors on tamed elk spawning.</li>\n</ul>"
+      },
+      {
+        "releaseid": 30497,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.0-dev.9_91cc5655ca60bef7865b68f205d788af.zip?dl=biomes_2.0.0-dev.9.zip",
+        "filename": "biomes_2.0.0-dev.9.zip",
+        "fileid": 67286,
+        "downloads": 103,
+        "tags": [
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5",
+          "1.21.6-rc.1"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.0-dev.9",
+        "created": "2025-12-09 01:11:07",
+        "changelog": "<p>Critical config fix for dev.8, see dev.8 for a more detailed changelog. Yanking dev.8 because it does not migrate configs properly.</p>"
+      },
+      {
+        "releaseid": 30224,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.0-dev.7_4648a86150df83828c9e294278c05146.zip?dl=biomes_2.0.0-dev.7.zip",
+        "filename": "biomes_2.0.0-dev.7.zip",
+        "fileid": 66713,
+        "downloads": 207,
+        "tags": [
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.0-dev.7",
+        "created": "2025-12-03 05:27:04",
+        "changelog": "<ul>\n<li>Internal split of config into a seperate class from the main mod system</li>\n<li>Several minor fixes to compat and whitelisting contributed by ShaeTsu</li>\n</ul>"
+      },
+      {
+        "releaseid": 30183,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.0-dev.6_d57f3dc4be1fad50b0608059dbfb0aa7.zip?dl=biomes_2.0.0-dev.6.zip",
+        "filename": "biomes_2.0.0-dev.6.zip",
+        "fileid": 66605,
+        "downloads": 96,
+        "tags": [
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.0-dev.6",
+        "created": "2025-12-02 08:45:18",
+        "changelog": "<ul>\n<li>Entity spawns should actually be properly filtered now, a logic error resulted in the biome check always returning valid</li>\n<li>Readds ShaeTsu's fixes that were merged shortly before I took over and I accidentally swallowed in the process of splitting the patches :/ sorry about that.</li>\n</ul>"
+      },
+      {
+        "releaseid": 29925,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.0-dev.5_8c5ca757ec89f290627cac4a8fe333e4.zip?dl=biomes_2.0.0-dev.5.zip",
+        "filename": "biomes_2.0.0-dev.5.zip",
+        "fileid": 66036,
+        "downloads": 200,
+        "tags": [
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.0-dev.5",
+        "created": "2025-11-26 21:04:38",
+        "changelog": "<ul>\n<li>Actually proper build</li>\n<li>Fix an issue where fruit trees were caching incorrectly, potentially fixing the wildcraft crash</li>\n</ul>"
+      },
+      {
+        "releaseid": 29888,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.0-dev.3_6002d9b7376e55528cf2970d2d41c4cf.zip?dl=biomes_2.0.0-dev.3.zip",
+        "filename": "biomes_2.0.0-dev.3.zip",
+        "fileid": 65967,
+        "downloads": 75,
+        "tags": [
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.0-dev.3",
+        "created": "2025-11-26 02:35:40",
+        "changelog": "<ul>\n<li>Fix an issue resulting in no seasons being valid spawns instead of all seasons when seasons weren't specified</li>\n<li>Properly integrate Hydromancerx's patches, whoops</li>\n<li>Finalizing splitting patches into individual files</li>\n<li>Add support for Winterlands Rustbound mobs, they will spawn properly now.</li>\n</ul>"
+      },
+      {
+        "releaseid": 29846,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.0-dev.2_09937a8bc76af93799ed3955ac9015bf.zip?dl=biomes_2.0.0-dev.2.zip",
+        "filename": "biomes_2.0.0-dev.2.zip",
+        "fileid": 65872,
+        "downloads": 109,
+        "tags": [
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.0-dev.2",
+        "created": "2025-11-25 03:04:53",
+        "changelog": "<ul>\n<li>Actually functional entity caching that shouldn't spam your logs</li>\n<li>More patch breakup and organization</li>\n</ul>"
+      },
+      {
+        "releaseid": 29837,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_2.0.0-dev.1_329ee8515e4f4cedd8ce42f09745d975.zip?dl=biomes_2.0.0-dev.1.zip",
+        "filename": "biomes_2.0.0-dev.1.zip",
+        "fileid": 65854,
+        "downloads": 62,
+        "tags": [
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1-rc.2",
+          "1.21.1",
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "biomes",
+        "modversion": "2.0.0-dev.1",
+        "created": "2025-11-25 00:59:27",
+        "changelog": "<h2><span style=\"color: #e74c3c;\">THIS IS A DEVELOPMENT VERSION! IT SHOULD NOT BE CONSIDERED STABLE!</span></h2>\n<h2><span style=\"color: #e74c3c;\">THIS SHOULD BE 100% COMPATIBLE, BUT BACK UP YOUR SAVES BEFORE USING!</span></h2>\n<p>&nbsp;</p>\n<p>This represents a new step forward for biomes, aiming for long term maintainability and as close to vanilla performance as is attainable.</p>\n<h2>Changes</h2>\n<ul>\n<li>Massive performance overhaul</li>\n<li>WIP Config reorganization</li>\n<li>Patch fixes by Hydromancerx</li>\n</ul>\n<h2>Known Issues</h2>\n<ul>\n<li>Rivers compat is currently explicitly disabled. This doesn't mean it's incompatible with rivers, but you may experience odd behavior.</li>\n<li>Some users are reporting crashes with Wildcraft. I am currently unable to replicate, but I am attempting to diagnose why they could be happening.</li>\n<li>Behavior has not been thoroughly tested in general. This seems to follow proper spawning rules but the inherent randomness of world gen makes it hard to test precisely.</li>\n</ul>"
+      },
+      {
+        "releaseid": 24061,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.21.0_c987bc3fccaee334890a84172b3bcac6.zip?dl=biomes_1.21.0.zip",
+        "filename": "biomes_1.21.0.zip",
+        "fileid": 52886,
+        "downloads": 6563,
+        "tags": [
+          "1.21.0"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.21.0",
+        "created": "2025-08-31 15:52:25",
+        "changelog": "<p>vanilla fixes - please match the minor versions with VS itself, 1.20 biomes with 1.20 VS, 1.21 biomes with 1.21 VS</p>\n<p>critterpack fixes</p>"
+      },
+      {
+        "releaseid": 22308,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.17_9592afc42d404a558620ff9b82ba67ec.zip?dl=biomes_1.20.17.zip",
+        "filename": "biomes_1.20.17.zip",
+        "fileid": 48862,
+        "downloads": 2248,
+        "tags": [
+          "1.20.0",
+          "1.20.1",
+          "1.20.2",
+          "1.20.3",
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7",
+          "1.20.8",
+          "1.20.9",
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.17",
+        "created": "2025-07-27 18:22:01",
+        "changelog": "<p>jalapeno fix</p>\n<p>critter pack ducks added</p>"
+      },
+      {
+        "releaseid": 21143,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.16_486ed58d6adc12490912d9cab3d90cab.zip?dl=biomes_1.20.16.zip",
+        "filename": "biomes_1.20.16.zip",
+        "fileid": 45841,
+        "downloads": 1802,
+        "tags": [
+          "1.20.0",
+          "1.20.1",
+          "1.20.2",
+          "1.20.3",
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7",
+          "1.20.8",
+          "1.20.9",
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.16",
+        "created": "2025-06-16 08:33:24",
+        "changelog": "<p>wildcraft compat updates from <a class=\"no-underline\" title=\"NiCH518/biomes:master\" href=\"https://github.com/NiCH518/biomes/tree/master\"><span class=\"css-truncate-target\">NiCH518</span></a></p>"
+      },
+      {
+        "releaseid": 21000,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.15_82db7af1d5c044824be5d5665afbd3cf.zip?dl=biomes_1.20.15.zip",
+        "filename": "biomes_1.20.15.zip",
+        "fileid": 45489,
+        "downloads": 470,
+        "tags": [
+          "1.20.0",
+          "1.20.1",
+          "1.20.2",
+          "1.20.3",
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7",
+          "1.20.8",
+          "1.20.9",
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.15",
+        "created": "2025-06-11 09:10:19",
+        "changelog": "<p>linux server support - requires VS 1.20.11 or newer</p>"
+      },
+      {
+        "releaseid": 20838,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.14_8b0c36ff80e3439635746a194850dabb.zip?dl=biomes_1.20.14.zip",
+        "filename": "biomes_1.20.14.zip",
+        "fileid": 45115,
+        "downloads": 547,
+        "tags": [
+          "1.20.0",
+          "1.20.1",
+          "1.20.2",
+          "1.20.3",
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7",
+          "1.20.8",
+          "1.20.9",
+          "1.20.10",
+          "1.20.11"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.14",
+        "created": "2025-06-05 21:12:08",
+        "changelog": "<p>VS 1.20.11 compat</p>"
+      },
+      {
+        "releaseid": 19919,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.13_c37693e32bf8eacd73910a53027eb457.zip?dl=biomes_1.20.13.zip",
+        "filename": "biomes_1.20.13.zip",
+        "fileid": 43164,
+        "downloads": 1255,
+        "tags": [
+          "1.20.0",
+          "1.20.1",
+          "1.20.2",
+          "1.20.3",
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7",
+          "1.20.8",
+          "1.20.9",
+          "1.20.10"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.13",
+        "created": "2025-05-12 09:27:17",
+        "changelog": "<p class=\"mb-1\">fix seaweed</p>\n<div class=\"my-2 Details-content--hidden\">\n<pre class=\"text-small ws-pre-wrap\">feverstone wilds cockatrice chick fix\nchange whitelisting to use whole path so entire mods can be whitelisted</pre>\n</div>"
+      },
+      {
+        "releaseid": 19869,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.12_360a33dd34b1dd8d37685e445daa994e.zip?dl=biomes_1.20.12.zip",
+        "filename": "biomes_1.20.12.zip",
+        "fileid": 43044,
+        "downloads": 330,
+        "tags": [
+          "1.20.0",
+          "1.20.1",
+          "1.20.2",
+          "1.20.3",
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7",
+          "1.20.8",
+          "1.20.9",
+          "1.20.10"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.12",
+        "created": "2025-05-10 20:12:08",
+        "changelog": "<p>fix salt and sands patches</p>\n<p>restrict vanillla amaranth to Pacific Neotropics</p>\n<p>fantasy creatures compat</p>\n<p>golden wolf compat</p>\n<p>npc halfling and elves compat</p>\n<p>ornamental fish compat minor update</p>\n<p>server-side debug logging now controlled by flag in ModConfig/biomes.json</p>"
+      },
+      {
+        "releaseid": 19859,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.11_1e6dea5e51ec5d40b72cab19ed8cedcf.zip?dl=biomes_1.20.11.zip",
+        "filename": "biomes_1.20.11.zip",
+        "fileid": 43011,
+        "downloads": 136,
+        "tags": [
+          "1.20.0",
+          "1.20.1",
+          "1.20.2",
+          "1.20.3",
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7",
+          "1.20.8",
+          "1.20.9",
+          "1.20.10"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.11",
+        "created": "2025-05-10 17:08:55",
+        "changelog": "<p>support rivergen mod (not tested)</p>\n<p>vanilla aquatic blockpatch fixes</p>\n<p>talldrygrass from art of growing</p>\n<p>critterpack crow, robin, waxwings</p>\n<p>vanilla crop and stalagmite fixes</p>\n<p>ensatina oregonensis</p>\n<p>rustbound magic fixes</p>"
+      },
+      {
+        "releaseid": 19851,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.10_0ad8368d5743ee7ad0687496d1111dd2.zip?dl=biomes_1.20.10.zip",
+        "filename": "biomes_1.20.10.zip",
+        "fileid": 42996,
+        "downloads": 137,
+        "tags": [
+          "1.20.0",
+          "1.20.1",
+          "1.20.2",
+          "1.20.3",
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7",
+          "1.20.8",
+          "1.20.9",
+          "1.20.10"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.10",
+        "created": "2025-05-10 13:31:06",
+        "changelog": "<p>more aquatic vanilla blockpatches</p>\n<p>wilderlands ethology</p>\n<p>npc fantasy goblins</p>\n<p>rainfrogs and ensinatas from hieronymus retile collection</p>\n<p>rename command to /biomes</p>"
+      },
+      {
+        "releaseid": 19683,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.9_d7d519a88c8d3bfd7851b72ce3faafab.zip?dl=biomes_1.20.9.zip",
+        "filename": "biomes_1.20.9.zip",
+        "fileid": 42574,
+        "downloads": 517,
+        "tags": [
+          "1.20.0",
+          "1.20.1",
+          "1.20.2",
+          "1.20.3",
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7",
+          "1.20.8",
+          "1.20.9",
+          "1.20.10"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.9",
+        "created": "2025-05-05 20:25:14",
+        "changelog": "<p>add /biome entity, /biome unconfigured, /biome whitelist commands</p>\n<p>vanilla foxes, butterflies, villagers</p>\n<p>still working on critterpack</p>"
+      },
+      {
+        "releaseid": 19671,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.8_15e2a0c9c32fa5dad788040a49d379d9.zip?dl=biomes_1.20.8.zip",
+        "filename": "biomes_1.20.8.zip",
+        "fileid": 42538,
+        "downloads": 128,
+        "tags": [
+          "1.20.0",
+          "1.20.1",
+          "1.20.2",
+          "1.20.3",
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7",
+          "1.20.8",
+          "1.20.9",
+          "1.20.10"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.8",
+        "created": "2025-05-05 16:10:13",
+        "changelog": "<p>Fantasy NPC series compat - Kobolds, Orcs, Humans</p>\n<p>slight touchup for crowsfoot spawns</p>\n<p>more critter pack fixes</p>"
+      },
+      {
+        "releaseid": 19645,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.7_8a947904ef632e1f0e85d505e957f424.zip?dl=biomes_1.20.7.zip",
+        "filename": "biomes_1.20.7.zip",
+        "fileid": 42480,
+        "downloads": 208,
+        "tags": [
+          "1.20.0",
+          "1.20.1",
+          "1.20.2",
+          "1.20.3",
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7",
+          "1.20.8",
+          "1.20.9"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.7",
+        "created": "2025-05-04 18:39:03",
+        "changelog": "<p>vanilla aquatic plants</p>\n<p>vanilla story creature</p>\n<p>rustbound magic compat</p>"
+      },
+      {
+        "releaseid": 19186,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.6_01b69d124d92e21f91543608b02a920f.zip?dl=biomes_1.20.6.zip",
+        "filename": "biomes_1.20.6.zip",
+        "fileid": 41487,
+        "downloads": 895,
+        "tags": [
+          "1.20.0",
+          "1.20.1",
+          "1.20.2",
+          "1.20.3",
+          "1.20.4",
+          "1.20.5",
+          "1.20.6",
+          "1.20.7",
+          "1.20.8"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.6",
+        "created": "2025-04-22 08:49:15",
+        "changelog": "<p>whitelist bowtorn and shiver</p>"
+      },
+      {
+        "releaseid": 17875,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.5_3a81c772b7d10e8ba05c3d8aaaba321c.zip?dl=biomes_1.20.5.zip",
+        "filename": "biomes_1.20.5.zip",
+        "fileid": 38380,
+        "downloads": 1741,
+        "tags": [
+          "1.20.4",
+          "1.20.5",
+          "1.20.6"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.5",
+        "created": "2025-03-21 16:02:47",
+        "changelog": "<p>blue raspberry tweak</p>"
+      },
+      {
+        "releaseid": 17620,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.4_c95cd42136226fbbdea69e8694d3aefc.zip?dl=biomes_1.20.4.zip",
+        "filename": "biomes_1.20.4.zip",
+        "fileid": 37600,
+        "downloads": 549,
+        "tags": [
+          "1.20.4",
+          "1.20.5-rc.1",
+          "1.20.5-rc.2",
+          "1.20.5-rc.3"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.4",
+        "created": "2025-03-15 10:00:00",
+        "changelog": "<p>Farm Crops mod compat thanks to RaptorMother</p>\n<p>Hieronymous Reptiles Pack mod compat thanks to ComitatensSaxoni</p>\n<p>&nbsp;</p>"
+      },
+      {
+        "releaseid": 17535,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.3_3dd9aabc35d02b01957797bc4355841c.zip?dl=biomes_1.20.3.zip",
+        "filename": "biomes_1.20.3.zip",
+        "fileid": 37303,
+        "downloads": 334,
+        "tags": [
+          "1.20.0",
+          "1.20.1",
+          "1.20.2",
+          "1.20.3",
+          "1.20.4",
+          "1.20.5-rc.3"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.3",
+        "created": "2025-03-13 10:16:56",
+        "changelog": "<p>Ensatinas support</p>\n<p>Very minor tidyup of command code and some files that were lying around unused</p>"
+      },
+      {
+        "releaseid": 17237,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.2_63fbc1a1ac99e120a41edfb1c886f194.zip?dl=biomes_1.20.2.zip",
+        "filename": "biomes_1.20.2.zip",
+        "fileid": 36542,
+        "downloads": 552,
+        "tags": [
+          "1.20.0",
+          "1.20.1",
+          "1.20.2",
+          "1.20.3",
+          "1.20.4",
+          "1.20.5-rc.1",
+          "1.20.5-rc.2"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.2",
+        "created": "2025-03-08 09:44:51",
+        "changelog": "<p>bugfix for More Animals</p>"
+      },
+      {
+        "releaseid": 14744,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.1_26cb88ca1e9e5083e339127ea75d276e.zip?dl=biomes_1.20.1.zip",
+        "filename": "biomes_1.20.1.zip",
+        "fileid": 30635,
+        "downloads": 2400,
+        "tags": [
+          "1.20.0",
+          "1.20.1"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.1",
+        "created": "2025-01-19 12:09:42",
+        "changelog": "<p>Treeheath is a flower not a tree</p>"
+      },
+      {
+        "releaseid": 14743,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_1.20.0_679327aa0b8b3953bdb740408158ffe7.zip?dl=biomes_1.20.0.zip",
+        "filename": "biomes_1.20.0.zip",
+        "fileid": 30634,
+        "downloads": 142,
+        "tags": [
+          "1.20.0",
+          "1.20.1"
+        ],
+        "modidstr": "biomes",
+        "modversion": "1.20.0",
+        "created": "2025-01-19 11:35:13",
+        "changelog": "<p>bump to match VS major/minor version from now on<br />add hellboars from feverstone wilds<br />add the critter pack and pipeleaf support</p>"
+      },
+      {
+        "releaseid": 14662,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.6.8_863accbd7a5983fec6531ede8aa9206e.zip?dl=biomes_0.6.8.zip",
+        "filename": "biomes_0.6.8.zip",
+        "fileid": 30504,
+        "downloads": 373,
+        "tags": [
+          "1.20.0"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.6.8",
+        "created": "2025-01-18 09:43:36",
+        "changelog": "<p>1.20 compat</p>"
+      },
+      {
+        "releaseid": 12470,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.6.7_3b6648ea0857701a1a4e2d63720cb980.zip?dl=biomes_0.6.7.zip",
+        "filename": "biomes_0.6.7.zip",
+        "fileid": 26135,
+        "downloads": 1857,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.6.7",
+        "created": "2024-10-10 14:09:28",
+        "changelog": "<p>-Salt and Salts compatibility<br />-Wildcraft Trees update 1.2.0 + the stumps, driftwood, and mangrove roots that were missed earlier (whoops!)<br />-Wildcraft Fruits n Nuts 1.2.2</p>"
+      },
+      {
+        "releaseid": 10769,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.6.6_0a0ffad21c0c683c296dde7a5d3b187e.zip?dl=biomes_0.6.6.zip",
+        "filename": "biomes_0.6.6.zip",
+        "fileid": 22387,
+        "downloads": 2074,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.6.6",
+        "created": "2024-06-11 08:34:10",
+        "changelog": "<p>Sams Humanoid Creatures</p>"
+      },
+      {
+        "releaseid": 10762,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.6.5_9d6c201c3439c8ad4fdaa8ef3be697c6.zip?dl=biomes_0.6.5.zip",
+        "filename": "biomes_0.6.5.zip",
+        "fileid": 22378,
+        "downloads": 231,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.6.5",
+        "created": "2024-06-11 00:22:24",
+        "changelog": "<p>Wildcraft Fruit and Nuts</p>"
+      },
+      {
+        "releaseid": 10173,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.6.4_afe740f97f9af70d1f3972ad1eb30eef.zip?dl=biomes_0.6.4.zip",
+        "filename": "biomes_0.6.4.zip",
+        "fileid": 21323,
+        "downloads": 1000,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.6.4",
+        "created": "2024-05-02 09:52:25",
+        "changelog": "<p>Creatures and Critters</p>"
+      },
+      {
+        "releaseid": 9899,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.6.3_ea8ac2063cd0e3d9e969ee1c5205737e.zip?dl=biomes_0.6.3.zip",
+        "filename": "biomes_0.6.3.zip",
+        "fileid": 20891,
+        "downloads": 519,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.6.3",
+        "created": "2024-04-18 19:53:15",
+        "changelog": null
+      },
+      {
+        "releaseid": 9374,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.6.2_f2a42c474c6fd495b2d6677ffde61a81.zip?dl=biomes_0.6.2.zip",
+        "filename": "biomes_0.6.2.zip",
+        "fileid": 19970,
+        "downloads": 791,
+        "tags": [
+          "1.19.5-rc.1"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.6.2",
+        "created": "2024-03-17 11:44:58",
+        "changelog": "<p>Something in the Water</p>\n<p>FotSA: Sirenia</p>"
+      },
+      {
+        "releaseid": 9068,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.6.1_3921c2332bbd608aefa5107e8eee620a.zip?dl=biomes_0.6.1.zip",
+        "filename": "biomes_0.6.1.zip",
+        "fileid": 19392,
+        "downloads": 689,
+        "tags": [
+          "1.19.3"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.6.1",
+        "created": "2024-02-24 16:00:07",
+        "changelog": "<p>Fix eating error</p>"
+      },
+      {
+        "releaseid": 8323,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.6.0_de8a509ec79cabe2f64f230818e742eb.zip?dl=biomes_0.6.0.zip",
+        "filename": "biomes_0.6.0.zip",
+        "fileid": 17997,
+        "downloads": 766,
+        "tags": [
+          "1.19.1"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.6.0",
+        "created": "2024-01-23 14:57:49",
+        "changelog": "<p>1.19 support and deer and goats</p>"
+      },
+      {
+        "releaseid": 7857,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.5.9_bc2119aaeff3f8caeafa2c6700337780.zip?dl=biomes_0.5.9.zip",
+        "filename": "biomes_0.5.9.zip",
+        "fileid": 17083,
+        "downloads": 799,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.5.9",
+        "created": "2023-12-22 20:57:40",
+        "changelog": "<p>rustcreatures compat</p>"
+      },
+      {
+        "releaseid": 7853,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.5.8_6fb39bedb79ce95d7d2917b20ad7d199.zip?dl=biomes_0.5.8.zip",
+        "filename": "biomes_0.5.8.zip",
+        "fileid": 17079,
+        "downloads": 244,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.5.8",
+        "created": "2023-12-22 14:49:51",
+        "changelog": "<p>turkeys for christmas</p>"
+      },
+      {
+        "releaseid": 7851,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.5.7_6a884bdf7cbc69c683e983708487b352.zip?dl=biomes_0.5.7.zip",
+        "filename": "biomes_0.5.7.zip",
+        "fileid": 17069,
+        "downloads": 234,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.5.7",
+        "created": "2023-12-21 23:42:42",
+        "changelog": "<p>North American Fish: Catfish</p>\n<p>North American Fish: Darters</p>\n<p>North American Salamanders</p>\n<p>Ornamental Fish</p>\n<p>&nbsp;</p>"
+      },
+      {
+        "releaseid": 7804,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.5.6_9910eb06f9e34d6ad947eec9f19067b4.zip?dl=biomes_0.5.6.zip",
+        "filename": "biomes_0.5.6.zip",
+        "fileid": 16997,
+        "downloads": 332,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.5.6",
+        "created": "2023-12-18 09:09:42",
+        "changelog": "<p dir=\"auto\">Removed horses from North America, added bison to Europe (Bison bonasus), cockatrice restricted to Atl. Pal, golem to Cen. Pal, faunling to Atl. Pal. Direwolves restricted to Pac and Atl Nea. Pac Nea removed from giraffes and ostriches, discus restricted to Atl. Neo.</p>\n<p dir=\"auto\">Also added the missing coconut tree from Wildcraft trees, and fixed typo in saxaul trees</p>"
+      },
+      {
+        "releaseid": 7797,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.5.5_dc2cd16f4a5f412b84661022d83ce5fb.zip?dl=biomes_0.5.5.zip",
+        "filename": "biomes_0.5.5.zip",
+        "fileid": 16981,
+        "downloads": 270,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.5.5",
+        "created": "2023-12-17 13:02:15",
+        "changelog": "<p>feverstone and feverstone horses compat</p>"
+      },
+      {
+        "releaseid": 7784,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.5.4_158930d9b89cc7a783b96e935a6e35bf.zip?dl=biomes_0.5.4.zip",
+        "filename": "biomes_0.5.4.zip",
+        "fileid": 16929,
+        "downloads": 289,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.5.4",
+        "created": "2023-12-15 21:59:42",
+        "changelog": "<p>Caprolineae by BraniyaKz</p>"
+      },
+      {
+        "releaseid": 7721,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.5.3_fd6c2ffeecdd10842db8e26c8f2a0e58.zip?dl=biomes_0.5.3.zip",
+        "filename": "biomes_0.5.3.zip",
+        "fileid": 16816,
+        "downloads": 359,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.5.3",
+        "created": "2023-12-10 12:34:58",
+        "changelog": "<p>Hide and Fabric compat</p>"
+      },
+      {
+        "releaseid": 7699,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.5.2_e4e0eb44e1057217e92eaa7712148089.zip?dl=biomes_0.5.2.zip",
+        "filename": "biomes_0.5.2.zip",
+        "fileid": 16785,
+        "downloads": 342,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.5.2",
+        "created": "2023-12-08 09:40:44",
+        "changelog": "<p>feverstone wilds compat</p>"
+      },
+      {
+        "releaseid": 7688,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.5.1_5586aedcb12ae8dd1acb1d92eee086ab.zip?dl=biomes_0.5.1.zip",
+        "filename": "biomes_0.5.1.zip",
+        "fileid": 16768,
+        "downloads": 255,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.5.1",
+        "created": "2023-12-07 16:25:49",
+        "changelog": "<p>mushroom fix<br />add seasonality for fauna only - no config implemented for this yet, just code<br />Rivers mod, which requires new config format to make use of , but all old configs are still compatible. only stops waterlilies spawning in rivers for now<br />rewrite and tidy up of condition code<br />new debug feature, check modconfig</p>"
+      },
+      {
+        "releaseid": 7523,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.4.5_3230bccc9b2bb07b1fdadc254f9c8f2d.zip?dl=biomes_0.4.5.zip",
+        "filename": "biomes_0.4.5.zip",
+        "fileid": 16442,
+        "downloads": 466,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.4.5",
+        "created": "2023-11-25 11:35:28",
+        "changelog": "<p>Fix Primitive Survival patches</p>"
+      },
+      {
+        "releaseid": 7498,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.4.4_304eb4571020e2cc79614145a1668fd5.zip?dl=biomes_0.4.4.zip",
+        "filename": "biomes_0.4.4.zip",
+        "fileid": 16407,
+        "downloads": 297,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.4.4",
+        "created": "2023-11-23 18:25:42",
+        "changelog": "<p>just adds a tag/donttag toggle for other modders</p>"
+      },
+      {
+        "releaseid": 7394,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.4.3_8afbdd3939ef59c4262599cb8c8ad0d7.zip?dl=biomes_0.4.3.zip",
+        "filename": "biomes_0.4.3.zip",
+        "fileid": 16171,
+        "downloads": 377,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.4.3",
+        "created": "2023-11-17 09:29:51",
+        "changelog": "<p>stop spamming logs when world wasnt created with Biomes installed</p>"
+      },
+      {
+        "releaseid": 7342,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.4.1_b380a8ffc36ed5a277e40774d5541743.zip?dl=biomes_0.4.1.zip",
+        "filename": "biomes_0.4.1.zip",
+        "fileid": 16054,
+        "downloads": 373,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.4.1",
+        "created": "2023-11-11 14:35:41",
+        "changelog": "<p>added primitive survival support</p>"
+      },
+      {
+        "releaseid": 7341,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.4.0_5ccab55161a028239ae13554ff4ac9eb.zip?dl=biomes_0.4.0.zip",
+        "filename": "biomes_0.4.0.zip",
+        "fileid": 16053,
+        "downloads": 283,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.4.0",
+        "created": "2023-11-11 10:14:36",
+        "changelog": "<p>on/under tree harmony patch fix</p>"
+      },
+      {
+        "releaseid": 7327,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.3.6_6b1af8bcb3ca115a6bf15304b7d53265.zip?dl=biomes_0.3.6.zip",
+        "filename": "biomes_0.3.6.zip",
+        "fileid": 16031,
+        "downloads": 279,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.3.6",
+        "created": "2023-11-10 07:13:58",
+        "changelog": "<p>Important bugfix for loose stone spawning</p>"
+      },
+      {
+        "releaseid": 7285,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.3.3_37d386defd0d75550b97b9e6e669a97e.zip?dl=biomes_0.3.3.zip",
+        "filename": "biomes_0.3.3.zip",
+        "fileid": 15936,
+        "downloads": 424,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.3.3",
+        "created": "2023-11-07 10:00:52",
+        "changelog": "<p>Asian Monitor Lizards mod support</p>\n<p>Wildcraft mod support</p>\n<p>Vanilla tree and fruit tree improvements</p>"
+      },
+      {
+        "releaseid": 7239,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.3.1_b4595b4c02b83876e8de83440dfc67d0.zip?dl=biomes_0.3.1.zip",
+        "filename": "biomes_0.3.1.zip",
+        "fileid": 15826,
+        "downloads": 353,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.3.1",
+        "created": "2023-11-03 10:16:44",
+        "changelog": "<p>important fixes for story entities</p>\n<p>fir trees</p>"
+      },
+      {
+        "releaseid": 7234,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.3.0_917f8e409009f2d66af73356471d3c55.zip?dl=biomes_0.3.0.zip",
+        "filename": "biomes_0.3.0.zip",
+        "fileid": 15813,
+        "downloads": 279,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.3.0",
+        "created": "2023-11-02 18:03:13",
+        "changelog": "<p>blockpatches and fruittrees</p>\n<p>more commands</p>\n<p>MoreAnimals and Wildcraft Fruit and Nuts support</p>\n<p>probably more things that I've forgotten at this point</p>"
+      },
+      {
+        "releaseid": 7214,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.2.1_68e800151c6c7bde4d06f4f526d577c2.zip?dl=biomes_0.2.1.zip",
+        "filename": "biomes_0.2.1.zip",
+        "fileid": 15724,
+        "downloads": 287,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.2.1",
+        "created": "2023-10-31 23:22:47",
+        "changelog": "<p>butterflies fixes</p>"
+      },
+      {
+        "releaseid": 7213,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.2.0_44d1adc5969eaac7f2170b4680981df2.zip?dl=biomes_0.2.0.zip",
+        "filename": "biomes_0.2.0.zip",
+        "fileid": 15722,
+        "downloads": 265,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.2.0",
+        "created": "2023-10-31 20:43:01",
+        "changelog": "<p>improve bear, salmon and walnut spawns</p>\n<p>add support for mods</p>\n<p>tested with 19-pre4, works fine</p>\n<p>add support for other mods providing tree and blockpatch directly with config files rather than patches. uses wildcards. move realms to realms.json to allow this.</p>\n<p>found the equator, I think? :D</p>"
+      },
+      {
+        "releaseid": 7203,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.1.5_6fc1fec8f9ca8afec9743a0ea34b0d94.zip?dl=biomes_0.1.5.zip",
+        "filename": "biomes_0.1.5.zip",
+        "fileid": 15668,
+        "downloads": 279,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.1.5",
+        "created": "2023-10-30 21:03:18",
+        "changelog": "<p>various fixes for vanilla, like bees and raccoons</p>\n<p>mod compatibility</p>\n<p>new option to FlipNorthSouth, which means you'll start in a southern hemisphere biome</p>"
+      },
+      {
+        "releaseid": 7185,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.1.4_42c2775852c0c953a175f2243a583ec6.zip?dl=biomes_0.1.4.zip",
+        "filename": "biomes_0.1.4.zip",
+        "fileid": 15611,
+        "downloads": 297,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.1.4",
+        "created": "2023-10-29 17:51:05",
+        "changelog": "<p>new world frogs, old world frogs</p>"
+      },
+      {
+        "releaseid": 7184,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.1.3_a88c100356afb9f5982df8851880d18c.zip?dl=biomes_0.1.3.zip",
+        "filename": "biomes_0.1.3.zip",
+        "fileid": 15610,
+        "downloads": 258,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.1.3",
+        "created": "2023-10-29 17:29:31",
+        "changelog": null
+      },
+      {
+        "releaseid": 7168,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.1.2_dbbfaa8d352576a3886c1ca532dbc351.zip?dl=biomes_0.1.2.zip",
+        "filename": "biomes_0.1.2.zip",
+        "fileid": 15592,
+        "downloads": 255,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.1.2",
+        "created": "2023-10-29 14:47:07",
+        "changelog": null
+      },
+      {
+        "releaseid": 7166,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.1.1_077d0259522a4c417c0bbf623c352d94.zip?dl=biomes_0.1.1.zip",
+        "filename": "biomes_0.1.1.zip",
+        "fileid": 15588,
+        "downloads": 264,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.1.1",
+        "created": "2023-10-29 13:55:27",
+        "changelog": "<p>butterflies are done</p>"
+      },
+      {
+        "releaseid": 7164,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.1.0_0f339f9a4340be6a322594f3618eb59a.zip?dl=biomes_0.1.0.zip",
+        "filename": "biomes_0.1.0.zip",
+        "fileid": 15585,
+        "downloads": 248,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.1.0",
+        "created": "2023-10-29 12:17:00",
+        "changelog": "<p>Rainfrogs support</p>\n<p>Some crash fixes</p>"
+      },
+      {
+        "releaseid": 7154,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.0.9_f58939f0ff70bb533d1b204ddb53081f.zip?dl=biomes_0.0.9.zip",
+        "filename": "biomes_0.0.9.zip",
+        "fileid": 15570,
+        "downloads": 270,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.0.9",
+        "created": "2023-10-28 21:07:49",
+        "changelog": "<p>gourami and butterflies</p>"
+      },
+      {
+        "releaseid": 7151,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.0.8_5425cd10afa90d1d889e37b97e57c84f.zip?dl=biomes_0.0.8.zip",
+        "filename": "biomes_0.0.8.zip",
+        "fileid": 15567,
+        "downloads": 250,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.0.8",
+        "created": "2023-10-28 19:15:50",
+        "changelog": null
+      },
+      {
+        "releaseid": 7150,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.0.7_325aef5d5001c07cc744f8df41e4fee2.zip?dl=biomes_0.0.7.zip",
+        "filename": "biomes_0.0.7.zip",
+        "fileid": 15566,
+        "downloads": 249,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.0.7",
+        "created": "2023-10-28 17:48:26",
+        "changelog": null
+      },
+      {
+        "releaseid": 7147,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.0.6_7522407de3eaf6699832b05fc216a2f4.zip?dl=biomes_0.0.6.zip",
+        "filename": "biomes_0.0.6.zip",
+        "fileid": 15563,
+        "downloads": 272,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.0.6",
+        "created": "2023-10-28 16:25:17",
+        "changelog": "<p>treestreestrees</p>"
+      },
+      {
+        "releaseid": 7145,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.0.5_dac919313383cb0c4fd91b0dde2dc5ce.zip?dl=biomes_0.0.5.zip",
+        "filename": "biomes_0.0.5.zip",
+        "fileid": 15561,
+        "downloads": 258,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.0.5",
+        "created": "2023-10-28 14:21:31",
+        "changelog": "<p>more than one biome for intermediate regions</p>\n<p>/biome trees</p>\n<p>/biome debug</p>\n<p>various bugfixes</p>"
+      },
+      {
+        "releaseid": 7140,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.0.4_1c1391b1e49e6441f50627371f50afef.zip?dl=biomes_0.0.4.zip",
+        "filename": "biomes_0.0.4.zip",
+        "fileid": 15546,
+        "downloads": 260,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.0.4",
+        "created": "2023-10-27 22:04:47",
+        "changelog": "<p>fix crash on tiny worlds</p>\n<p>more tree config, but still more needed</p>"
+      },
+      {
+        "releaseid": 7139,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.0.3_ba62c7bebc93c3bd4c6c630f2a2f98b2.zip?dl=biomes_0.0.3.zip",
+        "filename": "biomes_0.0.3.zip",
+        "fileid": 15545,
+        "downloads": 278,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.0.3",
+        "created": "2023-10-27 21:23:26",
+        "changelog": "<p>fix realm names</p>\n<p>hemisphere is jsut for infomation now. no need to tag flora/fauna with it</p>"
+      },
+      {
+        "releaseid": 7133,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.0.2_730a5b2c1b70892a1e30f7e6c4dee6e7.zip?dl=biomes_0.0.2.zip",
+        "filename": "biomes_0.0.2.zip",
+        "fileid": 15528,
+        "downloads": 258,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.0.2",
+        "created": "2023-10-27 15:26:17",
+        "changelog": "<p>add worldgen tree and shrub support</p>"
+      },
+      {
+        "releaseid": 7131,
+        "mainfile": "https://moddbcdn.vintagestory.at/biomes_0.0.1_4b9684b9e6e54bd90f4d68f0af7dbd92.zip?dl=biomes_0.0.1.zip",
+        "filename": "biomes_0.0.1.zip",
+        "fileid": 15524,
+        "downloads": 283,
+        "tags": [
+          "1.18.15"
+        ],
+        "modidstr": "biomes",
+        "modversion": "0.0.1",
+        "created": "2023-10-27 12:05:52",
+        "changelog": null
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 15937,
+        "mainfile": "https://moddbcdn.vintagestory.at/world_mapicon_tenth_f31af19f6455f183b2a29c2601181ccf.png",
+        "filename": "world_mapicon_tenth.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/world_mapicon_tenth_f31af19f6455f183b2a29c2601181ccf_55_60.png",
+        "created": "2023-11-07 10:03:19"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

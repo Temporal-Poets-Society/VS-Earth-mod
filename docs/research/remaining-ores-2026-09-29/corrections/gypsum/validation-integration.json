@@ -1,0 +1,10 @@
+{
+  "passed_checks": 145879,
+  "reviewed_count": 525,
+  "display_count": 28753,
+  "context_only_withheld_count": 1094,
+  "known_invalid_source_geometry_ids": [
+    "lgrb_gkbw_ge3:6418"
+  ],
+  "no_country_or_mine_point_buffer_created": true
+}

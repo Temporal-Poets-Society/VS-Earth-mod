@@ -1,0 +1,49 @@
+# Ground columns QC: 100 x 100 km boxes around the world (GROUND_PROBE=qc in tests/GroundColumnsTests).
+# name : centre latitude : centre longitude : what the real ground is like : checks (percent of land samples under 1 m,
+# under 3 m, over 20 m of cover, or the median in m; loose bounds from the reading, not measurements)
+# Europe
+Latvia Vidzeme upland:57.2:25.6:hummocky till upland, 5-30 m of glacial deposits, thicker in the Gauja valley, peat in hollows:under1<=5
+Latvia Kurzeme:56.9:22.0:till plain and coastal sands, 10-40 m Quaternary, peat bogs:under1<=5
+Latvia Latgale upland:56.3:27.3:lake-rich till upland, 20-80 m of Quaternary in places, many lakes and bogs:under1<=5
+Finland lakes:62.0:25.0:shield; bare or thin-till knolls next to till, sand and clay in valleys; GTK mean about 8.6 m (shield-cover correction 7 Nov gives a mean of 9.0 m; over 20 m read 26 % before it, a loose bound):under3>=15 over20>=3 median<=12
+Lapland:67.5:26.0:shield, permafrost-free; thin till, peat bogs, eskers; much bare rock on fells:under3>=8 median<=25
+Norway fjords:61.0:7.0:bare rock on plateaus and steep walls, sediment only on valley floors:under1>=30 over20<=5
+Scotland Highlands:57.0:-4.5:thin till and peat on rock, bare rock on summits:under1>=15
+Alps:46.5:9.0:bare rock and scree above, thick gravel and lake fill in valleys:under1>=30 over20>=2
+Paris basin:48.8:2.5:loess and alluvium on chalk and limestone; plateaus with a few m of loess:under1<=5
+Hungarian plain:47.0:20.0:thick alluvium and loess, hundreds of metres of young basin fill:under3<=5 median>=15
+Ukraine steppe:49.0:34.0:chernozem on 10-30 m of loess:under3<=10 median>=10
+Spain Meseta:40.0:-4.0:Tertiary basin sediments, thin soils, gravel terraces
+# Africa
+Namibia Damaraland:-21.0:15.0:bedrock under shallow sand and calcrete, bare inselbergs:under1>=25 median<=5
+Kalahari:-23.0:18.5:Kalahari sand tens of metres thick:median>=3
+Sahara Hoggar:23.0:5.5:bare rock and volcanic plateaus, sand and gravel in wadis:under3>=40
+Sahel Niger:14.0:2.0:sandy plains and laterite crusts on basement
+Congo basin:0.0:22.0:deep weathered saprolite and alluvium, tens of metres:under3<=5
+Ethiopian highlands:9.0:39.0:basalt plateau, thin to moderate soils, deep gorges
+South Africa Highveld:-26.0:28.0:residual soils on sediments and dolerite, 1-10 m
+# Asia
+Yakutia:62.5:130.0:continuous permafrost, alluvium and ice-rich silts in the Lena-Aldan lowland:under3<=10
+West Siberia:60.0:75.0:huge peatland and lake plain, thick Quaternary:under3<=5
+Tibet:32.0:88.0:high plateau, thin regolith, lake basins, permafrost patches:under3>=40
+Ganges plain:26.0:83.0:hundreds of metres of alluvium:under3<=2 median>=25
+Gobi:43.0:105.0:gravel desert, thin cover on rock, basins with sand
+Loess Plateau:36.0:109.0:loess 50-200 m thick, deep gullies:under3<=5 median>=15
+Borneo:1.0:114.0:deep tropical weathering, saprolite tens of metres
+Arabian shield:24.0:46.0:desert; rock, gravel plains and dunes
+# North America
+Canadian Shield:55.0:-75.0:bare rock knolls, thin till, lakes and peat:under3>=20 over20<=10
+Prairies:51.0:-106.0:thick till plain, 30-100 m:under3<=5 median>=20
+Appalachians:37.0:-81.0:residual soils and colluvium on folded rock, thin on ridges:under1>=10
+Basin and Range:39.0:-116.0:bare ranges with alluvial fans and thick basin fill:under1>=5 over20>=10
+Mississippi valley:33.0:-91.0:thick alluvium, loess bluffs:under3<=5 median>=20
+Alaska interior:65.0:-150.0:discontinuous permafrost, loess and alluvium
+# South America
+Amazon:-3.0:-60.0:deep weathering and alluvium
+Altiplano:-17.0:-68.0:high basin with lake and alluvial fill, bare volcanic ranges
+Pampas:-35.0:-61.0:loess plain, tens of metres:under3<=5 median>=10
+Patagonia:-45.0:-70.0:gravel plains and basalt plateaus, thin soils
+Guiana shield:5.0:-60.0:deep weathering on shield, inselbergs
+# Oceania
+Australian outback:-25.0:133.0:red sand, laterite and bare ranges
+New Zealand Canterbury:-43.5:171.0:gravel fans and plains below bare alps:under1>=20 over20>=5

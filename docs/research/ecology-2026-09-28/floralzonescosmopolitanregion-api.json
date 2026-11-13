@@ -1,0 +1,309 @@
+{
+  "mod": {
+    "modid": 3792,
+    "assetid": 22284,
+    "name": "Floral Zones: Cosmopolitan Region",
+    "text": "<p><span style=\"font-weight: 400;\">This mod adds plants from all over the world, primarily adding circumpolar, pantropical and aquatic plants.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" style=\"border-spacing: 0px; height: 5782px; width: 2138px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col width=\"157\" /><col width=\"189\" /><col width=\"107\" /><col width=\"141\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"172\" /><col width=\"271\" /><col width=\"1243\" /></colgroup>\n<tbody>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 133.426px;\">Common Name</td>\n<td style=\"height: 39px; width: 164.838px;\">Scientific name</td>\n<td style=\"height: 39px; width: 84.9769px;\">Size</td>\n<td style=\"height: 39px; width: 124.225px;\">Temperature</td>\n<td style=\"height: 39px; width: 96.25px;\">Precipitation</td>\n<td style=\"height: 39px; width: 84.132px;\">Fertility</td>\n<td style=\"height: 39px; width: 82.0718px;\">Forest</td>\n<td style=\"height: 39px; width: 84.7338px;\">Altitude</td>\n<td style=\"height: 39px; width: 90.9375px;\">Additional spawn conditions</td>\n<td style=\"height: 39px; width: 140.486px;\">Resources</td>\n<td style=\"height: 39px; width: 221.065px;\">Ecoregions</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 164.838px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 84.9769px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 124.225px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 96.25px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 84.132px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 82.0718px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 84.7338px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 140.486px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 221.065px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Fig-Leaf Gourd</td>\n<td style=\"height: 19px; width: 164.838px;\">Cucurbita ficifolia</td>\n<td style=\"height: 19px; width: 84.9769px;\">1 m+ W</td>\n<td style=\"height: 19px; width: 124.225px;\">17-31</td>\n<td style=\"height: 19px; width: 96.25px;\">55-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0.5-1</td>\n<td style=\"height: 19px; width: 82.0718px;\">0-0.6</td>\n<td style=\"height: 19px; width: 84.7338px;\">0.3-0.7</td>\n<td style=\"height: 19px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 140.486px;\">Fruit</td>\n<td style=\"height: 19px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, Pacific Neotropic, Atlantic Neotropic</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Black Crowberry</td>\n<td style=\"height: 19px; width: 164.838px;\">Empetrum nigrum</td>\n<td style=\"height: 19px; width: 84.9769px;\">0.3 m H</td>\n<td style=\"height: 19px; width: 124.225px;\">-18--2</td>\n<td style=\"height: 19px; width: 96.25px;\">12-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0-0.4</td>\n<td style=\"height: 19px; width: 82.0718px;\">0-0.2</td>\n<td style=\"height: 19px; width: 84.7338px;\">0-0.69</td>\n<td style=\"height: 19px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 140.486px;\">Fruit</td>\n<td style=\"height: 19px; width: 221.065px;\">Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Nearctic, Atlantic Nearctic, Atlantic Neotropic</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Common Juniper</td>\n<td style=\"height: 19px; width: 164.838px;\">Juniperus communis</td>\n<td style=\"height: 19px; width: 84.9769px;\">1.5 m H</td>\n<td style=\"height: 19px; width: 124.225px;\">-12-12</td>\n<td style=\"height: 19px; width: 96.25px;\">15-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0-1</td>\n<td style=\"height: 19px; width: 82.0718px;\">0-0.8</td>\n<td style=\"height: 19px; width: 84.7338px;\">0-0.7</td>\n<td style=\"height: 19px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 140.486px;\">Fruit</td>\n<td style=\"height: 19px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Cloudberry</td>\n<td style=\"height: 19px; width: 164.838px;\">Rubus chamaemorus</td>\n<td style=\"height: 19px; width: 84.9769px;\">0.25 m H</td>\n<td style=\"height: 19px; width: 124.225px;\">-14-4</td>\n<td style=\"height: 19px; width: 96.25px;\">8-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0-0.4</td>\n<td style=\"height: 19px; width: 82.0718px;\">0-0.6</td>\n<td style=\"height: 19px; width: 84.7338px;\">0-0.21</td>\n<td style=\"height: 19px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 140.486px;\">Fruit</td>\n<td style=\"height: 19px; width: 221.065px;\">Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 133.426px;\">Vanilla</td>\n<td style=\"height: 39px; width: 164.838px;\">Vanilla planifolia</td>\n<td style=\"height: 39px; width: 84.9769px;\">1 m+ W</td>\n<td style=\"height: 39px; width: 124.225px;\">22-40</td>\n<td style=\"height: 39px; width: 96.25px;\">88-100%</td>\n<td style=\"height: 39px; width: 84.132px;\">0.6-1</td>\n<td style=\"height: 39px; width: 82.0718px;\">0.8-1</td>\n<td style=\"height: 39px; width: 84.7338px;\">0-0.53</td>\n<td style=\"height: 39px; width: 90.9375px;\">On surface plus under trees</td>\n<td style=\"height: 39px; width: 140.486px;\">Fruit</td>\n<td style=\"height: 39px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, Pacific Paleotropic, Atlantic Paleotropic</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Garlic</td>\n<td style=\"height: 19px; width: 164.838px;\">Allium sativum</td>\n<td style=\"height: 19px; width: 84.9769px;\">1 m H</td>\n<td style=\"height: 19px; width: 124.225px;\">7-14</td>\n<td style=\"height: 19px; width: 96.25px;\">44-65%</td>\n<td style=\"height: 19px; width: 84.132px;\">0.3-1</td>\n<td style=\"height: 19px; width: 82.0718px;\">0-0.5</td>\n<td style=\"height: 19px; width: 84.7338px;\">0-0.64</td>\n<td style=\"height: 19px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 140.486px;\">Vegetable</td>\n<td style=\"height: 19px; width: 221.065px;\">Atlantic Palearctic, Central Palearctic, Eastern Palearctic</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Sweet Potato</td>\n<td style=\"height: 19px; width: 164.838px;\">Ipomoea batatas</td>\n<td style=\"height: 19px; width: 84.9769px;\">1 m+ W</td>\n<td style=\"height: 19px; width: 124.225px;\">21-40</td>\n<td style=\"height: 19px; width: 96.25px;\">60-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0.6-1</td>\n<td style=\"height: 19px; width: 82.0718px;\">0-0.3</td>\n<td style=\"height: 19px; width: 84.7338px;\">0-0.68</td>\n<td style=\"height: 19px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 140.486px;\">Vegetable, Grain</td>\n<td style=\"height: 19px; width: 221.065px;\">Pacific Nearctic, Pacific Neotropic, Atlantic Neotropic, Oceania</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Bean</td>\n<td style=\"height: 19px; width: 164.838px;\">Phaseolus vulgaris</td>\n<td style=\"height: 19px; width: 84.9769px;\">0.2-0.6 m H</td>\n<td style=\"height: 19px; width: 124.225px;\">16-40</td>\n<td style=\"height: 19px; width: 96.25px;\">50-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0.6-1</td>\n<td style=\"height: 19px; width: 82.0718px;\">0-0.5</td>\n<td style=\"height: 19px; width: 84.7338px;\">0-0.7</td>\n<td style=\"height: 19px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 140.486px;\">Legume, Vegetable</td>\n<td style=\"height: 19px; width: 221.065px;\">Atlantic Nearctic, Pacific Nearctic, Atlantic Neotropic, Pacific Neotropic</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Maize</td>\n<td style=\"height: 19px; width: 164.838px;\">Zea mays</td>\n<td style=\"height: 19px; width: 84.9769px;\">1.2-4 m H</td>\n<td style=\"height: 19px; width: 124.225px;\">14-34</td>\n<td style=\"height: 19px; width: 96.25px;\">60-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0.6-1</td>\n<td style=\"height: 19px; width: 82.0718px;\">0-0.4</td>\n<td style=\"height: 19px; width: 84.7338px;\">0-0.8</td>\n<td style=\"height: 19px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 140.486px;\">Grain, Flour</td>\n<td style=\"height: 19px; width: 221.065px;\">Atlantic Nearctic, Pacific Nearctic, Atlantic Neotropic, Pacific Neotropic</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 133.426px;\">Golden Leather Fern</td>\n<td style=\"height: 39px; width: 164.838px;\">Acrostichum aureum</td>\n<td style=\"height: 39px; width: 84.9769px;\">1.5 m H</td>\n<td style=\"height: 39px; width: 124.225px;\">24-40</td>\n<td style=\"height: 39px; width: 96.25px;\">70-100%</td>\n<td style=\"height: 39px; width: 84.132px;\">0.6-1</td>\n<td style=\"height: 39px; width: 82.0718px;\">0-1</td>\n<td style=\"height: 39px; width: 84.7338px;\">0-0.15</td>\n<td style=\"height: 39px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 140.486px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Neotropic, Atlantic Neotropic, Atlantic Afrotropic, Eastern Afrotropic, Australasian, Oceania</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 133.426px;\">Antarctic Hard-Fern</td>\n<td style=\"height: 39px; width: 164.838px;\">Austroblechnum penna-marina</td>\n<td style=\"height: 39px; width: 84.9769px;\">0.12 m H</td>\n<td style=\"height: 39px; width: 124.225px;\">4-16</td>\n<td style=\"height: 39px; width: 96.25px;\">55-100%</td>\n<td style=\"height: 39px; width: 84.132px;\">0.7-1</td>\n<td style=\"height: 39px; width: 82.0718px;\">0-0.5</td>\n<td style=\"height: 39px; width: 84.7338px;\">0-0.6</td>\n<td style=\"height: 39px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 140.486px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 221.065px;\">Pacific Neotropic, Atlantic Neotropic, Australasian, Oceania</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 133.426px;\">Fireweed</td>\n<td style=\"height: 39px; width: 164.838px;\">Chamaenerion angustifolium</td>\n<td style=\"height: 39px; width: 84.9769px;\">0.5-2.5 m H</td>\n<td style=\"height: 39px; width: 124.225px;\">-14-6</td>\n<td style=\"height: 39px; width: 96.25px;\">17-100%</td>\n<td style=\"height: 39px; width: 84.132px;\">0.3-0.7</td>\n<td style=\"height: 39px; width: 82.0718px;\">0-0.4</td>\n<td style=\"height: 39px; width: 84.7338px;\">0-0.8</td>\n<td style=\"height: 39px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 140.486px;\">Vegetable</td>\n<td style=\"height: 39px; width: 221.065px;\">Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Reindeer Lichen</td>\n<td style=\"height: 19px; width: 164.838px;\">Cladonia rangiferina</td>\n<td style=\"height: 19px; width: 84.9769px;\">0.1 m H</td>\n<td style=\"height: 19px; width: 124.225px;\">-22-6</td>\n<td style=\"height: 19px; width: 96.25px;\">35-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0-0.3</td>\n<td style=\"height: 19px; width: 82.0718px;\">0-1</td>\n<td style=\"height: 19px; width: 84.7338px;\">0-0.42</td>\n<td style=\"height: 19px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 140.486px;\">Grain</td>\n<td style=\"height: 19px; width: 221.065px;\">Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Giant Crinum Lily</td>\n<td style=\"height: 19px; width: 164.838px;\">Crinum asiaticum</td>\n<td style=\"height: 19px; width: 84.9769px;\">1.2 m H</td>\n<td style=\"height: 19px; width: 124.225px;\">16-40</td>\n<td style=\"height: 19px; width: 96.25px;\">71-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0.6-1</td>\n<td style=\"height: 19px; width: 82.0718px;\">0.3-0.5</td>\n<td style=\"height: 19px; width: 84.7338px;\">0-0.29</td>\n<td style=\"height: 19px; width: 90.9375px;\">Near Water</td>\n<td style=\"height: 19px; width: 140.486px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 221.065px;\">Central Palearctic, Eastern Palearctic, Pacific Palearctic, Australasia, Oceania</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 133.426px;\">Creeping Water Primrose</td>\n<td style=\"height: 39px; width: 164.838px;\">Ludwigia peploides</td>\n<td style=\"height: 39px; width: 84.9769px;\">2-3 m W</td>\n<td style=\"height: 39px; width: 124.225px;\">10-40</td>\n<td style=\"height: 39px; width: 96.25px;\">62-92%</td>\n<td style=\"height: 39px; width: 84.132px;\">0.5-1</td>\n<td style=\"height: 39px; width: 82.0718px;\">0-1</td>\n<td style=\"height: 39px; width: 84.7338px;\">0-0.61</td>\n<td style=\"height: 39px; width: 90.9375px;\">Near Water, In Water</td>\n<td style=\"height: 39px; width: 140.486px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, Pacific Neotropic, Atlantic Neotropic, Australasia</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Bogbean</td>\n<td style=\"height: 19px; width: 164.838px;\">Menyanthes trifoliata</td>\n<td style=\"height: 19px; width: 84.9769px;\">0.3 m H</td>\n<td style=\"height: 19px; width: 124.225px;\">-8-10</td>\n<td style=\"height: 19px; width: 96.25px;\">28-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0-0.5</td>\n<td style=\"height: 19px; width: 82.0718px;\">0-0.4</td>\n<td style=\"height: 19px; width: 84.7338px;\">0-0.72</td>\n<td style=\"height: 19px; width: 90.9375px;\">Near Water</td>\n<td style=\"height: 19px; width: 140.486px;\">Vegetable</td>\n<td style=\"height: 19px; width: 221.065px;\">Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 133.426px;\">Northern Labrador Tea</td>\n<td style=\"height: 39px; width: 164.838px;\">Rhododendron tomentosum</td>\n<td style=\"height: 39px; width: 84.9769px;\">0.5 m H</td>\n<td style=\"height: 39px; width: 124.225px;\">-13-4</td>\n<td style=\"height: 39px; width: 96.25px;\">12-55%</td>\n<td style=\"height: 39px; width: 84.132px;\">0-0.4</td>\n<td style=\"height: 39px; width: 82.0718px;\">0-0.4</td>\n<td style=\"height: 39px; width: 84.7338px;\">0-0.56</td>\n<td style=\"height: 39px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 140.486px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 221.065px;\">Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Bay Cedar</td>\n<td style=\"height: 19px; width: 164.838px;\">Suriana maritima</td>\n<td style=\"height: 19px; width: 84.9769px;\">1-2 m H</td>\n<td style=\"height: 19px; width: 124.225px;\">22-40</td>\n<td style=\"height: 19px; width: 96.25px;\">53-77%</td>\n<td style=\"height: 19px; width: 84.132px;\">0-0.65</td>\n<td style=\"height: 19px; width: 82.0718px;\">0-0.3</td>\n<td style=\"height: 19px; width: 84.7338px;\">0-0.02</td>\n<td style=\"height: 19px; width: 90.9375px;\">Near Water</td>\n<td style=\"height: 19px; width: 140.486px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Neotropic, Atlantic Neotropic, Eastern Afrotropic, Australasia</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">saltmarsh bulrush</td>\n<td style=\"height: 19px; width: 164.838px;\">Bolboschoenus maritimus</td>\n<td style=\"height: 19px; width: 84.9769px;\">1m H</td>\n<td style=\"height: 19px; width: 124.225px;\">-4-22</td>\n<td style=\"height: 19px; width: 96.25px;\">20-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0.5-1</td>\n<td style=\"height: 19px; width: 82.0718px;\">0-0.2</td>\n<td style=\"height: 19px; width: 84.7338px;\">0-0.01</td>\n<td style=\"height: 19px; width: 90.9375px;\">Near Water</td>\n<td style=\"height: 19px; width: 140.486px;\">Reeds</td>\n<td style=\"height: 19px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, Atlantic Palearctic, Central Palearctic</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 133.426px;\">Carolina Cabomba</td>\n<td style=\"height: 39px; width: 164.838px;\">Cabomba caroliniana</td>\n<td style=\"height: 39px; width: 84.9769px;\">0.3-10 m H</td>\n<td style=\"height: 39px; width: 124.225px;\">8-40</td>\n<td style=\"height: 39px; width: 96.25px;\">12-100%</td>\n<td style=\"height: 39px; width: 84.132px;\">0.6-1</td>\n<td style=\"height: 39px; width: 82.0718px;\">0-0.4</td>\n<td style=\"height: 39px; width: 84.7338px;\">0-3 m D, 0-0.08</td>\n<td style=\"height: 39px; width: 90.9375px;\">In Water</td>\n<td style=\"height: 39px; width: 140.486px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, Pacific Neotropic, Atlantic Neotropic</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">common reed</td>\n<td style=\"height: 19px; width: 164.838px;\">Phragmites australis</td>\n<td style=\"height: 19px; width: 84.9769px;\">3-6m H</td>\n<td style=\"height: 19px; width: 124.225px;\">0-40</td>\n<td style=\"height: 19px; width: 96.25px;\">50-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0-1</td>\n<td style=\"height: 19px; width: 82.0718px;\">0-0.3</td>\n<td style=\"height: 19px; width: 84.7338px;\">0-0.45</td>\n<td style=\"height: 19px; width: 90.9375px;\">Near Water</td>\n<td style=\"height: 19px; width: 140.486px;\">Thatch</td>\n<td style=\"height: 19px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Atlantic Afrotropic, Eastern Afrotropic, Australasia</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 133.426px;\">Water Lettuce</td>\n<td style=\"height: 39px; width: 164.838px;\">Pistia stratiotes</td>\n<td style=\"height: 39px; width: 84.9769px;\">0.46 m W</td>\n<td style=\"height: 39px; width: 124.225px;\">19-34</td>\n<td style=\"height: 39px; width: 96.25px;\">22-100%</td>\n<td style=\"height: 39px; width: 84.132px;\">-</td>\n<td style=\"height: 39px; width: 82.0718px;\">-</td>\n<td style=\"height: 39px; width: 84.7338px;\">0-0.4</td>\n<td style=\"height: 39px; width: 90.9375px;\">In Water</td>\n<td style=\"height: 39px; width: 140.486px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Neotropic, Atlantic Neotropic, Atlantic Afrotropic, Eastern Afrotropic, Australasian</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 133.426px;\">Sea Lettuce</td>\n<td style=\"height: 39px; width: 164.838px;\">Ulva lactuca</td>\n<td style=\"height: 39px; width: 84.9769px;\">0.6 m H</td>\n<td style=\"height: 39px; width: 124.225px;\">-6-40</td>\n<td style=\"height: 39px; width: 96.25px;\">5-100%</td>\n<td style=\"height: 39px; width: 84.132px;\">0-1</td>\n<td style=\"height: 39px; width: 82.0718px;\">0-1</td>\n<td style=\"height: 39px; width: 84.7338px;\">0-6 m D</td>\n<td style=\"height: 39px; width: 90.9375px;\">In Water</td>\n<td style=\"height: 39px; width: 140.486px;\">Vegetable</td>\n<td style=\"height: 39px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Neotropic, Atlantic Neotropic, Atlantic Afrotropic, Eastern Afrotropic, Australasian, Oceania</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 133.426px;\">Floating Bladderwort</td>\n<td style=\"height: 39px; width: 164.838px;\">Utricularia gibba</td>\n<td style=\"height: 39px; width: 84.9769px;\">.25 m (but forms mats)</td>\n<td style=\"height: 39px; width: 124.225px;\">2-34</td>\n<td style=\"height: 39px; width: 96.25px;\">55-100%</td>\n<td style=\"height: 39px; width: 84.132px;\">-</td>\n<td style=\"height: 39px; width: 82.0718px;\">-</td>\n<td style=\"height: 39px; width: 84.7338px;\">0-0.24</td>\n<td style=\"height: 39px; width: 90.9375px;\">In Water</td>\n<td style=\"height: 39px; width: 140.486px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, Atlantic Palearctic, Central Palearctic, Atlantic Afrotropic, Eastern Afrotropic</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Green Alder</td>\n<td style=\"height: 19px; width: 164.838px;\">Alnus alnobetula</td>\n<td style=\"height: 19px; width: 84.9769px;\">3-12 m H</td>\n<td style=\"height: 19px; width: 124.225px;\">-20-6</td>\n<td style=\"height: 19px; width: 96.25px;\">8-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0.2-0.7</td>\n<td style=\"height: 19px; width: 82.0718px;\">0.5-1</td>\n<td style=\"height: 19px; width: 84.7338px;\">0-0.6 (0.62)</td>\n<td style=\"height: 19px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 140.486px;\">Seeds</td>\n<td style=\"height: 19px; width: 221.065px;\">Atlantic Palearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Nearctic, Atlantic Nearctic</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 133.426px;\">Coconut Palm</td>\n<td style=\"height: 39px; width: 164.838px;\">Cocos nucifera</td>\n<td style=\"height: 39px; width: 84.9769px;\">20-30 m H</td>\n<td style=\"height: 39px; width: 124.225px;\">19-40</td>\n<td style=\"height: 39px; width: 96.25px;\">60-100%</td>\n<td style=\"height: 39px; width: 84.132px;\">0-1</td>\n<td style=\"height: 39px; width: 82.0718px;\">0-0.5</td>\n<td style=\"height: 39px; width: 84.7338px;\">0-0.4 (0.54)</td>\n<td style=\"height: 39px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 140.486px;\">Firewood, Thatch, fiber, fruit, vegetable, flour</td>\n<td style=\"height: 39px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, Central Palearctic, Eastern Palearctic, Pacific Palearctic, Pacific Neotropic, Atlantic Neotropic, Eastern Afrotropic, Australasian, Oceania</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Papaya</td>\n<td style=\"height: 19px; width: 164.838px;\">Carica papaya</td>\n<td style=\"height: 19px; width: 84.9769px;\">5-10 m H</td>\n<td style=\"height: 19px; width: 124.225px;\">23-34</td>\n<td style=\"height: 19px; width: 96.25px;\">30-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0.3-1</td>\n<td style=\"height: 19px; width: 82.0718px;\">0.4-0.7</td>\n<td style=\"height: 19px; width: 84.7338px;\">0-0.6 (0.63)</td>\n<td style=\"height: 19px; width: 90.9375px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 140.486px;\">Fruit, Firewood</td>\n<td style=\"height: 19px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, PacificNeotropic, Atlantic Neotropic</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">White Mangrove</td>\n<td style=\"height: 19px; width: 164.838px;\">Laguncularia racemosa</td>\n<td style=\"height: 19px; width: 84.9769px;\">5-10 m H</td>\n<td style=\"height: 19px; width: 124.225px;\">20-40</td>\n<td style=\"height: 19px; width: 96.25px;\">55-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0-1</td>\n<td style=\"height: 19px; width: 82.0718px;\">0.4-1</td>\n<td style=\"height: 19px; width: 84.7338px;\">0 (0.4)</td>\n<td style=\"height: 19px; width: 90.9375px;\">Near Water</td>\n<td style=\"height: 19px; width: 140.486px;\">Fruit, Firewood</td>\n<td style=\"height: 19px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, Atlantic Palearctic, Atlantic Neotropic, Pacific Neotropic</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Red Mangrove</td>\n<td style=\"height: 19px; width: 164.838px;\">Rhizophora mangle</td>\n<td style=\"height: 19px; width: 84.9769px;\">6-10 m H</td>\n<td style=\"height: 19px; width: 124.225px;\">18-40</td>\n<td style=\"height: 19px; width: 96.25px;\">60-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0.6-1</td>\n<td style=\"height: 19px; width: 82.0718px;\">0.4-1</td>\n<td style=\"height: 19px; width: 84.7338px;\">0 (0.4)</td>\n<td style=\"height: 19px; width: 90.9375px;\">Near Water</td>\n<td style=\"height: 19px; width: 140.486px;\">Firewood, Tannins</td>\n<td style=\"height: 19px; width: 221.065px;\">Pacific Nearctic, Atlantic Nearctic, Atlantic Palearctic, Pacific Neotropic, Atlantic Neotropic, Atlantic Afrotropic</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 133.426px;\">Mangrove Apple</td>\n<td style=\"height: 19px; width: 164.838px;\">Sonneratia caseolaris</td>\n<td style=\"height: 19px; width: 84.9769px;\">5-15 m H</td>\n<td style=\"height: 19px; width: 124.225px;\">22-40</td>\n<td style=\"height: 19px; width: 96.25px;\">66-100%</td>\n<td style=\"height: 19px; width: 84.132px;\">0.3-1</td>\n<td style=\"height: 19px; width: 82.0718px;\">0.8-1</td>\n<td style=\"height: 19px; width: 84.7338px;\">0 (0.4)</td>\n<td style=\"height: 19px; width: 90.9375px;\">Near Water</td>\n<td style=\"height: 19px; width: 140.486px;\">Fruit, Firewood</td>\n<td style=\"height: 19px; width: 221.065px;\">Central Palearctic, Eastern Palearctic, Pacific Palearctic, Eastern Afrotropic, Australasian, Oceania</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p><span style=\"font-weight: 400;\">&nbsp;</span></p>\n<p><span style=\"font-weight: 400;\">&nbsp;</span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Compatibility</div>\n<div class=\"spoiler-text\"><a href=\"https://mods.vintagestory.at/ancienttools\">Ancient Tools</a>: Adds wood product blocks, items and recipes from FZ wood types<br /><a href=\"https://mods.vintagestory.at/show/mod/8785\">Biomes</a>: This mod adds plant life to all default&nbsp;Realms<br /><a href=\"https://mods.vintagestory.at/wildcraftfruit\">Wildcraft</a>: Adds storage flags used by Wildcraft bags so FZ content can be added to WC bags<br /><a href=\"https://mods.vintagestory.at/show/mod/247\">XSkills</a>: Experience from berry bushes and trees<br /><br /></div>\n</div>\n<p><br /><br /></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q: </strong>Is this a compilation of the Floral Zone series?<strong><br /><br />A: </strong>No, it has unique content not found in the other modules. The plants in this pack would not easily fit into the rosters of other packs due to their large native or naturalized range so we made this one to contain those.<br /><strong><br /><br />Q:</strong> Why so many plant packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined file size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain plant pack file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><strong>Q:</strong>&nbsp;Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> It is safe to add, plants will only appear in chunks not previously generated. Removing this mod from an existing world will leave many broken blocks and is not recommended, but manually regenerating chunks via in game commands affecting can work.<br /><br /><br /><strong>Q:</strong> Can you add X plant?<br /><br /><strong>A:</strong> We are focusing on getting a core 30 plants into all 36 planned Floral Regions first before any plans to add more content, if ever. That said, we occasionally do commissions and would be open to adding plants that way. Check Tenth Architect's Discord or Author profile to see if any commission slots are open.<br /><br /><br /><strong>Q:</strong> Can you add X compatibility?<br /><br /><strong>A:</strong> Maintenance and our own planned content is our priority, and almost all our existing compatibilty files were those sent to us by community members. If you'd like to see compatibility added, you are welcome to make the patches, test to ensure they work and send them our way and we will add them. The exception to this would be if the size of the compatibility files would have significant performance impact for most users of this series, as performance is a higher priority of ours than cross compatibility.<br /><br /></div>\n</div>\n<p><br /><br /></p>\n<p><span style=\"font-weight: 400;\">Features:<br />The plants in this mod will spawn between 80 and 0 degrees latitude in a normal world climate.<br />And a big thanks to everyone who gave feedback and assistance!<br /><br /><br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "floralzonescosmopolitanregion",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_3640ab29c66907818eb28207a7684a22.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_3640ab29c66907818eb28207a7684a22.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_3640ab29c66907818eb28207a7684a22.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 95175,
+    "follows": 949,
+    "trendingpoints": 0,
+    "comments": 148,
+    "side": "both",
+    "type": "mod",
+    "created": "2025-04-04 20:24:57",
+    "lastreleased": "2026-09-23 19:50:14",
+    "lastmodified": "2026-09-28 20:18:51",
+    "tags": [
+      "Worldgen",
+      "Crafting",
+      "Food",
+      "Furniture",
+      "Flora"
+    ],
+    "releases": [
+      {
+        "releaseid": 58173,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_2aa0fc4d93e466f4f59afbfbdac570de.zip?dl=FloralZonesCosmopolitanRegion-v1.0.13.zip",
+        "filename": "FloralZonesCosmopolitanRegion-v1.0.13.zip",
+        "fileid": 124653,
+        "downloads": 1054,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "floralzonescosmopolitanregion",
+        "modversion": "1.0.13",
+        "created": "2026-09-23 19:50:14",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-Added decomposition to bog bean, reindeer lichen and sea lettuce</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Useful Traders patch (Thanks Droseran!)</span></p>"
+      },
+      {
+        "releaseid": 54522,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_690797937f8bd2db566faf3823167bfe.zip?dl=FloralZonesCosmopolitanRegion-v1.0.12.zip",
+        "filename": "FloralZonesCosmopolitanRegion-v1.0.12.zip",
+        "fileid": 117813,
+        "downloads": 4573,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "floralzonescosmopolitanregion",
+        "modversion": "1.0.12",
+        "created": "2026-08-26 17:52:17",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Mannequin recipes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Nutrition type to bogbean and reindeer lichen</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Stationary basket deconstruct recipe</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Stink bait recipe for garlic, corn, coconut and sweet potato</span></p>\n<p><span style=\"font-weight: 400;\">Added-Treeseed bracelets</span><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Changed-Black cloudberry, crowberry, fig-leaf gourd, juniper and vanilla into new berry bush</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Maize missing in container texture</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Vanilla extract ingredients not being displayed</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Added rotation to papaya fruits</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-New juniper fruit item shape</span></p>\n<p><span style=\"font-weight: 400;\">Tweak-Selection box of cloudberry, crowberry, vanilla, golden leather fern, saltmarsh bulrush, common reed and papaya</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Basket shapes and attributes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Changed amulet class to wearable behavior</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-XSkills Compat for berries and trees, Thanks Hydromancerx!</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Thank you I Have Many Names for making many of these fixes!</span></p>"
+      },
+      {
+        "releaseid": 29768,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_b447b353b156b6ff9679d675d42b6d1e.zip?dl=FloralZonesCosmopolitanRegion-v1.0.11.zip",
+        "filename": "FloralZonesCosmopolitanRegion-v1.0.11.zip",
+        "fileid": 65715,
+        "downloads": 40483,
+        "tags": [
+          "1.21.5",
+          "1.21.6"
+        ],
+        "modidstr": "floralzonescosmopolitanregion",
+        "modversion": "1.0.11",
+        "created": "2025-11-23 21:43:05",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Useful Trader Compatibility (Thanks Droseran!)<br /></span><span style=\"font-weight: 400;\">Added-Russian Translation (Thanks Nikuksis!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Vegetables in wrong slot in scrambled eggs</span></p>"
+      },
+      {
+        "releaseid": 28799,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_2835e68f80590e1cfa9f51a2810ad847.zip?dl=FloralZonesCosmopolitanRegion-v1.0.10.zip",
+        "filename": "FloralZonesCosmopolitanRegion-v1.0.10.zip",
+        "fileid": 63573,
+        "downloads": 3803,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "floralzonescosmopolitanregion",
+        "modversion": "1.0.10",
+        "created": "2025-11-06 16:28:40",
+        "changelog": "<p>Fixed-section of barrel recipe incorrectly commented out</p>"
+      },
+      {
+        "releaseid": 28774,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_0c0a6bdae9c2e5bf25372fa3e56c9c10.zip?dl=FloralZonesCosmopolitanRegion-v1.0.9.zip",
+        "filename": "FloralZonesCosmopolitanRegion-v1.0.9.zip",
+        "fileid": 63496,
+        "downloads": 437,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "floralzonescosmopolitanregion",
+        "modversion": "1.0.9",
+        "created": "2025-11-05 21:25:00",
+        "changelog": "<p><span style=\"font-weight: 400;\">Tweak-Short Coconut palm tree shape</span></p>"
+      },
+      {
+        "releaseid": 28659,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_948e7842e1f050076946d163e6ca7414.zip?dl=FloralZonesCosmopolitanRegion-v1.0.8.zip",
+        "filename": "FloralZonesCosmopolitanRegion-v1.0.8.zip",
+        "fileid": 63206,
+        "downloads": 858,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "floralzonescosmopolitanregion",
+        "modversion": "1.0.8",
+        "created": "2025-11-03 17:22:12",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed non-essential strings from file</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 28162,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_e6598c4899494458aec6aa9a65d2751d.zip?dl=FloralZonesCosmopolitanRegion-v1.0.7.zip",
+        "filename": "FloralZonesCosmopolitanRegion-v1.0.7.zip",
+        "fileid": 61938,
+        "downloads": 3479,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "floralzonescosmopolitanregion",
+        "modversion": "1.0.7",
+        "created": "2025-10-26 17:15:44",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Custom berry bush class to stop them from being pruned (Thanks Ape!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Mashed papaya, fig-leafed gourd, black crowberry, juniper and cloud berry to small trough</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Ukrainian Translation (Thanks Deanbro!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Typo in populated bulrush skep</span></p>"
+      },
+      {
+        "releaseid": 25982,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_d34ed65f6d2dfcb0a5932ba286e59aa5.zip?dl=FloralZonesCosmopolitanRegion-v1.0.6.zip",
+        "filename": "FloralZonesCosmopolitanRegion-v1.0.6.zip",
+        "fileid": 57088,
+        "downloads": 11208,
+        "tags": [
+          "1.21.1",
+          "1.21.2-rc.2",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "floralzonescosmopolitanregion",
+        "modversion": "1.0.6",
+        "created": "2025-09-26 16:19:52",
+        "changelog": "<p><span style=\"font-weight: 400;\">Tweak-Bulrush and common reed reset temps and seasonal die off temps</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 24054,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_c84bbc0a01e60ec6994fd2980ba86e67.zip?dl=FloralZonesCosmopolitanRegion-v1.0.5.zip",
+        "filename": "FloralZonesCosmopolitanRegion-v1.0.5.zip",
+        "fileid": 52873,
+        "downloads": 10760,
+        "tags": [
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1"
+        ],
+        "modidstr": "floralzonescosmopolitanregion",
+        "modversion": "1.0.5",
+        "created": "2025-08-31 15:26:38",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-treeseed necklaces</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-jam strings</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Bulrush, Coconut husk, Palm frond Basket</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Bulrush, Coconut husk, Palm frond Basket trap</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Bulrush, Coconut husk, Palm frond Handbasket</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Bulrush, Coconut husk, Palm frond Skep</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-hitbox to larger juniper bush</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Fireweed meal color</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Vanilla extract not showing in meals recipes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Vanilla visual bug</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweaked-Temperature range of all plants, now closer to irl latitudes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Berry bush blocks now have realistic empty, flowering and fruiting durations</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-bulrush bundles, whole coconuts and coconut husk floor pileable<br /></span><span style=\"font-weight: 400;\">Updated-dough recipes to use new 1.21 format, added jug recipe<br /></span><span style=\"font-weight: 400;\">Updated-meal patches to use new 1.21 format</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 20080,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_fc7e82cb73a52b7760348d1f61361b94.zip?dl=FloralZonesCosmopolitanRegion-v1.0.4.zip",
+        "filename": "FloralZonesCosmopolitanRegion-v1.0.4.zip",
+        "fileid": 43510,
+        "downloads": 12493,
+        "tags": [
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "floralzonescosmopolitanregion",
+        "modversion": "1.0.4",
+        "created": "2025-05-15 19:50:03",
+        "changelog": "<p>Added- garlic, sweet potato, beans, green beans, maize, fireweed shoots, reindeer lichen, bogbean roots, sea lettuce and papaya, fig-leafed gourd, black crowberry, common juniper, cloud berry fruit mashes can be added to troughs<br />Tweak-Fruitpress recipe updated to use rod instead of bars<br />Fixed-Added missing recipes, recipe strings and incorrect meal shapes and colors</p>"
+      },
+      {
+        "releaseid": 19946,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_9b743a97ad1808c6ef7e5c81a0fd5fc6.zip?dl=FloralZonesCosmopolitanRegion-v1.0.3.zip",
+        "filename": "FloralZonesCosmopolitanRegion-v1.0.3.zip",
+        "fileid": 43208,
+        "downloads": 518,
+        "tags": [
+          "1.20.10"
+        ],
+        "modidstr": "floralzonescosmopolitanregion",
+        "modversion": "1.0.3",
+        "created": "2025-05-12 16:50:23",
+        "changelog": "<p>Fixed-WC bag compat file placement</p>"
+      },
+      {
+        "releaseid": 19756,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_44e4c14ad87da56f2f7a6a36a07cc814.zip?dl=FloralZonesCosmopolitanRegion-v1.0.2.zip",
+        "filename": "FloralZonesCosmopolitanRegion-v1.0.2.zip",
+        "fileid": 42758,
+        "downloads": 977,
+        "tags": [
+          "1.20.10"
+        ],
+        "modidstr": "floralzonescosmopolitanregion",
+        "modversion": "1.0.2",
+        "created": "2025-05-07 22:17:42",
+        "changelog": "<p>Added-Wildcraft basket compatibility<br />Added-S<span data-sheets-root=\"1\">altmarsh Bulrush</span><span data-sheets-root=\"1\"> and Common Reed now scythable<br />Tweak-Reindeer Lichen less common in areas with above freezing annual average temps<br />Fixed-Missing audio for Coconut quad blocks</span></p>"
+      },
+      {
+        "releaseid": 19072,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_dc76e51d7c7cae433bacad9607713f89.zip?dl=FloralZonesCosmopolitanRegion-v1.0.1.zip",
+        "filename": "FloralZonesCosmopolitanRegion-v1.0.1.zip",
+        "fileid": 41237,
+        "downloads": 2297,
+        "tags": [
+          "1.20.7",
+          "1.20.8",
+          "1.20.10"
+        ],
+        "modidstr": "floralzonescosmopolitanregion",
+        "modversion": "1.0.1",
+        "created": "2025-04-18 14:44:26",
+        "changelog": "<p>Fixed-Rendering bug where shadows were solid planes<br />Fixed-Added Mangrove apple and white mangrove seed drops<br />Fixed-corn porridge being labled as rice<br />Fixed-corn and sweet potato beverages having their strings swapped</p>"
+      },
+      {
+        "releaseid": 18492,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_0c6cfc868a2bf529f88a3b9e0b15972f.zip?dl=FloralZonesCosmopolitanRegion-v1.0.0.zip",
+        "filename": "FloralZonesCosmopolitanRegion-v1.0.0.zip",
+        "fileid": 39969,
+        "downloads": 2235,
+        "tags": [
+          "1.20.7"
+        ],
+        "modidstr": "floralzonescosmopolitanregion",
+        "modversion": "1.0.0",
+        "created": "2025-04-04 20:26:05",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 39960,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-04_12-56-24_106463b9d64ae7ffd9889f7b4b794d85.png",
+        "filename": "2025-04-04_12-56-24.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-04_12-56-24_106463b9d64ae7ffd9889f7b4b794d85_55_60.png",
+        "created": "2025-04-04 20:21:10"
+      },
+      {
+        "fileid": 39961,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-04_13-00-59_054735ca1fc1b9b6638b170234cd53cb.png",
+        "filename": "2025-04-04_13-00-59.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-04_13-00-59_054735ca1fc1b9b6638b170234cd53cb_55_60.png",
+        "created": "2025-04-04 20:21:12"
+      },
+      {
+        "fileid": 39962,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-04_12-59-10_c0229b9199aa7dbea479d5094f6da6b8.png",
+        "filename": "2025-04-04_12-59-10.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-04_12-59-10_c0229b9199aa7dbea479d5094f6da6b8_55_60.png",
+        "created": "2025-04-04 20:21:12"
+      },
+      {
+        "fileid": 39963,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-04_13-04-05_af6da346afaddf81ca8f5343bcb807fc.png",
+        "filename": "2025-04-04_13-04-05.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-04_13-04-05_af6da346afaddf81ca8f5343bcb807fc_55_60.png",
+        "created": "2025-04-04 20:21:12"
+      },
+      {
+        "fileid": 39964,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-04_13-05-22_5230652c4e67bb3a01ef2b4e4bf41c17.png",
+        "filename": "2025-04-04_13-05-22.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-04_13-05-22_5230652c4e67bb3a01ef2b4e4bf41c17_55_60.png",
+        "created": "2025-04-04 20:21:12"
+      },
+      {
+        "fileid": 39965,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-04_13-06-58_41fd83f01cc459df55afde0ed8895c32.png",
+        "filename": "2025-04-04_13-06-58.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-04_13-06-58_41fd83f01cc459df55afde0ed8895c32_55_60.png",
+        "created": "2025-04-04 20:21:12"
+      },
+      {
+        "fileid": 39966,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-04_13-04-46_59de04b4b5d11a22ab0e59f8e303f753.png",
+        "filename": "2025-04-04_13-04-46.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-04_13-04-46_59de04b4b5d11a22ab0e59f8e303f753_55_60.png",
+        "created": "2025-04-04 20:21:12"
+      },
+      {
+        "fileid": 39967,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-04_13-14-48_2d8fe597e32a30218461f75c15762d1a.png",
+        "filename": "2025-04-04_13-14-48.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-04_13-14-48_2d8fe597e32a30218461f75c15762d1a_55_60.png",
+        "created": "2025-04-04 20:21:12"
+      },
+      {
+        "fileid": 39968,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-04-04_13-07-20_c73673568e220da1ce665b16d780b38f.png",
+        "filename": "2025-04-04_13-07-20.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-04-04_13-07-20_c73673568e220da1ce665b16d780b38f_55_60.png",
+        "created": "2025-04-04 20:21:13"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

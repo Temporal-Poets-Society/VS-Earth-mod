@@ -1,0 +1,201 @@
+{
+ "Cu": {
+  "hotCells": 7183,
+  "hotUnsupported": 2770,
+  "hotUnsupportedByCountry": {
+   "Russia": 1062,
+   "China": 388,
+   "United States of America": 176,
+   "Mongolia": 145,
+   "Canada": 105,
+   "sea/none": 80,
+   "Australia": 74,
+   "Kazakhstan": 60,
+   "Mexico": 42,
+   "South Africa": 41,
+   "Zimbabwe": 40,
+   "Argentina": 40
+  },
+  "bigDepositsMissed": 0,
+  "bigMissedExamples": []
+ },
+ "Sn": {
+  "hotCells": 455,
+  "hotUnsupported": 207,
+  "hotUnsupportedByCountry": {
+   "United States of America": 52,
+   "Russia": 32,
+   "Australia": 23,
+   "Kazakhstan": 11,
+   "China": 10,
+   "Brazil": 10,
+   "Canada": 6,
+   "Zimbabwe": 6,
+   "South Africa": 6,
+   "sea/none": 5,
+   "Kyrgyzstan": 5,
+   "Tajikistan": 4
+  },
+  "bigDepositsMissed": 0,
+  "bigMissedExamples": []
+ },
+ "Pb": {
+  "hotCells": 2145,
+  "hotUnsupported": 918,
+  "hotUnsupportedByCountry": {
+   "United States of America": 148,
+   "Russia": 91,
+   "Canada": 79,
+   "Australia": 48,
+   "Mexico": 47,
+   "Argentina": 47,
+   "Kazakhstan": 40,
+   "China": 37,
+   "sea/none": 36,
+   "Peru": 33,
+   "Finland": 17,
+   "Morocco": 16
+  },
+  "bigDepositsMissed": 0,
+  "bigMissedExamples": []
+ },
+ "Zn": {
+  "hotCells": 2313,
+  "hotUnsupported": 651,
+  "hotUnsupportedByCountry": {
+   "United States of America": 104,
+   "Australia": 55,
+   "Mexico": 42,
+   "Argentina": 39,
+   "Canada": 38,
+   "Russia": 30,
+   "sea/none": 29,
+   "Peru": 29,
+   "China": 24,
+   "Morocco": 17,
+   "South Korea": 14,
+   "South Africa": 13
+  },
+  "bigDepositsMissed": 0,
+  "bigMissedExamples": []
+ },
+ "Ag": {
+  "hotCells": 2272,
+  "hotUnsupported": 1059,
+  "hotUnsupportedByCountry": {
+   "United States of America": 219,
+   "Canada": 79,
+   "Australia": 73,
+   "sea/none": 60,
+   "Mexico": 54,
+   "Argentina": 42,
+   "Russia": 41,
+   "South Africa": 40,
+   "China": 36,
+   "Peru": 33,
+   "Morocco": 22,
+   "Mongolia": 19
+  },
+  "bigDepositsMissed": 0,
+  "bigMissedExamples": []
+ },
+ "Bi": {
+  "hotCells": 132,
+  "hotUnsupported": 112,
+  "hotUnsupportedByCountry": {
+   "United States of America": 28,
+   "Canada": 15,
+   "Russia": 14,
+   "Kazakhstan": 13,
+   "Australia": 10,
+   "Spain": 4,
+   "Japan": 4,
+   "China": 4,
+   "sea/none": 3,
+   "France": 3,
+   "Georgia": 3,
+   "Mexico": 3
+  },
+  "bigDepositsMissed": 0,
+  "bigMissedExamples": []
+ },
+ "Hg": {
+  "hotCells": 131,
+  "hotUnsupported": 86,
+  "hotUnsupportedByCountry": {
+   "United States of America": 37,
+   "Russia": 20,
+   "Japan": 9,
+   "China": 9,
+   "Tajikistan": 2,
+   "Afghanistan": 2,
+   "Zimbabwe": 2,
+   "South Africa": 2,
+   "Canada": 1,
+   "sea/none": 1,
+   "Indonesia": 1
+  },
+  "bigDepositsMissed": 0,
+  "bigMissedExamples": []
+ },
+ "W": {
+  "hotCells": 362,
+  "hotUnsupported": 206,
+  "hotUnsupportedByCountry": {
+   "Russia": 40,
+   "United States of America": 38,
+   "Kazakhstan": 15,
+   "China": 14,
+   "Australia": 14,
+   "South Africa": 11,
+   "Zimbabwe": 8,
+   "Namibia": 8,
+   "Canada": 7,
+   "Uzbekistan": 7,
+   "Sweden": 6,
+   "Mongolia": 5
+  },
+  "bigDepositsMissed": 0,
+  "bigMissedExamples": []
+ },
+ "Mo": {
+  "hotCells": 487,
+  "hotUnsupported": 178,
+  "hotUnsupportedByCountry": {
+   "Australia": 32,
+   "United States of America": 25,
+   "Canada": 23,
+   "Kazakhstan": 18,
+   "sea/none": 10,
+   "Democratic Republic of the Congo": 8,
+   "Greenland": 7,
+   "Mongolia": 5,
+   "South Africa": 5,
+   "Russia": 4,
+   "Uzbekistan": 4,
+   "China": 4
+  },
+  "bigDepositsMissed": 0,
+  "bigMissedExamples": []
+ },
+ "Sb": {
+  "hotCells": 793,
+  "hotUnsupported": 739,
+  "hotUnsupportedByCountry": {
+   "China": 293,
+   "United States of America": 72,
+   "Canada": 71,
+   "Russia": 58,
+   "Australia": 33,
+   "Kazakhstan": 22,
+   "Sweden": 21,
+   "Japan": 17,
+   "Norway": 16,
+   "Finland": 13,
+   "sea/none": 13,
+   "Turkey": 10
+  },
+  "bigDepositsMissed": 0,
+  "bigMissedExamples": []
+ }
+}

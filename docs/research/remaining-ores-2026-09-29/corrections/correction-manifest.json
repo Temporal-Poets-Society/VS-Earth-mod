@@ -1,0 +1,325 @@
+{
+  "scope": "Integrated correction inputs and delivered maps; baseline acquisition manifests remain separate.",
+  "files": [
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/overlay-registry.json",
+      "bytes": 1102,
+      "sha256": "5993048d96fdf7eeb5a3f33dd7f945bb515d9356c10657f79744910867042625"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/metals/normalized/pp1802-global.geojson",
+      "bytes": 2476019,
+      "sha256": "8e66b6f28eb9ffa1971b0ce32acf9bbb7ce345d8ec05a14b9333f744f757fe38"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/metals/normalized/ga-aimr-metals.geojson",
+      "bytes": 3709565,
+      "sha256": "5efa79e7ced5470fdf7e76d16b7baba07d70ef67e0644c86d2f3644dbe180673"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/metals/normalized/reviewed-secondary-metals.geojson",
+      "bytes": 4464,
+      "sha256": "c80fc9a933b1c3054262a607cc9ef0d83ee7e976d742689904163acce4ff2537"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/nonmetals/normalized/additional-evidence.geojson",
+      "bytes": 4954554,
+      "sha256": "7898a2ad8fe249008c52889243a8eb81200bcf33c61643b37a0d1a74a9d7f6d1"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/nonmetals/normalized/poland-minerals.geojson",
+      "bytes": 1084033,
+      "sha256": "91b9fc4285bd3f4728d7a32dc64f709e7a50d11430bdf564125211e095dc91a3"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/coal/normalized/coal-polygons.geojson",
+      "bytes": 86033309,
+      "sha256": "89ce937fef3709fd1d4069e0d9d4964b8fe4f52b4c304bb7b3d5ae7d6a1856d4"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/coal/normalized/coal-context-polygons.geojson",
+      "bytes": 20300895,
+      "sha256": "b6a1d8a757936df9c2f25f094e389a9aaf13b92d29b7b2bef087d04be4635cf1"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/coal/normalized/coal-supplement-points.geojson",
+      "bytes": 987086,
+      "sha256": "7ec7527816c004ae6c2a244f1add7c78270e3d85bed5c80a9abb6d2b7f859c6e"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/coal/normalized/nrw-halite.geojson",
+      "bytes": 122955,
+      "sha256": "4c7c6e34c68fd89332cd70e687970c54451ed4c6bb4ec1fe110815b71e5fe392"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/gypsum/normalized/gypsum-reviewed.geojson",
+      "bytes": 908838,
+      "sha256": "844441c272492b097d9b74577f235148c2c4876457c247ff329f5fb41898ad63"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/gypsum/normalized/gypsum-permissive-formations-display-only.geojson",
+      "bytes": 38325693,
+      "sha256": "484099e715f10cecdb1c3d771cb0832d39e04451ceb7d7298f7befafd06243bf"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/metals/latvia-deep-evidence.geojson",
+      "bytes": 6238,
+      "sha256": "d761eafabfee643d906fd6c11e9c1c1a743074b074945da40fcf15e977367662"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/resource-coverage-audit.json",
+      "bytes": 57016,
+      "sha256": "0aa016e6836bb9f48f3acc96c71aa14b4b927424e13426dc818518946db8de33"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/Fe.png",
+      "bytes": 113000,
+      "sha256": "33e7f37f9346ec224b64dfd372f8db241baa43502bd5c03a1c4e4355118f1d88"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/Au.png",
+      "bytes": 115221,
+      "sha256": "88d6172615b281fef6638b522361bf50bcc502e5e1ba8e2b31a687aef9a807b1"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/Ag.png",
+      "bytes": 113742,
+      "sha256": "0b8d3de7528c1dfa33450b16edc08d1be87b25dfb4cb0edb260a5aa8d96536d4"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/Pb.png",
+      "bytes": 113802,
+      "sha256": "6685425c22e004830b52d45ff0721240ccd57e11b9e38785f0290f991cf56707"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/Zn.png",
+      "bytes": 113345,
+      "sha256": "754b2b929b4fc84c57ee84f99a591e37268e1bbc3d5124ff2c3e6fc884c471de"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/Bi.png",
+      "bytes": 108346,
+      "sha256": "69e0d6a4931ddfd91a36a6485053c663204889c1841b5ee1e2ea2ee0e80af75e"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/Ni.png",
+      "bytes": 113479,
+      "sha256": "5ca9c6901a37375a2fbb83c2555d82857775e0160466733adb5dd9ebd91890ae"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/Cr.png",
+      "bytes": 112705,
+      "sha256": "972fe81c3df34d60aa736cf598001a0ac798616799921d836224b69743e5580b"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/Ti.png",
+      "bytes": 110583,
+      "sha256": "7532014816d1687d781de0604e0eca901c43159d3a068d637369689a6d86bcc0"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/Mn.png",
+      "bytes": 112527,
+      "sha256": "18336ff3ae403ff40b66281d602ccc87bb8f0373829dd5d7a631fb2880c4134a"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/Hg.png",
+      "bytes": 110066,
+      "sha256": "6d215e6dcd9245ad4cb0d969075070387f2c42e0e2ee25562485f9817349eece"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/W.png",
+      "bytes": 111033,
+      "sha256": "0efae1cfe74af24247721adf0050813b0fe3f1048a41301601f32b3355c7c75b"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/U.png",
+      "bytes": 110455,
+      "sha256": "d0f5f03a1815255e53f714441cfbbd8ec1e4780d249b8e0d171b3f0dc3b28137"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/Pt.png",
+      "bytes": 116307,
+      "sha256": "9ddbe59354b162fb05cab00f8c9dbc52cdcd448cb4f61381884de1c05376a959"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/V.png",
+      "bytes": 111238,
+      "sha256": "f29555782d9d45f7904811a57e05fbd139e18df3c18c74f02575d8141ba4fc17"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/Mo.png",
+      "bytes": 112842,
+      "sha256": "27d67a7375800d0fce6fed8887c83a2ebfc3daaa896e2e7c4778b6af0f1a08db"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/Sb.png",
+      "bytes": 116222,
+      "sha256": "9e92b4a175550348652148c5837b4d415bb705c7486c1a18d2d4ce3a0a63c082"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/B.png",
+      "bytes": 109725,
+      "sha256": "def6fd16304329e64363dd1180694466e5f78e2d862e0832147520f1b8f7398d"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/P.png",
+      "bytes": 114373,
+      "sha256": "7bfefd5837c79678c5b7feef9b5d6c6de08f8a8ae86b4185b13521ec6a9af06b"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/N.png",
+      "bytes": 106414,
+      "sha256": "90caa979e7ee49f49f957e49bff440710c59f0d39cbdfb3eb54ef05366cefb78"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/K.png",
+      "bytes": 111711,
+      "sha256": "0fd279ca1ea59885005d3c7eb904c2654fae53489240f0294265aaeae6738a27"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/NaCl.png",
+      "bytes": 110432,
+      "sha256": "3d5775d72d4d94c5803131f1f39e2c6a2a3efbdf9b358919f76ae073d3b2b2a9"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/S.png",
+      "bytes": 116408,
+      "sha256": "78e9ec61c20ea3659e635e05f4821f40516c7cf5ddb6d935ef63c3ae8e1b54ed"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/C_graphite.png",
+      "bytes": 109934,
+      "sha256": "2d6e5fff23520760a6106f6ca6ad674933ac3d9e712f4b8e0756a6c91bee898e"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/C_coal.png",
+      "bytes": 185520,
+      "sha256": "3b1f55a7ec3cbd7c7deaad81e219a45c7660a8cf9dedbe3b716e8f18411edb9a"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/F.png",
+      "bytes": 108980,
+      "sha256": "73c7c4077c3f69607866ac31566ab3ae7e1bb76235ce33f96e23ea115ebde869"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/SiO2.png",
+      "bytes": 112669,
+      "sha256": "afb5195232bf0dc9f15d7c97119b58841a33de9318793ef76d8cc9cd7702b08c"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/Al.png",
+      "bytes": 116120,
+      "sha256": "189c094331514674c28cdeb899d35b9c8947c0599046ddc9b8bf0d5385b76cc2"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/gypsum.png",
+      "bytes": 116071,
+      "sha256": "164aa0a168253f93806f3b366deda414bd5f50758e7a34d43e4397b23865c1d0"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/diamond.png",
+      "bytes": 109702,
+      "sha256": "b3582ff2e0c16b9adf627e45bad5bf3c4531ba4fb246e16cb82de3fc63a333b9"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/corundum.png",
+      "bytes": 113875,
+      "sha256": "37c9d1e36e0d6845437d61abc75c3870d226ed9cffc7c452b3e64083b74a68c4"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/emerald.png",
+      "bytes": 106681,
+      "sha256": "3e1bb47a172044574bbc48c6b28edef059d345473486fc56e7805dead1825d16"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/olivine.png",
+      "bytes": 111869,
+      "sha256": "fdd81c1383edb99455dc019c14349aa50f1ed4a5a3ab6bcec43ecf093642057d"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/garnet.png",
+      "bytes": 114695,
+      "sha256": "e793043eb73c54030f6ab6f101fd37cbe3f2c5588b9c8a0006851fb064669bac"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/lapis.png",
+      "bytes": 105687,
+      "sha256": "839ea51af8cbbef24603d46070a5581164300f00fd74a94ad5258c174a3c12a1"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/alum.png",
+      "bytes": 109368,
+      "sha256": "35bff2d0eac5c54830990123eb789440c781aaa598bfeeef560de821d1913170"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/topaz.png",
+      "bytes": 112755,
+      "sha256": "077ef5d427999129ef8dcb1f293bfd4539d75ed6b4719a48a9aad5b4120455d7"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/tourmaline.png",
+      "bytes": 113113,
+      "sha256": "a99e72f90e2188bc0a31535aeeb9c56ec292b55f16296a8a7def7929bb48e143"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/beryl.png",
+      "bytes": 114020,
+      "sha256": "b404d6744007dc8b7d6f2078bde9a1c13b82a0832952bf9e05b3fb42e48c3545"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/spinel.png",
+      "bytes": 112467,
+      "sha256": "122a57d2050012ed746e0fcec0d16781430199763e031ad57f0d845052c46043"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/maps/regional-coverage-review.png",
+      "bytes": 299548,
+      "sha256": "70f19005c2ba81620e6cd842bcaacc6c3132d852892a86117cf721c3b75ec763"
+    },
+    {
+      "file": "docs/research/copper-tin-preview-2026-09-29/copper-tin-evidence-preview.png",
+      "bytes": 320270,
+      "sha256": "60d76d8669d7455e9b04ff4904819de593f6fbf046d445c7cb7bf5dd694c7676"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/index.html",
+      "bytes": 46238,
+      "sha256": "0d1efafea3d73b79e079c12d72ea8817b640e413e714804c238cd160e66c3584"
+    },
+    {
+      "file": "docs/resource-coverage-correction.md",
+      "bytes": 10433,
+      "sha256": "da9fb7dff9aad49a8936104e609e95baa84245bf9f9174101f2d58b16d9cb7c6"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/map-validation.json",
+      "bytes": 16055,
+      "sha256": "8a8e5c5ceebc392fdec2b7b9ae8d5b60fb3180523f720d5f173af833d6b062c9"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/correction_layers.py",
+      "bytes": 2220,
+      "sha256": "5a6dadbc35d5ce7fc9b18128bfe5e4a837b769cb5fd9d637eac89d12e130983f"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/correction_atlas.py",
+      "bytes": 8242,
+      "sha256": "215850ec40709bfba3ef6c5f1aa316e41ba53397a48b6f89c3c0d161abca0e4c"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/render_maps.py",
+      "bytes": 13037,
+      "sha256": "f8634c5534cbb2e741c92962a0e6087e29352bb649f2142f818bd4161cef6b7e"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/build_audit.py",
+      "bytes": 4914,
+      "sha256": "7302c4c15820c88bcc55fa8aed7e3325a42ba6108ca763a328a6d88db7625ce8"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/resource-coverage-audit.csv",
+      "bytes": 34846,
+      "sha256": "c6f69dfff8b5611d852b78af08009f63fb796870df5de0b3623807e582f56d9d"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "approval": "Downloads approved by the user via the lead on 2026-10-02 (free, openly licensed datasets only; no sign-up/personal-data sources).",
+  "not_downloaded": [
+    {
+      "dataset": "USGS Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of Africa (doi:10.5066/P97EQWXP) and the companion Latin America / Asia-Pacific / Europe-Eurasia compilations",
+      "reason": "ScienceBase file endpoints answer with a Cloudflare bot challenge (HTTP 403 cf-mitigated: challenge); not bypassed. A third-party ArcGIS Online re-host (services2.arcgis.com/rtefou6JFIxFvYTf, a Dutch education organisation) was found and NOT used because its provenance cannot be verified."
+    },
+    {
+      "dataset": "USGS Global distribution of selected mines, deposits and districts of critical minerals (doi:10.5066/F7GH9GQR)",
+      "reason": "Already on disk and used: corrections/metals/normalized/pp1802-global.geojson (USGS PP1802 critical-minerals features)."
+    },
+    {
+      "dataset": "Global Energy Monitor Global Coal Mine Tracker",
+      "reason": "Requires a form with personal data; excluded by policy."
+    }
+  ],
+  "files": [
+    {
+      "file": "raw/usgs-minfac-csv.zip",
+      "url": "https://mrdata.usgs.gov/mineral-operations/minfac-csv.zip",
+      "retrieved_utc_date": "2026-10-02",
+      "bytes": 297647,
+      "sha256": "f52cb88cf058168c8ed91dd208d4ceffb2cf99dbc350ba86e3c0d972b126ab85",
+      "licence": "USGS public domain (metadata Access_Constraints none, Use_Constraints none)",
+      "content": "Mineral operations outside the United States (minfac), CSV"
+    },
+    {
+      "file": "raw/usgs-minfac.zip",
+      "url": "https://mrdata.usgs.gov/mineral-operations/minfac.zip",
+      "retrieved_utc_date": "2026-10-02",
+      "bytes": 479705,
+      "sha256": "76abaa40da70d962cbc4d0d6185af6b01c0298b8202934824c6076cd2f9c946a",
+      "licence": "USGS public domain",
+      "content": "Mineral operations outside the United States (minfac), shapefile"
+    },
+    {
+      "file": "raw/usgs-minfac.xml",
+      "url": "https://mrdata.usgs.gov/metadata/minfac.xml",
+      "retrieved_utc_date": "2026-10-02",
+      "bytes": 24476,
+      "sha256": "d15afd6cf1f03aecbb8f911f201ed1a6ec81a6089ffb270bfc28601bdf8785cd",
+      "licence": "USGS public domain",
+      "content": "FGDC metadata for minfac"
+    },
+    {
+      "file": "raw/naturalearth/ne_10m_admin_0_countries.zip",
+      "url": "https://naciscdn.org/naturalearth/10m/cultural/ne_10m_admin_0_countries.zip",
+      "retrieved_utc_date": "2026-10-02",
+      "bytes": 4930492,
+      "sha256": "ce1ac7036499a0edd641fbc093cd209a98f96a49d2eca8480aaacad35138a7f6",
+      "licence": "Public domain (Natural Earth terms of use)",
+      "content": "Natural Earth 1:10m admin-0 countries v5.1.1, for coordinate sanity checks only (not shipped)"
+    },
+    {
+      "file": "raw/peatmap/readme.txt",
+      "url": "https://archive.researchdata.leeds.ac.uk/251/3/readme.txt",
+      "retrieved_utc_date": "2026-10-02",
+      "bytes": 610,
+      "sha256": "13989ad4444dfe48162ec5f41076373770138986b6e4b0d2d606eb3345a0daa8",
+      "licence": "CC BY 4.0 (Xu, Morris, Liu, Holden 2017/2018, University of Leeds, doi:10.5518/252)",
+      "content": "PEATMAP global peatland polygons, readme.txt"
+    },
+    {
+      "file": "raw/peatmap/PEATMAP_data_sources.pdf",
+      "url": "https://archive.researchdata.leeds.ac.uk/251/2/PEATMAP_data_sources.pdf",
+      "retrieved_utc_date": "2026-10-02",
+      "bytes": 295417,
+      "sha256": "7d541f398be68c40a28224fc8ba59448407de08095fe7f143089dbba6b10a316",
+      "licence": "CC BY 4.0 (Xu, Morris, Liu, Holden 2017/2018, University of Leeds, doi:10.5518/252)",
+      "content": "PEATMAP global peatland polygons, PEATMAP_data_sources.pdf"
+    },
+    {
+      "file": "raw/peatmap/Africa.zip",
+      "url": "https://archive.researchdata.leeds.ac.uk/251/4/Africa.zip",
+      "retrieved_utc_date": "2026-10-02",
+      "bytes": 26843829,
+      "sha256": "2bca16dd7d276478b576f3d2a25e33cea9654b8e37dc43ffa1385e8520f311ed",
+      "licence": "CC BY 4.0 (Xu, Morris, Liu, Holden 2017/2018, University of Leeds, doi:10.5518/252)",
+      "content": "PEATMAP global peatland polygons, Africa.zip"
+    },
+    {
+      "file": "raw/peatmap/Asia.zip",
+      "url": "https://archive.researchdata.leeds.ac.uk/251/5/Asia.zip",
+      "retrieved_utc_date": "2026-10-02",
+      "bytes": 27063149,
+      "sha256": "8767e9ba8250770420cc555250f80b79b67410d00ae13ac629f4fe2ae9b8724e",
+      "licence": "CC BY 4.0 (Xu, Morris, Liu, Holden 2017/2018, University of Leeds, doi:10.5518/252)",
+      "content": "PEATMAP global peatland polygons, Asia.zip"
+    },
+    {
+      "file": "raw/peatmap/Europe.zip",
+      "url": "https://archive.researchdata.leeds.ac.uk/251/6/Europe.zip",
+      "retrieved_utc_date": "2026-10-02",
+      "bytes": 170482918,
+      "sha256": "cfe444a23f191c984fb5869198f73ea1915647027a7e1b6a093edc00fc339441",
+      "licence": "CC BY 4.0 (Xu, Morris, Liu, Holden 2017/2018, University of Leeds, doi:10.5518/252)",
+      "content": "PEATMAP global peatland polygons, Europe.zip"
+    },
+    {
+      "file": "raw/peatmap/North_America.zip",
+      "url": "https://archive.researchdata.leeds.ac.uk/251/11/North_America.zip",
+      "retrieved_utc_date": "2026-10-02",
+      "bytes": 23211475,
+      "sha256": "126e54ec4fcacdebc592e83fa6e098b070235f27362844e5102d40665cbe991e",
+      "licence": "CC BY 4.0 (Xu, Morris, Liu, Holden 2017/2018, University of Leeds, doi:10.5518/252)",
+      "content": "PEATMAP global peatland polygons, North_America.zip"
+    },
+    {
+      "file": "raw/peatmap/Oceania.zip",
+      "url": "https://archive.researchdata.leeds.ac.uk/251/12/Oceania.zip",
+      "retrieved_utc_date": "2026-10-02",
+      "bytes": 26782061,
+      "sha256": "f1ee32ccb21ac27491acbd8cc4b34f8bcc7b17952469d8cde40fb3a548362b4f",
+      "licence": "CC BY 4.0 (Xu, Morris, Liu, Holden 2017/2018, University of Leeds, doi:10.5518/252)",
+      "content": "PEATMAP global peatland polygons, Oceania.zip"
+    },
+    {
+      "file": "raw/peatmap/South_America.zip",
+      "url": "https://archive.researchdata.leeds.ac.uk/251/13/South_America.zip",
+      "retrieved_utc_date": "2026-10-02",
+      "bytes": 83074666,
+      "sha256": "9ffbc3e0075fe1b67d786d909c2422cae3954779e6b7cc35065f0d660dd443ae",
+      "licence": "CC BY 4.0 (Xu, Morris, Liu, Holden 2017/2018, University of Leeds, doi:10.5518/252)",
+      "content": "PEATMAP global peatland polygons, South_America.zip"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+# taxon (entity key, binomial): TDWG L3 region code = number of ~96 km PHYLACINE cells in the present-natural range but NOT in the current range
+bovinae:synceruscaffer (Syncerus caffer): CHA=8
+bovinae:taurotragusderbianus (Tragelaphus derbianus): SUD=25, MLI=19, BKN=10, CHA=9, NGR=1
+caninae:canis-lupus (Canis lupus): FRA=63, GRB=46, GER=40, SPA=39, SWE=35, NOR=20, IRE=18, ITA=15, DEN=11, AUT=10, GRC=10, POR=9, POL=8, CZE=6, NET=6, FIN=6, HUN=5, UKR=5, BGM=4, ROM=3, BLT=2, YUG=2, EGY=2, BUL=1, TUE=1, SIC=1
+caninae:canis-simensis (Canis simensis): ERI=10, SUD=6
+caninae:cuon-alpinus (Cuon alpinus): KAZ=298, WSB=284, RUN=171, IRN=96, RUC=94, TUR=92, RUE=81, FRA=72, UKR=70, SPA=68, SWE=59, AFG=55, NOR=54, TKM=53, RUS=52, UZB=49, FIN=45, ITA=44, GER=41, POL=38, NCS=32, YUG=29, BLT=28, ROM=27, TCS=27, GRC=24, BLR=20, RUW=18, LBS=17, TZK=15, CZE=14, POR=14, BUL=13, IRQ=11, AUT=10, HUN=10, DEN=10, KRY=8, NET=6, PAL=5, TUE=5, SWI=4, ALB=4, BGM=4, SIC=2, EAI=2, CYP=1
+caninae:lupulella-mesomelas (Canis mesomelas): SUD=38, EGY=4, ERI=1
+caninae:lycaon-pictus (Lycaon pictus): SUD=187, MLI=102, NGR=97, CHA=84, MTN=58, BKN=24, SEN=20, ERI=19, GAM=3, YEM=1
+capreolinae:alcesalces (Alces alces): UKR=64, GER=35, GRB=21, RUC=16, ROM=11, RUS=11, RUN=9, KRY=8, CZE=7, FRA=7, DEN=7, AUT=6, ITA=6, NET=5, POL=5, SWI=4, HUN=3, YUG=3, BLR=2
+capreolinae:capreoluscapreolus (Capreolus capreolus): LBS=8, PAL=3
+capreolinae:rangiferfennicus (Rangifer fennicus (provider taxonomy)): RUN=98, RUC=94, RUE=68, FIN=34, RUW=18
+capreolinae:rangifertarandus (Rangifer tarandus): WSB=118, RUN=98, SWE=55, FIN=34, NOR=30, RUW=18
+elephantidae:elephasmaximus (Elephas maximus): IRN=65, IRQ=27, KUW=2, LBS=1
+elephantidae:loxodontaafricana (Loxodonta africana): SUD=187, MTN=89, LBY=86, MLI=83, NGR=74, EGY=74, CHA=52, ALG=47, MOR=40, WSA=35, SEN=22, TUN=22, ERI=16, BKN=13, GAM=3, SPA=1, CNY=1, YEM=1
+felinae:caracalcaracal (Caracal caracal): SAU=171, ALG=119, LBY=92, MTN=91, IRN=76, SUD=65, MLI=63, AFG=39, WSA=37, TUR=34, CHA=33, IRQ=31, EGY=27, UZB=26, TCS=23, NGR=21, LBS=17, MOR=17, TKM=17, TUN=17, NCS=11, GST=11, KAZ=10, YEM=8, OMA=8, TZK=6, BKN=4, KUW=3, SEN=2, ERI=2, CYP=1, SIN=1, CNY=1
+felinae:lynxlynx (Lynx lynx): KAZ=206, FRA=55, SPA=52, UKR=52, RUS=48, TKM=48, WSB=43, RUN=40, UZB=39, ITA=38, AFG=37, GRB=32, TUR=31, GER=30, GRC=23, NCS=22, IRN=21, POL=14, LBS=14, YUG=11, RUE=8, HUN=8, ROM=8, POR=8, KRY=8, BUL=8, DEN=8, NOR=7, RUC=6, AUT=6, IRQ=6, NET=6, TCS=5, BGM=4, TUE=4, SIC=2, EAI=2, FIN=1, SWE=1, BLT=1, ALB=1, CYP=1
+felinae:lynxpardinus (Lynx pardinus): SPA=51, FRA=38, POR=9
+game:bear-brown (Ursus arctos): ALG=111, KAZ=103, IRN=102, LBY=99, SAU=91, FRA=68, UKR=67, SPA=62, TKM=53, MOR=48, GRB=45, EGY=43, AFG=42, IRQ=41, GER=41, UZB=39, RUS=37, POL=36, ITA=35, RUN=26, RUC=25, LBS=24, TUN=22, NCS=20, WSB=19, SWE=18, IRE=18, TUR=14, POR=14, GRC=14, PAL=13, BLT=10, DEN=10, BLR=9, CZE=9, HUN=9, ROM=8, KRY=8, NOR=7, TCS=7, SIN=6, NET=6, AUT=5, WSA=5, MTN=5, YUG=5, BUL=5, BGM=4, SWI=3, TUE=3, SIC=2, EAI=2, FIN=1, CYP=1, KUW=1
+game:deer-caribou (Rangifer tarandus): WSB=118, RUN=98, RUC=94, RUE=68, KAZ=62, SWE=55, UKR=48, POL=36, FIN=34, NOR=30, BLT=28, BLR=20, RUW=18, ROM=16, RUS=14, DEN=2, GER=1, CZE=1
+game:deer-elk (Cervus canadensis): KAZ=172, UZB=38, WSB=27, AFG=15, RUE=12, TZK=10, TKM=8, RUS=5, TCS=1
+game:deer-fallow (Dama dama): FRA=72, SPA=69, GRB=46, UKR=41, GER=41, POL=38, SWE=25, BLT=23, ROM=22, BLR=20, IRE=18, YUG=15, CZE=14, ITA=14, POR=14, AUT=10, HUN=10, DEN=10, NET=6, SWI=4, BGM=4, RUC=3, NOR=3, FIN=1, RUW=1
+game:deer-moose (Alces alces): UKR=64, GER=35, GRB=21, RUC=16, ROM=11, RUS=11, RUN=9, KRY=8, CZE=7, FRA=7, DEN=7, AUT=6, ITA=6, NET=5, POL=5, SWI=4, HUN=3, YUG=3, BLR=2
+game:goat-angora (Capra aegagrus): LBS=6, AFG=5, PAL=3, TCS=2
+game:goat-ibexalp (Capra ibex): AUT=2, FRA=2, HUN=1, ITA=1
+game:goat-ibexnub (Capra nubiana): YEM=4, SAU=3, SUD=1
+game:goat-markhor (Capra falconeri): AFG=8, TZK=5, UZB=2
+game:goat-muskox (Ovibos moschatus): WSB=102, RUN=32, NOR=20, SWE=9, FIN=3
+game:goat-nubian (Capra aegagrus): LBS=6, AFG=5, PAL=3, TCS=2
+game:goat-sirohi (Capra aegagrus): LBS=6, AFG=5, PAL=3, TCS=2
+game:goat-turdag (Capra aegagrus): LBS=6, AFG=5, PAL=3, TCS=2
+game:goat-valais (Capra aegagrus): LBS=6, AFG=5, PAL=3, TCS=2
+game:hyena-spotted (Crocuta crocuta): SAU=225, IRN=178, ALG=109, RUN=94, TUR=92, RUC=91, LBY=71, UKR=70, SPA=69, NGR=65, FRA=63, SUD=61, AFG=57, YEM=54, SWE=52, MOR=51, IRQ=47, CHA=47, GRB=45, ITA=44, OMA=43, FIN=43, GER=41, MTN=40, RUS=39, POL=38, NCS=32, WSA=32, TKM=31, YUG=29, BLT=28, ROM=27, EGY=27, KAZ=26, TCS=25, MLI=24, LBS=24, GRC=24, TUN=22, BLR=20, UZB=19, RUW=18, NOR=15, CZE=14, POR=14, GST=14, BUL=13, PAL=13, AUT=10, HUN=10, TZK=10, DEN=10, KRY=8, RUE=7, SIN=6, NET=6, TUE=5, SWI=4, ALB=4, BGM=4, SIC=2, EAI=2, KUW=2, IRE=1, CYP=1, CNY=1
+game:pig-eurasian (Sus scrofa): GRB=41, ALG=35, LBY=22, EGY=21, IRE=18, MOR=8, DEN=8, GRC=7, FIN=5, TUN=4, ITA=4, NET=4, FRA=3, SPA=3, TZK=2, RUC=1, GER=1, BGM=1, RUS=1, UZB=1, EAI=1, TUR=1, IRQ=1
+game:sheep-mouflon (Ovis orientalis): TUR=38, AFG=14, UZB=2, TZK=1, TKM=1
+game:wolf-eurasian (Canis lupus): FRA=63, GRB=46, GER=40, SPA=39, SWE=35, NOR=20, IRE=18, ITA=15, DEN=11, AUT=10, GRC=10, POR=9, POL=8, CZE=6, NET=6, FIN=6, HUN=5, UKR=5, BGM=4, ROM=3, BLT=2, YUG=2, EGY=2, BUL=1, TUE=1, SIC=1
+manidae:gigantea (Smutsia gigantea): BKN=1
+pantherinae:leo (Panthera leo): SUD=210, ALG=121, IRN=117, MLI=108, MTN=98, CHA=91, NGR=89, LBY=68, TUR=64, EGY=55, MOR=51, WSA=37, IRQ=35, BKN=24, LBS=24, GRC=23, TUN=22, SEN=19, ERI=19, AFG=16, PAL=11, BUL=9, SIN=6, TUE=5, GAM=3, EAI=2, SAU=2, KUW=2, YUG=1, ALB=1, SPA=1, CYP=1, CNY=1, YEM=1
+pantherinae:pardus (Panthera pardus): SUD=189, MLI=110, NGR=100, SAU=96, RUC=94, TUR=88, CHA=87, RUN=77, RUE=76, FRA=72, UKR=70, SPA=69, MTN=59, ALG=56, SWE=52, RUS=51, MOR=50, WSB=49, YEM=49, GRB=45, ITA=44, GER=41, IRN=39, POL=38, TKM=38, EGY=38, FIN=38, OMA=33, IRQ=32, YUG=29, NCS=29, AFG=28, NOR=28, BLT=28, ROM=27, KAZ=26, GRC=24, LBS=23, UZB=22, TCS=22, BKN=21, BLR=20, RUW=18, SEN=17, CZE=14, POR=14, TUN=14, GST=14, BUL=13, ERI=12, PAL=11, AUT=10, HUN=10, DEN=10, TZK=8, KRY=8, SIN=6, NET=6, TUE=5, SWI=4, ALB=4, BGM=4, KUW=3, GAM=3, SIC=2, EAI=2, IRE=1, CYP=1
+pantherinae:tigris (Panthera tigris): KAZ=210, IRN=60, TKM=46, TCS=26, AFG=25, UZB=24, NCS=12, WSB=11, RUS=11, TUR=10, TZK=6, IRQ=6
+rhinocerotidae:ceratotheriumsimum (Ceratotherium simum): SUD=37, CHA=6
+rhinocerotidae:dicerosbicornis (Diceros bicornis): SUD=98, CHA=47, MLI=12, BKN=11, NGR=9, SEN=2
+
+# region names
+AFG = Afghanistan
+ALB = Albania
+ALG = Algeria
+AUT = Austria
+BGM = Belgium
+BKN = Burkina
+BLR = Belarus
+BLT = Baltic States
+BUL = Bulgaria
+CHA = Chad
+CNY = Canary Is.
+CYP = Cyprus
+CZE = Czechoslovakia
+DEN = Denmark
+EAI = East Aegean Is.
+EGY = Egypt
+ERI = Eritrea
+FIN = Finland
+FRA = France
+GAM = Gambia, The
+GER = Germany
+GRB = Great Britain
+GRC = Greece
+GST = Gulf States
+HUN = Hungary
+IRE = Ireland
+IRN = Iran
+IRQ = Iraq
+ITA = Italy
+KAZ = Kazakhstan
+KRY = Krym
+KUW = Kuwait
+LBS = Lebanon-Syria
+LBY = Libya
+MLI = Mali
+MOR = Morocco
+MTN = Mauritania
+NCS = North Caucasus
+NET = Netherlands
+NGR = Niger
+NOR = Norway
+OMA = Oman
+PAL = Palestine
+POL = Poland
+POR = Portugal
+ROM = Romania
+RUC = Central European Russia
+RUE = East European Russia
+RUN = North European Russia
+RUS = South European Russia
+RUW = Northwest European Russia
+SAU = Saudi Arabia
+SEN = Senegal
+SIC = Sicilia
+SIN = Sinai
+SPA = Spain
+SUD = Sudan
+SWE = Sweden
+SWI = Switzerland
+TCS = Transcaucasus
+TKM = Turkmenistan
+TUE = Turkey-in-Europe
+TUN = Tunisia
+TUR = Turkey
+TZK = Tadzhikistan
+UKR = Ukraine
+UZB = Uzbekistan
+WSA = Western Sahara
+WSB = West Siberia
+YEM = Yemen
+YUG = Yugoslavia

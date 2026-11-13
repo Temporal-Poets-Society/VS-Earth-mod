@@ -1,0 +1,30 @@
+Earth Height Data 1/4 to 4/4 (earthheightdata1 .. earthheightdata4): land heights for Earth
+
+Files: earthdata/glo90c-index.bin and earthdata/glo90c-1.bin .. glo90c-4.bin. Each pack holds some of them; Earth's
+earthdata/pack-index.json names which pack holds which file.
+
+Source: Copernicus DEM GLO-90 (the Copernicus WorldDEM™-90, COP-DEM_GLO-90-DGED/2022_1) as published in the public AWS
+bucket copernicus-dem-90m (files dated 9 May 2022). Used under the "Licence for Copernicus DEM instance
+COP-DEM-GLO-90-F Global 90m Full, Free & Open" (eula_F.pdf, in each tile's INFO folder).
+
+produced using Copernicus WorldDEM™-90 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under
+COPERNICUS by the European Union and ESA; all rights reserved.
+
+The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use
+of the Copernicus WorldDEM™-90.
+
+How the data was changed (Earth's tools/Glo90Coarse): the 3-arc-second heights were averaged to cells 24 arc-seconds
+high (about 741 m), with 150 × cos(latitude) columns per degree so that cells are about square in metres; points with
+0 m (the sea in the source) were left out of the averages, and cells without land hold no height. Each average was
+then moved away from the mean of the land cells beside it by 0.3 times the difference (a slight sharpening, so that the
+interpolated surface follows the source more closely) and rounded to steps of 1 m below 64 m, 2 m below 256 m, 4 m
+below 1,536 m and 8 m above. A second layer holds, on cells 72 arc-seconds high, the root mean square of the source
+heights around the surface interpolated from these cells, in 16 logarithmic steps from 1 m to 1,024 m. Everything was
+then compressed.
+
+Earth and these packs are not endorsed by the European Union, ESA, the Copernicus programme, DLR or Airbus Defence and
+Space. Copernicus is a trade mark of the European Union; WorldDEM™ is a trade mark of Airbus Defence and Space GmbH.
+
+Anyone who redistributes these files or makes them available to the public, changed or not, must keep this notice and
+is bound by the same obligations (Article 6 of the licence): the notice above, the sentence on liability, and not
+giving the impression of endorsement.

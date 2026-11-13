@@ -1,0 +1,43 @@
+{
+  "worlds": 2,
+  "passed": 2,
+  "failed": 0,
+  "sites": 28,
+  "generated_columns": 258048,
+  "continental_coverage": [
+    "Africa",
+    "Antarctica",
+    "Asia",
+    "Australia",
+    "Europe",
+    "Island control",
+    "Lowland control",
+    "North America",
+    "Oceania",
+    "South America",
+    "Warm highland control"
+  ],
+  "assembly_hashes": [
+    "2BA62FEC81B1226E856070C34AE7B118F4C8DF0FD57DD3FC3F4C5A824C4059BF"
+  ],
+  "terrain_seconds_by_case_height": [
+    {
+      "case": "H",
+      "height": 384,
+      "repeat": 1,
+      "total_seconds": 76.44,
+      "site_seconds": 31.8,
+      "save_bytes": 94048256.0,
+      "passed": true
+    },
+    {
+      "case": "H",
+      "height": 512,
+      "repeat": 1,
+      "total_seconds": 80.58,
+      "site_seconds": 36.2,
+      "save_bytes": 98070528.0,
+      "passed": true
+    }
+  ]
+}

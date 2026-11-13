@@ -1,0 +1,62 @@
+{
+  "installed_at": "2026-10-31 23:23:15 +02:00",
+  "timezone": "Europe/Riga",
+  "modid": "earth",
+  "version": "1.0.0",
+  "packages": [
+    {
+      "action": "installed",
+      "bytes": 28489946,
+      "file": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\Mods\\earth-1.0.0.zip",
+      "sha256": "2ff974ef525428d1f811433434f15b6a275f4e1cdb3308362bfbbb4a3bc17531",
+      "source": "C:\\VS mods\\Earth\\release\\earth-1.0.0.zip"
+    },
+    {
+      "action": "retained unchanged",
+      "bytes": 36424452,
+      "file": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\Mods\\earthterraindata-1.0.0.zip",
+      "sha256": "1ebdbc0a22a862f4b0b078ce3d48b32f37bd6b150cb9d478f25599f1d33d2001",
+      "source": "C:\\VS mods\\Earth\\release\\earthterraindata-1.0.0.zip"
+    },
+    {
+      "action": "retained unchanged",
+      "bytes": 31583561,
+      "file": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\Mods\\earthwaterdata-1.0.0.zip",
+      "sha256": "edb78da63307ace1c72b3647039369294a57bdc2e9d7f2815d9e5ff9ea907e57",
+      "source": "C:\\VS mods\\Earth\\release\\earthwaterdata-1.0.0.zip"
+    }
+  ],
+  "removed_from_mods": {
+    "sha256": "f8c34a3788e437db992808c3b8edbbb9f9408c894df0d841c039856b9fe425dc",
+    "version": "0.17.0-pre.16",
+    "file": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\Mods\\earthmap-0.17.0-pre.16.zip",
+    "modid": "earthmap",
+    "retained_at": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\Backups\\earth-before-1.0.0-20261031-232315\\earthmap-0.17.0-pre.16.zip"
+  },
+  "config": {
+    "action": "copied existing Earth settings to earth.json",
+    "path": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\ModConfig\\earth.json",
+    "legacy_file_unchanged": true,
+    "sha256": "d240052367b94aebb4d6d69a4f063ad0fdc0857b28ac7a171595544353f2602c"
+  },
+  "client_settings_unchanged": true,
+  "backup_directory": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\Backups\\earth-before-1.0.0-20261031-232315",
+  "player_saves_touched": false,
+  "game_launched": false,
+  "gameplay_verification": "author confirmed working on 2026-11-01",
+  "post_install_verification": {
+    "one_copy_each": true,
+    "all_versions": "1.0.0",
+    "no_earthmap_mod_installed": true,
+    "all_hashes_match": true,
+    "all_new_parts_enabled": true,
+    "settings_copy_exact": true,
+    "backup_verified": true
+  },
+  "author_feedback": {
+    "date": "2026-11-01",
+    "timezone": "Europe/Riga",
+    "message": "ok it works",
+    "scope": "Author confirms the installed renamed Earth 1.0.0 works in gameplay; detailed coverage was not specified."
+  }
+}

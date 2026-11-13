@@ -1,0 +1,119 @@
+{
+  "bgs_coal_2004": {
+    "title": "BGS Coal Resources for New Technologies",
+    "url": "https://www.bgs.ac.uk/datasets/coal-resources-for-new-technologies/",
+    "year": 2004,
+    "license": "Open Government Licence",
+    "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "attribution": "Contains British Geological Survey materials © UKRI; BGS/Coal Authority 1999 geological base. Retrieved 29 September 2026.",
+    "limitation": "1:1,000,000 legacy compilation. Contains both exposed and concealed coal-bearing strata, not continuous coal seams. Modern economic assumptions do not define geological absence."
+  },
+  "pgi_midas": {
+    "title": "PIG-PIB MIDAS documented and archived mineral-deposit boundaries",
+    "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer",
+    "year": null,
+    "license": "PIG-PIB public-sector information reuse conditions; attribution/date/processing disclosure and original database terms",
+    "license_url": "https://www.pgi.gov.pl/rejestry-i-bazy-danych-geologicznych/zasady-korzystania-z-isp.html",
+    "attribution": "PIG-PIB, MIDAS documented deposits layer0 and selected archived deposits layer3, retrieved 29 September 2026. Coal-only subset; API reprojection to WGS84 and schema normalization by Earth research.",
+    "limitation": "Deposit documentation boundaries can be reconstructed from mining-area boundaries; original caveats retained. Current registry does not mean currently operating. Archived register is explicitly incomplete. Full source reuse conditions remain applicable."
+  },
+  "saxony_ruk400": {
+    "title": "LfULG Saxony RÜK400 fossil fuels",
+    "url": "https://luis.sachsen.de/geologie/rohstoffgeologische-karten.html",
+    "year": null,
+    "license": "Datenlizenz Deutschland – Namensnennung 2.0",
+    "license_url": "https://www.govdata.de/dl-de/by-2-0",
+    "attribution": "Geodaten Sachsen, LfULG, RÜK400Bre, retrieved 29 September 2026; selected coal-seam polygons reprojected by Earth research.",
+    "limitation": "1:400,000 coal-seam distributions. Individual seam layers overlap vertically; do not sum feature counts or overlap to infer abundance. Aggregate duplicate seam layer and pit boundaries excluded."
+  },
+  "saxony_lignite50": {
+    "title": "LfULG Saxony lignite-field inventory",
+    "url": "https://luis.sachsen.de/geologie/rohstoffgeologische-karten.html",
+    "year": null,
+    "license": "Datenlizenz Deutschland – Namensnennung 2.0",
+    "license_url": "https://www.govdata.de/dl-de/by-2-0",
+    "attribution": "Geodaten Sachsen, LfULG, Lagerstättenkataster Braunkohle 1:50,000, retrieved 29 September 2026; reprojected by Earth research.",
+    "limitation": "Named inventory fields overlap seam distributions. Source IDs retained; names are not guessed from identifiers. Publication page supplies scale; individual mining/depletion/depth status absent."
+  },
+  "nrw_rk500": {
+    "title": "Geologischer Dienst NRW IS RK500",
+    "url": "https://www.gd.nrw.de/pr_kd_rohstoffkarte-500000.php",
+    "year": 2005,
+    "license": "Datenlizenz Deutschland – Namensnennung 2.0",
+    "license_url": "https://www.govdata.de/dl-de/by-2-0",
+    "attribution": "IS RK500 (https://www.opengeodata.nrw.de/produkte/geologie/geologie/RK/ISRK500/), Geologischer Dienst NRW, Abrufdatum 29.09.2026. Nutzung gemäß Datenlizenz Deutschland – Namensnennung 2.0. Coal and rock-salt subsets reprojected by Earth research.",
+    "limitation": "1:500,000 generalized resource areas. Actual layer and attribute say hard coal to 2000 m; landing page says 200 m. Preserve source 2000 m and flag this conflict; no shallow-access inference."
+  },
+  "ga_basins_2013": {
+    "title": "Geoscience Australia Coal Basin Outlines",
+    "url": "https://data.gov.au/data/dataset/9d5a8d74-a201-42bd-9d49-3c392244be16",
+    "year": 2013,
+    "license": "Creative Commons Attribution 3.0 Australia",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "attribution": "© Commonwealth of Australia (Geoscience Australia), Australian Coal Basins 2013, Bioregional Assessment Source Dataset, retrieved 29 September 2026; reprojected by Earth research.",
+    "limitation": "Full province extents including covered regions; best use1:2M–1:5M; original metadata says pre-release not fully QA checked. RANK field is geological province rank, not coal rank. No assumption that entire basin contains coal."
+  },
+  "nsw_coalfields": {
+    "title": "NSW Mining Coalfields",
+    "url": "https://data.nsw.gov.au/data/dataset/nsw-mining-coalfieds",
+    "year": 2016,
+    "license": "Creative Commons Attribution (catalogue)",
+    "license_url": "https://data.nsw.gov.au/data/dataset/nsw-mining-coalfieds",
+    "attribution": "NSW Department of Industry 2016 / Geological Survey of NSW, Standing Committee 1976 coalfield definitions; retrieved 29 September 2026. API reprojection and normalization by Earth research.",
+    "limitation": "Five named coalfield areas derived from structural basins, not seam-by-seam ore extents. Source original CRS GDA94. Existing restricted BA-derived contour dataset not used; independently released open source used."
+  },
+  "victoria_coalfields": {
+    "title": "Victorian Coal Fields 2006 inventory",
+    "url": "https://discover.data.vic.gov.au/en_AU/dataset/victorian-coal-fields",
+    "year": 2006,
+    "license": "Creative Commons Attribution 4.0 International",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "Victorian Government DEECA / Geological Survey of Victoria, COALINVFLDS, retrieved 29 September 2026; WFS output and schema normalization by Earth research.",
+    "limitation": "46 fields may contain multiple seams. Source age, overburden, development, resources and accuracy-code fields retained without converting reserve tonnage into grade. Linked seam lookup tables not imported."
+  },
+  "ga_aimr_2025": {
+    "title": "Australia's Identified Mineral Resources 2025, coal resource sites",
+    "url": "https://services.ga.gov.au/gis/rest/services/AustraliasIdentifiedMineralResources/MapServer",
+    "year": 2025,
+    "license": "Creative Commons Attribution 4.0 International",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "© Commonwealth of Australia (Geoscience Australia), AIMR 2025 coal layers 32/33, retrieved 29 September 2026.",
+    "limitation": "Supplementary resource-site points, not basin footprints; includes supplied site status without operating-mine filtering. Size class is resource tonnage, not grade or universal accessibility."
+  },
+  "usgs_india_2011": {
+    "title": "USGS GIS representation of coal-bearing areas in India and Bangladesh",
+    "url": "https://pubs.usgs.gov/of/2011/1296/",
+    "year": 2011,
+    "license": "Use constraints:none; acknowledge USGS and cited original sources",
+    "license_url": "https://pubs.usgs.gov/of/2011/1296/Metadata/IndiaCoalfields%20Metadata.htm",
+    "attribution": "USGS Trippi/Tewalt et al., OFR2011-1296, underlying Geological Survey of India Bulletin45 and listed sources; retrieved 29 September 2026; datum transformed by Earth research.",
+    "limitation": "Legacy georeferenced coal-bearing formation outlines; some contacts are USGS interpretations under alluvium. Formation identities not included. Indian 1975 (EPSG:4240) datum converted for display; no rank inferred from location."
+  },
+  "usgs_china_2014": {
+    "title": "USGS Chinese coal-mining areas compilation",
+    "url": "https://pubs.usgs.gov/of/2014/1219/",
+    "year": 2014,
+    "license": "USGS release; original metadata and source references retained",
+    "license_url": "https://pubs.usgs.gov/of/2014/1219/",
+    "attribution": "USGS Trippi, Belkin, Dai, Tewalt and Chou, OFR2014-1219, source coal-mining areas as of 2001; retrieved 29 September 2026; Beijing1954 datum transformed by Earth research.",
+    "limitation": "Mapped coal-mining areas from historical atlas, not current mine operations or exhaustive coalfield geometry. Source reported coal rank retained. Does not prove continuous coal or surface access."
+  },
+  "usgs_americas_2008": {
+    "title": "USGS coal-bearing areas in North, Central and South America",
+    "url": "https://pubs.usgs.gov/of/2008/1257/",
+    "year": 2008,
+    "license": "USGS public release; attribution and original source references retained",
+    "license_url": "https://pubs.usgs.gov/of/2008/1257/",
+    "attribution": "USGS Tewalt, Kinney and Merrill, OFR2008-1257; cited national geology/coal sources retained per feature. Retrieved 29 September 2026.",
+    "limitation": "Small-scale approximations using appropriate-age surficial geology constrained by coal literature. Not adjusted for structure and excludes coal at depth; not suitable for resource-volume calculation. Do not reinterpret entire sedimentary units as continuous seams."
+  },
+  "usgs_us_2012": {
+    "title": "Coal Fields of Conterminous US, NCRA updated version",
+    "url": "https://pubs.usgs.gov/of/2012/1205/",
+    "year": 2012,
+    "license": "USGS public release; attribution and metadata retained",
+    "license_url": "https://pubs.usgs.gov/of/2012/1205/Downloads/Metadata/Coal_Fields.html",
+    "attribution": "USGS OFR2012-1205, updated Coal_Fields polygon layer, retrieved 29 September 2026; NAD83 to WGS84 transformation by Earth research.",
+    "limitation": "National generalized coalfields, includes inherited legacy boundaries. Detailed assessed thickness/overburden layers remain raw and are not mixed into resource extent counts. Overlaps the broader2008 Americas layer; not independent evidence."
+  }
+}

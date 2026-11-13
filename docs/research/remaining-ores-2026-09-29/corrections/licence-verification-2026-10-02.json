@@ -1,0 +1,58 @@
+{
+  "checked_utc_date": "2026-10-02",
+  "method": "Read-only fetch of official terms/metadata pages (no data downloaded). The 2026-09-29 saved PGI pages (coal/raw/pgi-data-rights.html, pgi-data-attribution.html, pgi-midas-source.html, pgi-reuse.html) are 212-839 byte Incapsula bot-block stubs and contain no terms.",
+  "sources": [
+    {
+      "source_ids": ["pgi_midas", "pgi_midas_layer0", "pgi_midas_layer3", "pgi_midas_documented", "pgi_midas_historical"],
+      "publisher": "Panstwowy Instytut Geologiczny - Panstwowy Instytut Badawczy (PIG-PIB), MIDAS",
+      "data_used": "343 coal deposit polygons (coal-polygons.geojson), 147 mineral deposit polygons (poland-minerals.geojson), 19 gypsum/anhydrite deposit polygons (gypsum-reviewed.geojson)",
+      "status": "verified",
+      "licence": "CC BY 4.0",
+      "evidence": [
+        {
+          "url": "https://api.dane.gov.pl/1.4/datasets/567",
+          "what": "Polish national open-data portal (dane.gov.pl) record 'System Gospodarki i Ochrony Bogactw Mineralnych (MIDAS)', institution PIG-PIB, modified 2025-09-08; resources include the MIDAS deposit (zloza kopalin) and written-off deposit (zloza wybilansowane) shapefiles and the MIDAS WMS.",
+          "quote": "license_name: \"CC BY 4.0\"",
+          "retrieved": "2026-10-02"
+        },
+        {
+          "url": "https://metadane.pgi.gov.pl/geonetwork/pig-pib/api/records/d90161b9-841b-464b-8031-38aa7605d805/formatters/htmlrdfa",
+          "what": "INSPIRE metadata of the MIDAS WFS download service (metadata date 2026-07-24).",
+          "quote": "Brak warunkow dostepu i uzytkowania (no conditions apply to access and use)",
+          "retrieved": "2026-10-02"
+        }
+      ],
+      "attribution": "Zrodlo: Panstwowy Instytut Geologiczny - PIB, MIDAS (CC BY 4.0), retrieved 2026-09-29",
+      "unresolved": "The PGI web page https://www.pgi.gov.pl/rejestry-i-bazy-danych-geologicznych/zasady-korzystania-z-isp.html is still bot-blocked for automated reads; the national open-data portal licence above is used as the governing reuse statement."
+    },
+    {
+      "source_ids": ["saxony_ruk400", "saxony_lignite50"],
+      "publisher": "Saechsisches Landesamt fuer Umwelt, Landwirtschaft und Geologie (LfULG)",
+      "data_used": "170 coal-seam polygons (RUEK400 fossile Brennstoffe, BRK400_UTM33.zip) and 119 lignite-field polygons (Braunkohlefelder_UTM33.zip), both downloaded from https://luis.sachsen.de/geologie/rohstoffgeologische-karten.html",
+      "status": "verified",
+      "licence": "Datenlizenz Deutschland - Namensnennung - Version 2.0 (dl-de/by-2-0)",
+      "evidence": [
+        {
+          "url": "https://luis.sachsen.de/nutzungshinweise.html",
+          "what": "LUIS page 'Nutzungsbedingungen fuer Geodaten und Geodatendienste des Saechsischen Landesamtes fuer Umwelt, Landwirtschaft und Geologie (LfULG)', which governs data offered on LUIS including the rohstoffgeologische Karten downloads. No page date.",
+          "quote": "Datenlizenz Deutschland - Namensnennung - Version 2.0",
+          "retrieved": "2026-10-02"
+        },
+        {
+          "url": "coal/raw/saxony-wfs-capabilities.xml (INSPIRE SN Energiequellen WFS, saved 2026-09-29)",
+          "what": "Fees element of the lignite download service capabilities.",
+          "quote": "gemaess den Nutzungsbestimmungen von Datenlizenz Deutschland - Namensnennung - Version 2.0",
+          "retrieved": "2026-09-29"
+        }
+      ],
+      "attribution": "Quelle: Saechsisches Landesamt fuer Umwelt, Landwirtschaft und Geologie, dl-de/by-2-0",
+      "unresolved": "The rohstoffgeologische-karten download page itself carries no licence text; the LfULG general geodata terms page is relied upon."
+    }
+  ],
+  "unchanged_exclusions": [
+    "GEMDATA 2005 and DIADATA (research-only: reuse/location qualifications unresolved)",
+    "LGRB MIN4EU occurrence data (not used in runtime)",
+    "BGS licensed gypsum resource linework (only factual memoir localities are used)",
+    "Mindat and IAEA UDEPO are not used anywhere in this pipeline"
+  ]
+}

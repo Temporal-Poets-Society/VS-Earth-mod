@@ -1,0 +1,51 @@
+{
+  "models": [
+    {
+      "model": "giza-khufu-blockout",
+      "sizeXYZ": [
+        115,
+        74,
+        115
+      ],
+      "solidBlocks": 347246,
+      "explicitAir": 1071,
+      "roundTrip": "pass",
+      "connectedToFoundation": "pass"
+    },
+    {
+      "model": "rome-amphitheatre-blockout",
+      "sizeXYZ": [
+        94,
+        25,
+        78
+      ],
+      "solidBlocks": 32260,
+      "explicitAir": 112040,
+      "roundTrip": "pass",
+      "connectedToFoundation": "pass"
+    },
+    {
+      "model": "tikal-temple-blockout",
+      "sizeXYZ": [
+        31,
+        25,
+        35
+      ],
+      "solidBlocks": 10410,
+      "explicitAir": 165,
+      "roundTrip": "pass",
+      "connectedToFoundation": "pass"
+    }
+  ],
+  "catalogueRows": 47,
+  "regions": 16,
+  "pyramidTestPassage": "2-wide x 3-high route and floor pass",
+  "notVerified": [
+    "native in-game import",
+    "finished historical accuracy",
+    "worldgen placement",
+    "full circulation and stair usability",
+    "weathering",
+    "block mechanics in game"
+  ]
+}

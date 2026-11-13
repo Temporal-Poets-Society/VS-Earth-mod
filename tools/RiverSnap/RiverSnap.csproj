@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Rivers in GLO-90's valleys (docs/research/river-snap-2026-11-05.md): snaps rivers.bin's courses to the valley floors of
+       Copernicus GLO-90 and takes their levels from it, writing a rivers.bin v2 the runtime reads unchanged. Built with the
+       .NET 8 SDK, runs on the newest installed runtime (.NET 10). -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><LangVersion>12</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings><Nullable>disable</Nullable><RollForward>LatestMajor</RollForward>
+    <Optimize>true</Optimize><TieredPGO>true</TieredPGO>
+    <ServerGarbageCollection>true</ServerGarbageCollection><ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- the mod's own GLO-90 store and tile code, linked rather than copied (EarthData.cs's Geo is replaced by GeoShim.cs) -->
+    <Compile Include="../../src/Core/FineElevation.cs" Link="Core/FineElevation.cs" />
+    <Compile Include="../../src/Core/DemTiles.cs" Link="Core/DemTiles.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- stay well inside the 64 GB machine: tiles are evicted before this is reached -->
+    <RuntimeHostConfigurationOption Include="System.GC.HeapHardLimit" Value="17179869184" />
+  </ItemGroup>
+</Project>

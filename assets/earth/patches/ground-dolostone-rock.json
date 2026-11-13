@@ -1,0 +1,4 @@
+[
+  {"op": "add", "file": "game:worldproperties/block/rock.json", "path": "/variants/-", "value": {"Code": "dolostone", "Weight": "40", "SoilpH": "7.8", "WeatheringFactor": "0.6", "RockGroup": "sedimentary"}, "dependsOn": [{"modid": "geoaddons", "invert": true}]},
+  {"op": "add", "file": "game:worldproperties/block/rockwithdeposit.json", "path": "/variants/-", "value": {"Code": "dolostone", "Weight": "40", "SoilpH": "7.8", "WeatheringFactor": "0.6", "RockGroup": "sedimentary"}, "dependsOn": [{"modid": "geoaddons", "invert": true}]}
+]

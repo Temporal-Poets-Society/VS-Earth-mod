@@ -1,0 +1,1122 @@
+{
+	"code": "sirenia",
+	"class": "EntityAgent",
+	"tags": ["animal","huntable","adult","habitat-aquatic"],
+	"variantgroups": [
+		{ "code": "age", "states": ["adult"] },
+		{ "code": "gender", "states": ["male", "female"] },
+		{ "code": "species", "states": ["dugon", "gigas", "inunguis","manatus","senegalensis" ] }
+	],
+	"hitBoxSizeByType": {
+		"*-female-dugon": { "x": 1.5,"y": 0.8},"*-male-dugon": { "x": 1.3,"y": 0.7},
+		"*-female-gigas": { "x": 4.0,"y": 1.7},"*-male-gigas": { "x": 3.5,"y": 1.6},
+		"*-female-inunguis": { "x": 1.0,"y": 0.5},"*-male-inunguis": { "x": 0.9,"y": 0.4},
+		"*-female-manatus": { "x": 1.5,"y": 0.8},"*-male-manatus": { "x": 1.4,"y": 0.7},
+		"*-female-senegalensis": { "x": 1.5,"y": 0.6},"*-male-senegalensis": { "x": 1.3,"y": 0.5}
+	},
+	"deadhitBoxSizeByType": {
+		"*-female-dugon": { "x": 1.5,"y": 0.8},"*-male-dugon": { "x": 1.3,"y": 0.7},
+		"*-female-gigas": { "x": 4.0,"y": 1.7},"*-male-gigas": { "x": 3.5,"y": 1.6},
+		"*-female-inunguis": { "x": 1.0,"y": 0.5},"*-male-inunguis": { "x": 0.9,"y": 0.4},
+		"*-female-manatus": { "x": 1.5,"y": 0.8},"*-male-manatus": { "x": 1.4,"y": 0.7},
+		"*-female-senegalensis": { "x": 1.5,"y": 0.6},"*-male-senegalensis": { "x": 1.3,"y": 0.5}
+	},
+	"eyeHeightByType": {
+		"*-dugon": 0.5,
+		"*-gigas": 1.0,
+		"*-inunguis": 0.5,
+		"*-manatus": 0.7,
+		"*-senegalensis": 0.6,
+		"*": 0.6
+	},
+	"weightByType": {
+		"*-female-dugon": 275,"*-male-dugon": 225,
+		"*-female-gigas": 10000,"*-male-gigas": 8000,
+		"*-female-inunguis": 240,"*-male-inunguis": 180,
+		"*-female-manatus": 600,"*-male-manatus": 500,
+		"*-female-senegalensis": 360,"*-male-senegalensis": 320
+	},
+	"knockbackResistanceByType": {
+		"*-female-dugon": 0.9,"*-male-dugon": 0.8,
+		"*-female-gigas": 1,"*-male-gigas": 1,
+		"*-female-inunguis": 0.8,"*-male-inunguis": 0.7,
+		"*-female-manatus": 1,"*-male-manatus": 1,
+		"*-female-senegalensis": 0.9,"*-male-senegalensis": 0.8
+	},
+	"drops": [],
+	"habitatByType": {"*-gigas":"Sea","*": "Underwater"},
+	"attributes": {
+		"trappableByType": {
+			"*": {
+				"small": { "trapChance": 0.0,	"trapDestroyChance": 0.95 },
+				"large": { "trapChance": 0.0,	"trapDestroyChance": 0.25 }
+			}
+		},
+		"creatureDiet": {
+			"foodCategories": ["Vegetable"],
+			"weightedFoodTags": [
+				{ "weight": 0.1, "code": "fish" },
+				{ "weight": 0.8, "code": "grass" },
+				{ "weight": 0.5, "code": "nibbleCrop" },
+				{ "weight": 1, "code": "tastyvegetable" }
+			]
+		},
+		"killedByInfoText": "deadcreature-killed",
+		"handbook": {
+			"groupcode": "creaturegroup-sirenia"
+		}
+	},
+	"client": {
+		"renderer": "Shape",
+		"shapeByType": {
+			"*-dugon": { "base": "entity/animal/mammal/sirenia/dugon-adult" },
+			"*-gigas": { "base": "entity/animal/mammal/sirenia/gigas-adult" },
+			"*-inunguis": { "base": "entity/animal/mammal/sirenia/inunguis-adult" },
+			"*-manatus": { "base": "entity/animal/mammal/sirenia/manatus-adult" },
+			"*-senegalensis": { "base": "entity/animal/mammal/sirenia/senegalensis-adult" }
+		},
+		"textureByType": { 
+			"*": { "base": "entity/animal/mammal/sirenia/{species}-adult" }   
+		},
+		"sizeByType": {
+			"*-female-dugon": 1.0,"*-male-dugon": 0.95,
+			"*-female-gigas": 1.3,"*-male-gigas": 1.2,
+			"*-female-inunguis": 0.8,"*-male-inunguis": 0.7,
+			"*-female-manatus": 1.2,"*-male-manatus": 1.1,
+			"*-female-senegalensis": 1.1,"*-male-senegalensis": 1.0
+		},
+		"behaviors": [
+			{ "code": "repulseagents" },
+			{ "code": "controlledphysics","stepHeightByType": {"*": 0.1251}},
+			{ "code": "interpolateposition" },
+			{ "code": "floatupwhenstuck", "onlyWhenDead": true },
+			{ "code": "harvestable","quantitySlots": 8 },
+			{ "code": "multiply", "enabledByType": { "*-female-*": true, "*": false } },
+			{ "code": "despawn", "minPlayerDistance": 16, "belowLightLevel": 1, "minSeconds": 300 }
+		],
+		"animations": [
+			{
+				"code": "flop",
+				"animation": "Flopping",
+				"animationSpeed": 1.0
+			},
+			{
+				"code": "hurt",
+				"animation": "Hurt",
+				"animationSpeed": 2.2,
+				"weight": 10,
+				"blendMode": "AddAverage"
+			},
+			{
+				"code": "die",
+				"animation": "Dead",
+				"weight": 10,
+				"blendMode": "Average",
+				"triggeredBy": { "onControls": [ "dead" ] }
+			},
+			{
+				"code": "idle",
+				"animation": "Idle",
+				"blendMode": "AddAverage",
+				"easeOutSpeed": 4,
+				"animationSpeed": 0.5,
+				"triggeredBy": { "defaultAnim": true }
+			},
+			{
+				"code": "sleep",
+				"animation": "Idle",
+				"easeInSpeed": 4,
+				"easeOutSpeed": 4,
+				"animationSpeed": 0.1,
+				"blendMode": "Average"
+			},
+			{
+				"code": "eat",
+				"animation": "Eat",
+				"easeInSpeed": 4,
+				"easeOutSpeed": 4,
+				"blendMode": "AddAverage"
+			},
+			{
+				"code": "swim",
+				"animation": "Swim",
+				"supressDefaultAnimation": true,
+				"animationSpeed": 0.5,
+				"blendMode": "Average"
+			},
+			{
+				"code": "swimfast",
+				"animation": "Swimfast",
+				"supressDefaultAnimation": true,
+				"animationSpeed": 1.0,
+				"blendMode": "Average"
+			}
+		]
+	},
+	"server": {
+		"attributes": {
+			"pathfinder": {
+				"minTurnAnglePerSec": 15,
+				"maxTurnAnglePerSec": 45
+			}
+		},
+		"behaviors": [
+			{ "code": "repulseagents" },
+      { "code": "controlledphysics","stepHeightByType": {"*": 0.1251 }},
+			{"code": "despawn","minPlayerDistance": 8,"belowLightLevel": 1,"minSeconds": 300},
+			{"code": "health",
+				"currenthealthByType": {
+				"sirenia-adult-female-dugon": 22,"sirenia-adult-male-dugon": 20,
+				"sirenia-adult-female-gigas": 230,"sirenia-adult-male-gigas": 190,
+				"sirenia-adult-female-inunguis": 21,"sirenia-adult-male-inunguis": 18,
+				"sirenia-adult-female-manatus": 34,"sirenia-adult-male-manatus": 30,
+				"sirenia-adult-female-senegalensis": 26,"sirenia-adult-male-senegalensis": 24
+				},
+				"maxhealthByType": {
+				"sirenia-adult-female-dugon": 22,"sirenia-adult-male-dugon": 20,
+				"sirenia-adult-female-gigas": 230,"sirenia-adult-male-gigas": 190,
+				"sirenia-adult-female-inunguis": 21,"sirenia-adult-male-inunguis": 18,
+				"sirenia-adult-female-manatus": 34,"sirenia-adult-male-manatus": 30,
+				"sirenia-adult-female-senegalensis": 26,"sirenia-adult-male-senegalensis": 24
+				}
+			},
+			{
+				"code": "deaddecay",
+				"hoursToDecay": 96,
+				"decayedBlockByType": {
+					"sirenia-adult-*-dugon": "carcass-medium",
+					"sirenia-adult-*-gigas": "carcass-large",
+					"*": "carcass-large"
+				}
+			},
+			{
+				"code": "floatupwhenstuck",
+				"onlyWhenDead": true
+			},
+			{
+				"code": "harvestable","quantitySlots": 24,
+				"drops": [
+					{
+						"type": "item",
+						"code": "game:redmeat-raw",
+						"quantityByType": {
+							"sirenia-adult-female-dugon": {"avg": 13,"var": 1.5},"sirenia-adult-male-dugon": {"avg": 11,"var": 1},
+							"sirenia-adult-female-gigas": {"avg": 337,"var": 37},"sirenia-adult-male-gigas": {"avg": 275,"var": 25},
+							"sirenia-adult-female-inunguis": {"avg": 12,"var": 1},"sirenia-adult-male-inunguis": {"avg": 10,"var": 1},
+							"sirenia-adult-female-manatus": {"avg": 20,"var": 2.5},"sirenia-adult-male-manatus": {"avg": 16,"var": 2},
+							"sirenia-adult-female-senegalensis": {"avg": 15,"var": 1.5},"sirenia-adult-male-senegalensis": {"avg": 14,"var": 1.5}
+						}
+					},
+					{
+						"type": "item",
+						"code": "game:bushmeat-raw",
+						"quantityByType": {
+							"sirenia-adult-female-dugon": {"avg": 13,"var": 1.5},"sirenia-adult-male-dugon": {"avg": 11,"var": 1},
+							"sirenia-adult-female-gigas": {"avg": 337,"var": 37},"sirenia-adult-male-gigas": {"avg": 275,"var": 25},
+							"sirenia-adult-female-inunguis": {"avg": 12,"var": 1},"sirenia-adult-male-inunguis": {"avg": 10,"var": 1},
+							"sirenia-adult-female-manatus": {"avg": 20,"var": 2.5},"sirenia-adult-male-manatus": {"avg": 16,"var": 2},
+							"sirenia-adult-female-senegalensis": {"avg": 15,"var": 1.5},"sirenia-adult-male-senegalensis": {"avg": 14,"var": 1.5}
+						}
+					},
+					{
+						"type": "item",
+						"code": "sirenia:pelt-raw-{gender}-{species}",
+						"quantityByType": {
+							"*": { "offset": 1, "avg": 0, "var": 0 }
+						}
+					},
+					{
+						"type": "item",
+						"code": "game:fat",
+						"quantityByType": {
+							"sirenia-adult-female-dugon": {"avg": 13,"var": 1},"sirenia-adult-male-dugon": {"avg": 11,"var": 1},
+							"sirenia-adult-female-gigas": {"avg": 337,"var": 37},"sirenia-adult-male-gigas": {"avg": 225,"var": 25},
+							"sirenia-adult-female-inunguis": {"avg": 12,"var": 1},"sirenia-adult-male-inunguis": {"avg": 10,"var": 1},
+							"sirenia-adult-female-manatus": {"avg": 20,"var": 2},"sirenia-adult-male-manatus": {"avg": 16,"var": 2},
+							"sirenia-adult-female-senegalensis": {"avg": 15,"var": 1},"sirenia-adult-male-senegalensis": {"avg": 14,"var": 1}
+						}
+					}
+				]
+			},
+			{
+				"code": "multiply",
+				"enabledByType": {
+					"*-female-*": true,
+					"*": false
+				},
+				"spawnEntityCodesByType": {
+				"*-female-*": [ { "code":"sirenia:sirenia-baby-male-{species}"}, {"code": "sirenia:sirenia-baby-female-{species}"} ]
+				},
+				"requiresNearbyEntityCodeByType": {"*-female-*": "sirenia:sirenia-adult-male-{species}"},
+				"requiresNearbyEntityRange": 10,
+				"spawnQuantityMin": 1,
+				"spawnQuantityMax": 1,
+				"eatAnyway": true,
+				"pregnancyDaysByType": {"*-dugon":85,"*-gigas": 85, "*-inunguis": 73, "*-manatus": 73, "*-senegalensis": 73},
+				"multiplyCooldownDaysMin": 73,
+				"multiplyCooldownDaysMax": 146,
+				"portionsEatenForMultiplyByType": {"*-dugon":19,"*-gigas": 125, "*-inunguis": 17, "*-manatus": 31, "*-senegalensis": 23}
+			}, 
+			{
+				"code": "emotionstates",
+				"states": [
+					{"code": "fleeondamage","whenHealthRelBelow": 0.75,"duration": 60,"chanceByType": {"*": 1.0},"slot": 2,"priority": 5,"accumType": "max"},
+					{"code": "fleeondamage","duration": 40,"chance": 1,"slot": 2,"priority": 1,"accumType": "max"},
+					{"code": "alarmherdondamage","executionChance": 1,"slot": 1,"priority": 1,"accumType": "max"},
+					{"code": "aggressiveondamage","whenHealthRelBelow": 0.99,"duration": 30,"chanceByType": {"*-gigas": 0.05,"*": 0.025},"slot": 2,"priority": 2,"accumType": "noaccum"},
+					{"code": "saturated","duration": 2400,"executionChance": 1,"slot": 0,"priority": 1,"accumType": "sum"}]
+			},
+			{
+				"code": "taskai",
+				"aitasks": [	
+					//-------------------------Movement Speed tests-------------------------//
+					//wandering swimfast at any time
+					{
+						"code": "wander",
+						"enabled":  false,
+						"priority": 10.8,
+						"priorityForCancel": 12.0,
+						"animation": "Swimfast",
+						"movespeedByType": {
+							"sirenia-adult-*-dugon": 0.04,
+							"sirenia-adult-*-gigas": 0.05,
+							"sirenia-adult-*-inunguis": 0.05,
+							"sirenia-adult-*-manatus": 0.05,
+							"sirenia-adult-*-senegalensis": 0.04
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.5,
+							"*": 1.0
+						},
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//wandering swim at any time
+					{
+						"code": "wander",
+						"enabled":  false,
+						"priority": 10.8,
+						"priorityForCancel": 12.0,
+						"animation": "Swim",
+						"movespeedByType": {
+							"*-dugon": 0.01,
+							"*-gigas": 0.015,
+							"*-inunguis": 0.0075,
+							"*-manatus": 0.01,
+							"*-senegalensis": 0.008,
+							"*": 0.006
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.25,
+							"*": 0.5
+						},
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+					//-------------------------Leave Deadly Conditions-------------------------//
+						//get into water					
+					{
+						"code": "fishoutofwater", 
+						"priority": 9.51, 
+						"priorityForCancel": 10,
+						"animation": "flop",
+						"movespeed": 0.005,
+						"animationSpeed": 1,
+						"whenSwimming": false,
+						"tagsAppliedToEntity": ["state-moving"]
+					},
+						//fleeing when injured
+					{
+						"code": "fleeentity",
+						"priority": 9.41,
+						"priorityForCancel": 9.42,
+						"animation": "Swimfast",
+						"entityCodes": [ "placeholder"],
+            "entityTags": {"anyOf": ["boss","defended","ferocious","mechanical","player","prickly","projectile","rust-creature","swarm","threatening","vehicle","venomous","has-open-fire","state-armed"], "noneOf":["carcass","egg","nest","state-burrowed","state-sneaking"]},
+						"movespeedByType": {
+							"sirenia-adult-*-dugon": 0.04,
+							"sirenia-adult-*-gigas": 0.05,
+							"sirenia-adult-*-inunguis": 0.05,
+							"sirenia-adult-*-manatus": 0.05,
+							"sirenia-adult-*-senegalensis": 0.04
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.5,
+							"*": 1.0
+						},
+						"seekingRange": 20,
+						"fleeingDistance" : 50,
+						"fleeDurationMs": 20000,
+						"whenInEmotionStates": ["fleeondamage"],
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"],
+						"whenSwimming": true
+					},
+						//fleeing when injured slower to finish flee on damage emotion state
+					{
+						"code": "fleeentity",
+						"priority": 9.4,
+						"priorityForCancel": 9.41,
+						"animation": "Swim",
+						"entityCodes": [ "placeholder"],
+            "entityTags": {"anyOf": ["boss","defended","ferocious","mechanical","player","prickly","projectile","rust-creature","swarm","threatening","vehicle","venomous","has-open-fire","state-armed"], "noneOf":["carcass","egg","nest","state-burrowed","state-sneaking"]},
+						"movespeedByType": {
+							"*-dugon": 0.01,
+							"*-gigas": 0.015,
+							"*-inunguis": 0.0075,
+							"*-manatus": 0.01,
+							"*-senegalensis": 0.008,
+							"*": 0.006
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.25,
+							"*": 0.5
+						},
+						"seekingRange": 120,
+						"fleeingDistance" : 180,
+						"fleeDurationMs": 60000,
+						"whenSwimming": true,
+						"whenInEmotionStates": ["fleeondamage"],
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"]
+					},
+					//-------------------------Combat-------------------------//
+						//standard attack, when aggressive
+					{
+						"code": "meleeattack",
+						"priority": 7.5,
+						"priorityForCancel": 8.0,
+						"animation": "swimfast",
+						"slot": 1,
+						"minTargetWeightByType": {"*gigas":0.005,"*":0.25},
+						"maxTargetWeightByType": {"*gigas":0.125,"*":1.125},
+            "entityTags": { "anyOf": ["humanoid","predator"],"noneOf":["carcass","egg","ferocious","nest","threatening","state-burrowed","state-sneaking"] },
+						"entityCodes": [ "placeholder"],
+						"skipEntityCodes": ["sirenia-adult-female-{species}","sirenia-adult-male-{species}","sirenia-baby-female-{species}","sirenia-baby-male-{species}"],
+						"animationSpeed": 1.5,
+						"damageByType": {
+							"sirenia-adult-female-dugon": 6,"sirenia-adult-male-dugon": 5,
+							"sirenia-adult-female-gigas": 26,"sirenia-adult-male-gigas": 22,
+							"sirenia-adult-female-inunguis": 5,"sirenia-adult-male-inunguis": 4,
+							"sirenia-adult-female-manatus": 8,"sirenia-adult-male-manatus": 7,
+							"sirenia-adult-female-senegalensis": 6,"sirenia-adult-male-senegalensis": 6
+						},
+						"damageType": "BluntAttack",
+						"minDistByType": {
+							"sirenia-adult-female-gigas": 2.5,"sirenia-adult-male-gigas": 2.2,
+							"*": 1.5
+						},
+						"minVerDistByType": {
+							"sirenia-adult-female-gigas": 2.5,"sirenia-adult-male-gigas": 2.2,
+							"*": 1.5
+						},
+						"damageTier": 2,
+						"MinCoolDownMs": 2500,
+						"MaxCooldownMs": 5000,
+						"attackDurationMs": 1250,
+						"damagePlayerAtMs": 750,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["threatening"],
+						"whenInEmotionStates": ["aggressiveondamage"],
+						"whenNotInEmotionStates": ["fleeondamage"]
+					},
+						//low damage, ferocious vs ferocious fight
+					{
+						"code": "meleeattack",
+						"priority": 7.4,
+						"priorityForCancel": 7.5,
+						"animation": "swimfast",
+						"slot": 1,
+						"minTargetWeightByType": {"*gigas":0.005,"*":0.25},
+						"maxTargetWeightByType": {"*gigas":0.125,"*":1.125},
+            "entityTags": { "anyOf":["ferocious","threatening"],"noneOf":["state-burrowed","state-sneaking"] },
+						"skipEntityCodes": ["sirenia-adult-female-{species}","sirenia-adult-male-{species}","sirenia-baby-female-{species}","sirenia-baby-male-{species}"],
+						"entityCodes": [ "placeholder"],
+						"animationSpeed": 1.5,
+						"damageByType": {
+							"sirenia-adult-female-dugon": 1.2,"sirenia-adult-male-dugon": 1,
+							"sirenia-adult-female-gigas": 5.2,"sirenia-adult-male-gigas": 4.4,
+							"sirenia-adult-female-inunguis": 1,"sirenia-adult-male-inunguis": 0.8,
+							"sirenia-adult-female-manatus": 1.6,"sirenia-adult-male-manatus": 1.4,
+							"sirenia-adult-female-senegalensis": 1.2,"sirenia-adult-male-senegalensis": 1.2
+						},
+						"damageType": "BluntAttack",
+						"minDistByType": {
+							"sirenia-adult-female-gigas": 2.5,"sirenia-adult-male-gigas": 2.2,
+							"*": 1.5
+						},
+						"minVerDistByType": {
+							"sirenia-adult-female-gigas": 2.5,"sirenia-adult-male-gigas": 2.2,
+							"*": 1.5
+						},
+						"damageTier": 2,
+						"MinCoolDownMs": 2500,
+						"MaxCooldownMs": 5000,
+						"attackDurationMs": 1250,
+						"damagePlayerAtMs": 750,
+						"alarmHerd": false,
+						"stopOnHurt": false,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["threatening"],
+						"whenInEmotionStates": ["aggressiveondamage"],
+						"whenNotInEmotionStates": ["fleeondamage"]
+					},
+						//stay in fight
+					{
+						"code": "seekentity",
+						"priority": 7.2,
+						"priorityForCancel": 7.3,
+						"animation": "swimfast",
+						"minTargetWeightByType": {"*gigas":0.005,"*":0.25},
+						"maxTargetWeightByType": {"*gigas":0.125,"*":1.125},
+            "entityTags": { "anyOf": ["ferocious","humanoid","predator","threatening"],"noneOf":["carcass","egg","ferocious","nest","threatening","state-burrowed","state-sneaking"] },
+						"entityCodes": [ "placeholder"],
+						"skipEntityCodes": ["sirenia-adult-female-{species}","sirenia-adult-male-{species}","sirenia-baby-female-{species}","sirenia-baby-male-{species}"],
+						"maxFollowTime": 20, 
+						"movespeedByType": {
+							"sirenia-adult-*-dugon": 0.04,
+							"sirenia-adult-*-gigas": 0.05,
+							"sirenia-adult-*-inunguis": 0.05,
+							"sirenia-adult-*-manatus": 0.05,
+							"sirenia-adult-*-senegalensis": 0.04
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.5,
+							"*": 1.0
+						},
+						"seekingRange": 15,
+						"leapAtTarget": false,
+						"soundByType": {
+							"*-inunguis": "creature/sirenia/squeak*",
+							"*-manatus": "creature/sirenia/cry*"},
+						"soundRangeByType": {"*": 60},
+						"stopOnHurt": false,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["threatening","state-moving"],
+						"whenInEmotionStates": ["aggressiveondamage","aggressivearoundentity"],
+						"whenNotInEmotionStates": ["fleeondamage"]
+					},
+					//-------------------------Avoid Dangerous Entities-------------------------//
+						//fleeing due to dangerous entity immediate
+					{
+						"code": "fleeentity",
+						"priority": 5.81,
+						"priorityForCancel": 6.0,
+						"animation": "Swimfast",
+						"minTargetWeight": 0.1,
+						"maxTargetWeight": 9999,
+            "entityTags": {"anyOf": ["predator","threatening"],"noneOf":["carcass","egg","nest","state-burrowed","state-sneaking"] },
+						"entityCodes": [ "placeholder"],
+						"skipEntityCodes": ["sirenia-adult-female-{species}","sirenia-adult-male-{species}","sirenia-baby-female-{species}","sirenia-baby-male-{species}"],
+						"movespeedByType": {
+							"sirenia-adult-*-dugon": 0.04,
+							"sirenia-adult-*-gigas": 0.05,
+							"sirenia-adult-*-inunguis": 0.05,
+							"sirenia-adult-*-manatus": 0.05,
+							"sirenia-adult-*-senegalensis": 0.04
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.5,
+							"*": 1.0
+						},
+						"seekingRange": 6,
+						"fleeingDistance" : 50,
+						"fleeDurationMs": 20000,
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"],
+						"whenSwimming": true,
+						"whenNotInEmotionStates": ["aggressiveondamage"]
+					},
+						//avoid larger dangerous entities at close range
+					{
+						"code": "fleeentity",
+						"priority": 5.6,
+						"priorityForCancel": 6.0,
+						"animation": "Swimfast",
+						"minTargetWeight": 0.25,
+						"maxTargetWeight": 9999,
+						"entityCodes": [ "placeholder"],
+            "entityTags": { "anyOf": ["ferocious","predator","threatening"],"noneOf":["carcass","egg","nest","state-burrowed","state-sneaking"]},
+						"skipEntityCodes": ["sirenia-adult-female-{species}","sirenia-adult-male-{species}","sirenia-baby-female-{species}","sirenia-baby-male-{species}"],
+						"movespeedByType": {
+							"sirenia-adult-*-dugon": 0.04,
+							"sirenia-adult-*-gigas": 0.05,
+							"sirenia-adult-*-inunguis": 0.05,
+							"sirenia-adult-*-manatus": 0.05,
+							"sirenia-adult-*-senegalensis": 0.04
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.5,
+							"*": 1.0
+						},
+						"fleeDurationMs": 20000,
+						"seekingRange": 10,
+						"fleeingDistance" : 40,
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"],
+						"whenNotInEmotionStates": ["aggressiveondamage"]
+					},
+						//avoid dangerous entities at close range
+					{
+						"code": "fleeentity",
+						"priority": 5.6,
+						"priorityForCancel": 6.0,
+						"animation": "Swimfast",
+						"minTargetWeight": 0,
+						"maxTargetWeight": 9999,
+						"entityCodes": [ "placeholder"],
+            "entityTags": {"anyOf": ["boss","mechanical","rust-creature","swarm","venomous"],"noneOf":["state-burrowed","state-sneaking"] },
+						"skipEntityCodes": ["sirenia-adult-female-{species}","sirenia-adult-male-{species}","sirenia-baby-female-{species}","sirenia-baby-male-{species}"],
+						"movespeedByType": {
+							"sirenia-adult-*-dugon": 0.04,
+							"sirenia-adult-*-gigas": 0.05,
+							"sirenia-adult-*-inunguis": 0.05,
+							"sirenia-adult-*-manatus": 0.05,
+							"sirenia-adult-*-senegalensis": 0.04
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.5,
+							"*": 1.0
+						},
+						"fleeDurationMs": 20000,
+						"seekingRange": 10,
+						"fleeingDistance" : 40,
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"],
+						"whenNotInEmotionStates": ["aggressiveondamage"]
+					},
+						//avoid large entities at mid range
+					{
+						"code": "fleeentity",
+						"priority": 5.2,
+						"priorityForCancel": 5.4,
+						"animation": "Swim",
+						"minTargetWeight": 1.125,
+						"maxTargetWeight": 9999,
+						"entityCodes": [ "placeholder"],
+            "entityTags": {"noneOf":["carcass","egg","nest","state-burrowed","state-sneaking"] },
+						"skipEntityCodes": ["sirenia-adult-female-{species}","sirenia-adult-male-{species}","sirenia-baby-female-{species}","sirenia-baby-male-{species}"],
+						"movespeedByType": {
+							"*-dugon": 0.01,
+							"*-gigas": 0.015,
+							"*-inunguis": 0.0075,
+							"*-manatus": 0.01,
+							"*-senegalensis": 0.008,
+							"*": 0.006
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.25,
+							"*": 0.5
+						},
+						"fleeDurationMs": 10000,
+						"seekingRange": 30,
+						"fleeingDistance" : 40,
+						"soundByType": {
+							"*-inunguis": "creature/sirenia/squeak*",
+							"*-manatus": "creature/sirenia/cry*"
+						},
+						"SoundChance" : 0.125,
+						"soundRangeByType": {"*": 40},
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving","state-sprinting"],
+						"whenNotInEmotionStates": ["aggressiveondamage"]
+					},
+					//-------------------------Food Seeking-------------------------//
+						//if hungry eat favorite foods from POI
+					{
+						"code": "seekfoodandeat",
+						"priority": 4.7,
+						"priorityForCancel": 5.0,
+						"animation": "Swim",
+						"eatAnimation": "Eat",
+						"eatAnimationLooseItems": "Eat",
+						"movespeedByType": {
+							"*-dugon": 0.01,
+							"*-gigas": 0.015,
+							"*-inunguis": 0.0075,
+							"*-manatus": 0.01,
+							"*-senegalensis": 0.008,
+							"*": 0.006
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.25,
+							"*": 0.5
+						},
+						"mincooldownHours": 1,
+						"MaxCooldownHours": 4,
+						"eatTime": 6,
+						"eatLooseItems": true,
+						"eatSound" : "game:creature/animal-eat1",
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+					//-------------------------Leave Hazardous condtions-------------------------//
+						//stay close to family in the dark male			
+					{
+						"code": "stayclosetoentity",
+						"priority": 3.51,
+						"priorityForCancel": 5.0,
+						"animation": "Swim",
+						"entityCode": "sirenia-baby-male-{species}",
+						"movespeedByType": {
+							"*-dugon": 0.01,
+							"*-gigas": 0.015,
+							"*-inunguis": 0.0075,
+							"*-manatus": 0.01,
+							"*-senegalensis": 0.008,
+							"*": 0.006
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.25,
+							"*": 0.5
+						},
+						"searchRange": 240,
+						"maxDistance": 4,
+						"minSeekSeconds": 240, 
+						"EntityLightLevels": [0,18],
+						"EntityLightLevelType": "TimeOfDaySunLight",
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},		
+						//stay close to family in the dark female			
+					{
+						"code": "stayclosetoentity",
+						"priority": 3.51,
+						"priorityForCancel": 5.0,
+						"animation": "Swim",
+						"entityCode": "sirenia-baby-female-{species}",
+						"movespeedByType": {
+							"*-dugon": 0.01,
+							"*-gigas": 0.015,
+							"*-inunguis": 0.0075,
+							"*-manatus": 0.01,
+							"*-senegalensis": 0.008,
+							"*": 0.006
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.25,
+							"*": 0.5
+						},
+						"searchRange": 240,
+						"maxDistance": 4,
+						"minSeekSeconds": 240, 
+						"EntityLightLevels": [0,18],
+						"EntityLightLevelType": "TimeOfDaySunLight",
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},		
+						//stay close to family all times female			
+					{
+						"code": "stayclosetoentity",
+						"priority": 3.5,
+						"priorityForCancel": 5.0,
+						"animation": "Swim",
+						"entityCode": "sirenia-baby-female-{species}",
+						"movespeedByType": {
+							"*-dugon": 0.01,
+							"*-gigas": 0.015,
+							"*-inunguis": 0.0075,
+							"*-manatus": 0.01,
+							"*-senegalensis": 0.008,
+							"*": 0.006
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.25,
+							"*": 0.5
+						},
+						"searchRange": 240,
+						"maxDistance": 12,
+						"minSeekSeconds": 240, 
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},	
+						//stay close to family all times male			
+					{
+						"code": "stayclosetoentity",
+						"priority": 3.5,
+						"priorityForCancel": 5.0,
+						"animation": "Swim",
+						"entityCode": "sirenia-baby-male-{species}",
+						"movespeedByType": {
+							"*-dugon": 0.01,
+							"*-gigas": 0.015,
+							"*-inunguis": 0.0075,
+							"*-manatus": 0.01,
+							"*-senegalensis": 0.008,
+							"*": 0.006
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.25,
+							"*": 0.5
+						},
+						"searchRange": 240,
+						"maxDistance": 12,
+						"minSeekSeconds": 240, 
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},	
+						//wander out of darkness		
+					{
+						"code": "wander",
+						"priority": 3.42,
+						"priorityForCancel": 5.0,
+						"animation": "Swim",
+						"movespeedByType": {
+							"*-dugon": 0.01,
+							"*-gigas": 0.015,
+							"*-inunguis": 0.0075,
+							"*-manatus": 0.01,
+							"*-senegalensis": 0.008,
+							"*": 0.006
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.25,
+							"*": 0.5
+						},
+						"EntityLightLevels": [0,8],
+						"EntityLightLevelType": "MaxLight",
+						"PreferredLightLevel": 32,
+						"PreferredLightLevelType": "MaxLight",
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},		
+					//-------------------------Domestic Behaviors-------------------------//
+						//follow lead holder
+					{
+						"code": "followleadholder",
+						"priority": 2.5,
+						"priorityForCancel": 3.0,
+						"animation": "Swim",
+						"movespeedByType": {
+							"*-dugon": 0.01,
+							"*-gigas": 0.015,
+							"*-inunguis": 0.0075,
+							"*-manatus": 0.01,
+							"*-senegalensis": 0.008,
+							"*": 0.006
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.25,
+							"*": 0.5
+						},
+						"minGeneration": 1,
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},	
+					//-------------------------Conditional Down Time-------------------------//	
+						//sleeping times
+					{
+						"code": "idle",
+						"priority": 1.5,
+						"priorityForCancel": 6,
+						"animation": "Sleep",
+						"minduration": 30000,
+						"maxduration": 60000,
+						"MinCoolDownMs": 10000,
+						"MaxCooldownMs": 30000,
+						"mincooldownHours": 1.5,
+						"MaxCooldownHours": 3.5,
+						"animationSpeed": 0.3,
+						"duringDayTimeFramesByType": {
+							"*-inunguis": [{"fromHour": 10,"toHour":14 },{"fromHour": 0,"toHour": 4}],
+							"*-senegalensis": [{"fromHour": 9,"toHour": 16}],
+							"*": [{"fromHour": 20,"toHour": 4}]
+						},
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//rare chance of call all day
+					{
+						"code": "idle",
+						"priority": 1.41,
+						"priorityForCancel": 2.0,
+						"animation": "Idle",
+						"executionChance": 0.125,
+						"minduration": 3000,
+						"maxduration": 9000,
+						"mincooldownHours": 0.125,
+						"MaxCooldownHours": 2,
+						"animationSpeed": 1,
+						"soundByType": {
+							"*-inunguis": "creature/sirenia/squeak*",
+							"*-manatus": "creature/sirenia/cry*"
+						},
+						"soundRepeatMs": 5000,
+						"soundRange": 60,
+						"whenSwimming": true,
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+					//-------------------------Down Time-------------------------//
+						//wandering fast swim any time
+					{
+						"code": "wander",
+						"priority": 0.8,
+						"priorityForCancel": 2.0,
+						"animation": "Swimfast",
+						"executionChance": 0.01,
+						"movespeedByType": {
+							"sirenia-adult-*-dugon": 0.04,
+							"sirenia-adult-*-gigas": 0.05,
+							"sirenia-adult-*-inunguis": 0.05,
+							"sirenia-adult-*-manatus": 0.05,
+							"sirenia-adult-*-senegalensis": 0.04
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.5,
+							"*": 1.0
+						},
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//wandering swim any time
+					{
+						"code": "wander",
+						"priority": 0.8,
+						"priorityForCancel": 2.0,
+						"animation": "Swim",
+						"executionChance": 0.9,
+						"movespeedByType": {
+							"*-dugon": 0.01,
+							"*-gigas": 0.015,
+							"*-inunguis": 0.0075,
+							"*-manatus": 0.01,
+							"*-senegalensis": 0.008,
+							"*": 0.006
+						},
+						"animationSpeedByType": {
+							"sirenia-adult-*-gigas": 0.25,
+							"*": 0.5
+						},
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"tagsAppliedToEntity": ["state-moving"],
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"]
+					},
+						//floating any time
+					{
+						"code": "idle",
+						"priority": 0.7,
+						"priorityForCancel": 2.0,
+						"animation": "Idle",
+						"minduration": 2000,
+						"maxduration": 12000,
+						"MinCoolDownMs": 12000,
+						"MaxCooldownMs": 120000,
+						"stopOnHurt": true,
+						"whenSwimming": true,
+						"whenFeetInLiquid": false
+					},
+						//looking around
+					{
+						"code": "lookaround",
+						"priority": 0.5,
+						"priorityForCancel": 2.0,
+						"stopOnHurt": true,
+						"whenNotInEmotionStates": ["aggressiveondamage","fleeondamage"],
+						"turnSpeedMul": 0.25,
+						"whenSwimming": true
+					}
+				]
+			},
+			{"code": "pettable","minGeneration": 1},
+			{"code": "ropetieable","minGeneration": 1},
+			{ "code": "entitystatetags" }
+		],
+		"spawnconditions": {
+			"worldgen": {
+			"requireSolidGround": false,
+			"tryOnlySurface": true,
+			"groupSizeByType": {
+					"*-male-dugon": { "dist": "invexp", "avg": 1.5, "var": 0.5 },"*-female-dugon": { "dist": "invexp", "avg": 4.5, "var": 3.5 },
+					"*-male-gigas": { "dist": "invexp", "avg": 1.0, "var": 0.0 },"*-female-gigas": { "dist": "invexp", "avg": 4.5, "var": 3.5 },
+					"*-male-inunguis": { "dist": "invexp", "avg": 1.0, "var": 0.0 },"*-female-inunguis": { "dist": "invexp", "avg": 4.5, "var": 3.5 },
+					"*-male-manatus": { "dist": "invexp", "avg": 1.0, "var": 0.0 },"*-female-manatus": { "dist": "invexp", "avg": 6.5, "var": 5.5 },
+					"*-senegalensis": { "dist": "invexp", "avg": 3.5, "var": 2.5 }
+			},
+				"insideBlockCodesByType": {
+					"*-dugon": [ "game:saltwater-*"],
+					"*-gigas": [ "game:saltwater-*"],
+					"*-inunguis": [ "game:water-*"],
+					"*-manatus": [ "game:water-*","game:saltwater-*"],
+					"*-senegalensis": [ "game:water-*","game:saltwater-*"]
+				},
+				"minLightLevel": 3,
+			"companionsByType": {
+				"sirenia-adult-female-*":["sirenia:sirenia-adult-female-{species}","sirenia:sirenia-adult-male-{species}","sirenia:sirenia-baby-female-{species}","sirenia:sirenia-baby-male-{species}"],
+				"sirenia-adult-male-*":["sirenia:sirenia-adult-female-{species}"],
+				"*":["sirenia:sirenia-adult-female-{species}","sirenia:sirenia-adult-male-{species}"]}
+		},
+			"runtime": {
+				"group": "neutral",
+				"maxQuantity": 2,
+				"requireSolidGround": false,
+				"tryOnlySurface": true,
+				"chanceByType": {
+					"*-dugon": 0.00001,
+					"*-gigas": 0.00001,
+					"*-inunguis": 0.00001,
+					"*-manatus": 0.00001,
+					"*-senegalensis": 0.00001,
+					"*": 0.0
+				},
+				"mindistancetoplayer": 50,
+				"minLightLevel": 2,
+				"spawnCapPlayerScaling": 0.0,	
+				"groupSizeByType": {
+					"*-male-dugon": { "dist": "invexp", "avg": 1.5, "var": 0.5 },"*-female-dugon": { "dist": "invexp", "avg": 4.5, "var": 3.5 },
+					"*-male-gigas": { "dist": "invexp", "avg": 1.0, "var": 4.0 },"*-female-gigas": { "dist": "invexp", "avg": 4.5, "var": 3.5 },
+					"*-male-inunguis": { "dist": "invexp", "avg": 1.0, "var": 0.0 },"*-female-inunguis": { "dist": "invexp", "avg": 4.5, "var": 3.5 },
+					"*-male-manatus": { "dist": "invexp", "avg": 1.0, "var": 0.0 },"*-female-manatus": { "dist": "invexp", "avg": 6.5, "var": 5.5 },
+					"*-senegalensis": { "dist": "invexp", "avg": 3.5, "var": 2.5 }
+				},
+				"insideBlockCodesByType": {
+					"*-dugon": [ "game:saltwater-*"],
+					"*-gigas": [ "game:saltwater-*"],
+					"*-inunguis": [ "game:water-*"],
+					"*-manatus": [ "game:water-*","game:saltwater-*"],
+					"*-senegalensis": [ "game:water-*","game:saltwater-*"]
+				},
+				"companionsByType": {
+				"*-female-gigas":["sirenia:sirenia-adult-female-{species}","sirenia:sirenia-adult-male-{species}","sirenia:sirenia-adult-female-{species}","sirenia:sirenia-adult-male-{species}","sirenia:sirenia-adult-female-{species}","sirenia:sirenia-adult-male-{species}","sirenia:sirenia-adult-female-{species}","sirenia:sirenia-adult-male-{species}","sirenia:sirenia-baby-female-{species}","sirenia:sirenia-baby-male-{species}"],
+				"*-female-*":["sirenia:sirenia-adult-female-{species}","sirenia:sirenia-adult-male-{species}","sirenia:sirenia-adult-female-{species}","sirenia:sirenia-adult-male-{species}","sirenia:sirenia-baby-female-{species}","sirenia:sirenia-baby-male-{species}"],
+				"*-male-*":["sirenia:sirenia-adult-female-{species}"],
+				"*":["sirenia:sirenia-adult-female-{species}","sirenia:sirenia-adult-male-{species}"]}
+			}
+		},
+		"spawnconditionsByType": {
+			"sirenia-adult-*-dugon": {
+					"randomMapCodePool": ["fish1", "fish2", "fish3", "fish4", "fish5", "fish6", "fish7", "fish8", "fish9"],
+				"climate": {
+					"minTemp": 18,
+					"maxTemp": 44,
+					"minRain": 0.1,
+					"maxRain": 1.0,
+					"minY": 0.1,
+					"maxY": 1					
+				},
+				"worldgen": {
+					"triesPerChunk": { "avg": 0.01, "var": 0}
+				},
+				"runtime": {
+					"maxQuantityByGroup": { "code": "sirenia-*", "maxQuantity": 1 }
+				}
+			},
+			"sirenia-adult-*-gigas": {
+					"randomMapCodePool": ["fish1", "fish2", "fish3", "fish4", "fish5", "fish6", "fish7", "fish8", "fish9"],
+				"climate": {
+					"minTemp": -15,
+					"maxTemp": 2,
+					"minRain": 0.25,
+					"maxRain": 1,
+					"minY": 0.1,
+					"maxY": 1					
+				},
+				"worldgen": {
+					"triesPerChunk": { "avg": 0.01, "var": 0}
+				},
+				"runtime": {
+					"maxQuantityByGroup": { "code": "sirenia-*", "maxQuantity": 1 }
+				}
+			},
+			"sirenia-adult-*-inunguis": {
+					"randomMapCodePool": ["fish1", "fish2", "fish3", "fish4", "fish5", "fish6", "fish7", "fish8", "fish9"],
+				"climate": {
+					"minTemp": 26,
+					"maxTemp": 40,
+					"minRain": 0.6,
+					"maxRain": 1.0,
+					"minForestOrShrubs": 0.6,
+					"maxForest": 1.0,
+					"maxShrubs": 1.0,
+					"minY": 0.7,
+					"maxY": 1				
+				},
+				"worldgen": {
+					"triesPerChunk": { "avg": 0.01, "var": 0}
+				},
+				"runtime": {
+					"maxQuantityByGroup": { "code": "sirenia-*", "maxQuantity": 2 }
+				}
+			},
+			"sirenia-adult-*-manatus": {
+				"climate": {
+					"randomMapCodePool": ["fish1", "fish2", "fish3", "fish4", "fish5", "fish6", "fish7", "fish8", "fish9"],
+					"minTemp": 12,
+					"maxTemp": 38,
+					"minRain": 0.6,
+					"maxRain": 1.0,
+					"minY": 0.1,
+					"maxY": 1				
+				},
+				"worldgen": {
+					"triesPerChunk": { "avg": 0.01, "var": 0}
+				},
+				"runtime": {
+					"maxQuantityByGroup": { "code": "sirenia-*", "maxQuantity": 1 }
+				}
+			},
+			"sirenia-adult-*-senegalensis": {
+				"climate": {
+					"randomMapCodePool": ["fish1", "fish2", "fish3", "fish4", "fish5", "fish6", "fish7", "fish8", "fish9"],
+					"minTemp": 28,
+					"maxTemp": 44,
+					"minRain": 0.55,
+					"maxRain": 1.0,
+					"minY": 0.0,
+					"maxY": 1					
+				},
+				"worldgen": {
+					"triesPerChunk": { "avg": 0.01, "var": 0}
+				},
+				"runtime": {
+					"maxQuantityByGroup": { "code": "sirenia-*", "maxQuantity": 1 }
+				}
+			}
+		}
+	},
+	"soundsByType": {
+		"sirenia-adult-*-inunguis":{
+			"hurt": "creature/sirenia/cry*",
+			"death": "creature/sirenia/cry*",
+			"idle": "creature/sirenia/squeak*"
+		},
+		"sirenia-adult-*-manatus":{
+			"hurt": "creature/sirenia/cry*",
+			"death": "creature/sirenia/cry*",
+			"idle": "creature/sirenia/squeak*"
+		}
+	},
+	"idlesoundRangeByType": {
+		"sirenia-adult-*-inunguis":12,
+		"sirenia-adult-*-manatus":15
+	},
+	"idleSoundChanceByType": {
+		"*-dugon": 0.0,
+		"*-gigas":0.0,
+		"*-inunguis":0.1,
+		"*-manatus":0.05,
+		"*-senegalensis":0.0
+	}
+}
+

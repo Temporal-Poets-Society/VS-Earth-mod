@@ -1,0 +1,569 @@
+{
+ "daugava_step1 [old]": {
+  "run": "old",
+  "kind": "1-block steps",
+  "centre": [
+   136207,
+   19025
+  ],
+  "riverColumns": 3510,
+  "drops": {
+   "1": 72
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 72
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {},
+   "elsewhere": {
+    "0": 308,
+    "1": 7,
+    "3": 1
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {},
+   "elsewhere": {
+    "flowing": 82,
+    "source": 1
+   }
+  }
+ },
+ "daugava_step1 [new]": {
+  "run": "new",
+  "kind": "1-block steps",
+  "centre": [
+   136207,
+   19025
+  ],
+  "riverColumns": 3510,
+  "drops": {
+   "1": 72
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 72
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {},
+   "elsewhere": {
+    "0": 308,
+    "1": 7,
+    "3": 1
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {},
+   "elsewhere": {
+    "flowing": 82,
+    "source": 1
+   }
+  }
+ },
+ "daugava_step1 [fix]": {
+  "run": "fix",
+  "kind": "1-block steps",
+  "centre": [
+   136207,
+   19025
+  ],
+  "riverColumns": 3510,
+  "drops": {
+   "1": 72
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 72
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {},
+   "elsewhere": {
+    "0": 308,
+    "1": 7,
+    "3": 1
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {},
+   "elsewhere": {
+    "flowing": 82,
+    "source": 1
+   }
+  }
+ },
+ "rhine_gorge_drop2 [old]": {
+  "run": "old",
+  "kind": "2-block drop",
+  "centre": [
+   126189,
+   22600
+  ],
+  "riverColumns": 10145,
+  "drops": {
+   "1": 232,
+   "2": 26
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 157,
+   "1: rapid flowing": 74,
+   "1: falling": 1,
+   "2: falling / flowing": 26
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {
+    "0": 12,
+    "1": 1
+   },
+   "elsewhere": {
+    "0": 607,
+    "1": 9,
+    "2": 1,
+    "3": 2
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {
+    "flowing": 65,
+    "rapid flowing": 34
+   },
+   "elsewhere": {
+    "flowing": 167,
+    "rapid flowing": 50
+   }
+  }
+ },
+ "rhine_gorge_drop2 [new]": {
+  "run": "new",
+  "kind": "2-block drop",
+  "centre": [
+   126189,
+   22600
+  ],
+  "riverColumns": 10145,
+  "drops": {
+   "1": 192,
+   "2": 44
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 191,
+   "1: falling": 1,
+   "2: falling / rapid flowing": 23,
+   "2: falling / flowing": 21
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {
+    "-1": 2,
+    "0": 30,
+    "1": 1
+   },
+   "elsewhere": {
+    "0": 587,
+    "1": 9,
+    "2": 1,
+    "3": 2
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {
+    "flowing": 82,
+    "rapid flowing": 47
+   },
+   "elsewhere": {
+    "flowing": 187,
+    "falling": 2
+   }
+  }
+ },
+ "rhine_gorge_drop2 [fix]": {
+  "run": "fix",
+  "kind": "2-block drop",
+  "centre": [
+   126189,
+   22600
+  ],
+  "riverColumns": 10145,
+  "drops": {
+   "1": 192,
+   "2": 44
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 191,
+   "1: falling": 1,
+   "2: falling / rapid flowing": 23,
+   "2: falling / flowing": 21
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {
+    "0": 32,
+    "1": 1
+   },
+   "elsewhere": {
+    "0": 587,
+    "1": 9,
+    "2": 1,
+    "3": 2
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {
+    "flowing": 82,
+    "rapid flowing": 45
+   },
+   "elsewhere": {
+    "flowing": 189,
+    "falling": 3
+   }
+  }
+ },
+ "congo_drop3 [old]": {
+  "run": "old",
+  "kind": "3-block drop, 2-block drops nearby",
+  "centre": [
+   129605,
+   54350
+  ],
+  "riverColumns": 17915,
+  "drops": {
+   "1": 1029,
+   "2": 23
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 699,
+   "1: rapid flowing": 329,
+   "1: falling": 1,
+   "2: falling / rapid flowing": 23
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {
+    "-1": 1,
+    "0": 9
+   },
+   "elsewhere": {
+    "0": 503,
+    "1": 7
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {
+    "rapid flowing": 38,
+    "flowing": 31
+   },
+   "elsewhere": {
+    "flowing": 649,
+    "rapid flowing": 348,
+    "falling": 1
+   }
+  }
+ },
+ "congo_drop3 [new]": {
+  "run": "new",
+  "kind": "3-block drop, 2-block drops nearby",
+  "centre": [
+   129605,
+   54350
+  ],
+  "riverColumns": 17915,
+  "drops": {
+   "1": 294,
+   "2": 264,
+   "3": 91
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 294,
+   "2: falling / rapid flowing": 264,
+   "3: falling / rapid flowing": 91
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {
+    "-2": 2,
+    "-1": 6,
+    "0": 73
+   },
+   "elsewhere": {
+    "0": 433,
+    "1": 6
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {
+    "rapid flowing": 497,
+    "falling": 92,
+    "flowing": 5
+   },
+   "elsewhere": {
+    "flowing": 288,
+    "rapid flowing": 212,
+    "falling": 1
+   }
+  }
+ },
+ "congo_drop3 [fix]": {
+  "run": "fix",
+  "kind": "3-block drop, 2-block drops nearby",
+  "centre": [
+   129605,
+   54350
+  ],
+  "riverColumns": 17915,
+  "drops": {
+   "1": 294,
+   "2": 264,
+   "3": 91
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 294,
+   "2: falling / rapid flowing": 264,
+   "3: falling / rapid flowing": 91
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {
+    "0": 81
+   },
+   "elsewhere": {
+    "0": 433,
+    "1": 6
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {
+    "rapid flowing": 490,
+    "falling": 90,
+    "flowing": 5
+   },
+   "elsewhere": {
+    "flowing": 290,
+    "rapid flowing": 212,
+    "falling": 2
+   }
+  }
+ },
+ "iguazu_falls [old]": {
+  "run": "old",
+  "kind": "listed waterfall, 5 blocks",
+  "centre": [
+   91346,
+   65792
+  ],
+  "riverColumns": 6418,
+  "drops": {
+   "1": 39,
+   "5": 40
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 39,
+   "5: falling / rapid flowing": 23,
+   "5: falling / flowing": 17
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {
+    "0": 16,
+    "1": 1
+   },
+   "elsewhere": {
+    "0": 286,
+    "1": 1,
+    "3": 30
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {
+    "falling": 126,
+    "flowing": 27,
+    "rapid flowing": 24
+   },
+   "elsewhere": {
+    "flowing": 71,
+    "source": 1
+   }
+  }
+ },
+ "iguazu_falls [new]": {
+  "run": "new",
+  "kind": "listed waterfall, 5 blocks",
+  "centre": [
+   91346,
+   65792
+  ],
+  "riverColumns": 6418,
+  "drops": {
+   "1": 39,
+   "5": 40
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 39,
+   "5: falling / rapid flowing": 40
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {
+    "0": 16,
+    "1": 1
+   },
+   "elsewhere": {
+    "0": 286,
+    "1": 1,
+    "3": 30
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {
+    "falling": 126,
+    "rapid flowing": 51
+   },
+   "elsewhere": {
+    "flowing": 38,
+    "rapid flowing": 33,
+    "source": 1
+   }
+  }
+ },
+ "iguazu_falls [fix]": {
+  "run": "fix",
+  "kind": "listed waterfall, 5 blocks",
+  "centre": [
+   91346,
+   65792
+  ],
+  "riverColumns": 6418,
+  "drops": {
+   "1": 39,
+   "5": 40
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 39,
+   "5: falling / rapid flowing": 40
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {
+    "0": 16,
+    "1": 1
+   },
+   "elsewhere": {
+    "0": 286,
+    "1": 1,
+    "3": 30
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {
+    "falling": 126,
+    "rapid flowing": 51
+   },
+   "elsewhere": {
+    "flowing": 38,
+    "rapid flowing": 33,
+    "source": 1
+   }
+  }
+ },
+ "iguazu_drop3 [old]": {
+  "run": "old",
+  "kind": "3-block drop",
+  "centre": [
+   91253,
+   65753
+  ],
+  "riverColumns": 11448,
+  "drops": {
+   "1": 94,
+   "3": 49
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 81,
+   "1: rapid flowing": 13,
+   "3: falling / flowing": 49
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {
+    "0": 22,
+    "3": 3
+   },
+   "elsewhere": {
+    "0": 472,
+    "1": 4,
+    "3": 4
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {
+    "flowing": 132,
+    "falling": 52,
+    "rapid flowing": 26
+   },
+   "elsewhere": {
+    "flowing": 87
+   }
+  }
+ },
+ "iguazu_drop3 [new]": {
+  "run": "new",
+  "kind": "3-block drop",
+  "centre": [
+   91253,
+   65753
+  ],
+  "riverColumns": 11448,
+  "drops": {
+   "1": 94,
+   "3": 49
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 94,
+   "3: falling / flowing": 49
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {
+    "0": 22,
+    "3": 3
+   },
+   "elsewhere": {
+    "0": 472,
+    "1": 4,
+    "3": 4
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {
+    "flowing": 158,
+    "falling": 52
+   },
+   "elsewhere": {
+    "flowing": 88
+   }
+  }
+ },
+ "iguazu_drop3 [fix]": {
+  "run": "fix",
+  "kind": "3-block drop",
+  "centre": [
+   91253,
+   65753
+  ],
+  "riverColumns": 11448,
+  "drops": {
+   "1": 94,
+   "3": 49
+  },
+  "lowerColumnAtDrops": {
+   "1: flowing": 94,
+   "3: falling / flowing": 49
+  },
+  "bankTopMinusWaterBeside": {
+   "near 2+ drops": {
+    "0": 22,
+    "3": 3
+   },
+   "elsewhere": {
+    "0": 472,
+    "1": 4,
+    "3": 4
+   }
+  },
+  "waterNextToOpenAir": {
+   "near 2+ drops": {
+    "flowing": 158,
+    "falling": 52
+   },
+   "elsewhere": {
+    "flowing": 88
+   }
+  }
+ }
+}

@@ -1,0 +1,282 @@
+[
+  {
+    "id": "floralzonescircumborealregion",
+    "name": "Floral Zones: Circumboreal Region",
+    "version": "1.0.2",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:51:27",
+    "url": "https://mods.vintagestory.at/floralzonescircumborealregion",
+    "archive": "https://moddbcdn.vintagestory.at/FloralZonesCircumbor_ea084a92b198ae61c28623749cd8fc8e.zip?dl=FloralZonesCircumborealRegion-v1.0.2.zip",
+    "changelog": "  Added-Useful Traders patch (Thanks Droseran!)     Fixed-Broken patch for Cosmopolitan Floral Zone wine   Fixed-Missing in-log beehives  "
+  },
+  {
+    "id": "floralzonescosmopolitanregion",
+    "name": "Floral Zones: Cosmopolitan Region",
+    "version": "1.0.13",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:50:14",
+    "url": "https://mods.vintagestory.at/floralzonescosmopolitanregion",
+    "archive": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_2aa0fc4d93e466f4f59afbfbdac570de.zip?dl=FloralZonesCosmopolitanRegion-v1.0.13.zip",
+    "changelog": "  Updated-Added decomposition to bog bean, reindeer lichen and sea lettuce     Updated-Useful Traders patch (Thanks Droseran!)  "
+  },
+  {
+    "id": "floralzonesmediterraneanregion",
+    "name": "Floral Zones: Mediterranean Region",
+    "version": "1.0.24",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:49:04",
+    "url": "https://mods.vintagestory.at/floralzonesmediterraneanregion",
+    "archive": "https://moddbcdn.vintagestory.at/FloralZonesMediterra_69bf9114d81bacc87d5e4a8e8a015ba2.zip?dl=FloralZonesMediterraneanRegion-v1.0.24.zip",
+    "changelog": "  Updated-Useful Traders patch (Thanks Droseran!)  "
+  },
+  {
+    "id": "floralzonesneozeylandicregion",
+    "name": "Floral Zones: Neozeylandic Region",
+    "version": "1.0.24",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:43:30",
+    "url": "https://mods.vintagestory.at/floralzonesneozeylandicregion",
+    "archive": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_0e9adae6a15ba1f8519fbfaa025a7c04.zip?dl=FloralZonesNeozeylandicRegion-v1.0.24.zip",
+    "changelog": "  Updated-Useful Traders patch (Thanks Droseran!)  "
+  },
+  {
+    "id": "floralzoneseastasiaticregion",
+    "name": "Floral Zones: East Asiatic Region",
+    "version": "1.0.24",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:42:47",
+    "url": "https://mods.vintagestory.at/floralzoneseastasiaticregion",
+    "archive": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_3dcf2357390c853ec92bfc9ac6e8c9c9.zip?dl=FloralZonesEastAsiaticRegion-v1.0.24.zip",
+    "changelog": "  Updated-Useful Traders patch (Thanks Droseran!)  "
+  },
+  {
+    "id": "floralzonescentralaustralianregion",
+    "name": "Floral Zones: Central Australian Region",
+    "version": "1.0.27",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:42:07",
+    "url": "https://mods.vintagestory.at/floralzonescentralaustralianregion",
+    "archive": "https://moddbcdn.vintagestory.at/FloralZonesCentralAu_c32032404793239b0e2b51df35794fe3.zip?dl=FloralZonesCentralAustralianRegion-v1.0.27.zip",
+    "changelog": "  Fixed-Changed old berry bushes to base game class, removing error report     Updated-Useful Traders patch (Thanks Droseran!)  "
+  },
+  {
+    "id": "floralzonescaribbeanregion",
+    "name": "Floral Zones: Caribbean Region",
+    "version": "1.0.29",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:25:42",
+    "url": "https://mods.vintagestory.at/floralzonescaribbeanregion",
+    "archive": "https://moddbcdn.vintagestory.at/FloralZonesCaribbean_58ab7382981744d81cb6f1451fec7a48.zip?dl=FloralZonesCaribbeanRegion-v1.0.29.zip",
+    "changelog": "  Updated-Useful Traders patch (Thanks Droseran!)  "
+  },
+  {
+    "id": "floralzonescaperegion",
+    "name": "Floral Zones: Cape Region",
+    "version": "1.0.37",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:24:48",
+    "url": "https://mods.vintagestory.at/floralzonescaperegion",
+    "archive": "https://moddbcdn.vintagestory.at/FloralZonesCapeRegio_628832dc44f97f1a2dae25d48baf1215.zip?dl=FloralZonesCapeRegion-v1.0.37.zip",
+    "changelog": "  Updated-Useful Traders patch (Thanks Droseran!)  "
+  },
+  {
+    "id": "elephantidae",
+    "name": "Fauna of the Stone Age: Elephantidae",
+    "version": "1.0.20",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:23:51",
+    "url": "https://mods.vintagestory.at/elephantidae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_26e684e9bf699ef3c31d766f7b0d7f0a.zip?dl=FotSA-Elephantidae-v1.0.20.zip",
+    "changelog": "  Fixed-Crash related to elephants not dropping new raw hides     Fixed-Shearing patch for tamed elephants  "
+  },
+  {
+    "id": "manidae",
+    "name": "Fauna of the Stone Age: Manidae",
+    "version": "1.0.23",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:21:29",
+    "url": "https://mods.vintagestory.at/manidae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Manidae-v1.0.2_534950f207fc60818e082e44eee85cfa.zip?dl=FotSA-Manidae-v1.0.23.zip",
+    "changelog": " Fixed-Combat Overhaul patch errors "
+  },
+  {
+    "id": "rhinocerotidae",
+    "name": "Fauna of the Stone Age: Rhinocerotidae",
+    "version": "1.0.28",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:19:56",
+    "url": "https://mods.vintagestory.at/rhinocerotidae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_0e538505a971ffa91e0cf1272918ffe5.zip?dl=FotSA-Rhinocerotidae-v1.0.28.zip",
+    "changelog": "  Fixed-Combat Overhaul patch errors   Fixed-Missing center point in carcass  "
+  },
+  {
+    "id": "casuariidae",
+    "name": "Fauna of the Stone Age: Casuariidae Plus",
+    "version": "1.1.13",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:17:31",
+    "url": "https://mods.vintagestory.at/casuariidae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_448533f883bf6937e8cedb45e12e22a2.zip?dl=FotSA-Casuariidae-v1.1.13.zip",
+    "changelog": "  Fixed-Missing center point in carcass     Fixed-Added missing preloaded tags     Tweak-Hides unused nests from creative and handbook  "
+  },
+  {
+    "id": "sirenia",
+    "name": "Fauna of the Stone Age: Sirenia",
+    "version": "1.0.32",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:16:37",
+    "url": "https://mods.vintagestory.at/sirenia",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.3_2aa34ad859838a8aa472ff7d1e767f30.zip?dl=FotSA-Sirenia-v1.0.32.zip",
+    "changelog": "  Fixed-Added missing preloaded tags  "
+  },
+  {
+    "id": "machairodontinae",
+    "name": "Fauna of the Stone Age: Machairodontinae",
+    "version": "1.1.13",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:15:44",
+    "url": "https://mods.vintagestory.at/machairodontinae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_f42423f2fa79de5326868efc23d85652.zip?dl=FotSA-Machairodontinae-v1.1.13.zip",
+    "changelog": "  Fixed-Adult saber cats not dropping fat correctly     Fixed-Missing center point in carcass  "
+  },
+  {
+    "id": "capreolinae",
+    "name": "Fauna of the Stone Age: Capreolinae",
+    "version": "2.0.18",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:14:28",
+    "url": "https://mods.vintagestory.at/capreolinae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_8e55da692c8081acb78b9b152d8870c5.zip?dl=FotSA-Capreolinae-v2.0.18.zip",
+    "changelog": "  Fixed-baby deer not dropping fat correctly     Fixed-baby roe deer scared sound not playing  "
+  },
+  {
+    "id": "spheniscidae",
+    "name": "Fauna of the Stone Age: Spheniscidae",
+    "version": "1.0.18",
+    "game": "1.22.7",
+    "released": "2026-09-18 23:01:51",
+    "url": "https://mods.vintagestory.at/spheniscidae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_377df94ace6b4f0338a0ef7f24d38ee9.zip?dl=FotSA-Spheniscidae-v1.0.18.zip",
+    "changelog": "  Added-Adjusted Frost overlay thresholds for different penguin species     Added-Ancient Tools Brain drops (Thanks Whiskey Sunshine!)     Added-Freshwater fish interactions     Added-Hen Box functionality, birds will now lay eggs in hen boxes and progress generations     Added-Oiled, Raw, Salted hides and associated recipes   Fixed-Large troughs can’t be used for penguin feeding     Tweak-Reduced spawn checks to single per species for optimization     Updated-Egg meal patch shapes and extra egg slots     Updated-Refactored AI tasks to the new version     Updated-Reformatted folders to match base game’s folder layout     Updated-Split entity files into adult and babies  "
+  },
+  {
+    "id": "caninae",
+    "name": "Fauna of the Stone Age: Caninae",
+    "version": "1.1.9",
+    "game": "1.22.7",
+    "released": "2026-09-11 15:44:42",
+    "url": "https://mods.vintagestory.at/caninae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.1.9_c457e26492b790db4967293276f8800b.zip?dl=FotSA-Caninae-v1.1.9.zip",
+    "changelog": "  Fixed-Pelts grouped in handbook     Fixed-Wolves attacking baby domestic dogs and baby domestic dogs fleeing from their wolf parents     Tweak-Dingo and gray wolf pack size distribution  "
+  },
+  {
+    "id": "pantherinae",
+    "name": "Fauna of the Stone Age: Pantherinae",
+    "version": "1.2.18",
+    "game": "1.22.7",
+    "released": "2026-09-11 15:41:03",
+    "url": "https://mods.vintagestory.at/pantherinae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_8fa84519bab0bd5c26eedc907f70e3d8.zip?dl=FotSA-Pantherinae-v1.2.18.zip",
+    "changelog": "  Fixed-Pelts grouped in handbook  "
+  },
+  {
+    "id": "bovinae",
+    "name": "Fauna of the Stone Age: Bovinae",
+    "version": "0.3.6",
+    "game": "1.22.6",
+    "released": "2026-08-14 17:08:42",
+    "url": "https://mods.vintagestory.at/bovinae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v0.3.6_b5f28fb3f8a5e6a85431aa4cb548e470.zip?dl=FotSA-Bovinae-v0.3.6.zip",
+    "changelog": "  Updated-Change chance and wanderChance to executionChance     Updated-Animal interaction patches     Note-This is a quick and dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22  There will be bugs reported due to WIP taurine cow implementation, I left it half finished rather than gutting it for this quick update "
+  },
+  {
+    "id": "chelonioidea",
+    "name": "Fauna of the Stone Age: Chelonioidea",
+    "version": "1.0.8",
+    "game": "1.22.6",
+    "released": "2026-08-14 16:51:17",
+    "url": "https://mods.vintagestory.at/chelonioidea",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Chelonioidea-v_ecda95c6920121cd058b68bb546effb2.zip?dl=FotSA-Chelonioidea-v1.0.8.zip",
+    "changelog": "  Updated-Change chance and wanderChance to executionChance     Updated-Animal interaction patches     Note-This is a quick and dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22  "
+  },
+  {
+    "id": "thylacinidae",
+    "name": "Fauna of the Stone Age: Thylacinidae Plus",
+    "version": "0.1.7",
+    "game": "1.22.6",
+    "released": "2026-08-14 16:46:59",
+    "url": "https://mods.vintagestory.at/thylacinidae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Thylacinidae-v_a7b8c61267c958aedf7b3f539313b4e6.zip?dl=FotSA-Thylacinidae-v0.1.7.zip",
+    "changelog": "  Updated-Change chance and wanderChance to executionChance     Updated-Animal interaction patches     Note-This is a quick and dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22  "
+  },
+  {
+    "id": "iniidae",
+    "name": "Fauna of the Stone Age: Iniidae Plus",
+    "version": "0.1.7",
+    "game": "1.22.6",
+    "released": "2026-08-14 16:44:20",
+    "url": "https://mods.vintagestory.at/iniidae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Iniidae-v0.1.7_1f2743d120fa7dfd3d8e84d4f6d54dec.zip?dl=FotSA-Iniidae-v0.1.7.zip",
+    "changelog": "  Updated-Change chance and wanderChance to executionChance     Updated-Animal interaction patches     Note-This is a quick a dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22  "
+  },
+  {
+    "id": "cervinae",
+    "name": "Fauna of the Stone Age: Cervinae",
+    "version": "0.1.14",
+    "game": "1.22.6",
+    "released": "2026-08-14 16:41:10",
+    "url": "https://mods.vintagestory.at/cervinae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._0d5422335b765692e9daf0ec73dccde8.zip?dl=FotSA-Cervinae-v0.1.14.zip",
+    "changelog": "  Updated-Change chance and wanderChance to executionChance     Updated-Animal interaction patches     Note-This is a quick a dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22  "
+  },
+  {
+    "id": "viverridae",
+    "name": "Fauna of the Stone Age: Viverridae Plus",
+    "version": "1.0.10",
+    "game": "1.22.7",
+    "released": "2026-09-28 14:48:45",
+    "url": "https://mods.vintagestory.at/viverridae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Viverridae-v1._8a1fdfd3e8cfcfd82c87037678d40d6d.zip?dl=FotSA-Viverridae-v1.0.10.zip",
+    "changelog": "  Added-Freshwater fish interactions     Added-Oiled, Raw, Salted hides and associated recipes   Fixed-Large troughs can’t be used for civet, genet or oyan feeding     Tweak-Changed spawn conditions to not allow any amount of artificial light block spawns   Tweak-Reduced spawn checks to single per species for optimization     Tweak-Removed minimum altitude from most spawn conditions     Updated-Refactored AI tasks to the new version     Updated-Reformatted folders to match base game’s folder layout     Updated-Split entity files into adult and babies  "
+  },
+  {
+    "id": "meiolaniidae",
+    "name": "Fauna of the Stone Age: Meiolaniidae",
+    "version": "0.1.11",
+    "game": "1.22.6",
+    "released": "2026-08-14 15:37:08",
+    "url": "https://mods.vintagestory.at/meiolaniidae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Meiolaniidae-v_49e6df3eccd623a7d6fad450b4b1ae77.zip?dl=FotSA-Meiolaniidae-v0.1.11.zip",
+    "changelog": "  Updated-Change chance and wanderChance to executionChance     Updated-Animal interaction patches     Note-This is a quick a dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22  "
+  },
+  {
+    "id": "vombatidae",
+    "name": "Fauna of the Stone Age: Vombatidae Plus",
+    "version": "0.4.6",
+    "game": "1.22.6",
+    "released": "2026-08-14 15:33:43",
+    "url": "https://mods.vintagestory.at/vombatidae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Vombatidae-v0._321e71ee5f883f404535876cf1d7a6c5.zip?dl=FotSA-Vombatidae-v0.4.6.zip",
+    "changelog": "  Updated-Change chance and wanderChance to executionChance     Updated-Animal interaction patches     Note-This is a quick a dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22  "
+  },
+  {
+    "id": "felinae",
+    "name": "Fauna of the Stone Age: Felinae",
+    "version": "0.2.14",
+    "game": "1.22.6",
+    "released": "2026-08-14 15:17:32",
+    "url": "https://mods.vintagestory.at/felinae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Felinae-v0.2.1_3752ee3df837c3c84fed2c69a8218b3a.zip?dl=FotSA-Felinae-v0.2.14.zip",
+    "changelog": "  Updated-Change chance and wanderChance to executionChance     Updated-Animal interaction patches     Note-This is a quick a dirty update to stop folks from updating it themselves and causing bigger issues, some things will break once this mod is fully updated to 1.22  "
+  },
+  {
+    "id": "dinornithidae",
+    "name": "Fauna of the Stone Age: Dinornithiformes Plus",
+    "version": "1.0.25",
+    "game": "1.22.7",
+    "released": "2026-09-23 19:22:27",
+    "url": "https://mods.vintagestory.at/dinornithidae",
+    "archive": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_3e0dcbff1f413dc375aeb8fd98a27b4d.zip?dl=FotSA-Dinornithidae-v1.0.25.zip",
+    "changelog": "  Added-Footstep sounds to moa     Fixed-Lesser moa babies not able to grow up     Fixed-Upland moa’s missing Flee Deadly conditions ai task section  "
+  }
+]

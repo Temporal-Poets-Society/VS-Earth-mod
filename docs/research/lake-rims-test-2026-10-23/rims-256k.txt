@@ -1,0 +1,14 @@
+Earth layout: 562.7 blocks per degree east-west (198 m per block at the equator), 568.4 north-south (stretch 1.01), latitudes shown ±90°, seam gutter 2240 blocks, world centre at 10.8°E.
+lake water more than 3 blocks above a river beside it: 52 samples in 12 cells of 256 blocks
+    70.489,  -79.564  Q     133  lake up to  13 above    15 samples
+    43.082,  -79.076  Q    8716  lake up to  11 above     8 samples
+    50.532, -127.010  Q     147  lake up to  18 above     6 samples
+    47.181,    8.409  Q     116  lake up to   4 above     5 samples
+    56.820,  -68.936  Q     233  lake up to  23 above     5 samples
+    67.306,   32.497  Q     115  lake up to  11 above     4 samples
+    60.183, -158.770  Q      29  lake up to   4 above     2 samples
+    54.499,   -8.175  Q     121  lake up to   5 above     2 samples
+    60.528,   17.411  Q     355  lake up to   6 above     2 samples
+    69.083,   33.217  Q     281  lake up to  12 above     1 samples
+    51.160,  -78.850  Q    1199  lake up to   4 above     1 samples
+    64.048,  -99.464  Q     341  lake up to   4 above     1 samples

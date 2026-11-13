@@ -1,0 +1,202 @@
+{
+ "Cu": {
+  "before": {
+   "obsCells": 14610,
+   "potCells": 17209,
+   "deepCells": 0,
+   "heat>=0.25": 16502,
+   "heat>=0.5": 7174,
+   "heat>=0.75": 1207,
+   "heatSum": 9247.7
+  },
+  "after": {
+   "obsCells": 14619,
+   "potCells": 17209,
+   "deepCells": 49,
+   "heat>=0.25": 16508,
+   "heat>=0.5": 7183,
+   "heat>=0.75": 1206,
+   "heatSum": 9253.8
+  }
+ },
+ "Sn": {
+  "before": {
+   "obsCells": 2787,
+   "potCells": 10604,
+   "deepCells": 0,
+   "heat>=0.25": 1821,
+   "heat>=0.5": 640,
+   "heat>=0.75": 119,
+   "heatSum": 2636.1
+  },
+  "after": {
+   "obsCells": 1868,
+   "potCells": 12231,
+   "deepCells": 0,
+   "heat>=0.25": 2903,
+   "heat>=0.5": 455,
+   "heat>=0.75": 136,
+   "heatSum": 2838.6
+  }
+ },
+ "Pb": {
+  "before": {
+   "obsCells": 9310,
+   "potCells": 4765,
+   "deepCells": 0,
+   "heat>=0.25": 6397,
+   "heat>=0.5": 2137,
+   "heat>=0.75": 655,
+   "heatSum": 4101.0
+  },
+  "after": {
+   "obsCells": 9319,
+   "potCells": 4765,
+   "deepCells": 12,
+   "heat>=0.25": 6404,
+   "heat>=0.5": 2145,
+   "heat>=0.75": 659,
+   "heatSum": 4106.7
+  }
+ },
+ "Zn": {
+  "before": {
+   "obsCells": 9597,
+   "potCells": 4765,
+   "deepCells": 0,
+   "heat>=0.25": 6662,
+   "heat>=0.5": 2308,
+   "heat>=0.75": 721,
+   "heatSum": 4268.1
+  },
+  "after": {
+   "obsCells": 9609,
+   "potCells": 4765,
+   "deepCells": 29,
+   "heat>=0.25": 6670,
+   "heat>=0.5": 2313,
+   "heat>=0.75": 729,
+   "heatSum": 4278.4
+  }
+ },
+ "Ag": {
+  "before": {
+   "obsCells": 9483,
+   "potCells": 2052,
+   "deepCells": 0,
+   "heat>=0.25": 6669,
+   "heat>=0.5": 2257,
+   "heat>=0.75": 609,
+   "heatSum": 3846.9
+  },
+  "after": {
+   "obsCells": 9506,
+   "potCells": 2151,
+   "deepCells": 22,
+   "heat>=0.25": 6711,
+   "heat>=0.5": 2272,
+   "heat>=0.75": 619,
+   "heatSum": 3869.0
+  }
+ },
+ "Bi": {
+  "before": {
+   "obsCells": 1455,
+   "potCells": 0,
+   "deepCells": 0,
+   "heat>=0.25": 868,
+   "heat>=0.5": 192,
+   "heat>=0.75": 40,
+   "heatSum": 471.1
+  },
+  "after": {
+   "obsCells": 892,
+   "potCells": 191,
+   "deepCells": 0,
+   "heat>=0.25": 868,
+   "heat>=0.5": 132,
+   "heat>=0.75": 45,
+   "heatSum": 375.6
+  }
+ },
+ "Hg": {
+  "before": {
+   "obsCells": 1670,
+   "potCells": 0,
+   "deepCells": 0,
+   "heat>=0.25": 914,
+   "heat>=0.5": 228,
+   "heat>=0.75": 21,
+   "heatSum": 509.0
+  },
+  "after": {
+   "obsCells": 993,
+   "potCells": 0,
+   "deepCells": 0,
+   "heat>=0.25": 912,
+   "heat>=0.5": 131,
+   "heat>=0.75": 30,
+   "heatSum": 372.6
+  }
+ },
+ "W": {
+  "before": {
+   "obsCells": 3253,
+   "potCells": 10604,
+   "deepCells": 0,
+   "heat>=0.25": 1976,
+   "heat>=0.5": 525,
+   "heat>=0.75": 101,
+   "heatSum": 2686.5
+  },
+  "after": {
+   "obsCells": 2006,
+   "potCells": 12387,
+   "deepCells": 5,
+   "heat>=0.25": 3269,
+   "heat>=0.5": 362,
+   "heat>=0.75": 111,
+   "heatSum": 2914.9
+  }
+ },
+ "Mo": {
+  "before": {
+   "obsCells": 3402,
+   "potCells": 5986,
+   "deepCells": 0,
+   "heat>=0.25": 2140,
+   "heat>=0.5": 580,
+   "heat>=0.75": 120,
+   "heatSum": 1766.9
+  },
+  "after": {
+   "obsCells": 2294,
+   "potCells": 6400,
+   "deepCells": 13,
+   "heat>=0.25": 2374,
+   "heat>=0.5": 487,
+   "heat>=0.75": 131,
+   "heatSum": 1646.8
+  }
+ },
+ "Sb": {
+  "before": {
+   "obsCells": 3686,
+   "potCells": 0,
+   "deepCells": 0,
+   "heat>=0.25": 2449,
+   "heat>=0.5": 881,
+   "heat>=0.75": 169,
+   "heatSum": 1355.3
+  },
+  "after": {
+   "obsCells": 2902,
+   "potCells": 0,
+   "deepCells": 0,
+   "heat>=0.25": 2601,
+   "heat>=0.5": 793,
+   "heat>=0.75": 171,
+   "heatSum": 1207.5
+  }
+ }
+}

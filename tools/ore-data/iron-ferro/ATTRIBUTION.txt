@@ -1,0 +1,36 @@
+Sources of the iron-ferro ore catalogue (assets/earth/config/ore-deposits-v1/iron-ferro.json) and heat-map evidence
+(tools/ore-data/iron-ferro/evidence.geojson). Only derived values (positions, tonnages, grades, outlines) are shipped.
+
+Ni-Co laterite deposits of the world: database and grade and tonnage models
+  Berger, V.I., Singer, D.A., Bliss, J.D., Moring, B.C., 2011, U.S. Geological Survey Open-File Report 2011-1058
+  https://pubs.usgs.gov/of/2011/1058/
+  Licence: public domain (U.S. Government work); retrieved 29 September 2026 (docs/research/remaining-ores-2026-09-29/raw)
+
+Podiform chromite deposits: database and grade and tonnage models
+  Mosier, D.L., Singer, D.A., Moring, B.C., Galloway, J.P., 2012, U.S. Geological Survey Scientific Investigations Report 2012-5157
+  https://pubs.usgs.gov/sir/2012/5157/
+  Licence: public domain (U.S. Government work); retrieved 29 September 2026
+
+An index to PGE-Ni-Cr deposits and occurrences in selected mineral-occurrence databases (nicrpge)
+  Causey, J.D., Galloway, J.P., Zientek, M.L., 2009, U.S. Geological Survey Open-File Report 2009-1045
+  https://pubs.usgs.gov/of/2009/1045/  (used for filtered heat-map re-adds only)
+  Licence: public domain (U.S. Government work); retrieved 29 September 2026
+
+Major mineral deposits of the world
+  U.S. Geological Survey Open-File Report 2005-1294 (ver. 2017)  https://mrdata.usgs.gov/major-deposits/
+  Licence: public domain (U.S. Government work); retrieved 29 September 2026 (heat-map re-adds)
+
+Mineral Commodity Summaries 2025 (iron ore, manganese, chromium, nickel, titanium mineral concentrates, vanadium,
+platinum-group metals, bauxite and alumina)
+  U.S. Geological Survey, 2025  https://pubs.usgs.gov/periodicals/mcs2025/
+  Licence: public domain (U.S. Government work); retrieved 8 November 2026 (validation and reserve figures cited in entries)
+
+Natural Earth 1:10m admin-0 countries (validation only, not shipped)
+  https://www.naturalearthdata.com/  Licence: public domain; retrieved 2 October 2026
+
+Published endowment figures (authored-deposits.csv, authored-areas.json)
+  Well-known figures from company annual reports and resource statements, national geological surveys and review papers,
+  each named in the entry's "ref" field (for example LKAB, Vale, Rio Tinto, BHP, Kumba Iron Ore, Norilsk Nickel,
+  Naldrett 2004 "Magmatic Sulfide Deposits", Cairncross and Beukes 2013, Lightfoot 2017, Indian Bureau of Mines,
+  Geoscience Australia AIMR). Used as facts with citation; no tables, maps or text copied. Outlines are drawn by hand
+  at about 5-10 km accuracy. Confidence q B or C. The compilation itself is offered under CC0 by the Earth project.

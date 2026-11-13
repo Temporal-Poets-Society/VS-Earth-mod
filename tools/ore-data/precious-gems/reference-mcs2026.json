@@ -1,0 +1,230 @@
+{
+ "retrieved": "2026-11-08",
+ "licence": "public domain (USGS)",
+ "tables": {
+  "gold": {
+   "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-gold.pdf",
+   "unit": "metric tons of gold content",
+   "sha256": "c2fef62f665d3334302b8b9bd32e2da6f40b3f8136d1ae00ffa102e196943627",
+   "rows": [
+    {
+     "country": "United States",
+     "production2024": 163.0,
+     "production2025e": 160.0,
+     "reserves": 3000.0,
+     "line": "United States 163 160 3,000"
+    },
+    {
+     "country": "Australia",
+     "production2024": 284.0,
+     "production2025e": 280.0,
+     "reserves": 13000.0,
+     "line": "Australia 284 280 1113,000"
+    },
+    {
+     "country": "Brazil",
+     "production2024": 82.0,
+     "production2025e": 80.0,
+     "reserves": 2500.0,
+     "line": "Brazil e82 80 2,500"
+    },
+    {
+     "country": "Canada",
+     "production2024": 200.0,
+     "production2025e": 200.0,
+     "reserves": 3200.0,
+     "line": "Canada e200 200 3,200"
+    },
+    {
+     "country": "China",
+     "production2024": 377.0,
+     "production2025e": 380.0,
+     "reserves": 3200.0,
+     "line": "China 377 380 3,200"
+    },
+    {
+     "country": "Ghana",
+     "production2024": 149.0,
+     "production2025e": 150.0,
+     "reserves": 1000.0,
+     "line": "Ghana 149 150 1,000"
+    },
+    {
+     "country": "Indonesia",
+     "production2024": 94.0,
+     "production2025e": 90.0,
+     "reserves": 3600.0,
+     "line": "Indonesia e94 90 3,600"
+    },
+    {
+     "country": "Kazakhstan",
+     "production2024": 130.0,
+     "production2025e": 130.0,
+     "reserves": 2300.0,
+     "line": "Kazakhstan e130 130 2,300"
+    },
+    {
+     "country": "Mexico",
+     "production2024": 140.0,
+     "production2025e": 140.0,
+     "reserves": 1400.0,
+     "line": "Mexico 140 140 1,400"
+    },
+    {
+     "country": "Peru",
+     "production2024": 108.0,
+     "production2025e": 110.0,
+     "reserves": 2200.0,
+     "line": "Peru 108 110 2,200"
+    },
+    {
+     "country": "Russia",
+     "production2024": 310.0,
+     "production2025e": 310.0,
+     "reserves": 12000.0,
+     "line": "Russia e310 310 12,000"
+    },
+    {
+     "country": "South Africa",
+     "production2024": 90.0,
+     "production2025e": 90.0,
+     "reserves": 5000.0,
+     "line": "South Africa 90 90 5,000"
+    },
+    {
+     "country": "Uzbekistan",
+     "production2024": 129.0,
+     "production2025e": 130.0,
+     "reserves": 2200.0,
+     "line": "Uzbekistan 129 130 2,200"
+    },
+    {
+     "country": "Other countries",
+     "production2024": 1020.0,
+     "production2025e": 1000.0,
+     "reserves": 11000.0,
+     "line": "Other countries 1,020 1,000  11,000"
+    },
+    {
+     "country": "World total (rounded)",
+     "production2024": 3280.0,
+     "production2025e": 3300.0,
+     "reserves": 66000.0,
+     "line": "World total (rounded) 3,280 3,300 66,000"
+    }
+   ]
+  },
+  "gemDiamond": {
+   "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-gemstones.pdf",
+   "unit": "thousand carats of gem-quality natural diamond",
+   "sha256": "ba51b1e6271d61048db49ccd9bc7acc5a254073d747fa68ec2c865556ed313f7",
+   "rows": [
+    {
+     "country": "United States",
+     "production2024": null,
+     "production2025e": null,
+     "reserves": null,
+     "line": "United States — — NA"
+    },
+    {
+     "country": "Angola",
+     "production2024": 12600.0,
+     "production2025e": 13000.0,
+     "reserves": 150000.0,
+     "line": "Angola 12,600 13,000 150,000"
+    },
+    {
+     "country": "Botswana",
+     "production2024": 12700.0,
+     "production2025e": 13000.0,
+     "reserves": 250000.0,
+     "line": "Botswana 12,700 13,000 250,000"
+    },
+    {
+     "country": "Canada",
+     "production2024": 13300.0,
+     "production2025e": 13000.0,
+     "reserves": 110000.0,
+     "line": "Canada 13,300 13,000 110,000"
+    },
+    {
+     "country": "Congo (Kinshasa)",
+     "production2024": 1960.0,
+     "production2025e": 2000.0,
+     "reserves": 150000.0,
+     "line": "Congo (Kinshasa) 1,960 2,000 150,000"
+    },
+    {
+     "country": "Ghana",
+     "production2024": 333.0,
+     "production2025e": 330.0,
+     "reserves": null,
+     "line": "Ghana 333 330 NA"
+    },
+    {
+     "country": "Lesotho",
+     "production2024": 696.0,
+     "production2025e": 700.0,
+     "reserves": null,
+     "line": "Lesotho 696 700 NA"
+    },
+    {
+     "country": "Namibia",
+     "production2024": 2320.0,
+     "production2025e": 2300.0,
+     "reserves": null,
+     "line": "Namibia 2,320 2,300 NA"
+    },
+    {
+     "country": "Russia",
+     "production2024": 20900.0,
+     "production2025e": 21000.0,
+     "reserves": 750000.0,
+     "line": "Russia 20,900 21,000 750,000"
+    },
+    {
+     "country": "Sierra Leone",
+     "production2024": 459.0,
+     "production2025e": 460.0,
+     "reserves": null,
+     "line": "Sierra Leone 459 460 NA"
+    },
+    {
+     "country": "South Africa",
+     "production2024": 2140.0,
+     "production2025e": 2100.0,
+     "reserves": 87000.0,
+     "line": "South Africa 2,140 2,100 87,000"
+    },
+    {
+     "country": "Tanzania",
+     "production2024": 318.0,
+     "production2025e": 320.0,
+     "reserves": null,
+     "line": "Tanzania 318 320 NA"
+    },
+    {
+     "country": "Zimbabwe",
+     "production2024": 529.0,
+     "production2025e": 530.0,
+     "reserves": 56000.0,
+     "line": "Zimbabwe 529 530 56,000"
+    },
+    {
+     "country": "Other countries",
+     "production2024": 324.0,
+     "production2025e": 320.0,
+     "reserves": 120000.0,
+     "line": "Other countries  324  320  120,000"
+    },
+    {
+     "country": "World total (rounded)",
+     "production2024": 68600.0,
+     "production2025e": 69000.0,
+     "reserves": 2000000.0,
+     "line": "World total (rounded) 68,600 69,000 >2,000,000"
+    }
+   ]
+  }
+ }
+}

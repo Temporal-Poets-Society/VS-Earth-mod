@@ -1,0 +1,98 @@
+# taxon (entity key, binomial): TDWG L3 region code = number of ~96 km PHYLACINE cells in the present-natural range but NOT in the current range
+bovinae:boselaphustragocamelus (Boselaphus tragocamelus): BAN=13, IND=10, ASS=4, NEP=3
+bovinae:bubalusarnee (Bubalus arnee): IND=196, MYA=66, THA=44, VIE=41, LAO=25, BAN=15, CBD=13, ASS=12, CHC=12, SRL=6, EHM=3, NEP=2, CHS=1
+bovinae:bubalusdepressicornis (Bubalus depressicornis): SUL=16
+bovinae:bubalusmindorensis (Bubalus mindorensis): PHI=1
+bovinae:pseudoryxnghetinhensis (Pseudoryx nghetinhensis): LAO=1
+caninae:canis-lupus (Canis lupus): IND=121, JAP=84, MAG=23, WHM=17, PAK=11, SAK=1, KUR=1
+caninae:cuon-alpinus (Cuon alpinus): KRA=191, CHS=172, MON=164, CHI=133, CHN=117, CHX=111, MAG=108, KHA=96, CHC=91, CHM=90, IND=82, IRK=81, KAM=77, CHQ=64, CHT=59, YAK=53, VIE=46, CTA=43, AMU=42, BRY=41, KOR=37, THA=33, PAK=29, ALT=25, PRM=25, KGZ=21, TVA=19, MLY=16, WHM=15, SRL=15, MYA=14, LAO=13, BAN=12, SUM=11, JAW=5, CBD=2, KUR=1
+caninae:vulpes-vulpes (Vulpes vulpes): MAG=1
+capreolinae:hydropotesinermis (Hydropotes inermis): CHS=116, CHN=37, KOR=20, CHM=18, CHC=9
+capreolinae:rangifertarandus (Rangifer tarandus): MAG=59, KAM=47, CTA=27, KRA=22, BRY=9, KHA=6, IRK=4
+elephantidae:elephasmaximus (Elephas maximus): IND=277, CHS=168, CHC=90, PAK=55, CHT=42, VIE=40, MYA=33, THA=28, BOR=27, SUM=25, WHM=23, CHN=15, BAN=10, CBD=9, LAO=8, CHX=7, NEP=7, EHM=7, SRL=4, MLY=4, ASS=1, PHI=1
+elephantidae:elephasmaximusborneensis (Elephas maximus borneensis): BOR=27
+felinae:caracalcaracal (Caracal caracal): IND=188, PAK=25, WHM=7, KGZ=1
+felinae:lynxlynx (Lynx lynx): CHS=172, CHN=112, CHI=111, CHC=98, KRA=78, MON=67, CHX=55, YAK=38, CHM=34, MAG=32, KOR=18, PAK=16, MYA=9, CHQ=8, VIE=7, NEP=5, IND=4, EHM=4, WHM=2, KAM=1, KHA=1, ASS=1
+game:bear-brown (Ursus arctos): MON=126, CHI=82, CHX=72, KRA=47, CHN=45, YAK=17, CHC=14, MAG=7, EHM=6, PAK=5, NEP=5, CHM=4, MYA=2, KHA=1, BRY=1, WHM=1
+game:bear-panda (Ailuropoda melanoleuca): CHC=86, CHS=83, CHN=15, VIE=1
+game:bear-sun (Helarctos malayanus): THA=24, VIE=21, BAN=7, MYA=5, SUM=4, LAO=3, MLY=2, EHM=1, ASS=1, BOR=1
+game:deer-caribou (Rangifer tarandus): MAG=59, MON=50, KAM=47, CTA=27, KRA=22, PRM=16, ALT=13, SAK=13, CHI=12, TVA=11, BRY=9, CHM=8, KHA=6, IRK=4, AMU=4, CHX=3
+game:deer-chital (Axis axis): BAN=8, ASS=2, IND=1
+game:deer-elk (Cervus canadensis): ALT=10, PAK=5, NEP=2, KGZ=1
+game:deer-water (Hydropotes inermis): CHS=116, CHN=37, KOR=20, CHM=18, CHC=9
+game:fox-red (Vulpes vulpes): MAG=1
+game:goat-angora (Capra aegagrus): PAK=4
+game:goat-markhor (Capra falconeri): PAK=3
+game:goat-muskox (Ovibos moschatus): MAG=142, KRA=110, KAM=77, YAK=36, KHA=12, KUR=1
+game:goat-nubian (Capra aegagrus): PAK=4
+game:goat-sirohi (Capra aegagrus): PAK=4
+game:goat-turdag (Capra aegagrus): PAK=4
+game:goat-valais (Capra aegagrus): PAK=4
+game:hyena-spotted (Crocuta crocuta): IND=305, CHC=133, CHS=82, PAK=79, CHN=77, MYA=55, THA=45, VIE=19, LAO=18, CHQ=15, CBD=14, WHM=13, KGZ=12, CHT=12, CHI=11, NEP=5, EHM=3, BAN=3, CHM=3, SRL=1
+game:pig-eurasian (Sus scrofa): MON=96, CHT=61, CHQ=60, CHX=52, JAP=32, CHI=29, WHM=17, PAK=14, CHN=12, MYA=6, TVA=5, CTA=5, THA=5, IND=4, CHS=2, SAK=1, KUR=1, PRM=1, KGZ=1, NEP=1, VIE=1
+game:sheep-mouflon (Ovis orientalis): PAK=11, WHM=1
+game:wolf-eurasian (Canis lupus): IND=121, JAP=84, MAG=23, WHM=17, PAK=11, SAK=1, KUR=1
+manidae:javanica (Manis javanica): THA=17, VIE=12, MYA=10, LAO=1, SUM=1
+pantherinae:diardi (Neofelis diardi): JAW=27, BOR=21, SUM=18, PHI=1
+pantherinae:leo (Panthera leo): IND=117, PAK=67
+pantherinae:nebulosa (Neofelis nebulosa): CHC=42, CHS=23, THA=22, VIE=16, LAO=11, TAI=9, CBD=6, CHT=4, MYA=4, ASS=3
+pantherinae:pardus (Panthera pardus): CHS=157, IND=134, CHC=121, CHN=82, PAK=75, THA=53, VIE=51, CHM=45, CHI=43, MYA=40, KOR=37, LAO=24, CBD=16, BAN=13, PRM=12, JAW=12, KHA=9, KGZ=9, CHQ=8, CHT=8, MLY=7, WHM=3, SUM=3, SRL=2
+pantherinae:tigris (Panthera tigris): CHS=172, IND=166, CHC=110, BOR=108, CHX=88, JAP=83, CHN=80, CHM=79, YAK=77, MYA=68, KHA=65, VIE=53, CHI=44, THA=44, AMU=42, BRY=40, IRK=39, CTA=39, KOR=37, JAW=29, ALT=25, LAO=23, SAK=22, CBD=21, KGZ=19, PAK=15, TVA=15, SRL=15, SUM=15, MON=14, BAN=13, KRA=10, PHI=9, CHT=8, ASS=8, NEP=7, MLY=6, WHM=2, LSI=2, PRM=1, KUR=1, EHM=1
+rhinocerotidae:dicerorhinussumatrensis (Dicerorhinus sumatrensis): CHS=171, BOR=93, MYA=87, CHC=67, SUM=60, THA=45, CHN=31, MLY=21, ASS=17, LAO=16, VIE=14, BAN=8, EHM=5, PHI=1
+rhinocerotidae:rhinocerossondaicus (Rhinoceros sondaicus): CHS=85, MYA=67, THA=52, VIE=49, SUM=42, CBD=21, ASS=18, JAW=16, LAO=13, MLY=10, BAN=9, EHM=6, CHT=2, CHC=1
+rhinocerotidae:rhinocerosunicornis (Rhinoceros unicornis): IND=53, PAK=16, WHM=13, NEP=5, EHM=3, ASS=3, BAN=2
+viverridae:arctictisbinturong (Arctictis binturong): VIE=15, CHS=2
+viverridae:macrogalidiamusschenbroekii (Macrogalidia musschenbroekii): SUL=12
+viverridae:viverracivettina (Viverra civettina): IND=15
+viverridae:viverramegaspila (Viverra megaspila): CHC=22, VIE=22, MYA=19, THA=18, MLY=18, LAO=17, EHM=10, CHS=9, ASS=8, CHT=6, SUM=2
+viverridae:viverrazibetha (Viverra zibetha): CHS=135, CHC=95, CHN=16, CHH=10
+
+# region names
+ALT = Altay
+AMU = Amur
+ASS = Assam
+BAN = Bangladesh
+BOR = Borneo
+BRY = Buryatiya
+CBD = Cambodia
+CHC = China South-Central
+CHH = Hainan
+CHI = Inner Mongolia
+CHM = Manchuria
+CHN = China North-Central
+CHQ = Qinghai
+CHS = China Southeast
+CHT = Tibet
+CHX = Xinjiang
+CTA = Chita
+EHM = East Himalaya
+IND = India
+IRK = Irkutsk
+JAP = Japan
+JAW = Jawa
+KAM = Kamchatka
+KGZ = Kirgizistan
+KHA = Khabarovsk
+KOR = Korea
+KRA = Krasnoyarsk
+KUR = Kuril Is.
+LAO = Laos
+LSI = Lesser Sunda Is.
+MAG = Magadan
+MLY = Malaya
+MON = Mongolia
+MYA = Myanmar
+NEP = Nepal
+PAK = Pakistan
+PHI = Philippines
+PRM = Primorye
+SAK = Sakhalin
+SRL = Sri Lanka
+SUL = Sulawesi
+SUM = Sumatera
+TAI = Taiwan
+THA = Thailand
+TVA = Tuva
+VIE = Vietnam
+WHM = West Himalaya
+YAK = Yakutskiya

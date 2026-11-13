@@ -1,0 +1,19 @@
+
+rivers-glo90.bin (in Earth Height Data 4/4): Earth's rivers laid onto Copernicus GLO-90 (decision 0053, test).
+
+Sources:
+- HydroRIVERS v1.0 (the river network, discharge and order). Lehner, B., Grill G. (2013): Global river hydrography and
+  network routing: baseline data and new approaches to study the world's large river systems. Hydrological Processes,
+  27(15): 2171-2186. Data is available at www.hydrosheds.org. Used under the HydroSHEDS license (free for scientific,
+  educational and commercial use, with attribution).
+- HydroLAKES v1.0 (lakes on the rivers, and reservoirs of at least 1 km² whose dams are left out). Messager, M.L.,
+  Lehner, B., Grill, G., Nedeva, I., Schmitt, O. (2016): Estimating the volume and age of water stored in global lakes
+  using a geo-statistical approach. Nature Communications, 7: 13603. Data is available at www.hydrosheds.org. Used under
+  the HydroSHEDS license.
+- Copernicus DEM GLO-90, as above (the valley floors and levels).
+
+How the data was changed (Earth's tools/RiverSnap): starting from Earth's rivers.bin (the same reaches, discharge and
+joints), each river's course was moved, within a few kilometres, onto the lowest line of the GLO-90 heights along it,
+main rivers before their tributaries, and its water levels were fitted to GLO-90's floor along that course so that they
+never rise downstream, held between the levels of the lakes and the sea it joins. Lake and sea points keep their places
+and levels. The courses were then simplified to within 30 m (2 m in height) and compressed.

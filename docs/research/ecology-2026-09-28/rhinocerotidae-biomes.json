@@ -1,0 +1,129 @@
+[
+  {
+    "file": "rhinocerotidae:entities/animal/mammal/hooved/rhinocerotidae-carcass.json",
+    "op": "addmerge",
+    "path": "/attributesByType",
+    "side": "Server",
+    "value": {
+      "*": {
+        "biorealm": [
+          "atlantic palearctic",
+          "central palearctic",
+          "eastern palearctic",
+          "pacific palearctic",
+          "atlantic afrotropic",
+          "eastern afrotropic"
+        ]
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "biomes"
+      }
+    ]
+  },
+  {
+    "file": "rhinocerotidae:entities/animal/mammal/hooved/rhinocerotidae-adult.json",
+    "op": "addmerge",
+    "path": "/attributesByType",
+    "side": "Server",
+    "value": {
+      "*-ceratotheriumsimum": {
+        "biorealm": [
+          "atlantic palearctic",
+          "atlantic afrotropic",
+          "eastern afrotropic"
+        ]
+      },
+      "*-coelodontaantiquitatis": {
+        "biorealm": [
+          "atlantic palearctic",
+          "central palearctic",
+          "eastern palearctic"
+        ]
+      },
+      "*-dicerorhinussumatrensis": {
+        "biorealm": [
+          "eastern palearctic",
+          "pacific palearctic"
+        ]
+      },
+      "*-dicerosbicornis": {
+        "biorealm": [
+          "atlantic palearctic",
+          "atlantic afrotropic",
+          "eastern afrotropic"
+        ]
+      },
+      "*-rhinocerossondaicus": {
+        "biorealm": [
+          "eastern palearctic",
+          "pacific palearctic"
+        ]
+      },
+      "*-rhinocerosunicornis": {
+        "biorealm": [
+          "central palearctic",
+          "eastern palearctic"
+        ]
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "biomes"
+      }
+    ]
+  },
+  {
+    "file": "rhinocerotidae:entities/animal/mammal/hooved/rhinocerotidae-baby.json",
+    "op": "addmerge",
+    "path": "/attributesByType",
+    "side": "Server",
+    "value": {
+      "*-ceratotheriumsimum": {
+        "biorealm": [
+          "atlantic palearctic",
+          "atlantic afrotropic",
+          "eastern afrotropic"
+        ]
+      },
+      "*-coelodontaantiquitatis": {
+        "biorealm": [
+          "atlantic palearctic",
+          "central palearctic",
+          "eastern palearctic"
+        ]
+      },
+      "*-dicerorhinussumatrensis": {
+        "biorealm": [
+          "eastern palearctic",
+          "pacific palearctic"
+        ]
+      },
+      "*-dicerosbicornis": {
+        "biorealm": [
+          "atlantic palearctic",
+          "atlantic afrotropic",
+          "eastern afrotropic"
+        ]
+      },
+      "*-rhinocerossondaicus": {
+        "biorealm": [
+          "eastern palearctic",
+          "pacific palearctic"
+        ]
+      },
+      "*-rhinocerosunicornis": {
+        "biorealm": [
+          "central palearctic",
+          "eastern palearctic"
+        ]
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "biomes"
+      }
+    ]
+  }
+]

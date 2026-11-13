@@ -1,0 +1,10 @@
+Earth layout: 2269 blocks per degree east-west (49 m per block at the equator), 2275 north-south (stretch 1.00), latitudes shown ±90°, seam gutter 2368 blocks, world centre at 10.8°E.
+  70.47,-79.55       river cols    1638  levels  164..165  ramp cols    118  steps ok    8 bare   0 2+   0  river/lake   0  walls    0  lake walls  66 curtain  23  depth 2:143 3:74 4:152 5:174 6:1095
+  43.08,-79.07       river cols    7169  levels  184..195  ramp cols    855  steps ok    0 bare   0 2+  16  river/lake 161  walls    0  lake walls  67 curtain 128  depth 2:726 3:471 4:359 5:330 6:333 7:357 8:3788 9:407 10:41 11:46 12:38 13:273
+  50.54,-127.01      river cols    1157  levels  164..182  ramp cols    738  steps ok  145 bare   0 2+   0  river/lake  42  walls    0  lake walls 109 curtain  14  depth 2:101 3:88 4:77 5:85 6:806
+  49.20,-121.99      river cols    5267  levels  166..179  ramp cols   1827  steps ok  339 bare   0 2+   7  river/lake  10  walls    0  lake walls  41 curtain  70  depth 1:170 2:1237 3:438 4:318 5:282 6:292 7:355 8:2175
+  48.69,-89.63       river cols    1345  levels  212..222  ramp cols    364  steps ok   35 bare   0 2+   6  river/lake  26  walls    0  lake walls 131 curtain  29  depth 1:8 2:407 3:930
+  51.88,104.82       river cols    5768  levels  167..224  ramp cols   1662  steps ok  338 bare   0 2+ 125  river/lake  44  walls    0  lake walls  86 curtain  50  depth 1:151 2:1891 3:423 4:305 5:272 6:273 7:397 8:696 9:131 10:128 11:173 12:365 13:199 14:31 15:333
+  47.17,8.41         river cols    4962  levels  219..221  ramp cols    268  steps ok   27 bare   0 2+   0  river/lake  23  walls    0  lake walls  58 curtain  23  depth 2:467 3:392 4:345 5:412 6:3346
+  50.19,-122.48      river cols    2500  levels  199..211  ramp cols    507  steps ok  117 bare   0 2+   0  river/lake   1  walls    0  lake walls  20 curtain  14  depth 1:69 2:583 3:272 4:224 5:238 6:1114
+  45.82,9.41         river cols    2994  levels  199..208  ramp cols    415  steps ok   88 bare   0 2+  14  river/lake   5  walls    0  lake walls  23 curtain   6  depth 1:41 2:556 3:290 4:220 5:233 6:1654

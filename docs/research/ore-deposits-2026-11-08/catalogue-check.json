@@ -1,0 +1,452 @@
+{
+ "errors": [],
+ "warnings": [],
+ "crossGroupPairs": [
+  {
+   "a": "base-metals:named:bi-schneeberg",
+   "aName": "Schneeberg (Co-Ni-Bi-Ag veins)",
+   "aLayer": "Bi",
+   "aMt": 3.0,
+   "b": "precious-gems:pg:u-schlema-alberoda",
+   "bName": "Schlema-Alberoda",
+   "bLayer": "U",
+   "bMt": 25.0,
+   "km": 1.9
+  },
+  {
+   "a": "base-metals:named:ag-pribram",
+   "aName": "Příbram (Březové Hory)",
+   "aLayer": "Ag",
+   "aMt": 19.0,
+   "b": "precious-gems:pg:u-pribram",
+   "bName": "Pribram",
+   "bLayer": "U",
+   "bMt": 14.0,
+   "km": 2.7
+  },
+  {
+   "a": "base-metals:usgs-vms-2009:1060",
+   "aName": "Wildcat",
+   "aLayer": "Cu",
+   "aMt": 0.6,
+   "b": "precious-gems:pg:au-baguio",
+   "bName": "Baguio district",
+   "bLayer": "Au",
+   "bMt": 80.0,
+   "km": 0.9
+  },
+  {
+   "a": "base-metals:usgs-vms-2009:628",
+   "aName": "Big Bend",
+   "aLayer": "Zn",
+   "aMt": 0.05,
+   "b": "iron-ferro:usgs-podchrome-2012:210",
+   "bName": "Big Bend",
+   "bLayer": "Cr",
+   "bMt": 9.1e-05,
+   "km": 13.0
+  },
+  {
+   "a": "base-metals:usgs-vms-2009:1277",
+   "aName": "Outokumpu",
+   "aLayer": "Cu",
+   "aMt": 28.0,
+   "b": "precious-gems:pg:ga-outokumpu",
+   "bName": "Outokumpu uvarovite",
+   "bLayer": "garnet",
+   "bMt": 0.1,
+   "km": 1.5
+  },
+  {
+   "a": "base-metals:usgs-vms-2009:939",
+   "aName": "Queen of Bronze",
+   "aLayer": "Cu",
+   "aMt": 0.03,
+   "b": "iron-ferro:usgs-podchrome-2012:435",
+   "bName": "Ali Baba",
+   "bLayer": "Cr",
+   "bMt": 0.000559,
+   "km": 1.8
+  },
+  {
+   "a": "base-metals:usgs-vms-2009:939",
+   "aName": "Queen of Bronze",
+   "aLayer": "Cu",
+   "aMt": 0.03,
+   "b": "iron-ferro:usgs-podchrome-2012:441",
+   "bName": "Happy Camp",
+   "bLayer": "Cr",
+   "bMt": 1e-05,
+   "km": 2.3
+  },
+  {
+   "a": "base-metals:usgs-vms-2009:767",
+   "aName": "Huntingdon",
+   "aLayer": "Cu",
+   "aMt": 1.82,
+   "b": "iron-ferro:usgs-podchrome-2012:513",
+   "bName": "Stark",
+   "bLayer": "Cr",
+   "bMt": 2.7e-05,
+   "km": 2.2
+  },
+  {
+   "a": "base-metals:usgs-gcra-pcu:514",
+   "aName": "Luna-Asiga",
+   "aLayer": "Cu",
+   "aMt": 26.0,
+   "b": "iron-ferro:usgs-laterite-2011:88",
+   "bName": "Agata",
+   "bLayer": "Ni",
+   "bMt": 30.7,
+   "km": 2.9
+  },
+  {
+   "a": "iron-ferro:usgs-podchrome-2012:172",
+   "aName": "Spring Hill",
+   "aLayer": "Cr",
+   "aMt": 1e-05,
+   "b": "precious-gems:pg:au-grass-valley",
+   "bName": "Grass Valley (Empire-North Star-Idaho Maryland)",
+   "bLayer": "Au",
+   "bMt": 30.0,
+   "km": 2.5
+  },
+  {
+   "a": "iron-ferro:usgs-podchrome-2012:173",
+   "aName": "Geach",
+   "aLayer": "Cr",
+   "aMt": 4e-05,
+   "b": "precious-gems:pg:au-grass-valley",
+   "bName": "Grass Valley (Empire-North Star-Idaho Maryland)",
+   "bLayer": "Au",
+   "bMt": 30.0,
+   "km": 2.0
+  },
+  {
+   "a": "base-metals:usgs-vms-2009:637",
+   "aName": "Blue Ledge",
+   "aLayer": "Cu",
+   "aMt": 0.18,
+   "b": "iron-ferro:usgs-podchrome-2012:274",
+   "bName": "Ladd",
+   "bLayer": "Cr",
+   "bMt": 0.005,
+   "km": 2.8
+  },
+  {
+   "a": "base-metals:usgs-vms-2009:637",
+   "aName": "Blue Ledge",
+   "aLayer": "Cu",
+   "aMt": 0.18,
+   "b": "iron-ferro:usgs-podchrome-2012:275",
+   "bName": "Fairview",
+   "bLayer": "Cr",
+   "bMt": 0.005,
+   "km": 2.9
+  },
+  {
+   "a": "base-metals:usgs-vms-2009:891",
+   "aName": "Newton",
+   "aLayer": "Cu",
+   "aMt": 0.15,
+   "b": "iron-ferro:usgs-podchrome-2012:75",
+   "bName": "Courtwright Property",
+   "bLayer": "Cr",
+   "bMt": 9.5e-05,
+   "km": 2.6
+  },
+  {
+   "a": "base-metals:usgs-vms-2009:643",
+   "aName": "Bongbongan",
+   "aLayer": "Cu",
+   "aMt": 0.09,
+   "b": "iron-ferro:usgs-podchrome-2012:1008",
+   "bName": "Tigbatang",
+   "bLayer": "Cr",
+   "bMt": 0.0012,
+   "km": 1.7
+  },
+  {
+   "a": "base-metals:named:pb-peak-district",
+   "aName": "Derbyshire Peak District orefield",
+   "aLayer": "Pb",
+   "aMt": 25.0,
+   "b": "precious-gems:pg:f-derbyshire",
+   "bName": "Derbyshire (Peak District orefield)",
+   "bLayer": "F",
+   "bMt": 15.0,
+   "km": 5.6
+  },
+  {
+   "a": "iron-ferro:iron-ferro:mn-nsuta",
+   "aName": "Nsuta",
+   "aLayer": "Mn",
+   "aMt": 100.0,
+   "b": "precious-gems:pg:au-tarkwa",
+   "bName": "Tarkwa banket reefs",
+   "bLayer": "Au",
+   "bMt": 600.0,
+   "km": 2.5
+  },
+  {
+   "a": "iron-ferro:iron-ferro:ni-kambalda",
+   "aName": "Kambalda dome",
+   "aLayer": "Ni",
+   "aMt": 50.0,
+   "b": "precious-gems:pg:au-st-ives",
+   "bName": "St Ives (Kambalda)",
+   "bLayer": "Au",
+   "bMt": 120.0,
+   "km": 2.9
+  }
+ ],
+ "totals": {
+  "Ag": {
+   "deposits": 56,
+   "areas": 0,
+   "mt": 1582.6,
+   "contained_t": 331058
+  },
+  "Al": {
+   "deposits": 43,
+   "areas": 0,
+   "mt": 33835.0,
+   "contained_t": 15816250000
+  },
+  "Au": {
+   "deposits": 151,
+   "areas": 7,
+   "mt": 56784.3,
+   "contained_t": 83862
+  },
+  "B": {
+   "deposits": 12,
+   "areas": 0,
+   "mt": 3310.0,
+   "contained_t": 640900000
+  },
+  "Bi": {
+   "deposits": 4,
+   "areas": 0,
+   "mt": 53.0,
+   "contained_t": 52568
+  },
+  "C_coal": {
+   "deposits": 0,
+   "areas": 119,
+   "mt": 13931500.0,
+   "contained_t": 0
+  },
+  "C_graphite": {
+   "deposits": 12,
+   "areas": 0,
+   "mt": 1942.4,
+   "contained_t": 187949500
+  },
+  "Cr": {
+   "deposits": 876,
+   "areas": 2,
+   "mt": 15321.2,
+   "contained_t": 687484510
+  },
+  "Cu": {
+   "deposits": 1244,
+   "areas": 94,
+   "mt": 407631.1,
+   "contained_t": 2105697974
+  },
+  "F": {
+   "deposits": 13,
+   "areas": 0,
+   "mt": 442.8,
+   "contained_t": 153950000
+  },
+  "Fe": {
+   "deposits": 116,
+   "areas": 11,
+   "mt": 449454.0,
+   "contained_t": 97866160000
+  },
+  "Hg": {
+   "deposits": 17,
+   "areas": 0,
+   "mt": 78.8,
+   "contained_t": 788700
+  },
+  "K": {
+   "deposits": 0,
+   "areas": 24,
+   "mt": 290050.0,
+   "contained_t": 0
+  },
+  "Mn": {
+   "deposits": 17,
+   "areas": 3,
+   "mt": 23188.0,
+   "contained_t": 1918000000
+  },
+  "Mo": {
+   "deposits": 23,
+   "areas": 0,
+   "mt": 20864.6,
+   "contained_t": 17612140
+  },
+  "NaCl": {
+   "deposits": 39,
+   "areas": 30,
+   "mt": 1003565.0,
+   "contained_t": 0
+  },
+  "Ni": {
+   "deposits": 142,
+   "areas": 0,
+   "mt": 31023.7,
+   "contained_t": 299384404
+  },
+  "P": {
+   "deposits": 1,
+   "areas": 26,
+   "mt": 111900.0,
+   "contained_t": 90000000
+  },
+  "Pb": {
+   "deposits": 48,
+   "areas": 0,
+   "mt": 1521.9,
+   "contained_t": 72580901
+  },
+  "Pt": {
+   "deposits": 9,
+   "areas": 3,
+   "mt": 24645.0,
+   "contained_t": 6235
+  },
+  "S": {
+   "deposits": 8,
+   "areas": 3,
+   "mt": 218702.0,
+   "contained_t": 454994754
+  },
+  "Sb": {
+   "deposits": 8,
+   "areas": 0,
+   "mt": 114.6,
+   "contained_t": 3145000
+  },
+  "SiO2": {
+   "deposits": 8,
+   "areas": 0,
+   "mt": 217.1,
+   "contained_t": 8914950
+  },
+  "Sn": {
+   "deposits": 56,
+   "areas": 0,
+   "mt": 35868.0,
+   "contained_t": 20496250
+  },
+  "Ti": {
+   "deposits": 22,
+   "areas": 0,
+   "mt": 26595.0,
+   "contained_t": 721090000
+  },
+  "U": {
+   "deposits": 30,
+   "areas": 0,
+   "mt": 4628.2,
+   "contained_t": 4227980
+  },
+  "V": {
+   "deposits": 7,
+   "areas": 1,
+   "mt": 10851.4,
+   "contained_t": 781300
+  },
+  "W": {
+   "deposits": 26,
+   "areas": 0,
+   "mt": 2725.0,
+   "contained_t": 7871400
+  },
+  "Zn": {
+   "deposits": 451,
+   "areas": 0,
+   "mt": 10963.8,
+   "contained_t": 551738279
+  },
+  "alum": {
+   "deposits": 12,
+   "areas": 0,
+   "mt": 667.0,
+   "contained_t": 0
+  },
+  "beryl": {
+   "deposits": 3,
+   "areas": 0,
+   "mt": 1.6,
+   "contained_t": 0
+  },
+  "corundum": {
+   "deposits": 13,
+   "areas": 0,
+   "mt": 1932.0,
+   "contained_t": 0
+  },
+  "diamond": {
+   "deposits": 41,
+   "areas": 0,
+   "mt": 14882.5,
+   "contained_t": 0
+  },
+  "emerald": {
+   "deposits": 11,
+   "areas": 0,
+   "mt": 36.7,
+   "contained_t": 0
+  },
+  "garnet": {
+   "deposits": 6,
+   "areas": 0,
+   "mt": 81.4,
+   "contained_t": 0
+  },
+  "gypsum": {
+   "deposits": 4,
+   "areas": 14,
+   "mt": 1800.0,
+   "contained_t": 0
+  },
+  "lapis": {
+   "deposits": 3,
+   "areas": 0,
+   "mt": 1.0,
+   "contained_t": 0
+  },
+  "olivine": {
+   "deposits": 5,
+   "areas": 0,
+   "mt": 2006.5,
+   "contained_t": 0
+  },
+  "spinel": {
+   "deposits": 1,
+   "areas": 0,
+   "mt": 0.2,
+   "contained_t": 0
+  },
+  "topaz": {
+   "deposits": 6,
+   "areas": 0,
+   "mt": 4.7,
+   "contained_t": 0
+  },
+  "tourmaline": {
+   "deposits": 7,
+   "areas": 0,
+   "mt": 23.2,
+   "contained_t": 0
+  }
+ }
+}

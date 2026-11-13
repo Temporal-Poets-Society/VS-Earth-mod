@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "records": 147,
+  "withheld": [
+    {
+      "id": 10937,
+      "layer": 0,
+      "reason": "Invalid source geometry; withheld from display"
+    }
+  ],
+  "acquisition": [
+    {
+      "file": "raw\\pgi-0-selected.geojson",
+      "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/0/query?where=COMMODITY+IN+%28%27sulfur%27%2C%27rock+salts%27%2C%27potassium-magnesium+salts%27%2C%27vein+quartz%27%2C%27quartzitic+schists%27%2C%27quartzites%27%2C%27phosphorites%27%2C%27glass+sands+and+sandstones%27%29+OR+UPPER%28KOPALINA_ALL%29+LIKE+%27%25FLUOR%25%27&outFields=%2A&outSR=4326&f=geojson",
+      "retrieved_utc": "2026-09-29T18:56:27.221741+00:00",
+      "status": "acquired",
+      "bytes": 905049,
+      "sha256": "a1b6b4448ce5556e9d5a2d113cc6be6aa61c5011e36781d442825bafeff236e5"
+    },
+    {
+      "file": "raw\\pgi-0-count.json",
+      "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/0/query?where=COMMODITY+IN+%28%27sulfur%27%2C%27rock+salts%27%2C%27potassium-magnesium+salts%27%2C%27vein+quartz%27%2C%27quartzitic+schists%27%2C%27quartzites%27%2C%27phosphorites%27%2C%27glass+sands+and+sandstones%27%29+OR+UPPER%28KOPALINA_ALL%29+LIKE+%27%25FLUOR%25%27&returnCountOnly=true&f=json",
+      "retrieved_utc": "2026-09-29T18:56:27.221741+00:00",
+      "status": "acquired",
+      "bytes": 13,
+      "sha256": "c850de029030f4729a22a610ba573af0daf449a1b305621e12f029d6dfb89d47"
+    },
+    {
+      "file": "raw\\pgi-3-selected.geojson",
+      "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/3/query?where=COMMODITY+IN+%28%27sulfur%27%2C%27rock+salts%27%2C%27potassium-magnesium+salts%27%2C%27vein+quartz%27%2C%27quartzitic+schists%27%2C%27quartzites%27%2C%27phosphorites%27%2C%27glass+sands+and+sandstones%27%29+OR+UPPER%28KOPALINA%29+LIKE+%27%25FLUOR%25%27&outFields=%2A&outSR=4326&f=geojson",
+      "retrieved_utc": "2026-09-29T18:56:27.222742+00:00",
+      "status": "acquired",
+      "bytes": 37376,
+      "sha256": "22d77fe63487301f14f5e5c57e9e5545082abb6a70b6e5b8301301e8eb0941a6"
+    },
+    {
+      "file": "raw\\pgi-3-count.json",
+      "url": "https://geologia.pgi.gov.pl/srv/rest/services/midas/MapServer/3/query?where=COMMODITY+IN+%28%27sulfur%27%2C%27rock+salts%27%2C%27potassium-magnesium+salts%27%2C%27vein+quartz%27%2C%27quartzitic+schists%27%2C%27quartzites%27%2C%27phosphorites%27%2C%27glass+sands+and+sandstones%27%29+OR+UPPER%28KOPALINA%29+LIKE+%27%25FLUOR%25%27&returnCountOnly=true&f=json",
+      "retrieved_utc": "2026-09-29T18:56:27.222742+00:00",
+      "status": "acquired",
+      "bytes": 12,
+      "sha256": "6ee8a36b3a4c997cf095a065def85314b843303c136e2a9b281fe6e130575905"
+    }
+  ]
+}

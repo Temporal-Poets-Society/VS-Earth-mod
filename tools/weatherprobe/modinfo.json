@@ -1,0 +1,11 @@
+{
+  "type": "code",
+  "modid": "weatherprobe",
+  "name": "Weather contract probe (Earth test tool)",
+  "description": "Reads seacontracts:weather the way a third-party mod would: through api.ObjectCache with .NET base types only. /wprobe on the server, .wprobe on a client. Not for release.",
+  "version": "0.1.0",
+  "side": "Universal",
+  "requiredOnClient": false,
+  "requiredOnServer": false,
+  "dependencies": { "game": "" }
+}

@@ -1,0 +1,27 @@
+{
+  "RegionalOres": true,
+  "GeologyTransitionBlocks": 96,
+  "UpgradeExistingWorldOreRules": false,
+  "UpgradeExistingWorldGeologyRules": false,
+  "Ores": {
+    "BackgroundChance": 0.08,
+    "HotspotChance": 1.0,
+    "FrequencyMultiplier": 0.4,
+    "RadiusMultiplier": 1.6,
+    "ThicknessMultiplier": 1.25,
+    "Concentration": 0.85,
+    "QualityBias": 0.0,
+    "DepthMultiplier": 1.0,
+    "MinDepthBlocks": 0,
+    "MaxDepthBlocks": 0,
+    "MetresPerBlock": 5,
+    "SurfaceFrequencyMultiplier": 1.0,
+    "BogIronChance": 0.025,
+    "BackgroundWeight": 1.0,
+    "EvidenceWeight": 1.0,
+    "CoalBasins": 1.0,
+    "IronFormations": 1.0,
+    "RichDistricts": 1.0,
+    "Resources": {}
+  }
+}

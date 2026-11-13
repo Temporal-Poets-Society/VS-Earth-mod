@@ -1,0 +1,51 @@
+{
+  "installed_at": "2026-10-31 21:40:06 +02:00",
+  "timezone": "Europe/Riga",
+  "earth_version": "0.17.0-pre.16",
+  "installed": [
+    {
+      "file": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\Mods\\earthmap-0.17.0-pre.16.zip",
+      "bytes": 28490129,
+      "sha256": "f8c34a3788e437db992808c3b8edbbb9f9408c894df0d841c039856b9fe425dc",
+      "source": "C:\\VS mods\\Earth\\release\\earthmap-0.17.0-pre.16.zip"
+    },
+    {
+      "file": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\Mods\\earthterraindata-1.0.0.zip",
+      "bytes": 36424452,
+      "sha256": "1ebdbc0a22a862f4b0b078ce3d48b32f37bd6b150cb9d478f25599f1d33d2001",
+      "source": "C:\\VS mods\\Earth\\release\\earthterraindata-1.0.0.zip"
+    },
+    {
+      "file": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\Mods\\earthwaterdata-1.0.0.zip",
+      "bytes": 31583561,
+      "sha256": "edb78da63307ace1c72b3647039369294a57bdc2e9d7f2815d9e5ff9ea907e57",
+      "source": "C:\\VS mods\\Earth\\release\\earthwaterdata-1.0.0.zip"
+    }
+  ],
+  "backup_directory": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\Backups\\earthmap-before-pre16-20261031-214006",
+  "previous_archive": {
+    "file": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\Backups\\earthmap-before-pre16-20261031-214006\\earthmap-0.17.0-pre.14.zip",
+    "sha256": "dae9f5c233cf4cf0de2de3ec1b232cb2ac14d319745018720293534aa07d3179"
+  },
+  "unchanged_settings_sha256": {
+    "ModConfig/earthmap.json": "d240052367b94aebb4d6d69a4f063ad0fdc0857b28ac7a171595544353f2602c",
+    "clientsettings.json": "bf0bb3e0894729cd30a8d3a12098fe65730c258ba82b43e7d3a1f734e0e96a74",
+    "ModConfig/cylinderworld.json": "2f1dae60f66b0fc16135f3e71a2f892a3c6ccfa2d19add55b8b3de6514c07b73",
+    "ModConfig/hydrology.json": "2cc09afbb3acb597fd4aea5046a3a91b03ee5d89049ec1c01933b52a8890f5cf",
+    "ModConfig/sea.json": "0bcb156b30f33d49c52f3853dcfd172ed0538b6cfaad695686c87dca46f1b768"
+  },
+  "unchanged_companions_sha256": {
+    "hydrology-0.6.0.zip": "c48a1272b711d0dc840eac0fe0c204787cc769616bc7e3bd0cd0b41b72d455d2",
+    "cylinderworld-0.11.15-playtest.8.zip": "2f59c6ca03ebf918cdf945d3c344aad88d0acbca985c444c11b5de0488a7136a",
+    "sea-0.4.7-pre.12.zip": "9d828c9d5de945959190c8bc73301ad21f0303340e1642914b069fc1625cd7bc"
+  },
+  "player_saves_touched": false,
+  "game_launched": false,
+  "gameplay_verification": "author confirmed working",
+  "author_feedback": {
+    "date": "2026-10-31",
+    "timezone": "Europe/Riga",
+    "message": "ok it works",
+    "scope": "Author confirms the installed pre.16 build works; detailed coverage was not specified."
+  }
+}

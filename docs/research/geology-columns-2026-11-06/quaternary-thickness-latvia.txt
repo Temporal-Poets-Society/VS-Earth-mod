@@ -1,0 +1,9 @@
+Latvia Quaternary thickness (Popovs et al. 2022, 250 m): cells 1034814, median 21 m, p10 7, p90 67, p99 120, max 219; share <=10 m 20%, <=30 m 66%, >60 m 13%
+  Riga                     median    17 m (range 13-30 within 1 km)
+  Jelgava (Zemgale plain)  median    18 m (range 11-27 within 1 km)
+  Staicele                 median    11 m (range 0-19 within 1 km)
+  Liepaja                  median    12 m (range 7-18 within 1 km)
+  Saldus/Broceni           median    20 m (range 4-37 within 1 km)
+  Daugavpils               median    70 m (range 52-90 within 1 km)
+  Gulbene (upland)         median    27 m (range 18-38 within 1 km)
+  Cesis (Gauja)            median     8 m (range 0-26 within 1 km)

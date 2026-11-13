@@ -1,0 +1,148 @@
+{
+  "created": "2020-02-28T17:44:44.459133+02:00",
+  "modified": "2020-02-29T09:21:08.705302+02:00",
+  "id": 3690867,
+  "conceptrecid": "1250503",
+  "doi": "10.5281/zenodo.3690867",
+  "conceptdoi": "10.5281/zenodo.1250503",
+  "doi_url": "https://doi.org/10.5281/zenodo.3690867",
+  "metadata": {
+    "title": "MegaPast2Future/PHYLACINE_1.2: PHYLACINE Version 1.2.1",
+    "doi": "10.5281/zenodo.3690867",
+    "publication_date": "2020-02-28",
+    "description": "<p>This is an update to PHYLACINE: The Phylogenetic Atlas of Mammal Macroecology.</p>\n\n<p>This updated version of the PHYLACINE database corrects several errors and should be used over the original version.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Søren Faurby",
+        "affiliation": "University of Gothenburg",
+        "orcid": "0000-0002-2974-2628"
+      },
+      {
+        "name": "Rasmus Ø Pedersen",
+        "affiliation": "Aarhus University",
+        "orcid": "0000-0001-8538-8646"
+      },
+      {
+        "name": "Matt Davis",
+        "affiliation": "Aarhus University",
+        "orcid": "0000-0002-5949-3044"
+      },
+      {
+        "name": "Simon D. Schowanek",
+        "affiliation": "Aarhus University",
+        "orcid": "0000-0001-6036-7507"
+      },
+      {
+        "name": "Scott Jarvie",
+        "affiliation": "Aarhus University",
+        "orcid": "0000-0002-0086-2351"
+      },
+      {
+        "name": "Alexandre Antonelli",
+        "affiliation": "University of Gothenburg",
+        "orcid": "0000-0003-1842-9297"
+      },
+      {
+        "name": "Jens-Christian Svenning",
+        "affiliation": "Aarhus University",
+        "orcid": "0000-0002-3415-0862"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/MegaPast2Future/PHYLACINE_1.2/tree/v1.2.1",
+        "relation": "isSupplementTo",
+        "scheme": "url"
+      }
+    ],
+    "version": "v1.2.1",
+    "resource_type": {
+      "title": "Software",
+      "type": "software"
+    },
+    "license": {
+      "id": "other-open"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 1,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "1250503"
+          }
+        }
+      ]
+    }
+  },
+  "title": "MegaPast2Future/PHYLACINE_1.2: PHYLACINE Version 1.2.1",
+  "links": {
+    "self": "https://zenodo.org/api/records/3690867",
+    "self_html": "https://zenodo.org/records/3690867",
+    "preview_html": "https://zenodo.org/records/3690867?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.3690867",
+    "self_doi": "https://doi.org/10.5281/zenodo.3690867",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.3690867",
+    "reserve_doi": "https://zenodo.org/api/records/3690867/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/1250503",
+    "parent_html": "https://zenodo.org/records/1250503",
+    "parent_doi": "https://doi.org/10.5281/zenodo.1250503",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.1250503",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:3690867/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:3690867/sequence/default",
+    "files": "https://zenodo.org/api/records/3690867/files",
+    "media_files": "https://zenodo.org/api/records/3690867/media-files",
+    "archive": "https://zenodo.org/api/records/3690867/files-archive",
+    "archive_media": "https://zenodo.org/api/records/3690867/media-files-archive",
+    "latest": "https://zenodo.org/api/records/3690867/versions/latest",
+    "latest_html": "https://zenodo.org/records/3690867/latest",
+    "versions": "https://zenodo.org/api/records/3690867/versions",
+    "draft": "https://zenodo.org/api/records/3690867/draft",
+    "access_links": "https://zenodo.org/api/records/3690867/access/links",
+    "access_grants": "https://zenodo.org/api/records/3690867/access/grants",
+    "access_users": "https://zenodo.org/api/records/3690867/access/users",
+    "access_request": "https://zenodo.org/api/records/3690867/access/request",
+    "access": "https://zenodo.org/api/records/3690867/access",
+    "communities": "https://zenodo.org/api/records/3690867/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/3690867/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/3690867/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/3690867/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/3690867/quota-increase",
+    "requests": "https://zenodo.org/api/records/3690867/requests"
+  },
+  "updated": "2020-02-29T09:21:08.705302+02:00",
+  "recid": "3690867",
+  "revision": 2,
+  "files": [
+    {
+      "id": "45e56527-966c-4c66-be49-5ff2abf84fba",
+      "key": "PHYLACINE_v1.2.1.zip",
+      "size": 106362537,
+      "checksum": "md5:3add4a5ec5954754e7bc1bad0b044f1c",
+      "links": {
+        "self": "https://zenodo.org/api/records/3690867/files/PHYLACINE_v1.2.1.zip/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "92050"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 717,
+    "unique_downloads": 661,
+    "views": 3992,
+    "unique_views": 3748,
+    "version_downloads": 392,
+    "version_unique_downloads": 355,
+    "version_unique_views": 1715,
+    "version_views": 1827
+  },
+  "state": "done",
+  "submitted": true
+}

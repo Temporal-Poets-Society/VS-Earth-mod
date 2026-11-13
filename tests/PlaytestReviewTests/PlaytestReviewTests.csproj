@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings></PropertyGroup>
+  <ItemGroup><Compile Include="../../src/Core/*.cs" Link="Core/%(Filename)%(Extension)" /></ItemGroup>
+  <ItemGroup><Compile Include="../RegionalTreesTests/Harness.cs" Link="Harness.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="../../tools/PeakBake/GeoNamesBake.cs" Link="GeoNamesBake.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="../../src/EarthParams.cs" Link="EarthParams.cs" /><Compile Include="../../src/EarthMapConfig.cs" Link="EarthMapConfig.cs" /></ItemGroup>
+</Project>

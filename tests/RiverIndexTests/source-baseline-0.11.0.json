@@ -1,0 +1,231 @@
+{
+  "archive": "C:\\VS mods\\Earth\\release\\earthmap-0.11.0.zip",
+  "matching": 20,
+  "mismatched": 7,
+  "missing": 0,
+  "extraSourceFiles": [
+    "src/EarthOreContent.cs",
+    "src/EarthOreGenerator.cs",
+    "src/EarthOres.cs",
+    "src/Core/GeologyTransitions.cs",
+    "src/Core/RegionalOreCatalog.cs"
+  ],
+  "files": [
+    {
+      "relative": "src/ClientMapRaceFix.cs",
+      "original": "C:\\VS mods\\Earth\\src\\ClientMapRaceFix.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "be5fc4074a5e6c8b999ae9f83c7c13b730d3daec66f74baba13b099829899d90",
+      "actual": "be5fc4074a5e6c8b999ae9f83c7c13b730d3daec66f74baba13b099829899d90",
+      "matches": true
+    },
+    {
+      "relative": "src/Core/EarthData.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\EarthData.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "efa232034607864399cb124a1837e9c92bb90e00bf7b152850daf35330f236ee",
+      "actual": "efa232034607864399cb124a1837e9c92bb90e00bf7b152850daf35330f236ee",
+      "matches": true
+    },
+    {
+      "relative": "src/Core/EarthGeometry.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\EarthGeometry.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "5fe643495a5c250d90b9666bf718201d70c7f343a29b6570b0d1f138a9a5b1af",
+      "actual": "5fe643495a5c250d90b9666bf718201d70c7f343a29b6570b0d1f138a9a5b1af",
+      "matches": true
+    },
+    {
+      "relative": "src/Core/EarthLayout.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\EarthLayout.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "2fc8f44015b970594d7e6b8019304cad03e57a876229db4ce444d8f4393625cc",
+      "actual": "2fc8f44015b970594d7e6b8019304cad03e57a876229db4ce444d8f4393625cc",
+      "matches": true
+    },
+    {
+      "relative": "src/Core/Noise.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\Noise.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "6e57b2427e76e4aa0c4b4c199d894e437faf90fc123ecaf6ebe9f57658de8fa6",
+      "actual": "6e57b2427e76e4aa0c4b4c199d894e437faf90fc123ecaf6ebe9f57658de8fa6",
+      "matches": true
+    },
+    {
+      "relative": "src/Core/Png.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\Png.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "96f24e03d952656a8527e1247169b68e61cc4592bc2516d668838d63fd64eed7",
+      "actual": "96f24e03d952656a8527e1247169b68e61cc4592bc2516d668838d63fd64eed7",
+      "matches": true
+    },
+    {
+      "relative": "src/Core/RegionalFaunaCatalog.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\RegionalFaunaCatalog.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "8da6458377d0750612f1f4d38eb23a55f58dde19710951a45ba707c384cfa0d3",
+      "actual": "8da6458377d0750612f1f4d38eb23a55f58dde19710951a45ba707c384cfa0d3",
+      "matches": true
+    },
+    {
+      "relative": "src/Core/RegionalFaunaClimate.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\RegionalFaunaClimate.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "c67db7a2a9419dc618029a4b50f348eff26f0ec57c83963b9d5fcfca24c57e88",
+      "actual": "c67db7a2a9419dc618029a4b50f348eff26f0ec57c83963b9d5fcfca24c57e88",
+      "matches": true
+    },
+    {
+      "relative": "src/Core/RegionalGeologyCatalog.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\RegionalGeologyCatalog.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "17804e3aef06e4673f732314f2e55a206121335a085d8c4e6fc1203985baf426",
+      "actual": "8407c48510587fe4fa2fb1e1946fcabfc133f6fe7372ddf01dd15dbc6692441e",
+      "matches": false
+    },
+    {
+      "relative": "src/Core/RegionalGeologyCompatibility.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\RegionalGeologyCompatibility.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "6667f20afc417a288a029dd7e33a4e91e30d2ab7cab1b2637c503565cd97b0b6",
+      "actual": "6667f20afc417a288a029dd7e33a4e91e30d2ab7cab1b2637c503565cd97b0b6",
+      "matches": true
+    },
+    {
+      "relative": "src/Core/RegionalTreeCatalog.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\RegionalTreeCatalog.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "91d21c71ba32dbb593703f26c00a456608d4142228973ea79282c29b27838141",
+      "actual": "91d21c71ba32dbb593703f26c00a456608d4142228973ea79282c29b27838141",
+      "matches": true
+    },
+    {
+      "relative": "src/Core/RiverAudit.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\RiverAudit.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "c999ccc08f5ac9a014b9f079f21500220a096b04da057615504bb145d65d6987",
+      "actual": "c999ccc08f5ac9a014b9f079f21500220a096b04da057615504bb145d65d6987",
+      "matches": true
+    },
+    {
+      "relative": "src/Core/RiverNetwork.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\RiverNetwork.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "6fc3c1cce33c17e6ddc823e9c736723b77605dfe68c4a381b4c8602be8c86b2b",
+      "actual": "8d8c2ea18f32ab8fab7331b1816892ea70811f71e8a3f031233ca7e49908b106",
+      "matches": false
+    },
+    {
+      "relative": "src/Core/RiverStraighten.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\RiverStraighten.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "79f1c65d8e9f2c98392756e35a573aa772fe5c4d9e7fd978882bc3f5f6897c65",
+      "actual": "79f1c65d8e9f2c98392756e35a573aa772fe5c4d9e7fd978882bc3f5f6897c65",
+      "matches": true
+    },
+    {
+      "relative": "src/Core/TerrainModel.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\TerrainModel.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "40cf20615f99bed8699e057b9e1af1ec0a1b2d90cc9f94b38cc8ac839aa60ba9",
+      "actual": "40cf20615f99bed8699e057b9e1af1ec0a1b2d90cc9f94b38cc8ac839aa60ba9",
+      "matches": true
+    },
+    {
+      "relative": "src/Core/TerrainReservations.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\TerrainReservations.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "985da13f4c27dcc091c10728c137ab6c972d46a14cd97eb8b43f9dba4edd64f8",
+      "actual": "985da13f4c27dcc091c10728c137ab6c972d46a14cd97eb8b43f9dba4edd64f8",
+      "matches": true
+    },
+    {
+      "relative": "src/Core/VerticalScale.cs",
+      "original": "C:\\VS mods\\Earth\\src\\Core\\VerticalScale.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "1887c8a2d3c27b303cbbfcd597d1dc51d9bc80247097112cd0dbca5eb64c9fd4",
+      "actual": "1887c8a2d3c27b303cbbfcd597d1dc51d9bc80247097112cd0dbca5eb64c9fd4",
+      "matches": true
+    },
+    {
+      "relative": "src/CylinderCompat.cs",
+      "original": "C:\\VS mods\\Earth\\src\\CylinderCompat.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "355d191bfb65fdd9cdec107c121364c05e034288e83197f4cf3f2964e55779f9",
+      "actual": "355d191bfb65fdd9cdec107c121364c05e034288e83197f4cf3f2964e55779f9",
+      "matches": true
+    },
+    {
+      "relative": "src/EarthFauna.cs",
+      "original": "C:\\VS mods\\Earth\\src\\EarthFauna.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "be150276f454d9f15a42213d612d23c4423ebcf5a7a3cb6f2993c1ec90e5a30e",
+      "actual": "be150276f454d9f15a42213d612d23c4423ebcf5a7a3cb6f2993c1ec90e5a30e",
+      "matches": true
+    },
+    {
+      "relative": "src/EarthGeology.cs",
+      "original": "C:\\VS mods\\Earth\\src\\EarthGeology.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "bd589b64c11edb90f5ae8021534b3dd7ad287a003187db316ba6fc4ed6edb734",
+      "actual": "3ac3c32499dc5631d54a62143264b2343a4a4e75c3e8ce7bda6d3883161b0631",
+      "matches": false
+    },
+    {
+      "relative": "src/EarthMapConfig.cs",
+      "original": "C:\\VS mods\\Earth\\src\\EarthMapConfig.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "af4aaa07f62a4ebb939b30e3bad62608ac2157976bcce4529967b83bbbc9f787",
+      "actual": "a0d4aa30fae1728535e8b43757047ef5e6c683169d6e618b8b5818a096422dca",
+      "matches": false
+    },
+    {
+      "relative": "src/EarthMapSystem.cs",
+      "original": "C:\\VS mods\\Earth\\src\\EarthMapSystem.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "e0da121ba7a325b9de668ee7d3b78c5ac372572d23866a223d682111534dfa15",
+      "actual": "ef3bed69771d12ae752a32fb81734336d84d7a31b50de3d9ef7438df14b580a1",
+      "matches": false
+    },
+    {
+      "relative": "src/EarthParams.cs",
+      "original": "C:\\VS mods\\Earth\\src\\EarthParams.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "eb45ef3f776bb08123bf34b97253c1a189503f6e80b209160da9361a3e861036",
+      "actual": "b08cd7b0a3907cfdd11db351ced3df1517fd75983b0902b9f33624cac2131102",
+      "matches": false
+    },
+    {
+      "relative": "src/EarthTrees.cs",
+      "original": "C:\\VS mods\\Earth\\src\\EarthTrees.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "4dbc4689445c243653bfdde80d3975986778f015cbfec2f0d08cf54d1a9a0f36",
+      "actual": "4dbc4689445c243653bfdde80d3975986778f015cbfec2f0d08cf54d1a9a0f36",
+      "matches": true
+    },
+    {
+      "relative": "src/EarthWorldGen.cs",
+      "original": "C:\\VS mods\\Earth\\src\\EarthWorldGen.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "db46dfe0059e63d8b0217bb3e5fdcc0a43f7fed2b5db1622dc21f31a09e7b612",
+      "actual": "db46dfe0059e63d8b0217bb3e5fdcc0a43f7fed2b5db1622dc21f31a09e7b612",
+      "matches": true
+    },
+    {
+      "relative": "src/SelfTest.cs",
+      "original": "C:\\VS mods\\Earth\\src\\SelfTest.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "b1a5a4bbb8cb4183c15629fb222fc3f2688177b45d4ab04f08ac2f16a6a5d78b",
+      "actual": "aec29bb38abec04d47e83ce69f5c25ab546d2890d454a50f59f41881d4ebe477",
+      "matches": false
+    },
+    {
+      "relative": "src/StoryPlacer.cs",
+      "original": "C:\\VS mods\\Earth\\src\\StoryPlacer.cs",
+      "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16",
+      "expected": "3d422988addffbeb346d62b844a2e66b7d9095d2beb641623b58ce672f91ffdd",
+      "actual": "3d422988addffbeb346d62b844a2e66b7d9095d2beb641623b58ce672f91ffdd",
+      "matches": true
+    }
+  ]
+}

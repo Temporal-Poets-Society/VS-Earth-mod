@@ -1,0 +1,17 @@
+{
+	// Ranges proposal, step 5a (docs/research/ranges-2026-11-07/README.md): the share of vanilla's tall grass that dry land
+	// keeps, by the real aridity index (precipitation / potential evapotranspiration), the value soil rule 0048 reads.
+	// Interpolated in log aridity; the end knots hold beyond the ends. Vanilla still chooses where grass grows and how tall;
+	// below an aridity of 0.2 there is no soil (0048), so no tall grass either way.
+	// The knots are a look, not a measurement: plant cover falls steeply as land gets drier than an aridity index of about
+	// 0.5 (Berdugo et al. 2020, Science 367, "Global ecosystem thresholds driven by aridity"). Tuned in game.
+	// New worlds only (EarthParams.GroundCoverRules). The author, 7 November 2026: "New worlds sure."
+	"version": 1,
+	"tallGrassKept": [
+		{ "aridity": 0.05, "kept": 0 },
+		{ "aridity": 0.2, "kept": 0.15 },
+		{ "aridity": 0.3, "kept": 0.3 },
+		{ "aridity": 0.5, "kept": 0.7 },
+		{ "aridity": 0.75, "kept": 1 }
+	]
+}

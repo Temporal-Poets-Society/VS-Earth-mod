@@ -1,0 +1,153 @@
+{
+  "baseline": "earthmap-0.12.0.zip",
+  "candidate": "earthmap-0.12.1.zip",
+  "assemblyIdentity": "EarthMap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "fileVersion": "0.12.1.0",
+  "modVersion": "0.12.1",
+  "changedEntries": [
+    "EarthMap.dll",
+    "EarthMap.pdb",
+    "modinfo.json"
+  ],
+  "extraEntries": [],
+  "entries": [
+    {
+      "path": "EarthMap.dll",
+      "oldSha256": "625319579729C15C8BA015C84550910365D0EDFD75378243CA64A0299A388318",
+      "newSha256": "C30580FCECA8BC3ACCC492FC4C69EC55E51C669DC3AEBDFA8B8331E928B684AC",
+      "identical": false
+    },
+    {
+      "path": "EarthMap.pdb",
+      "oldSha256": "F5EC59380080771B7747B804FE41E7FF143BD4C04F74D8C8BDEC938B368F1465",
+      "newSha256": "884ACEF36A72CC2C9A2DA7D1A759D966772D269A3826016BD08128A1F263FCAC",
+      "identical": false
+    },
+    {
+      "path": "modinfo.json",
+      "oldSha256": "A34457260E21A8364C24B4238479C05161217E246542667D2151709580EFB842",
+      "newSha256": "6301EC21187F0A9B05CB1191F573F5F1C41E7484C24B9C7161DCEF6158F9B5FD",
+      "identical": false
+    },
+    {
+      "path": "earthdata/ATTRIBUTION.txt",
+      "oldSha256": "A293220BCE75C5FA34B31CE97E4CC876811174D2B84F52AA390C52DDA2DF962E",
+      "newSha256": "A293220BCE75C5FA34B31CE97E4CC876811174D2B84F52AA390C52DDA2DF962E",
+      "identical": true
+    },
+    {
+      "path": "earthdata/climate.bin",
+      "oldSha256": "D3AF81BAB0CC3C4F2E1D03E82C5F07D0527CBD9F21D0D97D61D4701AC98B7395",
+      "newSha256": "D3AF81BAB0CC3C4F2E1D03E82C5F07D0527CBD9F21D0D97D61D4701AC98B7395",
+      "identical": true
+    },
+    {
+      "path": "earthdata/earth.json",
+      "oldSha256": "01DAB32F0A7CB98B82CB9348EA63C82882DAA80FCB5624A4921245C2E9BBE986",
+      "newSha256": "01DAB32F0A7CB98B82CB9348EA63C82882DAA80FCB5624A4921245C2E9BBE986",
+      "identical": true
+    },
+    {
+      "path": "earthdata/rivers.bin",
+      "oldSha256": "AAEBDA1D8ABF95A75E740C1D21774AA360419582BF774A4FCDDA21E73446A8B5",
+      "newSha256": "AAEBDA1D8ABF95A75E740C1D21774AA360419582BF774A4FCDDA21E73446A8B5",
+      "identical": true
+    },
+    {
+      "path": "earthdata/terrain.bin",
+      "oldSha256": "E733CCA42AC825C13005482A87F4ABF2147480BCB7C41F5C2ABBC71CDE1E4640",
+      "newSha256": "E733CCA42AC825C13005482A87F4ABF2147480BCB7C41F5C2ABBC71CDE1E4640",
+      "identical": true
+    },
+    {
+      "path": "assets/earthmap/blocktypes/bogpeat.json",
+      "oldSha256": "7149987C8D13DAE08059836A960A80AD8FFE0B531137CBD79F9C963F1A293355",
+      "newSha256": "7149987C8D13DAE08059836A960A80AD8FFE0B531137CBD79F9C963F1A293355",
+      "identical": true
+    },
+    {
+      "path": "assets/earthmap/config/fauna-attribution.txt",
+      "oldSha256": "6BE13CAA75005C5CFA297343C2EB9C442FB656D6DAD1639927D914DA6D1050BD",
+      "newSha256": "6BE13CAA75005C5CFA297343C2EB9C442FB656D6DAD1639927D914DA6D1050BD",
+      "identical": true
+    },
+    {
+      "path": "assets/earthmap/config/fauna-species.json",
+      "oldSha256": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+      "newSha256": "CCE94AA4FE47BE9C25F4A6FDC499FB17BADFE19B583524C77A41B84FD13CA29A",
+      "identical": true
+    },
+    {
+      "path": "assets/earthmap/config/geology-attribution.txt",
+      "oldSha256": "9FC5B55241532C124D1992ED8071CB2BEFDBB4711A6F852E34D0D3315C9999AA",
+      "newSha256": "9FC5B55241532C124D1992ED8071CB2BEFDBB4711A6F852E34D0D3315C9999AA",
+      "identical": true
+    },
+    {
+      "path": "assets/earthmap/config/geology-grids-v1.json",
+      "oldSha256": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+      "newSha256": "D4D6816864E0D6D5F8CB7567B10E4EE695806F64033DA2A326E8D5AC6A970EE9",
+      "identical": true
+    },
+    {
+      "path": "assets/earthmap/config/geology-rules-v1.json",
+      "oldSha256": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E",
+      "newSha256": "52D2C7CA136480FEBD3BD717BFFB04C7DC148E6A8625EC866C8F2AF4931E254E",
+      "identical": true
+    },
+    {
+      "path": "assets/earthmap/config/ore-heatmaps-SOURCES.txt",
+      "oldSha256": "C79AC17FFB98CDB9009ED9858DA172078B0710161113ECBB631B1EE18C98BBC4",
+      "newSha256": "C79AC17FFB98CDB9009ED9858DA172078B0710161113ECBB631B1EE18C98BBC4",
+      "identical": true
+    },
+    {
+      "path": "assets/earthmap/config/ore-heatmaps-v1.json",
+      "oldSha256": "20C02C4032446EC96E71721BCCD8D42CBD483316159989939906F4E8560F2BC9",
+      "newSha256": "20C02C4032446EC96E71721BCCD8D42CBD483316159989939906F4E8560F2BC9",
+      "identical": true
+    },
+    {
+      "path": "assets/earthmap/config/regionaltrees.json",
+      "oldSha256": "E9051B11DA371471A785CE34F85CE26BC800E6DCE619ADED70C30AFDC87F93F1",
+      "newSha256": "E9051B11DA371471A785CE34F85CE26BC800E6DCE619ADED70C30AFDC87F93F1",
+      "identical": true
+    },
+    {
+      "path": "assets/earthmap/config/TREE-DATA-ATTRIBUTION.txt",
+      "oldSha256": "C8025B47DDD82BA2882A1F1C5E1013E54B863913189AC6EE9F1BFDEB81541C45",
+      "newSha256": "C8025B47DDD82BA2882A1F1C5E1013E54B863913189AC6EE9F1BFDEB81541C45",
+      "identical": true
+    },
+    {
+      "path": "assets/earthmap/config/treeregions.json",
+      "oldSha256": "764B5A5419EA0EA2956153CD741457F8F42CB2F4F182B6609DB7CD6F4964BF74",
+      "newSha256": "764B5A5419EA0EA2956153CD741457F8F42CB2F4F182B6609DB7CD6F4964BF74",
+      "identical": true
+    },
+    {
+      "path": "assets/earthmap/lang/en.json",
+      "oldSha256": "ED24FEAD13B876351D8CC0D0052F5A5AC1F19B6118E63298467596C4290F0259",
+      "newSha256": "ED24FEAD13B876351D8CC0D0052F5A5AC1F19B6118E63298467596C4290F0259",
+      "identical": true
+    }
+  ],
+  "hashes": [
+    {
+      "Path": "C:\\VS mods\\Earth\\release\\earthmap-0.11.0.zip",
+      "Hash": "3AD6E7F4ECBC352CA8C323E9127352E37789B0D9B35F99AA6B1927D3F69B067F"
+    },
+    {
+      "Path": "C:\\VS mods\\Earth\\release\\earthmap-0.12.0.zip",
+      "Hash": "1A2EB7A459484C6287C5FD94C2957B3D9EF5B974743E5892476A51B1ADB1B3E5"
+    },
+    {
+      "Path": "C:\\VS mods\\Earth\\release\\earthmap-0.12.1.zip",
+      "Hash": "C2B432F86157C78B11E7103846E98A0BFCD561A795DF0D1464CEB5BEF36E6081"
+    },
+    {
+      "Path": "C:\\VS mods\\Earth\\obj\\river-index-0.12.1\\bin\\RiverIndex\\mod\\EarthMap.dll",
+      "Hash": "C30580FCECA8BC3ACCC492FC4C69EC55E51C669DC3AEBDFA8B8331E928B684AC"
+    }
+  ]
+}

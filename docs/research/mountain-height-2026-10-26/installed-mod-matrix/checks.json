@@ -1,0 +1,48 @@
+[
+  {
+    "Case": "K",
+    "Height": 384,
+    "Repeat": 1,
+    "Detail": "half",
+    "AssemblySHA256": "2BA62FEC81B1226E856070C34AE7B118F4C8DF0FD57DD3FC3F4C5A824C4059BF",
+    "ExpectedSites": 14,
+    "ReportedSites": 14,
+    "Pass": false,
+    "Errors": [
+      "26.10.2026 23:22:59 [Error] Failed to find language folder: C:\\Users\\andri\\.codex\\worktrees\\mountain-height-playtest\\Earth\\testruns\\mountain-followup-installed-mods-K-h384-r1\\Cache\\unpack\\hydrology-0.1.11.zip_baa1f81ca9cd\\assets\\game\\lang\r"
+    ],
+    "VerticalChecks": [
+      "world 512000 x 204800 x 384, sea level 128",
+      "terrain profile: 128/balanced/half; curve=6000; detail=0.5; ecology=True; rock=True; climate=2; API sea=128; helper sea=128",
+      "vertical sea agreement: PASS; Earth=128, Cylinder=128",
+      "vertical climate 35.36,138.73: helper=-2.65, Earth=-2.43, PASS",
+      "vertical climate 27.99,86.93: helper=-17.54, Earth=-17.50, PASS",
+      "vertical climate 9.03,38.74: helper=16.20, Earth=16.26, PASS",
+      "vertical climate 56.95,24.1: helper=6.59, Earth=6.79, PASS",
+      "vertical climate helpers: PASS"
+    ]
+  },
+  {
+    "Case": "K",
+    "Height": 512,
+    "Repeat": 1,
+    "Detail": "half",
+    "AssemblySHA256": "2BA62FEC81B1226E856070C34AE7B118F4C8DF0FD57DD3FC3F4C5A824C4059BF",
+    "ExpectedSites": 14,
+    "ReportedSites": 14,
+    "Pass": false,
+    "Errors": [
+      "26.10.2026 23:25:30 [Error] Failed to find language folder: C:\\Users\\andri\\.codex\\worktrees\\mountain-height-playtest\\Earth\\testruns\\mountain-followup-installed-mods-K-h512-r1\\Cache\\unpack\\hydrology-0.1.11.zip_baa1f81ca9cd\\assets\\game\\lang\r"
+    ],
+    "VerticalChecks": [
+      "world 512000 x 204800 x 512, sea level 128",
+      "terrain profile: 128/balanced/half; curve=6000; detail=0.5; ecology=True; rock=True; climate=2; API sea=128; helper sea=128",
+      "vertical sea agreement: PASS; Earth=128, Cylinder=128",
+      "vertical climate 35.36,138.73: helper=-2.62, Earth=-2.40, PASS",
+      "vertical climate 27.99,86.93: helper=-17.76, Earth=-17.72, PASS",
+      "vertical climate 9.03,38.74: helper=16.12, Earth=16.18, PASS",
+      "vertical climate 56.95,24.1: helper=6.59, Earth=6.79, PASS",
+      "vertical climate helpers: PASS"
+    ]
+  }
+]

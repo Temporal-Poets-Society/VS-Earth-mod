@@ -1,0 +1,116 @@
+[
+  {
+    "id": "ngwenya",
+    "commodity": "Fe",
+    "place": "Ngwenya, Eswatini",
+    "period": "Prehistoric pigment extraction; later iron metallurgy",
+    "evidence": "State heritage nomination distinguishes hematite/specularite ochre extraction from later iron-ore mining. Do not treat the earliest pigments as smelted iron.",
+    "source_urls": [
+      "https://whc.unesco.org/en/tentativelists/5421/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11502791/"
+    ],
+    "geometry": null,
+    "spatial_status": "No validated extraction-footprint geometry imported",
+    "early_accessibility": null,
+    "generation_ready": false
+  },
+  {
+    "id": "las-medulas",
+    "commodity": "Au",
+    "place": "Las Medulas, Spain",
+    "period": "Roman, first to early third centuries CE",
+    "evidence": "Hydraulic washing of gold-bearing conglomerate documents a secondary source and a former landscape changed by mining. Heritage boundaries include tailings/infrastructure and are not an ore-body outline.",
+    "source_urls": [
+      "https://whc.unesco.org/en/list/803"
+    ],
+    "geometry": null,
+    "spatial_status": "No validated extraction-footprint geometry imported",
+    "early_accessibility": null,
+    "generation_ready": false
+  },
+  {
+    "id": "iwami-ginzan",
+    "commodity": "Ag",
+    "place": "Iwami Ginzan, Japan",
+    "period": "Sixteenth to twentieth centuries",
+    "evidence": "Mine, processing and transport remains document extraction; does not prove native silver as the mineral or Bronze-Age accessibility.",
+    "source_urls": [
+      "https://whc.unesco.org/en/list/1246"
+    ],
+    "geometry": null,
+    "spatial_status": "No validated extraction-footprint geometry imported",
+    "early_accessibility": null,
+    "generation_ready": false
+  },
+  {
+    "id": "almaden",
+    "commodity": "Hg",
+    "place": "Almaden, Spain",
+    "period": "Ancient through modern mining history",
+    "evidence": "Long-lived mercury extraction documented by the heritage assessment. Exact source mineral/footprint requires geological record joining.",
+    "source_urls": [
+      "https://whc.unesco.org/en/decisions/4810"
+    ],
+    "geometry": null,
+    "spatial_status": "No validated extraction-footprint geometry imported",
+    "early_accessibility": null,
+    "generation_ready": false
+  },
+  {
+    "id": "idrija",
+    "commodity": "Hg",
+    "place": "Idrija, Slovenia",
+    "period": "Medieval through modern mining history",
+    "evidence": "Historical mercury mining; keep separate from locations where mercury was used to process imported silver/gold.",
+    "source_urls": [
+      "https://whc.unesco.org/en/decisions/4810"
+    ],
+    "geometry": null,
+    "spatial_status": "No validated extraction-footprint geometry imported",
+    "early_accessibility": null,
+    "generation_ready": false
+  },
+  {
+    "id": "hallstatt",
+    "commodity": "NaCl",
+    "place": "Hallstatt, Austria",
+    "period": "Bronze and Iron Age underground salt extraction",
+    "evidence": "Excavating museum reports salt under roughly 30m of salt-free cover; historical extraction does not mean surface halite. Earlier brine collection is plausible but not directly demonstrated there.",
+    "source_urls": [
+      "https://www.nhm-wien.ac.at/hallstatt/en/salt_mine/beginnings",
+      "https://www.nhm-wien.ac.at/hallstatt/fundort"
+    ],
+    "geometry": null,
+    "spatial_status": "No validated extraction-footprint geometry imported",
+    "early_accessibility": null,
+    "generation_ready": false
+  },
+  {
+    "id": "wieliczka-bochnia",
+    "commodity": "NaCl",
+    "place": "Wieliczka and Bochnia, Poland",
+    "period": "Thirteenth century onwards",
+    "evidence": "Historical rock-salt mining in a shared geological deposit; natural extent and accessible depth remain to be mapped.",
+    "source_urls": [
+      "https://whc.unesco.org/en/list/0032/"
+    ],
+    "geometry": null,
+    "spatial_status": "No validated extraction-footprint geometry imported",
+    "early_accessibility": null,
+    "generation_ready": false
+  },
+  {
+    "id": "peak-alum",
+    "commodity": "alum",
+    "place": "Peak works, North Yorkshire, England",
+    "period": "Post-medieval / early industrial",
+    "evidence": "Alum was manufactured from quarried shale by calcination and chemical processing. This is feedstock evidence, not a natural deposit of game alum crystals.",
+    "source_urls": [
+      "https://historicengland.org.uk/listing/the-list/list-entry/1018146"
+    ],
+    "geometry": null,
+    "spatial_status": "No validated extraction-footprint geometry imported",
+    "early_accessibility": null,
+    "generation_ready": false
+  }
+]

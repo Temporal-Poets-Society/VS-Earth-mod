@@ -1,0 +1,131 @@
+{
+ "code": "gem",
+ "class": "ItemGem",
+ "behaviors": [
+  {
+   "name": "GroundStorable",
+   "properties": {
+    "layout": "Messy12",
+    "collisionBox": {
+     "x1": 0,
+     "y1": 0,
+     "z1": 0,
+     "x2": 1,
+     "y2": 0.125,
+     "z2": 1
+    }
+   }
+  }
+ ],
+ "maxstacksize": 64,
+ "attributes": {
+  "handbook": {
+   "groupBy": [
+    "gem-*-{ore}"
+   ],
+   "extraSections": [
+    {
+     "title": "earth:handbooktitle-mineral",
+     "text": "earth:handbooktext-mineral-{ore}"
+    }
+   ]
+  },
+  "displaycaseable": true,
+  "shelvable": true,
+  "displayable": {
+   "shelf": {
+    "size": {
+     "width": 2,
+     "height": 2,
+     "length": 2
+    }
+   }
+  }
+ },
+ "variantgroups": [
+  {
+   "code": "refinestate",
+   "states": [
+    "rough"
+   ]
+  },
+  {
+   "code": "ore",
+   "states": [
+    "topaz",
+    "tourmaline",
+    "beryl",
+    "spinel",
+    "garnet",
+    "ruby",
+    "sapphire"
+   ]
+  }
+ ],
+ "storageFlags": 5,
+ "shape": {
+  "base": "earth:item/gem/rough/{ore}"
+ },
+ "creativeinventory": {
+  "general": [
+   "*"
+  ],
+  "items": [
+   "*"
+  ]
+ },
+ "guiTransform": {
+  "translation": {
+   "x": 0,
+   "y": 0,
+   "z": 0
+  },
+  "rotation": {
+   "x": 151,
+   "y": -3,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.487,
+   "y": 0.08,
+   "z": 0.5
+  },
+  "scale": 6
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -0.78,
+   "y": -0.11,
+   "z": -0.7
+  },
+  "rotation": {
+   "x": -41,
+   "y": -29,
+   "z": -60
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0.09,
+   "z": 0.5
+  },
+  "scale": 0.75
+ },
+ "groundTransform": {
+  "translation": {
+   "x": 0,
+   "y": 0,
+   "z": 0
+  },
+  "rotation": {
+   "x": 0,
+   "y": 0,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.5,
+   "y": 0,
+   "z": 0.5
+  },
+  "scale": 4.5
+ }
+}

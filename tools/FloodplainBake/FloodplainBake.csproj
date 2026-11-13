@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Arid floodplains (decision 0048, soil rules 3): bakes assets/earth/config/floodplains.bin, the natural flood of the
+       rivers that keep water through the dry season, from Earth's own river courses and GLO-90 heights, the terrain model
+       built as a new 1:10 GLO-90 world builds it. Built with the .NET 8 SDK, runs on the newest installed runtime. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><LangVersion>12</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings><Nullable>disable</Nullable><RollForward>LatestMajor</RollForward>
+    <Optimize>true</Optimize><TieredPGO>true</TieredPGO><NoWarn>CA1416</NoWarn>
+    <ServerGarbageCollection>true</ServerGarbageCollection><ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(VINTAGE_STORY)</VintageStoryPath>
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(APPDATA)\Vintagestory</VintageStoryPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- the mod's own terrain model, linked rather than copied -->
+    <Compile Include="../../src/Core/*.cs" Link="Core/%(Filename)%(Extension)" />
+    <Compile Include="../../src/EarthParams.cs;../../src/EarthMapConfig.cs" Link="%(Filename)%(Extension)" />
+    <Reference Include="VintagestoryAPI"><HintPath>$(VintageStoryPath)\VintagestoryAPI.dll</HintPath></Reference>
+    <Reference Include="protobuf-net"><HintPath>$(VintageStoryPath)\Lib\protobuf-net.dll</HintPath></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>$(VintageStoryPath)\Lib\Newtonsoft.Json.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>

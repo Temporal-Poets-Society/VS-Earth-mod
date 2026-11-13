@@ -1,0 +1,34 @@
+{
+  "inspectedAt": "2026-09-29",
+  "method": "Read-only ILSpy decompilation of installed VSEssentials; no source changes to game",
+  "assemblySha256": "A28565C5C9181F8CC84B98A2B7457AB824B8ECB7763714448DA1F7C245AECD6E",
+  "assemblyVersion": "1.22.7",
+  "hooks": [
+    {
+      "order": 0.1,
+      "adapter": "postfix bare-rock replacement",
+      "method": "GenChunkColumn",
+      "pass": "Terrain",
+      "type": "GenRockStrataNew"
+    },
+    {
+      "order": 0.4,
+      "adapter": "postfix sediment cover and top-rock repair",
+      "method": "OnChunkColumnGeneration",
+      "pass": "Terrain",
+      "type": "GenBlockLayers"
+    },
+    {
+      "order": 0.2,
+      "adapter": "prefix targeted nonmetal eligibility",
+      "method": "GenDeposit",
+      "pass": "TerrainFeatures",
+      "type": "GenDeposits"
+    }
+  ],
+  "childGradeBehavior": {
+    "parent": "DiscDepositGenerator clamps grade index to Blocks.Length-1 and skips empty arrays",
+    "child": "ChildDepositGenerator indexes Blocks[globalGradeIndex] without those checks",
+    "adapter": "GA1.4.8 only, normalize after resolution and before generation; logs affected host/child/source"
+  }
+}

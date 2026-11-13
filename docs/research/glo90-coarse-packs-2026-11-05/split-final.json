@@ -1,0 +1,37 @@
+[
+  {
+    "name": "glo90c-index.bin",
+    "bytes": 177324,
+    "sha256": "d55d203d436fa7b14d2d6c5de4a412090e9a0bc6f6ce0f70b969481f87926977",
+    "firstTile": null,
+    "lastTile": null
+  },
+  {
+    "name": "glo90c-1.bin",
+    "bytes": 39594940,
+    "sha256": "69edad31d3df4e66afd1f10fe52ea61e54622c41295a36d510dfaad3813c558e",
+    "firstTile": "N83W078",
+    "lastTile": "N45E078"
+  },
+  {
+    "name": "glo90c-2.bin",
+    "bytes": 39791138,
+    "sha256": "1ce4ab9eab2fc57ca3f79bd8547ab0254d35dd4273989ffaa02763713a8276b4",
+    "firstTile": "N45E079",
+    "lastTile": "N15W093"
+  },
+  {
+    "name": "glo90c-3.bin",
+    "bytes": 39796380,
+    "sha256": "0b98d0ef7343c86b14ef5fa127db81e3cd5ff295359e357d152c116eb26b0a22",
+    "firstTile": "N15W092",
+    "lastTile": "S31W051"
+  },
+  {
+    "name": "glo90c-4.bin",
+    "bytes": 9984522,
+    "sha256": "6a669fda9a68b0c411dc7330014b2a93f401cb154823bdcbf5dc49251777e103",
+    "firstTile": "S31E017",
+    "lastTile": "S90E179"
+  }
+]

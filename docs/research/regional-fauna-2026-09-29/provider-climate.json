@@ -1,0 +1,4824 @@
+[
+  {
+    "provider": "elephantidae",
+    "tokens": [
+      "elephasmaximus"
+    ],
+    "example": "elephantidae:elephantidae-adult-female-elephasmaximus",
+    "climate": {
+      "minTemp": 20,
+      "maxTemp": 40,
+      "minRain": 0.15,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "elephantidae",
+    "tokens": [
+      "elephasmaximusborneensis"
+    ],
+    "example": "elephantidae:elephantidae-adult-female-elephasmaximusborneensis",
+    "climate": {
+      "minTemp": 26,
+      "maxTemp": 40,
+      "minRain": 0.65,
+      "maxRain": 1.0,
+      "minForest": 0.2,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "elephantidae",
+    "tokens": [
+      "loxodontaafricana"
+    ],
+    "example": "elephantidae:elephantidae-adult-female-loxodontaafricana",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 40,
+      "minRain": 0.05,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.8,
+      "maxShrubs": 1.0,
+      "maxY": 1.65
+    }
+  },
+  {
+    "provider": "elephantidae",
+    "tokens": [
+      "loxodontacyclotis"
+    ],
+    "example": "elephantidae:elephantidae-adult-female-loxodontacyclotis",
+    "climate": {
+      "minTemp": 25,
+      "maxTemp": 40,
+      "minRain": 0.65,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.7,
+      "maxForest": 1.0,
+      "maxShrubs": 0.75,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "elephantidae",
+    "tokens": [
+      "mammuthuscolumbi"
+    ],
+    "example": "elephantidae:elephantidae-adult-female-mammuthuscolumbi",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 24,
+      "minRain": 0.05,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.7,
+      "maxShrubs": 1.0,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "elephantidae",
+    "tokens": [
+      "mammuthusexilis"
+    ],
+    "example": "elephantidae:elephantidae-adult-female-mammuthusexilis",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 15,
+      "minRain": 0.22,
+      "maxRain": 0.42,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.6,
+      "maxShrubs": 1.0,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "elephantidae",
+    "tokens": [
+      "mammuthusprimigenius"
+    ],
+    "example": "elephantidae:elephantidae-adult-female-mammuthusprimigenius",
+    "climate": {
+      "minTemp": -20,
+      "maxTemp": 5,
+      "minRain": 0.05,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.7,
+      "maxShrubs": 1.0,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "elephantidae",
+    "tokens": [
+      "palaeoloxodoncypriotes"
+    ],
+    "example": "elephantidae:elephantidae-adult-female-palaeoloxodoncypriotes",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 19,
+      "minRain": 0.3,
+      "maxRain": 0.65,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.6,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "manidae",
+    "tokens": [
+      "crassicaudata"
+    ],
+    "example": "manidae:manidae-adult-female-crassicaudata",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 48,
+      "minRain": 0.15,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.63
+    }
+  },
+  {
+    "provider": "manidae",
+    "tokens": [
+      "culionensis"
+    ],
+    "example": "manidae:manidae-adult-female-culionensis",
+    "climate": {
+      "minTemp": 24,
+      "maxTemp": 38,
+      "minRain": 0.75,
+      "maxRain": 0.95,
+      "minForest": 0.75,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "manidae",
+    "tokens": [
+      "gigantea"
+    ],
+    "example": "manidae:manidae-adult-female-gigantea",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 44,
+      "minRain": 0.65,
+      "maxRain": 0.9,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "manidae",
+    "tokens": [
+      "javanica"
+    ],
+    "example": "manidae:manidae-adult-female-javanica",
+    "climate": {
+      "minTemp": 22,
+      "maxTemp": 40,
+      "minRain": 0.65,
+      "maxRain": 1.0,
+      "minForest": 0.75,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "manidae",
+    "tokens": [
+      "mysteria"
+    ],
+    "example": "manidae:manidae-adult-female-mysteria",
+    "climate": {
+      "minTemp": 19,
+      "maxTemp": 40,
+      "minRain": 0.65,
+      "maxRain": 1.0,
+      "minForest": 0.75,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "manidae",
+    "tokens": [
+      "pentadactyla"
+    ],
+    "example": "manidae:manidae-adult-female-pentadactyla",
+    "climate": {
+      "minTemp": 8,
+      "maxTemp": 26,
+      "minRain": 0.65,
+      "maxRain": 0.85,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "manidae",
+    "tokens": [
+      "temminckii"
+    ],
+    "example": "manidae:manidae-adult-female-temminckii",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 44,
+      "minRain": 0.15,
+      "maxRain": 0.75,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "manidae",
+    "tokens": [
+      "tetradactyla"
+    ],
+    "example": "manidae:manidae-adult-female-tetradactyla",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 38,
+      "minRain": 0.65,
+      "maxRain": 1.0,
+      "minForest": 0.75,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "manidae",
+    "tokens": [
+      "tricuspis"
+    ],
+    "example": "manidae:manidae-adult-female-tricuspis",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 42,
+      "minRain": 0.62,
+      "maxRain": 1.0,
+      "minForest": 0.6,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "rhinocerotidae",
+    "tokens": [
+      "ceratotheriumsimum"
+    ],
+    "example": "rhinocerotidae:rhinocerotidae-adult-female-ceratotheriumsimum",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 40,
+      "minRain": 0.05,
+      "maxRain": 0.75,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.5,
+      "maxShrubs": 0.75,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "rhinocerotidae",
+    "tokens": [
+      "coelodontaantiquitatis"
+    ],
+    "example": "rhinocerotidae:rhinocerotidae-adult-female-coelodontaantiquitatis",
+    "climate": {
+      "minTemp": -15,
+      "maxTemp": 0,
+      "minRain": 0.1,
+      "maxRain": 0.75,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.5,
+      "maxShrubs": 0.75,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "rhinocerotidae",
+    "tokens": [
+      "dicerorhinussumatrensis"
+    ],
+    "example": "rhinocerotidae:rhinocerotidae-adult-female-dicerorhinussumatrensis",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 42,
+      "minRain": 0.55,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.5,
+      "maxForest": 1.0,
+      "maxShrubs": 0.75,
+      "minY": 1.1,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "rhinocerotidae",
+    "tokens": [
+      "dicerosbicornis"
+    ],
+    "example": "rhinocerotidae:rhinocerotidae-adult-female-dicerosbicornis",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 40,
+      "minRain": 0.05,
+      "maxRain": 0.75,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.5,
+      "maxShrubs": 0.75,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "rhinocerotidae",
+    "tokens": [
+      "rhinocerossondaicus"
+    ],
+    "example": "rhinocerotidae:rhinocerotidae-adult-female-rhinocerossondaicus",
+    "climate": {
+      "minTemp": 24,
+      "maxTemp": 44,
+      "minRain": 0.55,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 0.75,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "rhinocerotidae",
+    "tokens": [
+      "rhinocerosunicornis"
+    ],
+    "example": "rhinocerotidae:rhinocerotidae-adult-female-rhinocerosunicornis",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 36,
+      "minRain": 0.2,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 0.75,
+      "minY": 1.1,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "casuariidae",
+    "tokens": [
+      "cereopsisnovaehollandiae"
+    ],
+    "example": "casuariidae:anatidae-adult-male-cereopsisnovaehollandiae",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 18,
+      "minRain": 0.3,
+      "maxRain": 0.6,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 4.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "casuariidae",
+    "tokens": [
+      "bennetti"
+    ],
+    "example": "casuariidae:casuariidae-adult-male-bennetti",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 34,
+      "minRain": 0.7,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.6,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.2,
+      "maxY": 1.73
+    }
+  },
+  {
+    "provider": "casuariidae",
+    "tokens": [
+      "casuarius"
+    ],
+    "example": "casuariidae:casuariidae-adult-male-casuarius",
+    "climate": {
+      "minTemp": 26,
+      "maxTemp": 42,
+      "minRain": 0.7,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.5,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "casuariidae",
+    "tokens": [
+      "novaehollandiae"
+    ],
+    "example": "casuariidae:casuariidae-adult-male-novaehollandiae",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 48,
+      "minRain": 0.0,
+      "maxRain": 0.7,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.5,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "casuariidae",
+    "tokens": [
+      "novaehollandiaediemenensis"
+    ],
+    "example": "casuariidae:casuariidae-adult-male-novaehollandiaediemenensis",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.4,
+      "maxRain": 1,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "casuariidae",
+    "tokens": [
+      "unappendiculatus"
+    ],
+    "example": "casuariidae:casuariidae-adult-male-unappendiculatus",
+    "climate": {
+      "minTemp": 30,
+      "maxTemp": 42,
+      "minRain": 0.7,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.5,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "casuariidae",
+    "tokens": [
+      "genyornisnewtoni"
+    ],
+    "example": "casuariidae:dromornithidae-adult-male-genyornisnewtoni",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 22,
+      "minRain": 0.4,
+      "maxRain": 0.85,
+      "minForestOrShrubs": 0.2,
+      "maxForest": 0.9,
+      "maxShrubs": 0.9,
+      "minY": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "casuariidae",
+    "tokens": [
+      "tribonyxmortierii"
+    ],
+    "example": "casuariidae:rallidae-adult-male-tribonyxmortierii",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 28,
+      "minRain": 0.4,
+      "maxRain": 0.85,
+      "minShrubs": 0.2,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "sirenia",
+    "tokens": [
+      "dugon"
+    ],
+    "example": "sirenia:sirenia-adult-male-dugon",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 44,
+      "minRain": 0.1,
+      "maxRain": 1.0,
+      "minY": 0.1,
+      "maxY": 1
+    }
+  },
+  {
+    "provider": "sirenia",
+    "tokens": [
+      "gigas"
+    ],
+    "example": "sirenia:sirenia-adult-male-gigas",
+    "climate": {
+      "minTemp": -15,
+      "maxTemp": 2,
+      "minRain": 0.25,
+      "maxRain": 1,
+      "minY": 0.1,
+      "maxY": 1
+    }
+  },
+  {
+    "provider": "sirenia",
+    "tokens": [
+      "inunguis"
+    ],
+    "example": "sirenia:sirenia-adult-male-inunguis",
+    "climate": {
+      "minTemp": 26,
+      "maxTemp": 40,
+      "minRain": 0.6,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.6,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.7,
+      "maxY": 1
+    }
+  },
+  {
+    "provider": "sirenia",
+    "tokens": [
+      "manatus"
+    ],
+    "example": "sirenia:sirenia-adult-male-manatus",
+    "climate": {
+      "randomMapCodePool": [
+        "fish1",
+        "fish2",
+        "fish3",
+        "fish4",
+        "fish5",
+        "fish6",
+        "fish7",
+        "fish8",
+        "fish9"
+      ],
+      "minTemp": 12,
+      "maxTemp": 38,
+      "minRain": 0.6,
+      "maxRain": 1.0,
+      "minY": 0.1,
+      "maxY": 1
+    }
+  },
+  {
+    "provider": "sirenia",
+    "tokens": [
+      "senegalensis"
+    ],
+    "example": "sirenia:sirenia-adult-male-senegalensis",
+    "climate": {
+      "randomMapCodePool": [
+        "fish1",
+        "fish2",
+        "fish3",
+        "fish4",
+        "fish5",
+        "fish6",
+        "fish7",
+        "fish8",
+        "fish9"
+      ],
+      "minTemp": 28,
+      "maxTemp": 44,
+      "minRain": 0.55,
+      "maxRain": 1.0,
+      "minY": 0.0,
+      "maxY": 1
+    }
+  },
+  {
+    "provider": "machairodontinae",
+    "tokens": [
+      "homotherium",
+      "serum"
+    ],
+    "example": "machairodontinae:machairodontinae-adult-female-homotherium-serum",
+    "climate": {
+      "minTemp": -11,
+      "maxTemp": 21,
+      "minRain": 0.2,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "machairodontinae",
+    "tokens": [
+      "smilodon",
+      "fatalis"
+    ],
+    "example": "machairodontinae:machairodontinae-adult-female-smilodon-fatalis",
+    "climate": {
+      "minTemp": 5,
+      "maxTemp": 44,
+      "minRain": 0.1,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "machairodontinae",
+    "tokens": [
+      "smilodon",
+      "populator"
+    ],
+    "example": "machairodontinae:machairodontinae-adult-female-smilodon-populator",
+    "climate": {
+      "minTemp": 3,
+      "maxTemp": 44,
+      "minRain": 0.1,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.75,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "alcesalces"
+    ],
+    "example": "capreolinae:cervidae-alceini-adult-female-alcesalces",
+    "climate": {
+      "minTemp": -12,
+      "maxTemp": 8,
+      "minRain": 0.25,
+      "maxRain": 1,
+      "minForestOrShrubs": 0.1,
+      "maxForest": 0.9,
+      "maxShrubs": 0.8,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "cervalcesscotti"
+    ],
+    "example": "capreolinae:cervidae-alceini-adult-female-cervalcesscotti",
+    "climate": {
+      "minTemp": 6,
+      "maxTemp": 18,
+      "minRain": 0.45,
+      "maxRain": 0.8,
+      "minForest": 0,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "capreoluscapreolus"
+    ],
+    "example": "capreolinae:cervidae-capreolini-adult-female-capreoluscapreolus",
+    "climate": {
+      "minTemp": 2,
+      "maxTemp": 16,
+      "minRain": 0.25,
+      "maxRain": 1,
+      "minForestOrShrubs": 0,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "capreoluspygargus"
+    ],
+    "example": "capreolinae:cervidae-capreolini-adult-female-capreoluspygargus",
+    "climate": {
+      "minTemp": -6,
+      "maxTemp": 16,
+      "minRain": 0.45,
+      "maxRain": 0.8,
+      "minForestOrShrubs": 0,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "hydropotesinermis"
+    ],
+    "example": "capreolinae:cervidae-capreolini-adult-female-hydropotesinermis",
+    "climate": {
+      "minTemp": 6,
+      "maxTemp": 18,
+      "minRain": 0.45,
+      "maxRain": 0.8,
+      "minForest": 0,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "antiferultra"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-antiferultra",
+    "climate": {
+      "minTemp": 7,
+      "maxTemp": 21,
+      "minRain": 0.3,
+      "maxRain": 0.85,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.65,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "blastocerusdichotomus"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-blastocerusdichotomus",
+    "climate": {
+      "minTemp": 15,
+      "maxTemp": 26,
+      "minRain": 0.65,
+      "maxRain": 0.95,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "bretzianebrascensis"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-bretzianebrascensis",
+    "climate": {
+      "minTemp": 3,
+      "maxTemp": 9,
+      "minRain": 0.25,
+      "maxRain": 0.45,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.6,
+      "maxShrubs": 1.0,
+      "minY": 1.05,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "hippocamelusantisensis"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-hippocamelusantisensis",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 28,
+      "minRain": 0.0,
+      "maxRain": 0.6,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.45,
+      "maxShrubs": 1.0,
+      "minY": 1.5,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "hippocamelusbisulcus"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-hippocamelusbisulcus",
+    "climate": {
+      "minTemp": 4,
+      "maxTemp": 10,
+      "minRain": 0.2,
+      "maxRain": 0.85,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.05,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "mazamaamericana"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-mazamaamericana",
+    "climate": {
+      "minTemp": 26,
+      "maxTemp": 40,
+      "minRain": 0.25,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.45,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "mazamabricenii"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-mazamabricenii",
+    "climate": {
+      "minTemp": 28,
+      "maxTemp": 40,
+      "minRain": 0.55,
+      "maxRain": 1,
+      "minForestOrShrubs": 0.05,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.3,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "mazamajucunda"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-mazamajucunda",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 22,
+      "minRain": 0.5,
+      "maxRain": 0.75,
+      "minForestOrShrubs": 0.55,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "mazamanana"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-mazamanana",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 22,
+      "minRain": 0.65,
+      "maxRain": 0.95,
+      "minForestOrShrubs": 0.55,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "mazamarufa"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-mazamarufa",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 26,
+      "minRain": 0.25,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.45,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "mazamarufina"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-mazamarufina",
+    "climate": {
+      "minTemp": 26,
+      "maxTemp": 40,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.45,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.45,
+      "maxY": 1.75
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "mazamatemama"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-mazamatemama",
+    "climate": {
+      "minTemp": 20,
+      "maxTemp": 28,
+      "minRain": 0.6,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.7,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "mazamatienhoveni"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-mazamatienhoveni",
+    "climate": {
+      "minTemp": 24,
+      "maxTemp": 28,
+      "minRain": 0.75,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.7,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "odocoileushemionus"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-odocoileushemionus",
+    "climate": {
+      "minTemp": -8,
+      "maxTemp": 22,
+      "minRain": 0.05,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "odocoileuslucasi"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-odocoileuslucasi",
+    "climate": {
+      "minTemp": -3,
+      "maxTemp": 15,
+      "minRain": 0.05,
+      "maxRain": 1,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.3,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "odocoileuspandora"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-odocoileuspandora",
+    "climate": {
+      "minTemp": 24,
+      "maxTemp": 28,
+      "minRain": 0.65,
+      "maxRain": 0.85,
+      "minForestOrShrubs": 0.45,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "odocoileusvirginianus"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-odocoileusvirginianus",
+    "climate": {
+      "minTemp": -2,
+      "maxTemp": 40,
+      "minRain": 0.05,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "ozotocerosbezoarticus"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-ozotocerosbezoarticus",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 26,
+      "minRain": 0.2,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.65,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "passalitesnemorivaga"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-passalitesnemorivaga",
+    "climate": {
+      "minTemp": 24,
+      "maxTemp": 40,
+      "minRain": 0.6,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "pudellacarlae"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-pudellacarlae",
+    "climate": {
+      "minTemp": 24,
+      "maxTemp": 32,
+      "minRain": 0.6,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.6,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "minY": 1.3,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "pudellamephistophiles"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-pudellamephistophiles",
+    "climate": {
+      "minTemp": 24,
+      "maxTemp": 36,
+      "minRain": 0.4,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.4,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "minY": 1.3,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "pudupuda"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-pudupuda",
+    "climate": {
+      "minTemp": 8,
+      "maxTemp": 12,
+      "minRain": 0.4,
+      "maxRain": 0.85,
+      "minShrubs": 0.6,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "rangiferarcticus"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-rangiferarcticus",
+    "climate": {
+      "minTemp": -30,
+      "maxTemp": -8,
+      "minRain": 0.1,
+      "maxRain": 0.95,
+      "minForest": 0,
+      "maxForest": 0.6,
+      "maxShrubs": 0.8,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "rangifercaribou"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-rangifercaribou",
+    "climate": {
+      "minTemp": -12,
+      "maxTemp": 4,
+      "minRain": 0.2,
+      "maxRain": 0.75,
+      "minForest": 0.6,
+      "maxForest": 1,
+      "maxShrubs": 0.8,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "rangiferfennicus"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-rangiferfennicus",
+    "climate": {
+      "minTemp": 0,
+      "maxTemp": 4,
+      "minRain": 0.5,
+      "maxRain": 0.75,
+      "minForest": 0.6,
+      "maxForest": 1,
+      "maxShrubs": 0.8,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "rangifergroenlandicus"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-rangifergroenlandicus",
+    "climate": {
+      "minTemp": -16,
+      "maxTemp": -8,
+      "minRain": 0.1,
+      "maxRain": 0.75,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.6,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "rangiferplatyrhynchus"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-rangiferplatyrhynchus",
+    "climate": {
+      "minTemp": -10,
+      "maxTemp": -4,
+      "minRain": 0.2,
+      "maxRain": 0.65,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.6,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "rangifertarandus"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-rangifertarandus",
+    "climate": {
+      "minTemp": -20,
+      "maxTemp": 0,
+      "minRain": 0.05,
+      "maxRain": 0.8,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.6,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "subulochunyi"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-subulochunyi",
+    "climate": {
+      "minTemp": 20,
+      "maxTemp": 24,
+      "minRain": 0.55,
+      "maxRain": 1,
+      "minForest": 0.25,
+      "maxForest": 1,
+      "minY": 1.2,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "subulogouazoubira"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-subulogouazoubira",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 30,
+      "minRain": 0.25,
+      "maxRain": 0.9,
+      "minForest": 0.25,
+      "maxForest": 0.75,
+      "maxShrubs": 0.75,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "torontoceroshypnogeos"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-torontoceroshypnogeos",
+    "climate": {
+      "minTemp": -1,
+      "maxTemp": 5,
+      "minRain": 0.55,
+      "maxRain": 0.85,
+      "minForest": 0.4,
+      "maxForest": 0.9,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "capreolinae",
+    "tokens": [
+      "rangifertarandusdomesticus"
+    ],
+    "example": "capreolinae:cervidae-odocoileini-adult-female-rangifertarandusdomesticus-semitamed",
+    "climate": {}
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "aptenodytesforsteri"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-aptenodytesforsteri",
+    "climate": {
+      "minTemp": -20,
+      "maxTemp": -6,
+      "minRain": 0.0,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "aptenodytespatagonicus"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-aptenodytespatagonicus",
+    "climate": {
+      "minTemp": -6,
+      "maxTemp": 3,
+      "minRain": 0.0,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "eudypteschrysocome"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-eudypteschrysocome",
+    "climate": {
+      "minTemp": 0,
+      "maxTemp": 18,
+      "minRain": 0.0,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "eudypteschrysolophus"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-eudypteschrysolophus",
+    "climate": {
+      "minTemp": -12,
+      "maxTemp": 8,
+      "minRain": 0.0,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "eudyptesmoseleyi"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-eudyptesmoseleyi",
+    "climate": {
+      "minTemp": -2,
+      "maxTemp": 16,
+      "minRain": 0.0,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "eudyptespachyrhynchus"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-eudyptespachyrhynchus",
+    "climate": {
+      "minTemp": 8,
+      "maxTemp": 12,
+      "minRain": 0.6,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "eudyptesrobustus"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-eudyptesrobustus",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 12,
+      "minRain": 0.6,
+      "maxRain": 0.8,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "eudyptessclateri"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-eudyptessclateri",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 16,
+      "minRain": 0.4,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "eudyptesschlegeli"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-eudyptesschlegeli",
+    "climate": {
+      "minTemp": 3,
+      "maxTemp": 7,
+      "minRain": 0.4,
+      "maxRain": 0.7,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "eudypteswarhami"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-eudypteswarhami",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 15,
+      "minRain": 0.6,
+      "maxRain": 0.8,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "eudyptulaminor"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-eudyptulaminor",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 16,
+      "minRain": 0.0,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "eudyptulanovaehollandiae"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-eudyptulanovaehollandiae",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 24,
+      "minRain": 0.0,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "megadyptesantipodes"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-megadyptesantipodes",
+    "climate": {
+      "minTemp": 6,
+      "maxTemp": 10,
+      "minRain": 0.0,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "pygoscelisadeliae"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-pygoscelisadeliae",
+    "climate": {
+      "minTemp": -20,
+      "maxTemp": -6,
+      "minRain": 0.0,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "pygoscelisantarcticus"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-pygoscelisantarcticus",
+    "climate": {
+      "minTemp": -15,
+      "maxTemp": 13,
+      "minRain": 0.0,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "pygoscelispapua"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-pygoscelispapua",
+    "climate": {
+      "minTemp": -10,
+      "maxTemp": 14,
+      "minRain": 0.0,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "spheniscusdemersus"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-spheniscusdemersus",
+    "climate": {
+      "minTemp": 13,
+      "maxTemp": 25,
+      "minRain": 0.0,
+      "maxRain": 0.5,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "spheniscushumboldti"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-spheniscushumboldti",
+    "climate": {
+      "minTemp": 22,
+      "maxTemp": 27,
+      "minRain": 0.0,
+      "maxRain": 0.3,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "spheniscusmagellanicus"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-spheniscusmagellanicus",
+    "climate": {
+      "minTemp": 6,
+      "maxTemp": 24,
+      "minRain": 0.0,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "spheniscidae",
+    "tokens": [
+      "spheniscusmendiculus"
+    ],
+    "example": "spheniscidae:spheniscidae-adult-male-spheniscusmendiculus",
+    "climate": {
+      "minTemp": 23,
+      "maxTemp": 27,
+      "minRain": 0.1,
+      "maxRain": 0.3,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 0.8,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "aenocyon",
+      "dirus"
+    ],
+    "example": "caninae:caninae-canina-adult-female-aenocyon-dirus",
+    "climate": {
+      "minTemp": 4,
+      "maxTemp": 28,
+      "minRain": 0.25,
+      "maxRain": 1,
+      "minForestOrShrubs": 0,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "minY": 1.0,
+      "maxY": 1.62
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "canis",
+      "aureus"
+    ],
+    "example": "caninae:caninae-canina-adult-female-canis-aureus",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 36,
+      "minRain": 0.1,
+      "maxRain": 1,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 1,
+      "maxShrubs": 0.75,
+      "minY": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "canis",
+      "latrans"
+    ],
+    "example": "caninae:caninae-canina-adult-female-canis-latrans",
+    "climate": {
+      "minTemp": -14,
+      "maxTemp": 36,
+      "minRain": 0.1,
+      "maxRain": 1,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.75,
+      "maxShrubs": 1,
+      "minY": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "canis",
+      "lupastor"
+    ],
+    "example": "caninae:caninae-canina-adult-female-canis-lupastor",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 44,
+      "minRain": 0.1,
+      "maxRain": 0.75,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.45,
+      "maxShrubs": 1,
+      "minY": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "canis",
+      "lupus"
+    ],
+    "example": "caninae:caninae-canina-adult-female-canis-lupus",
+    "climate": {
+      "minTemp": -22,
+      "maxTemp": 22,
+      "minRain": 0.1,
+      "maxRain": 1,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "minY": 1.0,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "canis",
+      "lupusarctos"
+    ],
+    "example": "caninae:caninae-canina-adult-female-canis-lupusarctos",
+    "climate": {
+      "minTemp": -30,
+      "maxTemp": -15,
+      "minRain": 0.1,
+      "maxRain": 1,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "minY": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "canis",
+      "lupusdingo"
+    ],
+    "example": "caninae:caninae-canina-adult-female-canis-lupusdingo",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 36,
+      "minRain": 0.1,
+      "maxRain": 0.8,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "minY": 1.0,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "canis",
+      "lycaon"
+    ],
+    "example": "caninae:caninae-canina-adult-female-canis-lycaon",
+    "climate": {
+      "minTemp": -8,
+      "maxTemp": 6,
+      "minRain": 0.25,
+      "maxRain": 1,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "minY": 1.0,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "canis",
+      "rufus"
+    ],
+    "example": "caninae:caninae-canina-adult-female-canis-rufus",
+    "climate": {
+      "minTemp": 8,
+      "maxTemp": 28,
+      "minRain": 0.1,
+      "maxRain": 1,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "minY": 1.0,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "canis",
+      "simensis"
+    ],
+    "example": "caninae:caninae-canina-adult-female-canis-simensis",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 22,
+      "minRain": 0.25,
+      "maxRain": 1,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.5,
+      "maxShrubs": 1,
+      "minY": 1.5,
+      "maxY": 1.9
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "cuon",
+      "alpinus"
+    ],
+    "example": "caninae:caninae-canina-adult-female-cuon-alpinus",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 44,
+      "minRain": 0.25,
+      "maxRain": 1,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "minY": 1.4,
+      "maxY": 1.9
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "cynotherium",
+      "sardous"
+    ],
+    "example": "caninae:caninae-canina-adult-female-cynotherium-sardous",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 20,
+      "minRain": 0.25,
+      "maxRain": 0.75,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "minY": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "lupulella",
+      "adusta"
+    ],
+    "example": "caninae:caninae-canina-adult-female-lupulella-adusta",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 44,
+      "minRain": 0.25,
+      "maxRain": 0.75,
+      "minForestOrShrubs": 0.5,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "minY": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "lupulella",
+      "mesomelas"
+    ],
+    "example": "caninae:caninae-canina-adult-female-lupulella-mesomelas",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 44,
+      "minRain": 0.1,
+      "maxRain": 0.9,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.5,
+      "maxShrubs": 0.5,
+      "minY": 1.0,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "lycaon",
+      "pictus"
+    ],
+    "example": "caninae:caninae-canina-adult-female-lycaon-lycaon",
+    "climate": {}
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "atelocynus",
+      "microtis"
+    ],
+    "example": "caninae:caninae-cerdocyonina-adult-female-atelocynus-microtis",
+    "climate": {
+      "minTemp": 22,
+      "maxTemp": 44,
+      "minRain": 0.75,
+      "maxRain": 1,
+      "minForestOrShrubs": 0.5,
+      "maxForest": 1,
+      "maxShrubs": 1.0,
+      "minY": 1.1,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "cerdocyon",
+      "thous"
+    ],
+    "example": "caninae:caninae-cerdocyonina-adult-female-cerdocyon-thous",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 36,
+      "minRain": 0.2,
+      "maxRain": 0.75,
+      "minForestOrShrubs": 0,
+      "maxForest": 0.75,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "chrysocyon",
+      "brachyurus"
+    ],
+    "example": "caninae:caninae-cerdocyonina-adult-female-chrysocyon-brachyurus",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 36,
+      "minRain": 0.25,
+      "maxRain": 1,
+      "minForestOrShrubs": 0,
+      "maxForest": 0.5,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "dusicyon",
+      "australis"
+    ],
+    "example": "caninae:caninae-cerdocyonina-adult-female-dusicyon-australis",
+    "climate": {
+      "minTemp": -2,
+      "maxTemp": 8,
+      "minRain": 0.6,
+      "maxRain": 0.8,
+      "minForestOrShrubs": 0,
+      "maxForest": 1,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "dusicyon",
+      "avus"
+    ],
+    "example": "caninae:caninae-cerdocyonina-adult-female-dusicyon-avus",
+    "climate": {
+      "minTemp": 4,
+      "maxTemp": 22,
+      "minRain": 0.1,
+      "maxRain": 1,
+      "minForestOrShrubs": 0,
+      "maxForest": 1,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "lycalopex",
+      "culpaeus"
+    ],
+    "example": "caninae:caninae-cerdocyonina-adult-female-lycalopex-culpaeus",
+    "climate": {
+      "minTemp": 0,
+      "maxTemp": 28,
+      "minRain": 0.05,
+      "maxRain": 1,
+      "minForestOrShrubs": 0,
+      "maxForest": 1,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "lycalopex",
+      "fulvipes"
+    ],
+    "example": "caninae:caninae-cerdocyonina-adult-female-lycalopex-fulvipes",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.75,
+      "maxRain": 1,
+      "minForestOrShrubs": 0.5,
+      "maxForest": 0.75,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "lycalopex",
+      "griseus"
+    ],
+    "example": "caninae:caninae-cerdocyonina-adult-female-lycalopex-griseus",
+    "climate": {
+      "minTemp": 0,
+      "maxTemp": 20,
+      "minRain": 0.1,
+      "maxRain": 0.5,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "lycalopex",
+      "gymnocercus"
+    ],
+    "example": "caninae:caninae-cerdocyonina-adult-female-lycalopex-gymnocercus",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 26,
+      "minRain": 0.1,
+      "maxRain": 1,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "lycalopex",
+      "sechurae"
+    ],
+    "example": "caninae:caninae-cerdocyonina-adult-female-lycalopex-sechurae",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 36,
+      "minRain": 0,
+      "maxRain": 0.25,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.5,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "lycalopex",
+      "vetulus"
+    ],
+    "example": "caninae:caninae-cerdocyonina-adult-female-lycalopex-vetulus",
+    "climate": {
+      "minTemp": 20,
+      "maxTemp": 28,
+      "minRain": 0.75,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.5,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "speothos",
+      "pacivorus"
+    ],
+    "example": "caninae:caninae-cerdocyonina-adult-female-speothos-pacivorus",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 38,
+      "minRain": 0.25,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "speothos",
+      "venaticus"
+    ],
+    "example": "caninae:caninae-cerdocyonina-adult-female-speothos-venaticus",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 36,
+      "minRain": 0.25,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "urocyon",
+      "cinereoargenteus"
+    ],
+    "example": "caninae:caninae-urocyonini-adult-female-urocyon-cinereoargenteus",
+    "climate": {
+      "minTemp": 6,
+      "maxTemp": 36,
+      "minRain": 0.0,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "urocyon",
+      "littoralis"
+    ],
+    "example": "caninae:caninae-urocyonini-adult-female-urocyon-littoralis",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 15,
+      "minRain": 0.5,
+      "maxRain": 0.7,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.6,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "nyctereutes",
+      "procyonoides"
+    ],
+    "example": "caninae:caninae-vulpini-adult-female-nyctereutes-procyonoides",
+    "climate": {
+      "minTemp": -12,
+      "maxTemp": 24,
+      "minRain": 0.2,
+      "maxRain": 0.9,
+      "minForestOrShrubs": 0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "nyctereutes",
+      "viverrinus"
+    ],
+    "example": "caninae:caninae-vulpini-adult-female-nyctereutes-viverrinus",
+    "climate": {
+      "minTemp": -6,
+      "maxTemp": 12,
+      "minRain": 0.25,
+      "maxRain": 0.9,
+      "minForestOrShrubs": 0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "otocyon",
+      "megalotis"
+    ],
+    "example": "caninae:caninae-vulpini-adult-female-otocyon-megalotis",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 44,
+      "minRain": 0.1,
+      "maxRain": 0.5,
+      "minForestOrShrubs": 0,
+      "maxForest": 0.75,
+      "maxShrubs": 1,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "vulpes",
+      "bengalensis"
+    ],
+    "example": "caninae:caninae-vulpini-adult-female-vulpes-bengalensis",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 36,
+      "minRain": 0.25,
+      "maxRain": 0.5,
+      "minForestOrShrubs": 0,
+      "maxForest": 0.75,
+      "maxShrubs": 1,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "vulpes",
+      "cana"
+    ],
+    "example": "caninae:caninae-vulpini-adult-female-vulpes-cana",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 44,
+      "minRain": 0.1,
+      "maxRain": 0.3,
+      "minForestOrShrubs": 0,
+      "maxForest": 0.5,
+      "maxShrubs": 1,
+      "maxY": 1.45
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "vulpes",
+      "chama"
+    ],
+    "example": "caninae:caninae-vulpini-adult-female-vulpes-chama",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 20,
+      "minRain": 0.1,
+      "maxRain": 0.75,
+      "minForestOrShrubs": 0,
+      "maxForest": 0.5,
+      "maxShrubs": 1,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "vulpes",
+      "corsac"
+    ],
+    "example": "caninae:caninae-vulpini-adult-female-vulpes-corsac",
+    "climate": {
+      "minTemp": -8,
+      "maxTemp": 16,
+      "minRain": 0.1,
+      "maxRain": 0.3,
+      "minForestOrShrubs": 0,
+      "maxForest": 0.5,
+      "maxShrubs": 1,
+      "minY": 1.1,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "vulpes",
+      "ferrilata"
+    ],
+    "example": "caninae:caninae-vulpini-adult-female-vulpes-ferrilata",
+    "climate": {
+      "minTemp": 4,
+      "maxTemp": 16,
+      "minRain": 0.1,
+      "maxRain": 0.5,
+      "minForestOrShrubs": 0,
+      "maxForest": 0.25,
+      "maxShrubs": 1,
+      "minY": 1.4,
+      "maxY": 1.9
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "vulpes",
+      "lagopus"
+    ],
+    "example": "caninae:caninae-vulpini-adult-female-vulpes-lagopus",
+    "climate": {
+      "minTemp": -30,
+      "maxTemp": -4,
+      "minRain": 0.1,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "vulpes",
+      "macrotis"
+    ],
+    "example": "caninae:caninae-vulpini-adult-female-vulpes-macrotis",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 22,
+      "minRain": 0.1,
+      "maxRain": 0.4,
+      "minForestOrShrubs": 0,
+      "maxForest": 0.25,
+      "maxShrubs": 1,
+      "minY": 1.1,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "vulpes",
+      "pallida"
+    ],
+    "example": "caninae:caninae-vulpini-adult-female-vulpes-pallida",
+    "climate": {
+      "minTemp": 22,
+      "maxTemp": 44,
+      "minRain": 0.1,
+      "maxRain": 0.4,
+      "minForestOrShrubs": 0,
+      "maxForest": 0.25,
+      "maxShrubs": 0.25,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "vulpes",
+      "rueppellii"
+    ],
+    "example": "caninae:caninae-vulpini-adult-female-vulpes-rueppellii",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 44,
+      "minRain": 0.1,
+      "maxRain": 0.25,
+      "minForestOrShrubs": 0,
+      "maxForest": 0.25,
+      "maxShrubs": 1,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "vulpes",
+      "velox"
+    ],
+    "example": "caninae:caninae-vulpini-adult-female-vulpes-velox",
+    "climate": {
+      "minTemp": 4,
+      "maxTemp": 16,
+      "minRain": 0.25,
+      "maxRain": 0.75,
+      "minForestOrShrubs": 0,
+      "maxForest": 0.25,
+      "maxShrubs": 1,
+      "minY": 1.1,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "vulpes",
+      "vulpes"
+    ],
+    "example": "caninae:caninae-vulpini-adult-female-vulpes-vulpes",
+    "climate": {
+      "minTemp": -18,
+      "maxTemp": 28,
+      "minRain": 0.1,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "vulpes",
+      "zerda"
+    ],
+    "example": "caninae:caninae-vulpini-adult-female-vulpes-vulpes",
+    "climate": {
+      "minTemp": -18,
+      "maxTemp": 28,
+      "minRain": 0.1,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0,
+      "maxForest": 1,
+      "maxShrubs": 1,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "pantherinae",
+    "tokens": [
+      "diardi"
+    ],
+    "example": "pantherinae:pantherinae-neofelis-adult-female-diardi-normal",
+    "climate": {
+      "minTemp": 26,
+      "maxTemp": 40,
+      "minRain": 0.65,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.65,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "pantherinae",
+    "tokens": [
+      "nebulosa"
+    ],
+    "example": "pantherinae:pantherinae-neofelis-adult-female-nebulosa-normal",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 40,
+      "minRain": 0.45,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.45,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "pantherinae",
+    "tokens": [
+      "atrox"
+    ],
+    "example": "pantherinae:pantherinae-panthera-adult-female-atrox-normal",
+    "climate": {
+      "minTemp": 1,
+      "maxTemp": 21,
+      "minRain": 0.1,
+      "maxRain": 0.9,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.65,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "pantherinae",
+    "tokens": [
+      "leo"
+    ],
+    "example": "pantherinae:pantherinae-panthera-adult-female-leo-normal",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 40,
+      "minRain": 0.1,
+      "maxRain": 0.9,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.8,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "pantherinae",
+    "tokens": [
+      "onca"
+    ],
+    "example": "pantherinae:pantherinae-panthera-adult-female-onca-normal",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 40,
+      "minRain": 0.0,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.1,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "pantherinae",
+    "tokens": [
+      "pardus"
+    ],
+    "example": "pantherinae:pantherinae-panthera-adult-female-pardus-normal",
+    "climate": {
+      "minTemp": 8,
+      "maxTemp": 40,
+      "minRain": 0.1,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.1,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "pantherinae",
+    "tokens": [
+      "spelaea"
+    ],
+    "example": "pantherinae:pantherinae-panthera-adult-female-spelaea-normal",
+    "climate": {
+      "minTemp": -25,
+      "maxTemp": 11,
+      "minRain": 0.1,
+      "maxRain": 0.75,
+      "minForestOrShrubs": 0.05,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "pantherinae",
+    "tokens": [
+      "tigris"
+    ],
+    "example": "pantherinae:pantherinae-panthera-adult-female-tigris-normal",
+    "climate": {
+      "minTemp": -12,
+      "maxTemp": 40,
+      "minRain": 0.25,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.4,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "pantherinae",
+    "tokens": [
+      "uncia"
+    ],
+    "example": "pantherinae:pantherinae-panthera-adult-female-uncia-normal",
+    "climate": {
+      "minTemp": 4,
+      "maxTemp": 26,
+      "minRain": 0.0,
+      "maxRain": 0.65,
+      "minY": 1.4
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "bosprimigeniusprimigenius"
+    ],
+    "example": "bovinae:bovinae-adult-female-bosprimigeniusprimigenius",
+    "climate": {
+      "minTemp": 2,
+      "maxTemp": 14,
+      "minRain": 0.25,
+      "maxRain": 0.8,
+      "minForest": 0.0,
+      "maxForest": 0.6,
+      "maxShrubs": 0.9,
+      "minY": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "boselaphustragocamelus"
+    ],
+    "example": "bovinae:bovinae-adult-female-boselaphustragocamelus",
+    "climate": {
+      "minTemp": 24,
+      "maxTemp": 34,
+      "minRain": 0.4,
+      "maxRain": 0.85,
+      "minShrubs": 0.4,
+      "maxShrubs": 1.0,
+      "maxForest": 0.6,
+      "minY": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "bubalusarnee"
+    ],
+    "example": "bovinae:bovinae-adult-female-bubalusarnee",
+    "climate": {
+      "minTemp": 20,
+      "maxTemp": 34,
+      "minRain": 0.5,
+      "maxRain": 1,
+      "minForest": 0.0,
+      "maxForest": 0.7,
+      "minY": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "bubalusbrevicornis"
+    ],
+    "example": "bovinae:bovinae-adult-female-bubalusbrevicornis",
+    "climate": {
+      "minTemp": 4,
+      "maxTemp": 22,
+      "minRain": 0.5,
+      "maxRain": 1,
+      "minForest": 0.0,
+      "maxForest": 0.7,
+      "minY": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "bubaluscebuensis"
+    ],
+    "example": "bovinae:bovinae-adult-female-bubaluscebuensis",
+    "climate": {
+      "minTemp": 24,
+      "maxTemp": 30,
+      "minRain": 0.85,
+      "maxRain": 1,
+      "minForest": 0.6,
+      "maxForest": 0.9,
+      "minY": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "bubalusdepressicornis"
+    ],
+    "example": "bovinae:bovinae-adult-female-bubalusdepressicornis",
+    "climate": {
+      "minTemp": 22,
+      "maxTemp": 28,
+      "minRain": 0.75,
+      "maxRain": 1,
+      "minForest": 0.4,
+      "maxForest": 1,
+      "minY": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "bubalusgrovesi"
+    ],
+    "example": "bovinae:bovinae-adult-female-bubalusgrovesi",
+    "climate": {
+      "minTemp": 22,
+      "maxTemp": 28,
+      "minRain": 0.75,
+      "maxRain": 1,
+      "minForest": 0.4,
+      "maxForest": 1,
+      "minY": 1.3,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "bubalusmephistopheles"
+    ],
+    "example": "bovinae:bovinae-adult-female-bubalusmephistopheles",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 22,
+      "minRain": 0.45,
+      "maxRain": 0.85,
+      "minForest": 0.0,
+      "maxForest": 0.7,
+      "minY": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "bubalusmindorensis"
+    ],
+    "example": "bovinae:bovinae-adult-female-bubalusmindorensis",
+    "climate": {
+      "minTemp": 28,
+      "maxTemp": 34,
+      "minRain": 0.85,
+      "maxRain": 1,
+      "minForest": 0.6,
+      "maxForest": 1,
+      "minY": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "bubalusmurrensis"
+    ],
+    "example": "bovinae:bovinae-adult-female-bubalusmurrensis",
+    "climate": {
+      "minTemp": 8,
+      "maxTemp": 14,
+      "minRain": 0.55,
+      "maxRain": 0.8,
+      "minForest": 0.0,
+      "maxForest": 0.7,
+      "minY": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "bubalusquarlesi"
+    ],
+    "example": "bovinae:bovinae-adult-female-bubalusquarlesi",
+    "climate": {
+      "minTemp": 22,
+      "maxTemp": 28,
+      "minRain": 0.75,
+      "maxRain": 1,
+      "minForest": 0.4,
+      "maxForest": 1,
+      "minY": 1.3,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "pseudoryxnghetinhensis"
+    ],
+    "example": "bovinae:bovinae-adult-female-pseudoryxnghetinhensis",
+    "climate": {
+      "minTemp": 22,
+      "maxTemp": 26,
+      "minRain": 0.75,
+      "maxRain": 1,
+      "minForest": 0.75,
+      "maxForest": 1,
+      "minY": 1.06,
+      "maxY": 1.55
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "syncerusantiquus"
+    ],
+    "example": "bovinae:bovinae-adult-female-syncerusantiquus",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 34,
+      "minRain": 0.3,
+      "maxRain": 0.9,
+      "minForest": 0.0,
+      "maxForest": 0.6,
+      "minY": 1.0,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "synceruscaffer"
+    ],
+    "example": "bovinae:bovinae-adult-female-synceruscaffer",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 34,
+      "minRain": 0.3,
+      "maxRain": 0.9,
+      "minForest": 0.1,
+      "maxForest": 0.9,
+      "minY": 1.0,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "syncerusnanus"
+    ],
+    "example": "bovinae:bovinae-adult-female-syncerusnanus",
+    "climate": {
+      "minTemp": 22,
+      "maxTemp": 34,
+      "minRain": 0.75,
+      "maxRain": 1.0,
+      "minForest": 0.2,
+      "maxForest": 1.0,
+      "minY": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "taurotragusderbianus"
+    ],
+    "example": "bovinae:bovinae-adult-female-taurotragusderbianus",
+    "climate": {
+      "minTemp": 22,
+      "maxTemp": 34,
+      "minRain": 0.2,
+      "maxRain": 0.75,
+      "minShrubs": 0.0,
+      "maxShrubs": 0.75,
+      "minForest": 0.4,
+      "maxForest": 0.9,
+      "minY": 1.0,
+      "maxY": 1.85
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "taurotragusoryx"
+    ],
+    "example": "bovinae:bovinae-adult-female-taurotragusoryx",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 28,
+      "minRain": 0.2,
+      "maxRain": 0.75,
+      "minShrubs": 0.0,
+      "maxShrubs": 0.75,
+      "minForest": 0.4,
+      "maxForest": 0.9,
+      "minY": 1.0,
+      "maxY": 1.85
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "tetracerusquadricornis"
+    ],
+    "example": "bovinae:bovinae-adult-female-tetracerusquadricornis",
+    "climate": {
+      "minTemp": 24,
+      "maxTemp": 34,
+      "minRain": 0.4,
+      "maxRain": 0.9,
+      "minShrubs": 0.4,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.35
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "tragelaphusangasii"
+    ],
+    "example": "bovinae:bovinae-adult-female-tragelaphusangasii",
+    "climate": {
+      "minTemp": 20,
+      "maxTemp": 26,
+      "minRain": 0.5,
+      "maxRain": 0.75,
+      "minForest": 0.4,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "tragelaphusbuxtoni"
+    ],
+    "example": "bovinae:bovinae-adult-female-tragelaphusbuxtoni",
+    "climate": {
+      "minTemp": 28,
+      "maxTemp": 34,
+      "minRain": 0.55,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.3,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.55
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "tragelaphuseurycerus"
+    ],
+    "example": "bovinae:bovinae-adult-female-tragelaphuseurycerus",
+    "climate": {
+      "minTemp": 21,
+      "maxTemp": 34,
+      "minRain": 0.65,
+      "maxRain": 1.0,
+      "minForest": 0.5,
+      "maxForest": 1.0,
+      "maxShrubs": 0.9,
+      "minY": 1.1,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "tragelaphusimberbis"
+    ],
+    "example": "bovinae:bovinae-adult-female-tragelaphusimberbis",
+    "climate": {
+      "minTemp": 22,
+      "maxTemp": 36,
+      "minRain": 0.2,
+      "maxRain": 0.65,
+      "minForest": 0.4,
+      "maxForest": 1.0,
+      "maxShrubs": 0.9,
+      "minY": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "tragelaphusscriptus"
+    ],
+    "example": "bovinae:bovinae-adult-female-tragelaphusscriptus",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 34,
+      "minRain": 0.4,
+      "maxRain": 0.9,
+      "minForest": 0.1,
+      "maxForest": 0.9,
+      "maxShrubs": 0.9,
+      "minY": 1.0,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "tragelaphusspekii"
+    ],
+    "example": "bovinae:bovinae-adult-female-tragelaphusspekii",
+    "climate": {
+      "minTemp": 22,
+      "maxTemp": 34,
+      "minRain": 0.55,
+      "maxRain": 1.0,
+      "minForest": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "tragelaphusstrepsiceros"
+    ],
+    "example": "bovinae:bovinae-adult-female-tragelaphusstrepsiceros",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 34,
+      "minRain": 0.2,
+      "maxRain": 0.65,
+      "minForest": 0.4,
+      "maxForest": 1.0,
+      "minY": 1.0,
+      "maxY": 1.65
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "tragelaphussylvaticus"
+    ],
+    "example": "bovinae:bovinae-adult-female-tragelaphussylvaticus",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 28,
+      "minRain": 0.3,
+      "maxRain": 0.9,
+      "minForest": 0.1,
+      "maxForest": 0.9,
+      "maxShrubs": 0.9,
+      "minY": 1.0,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "bostaurustaurus"
+    ],
+    "example": "bovinae:bovinae-adult-female-bostaurustaurus-semitamed",
+    "climate": {}
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "bubalusbubalis"
+    ],
+    "example": "bovinae:bovinae-adult-female-bubalusbubalis-semitamed",
+    "climate": {}
+  },
+  {
+    "provider": "chelonioidea",
+    "tokens": [
+      "carettacaretta"
+    ],
+    "example": "chelonioidea:chelonioidea-adult-male-carettacaretta",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 40,
+      "minY": 0.5,
+      "maxY": 0.98
+    }
+  },
+  {
+    "provider": "chelonioidea",
+    "tokens": [
+      "cheloniamydas"
+    ],
+    "example": "chelonioidea:chelonioidea-adult-male-cheloniamydas",
+    "climate": {
+      "minTemp": 6,
+      "maxTemp": 40,
+      "minY": 0.5,
+      "maxY": 0.98
+    }
+  },
+  {
+    "provider": "chelonioidea",
+    "tokens": [
+      "dermochelyscoriacea"
+    ],
+    "example": "chelonioidea:chelonioidea-adult-male-dermochelyscoriacea",
+    "climate": {
+      "minTemp": 8,
+      "maxTemp": 40,
+      "minY": 0.5,
+      "maxY": 0.98
+    }
+  },
+  {
+    "provider": "chelonioidea",
+    "tokens": [
+      "eretmochelysimbricata"
+    ],
+    "example": "chelonioidea:chelonioidea-adult-male-eretmochelysimbricata",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 40,
+      "minY": 0.5,
+      "maxY": 0.98
+    }
+  },
+  {
+    "provider": "chelonioidea",
+    "tokens": [
+      "lepidochelyskempii"
+    ],
+    "example": "chelonioidea:chelonioidea-adult-male-lepidochelyskempii",
+    "climate": {
+      "minTemp": 4,
+      "maxTemp": 40,
+      "minY": 0.5,
+      "maxY": 0.98
+    }
+  },
+  {
+    "provider": "chelonioidea",
+    "tokens": [
+      "lepidochelysolivacea"
+    ],
+    "example": "chelonioidea:chelonioidea-adult-male-lepidochelysolivacea",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 40,
+      "minY": 0.5,
+      "maxY": 0.98
+    }
+  },
+  {
+    "provider": "chelonioidea",
+    "tokens": [
+      "natatordepressus"
+    ],
+    "example": "chelonioidea:chelonioidea-adult-male-natatordepressus",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 40,
+      "minY": 0.5,
+      "maxY": 0.98
+    }
+  },
+  {
+    "provider": "thylacinidae",
+    "tokens": [
+      "sarcophilusharrisii"
+    ],
+    "example": "thylacinidae:dasyuridae-adult-female-sarcophilusharrisii",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 30,
+      "minRain": 0.1,
+      "maxRain": 0.8,
+      "minForestOrShrubs": 0.3,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "thylacinidae",
+    "tokens": [
+      "sarcophiluslaniarius"
+    ],
+    "example": "thylacinidae:dasyuridae-adult-female-sarcophiluslaniarius",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 30,
+      "minRain": 0.1,
+      "maxRain": 0.8,
+      "minForestOrShrubs": 0.2,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "iniidae",
+    "tokens": [
+      "lipotesvexillifer"
+    ],
+    "example": "iniidae:cetacea-adult-male-lipotesvexillifer",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 16,
+      "minRain": 0.65,
+      "maxRain": 0.75,
+      "minY": 0.1,
+      "maxY": 0.99
+    }
+  },
+  {
+    "provider": "cervinae",
+    "tokens": [
+      "megalocerosgiganteus"
+    ],
+    "example": "cervinae:cervidae-cervini-adult-female-megalocerosgiganteus",
+    "climate": {
+      "minTemp": -4,
+      "maxTemp": 10,
+      "minRain": 0.1,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.1,
+      "maxForest": 0.9,
+      "maxShrubs": 0.9,
+      "minY": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "nandiniabinotata"
+    ],
+    "example": "viverridae:nandiniidae-adult-female-nandiniabinotata",
+    "climate": {
+      "minTemp": 19,
+      "maxTemp": 40,
+      "minRain": 0.6,
+      "maxRain": 1,
+      "minForest": 0.4,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.65
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "arctictisbinturong"
+    ],
+    "example": "viverridae:viverridae-adult-female-arctictisbinturong",
+    "climate": {
+      "minTemp": 17,
+      "maxTemp": 40,
+      "minRain": 0.5,
+      "maxRain": 1,
+      "minForest": 0.4,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "arctogalidiatrivirgata"
+    ],
+    "example": "viverridae:viverridae-adult-female-arctogalidiatrivirgata",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 26,
+      "minRain": 0.65,
+      "maxRain": 1,
+      "minForest": 0.7,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "chrotogaleowstoni"
+    ],
+    "example": "viverridae:viverridae-adult-female-chrotogaleowstoni",
+    "climate": {
+      "minTemp": 24,
+      "maxTemp": 40,
+      "minRain": 0.65,
+      "maxRain": 1,
+      "minForest": 0.5,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "civettictiscivetta"
+    ],
+    "example": "viverridae:viverridae-adult-female-civettictiscivetta",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 40,
+      "minRain": 0.1,
+      "maxRain": 1,
+      "minForest": 0.2,
+      "maxForest": 0.7,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "cynogalebennettii"
+    ],
+    "example": "viverridae:viverridae-adult-female-cynogalebennettii",
+    "climate": {
+      "minTemp": 27,
+      "maxTemp": 40,
+      "minRain": 0.75,
+      "maxRain": 1,
+      "minForest": 0.6,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.05
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "diplogalehosei"
+    ],
+    "example": "viverridae:viverridae-adult-female-diplogalehosei",
+    "climate": {
+      "minTemp": 29,
+      "maxTemp": 40,
+      "minRain": 0.85,
+      "maxRain": 1,
+      "minForest": 0.6,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.1,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "genettaabyssinica"
+    ],
+    "example": "viverridae:viverridae-adult-female-genettaabyssinica",
+    "climate": {
+      "minTemp": 13,
+      "maxTemp": 40,
+      "minRain": 0.05,
+      "maxRain": 0.6,
+      "minForest": 0.0,
+      "maxForest": 0.4,
+      "maxShrubs": 1.0,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "genettaangolensis"
+    ],
+    "example": "viverridae:viverridae-adult-female-genettaangolensis",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 24,
+      "minRain": 0.5,
+      "maxRain": 0.75,
+      "minForest": 0.1,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "genettabourloni"
+    ],
+    "example": "viverridae:viverridae-adult-female-genettabourloni",
+    "climate": {
+      "minTemp": 25,
+      "maxTemp": 40,
+      "minRain": 0.85,
+      "maxRain": 1,
+      "minForest": 0.5,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "genettacristata"
+    ],
+    "example": "viverridae:viverridae-adult-female-genettacristata",
+    "climate": {
+      "minTemp": 27,
+      "maxTemp": 40,
+      "minRain": 0.8,
+      "maxRain": 1,
+      "minForest": 0.3,
+      "maxForest": 0.8,
+      "maxShrubs": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "genettagenetta"
+    ],
+    "example": "viverridae:viverridae-adult-female-genettagenetta",
+    "climate": {
+      "minTemp": 13,
+      "maxTemp": 40,
+      "minRain": 0.1,
+      "maxRain": 0.8,
+      "minForest": 0.3,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "genettajohnstoni"
+    ],
+    "example": "viverridae:viverridae-adult-female-genettajohnstoni",
+    "climate": {
+      "minTemp": 25,
+      "maxTemp": 40,
+      "minRain": 0.85,
+      "maxRain": 1,
+      "minForest": 0.5,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "genettamaculata"
+    ],
+    "example": "viverridae:viverridae-adult-female-genettamaculata",
+    "climate": {
+      "minTemp": 15,
+      "maxTemp": 40,
+      "minRain": 0.4,
+      "maxRain": 1,
+      "minForest": 0.3,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "genettapardina"
+    ],
+    "example": "viverridae:viverridae-adult-female-genettapardina",
+    "climate": {
+      "minTemp": 23,
+      "maxTemp": 40,
+      "minRain": 0.3,
+      "maxRain": 1,
+      "minForest": 0.3,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "genettapiscivora"
+    ],
+    "example": "viverridae:viverridae-adult-female-genettapiscivora",
+    "climate": {
+      "minTemp": 24,
+      "maxTemp": 28,
+      "minRain": 0.65,
+      "maxRain": 0.85,
+      "minForest": 0.7,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.1,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "genettaplesictoides"
+    ],
+    "example": "viverridae:viverridae-adult-female-genettaplesictoides",
+    "climate": {
+      "minTemp": 15,
+      "maxTemp": 20,
+      "minRain": 0.3,
+      "maxRain": 0.65,
+      "minForest": 0.0,
+      "maxForest": 0.7,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "genettapoensis"
+    ],
+    "example": "viverridae:viverridae-adult-female-genettapoensis",
+    "climate": {
+      "minTemp": 26,
+      "maxTemp": 40,
+      "minRain": 0.65,
+      "maxRain": 0.85,
+      "minForest": 0.7,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "genettaservalina"
+    ],
+    "example": "viverridae:viverridae-adult-female-genettaservalina",
+    "climate": {
+      "minTemp": 20,
+      "maxTemp": 28,
+      "minRain": 0.6,
+      "maxRain": 1,
+      "minForest": 0.4,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.1,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "genettathierryi"
+    ],
+    "example": "viverridae:viverridae-adult-female-genettathierryi",
+    "climate": {
+      "minTemp": 24,
+      "maxTemp": 40,
+      "minRain": 0.65,
+      "maxRain": 1,
+      "minForest": 0.5,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "genettatigrina"
+    ],
+    "example": "viverridae:viverridae-adult-female-genettatigrina",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 18,
+      "minRain": 0.2,
+      "maxRain": 0.65,
+      "minForest": 0.6,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "genettavictoriae"
+    ],
+    "example": "viverridae:viverridae-adult-female-genettavictoriae",
+    "climate": {
+      "minTemp": 22,
+      "maxTemp": 26,
+      "minRain": 0.65,
+      "maxRain": 0.85,
+      "minForest": 0.4,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.1,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "hemigalusderbyanus"
+    ],
+    "example": "viverridae:viverridae-adult-female-hemigalusderbyanus",
+    "climate": {
+      "minTemp": 26,
+      "maxTemp": 40,
+      "minRain": 0.75,
+      "maxRain": 1,
+      "minForest": 0.6,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.55
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "macrogalidiamusschenbroekii"
+    ],
+    "example": "viverridae:viverridae-adult-female-macrogalidiamusschenbroekii",
+    "climate": {
+      "minTemp": 26,
+      "maxTemp": 40,
+      "minRain": 0.85,
+      "maxRain": 1,
+      "minForest": 0.6,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.1,
+      "maxY": 1.65
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "pagumalarvata"
+    ],
+    "example": "viverridae:viverridae-adult-female-pagumalarvata",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 40,
+      "minRain": 0.3,
+      "maxRain": 1,
+      "minForest": 0.5,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "paradoxurushermaphroditus"
+    ],
+    "example": "viverridae:viverridae-adult-female-paradoxurushermaphroditus",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 40,
+      "minRain": 0.25,
+      "maxRain": 1,
+      "minForest": 0.7,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "paradoxurusjerdoni"
+    ],
+    "example": "viverridae:viverridae-adult-female-paradoxurusjerdoni",
+    "climate": {
+      "minTemp": 26,
+      "maxTemp": 40,
+      "minRain": 0.75,
+      "maxRain": 1,
+      "minForest": 0.6,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.1,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "paradoxuruszeylonensis"
+    ],
+    "example": "viverridae:viverridae-adult-female-paradoxuruszeylonensis",
+    "climate": {
+      "minTemp": 28,
+      "maxTemp": 40,
+      "minRain": 0.75,
+      "maxRain": 1,
+      "minForest": 0.6,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.1,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "poianaleightoni"
+    ],
+    "example": "viverridae:viverridae-adult-female-poianaleightoni",
+    "climate": {
+      "minTemp": 24,
+      "maxTemp": 26,
+      "minRain": 0.75,
+      "maxRain": 1,
+      "minForest": 0.8,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "poianarichardsonii"
+    ],
+    "example": "viverridae:viverridae-adult-female-poianarichardsonii",
+    "climate": {
+      "minTemp": 22,
+      "maxTemp": 26,
+      "minRain": 0.65,
+      "maxRain": 1,
+      "minForest": 0.8,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "viverracivettina"
+    ],
+    "example": "viverridae:viverridae-adult-female-viverracivettina",
+    "climate": {
+      "minTemp": 24,
+      "maxTemp": 26,
+      "minRain": 0.75,
+      "maxRain": 1,
+      "minForest": 0.8,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "viverramegaspila"
+    ],
+    "example": "viverridae:viverridae-adult-female-viverramegaspila",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 28,
+      "minRain": 0.5,
+      "maxRain": 1,
+      "minForest": 0.6,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "viverratangalunga"
+    ],
+    "example": "viverridae:viverridae-adult-female-viverratangalunga",
+    "climate": {
+      "minTemp": 22,
+      "maxTemp": 40,
+      "minRain": 0.75,
+      "maxRain": 1,
+      "minForest": 0.7,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "viverrazibetha"
+    ],
+    "example": "viverridae:viverridae-adult-female-viverrazibetha",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 40,
+      "minRain": 0.5,
+      "maxRain": 1,
+      "minForest": 0.3,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "viverridae",
+    "tokens": [
+      "viverriculaindica"
+    ],
+    "example": "viverridae:viverridae-adult-female-viverriculaindica",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 40,
+      "minRain": 0.25,
+      "maxRain": 1,
+      "minForest": 0.1,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.65
+    }
+  },
+  {
+    "provider": "meiolaniidae",
+    "tokens": [
+      "ninjemysoweni"
+    ],
+    "example": "meiolaniidae:meiolaniidae-adult-male-ninjemysoweni",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 22,
+      "minRain": 0.5,
+      "maxRain": 0.8,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.65,
+      "maxShrubs": 1,
+      "minY": 1.05,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "vombatidae",
+    "tokens": [
+      "zygomaturustrilobus"
+    ],
+    "example": "vombatidae:diprotodontidae-adult-female-zygomaturustrilobus",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 32,
+      "minRain": 0.4,
+      "maxRain": 1.0,
+      "minForest": 0.2,
+      "maxForest": 0.8,
+      "maxShrubs": 1,
+      "minY": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "vombatidae",
+    "tokens": [
+      "thylacoleocarnifex"
+    ],
+    "example": "vombatidae:thylacoleonidae-adult-female-thylacoleocarnifex",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 30,
+      "minRain": 0.1,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.2,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "vombatidae",
+    "tokens": [
+      "lasiorhinuskrefftii"
+    ],
+    "example": "vombatidae:vombatidae-adult-female-lasiorhinuskrefftii",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 30,
+      "minRain": 0.4,
+      "maxRain": 0.8,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "vombatidae",
+    "tokens": [
+      "lasiorhinuslatifrons"
+    ],
+    "example": "vombatidae:vombatidae-adult-female-lasiorhinuslatifrons",
+    "climate": {
+      "minTemp": 16,
+      "maxTemp": 22,
+      "minRain": 0.25,
+      "maxRain": 0.6,
+      "minForest": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "vombatidae",
+    "tokens": [
+      "phascolonusgigas"
+    ],
+    "example": "vombatidae:vombatidae-adult-female-phascolonusgigas",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 30,
+      "minRain": 0.05,
+      "maxRain": 0.6,
+      "minForest": 0.0,
+      "maxForest": 0.6,
+      "maxShrubs": 0.6,
+      "minY": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "vombatidae",
+    "tokens": [
+      "vombatushacketti"
+    ],
+    "example": "vombatidae:vombatidae-adult-female-vombatushacketti",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 18,
+      "minRain": 0.1,
+      "maxRain": 0.75,
+      "minForest": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "vombatidae",
+    "tokens": [
+      "vombatusursinus"
+    ],
+    "example": "vombatidae:vombatidae-adult-female-vombatusursinus",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 21,
+      "minRain": 0.6,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "felinae",
+    "tokens": [
+      "caracalcaracal"
+    ],
+    "example": "felinae:felinae-adult-female-caracalcaracal",
+    "climate": {
+      "minTemp": 15,
+      "maxTemp": 35,
+      "minRain": 0.05,
+      "maxRain": 0.75,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.7
+    }
+  },
+  {
+    "provider": "felinae",
+    "tokens": [
+      "lynxcanadensis"
+    ],
+    "example": "felinae:felinae-adult-female-lynxcanadensis",
+    "climate": {
+      "minTemp": -15,
+      "maxTemp": 7,
+      "minRain": 0.1,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "felinae",
+    "tokens": [
+      "lynxlynx"
+    ],
+    "example": "felinae:felinae-adult-female-lynxlynx",
+    "climate": {
+      "minTemp": -23,
+      "maxTemp": 12,
+      "minRain": 0.05,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "felinae",
+    "tokens": [
+      "lynxpardinus"
+    ],
+    "example": "felinae:felinae-adult-female-lynxpardinus",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 16,
+      "minRain": 0.35,
+      "maxRain": 0.8,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "acanthisittachloris"
+    ],
+    "example": "dinornithidae:acanthisittidae-adult-male-acanthisittachloris",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minForest": 0.4,
+      "maxForest": 0.75,
+      "minY": 1.05,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "dendroscansordecurvirostris"
+    ],
+    "example": "dinornithidae:acanthisittidae-adult-male-dendroscansordecurvirostris",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 12,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minForest": 0.75,
+      "maxForest": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "pachyplichasjagmi"
+    ],
+    "example": "dinornithidae:acanthisittidae-adult-male-pachyplichasjagmi",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 16,
+      "minRain": 0.35,
+      "maxRain": 1.0,
+      "minY": 1.05,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "pachyplichasyaldwyni"
+    ],
+    "example": "dinornithidae:acanthisittidae-adult-male-pachyplichasyaldwyni",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 12,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minY": 1.05,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "traversialyalli"
+    ],
+    "example": "dinornithidae:acanthisittidae-adult-male-traversialyalli",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minForest": 0.5,
+      "maxForest": 1.0,
+      "minY": 1.05,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "xenicusgilviventris"
+    ],
+    "example": "dinornithidae:acanthisittidae-adult-male-xenicusgilviventris",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 12,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minForest": 0.0,
+      "maxForest": 0.5,
+      "minY": 1.3,
+      "maxY": 1.65
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "xenicuslongipes"
+    ],
+    "example": "dinornithidae:acanthisittidae-adult-male-xenicuslongipes",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.25,
+      "maxRain": 1.0,
+      "minShrub": 0.25,
+      "minY": 1.05,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "aegothelesnovaezealandiae"
+    ],
+    "example": "dinornithidae:aegothelidae-adult-male-aegothelesnovaezealandiae",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minForest": 0.75,
+      "maxForest": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "anasaucklandica"
+    ],
+    "example": "dinornithidae:anatidae-adult-male-anasaucklandica",
+    "climate": {
+      "minTemp": 1,
+      "maxTemp": 8,
+      "minRain": 0.3,
+      "maxRain": 0.75,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.4,
+      "maxShrubs": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "anaschlorotis"
+    ],
+    "example": "dinornithidae:anatidae-adult-male-anaschlorotis",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.4,
+      "maxShrubs": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "anasnesiotis"
+    ],
+    "example": "dinornithidae:anatidae-adult-male-anasnesiotis",
+    "climate": {
+      "minTemp": 4,
+      "maxTemp": 8,
+      "minRain": 0.65,
+      "maxRain": 0.73,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.4,
+      "maxShrubs": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "chenonettafinschi"
+    ],
+    "example": "dinornithidae:anatidae-adult-male-chenonettafinschi",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.35,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "cnemiorniscalcitrans"
+    ],
+    "example": "dinornithidae:anatidae-adult-male-cnemiorniscalcitrans",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 12,
+      "minRain": 0.35,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 4.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "cnemiornisgracilis"
+    ],
+    "example": "dinornithidae:anatidae-adult-male-cnemiornisgracilis",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 16,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 4.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "apteryxaustralis"
+    ],
+    "example": "dinornithidae:apterygidae-adult-male-apteryxaustralis",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 12,
+      "minRain": 0.65,
+      "maxRain": 1.0,
+      "minForest": 0.6,
+      "maxForest": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "apteryxhaastii"
+    ],
+    "example": "dinornithidae:apterygidae-adult-male-apteryxhaastii",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.25,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.2,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "apteryxmantelli"
+    ],
+    "example": "dinornithidae:apterygidae-adult-male-apteryxmantelli",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 16,
+      "minRain": 0.25,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.2,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "apteryxowenii"
+    ],
+    "example": "dinornithidae:apterygidae-adult-male-apteryxowenii",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 16,
+      "minRain": 0.25,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.2,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "apteryxrowi"
+    ],
+    "example": "dinornithidae:apterygidae-adult-male-apteryxrowi",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 12,
+      "minRain": 0.25,
+      "maxRain": 1.0,
+      "minForest": 0.8,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.4
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "aptornisdefossor"
+    ],
+    "example": "dinornithidae:aptornithidae-adult-male-aptornisdefossor",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 16,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 0.8,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "aptornisotidiformis"
+    ],
+    "example": "dinornithidae:aptornithidae-adult-male-aptornisotidiformis",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 12,
+      "minRain": 0.35,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 0.8,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "dinornisnovaezealandiae"
+    ],
+    "example": "dinornithidae:dinornithidae-adult-male-dinornisnovaezealandiae",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 16,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 0.8,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "dinornisrobustus"
+    ],
+    "example": "dinornithidae:dinornithidae-adult-male-dinornisrobustus",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 12,
+      "minRain": 0.35,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 0.8,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "anomalopteryxdidiformis"
+    ],
+    "example": "dinornithidae:emeidae-adult-male-anomalopteryxdidiformis",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 0.8,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "emeuscrassus"
+    ],
+    "example": "dinornithidae:emeidae-adult-male-emeuscrassus",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 12,
+      "minRain": 0.35,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "euryapteryxcurtus"
+    ],
+    "example": "dinornithidae:emeidae-adult-male-euryapteryxcurtus",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 18,
+      "minRain": 0.25,
+      "maxRain": 0.8,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 0.8,
+      "maxShrubs": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "pachyornisaustralis"
+    ],
+    "example": "dinornithidae:emeidae-adult-male-pachyornisaustralis",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 12,
+      "minRain": 0.6,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.2,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "pachyorniselephantopus"
+    ],
+    "example": "dinornithidae:emeidae-adult-male-pachyorniselephantopus",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.25,
+      "maxRain": 0.6,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 0.75,
+      "maxShrubs": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "pachyornisgeranoides"
+    ],
+    "example": "dinornithidae:emeidae-adult-male-pachyornisgeranoides",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 18,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 0.75,
+      "maxShrubs": 1.0,
+      "maxY": 1.3
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "megalapteryxdidinus"
+    ],
+    "example": "dinornithidae:megalapterygidae-adult-male-megalapteryxdidinus",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 12,
+      "minRain": 0.35,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "minY": 1.25,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "cabalusmodestus"
+    ],
+    "example": "dinornithidae:rallidae-adult-male-cabalusmodestus",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.5,
+      "maxRain": 0.6,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "diaphorapteryxhawkinsi"
+    ],
+    "example": "dinornithidae:rallidae-adult-male-diaphorapteryxhawkinsi",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.5,
+      "maxRain": 0.6,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "gallirallusaustralis"
+    ],
+    "example": "dinornithidae:rallidae-adult-male-gallirallusaustralis",
+    "climate": {
+      "minTemp": 6,
+      "maxTemp": 16,
+      "minRain": 0.6,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "hypotaenidiadieffenbachii"
+    ],
+    "example": "dinornithidae:rallidae-adult-male-hypotaenidiadieffenbachii",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.5,
+      "maxRain": 0.6,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "hypotaenidiaphilippensis"
+    ],
+    "example": "dinornithidae:rallidae-adult-male-hypotaenidiaphilippensis",
+    "climate": {
+      "minTemp": 6,
+      "maxTemp": 40,
+      "minRain": 0.3,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "hypotaenidiasylvestris"
+    ],
+    "example": "dinornithidae:rallidae-adult-male-hypotaenidiasylvestris",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 22,
+      "minRain": 0.62,
+      "maxRain": 0.68,
+      "minForestOrShrubs": 0.3,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "lewiniamuelleri"
+    ],
+    "example": "dinornithidae:rallidae-adult-male-lewiniamuelleri",
+    "climate": {
+      "minTemp": 5,
+      "maxTemp": 11,
+      "minRain": 0.7,
+      "maxRain": 0.8,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.5,
+      "maxShrubs": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "porphyrioalbus"
+    ],
+    "example": "dinornithidae:rallidae-adult-male-porphyrioalbus",
+    "climate": {
+      "minTemp": 18,
+      "maxTemp": 22,
+      "minRain": 0.62,
+      "maxRain": 0.68,
+      "minForestOrShrubs": 0.3,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.2
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "porphyriohochstetteri"
+    ],
+    "example": "dinornithidae:rallidae-adult-male-porphyriohochstetteri",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.5,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "porphyriomantelli"
+    ],
+    "example": "dinornithidae:rallidae-adult-male-porphyriomantelli",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 16,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.0,
+      "maxForest": 0.5,
+      "maxShrubs": 1.0,
+      "maxY": 1.6
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "tribonyxhodgenorum"
+    ],
+    "example": "dinornithidae:rallidae-adult-male-tribonyxhodgenorum",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.25,
+      "maxRain": 1.0,
+      "minShrubs": 0.2,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.1
+    }
+  },
+  {
+    "provider": "dinornithidae",
+    "tokens": [
+      "strigopshabroptila"
+    ],
+    "example": "dinornithidae:strigopidae-adult-male-strigopshabroptila",
+    "climate": {
+      "minTemp": 10,
+      "maxTemp": 14,
+      "minRain": 0.5,
+      "maxRain": 1.0,
+      "minForestOrShrubs": 0.25,
+      "maxForest": 1.0,
+      "maxShrubs": 1.0,
+      "maxY": 1.5
+    }
+  }
+]

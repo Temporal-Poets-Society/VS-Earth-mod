@@ -1,0 +1,473 @@
+{
+  "mod": {
+    "modid": 2180,
+    "assetid": 12526,
+    "name": "Floral Zones: Neozeylandic Region",
+    "text": "<p><span style=\"font-weight: 400;\">This mod adds plants from the Neozeylandic floristic region, filling out the roster of temperate and subtropical plants.</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">This mod includes:<br /><br /></span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Stats</div>\n<div class=\"spoiler-text\">\n<table dir=\"ltr\" style=\"border-spacing: 0px; height: 1935px; width: 2262px;\" border=\"1\" cellpadding=\"0\" data-sheets-root=\"1\" data-sheets-baot=\"1\"><colgroup><col width=\"189\" /><col width=\"176\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"100\" /><col width=\"181\" /><col width=\"250\" /><col width=\"243\" /></colgroup>\n<tbody>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 245.764px;\">Common Name</td>\n<td style=\"height: 39px; width: 228.854px;\">Scientific name</td>\n<td style=\"height: 39px; width: 130.023px;\">Size</td>\n<td style=\"height: 39px; width: 130.023px;\">Temperature</td>\n<td style=\"height: 39px; width: 130.023px;\">Precipitation</td>\n<td style=\"height: 39px; width: 130.023px;\">Fertility</td>\n<td style=\"height: 39px; width: 130.023px;\">Forest</td>\n<td style=\"height: 39px; width: 130.023px;\">Altitude</td>\n<td style=\"height: 39px; width: 130.023px;\">Additional spawn conditions</td>\n<td style=\"height: 39px; width: 235.359px;\">Resources</td>\n<td style=\"height: 39px; width: 325.081px;\">Additional Features</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 228.854px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 21px;\">\n<td style=\"height: 21px; width: 245.764px;\">Swamp Astelia</td>\n<td style=\"height: 21px; width: 228.854px;\">Astelia grandis</td>\n<td style=\"height: 21px; width: 130.023px;\">1.5-2 m H</td>\n<td style=\"height: 21px; width: 130.023px;\">8-16</td>\n<td style=\"height: 21px; width: 130.023px;\">40-93%</td>\n<td style=\"height: 21px; width: 130.023px;\">0.4-1</td>\n<td style=\"height: 21px; width: 130.023px;\">0.3-1</td>\n<td style=\"height: 21px; width: 130.023px;\">0-0.25</td>\n<td style=\"height: 21px; width: 130.023px;\">Near Water</td>\n<td style=\"height: 21px; width: 235.359px;\">Fruit</td>\n<td style=\"height: 21px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Dwarf Cabbage Tree</td>\n<td style=\"height: 19px; width: 228.854px;\">Cordyline pumilio</td>\n<td style=\"height: 19px; width: 130.023px;\">1 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">12-16</td>\n<td style=\"height: 19px; width: 130.023px;\">63-92%</td>\n<td style=\"height: 19px; width: 130.023px;\">0.4-0.6</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.6</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.15</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">Vegetable</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Mountain Cabbage Tree</td>\n<td style=\"height: 19px; width: 228.854px;\">Cordyline indivisa</td>\n<td style=\"height: 19px; width: 130.023px;\">8 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">6-14</td>\n<td style=\"height: 19px; width: 130.023px;\">26-100%</td>\n<td style=\"height: 19px; width: 130.023px;\">0.6-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0.2-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0.1-0.45</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 245.764px;\">Parataniwha</td>\n<td style=\"height: 39px; width: 228.854px;\">Elatostema rugosum</td>\n<td style=\"height: 39px; width: 130.023px;\">1 m H</td>\n<td style=\"height: 39px; width: 130.023px;\">10-16</td>\n<td style=\"height: 39px; width: 130.023px;\">59-95%</td>\n<td style=\"height: 39px; width: 130.023px;\">0.6-1</td>\n<td style=\"height: 39px; width: 130.023px;\">0.5-1</td>\n<td style=\"height: 39px; width: 130.023px;\">0-0.16</td>\n<td style=\"height: 39px; width: 130.023px;\">On Surface Plus Under Trees</td>\n<td style=\"height: 39px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Pygmy Pine</td>\n<td style=\"height: 19px; width: 228.854px;\">Lepidothamnus laxifolius</td>\n<td style=\"height: 19px; width: 130.023px;\">1 m W</td>\n<td style=\"height: 19px; width: 130.023px;\">3-11</td>\n<td style=\"height: 19px; width: 130.023px;\">58-100%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.6</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.2</td>\n<td style=\"height: 19px; width: 130.023px;\">0.21-0.4</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 245.764px;\">Crown Fern</td>\n<td style=\"height: 39px; width: 228.854px;\">Lomaria discolor</td>\n<td style=\"height: 39px; width: 130.023px;\">1 m H</td>\n<td style=\"height: 39px; width: 130.023px;\">6-16</td>\n<td style=\"height: 39px; width: 130.023px;\">26-100%</td>\n<td style=\"height: 39px; width: 130.023px;\">0-1</td>\n<td style=\"height: 39px; width: 130.023px;\">0.4-1</td>\n<td style=\"height: 39px; width: 130.023px;\">0-0.4</td>\n<td style=\"height: 39px; width: 130.023px;\">On Surface Plus Under Trees</td>\n<td style=\"height: 39px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 245.764px;\">King Fern</td>\n<td style=\"height: 39px; width: 228.854px;\">Ptisana salicina</td>\n<td style=\"height: 39px; width: 130.023px;\">5 m H</td>\n<td style=\"height: 39px; width: 130.023px;\">11-23</td>\n<td style=\"height: 39px; width: 130.023px;\">50-96%</td>\n<td style=\"height: 39px; width: 130.023px;\">0.6-1</td>\n<td style=\"height: 39px; width: 130.023px;\">0.6-1</td>\n<td style=\"height: 39px; width: 130.023px;\">0-0.22</td>\n<td style=\"height: 39px; width: 130.023px;\">On Surface Plus Under Trees</td>\n<td style=\"height: 39px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Taramea</td>\n<td style=\"height: 19px; width: 228.854px;\">Aciphylla aurea</td>\n<td style=\"height: 19px; width: 130.023px;\">1.5 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">-2-12</td>\n<td style=\"height: 19px; width: 130.023px;\">26-75%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.7</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.2</td>\n<td style=\"height: 19px; width: 130.023px;\">0.05-0.5</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Ross Lily</td>\n<td style=\"height: 19px; width: 228.854px;\">Bulbinella rossii</td>\n<td style=\"height: 19px; width: 130.023px;\">1 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">8-10</td>\n<td style=\"height: 19px; width: 130.023px;\">65-73%</td>\n<td style=\"height: 19px; width: 130.023px;\">0.7-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.18</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Cotton Daisy</td>\n<td style=\"height: 19px; width: 228.854px;\">Celmisia angustifolia</td>\n<td style=\"height: 19px; width: 130.023px;\">1 m W</td>\n<td style=\"height: 19px; width: 130.023px;\">-2-10</td>\n<td style=\"height: 19px; width: 130.023px;\">48-80%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.1</td>\n<td style=\"height: 19px; width: 130.023px;\">0.08-0.6</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Lord Howe Wedding Lily</td>\n<td style=\"height: 19px; width: 228.854px;\">Dietes robinsoniana</td>\n<td style=\"height: 19px; width: 130.023px;\">1.5 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">18-20</td>\n<td style=\"height: 19px; width: 130.023px;\">62-68%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.5</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.22</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Forked Sundew</td>\n<td style=\"height: 19px; width: 228.854px;\">Drosera binata</td>\n<td style=\"height: 19px; width: 130.023px;\">0.3 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">10-20</td>\n<td style=\"height: 19px; width: 130.023px;\">26-75%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.6</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.2</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.1</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 245.764px;\">Chatham Island Forget-Me-Not</td>\n<td style=\"height: 39px; width: 228.854px;\">Myosotidium hortensia</td>\n<td style=\"height: 39px; width: 130.023px;\">1 m H</td>\n<td style=\"height: 39px; width: 130.023px;\">11-13</td>\n<td style=\"height: 39px; width: 130.023px;\">29-63%</td>\n<td style=\"height: 39px; width: 130.023px;\">0.5-1</td>\n<td style=\"height: 39px; width: 130.023px;\">0-0.3</td>\n<td style=\"height: 39px; width: 130.023px;\">0-0.05</td>\n<td style=\"height: 39px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 245.764px;\">Giant Button Daisy</td>\n<td style=\"height: 39px; width: 228.854px;\">Pleurophyllum criniferum</td>\n<td style=\"height: 39px; width: 130.023px;\">2 m H</td>\n<td style=\"height: 39px; width: 130.023px;\">4-10</td>\n<td style=\"height: 39px; width: 130.023px;\">65-73%</td>\n<td style=\"height: 39px; width: 130.023px;\">0.7-1</td>\n<td style=\"height: 39px; width: 130.023px;\">0-0.1</td>\n<td style=\"height: 39px; width: 130.023px;\">0-0.18</td>\n<td style=\"height: 39px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 245.764px;\">Campbell Island Daisy</td>\n<td style=\"height: 39px; width: 228.854px;\">Pleurophyllum speciosum</td>\n<td style=\"height: 39px; width: 130.023px;\">1 m H</td>\n<td style=\"height: 39px; width: 130.023px;\">6-10</td>\n<td style=\"height: 39px; width: 130.023px;\">65-73%</td>\n<td style=\"height: 39px; width: 130.023px;\">0.7-1</td>\n<td style=\"height: 39px; width: 130.023px;\">0-0.1</td>\n<td style=\"height: 39px; width: 130.023px;\">0-0.18</td>\n<td style=\"height: 39px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Mount Cook Buttercup</td>\n<td style=\"height: 19px; width: 228.854px;\">Ranunculus lyallii</td>\n<td style=\"height: 19px; width: 130.023px;\">1 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">-2-8</td>\n<td style=\"height: 19px; width: 130.023px;\">50-100%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.3</td>\n<td style=\"height: 19px; width: 130.023px;\">0.18-0.5</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Dwarf Kowhai</td>\n<td style=\"height: 19px; width: 228.854px;\">Sophora prostrata</td>\n<td style=\"height: 19px; width: 130.023px;\">2 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">8-12</td>\n<td style=\"height: 19px; width: 130.023px;\">26-70%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.3</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.1</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Hebe</td>\n<td style=\"height: 19px; width: 228.854px;\">Veronica epacridea</td>\n<td style=\"height: 19px; width: 130.023px;\">0.4 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">-2-10</td>\n<td style=\"height: 19px; width: 130.023px;\">21-100%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.3</td>\n<td style=\"height: 19px; width: 130.023px;\">0.15-0.68</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Kahakaha</td>\n<td style=\"height: 19px; width: 228.854px;\">Astelia hastata</td>\n<td style=\"height: 19px; width: 130.023px;\">1-1.5 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">10-16</td>\n<td style=\"height: 19px; width: 130.023px;\">29-100%</td>\n<td style=\"height: 19px; width: 130.023px;\">-</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.39</td>\n<td style=\"height: 19px; width: 130.023px;\">On Trees</td>\n<td style=\"height: 19px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 325.081px;\">Placeable in antler mounts</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">New Zealand Flax</td>\n<td style=\"height: 19px; width: 228.854px;\">Phormium tenax</td>\n<td style=\"height: 19px; width: 130.023px;\">4 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">6-20</td>\n<td style=\"height: 19px; width: 130.023px;\">26-100%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.5</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.41</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">Fibers, Rope, Reeds</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Shore Puha</td>\n<td style=\"height: 19px; width: 228.854px;\">Sonchus kirkii</td>\n<td style=\"height: 19px; width: 130.023px;\">0.3-1 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">10-16</td>\n<td style=\"height: 19px; width: 130.023px;\">26-80%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.2</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.05</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">Vegetable</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 245.764px;\">Tree Nettle</td>\n<td style=\"height: 39px; width: 228.854px;\">Urtica ferox</td>\n<td style=\"height: 39px; width: 130.023px;\">3 m H</td>\n<td style=\"height: 39px; width: 130.023px;\">8-14</td>\n<td style=\"height: 39px; width: 130.023px;\">26-100%</td>\n<td style=\"height: 39px; width: 130.023px;\">0.7-1</td>\n<td style=\"height: 39px; width: 130.023px;\">0.1-0.6</td>\n<td style=\"height: 39px; width: 130.023px;\">0-0.18</td>\n<td style=\"height: 39px; width: 130.023px;\">On Surface Plus Under Trees</td>\n<td style=\"height: 39px; width: 235.359px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 325.081px;\">Damaging block</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Bog Pine</td>\n<td style=\"height: 19px; width: 228.854px;\">Halocarpus bidwillii</td>\n<td style=\"height: 19px; width: 130.023px;\">3-4.8 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">4-12</td>\n<td style=\"height: 19px; width: 130.023px;\">71-100%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0.3-0.6</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.45 (0.5)</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">Seeds</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Snow Totara</td>\n<td style=\"height: 19px; width: 228.854px;\">Podocarpus nivalis</td>\n<td style=\"height: 19px; width: 130.023px;\">2-3 m W</td>\n<td style=\"height: 19px; width: 130.023px;\">4-12</td>\n<td style=\"height: 19px; width: 130.023px;\">68-100%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.4</td>\n<td style=\"height: 19px; width: 130.023px;\">0.06-0.5 (0.5)</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">Seeds</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Norfolk Island Pine</td>\n<td style=\"height: 19px; width: 228.854px;\">Araucaria heterophylla</td>\n<td style=\"height: 19px; width: 130.023px;\">50-65 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">18-20</td>\n<td style=\"height: 19px; width: 130.023px;\">65-71%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.6</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.05(0.4)</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">Wood, Seeds</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Silver Tree Fern</td>\n<td style=\"height: 19px; width: 228.854px;\">Alsophila tricolor</td>\n<td style=\"height: 19px; width: 130.023px;\">10-12 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">6-16</td>\n<td style=\"height: 19px; width: 130.023px;\">26-54%</td>\n<td style=\"height: 19px; width: 130.023px;\">0.4-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.5(0.6)</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">Seeds</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Rimu</td>\n<td style=\"height: 19px; width: 228.854px;\">Dacrydium cupressinum</td>\n<td style=\"height: 19px; width: 130.023px;\">35-60 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">8-16</td>\n<td style=\"height: 19px; width: 130.023px;\">26-100%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0.5-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.2(0.45)</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">Wood, Seeds, Resin</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Whau</td>\n<td style=\"height: 19px; width: 228.854px;\">Entelea arborescens</td>\n<td style=\"height: 19px; width: 130.023px;\">5-8 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">12-16</td>\n<td style=\"height: 19px; width: 130.023px;\">26-75%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.7</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.65</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.2(0.4)</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">Firewood, Seeds</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Tawhai</td>\n<td style=\"height: 19px; width: 228.854px;\">Nothofagus menziesii</td>\n<td style=\"height: 19px; width: 130.023px;\">25 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">6-14</td>\n<td style=\"height: 19px; width: 130.023px;\">26-100%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0.4-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.5(0.65)</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">Wood, Seeds, Tannin</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 19px;\">\n<td style=\"height: 19px; width: 245.764px;\">Totara</td>\n<td style=\"height: 19px; width: 228.854px;\">Podocarpus totara</td>\n<td style=\"height: 19px; width: 130.023px;\">20-25 m H</td>\n<td style=\"height: 19px; width: 130.023px;\">6-16</td>\n<td style=\"height: 19px; width: 130.023px;\">26-100%</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-1</td>\n<td style=\"height: 19px; width: 130.023px;\">0-0.52 (0.67</td>\n<td style=\"height: 19px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 19px; width: 235.359px;\">Wood, Seeds</td>\n<td style=\"height: 19px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 245.764px;\">Lancewood</td>\n<td style=\"height: 39px; width: 228.854px;\">Psuedopanax crassifolius</td>\n<td style=\"height: 39px; width: 130.023px;\">8-12 m H</td>\n<td style=\"height: 39px; width: 130.023px;\">6-16</td>\n<td style=\"height: 39px; width: 130.023px;\">26-100%</td>\n<td style=\"height: 39px; width: 130.023px;\">0-1</td>\n<td style=\"height: 39px; width: 130.023px;\">0.3-1</td>\n<td style=\"height: 39px; width: 130.023px;\">0-0.23 (0.4)</td>\n<td style=\"height: 39px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 235.359px;\">Firewood, Seeds</td>\n<td style=\"height: 39px; width: 325.081px;\">&nbsp;</td>\n</tr>\n<tr style=\"height: 39px;\">\n<td style=\"height: 39px; width: 245.764px;\">Nikau Palm</td>\n<td style=\"height: 39px; width: 228.854px;\">Rhopalostylis sapida</td>\n<td style=\"height: 39px; width: 130.023px;\">15 m H</td>\n<td style=\"height: 39px; width: 130.023px;\">12-16</td>\n<td style=\"height: 39px; width: 130.023px;\">26-75%</td>\n<td style=\"height: 39px; width: 130.023px;\">0.5-1</td>\n<td style=\"height: 39px; width: 130.023px;\">0-0.85</td>\n<td style=\"height: 39px; width: 130.023px;\">0-0.05 (0.4)</td>\n<td style=\"height: 39px; width: 130.023px;\">&nbsp;</td>\n<td style=\"height: 39px; width: 235.359px;\">Firewood, Seeds, Thatch, Vegetable</td>\n<td style=\"height: 39px; width: 325.081px;\">&nbsp;</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<p>&nbsp;</p>\n<p><span style=\"font-weight: 400;\">&nbsp;</span></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Compatibility</div>\n<div class=\"spoiler-text\"><a href=\"https://mods.vintagestory.at/ancienttools\">Ancient Tools</a>: Adds wood product blocks, items and recipes from FZ wood types<br /><a href=\"https://mods.vintagestory.at/show/mod/8785\">Biomes</a>: This mod adds plant life to the <span style=\"font-weight: 400;\">Australasian and Oceanic</span>&nbsp;Realms<br /><a href=\"https://mods.vintagestory.at/fieldsofsalt\">Fields of Salt</a>: Adds wood product blocks and recipes from FZ wood types<br /><a href=\"https://mods.vintagestory.at/oilpatch\">Oils! (Patched)</a>: Adds wood product blocks and recipes from FZ wood types<br /><a href=\"https://mods.vintagestory.at/postsandbeams\">Posts and Beams</a>: Adds wood product blocks and recipes from FZ wood types<br /><a href=\"https://mods.vintagestory.at/wildcraftfruit\">Wildcraft</a>: Adds storage flags used by Wildcraft bags so FZ content can be added to WC bags<br /><a href=\"https://mods.vintagestory.at/show/mod/247\">XSkills</a>: Experience from berry bushes and trees<br /><br /></div>\n</div>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ</div>\n<div class=\"spoiler-text\"><strong>Q:</strong> Why so many plant packs? Can't you make one giant one?<br /><br /><strong>A:</strong> The combined size of this series exceeds the Mod data base's file upload size limit and therefore could not be hosted on this site, making it extremely difficult for servers to use. What's more, I don't know just how large certain plant pack file sizes will get as new features come out and I want to ensure they don't need to be split in the future, as that may cause considerable server issues. Whenever mod packs are implemented, or if there are other resources for creating a more organized bundle, I will do so.<br /><br /><br /><strong>Q:</strong>&nbsp;Is this mod safe to add and remove to an existing world?<br /><br /><strong>A:</strong> It is safe to add, plants will only appear in chunks not previously generated. Removing this mod from an existing world will leave many broken blocks and is not recommended, but manually regenerating chunks via in game commands affecting can work.<br /><br /><br /><strong>Q:</strong> Can you add X plant?<br /><br /><strong>A:</strong> We are focusing on getting a core 30 plants into all 36 planned Floral Regions first before any plans to add more content, if ever. That said, we occasionally do commissions and would be open to adding plants that way. Check Tenth Architect's Discord or Author profile to see if any commission slots are open.<br /><br /><br /><strong>Q:</strong> Can you add X compatibility?<br /><br /><strong>A:</strong> Maintenance and our own planned content is our priority, and almost all our existing compatibilty files were those sent to us by community members. If you'd like to see compatibility added, you are welcome to make the patches, test to ensure they work and send them our way and we will add them. The exception to this would be if the size of the compatibility files would have significant performance impact for most users of this series, as performance is a higher priority of ours than cross compatibility.<br /><br /></div>\n</div>\n<p><span style=\"font-weight: 400;\">&nbsp;</span></p>\n<p><span style=\"font-weight: 400;\"><br />Features:<br />The plants in this mod primarily spawn between 50 and 0 degrees latitude in a normal world climate.<br /><br />Links:<br /><a href=\"https://ko-fi.com/tentharchitect\">https://ko-fi.com/tentharchitect<br /><br /></a>And a big thanks to everyone who gave feedback and assistance!<br /><br />All Rights Reserved. Please contact me if you are interested in making work derived from mine.</span></p>",
+    "author": "Tentharchitect",
+    "urlalias": "floralzonesneozeylandicregion",
+    "logofilename": "https://moddbcdn.vintagestory.at/modicon_6e05457c6d55f830b2b7a5c1e12ed670.png",
+    "logofile": "https://moddbcdn.vintagestory.at/modicon_6e05457c6d55f830b2b7a5c1e12ed670.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/modicon_6e05457c6d55f830b2b7a5c1e12ed670.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 109106,
+    "follows": 793,
+    "trendingpoints": 0,
+    "comments": 84,
+    "side": "both",
+    "type": "mod",
+    "created": "2024-05-16 21:37:25",
+    "lastreleased": "2026-09-23 19:43:30",
+    "lastmodified": "2026-09-28 20:10:29",
+    "tags": [
+      "Worldgen",
+      "Crafting",
+      "Food",
+      "Flora"
+    ],
+    "releases": [
+      {
+        "releaseid": 58171,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_0e9adae6a15ba1f8519fbfaa025a7c04.zip?dl=FloralZonesNeozeylandicRegion-v1.0.24.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.24.zip",
+        "fileid": 124651,
+        "downloads": 874,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.24",
+        "created": "2026-09-23 19:43:30",
+        "changelog": "<p><span style=\"font-weight: 400;\">Updated-Useful Traders patch (Thanks Droseran!)</span></p>"
+      },
+      {
+        "releaseid": 56447,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_e64d01989aec4f95f39a53c34299eb03.zip?dl=FloralZonesNeozeylandicRegion-v1.0.23.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.23.zip",
+        "fileid": 121412,
+        "downloads": 1551,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.23",
+        "created": "2026-09-10 23:24:47",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Glass pane textures and audio</span></p>"
+      },
+      {
+        "releaseid": 54801,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_251969d99f18e19c1f30ccae6b4e2aa5.zip?dl=FloralZonesNeozeylandicRegion-v1.0.22.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.22.zip",
+        "fileid": 118309,
+        "downloads": 2322,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.22",
+        "created": "2026-08-28 21:56:03",
+        "changelog": "<p>Added-XSkills Compat for berries and trees, Thanks Hydromancerx!<br />Updated-Chest recipe to match base game's</p>"
+      },
+      {
+        "releaseid": 54161,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_f900f2d5b8f8d952ab933e8834b592b8.zip?dl=FloralZonesNeozeylandicRegion-v1.0.21.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.21.zip",
+        "fileid": 117167,
+        "downloads": 1014,
+        "tags": [
+          "1.22.7"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.21",
+        "created": "2026-08-23 22:39:07",
+        "changelog": "<p><span style=\"font-weight: 400;\">Tweak-Added rotation to palm fruits and tops</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweak-Selection box of silver tree fern, pygmy pine, New Zealand flax, shore puha</span></p>"
+      },
+      {
+        "releaseid": 51368,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_41414f0a0bc9649f735fa07b939c92e1.zip?dl=FloralZonesNeozeylandicRegion-v1.0.20.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.20.zip",
+        "fileid": 111600,
+        "downloads": 5731,
+        "tags": [
+          "1.22.5"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.20",
+        "created": "2026-07-31 17:11:15",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Bellows recipe</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Cabinet block and recipe</span><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-New display case recipe</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Figurehead recipes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Grindstone recipe</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Mannequin recipes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-New mechanical powered block recipes<br /></span><span style=\"font-weight: 400;\">Added-Snowshovel recipe</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-New sod roofing recipes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Stationary basket deconstruct recipe<br /></span><span style=\"font-weight: 400;\">Added-Treeseed bracelets</span><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Woodtyped ladders</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Changed-Swamp Astelia into new berry bush<br /></span><span style=\"font-weight: 400;\">Updated-Basket shapes and attributes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Changed amulet class to wearable behavior</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Fence step up and particle heights<br /></span><span style=\"font-weight: 400;\">Updated-Sleek doors are now airtight</span><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Woodenshields</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Thank you I Have Many Names for making many of these fixes!</span></p>"
+      },
+      {
+        "releaseid": 29766,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_fea21114a45872cc0cf1e01ece5200cf.zip?dl=FloralZonesNeozeylandicRegion-v1.0.19.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.19.zip",
+        "fileid": 65713,
+        "downloads": 28670,
+        "tags": [
+          "1.21.5",
+          "1.21.6"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.19",
+        "created": "2025-11-23 21:41:31",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Useful Trader Compatibility (Thanks Droseran!)<br /></span><span style=\"font-weight: 400;\">Added-Russian Translation (Thanks Nikuksis!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Fences missing unstable rock support<br /></span><span style=\"font-weight: 400;\">Fixed-Fences unable to be placed in sailboats</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-In log beehive string</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Missing sailboat string</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Vegetables in wrong slot in scrambled eggs</span></p>"
+      },
+      {
+        "releaseid": 28772,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_a2aa52c4f947693da6fc38962448566b.zip?dl=FloralZonesNeozeylandicRegion-v1.0.18.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.18.zip",
+        "fileid": 63494,
+        "downloads": 2912,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.18",
+        "created": "2025-11-05 21:23:27",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Crash caused when using Vanillia Variants, Wildcraft and the Vanilla Variant's Wildcraft patch mods together (Thanks Droseran)</span></p>"
+      },
+      {
+        "releaseid": 28657,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_bd645ca950f689db2b609bb3f3836671.zip?dl=FloralZonesNeozeylandicRegion-v1.0.17.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.17.zip",
+        "fileid": 63204,
+        "downloads": 722,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.17",
+        "created": "2025-11-03 17:18:30",
+        "changelog": "<p><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Fields of Salt Compatibility (Thanks Droseran)</span></p>\n<p><span style=\"font-weight: 400;\">Added-Oils! (Patched) Compatibility (Thanks Droseran)</span></p>\n<p><span style=\"font-weight: 400;\">Added-Posts and Beams Compatibility (Thanks Droseran)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Removed non-essential strings from file</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 28160,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_530ce6cc18e83bd11d0e93c993ba0e43.zip?dl=FloralZonesNeozeylandicRegion-v1.0.16.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.16.zip",
+        "fileid": 61935,
+        "downloads": 3029,
+        "tags": [
+          "1.21.5"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.16",
+        "created": "2025-10-26 17:12:14",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Custom berry bush class to stop them from being pruned (Thanks Ape!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Antler mounts not using correct shape</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Fence gate and rough fence gate not playing sounds</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Planks not stacking indefinitely</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Stairs chiseling into solid blocks</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Support beams not stabilizing rock</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 25980,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_4c203e4d75682389f25a560591e0986a.zip?dl=FloralZonesNeozeylandicRegion-v1.0.15.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.15.zip",
+        "fileid": 57086,
+        "downloads": 12478,
+        "tags": [
+          "1.21.1",
+          "1.21.2-rc.2",
+          "1.21.2",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.15",
+        "created": "2025-09-26 16:18:19",
+        "changelog": "<p><span style=\"font-weight: 400;\">Fixed-Crate recipe in line with base game&rsquo;s</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Typo in wildcraft compatibility file</span></p>"
+      },
+      {
+        "releaseid": 24052,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_4efa4e3d015741a448a007e103463ab8.zip?dl=FloralZonesNeozeylandicRegion-v1.0.14.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.14.zip",
+        "fileid": 52871,
+        "downloads": 8156,
+        "tags": [
+          "1.21.0",
+          "1.21.1-rc.1",
+          "1.21.1"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.14",
+        "created": "2025-08-31 15:25:36",
+        "changelog": "<p><span style=\"font-weight: 400;\">Added-Figure heads</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-jam strings</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Palm frond and NZ flax Basket</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Palm frond and NZ flax Basket trap</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Palm frond and NZ flax Handbasket</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Palm frond and NZ flax Skep</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Trap crate recipe</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-treeseed necklaces</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Added-Wood typed wooden paths</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Fixed-Missing in-log beehives causes worldgen bugs</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Tweaked-Temperature range of all plants, now closer to irl latitudes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Ancient Tools Compatibility patches (Thanks Whiskey Sunshine!)</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Berry bush blocks now have realistic empty, flowering and fruiting durations</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Bookshelf 1.21 changes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Crate 1.21 changes</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-meal patches to use new 1.21 format</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-New Zealand flax floor pileable</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Raft and Sailboat entity to use new 1.21 features</span><span style=\"font-weight: 400;\"><br /></span><span style=\"font-weight: 400;\">Updated-Scrollrack 1.21 changes</span><span style=\"font-weight: 400;\"><br /></span></p>"
+      },
+      {
+        "releaseid": 20078,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_ab8f7cdd811e81f6f369e1955975d376.zip?dl=FloralZonesNeozeylandicRegion-v1.0.13.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.13.zip",
+        "fileid": 43508,
+        "downloads": 15865,
+        "tags": [
+          "1.20.10",
+          "1.20.11",
+          "1.20.12"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.13",
+        "created": "2025-05-15 19:42:39",
+        "changelog": "<p>Added-Dwarf cabbage tree roots can be added to troughs<br />Tweak-Fruitpress recipe updated to use rod instead of bars<br />Fixed-Added missing meal recipes, meal recipe strings and incorrect meal shapes and colors</p>"
+      },
+      {
+        "releaseid": 19939,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_022c041c2e2aaa561252e7e3b5b650c1.zip?dl=FloralZonesNeozeylandicRegion-v1.0.12.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.12.zip",
+        "fileid": 43201,
+        "downloads": 938,
+        "tags": [
+          "1.20.10"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.12",
+        "created": "2025-05-12 16:23:45",
+        "changelog": "<p>Added-Wooden path recipe<br />Fixed-WC bag compat file placement<br />Fixed-Missing Biome whitelisting for&nbsp;<span data-sheets-root=\"1\">Medium sized Rimu and the Campbell Island Daisy</span></p>"
+      },
+      {
+        "releaseid": 19754,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_9c321e87d8f794410ccb3100f513dca4.zip?dl=FloralZonesNeozeylandicRegion-v1.0.11.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.11.zip",
+        "fileid": 42756,
+        "downloads": 692,
+        "tags": [
+          "1.20.10"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.11",
+        "created": "2025-05-07 22:14:30",
+        "changelog": "<p>Added-Wildcraft basket compatibility<br />Added-<span data-sheets-root=\"1\">New Zealand Flax</span><span data-sheets-root=\"1\">&nbsp;now scythable</span></p>"
+      },
+      {
+        "releaseid": 19047,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_6a5c150ebcb07119d0293a861a8a0d79.zip?dl=FloralZonesNeozeylandicRegion-1.0.10.zip",
+        "filename": "FloralZonesNeozeylandicRegion-1.0.10.zip",
+        "fileid": 41184,
+        "downloads": 2793,
+        "tags": [
+          "1.20.7",
+          "1.20.8",
+          "1.20.10"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.10",
+        "created": "2025-04-17 23:40:17",
+        "changelog": "<p>Fixed-Fern lighting bug creating double shadows</p>\n<p>&nbsp;</p>"
+      },
+      {
+        "releaseid": 18501,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_fc26cb096b41347ccf06a14d2dbde004.zip?dl=FloralZonesNeozeylandicRegion-v1.0.9.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.9.zip",
+        "fileid": 39981,
+        "downloads": 1711,
+        "tags": [
+          "1.20.7"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.9",
+        "created": "2025-04-04 21:22:52",
+        "changelog": "<p>Fixed-Long standing rendering bug, plants no longer fade to white at a distance</p>"
+      },
+      {
+        "releaseid": 17888,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_cb2f1669283b288c003e52c1af223882.zip?dl=FloralZonesNeozeylandicRegion-v1.0.8.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.8.zip",
+        "fileid": 38403,
+        "downloads": 2152,
+        "tags": [
+          "1.20.6",
+          "1.20.7"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.8",
+        "created": "2025-03-21 21:15:07",
+        "changelog": "<p>Fixed-Antler Mount recipes<br />Fixed-Interior crate texture broken<br />Fixed-Changed crate recipe to match new base game recipe<br />Fixed-Standardized scroll rack names with other FZ mods<br />Fixed-Roofing recipe<br />Fixed-Quarter log recipe<br />Fixed-Narrow logs not usable for firewood<br />Fixed-Boats and raft placement issues<br />Fixed-Missing wood interaction sounds<br /><br /></p>"
+      },
+      {
+        "releaseid": 15361,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_940eface81916853fd5b71d9a1e7c044.zip?dl=FloralZonesNeozeylandicRegion-v1.0.7.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.7.zip",
+        "fileid": 31721,
+        "downloads": 6720,
+        "tags": [
+          "1.20.3",
+          "1.20.4",
+          "1.20.5",
+          "1.20.6"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.7",
+        "created": "2025-01-28 20:04:33",
+        "changelog": "<p>Added-Bucket recipe with rope<br />Added-Vegetables to soup recipe<br />Added-Missing leaded window recipe<br />Fixed-Heart of Palm json incorrectly formatted<br />Fixed- Half roof right not using correct textures<br />Fixed-oars not being tagged with the boat storage slot<br />Fixed-solid trap doors not blocking airflow<br />Fixed-Shields not using new blocking features</p>"
+      },
+      {
+        "releaseid": 13618,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_adf46bc31d8545bde19fbba9525814fd.zip?dl=FloralZonesNeozeylandicRegion-v1.0.6.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.6.zip",
+        "fileid": 28532,
+        "downloads": 4127,
+        "tags": [
+          "1.20.0-rc.1",
+          "1.20.0-rc.6",
+          "1.20.0-rc.8",
+          "1.20.0-rc.9",
+          "1.20.0",
+          "1.20.1",
+          "1.20.3"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.6",
+        "created": "2024-12-12 19:45:13",
+        "changelog": "<p>Added-Quarter logs for <span data-sheets-root=\"1\">Norfolk Island Pine</span>, <span data-sheets-root=\"1\">Rimu</span>,<span data-sheets-root=\"1\">Tawhai</span><span data-sheets-root=\"1\">,Totara</span> and <span data-sheets-root=\"1\">Lancewood</span><br />Added-Roofing for <span data-sheets-root=\"1\">Norfolk Island Pine</span>, <span data-sheets-root=\"1\">Rimu</span>,<span data-sheets-root=\"1\">Tawhai</span><span data-sheets-root=\"1\">,Totara</span><br />Added-Ships and boatseats made of <span data-sheets-root=\"1\">Norfolk Island Pine</span>, <span data-sheets-root=\"1\">Rimu</span>,<span data-sheets-root=\"1\">Tawhai</span><span data-sheets-root=\"1\">,Totara</span> (Ships only available in creative currently)<br />Added-2x3 gates made of <span data-sheets-root=\"1\">Norfolk Island Pine</span>, <span data-sheets-root=\"1\">Rimu</span>,<span data-sheets-root=\"1\">Tawhai</span><span data-sheets-root=\"1\">,Totara</span><br />Added-Trapdoors made of <span data-sheets-root=\"1\">Norfolk Island Pine</span>, <span data-sheets-root=\"1\">Rimu</span>,<span data-sheets-root=\"1\">Tawhai</span><span data-sheets-root=\"1\">,Totara</span><br />Added-Ancient Tools compatibility (Thanks Whiskey Sunshine!)<br />Fixed-Reduced the rate that <span data-sheets-root=\"1\">Tawhai and Norfolk Island Pine would overhang soil</span></p>"
+      },
+      {
+        "releaseid": 13455,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_099e0ac40bc94765659088ca4ac1bc54.zip?dl=FloralZonesNeozeylandicRegion-v1.0.5.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.5.zip",
+        "fileid": 28199,
+        "downloads": 936,
+        "tags": [
+          "1.20.0-rc.1"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.5",
+        "created": "2024-12-05 18:29:48",
+        "changelog": "<p>Refactored-fixed for 1.20's new formats<br /><br />new wood typed content will be added soon!</p>"
+      },
+      {
+        "releaseid": 12900,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_6bd387017158596cde767997a08eb45e.zip?dl=FloralZonesNeozeylandicRegion-v1.0.4.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.4.zip",
+        "fileid": 27094,
+        "downloads": 1151,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.4",
+        "created": "2024-11-06 18:56:41",
+        "changelog": "<p>Adds-Cabbage tree root and palm heart pies<br />Fixed-Nikau palm spawns with fruit and should grow appropriately<br />Fixed-Swamp astelia's break time and not dropping berries when broken<br />Fixed-Narrow log trees drop their own logs instead of firewood<br />Tweak-Totara seasonal colors</p>"
+      },
+      {
+        "releaseid": 10778,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_85a0b43e22ed31b8c346c83416854af6.zip?dl=FloralZonesNeozeylandicRegion-v1.0.3.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.3.zip",
+        "fileid": 22398,
+        "downloads": 2996,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.3",
+        "created": "2024-06-11 16:00:14",
+        "changelog": "<p>Fixed-Vegetable strings</p>"
+      },
+      {
+        "releaseid": 10432,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_cb6068d2b0e530b4e6a93054f2be18c5.zip?dl=FloralZonesNeozeylandicRegion-v1.0.2.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.2.zip",
+        "fileid": 21797,
+        "downloads": 784,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.2",
+        "created": "2024-05-21 15:40:41",
+        "changelog": "<p>Fixed-Game crashing bug when looking at bow staff in handbook<br />Added-Lancewood and all full block trees to bow staff recipe</p>"
+      },
+      {
+        "releaseid": 10350,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_9e49b9a4d5a2b97ea6a52f9c71ce1151.zip?dl=FloralZonesNeozeylandicRegion-v1.0.1.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.1.zip",
+        "fileid": 21672,
+        "downloads": 482,
+        "tags": [
+          "1.19.7",
+          "1.19.8"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.1",
+        "created": "2024-05-17 01:41:51",
+        "changelog": "<p>Fixed-Added missing fence textures<br />Fixed-Adjusted Whau tree gen so it's no longer 1 cube</p>"
+      },
+      {
+        "releaseid": 10346,
+        "mainfile": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_d484b64a6097ecc89b16acd4108ae735.zip?dl=FloralZonesNeozeylandicRegion-v1.0.0.zip",
+        "filename": "FloralZonesNeozeylandicRegion-v1.0.0.zip",
+        "fileid": 21668,
+        "downloads": 300,
+        "tags": [
+          "1.19.7"
+        ],
+        "modidstr": "floralzonesneozeylandicregion",
+        "modversion": "1.0.0",
+        "created": "2024-05-16 21:40:39",
+        "changelog": "<p>Launch</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 21659,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-05-16_09-51-38_04cfa240b8604603a14f3815a9e74f6e.png",
+        "filename": "2024-05-16_09-51-38.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-05-16_09-51-38_04cfa240b8604603a14f3815a9e74f6e_55_60.png",
+        "created": "2024-05-16 21:38:25"
+      },
+      {
+        "fileid": 21660,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-05-16_09-20-35_c5afd49420c3572cdbb249b90ac97052.png",
+        "filename": "2024-05-16_09-20-35.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-05-16_09-20-35_c5afd49420c3572cdbb249b90ac97052_55_60.png",
+        "created": "2024-05-16 21:38:30"
+      },
+      {
+        "fileid": 21661,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-05-16_09-43-46_53b0e265c64b3f133b31da8e3327032d.png",
+        "filename": "2024-05-16_09-43-46.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-05-16_09-43-46_53b0e265c64b3f133b31da8e3327032d_55_60.png",
+        "created": "2024-05-16 21:38:30"
+      },
+      {
+        "fileid": 21662,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-05-14_14-34-20_f883b9f1dd71e0c7e9eaa7519fbf12ac.png",
+        "filename": "2024-05-14_14-34-20.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-05-14_14-34-20_f883b9f1dd71e0c7e9eaa7519fbf12ac_55_60.png",
+        "created": "2024-05-16 21:38:31"
+      },
+      {
+        "fileid": 21663,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-05-14_14-25-46_ce046a66c1ac9d4dc40f45231a4a5f50.png",
+        "filename": "2024-05-14_14-25-46.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-05-14_14-25-46_ce046a66c1ac9d4dc40f45231a4a5f50_55_60.png",
+        "created": "2024-05-16 21:38:31"
+      },
+      {
+        "fileid": 21664,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-05-16_09-45-12_f685fda629009c3b79339ccaba795ef2.png",
+        "filename": "2024-05-16_09-45-12.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-05-16_09-45-12_f685fda629009c3b79339ccaba795ef2_55_60.png",
+        "created": "2024-05-16 21:38:31"
+      },
+      {
+        "fileid": 21665,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-05-14_14-28-26_eccf4091e93be8647c18513fad0100b6.png",
+        "filename": "2024-05-14_14-28-26.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-05-14_14-28-26_eccf4091e93be8647c18513fad0100b6_55_60.png",
+        "created": "2024-05-16 21:38:32"
+      },
+      {
+        "fileid": 21666,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-05-16_09-46-38_7ce0fc3b1722ee60d31c685fd29aa1dc.png",
+        "filename": "2024-05-16_09-46-38.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-05-16_09-46-38_7ce0fc3b1722ee60d31c685fd29aa1dc_55_60.png",
+        "created": "2024-05-16 21:38:33"
+      },
+      {
+        "fileid": 21667,
+        "mainfile": "https://moddbcdn.vintagestory.at/2024-05-16_09-52-44_42302ba83b9b24df5bd46c2eb44580e8.png",
+        "filename": "2024-05-16_09-52-44.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2024-05-16_09-52-44_42302ba83b9b24df5bd46c2eb44580e8_55_60.png",
+        "created": "2024-05-16 21:38:38"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

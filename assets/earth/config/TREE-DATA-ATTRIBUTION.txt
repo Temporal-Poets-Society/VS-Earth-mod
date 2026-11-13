@@ -1,0 +1,71 @@
+Earth regional trees, rules version 2 (2026-10-02)
+
+Native distributions and accepted botanical names:
+Govaerts R (ed.). 2026. WCVP: World Checklist of Vascular Plants.
+Facilitated by the Royal Botanic Gardens, Kew. https://doi.org/10.34885/egs6-cp24
+Snapshot: 2026-06-04, downloaded 2026-09-29 from
+https://sftp.kew.org/pub/data-repositories/WCVP/wcvp.zip
+License: Creative Commons Attribution 3.0 (https://creativecommons.org/licenses/by/3.0/).
+Derived subset: accepted taxa and their native botanical countries; introduced
+and doubtful distribution records excluded. Regionally extinct native records retained.
+Changes: native records that are evident introductions or errors are removed and
+listed with reasons in the source repository (tools/tree-taxa.json "exclusions";
+currently silver birch, Betula pendula, in Argentina South).
+No occurrence coordinates or present-day forestry plantations are used.
+
+Botanical boundaries:
+Biodiversity Information Standards (TDWG), World Geographical Scheme for Recording
+Plant Distributions, 2nd edition (Brummitt, R.K. 2001); boundaries from
+https://github.com/tdwg/wgsrpd (geojson/level3.geojson; originally ArcView shapefiles
+provided by the Royal Botanic Gardens, Kew; GIS dataset by Justin Moat).
+LICENSING IS AN OPEN QUESTION. Open content on TDWG's website, including the WGSRPD
+standard page, is licensed CC BY 4.0, but the boundary files themselves carry no
+explicit licence: the github.com/tdwg/wgsrpd repository states none, and the file
+metadata (level3/master_meta_data.html) gives use constraints "None" while preserving
+the credit "copyright 1992-1997 ESRI, GMi, All Rights Reserved" for the base geography.
+Earth does not claim a licence for these boundaries. The simplified polygons
+(treeregions.json) are distributed pending clarification with TDWG / Royal Botanic
+Gardens, Kew, and may have to be replaced by boundaries under a known open licence.
+Changes: topology-preserving simplification at 0.015 degrees, coordinate rounding
+to five decimals, conversion to compact polygon rings and a runtime spatial index.
+
+Finer natural ranges (2026-11-07):
+Caudullo, G., Welk, E., San-Miguel-Ayanz, J., 2017. Chorological maps for the main
+European woody species. Data in Brief 12, 662-666. https://doi.org/10.1016/j.dib.2017.05.007
+Data: Mendeley Data hr5h2hcgg4 version 19 (last update 20 Dec 2024).
+License: Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/).
+Changes: native range polygons and isolated-population points (introduced and
+naturalised layers left out) rasterised to a 0.1 degree grid from 20 N to 80 N, widened
+by one cell, and combined with the WCVP botanical countries: inside a country where a
+mapped species is native, its tree grows only within that species' map (regionaltrees.json
+"rangeMask", "rangeSource"). Walnut, Italian cypress, bay laurel and white poplar, which
+people had spread well beyond these maps by 1318, keep their botanical countries alone,
+and so does yew, which the longbow-stave trade cut out of much of its range after 1318. Scots
+pine also holds the Scottish Highlands (56.3-58.7 N, 5.9-2.6 W), where the mapped native
+stands are the remnants of the Caledonian pinewood.
+
+Soil indicators (2026-11-07):
+Dengler, J., Jansen, F., Chusova, O., et al. 2023. Ecological Indicator Values for Europe (EIVE) 1.0.
+Vegetation Classification and Survey 4: 7-29. https://doi.org/10.3897/VCS.98324
+Data: supplementary material 8 (EIVE_Paper_1.0_SM_08.xlsx).
+License: Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/).
+Changes: niche position and width (nw3) for moisture, nutrients and soil reaction of the
+species each tree rule stands for, combined over its taxa weighted by the number of
+indicator systems EIVE used (regionaltrees.json "eive").
+
+Climate envelopes:
+Per-species Earth climate envelopes (real yearly mean temperature, rainfall) are
+derived from the WCVP native botanical countries combined with Earth's own baked
+climate (earthdata/, see earthdata/ATTRIBUTION.txt for its sources).
+
+Earth's interpretation:
+Generic vanilla/Wildcraft forms use explicit regional botanical analogues (e.g. the
+generic vanilla fir stands for regional firs and spruces); "regional analogue" rules
+designate stand-in species for a biome where no installed native species qualifies;
+cultivars are excluded from natural generation. A few named habitat/elevation
+corrections and a redwood coastal envelope supplement country-scale native ranges.
+These are approximate botanical-country ranges, not precise habitat maps.
+Content models/textures/code remain supplied by the original mods; none is copied
+into this data set. Exact input checksums, taxon IDs, exclusions and analogue rules
+are recorded in the source repository at docs/research/tree-range-provenance.json
+and tools/tree-taxa.json.

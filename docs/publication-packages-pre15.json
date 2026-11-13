@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-31",
+  "timezone": "Europe/Riga",
+  "candidate": "0.17.0-pre.15",
+  "status": "prepared; not installed or published",
+  "archives": [
+    {
+      "file": "C:\\VS mods\\Earth\\release\\earthmap-0.17.0-pre.15.zip",
+      "bytes": 28490266,
+      "sha256": "31e7af85b9c916d0246f9aca9de080044ffb003beaf98f5b1b89468f6b1bf337"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\release\\earthterraindata-1.0.0.zip",
+      "bytes": 36424452,
+      "sha256": "1ebdbc0a22a862f4b0b078ce3d48b32f37bd6b150cb9d478f25599f1d33d2001"
+    },
+    {
+      "file": "C:\\VS mods\\Earth\\release\\earthwaterdata-1.0.0.zip",
+      "bytes": 31583561,
+      "sha256": "edb78da63307ace1c72b3647039369294a57bdc2e9d7f2815d9e5ff9ea907e57"
+    }
+  ],
+  "total_bytes": 96498279,
+  "limit_per_archive_bytes": 40000000,
+  "choices": {
+    "summit_minimum_metres": 3000,
+    "summit_fade_metres": 250,
+    "temperature_step_C": 0.5,
+    "maximum_stored_cell_temperature_change_C": 0.2,
+    "temperature_resolution_arcminutes": 2,
+    "old_world_compatibility_required": false
+  },
+  "previous_installed_archive": {
+    "file": "C:\\Users\\andri\\AppData\\Roaming\\VintagestoryData\\Mods\\earthmap-0.17.0-pre.14.zip",
+    "bytes": 145254639,
+    "sha256": "dae9f5c233cf4cf0de2de3ec1b232cb2ac14d319745018720293534aa07d3179",
+    "modified": false
+  },
+  "geographic_files_changed": [
+    "earthdata/earth.json",
+    "earthdata/summits.bin",
+    "earthdata/temperature.bin"
+  ],
+  "geographic_files_identical": [
+    "earthdata/ATTRIBUTION.txt",
+    "earthdata/climate.bin",
+    "earthdata/climatefix.bin",
+    "earthdata/coasts.bin",
+    "earthdata/glaciers.bin",
+    "earthdata/islands.bin",
+    "earthdata/lakes.bin",
+    "earthdata/peaks.json",
+    "earthdata/rain.bin",
+    "earthdata/reservoirs-v1.json",
+    "earthdata/rivers.bin",
+    "earthdata/shores.bin",
+    "earthdata/terrain.bin",
+    "earthdata/weather.bin"
+  ],
+  "verification": {
+    "build": "0 warnings; 0 errors",
+    "world_options_data_and_terrain_checks": 507,
+    "required_provider_checks": 35,
+    "archive_crc": "all pass",
+    "idempotent_rebuild": "unchanged archives reused; explicit unpublished main replacement preserved prior ZIP backup",
+    "native_server": {
+      "run": "C:\\VS mods\\Earth\\.claude\\worktrees\\codex-earth-playstyle\\testruns\\compact-data-pre15-final-20261031\\valid",
+      "error_fatal_count": 0,
+      "reached_run_game": true,
+      "graceful_shutdown": true,
+      "earth_layout": 10,
+      "river_query": 2,
+      "sea_wind_provider": "Earth",
+      "archive_bytes_match_published_candidates": true
+    },
+    "client_visual_acceptance": "pending",
+    "cross_mod_data_identity": "Earth Ruins metadata fingerprint includes external data-file hashes; Wmap uses Earth live model/data"
+  },
+  "source_worktree": "C:\\VS mods\\Earth\\.claude\\worktrees\\codex-earth-playstyle",
+  "decision": "C:\\VS mods\\Earth\\.claude\\worktrees\\codex-earth-playstyle\\docs\\decisions\\0040-publication-data-and-packaging.md",
+  "additional_experiments_applied": false,
+  "data_pack_moddb_links": "pages must be created before publication"
+}

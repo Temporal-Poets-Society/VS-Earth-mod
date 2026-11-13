@@ -1,0 +1,990 @@
+{
+  "settings": {
+    "version": 1,
+    "datasetId": "earth-resource-evidence-2026-09-29-v1",
+    "pointRadiusKm": 75,
+    "pointPeak": 0.7,
+    "formationWeight": 0.8,
+    "assessedPotentialWeight": 0.5,
+    "minimumPointWeight": 0.15,
+    "combination": "maximum; duplicate records never add strength",
+    "gridDegrees": 0.5,
+    "note": "Authored spawning suitability, not measured discovery probability. General host-rock background is configured at runtime. No interpolation between unrelated mineral provinces."
+  },
+  "runtimeSha256": "20c02c4032446ec96e71721bccd8d42cbd483316159989939906f4e8560f2bc9",
+  "inputs": [
+    {
+      "file": "tools/ore-heatmap-settings.json",
+      "sha256": "dfacf4a192c6fbdfc54a1aa382c63d71062489ec310cfb5b9c4f911969d29696"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Fe-occurrences.geojson.gz",
+      "sha256": "6eb9a36b5ef5fb4d0bb8f8683bc666cb97c449e294af8edd91485dfde16d6356"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Fe-specialist.geojson",
+      "sha256": "b168b743b2761c017ded9e91eb8b02dd47f512be35fba64f9bbf4c6bc1dfd64f"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Au-occurrences.geojson.gz",
+      "sha256": "b988cfa9f1c117bedd8a852afd7907bf3cb6c36c3c0ead1a90bbf611441508d4"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Au-specialist.geojson",
+      "sha256": "ce59fe79578d07df9020006ee0dc9995bb35a3d97b2d4eae7dfb54498a97a39d"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Ag-occurrences.geojson.gz",
+      "sha256": "acd1b674d6b3524e9a79034e3e8e38ad78ef3fa1d19bfd34aebefe1852828d6a"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Ag-specialist.geojson",
+      "sha256": "c6965f0bc49da6d970b7131a11250fbee6d25627e0c153343068caf105a65340"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Pb-occurrences.geojson.gz",
+      "sha256": "190c15943aca88d4d10599573bee1989932b45b99f26452225640938e6396797"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Pb-specialist.geojson",
+      "sha256": "dc1c687573ff858c17c690702f513be987603eb94cd20772552998a9bfe52241"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Zn-occurrences.geojson.gz",
+      "sha256": "2fb9b63a984fda996710d2359d951f2d5c8c5863626f9e057c4b30e885f32618"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Zn-specialist.geojson",
+      "sha256": "37fb2544da6f9d0abc20483f5bcae493c29f2cf67fec3a3b4b0b3e1f9247db55"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Bi-occurrences.geojson.gz",
+      "sha256": "dc86047583efc1dc8fe16a5752f6b6d612a92eff49bfe5cb4f31f27013467024"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Bi-specialist.geojson",
+      "sha256": "793c186ea46aa12a7ae3b468fd8012f4404dbd9e7880a4e48b4f639898cb81f9"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Ni-occurrences.geojson.gz",
+      "sha256": "6dde2261874e67ab67e32fc1b342a4f48d0622d3244cf2dacbc5858337f42246"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Ni-specialist.geojson",
+      "sha256": "f47d62075ab48178fa7a906e69d9b8cbfb3ed91f8c4937484c7e209d03452ae0"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Cr-occurrences.geojson.gz",
+      "sha256": "35fd8b98a710541f6217aad93b08a33b7f374faa381bb2f9cfcac850dff722ad"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Cr-specialist.geojson",
+      "sha256": "78a0d6181e6cace16fe1b67f755bcc41143ac40f3a8c7ea1884bde231c4ff168"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Ti-occurrences.geojson.gz",
+      "sha256": "fa9aabb75100abccf05b592e6dd4cb2f6a6ce363882d678fefab5b13d327a858"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Ti-specialist.geojson",
+      "sha256": "0eb11acfc918494002b3e119ea67989d9b9dbf61190966a01fb50a68e2e8f149"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Mn-occurrences.geojson.gz",
+      "sha256": "f60644e3bb70555f9289430d8b280699883b12bee8805a7a1146fc0a64c0518a"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Mn-specialist.geojson",
+      "sha256": "14b9e4730253523736bb25f464c962982c14997cc1a2a16470921b4271d394fc"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Hg-occurrences.geojson.gz",
+      "sha256": "2346c7eb68c5218bdf3c712f42e444e5c05031292688296173636a9cf713a915"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Hg-specialist.geojson",
+      "sha256": "3e989917214854f2c827fb1c3f0e95b0df43a8c1c0225367d7ef9e5e12bf3beb"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/W-occurrences.geojson.gz",
+      "sha256": "1abb293c3f60866781b1224a6e376b42b21a4a74f0eec68ea2de80c8934953d1"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/W-specialist.geojson",
+      "sha256": "727e70ed99a1cea9d94a79fd0c16d638170f5598afa8bc4c4fa1de1b732f0181"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/U-occurrences.geojson.gz",
+      "sha256": "a7a4ed570d8f0c28dc68304e1ef135ea21847aa1253528b110b64695879edebc"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/U-specialist.geojson",
+      "sha256": "f59432dc8697e09885ca3b7e8c86977022cfc19e65a1892b7298e18fe1a7485e"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Pt-occurrences.geojson.gz",
+      "sha256": "229aa9d72dc7694b48733e7c4694899c3efca4bf52413e96308970cfa376f785"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Pt-specialist.geojson",
+      "sha256": "500d114354379ed8fbbe6cb25d9eb2e50b702241ca51bcd7f434c41babe9476c"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/V-occurrences.geojson.gz",
+      "sha256": "90d72a0576b04126ef1680494c54ec2e826b1c1bebd460446a7c97cbb48e4f56"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/V-specialist.geojson",
+      "sha256": "6af21f4c0cc174e3938fe324077d7b760c2890176fd73fb13529acffefa3fdf6"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Mo-occurrences.geojson.gz",
+      "sha256": "7674a3dbbb626423995fbae2e1d78a77b07b249e9f2f9da31e46b83fc95113d9"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Mo-specialist.geojson",
+      "sha256": "bc80ca1ab8d3d0c32aab61270e27aa19143a295149bcaaa209441d1c74eb8007"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Sb-occurrences.geojson.gz",
+      "sha256": "bbc8df9cd8db096826cfe48a8ec73a3bc8d4b28555450e747aaf1cf2f9e8ee75"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Sb-specialist.geojson",
+      "sha256": "9b1fd1c7803ea017563768fa68193b03a741a81a4d2cf607d946d9302ab7355f"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/B-occurrences.geojson.gz",
+      "sha256": "b3776dc47bccdfc89c570484fc921c6782fc0f871114f3b6f879a671b35ebec9"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/B-specialist.geojson",
+      "sha256": "2c4a8d643447cd68fbbacf0bf100949db74202bdd92cca49a1c4b3690960d00f"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/P-occurrences.geojson.gz",
+      "sha256": "ec65ebc2364b6dfe46d5ab76afcdda1f8411728dcb5415eba9c71a7d2ac0ffe0"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/P-specialist.geojson",
+      "sha256": "7071650641d189ec0ac11d2addc9d26035155bff0f2dd18e0ba7fe61880af5f0"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/N-occurrences.geojson.gz",
+      "sha256": "d2d87034a2ec1bb4ca0dfa44ec1fee96fc97bd3d8e8e0691c5c05b36e73286b5"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/N-specialist.geojson",
+      "sha256": "4779bfb694dfc4965426c4718e4a47dc5198b725a64ccf8a0cdc88e1afa086f2"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/K-occurrences.geojson.gz",
+      "sha256": "dcf8e1ad20c0a70abd3035ca85a8a8578760b5f24d5415d052746f6070c390a3"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/K-specialist.geojson",
+      "sha256": "24877c9ac232f998085fb8ea74df83b58744938a94a35d3ff05c552629feab04"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/NaCl-occurrences.geojson.gz",
+      "sha256": "c5c5cbf88377bfaf684abd742e3ac85aea6f676a6d71718eee8e82be3de7b829"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/NaCl-specialist.geojson",
+      "sha256": "bba4926be95e4c1d57448640d5307f465306e9ad7435ecccfaeddde4e5db6ed2"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/S-occurrences.geojson.gz",
+      "sha256": "26e5349f62d758493b6b054299bf66f282179021b1538fac5e8aa108effd2b86"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/S-specialist.geojson",
+      "sha256": "dd388cf9c4f59adb56a55e5746a71e1d01637341713c5ceef4194ba91abc2229"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/C_graphite-occurrences.geojson.gz",
+      "sha256": "8ef2dfcec8d9e74b812fe2732a74982470a67ab5e0ecc3348df8b491b0bc2d06"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/C_graphite-specialist.geojson",
+      "sha256": "2d442d2a7d0c7954e8bc2aeb0be083b08225a38033c7199a7b79f5611d881421"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/C_coal-occurrences.geojson.gz",
+      "sha256": "304a65a560c7705ec13348eddac213d08cb847dc4db7bccdb4c0a3b24a77074f"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/C_coal-specialist.geojson",
+      "sha256": "e0f0478cf4c44e502e0638df21d3986f25a38ce61147f6204232e68cc17fbe4a"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/F-occurrences.geojson.gz",
+      "sha256": "46a910fb26d1d11bc752f5a167d1bf24e3a17de60ba733d5d1c55a44ca68ff57"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/F-specialist.geojson",
+      "sha256": "189c69eee9c1fec5c28ed628f89cd55244a07accc521f61bc4ef55ba4668e070"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/SiO2-occurrences.geojson.gz",
+      "sha256": "31a5636a5be4d1c36e83ca1217dd3d31d6e2880a123cc923a05456d6b5391440"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/SiO2-specialist.geojson",
+      "sha256": "c85bdf1505ea3226dc1f62296abea2148804bdf888fe2e19b1a903c243b10ebb"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Al-occurrences.geojson.gz",
+      "sha256": "a3ab2e4b58eaafab5a64a78b703aeeecc2e63113cb9d232905ccfd6f48255b64"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/Al-specialist.geojson",
+      "sha256": "15834b62e77f0f8fe963069ce26fd53ddc503e6c0bd2aa8496bc06788247aae5"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/gypsum-occurrences.geojson.gz",
+      "sha256": "fca674f02c8cf9e367e6e0c6384f5abdda49323b5dde5a4c4a725222e04876d9"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/gypsum-specialist.geojson",
+      "sha256": "391fe4bd5f41772bbab2c6bd9e8d472695cab84017652ac98e8792f8496e445e"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/diamond-occurrences.geojson.gz",
+      "sha256": "f1e6fd6fef7e543b7e66571fc7970782348bab59f608d30e19c0c990f3d659c1"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/diamond-specialist.geojson",
+      "sha256": "e1952a1fdbef9774525530a09575b0ce4156b6d2d83b070e461ace9d0f91f0ea"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/corundum-occurrences.geojson.gz",
+      "sha256": "68745802acd853659175117cf3ee9f545bb34d0cfd6a4f2bfc955711780a956f"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/corundum-specialist.geojson",
+      "sha256": "c3b15d896bc2e30dbcd61cb7fac66e0cc58432c8727a9345021682911483a8ca"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/emerald-occurrences.geojson.gz",
+      "sha256": "9eeac357df8a5a757665a73fce94691c52a894f3aefe59ec95c3c52bce8c0a5a"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/emerald-specialist.geojson",
+      "sha256": "3eed1b0ba69bc1be32ee992e36a2ef18192bca381b48d932ed61ac5c302db8d9"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/olivine-occurrences.geojson.gz",
+      "sha256": "40fd0f23ac1792dda9bcf2c7b80dfdfa5940b186d383329e978ed60e8e074dd6"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/olivine-specialist.geojson",
+      "sha256": "2e828f308faeaeefb50c4d93f0ce533d586eee79e2649b06ebff89d3eb61ff60"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/garnet-occurrences.geojson.gz",
+      "sha256": "1ef1a6daeb190e331cdbb7b7b166856b69eef20c544066e0bfc006e0c0f96c9e"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/garnet-specialist.geojson",
+      "sha256": "9e3d216d35a70367d8857ed90be5e7537bc417246dc470fca2a629641bdda611"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/lapis-occurrences.geojson.gz",
+      "sha256": "c5af3e15685424f4775791d1c70e87dfca29bbf1a897192032b6a9d7fb1e234a"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/lapis-specialist.geojson",
+      "sha256": "553f21ea0ad2f22d3ec8d2f19fbb830849a30015466d0241f9502880e79c0972"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/alum-occurrences.geojson.gz",
+      "sha256": "c77d503b7286a172c669cee10a8ed38197b5293346a533109b16d35eb6d8a092"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/alum-specialist.geojson",
+      "sha256": "4ce6c0bd290ff1d0919add113e1fb7d2151ca8e583abdd62d1a0dc0e96d994cb"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/topaz-occurrences.geojson.gz",
+      "sha256": "660eb9cfe869e9194e73b185a93cbc2641e0a7ff9b1b709b7e7ce25170bc27d2"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/topaz-specialist.geojson",
+      "sha256": "f2d4a000bf16703beb492a0989550c5c4f66e19d40595347c846c42bdbd7197d"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/tourmaline-occurrences.geojson.gz",
+      "sha256": "093271a970d16c33d076d30f8638dd3ec0bf47c8ccd0fe2ed506f5e74d3ffb33"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/tourmaline-specialist.geojson",
+      "sha256": "12b6df64c03c39324e73e4d09628feab2ab58b9e59f8bddbe4530b925d19836e"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/beryl-occurrences.geojson.gz",
+      "sha256": "607ee8cb41babdba3c9b36825de424075f4e301d3f1093e33e47f89a28523592"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/beryl-specialist.geojson",
+      "sha256": "1e43e3347e493a9c8e0f6aca003239afca62bf42c11826602ca13ce6bd939438"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/spinel-occurrences.geojson.gz",
+      "sha256": "a8be71fc4a08f4a988f6cbbebaa3523ce9ca736ab10b59b13bdd81f2400a8f1d"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/spinel-specialist.geojson",
+      "sha256": "520ef21fe620ae4f2d7f4f4433d48265a54ab91a8880b2afabab7d3ad9151361"
+    },
+    {
+      "file": "docs/research/copper-tin-global-2026-09-29/normalized/mrds-copper-tin-occurrences.csv",
+      "sha256": "8fa8037a2c5460c518a76bcaf49ec18d8ee478322f0869f366ccd8e2ecd6e04d"
+    },
+    {
+      "file": "docs/research/copper-tin-global-2026-09-29/normalized/global-copper-assessment-occurrences.csv",
+      "sha256": "0ae1833710d9cf80d61ac5ab0863d1edc81bf7af3d48737c95c3e2b0992194e0"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/overlay-registry.json",
+      "sha256": "5993048d96fdf7eeb5a3f33dd7f945bb515d9356c10657f79744910867042625"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/metals/normalized/pp1802-global.geojson",
+      "sha256": "8e66b6f28eb9ffa1971b0ce32acf9bbb7ce345d8ec05a14b9333f744f757fe38"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/metals/normalized/ga-aimr-metals.geojson",
+      "sha256": "5efa79e7ced5470fdf7e76d16b7baba07d70ef67e0644c86d2f3644dbe180673"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/metals/normalized/reviewed-secondary-metals.geojson",
+      "sha256": "c80fc9a933b1c3054262a607cc9ef0d83ee7e976d742689904163acce4ff2537"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/nonmetals/normalized/additional-evidence.geojson",
+      "sha256": "7898a2ad8fe249008c52889243a8eb81200bcf33c61643b37a0d1a74a9d7f6d1"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/nonmetals/normalized/poland-minerals.geojson",
+      "sha256": "91b9fc4285bd3f4728d7a32dc64f709e7a50d11430bdf564125211e095dc91a3"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/coal/normalized/coal-polygons.geojson",
+      "sha256": "89ce937fef3709fd1d4069e0d9d4964b8fe4f52b4c304bb7b3d5ae7d6a1856d4"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/coal/normalized/coal-context-polygons.geojson",
+      "sha256": "b6a1d8a757936df9c2f25f094e389a9aaf13b92d29b7b2bef087d04be4635cf1"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/coal/normalized/coal-supplement-points.geojson",
+      "sha256": "7ec7527816c004ae6c2a244f1add7c78270e3d85bed5c80a9abb6d2b7f859c6e"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/coal/normalized/nrw-halite.geojson",
+      "sha256": "4c7c6e34c68fd89332cd70e687970c54451ed4c6bb4ec1fe110815b71e5fe392"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/gypsum/normalized/gypsum-reviewed.geojson",
+      "sha256": "844441c272492b097d9b74577f235148c2c4876457c247ff329f5fb41898ad63"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/corrections/gypsum/normalized/gypsum-permissive-formations.geojson.gz",
+      "sha256": "4f81256c5e0ef9a8a90a8478a9371f519cd89479e9ddfdabee8b42947193021a"
+    },
+    {
+      "file": "docs/research/copper-tin-global-2026-09-29/normalized/pCu_tracts.geojson",
+      "sha256": "a212f2dc2309f1ac1bb048ef35a4fb2860a7c7ae89cc158f743548154c15a7e2"
+    },
+    {
+      "file": "docs/research/copper-tin-global-2026-09-29/normalized/sedCu_tracts.geojson",
+      "sha256": "2de3c0ee60c38539704fa2fbccaa32aae5001db2684c533a45dd164b6e63f6df"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/normalized/PotashTracts.geojson",
+      "sha256": "187d7ea338233a7a26a68aa83d6790418821dfc96bf386f128359f350cbea725"
+    },
+    {
+      "file": "assets/earthmap/config/geology-grids-v1.json",
+      "sha256": "d4d6816864e0d6d5f8cb7567b10e4ee695806f64033da2a326e8d5ac6a970ee9"
+    },
+    {
+      "file": "tools/bake_ore_heatmaps.py",
+      "sha256": "1d7dc4e92d78a3e8fd09a2e4ad94f7900ed7834bbbbc028dc79b2c19f7d2ebc8"
+    },
+    {
+      "file": "docs/research/remaining-ores-2026-09-29/game-mineral-scope.csv",
+      "sha256": "0c99fc92d42675f4a48c6efcadbae04ad68952816e13e0972a073700b783f4fc"
+    }
+  ],
+  "excluded": {
+    "research_only_rights_or_precision": 2300,
+    "invalid_geometry": 33,
+    "context_only": 1820,
+    "antimeridian_polygon_requires_review": 3
+  },
+  "resources": [
+    {
+      "code": "Fe",
+      "nonzeroObservedCells": 13919,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "Fe-occurrences.geojson.gz": 23286,
+        "Fe-specialist.geojson": 1675,
+        "ga-aimr-metals.geojson": 206,
+        "additional-evidence.geojson": 122
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Au",
+      "nonzeroObservedCells": 16439,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "Au-occurrences.geojson.gz": 83770,
+        "Au-specialist.geojson": 4488,
+        "ga-aimr-metals.geojson": 1386,
+        "additional-evidence.geojson": 95
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Ag",
+      "nonzeroObservedCells": 12111,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "Ag-occurrences.geojson.gz": 50070,
+        "Ag-specialist.geojson": 2716,
+        "ga-aimr-metals.geojson": 277,
+        "additional-evidence.geojson": 11
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Pb",
+      "nonzeroObservedCells": 12397,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "Pb-occurrences.geojson.gz": 38525,
+        "Pb-specialist.geojson": 1744,
+        "ga-aimr-metals.geojson": 192,
+        "additional-evidence.geojson": 115
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Zn",
+      "nonzeroObservedCells": 12779,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "Zn-occurrences.geojson.gz": 28050,
+        "Zn-specialist.geojson": 2205,
+        "ga-aimr-metals.geojson": 192,
+        "additional-evidence.geojson": 103
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Bi",
+      "nonzeroObservedCells": 2545,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "Bi-occurrences.geojson.gz": 1016,
+        "Bi-specialist.geojson": 167,
+        "additional-evidence.geojson": 17
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Ni",
+      "nonzeroObservedCells": 10656,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "Ni-occurrences.geojson.gz": 2702,
+        "Ni-specialist.geojson": 8954,
+        "ga-aimr-metals.geojson": 184,
+        "additional-evidence.geojson": 2
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Cr",
+      "nonzeroObservedCells": 6682,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "Cr-occurrences.geojson.gz": 5640,
+        "Cr-specialist.geojson": 8225,
+        "additional-evidence.geojson": 13
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Ti",
+      "nonzeroObservedCells": 5668,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "Ti-occurrences.geojson.gz": 2304,
+        "Ti-specialist.geojson": 322,
+        "pp1802-global.geojson": 121,
+        "ga-aimr-metals.geojson": 176,
+        "additional-evidence.geojson": 2
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Mn",
+      "nonzeroObservedCells": 6324,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "Mn-occurrences.geojson.gz": 10061,
+        "Mn-specialist.geojson": 221,
+        "pp1802-global.geojson": 38,
+        "ga-aimr-metals.geojson": 48,
+        "additional-evidence.geojson": 4
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Hg",
+      "nonzeroObservedCells": 2755,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "Hg-occurrences.geojson.gz": 4062,
+        "Hg-specialist.geojson": 148,
+        "additional-evidence.geojson": 31
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "W",
+      "nonzeroObservedCells": 4944,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "W-occurrences.geojson.gz": 8144,
+        "W-specialist.geojson": 203,
+        "ga-aimr-metals.geojson": 32,
+        "additional-evidence.geojson": 51
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "U",
+      "nonzeroObservedCells": 3918,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "U-occurrences.geojson.gz": 15364,
+        "U-specialist.geojson": 278,
+        "ga-aimr-metals.geojson": 95,
+        "additional-evidence.geojson": 4
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Pt",
+      "nonzeroObservedCells": 9400,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "Pt-occurrences.geojson.gz": 2933,
+        "Pt-specialist.geojson": 5381,
+        "pp1802-global.geojson": 153,
+        "ga-aimr-metals.geojson": 28
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "V",
+      "nonzeroObservedCells": 3516,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "V-occurrences.geojson.gz": 4837,
+        "V-specialist.geojson": 207,
+        "pp1802-global.geojson": 81,
+        "ga-aimr-metals.geojson": 33
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Mo",
+      "nonzeroObservedCells": 5678,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "Mo-occurrences.geojson.gz": 4797,
+        "Mo-specialist.geojson": 307,
+        "ga-aimr-metals.geojson": 35,
+        "additional-evidence.geojson": 5
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Sb",
+      "nonzeroObservedCells": 5487,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "Sb-occurrences.geojson.gz": 5326,
+        "Sb-specialist.geojson": 448,
+        "pp1802-global.geojson": 38,
+        "ga-aimr-metals.geojson": 8,
+        "additional-evidence.geojson": 2
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "B",
+      "nonzeroObservedCells": 894,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "B-occurrences.geojson.gz": 612,
+        "B-specialist.geojson": 43,
+        "additional-evidence.geojson": 1
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "P",
+      "nonzeroObservedCells": 6685,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "P-occurrences.geojson.gz": 2823,
+        "P-specialist.geojson": 1447,
+        "additional-evidence.geojson": 41,
+        "poland-minerals.geojson": 1
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "N",
+      "nonzeroObservedCells": 246,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "N-occurrences.geojson.gz": 110,
+        "N-specialist.geojson": 12
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "K",
+      "nonzeroObservedCells": 1246,
+      "potentialCells": 4941,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "K-occurrences.geojson.gz": 383,
+        "K-specialist.geojson": 72,
+        "additional-evidence.geojson": 15,
+        "poland-minerals.geojson": 5,
+        "PotashTracts.geojson": 77
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "NaCl",
+      "nonzeroObservedCells": 2221,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "NaCl-occurrences.geojson.gz": 922,
+        "NaCl-specialist.geojson": 100,
+        "additional-evidence.geojson": 14,
+        "poland-minerals.geojson": 25,
+        "nrw-halite.geojson": 4
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "S",
+      "nonzeroObservedCells": 9449,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "S-occurrences.geojson.gz": 10000,
+        "S-specialist.geojson": 1323,
+        "additional-evidence.geojson": 97,
+        "poland-minerals.geojson": 20
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "C_graphite",
+      "nonzeroObservedCells": 1898,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "C_graphite-occurrences.geojson.gz": 760,
+        "C_graphite-specialist.geojson": 60,
+        "pp1802-global.geojson": 110,
+        "additional-evidence.geojson": 29
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "C_coal",
+      "nonzeroObservedCells": 5742,
+      "potentialCells": 0,
+      "deepCells": 23,
+      "acceptedSourceAssociations": {
+        "C_coal-occurrences.geojson.gz": 240,
+        "C_coal-specialist.geojson": 6,
+        "additional-evidence.geojson": 44,
+        "coal-polygons.geojson": 3906,
+        "coal-supplement-points.geojson": 520
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "F",
+      "nonzeroObservedCells": 3293,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "F-occurrences.geojson.gz": 4155,
+        "F-specialist.geojson": 115,
+        "pp1802-global.geojson": 106,
+        "additional-evidence.geojson": 18,
+        "poland-minerals.geojson": 2
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "SiO2",
+      "nonzeroObservedCells": 4486,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "SiO2-occurrences.geojson.gz": 3622,
+        "SiO2-specialist.geojson": 87,
+        "additional-evidence.geojson": 44,
+        "poland-minerals.geojson": 94
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Al",
+      "nonzeroObservedCells": 4412,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "Al-occurrences.geojson.gz": 3102,
+        "Al-specialist.geojson": 129,
+        "ga-aimr-metals.geojson": 40,
+        "additional-evidence.geojson": 6
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "gypsum",
+      "nonzeroObservedCells": 2799,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "gypsum-occurrences.geojson.gz": 1948,
+        "gypsum-specialist.geojson": 44,
+        "additional-evidence.geojson": 25,
+        "gypsum-reviewed.geojson": 525,
+        "gypsum-permissive-formations.geojson.gz": 27659
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "diamond",
+      "nonzeroObservedCells": 1227,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "diamond-occurrences.geojson.gz": 494,
+        "diamond-specialist.geojson": 89,
+        "additional-evidence.geojson": 7
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "corundum",
+      "nonzeroObservedCells": 575,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "corundum-occurrences.geojson.gz": 229,
+        "corundum-specialist.geojson": 17,
+        "additional-evidence.geojson": 1
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "emerald",
+      "nonzeroObservedCells": 101,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "emerald-occurrences.geojson.gz": 15,
+        "emerald-specialist.geojson": 9,
+        "additional-evidence.geojson": 8
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "olivine",
+      "nonzeroObservedCells": 171,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "olivine-occurrences.geojson.gz": 45,
+        "olivine-specialist.geojson": 23,
+        "additional-evidence.geojson": 1
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "garnet",
+      "nonzeroObservedCells": 1275,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "garnet-occurrences.geojson.gz": 564,
+        "garnet-specialist.geojson": 17,
+        "additional-evidence.geojson": 16
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "lapis",
+      "nonzeroObservedCells": 18,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "lapis-occurrences.geojson.gz": 2,
+        "lapis-specialist.geojson": 1,
+        "additional-evidence.geojson": 2
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "alum",
+      "nonzeroObservedCells": 288,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "alum-occurrences.geojson.gz": 149,
+        "alum-specialist.geojson": 1
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "topaz",
+      "nonzeroObservedCells": 182,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "topaz-occurrences.geojson.gz": 37,
+        "topaz-specialist.geojson": 2,
+        "additional-evidence.geojson": 2
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "tourmaline",
+      "nonzeroObservedCells": 368,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "tourmaline-occurrences.geojson.gz": 69,
+        "tourmaline-specialist.geojson": 3,
+        "additional-evidence.geojson": 27
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "beryl",
+      "nonzeroObservedCells": 758,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "beryl-occurrences.geojson.gz": 588,
+        "beryl-specialist.geojson": 4,
+        "additional-evidence.geojson": 36
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "spinel",
+      "nonzeroObservedCells": 112,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "spinel-occurrences.geojson.gz": 16,
+        "spinel-specialist.geojson": 1
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Cu",
+      "nonzeroObservedCells": 16364,
+      "potentialCells": 12836,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "mrds-copper-tin-occurrences.csv": 44378,
+        "global-copper-assessment-occurrences.csv": 3420,
+        "ga-aimr-metals.geojson": 406,
+        "additional-evidence.geojson": 245,
+        "pCu_tracts.geojson": 179,
+        "sedCu_tracts.geojson": 47
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "Sn",
+      "nonzeroObservedCells": 4075,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {
+        "mrds-copper-tin-occurrences.csv": 2749,
+        "pp1802-global.geojson": 113,
+        "ga-aimr-metals.geojson": 59,
+        "additional-evidence.geojson": 75
+      },
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "peat",
+      "nonzeroObservedCells": 439,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {},
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    },
+    {
+      "code": "clay",
+      "nonzeroObservedCells": 5084,
+      "potentialCells": 0,
+      "deepCells": 0,
+      "acceptedSourceAssociations": {},
+      "generation_model": "Authored suitability; not measured abundance/probability"
+    }
+  ],
+  "caveats": [
+    "0.5 degree cells and 75 km point influence are gameplay inference, not deposit footprints.",
+    "Max combination prevents duplicate-count boosts but cannot remove geographic survey coverage bias.",
+    "Research-only gem/diamond records, context-only units, invalid geometry and antimeridian polygons requiring repair are excluded.",
+    "Peat/clay use positive coarse sediment categories plus runtime habitat checks.",
+    "Deep evidence boosts only at/under its reported depth; no depth is invented for unknown records.",
+    "V1 keeps the strongest deep weight paired with its own burial depth (shallower wins ties); weaker shallow records can be omitted, never used to expose stronger deep evidence early."
+  ]
+}

@@ -1,0 +1,430 @@
+{
+  "mod": {
+    "modid": 9431,
+    "assetid": 54480,
+    "name": "Deciduous Trees",
+    "text": "<p><a href=\"https://mods.vintagestory.at/ecomachina\"><span style=\"color: #e74c3c;\"><strong>ECO MACHINA IS REQUIRED FOR FANCY BRANCHES</strong></span></a></p>\n<p><span style=\"color: #e74c3c;\"><strong>but, it is not required for the mod to function. Compare with screenshots for the look you want.<br><br><span style=\"color: #e03e2d;\">WEIRD ISSUES WITH BLOCK PLACEMENT? CHECK FAQ SECTION PLEASE</span></strong></span></p>\n<h3><span style=\"color: #e74c3c;\"><strong><br>NOTE: </strong><span style=\"color: #000000;\">This mod is lightweight on servers and on the client,</span> <a href=\"https://mods.vintagestory.at/ecomachina\">Eco Machina</a> <span style=\"color: #000000;\">is heavier. Our resting performance heartrate is tiny and we take pride in that. A lot of players incorrectly think we're the ones causing lag since the two mods are commonly installed together for the superior experience.</span></span></h3>\n<h2><strong><span style=\"color: #e67e23;\">Want your deciduous trees to drop leaf litter? Try my companion mod <a href=\"https://mods.vintagestory.at/leaflitter\">Leaf Litter</a>!<br></span></strong></h2>\n<hr>\n<p><strong><br>What does this mod do?<br></strong><br>Deciduous trees will now slowly enter and exit dormancy based off local temperature. This effects mirrors real life and allows you to enjoy seasonal immersion. Since the changes are local, emergent microclimates will form. Valleys will stay green longer, autumn descends down mountains in an altitudinal gradient, Foliage can be stunted due to cold snaps in the spring, etc.<br><br>When leaves disappear for the season, their hitboxes do as well, despite never being removed from your world. Leaves will slowly return when temperatures improve.&nbsp;</p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Features (more than you'd think)</div>\n<div class=\"spoiler-text\">\n<p>Summarized by users: \"Real leaf fall! Falling leaves! REAL!!!!!! PEAK!\"<br><br>~ Temperature-based tree canopy hiding. This means trees may lose their leaves at different points in time across the map, rather than strictly in winter.<br><br>~ Canopy acts bare, snow will accumulate beneath deciduous trees, and will thaw in spring.<br><br>~ Trees <strong>smoothly </strong>lose their canopy during autumn or in the case of the tropics, if a coldsnap frightens the tree.<br><br></p>\n<p>~ Trees <strong>smoothly </strong>gain their canopy when temperatures improve.<br><br>~ Trees of varying species leaf out at different times.<br><br>~ Particles gently rain from the trees during autumn to simulate falling leaves.<br><br>~ Evergreens do not lose their leaves. If you want to add to the list of trees unaffected you can edit the config.<br><br>~ Hidden leaves have no hitbox or cursor highlights, so you won't notice them or trip on invisible blocks (use the config if you still want cursor highlights in case they get in the way of winter construction.)<br><br>~ Snow does not accumulate on hidden leaves, but does accumulate on evergreens. Snow \"falls through\" the bare branches of trees.<br><br>~ Vines don't appear on hidden leaves.<br><br>~ This mod can safely be uninstalled at any time. Even when all of your trees are bare, uninstalling this mod does nothing to harm your save. This mod is almost a visuals only mod.<br><br>~ Partial compatibility for mods, including a config so you can change which trees should and shouldn't lose leaves. Modded trees work in the config. It's not populated with modded trees by default as it would open Pandora's box for unrelated bugs.<br><br>~ There may be a hidden Halloween day easter egg...</p>\n</div>\n</div>\n<hr>\n<p><em><br>Consider my other mods!<br><br></em><span style=\"color: #000000;\"><a title=\"Leaf Litter:\" href=\"https://mods.vintagestory.at/leaflitter\"><strong>Leaf Litter:</strong></a> A Companion mod made to go with Decidous Trees. Produces leaf litter that slowly builds up under trees. Rake it up and use it as mulch!</span><br><br><strong><a href=\"https://mods.vintagestory.at/show/mod/56676\" target=\"_blank\" rel=\"noopener\">Seasonal Flowers</a></strong>: Another temperature-based mod that hides blocks in the winter, giving flowers a visual lifecycle.<strong><br><br><a href=\"https://mods.vintagestory.at/blackraspberry\">Everything Black Raspberry</a>:</strong>&nbsp;A mod that adds the classic Midwestern berry bush and it's respective products. Tons of compatibility patches. Lots of love went into this mod.<br><br><a href=\"https://mods.vintagestory.at/fastpackeddirtpaths\" target=\"_blank\" rel=\"noopener\"><strong>Fast Packed Dirt Paths</strong></a>: A mod that makes packed dirt faster to walk on.<br><br></p>\n<hr>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">FAQ - Read this before you submit a bug report, please</div>\n<div class=\"spoiler-text\">\n<h6><span style=\"color: #e74c3c;\">Note</span>: This is largely a personal mod, this mod gives me massive headaches and I probably won't be too active on it. I also reserve full rights to say \"no\" on bad ideas for it.</h6>\n<h2>Mods Section</h2>\n<p><br>Q. Does this mod need <a href=\"https://mods.vintagestory.at/ecomachina\">Eco Machina</a> to run?<br>A. As of 1.3.0 <a href=\"https://mods.vintagestory.at/ecomachina\">Eco</a> is no longer required, but STRONGLY recommended. You can see the visual difference in the images above.<br><br>Q. What happens if I don't use <a href=\"https://mods.vintagestory.at/ecomachina\">Eco Machina</a>?<br>A. The tree will appear more vanilla-like. Square trunks, fruit tree branches. Compare pictures in the showcase to see examples.<br><br>Q. Why do my trees not have branches like in the first picture?&nbsp;<br>A. Mod needs <a href=\"https://mods.vintagestory.at/ecomachina\">Eco Machina</a> for fancy curvy branches.<br><br>Q. Can I use foliage recolors, or mods that modify seasonal tint?&nbsp;<br>A. Yes! I made sure that mods like <a href=\"https://mods.vintagestory.at/naturalfoliage\">Natural Foliage</a> are unbothered.<br><br>Q. Can I add or remove this mod from existing saves? <br>A. Yes! You can even remove the mod when the leaves are bare, they're not actually removed, so your trees are safe. The snow accumulated underneath the leaf canopy may stay if you uninstall mid-winter.&nbsp;<br><br>Q. Evergreens from modded trees lose their leaves?<br>A. I'm hesitant to include modded trees into the config by default as it would be playing favorites to the infinite number of tree adding mods. You can add the trees you want to keep leaves in the config yourself. In comments to this mod, <a href=\"https://mods.vintagestory.at/show/user/A30947E7BD0168B35DD4\">MrFastZombie</a> made a comprehensive list that is ready to use <a href=\"https://mods.vintagestory.at/deciduoustrees#cmt-191761\">here (Wildcraft and FloralZones)</a>.</p>\n<h2>Gameplay Section&nbsp;<br><br></h2>\n<p>Q. If leaf blocks are right clicked while holding regular blocks, the leaf block is replaced with the held block rather than the block being placed beside it?<br>A. This is a technical limitation. So many complaints stemmed from placing on invisible leaves, that I enabled this feature by default. If it bothers you, turn it off on the config.<br><br>Q. It says a \"block is in the way\" and I can't build there?<br>A. The mod doesn't actually physically remove the leaves from trees (if it did, your game would massively lag). You're trying to place a block where hidden leaf blocks are. Change the your own client-side config (not the server config if you're on a server) to see the hidden leaves and then cut them down. Or burn them. Or wait for spring.<br><br>Q. Bushes spawn where i'm working, this mod is broken.<br>A. Previously, placing into hidden blocks this was forbidden and it prevented players from incurring this issue. The game believes it's creating new dormant bushes whenever you build under branchy leaves. Enable block highlights if it gets too annoying.<br><br>Q. The falling leaf particles make me lag, is there a fix?<br>A. Sorry about that, turn them off in the config as \"ParticleFallingLeaves\".<br><br>Q. I am evil and do not like Fall or the gradual leaf shedding, can I turn it off?<br>A. Yes, much to my ire, it's in the config as \"AutumnDrop\". The mod will instead jump straight to winter mod when it gets too cold.<br><br>Q. I don't want X type of tree to lose leaves, is there a way for me to exclude it? <br>A. Yeah, there is a config for dormancy temperatures and leaf exclusions.</p>\n<h2>Misc. Section</h2>\n<p><br>Q. Why did you make this mod?<br>A. I've always wanted to see actual desolate winters in a sandbox game. Fall is also my favorite season, and I look forward to it all year round. I've been trying to bribe people to make this mod for a while now, and since Eco Machina originally did the heavy lifting, I decided to try. I'm a finance bro by trade, not a coder. But homesickness for Michigan is sorta bridging the gap. By now, the mod no longer needs Eco Machina and I've grown as a programmer, solving the original hurdle that prevented me from making the mod. We've come full circle.<br><br>Q. If this mod falls out of date can I fork or patch it?<br>A. If I'm MIA for a while, you have the authority to patch, do not fork.</p></div></div>",
+    "author": "Tritan20",
+    "urlalias": "deciduoustrees",
+    "logofilename": "https://moddbcdn.vintagestory.at/Logo2_1ca23bf51479236d4fe08fa2de26ca08.png",
+    "logofile": "https://moddbcdn.vintagestory.at/Logo2_1ca23bf51479236d4fe08fa2de26ca08.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/Logo2_d86498ed183f81c4384d776942360de3.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 24905,
+    "follows": 951,
+    "trendingpoints": 0,
+    "comments": 194,
+    "side": "both",
+    "type": "mod",
+    "created": "2026-06-07 02:16:54",
+    "lastreleased": "2026-09-20 02:51:18",
+    "lastmodified": "2026-09-29 05:13:15",
+    "tags": [
+      "Tweak",
+      "Realism",
+      "Spooky",
+      "Addon",
+      "Compatibility",
+      "Biodiversity",
+      "Immersive",
+      "Immersion",
+      "Terrain",
+      "User Experience",
+      "Pine",
+      "Decoration",
+      "Behavior",
+      "Foliage",
+      "Leaves",
+      "Visual"
+    ],
+    "releases": [
+      {
+        "releaseid": 53648,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.8.2_0fd2b2b53db1f1a7e285863495bb4e3c.zip?dl=deciduoustrees_1.8.2.zip",
+        "filename": "deciduoustrees_1.8.2.zip",
+        "fileid": 116196,
+        "downloads": 4752,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3",
+          "1.22.4",
+          "1.22.5",
+          "1.22.6",
+          "1.22.7"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.8.2",
+        "created": "2026-08-20 11:25:20",
+        "changelog": "<p>Minor 1.22.7 update<br /><br />- Made it so leaves are now place-through by default. Since it was requested (again), this occurs in every season.<br />While personally I dislike being able to accidentally destroy my hedges by placing a block over them, this removes a LOT of angry commenters who refuse to read the FAQ. If this bothers you, there is a config.&nbsp;<br /><br /><br /><br /><br /><br />I've been busy in my personal life. I'm a finance bro, not a really a coder. Burnout got me pretty bad.</p>"
+      },
+      {
+        "releaseid": 50139,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.8.1_337a3d6e08f6e58b7105edfc11e2b380.zip?dl=deciduoustrees_1.8.1.zip",
+        "filename": "deciduoustrees_1.8.1.zip",
+        "fileid": 109201,
+        "downloads": 4683,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3",
+          "1.22.4",
+          "1.22.5",
+          "1.22.6",
+          "1.22.7"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.8.1",
+        "created": "2026-07-22 11:29:06",
+        "changelog": "<p>- Updated to 1.22.5<br /><br />- Snow culling that would run for world-placed-snow or snow placed before this mod <strong>now runs</strong> <strong>instantly</strong> instead of waiting an hour of in-game time to log the trees to save on resources.<br /><br />-You can now place blocks over invisible leaves. In my heart, I know this will spawn all sorts of \"there is a bush in my house, this mod is bwoken\" posts. The config can turn this off.</p>"
+      },
+      {
+        "releaseid": 49761,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.8.0_afe9fca9fdac1cb7ea446cd63034fcaf.zip?dl=deciduoustrees_1.8.0.zip",
+        "filename": "deciduoustrees_1.8.0.zip",
+        "fileid": 108432,
+        "downloads": 1388,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3",
+          "1.22.4",
+          "1.22.5",
+          "1.22.6"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.8.0",
+        "created": "2026-07-19 11:32:24",
+        "changelog": "<p>Major content update:<br><br>- Added gradual spring leaf out, spring is no longer instant<br>- Added cold stunted spring growth (visual only)<br>- Added per species readings of trees so trees react at different times</p>\n<p>&nbsp;</p>\n<p>- Minor snow refinement<br><br><br></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Spoiler!</div>\n<div class=\"spoiler-text\">- Added special event for players to find on October 31st.</div></div>"
+      },
+      {
+        "releaseid": 49087,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.7.2_5b4d723ebd5d61acf73f68654a4f7477.zip?dl=deciduoustrees_1.7.2.zip",
+        "filename": "deciduoustrees_1.7.2.zip",
+        "fileid": 107099,
+        "downloads": 1928,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.7.2",
+        "created": "2026-07-14 00:47:40",
+        "changelog": "<p>Minor Leaf Litter compat update<br /><br />-Now allows leaf litter to be covered with snow when under canopies if that mod is installed.</p>"
+      },
+      {
+        "releaseid": 48891,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.7.1_aba74c54a81dbffd87c801003649a893.zip?dl=deciduoustrees_1.7.1.zip",
+        "filename": "deciduoustrees_1.7.1.zip",
+        "fileid": 106759,
+        "downloads": 677,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.7.1",
+        "created": "2026-07-12 19:03:46",
+        "changelog": "<p>Particle refinement update<br /><br />- Leaf particles now gently fall.<br />- fixed color issue for particles.<br />- fixed gusts of wind being slightly more annoying with this mod installed.</p>"
+      },
+      {
+        "releaseid": 48454,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.7.0_07f8bd2edc08ad3811f374b314ec41f6.zip?dl=deciduoustrees_1.7.0.zip",
+        "filename": "deciduoustrees_1.7.0.zip",
+        "fileid": 105932,
+        "downloads": 1950,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.7.0",
+        "created": "2026-07-08 19:49:41",
+        "changelog": "<p>Content update<br /><br /><br />- MASSIVE performance update for all players.<br />- Server desync now impossible or at least, very rare.<br />- Deciduous Trees now allow snow to fall through their invisible canopies.<br />- Snow underneath leaves now thaw, in vanilla sheltered snow doesn't normally do this<br /><br />- Fixed minor flicker error for mountains</p>"
+      },
+      {
+        "releaseid": 47413,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.6.0_8ad8b0945e2e93102baacc1ab594cb80.zip?dl=deciduoustrees_1.6.0.zip",
+        "filename": "deciduoustrees_1.6.0.zip",
+        "fileid": 103810,
+        "downloads": 2272,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.6.0",
+        "created": "2026-06-28 19:16:32",
+        "changelog": "<p>MAJOR Update:<br /><br />- Added seasonal Fall dieback, replacing the old instant method. (you can turn this off in config to go back to how things were).<br />- Added more autumnal delights, such as falling leaf particles that slowly rain from decidious trees (you can turn this off in config).<br />- Added temperature dependent coloring of trees<br />- Slightly reworked Spring leafout, though it's not at a finished polished state. This should fix residual flickering bugs.<br /><br /><br />- Tweaked how the mod plays with modded trees, it should be more inclusive now.<br />- optimization is always a priority, however the system now has virtually no overhead while playing, only on first load. This mod won't hog resources on small servers, so there may be slight staging lag if the server is already chugging.<br /><br /><br /><br /><em>Oh pumpkins bright, in fields of gold, </em><br /><em>Nature's canvas, a story told. </em><br /><em>With tender leaves, you rise and grow, </em><br /><em>In autumn&rsquo;s breath, your colors glow.</em></p>"
+      },
+      {
+        "releaseid": 46753,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.5.1_ab8defb6f383dce459505267d3bbad2c.zip?dl=deciduoustrees_1.5.1.zip",
+        "filename": "deciduoustrees_1.5.1.zip",
+        "fileid": 102477,
+        "downloads": 1806,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.5.1",
+        "created": "2026-06-22 00:29:29",
+        "changelog": "<p>Minor QOL update<br /><br />- Made cursor highlights for the visible branchy leaves.</p>"
+      },
+      {
+        "releaseid": 46626,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.5.0_8509e6400b282472f58c12bcff979495.zip?dl=deciduoustrees_1.5.0.zip",
+        "filename": "deciduoustrees_1.5.0.zip",
+        "fileid": 102189,
+        "downloads": 583,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.5.0",
+        "created": "2026-06-20 21:16:16",
+        "changelog": "<p>Vanilla branches update.<br /><br />-Added vanilla-like branches for when users do not have Eco Machina installed. These are based on fruit trees, so there are some limitations.<br /><br />-Added a better texture and detection for the bushes added in 1.4.0.<br /><br />-added config to allow user to simply display log-only pole trees when using Vanilla.<br /><br />-Added a config for bushes when using Eco Machina.<br /><br /><br />Quite proud of this version. Our branches are no where close to Eco but they certainly look better than bare log poles.<br /><br /><br />If you ever find my easteregg, vaguepost about it.</p>"
+      },
+      {
+        "releaseid": 46373,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.4.0_371e427e1143241bc535a9a11ef53eec.zip?dl=deciduoustrees_1.4.0.zip",
+        "filename": "deciduoustrees_1.4.0.zip",
+        "fileid": 101683,
+        "downloads": 771,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.4.0",
+        "created": "2026-06-18 18:05:24",
+        "changelog": "<p>The bush update...<br /><br />I found a way to get the branch texture to show using the new architecture made a few updates ago. Branchy leaves that touch soil now render to telegraph where large bushes once were. You can disable this in the config.<br /><br />- Added dormant bushes<br />- Added config for dormant bushes</p>"
+      },
+      {
+        "releaseid": 46049,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.3.0_134869b4da483464115a3545f87ae668.zip?dl=deciduoustrees_1.3.0.zip",
+        "filename": "deciduoustrees_1.3.0.zip",
+        "fileid": 101067,
+        "downloads": 767,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.3.0",
+        "created": "2026-06-16 01:40:55",
+        "changelog": "<p>Major updates:<br /><br />-Fully removed the dependant code from Eco Machina. Enjoy the bizzare vanilla trees without leaves, I guess.<br /><br />Fixes:<br /><br />-Faster Leaf hiding (Instant in singleplayer)<br />-Faster Vine hiding (Instant in singleplayer)</p>"
+      },
+      {
+        "releaseid": 45504,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.2.4_e245cd511c13f7c757c8335bd7d0f77d.zip?dl=deciduoustrees_1.2.4.zip",
+        "filename": "deciduoustrees_1.2.4.zip",
+        "fileid": 100051,
+        "downloads": 1116,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.2.4",
+        "created": "2026-06-12 03:40:00",
+        "changelog": "<p>Bug fix update<br /><br />-Fixed a bug where snow could still form at certain heights.</p>\n<p>-Allows the server to give more resources if hosting larger player counts.</p>"
+      },
+      {
+        "releaseid": 45487,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.2.3_bd251e725c67eae5341d61cd205091ce.zip?dl=deciduoustrees_1.2.3.zip",
+        "filename": "deciduoustrees_1.2.3.zip",
+        "fileid": 100023,
+        "downloads": 131,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.2.3",
+        "created": "2026-06-12 00:36:59",
+        "changelog": "<p>Major leaf rendering and server communication overhaul update.</p>\n<p>Additions:&nbsp;</p>\n<p>- MUCH faster leaf rendering.<br />- Config option to reenable hitboxes (to get rid of leaves in the winter)</p>\n<p>Bug fixes:</p>\n<p>- Server no longer allows stale solid states for branchy leaves, (preventing tripping on servers).<br />- Tree \"leaf hats\" should be fixed, if they don't visually fix within a few seconds of being nearby, relog.<br />- Trees are no longer turn invisible when players walk to close to them at Y 128-130</p>"
+      },
+      {
+        "releaseid": 45171,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.1.3_ac732868d7da8a4c89c7de503a6d32c5.zip?dl=deciduoustrees_1.1.3.zip",
+        "filename": "deciduoustrees_1.1.3.zip",
+        "fileid": 99376,
+        "downloads": 902,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.1.3",
+        "created": "2026-06-09 02:38:46",
+        "changelog": "<p>I can't believe I forgot the most important part of the mod. The mod icon...</p>"
+      },
+      {
+        "releaseid": 45152,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.1.2_db50c32c77f5bc260461cb68816dcd35.zip?dl=deciduoustrees_1.1.2.zip",
+        "filename": "deciduoustrees_1.1.2.zip",
+        "fileid": 99341,
+        "downloads": 162,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.1.2",
+        "created": "2026-06-09 00:28:57",
+        "changelog": "<p>More aggressive snow culling method implemented.<br />Fixed floating snow edge case.</p>"
+      },
+      {
+        "releaseid": 45114,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.1.0_a8e2207ac622521963348a8b63530cad.zip?dl=deciduoustrees_1.1.0.zip",
+        "filename": "deciduoustrees_1.1.0.zip",
+        "fileid": 99259,
+        "downloads": 208,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.1.1",
+        "created": "2026-06-08 18:34:37",
+        "changelog": "<p>Added a config for temps and modded evergreen trees.<br /><br />Again, 'WEH' to modded trees.</p>"
+      },
+      {
+        "releaseid": 45112,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.1.0_7a4a6800a07edd963db6cead515bbc94.zip?dl=deciduoustrees_1.1.0.zip",
+        "filename": "deciduoustrees_1.1.0.zip",
+        "fileid": 99257,
+        "downloads": 80,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.1.0",
+        "created": "2026-06-08 18:12:30",
+        "changelog": "<p>Changed architecture as to what trees keep their leaves, so that modded trees now lose their leaves. However, this means ALL modded trees lose leaves, even the evergreens. I sorta refuse to sit and categorize each tree individually when I don't even use the mod to begin with.<br /><br />WEH!</p>"
+      },
+      {
+        "releaseid": 44975,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.0.1_66d6535bde620d0e3e3ef26f0f5b7301.zip?dl=deciduoustrees_1.0.1.zip",
+        "filename": "deciduoustrees_1.0.1.zip",
+        "fileid": 99009,
+        "downloads": 595,
+        "tags": [
+          "1.22.0",
+          "1.22.1",
+          "1.22.2",
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.0.1",
+        "created": "2026-06-07 17:29:33",
+        "changelog": "<p>Mod is now less picky on what versions it wants. I'm trusting you guys to be smart about it...</p>"
+      },
+      {
+        "releaseid": 44972,
+        "mainfile": "https://moddbcdn.vintagestory.at/deciduoustrees_1.0.0_a89c74e1326b3105c201826a8e3314ec.zip?dl=deciduoustrees_1.0.0.zip",
+        "filename": "deciduoustrees_1.0.0.zip",
+        "fileid": 99002,
+        "downloads": 134,
+        "tags": [
+          "1.22.3"
+        ],
+        "modidstr": "deciduoustrees",
+        "modversion": "1.0.0",
+        "created": "2026-06-07 16:37:43",
+        "changelog": "<p>Release:<br /><br />Trees lose their leaves when it starts to get cold, about 32F.</p>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 98880,
+        "mainfile": "https://moddbcdn.vintagestory.at/3_602a41e2933250e4b3ded059c4e32b41.png",
+        "filename": "3.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/3_602a41e2933250e4b3ded059c4e32b41_55_60.png",
+        "created": "2026-06-07 02:16:29"
+      },
+      {
+        "fileid": 98881,
+        "mainfile": "https://moddbcdn.vintagestory.at/4_1ca23bf51479236d4fe08fa2de26ca08.png",
+        "filename": "4.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/4_1ca23bf51479236d4fe08fa2de26ca08_55_60.png",
+        "created": "2026-06-07 02:19:18"
+      },
+      {
+        "fileid": 99001,
+        "mainfile": "https://moddbcdn.vintagestory.at/5_e998fca8e8d7a5971a20ba8e07bc2274.png",
+        "filename": "5.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/5_e998fca8e8d7a5971a20ba8e07bc2274_55_60.png",
+        "created": "2026-06-07 16:34:55"
+      },
+      {
+        "fileid": 101674,
+        "mainfile": "https://moddbcdn.vintagestory.at/2_ee7d2921be8c2002bf034fabb273f928.png",
+        "filename": "2.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2_ee7d2921be8c2002bf034fabb273f928_55_60.png",
+        "created": "2026-06-18 17:04:31"
+      },
+      {
+        "fileid": 102195,
+        "mainfile": "https://moddbcdn.vintagestory.at/6_57fa205d9c767616082f202a2073e380.png",
+        "filename": "6.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/6_57fa205d9c767616082f202a2073e380_55_60.png",
+        "created": "2026-06-20 21:22:35"
+      },
+      {
+        "fileid": 103594,
+        "mainfile": "https://moddbcdn.vintagestory.at/Eco+Fall_78dd53e2ae410933029922e458227107.gif",
+        "filename": "Eco Fall.gif",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/Eco+Fall_78dd53e2ae410933029922e458227107_55_60.gif",
+        "created": "2026-06-28 00:53:51"
+      },
+      {
+        "fileid": 103598,
+        "mainfile": "https://moddbcdn.vintagestory.at/Vanilla+Fall_068b2d040b8f6acef63e4a20feec34c7.gif",
+        "filename": "Vanilla Fall.gif",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/Vanilla+Fall_068b2d040b8f6acef63e4a20feec34c7_55_60.gif",
+        "created": "2026-06-28 01:17:52"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

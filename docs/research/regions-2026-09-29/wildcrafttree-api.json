@@ -1,0 +1,248 @@
+{
+  "mod": {
+    "modid": 1856,
+    "assetid": 9909,
+    "name": "Wildcraft: Trees and Shrubs",
+    "text": "<h1><span style=\"color: #d35400;\"><a style=\"color: #d35400;\" href=\"https://mods.vintagestory.at/herbarium\" target=\"_blank\" rel=\"noopener\">&gt;&gt;REQUIRES HERBARIUM TO WORK&lt;&lt;</a></span></h1>\n<h4><strong><span style=\"color: #d35400;\">Do not use this mod with either of the old wildcraft mods, Wildcraft or Wildcraft Trees. These mods are being discontuined in favor of Herbarium and the new content modules (which are still being worked on and released). Using this content module with either of the old versions will cause issues and crashes.<br /></span></strong></h4>\n<h4><span style=\"color: #d35400;\">The old Wildcraft and Wildcraft Trees pages will no longer be updated or maintained, but will stay up for the sake of legacy versions of the game. </span><span style=\"color: #d35400;\">Using this mod on an old world with Wildcraft or Wildcraft trees is likely to cause issues, but remmapings have been added&nbsp; to help migrate old worlds to the new versions. We appreciate your continued patience in our development process.<br /><br /></span></h4>\n<p><strong>Contributors:</strong></p>\n<div>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Spoiler!</div>\n<div class=\"spoiler-text\">\n<ul>\n<li>Ледяная Соня: Author of the module's content, all the textures, models, json works</li>\n<li>gabb: Code, general help and bugfixes</li>\n<li>CATASTEROID: Author of the old \"Wildcraft Trees\" mod</li>\n</ul>\n</div>\n</div>\n</div>\n<p><strong>Content:</strong></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Spoiler!</div>\n<div class=\"spoiler-text\">\n<ul>\n<li>\n<p>About 50 new types of trees and shrubs spread between all ingame climates:</p>\n<ul>\n<li>Cedar pine (<em>Pinus sibirica</em>)</li>\n<li>Fir (<em>Abies sibirica</em> and <em>Abies nordmanniana</em>)</li>\n<li>Spruce (<em>Picea abies</em> and/or <em>Picea obovata</em>)</li>\n<li>Blue spruce (<em>Picea pungens</em>)</li>\n<li>Douglas fir (<em>Pseudotsuga menziesii</em>)</li>\n<li>Arborvitae (<em>Thuja occidentalis </em>and <em>Microbiota decussata</em>)</li>\n<li>Red cedar (<em>Thuja plicata</em>)</li>\n<li>Yew (<em>Taxus baccata</em>)</li>\n<li>Kauri (<em>Agathis australis</em>)</li>\n<li>Ginkgo (<em>Ginkgo biloba</em>)</li>\n<li>Sycamore (<em>Platanus occidentalis</em>)</li>\n<li>Honey locust (<em>Gleditsia triacanthos</em>)</li>\n<li>Dalbergia (<em>Dalbergia melanoxylon</em>)</li>\n<li>Wiliwili (<em>Erythrina sandwicensis</em>)</li>\n<li>Crown-of-thorns (<em>Paliurus spina-christi</em>)</li>\n<li>Umnini (<em>Phyllogeiton zeyheri</em>)</li>\n<li>Banyan (<em>Ficus benghalensis</em>)</li>\n<li>Elm (<em>Ulmus pumila</em> and/or <em>Ulmus americana</em>)</li>\n<li>Beech (<em>Fagus sylvatica</em> and/or<em> Fagus orientalis</em>)</li>\n<li>Bride-in-white (<em>Betula pubescens</em>)</li>\n<li>Alder (<em>Alnus alnobetula</em> and<em> Alnus hirsuta</em>)</li>\n<li>Bearnut (<em>Corylus colurna</em>)</li>\n<li>Willow (<em>Salix babylonica</em>, <em>Salix caprea</em> and <em>Salix arbuscula</em>)</li>\n<li>Red willow (<em>Salix acutifolia</em>)</li>\n<li>Poplar (<em>Populus nigra</em> and <em>Populus nigra</em> f.<em> pyramidalis</em>)</li>\n<li>Aspen (<em>Populus tremula</em> and/or <em>Populus tremuloides</em>)</li>\n<li>Tamanu (<em>Calophyllum inophyllum</em>)</li>\n<li>Spurge tree (<em>Euphorbia ingens</em>)</li>\n<li>Azobe (<em>Lophira alata</em>)</li>\n<li>Guajacum (<em>Guaiacum officinale</em>)</li>\n<li>Eucalyptus (<em>Eucalyptus deglupta</em>)</li>\n<li>Ghost gum (<em>Corymbia candida</em> and/or <em>Corymbia aparrerinja</em>)</li>\n<li>Ohia (<em>Metrosideros polymorpha</em> and <em>Metrosideros operculata</em>)</li>\n<li>Satinash (<em>Syzygium gustavioides</em>)</li>\n<li>Leadwood (<em>Combretum imberbe</em>)</li>\n<li>Blue mahoe (<em>Hibiscus elatus</em>)</li>\n<li>Linden (<em>Tilia amurensis</em>, <em>Tilia cordata</em> and/or <em>Tilia americana</em>)</li>\n<li>Sal (<em>Shorea robusta</em>)</li>\n<li>Horse chestnut (<em>Aesculus hippocastanum</em>)</li>\n<li>Tigerwood (<em>Astronium fraxinifolium</em>)</li>\n<li>Mahogany (<em>Swietenia macrophylla</em>)</li>\n<li>Sapele (<em>Entandrophragma cylindricum</em>)</li>\n<li>Saxaul (<em>Haloxylon persicum</em>)</li>\n<li>Heather (<em>Erica cinerea</em> and <em>Erica arborea</em>)</li>\n<li>Sourwood (<em>Oxydendrum arboreum</em>)</li>\n<li>Ash (<em>Fraxinus excelsior</em>)</li>\n<li>Mousetrap tree (<em>Uncarina grandidieri</em>)</li>\n<li>Catalpa (<em>Catalpa bignonioides</em>)</li>\n<li>Jacaranda (<em>Jacaranda filicifolia</em>)</li>\n<li>Mangrove (<em>Avicennia marina</em>)</li>\n<li>Empress tree (<em>Paulownia tomentosa</em>)</li>\n</ul>\n</li>\n</ul>\n<p>&nbsp;</p>\n<ul>\n<li>All new trees support mycelium, some can leak resin or can be used to make tannin</li>\n<li>Some tree types have a generation variant with two blocks thick trunk, while others can spawn with trunks less than a block thick<br />\n<ul>\n<li>Chopping down a thin tree will give you narrow logs that can be turned into firewood or a proportional amount of boards</li>\n<li>A couple of thin tree types are mainly decorative: they lack regular-sized counterparts and don't have their own wood type, so their logs can be used only for firewood<br /><br /></li>\n</ul>\n</li>\n</ul>\n<ul>\n<li>Three special, highly decorative wood types:\n<ul>\n<li>Charred wood, which is created artificially by heating certain softwoods over a firepit; logs, debarked logs, support beams and boards must be prepared separately</li>\n<li>Petrified wood, which can only be found underground in dry climates and is non-renewable</li>\n<li>Chlorociboria-dyed wood, which can be found in nature and limitedly propagated<br /><br /></li>\n</ul>\n</li>\n</ul>\n<ul>\n<li>Breaking through the foliage of some trees will drop leaves or flexible canes&nbsp;<br />\n<ul>\n<li>Most leaves can serve as a low-nutrition food if you are starving; oak leaves can be soaked to make tannins, while walnut leaves turn into persistent black dye</li>\n<li>Dried leaves can be used as fuel or ground into mulch, a poor quality but very affordable fertilizer</li>\n<li>Canes also can be burned, used to weave both stationary and handheld baskets, including a special one suited for foraging, and typed, colourful wattle fences that support daub mechanic<br /><br /></li>\n</ul>\n</li>\n</ul>\n<ul>\n<li>Stumps of all the regular-sized tree types now generate in the world according to where these tree types are usually found<br />\n<ul>\n<li>These can be picked up and placed as is, or converted into regular logs</li>\n<li>Some types of stumps can be used for chlorociboria fungus propagation to produce more chlorociboria-dyed wood</li>\n</ul>\n</li>\n</ul>\n</div>\n</div>\n<p><strong>Changelog:</strong></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Spoiler!</div>\n<div class=\"spoiler-text\">\n<p><strong>&nbsp; &nbsp;1.3.4:</strong></p>\n<ul>\n<li>Restored mod's functionality on 1.22 - however not all the new wood-typed blocks and items are implemented (have pity on meeeee)</li>\n<li>Wattle hand baskets are now typed and deconstruct into corresponding canes</li>\n<li>Reed baskets are now actually called baskets, not \"chests\"</li>\n<li>Roofing element naming is updated to correspond basegame changes</li>\n<li>Fixed very aged sleek door having the same texture as regular aged</li>\n<li>Sleek door visuals updated</li>\n<li>Debarked logs' \"tree trunk\" textures updated as well</li>\n<li>Tried to fix mutiplayer wattle basket weirdness, not sure if succeeded</li>\n<li>Fixed \"dwarfism\" in player-grown trees - now they are about the same size as naturally-generated, this includes basegame trees as well</li>\n<li>Fixed wooden shield crashes, I hope?</li>\n<li>Nerfed poutice recipes, now they require one sap or latex per batch</li>\n<li>Slightly rebalanced modded tree spanws: elms, lindens, ginkgos and yews now should be more common</li>\n<li>Fixed poultices not applying mid-air</li>\n<li>Fixed modded board piles being non-stackable</li>\n<li>Fixed bear, fox and raccoon hides not going into foraging baskets</li>\n<li>Even more wood-related things are now handbook-grouped</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>&nbsp; &nbsp;1.3.3:</strong></p>\n<ul>\n<li>Added figureheads</li>\n<li>Entirely reworked canes and leaves drops system, now these drops are shown correctly in the handbook, hopefully will be less laggy and more balacned amount-wise</li>\n<li>Fixed bookshelf crash and antler mount weirdness</li>\n<li>Fixed F&amp;N trellis compatibility weirdness</li>\n<li>Updated poultice behaviour</li>\n<li>Canes now can be used to craft crude shield</li>\n<li>Sod now can be crafted with modded logs</li>\n<li>Modded crates and fences now can be put onto boats and shields attached to them</li>\n<li>Modded wood now can be used to craft crate trap</li>\n<li>Adjusted tree seed burning times</li>\n<li>Bone arrows now can be put into foraging baskets</li>\n<li>More wood-related things are now handbook-grouped</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>&nbsp; &nbsp;1.3.2:</strong></p>\n<ul>\n<li>Restored mod's functionality on 1.21</li>\n<li>Added water plants, eucalyptus sap, latex, seashells, horns and antlers to the list of things that can be put into foraging baskets</li>\n<li>CANE AND LEAF NERF: now leaves only drop from regular foliage blocks and canes only from branchy ones, this should reduce their overall amount</li>\n<li>Fresh and dried leaves and mulch now stack up to 128</li>\n<li>Debarked logs are now properly handbook-grouped</li>\n<li>Split several variant-heavy json files into smaller ones to improve performance</li>\n<li>Fixed texture weirdness with thorny honey locust logs</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>&nbsp; &nbsp;1.3.1:</strong></p>\n<ul>\n<li>Remaps should WORK now</li>\n<li>Canes are now handbook-grouped</li>\n<li>Fixed broken fruit press recipe</li>\n<li>Fixed mangrove pneumatophores being indestructible (they also don't require an axe to break)</li>\n<li>Fixed inability to burn dried leaves</li>\n<li>Updated bearnut seed shape and yew seed texture to match analogues from the Fruit module</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>&nbsp; &nbsp;1.3.0:</strong></p>\n<ul>\n<li>Restored mod's functionality on 1.20</li>\n<li>New basegame version parity updates: removed modded driftwood and wattle-and-daub, vanilla and modded wattle fence partially fused, their recipes changed for consistency</li>\n<li>Added roof elements (texturing which took an ungodly amount of time), trapdoors and sailboats of every wood type; unfortunately sailboats cannot be constructed, creative-only for now</li>\n<li>Added separate foliage types, seeds and saplings for weeping willows and pyramidal poplars, so these now can be grown by player; weeping willows now have special foliage texture as well</li>\n<li>Added wooden trellis of all types and styles; will be present only if the Fruit module is installed</li>\n<li>Added dry leaves and mulch as a cheap but not particularly effective fertilizer</li>\n<li>Updated leaf pile model</li>\n<li>Changed mousetrap tree foliage textures</li>\n<li>Doubled sapling growth time to be basegame-consistent</li>\n<li>Rafts are now handbook-grouped</li>\n<li>Wattle baskets can now be placed on rafts and boats</li>\n<li>Stumps are now less abundant</li>\n<li>Tannin recipes that use oak leaves now require less of them</li>\n<li>Added tule roots, thatch, flowers, ferns, cacti, water lilies, wild vines and wax to the list of things that can be put into foraging baskets</li>\n<li>Fixed thin willows, birches and some other thin trees leaving floating foliage blocks after being chopped down</li>\n<li>Fixed bookshelves being textureless and rough-hewn fences being modelless, including snow-covered variants</li>\n<li>Fixed some smaller trees being too tiny when grown from saplings</li>\n<li>Fixed rough-hewn fence-related error spam</li>\n<li>Fixed tint inconsistency between normal and branchy heather leaves</li>\n<li>Removed red willow leaves item due to redundancy</li>\n<li>General updates and fixes of all language files except japanese</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>&nbsp; &nbsp;1.2.0:</strong></p>\n<ul>\n<li>Added fir, aspen (only thin), linden, ash, horse chestnut, heather (only thin), leadwood (regular and thin), tigerwood, mousetrap tree (only thin), spurge tree, mangrove, crown-of-thorns (only thin), sapele, tamanu (regular and thick), azobe, and their associated variants of all wood-typed vanilla blocks and items</li>\n<li>Added charred wood, a decorative wood type created by \"baking\" certain softwoods over a firepit; logs, debarked logs, support beams and boards must be prepared separately</li>\n<li>Added chlorociboria fungus proparation by turning its fruiting bodies into spore culture and seeding certain types of stumps with it</li>\n<li>Added mangrove roots, decorative blocks that generate around mangrove trees</li>\n<li>Added oak leaves item for extra tannins</li>\n<li>Added fir cone amulets</li>\n<li>Eucalyptus and ghost gum trees now have leaking logs that produce sap which can be used for slightly better eucalyptus poultices</li>\n<li>Spurge trees leak latex that also can be used for poultices (will become a pitch glue alternative in the future, hopefully...)</li>\n<li>Mangrove trees excrete salt in small amounts</li>\n<li>Updated willow seed model to be less recognizeable but more botanically accurate (old model was technically a flower not a seed)</li>\n<li>Acacia, honey locust and crown-of-thorns foliage is now prickly, similar to prickly berry bushes; honey locust trees now also have thorns on their trunks</li>\n<li>Both modded and vanilla debarked logs now have proper burning temperature and duration</li>\n<li>Trimming stumps now requires an axe</li>\n<li>Quarter logs now can be properly used for crafting</li>\n<li>Adjusted various crafting recipes and transforms for vanilla consistency</li>\n<li>Seed amulets now can be put into display cases</li>\n<li>Building traders now sell few more planks</li>\n<li>Fixed issue with nonexistent rough-hewn fences still loading recipes</li>\n<li>Fixed issue with resinous logs not dropping anything when broken and behaving weirdly</li>\n<li>Grenadill wood is now slightly darker and less saturated</li>\n<li>Red willow oversaturated bark is now less of an eyesore</li>\n<li>Satinash, banyan, dalbergia, ghost gum and blue spruce foliage textures and tints updated</li>\n<li>Fixed blue spruces being ridiculously rare</li>\n<li>Fixed beech trees being... a little too common in northern climates</li>\n<li>Changed wiliwili treegen to be bushier</li>\n<li>Changed alder treegen to be less stubby</li>\n<li>Changed wattle block hit/break sounds</li>\n<li>Added handbook descriptions for blocks and items that previously lacked them</li>\n<li>Removed harmless but annoying warning spam from server-main; unfortuntaly it was made via code, this means canes and leaves don't show as drops from foliage in handbook...</li>\n<li>Hopefully resolved a notification caused by storagetypes patch not having \"side: server\" specifications in it</li>\n<li>Added Carry On compatibility (for wattle baskets)</li>\n<li>Added polish translation (thanks to Veir)</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>&nbsp; &nbsp;1.1.0:</strong></p>\n<ul>\n<li>Improved remaps, should be much better now, but still creating new worlds is recommended</li>\n<li>Remapped pyramidal poplars to yew trees to avoid leaving them ? blocks</li>\n<li>Added satinash and its associated variants of all wood-typed blocks and items</li>\n<li>Added antler mounts and scroll racks of every wood type</li>\n<li>Added wattle basket deconstruction recipes</li>\n<li>Added whole pineapples and rot to the list of things that can be put into foraging baskets</li>\n<li>Added rustling sound to tree foliage for vanilla consistency</li>\n<li>Fixed inability to make firewood out of ohia and wiliwili logs</li>\n<li>Rebalanced growth time for some saplings</li>\n<li>Blue mahoe wood is now soft and can be chopped by any axe; arborvitae, elm and guajacum wood is now hard and can be chopped by copper axe or better</li>\n<li>Driftwood is now rarer and only spawns on sand or gravel beaches</li>\n<li>Some trees now have higher chance of dropping seeds</li>\n<li>Some trees, such as beech, bearnut and yew, are slighly more common now</li>\n<li>Added french (thanks to Laerinok), spanish (thanks to XurxoMF) and japanese (thanks to Macoto Hino) translations</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>&nbsp; &nbsp;1.0.0:</strong></p>\n<ul>\n<li>All fruit trees migrated to the Fruit module according to the Wildcraft grand split plan</li>\n<li>All blocks and items were relocated into \"wildcraftree\" directory, thus now they all are marked with mod's id for easy search: this procedure also reduced the amount of patches and made the whole thing more manageable</li>\n<li>Added remaps for most relocated blocks for people who want to update old worlds, should work...</li>\n<li>Added sourwood (only thin), jacaranda, empress tree, dalbergia, wiliwili (only thin), guajacum, umnini, banyan (regular and thick), red willow (only thin), ghost gum, ohia, blue mahoe (regular and thin), ginkgo, yew, arborvitae, red cedar, kauri (regular and thick), and their associated variants of all wood-typed vanilla blocks and items, including rafts, bookshelves and shields</li>\n<li>Added thick variants for elm and sycamore, and thin variants for bearnut and larch</li>\n<li>Added 40 regular stump variants, plus a variant infected with clorociboria fungus</li>\n<li>Added petrified logs (they generate underground in arid regions)</li>\n<li>Added driftwood</li>\n<li>Added 8 more variants of canes, wattle baskets and fences: kapok, larch, poplar, honey locust, bride-in-white, red willow, eucalyptus and arborvitae</li>\n<li>Added wattle fence gates</li>\n<li>Added wattle hand basket, it's not wood-typed however</li>\n<li>Added foraging basket that functions similarly to mining bag: is has 10 slots but can only carry organic things found in nature</li>\n<li>Added leaf items for a few tree types, all of them can be eaten but not used for cooking</li>\n<li>Added walnut black dye that can be used without mordant</li>\n<li>Added eucalyptus poultices</li>\n<li>Added cedar pine, spruce, Douglas fir and kauri cone, bearnut, arborvitae seed and wiliwili bean amulets</li>\n<li>Polished visuals for log, debarked log, planks and leaves blocks</li>\n<li>Readjusted colors of several wood types to match real life counterparts more closely; old bearnut textures assigned to poplar, old poplar textures assigned to empress tree</li>\n<li>Polished visuals of canes, wattle fences and baskets</li>\n<li>Polished visuals for tree seeds in inventory, in player's hand, on the ground and on shelves</li>\n<li>Updated and massively rebalanced spawning conditions and weights for all old and new trees to prevent them from outcrowding vanilla trees</li>\n<li>Polished, adjusted or entirely remade treegens for most tree types to better represent real life counterparts</li>\n<li>Added two entirely new forest assemblages that occupy previously vacant or nearly vacant regions: spruce-cedar forests with alder, birch and willow undergrowth for cold-to-temperate humid areas and sycamore-catalpa-kauri forests with mixed in blue mahoe and sourwood for warm-to-subtropical humid areas</li>\n<li>Rebalanced crafting recipes for wattle fence and wattle and daub blocks</li>\n<li>Rebalanced the burning duration of logs of most tree types</li>\n<li>Rebalanced sapling growth time</li>\n<li>Fixed the absence of certain crafting recipes and/or wood-typed variants</li>\n<li>Fixed sycamores dropping grown log blocks instead of placed ones</li>\n<li>Palissandre wood is now obtained from jacaranda trees, not catalpas</li>\n<li>Furniture traders now sell sleek doors of all new wood types</li>\n<li>Merged black and pyramidal poplars into one wood type for simplicity and because of some worldproperties blocktype limitations; pyramidal poplars are now represented by a rare treegen variant</li>\n<li>General updates and fixes of english and russian language files</li>\n</ul>\n</div>\n</div>\n<p><strong>Known issues:</strong></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Spoiler!</div>\n<div class=\"spoiler-text\">\n<ul>\n<li>SPONTANEOUS DEFOLIATION: any new tree that is generated with grown leaves blocks, when in a loaded area, can randomly start losing leaves because of leaf decay behaviour going haywire, approximately one leaf block per second, as if the log blocks were removed\n<ul>\n<li>The process can start chain reactions that render whole forests bare</li>\n<li>Until we figure out how to fix the issue, a temporal solution is applied: trees generate with placed leaves, but don't worry, they still can be chopped down normally</li>\n</ul>\n</li>\n</ul>\n</div>\n</div>\n<p><strong>Plans for the future:</strong></p>\n<div class=\"spoiler\">\n<div class=\"spoiler-toggle\">Spoiler!</div>\n<div class=\"spoiler-text\">\n<ul>\n<li>Making spurge latex into latex glue that will take longer to cool down/solidify</li>\n<li>Making some tree seeds rotate when falling similar to maple seeds</li>\n</ul>\n</div>\n</div>\n<p><strong>Other Wildcraft content:</strong></p>\n<ul>\n<li><a href=\"https://mods.vintagestory.at/wildcraftfruit\">Wildcraft: Fruits and Nuts</a></li>\n<li><a href=\"https://mods.vintagestory.at/wildcraftgrain\">Wildcraft: Grains and Seeds</a><br /><br /></li>\n</ul>\n<p>If you have feedback, leave them in the comments. Please try to be detailed with bug reports and crashes. You can also message Sonya on the Official Vintage Story Discord @sonyatheformerwindkeeper (aka LedyanayaSonya).<br />P.S.: Don't disturb Gabb please! Disturb me instead!</p>",
+    "author": "gabb",
+    "urlalias": "wildcrafttree",
+    "logofilename": "https://moddbcdn.vintagestory.at/logo_ddb87fe12519842ccf7b0316e4c89801.png",
+    "logofile": "https://moddbcdn.vintagestory.at/logo_ddb87fe12519842ccf7b0316e4c89801.png",
+    "logofiledb": "https://moddbcdn.vintagestory.at/logo_ddb87fe12519842ccf7b0316e4c89801.png",
+    "homepageurl": "",
+    "sourcecodeurl": "",
+    "trailervideourl": "",
+    "issuetrackerurl": "",
+    "wikiurl": "",
+    "downloads": 108538,
+    "follows": 1577,
+    "trendingpoints": 0,
+    "comments": 245,
+    "side": "both",
+    "type": "mod",
+    "created": "2024-01-10 07:19:07",
+    "lastreleased": "2026-05-27 01:43:43",
+    "lastmodified": "2026-09-29 04:36:56",
+    "tags": [
+      "Worldgen",
+      "Crafting"
+    ],
+    "releases": [
+      {
+        "releaseid": 43392,
+        "mainfile": "https://moddbcdn.vintagestory.at/wildcrafttree_1.3.4_3fc7ce78efc1d6d2aa4e933d3feb9d10.zip?dl=wildcrafttree_1.3.4.zip",
+        "filename": "wildcrafttree_1.3.4.zip",
+        "fileid": 95667,
+        "downloads": 20873,
+        "tags": [
+          "1.22.0-pre.1",
+          "1.22.0-pre.2",
+          "1.22.0-pre.3",
+          "1.22.0-pre.4",
+          "1.22.0-pre.5",
+          "1.22.0-rc.1",
+          "1.22.0-rc.2",
+          "1.22.0-rc.3",
+          "1.22.0-rc.4",
+          "1.22.0-rc.5",
+          "1.22.0-rc.6",
+          "1.22.0-rc.7",
+          "1.22.0-rc.8",
+          "1.22.0-rc.9",
+          "1.22.0-rc.10",
+          "1.22.0",
+          "1.22.1",
+          "1.22.2"
+        ],
+        "modidstr": "wildcrafttree",
+        "modversion": "1.3.4",
+        "created": "2026-05-27 01:43:43",
+        "changelog": "<p>- Restored mod's functionality on 1.22 - however not all the new wood-typed blocks and items are implemented (have pity on meeeee)<br />- Wattle hand baskets are now typed and deconstruct into corresponding canes<br />- Reed baskets are now actually called baskets, not \"chests\"<br />- Roofing element naming is updated to correspond basegame changes<br />- Fixed very aged sleek door having the same texture as regular aged<br />- Sleek door visuals updated<br />- Debarked logs' \"tree trunk\" textures updated as well<br />- Tried to fix mutiplayer wattle basket weirdness, not sure if succeeded<br />- Fixed \"dwarfism\" in player-grown trees - now they are about the same size as naturally-generated, this includes basegame trees as well<br />- Fixed wooden shield crashes, I hope?<br />- Nerfed poutice recipes, now they require one sap or latex per batch<br />- Slightly rebalanced modded tree spanws: elms, lindens, ginkgos and yews now should be more common<br />- Fixed poultices not applying mid-air<br />- Fixed modded board piles being non-stackable<br />- Fixed bear, fox and raccoon hides not going into foraging baskets<br />- Even more wood-related things are now handbook-grouped</p>"
+      },
+      {
+        "releaseid": 28337,
+        "mainfile": "https://moddbcdn.vintagestory.at/wildcrafttree_1.3.3_36f6d2a88d3c0568fd08928e4a1a6482.zip?dl=wildcrafttree_1.3.3.zip",
+        "filename": "wildcrafttree_1.3.3.zip",
+        "fileid": 62381,
+        "downloads": 27547,
+        "tags": [
+          "1.21.2-rc.1",
+          "1.21.2-rc.2",
+          "1.21.2-rc.3",
+          "1.21.2",
+          "1.21.3",
+          "1.21.4",
+          "1.21.5"
+        ],
+        "modidstr": "wildcrafttree",
+        "modversion": "1.3.3",
+        "created": "2025-10-29 11:11:31",
+        "changelog": "<p>- Added figureheads<br />- Entirely reworked canes and leaves drops system, now these drops are shown correctly in the handbook, hopefully will be less laggy and more balacned amount-wise<br />- Fixed bookshelf crash and antler mount weirdness<br />- Fixed F&amp;N trellis compatibility weirdness<br />- Updated poultice behaviour<br />- Canes now can be used to craft crude shield<br />- Sod now can be crafted with modded logs<br />- Modded crates and fences now can be put onto boats and shields attached to them<br />- Modded wood now can be used to craft crate trap<br />- Adjusted tree seed burning times<br />- Bone arrows now can be put into foraging baskets<br />- More wood-related things are now handbook-grouped</p>"
+      },
+      {
+        "releaseid": 23680,
+        "mainfile": "https://moddbcdn.vintagestory.at/wildcrafttree_1.3.2_9330a0cf40cc3653296808287c3acfed.zip?dl=wildcrafttree_1.3.2.zip",
+        "filename": "wildcrafttree_1.3.2.zip",
+        "fileid": 52146,
+        "downloads": 9212,
+        "tags": [
+          "1.21.0"
+        ],
+        "modidstr": "wildcrafttree",
+        "modversion": "1.3.2",
+        "created": "2025-08-28 08:35:12",
+        "changelog": "<p>- Restored mod's functionality on 1.21<br />- Added water plants, eucalyptus sap, latex, seashells, horns and antlers to the list of things that can be put into foraging baskets<br />- CANE AND LEAF NERF: now leaves only drop from regular foliage blocks and canes only from branchy ones, this should reduce their overall amount<br />- Fresh and dried leaves and mulch now stack up to 128<br />- Debarked logs are now properly handbook-grouped<br />- Split several variant-heavy json files into smaller ones to improve performance<br />- Fixed texture weirdness with thorny honey locust logs</p>"
+      },
+      {
+        "releaseid": 19573,
+        "mainfile": "https://moddbcdn.vintagestory.at/wildcrafttree_1.3.1_cc06bd82e2f9c229621aaffca479a74f.zip?dl=wildcrafttree_1.3.1.zip",
+        "filename": "wildcrafttree_1.3.1.zip",
+        "fileid": 42341,
+        "downloads": 12226,
+        "tags": [
+          "1.20.6",
+          "1.20.7",
+          "1.20.8-rc.1",
+          "1.20.8-rc.2",
+          "1.20.8",
+          "1.20.9"
+        ],
+        "modidstr": "wildcrafttree",
+        "modversion": "1.3.1",
+        "created": "2025-05-02 21:07:42",
+        "changelog": "<p>Remaps should WORK now<br />Canes are now handbook-grouped<br />Fixed broken fruit press recipe<br />Fixed mangrove pneumatophores being indestructible (they also don't require an axe to break)<br />Fixed inability to burn dried leaves<br />Updated bearnut seed shape and yew seed texture to match analogues from the Fruit module</p>"
+      },
+      {
+        "releaseid": 17761,
+        "mainfile": "https://moddbcdn.vintagestory.at/wildcrafttree_1.3.0_77812dcd70f39e12aaa05b2697f14655.zip?dl=wildcrafttree_1.3.0.zip",
+        "filename": "wildcrafttree_1.3.0.zip",
+        "fileid": 38059,
+        "downloads": 7020,
+        "tags": [
+          "1.20.3",
+          "1.20.4-rc.1",
+          "1.20.4-rc.2",
+          "1.20.4-rc.3",
+          "1.20.4-rc.4",
+          "1.20.4",
+          "1.20.5-rc.1",
+          "1.20.5-rc.2",
+          "1.20.5-rc.3"
+        ],
+        "modidstr": "wildcrafttree",
+        "modversion": "1.3.0",
+        "created": "2025-03-18 23:50:18",
+        "changelog": "<p>Restored mod's functionality on 1.20<br />New basegame version parity updates: removed modded driftwood and wattle-and-daub, vanilla and modded wattle fence partially fused, their recipes changed for consistency<br />Added roof elements (texturing which took an ungodly amount of time), trapdoors and sailboats of every wood type; unfortunately sailboats cannot be constructed, creative-only for now<br />Added separate foliage types, seeds and saplings for weeping willows and pyramidal poplars, so these now can be grown by player; weeping willows now have special foliage texture as well<br />Added wooden trellis of all types and styles; will be present only if the Fruit module is installed<br />Added dry leaves and mulch as a cheap but not particularly effective fertilizer<br />Updated leaf pile model<br />Changed mousetrap tree foliage textures<br />Doubled sapling growth time to be basegame-consistent<br />Rafts are now handbook-grouped<br />Wattle baskets can now be placed on rafts and boats<br />Stumps are now less abundant<br />Tannin recipes that use oak leaves now require less of them<br />Added tule roots, thatch, flowers, ferns, cacti, water lilies, wild vines and wax to the list of things that can be put into foraging baskets<br />Fixed thin willows, birches and some other thin trees leaving floating foliage blocks after being chopped down<br />Fixed bookshelves being textureless and rough-hewn fences being modelless, including snow-covered variants<br />Fixed some smaller trees being too tiny when grown from saplings<br />Fixed rough-hewn fence-related error spam<br />Fixed tint inconsistency between normal and branchy heather leaves<br />Removed red willow leaves item due to redundancy<br />General updates and fixes of all language files except japanese</p>"
+      },
+      {
+        "releaseid": 11818,
+        "mainfile": "https://moddbcdn.vintagestory.at/wildcrafttree_1.2.0_4948d81358be292a208a25aaa8c98c5f.zip?dl=wildcrafttree_1.2.0.zip",
+        "filename": "wildcrafttree_1.2.0.zip",
+        "fileid": 24784,
+        "downloads": 13908,
+        "tags": [
+          "1.19.8"
+        ],
+        "modidstr": "wildcrafttree",
+        "modversion": "1.2.0",
+        "created": "2024-08-28 20:30:34",
+        "changelog": "<div tabindex=\"-1\" role=\"article\" data-list-item-id=\"chat-messages___chat-messages-867605542956302356-1278451339499667549\" aria-setsize=\"-1\" aria-labelledby=\"message-username-1278451339499667549 uid_1 message-content-1278451339499667549 uid_2 message-timestamp-1278451339499667549\">\n<div>\n<div id=\"message-content-1278451339499667549\">\n<ul>\n<li>Added fir, aspen (only thin), linden, ash, horse chestnut, heather (only thin), leadwood (regular and thin), tigerwood, mousetrap tree (only thin), spurge tree, mangrove, crown-of-thorns (only thin), sapele, tamanu (regular and thick), azobe, and their associated variants of all wood-typed vanilla blocks and items</li>\n<li>Added charred wood, a decorative wood type created by \"baking\" certain softwoods over a firepit; logs, debarked logs, support beams and boards must be prepared separately</li>\n<li>Added chlorociboria fungus proparation by turning its fruiting bodies into spore culture and seeding certain types of stumps with it</li>\n<li>Added mangrove roots, decorative blocks that generate around mangrove trees</li>\n<li>Added oak leaves item for extra tannins</li>\n<li>Added fir cone amulets</li>\n<li>Eucalyptus and ghost gum trees now have leaking logs that produce sap which can be used for slightly better eucalyptus poultices</li>\n<li>Spurge trees leak latex that also can be used for poultices (will become a pitch glue alternative in the future, hopefully...)</li>\n<li>Mangrove trees excrete salt in small amounts</li>\n<li>Updated willow seed model to be less recognizeable but more botanically accurate (old model was technically a flower not a seed)</li>\n<li>Acacia, honey locust and crown-of-thorns foliage is now prickly, similar to prickly berry bushes; honey locust trees now also have thorns on their trunks</li>\n<li>Both modded and vanilla debarked logs now have proper burning temperature and duration</li>\n<li>Trimming stumps now requires an axe</li>\n<li>Quarter logs now can be properly used for crafting</li>\n<li>Adjusted various crafting recipes and transforms for vanilla consistency</li>\n<li>Seed amulets now can be put into display cases</li>\n<li>Building traders now sell few more planks</li>\n<li>Fixed issue with nonexistent rough-hewn fences still loading recipes</li>\n<li>Fixed issue with resinous logs not dropping anything when broken and behaving weirdly</li>\n<li>Grenadill wood is now slightly darker and less saturated</li>\n<li>Red willow oversaturated bark is now less of an eyesore</li>\n<li>Satinash, banyan, dalbergia, ghost gum and blue spruce foliage textures and tints updated</li>\n<li>Fixed blue spruces being ridiculously rare</li>\n<li>Fixed beech trees being... a little too common in northern climates</li>\n<li>Changed wiliwili treegen to be bushier</li>\n<li>Changed alder treegen to be less stubby</li>\n<li>Changed wattle block hit/break sounds</li>\n<li>Added handbook descriptions for blocks and items that previously lacked them</li>\n<li>Removed harmless but annoying warning spam from server-main; unfortuntaly it was made via code, this means canes and leaves don't show as drops from foliage in handbook...</li>\n<li>Hopefully resolved a notification caused by storagetypes patch not having \"side: server\" specifications in it</li>\n<li>Added Carry On compatibility (for wattle baskets)</li>\n<li>Added polish translation (thanks to Veir)</li>\n</ul>\n</div>\n</div>\n<div>\n<div role=\"group\" aria-label=\"Message Actions\">&nbsp;</div>\n</div>\n</div>\n<div tabindex=\"-1\" role=\"article\" data-list-item-id=\"chat-messages___chat-messages-867605542956302356-1278451345279418379\" aria-setsize=\"-1\" aria-labelledby=\"message-username-1278451339499667549 uid_1 message-content-1278451345279418379 uid_2 message-timestamp-1278451345279418379\">\n<div><time id=\"message-timestamp-1278451345279418379\" datetime=\"2024-08-28T20:29:13.192Z\" aria-label=\"Today at 1:29 PM\"></time>\n<div id=\"message-content-1278451345279418379\">&nbsp;</div>\n</div>\n</div>"
+      },
+      {
+        "releaseid": 9000,
+        "mainfile": "https://moddbcdn.vintagestory.at/wildcrafttree_1.1.0_33a65b93606a7458ffdd341094044a3b.zip?dl=wildcrafttree_1.1.0.zip",
+        "filename": "wildcrafttree_1.1.0.zip",
+        "fileid": 19277,
+        "downloads": 14372,
+        "tags": [
+          "1.19.3"
+        ],
+        "modidstr": "wildcrafttree",
+        "modversion": "1.1.0",
+        "created": "2024-02-21 05:46:44",
+        "changelog": "<ul>\n<li>Improved remaps, should be much better now, but still creating new worlds is recommended</li>\n<li>Remapped pyramidal poplars to yew trees to avoid leaving them ? blocks</li>\n<li>Added satinash and its associated variants of all wood-typed blocks and items</li>\n<li>Added antler mounts and scroll racks of every wood type</li>\n<li>Added wattle basket deconstruction recipes</li>\n<li>Added whole pineapples and rot to the list of things that can be put into foraging baskets</li>\n<li>Added rustling sound to tree foliage for vanilla consistency</li>\n<li>Fixed inability to make firewood out of ohia and wiliwili logs</li>\n<li>Rebalanced growth time for some saplings</li>\n<li>Blue mahoe wood is now soft and can be chopped by any axe; arborvitae, elm and guajacum wood is now hard and can be chopped by copper axe or better</li>\n<li>Driftwood is now rarer and only spawns on sand or gravel beaches</li>\n<li>Some trees now have higher chance of dropping seeds</li>\n<li>Some trees, such as beech, bearnut and yew, are slighly more common now</li>\n<li>Added french (thanks to Laerinok), spanish (thanks to XurxoMF) and japanese (thanks to Macoto Hino) translations</li>\n</ul>"
+      },
+      {
+        "releaseid": 8073,
+        "mainfile": "https://moddbcdn.vintagestory.at/wildcrafttree_1.0.0_32c230ce89a08533877794eb15a82cd7.zip?dl=wildcrafttree_1.0.0.zip",
+        "filename": "wildcrafttree_1.0.0.zip",
+        "fileid": 17555,
+        "downloads": 3378,
+        "tags": [
+          "1.18.15",
+          "1.19.3"
+        ],
+        "modidstr": "wildcrafttree",
+        "modversion": "1.0.0",
+        "created": "2024-01-11 07:37:08",
+        "changelog": "<ul>\n<li>All fruit trees migrated to the Fruit module according to the Wildcraft grand split plan</li>\n<li>All blocks and items were relocated into \"wildcraftrees\" directory, thus now they all are marked with mod's id for easy search: this procedure also reduced the amount of patches and made the whole thing more manageable</li>\n<li>Added remaps for most relocated blocks for people who want to update old worlds, should work...</li>\n<li>Added sourwood (only thin), jacaranda, empress tree, dalbergia, wiliwili (only thin), guajacum, umnini, banyan (regular and thick), red willow (only thin), ghost gum, ohia, blue mahoe (regular and thin), ginkgo, yew, arborvitae, red cedar, kauri (regular and thick), and their associated variants of all wood-typed vanilla blocks and items, including rafts, bookshelves and shields</li>\n<li>Added thick variants for elm and sycamore, and thin variants for bearnut and larch</li>\n<li>Added 40 regular stump variants, plus a variant infected by clorociboria fungus</li>\n<li>Added petrified logs (they generate underground in arid regions)</li>\n<li>Added driftwood</li>\n<li>Added 8 more variants of canes, wattle baskets and fences: kapok, larch, poplar, honey locust, bride-in-white, red willow, eucalyptus and arborvitae</li>\n<li>Added wattle fence gates</li>\n<li>Added wattle hand basket, it's not wood-typed however</li>\n<li>Added foraging basket that functions similarly to mining bag: is has 10 slots but can only carry organic things found in nature</li>\n<li>Added leaf items for a few tree types, all of them can be eaten but not used for cooking</li>\n<li>Added walnut black dye that can be used without mordant</li>\n<li>Added eucalyptus poultices</li>\n<li>Added cedar, spruce, Douglas fir and kauri cone, bearnut, arborvitae seed and wiliwili bean amulets</li>\n<li>Polished visuals for log, debarked log, planks and leaves blocks</li>\n<li>Readjusted colors of several wood types to match real life counterparts more closely; old bearnut textures assigned to poplar, old poplar textures assigned to empress tree</li>\n<li>Polished visuals of canes, wattle fences and baskets</li>\n<li>Polished visuals for tree seeds in inventory, in player's hand, on the ground and on shelves</li>\n<li>Updated and massively rebalanced spawning conditions and weights for all old and new trees to prevent them from outcrowding vanilla trees</li>\n<li>Polished, adjusted or entirely remade treegens for most tree types to better represent real life counterparts</li>\n<li>Added two entirely new forest assemblages that occupy previously vacant or nearly vacant regions: spruce-cedar forests with alder, birch and willow undergrowth for cold-to-temperate humid areas and sycamore-catalpa-kauri forests with mixed in blue mahoe and sourwood for warm-to-subtropical humid areas</li>\n<li>Rebalanced crafting recipes for wattle fence and wattle and daub blocks</li>\n<li>Rebalanced the burning duration of logs of most tree types</li>\n<li>Rebalanced sapling growth time</li>\n<li>Fixed the absence of certain crafting recipes and/or wood-typed variants</li>\n<li>Fixed sycamores dropping grown log blocks instead of placed ones</li>\n<li>Palissandre wood is now obtained from jacaranda trees, not catalpas</li>\n<li>Furniture traders now sell sleek doors of all new wood types</li>\n<li>Merged black and pyramidal poplars into one wood type for simplicity and because of some worldproperties blocktype limitations; pyramidal poplars are now represented by a rare treegen variant</li>\n<li>General updates and fixes of english and russian language files</li>\n</ul>"
+      }
+    ],
+    "screenshots": [
+      {
+        "fileid": 38074,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-03-19_05-15-14_bf5a4de9ab0f6d56036bf5859345fc5f.png",
+        "filename": "2025-03-19_05-15-14.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-03-19_05-15-14_bf5a4de9ab0f6d56036bf5859345fc5f_55_60.png",
+        "created": "2025-03-19 02:57:01"
+      },
+      {
+        "fileid": 38075,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-03-19_03-26-07_133ff12a7673dd6a6f8db05582d11a1e.png",
+        "filename": "2025-03-19_03-26-07.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-03-19_03-26-07_133ff12a7673dd6a6f8db05582d11a1e_55_60.png",
+        "created": "2025-03-19 02:59:50"
+      },
+      {
+        "fileid": 38076,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-03-19_04-12-17_a842909becdf3f8143b2a9798311c3ef.png",
+        "filename": "2025-03-19_04-12-17.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-03-19_04-12-17_a842909becdf3f8143b2a9798311c3ef_55_60.png",
+        "created": "2025-03-19 03:00:00"
+      },
+      {
+        "fileid": 38077,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-03-19_04-26-26_0c38cff26883aafffd3b3c718bcfb02c.png",
+        "filename": "2025-03-19_04-26-26.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-03-19_04-26-26_0c38cff26883aafffd3b3c718bcfb02c_55_60.png",
+        "created": "2025-03-19 03:00:09"
+      },
+      {
+        "fileid": 38078,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-03-19_04-31-09_2b83ef7c4a45af22fe76a928892a3885.png",
+        "filename": "2025-03-19_04-31-09.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-03-19_04-31-09_2b83ef7c4a45af22fe76a928892a3885_55_60.png",
+        "created": "2025-03-19 03:00:15"
+      },
+      {
+        "fileid": 38079,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-03-19_05-03-22_9bd61449d639b37c6744a2dececbcca5.png",
+        "filename": "2025-03-19_05-03-22.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-03-19_05-03-22_9bd61449d639b37c6744a2dececbcca5_55_60.png",
+        "created": "2025-03-19 03:00:20"
+      },
+      {
+        "fileid": 38080,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-03-19_03-53-58_276ebab73b4ce73768dea9879354c7e1.png",
+        "filename": "2025-03-19_03-53-58.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-03-19_03-53-58_276ebab73b4ce73768dea9879354c7e1_55_60.png",
+        "created": "2025-03-19 03:00:34"
+      },
+      {
+        "fileid": 38082,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-03-19_03-51-24_1fedf1791e5c5f9fea8e21117700a430.png",
+        "filename": "2025-03-19_03-51-24.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-03-19_03-51-24_1fedf1791e5c5f9fea8e21117700a430_55_60.png",
+        "created": "2025-03-19 03:00:51"
+      },
+      {
+        "fileid": 38083,
+        "mainfile": "https://moddbcdn.vintagestory.at/2025-03-19_04-27-37_8ca9b6eeefb4036e8be9939e3aeaef94.png",
+        "filename": "2025-03-19_04-27-37.png",
+        "thumbnailfilename": "https://moddbcdn.vintagestory.at/2025-03-19_04-27-37_8ca9b6eeefb4036e8be9939e3aeaef94_55_60.png",
+        "created": "2025-03-19 03:01:26"
+      }
+    ]
+  },
+  "statuscode": "200"
+}

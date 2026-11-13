@@ -1,0 +1,219 @@
+{
+  "entries": 480,
+  "entriesChangingCells": 480,
+  "entriesAddingHeat": 479,
+  "noOpEntries": [],
+  "perLayer": {
+    "Ag": {
+      "cellsRaisedObserved": 38,
+      "cellsAddingHeat": 38,
+      "newlyLitCells": 14
+    },
+    "Al": {
+      "cellsRaisedObserved": 31,
+      "cellsAddingHeat": 31,
+      "newlyLitCells": 8
+    },
+    "Au": {
+      "cellsRaisedObserved": 88,
+      "cellsAddingHeat": 88,
+      "newlyLitCells": 12
+    },
+    "B": {
+      "cellsRaisedObserved": 14,
+      "cellsAddingHeat": 14,
+      "newlyLitCells": 4
+    },
+    "Bi": {
+      "cellsRaisedObserved": 8,
+      "cellsAddingHeat": 8,
+      "newlyLitCells": 3
+    },
+    "C_coal": {
+      "cellsRaisedObserved": 249,
+      "cellsAddingHeat": 249,
+      "newlyLitCells": 140
+    },
+    "C_graphite": {
+      "cellsRaisedObserved": 7,
+      "cellsAddingHeat": 7,
+      "newlyLitCells": 2
+    },
+    "Cr": {
+      "cellsRaisedObserved": 2,
+      "cellsAddingHeat": 2,
+      "newlyLitCells": 1
+    },
+    "Cu": {
+      "cellsRaisedObserved": 29,
+      "cellsAddingHeat": 27,
+      "newlyLitCells": 3
+    },
+    "F": {
+      "cellsRaisedObserved": 9,
+      "cellsAddingHeat": 9,
+      "newlyLitCells": 4
+    },
+    "Fe": {
+      "cellsRaisedObserved": 41,
+      "cellsAddingHeat": 41,
+      "newlyLitCells": 12
+    },
+    "Hg": {
+      "cellsRaisedObserved": 6,
+      "cellsAddingHeat": 6,
+      "newlyLitCells": 2
+    },
+    "K": {
+      "cellsRaisedObserved": 6,
+      "cellsAddingHeat": 3,
+      "newlyLitCells": 0
+    },
+    "Mn": {
+      "cellsRaisedObserved": 5,
+      "cellsAddingHeat": 5,
+      "newlyLitCells": 1
+    },
+    "Mo": {
+      "cellsRaisedObserved": 17,
+      "cellsAddingHeat": 17,
+      "newlyLitCells": 1
+    },
+    "N": {
+      "cellsRaisedObserved": 6,
+      "cellsAddingHeat": 6,
+      "newlyLitCells": 5
+    },
+    "NaCl": {
+      "cellsRaisedObserved": 39,
+      "cellsAddingHeat": 28,
+      "newlyLitCells": 10
+    },
+    "Ni": {
+      "cellsRaisedObserved": 8,
+      "cellsAddingHeat": 8,
+      "newlyLitCells": 0
+    },
+    "P": {
+      "cellsRaisedObserved": 7,
+      "cellsAddingHeat": 7,
+      "newlyLitCells": 2
+    },
+    "Pb": {
+      "cellsRaisedObserved": 30,
+      "cellsAddingHeat": 30,
+      "newlyLitCells": 10
+    },
+    "Pt": {
+      "cellsRaisedObserved": 3,
+      "cellsAddingHeat": 3,
+      "newlyLitCells": 0
+    },
+    "S": {
+      "cellsRaisedObserved": 13,
+      "cellsAddingHeat": 13,
+      "newlyLitCells": 9
+    },
+    "Sb": {
+      "cellsRaisedObserved": 3,
+      "cellsAddingHeat": 3,
+      "newlyLitCells": 0
+    },
+    "SiO2": {
+      "cellsRaisedObserved": 2,
+      "cellsAddingHeat": 2,
+      "newlyLitCells": 0
+    },
+    "Sn": {
+      "cellsRaisedObserved": 17,
+      "cellsAddingHeat": 17,
+      "newlyLitCells": 4
+    },
+    "Ti": {
+      "cellsRaisedObserved": 9,
+      "cellsAddingHeat": 9,
+      "newlyLitCells": 4
+    },
+    "U": {
+      "cellsRaisedObserved": 70,
+      "cellsAddingHeat": 70,
+      "newlyLitCells": 57
+    },
+    "V": {
+      "cellsRaisedObserved": 2,
+      "cellsAddingHeat": 2,
+      "newlyLitCells": 0
+    },
+    "W": {
+      "cellsRaisedObserved": 17,
+      "cellsAddingHeat": 17,
+      "newlyLitCells": 2
+    },
+    "Zn": {
+      "cellsRaisedObserved": 35,
+      "cellsAddingHeat": 35,
+      "newlyLitCells": 14
+    },
+    "alum": {
+      "cellsRaisedObserved": 13,
+      "cellsAddingHeat": 13,
+      "newlyLitCells": 12
+    },
+    "beryl": {
+      "cellsRaisedObserved": 54,
+      "cellsAddingHeat": 54,
+      "newlyLitCells": 43
+    },
+    "corundum": {
+      "cellsRaisedObserved": 40,
+      "cellsAddingHeat": 40,
+      "newlyLitCells": 38
+    },
+    "diamond": {
+      "cellsRaisedObserved": 36,
+      "cellsAddingHeat": 36,
+      "newlyLitCells": 29
+    },
+    "emerald": {
+      "cellsRaisedObserved": 16,
+      "cellsAddingHeat": 16,
+      "newlyLitCells": 15
+    },
+    "garnet": {
+      "cellsRaisedObserved": 23,
+      "cellsAddingHeat": 23,
+      "newlyLitCells": 21
+    },
+    "gypsum": {
+      "cellsRaisedObserved": 10,
+      "cellsAddingHeat": 10,
+      "newlyLitCells": 0
+    },
+    "lapis": {
+      "cellsRaisedObserved": 8,
+      "cellsAddingHeat": 8,
+      "newlyLitCells": 8
+    },
+    "olivine": {
+      "cellsRaisedObserved": 8,
+      "cellsAddingHeat": 8,
+      "newlyLitCells": 8
+    },
+    "spinel": {
+      "cellsRaisedObserved": 18,
+      "cellsAddingHeat": 18,
+      "newlyLitCells": 18
+    },
+    "topaz": {
+      "cellsRaisedObserved": 52,
+      "cellsAddingHeat": 52,
+      "newlyLitCells": 51
+    },
+    "tourmaline": {
+      "cellsRaisedObserved": 42,
+      "cellsAddingHeat": 42,
+      "newlyLitCells": 41
+    }
+  },
+  "shippedGridMismatchCells": 0
+}

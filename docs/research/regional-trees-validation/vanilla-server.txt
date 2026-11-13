@@ -1,0 +1,58 @@
+world 256000 x 102400 x 384, sea level 165
+Spawn: 48.60°N 7.75°E (x=123486 z=23551)
+resonancearchive: 7.37°N 13.77°E (x=127732 z=47009)
+lazaret: 1.95°S 24.25°E (x=135122 z=52308)
+village: 4.38°S 32.90°E (x=141225 z=53694)
+devastationarea: 9.56°N 35.57°E (x=143111 z=45763)
+tobiascave: 7.70°S 35.79°E (x=143265 z=55580)
+treasurehunter: 1.35°N 13.96°E (x=127861 z=50430)
+57,25 at 57.01°N 25.02°E: 9216 columns in 3.3s; terrain height = model in 97.4% (within 2: 99.1%, max diff 8); terrain y min/10%/50%/90%/max 178/183/185/188/189; surface y 178..207; water 0%; top blocks: forestfloor 53%, leaves 34%, leavesbranchy 4%, soil 4%, fern 2%, flower 1%, rock 1%, fruitingbush 1%; image C:\VS mods\Earth\testruns\regional-trees-vanilla-20260929-194403\EarthMap\selftest-57_25.png
+57,25 climate at y=196: game worldgen 4.1 °C, now 7.0 °C (month May), rain 0.56, fertility 0.41, forest 0.75; real yearly mean 5.9 °C at the surface, 5.4 °C at this height, VS rain 138
+57,25 seasons: game January -6.3 °C, July 16.1 °C; real coldest month -5.0 °C, warmest 17.8 °C; summer drought 0.00
+57,25: water seams 0; river ramps placed 0, missing 0; ramp edges 0
+57,25: river columns with something solid in the water: 0
+57,25: tree canopy by wood: pine 57%, birch 35%, oak 8%
+44,-73 at 44.02°N 73.01°W: 9216 columns in 2.4s; terrain height = model in 99.3% (within 2: 99.7%, max diff 9); terrain y min/10%/50%/90%/max 199/220/228/240/249; surface y 199..261; water 0%; top blocks: soil 54%, leaves 20%, forestfloor 14%, rock 5%, leavesbranchy 3%, sand 2%, peat 1%, crop 1%; image C:\VS mods\Earth\testruns\regional-trees-vanilla-20260929-194403\EarthMap\selftest-44_-73.png
+44,-73 climate at y=230: game worldgen 5.1 °C, now 7.8 °C (month May), rain 0.58, fertility 0.46, forest 0.43; real yearly mean 5.6 °C at the surface, 5.4 °C at this height, VS rain 149
+44,-73 seasons: game January -9.1 °C, July 18.6 °C; real coldest month -9.0 °C, warmest 19.0 °C; summer drought 0.00
+44,-73: water seams 0; river ramps placed 0, missing 0; ramp edges 0
+44,-73: river columns with something solid in the water: 0
+44,-73: tree canopy by wood: pine 56%, maple 44%
+-35.7,174 at 35.69°S 174.01°E: 9216 columns in 2.6s; terrain height = model in 99.7% (within 2: 99.9%, max diff 3); terrain y min/10%/50%/90%/max 171/174/180/200/219; surface y 171..219; water 0%; top blocks: soil 88%, rock 8%, flower 2%, peat 0%, water 0%, fruitingbush 0%, gravel 0%, fern 0%; image C:\VS mods\Earth\testruns\regional-trees-vanilla-20260929-194403\EarthMap\selftest--35.7_174.png
+-35.7,174 climate at y=178: game worldgen 13.7 °C, now 11.4 °C (month May), rain 0.62, fertility 0.49, forest 0.97; real yearly mean 13.8 °C at the surface, 13.7 °C at this height, VS rain 159
+-35.7,174 seasons: game January 18.6 °C, July 9.8 °C; real coldest month 9.8 °C, warmest 18.2 °C; summer drought 0.00
+-35.7,174: water seams 0; river ramps placed 0, missing 0; ramp edges 0
+-35.7,174: river columns with something solid in the water: 0
+-33.8,18.7 at 33.78°S 18.71°E: 9216 columns in 1.8s; terrain height = model in 100.0% (within 2: 100.0%, max diff 0); terrain y min/10%/50%/90%/max 178/182/186/191/196; surface y 178..196; water 0%; top blocks: sand 60%, soil 38%, flower 1%, looseboulders 1%, crop 0%; image C:\VS mods\Earth\testruns\regional-trees-vanilla-20260929-194403\EarthMap\selftest--33.8_18.7.png
+-33.8,18.7 climate at y=184: game worldgen 16.5 °C, now 13.1 °C (month May), rain 0.30, fertility 0.25, forest 0.07; real yearly mean 16.4 °C at the surface, 16.5 °C at this height, VS rain 79
+-33.8,18.7 seasons: game January 21.6 °C, July 12.4 °C; real coldest month 12.1 °C, warmest 21.0 °C; summer drought 0.84
+-33.8,18.7: water seams 0; river ramps placed 0, missing 0; ramp edges 0
+-33.8,18.7: river columns with something solid in the water: 0
+35.5,137 at 35.52°N 137.02°E: 9216 columns in 3.8s; terrain height = model in 99.8% (within 2: 99.8%, max diff 13); terrain y min/10%/50%/90%/max 176/182/197/211/217; surface y 180..237; water 9%; top blocks: leaves 51%, forestfloor 21%, leavesbranchy 14%, rapidwater 6%, water 3%, log 2%, sand 2%, soil 1%; image C:\VS mods\Earth\testruns\regional-trees-vanilla-20260929-194403\EarthMap\selftest-35.5_137.png
+35.5,137 climate at y=211: game worldgen 13.7 °C, now 17.1 °C (month May), rain 0.74, fertility 0.62, forest 0.80; real yearly mean 15.6 °C at the surface, 15.1 °C at this height, VS rain 182
+35.5,137 seasons: game January 2.3 °C, July 26.2 °C; real coldest month 3.7 °C, warmest 27.9 °C; summer drought 0.00
+35.5,137: water seams 0; river ramps placed 786, missing 0; ramp edges 149
+35.5,137: river columns with something solid in the water: 0
+35.5,137: tree canopy by wood: maple 48%, pine 30%, birch 22%
+-23.8,133.8 at 23.82°S 133.80°E: 9216 columns in 2.4s; terrain height = model in 100.0% (within 2: 100.0%, max diff 0); terrain y min/10%/50%/90%/max 231/232/233/234/236; surface y 231..240; water 0%; top blocks: sand 97%, looseboulders 1%, silvertorchcactus 1%, chiseledblock 0%, microblock 0%, barrelcactus 0%, flower 0%, cobblestone 0%; image C:\VS mods\Earth\testruns\regional-trees-vanilla-20260929-194403\EarthMap\selftest--23.8_133.8.png
+-23.8,133.8 climate at y=233: game worldgen 21.1 °C, now 15.1 °C (month May), rain 0.19, fertility 0.17, forest 0.00; real yearly mean 21.3 °C at the surface, 21.3 °C at this height, VS rain 48
+-23.8,133.8 seasons: game January 29.7 °C, July 11.9 °C; real coldest month 12.0 °C, warmest 29.3 °C; summer drought 0.04
+-23.8,133.8: water seams 0; river ramps placed 0, missing 0; ramp edges 0
+-23.8,133.8: river columns with something solid in the water: 0
+25.2,-80.6 at 25.17°N 80.59°W: 9216 columns in 2.1s; terrain height = model in 100.0% (within 2: 100.0%, max diff 0); terrain y min/10%/50%/90%/max 159/159/159/165/165; surface y 164..171; water 82%; top blocks: saltwater 82%, soil 13%, sand 4%, chiseledblock 0%, palisadewall 0%, flower 0%, clutter 0%, trapdoor 0%; image C:\VS mods\Earth\testruns\regional-trees-vanilla-20260929-194403\EarthMap\selftest-25.2_-80.6.png
+25.2,-80.6 climate at y=165: game worldgen 24.2 °C, now 24.0 °C (month May), rain 0.60, fertility 0.51, forest 0.81; real yearly mean 24.5 °C at the surface, 24.5 °C at this height, VS rain 152
+25.2,-80.6 seasons: game January 20.4 °C, July 28.0 °C; real coldest month 20.1 °C, warmest 28.1 °C; summer drought 0.00
+25.2,-80.6: water seams 0; river ramps placed 0, missing 0; ramp edges 0
+25.2,-80.6: river columns with something solid in the water: 0
+25.2,-80.6: tree canopy by wood: birch 100%
+Regional tree selections (self-test only):
+BLT game:dwarfbirch: 151
+BLT game:englishoak: 12
+BLT game:scotspine: 684
+BLT game:silverbirch: 1113
+JAP game:fir: 207
+JAP game:japanesemaple: 313
+JAP game:silverbirch: 259
+VER game:fir: 350
+VER game:sugarmaple: 2
+VER game:sugarmaplesmall: 557

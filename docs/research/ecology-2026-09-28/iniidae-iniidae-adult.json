@@ -1,0 +1,501 @@
+{
+	"code": "cetacea",
+	"class": "EntityFish",
+	"tags": ["animal", "huntable","predator", "adult", "habitat-aquatic"],
+	"variantgroups": [
+		{ "code": "age", "states": ["adult"] },
+		{ "code": "gender", "states": ["male","female"] },
+		{ "code": "type", "states": ["lipotesvexillifer" ] }
+	],
+	"hitBoxSizeByType": {
+		"*-adult-female-lipotesvexillifer": { "x": 1.5,"y": 0.8},
+		"*-adult-male-lipotesvexillifer": { "x": 1.3,"y": 0.7}
+	},
+	"deadhitBoxSizeByType": {
+		"*-adult-female-lipotesvexillifer": { "x": 1.5,"y": 0.8},
+		"*-adult-male-lipotesvexillifer": { "x": 1.3,"y": 0.7}
+	},
+	"eyeHeightByType": {
+		"*-adult-*-lipotesvexillifer": 0.5,
+		"*": 0.6
+	},
+	"weightByType": {
+		"*-adult-female-lipotesvexillifer": 180,
+		"*-adult-male-lipotesvexillifer": 150
+	},	
+	"knockbackResistanceByType": {
+		"*-adult-female-lipotesvexillifer": 0.9,
+		"*-adult-male-lipotesvexillifer": 0.8
+	},	
+	"drops": [],
+	"habitat": "Underwater",
+	"attributes": {
+		"killedByInfoText": "deadcreature-killed",
+		"trappableByType": {
+			"*": {
+				"small": { "trapChance": 0.0,	"trapDestroyChance": 0.3 },
+				"large": { "trapChance": 0.0,	"trapDestroyChance": 0.05 }
+			}
+		},
+		"creatureDietByType": {
+			"*":{
+			"weightedFoodTags": [
+				{ "weight": 1, "code": "fish" },
+				{ "weight": 0.5, "code": "meat" }
+			]
+		}},
+		"handbook": {
+			"groupcode": "creaturegroup-cetacea"
+		}
+	},
+	"client": {
+		"renderer": "Shape",
+		"shapeByType": {
+			"*-adult-*-lipotesvexillifer": { "base": "entity/water/cetacea/lipotesvexillifer-adult" }
+		},
+		"textureByType": { 
+			"*": { "base": "entity/cetacea/{type}-{age}" }   
+		},
+		"sizeByType": {
+			"*-adult-female-lipotesvexillifer": 1.0,
+			"*-adult-male-lipotesvexillifer": 0.95
+		},
+		"behaviors": [
+			{ "code": "repulseagents" },
+			{ "code": "controlledphysics","stepHeightByType": {"*": 0.1251}},
+			{ "code": "interpolateposition" },
+			{ "code": "floatupwhenstuck", "onlyWhenDead": true },
+			{ "code": "harvestable","quantitySlots": 8 },
+			{ "code": "multiply", "enabledByType": { "*-adult-female-*": true, "*": false } },
+			{ "code": "despawn", "minPlayerDistance": 16, "belowLightLevel": 1, "minSeconds": 300 }
+		],
+		"animations": [
+			{
+				"code": "flop",
+				"animation": "Flopping",
+				"animationSpeed": 1.0
+			},
+			{
+				"code": "hurt",
+				"animation": "Hurt",
+				"animationSpeed": 2.2,
+				"weight": 10,
+				"blendMode": "AddAverage"
+			},
+			{
+				"code": "die",
+				"animation": "Dead",
+				"weight": 10,
+				"blendMode": "Average",
+				"triggeredBy": { "onControls": [ "dead" ] }
+			},
+			{
+				"code": "idle",
+				"animation": "Idle",
+				"blendMode": "AddAverage",
+				"easeOutSpeed": 4,
+				"animationSpeed": 1,
+				"triggeredBy": { "defaultAnim": true }
+			},
+			{
+				"code": "susu",
+				"animation": "Susu",
+				"blendMode": "AddAverage",
+				"easeOutSpeed": 4,
+				"animationSpeed": 1,
+				"triggeredBy": { "defaultAnim": true }
+			},
+			{
+				"code": "sleep",
+				"animation": "Idle",
+				"easeInSpeed": 4,
+				"easeOutSpeed": 4,
+				"animationSpeed": 0.1,
+				"blendMode": "Average"
+			},
+			{
+				"code": "eat",
+				"animation": "Eat",
+				"easeInSpeed": 4,
+				"easeOutSpeed": 4,
+				"blendMode": "AddAverage"
+			},
+			{
+				"code": "swim",
+				"animation": "Swim",
+				"supressDefaultAnimation": true,
+				"animationSpeed": 1,
+				"blendMode": "Average"
+			},
+			{
+				"code": "swimfast",
+				"animation": "Swimfast",
+				"supressDefaultAnimation": true,
+				"animationSpeed": 2.0,
+				"blendMode": "Average"
+			}
+		]
+	},
+	"server": {
+		"attributes": {
+			"pathfinder": {
+				"minTurnAnglePerSec": 15,
+				"maxTurnAnglePerSec": 45
+			}
+		},
+		"behaviors": [
+			{ "code": "repulseagents" },
+      { "code": "controlledphysics","stepHeightByType": {"*": 0.1251 }},
+			{"code": "despawn","minPlayerDistance": 8,"belowLightLevel": 1,"minSeconds": 300},
+			{"code": "health",
+				"maxhealthByType": {
+				"cetacea-adult-female-lipotesvexillifer": 22,
+				"cetacea-adult-male-lipotesvexillifer": 16
+				}
+			},
+			{
+				"code": "deaddecay",
+				"hoursToDecay": 96,
+				"decayedBlockByType": {
+					"cetacea-adult-*-lipotesvexillifer": "carcass-medium",
+					"*": "carcass-large"
+				}
+			},
+			{
+				"code": "floatupwhenstuck",
+				"onlyWhenDead": true
+			},
+			{
+				"code": "harvestable","quantitySlots": 8,
+				"drops": [
+					{
+						"type": "item",
+						"code": "game:bushmeat-raw",
+						"quantityByType": {
+							"cetacea-adult-female-lipotesvexillifer": {"avg": 25,"var": 2},
+							"cetacea-adult-male-lipotesvexillifer": {"avg": 20,"var": 2}
+						}
+					},
+					{
+						"type": "item",
+						"code": "iniidae:pelt-{gender}-{type}",
+						"quantityByType": {
+							"*-adult-*": { "offset": 1, "avg": 0, "var": 0 },
+							"*": {"avg": 0.0,"var": 0.0}
+						}
+					},
+					{
+						"type": "item",
+						"code": "game:fat",
+						"quantityByType": {
+							"cetacea-adult-female-lipotesvexillifer": {"avg": 7,"var": 1},
+							"cetacea-adult-male-lipotesvexillifer": {"avg": 5.5,"var": 0.5}
+						}
+					}
+				]
+			},
+			{
+				"code": "multiply",
+				"enabledByType": {
+					"*-adult-female-*": true,
+					"*": false
+				},
+				"spawnEntityCodesByType": {
+				"*-adult-female-*": [ { "code":"iniidae:cetacea-baby-male-{type}"}, {"code": "iniidae:cetacea-baby-female-{type}"} ]
+				},
+				"requiresNearbyEntityCodeByType": {"*-adult-female-*": "iniidae:cetacea-adult-male-{type}"},
+				"requiresNearbyEntityRange": 10,
+				"spawnQuantityMin": 1,
+				"spawnQuantityMax": 1,
+				"eatAnyway": true,
+				"pregnancyDaysByType": {"*-lipotesvexillifer":60},
+				"multiplyCooldownDaysMin": 73,
+				"multiplyCooldownDaysMax": 81,
+				"portionsEatenForMultiplyByType": {"*-lipotesvexillifer":14}
+			}, 
+			{
+				"code": "emotionstates",
+				"states": [
+					{"code": "fleeondamage","whenHealthRelBelow": 0.5,"duration": 60,"chanceByType": {"*": 1.0},"slot": 0,"priority": 5,"accumType": "max"},
+					{"code": "fleeondamage","duration": 40,"chanceByType": {"*-adult-*": 0.75,"*": 1.0},"slot": 0,"priority": 1,"accumType": "max"},
+					{"code": "alarmherdondamage","executionChance": 1,"slot": 1,"priority": 1,"accumType": "max"},
+					{"code": "aggressiveondamage","whenHealthRelBelow": 0.75,"duration": 30,"chanceByType": {"*-baby-*": 0.0,"*-adult-*": 0.25},"slot": 0,"priority": 2,"accumType": "noaccum"},
+					{"code": "saturated","duration": 2400,"executionChance": 1,"slot": 0,"priority": 1,"accumType": "sum"}]
+			},
+			{
+				"code": "taskai",
+				"aitasks": [
+					{
+						"code": "fishoutofwater", 
+						"priority": 3.5, 
+						"priorityForCancel": 3.6,
+						"movespeed": 0.005,
+						"animation": "flop",
+						"animationSpeed": 1
+					},
+					{
+						"code": "meleeattack",
+						"animation": "Eat",
+						"entityCodes": [ "player","salmon"],
+						"priority": 3,
+						"damageByType": {
+							"cetacea-adult-female-lipotesvexillifer": 5,
+							"cetacea-adult-male-lipotesvexillifer": 4
+						},
+						"damageTier": 1,
+						"damageType": "SlashingAttack",
+						"slot": 1,
+						"minDistByType": {
+							"*-adult-*": 1.5						},
+						"minVerDistByType": {
+							"*-adult-*": 1.5
+						},
+						"mincooldown": 1500,
+						"maxcooldown": 2500,
+						"attackDurationMs": 800,
+						"damagePlayerAtMs": 500,
+						"animationSpeed": 1.5,
+						"soundByType": {
+							"*-lipotesvexillifer": "creature/cetacea/lipotesvexillifer/whistle*"
+						},
+						"whenInEmotionState": "aggressiveondamage"
+					},
+					{
+						"code": "seekentity",
+						"animation": "Swimfast",
+						"entityCodes": ["salmon"],
+						"priority": 1.5,
+						"mincooldown": 600,
+						"maxcooldown": 650,
+						"movespeedByType": {
+							"cetacea-adult-*-lipotesvexillifer": 0.04
+						},
+						"animationSpeedByType": {
+							"cetacea-adult-*-lipotesvexillifer": 2.0
+						},
+						"seekingRange": 20,
+						"soundByType": {
+							"*-lipotesvexillifer": "creature/cetacea/lipotesvexillifer/whistle*"
+						},
+						"whenNotInEmotionState": "aggressiveondamage|aggressivearoundentities|fleeondamage|saturated"
+					},
+					{
+						"code": "fleeentity",
+						"animation": "Swimfast",
+						"entityCodesByType": {
+							"*": [ "bear-*", "hyena-male", "hyena-female", "wolf-male", "wolf-female","bovinae-adult-*", "caninae-canina-adult-*","diprotodontidae-adult-*","elephantidae-adult-*","hyaenidae-adult-*","machairodontinae-adult*", "pantherinae-panthera-adult*","rhinocerotidae-adult-*","thylacoleonidae-adult-*", "ursidae-adult-*"]},
+						"priority": 1.51,
+						"movespeedByType": {
+							"cetacea-adult-*-lipotesvexillifer": 0.04
+						},
+						"seekingRange": 14,
+						"animationSpeedByType": {
+							"cetacea-adult-*-lipotesvexillifer": 2.0
+						},
+						"soundByType": {
+							"*-lipotesvexillifer": "creature/cetacea/lipotesvexillifer/whistle*"
+						}
+					},
+					{
+						"code": "seekentity",
+						"animation": "Swimfast",
+						"entityCodes": [ "player", "hyena-male", "hyena-female", "wolf-male", "wolf-female", "caninae-*","felinae-*","hyaenidae-*","machairodontinae-*", "pantherinae-*","thylacoleonidae-*", "ursidae-*"  ],
+						"priority": 1.6,
+						"mincooldown": 600,
+						"maxcooldown": 650,
+						"movespeedByType": {
+							"cetacea-adult-*-lipotesvexillifer": 0.04
+						},
+						"animationSpeedByType": {
+							"cetacea-adult-*-lipotesvexillifer": 2.0
+						},
+						"seekingRange": 20,
+						"soundByType": {
+							"*-lipotesvexillifer": "creature/cetacea/lipotesvexillifer/whistle*"
+						},
+						"whenInEmotionState": "aggressiveondamage|aggressivearoundentities"
+					},
+					{
+						"code": "stayclosetoentity",
+						"animation": "Swim",
+						"priority": 1.4,
+						"entityCodeByType": {
+							"*-adult-female-*": "cetacea-adult-male-{type}"
+						},
+						"movespeedByType": {
+							"*-lipotesvexillifer": 0.01,
+							"*": 0.006
+						},
+						"animationSpeedByType": {
+							"cetacea-adult-*-lipotesvexillifer": 1
+						},
+						"maxDistance": 5,
+						"searchRange": 25
+					},
+					{
+						"code": "idle",
+						"animation": "Idle",
+						"priority": 0.9,
+						"minduration": 1600,
+						"maxduration": 3200,
+						"mincooldown": 6000,
+						"maxcooldown": 120000,
+						"priorityForCancel": 1.28,
+						"stopOnNearbyEntityCodes": [ "player", "bear-*", "hyena-male", "hyena-female", "wolf-male", "wolf-female", "caninae-*","felinae-*","hyaenidae-*","machairodontinae-*", "pantherinae-*","thylacoleonidae-*", "ursidae-*" ],
+						"stopRange": 10,
+						"stopOnHurt": true,
+						"animationSpeed": 0.5,
+						"soundByType": {
+							"*-lipotesvexillifer": "creature/cetacea/lipotesvexillifer/whistle*"
+						}
+					},
+					{
+						"code": "idle",
+						"animation": "Susu",
+						"priority": 0.9,
+						"minduration": 1600,
+						"maxduration": 3200,
+						"mincooldown": 6000,
+						"maxcooldown": 120000,
+						"priorityForCancel": 1.28,
+						"stopOnNearbyEntityCodes": [ "player", "bear-*", "hyena-male", "hyena-female", "wolf-male", "wolf-female", "caninae-*","felinae-*","hyaenidae-*","machairodontinae-*", "pantherinae-*","thylacoleonidae-*", "ursidae-*" ],
+						"stopRange": 10,
+						"stopOnHurt": true,
+						"animationSpeed": 0.5
+					},
+					{
+						"code": "idle",
+						"animation": "Sleep",
+						"priority": 1.38,
+						"minduration": 6000,
+						"maxduration": 12000,
+						"mincooldown": 10000,
+						"maxcooldown": 30000,
+						"priorityForCancel": 1.38,
+						"whenNotInEmotionState": "aggressiveondamage",
+						"duringDayTimeFramesByType": {
+							"*": [{"fromHour": 0,"toHour": 24}]
+						},
+						"stopOnNearbyEntityCodes": [ "player", "bear-*", "hyena-male", "hyena-female", "wolf-male", "wolf-female", "caninae-*","felinae-*","hyaenidae-*","machairodontinae-*", "pantherinae-*","thylacoleonidae-*", "ursidae-*"  ],
+						"stopRange": 8,
+						"stopOnHurt": true,
+						"animationSpeed": 0.1
+					},
+					{
+						"code": "wander",
+						"animation": "Swim",
+						"priority": 1.0,
+						"priorityForCancel": 1.35,
+						"stopOnNearbyEntityCodes": [ "player", "bear-*", "hyena-male", "hyena-female", "wolf-male", "wolf-female", "caninae-*","felinae-*","hyaenidae-*","machairodontinae-*", "pantherinae-*","thylacoleonidae-*", "ursidae-*"  ],
+						"executionChance": 0.5,
+						"movespeedByType": {
+							"*-lipotesvexillifer": 0.04,
+							"*": 0.006
+						},
+						"animationSpeedByType": {
+							"cetacea-adult-*-lipotesvexillifer": 1
+						},
+						"preferredLightLevel": 22
+					},
+					{
+						"code": "seekfoodandeat",
+						"movespeedByType": {
+							"*-lipotesvexillifer": 0.01,
+							"*": 0.006
+						},
+						"animationSpeedByType": {
+							"cetacea-adult-*-lipotesvexillifer": 1
+						},
+						"priority": 1.25,
+						"eatSoundByType": {
+							"*": "game:creature/animal-eat-small"
+						},
+						"eatTime": 1.5,
+						"eatLooseItems": true,
+						"animation": "Swim",
+						"eatAnimation": "Eat",
+						"mincooldownHours": 1,
+						"maxcooldownHours": 4
+					}
+				]
+			},
+			{
+				"code": "pettable",
+				"minGeneration": 1
+			},
+			{
+				"code": "ropetieable",
+				"minGeneration": 2
+			}
+		],
+		"spawnconditions": {
+			"worldgen": {
+			"requireSolidGround": false,
+			"groupSizeByType": {
+					"*-lipotesvexillifer": { "dist": "invexp", "avg": 4, "var": 1 }
+			},
+				"insideBlockCodesByType": {
+					"*-adult-*-lipotesvexillifer": [ "game:water-*"]
+				},
+				"minLightLevel": 3,
+			"companionsByType": {
+				"cetacea-adult-female-*":["iniidae:cetacea-adult-female-{type}","iniidae:cetacea-adult-male-{type}","iniidae:cetacea-baby-female-{type}","iniidae:cetacea-baby-male-{type}"],
+				"cetacea-adult-male-*":["iniidae:cetacea-adult-female-{type}"],
+				"*":["iniidae:cetacea-adult-female-{type}","iniidae:cetacea-adult-male-{type}"]}
+		},
+			"runtime": {
+				"group": "neutral",
+				"maxQuantity": 2,
+				"requireSolidGround": false,
+				"chanceByType": {
+					"*-adult-female-lipotesvexillifer": 0.00001, "*-adult-male-lipotesvexillifer": 0.00001,
+					"*": 0.0
+				},
+				"mindistancetoplayer": 50,
+				"minLightLevel": 3,
+				"spawnCapPlayerScaling": 0.0,	
+				"groupSizeByType": {
+					"*-lipotesvexillifer": { "dist": "invexp", "avg": 4, "var": 1 }
+				},
+				"insideBlockCodesByType": {
+					"*-adult-*-lipotesvexillifer": [ "game:water-*"]
+				},
+				"companionsByType": {
+				"cetacea-adult-female-*":["iniidae:cetacea-adult-female-{type}","iniidae:cetacea-adult-male-{type}"],
+				"cetacea-adult-male-*":["iniidae:cetacea-adult-female-{type}"],
+				"*":["iniidae:cetacea-adult-female-{type}","iniidae:cetacea-adult-male-{type}"]}
+			}
+		},
+		"spawnconditionsByType": {
+			"cetacea-adult-*-lipotesvexillifer": {
+				"climate": {
+					"minTemp": 12,
+					"maxTemp": 16,
+					"minRain": 0.65,
+					"maxRain": 0.75,
+					"minY": 0.1,
+					"maxY": 0.99					
+				},
+				"worldgen": {
+					"triesPerChunk": { "avg": 0.001, "var": 0}
+				},
+				"runtime": {
+					"maxQuantityByGroup": { "code": "cetacea-*", "maxQuantity": 1 }
+				}
+			}
+		}
+	},
+	"soundsByType": {
+		"cetacea-*-*-lipotesvexillifer":{
+			"hurt": "creature/cetacea/lipotesvexillifer/whistle*",
+			"death": "creature/cetacea/lipotesvexillifer/whistle*",
+			"idle": "creature/cetacea/lipotesvexillifer/whistle*"
+		}
+	},
+	"idleSoundRangeByType": {
+		"cetacea-adult-*":30
+	},
+	"idleSoundChanceByType": {
+		"*-lipotesvexillifer": 0.001
+	}
+}
