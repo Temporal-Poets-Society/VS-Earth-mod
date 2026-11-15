@@ -1,0 +1,328 @@
+[
+ {
+  "ingredientPattern": "H\tB",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "B": {
+    "type": "item",
+    "code": "game:burnedbrick-*",
+    "name": "brick"
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:grog",
+   "quantity": 2
+  }
+ },
+ {
+  "ingredientPattern": "H\tS",
+  "width": 1,
+  "height": 2,
+  "ingredients": {
+   "H": {
+    "type": "item",
+    "tags": [
+     "tool-hammer"
+    ],
+    "isTool": true
+   },
+   "S": {
+    "type": "item",
+    "code": "earth:ore-*",
+    "name": "mineral",
+    "allowedVariants": [
+     "kyanite",
+     "sillimanite",
+     "andalusite"
+    ]
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "earth:crushed-{mineral}",
+   "quantity": 1
+  }
+ },
+ {
+  "ingredientPattern": "CCC\tCGC\tCCC",
+  "width": 3,
+  "height": 3,
+  "recipegroup": 3,
+  "ingredients": {
+   "G": {
+    "type": "item",
+    "code": "earth:grog"
+   },
+   "C": {
+    "type": "item",
+    "code": "game:clay-*",
+    "allowedVariants": [
+     "blue",
+     "red"
+    ]
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "game:clay-fire",
+   "quantity": 8
+  }
+ },
+ {
+  "ingredientPattern": "CCC\tCQC\tCCC",
+  "width": 3,
+  "height": 3,
+  "recipegroup": 4,
+  "ingredients": {
+   "Q": {
+    "type": "item",
+    "code": "game:crushed-quartz"
+   },
+   "C": {
+    "type": "item",
+    "code": "game:clay-*",
+    "allowedVariants": [
+     "blue",
+     "red"
+    ]
+   }
+  },
+  "output": {
+   "type": "item",
+   "code": "game:clay-fire",
+   "quantity": 8
+  }
+ },
+ {
+  "ingredientPattern": "FF,FQ,G_",
+  "ingredients": {
+   "F": {
+    "type": "item",
+    "code": "game:clay-fire"
+   },
+   "Q": {
+    "type": "item",
+    "code": "game:crushed-quartz"
+   },
+   "G": {
+    "type": "item",
+    "code": "earth:grog"
+   }
+  },
+  "width": 2,
+  "height": 3,
+  "shapeless": true,
+  "output": {
+   "type": "item",
+   "code": "game:refractorybrick-raw-tier1",
+   "quantity": 1
+  }
+ },
+ {
+  "ingredientPattern": "FF,QB",
+  "ingredients": {
+   "F": {
+    "type": "item",
+    "code": "game:clay-fire"
+   },
+   "Q": {
+    "type": "item",
+    "code": "game:crushed-quartz"
+   },
+   "B": {
+    "type": "item",
+    "code": "earth:crushed-*",
+    "name": "mineral",
+    "allowedVariants": [
+     "kyanite",
+     "sillimanite",
+     "andalusite"
+    ]
+   }
+  },
+  "width": 2,
+  "height": 2,
+  "shapeless": true,
+  "output": {
+   "type": "item",
+   "code": "game:refractorybrick-raw-tier1",
+   "quantity": 1
+  },
+  "recipegroup": 5
+ },
+ {
+  "ingredientPattern": "FF,QB,P_",
+  "ingredients": {
+   "F": {
+    "type": "item",
+    "code": "game:clay-fire"
+   },
+   "Q": {
+    "type": "item",
+    "code": "game:crushed-quartz"
+   },
+   "B": {
+    "type": "item",
+    "code": "earth:crushed-*",
+    "name": "mineral",
+    "allowedVariants": [
+     "kyanite",
+     "sillimanite",
+     "andalusite"
+    ]
+   },
+   "P": {
+    "type": "item",
+    "code": "game:crushed-olivine"
+   }
+  },
+  "width": 2,
+  "height": 3,
+  "shapeless": true,
+  "output": {
+   "type": "item",
+   "code": "game:refractorybrick-raw-tier2",
+   "quantity": 1
+  },
+  "recipegroup": 5
+ },
+ {
+  "ingredientPattern": "FF,QB,PI",
+  "ingredients": {
+   "F": {
+    "type": "item",
+    "code": "game:clay-fire"
+   },
+   "Q": {
+    "type": "item",
+    "code": "game:crushed-quartz"
+   },
+   "B": {
+    "type": "item",
+    "code": "earth:crushed-*",
+    "name": "mineral",
+    "allowedVariants": [
+     "kyanite",
+     "sillimanite",
+     "andalusite"
+    ]
+   },
+   "P": {
+    "type": "item",
+    "code": "game:crushed-olivine"
+   },
+   "I": {
+    "type": "item",
+    "code": "game:crushed-ilmenite"
+   }
+  },
+  "width": 2,
+  "height": 3,
+  "shapeless": true,
+  "output": {
+   "type": "item",
+   "code": "game:refractorybrick-raw-tier3",
+   "quantity": 1
+  },
+  "recipegroup": 5
+ },
+ {
+  "ingredientPattern": "FF,QB",
+  "ingredients": {
+   "F": {
+    "type": "item",
+    "code": "game:clay-fire"
+   },
+   "Q": {
+    "type": "item",
+    "code": "game:crushed-quartz"
+   },
+   "B": {
+    "type": "item",
+    "code": "game:ore-corundum"
+   }
+  },
+  "width": 2,
+  "height": 2,
+  "shapeless": true,
+  "output": {
+   "type": "item",
+   "code": "game:refractorybrick-raw-tier1",
+   "quantity": 1
+  },
+  "recipegroup": 6
+ },
+ {
+  "ingredientPattern": "FF,QB,P_",
+  "ingredients": {
+   "F": {
+    "type": "item",
+    "code": "game:clay-fire"
+   },
+   "Q": {
+    "type": "item",
+    "code": "game:crushed-quartz"
+   },
+   "B": {
+    "type": "item",
+    "code": "game:ore-corundum"
+   },
+   "P": {
+    "type": "item",
+    "code": "game:crushed-olivine"
+   }
+  },
+  "width": 2,
+  "height": 3,
+  "shapeless": true,
+  "output": {
+   "type": "item",
+   "code": "game:refractorybrick-raw-tier2",
+   "quantity": 1
+  },
+  "recipegroup": 6
+ },
+ {
+  "ingredientPattern": "FF,QB,PI",
+  "ingredients": {
+   "F": {
+    "type": "item",
+    "code": "game:clay-fire"
+   },
+   "Q": {
+    "type": "item",
+    "code": "game:crushed-quartz"
+   },
+   "B": {
+    "type": "item",
+    "code": "game:ore-corundum"
+   },
+   "P": {
+    "type": "item",
+    "code": "game:crushed-olivine"
+   },
+   "I": {
+    "type": "item",
+    "code": "game:crushed-ilmenite"
+   }
+  },
+  "width": 2,
+  "height": 3,
+  "shapeless": true,
+  "output": {
+   "type": "item",
+   "code": "game:refractorybrick-raw-tier3",
+   "quantity": 1
+  },
+  "recipegroup": 6
+ }
+]

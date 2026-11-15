@@ -57,7 +57,6 @@ namespace EarthMap.Core
             public int Rows => 180 * RowsPerDegree;
             /// <summary>The 1° row (latS + 90) of grid row g (0 = northernmost).</summary>
             public int Band(int g) => 179 - g / RowsPerDegree;
-            public double RowLat(int g) => 90 + 0.5 / NativeRowsPerDegree - (g + 0.5) / RowsPerDegree;
             /// <summary>Fractional grid row of a latitude (row centres at whole numbers).</summary>
             public double RowY(double lat) => (90 + 0.5 / NativeRowsPerDegree - lat) * RowsPerDegree - 0.5;
             public double ColLon(int band, int j) => -180 - 0.5 / NativeCols[band] + (j + 0.5) / Cols[band];
@@ -379,8 +378,6 @@ namespace EarthMap.Core
         public bool HasRoughness => rGrid != null;
         /// <summary>Latitude spacing of the roughness grid (arc-seconds), 0 without it.</summary>
         public double RoughnessSpacingArcSeconds => rGrid == null ? 0 : 3600.0 / rGrid.RowsPerDegree;
-        /// <summary>Longitude spacing of the height grid at a latitude (arc-seconds).</summary>
-        public double LonSpacingArcSeconds(double lat) => 3600.0 / hGrid.Cols[Math.Clamp((int)Math.Floor(lat), -90, 89) + 90];
         /// <summary>The converter's note (source, grid, steps).</summary>
         public string Note { get; }
         /// <summary>Tiles held, and the payload bytes kept in memory.</summary>
@@ -426,9 +423,7 @@ namespace EarthMap.Core
             if (index.Length < 5 || index[0] != IndexMagic[0] || index[1] != IndexMagic[1] || index[2] != IndexMagic[2] || index[3] != IndexMagic[3])
                 throw new InvalidDataException("not an Earth coarse height index");
             if (index[4] != Version) throw new InvalidDataException("coarse height index version " + index[4]);
-            byte[] body;
-            using (var z = new BrotliStream(new MemoryStream(index, 5, index.Length - 5), CompressionMode.Decompress))
-            using (var ms = new MemoryStream()) { z.CopyTo(ms); body = ms.ToArray(); }
+            byte[] body = EarthBinary.UnbrotliAll(index, 5, "coarse height index");
             using var r = new BinaryReader(new MemoryStream(body));
             int parts = r.ReadByte();
             Note = Encoding.UTF8.GetString(r.ReadBytes(r.ReadUInt16()));

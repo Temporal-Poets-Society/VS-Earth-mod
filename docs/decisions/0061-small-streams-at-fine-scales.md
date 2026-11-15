@@ -1,8 +1,6 @@
 # 0061: Small streams in 1:25 to 1:10 worlds (proposal)
 
-Status: **proposal** for the streams layer, not agreed or built. The quick step below is **implemented** at the author's
-choice ("Quick step first", 8 November) in test build 1.0.3-tall.22 (`aa11e30` on release/1.0), checked offline and on
-a private bench, installed in the author's game (8 November 09:15), not played yet. Date: 2026-11-08.
+Status: **proposal** for the streams layer, not agreed or built. The quick step below (every stream from 20 m³/s at 1:25 and finer) is **built** at the author's choice ("Quick step first", 8 November), in Earth 2.0.0; not played. Date: 2026-11-08.
 
 ## What the author asked
 
@@ -114,3 +112,11 @@ The author chose it first. What it does:
   Mods in place of tall.21; tall.21 and `earth.json` backed up in
   `Backups/earth-before-1.0.3-tall.22-20261108-091504`. Data packs unchanged. The player's `earth.json` (Streams
   `ends`, config version 4) moves to `auto` on the next start; existing worlds keep their rivers.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: **proposal** for the streams layer, not agreed or built. The quick step below is **implemented** at the author's
+choice ("Quick step first", 8 November) in test build 1.0.3-tall.22 (`aa11e30` on release/1.0), checked offline and on
+a private bench, installed in the author's game (8 November 09:15), not played yet.

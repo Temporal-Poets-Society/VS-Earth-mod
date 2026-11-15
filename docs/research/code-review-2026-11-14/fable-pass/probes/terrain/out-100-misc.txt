@@ -1,0 +1,42 @@
+data loaded in 835 ms
+Earth layout: 1112.2 blocks per degree east-west (100 m per block at the equator), 1111.6 north-south (stretch 1.00), latitudes shown ñ90ø, seam gutter 0 blocks, world centre at 10.8øE.
+1:100: world 433152 x 200192, ring 400384 from 16384, 100.09 m/block; coasts 1 courses 4 channelRules 5 flowRules 1 dams 3 outlines L2 R4 streams ends works 4 referee 2 coarse 1
+model built in 7990 ms (cache reused [strait-routes-1,sea-channel-ways-1] built []); rivers 2766401 pieces; managed 1861 MB, working set 2139 MB
+== misc
+  terminal lakes 18: 11205 cells, 0 not at the kept level near them, 6 of 11205 cell centres are dry columns
+  squares without a GLO-90 tile where the grid has dry land above 0 m: 0
+  coasts: tile 1 deg, unit 20000 per deg, margin 1000 units = 0.0500 deg; reach 8 blocks = 0.0072 deg
+  lake outline reach 8, river outline reach 4, works reach 8
+== cells
+  Amazon Manaus    boundary pairs 7165: mean |dAlong| 0.643 max 18.2, >2.5: 120, water top differs 1 | mid-cell pairs 6893: mean 0.601 max 23.2, >2.5: 74, water top differs 5
+      worst at a boundary: (138751,103710) along 3.8 top 166 | (138752,103710) along 22.0 top 166, reach 623681, hw 36.0
+  Lena             boundary pairs 3491: mean |dAlong| 0.598 max 11.4, >2.5: 27, water top differs 1 | mid-cell pairs 3050: mean 0.686 max 5.5, >2.5: 90, water top differs 3
+      worst at a boundary: (349311,30725) along 12.7 top 181 | (349312,30725) along 1.3 top 181, reach 614117, hw 49.0
+  Daugava Riga     boundary pairs 1536: mean |dAlong| 0.680 max 4.8, >2.5: 1, water top differs 0 | mid-cell pairs 2000: mean 0.551 max 2.0, >2.5: 0, water top differs 4
+      worst at a boundary: (232295,37119) along 10.5 top 169 | (232295,37120) along 5.8 top 169, reach 545351, hw 19.9
+  Rhine Cologne    boundary pairs 1818: mean |dAlong| 0.631 max 3.9, >2.5: 10, water top differs 1 | mid-cell pairs 1600: mean 0.646 max 2.5, >2.5: 1, water top differs 5
+      worst at a boundary: (212607,44416) along 41.1 top 181 | (212608,44416) along 45.0 top 181, reach 471010, hw 6.2
+  Danube Budapest  boundary pairs 1405: mean |dAlong| 0.771 max 3.9, >2.5: 1, water top differs 0 | mid-cell pairs 1448: mean 0.619 max 5.2, >2.5: 9, water top differs 0
+      worst at a boundary: (225663,48033) along 2.3 top 183 | (225664,48033) along 6.2 top 183, reach 581810, hw 18.9
+  Volga            boundary pairs 3593: mean |dAlong| 0.650 max 10.3, >2.5: 37, water top differs 5 | mid-cell pairs 3179: mean 0.604 max 4.4, >2.5: 21, water top differs 3
+      worst at a boundary: (254719,45315) along 18.9 top 160 | (254720,45315) along 8.5 top 160, reach 610324, hw 65.8
+  Congo            boundary pairs 3128: mean |dAlong| 0.551 max 13.6, >2.5: 37, water top differs 15 | mid-cell pairs 3568: mean 0.536 max 20.6, >2.5: 34, water top differs 20
+      worst at a boundary: (221567,104876) along 24.8 top 205 | (221568,104876) along 11.2 top 206, reach 620821, hw 31.2
+  Mississippi      boundary pairs 4202: mean |dAlong| 0.687 max 12.2, >2.5: 37, water top differs 14 | mid-cell pairs 4879: mean 0.558 max 19.9, >2.5: 17, water top differs 4
+      worst at a boundary: (104252,61183) along 11.5 top 176 | (104252,61184) along 23.7 top 176, reach 618453, hw 28.1
+== edges
+  lon 24 (Riga)          1557 pairs (808 land): across the edge mean |dTop| 0.155 max 2, land/water flips 2, water tops differ 0, river flips 2 | 5 blocks on: mean 0.175 max 2, flips 5, water tops 0, river 2
+  lat 57 (Riga)          1558 pairs (972 land): across the edge mean |dTop| 0.517 max 5, land/water flips 41, water tops differ 0, river flips 11 | 5 blocks on: mean 0.599 max 5, flips 33, water tops 0, river 21
+  lon 8 (Alps)           1113 pairs (1110 land): across the edge mean |dTop| 0.670 max 4, land/water flips 0, water tops differ 0, river flips 0 | 5 blocks on: mean 0.593 max 3, flips 1, water tops 0, river 1
+  lat 46 (Alps)          1113 pairs (1113 land): across the edge mean |dTop| 0.565 max 3, land/water flips 0, water tops differ 0, river flips 0 | 5 blocks on: mean 0.619 max 3, flips 0, water tops 0, river 0
+  lon 4 (Holland)        1113 pairs (231 land): across the edge mean |dTop| 0.090 max 2, land/water flips 4, water tops differ 0, river flips 0 | 5 blocks on: mean 0.097 max 2, flips 10, water tops 0, river 2
+  lat 52 (Holland)       1113 pairs (947 land): across the edge mean |dTop| 0.123 max 5, land/water flips 14, water tops differ 0, river flips 3 | 5 blocks on: mean 0.170 max 6, flips 17, water tops 0, river 1
+  lon -60 (Amazon)       1112 pairs (864 land): across the edge mean |dTop| 0.629 max 5, land/water flips 15, water tops differ 0, river flips 5 | 5 blocks on: mean 0.676 max 5, flips 10, water tops 1, river 9
+  lat -3 (Amazon)        1113 pairs (939 land): across the edge mean |dTop| 1.122 max 7, land/water flips 30, water tops differ 0, river flips 10 | 5 blocks on: mean 0.961 max 8, flips 20, water tops 0, river 6
+  lon 180 (Chukotka)     4448 pairs (4327 land): across the edge mean |dTop| 0.362 max 7, land/water flips 20, water tops differ 0, river flips 0 | 5 blocks on: mean 0.368 max 3, flips 5, water tops 0, river 0
+  lon 180 (Fiji)         1224 pairs (269 land): across the edge mean |dTop| 0.296 max 24, land/water flips 18, water tops differ 0, river flips 0 | 5 blocks on: mean 0.466 max 22, flips 3, water tops 0, river 0
+  lon 180 (Wrangel)      779 pairs (586 land): across the edge mean |dTop| 0.136 max 2, land/water flips 0, water tops differ 0, river flips 0 | 5 blocks on: mean 0.128 max 1, flips 0, water tops 0, river 0
+  lon 130 (Lena)         1112 pairs (850 land): across the edge mean |dTop| 0.243 max 8, land/water flips 38, water tops differ 0, river flips 20 | 5 blocks on: mean 0.210 max 4, flips 27, water tops 1, river 16
+  lon 6 (Geneva)         1113 pairs (1102 land): across the edge mean |dTop| 0.403 max 4, land/water flips 0, water tops differ 0, river flips 0 | 5 blocks on: mean 0.355 max 4, flips 0, water tops 0, river 0
+  lon 0 (Greenwich)      3892 pairs (2407 land): across the edge mean |dTop| 0.209 max 3, land/water flips 16, water tops differ 0, river flips 4 | 5 blocks on: mean 0.208 max 6, flips 8, water tops 0, river 3
+  lat 0 (Equator Congo)  2225 pairs (1974 land): across the edge mean |dTop| 0.100 max 3, land/water flips 8, water tops differ 0, river flips 8 | 5 blocks on: mean 0.104 max 2, flips 4, water tops 0, river 4

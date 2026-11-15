@@ -64,6 +64,12 @@ namespace EarthMap.Core
         public static float Fit(float[] niche, in TreeSite s)
         {
             if (niche == null || !s.HasSoil) return 1f;
+            if (s.ColumnSite)
+            {
+                // site rules 1: one place, one value per axis (no shares to mix)
+                double cr = float.IsNaN(s.SoilPh) ? 1 : Gauss(Reaction(s.SoilPh), niche[4], niche[5]);
+                return (float)Math.Max(1e-4, Gauss(s.SiteMoisture, niche[0], niche[1]) * Gauss(s.SiteNutrients, niche[2], niche[3]) * cr);
+            }
             double wet = Math.Clamp(s.WetShare, 0, 1), poor = Math.Clamp(s.PoorShare, 0, 1);
             double m = (1 - wet) * Gauss(s.SoilMoisture, niche[0], niche[1]) + wet * Gauss(WaterloggedMoisture, niche[0], niche[1]);
             double n = (1 - poor) * Gauss(RichNutrients(s.GrassShare), niche[2], niche[3]) + poor * Gauss(PoorNutrients, niche[2], niche[3]);

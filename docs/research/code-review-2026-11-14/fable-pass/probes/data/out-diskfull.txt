@@ -1,0 +1,9 @@
+download all of 40 squares (4.8 MB in the release) into a store where every write fails:
+  ended yes after 141 s; done 0, failed 40, error ''
+  bytes read from the sources: 19.0 MB = 4.0 times the release; log lines: 242
+      x120: N10E022: attempt 1 of 3 from the release failed: Access to the path is denied.
+      x40: N10E020 in part1.zip: Access to the path is denied.
+      x40: N10E021: not from the release; trying Copernicus
+      x40: Copernicus_DSM_COG_30_N10_00_E021_00_DEM: not in <scratch>/fable/probes-data/work-diskfull\cop...
+      x1: the release's manifest: 40 squares in 1 parts, from <scratch>/fable/probes-data/work-diskfull\...
+      x1: download all from the release finished: 0 fetched, 40 failed, 0 already here; 0.02 GB downloaded

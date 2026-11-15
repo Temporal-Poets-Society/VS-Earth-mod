@@ -1,0 +1,12 @@
+== Copernicus GeoTIFF Copernicus_DSM_COG_30_N05_00_E102_00_DEM.tif (DemTiles.ReadGeoTiff; not hash-checked, the bucket's bytes) (4,980,045 B): unchanged -> ok (23 MB allocated, 67 ms)
+    ~ accepted (no error)  x3   <- minus 1 byte; 8 body bytes flipped (seed 1); 8 body bytes flipped (seed 3)
+   !! load: ArgumentOutOfRangeException  x5   <- header only (16 B); int32@4=MAX; int32@4=-1; int32@4=16M; garbage (random bytes, same length, magic kept)
+      load: InvalidDataException  x6
+GeoTIFF directory mutations by outcome:
+   105  InvalidDataException
+    98  ok   e.g. tag 256 value=0; tag 256 count=0; tag 256 value=1; tag 256 count=1; tag 257 value=0
+    14  InvalidDataException [ALLOC >400 MB]   e.g. tag 322 value=2147483647; tag 322 count=2147483647; tag 322 value=4294967295; tag 322 count=4294967295; tag 322 value=60000
+     8  ArgumentOutOfRangeException   e.g. ifd offset = 0xFFFFFFF0; ifd offset = file length - 1; tag 33550 value=2147483647; tag 33550 value=4294967295; tag 33550 value=500000000
+     6  OutOfMemoryException   e.g. tag 324 count=2147483647; tag 324 count=500000000; tag 325 count=2147483647; tag 325 count=500000000; tag 33550 count=2147483647
+     4  OverflowException   e.g. tag 324 count=4294967295; tag 325 count=4294967295; tag 33550 count=4294967295; tag 33922 count=4294967295
+     2  ArgumentOutOfRangeException [ALLOC 4.0 GB]   e.g. tag 33550 count=500000000; tag 33922 count=500000000

@@ -1,7 +1,7 @@
 # 0053: Exact scales, included GLO-90 heights, rivers on GLO-90 and a smaller detail noise
 
-Date: 5 November 2026. Status: **implemented, on `main`** (in every Earth 2.0.0 release candidate since rc.1,
-8 November 2026; not released). The direction is the author's (below); the details were proposals, built in test builds
+Date: 5 November 2026. Status: **in Earth 2.0.0** (and in every 2.0.0 release candidate since rc.1,
+8 November 2026). The direction is the author's (below); the details were proposals, built in test builds
 1.0.3-tall.5 to tall.21 on `claude/tall-glo90` (committed 7 November as `5207611` and later; release/1.0 merged into it
 the same day at the author's request, "Merge both to get right land, water and rivers", `3fc1d7d`) and carried into 2.0
 rather than agreed as a whole. Since then: the scales are play styles 1:200 to 1:10 (1:100 the default) with 1:5 on the

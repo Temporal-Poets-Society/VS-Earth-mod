@@ -120,8 +120,13 @@ namespace EarthMap.Core
         public const double ApronBlocks = 24;
         /// <summary>The island rules a world is frozen with (EarthParams.Islands). 1: the outlines as GSHHG has them (0.14.0).
         /// 2: their corners rounded off (Smooth). 3: islands in the sea stay whole where a river's centre line or a river
-        /// exit channel crosses them (TerrainModel.Column.IslandOverSea; before, the channel cut a straight strip through).</summary>
-        public const int RulesVersion = 3;
+        /// exit channel crosses them (TerrainModel.Column.IslandOverSea; before, the channel cut a straight strip through).
+        /// 4 (EA-0110, Fable pass FP-20): an island crossing 180° (GSHHG stores it as two halves cut there: Taveuni, Rabi)
+        /// has no coast along the cut, so its profile runs on across the meridian instead of dropping to a sea-level beach
+        /// in a notch along it.</summary>
+        public const int RulesVersion = 4;
+        /// <summary>From these rules the edges along 180° are no coast.</summary>
+        public const int SeamlessMeridianRules = 4;
         /// <summary>Corner cutting as CoastLayer and tools/bake_earth.py smooth_ring do it for the big land: at most this far
         /// (degrees, ~170 m) back from a corner, this many passes.</summary>
         public const double SmoothCut = 0.0015;
@@ -150,8 +155,17 @@ namespace EarthMap.Core
         sealed class Edges
         {
             public float[] X, Z;
+            /// <summary>The edge from point i lies on 180° (both ends there): GSHHG's cut, not a coast. Null: none.</summary>
+            public bool[] OnMeridian;
             public int[][] Strips;
             public double StripH;
+            /// <summary>EA-0113: a grid of square cells over the edges (each edge in every cell its box touches), and for each
+            /// cell how many rings of cells around it hold no edge; built with the edges. Used for points inside the island,
+            /// whose search reaches half the island's width.</summary>
+            public int[][] Cells;
+            public int[] EmptyRings;
+            public int CellsX, CellsZ;
+            public double CellSize, GridX0, GridZ0;
         }
 
         public struct Hit
@@ -203,8 +217,28 @@ namespace EarthMap.Core
             foreach (var kv in lists) buckets[kv.Key] = kv.Value.ToArray();
         }
 
+        // EA-0113 (the Fable pass's FP-23): a column asks for the same point twice (the island profile, then the shore strip):
+        // the last answer on this thread is kept
+        // (Fable's re-review of c5b4564) by the layer's number, not the layer: a pool thread must not keep a closed world's
+        // islands, their edges and cell grids alive (as ER-22 / EA-0091 did elsewhere)
+        [ThreadStatic] static long lastLayer;
+        static long layers;
+        readonly long layerId = Interlocked.Increment(ref layers);
+        [ThreadStatic] static long lastLat, lastLon;
+        [ThreadStatic] static bool lastFound;
+        [ThreadStatic] static Hit lastHit;
+
         /// <summary>The island at or nearest to a point (within ApronBlocks of its coast), if any.</summary>
         public bool Query(double lat, double lon, out Hit hit)
+        {
+            long bLat = BitConverter.DoubleToInt64Bits(lat), bLon = BitConverter.DoubleToInt64Bits(lon);
+            if (lastLayer == layerId && lastLat == bLat && lastLon == bLon) { hit = lastHit; return lastFound; }
+            bool found = QueryAt(lat, lon, out hit);
+            lastLayer = layerId; lastLat = bLat; lastLon = bLon; lastHit = hit; lastFound = found;
+            return found;
+        }
+
+        bool QueryAt(double lat, double lon, out Hit hit)
         {
             hit = default;
             int key = (int)Math.Floor((lat + 90) / BucketDeg) * bucketsX + (((int)Math.Floor((lon + 180) / BucketDeg) % bucketsX) + bucketsX) % bucketsX;
@@ -218,7 +252,7 @@ namespace EarthMap.Core
                 var e = sh.Edges ?? BuildEdges(sh);
                 bool inside = px >= sh.MinX && px <= sh.MaxX && pz >= sh.MinZ && pz <= sh.MaxZ && Inside(e, px, pz);
                 double cap = inside ? sh.ProfileBlocks : ApronBlocks;
-                double d = Distance(e, px, pz, cap);
+                double d = inside ? DistanceInside(e, px, pz, cap, Rules >= SeamlessMeridianRules) : Distance(e, px, pz, cap, Rules >= SeamlessMeridianRules);
                 if (!inside && d >= ApronBlocks) continue;
                 if (inside || !found || (!hit.Inside && d < hit.Dist))
                 {
@@ -245,6 +279,12 @@ namespace EarthMap.Core
                 e.X[i] = (float)(Geo.Wrap180(lon[i] - sh.LonRef) * bpdX);
                 e.Z[i] = (float)((lat[i] - sh.LatRef) * bpdZ);
             }
+            for (int i = 0; i < n; i++)
+            {
+                if (!OnCut(lon[i]) || !OnCut(lon[(i + 1) % n])) continue;
+                e.OnMeridian ??= new bool[n];
+                e.OnMeridian[i] = true;
+            }
             int k = Math.Clamp(n / 6, 1, 512);
             e.StripH = Math.Max(sh.MaxZ / k, 1e-6);
             var strips = new List<int>[k];
@@ -258,6 +298,7 @@ namespace EarthMap.Core
             }
             e.Strips = new int[k][];
             for (int i = 0; i < k; i++) e.Strips[i] = strips[i].ToArray();
+            BuildCells(e);
             Interlocked.CompareExchange(ref sh.Edges, e, null);
             return sh.Edges;
         }
@@ -323,8 +364,128 @@ namespace EarthMap.Core
             return inside;
         }
 
-        static double Distance(Edges e, double px, double pz, double cap)
+        /// <summary>EA-0113: the cell grid of <see cref="Edges.Cells"/>: at most 128 cells a side, none under 8 blocks.</summary>
+        static void BuildCells(Edges e)
         {
+            int n = e.X.Length;
+            double x0 = double.MaxValue, x1 = double.MinValue, z0 = double.MaxValue, z1 = double.MinValue;
+            for (int i = 0; i < n; i++)
+            {
+                x0 = Math.Min(x0, e.X[i]); x1 = Math.Max(x1, e.X[i]);
+                z0 = Math.Min(z0, e.Z[i]); z1 = Math.Max(z1, e.Z[i]);
+            }
+            double size = Math.Max(8, Math.Max(x1 - x0, z1 - z0) / 128);
+            int nx = Math.Max(1, (int)Math.Ceiling((x1 - x0) / size) + 1), nz = Math.Max(1, (int)Math.Ceiling((z1 - z0) / size) + 1);
+            var lists = new List<int>[nx * nz];
+            const double pad = 1e-3;   // an edge on a cell's border is in the cells on both sides
+            for (int i = 0; i < n; i++)
+            {
+                int j = (i + 1) % n;
+                int cx0 = Math.Clamp((int)Math.Floor((Math.Min(e.X[i], e.X[j]) - pad - x0) / size), 0, nx - 1);
+                int cx1 = Math.Clamp((int)Math.Floor((Math.Max(e.X[i], e.X[j]) + pad - x0) / size), 0, nx - 1);
+                int cz0 = Math.Clamp((int)Math.Floor((Math.Min(e.Z[i], e.Z[j]) - pad - z0) / size), 0, nz - 1);
+                int cz1 = Math.Clamp((int)Math.Floor((Math.Max(e.Z[i], e.Z[j]) + pad - z0) / size), 0, nz - 1);
+                for (int cz = cz0; cz <= cz1; cz++)
+                    for (int cx = cx0; cx <= cx1; cx++)
+                        (lists[cz * nx + cx] ??= new List<int>()).Add(i);
+            }
+            var cells = new int[nx * nz][];
+            var rings = new int[nx * nz];
+            const int far = int.MaxValue / 4;
+            for (int c = 0; c < cells.Length; c++)
+            {
+                cells[c] = lists[c]?.ToArray() ?? Array.Empty<int>();
+                rings[c] = cells[c].Length > 0 ? 0 : far;
+            }
+            // the chessboard distance to the nearest cell holding an edge, in two passes
+            for (int cz = 0; cz < nz; cz++)
+                for (int cx = 0; cx < nx; cx++)
+                {
+                    int c = cz * nx + cx, v = rings[c];
+                    if (cx > 0) v = Math.Min(v, rings[c - 1] + 1);
+                    if (cz > 0)
+                    {
+                        v = Math.Min(v, rings[c - nx] + 1);
+                        if (cx > 0) v = Math.Min(v, rings[c - nx - 1] + 1);
+                        if (cx < nx - 1) v = Math.Min(v, rings[c - nx + 1] + 1);
+                    }
+                    rings[c] = v;
+                }
+            for (int cz = nz - 1; cz >= 0; cz--)
+                for (int cx = nx - 1; cx >= 0; cx--)
+                {
+                    int c = cz * nx + cx, v = rings[c];
+                    if (cx < nx - 1) v = Math.Min(v, rings[c + 1] + 1);
+                    if (cz < nz - 1)
+                    {
+                        v = Math.Min(v, rings[c + nx] + 1);
+                        if (cx < nx - 1) v = Math.Min(v, rings[c + nx + 1] + 1);
+                        if (cx > 0) v = Math.Min(v, rings[c + nx - 1] + 1);
+                    }
+                    rings[c] = v;
+                }
+            e.Cells = cells;
+            e.EmptyRings = rings;
+            e.CellsX = nx; e.CellsZ = nz;
+            e.CellSize = size; e.GridX0 = x0; e.GridZ0 = z0;
+        }
+
+        /// <summary>
+        /// EA-0113 (the Fable pass's FP-23): <see cref="Distance"/> for a point inside the island, whose cap is half the
+        /// island's width: the edges are searched ring by ring of cells around the point's cell, from the first ring that holds
+        /// any, until no edge farther out can be nearer than the best so far. Every edge nearer than the result is in a ring
+        /// searched, each distance is worked out as Distance does and the minimum over them is the same number in any order,
+        /// so the result is Distance's to the bit.
+        /// </summary>
+        static double DistanceInside(Edges e, double px, double pz, double cap, bool seamless)
+        {
+            double size = e.CellSize;
+            double fx = (px - e.GridX0) / size, fz = (pz - e.GridZ0) / size;
+            int ci = (int)Math.Floor(fx), cj = (int)Math.Floor(fz);
+            if (ci < 0 || cj < 0 || ci >= e.CellsX || cj >= e.CellsZ) return Distance(e, px, pz, cap, seamless);
+            var meridian = seamless ? e.OnMeridian : null;
+            int n = e.X.Length;
+            double best = cap * cap;
+            int maxRing = Math.Max(Math.Max(ci, e.CellsX - 1 - ci), Math.Max(cj, e.CellsZ - 1 - cj));
+            for (int r = e.EmptyRings[cj * e.CellsX + ci]; r <= maxRing; r++)
+            {
+                // a cell r rings out lies at least r - 1 cells from the point (a little less, against rounding)
+                if (r >= 1)
+                {
+                    double lb = (r - 1) * size * 0.999;
+                    if (lb * lb >= best) break;
+                }
+                for (int dz = -r; dz <= r; dz++)
+                {
+                    int cz = cj + dz;
+                    if (cz < 0 || cz >= e.CellsZ) continue;
+                    bool edgeRow = dz == -r || dz == r;
+                    for (int dx = -r; dx <= r; dx += edgeRow ? 1 : Math.Max(1, 2 * r))
+                    {
+                        int cx = ci + dx;
+                        if (cx < 0 || cx >= e.CellsX) continue;
+                        foreach (int i in e.Cells[cz * e.CellsX + cx])
+                        {
+                            if (meridian != null && meridian[i]) continue;
+                            int j = (i + 1) % n;
+                            double ax = e.X[i], az = e.Z[i], bx = e.X[j], bz = e.Z[j];
+                            if (Math.Min(ax, bx) - cap > px || Math.Max(ax, bx) + cap < px) continue;
+                            double ddx = bx - ax, ddz = bz - az, len = ddx * ddx + ddz * ddz;
+                            double t = len > 0 ? Math.Clamp(((px - ax) * ddx + (pz - az) * ddz) / len, 0, 1) : 0;
+                            double ex = ax + t * ddx - px, ez = az + t * ddz - pz, d2 = ex * ex + ez * ez;
+                            if (d2 < best) best = d2;
+                        }
+                    }
+                }
+            }
+            return Math.Sqrt(best);
+        }
+
+        /// <summary>The distance to the coast within <paramref name="cap"/>; with <paramref name="seamless"/> the edges along
+        /// 180° do not count (island rules 4).</summary>
+        static double Distance(Edges e, double px, double pz, double cap, bool seamless)
+        {
+            var meridian = seamless ? e.OnMeridian : null;
             int k = e.Strips.Length, n = e.X.Length;
             int s0 = Math.Clamp((int)Math.Floor((pz - cap) / e.StripH), 0, k - 1), s1 = Math.Clamp((int)Math.Floor((pz + cap) / e.StripH), 0, k - 1);
             double best = cap * cap;
@@ -332,6 +493,7 @@ namespace EarthMap.Core
             {
                 foreach (int i in e.Strips[s])
                 {
+                    if (meridian != null && meridian[i]) continue;
                     int j = (i + 1) % n;
                     double ax = e.X[i], az = e.Z[i], bx = e.X[j], bz = e.Z[j];
                     if (Math.Min(ax, bx) - cap > px || Math.Max(ax, bx) + cap < px) continue;

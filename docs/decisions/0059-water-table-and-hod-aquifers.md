@@ -1,6 +1,18 @@
 # 0059: A water table for every land column, and Hydrate or Diedrate's aquifers from it
 
-Status: **Merged into release/1.0** (8 November 2026; the author: "Merge as is"). The author answered the well
+Status: **Built, in Earth 2.0.0**. The author, 15 November 2026: "i am ok for own rock and ground generation. When vanilla
+settings are selected the goes as vanilla and HoD defaults." So questions 1–4 stand as built (ratings raw, brine below
+500 m, 0 above the table, new chunks only) for worlds with Earth's own rock and ground, and Earth writes Hydrate or
+Diedrate's aquifer data only there: with vanilla rock and ground, or biomes back to vanilla (0075), it writes nothing and HoD
+keeps its own defaults (`EarthParams.WritesHodAquifers`; before, every new world wrote it). Checked on headless servers with
+HoD 2.5.8 at 1:100: Earth's rock and ground 49 columns written, vanilla rock and ground 0, vanilla biomes 0
+(EA-0130). Question 8 waits for a later water-table rules version (a block off in a few percent of columns); HoD's pull
+request 215 stays open. Vanilla biomes counts as one of "vanilla settings": the coordinator's reading of the author's answer
+(15 November; the author named rock and ground, and 0075's biomes back to vanilla is a vanilla setting of the same kind;
+ores, nature and weather are not about the ground the water table rates). The rule is computed from the saved fields at
+each start, with no saved answer of its own: a later change to it goes through a new water-table rules version like every
+generation change (decision 0002), so worlds already made keep theirs (the terrain session's decision as the code's
+maintainer, after Fable's review of 8cde588). Before: merged into release/1.0 (8 November 2026; the author: "Merge as is"). The author answered the well
 question (section 8) with "a now, ask HoD (c)", and the build went ahead on that. Open questions 1–4 are built as
 recommended and stay open until the author answers them. The bench found two flaws (questions 6 and 7); the author said
 "Yes, fix both", and both are built (8 November): ratings by real metres, and mapped wetlands raise the table. Built on

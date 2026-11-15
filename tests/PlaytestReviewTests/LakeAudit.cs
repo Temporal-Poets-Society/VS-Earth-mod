@@ -4,7 +4,7 @@ static class LakeAudit
 {
     public static void Write(string root,string output)
     {
-        string path=Path.GetFullPath(Path.Combine(root,"../../../rawdata/hydrolakes/HydroLAKES_points_v10_shp/HydroLAKES_points_v10"));
+        string path=Path.GetFullPath(Path.Combine(RawData.Folder(root),"hydrolakes/HydroLAKES_points_v10_shp/HydroLAKES_points_v10"));
         using var db=new BinaryReader(File.OpenRead(path+".dbf"));using var shp=new BinaryReader(File.OpenRead(path+".shp"));
         db.BaseStream.Position=4;int count=db.ReadInt32(),header=db.ReadUInt16(),size=db.ReadUInt16();
         var fields=new Dictionary<string,(int Offset,int Length)>(StringComparer.OrdinalIgnoreCase);int offset=1;

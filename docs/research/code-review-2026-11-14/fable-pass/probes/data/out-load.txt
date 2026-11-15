@@ -1,0 +1,8 @@
+client: EarthData.Load (climate, fixes, weather)              179 ms | live managed     53 MB (large objects    74 MB) | allocated so far     84 MB | peak working set    123 MB
+client: + fix 4, CHELSA temp/rain/aridity, world sweep       4653 ms | live managed    143 MB (large objects   148 MB) | allocated so far   3411 MB | peak working set    401 MB
+server: EarthData.Load with terrain (tracked earthdata)      1169 ms | live managed    352 MB (large objects   162 MB) | allocated so far   3911 MB | peak working set    587 MB
+server: + the world's choices (overlays, referee)            1263 ms | live managed    596 MB (large objects   220 MB) | allocated so far   4549 MB | peak working set    742 MB
+server: + peaks.json (155318 peaks)                           511 ms | live managed    646 MB (large objects   247 MB) | allocated so far   4610 MB | peak working set    748 MB
+server: rivers.bin reaches held (619723)                      366 ms | live managed    646 MB (large objects   247 MB) | allocated so far   4610 MB | peak working set    748 MB
+SHA-256 of 16 store files here (99 MB of the store's 289 MB), in parallel: 36 ms
+store list: 38 files, 289.0 MB; ground sets 172.3 MB; GLO-90 release 8.62 GB

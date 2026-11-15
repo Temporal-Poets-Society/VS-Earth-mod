@@ -68,6 +68,8 @@ namespace EarthMap
             catch (Exception e) { Mod.Logger.Error("Earth Map: earth-client.json can't be read ({0}); seasonal grass colour stays on.", e.Message); }
             if (!enabled) { Mod.Logger.Notification("Earth Map: seasonal grass colour is off (earth-client.json)."); return; }
             earth = api.ModLoader.GetModSystem<EarthMapSystem>();
+            // ER-18: at once when the params are set (the two-second tick stays for the season's changes)
+            if (earth != null) earth.ParamsReady += _ => Tick();
             if (!patched)
             {
                 // PatchVanilla's GrassSeasonTable: the chunk mesh's colour data (vanilla's tesselator builds it itself, 1.22.7:

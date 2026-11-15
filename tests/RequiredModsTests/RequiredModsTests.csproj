@@ -4,7 +4,10 @@
     <ImplicitUsings>enable</ImplicitUsings><RollForward>LatestMajor</RollForward><UseAppHost>false</UseAppHost><NoWarn>CA1416</NoWarn>
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
     <NetCoreRuntimeDir>$([System.IO.Directory]::GetDirectories('$(NetCoreRoot)shared\Microsoft.NETCore.App', '10.*')[0])</NetCoreRuntimeDir>
-    <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(MSBuildProjectDirectory)\..\..\.local\vs</VintageStoryPath>
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(VINTAGE_STORY)</VintageStoryPath>
+    <!-- (S-L6 of the Fable pass) as EarthMap.csproj: VINTAGE_STORY, a repo-local copy where there is one, else the game's own folder -->
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == '' and Exists('$(MSBuildProjectDirectory)\..\..\.local\vs\VintagestoryAPI.dll')">$(MSBuildProjectDirectory)\..\..\.local\vs</VintageStoryPath>
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(APPDATA)\Vintagestory</VintageStoryPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="$(NetCoreRuntimeDir)\System.*.dll" Exclude="$(NetCoreRuntimeDir)\System.Private.*.dll;$(NetCoreRuntimeDir)\System.IO.Compression.Native.dll" Private="false" />

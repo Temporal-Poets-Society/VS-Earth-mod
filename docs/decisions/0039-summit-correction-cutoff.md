@@ -1,6 +1,6 @@
 # 0039: Minimum elevation for listed summit correction
 
-Date: 31 October 2026. Status: implemented and built as 0.17.0-pre.14; offline verification passed. Installed at the author's request at 18:58 Europe/Riga; client inspection pending.
+Date: 31 October 2026. Status: built in 0.17.0-pre.14; in Earth 1.0.0 and 2.0.0. Not inspected in game; land heights have since changed with GLO-90 (0051, 0053).
 
 ## User direction
 
@@ -45,3 +45,9 @@ The prior installed pre.12 Earth+ asset revision (SHA-256 `9f0a75b6ae2b7e772e53c
 ## Source locations
 
 `src/EarthWorldOptions.cs`, `src/EarthParams.cs`, `src/Core/TerrainModel.cs`, `src/Core/KnownSummits.cs`, `worldconfig.json`, `assets/game/lang/worldconfig-en.json`; regression: `tests/EarthWorldOptionsTests/SummitChecks.cs`.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: implemented and built as 0.17.0-pre.14; offline verification passed. Installed at the author's request at 18:58 Europe/Riga; client inspection pending.

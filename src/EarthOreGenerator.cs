@@ -335,8 +335,20 @@ namespace EarthMap
             p.Valid = p.Radius > 0;
             return p;
         }
-        /// <summary>Expensive, chunk-independent part, computed only for deposits that reach the generating chunk.</summary>
+        /// <summary>Expensive, chunk-independent part, computed only for deposits that reach the generating chunk. A throw
+        /// half way leaves the plan unfinished (Stage2 false), so the next chunk that asks completes it anew: before, it
+        /// stayed "complete" with the values of whatever deposit had used the slot before (ER-21, code review 14 Nov 2026).</summary>
         void Complete(Plan p, BlockPos center)
+        {
+            try { CompleteStage2(p, center); }
+            catch
+            {
+                p.Stage2 = false;
+                throw;
+            }
+        }
+
+        void CompleteStage2(Plan p, BlockPos center)
         {
             p.Stage2 = true;
             var ctx = Session.Context(center.X >> 5, center.Z >> 5);
@@ -455,6 +467,9 @@ namespace EarthMap
         // ---------------- generation ----------------
         public override void GenDeposit(IBlockAccessor accessor, IServerChunk[] chunks, int cx, int cz, BlockPos center, ref Dictionary<BlockPos, DepositVariant> children)
         {
+            // (FP-12) the world's deposit pass (the prospecting pick's own GenDeposits keeps vanilla's generators): this thread
+            // may wait for GLO-90 tiles, so rules v5's valley search never leaves a body out for a thread that can't
+            using var fetch = FineElevation.Generating();
             try
             {
                 if (kind == Kind.Child) GenerateChild(accessor, chunks, cx, cz, center);
@@ -462,8 +477,10 @@ namespace EarthMap
             }
             catch (Exception e)
             {
-                // Never break vanilla's chunk generation; this deposit is skipped (logged once per session, CR-O4).
-                if (Interlocked.Increment(ref Session.GenErrors) == 1) owner.Log.Error("Earth ores: deposit {0} failed and was skipped (further errors suppressed). {1}", variant.Code, e);
+                // ER-08: a deposit that fails is refused as the terrain is (the chunk is made again at the next start, the
+                // server stops), not skipped for good with one line a session (CR-O4)
+                Interlocked.Increment(ref Session.GenErrors);
+                EarthWorldGen.FailedPass("deposit " + variant.Code, chunks, cx, cz, e);
             }
         }
         void GenerateDisc(IBlockAccessor accessor, IServerChunk[] chunks, int cx, int cz, BlockPos center, Dictionary<BlockPos, DepositVariant> children)

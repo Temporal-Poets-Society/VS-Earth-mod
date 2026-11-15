@@ -22,6 +22,7 @@ static partial class Checks
         ("grass winter", PatchVanilla.GrassWinterTable), ("ground moisture", PatchVanilla.GroundMoistureTable),
         ("grass season", PatchVanilla.GrassSeasonTable), ("season tint", PatchVanilla.SeasonTintTable),
         ("thunder", PatchVanilla.ThunderTable), ("creative date", PatchVanilla.CreativeDateTable),
+        ("snow melt light", PatchVanilla.SnowMeltLightTable),
     };
 
     /// <summary>A soil tick whose third parameter a game update renamed (vanilla's 1.22.7: object extra).</summary>

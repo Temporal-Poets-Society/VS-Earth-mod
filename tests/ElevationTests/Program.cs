@@ -17,6 +17,9 @@ if (args.Length < 2)
     return 0;
 }
 string src = args[0], list = args[1];
+// EA-0106 (Fable's re-review of 255baa7): the release's heights table, shipped beside the tile list
+string heightsPath = Path.Combine(Path.GetDirectoryName(Path.GetFullPath(list)), Glo90Heights.FileName);
+var releaseHeights = File.Exists(heightsPath) ? Glo90Heights.Read(File.ReadAllBytes(heightsPath), File.ReadAllBytes(list)) : null;
 string work = args.Length > 2 ? args[2] : Path.Combine(Path.GetTempPath(), "earth-elevation-test");
 if (Directory.Exists(work)) Directory.Delete(work, true);
 Directory.CreateDirectory(work);
@@ -126,6 +129,336 @@ Check(!fine.TryHeight(60.5, 6.5, out _) && !fine.TrySmoothHeight(60.5, 6.5, out 
     Check(FineElevation.CatmullRomBounded(5, 2, 7, 1, 0) == 2 && FineElevation.CatmullRomBounded(5, 2, 7, 1, 1) == 7, "rules 5: the bounded curve passes through its points");
 }
 
+// ER-16 (code review 14 November 2026): a GLO-90 release file (DemDownloader.FetchFile, blocking at the first start) stops
+// at once on the server's stop token and leaves nothing as if fetched
+{
+    using var cancelled = new CancellationTokenSource();
+    cancelled.Cancel();
+    string stopDir = work + "-stop";
+    var fineStop = new FineElevation(stopDir, File.ReadAllBytes(list));
+    using var dlStop = new DemDownloader(fineStop, src, 1, src);
+    string target = Path.Combine(stopDir, "release-test.bin");
+    var t0 = DateTime.UtcNow;
+    bool stopped = false;
+    try { dlStop.FetchFile("release-test.bin", target, 10, new string('0', 64), out _, out _, cancelled.Token); }
+    catch (OperationCanceledException) { stopped = (DateTime.UtcNow - t0).TotalSeconds < 5; }
+    Check(stopped && !File.Exists(target), "ER-16: a GLO-90 release file stops on a cancelled token, nothing fetched");
+}
+
+// FP-01 (the Fable pass of the 14 November 2026 review): chunk generation's wait for a square, bounded (the running game's)
+// or not (the spawn chunks'), ends with ServerStoppingException within a poll of the server's stop, so the generation thread
+// pauses before the game disposes the mods; and it still returns the download's answer when there is no stop
+{
+    var fineWait = new FineElevation(work + "-wait", File.ReadAllBytes(list));
+    using var dlWait = new DemDownloader(fineWait, src, 1);
+    var never = new TaskCompletionSource<bool>().Task;
+    bool stop = false;
+    dlWait.Stopping = () => stop;
+    foreach (var (budget, what) in new[] { (TimeSpan.FromMinutes(2), "the running game's two minutes"), (Timeout.InfiniteTimeSpan, "the spawn chunks' unbounded wait") })
+    {
+        stop = false;
+        var clock = Stopwatch.StartNew();
+        // (caught inside: ServerStoppingException is a TaskCanceledException, so a task it ends is Canceled, not Faulted)
+        var waiting = Task.Run(() =>
+        {
+            try { dlWait.AwaitForGeneration(10, 10, never, budget); return null; }
+            catch (Exception e) { return e; }
+        });
+        Thread.Sleep(600);
+        bool stillWaiting = !waiting.IsCompleted;
+        stop = true;
+        bool ended = waiting.Wait(TimeSpan.FromSeconds(5)) && waiting.Result is ServerStoppingException;
+        double after = clock.Elapsed.TotalSeconds;
+        Check(stillWaiting && ended && after < 0.6 + 2 * DemDownloader.StopPollMs / 1000.0 + 0.5,
+            $"FP-01: {what} for a square ends with ServerStoppingException {after:0.00} s after the call, the stop said at 0.6 s");
+    }
+    stop = false;
+    var done = new TaskCompletionSource<bool>();
+    var answered = Task.Run(() => dlWait.AwaitForGeneration(10, 10, done.Task, Timeout.InfiniteTimeSpan));
+    Thread.Sleep(400);
+    done.SetResult(true);
+    Check(answered.Wait(TimeSpan.FromSeconds(5)) && answered.Result, "FP-01: without a stop, the unbounded wait returns the download's answer");
+}
+
+// FP-11/FP-12: a generation entry point may wait for tiles for its own length, and the thread is as it was after it
+{
+    bool before = FineElevation.FetchAllowed;
+    FineElevation.FetchAllowed = false;
+    bool inner, nested;
+    using (FineElevation.Generating())
+    {
+        inner = FineElevation.FetchAllowed;
+        using (FineElevation.Generating()) { }
+        nested = FineElevation.FetchAllowed;
+    }
+    bool after = FineElevation.FetchAllowed;
+    FineElevation.FetchAllowed = true;
+    using (FineElevation.Generating()) { }
+    Check(inner && nested && !after && FineElevation.FetchAllowed, "FP-11: Generating() allows fetching inside its scope (nested too) and restores the thread's flag after it");
+    FineElevation.FetchAllowed = before;
+}
+
+// EA-0106 (the Fable pass's FP-17, L3): a damaged GeoTIFF directory throws InvalidDataException and nothing else, and
+// allocates no more than a GLO-90 tile's worth
+{
+    string tifPath = Directory.EnumerateFiles(src, "Copernicus_DSM_COG_30_*.tif").OrderBy(p => p).First();
+    byte[] tif = File.ReadAllBytes(tifPath);
+    int ifd = (int)BitConverter.ToUInt32(tif, 4), entries = BitConverter.ToUInt16(tif, ifd);
+    int invalid = 0, accepted = 0;
+    var others = new List<string>();
+    long most = 0;
+    void TryRead(byte[] m, string what)
+    {
+        long before = GC.GetAllocatedBytesForCurrentThread();
+        try { DemTiles.ReadGeoTiff(m); accepted++; }
+        catch (InvalidDataException) { invalid++; }
+        catch (Exception x) { others.Add(what + ": " + x.GetType().Name); }
+        most = Math.Max(most, GC.GetAllocatedBytesForCurrentThread() - before);
+    }
+    uint[] counts = { 0, 2, 0xFFFF, 0x10001, 0x7FFFFFFF, 0xFFFFFFFF };
+    uint[] places = { 0, 7, (uint)tif.Length - 2, (uint)tif.Length, 0x7FFFFFF0, 0xFFFFFFFF };
+    for (int i = 0; i < entries; i++)
+    {
+        int e = ifd + 2 + 12 * i;
+        foreach (uint c in counts) { var m = (byte[])tif.Clone(); System.Buffers.Binary.BinaryPrimitives.WriteUInt32LittleEndian(m.AsSpan(e + 4), c); TryRead(m, $"entry {i} count {c}"); }
+        foreach (uint v in places) { var m = (byte[])tif.Clone(); System.Buffers.Binary.BinaryPrimitives.WriteUInt32LittleEndian(m.AsSpan(e + 8), v); TryRead(m, $"entry {i} value {v}"); }
+        foreach (ushort t in new ushort[] { 0, 2, 7, 13, 16 }) { var m = (byte[])tif.Clone(); System.Buffers.Binary.BinaryPrimitives.WriteUInt16LittleEndian(m.AsSpan(e + 2), t); TryRead(m, $"entry {i} type {t}"); }
+    }
+    foreach (uint v in places) { var m = (byte[])tif.Clone(); System.Buffers.Binary.BinaryPrimitives.WriteUInt32LittleEndian(m.AsSpan(4), v); TryRead(m, $"directory at {v}"); }
+    { var m = (byte[])tif.Clone(); System.Buffers.Binary.BinaryPrimitives.WriteUInt16LittleEndian(m.AsSpan(ifd), 0xFFFF); TryRead(m, "65535 entries"); }
+    Check(others.Count == 0 && most < 200_000_000,
+        $"EA-0106: {invalid + accepted + others.Count} damaged GeoTIFF directories: {invalid} refused, {accepted} still read, {others.Count} other " +
+        $"exceptions{(others.Count > 0 ? " (" + string.Join("; ", others.Take(5)) + ")" : "")}; at most {most / 1e6:F0} MB allocated by one");
+
+    // (L8) a GeoTIFF of one degree but other dimensions than GLO-90's (another product) is read, but not kept as a tile
+    string tifName = Path.GetFileNameWithoutExtension(tifPath);
+    DemTiles.TryParseSourceName(tifName, out int oddLat, out int oddLon);
+    int Entry(byte[] f, int tag)
+    {
+        for (int i = 0; i < entries; i++) if (BitConverter.ToUInt16(f, ifd + 2 + 12 * i) == tag) return ifd + 2 + 12 * i;
+        return -1;
+    }
+    var odd = (byte[])tif.Clone();
+    int we = Entry(odd, 256), se = Entry(odd, 33550), half = DemTiles.Glo90Cols(oddLat) / 2;
+    if (BitConverter.ToUInt16(odd, we + 2) == 3) System.Buffers.Binary.BinaryPrimitives.WriteUInt16LittleEndian(odd.AsSpan(we + 8), (ushort)half);
+    else System.Buffers.Binary.BinaryPrimitives.WriteUInt32LittleEndian(odd.AsSpan(we + 8), (uint)half);
+    int scaleAt = (int)BitConverter.ToUInt32(odd, se + 8);
+    System.Buffers.Binary.BinaryPrimitives.WriteDoubleLittleEndian(odd.AsSpan(scaleAt), 2 * BitConverter.ToDouble(odd, scaleAt));
+    string oddSource = work + "-odd";
+    if (Directory.Exists(oddSource)) Directory.Delete(oddSource, true);
+    Directory.CreateDirectory(oddSource);
+    File.WriteAllBytes(Path.Combine(oddSource, tifName + ".tif"), odd);
+    var oddList = new byte[360 * 180 / 8];
+    int oddBit = DemTiles.SquareIndex(oddLat, oddLon);
+    oddList[oddBit >> 3] |= (byte)(0x80 >> (oddBit & 7));
+    var oddFine = new FineElevation(Path.Combine(oddSource, "glo90"), oddList);
+    var oddLog = new List<string>();
+    using (var dlOdd = new DemDownloader(oddFine, oddSource, 1, null) { Retries = 1, Log = s => { lock (oddLog) oddLog.Add(s); } })
+    {
+        int oddCols = DemTiles.ReadGeoTiff(odd).Cols;
+        bool kept = dlOdd.FetchBlocking(oddLat, oddLon);
+        Check(oddCols == half && !kept && !oddFine.IsHere(oddLat, oddLon) && oddLog.Any(l => l.Contains("not GLO-90's")),
+            $"EA-0106 (L8): a GeoTIFF of {oddCols} x 1200 cells for {DemTiles.ShortName(oddLat, oddLon)} is not kept ({oddLog.LastOrDefault()})");
+    }
+}
+
+// EA-0106 (FP-17, L2): a mirror's manifest larger than 16 MB, with an entry larger than a tile can be, or with one whose end
+// overflows, is refused: nothing is read from its parts
+{
+    string hostile = work + "-hostile";
+    if (Directory.Exists(hostile)) Directory.Delete(hostile, true);
+    var oneSquare = new byte[360 * 180 / 8];
+    int hb = DemTiles.SquareIndex(10, 20);
+    oneSquare[hb >> 3] |= (byte)(0x80 >> (hb & 7));
+    string sha0 = new string('0', 64);
+    string Manifest(long partBytes, long off, long len, string pad = "") =>
+        "{" + pad + "\"format\":\"egl\",\"formatVersion\":1,\"parts\":[{\"name\":\"p.zip\",\"bytes\":" + partBytes + "}],\"tiles\":{\"N10E020\":[1," + off + "," + len + ",\"" + sha0 + "\"]}}";
+    foreach (var (what, json) in new[]
+    {
+        ("an entry of 9 MB", Manifest(20_000_000, 0, 9_000_000)),
+        ("an entry whose end overflows", Manifest(1000, long.MaxValue - 10, 100)),
+        ("a manifest of 17 MB", Manifest(1000, 0, 100, new string(' ', 17 << 20))),
+    })
+    {
+        string repo = Path.Combine(hostile, what.Replace(' ', '-'));
+        Directory.CreateDirectory(repo);
+        File.WriteAllText(Path.Combine(repo, DemDownloader.ManifestName), json);
+        File.WriteAllBytes(Path.Combine(repo, "p.zip"), new byte[1000]);
+        var log = new List<string>();
+        using var dlH = new DemDownloader(new FineElevation(Path.Combine(repo, "glo90"), oneSquare), null, 1, repo) { Retries = 1, Log = s => { lock (log) log.Add(s); } };
+        bool got = dlH.FetchBlocking(10, 20);
+        string said = log.FirstOrDefault(l => l.Contains("manifest could not be had"));
+        Check(!got && said != null && dlH.BytesDownloaded == 0, $"EA-0106: a mirror's manifest with {what} is refused ({said})");
+    }
+}
+
+// EA-0100 (the Fable pass's FP-05): "download all" into a store that can't be written ends at the first tile, with the
+// store's error, never trying Copernicus; with too little room it doesn't start, nor does a fetch for generation; with room
+// it fetches every square
+{
+    string full = work + "-room";
+    if (Directory.Exists(full)) Directory.Delete(full, true);
+    string repo = Path.Combine(full, "repo"), cop = Path.Combine(full, "copernicus");
+    Directory.CreateDirectory(repo); Directory.CreateDirectory(cop);
+    var roomList = new byte[360 * 180 / 8];
+    var roomSquares = new List<(int, int)>();
+    for (int i = 0; i < 40; i++) roomSquares.Add((10 + i / 8, 20 + i % 8));
+    foreach (var (la, lo) in roomSquares) { int ix = DemTiles.SquareIndex(la, lo); roomList[ix >> 3] |= (byte)(0x80 >> (ix & 7)); }
+    long partBytes;
+    using (var part = new FileStream(Path.Combine(repo, "part1.zip"), FileMode.Create))
+    {
+        var sb = new System.Text.StringBuilder();
+        foreach (var (la, lo) in roomSquares)
+        {
+            int cols = DemTiles.Glo90Cols(la), rows = DemTiles.Glo90Rows;
+            var t = new DemTiles.Tile { LatS = la, LonW = lo, Cols = cols, Rows = rows, Heights = new short[cols * rows] };
+            for (int r = 0; r < rows; r++) for (int c = 0; c < cols; c++) t.Heights[r * cols + c] = (short)(200 + 80 * Math.Sin(r / 37.0) + 60 * Math.Cos(c / 23.0) + la);
+            t.Min = t.Heights.Min(); t.Max = t.Heights.Max();
+            byte[] tile = DemTiles.Encode(t);
+            if (sb.Length > 0) sb.Append(',');
+            sb.Append($"\"{DemTiles.ShortName(la, lo)}\":[1,{part.Position},{tile.Length},\"{Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(tile)).ToLowerInvariant()}\"]");
+            part.Write(tile);
+        }
+        partBytes = part.Position;
+        File.WriteAllText(Path.Combine(repo, "manifest.json"), "{\"format\":\"egl\",\"formatVersion\":1,\"parts\":[{\"name\":\"part1.zip\",\"bytes\":" + partBytes + "}],\"tiles\":{" + sb + "}}");
+    }
+    DemDownloader.Batch RunAll(DemDownloader d)
+    {
+        var clock = Stopwatch.StartNew();
+        Check(d.StartAll(3, DemDownloader.Origin.Repo), "EA-0100: download all starts");
+        while (d.All.Running && clock.Elapsed.TotalSeconds < 120) Thread.Sleep(50);
+        return d.All;
+    }
+
+    // a store where every tile write fails (a folder stands where each tile goes, as a full disk refuses the write)
+    var logFull = new List<string>();
+    var fineFull = new FineElevation(Path.Combine(full, "glo90-full"), roomList);
+    foreach (var (la, lo) in roomSquares) Directory.CreateDirectory(fineFull.PathOf(la, lo));
+    using (var dlFull = new DemDownloader(fineFull, cop, 3, repo) { Log = s => { lock (logFull) logFull.Add(s); } })
+    {
+        var bFull = RunAll(dlFull);
+        bool viaCopernicus;
+        lock (logFull) viaCopernicus = logFull.Any(l => l.Contains("Copernicus"));
+        Check(!bFull.Running && bFull.Done == 0 && bFull.Error != null && bFull.Error.Contains("could not be written") && !viaCopernicus
+            && dlFull.BytesDownloaded < partBytes / 4,
+            $"EA-0100: into a store that can't be written, download all ends at once with the store's error ('{bFull.Error}'), " +
+            $"{dlFull.BytesDownloaded:N0} of {partBytes:N0} bytes read, Copernicus not tried; {logFull.Count} log lines");
+    }
+
+    // too little room: download all doesn't start and nothing is read; (Fable's re-review of 1926d8f) a square for generation
+    // is still fetched with 0.2 GB free (its floor is GenerationReserve), and fails at once without trying Copernicus with 50 MB
+    var logLow = new List<string>();
+    var fineLow = new FineElevation(Path.Combine(full, "glo90-low"), roomList);
+    long freeLow = 200_000_000;
+    using (var dlLow = new DemDownloader(fineLow, cop, 3, repo) { FreeSpace = () => freeLow, Log = s => { lock (logLow) logLow.Add(s); } })
+    {
+        var bLow = RunAll(dlLow);
+        Check(bLow.Done == 0 && bLow.Error != null && bLow.Error.Contains("free on the disk") && dlLow.BytesDownloaded == 0
+            && !Directory.EnumerateFiles(fineLow.Folder, "*" + FineElevation.FileExtension).Any(),
+            $"EA-0100: with 0.2 GB free and a 1 GB reserve download all does not start ('{bLow.Error}'), nothing read or written");
+        var (la0, lo0) = roomSquares[0];
+        bool gen = dlLow.FetchAsync(la0, lo0).Wait(TimeSpan.FromSeconds(30)) && dlLow.FetchAsync(la0, lo0).Result;
+        Check(gen && fineLow.IsHere(la0, lo0), "EA-0100: a square for generation is still fetched with 0.2 GB free (generation's floor is 0.1 GB)");
+        freeLow = 50_000_000;
+        long before = dlLow.BytesDownloaded;
+        var (la1, lo1) = roomSquares[1];
+        bool got = dlLow.FetchAsync(la1, lo1).Wait(TimeSpan.FromSeconds(30)) && dlLow.FetchAsync(la1, lo1).Result;
+        bool tried;
+        lock (logLow) tried = logLow.Any(l => l.Contains("Copernicus"));
+        Check(!got && dlLow.BytesDownloaded == before && !tried && dlLow.StoreError != null,
+            "EA-0100: with 50 MB free a square for generation fails without a byte read or Copernicus tried");
+    }
+
+    // with room: every square, no error
+    var fineOk = new FineElevation(Path.Combine(full, "glo90-ok"), roomList);
+    using (var dlOk = new DemDownloader(fineOk, cop, 3, repo) { FreeSpace = () => 100_000_000_000 })
+    {
+        var bOk = RunAll(dlOk);
+        Check(bOk.Done == roomSquares.Count && bOk.Error == null && bOk.Failed == 0,
+            $"EA-0100: with room download all fetches every square ({bOk.Done} of {roomSquares.Count}, error '{bOk.Error}')");
+    }
+}
+
+// EA-0116 T-L10: a tile that can't be read for a moment (another process holds it) is not set aside as damaged; it is read
+// once it is free. D-R3: a killed process's leftovers are swept: tiles' unique .part files an hour old, .bad tiles 30 days
+// old; a release file's own .part (to be resumed), fresh ones and .differs tiles stay
+{
+    string lockedDir = work + "-locked";
+    if (Directory.Exists(lockedDir)) Directory.Delete(lockedDir, true);
+    var fineL = new FineElevation(lockedDir, File.ReadAllBytes(list));
+    Directory.CreateDirectory(fineL.Folder);
+    var someTile = Directory.EnumerateFiles(work, "*" + FineElevation.FileExtension).First();
+    var heldTile = DemTiles.Decode(File.ReadAllBytes(someTile));
+    string heldPath = fineL.PathOf(heldTile.LatS, heldTile.LonW);
+    File.Copy(someTile, heldPath);
+    bool readWhileHeld, readAfter;
+    using (new FileStream(heldPath, FileMode.Open, FileAccess.ReadWrite, FileShare.None))
+        readWhileHeld = fineL.TryHeight(heldTile.LatS + 0.5, heldTile.LonW + 0.5, out _);
+    fineL.TileArrived(heldTile.LatS, heldTile.LonW);
+    readAfter = fineL.TryHeight(heldTile.LatS + 0.5, heldTile.LonW + 0.5, out _);
+    Check(!readWhileHeld && readAfter && !File.Exists(heldPath + ".bad") && File.Exists(heldPath),
+        $"EA-0116 T-L10: a tile held by another process is not set aside ({fineL.LastError}), and is read once free");
+
+    string Touch(string name, TimeSpan age)
+    {
+        string p = Path.Combine(fineL.Folder, name);
+        File.WriteAllBytes(p, new byte[10]);
+        File.SetLastWriteTimeUtc(p, DateTime.UtcNow - age);
+        return p;
+    }
+    var oldPart = Touch("N10E020.egl.0123456789ab.part", TimeSpan.FromHours(2));
+    var newPart = Touch("N10E021.egl.0123456789ac.part", TimeSpan.FromMinutes(5));
+    var resumable = Touch("lakes-glo90-2.bin.part", TimeSpan.FromDays(3));
+    var oldBad = Touch("N10E022.egl.bad", TimeSpan.FromDays(40));
+    var newBad = Touch("N10E023.egl.bad", TimeSpan.FromDays(2));
+    var differs = Touch("N10E024.egl.differs", TimeSpan.FromDays(400));
+    int swept = fineL.SweepLeftovers();
+    Check(swept == 2 && !File.Exists(oldPart) && !File.Exists(oldBad) && File.Exists(newPart) && File.Exists(resumable) && File.Exists(newBad) && File.Exists(differs)
+        && File.Exists(heldPath), $"EA-0116 D-R3: {swept} leftovers swept (an hour-old tile .part, a 40-day-old .bad); a release file's .part, fresh ones, .differs and tiles kept");
+}
+
+// EA-0099 (the Fable pass's FP-03): a square whose fetch failed for a reason that may pass, with the server's Unavailable
+// handler set, throws for the chunk being made and is not kept on the built-in heights (no fallback marked); without the
+// handler, or where the sources lack the square, it falls back as before
+{
+    var fineU = new FineElevation(work + "-unavailable", File.ReadAllBytes(list));
+    int sessionFallbacks = 0, forGood = 0, told = 0;
+    fineU.Fetch = (_, _) => false;
+    fineU.Lacks = (la, _) => la == 28;
+    fineU.FellBackForSession = (_, _) => sessionFallbacks++;
+    fineU.FellBack = (_, _) => forGood++;
+    fineU.Unavailable = (la, lo) => { told++; throw new TileUnavailableException(la, lo, "test"); };
+    FineElevation.FetchAllowed = true;
+    TileUnavailableException thrown = null;
+    try { fineU.TryHeight(27.5, 86.5, out _); } catch (TileUnavailableException e) { thrown = e; }
+    Check(thrown != null && thrown.LatS == 27 && thrown.LonW == 86 && told == 1 && !fineU.IsFallback(27, 86) && sessionFallbacks == 0,
+        "EA-0099: a square that can't be had now throws TileUnavailableException for the chunk and is not kept on built-in heights");
+    TileUnavailableException again = null;
+    try { fineU.TryHeight(27.5, 86.5, out _); } catch (TileUnavailableException e) { again = e; }
+    Check(again != null && told == 2, "EA-0099: and so it does at the next read (a later chunk), not a fallback from the first");
+    bool lacked = fineU.TryHeight(28.5, 86.5, out _);
+    Check(!lacked && forGood == 1 && fineU.IsFallbackForGood(28, 86) && told == 2,
+        "EA-0099: a square the sources lack still keeps the built-in heights for good, Unavailable not asked");
+    // outside a chunk pass (a map region): true, the built-in heights for this read, the square not given up
+    int asked = 0;
+    fineU.Unavailable = (_, _) => { asked++; return true; };
+    bool outside1 = fineU.TryHeight(27.5, 88.5, out _), outside2 = fineU.TryHeight(27.5, 88.5, out _);
+    Check(!outside1 && !outside2 && asked == 2 && !fineU.IsFallback(27, 88) && sessionFallbacks == 0,
+        "EA-0099: outside a chunk pass the read takes the built-in heights, the square is not given up and is asked for again");
+    fineU.Unavailable = (_, _) => false;
+    bool before = fineU.TryHeight(27.5, 87.5, out _);
+    Check(!before && sessionFallbacks == 1 && fineU.IsFallback(27, 87) && !fineU.IsFallbackForGood(27, 87),
+        "EA-0099: when Unavailable says so (before the game runs), the square falls back for this session as before");
+    bool outsideScope = FineElevation.InChunkPass, inner, afterInner;
+    using (FineElevation.ChunkPass())
+    {
+        using (FineElevation.ChunkPass()) inner = FineElevation.InChunkPass;
+        afterInner = FineElevation.InChunkPass;
+    }
+    Check(!outsideScope && inner && afterInner && !FineElevation.InChunkPass, "EA-0099: the chunk pass scope nests and ends");
+    FineElevation.FetchAllowed = false;
+}
+
 // the downloader from a local folder, into a fresh folder
 string work2 = work + "-dl";
 if (Directory.Exists(work2)) Directory.Delete(work2, true);
@@ -152,6 +485,58 @@ using (var dl = new DemDownloader(fine2, src) { Log = s => Console.WriteLine("  
     FineElevation.FetchAllowed = false;
     var (srcCount, here, bytes) = dl.Census();
     Check(srcCount == 26475 && here == 2, $"census: {srcCount} source squares, {here} here ({bytes / 1e6:F1} MB)");
+}
+// (Fable's overview low 8) a fetch from Copernicus doesn't wait for the release's manifest first: a release that never
+// answers (a listener that takes the connection and stays silent; the transport would wait 3 minutes) doesn't hold it up
+{
+    var silent = new System.Net.Sockets.TcpListener(System.Net.IPAddress.Loopback, 0);
+    silent.Start();
+    var held = new System.Collections.Concurrent.ConcurrentBag<System.Net.Sockets.Socket>();
+    _ = Task.Run(async () => { try { while (true) held.Add(await silent.AcceptSocketAsync()); } catch (Exception) { } });
+    string mute = $"http://127.0.0.1:{((System.Net.IPEndPoint)silent.LocalEndpoint).Port}/";
+    string muteWork = work + "-mute";
+    if (Directory.Exists(muteWork)) Directory.Delete(muteWork, true);
+    var fineM = new FineElevation(muteWork, File.ReadAllBytes(list));
+    var dlM = new DemDownloader(fineM, src, 3, mute) { Retries = 1, Log = s => Console.WriteLine("  log: " + s) };
+    string first = Directory.EnumerateFiles(src, "Copernicus_DSM_COG_30_*.tif").Select(Path.GetFileNameWithoutExtension).OrderBy(n => n).First();
+    DemTiles.TryParseSourceName(first, out int laM, out int loM);
+    var muteClock = Stopwatch.StartNew();
+    var fetchM = dlM.FetchAsync(laM, loM, copernicus: true);
+    bool doneM = fetchM.Wait(TimeSpan.FromSeconds(30));
+    Check(doneM && fetchM.Result && dlM.TilesConverted == 1 && fineM.IsHere(laM, loM),
+        $"low 8: from Copernicus with a release that never answers, converted at once ({muteClock.Elapsed.TotalSeconds:F1} s), the manifest not waited for");
+
+    // EA-0121: /earth tp's wait for a square (Core.TeleportWait). The bench's case, a release that never answers and no
+    // Copernicus: the wait's limit (here 1 s) ends with the fetch still running, and nobody is teleported; a release that
+    // refuses the connection: the fetch fails and the message gives the manifest's reason; a square fetched, or one the
+    // sources lack (built-in heights for good, its chunks are made): teleported
+    string sqT = DemTiles.ShortName(laM, loM);
+    var limitT = TimeSpan.FromSeconds(1);
+    var dlT = new DemDownloader(new FineElevation(muteWork + "-tp", File.ReadAllBytes(list)), null, 3, mute) { Retries = 1, Log = s => Console.WriteLine("  log: " + s) };
+    var hanging = dlT.FetchAsync(laM, loM);
+    Task.WhenAny(hanging, Task.Delay(limitT)).Wait();
+    var (goT, msgT) = TeleportWait.After(hanging, dlT.Lacks(laM, loM), dlT.WhyFailed(laM, loM), sqT, "there", limitT);
+    Check(!hanging.IsCompleted && !goT && msgT.Contains("not here after") && msgT.Contains("not teleported"),
+        $"EA-0121: a release that never answers: the wait ends at its limit, no teleport ({msgT})");
+    dlT.Dispose();
+    var probe = new System.Net.Sockets.TcpListener(System.Net.IPAddress.Loopback, 0);
+    probe.Start();
+    int closedPort = ((System.Net.IPEndPoint)probe.LocalEndpoint).Port;
+    probe.Stop();
+    using (var dlR = new DemDownloader(new FineElevation(muteWork + "-tpR", File.ReadAllBytes(list)), null, 3, $"http://127.0.0.1:{closedPort}/") { Retries = 1, Log = s => Console.WriteLine("  log: " + s) })
+    {
+        var refusedT = dlR.FetchAsync(laM, loM);
+        bool endedR = refusedT.Wait(TimeSpan.FromSeconds(90));
+        var (goR, msgR) = TeleportWait.After(refusedT, dlR.Lacks(laM, loM), dlR.WhyFailed(laM, loM), sqT, "there", TeleportWait.Limit);
+        Check(endedR && !refusedT.Result && !goR && msgR.Contains("manifest could not be had") && msgR.Contains("not teleported"),
+            $"EA-0121: a release that refuses the connection: the fetch fails, no teleport, the reason given ({msgR})");
+    }
+    Check(TeleportWait.After(Task.FromResult(true), false, null, sqT, "there", limitT).Teleport
+        && TeleportWait.After(Task.FromResult(false), true, "the sources lack it", sqT, "there", limitT).Teleport,
+        "EA-0121: teleported when the tile is here, or when the sources lack the square (built-in heights for good)");
+    silent.Stop();
+    foreach (var c in held) c.Dispose();
+    if (doneM) dlM.Dispose();
 }
 // review A3: a square no source has (the folder lacks it) falls back for good and is saved with the world; one whose fetch
 // fails (here a source file that doesn't convert, as a broken download would) falls back for this session only
@@ -384,11 +769,115 @@ if (storeArg != null && Directory.Exists(storeArg))
         Check(File.Exists(Path.Combine(fineA.Folder, DemDownloader.ManifestCache)), "the release's manifest is kept beside the tiles");
         Check(!dl.FetchBlocking(brokenLat, brokenLon) && !fineA.IsHere(brokenLat, brokenLon), $"{broken}: a damaged copy in the release is not kept (no Copernicus here)");
     }
-    // the damaged square from Copernicus instead
+    // EA-0106 (Fable's re-review of 255baa7): the shipped heights table is the release's: every 50th tile of the store decodes
+    // to the table's checksum
+    {
+        int sampled = 0, agree = 0;
+        foreach (var n in all.Where((n, i) => i % 50 == 0))
+        {
+            var t = DemTiles.Decode(Stored(n));
+            sampled++;
+            if (releaseHeights != null && releaseHeights.TryGet(t.LatS, t.LonW, out ulong sum) && sum == DemTiles.Checksum(t.Heights)) agree++;
+        }
+        Check(releaseHeights != null && releaseHeights.Count == all.Count && agree == sampled,
+            $"EA-0106: data/{Glo90Heights.FileName} holds {releaseHeights?.Count} squares ({all.Count} in the store); {agree} of {sampled} sampled tiles' heights agree");
+    }
+    // the damaged square from Copernicus instead: its heights are the release's (EA-0106), so it is kept
     var fineB = new FineElevation(Fresh("-relB"), bitmap);
-    using (var dl = new DemDownloader(fineB, src, 3, rel) { Retries = 1, Log = s => Console.WriteLine("  log: " + s) })
-        Check(dl.FetchBlocking(brokenLat, brokenLon) && dl.TilesConverted == 1 && dl.TilesFetched == 0 && SameHeights(fineB.Folder, broken),
-            $"{broken}: from Copernicus where the release's copy is damaged, the same heights as the store's");
+    using (var dl = new DemDownloader(fineB, src, 3, rel) { Retries = 1, ReleaseHeights = releaseHeights, Log = s => Console.WriteLine("  log: " + s) })
+        Check(dl.FetchBlocking(brokenLat, brokenLon) && dl.TilesConverted == 1 && dl.TilesFetched == 0 && dl.TilesDiffering == 0 && SameHeights(fineB.Folder, broken),
+            $"{broken}: from Copernicus where the release's copy is damaged, the release's heights (judged by heights, on this runtime: {Environment.Version})");
+
+    // EA-0106 (the Fable pass's FP-15): a conversion that is not the release's tile is not kept, and the release's is preferred.
+    // A one-square release whose tile for the broken square has one height changed (as if Copernicus's file had been issued
+    // again since): from Copernicus only, the conversion is refused and the release's tile kept; with the release's part
+    // gone, neither is kept, and the square is not one the sources lack
+    {
+        string rel2 = Fresh("-rel2");
+        Directory.CreateDirectory(rel2);
+        var other = DemTiles.Decode(Stored(broken));
+        other.Heights[12345] += 7;
+        other.Min = other.Heights.Min(); other.Max = other.Heights.Max();
+        byte[] altered = DemTiles.Encode(other);
+        File.WriteAllBytes(Path.Combine(rel2, "p.zip"), altered);
+        File.WriteAllText(Path.Combine(rel2, DemDownloader.ManifestName), System.Text.Json.JsonSerializer.Serialize(new Dictionary<string, object>
+        {
+            ["format"] = "egl", ["formatVersion"] = 1,
+            ["parts"] = new[] { new Dictionary<string, object> { ["name"] = "p.zip", ["bytes"] = altered.Length } },
+            ["tiles"] = new Dictionary<string, object[]> { [broken] = new object[] { 1, 0, altered.Length, Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(altered)).ToLowerInvariant() } },
+        }));
+        var alteredHeights = new Glo90Heights(new Dictionary<(int LatS, int LonW), ulong> { [(brokenLat, brokenLon)] = DemTiles.Checksum(other.Heights) });
+        var fineE = new FineElevation(Fresh("-relE"), bitmap);
+        using (var dl = new DemDownloader(fineE, src, 3, rel2) { Retries = 1, ReleaseHeights = alteredHeights, Log = s => Console.WriteLine("  log: " + s) })
+        {
+            bool got = dl.FetchAsync(brokenLat, brokenLon, copernicus: true).GetAwaiter().GetResult();
+            Check(got && dl.TilesConverted == 0 && dl.TilesFetched == 1 && dl.TilesDiffering == 1
+                && File.ReadAllBytes(fineE.PathOf(brokenLat, brokenLon)).AsSpan().SequenceEqual(altered),
+                $"EA-0106: {broken} from Copernicus is not the release's tile: not kept, the release's instead ({dl.TilesConverted} converted, {dl.TilesFetched} fetched)");
+        }
+        File.Delete(Path.Combine(rel2, "p.zip"));
+        var fineF = new FineElevation(Fresh("-relF"), bitmap);
+        using (var dl = new DemDownloader(fineF, src, 3, rel2) { Retries = 1, ReleaseHeights = alteredHeights, Log = s => Console.WriteLine("  log: " + s) })
+            Check(!dl.FetchBlocking(brokenLat, brokenLon) && !fineF.IsHere(brokenLat, brokenLon) && !dl.Lacks(brokenLat, brokenLon) && dl.TilesDiffering == 1,
+                $"EA-0106: {broken} with the release's part gone: Copernicus's conversion still not kept, and the square isn't one the sources lack");
+    }
+
+    // EA-0106 (FP-15): tiles here are judged by their heights at their first read in a session: one converted from Copernicus
+    // with the bucket's ETag and the release's heights is taken as it is (whatever its bytes); one with other heights stays in
+    // use while the release's is fetched beside it
+    {
+        var okNames = part1.Where(n => n != broken).ToList();
+        var fineG = new FineElevation(Fresh("-relG"), bitmap);
+        Directory.CreateDirectory(fineG.Folder);
+        DemDownloader.TryParseShortName(okNames[0], out int laA, out int loA);
+        DemDownloader.TryParseShortName(okNames[1], out int laB, out int loB);
+        DemDownloader.TryParseShortName(okNames[2], out int laC, out int loC);
+        var asBucket = DemTiles.Decode(Stored(okNames[0]));
+        asBucket.SourceETag = "5d41402abc4b2a76b9719d911017c592-2";
+        File.WriteAllBytes(fineG.PathOf(laA, loA), DemTiles.Encode(asBucket));
+        var otherHeights = DemTiles.Decode(Stored(okNames[1]));
+        otherHeights.Heights[777] += 3;
+        otherHeights.Min = otherHeights.Heights.Min(); otherHeights.Max = otherHeights.Heights.Max();
+        File.WriteAllBytes(fineG.PathOf(laB, loB), DemTiles.Encode(otherHeights));
+        using (var dl = new DemDownloader(fineG, null, 3, rel) { Retries = 1, ReleaseHeights = releaseHeights, Log = s => Console.WriteLine("  log: " + s) })
+        {
+            fineG.Verify = dl.KeptMatches;
+            fineG.Replace = dl.FetchReplacement;
+            fineG.Fetch = (la, lo) => dl.FetchBlocking(la, lo);
+            Check(dl.FetchBlocking(laC, loC), "EA-0106: a third square fetched (the manifest is here)");
+            bool hA, hB;
+            using (FineElevation.Generating())
+            {
+                hA = fineG.TryHeight(laA + 0.5, loA + 0.5, out _);
+                hB = fineG.TryHeight(laB + 0.5, loB + 0.5, out _);
+            }
+            // (Fable's re-review of 90692fe) the differing tile stays in use; the release's arrives beside it and takes its place
+            // at the next start, the old one kept as .differs
+            string pathB = fineG.PathOf(laB, loB), releaseB = pathB + FineElevation.ReplacementExtension;
+            var waitRelease = Stopwatch.StartNew();
+            while (!File.Exists(releaseB) && waitRelease.Elapsed.TotalSeconds < 20) Thread.Sleep(50);
+            bool keptInUse = File.ReadAllBytes(pathB).AsSpan().SequenceEqual(DemTiles.Encode(otherHeights)) && !File.Exists(pathB + FineElevation.DiffersExtension);
+            bool bucketKept = File.ReadAllBytes(fineG.PathOf(laA, loA)).AsSpan().SequenceEqual(DemTiles.Encode(asBucket))
+                && !File.Exists(fineG.PathOf(laA, loA) + FineElevation.ReplacementExtension);
+            Check(hA && hB && bucketKept && keptInUse && File.Exists(releaseB) && dl.TilesDiffering == 1,
+                $"EA-0106: tiles here at their first read: {okNames[0]} (the bucket's ETag, the release's heights) taken as it is, {okNames[1]} " +
+                $"(other heights) still in use with the release's fetched beside it ({dl.TilesDiffering} differing)");
+            var said = new List<string>();
+            var (sameH, otherH) = fineG.ApplyReplacements(said.Add);
+            Check(sameH == 0 && otherH == 1 && Same(fineG.Folder, okNames[1]) && File.Exists(pathB + FineElevation.DiffersExtension) && !File.Exists(releaseB)
+                && said.Count == 1 && said[0].Contains(okNames[1]) && said[0].Contains("keep the old heights"),
+                $"EA-0106: at the next start the release's tile takes the differing one's place, the old kept as .differs ('{said.FirstOrDefault()}')");
+            // the same heights in another encoding: replaced without a .differs file or a word
+            var reencoded = DemTiles.Decode(Stored(okNames[2]));
+            reencoded.SourceBytes += 1;
+            File.WriteAllBytes(fineG.PathOf(laC, loC), DemTiles.Encode(reencoded));
+            File.WriteAllBytes(fineG.PathOf(laC, loC) + FineElevation.ReplacementExtension, Stored(okNames[2]));
+            said.Clear();
+            var (sameC, otherC) = fineG.ApplyReplacements(said.Add);
+            Check(sameC == 1 && otherC == 0 && Same(fineG.Folder, okNames[2]) && !File.Exists(fineG.PathOf(laC, loC) + FineElevation.DiffersExtension) && said.Count == 0,
+                "EA-0106: a replacement with the same heights (another encoding) takes the place silently, no .differs");
+        }
+    }
     // download all from the release
     var fineC = new FineElevation(Fresh("-relC"), bitmap);
     Directory.CreateDirectory(fineC.Folder);

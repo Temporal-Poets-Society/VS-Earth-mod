@@ -1,6 +1,6 @@
 # 0043: Remove an unsupported publication manifest field
 
-Date: 31 October 2026. Status: upload blocker fixed in the unpublished Earth 1.0.0 archive; author must retry the upload.
+Date: 31 October 2026. Status: done; Earth 1.0.0 was published on Mod DB on 31 October 2026 (tag v1.0.0), and the packager still rejects the field.
 
 The author’s Mod DB Add Release screenshot rejects the uploaded `earthmap-1.0.0.zip`: **Unexpected property 'incompatibilities' on modinfo.json with value '{}'**. The empty field existed in the candidate manifest but is not accepted by the site's parser. It is not needed: it declares no incompatibilities. The source manifest now omits it. The release packager refuses to package it if it is reintroduced.
 
@@ -13,3 +13,9 @@ Verification: Release build has zero warnings/errors; ZIP CRCs pass; complete pa
 The second screenshot and author-provided URL identify the public alias as **earth**, at https://mods.vintagestory.at/earth. The publication draft now records that alias; internal mod ID `earthmap` stays unchanged.
 
 Sources: author upload-error/alias screenshots; `modinfo.json`; `tools/package-publication.py`; [current package verification](../../../../../docs/publication-packages-1.0.0.json). The [upstream Mod DB upload wrapper](https://github.com/anegostudios/vsmoddb/blob/master/lib/modinfo.php) invokes its separate `modpeek` parser, so successful game startup alone was not proof of upload compatibility.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: upload blocker fixed in the unpublished Earth 1.0.0 archive; author must retry the upload.

@@ -1,0 +1,660 @@
+== rivers.bin (RiverData.Read) (12,132,790 B): unchanged -> ok (171 MB allocated, 267 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. int32@4=MAX
+      .. int32@4=-1
+      .. int32@4=0
+      .. int32@4=16M
+      .. int32@8=MAX
+      .. int32@8=-1
+      .. int32@8=0
+      .. int32@8=16M
+      .. int32@12=MAX
+      .. int32@12=-1
+      .. int32@12=0
+      .. int32@12=16M
+      .. int32@16=MAX
+      .. int32@16=-1
+      .. int32@16=0
+      .. int32@16=16M
+      .. int32@20=MAX
+      .. int32@20=-1
+      .. int32@20=0
+      .. int32@20=16M
+      .. int32@24=MAX
+      .. int32@24=-1
+      .. int32@24=0
+      .. int32@24=16M
+      .. int32@28=MAX
+      .. int32@28=-1
+      .. int32@28=0
+      .. int32@28=16M
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+    ~ accepted (no error)  x1   <- int32@8=0
+   !! load: ArgumentOutOfRangeException  x1   <- int32@8=-1
+   !! load: ArgumentOutOfRangeException [ALLOC 5554 MB]  x2   <- int32@4=-1; int32@4=0
+      load: InvalidDataException  x6
+   !! load: InvalidOperationException  x25   <- int32@12=MAX; int32@12=-1; int32@12=0; int32@12=16M; int32@16=MAX; int32@16=-1; ...
+   !! load: OutOfMemoryException  x1   <- int32@8=MAX
+   !! load: OutOfMemoryException [ALLOC 4370 MB]  x2   <- int32@4=MAX; int32@4=16M
+== islands.bin (9,891,240 B): unchanged -> ok (155 MB allocated, 316 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. int32@4=MAX
+      .. int32@4=-1
+      .. int32@4=0
+      .. int32@4=16M
+      .. int32@8=MAX
+      .. int32@8=-1
+      .. int32@8=0
+      .. int32@8=16M
+      .. int32@12=MAX
+      .. int32@12=-1
+      .. int32@12=0
+      .. int32@12=16M
+      .. int32@16=MAX
+      .. int32@16=-1
+      .. int32@16=0
+      .. int32@16=16M
+      .. int32@20=MAX
+      .. int32@20=-1
+      .. int32@20=0
+      .. int32@20=16M
+      .. int32@24=MAX
+      .. int32@24=-1
+      .. int32@24=0
+      .. int32@24=16M
+      .. int32@28=MAX
+      .. int32@28=-1
+      .. int32@28=0
+      .. int32@28=16M
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+    ~ accepted (no error)  x1   <- int32@16=0
+   !! load: ArgumentException  x1   <- int32@16=16M
+   !! load: IndexOutOfRangeException  x3   <- half; minus 1 byte; int32@12=16M
+      load: InvalidDataException  x12
+   !! load: InvalidOperationException  x16   <- int32@20=MAX; int32@20=-1; int32@20=0; int32@20=16M; int32@24=MAX; int32@24=-1; ...
+   !! load: OutOfMemoryException  x2   <- int32@12=MAX; int32@16=MAX
+   !! load: OverflowException  x3   <- int32@12=-1; int32@12=0; int32@16=-1
+== lakes.bin (17,444 B): unchanged -> ok (1 MB allocated, 1 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. int32@4=MAX
+      .. int32@4=-1
+      .. int32@4=0
+      .. int32@4=16M
+      .. int32@8=MAX
+      .. int32@8=-1
+      .. int32@8=0
+      .. int32@8=16M
+      .. int32@12=MAX
+      .. int32@12=-1
+      .. int32@12=0
+      .. int32@12=16M
+      .. int32@16=MAX
+      .. int32@16=-1
+      .. int32@16=0
+      .. int32@16=16M
+      .. int32@20=MAX
+      .. int32@20=-1
+      .. int32@20=0
+      .. int32@20=16M
+      .. int32@24=MAX
+      .. int32@24=-1
+      .. int32@24=0
+      .. int32@24=16M
+      .. int32@28=MAX
+      .. int32@28=-1
+      .. int32@28=0
+      .. int32@28=16M
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+    ~ accepted (no error)  x2   <- int32@12=0; int32@16=0
+   !! load: ArgumentOutOfRangeException  x3   <- half; minus 1 byte; int32@16=16M
+   !! load: IndexOutOfRangeException  x1   <- int32@12=16M
+      load: InvalidDataException  x12
+   !! load: InvalidOperationException  x16   <- int32@20=MAX; int32@20=-1; int32@20=0; int32@20=16M; int32@24=MAX; int32@24=-1; ...
+   !! load: OutOfMemoryException  x2   <- int32@12=MAX; int32@16=MAX
+   !! load: OverflowException  x2   <- int32@12=-1; int32@16=-1
+== shores.bin (126,401 B): unchanged -> ok (2 MB allocated, 4 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. int32@4=MAX
+      .. int32@4=-1
+      .. int32@4=0
+      .. int32@4=16M
+      .. int32@8=MAX
+      .. int32@8=-1
+      .. int32@8=0
+      .. int32@8=16M
+      .. int32@12=MAX
+      .. int32@12=-1
+      .. int32@12=0
+      .. int32@12=16M
+      .. int32@16=MAX
+      .. int32@16=-1
+      .. int32@16=0
+      .. int32@16=16M
+      .. int32@20=MAX
+      .. int32@20=-1
+      .. int32@20=0
+      .. int32@20=16M
+      .. int32@24=MAX
+      .. int32@24=-1
+      .. int32@24=0
+      .. int32@24=16M
+      .. int32@28=MAX
+      .. int32@28=-1
+      .. int32@28=0
+      .. int32@28=16M
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+    ~ accepted (no error)  x2   <- int32@12=0; int32@16=0
+   !! load: ArgumentException  x1   <- minus 1 byte
+   !! load: IndexOutOfRangeException  x3   <- half; int32@12=16M; int32@16=16M
+      load: InvalidDataException  x12
+   !! load: InvalidOperationException  x16   <- int32@20=MAX; int32@20=-1; int32@20=0; int32@20=16M; int32@24=MAX; int32@24=-1; ...
+   !! load: OutOfMemoryException  x2   <- int32@12=MAX; int32@16=MAX
+   !! load: OverflowException  x2   <- int32@12=-1; int32@16=-1
+== outlets.bin (3,782 B): unchanged -> ok (0 MB allocated, 0 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. int32@4=MAX
+      .. int32@4=-1
+      .. int32@4=0
+      .. int32@4=16M
+      .. int32@8=MAX
+      .. int32@8=-1
+      .. int32@8=0
+      .. int32@8=16M
+      .. int32@12=MAX
+      .. int32@12=-1
+      .. int32@12=0
+      .. int32@12=16M
+      .. int32@16=MAX
+      .. int32@16=-1
+      .. int32@16=0
+      .. int32@16=16M
+      .. int32@20=MAX
+      .. int32@20=-1
+      .. int32@20=0
+      .. int32@20=16M
+      .. int32@24=MAX
+      .. int32@24=-1
+      .. int32@24=0
+      .. int32@24=16M
+      .. int32@28=MAX
+      .. int32@28=-1
+      .. int32@28=0
+      .. int32@28=16M
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+    ~ accepted (no error)  x1   <- int32@12=0
+   !! load: ArgumentOutOfRangeException  x1   <- half
+   !! load: IndexOutOfRangeException  x3   <- header only (16 B); minus 1 byte; int32@12=16M
+      load: InvalidDataException  x11
+   !! load: InvalidOperationException  x20   <- int32@16=MAX; int32@16=-1; int32@16=0; int32@16=16M; int32@20=MAX; int32@20=-1; ...
+   !! load: OutOfMemoryException  x1   <- int32@12=MAX
+   !! load: OverflowException  x1   <- int32@12=-1
+== coasts.bin (9,477,193 B): unchanged -> ok (10 MB allocated, 2 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. int32@4=MAX
+      .. int32@4=-1
+      .. int32@4=0
+      .. int32@4=16M
+      .. int32@8=MAX
+      .. int32@8=-1
+      .. int32@8=0
+      .. int32@8=16M
+      .. int32@12=MAX
+      .. int32@12=-1
+      .. int32@12=0
+      .. int32@12=16M
+      .. int32@16=MAX
+      .. int32@16=-1
+      .. int32@16=0
+      .. int32@16=16M
+      .. int32@20=MAX
+      .. int32@20=-1
+      .. int32@20=0
+      .. int32@20=16M
+      .. int32@24=MAX
+      .. int32@24=-1
+      .. int32@24=0
+      .. int32@24=16M
+      .. int32@28=MAX
+      .. int32@28=-1
+      .. int32@28=0
+      .. int32@28=16M
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+    ~ accepted (no error)  x15   <- int32@8=MAX; int32@8=-1; int32@8=0; int32@8=16M; int32@24=MAX; int32@24=-1; ...
+      load: InvalidDataException  x23
+== sea-referee.bin (6,262,394 B): unchanged -> ok (6 MB allocated, 0 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. int32@4=MAX
+      .. int32@4=-1
+      .. int32@4=0
+      .. int32@4=16M
+      .. int32@8=MAX
+      .. int32@8=-1
+      .. int32@8=0
+      .. int32@8=16M
+      .. int32@12=MAX
+      .. int32@12=-1
+      .. int32@12=0
+      .. int32@12=16M
+      .. int32@16=MAX
+      .. int32@16=-1
+      .. int32@16=0
+      .. int32@16=16M
+      .. int32@20=MAX
+      .. int32@20=-1
+      .. int32@20=0
+      .. int32@20=16M
+      .. int32@24=MAX
+      .. int32@24=-1
+      .. int32@24=0
+      .. int32@24=16M
+      .. int32@28=MAX
+      .. int32@28=-1
+      .. int32@28=0
+      .. int32@28=16M
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+    ~ accepted (no error)  x26   <- half; minus 1 byte; int32@12=MAX; int32@12=-1; int32@12=0; int32@12=16M; ...
+      load: InvalidDataException  x12
+== rivers-glo90-snap-2.bin (8,235,212 B): unchanged -> ok (8 MB allocated, 1 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. int32@4=MAX
+      .. int32@4=-1
+      .. int32@4=0
+      .. int32@4=16M
+      .. int32@8=MAX
+      .. int32@8=-1
+      .. int32@8=0
+      .. int32@8=16M
+      .. int32@12=MAX
+      .. int32@12=-1
+      .. int32@12=0
+      .. int32@12=16M
+      .. int32@16=MAX
+      .. int32@16=-1
+      .. int32@16=0
+      .. int32@16=16M
+      .. int32@20=MAX
+      .. int32@20=-1
+      .. int32@20=0
+      .. int32@20=16M
+      .. int32@24=MAX
+      .. int32@24=-1
+      .. int32@24=0
+      .. int32@24=16M
+      .. int32@28=MAX
+      .. int32@28=-1
+      .. int32@28=0
+      .. int32@28=16M
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+    ~ accepted (no error)  x30   <- half; minus 1 byte; int32@8=MAX; int32@8=-1; int32@8=0; int32@8=16M; ...
+      load: InvalidDataException  x8
+== rivers-glo90-arms-2.bin (223,228 B): unchanged -> ok (0 MB allocated, 0 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. int32@4=MAX
+      .. int32@4=-1
+      .. int32@4=0
+      .. int32@4=16M
+      .. int32@8=MAX
+      .. int32@8=-1
+      .. int32@8=0
+      .. int32@8=16M
+      .. int32@12=MAX
+      .. int32@12=-1
+      .. int32@12=0
+      .. int32@12=16M
+      .. int32@16=MAX
+      .. int32@16=-1
+      .. int32@16=0
+      .. int32@16=16M
+      .. int32@20=MAX
+      .. int32@20=-1
+      .. int32@20=0
+      .. int32@20=16M
+      .. int32@24=MAX
+      .. int32@24=-1
+      .. int32@24=0
+      .. int32@24=16M
+      .. int32@28=MAX
+      .. int32@28=-1
+      .. int32@28=0
+      .. int32@28=16M
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+    ~ accepted (no error)  x30   <- half; minus 1 byte; int32@8=MAX; int32@8=-1; int32@8=0; int32@8=16M; ...
+      load: InvalidDataException  x8
+== works-1318-2.bin (143,044 B): unchanged -> ok (1 MB allocated, 1 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. int32@4=MAX
+      .. int32@4=-1
+      .. int32@4=0
+      .. int32@4=16M
+      .. int32@8=MAX
+      .. int32@8=-1
+      .. int32@8=0
+      .. int32@8=16M
+      .. int32@12=MAX
+      .. int32@12=-1
+      .. int32@12=0
+      .. int32@12=16M
+      .. int32@16=MAX
+      .. int32@16=-1
+      .. int32@16=0
+      .. int32@16=16M
+      .. int32@20=MAX
+      .. int32@20=-1
+      .. int32@20=0
+      .. int32@20=16M
+      .. int32@24=MAX
+      .. int32@24=-1
+      .. int32@24=0
+      .. int32@24=16M
+      .. int32@28=MAX
+      .. int32@28=-1
+      .. int32@28=0
+      .. int32@28=16M
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+    ~ accepted (no error)  x9   <- int32@8=MAX; int32@8=16M; int32@24=MAX; int32@24=-1; int32@24=0; int32@28=MAX; ...
+      load: InvalidDataException  x29
+== rivers-nonperennial-2.bin (20,575 B): unchanged -> ok (2 MB allocated, 2 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. int32@4=MAX
+      .. int32@4=-1
+      .. int32@4=0
+      .. int32@4=16M
+      .. int32@8=MAX
+      .. int32@8=-1
+      .. int32@8=0
+      .. int32@8=16M
+      .. int32@12=MAX
+      .. int32@12=-1
+      .. int32@12=0
+      .. int32@12=16M
+      .. int32@16=MAX
+      .. int32@16=-1
+      .. int32@16=0
+      .. int32@16=16M
+      .. int32@20=MAX
+      .. int32@20=-1
+      .. int32@20=0
+      .. int32@20=16M
+      .. int32@24=MAX
+      .. int32@24=-1
+      .. int32@24=0
+      .. int32@24=16M
+      .. int32@28=MAX
+      .. int32@28=-1
+      .. int32@28=0
+      .. int32@28=16M
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+    ~ accepted (no error)  x8   <- int32@8=MAX; int32@8=-1; int32@8=0; int32@8=16M; int32@12=MAX; int32@12=-1; ...
+      load: InvalidDataException  x4
+   !! load: InvalidOperationException  x26   <- half; minus 1 byte; int32@4=MAX; int32@4=-1; int32@4=0; int32@4=16M; ...
+== shores-osm-1.bin (2,220,894 B): unchanged -> ok (0 MB allocated, 2 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. int32@4=MAX
+      .. int32@4=-1
+      .. int32@4=0
+      .. int32@4=16M
+      .. int32@8=MAX
+      .. int32@8=-1
+      .. int32@8=0
+      .. int32@8=16M
+      .. int32@12=MAX
+      .. int32@12=-1
+      .. int32@12=0
+      .. int32@12=16M
+      .. int32@16=MAX
+      .. int32@16=-1
+      .. int32@16=0
+      .. int32@16=16M
+      .. int32@20=MAX
+      .. int32@20=-1
+      .. int32@20=0
+      .. int32@20=16M
+      .. int32@24=MAX
+      .. int32@24=-1
+      .. int32@24=0
+      .. int32@24=16M
+      .. int32@28=MAX
+      .. int32@28=-1
+      .. int32@28=0
+      .. int32@28=16M
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+    ~ accepted (no error)  x14   <- int32@12=0; int32@16=MAX; int32@16=-1; int32@16=0; int32@16=16M; int32@24=0; ...
+      load: InvalidDataException  x2
+   !! load: InvalidOperationException  x22   <- header only (16 B); half; minus 1 byte; int32@4=MAX; int32@4=-1; int32@4=0; ...
+== stream-heads-1.bin (4,712,127 B): unchanged -> ok (36 MB allocated, 100 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. int32@4=MAX
+      .. int32@4=-1
+      .. int32@4=0
+      .. int32@4=16M
+      .. int32@8=MAX
+      .. int32@8=-1
+      .. int32@8=0
+      .. int32@8=16M
+      .. int32@12=MAX
+      .. int32@12=-1
+      .. int32@12=0
+      .. int32@12=16M
+      .. int32@16=MAX
+      .. int32@16=-1
+      .. int32@16=0
+      .. int32@16=16M
+      .. int32@20=MAX
+      .. int32@20=-1
+      .. int32@20=0
+      .. int32@20=16M
+      .. int32@24=MAX
+      .. int32@24=-1
+      .. int32@24=0
+      .. int32@24=16M
+      .. int32@28=MAX
+      .. int32@28=-1
+      .. int32@28=0
+      .. int32@28=16M
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+    ~ accepted (no error)  x3   <- int32@16=0; int32@20=MAX; int32@20=16M
+      load: InvalidDataException  x24
+   !! load: InvalidOperationException  x11   <- int32@24=MAX; int32@24=-1; int32@24=0; int32@24=16M; int32@28=MAX; int32@28=-1; ...
+== summits.bin (TiledGrid) (2,474,923 B): unchanged -> ok (38 MB allocated, 70 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. int32@4=MAX
+      .. int32@4=-1
+      .. int32@4=0
+      .. int32@4=16M
+      .. int32@8=MAX
+      .. int32@8=-1
+      .. int32@8=0
+      .. int32@8=16M
+      .. int32@12=MAX
+      .. int32@12=-1
+      .. int32@12=0
+      .. int32@12=16M
+      .. int32@16=MAX
+      .. int32@16=-1
+      .. int32@16=0
+      .. int32@16=16M
+      .. int32@20=MAX
+      .. int32@20=-1
+      .. int32@20=0
+      .. int32@20=16M
+      .. int32@24=MAX
+      .. int32@24=-1
+      .. int32@24=0
+      .. int32@24=16M
+      .. int32@28=MAX
+      .. int32@28=-1
+      .. int32@28=0
+      .. int32@28=16M
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+    ~ accepted (no error)  x9   <- int32@4=MAX; int32@4=-1; int32@4=0; int32@4=16M; int32@24=MAX; int32@24=-1; ...
+      load: InvalidDataException  x29
+== glaciers.bin (TiledGrid) (1,220,181 B): unchanged -> ok (55 MB allocated, 67 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. int32@4=MAX
+      .. int32@4=-1
+      .. int32@4=0
+      .. int32@4=16M
+      .. int32@8=MAX
+      .. int32@8=-1
+      .. int32@8=0
+      .. int32@8=16M
+      .. int32@12=MAX
+      .. int32@12=-1
+      .. int32@12=0
+      .. int32@12=16M
+      .. int32@16=MAX
+      .. int32@16=-1
+      .. int32@16=0
+      .. int32@16=16M
+      .. int32@20=MAX
+      .. int32@20=-1
+      .. int32@20=0
+      .. int32@20=16M
+      .. int32@24=MAX
+      .. int32@24=-1
+      .. int32@24=0
+      .. int32@24=16M
+      .. int32@28=MAX
+      .. int32@28=-1
+      .. int32@28=0
+      .. int32@28=16M
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+    ~ accepted (no error)  x9   <- int32@4=MAX; int32@4=-1; int32@4=0; int32@4=16M; int32@24=MAX; int32@24=-1; ...
+      load: InvalidDataException  x29
+== peaks.json (6,642,227 B): unchanged -> ok (54 MB allocated, 235 ms)
+      .. zero-length
+      .. 3 bytes
+      .. header only (16 B)
+      .. half
+      .. minus 1 byte
+      .. 8 body bytes flipped (seed 1)
+      .. 8 body bytes flipped (seed 2)
+      .. 8 body bytes flipped (seed 3)
+      .. 8 body bytes flipped (seed 4)
+      .. garbage (random bytes, same length, magic kept)
+      load: JsonReaderException  x10
+
+SUMMARY of mutated inputs by outcome:
+    231  clean InvalidData at load
+    189  other exception type at load
+    160  accepted

@@ -1,6 +1,6 @@
 # 0045: Sea-level deposits follow Earth's sea level
 
-Date: 2 November 2026. Status: implemented on `claude/sealevel-deposits` (from `release/1.0`), version 1.0.2 in source; native-server and graphical-client verified (below). Not packaged, installed or uploaded.
+Date: 2 November 2026. Status: built in 1.0.2 (`ec2ed7f`, tag v1.0.2), published on Mod DB 2 November 2026; in Earth 2.0.0.
 
 ## Report
 
@@ -45,3 +45,9 @@ Every fixed run's self-test reports `deposit sea agreement: PASS; 38 sea-level d
 Graphical client (2 November, VS 1.22.7 Linux client and server in WSL2, off-screen X display; the player's settings including start Athens, at heights 512, 384 and 256, 1.0.1 and fix each). A copy of the ore audit that also lists surface saltpeter blocks (depth ≤ 2, open above) found them in 1.0.1 only at 512: 1,830 above ground in 7 x 7 chunks east of Vienna (48.17° N 16.9° E), 698 on the Pannonian plain, none at 384 or 256. The player's world is Earth size 1,024,000, not 512,000: their screenshot shows `-36109, 170, -17160` (vanilla's X and Z are relative to the Athens spawn) at 45°31′ N 7°52′ E, which is 2,276 blocks per degree on both axes. A 1,024,000 world with their settings (Athens spawn at 37.98° N 23.73° E) puts that block within about 20 blocks of the coordinate, on ground averaging Y 170 (their Y). There, 1.0.1 places saltpeter up to Y 140, below the hills, and on the surface only where valleys drop to it (4 blocks within 10 chunks); 1.0.2 logs 28 generators rescaled and places it no higher than Y 90, with none above ground. The author installed the 1.0.2 zips, visited the player's spot in their own game and found it clean (2 November). The client stood on recorded blocks and looked down: 1.0.1 at 512 shows white saltpeter coating on the grass east of Vienna and on the plain, as in the player's screenshot; the fix at the same blocks shows grass only. Both builds show grass at 384 and 256. Fixed servers logged 28 generators rescaled (220 → 110 at 512, 165 → 110 at 384) and none at 256.
 
 Source: `src/SealevelDeposits.cs`, `src/EarthVerticalBootstrap.cs`, `src/EarthOres.cs`, `src/SelfTest.cs`, `modinfo.json`.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: implemented on `claude/sealevel-deposits` (from `release/1.0`), version 1.0.2 in source; native-server and graphical-client verified (below). Not packaged, installed or uploaded.

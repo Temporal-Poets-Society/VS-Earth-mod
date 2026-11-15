@@ -121,6 +121,27 @@ Check(!File.Exists(GroundDownloader.PathOf(data, sets[2])), "missing in the sour
         "A9: a fetch that can't fit names the disk");
 }
 
+// ER-16 (code review 14 November 2026): the first start's three downloads stop at once on the server's stop token, and
+// leave nothing as if fetched
+{
+    using var cancelled = new CancellationTokenSource();
+    cancelled.Cancel();
+    string fresh = Path.Combine(root, "cancelled");
+    bool Stopped(Func<object> run)
+    {
+        var t0 = DateTime.UtcNow;
+        try { run(); }
+        catch (OperationCanceledException) { return (DateTime.UtcNow - t0).TotalSeconds < 5; }
+        return false;
+    }
+    Check(Stopped(() => GroundDownloader.Get(fresh, source, null, cancelled.Token, sets)) && GroundDownloader.Missing(fresh, false, sets).Count == sets.Length,
+        "ER-16: the ground sets stop on a cancelled token, nothing fetched");
+    var storeFile = new EarthDataStore.File(sets[2].Name, sets[2].Bytes, sets[2].Sha256);
+    Check(Stopped(() => EarthDataStore.Ensure(fresh, null, source, null, out _, cancelled.Token, new[] { storeFile })) && EarthDataStore.Missing(fresh, new[] { storeFile }).Count == 1,
+        "ER-16: the data store stops on a cancelled token, nothing fetched");
+    // (the GLO-90 release files' DemDownloader.FetchFile: ElevationTests)
+}
+
 // ------------------------------------------------------------------ the transport over HTTP (DataTransport), on a local
 // server that misbehaves on request: every Earth download goes through it (GLO-90 squares and parts, the release files,
 // these sets)
@@ -219,11 +240,66 @@ using (var transport = new DataTransport(TimeSpan.FromSeconds(30)) { ReadTimeout
     catch (HttpRequestException) { refused = true; }
     Check(refused, "HTTP: a range answered with the whole file is not read");
     server.Plan = (_, _) => TestServer.Mode.Normal;
-    var got = await transport.GetAsync(server.Url + "big.bin");
-    var none = await transport.GetAsync(server.Url + "nothing.bin");
+    var got = await transport.GetAsync(server.Url + "big.bin", big.Length);
+    var none = await transport.GetAsync(server.Url + "nothing.bin", 1 << 20);
     Check(got.Found && got.Data.AsSpan().SequenceEqual(big) && !none.Found, "HTTP: a whole read, and a missing file (404) is not found");
-    var local = await transport.GetAsync(Path.Combine(web, "nothing.bin"));
+    // EA-0106 (FP-17): a body larger than the caller's limit is not read: by its length, or, sent without one (a body
+    // without end), once past the limit; a local file too
+    async Task<string> Refusal(Func<Task> read)
+    {
+        try { await read(); return null; }
+        catch (InvalidDataException e) { return e.Message; }
+    }
+    string byLength = await Refusal(() => transport.GetAsync(server.Url + "big.bin", big.Length - 1));
+    server.Plan = (_, _) => TestServer.Mode.Endless;
+    var endless = System.Diagnostics.Stopwatch.StartNew();
+    string bySize = await Refusal(() => transport.GetAsync(server.Url + "big.bin", 3 * big.Length));
+    endless.Stop();
+    server.Plan = (_, _) => TestServer.Mode.Normal;
+    string byFile = await Refusal(() => transport.GetAsync(Path.Combine(web, "big.bin"), big.Length - 1));
+    Check(byLength != null && bySize != null && bySize.Contains("more than") && byFile != null && endless.ElapsedMilliseconds < 20_000,
+        $"HTTP: larger than the limit is not read: by its length ('{byLength}'), a body without end after the limit ('{bySize}', " +
+        $"{endless.ElapsedMilliseconds} ms), a local file ('{byFile}')");
+    var local = await transport.GetAsync(Path.Combine(web, "nothing.bin"), 1 << 20);
+    // (Fable's re-review, 14 November) a local source folder that isn't there is no answer that it lacks the file
+    string noFolder = null;
+    try { await transport.GetAsync(Path.Combine(web, "no-such-folder", "nothing.bin"), 1 << 20); } catch (DirectoryNotFoundException e) { noFolder = e.Message; }
+    Check(noFolder != null && noFolder.Contains("isn't there"), "a source folder that isn't there fails as a failure that may pass, not \"not there\" (" + noFolder + ")");
     Check(!local.Found && (await transport.RangeAsync(web, "big.bin", 5, 10)).AsSpan().SequenceEqual(big.AsSpan(5, 10)), "a local folder works as a source too");
+    // (Fable's overview low 5) the same for a whole file, a range, the ground sets and the data store: a failure naming the
+    // folder, at once, never Lacking (which a new world records for good)
+    string away = Path.Combine(web, "unmounted"), awayFull = Path.GetFullPath(away);
+    var noFile = await transport.FileAsync(away, "nothing.bin", Target("nothing.bin"), 10, new string('0', 64), 1);
+    string noRange = null;
+    try { await transport.RangeAsync(away, "big.bin", 5, 10); } catch (DirectoryNotFoundException e) { noRange = e.Message; }
+    var lowLog = new List<string>();
+    var lowWatch = System.Diagnostics.Stopwatch.StartNew();
+    var lowGround = await GroundDownloader.GetAsync(Path.Combine(root, "low5"), away, s => lowLog.Add(s), default, sets.Take(1));
+    lowWatch.Stop();
+    bool lowStore = EarthDataStore.Ensure(Path.Combine(root, "low5-store"), null, away, null, out string lowWhy, default,
+        new[] { new EarthDataStore.File("lakes-test.bin", 10, new string('0', 64)) });
+    Check(!noFile.Ok && !noFile.NotThere && noFile.Error.Contains(awayFull) && noRange != null && noRange.Contains(awayFull),
+        $"low 5: a whole file or a range from a folder that isn't there: a failure that may pass, naming it ({noFile.Error})");
+    Check(lowGround == GroundDownloader.Result.Failed && lowLog.Any(l => l.Contains("GroundRepo") && l.Contains(awayFull)) && lowWatch.ElapsedMilliseconds < 2000,
+        $"low 5: the ground sets from a folder that isn't there: Failed (not Lacking), at once ({lowWatch.ElapsedMilliseconds} ms), naming GroundRepo and the folder ({string.Join(" | ", lowLog)})");
+    Check(!lowStore && lowWhy.Contains("DataRepo") && lowWhy.Contains(awayFull), $"low 5: the data store from a folder that isn't there names DataRepo and the folder ({lowWhy})");
+
+    // EA-0116 D-L4: a source setting that can't be used is named, not thrown raw
+    Check(DataTransport.SourceProblem("http://exa mple.invalid/") != null && DataTransport.SourceProblem("http://") != null
+        && DataTransport.SourceProblem("https://github.com/Temporal-Poets-Society/earth-ground/releases/download/egts-v1/") == null
+        && DataTransport.SourceProblem(Path.Combine(web, "no-such-folder")) == null && DataTransport.SourceProblem("") == null && DataTransport.SourceProblem(null) == null
+        && DataTransport.SourceProblem("C:\\bad|folder") != null,
+        "EA-0116 D-L4: SourceProblem: a malformed address or path is a problem; a good address, any folder path and none set are not");
+    var badLog = new List<string>();
+    GroundDownloader.Result badGround;
+    try { badGround = await GroundDownloader.GetAsync(Path.Combine(web, "bad-source"), "http://", s => badLog.Add(s)); }
+    catch (Exception e) { badGround = GroundDownloader.Result.Here; badLog.Add("THREW " + e.GetType().Name); }
+    string whyData = null;
+    bool dataOk;
+    try { dataOk = EarthDataStore.Ensure(Path.Combine(web, "bad-source"), null, "http://exa mple.invalid/", s => { }, out whyData); }
+    catch (Exception e) { dataOk = true; whyData = "THREW " + e.GetType().Name; }
+    Check(badGround == GroundDownloader.Result.Failed && badLog.Any(l => l.Contains("GroundRepo")) && !dataOk && whyData != null && whyData.Contains("DataRepo"),
+        $"EA-0116 D-L4: GroundRepo \"http://\" and DataRepo \"http://exa mple.invalid/\" end the fetch naming the setting ('{badLog.LastOrDefault()}', '{whyData}')");
 
     // retries: false is an answer (no retry), a transient failure is retried, the caller's cancellation ends it
     int calls = 0;

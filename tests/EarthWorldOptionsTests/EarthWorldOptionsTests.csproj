@@ -4,11 +4,14 @@
     <ImplicitUsings>enable</ImplicitUsings><RollForward>LatestMajor</RollForward><NoWarn>CA1416</NoWarn><UseAppHost>false</UseAppHost>
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
     <NetCoreRuntimeDir>$([System.IO.Directory]::GetDirectories('$(NetCoreRoot)shared\Microsoft.NETCore.App', '10.*')[0])</NetCoreRuntimeDir>
-    <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(MSBuildProjectDirectory)\..\..\.local\vs</VintageStoryPath>
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(VINTAGE_STORY)</VintageStoryPath>
+    <!-- (S-L6 of the Fable pass) as EarthMap.csproj: VINTAGE_STORY, a repo-local copy where there is one, else the game's own folder -->
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == '' and Exists('$(MSBuildProjectDirectory)\..\..\.local\vs\VintagestoryAPI.dll')">$(MSBuildProjectDirectory)\..\..\.local\vs</VintageStoryPath>
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(APPDATA)\Vintagestory</VintageStoryPath>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="../../src/Core/*.cs" Link="Core/%(Filename)%(Extension)" />
-    <Compile Include="../../src/EarthWorldOptions.cs;../../src/EarthParams.cs;../../src/EarthMapConfig.cs" />
+    <ProjectReference Include="..\Earth.Core.Tests.Common\Earth.Core.Tests.Common.csproj" />
+    <Compile Include="../../src/EarthWorldOptions.cs;../../src/EarthParams.cs;../../src/EarthParams.Model.cs;../../src/EarthMapConfig.cs;../../src/EarthConfigStore.cs;../../src/WorldUpgrades.cs;../../src/WorldParamsBuilder.cs;../../src/EarthCrafting.cs;../../src/PackedAssets.cs" />
     <Reference Include="$(NetCoreRuntimeDir)\System.*.dll" Exclude="$(NetCoreRuntimeDir)\System.Private.*.dll;$(NetCoreRuntimeDir)\System.IO.Compression.Native.dll" Private="false" />
     <Reference Include="$(NetCoreRuntimeDir)\System.Private.CoreLib.dll" Private="false" />
     <Reference Include="$(NetCoreRuntimeDir)\System.Private.Xml.dll" Private="false" />

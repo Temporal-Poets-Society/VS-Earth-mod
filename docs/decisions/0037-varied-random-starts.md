@@ -1,6 +1,6 @@
 # 0037: Varied random starts at the chosen climate (ROADMAP #38)
 
-Status: Implemented in 0.17.0-pre.12; real-data offline distribution checks passed, in-game acceptance pending | Date: 2026-10-31
+Status: Built in 0.17.0-pre.12 (`45efac9`); in Earth 1.0.0 and 2.0.0; the terrain check made faster for GLO-90 in 0051. EA-0014 closed on the author's general review | Date: 2026-10-31
 
 ## Problem and measurement
 
@@ -102,3 +102,9 @@ climate give the same region shares, region by 5-degree latitude bands and 2-deg
 15 tests). `tests/SpawnDistributionTests after` passes, as do `tests/EarthMapTests`' random-start checks. A seed's
 place changes for new worlds; saved spawns don't. On full GLO-90 (the author's store, 4,096,000 wide), the first
 search per climate took 0.0-3.2 s and read 3-170 tiles, against 235 s and 15,615 tiles.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: Implemented in 0.17.0-pre.12; real-data offline distribution checks passed, in-game acceptance pending

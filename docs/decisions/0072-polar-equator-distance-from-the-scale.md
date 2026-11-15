@@ -1,6 +1,6 @@
 # 0072: polarEquatorDistance is the world's own equator-to-pole distance
 
-Status: **built** for 2.0.0-rc.9 (EA-0041; the author, 13 November 2026: "then fix this also. if need Cylinder world
+Status: **built** for 2.0.0-rc.9, in Earth 2.0.0 (EA-0041; the author, 13 November 2026: "then fix this also. if need Cylinder world
 changes then do it"). New worlds only (0002): a world made before keeps the value it saved. Cylinder World unchanged.
 Date: 2026-11-13.
 

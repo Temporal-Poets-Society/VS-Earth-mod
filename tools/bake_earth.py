@@ -14,7 +14,10 @@ Outputs (earthdata/):
   - climate.bin   0.25° grid: sea-level-equivalent temperature (mean, coldest, warmest month), precipitation, VS rain
                   (from a cut-short UDel file, kept for existing worlds); climatefix.bin (v1), climatefix2.bin (v2,
                   the complete UDel normals) and climatefix3.bin (v3, UDel faded in over a 1° coast band) hold the
-                  cells newer worlds change (`--climate-fix-only [1 2 3]`, decision 0018)
+                  cells newer worlds change (`--climate-fix-only [1 2 3 4]`, decision 0018); climatefix4.bin (v4, the
+                  GPCP share at desert coasts at CHELSA's level, EA-0060)
+  - weatherground.bin  0.5° grid: the height weather.bin's sea-level temperatures were reduced from (weather rules 7,
+                  EA-0021; `--weather-ground-only`)
   - earth.json    grid description, seam path (longitude of the cut by latitude), attribution
   - islands.bin   islands smaller than BIG_LAND_KM2 as outlines (built in game where they are wide enough in blocks), and
                   the grid cells that change when their land is taken out of the grid
@@ -39,6 +42,8 @@ from PIL import Image, ImageDraw
 from scipy.interpolate import RegularGridInterpolator
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, "tools"))
+import planecoding as pc
 RAW = os.path.join(ROOT, "rawdata")
 OUT = os.path.join(ROOT, "earthdata")
 PREVIEW = os.path.join(ROOT, "preview")
@@ -1066,7 +1071,54 @@ def coast_band_weight(wU, tlat, band):
     return np.where((tlat > -60)[:, None], w, old)
 
 
-def build_climate(S1, fill_gaps=False, legacy_udel=True, coast_band=0):
+# climatefix4 (EA-0060): GPCP's share is brought to CHELSA's level where GPCP is over DESERT_RATIO times as wet as CHELSA (fully
+# from twice that) and CHELSA has under DESERT_MM (fully under half of it); a smooth weight in the logarithm in between
+DESERT_RATIO, DESERT_MM = 2.0, 300.0
+CHELSA_BIO12 = os.path.join("chelsa-bio-v2.1", "CHELSA_bio12_1981-2010_V.2.1.tif")
+
+
+def chelsa_bio12_quarter():
+    """CHELSA v2.1's yearly precipitation (bio12, mm, 1981-2010) as means of its 30" pixels over each 0.25° cell of the
+    climate grid (rows from 90°N); NaN north of 84°N, where CHELSA ends. The pixels at the format's top value 65535
+    (6553.5 mm, a few very wet places) are left out of their cell's mean; no dry cell has one."""
+    import bake_rain
+    r = bake_rain.Raster(os.path.join(RAW, CHELSA_BIO12))
+    out = np.full((180 * CLIM_RES, 360 * CLIM_RES), np.nan)
+    k = int(round(1 / (r.px[1] * CLIM_RES)))                  # pixels per cell side (30)
+    row0 = int(round((90 - r.tie[4]) * CLIM_RES))
+    step = k * 16
+    for a in range(0, r.h, step):
+        b = min(a + step, r.h)
+        x = r.rows(a, b).astype(np.float64)
+        if r.nodata is not None:
+            x[x == r.nodata] = np.nan
+        x = x * r.scale + r.offset
+        n = (b - a) // k
+        with np.errstate(invalid="ignore"):
+            out[row0 + a // k: row0 + a // k + n] = np.nanmean(x[:n * k].reshape(n, k, out.shape[1], k), axis=(1, 3))
+    log(f"CHELSA bio12 on the 0.25° grid: {np.isfinite(out).mean() * 100:.1f}% of the cells")
+    return out
+
+
+def desert_coast_factor(p_gpcp_year):
+    """The factor on GPCP's monthly precipitation that brings its year toward CHELSA's on dry coasts (climatefix4): GPCP^(1-k)
+    CHELSA^k for the year, k = smooth((ln(GPCP/CHELSA) - ln DESERT_RATIO) / ln DESERT_RATIO) smooth((DESERT_MM - CHELSA) /
+    (DESERT_MM / 2)), 1 where CHELSA has no data. Only GPCP's share of a cell changes: inland, where the climate is UDel's
+    alone, the Sahel's northern edge is wetter in UDel than in CHELSA and stations there don't settle which is right."""
+    c = chelsa_bio12_quarter()
+    def smooth(x):
+        x = np.clip(x, 0, 1)
+        return x * x * (3 - 2 * x)
+    with np.errstate(invalid="ignore", divide="ignore"):
+        ratio = p_gpcp_year / np.maximum(c, 1)
+        k = smooth((np.log(ratio) - math.log(DESERT_RATIO)) / math.log(DESERT_RATIO)) * smooth((DESERT_MM - c) / (DESERT_MM / 2))
+        k = np.where(np.isfinite(k) & (p_gpcp_year > 0), k, 0)
+        f = np.where(k > 0, np.exp(-k * np.log(np.maximum(ratio, 1e-9))), 1.0)
+    log(f"climate fix v4: GPCP brought toward CHELSA in {int((k > 0.01).sum())} cells ({int((k > 0.99).sum())} fully)")
+    return f
+
+
+def build_climate(S1, fill_gaps=False, legacy_udel=True, coast_band=0, desert_coasts=False):
     """fill_gaps: UDel's missing precipitation months filled (fill_month_gaps), which climate.bin (worlds before the climate
     fix) doesn't have; climatefix.bin holds the cells that changes (decision 0018).
     legacy_udel: UDel's precipitation as climate.bin and climatefix.bin were baked from (cut short, December 0 mm over most
@@ -1075,7 +1127,10 @@ def build_climate(S1, fill_gaps=False, legacy_udel=True, coast_band=0):
     COAST_BAND); 0 switches within the row where its nodes end (climate.bin to v2). The one-row switch drew rain stripes
     along coasts wherever the two differ in level (GPCP corrects for the gauges' undercatch: about 1.4 times UDel on
     Arctic coasts), EA-0016. The temperatures keep the one-row switch: worlds take theirs from CHELSA (temperature.bin),
-    and climatefix3.bin then holds only the precipitation planes (size)."""
+    and climatefix3.bin then holds only the precipitation planes (size).
+    desert_coasts: GPCP's share of the blend (the coast band and the sea) at CHELSA's yearly level where GPCP is much wetter
+    than CHELSA on a dry coast (climatefix4.bin, desert_coast_factor, EA-0060): GPCP's 2.5° cells mix the Humboldt and
+    Benguela coasts with the Andes and the tropics (Lima 497 mm against 24)."""
     log("climate" + (" with UDel's missing months filled" if fill_gaps else "") + ("" if legacy_udel else " (complete UDel)")
         + (f" blended over {coast_band} cells at the coast" if coast_band else ""))
     # UDel land normals on a 0.5° grid
@@ -1113,6 +1168,8 @@ def build_climate(S1, fill_gaps=False, legacy_udel=True, coast_band=0):
         pUg = pUg / wU[None]
     tNg = regrid(tN, latN, lonN, tlat, tlon)
     pGg = regrid(pG, latG, lonG, tlat, tlon)
+    if desert_coasts:
+        pGg = pGg * desert_coast_factor((pGg * days[:, None, None]).sum(axis=0))[None]
 
     # land cells use UDel where it has data nearby, the ocean uses NCEP / GPCP; blend over the coast
     wt = np.clip((wU - 0.25) / 0.5, 0, 1)
@@ -1184,35 +1241,23 @@ def climate_planes(c):
 
 
 def write_climate(c):
-    CH, CW = c["t_mean"].shape
-    planes = climate_planes(c)
-    raw = b"".join(p.tobytes() for p in planes)
+    """climate.bin version 3 as predicted planes (tools/planecoding.py, EA-0077; plain brotli of the planes before
+    2.0.0-rc.14)."""
     path = os.path.join(OUT, "climate.bin")
-    with open(path, "wb") as f:
-        f.write(b"EMCL")
-        f.write(struct.pack("<iii", 3, CW, CH))
-        f.write(brotli.compress(raw, quality=11, lgwin=24))
+    pc.write_climate(path, climate_planes(c))
     log(f"climate.bin {os.path.getsize(path) / 1e6:.1f} MB")
 
 
 def read_climate_planes():
-    """climate.bin's planes as stored in earthdata/ (no rebuild)."""
-    with open(os.path.join(OUT, "climate.bin"), "rb") as f:
-        head = f.read(16)
-        version, CW, CH = struct.unpack("<iii", head[4:16])
-        raw = brotli.decompress(f.read())
-    n = CW * CH
-    kinds = [("<i2", 2), ("<i2", 2), ("<i2", 2), ("<u2", 2), (np.uint8, 1), (np.uint8, 1)]
-    planes, off = [], 0
-    for dt, size in kinds:
-        planes.append(np.frombuffer(raw[off:off + n * size], dt).reshape(CH, CW))
-        off += n * size
-    return planes
+    """climate.bin's planes as stored in earthdata/ (no rebuild), either coding, in their stored types."""
+    planes, version = pc.read_climate(os.path.join(OUT, "climate.bin"))
+    return [p.astype(pc.DTYPE[t]) for p, t in zip(planes, pc.CLIMATE_TYPES)]
 
 
 def write_climate_fix(fixed, base, version=1):
     """climatefix.bin (version 1: UDel's filled months, decision 0018), climatefix2.bin (version 2: the complete UDel
-    normals, 0018 Correction) or climatefix3.bin (version 3: v2's precipitation blended over a coast band, EA-0016): the
+    normals, 0018 Correction), climatefix3.bin (version 3: v2's precipitation blended over a coast band, EA-0016) or
+    climatefix4.bin (version 4: v3 with GPCP's share at CHELSA's level on desert coasts, EA-0060): the
     cells of climate.bin that change. climate.bin stays as old worlds have it; worlds with EarthParams.ClimateData =
     version apply that file's values on top.
     Versions 1 and 2, each against climate.bin itself: header EMCF, version, width, height, count, then brotli of the cell
@@ -1220,7 +1265,9 @@ def write_climate_fix(fixed, base, version=1):
     Version 3 and later, against the version before (base is that version's climate; the reader applies the fixes in
     turn), so a new version ships only what it changes (the mod zip's 40 MB limit): header EMCF, version, width, height,
     count, plane mask (i32, bit p for plane p), then brotli of the cell indices as differences from the one before (i32,
-    the first from 0) and the new values of the planes in the mask only (the others are the version before's)."""
+    the first from 0) and the new values of the planes in the mask only (the others are the version before's).
+    From 2.0.0-rc.14 versions 1 and 2 are written predicted (tools/planecoding.py write_climate_fix, EA-0077): a bitmap of
+    the cells and the new values as differences from climate.bin's."""
     # the cells the filled months change (against the same build without them, so rounding noise between library versions
     # in climate.bin itself stays out)
     old = climate_planes(base)
@@ -1230,20 +1277,15 @@ def write_climate_fix(fixed, base, version=1):
     for a, b in zip(old, new):
         changed |= a != b
     idx = np.flatnonzero(changed).astype("<i4")
-    if version >= 3:
-        mask = sum(1 << p for p, (a, b) in enumerate(zip(old, new)) if (a != b).any())
-        steps = np.diff(np.concatenate([[0], idx])).astype("<i4")
-        raw = steps.tobytes() + b"".join(p.ravel()[idx].tobytes() for i, p in enumerate(new) if mask >> i & 1)
-        head = struct.pack("<iiiii", version, CW, CH, len(idx), mask)
-    else:
-        raw = idx.tobytes() + b"".join(p.ravel()[idx].tobytes() for p in new)
-        head = struct.pack("<iiii", version, CW, CH, len(idx))
     name = "climatefix.bin" if version == 1 else f"climatefix{version}.bin"
     path = os.path.join(OUT, name)
-    with open(path, "wb") as f:
-        f.write(b"EMCF")
-        f.write(head)
-        f.write(brotli.compress(raw, quality=11, lgwin=24))
+    if version >= 3:
+        mask = sum(1 << p for p, (a, b) in enumerate(zip(old, new)) if (a != b).any())
+        pc.write_climate_fix(path, version, CW, CH, idx, [p.ravel()[idx] for p in new], None, mask)
+    else:
+        # against climate.bin as written (read back: the stored planes, which old's rebuild matches but for roundings)
+        stored = read_climate_planes()
+        pc.write_climate_fix(path, version, CW, CH, idx, [p.ravel()[idx] for p in new], [p.ravel()[idx] for p in stored], climate=stored)
     log(f"{name} {os.path.getsize(path) / 1e6:.2f} MB: {len(idx)} of {CH * CW} cells ({len(idx) / (CH * CW) * 100:.1f}%)")
 
 
@@ -1336,6 +1378,11 @@ def build_weather(S1):
     pGg = regrid(pG, latG, lonG, tlat, tlon)
     wt = np.clip((wU - 0.25) / 0.5, 0, 1)
     t_sl = np.where(wt[None] > 0, wt[None] * np.nan_to_num(tUg) + (1 - wt[None]) * tNg, tNg)
+    # the height each cell's sea-level temperature was reduced from: UDel's share, regridded as its temperatures were
+    # (NCEP's 2 m air, where UDel has no stations, is at its own surface and was not reduced)
+    hUg = regrid(np.where(validU, hU, 0)[None], latU, lonU, tlat, tlon)[0]
+    with np.errstate(invalid="ignore", divide="ignore"):
+        h_red = np.where(wt > 0, wt * np.nan_to_num(hUg / wU), 0.0)
     # mm per day: UDel cm/month over land, GPCP mm/day over the sea
     p_day = np.where(wt[None] > 0, wt[None] * np.nan_to_num(pUg) * 10 / days[:, None, None] + (1 - wt[None]) * pGg, pGg)
     p_day = np.maximum(p_day, 0)
@@ -1348,7 +1395,7 @@ def build_weather(S1):
     cloud = np.clip(regrid(cN, latC, lonC, tlat, tlon), 0, 100)
     log(f"weather: precipitation 0..{p_day.max():.1f} mm/day, temperature {t_sl.min():.1f}..{t_sl.max():.1f} °C, land {landfrac.mean() * 100:.1f}%, "
         f"wind {np.hypot(u, v).max():.1f} m/s at most, cloud cover {cloud.mean():.0f}% on average")
-    return {"p": p_day, "t": t_sl, "land": landfrac, "u": u, "v": v, "cloud": cloud}
+    return {"p": p_day, "t": t_sl, "land": landfrac, "u": u, "v": v, "cloud": cloud, "h": h_red}
 
 
 # at most this share of the land north of 60°S may store 0 mm (u8 0: under 0.016 mm/day) in any one month: dry seasons in
@@ -1382,13 +1429,35 @@ def write_weather(w):
     planes += [np.clip(np.round(8 * w["u"][m]), -127, 127).astype(np.int8) for m in range(M)]
     planes += [np.clip(np.round(8 * w["v"][m]), -127, 127).astype(np.int8) for m in range(M)]
     planes += [np.clip(np.round(2.5 * w["cloud"][m]), 0, 250).astype(np.uint8) for m in range(M)]
-    raw = b"".join(pl.tobytes() for pl in planes)
     path = os.path.join(OUT, "weather.bin")
+    # predicted planes (EA-0077) carrying the signature of the plain file of these planes (worlds freeze it)
+    plain = os.path.join(OUT, "weather.plain.bin")
+    pc.write_weather(plain, planes, coding=pc.PLAIN)
+    signature = pc.fnv1a(open(plain, "rb").read())
+    os.remove(plain)
+    pc.write_weather(path, planes, signature=signature)
+    log(f"weather.bin {os.path.getsize(path) / 1e6:.2f} MB, signature {signature:016x}")
+
+
+WX_GROUND_STEP = 50   # weatherground.bin's unit, metres
+
+
+def write_weather_ground(w):
+    """weatherground.bin (weather rules 7, EA-0021): for each cell of weather.bin's 0.5° grid the height (m) its sea-level
+    temperatures were reduced from with 6.5 °C/km, so the weather knows the ground's temperature for the rain rate (fitted
+    at low airports; the High Plains' and the Great Basin's winters snow for longer at their real temperatures). Header
+    EMWG, version 1, width, height, metres per unit, then brotli of the u16 heights row by row from the north-west, each
+    row as differences from the cell before (i16, the first from 0). 0 at sea and where NCEP's surface air stands in."""
+    h = w["h"]
+    H, W = h.shape
+    q = np.clip(np.round(h / WX_GROUND_STEP), 0, 65535).astype(np.int32)
+    steps = np.diff(q, axis=1, prepend=0).astype("<i2")
+    path = os.path.join(OUT, "weatherground.bin")
     with open(path, "wb") as f:
-        f.write(b"EMWX")
-        f.write(struct.pack("<iiii", 2, W, H, M))
-        f.write(brotli.compress(raw, quality=11, lgwin=24))
-    log(f"weather.bin {os.path.getsize(path) / 1e6:.2f} MB")
+        f.write(b"EMWG")
+        f.write(struct.pack("<iiii", 1, W, H, WX_GROUND_STEP))
+        f.write(brotli.compress(steps.tobytes(), quality=11, lgwin=24))
+    log(f"weatherground.bin {os.path.getsize(path) / 1e3:.1f} kB, heights up to {q.max() * WX_GROUND_STEP} m")
 
 
 # ---------------------------------------------------------------------------------------------- seam path
@@ -1959,7 +2028,7 @@ def main():
         # months (v1), the complete UDel normals (v2) and those blended over a coast band (v3) change. Versions to write may
         # follow the flag (default all): a shipped file never changes under its name, so rebuild old ones only to compare.
         args = sys.argv[sys.argv.index("--climate-fix-only") + 1:]
-        versions = [int(a) for a in args if a.isdigit()] or [1, 2, 3]
+        versions = [int(a) for a in args if a.isdigit()] or [1, 2, 3, 4]
         S = tifffile.imread(os.path.join(RAW, "ETOPO_2022_v1_60s_N90W180_surface.tif")).astype(np.float32)
         base = build_climate(S)
         check_climate_reproduced(base)
@@ -1970,7 +2039,16 @@ def main():
         if 3 in versions:
             v2 = build_climate(S, legacy_udel=False)
             write_climate_fix(build_climate(S, legacy_udel=False, coast_band=COAST_BAND), v2, version=3)
+        if 4 in versions:
+            v3 = build_climate(S, legacy_udel=False, coast_band=COAST_BAND)
+            write_climate_fix(build_climate(S, legacy_udel=False, coast_band=COAST_BAND, desert_coasts=True), v3, version=4)
         log("done (climate fix only)")
+        return
+    if "--weather-ground-only" in sys.argv:
+        # weatherground.bin only (weather rules 7): weather.bin itself is pinned and stays as it is
+        S = tifffile.imread(os.path.join(RAW, "ETOPO_2022_v1_60s_N90W180_surface.tif")).astype(np.float32)
+        write_weather_ground(build_weather(S))
+        log("done (weather ground only)")
         return
     if "--weather-only" in sys.argv:
         # quick path for the weather's monthly normals: nothing else changes

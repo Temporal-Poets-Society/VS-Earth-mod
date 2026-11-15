@@ -312,16 +312,14 @@ namespace EarthMap.Core
             var run = Enumerable.Range(0, basins.Count).ToList();
             for (int iter = 0; iter < MaxRounds; iter++)
             {
-                System.Threading.Tasks.Parallel.ForEach(
-                    System.Collections.Concurrent.Partitioner.Create(run, System.Collections.Concurrent.EnumerablePartitionerOptions.NoBuffering),
-                    () => new Worker(),
-                    (b, loop, wk) =>
-                    {
-                        lowered[b] = RunBasin(basins[b], wk);
-                        basinGorge[b] = (wk.GorgeSections, wk.GorgeSteps);
-                        return wk;
-                    },
-                    _ => { });
+                // (ER-25: on ParallelWork's few long-lived workers, each with one Worker, one basin at a time)
+                var thisRound = run;
+                ParallelWork.For(thisRound.Count, () => new Worker(), (k, wk) =>
+                {
+                    int b = thisRound[k];
+                    lowered[b] = RunBasin(basins[b], wk);
+                    basinGorge[b] = (wk.GorgeSections, wk.GorgeSteps);
+                });
                 if (!run.Any(b => lowered[b])) break;
                 run = Enumerable.Range(0, basins.Count).Where(b => lowered[b] || unordered[b]).ToList();
                 // the rounds ran out with caps still lowered: those basins keep a tributary above its main river at a

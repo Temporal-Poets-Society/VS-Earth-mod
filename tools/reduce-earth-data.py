@@ -4,7 +4,8 @@ python tools/reduce-earth-data.py --source earthdata --output .local/publication
   --rawdata 'C:/VS mods/Earth/rawdata'
 
 The 2' base terrain, rainfall, coastlines and all other geographic files are copied unchanged.
-Existing worlds are outside this pre-release conversion's compatibility scope.
+Existing worlds are outside this pre-release conversion's compatibility scope. temperature.bin is written as predicted
+planes (tools/planecoding.py, EA-0077).
 """
 import argparse
 from concurrent.futures import ProcessPoolExecutor
@@ -12,7 +13,8 @@ import hashlib, json, pathlib, shutil, struct, time, zlib
 import brotli
 import numpy as np
 import bake_summits as summits
-from bake_chelsa import quantize_temperature, paeth_residual
+from bake_chelsa import quantize_temperature
+import planecoding as pc
 
 
 def grid(data):
@@ -45,18 +47,20 @@ def temperature_tile(job):
     q = [quantize_temperature(a, step) for a in planes]
     error = max(int(np.abs(a.astype(np.int32) - b).max()) for a, b in zip(planes, q)) / 10
     assert error <= step / 2 + 1e-8
-    pred = [paeth_residual(a.astype(np.int32)).astype('<i2') for a in q]
-    assert all(np.array_equal(unpaeth(p), a) for p, a in zip(pred, q))
-    new = b''.join(p.tobytes() for p in pred) + raw[6 * n:]
-    encoded = brotli.compress(new, quality=11, lgwin=24)
-    assert brotli.decompress(encoded) == new
-    assert new[6 * n:] == raw[6 * n:]  # unchanged coverage/fallback mask
+    mask = np.frombuffer(raw[6 * n:], np.uint8).reshape(tile, tile)
+    types = [pc.I16, pc.I16, pc.I16, pc.U8]
+    encoded, _ = pc.encode_block([a.astype(np.int64) for a in q] + [mask.astype(np.int64)], types, steps=['auto'] * 3 + [1])
+    back = pc.decode_block(encoded, tile, tile, types)
+    assert all(np.array_equal(b, a) for b, a in zip(back, q)) and np.array_equal(back[3], mask)  # mask unchanged
     return key, encoded, error
 
 
-def write_grid(original, blobs, target):
+def write_grid(original, blobs, target, coding=None):
     count = struct.unpack_from('<i', original, 20)[0]
     data = bytearray(original[:24])
+    if coding is not None:
+        version = pc.split_version(struct.unpack_from('<i', original, 4)[0])[0]
+        struct.pack_into('<i', data, 4, pc.header_version(version, coding))
     offset = 24 + 8 * count
     for key in range(count):
         n = len(blobs.get(key, b''))
@@ -133,7 +137,7 @@ def main():
             max_error = max(max_error, error)
             if i % 300 == 299:
                 print(f'Temperature {i + 1}/{len(entries)}; {time.time() - start:.1f}s', flush=True)
-        report['temperature'] = write_grid(data, blobs, output / 'temperature.bin')
+        report['temperature'] = write_grid(data, blobs, output / 'temperature.bin', pc.PREDICTED)
         report['maximum_temperature_cell_change_C'] = max_error
     metadata['publicationData'] = {'summitMinimumElevationMetres': args.minimum, 'summitFadeMetres': args.fade,
                                    'temperatureStepC': args.temperature_step, 'geographicResolutionUnchanged': True}

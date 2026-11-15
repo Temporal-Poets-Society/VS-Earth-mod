@@ -53,6 +53,8 @@ namespace EarthMap
         {
             sapi = api;
             earth = api.ModLoader.GetModSystem<EarthMapSystem>();
+            // ER-18: at once when the params are set, not at the first five-second watch
+            if (earth != null) earth.ParamsReady += _ => Watch();
             api.Event.SaveGameLoaded += () => tickId = api.Event.RegisterGameTickListener(_ => Watch(), 5000, 1000);
         }
 
@@ -172,7 +174,9 @@ namespace EarthMap
             var model = EarthWorldGen.Instance?.Model;
             if (model != null) temperature -= TerrainModel.Lapse(model.Vertical, y);
             if (cache.TryGetValue(key, out float m)) return m;
-            m = (float)GroundMoisture.At(weather, wx, wz, hours);
+            // (X-L7, the Fable pass) at the bucket's start, not the first asker's hour: the cached value is the same whoever
+            // asked first
+            m = (float)GroundMoisture.At(weather, wx, wz, bucket * BucketHours);
             cache.Set(key, m);
             return m;
         }
@@ -194,7 +198,8 @@ namespace EarthMap
             if (ba.GetRainMapHeightAt(pos) > pos.Y + 1) return;
             double share = gen.TallGrassShareAt(pos.X, pos.Z);
             if (double.IsNaN(share) || share >= 0.999 || GroundCover.Keeps(pos.X, pos.Z, share)) return;
-            double m = self.MoistureAt(pos.X, pos.Y + 1, pos.Z, world.Calendar.TotalHours, out double temperature);
+            // (the rain's own hour, as EarthWeather.HoursNow: TotalDays with any timelapse)
+            double m = self.MoistureAt(pos.X, pos.Y + 1, pos.Z, world.Calendar.TotalDays * world.Calendar.HoursPerDay, out double temperature);
             if (double.IsNaN(m) || !(temperature >= DormantBelow)) return;
             if (air && m >= Wet)
             {

@@ -1,7 +1,7 @@
 # 0051: Copernicus GLO-90 land heights, downloaded per tile on demand
 
-Date: 4 November 2026. Status: **implemented, on `main`** (in every Earth 2.0.0 release candidate since rc.1,
-8 November 2026; not released). The direction is the author's (below); the details were built and played in the 1.0.3
+Date: 4 November 2026. Status: **in Earth 2.0.0** (and in every 2.0.0 release candidate since rc.1,
+8 November 2026). The direction is the author's (below); the details were built and played in the 1.0.3
 test builds and carried into 2.0 rather than agreed one by one. On `main`: new worlds take dry land's heights from
 GLO-90 at every scale (`earthElevation` `auto`, as `glo90`); the squares come from Earth's own data release on GitHub
 (`Temporal-Poets-Society/earth-glo90`, release `egl-v1`, 8.6 GB; [Data release](#data-release-tall10)), all of them
@@ -465,6 +465,56 @@ since (package L, `claude/rc2-fix-life`):
 Not changed (proposal): a square that falls back for the session while the game runs may meet later chunks with a step
 once its tile arrives; waiting for the network instead would stall all world generation.
 
+Changed on 14 November 2026 (EA-0099, the Fable pass's FP-03; option (a) of three, the author's decision of 14 November
+2026): rule 3 no longer gives a square the built-in heights while the game runs. A chunk whose square can't be fetched
+then is not made: Earth's chunk passes (`FineElevation.ChunkPass`) throw `TileUnavailableException`, EarthWorldGen notes the chunk (no refusal; the
+world goes on), the game saves it empty, Earth's later passes skip it, and the next start deletes it so that it is made
+on the square's heights. Players get a chat line, at most every 10 minutes a square; the square is tried again after 5
+minutes and its chunks fail at once meanwhile. Reads outside a chunk pass (map regions and layers, the story pad: the
+game doesn't guard those handlers) take the built-in heights for that read and don't give the square up. A chunk built
+on in the meantime loses what was built, as every noted chunk does. (Fable's re-review of `f55cba9`: a volcano's planning
+that reaches such a square leaves the chunk for the next start too, instead of refusing the world; the chat line says the
+chunks are holes to keep away from and not to build in; the 5 minutes count from a fetch that failed.) The author took
+this knowing what it costs: the chunks left unmade are open holes a player can fall into, and anything built in them is
+deleted when they are made at the next start. Also the author's decisions of 14 November 2026: such chunks get no
+placeholder floor (anything built on it would be deleted when the chunk is made), and a map region made while its square
+can't be had keeps its coarse maps (climate, forest) from the built-in heights for good, as before EA-0099: a known limit
+for 2.0, to be looked at again after it.
+
+### Every tile the release's (EA-0106)
+
+The Fable pass of the 14 November 2026 code review (FP-15, FP-17) found that only tiles from the release were checked
+against its manifest: a square converted from Copernicus, or a tile kept from before egl-v1, was never compared, so two
+computers could make one world on different heights; and downloads and the GeoTIFF reader took sizes from the source
+unchecked (a body without end, a mirror's manifest asking for 1.5 GB a square, a damaged GeoTIFF directory allocating
+4 GB). The rule since (`claude/tile-checks`):
+
+1. Where the release has a square, the square's tile has the release's heights. They are judged by the heights'
+   checksum (`DemTiles.Checksum`, FNV-1a over the decoded heights, which every tile's header carries and `Decode`
+   verifies) against `data/glo90-heights.bin` (`Glo90Heights`: 26,475 checksums, 212 kB, embedded in the mod; baked from
+   egl-v1's tiles by `tools/bake_glo90_heights.py`). A conversion with other heights (a source file issued again, another
+   converter) is not kept and the release's tile is fetched instead; when the release can't be had either, the square is
+   a failure that may pass, not one the sources lack. Without the table a conversion is kept as before, said once.
+2. A tile already here is judged the same way at its first read in a session (`FineElevation.Verify`,
+   `DemDownloader.KeptMatches`; no manifest needed): with the release's heights it passes, whatever its bytes (a tile
+   converted earlier with the bucket's ETag is taken as it is). Any other stays in use for the session (the square never
+   lacks heights, offline too), and the release's tile is fetched beside it (`.release`); at the next start it takes the
+   old one's place (`FineElevation.ApplyReplacements`): with the same heights silently, with others the old kept as
+   `.differs` and the square named in the log (chunks made before keep the old heights). (Fable's re-review of
+   `90692fe`.)
+2a. (Fable's re-review of `255baa7`) Judging by file bytes did not hold: a tile's bytes depend on the runtime's Brotli.
+   On .NET 8.0.25, where the release was made, all 602 sampled release tiles encode again to the same bytes; on the
+   game's .NET 10.0.8, 341 of them encode to other bytes with the same heights, and a canary tile could not tell. The
+   byte comparison, the canary and the rewrite of converted tiles went; ElevationTests runs on both runtimes.
+3. Limits: a manifest no larger than the default release's pinned size, or 16 MB for a mirror, and no entry over 8 MB
+   (egl-v1's largest tile is 1.18 MB; an entry's end is found without overflow); a GeoTIFF no larger than 64 MB (GLO-90's
+   largest is 6.1 MB), its directory, value arrays and tiles inside the file, at most 4,096 columns, rows, tile columns
+   and tile rows and 65,536 values an entry; a conversion of other dimensions than GLO-90's is not kept (L8). A manifest
+   whose copy can't be kept in the store is used for the session (L7).
+
+Not changed: a missing local source folder is still retried as a failure that may pass (L7's second half): treating it
+as the source's answer would let a typo in a setting take a square for good (rule 1 of the section above).
+
 ## History
 
 - 4 November 2026: proposed at the author's direction; prototype started on `claude/glo90-elevation`. The same day,
@@ -489,3 +539,10 @@ once its tile arrives; waiting for the network instead would stall all world gen
 - 9 November 2026: review round 3 of 2.0.0-rc.2 (A3, A4): fallbacks for good only on a source's answer, a stop for
   failures while the world starts, session fallbacks while it runs, turns for every fetch
   ([A tile or file that can't be had](#a-tile-or-file-that-cant-be-had-rc3)); `claude/rc2-fix-life`, not merged.
+- 14 November 2026: EA-0099 (the Fable pass's FP-03): while the game runs a chunk whose square can't be had is left
+  for the next start instead of taking the built-in heights (option (a): don't make the chunk, note it and make it again
+  at the next start, tell the players without flooding the chat; first the release coordinator's call, then the author's
+  decision the same day, with no placeholder floor and map regions' coarse maps a known limit); `claude/tile-unavailable`.
+- 14 November 2026: EA-0106 (the Fable pass's FP-15, FP-17): every tile the release's where its manifest lists it, tiles
+  here compared at their first read, limits on every download and the GeoTIFF reader
+  ([Every tile the release's](#every-tile-the-releases-ea-0106)); `claude/tile-checks`.

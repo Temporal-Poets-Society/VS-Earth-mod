@@ -5,11 +5,11 @@ using System.Text;
 /// <summary>
 /// A small HTTP server on 127.0.0.1 for the transport's checks: serves the files of a folder with range requests, and on
 /// request misbehaves the way real servers and networks do (a body that stalls after the headers, a connection cut short,
-/// a range ignored, a file not there). One request per connection.
+/// a range ignored, a file not there, a body without a length that never ends). One request per connection.
 /// </summary>
 sealed class TestServer : IDisposable
 {
-    public enum Mode { Normal, Stall, Cut, IgnoreRange, NotFound }
+    public enum Mode { Normal, Stall, Cut, IgnoreRange, NotFound, Endless }
 
     readonly TcpListener listener;
     readonly string folder;
@@ -77,6 +77,13 @@ sealed class TestServer : IDisposable
                     return;
                 }
                 byte[] all = File.ReadAllBytes(path);
+                if (mode == Mode.Endless)
+                {
+                    // no length, the file over and over until the client goes
+                    await Write(s, "HTTP/1.1 200 OK\r\nConnection: close\r\n\r\n");
+                    while (!stop.IsCancellationRequested) await s.WriteAsync(all, stop.Token);
+                    return;
+                }
                 if (mode == Mode.IgnoreRange) ranged = false;
                 if (!ranged) { from = 0; to = all.Length - 1; }
                 else if (to < 0 || to >= all.Length) to = all.Length - 1;

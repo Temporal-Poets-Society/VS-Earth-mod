@@ -303,12 +303,15 @@ namespace EarthMap
 
         internal static bool WorldgenPrefix([HarmonyArgument(1)] EntityProperties type,[HarmonyArgument(2)] BlockPos pos,ref bool __result)
         {
+            // (FP-11, Fable's low 5 on ad56a74) a generation entry point inside vanilla's pass: this thread may wait for a missing tile
+            using var fetch = Core.FineElevation.Generating();
             var self=instance; var st=self?.state; var m=st==null ? null : MappingOf(st,type);
             if(m==null || self.Allows(st,m,pos.X,pos.Z)) return true;
             __result=false; return false;
         }
         internal static void WorldgenClimatePrefix([HarmonyArgument(1)] EntityProperties type,[HarmonyArgument(2)] BlockPos pos,[HarmonyArgument(5)] ref float rain,[HarmonyArgument(6)] ref float temp)
         {
+            using var fetch = Core.FineElevation.Generating();
             var self=instance; var st=self?.state;
             if(st==null || MappingOf(st,type)?.SamplesClimate!=true) return;
             var sample=RegionalFaunaClimate.At(st.Model,pos.X,pos.Z,st.ExtendTemperature);

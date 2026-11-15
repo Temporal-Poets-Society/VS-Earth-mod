@@ -260,7 +260,7 @@ static partial class Checks
             new PatchMethod(typeof(GenRivulets), "tryGenMountainSideRivers", prefix: (typeof(SpringsAndPonds), nameof(SpringsAndPonds.SpringGuard))),
         })));
         Console.WriteLine("  changed signature: " + changed.Lines.Single());
-        Check(changed.Lines.Single().Contains("GenRivulets.tryGenMountainSideRivers changed (no argument 4)"), "a changed signature is named (the spring guard reads lava by position)");
+        Check(changed.Lines.Single().Contains("GenRivulets.tryGenMountainSideRivers changed (argument 3 is a Int32, not a Single)"), "a changed signature is named (the spring guard reads its arguments by position: the activity line, a float, at 3)");
         OthersOn(changed.Pv, Feature.Springs);
         Check(Earth(AccessTools.Method(typeof(GenRivulets), "tryGenRivulet"), changed.Harmony.Id) == 0, "the springs' first patch was not applied either");
         changed.Harmony.UnpatchAll(changed.Harmony.Id);

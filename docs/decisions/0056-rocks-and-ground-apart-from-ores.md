@@ -1,8 +1,6 @@
 # 0056: Rocks and ground apart from Ores; the ground pack required
 
-Status: implemented in source (`claude/ground-columns`, commit 9718956), offline tests pass; loaded on the
-AgentBridge bench on 7 November (Earth with `earthgrounddata` 1.0.1 as a separate zip; the default 1:200 world got
-ground columns and vanilla ores, no Earth errors); merged into release/1.0 at a3381cd with the author's "Yes, merge" (7 November). New worlds only.
+Status: built, in Earth 2.0.0 (two choices, ground columns by default), merged with the author's "Yes, merge" (7 November); the required ground data pack is replaced by 0066's download. New worlds only.
 Date: 2026-11-07.
 
 ## What the author asked
@@ -57,3 +55,18 @@ sulfur 1567, smithsonite 231 beside sphalerite 1344, garnet 86 and spinel 40 bes
 `tests/EarthWorldOptionsTests`: both rock choices with both ore choices, vanilla rocks with the ore maps, the old key's
 three values, the new keys winning over the old one, invalid values falling back to earth.json, and the menu defaults
 (ground columns, vanilla ores, no `earthOres` entry left).
+
+## Later: the whole ground column (GenFixRules 4, 14 November 2026)
+
+`EarthGeology.RegionalRock`, which the ore plans' host search, prospecting and the water table read, knew only the top
+512 blocks of a ground column (`GroundIds` was 512 long), so below that it answered regional geology's bed or nothing
+where the ground pass had placed the ground column's own blocks (a top above y 512: 1:10 and 1:5 mountains). New worlds
+(`GenFixRules` 4, code review ER-20) read the column to its bottom; older worlds keep the 512 blocks.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: implemented in source (`claude/ground-columns`, commit 9718956), offline tests pass; loaded on the
+AgentBridge bench on 7 November (Earth with `earthgrounddata` 1.0.1 as a separate zip; the default 1:200 world got
+ground columns and vanilla ores, no Earth errors); merged into release/1.0 at a3381cd with the author's "Yes, merge" (7 November). New worlds only.

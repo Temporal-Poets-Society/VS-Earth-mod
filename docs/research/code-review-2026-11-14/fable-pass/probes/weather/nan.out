@@ -1,0 +1,32 @@
+geometry: ring 25600+204800, wraps True, gutter 0, seam -169.25, 568.89 x 568.36 blocks per degree
+rules 5 default       : bad 0; cloudness <= 1.600, wind <= 1.241, anomaly 0.0..0.0 C, rain <= 4.2 mm/h
+rules 5 rain 0        : bad 0; cloudness <= 0.000, wind <= 1.241, anomaly 0.0..0.0 C, rain <= 0.0 mm/h
+rules 5 rain 10       : bad 0; cloudness <= 1.550, wind <= 1.241, anomaly 0.0..0.0 C, rain <= 2.3 mm/h
+rules 5 storms 0      : bad 0; cloudness <= 1.600, wind <= 0.782, anomaly 0.0..0.0 C, rain <= 4.2 mm/h
+rules 5 storms 20     : bad 0; cloudness <= 1.600, wind <= 1.500, anomaly 0.0..0.0 C, rain <= 4.4 mm/h
+rules 5 pace 0.05     : bad 0; cloudness <= 1.600, wind <= 1.179, anomaly 0.0..0.0 C, rain <= 6.7 mm/h
+rules 5 pace 20       : bad 0; cloudness <= 1.600, wind <= 1.172, anomaly 0.0..0.0 C, rain <= 4.4 mm/h
+rules 5 hours/day 2.4 : bad 0; cloudness <= 1.600, wind <= 1.232, anomaly 0.0..0.0 C, rain <= 5.9 mm/h
+rules 5 days/year 12  : bad 0; cloudness <= 1.600, wind <= 1.254, anomaly 0.0..0.0 C, rain <= 4.8 mm/h
+rules 5 days/year 720 : bad 0; cloudness <= 1.600, wind <= 1.089, anomaly 0.0..0.0 C, rain <= 4.3 mm/h
+rules 5 gusts 5       : bad 0; cloudness <= 1.600, wind <= 1.500, anomaly 0.0..0.0 C, rain <= 4.2 mm/h
+rules 5 variability 5 : bad 0; cloudness <= 1.600, wind <= 1.500, anomaly 0.0..0.0 C, rain <= 4.2 mm/h
+rules 5 rain 0.001    : bad 0; cloudness <= 1.600, wind <= 1.241, anomaly 0.0..0.0 C, rain <= 794.2 mm/h
+rules 5 rain -1       : bad 0; cloudness <= 0.000, wind <= 1.241, anomaly 0.0..0.0 C, rain <= 0.0 mm/h
+rules 5 storms -1     : bad 0; cloudness <= 1.600, wind <= 0.782, anomaly 0.0..0.0 C, rain <= 4.2 mm/h
+rules 9 default       : bad 0; cloudness <= 1.600, wind <= 1.241, anomaly -19.3..17.8 C, rain <= 6.8 mm/h
+rules 9 rain 0        : bad 0; cloudness <= 0.000, wind <= 1.241, anomaly -20.2..17.8 C, rain <= 0.0 mm/h
+rules 9 rain 10       : bad 0; cloudness <= 1.600, wind <= 1.241, anomaly -19.1..18.1 C, rain <= 2.3 mm/h
+rules 9 storms 0      : bad 0; cloudness <= 1.600, wind <= 0.782, anomaly -19.3..17.8 C, rain <= 6.8 mm/h
+rules 9 storms 20     : bad 0; cloudness <= 1.600, wind <= 1.500, anomaly -19.1..17.8 C, rain <= 6.8 mm/h
+rules 9 pace 0.05     : bad 0; cloudness <= 1.600, wind <= 1.179, anomaly -18.9..19.7 C, rain <= 7.1 mm/h
+rules 9 pace 20       : bad 0; cloudness <= 1.600, wind <= 1.172, anomaly -17.5..20.4 C, rain <= 7.9 mm/h
+rules 9 hours/day 2.4 : bad 0; cloudness <= 1.600, wind <= 1.232, anomaly -18.0..19.6 C, rain <= 7.7 mm/h
+rules 9 days/year 12  : bad 0; cloudness <= 1.600, wind <= 1.254, anomaly -18.9..19.6 C, rain <= 8.7 mm/h
+rules 9 days/year 720 : bad 0; cloudness <= 1.600, wind <= 1.089, anomaly -18.0..17.8 C, rain <= 7.3 mm/h
+rules 9 gusts 5       : bad 0; cloudness <= 1.600, wind <= 1.500, anomaly -19.3..17.8 C, rain <= 6.8 mm/h
+rules 9 variability 5 : bad 0; cloudness <= 1.600, wind <= 1.500, anomaly -19.3..17.8 C, rain <= 6.8 mm/h
+rules 9 rain 0.001    : bad 0; cloudness <= 1.600, wind <= 1.241, anomaly -20.2..17.8 C, rain <= 794.2 mm/h
+rules 9 rain -1       : bad 0; cloudness <= 0.000, wind <= 1.241, anomaly -20.2..17.8 C, rain <= 0.0 mm/h
+rules 9 storms -1     : bad 0; cloudness <= 1.600, wind <= 0.782, anomaly -19.3..17.8 C, rain <= 6.8 mm/h
+nan/range scan: 360000 samples, 0 bad

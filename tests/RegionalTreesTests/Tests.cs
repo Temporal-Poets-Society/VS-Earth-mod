@@ -520,6 +520,39 @@ static class Tests
             "Beech, oak, ash and lime prefer the loess to the acid sand");
         foreach (var (name, _) in sites)
             Check(Math.Abs(success[name] - success["any soil"]) < 0.02, $"Soil sorts the species but does not thin the forest ({name}: {success[name]:0.00} vs {success["any soil"]:0.00})");
+        // EA-0054 step 2 (site rules 1): one column's own site (wetness class, richness, pH) instead of the grid's shares
+        TreeSite Column(int wetness, int richness, float ph)
+        {
+            var s = baseSite;
+            s.HasSoil = true; s.ColumnSite = true; s.SoilPh = ph;
+            s.SiteMoisture = SiteNiche.Moisture(wetness, 1.0); s.SiteNutrients = SiteNiche.Nutrients(richness);
+            s.Wet = wetness >= SiteNiche.WetGround;   // as EarthTrees sets it
+            return s;
+        }
+        var columns = new (string Name, TreeSite Site)[]
+        {
+            ("raised bog", Column(5, 0, 4.0f)), ("alder carr", Column(5, 2, 6.5f)), ("dry heath", Column(1, 0, 4.3f)), ("fresh rich", Column(2, 3, 6.8f)),
+        };
+        foreach (var (name, site) in columns)
+        {
+            double ok = picker.Expected(site, share);
+            success[name] = ok;
+            var by = new Dictionary<string, double>();
+            for (int i = 0; i < share.Length; i++) if (share[i] > 0) by[picker.Generator(i)] = by.GetValueOrDefault(picker.Generator(i)) + share[i] / ok;
+            mix[name] = by;
+            Console.WriteLine($"  column {name,-11} success {ok:0.00}: " + string.Join(", ", by.OrderByDescending(kv => kv.Value).Take(7).Select(kv => $"{kv.Key.Substring(5)} {100 * kv.Value:0}%")));
+        }
+        string[] broadleaf = { "beech", "englishoak", "oldenglishoak", "ash", "linden" }, birch = { "silverbirch", "brideinwhite", "thinbirch", "dwarfbirch" };
+        Check(Genus("raised bog", birch) + Genus("raised bog", "scotspine") > 2 * Genus("raised bog", broadleaf),
+            $"Raised bog: birch and pine, not broadleaves ({Genus("raised bog", birch) + Genus("raised bog", "scotspine"):0.00} vs {Genus("raised bog", broadleaf):0.00})");
+        Check(Genus("alder carr", "alder", "alnusglutinosa") >= 0.2 && Genus("alder carr", "alder", "alnusglutinosa") >= 2 * Genus("fresh rich", "alder", "alnusglutinosa") && Genus("alder carr", "alder", "alnusglutinosa") >= 2 * Genus("raised bog", "alder", "alnusglutinosa"),
+            $"Alder carr: alder on wet rich ground ({Genus("alder carr", "alder", "alnusglutinosa"):0.00}), not on the bog or fresh ground");
+        Check(Genus("dry heath", "scotspine") >= 1.5 * Genus("fresh rich", "scotspine") && Genus("dry heath", "scotspine") > Genus("dry heath", broadleaf),
+            $"Dry heath: Scots pine ({Genus("dry heath", "scotspine"):0.00} vs {Genus("fresh rich", "scotspine"):0.00} on fresh rich ground)");
+        Check(Genus("fresh rich", broadleaf) > 1.5 * Genus("raised bog", broadleaf) && Genus("fresh rich", broadleaf) > Genus("dry heath", broadleaf),
+            $"Fresh rich ground: beech, oak, ash and lime ({Genus("fresh rich", broadleaf):0.00})");
+        foreach (var (name, _) in columns)
+            Check(Math.Abs(success[name] - success["any soil"]) < 0.02, $"The column's site sorts the species but does not thin the forest ({name}: {success[name]:0.00})");
         // outside Europe's flora nothing changes: a species without indicators keeps its weight on every soil
         var tokyo = h.Site(full.Catalog, 35.7, 139.7, false);
         var tokyoSoil = tokyo;

@@ -1,0 +1,88 @@
+data loaded from <scratch>/earth-fable in 161 ms
+portable maths (EA-0029)
+  ok   Exp within 2.2e-16 (relative) over ±700
+  ok   Log within 1.1e-16 over 1e-304..1e304
+  ok   Pow within 5.5e-15 (relative) for bases 0-50, powers ±8
+  ok   Sin and Cos within 1.1e-16 over ±2000
+  ok   Atan2 within 4.4e-16 over all four quadrants
+  ok   special values (exp 0, log 1, 2^10, (−2)^3, sin 0, cos 0, atan2's axes, log −1, exp ±800)
+weather rules table
+  ok   each weather rules version turns on what it did before the rules record (6, 7, 8)
+  ok   new worlds get the newest weather rules (9)
+  ok   the ground is read from rules 7 on
+older weather rules, pinned
+  ok   weather rules 5 as built: ALL 18C6D3C6B8B0F4E7, anomaly AC2878215AD33205, hail AC2878215AD33205
+  ok   weather rules 6 as built: ALL C99BE19573CD5E22, anomaly B15FF6CA45CE773B, hail 771BC10DED7B5F52
+  ok   weather rules 7 as built: ALL 04AE435FBB7B4301, anomaly 4D6A17C62BD10123, hail 771BC10DED7B5F52
+  ok   weather rules 8 as built: ALL 4D19B0486DDC9A14, anomaly 44EFC9EA945B58DE, hail 771BC10DED7B5F52
+shape and types
+  ok   the entry is a Dictionary<string, object>
+  ok   members: owner, version, priority, revision, wind, prevailing, storm, rain, writesVanilla
+  ok   owner "earth" (Earth's mod ID and its SetWindProvider name)
+  ok   version 1 (int)
+  ok   priority 100 (int, the world's owner)
+  ok   revision is Func<long>
+  ok   wind is Func<double, double, double, bool, (double, double)>
+  ok   prevailing is Func<double, double, double, (double, double)>
+  ok   storm is Func<double, double, double, (double, double, string)>
+  ok   rain is Func<double, double, double, (double, double)>
+  ok   writesVanilla is true (bool)
+  ok   every member's type is from the base class library
+claiming the role (R2)
+  ok   an empty slot: Earth takes it
+  ok   a mod's default (priority 50): Earth takes its place
+  ok   a fallback (priority 0): Earth takes its place
+  ok   an entry without a priority counts as 0
+  ok   a priority that isn't an int counts as 0
+  ok   a value that isn't an entry is replaced
+  ok   another world owner (100) keeps it, and Earth knows who
+  ok   a higher priority without an owner keeps it ("?")
+  ok   Earth's own entry is never asked about (it would count as another owner)
+before the weather is built
+  ok   every answer is NaN (no answer, R7)
+  ok   revision answers
+  ok   revision: changes when the model is built (1 → 2)
+units: m/s
+  ok   wind and prevailing are Earth's wind units × 25 at 4000 of 4000 places and times
+  ok   steady open-sea wind 5.9 m/s on average (4-12; Earth's own check: ~7)
+  ok   never above 37.5 m/s (most 30.6)
+directions: +X east, +Z south, toward where the air goes
+  ok   the layout: north is −Z, east is +X
+  ok   NE trades (15°N 140°W) blow toward the south-west: (-6.2, 3.1) m/s
+  ok   SE trades (15°S 110°W) blow toward the north-west: (-6.8, -1.5) m/s
+  ok   roaring forties (45°S 90°E) blow toward the east: (7.9, 1.3) m/s
+  ok   North Atlantic westerlies (50°N 30°W) blow toward the east: (4.5, -1.6) m/s
+  ok   the prevailing wind there too: (-6.4, 3.0) m/s
+storms: presence 0-1, wind in m/s, Rough Seas' kinds
+  ok   no storm: no kind
+  ok   Presence 0-1 and WindMps 0-37.5 at 20000 of 20000
+  ok   Kind is null, gale or hurricane, never squall (seen: gale, hurricane)
+  ok   a kind exactly where a storm is present (20000 of 20000)
+  ok   presence and wind are Earth's storms' at 20000 of 20000 (11.5 % of the places and times inside a storm)
+  ok   both of Earth's storm kinds turn up
+  ok   a strong tropical cyclone and a strong low found at their peaks
+  ok   Tropical cyclone 831 (peak 36 m/s, now 36) is a hurricane: centre hurricane, eyewall hurricane
+  ok     inside its core near its peak: presence 1.00 at the centre, 1.00 at 56 km
+  ok     its own wind at 56 km: 37.5 m/s (more than half its 36 m/s)
+  ok     presence falls away from it (0.00 at twice its radius)
+  ok   Low 266 (peak 23 m/s, now 23) is a gale: centre gale, eyewall gale
+  ok     inside its core near its peak: presence 1.00 at the centre, 1.00 at 415 km
+  ok     its own wind at 415 km: 23.8 m/s (more than half its 23 m/s)
+  ok     presence falls away from it (0.00 at twice its radius)
+  ok   presence: eye 1.00, eyewall 1.00, half way out 0.39, edge 0.00
+  ok   a storm at 30 % of its peak is 30 % present in its core (0.30)
+rain: vanilla's 0-1 rain-cloud overlay and precipitation
+  ok   both 0-1, and rain only under clouds above 0.5 (20000 of 20000)
+  ok   the same as vanilla's RainCloudOverlay and Rainfall from Earth's cloudness at 20000 of 20000
+  ok   raining at 16.1 % of the places and times
+  ok   Mumbai: rain 0.3 % of January, 31.3 % of July
+the same answer on another side
+  ok   a client's model answers the server's 3000 questions bit for bit
+the same answer from several threads
+  ok   32 threads asking one fresh model at once, each in its own order: 32 of 32 get the single thread's answers
+vanilla's wind as a vector (section 5)
+  ok   X east and Z south along the wind, the length its strength, and a reader of the length gets the strength back (5000 of 5000)
+  ok   calm: no wind
+  ok   vanilla's X: toward the east in the roaring forties (0.35), toward the west in the trades (-0.25)
+ALL OK
+EXIT 0

@@ -1,8 +1,6 @@
 # 0049: Plants grow where they grew around 1318
 
-Date: 3 November 2026. Status: **Agreed**; first slice **Implemented** 3 November 2026 (fruit trees, vanilla wild crops
-and berry bushes, Floral Zones wild crops) through the placement catalogue of
-[0047](0047-placement-catalogue-and-audit.md#implementation-first-slice). Other ground plants are not covered yet.
+Date: 3 November 2026. Status: **Agreed**; built, in Earth 2.0.0: fruit trees, wild crops, berry bushes, vanilla flowers and cacti through the placement catalogue of [0047](0047-placement-catalogue-and-audit.md#implementation-first-slice). Other ground plants are not covered.
 
 ## Report
 
@@ -68,3 +66,11 @@ What this means, to be confirmed taxon by taxon with sources in the catalogue (0
   animals already have natural ranges since 0031.
 - 3 November 2026: renumbered from 0046 to 0049 when merged with calm rivers, which had taken 0046 in an installed
   playtest build and in Hydrology.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: **Agreed**; first slice **Implemented** 3 November 2026 (fruit trees, vanilla wild crops
+and berry bushes, Floral Zones wild crops) through the placement catalogue of
+[0047](0047-placement-catalogue-and-audit.md#implementation-first-slice). Other ground plants are not covered yet.

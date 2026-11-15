@@ -22,10 +22,12 @@ namespace EarthMap.Core
     /// - Vanilla's lava springs are off (EarthWorldGen's spring guard); open lava waits for real volcanoes (0057 part 2).
     ///
     /// From rules 2, volcanoes get bodies: magma chambers, conduits, craters and lava lakes (Volcanoes.cs, EarthVolcanoes).
+    /// From rules 3 (decision 0078, EA-0067), their interiors in real proportions: the cone's own layered rock, a lens-shaped
+    /// chamber, a conduit with a cupola and a funnel, dykes and a sill, no caves next to them (VolcanoInterior.cs).
     /// </summary>
     public static partial class Geothermal
     {
-        public const int RulesVersion = 2;
+        public const int RulesVersion = 3;
 
         /// <summary>The kinds of site (tools/bake_geothermal_sites.py writes these numbers). Volcanoes by the GVP's evidence:
         /// Active, an eruption dated in the Common Era; Holocene, dated before it or credible without a date; Uncertain.</summary>

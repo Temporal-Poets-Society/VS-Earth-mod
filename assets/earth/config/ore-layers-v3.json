@@ -1,0 +1,102 @@
+{
+  // Decision 0060: ores, gems and deposits in their ground layer, whatever the ore choice. Read with
+  // ground-rules-v1.json (material, recipe and unit names). Worlds keep the version they were made with
+  // (EarthParams.OreLayers): v1 worlds read ore-layers-v1.json, new worlds this file.
+  // v2 (EA-0059, 13 November 2026): a rule's "under" names rules whose kept blocks its own may sit directly under, in any
+  // layer. Fire clay takes it for vanilla's underclay: a bituminous-coal or anthracite block (BlockBituCoal) lays fire clay
+  // in the sedimentary rock below it about 4 times in 10, which v1 put back (93 % of fire clay under the ore maps).
+  // v3 (EA-0064, decision 0076, 13 November 2026): "surface" rules lay loose flint and chert on the ground of their cover.
+  // Everything else is as in v2.
+  "version": 3,
+
+  // Layer classes. Each layer of a ground column has a part (top, cover, deep-cover, bed, basement), a source (the top's
+  // kind: soil, peat, beach, riverbed, seabed; the cover recipe; the bed's template unit) and a material. The first rule
+  // that matches gives the class. A rule's parts, sources and materials must all match where given.
+  "classes": [
+    {"class": "alluvial", "parts": ["top"], "sources": ["riverbed"]},
+    {"class": "alluvial", "parts": ["cover"], "sources": ["alluvium", "alluvium-on-till", "fan", "delta"],
+     "materials": ["sand", "gravel", "permafrost-sand", "permafrost-gravel"]},
+    {"class": "outwash", "parts": ["cover"], "sources": ["outwash"],
+     "materials": ["sand", "gravel", "permafrost-sand", "permafrost-gravel"]},
+    {"class": "peat", "parts": ["top", "cover"], "materials": ["peat"]},
+    {"class": "laterite", "parts": ["cover"], "materials": ["laterite", "ironstone", "terra-rossa"]},
+    {"class": "saprolite", "parts": ["cover"], "materials": ["saprolite", "saprolite-mafic"]},
+    {"class": "playa", "parts": ["cover"], "sources": ["playa"]},
+    {"class": "deep-cover", "parts": ["deep-cover"]},
+    {"class": "cover", "parts": ["top", "cover"]},
+    {"class": "bed", "parts": ["bed"]},
+    {"class": "basement", "parts": ["basement"]}
+  ],
+
+  // Bed ages. Template units by name; where a column hands its rock to regional geology, the column's bedrock era
+  // (Chorlton) instead. Eras that span more than one age are unknown, which no age rule excludes.
+  "unitAges": {
+    "cenozoic": "cenozoic", "mesozoic": "mesozoic", "paleozoic": "paleozoic", "proterozoic": "precambrian",
+    "neogene": "cenozoic", "palaeogene": "cenozoic",
+    "cretaceous": "mesozoic", "jurassic": "mesozoic", "triassic": "mesozoic",
+    "permian": "paleozoic-late", "carboniferous": "paleozoic-late",
+    "devonian-upper": "paleozoic-late", "devonian-middle": "paleozoic-late", "devonian-lower": "paleozoic-late",
+    "silurian": "paleozoic-early", "ordovician": "paleozoic-early", "cambrian": "paleozoic-early"
+  },
+  "eraAges": {
+    "Cenozoic": "cenozoic", "Mesozoic": "mesozoic", "Paleozoic": "paleozoic",
+    "Neoproterozoic": "precambrian", "Mesoproterozoic-Neoproterozoic": "precambrian", "Mesoproterozoic": "precambrian",
+    "Proterozoic": "precambrian", "Paleoproterozoic-Mesoproterozoic": "precambrian", "Paleoproterozoic": "precambrian",
+    "Archean-Paleoproterozoic": "precambrian", "Archean": "precambrian", "Eoarchean": "precambrian", "Precambrian": "precambrian"
+  },
+
+  // Evaporite beds: every bed of regional geology's evaporitic sequence, and beds of these rocks that are not Precambrian.
+  "evaporiteProfiles": ["evaporitic"],
+  "evaporiteRocks": ["gypsum", "claystone", "shale", "mudstone", "dolostone", "limestone"],
+  // Regional rock below a hand-off column: these rocks are beds, any other rock is basement.
+  "sedimentaryRocks": ["sandstone", "conglomerate", "claystone", "shale", "mudstone", "siltstone", "limestone", "dolostone",
+                       "chalk", "chert", "gypsum", "halite", "marl"],
+
+  // Where each deposit may go, by deposit code (child deposits by their own code). classes: allowed layer classes;
+  // ages: allowed bed ages (unknown always passes); evaporite: evaporite beds only; rocks: only these host rocks;
+  // minDepth: blocks below the column's top. "any": no layer rule. A code not named here follows "defaults".
+  "deposits": [
+    {"name": "hard-rock ores and gems", "classes": ["bed", "basement"], "codes": [
+      "nativecopper", "surfacecopper", "cassiterite", "surfacecassiterite", "bismuthinite", "chromite", "galena", "silver",
+      "sphalerite", "ilmenite", "limonite", "hematite", "magnetite", "malachite", "pentlandite", "rhodochrosite", "cinnabar",
+      "graphite", "lapis", "quartz", "gold", "olivine", "peridot", "emerald", "diamond", "whitemarble", "redmarble",
+      "greenmarble", "rock-obsidian", "travertine", "crackedrock"]},
+    {"name": "sedimentary minerals", "classes": ["bed"], "codes": ["alum", "phosphorite", "fluorite", "sulfur"]},
+    {"name": "flint", "classes": ["bed"], "rocks": ["chalk", "limestone"], "codes": ["flint"]},
+    {"name": "lignite", "classes": ["bed"], "ages": ["cenozoic", "mesozoic"], "codes": ["lignite"]},
+    {"name": "bituminous coal", "classes": ["bed"], "ages": ["cenozoic", "mesozoic", "paleozoic", "paleozoic-late"], "codes": ["bituminouscoal"]},
+    {"name": "anthracite", "classes": ["bed"], "ages": ["mesozoic", "paleozoic", "paleozoic-late"], "codes": ["anthracite"]},
+    {"name": "salt", "classes": ["bed"], "evaporite": true, "codes": ["halite", "sylvite", "earth-gypsum"]},
+    {"name": "borates", "classes": ["bed"], "evaporite": true, "ages": ["cenozoic"], "codes": ["borax", "kernite"]},
+    {"name": "salt flats", "classes": ["playa"], "codes": ["earth-saltflat", "earth-saltflat-sylvite"]},
+    {"name": "bauxite", "classes": ["laterite"], "codes": ["earth-bauxite"]},
+    // fire clay: kaolin in saprolite and laterite, and the underclay directly below a kept coal block
+    {"name": "fire clay", "classes": ["saprolite", "laterite"], "under": ["bituminous coal", "anthracite"], "codes": ["earth-kaolin"]},
+    // peat is mostly one block thick at these scales, so bog iron may take the top peat block
+    {"name": "bog iron", "classes": ["peat"], "codes": ["earth-bogiron", "bogironlarge", "bogironsmall"]},
+    {"name": "placers", "classes": ["alluvial", "outwash"], "codes": ["earth-placergold", "earth-placertin", "earth-placerplatinum"]},
+    {"name": "cave air", "any": true, "codes": ["saltpeter"]}
+  ],
+  // v3: loose stones on the ground, after the layer pass. First match wins, once per column with its chance. covers: the
+  // column's cover recipe (ground rules); tops: its top (soil, peat, beach, riverbed, seabed, "shore gravel" and the
+  // like); materials: its uppermost layer below the topsoil; inWater: only under water (else only on dry ground).
+  // Real sources (EA-0064): the ice sheets spread the flint of the chalk (Denmark, Ruegen, Scania, the North Sea floor)
+  // through the till, outwash and the gravel of rivers and beaches of the glaciated north; chert nodules weather out of
+  // limestone. Vanilla's flint deposits only mark themselves with loose flint above them (10 % per surface block).
+  "surface": [
+    {"name": "flint shingle", "tops": ["shore gravel"],
+     "covers": ["thin-till", "till", "knob-till", "outwash", "alluvium-on-till", "marine-on-till", "lakeclay"],
+     "block": "game:looseflints-chalk-free", "chance": 0.03},
+    {"name": "river flint", "tops": ["riverbed"], "inWater": true,
+     "covers": ["thin-till", "till", "knob-till", "outwash", "alluvium-on-till"],
+     "block": "game:looseflints-chalk-water", "chance": 0.01},
+    {"name": "till flint", "tops": ["soil"],
+     "covers": ["thin-till", "till", "knob-till", "outwash", "alluvium-on-till", "marine-on-till"],
+     "block": "game:looseflints-chalk-free", "chance": 0.004},
+    {"name": "karst chert", "tops": ["soil"], "covers": ["rendzina", "residual-karst"],
+     "block": "game:loosestones-chert-free", "chance": 0.004}
+  ],
+
+  // Deposits not named above: rock-hosted ones (any host is a rock-* block) go in bed or basement; others are unchanged.
+  "defaults": {"rockHosted": {"name": "rock-hosted (default)", "classes": ["bed", "basement"]}}
+}

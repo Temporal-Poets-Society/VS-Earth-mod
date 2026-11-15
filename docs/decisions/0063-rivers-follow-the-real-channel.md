@@ -1,6 +1,6 @@
 # 0063: Rivers follow the real channel at fine scales ("dredging")
 
-Status: **agreed, built** in test build 1.0.3-tall.25 on `claude/tall-glo90` (not released, not installed, not pushed;
+Status: **agreed, built** in test build 1.0.3-tall.25 on `claude/tall-glo90`, in Earth 2.0.0 (
 the author, 8 November 2026: "Nothing is released from this branch yet. Plan and do proper solutions for all and
 implement and test and then merge"; the courses' smoothing at the author's "fix" for the Tigris's angular bends). Checked
 offline at every reported place and on the bench at 1:10. The two new GLO-90 folder files are on the data release

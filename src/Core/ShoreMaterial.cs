@@ -30,6 +30,9 @@ namespace EarthMap.Core
             Sand => 40, Gravel => 20, Mixed => 30, Rock => 8, Mud => 30, Beach => 35, _ => 30,
         };
         public const double WidthVary = 0.35;
+        /// <summary>The widest class's width (m): <see cref="WidthMetres"/>'s largest answer (TerrainModel's shore strip bounds
+        /// its reach by it).</summary>
+        public const double WidestMetres = 40;
         /// <summary>At a lake: this share of the sea's width (no surf, smaller storms).</summary>
         public const double LakeShare = 0.5;
         /// <summary>Lakes smaller than this (km²) keep their shores as they are (eased shores, sedge zones). The lake

@@ -1,0 +1,15 @@
+data loaded in 800 ms
+Earth layout: 11133.2 blocks per degree east-west (10 m per block at the equator), 11132.6 north-south (stretch 1.00), latitudes shown ñ90ø, seam gutter 0 blocks, world centre at 10.8øE.
+1:10: world 4040704 x 2003968, ring 4007936 from 16384, 10.00 m/block; coasts 1 courses 4 channelRules 5 flowRules 1 dams 3 outlines L2 R4 streams all works 4 referee 2 coarse 1
+model built in 12880 ms (cache reused [strait-routes-1,sea-channel-ways-1] built []); rivers 9367660 pieces; managed 3191 MB, working set 3454 MB
+== dump
+  Rotterdam              512x512:   203.78 us/column,    316 B/column | sea:254500 river:7166 beach:407 land:71
+  Rhine-Maas delta       384x384:   104.80 us/column,     11 B/column | sea:86751 land:38079 beach:22600 lake:26
+  Flevoland              384x384:     1.91 us/column,    191 B/column | sea:147456
+  Wadden / Afsluitdijk   384x384:     6.73 us/column,     70 B/column | sea:147206 beach:204 land:46
+  Zeeland                384x384:     5.47 us/column,    205 B/column | sea:111651 beach:13748 land:11526 river:10514 bank:17
+  Daugava mouth          256x256:     3.37 us/column,    366 B/column | land:39773 sea:20453 beach:4654 river:562 bank:94
+  Amazon mouth           256x256:     3.21 us/column,   1272 B/column | sea:65536
+  Elbe mouth             256x256:     3.19 us/column,    358 B/column | sea:65536
+  Thames mouth           256x256:     3.16 us/column,    364 B/column | land:31548 sea:28900 beach:5088
+  written <scratch>\fable\probes-terrain\scratch\dump-10-fix.bin

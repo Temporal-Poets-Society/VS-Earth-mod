@@ -16,7 +16,8 @@ namespace EarthMap.Core
         readonly TerrainOverlays overlays;
         readonly int tile, tilesX, terrainW, terrainH;
         readonly TileCache<TerrainTile> tiles;
-        /// <summary>Tiles kept (each about 360 KB); past it the least recently used are dropped.</summary>
+        /// <summary>Tiles kept (each about 230 KB: elevation and ice as their 16-bit codes, EA-0087); past it the least
+        /// recently used are dropped.</summary>
         public int MaxCachedTiles { get => tiles.Max; set => tiles.Max = value; }
         // per thread: the last sample's neighbourhood (nearly every lookup of a chunk hits it; the tiles' own per-thread last
         // tile is TileCache's), keyed by a number rather than this object, so an unloaded world is not kept alive by a thread
@@ -100,7 +101,7 @@ namespace EarthMap.Core
             foreach (var p in patches)
             {
                 int i = (p.Row % tile) * tile + p.Col % tile;
-                t.Elev[i] = data.ElevationOf(p.ElevCode);
+                t.ElevCode[i] = TerrainTile.Code(p.ElevCode);
                 t.Level[i] = p.Level;
                 t.Flags[i] = p.Flags;
                 // a cell an island or a terminal lake changes is no longer the base lakes' ring: the old rules hold there
@@ -116,7 +117,7 @@ namespace EarthMap.Core
             if (col < 0) col += terrainW;
             var t = GetTile(row / tile, col / tile);
             int i = (row % tile) * tile + col % tile;
-            return new EarthData.Cell { Elev = t.Elev[i], Level = t.Level[i], Flags = t.Flags[i], Ice = t.Ice[i], Near = t.Level[i] == EarthData.NoLevel ? (byte)0 : t.Near != null ? t.Near[i] : (byte)255 };
+            return new EarthData.Cell { Elev = data.ElevationOfCode(t.ElevCode[i]), Level = t.Level[i], Flags = t.Flags[i], Ice = t.IceAt(i), Near = t.Level[i] == EarthData.NoLevel ? (byte)0 : t.Near != null ? t.Near[i] : (byte)255 };
         }
 
         public float GetElev(int row, int col)
@@ -125,7 +126,7 @@ namespace EarthMap.Core
             col %= terrainW;
             if (col < 0) col += terrainW;
             var t = GetTile(row / tile, col / tile);
-            return t.Elev[(row % tile) * tile + col % tile];
+            return data.ElevationOfCode(t.ElevCode[(row % tile) * tile + col % tile]);
         }
     }
 }

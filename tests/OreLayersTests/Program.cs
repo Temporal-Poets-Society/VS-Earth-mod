@@ -273,8 +273,70 @@ Check(hard > 0 && hardKept * 2 > hard, "most hard-rock host blocks the draws rea
     var model = GroundColumns.Load(groundRules, ReadAsset, cv, 1234);
     var v1 = new OreLayers(layerRules, model);
     var v2 = new OreLayers(File.ReadAllText(Path.Combine(root, OreLayers.RulesAsset(2).Replace("earth:", "assets/earth/"))), model);
-    Check(v1.Version == 1 && v2.Version == 2 && OreLayers.RulesVersion == 2 && OreLayers.Supported(1) == 1 && OreLayers.Supported(2) == 2,
-        "ore layers: v1 and v2 load with their versions; new worlds get v2");
+    var v3 = new OreLayers(File.ReadAllText(Path.Combine(root, OreLayers.RulesAsset(3).Replace("earth:", "assets/earth/"))), model);
+    var v4 = new OreLayers(File.ReadAllText(Path.Combine(root, OreLayers.RulesAsset(4).Replace("earth:", "assets/earth/"))), model);
+    Check(v1.Version == 1 && v2.Version == 2 && v3.Version == 3 && v4.Version == 4 && OreLayers.RulesVersion == 4 && OreLayers.Supported(1) == 1
+        && OreLayers.Supported(2) == 2 && OreLayers.Supported(3) == 3 && OreLayers.Supported(4) == 4 && OreLayers.AluminosilicateVersion == 4,
+        "ore layers: v1 to v4 load with their versions; new worlds get v4");
+    // v4 (EA-0068, decision 0077): v3's rules and surface rules, plus the aluminosilicates' rule in bed and basement rock
+    var alu = v4.RuleFor("earth-kyanite", true);
+    Check(v3.Rules.Select(r => r.Name).SequenceEqual(v4.Rules.Select(r => r.Name).Where(n => n != "aluminosilicates")) && v4.Surface.Count == v3.Surface.Count
+        && alu?.Name == "aluminosilicates" && v4.RuleFor("earth-sillimanite", true) == alu && v4.RuleFor("earth-andalusite", true) == alu
+        && !v3.Names("earth-kyanite"),
+        "ore layers v4: v3's rules and surface rules plus one rule for kyanite, sillimanite and andalusite; v3 does not name them");
+    // the deposits' host rocks and blocks exist: each placeblock and surface marker is an allowed variant of Earth's blocks
+    {
+        static HashSet<string> Allowed(string path) { using var doc = JsonDocument.Parse(File.ReadAllText(path)); return doc.RootElement.GetProperty("allowedVariants").EnumerateArray().Select(e => e.GetString()).ToHashSet(); }
+        var ores = Allowed(Path.Combine(root, "assets/earth/blocktypes/stone/ore-ungraded.json"));
+        var loose = Allowed(Path.Combine(root, "assets/earth/blocktypes/stone/looseores.json"));
+        using var doc = JsonDocument.Parse(File.ReadAllText(Path.Combine(root, "assets/earth/worldgen/deposits/earth-aluminosilicates.json")));
+        var hosts = new Dictionary<string, string[]> { ["kyanite"] = new[] { "gneiss", "quartzite", "schist" }, ["sillimanite"] = new[] { "gneiss", "schist" }, ["andalusite"] = new[] { "phyllite", "schist", "slate" } };
+        int found = 0;
+        foreach (var d in doc.RootElement.EnumerateArray())
+        {
+            string t = d.GetProperty("code").GetString().Substring("earth-".Length);
+            var a = d.GetProperty("attributes");
+            var rocks = a.GetProperty("inblock").GetProperty("allowedVariants").EnumerateArray().Select(e => e.GetString()).OrderBy(r => r, StringComparer.Ordinal).ToArray();
+            bool blocks = rocks.All(r => ores.Contains(a.GetProperty("placeblock").GetProperty("code").GetString().Replace("earth:", "").Replace("{rock}", r))
+                && loose.Contains(a.GetProperty("surfaceBlock").GetProperty("code").GetString().Replace("earth:", "").Replace("{rock}", r)));
+            Check(hosts.TryGetValue(t, out var want) && rocks.SequenceEqual(want) && blocks,
+                $"aluminosilicates: {t} in {string.Join(", ", rocks)}, ore blocks and loose markers exist");
+            found++;
+        }
+        Check(found == 3 && ores.Count(o => o.StartsWith("ore-kyanite-") || o.StartsWith("ore-sillimanite-") || o.StartsWith("ore-andalusite-")) == 8
+            && loose.Count == 16, "aluminosilicates: three deposits, eight ore blocks, sixteen loose markers");
+    }
+    // v3 (EA-0064): v2's deposit rules unchanged, plus surface rules; v1 and v2 lay nothing
+    Check(v2.Rules.Select(r => (r.Name, r.Classes, r.Ages, r.Under, r.MinDepth)).SequenceEqual(v3.Rules.Select(r => (r.Name, r.Classes, r.Ages, r.Under, r.MinDepth)))
+        && v1.Surface.Count == 0 && v2.Surface.Count == 0 && v3.Surface.Count == 4,
+        "ore layers v3: v2's deposit rules, four surface rules; v1 and v2 have none");
+    var surfCol = new GroundColumns.Column();
+    string SurfaceOf(string cover, GroundColumns.Surface surface, byte shore = 0)
+    {
+        var sm = model.At(54.3, 13.4, new GroundColumns.Place { Elevation = 20, Surface = surface, RegionalRock = true, Shore = shore, ShoreRules = 3 });
+        sm.Cover = cover; sm.QuaternaryMetres = 20; sm.Soil = "Luvisols";
+        model.Build(sm, surface, surfCol);
+        int r = v3.SurfaceRuleOf(surfCol);
+        return r == 0 ? "none" : v3.Surface[r - 1].Name;
+    }
+    foreach (var (cover, surface, shore, want) in new (string, GroundColumns.Surface, byte, string)[]
+    {
+        ("till", GroundColumns.Surface.Land, 0, "till flint"), ("thin-till", GroundColumns.Surface.Land, 0, "till flint"),
+        ("outwash", GroundColumns.Surface.Land, 0, "till flint"), ("rendzina", GroundColumns.Surface.Land, 0, "karst chert"),
+        ("residual-karst", GroundColumns.Surface.Land, 0, "karst chert"), ("loess", GroundColumns.Surface.Land, 0, "none"),
+        ("alluvium", GroundColumns.Surface.Land, 0, "none"), ("residual", GroundColumns.Surface.Land, 0, "none"),
+        ("till", GroundColumns.Surface.RiverBed, 0, "river flint"), ("alluvium", GroundColumns.Surface.RiverBed, 0, "none"),
+        ("marine-on-till", GroundColumns.Surface.Beach, ShoreMaterial.Gravel, "flint shingle"),
+        ("marine", GroundColumns.Surface.Beach, ShoreMaterial.Gravel, "none"),
+    })
+    {
+        string got = SurfaceOf(cover, surface, shore);
+        Check(got == want, $"ore layers v3: {cover} ({surface}{(shore != 0 ? ", gravel shore" : "")}) lays {want} (got {got}; {model.Describe(surfCol)})");
+    }
+    bool surfaceThrew = false;
+    try { new OreLayers(File.ReadAllText(Path.Combine(root, OreLayers.RulesAsset(3).Replace("earth:", "assets/earth/"))).Replace("\"version\": 3", "\"version\": 2"), model); }
+    catch (FormatException) { surfaceThrew = true; }
+    Check(surfaceThrew, "ore layers: a v2 file may not have surface rules");
     Check(v1.Rules.Select(r => r.Name).SequenceEqual(v2.Rules.Select(r => r.Name)) && v1.Rules.All(r => r.Under == 0),
         "ore layers v2: the same rules as v1; no rule in v1 allows an underclay");
     var clay = v2.RuleFor("earth-kaolin", false);

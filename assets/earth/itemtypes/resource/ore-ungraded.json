@@ -7,7 +7,10 @@
   {
    "code": "type",
    "states": [
-    "pyrite"
+    "pyrite",
+    "kyanite",
+    "sillimanite",
+    "andalusite"
    ]
   }
  ],
@@ -16,13 +19,13 @@
  },
  "textures": {
   "ore": {
-   "base": "earth:item/ore/pyrite"
+   "base": "earth:item/ore/{type}"
   }
  },
  "attributes": {
   "handbook": {
    "groupBy": [
-    "ore-pyrite"
+    "ore-{type}"
    ],
    "extraSections": [
     {
@@ -71,13 +74,6 @@
   "items": [
    "*"
   ]
- },
- "grindingProps": {
-  "groundStack": {
-   "type": "item",
-   "code": "game:powder-sulfur",
-   "stacksize": 1
-  }
  },
  "guiTransform": {
   "translation": {
@@ -132,5 +128,40 @@
    "z": 0.5
   },
   "scale": 4.5
+ },
+ "grindingPropsByType": {
+  "ore-pyrite": {
+   "groundStack": {
+    "type": "item",
+    "code": "game:powder-sulfur",
+    "stacksize": 1
+   }
+  }
+ },
+ "crushingPropsByType": {
+  "ore-kyanite": {
+   "crushedStack": {
+    "type": "item",
+    "code": "earth:crushed-kyanite",
+    "stacksize": 1
+   },
+   "hardnessTier": 2
+  },
+  "ore-sillimanite": {
+   "crushedStack": {
+    "type": "item",
+    "code": "earth:crushed-sillimanite",
+    "stacksize": 1
+   },
+   "hardnessTier": 2
+  },
+  "ore-andalusite": {
+   "crushedStack": {
+    "type": "item",
+    "code": "earth:crushed-andalusite",
+    "stacksize": 1
+   },
+   "hardnessTier": 2
+  }
  }
 }

@@ -52,6 +52,15 @@ namespace EarthMap.Core
 
         public static bool IsLake(in LakeOutlineLayer.Hit h) => h.Inside && (h.Flags & Lake) != 0;
 
+        /// <summary><see cref="Undoes(in LakeOutlineLayer.Hit)"/> of TerrainModel.WorksAt's answer.</summary>
+        public static bool Undoes(in WorksHit w) => Undoes(w.Raw);
+
+        /// <summary><see cref="IsLake(in LakeOutlineLayer.Hit)"/> of TerrainModel.WorksAt's answer.</summary>
+        public static bool IsLake(in WorksHit w) => IsLake(w.Raw);
+
+        /// <summary><see cref="Combine(double, in LakeOutlineLayer.Hit, double)"/> of TerrainModel.WorksAt's answer.</summary>
+        public static double Combine(double d, in WorksHit w, double reach) => Combine(d, w.Raw, reach);
+
         /// <summary>The coast's signed distance (blocks, + land, NaN for no outline) with a works hit taken in: the union
         /// with SEA areas' water, then with LAND areas' land, measured up to reach.</summary>
         public static double Combine(double d, in LakeOutlineLayer.Hit h, double reach)
@@ -70,5 +79,44 @@ namespace EarthMap.Core
             if (land) return System.Math.Max(d, -dist);
             return d;
         }
+    }
+
+    /// <summary>
+    /// (T-R3, code review 14 November 2026) The works of 1318 at a place as TerrainModel.WorksAt answers it: a type of its
+    /// own, not a lake outline's hit, so it can't reach the lake rules (TerrainModel.LakeArea, LakeOutlineLayer.WholeArea)
+    /// by mistake; a LAKE area of 1318 is handed to them only through <see cref="LakeOf1318"/>. <see cref="Dist"/> is the
+    /// distance to the area's edge, except at a place <see cref="Enclosed"/> by SEA areas, where it is the nearer SEA area
+    /// along one axis.
+    /// </summary>
+    public readonly struct WorksHit
+    {
+        readonly LakeOutlineLayer.Hit hit;
+        /// <summary>Works rules 3: a place between SEA areas and in none (TerrainModel.EnclosedBySea): Inside, with the Sea flag,
+        /// and Dist along an axis.</summary>
+        public readonly bool Enclosed;
+
+        public WorksHit(in LakeOutlineLayer.Hit hit, bool enclosed)
+        {
+            this.hit = hit;
+            Enclosed = enclosed;
+        }
+
+        /// <summary>The works' data has the place's tile.</summary>
+        public bool Covered => hit.Covered;
+        /// <summary>Inside an area (or <see cref="Enclosed"/> by SEA areas).</summary>
+        public bool Inside => hit.Inside;
+        /// <summary>Works1318Data's flags: Sea, Lake, Land, Fen, Canal, Late.</summary>
+        public byte Flags => hit.Flags;
+        /// <summary>The area's level (m; NaN where none is near).</summary>
+        public double Level => hit.Level;
+        /// <summary>Blocks to the area's edge; for an <see cref="Enclosed"/> place, to the nearer SEA area along its axis.</summary>
+        public double Dist => hit.Dist;
+
+        /// <summary>A LAKE area of 1318 as a lake (its level, distance from the shore and flags; its whole area its own
+        /// layer's). Only where <see cref="Works1318Data.IsLake(in WorksHit)"/>.</summary>
+        public LakeOutlineLayer.Hit LakeOf1318 => Works1318Data.IsLake(hit) ? hit : throw new System.InvalidOperationException("not a LAKE area of 1318");
+
+        /// <summary>The layer's hit, for Works1318Data's tests alone.</summary>
+        internal LakeOutlineLayer.Hit Raw => hit;
     }
 }

@@ -2,10 +2,8 @@
   <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><LangVersion>12</LangVersion><Nullable>disable</Nullable><ImplicitUsings>enable</ImplicitUsings><EnableDefaultCompileItems>false</EnableDefaultCompileItems></PropertyGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="../../src/Core/GroundDownloader.cs" Link="Core/GroundDownloader.cs" />
-    <Compile Include="../../src/Core/DataTransport.cs" Link="Core/DataTransport.cs" />
-    <Compile Include="../../src/Core/EarthDataStore.cs" Link="Core/EarthDataStore.cs" />
-    <Compile Include="../../src/Core/EarthBinary.cs" Link="Core/EarthBinary.cs" />
+    <ProjectReference Include="..\Earth.Core.Tests.Common\Earth.Core.Tests.Common.csproj" />
+
     <Compile Include="TestServer.cs" />
   </ItemGroup>
 </Project>

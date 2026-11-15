@@ -17,8 +17,12 @@ namespace EarthMap.Core
     {
         /// <summary>The rules new worlds are made with (EarthParams.OreLayers). 2: a deposit block may also sit directly under a
         /// block its rule's <c>under</c> rules keep (EA-0059: vanilla's underclay, the fire clay under a coal seam). Worlds keep the
-        /// version they were made with; each version is its own file.</summary>
-        public const int RulesVersion = 2;
+        /// version they were made with; each version is its own file. 3 (EA-0064, decision 0076): <c>surface</c> rules lay
+        /// loose flint and chert on the ground of their cover (glacial till, flint shingle, karst). 4 (EA-0068, decision 0077):
+        /// v3 plus the rule for Earth's kyanite, sillimanite and andalusite, whose deposits only v4 worlds keep.</summary>
+        public const int RulesVersion = 4;
+        /// <summary>The first version whose worlds keep Earth's aluminosilicate deposits (EarthOreLayers.AluminosilicateFile).</summary>
+        public const int AluminosilicateVersion = 4;
         public static string RulesAsset(int version) => "earth:config/ore-layers-v" + version.ToString(CultureInfo.InvariantCulture) + ".json";
         /// <summary>A saved version this build reads (1 to <see cref="RulesVersion"/>); a newer or unknown one reads the newest.</summary>
         public static int Supported(int saved) => saved >= 1 && saved <= RulesVersion ? saved : RulesVersion;
@@ -66,6 +70,21 @@ namespace EarthMap.Core
             public uint Under;
             public override string ToString() => Name;
         }
+
+        /// <summary>Rules v3: loose stones on the ground of a column, by its cover recipe, top and top material. First match
+        /// wins; <see cref="Chance"/> per column. Block: a block code ("game:looseflints-chalk-free"); <see cref="InWater"/>:
+        /// only under water (river and sea floors), else only on dry ground.</summary>
+        public sealed class SurfaceRule
+        {
+            public string Name, Block;
+            public int Index;
+            public HashSet<string> Covers, Tops;
+            public bool[] Materials;
+            public double Chance;
+            public bool InWater;
+            public override string ToString() => Name;
+        }
+        public readonly IReadOnlyList<SurfaceRule> Surface;
 
         sealed class ClassRule { public Class Class; public HashSet<GroundColumns.Part> Parts; public HashSet<string> Sources; public bool[] Materials; }
 
@@ -154,10 +173,36 @@ namespace EarthMap.Core
                     if (!byCode.TryAdd(code, rule)) throw new FormatException("deposit code '" + code + "' has two layer rules");
                 if (Strings(d, "under") is { } names)
                 {
-                    if (Version < 2) throw new FormatException("'under' needs ore layer rules v2");
+                    if (!OreLayerFacts.Under(Version)) throw new FormatException("'under' needs ore layer rules v2");
                     under.Add((rule, names));
                 }
             }
+            var surface = new List<SurfaceRule>();
+            if (root.TryGetProperty("surface", out var sf))
+            {
+                if (!OreLayerFacts.Surface(Version)) throw new FormatException("'surface' needs ore layer rules v3");
+                foreach (var e in sf.EnumerateArray())
+                {
+                    var r = new SurfaceRule
+                    {
+                        Name = e.GetProperty("name").GetString(),
+                        Block = e.GetProperty("block").GetString(),
+                        Index = surface.Count,
+                        Covers = Strings(e, "covers") is { } cv ? new HashSet<string>(cv, StringComparer.Ordinal) : null,
+                        Tops = Strings(e, "tops") is { } tp ? new HashSet<string>(tp, StringComparer.Ordinal) : null,
+                        Chance = e.GetProperty("chance").GetDouble(),
+                        InWater = e.TryGetProperty("inWater", out var iw) && iw.GetBoolean(),
+                    };
+                    if (!(r.Chance > 0 && r.Chance <= 1)) throw new FormatException("surface rule '" + r.Name + "': chance must be in (0, 1]");
+                    if (Strings(e, "materials") is { } ms) { r.Materials = new bool[materials.Length]; foreach (var m in ms) r.Materials[Material(m)] = true; }
+                    if (r.Covers != null)
+                        foreach (var c in r.Covers)
+                            if (!model.HasRecipe(c)) throw new KeyNotFoundException("surface rule '" + r.Name + "' names undefined cover recipe '" + c + "'");
+                    surface.Add(r);
+                }
+                if (surface.Count > 254) throw new FormatException("at most 254 surface rules");
+            }
+            Surface = surface;
             RockHostedDefault = RuleOf(root.GetProperty("defaults").GetProperty("rockHosted"));
             rules.Add(RockHostedDefault);
             if (rules.Count > 32) throw new FormatException("at most 32 deposit rules");
@@ -197,6 +242,24 @@ namespace EarthMap.Core
         public static bool AllowsUnder(Rule rule, uint keptAbove) => rule != null && (rule.Under & keptAbove) != 0;
 
         // ------------------------------------------------------------------ classifying a column
+
+        /// <summary>Rules v3: the surface rule for a built column (index + 1), 0 for none. Cover: the column's cover recipe; top:
+        /// the source of its top segment (soil, peat, beach, riverbed, seabed); material: its uppermost layer below the topsoil.</summary>
+        public int SurfaceRuleOf(GroundColumns.Column col)
+        {
+            if (Surface.Count == 0 || col.Segments == 0) return 0;
+            string top = col.SegPart[0] == GroundColumns.Part.Top ? col.SegSource[0] : null;
+            int material = -1;
+            for (int i = 0; i < col.Segments; i++) if (col.SegMaterial[i] != Model.Topsoil) { material = col.SegMaterial[i]; break; }
+            foreach (var r in Surface)
+            {
+                if (r.Covers != null && (col.Recipe == null || !r.Covers.Contains(col.Recipe))) continue;
+                if (r.Tops != null && (top == null || !r.Tops.Contains(top))) continue;
+                if (r.Materials != null && (material < 0 || material >= r.Materials.Length || !r.Materials[material])) continue;
+                return r.Index + 1;
+            }
+            return 0;
+        }
 
         /// <summary>The age of a template unit (bed source), unknown when the rules do not name it.</summary>
         public Age AgeOfUnit(string unit) => unit != null && unitAges.TryGetValue(unit, out var a) ? a : Age.Unknown;

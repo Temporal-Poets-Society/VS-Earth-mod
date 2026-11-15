@@ -1,6 +1,6 @@
 # 0006: Earth-like ores (ore rules v3)
 
-Status: Agreed direction, being implemented (0.14.1-pre) | Date: 2026-10-16 | Decided by: the user (direction, "can build and fix ore parts"); Claude (the rules below)
+Status: Agreed direction (the user, 2026-10-16); built in 0.14.1 (in Earth 1.0.0); in Earth 2.0.0 for worlds made before ore rules 4. New worlds use 0065's catalogue ore bodies instead | Date: 2026-10-16 | Decided by: the user (direction, "can build and fix ore parts"); Claude (the rules below)
 
 ## Context
 
@@ -153,3 +153,9 @@ Changing these for an existing world needs `UpgradeExistingWorldOreRules` once a
   block, so a thick salt dome's deeper part counts), as GenerateDisc seeds children and GenerateChild keeps them.
   Round 8: a child's blocks per seed count the parent's thickness (one layer of a thin sheet, the whole cloud inside a
   salt dome), where v2 always assumed one layer.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: Agreed direction, being implemented (0.14.1-pre)

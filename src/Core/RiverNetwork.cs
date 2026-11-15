@@ -97,7 +97,7 @@ namespace EarthMap.Core
     /// (RiverPoolPlanner), the pieces (RiverSegmentBuilder) and their index (RiverSpatialIndexBuilder); this class keeps what
     /// the queries read. Read-only after construction (thread-safe).
     /// </summary>
-    public sealed class RiverNetwork
+    public sealed partial class RiverNetwork
     {
         /// <summary>The reaches this network was built from (EarthData.Rivers, or as RiverEnds prepared them; same indices); null
         /// after <see cref="ReleaseStartupData"/>.</summary>
@@ -233,8 +233,6 @@ namespace EarthMap.Core
         public readonly bool RapidsReaches = true;
         bool[] reachRapids;
         float[] reachSlope, reachValley, reachQ;
-        /// <summary>Pool layout 8: the real valley's fall along a reach (m/km, averaged as for ReachRapids).</summary>
-        public double ReachValleySlope(int r) => reachValley != null && r >= 0 && r < reachValley.Length ? reachValley[r] : 0;
         /// <summary>Pool layout 8: whether a reach is a rapids reach, and its water's fall per block (both averaged over
         /// RapidsWindow each way; constant along the reach).</summary>
         public bool ReachRapids(int r) => reachRapids != null && r >= 0 && r < reachRapids.Length && reachRapids[r];
@@ -275,6 +273,11 @@ namespace EarthMap.Core
 
         internal struct Seg
         {
+            /// <remarks>(T-L8, code review 14 November 2026) Floats: a block position from 2^21 (2,097,152) blocks on is
+            /// kept to 0.25 block, from 2^22 to 0.5 block. With the ring's x, that is east of about 17.6° E at 1:10 and 18.4° E
+            /// at 1:5. A course's line moves by at most that; a column's water, width and bed round to whole blocks with
+            /// noise of a block, so the snap is not seen. Kept as floats: the segments' memory and every saved world's
+            /// rivers.</remarks>
             public float X1, Z1, X2, Z2, Q, Len;
             /// <summary>Channel rules 1 (0063): the river's measured half width (blocks; RiverReach.Width) at the segment's start
             /// and end, 0 where it has none (the flow's width there).</summary>
@@ -313,9 +316,6 @@ namespace EarthMap.Core
 
         Seg[] segs;
         Pools[] pools;
-        double[] dbgCap;
-        /// <summary>For DebugReach: each reach's backward bound at its start (NaN where not kept).</summary>
-        double[] dbgBound0;
         readonly Dictionary<long, int[]> grid = new Dictionary<long, int[]>();
         internal const double Cell = 128;
         readonly int indexSpan;
@@ -331,20 +331,6 @@ namespace EarthMap.Core
         readonly long cacheOwner = System.Threading.Interlocked.Increment(ref lastCacheOwner);
         static long lastCacheOwner;
         public int SegmentCount => segs?.Length ?? 0;
-        /// <summary>Total length (blocks) of the indexed river pieces, mouth prolongations left out, and the widest x span of
-        /// one piece (tests: nothing real dropped, nothing across the seam).</summary>
-        internal (double Length, double MaxDx) IndexedExtent()
-        {
-            double len = 0, maxDx = 0;
-            foreach (var g in segs ?? Array.Empty<Seg>())
-            {
-                if (g.Mouth) continue;
-                len += g.Len;
-                maxDx = Math.Max(maxDx, Math.Abs(g.X2 - g.X1));
-            }
-            return (len, maxDx);
-        }
-
         /// <summary>The waterfalls placed on this network (RiverFalls), none unless the world has them.</summary>
         public readonly IReadOnlyList<PlacedFall> Falls;
 
@@ -511,7 +497,7 @@ namespace EarthMap.Core
             ? Math.Max(2, (0.3 + 0.4 * streamT) * landCellBlocks) + 0.5 * halfWidth
             : (4 + 12 * streamT) * SizeScale + 1.5 * halfWidth;
 
-        /// <summary>0053 (proposed): the version of the rivers on GLO-90 (EarthParams.RiverCourses): courses and levels from
+        /// <summary>0053: the version of the rivers on GLO-90 (EarthParams.RiverCourses): courses and levels from
         /// rivers-glo90.bin, loops cut only at the water's own width, banks and valleys in metres from the land grid. 2 (item
         /// 14, tall.14): the same with the reaches the water atlas moved into the water mask's rivers (rivers-glo90-snap.bin,
         /// Glo90SnapCourses). 3 (item 16, tall.16): and the side arms round the islands the water mask shows in the rivers
@@ -636,56 +622,6 @@ namespace EarthMap.Core
             public bool Masked;
         }
 
-        /// <summary>For tests: the river length (blocks) in reaches of each kind: rapids by layouts 8-10's rule, by layout 11's,
-        /// and in all.</summary>
-        public (double Old, double New, double All) RapidsLengths()
-        {
-            double o = 0, n = 0, a = 0;
-            if (reachValley == null) return (0, 0, 0);
-            for (int r = 0; r < reachValley.Length; r++)
-            {
-                if (pools[r] == null) continue;
-                double len = pools[r].Len;
-                a += len;
-                if (reachValley[r] >= RapidsSlope) o += len;
-                if (RapidsByPower(reachValley[r], reachQ[r])) n += len;
-            }
-            return (o, n, a);
-        }
-
-        /// <summary>For tests: a reach's pools (start level, steps, neighbours).</summary>
-        public string DebugReach(int r)
-        {
-            var p = pools != null && r >= 0 && r < pools.Length ? pools[r] : null;
-            if (p == null) return "no pools";
-            return $"P0 {p.P0} D0 {p.D0:0} len {p.Len:0} next {p.Next} mainIn {p.MainIn} cap {dbgCap?[r]:0.#} bound0 {(dbgBound0 != null && !double.IsNaN(dbgBound0[r]) ? dbgBound0[r] : (double?)null):0.#} drops [{string.Join(", ", p.Drops.Select(d => d.ToString("0")))}]";
-        }
-
-        /// <summary>For tests: a reach's drops with their shapes (c step, s chute, C curtain, S short curtain).</summary>
-        public string DebugShapes(int r)
-        {
-            var p = pools != null && r >= 0 && r < pools.Length ? pools[r] : null;
-            if (p?.Shape == null) return "";
-            return string.Join(", ", p.Drops.Select((d, i) => d.ToString("0") + (i < p.Shape.Length ? "csCS"[p.Shape[i]].ToString() : "")));
-        }
-
-        /// <summary>For tests: every step (world x, z of the centre line, pool top below it).</summary>
-        public IEnumerable<(double X, double Z, int Top)> Drops()
-        {
-            if (segs == null) yield break;
-            foreach (var s in segs)
-            {
-                var pl = pools[s.Reach];
-                for (int i = 0; i < pl.Drops.Length; i++)
-                {
-                    double a = pl.Drops[i] - s.S0;
-                    if (a < 0 || a >= s.Len) continue;
-                    double f = a / Math.Max(1e-6, s.Len);
-                    yield return (s.X1 + f * (s.X2 - s.X1), s.Z1 + f * (s.Z2 - s.Z1), pl.P0 - i - 1);
-                }
-            }
-        }
-
         /// <summary>
         /// One candidate segment of a 128-block cell, prepared for the per-column queries: the projection terms exactly as
         /// <see cref="Project(in Seg, double, double, out double)"/> computes them, and the segment's influence reach and half width (pure functions of its
@@ -734,22 +670,6 @@ namespace EarthMap.Core
         const int CacheWays = 4;
         [ThreadStatic] static CellCandidates[] threadCells;
         [ThreadStatic] static int threadCellNext;
-
-        /// <summary>Drops this thread's cached cells (for tests that alter an index after querying it).</summary>
-        internal static void ResetThreadCache()
-        {
-            threadCells = null;
-            threadCellNext = 0;
-        }
-
-        /// <summary>For tests: the segment ids a query in this fine cell examines, in order.</summary>
-        internal int[] CellCandidateIds(int cx, int cz)
-        {
-            var c = Candidates(cx, cz);
-            var ids = new int[c.Count];
-            for (int i = 0; i < ids.Length; i++) ids[i] = c.Items[i].Seg;
-            return ids;
-        }
 
         CellCandidates Candidates(int cx, int cz)
         {
@@ -868,20 +788,6 @@ namespace EarthMap.Core
         }
 
         /// <summary>
-        /// Channel rules 1 (TerrainModel.OutlineRiver): how deep the water mask's river water at (x, z) may be (blocks), from
-        /// every course whose influence reaches it rather than the nearest alone (the nearest one's depth made straight-edged
-        /// patches a block shallower wherever a tributary's or an arm's end was nearer than the main river: Rīgas HES). Each
-        /// course pulls towards its centre depth (Depth, deepened where the mask narrows it) within its water, easing back to
-        /// far across its bank and valley (OutlineFade); the deepest course governs, and a shallower one shallows the water
-        /// only where no deeper course reaches a block below far. far where no course reaches. Continuous in (x, z).
-        /// </summary>
-        public double OutlineDepthNear(double x, double z, double far)
-        {
-            double fx = 0, fz = 0;
-            return BlendNear(x, z, far, ref fx, ref fz);
-        }
-
-        /// <summary>
         /// Channel rules 1 (TerrainModel): the flow at (x, z) from every course whose influence reaches it, each segment's
         /// downstream direction weighted by its half width, falling off with the square of the distance beyond it and
         /// easing out at its reach (OutlineFade): one direction turning smoothly through a confluence and round a bend,
@@ -890,7 +796,15 @@ namespace EarthMap.Core
         /// </summary>
         public void FlowNear(double x, double z, ref double fx, ref double fz) => BlendNear(x, z, 0, ref fx, ref fz);
 
-        /// <summary>OutlineDepthNear and FlowNear in one pass over the candidates.</summary>
+        /// <summary>
+        /// Channel rules 1 (TerrainModel.OutlineRiver): how deep the water mask's river water at (x, z) may be (blocks), from
+        /// every course whose influence reaches it rather than the nearest alone (the nearest one's depth made straight-edged
+        /// patches a block shallower wherever a tributary's or an arm's end was nearer than the main river: Rīgas HES). Each
+        /// course pulls towards its centre depth (Depth, deepened where the mask narrows it) within its water, easing back to
+        /// far across its bank and valley (OutlineFade); the deepest course governs, and a shallower one shallows the water
+        /// only where no deeper course reaches a block below far. far where no course reaches. Continuous in (x, z). And
+        /// FlowNear's blended direction, in the same pass over the candidates.
+        /// </summary>
         public double BlendNear(double x, double z, double far, ref double fx, ref double fz)
         {
             if (segs == null || segs.Length == 0) return far;
@@ -930,13 +844,13 @@ namespace EarthMap.Core
             return far + up + down * Math.Max(0, 1 - up);
         }
 
-        /// <summary>OutlineDepthNear: a course's share at d blocks from it, its water within hw and its influence out to reach
+        /// <summary>BlendNear's depth: a course's share at d blocks from it, its water within hw and its influence out to reach
         /// (1 in its water, easing to 0 at reach).</summary>
         public static double OutlineFade(double d, double hw, double reach) =>
             d <= hw ? 1 : 1 - Geo.SmoothStep((d - hw) / Math.Max(1, reach - hw));
 
         /// <summary>
-        /// 0053 item 18 (proposed): the river course nearest to (x, z) within the given distance (blocks), its influence's
+        /// 0053 item 18: the river course nearest to (x, z) within the given distance (blocks), its influence's
         /// reach or not, chosen as Nearest chooses (the bigger river where two are about as near): the level of the water the
         /// water mask's rivers have there (TerrainModel.ApplyOutlineRiver), which reaches further from the course than its
         /// channel does (the Daugava at Riga is 600-700 m wide, its channel 200 m). Columns within reach take Nearest.
@@ -1003,6 +917,21 @@ namespace EarthMap.Core
         /// gives one of them, or <paramref name="none"/>. Where two branches of a delta meet, the nearest alone made a step
         /// along the line between them.
         /// </summary>
+        /// <summary>Whether any bucket <see cref="MaxNear"/> would read for (x, z, within) holds a piece: false means MaxNear finds
+        /// no hit and returns its <c>none</c> (the same bucket range, without a candidate; ER-11, code review 14 November 2026).</summary>
+        public bool AnyBucketNear(double x, double z, double within)
+        {
+            if (segs == null || segs.Length == 0) return false;
+            x = geo.WrapX(x);
+            int cx0 = (int)Math.Floor((x - within) / Cell), cx1 = (int)Math.Floor((x + within) / Cell);
+            int cz0 = (int)Math.Floor((z - within) / Cell), cz1 = (int)Math.Floor((z + within) / Cell);
+            int bx0 = Bucket(cx0), bx1 = Bucket(cx1), bz0 = Bucket(cz0), bz1 = Bucket(cz1);
+            for (int bz = bz0; bz <= bz1; bz++)
+                for (int bx = bx0; bx <= bx1; bx++)
+                    if (grid.TryGetValue(Key(bx, bz), out var ids) && ids.Length > 0) return true;
+            return false;
+        }
+
         public double MaxNear(double x, double z, double within, Func<Hit, double> f, double none)
         {
             if (segs == null || segs.Length == 0) return none;
@@ -1071,7 +1000,10 @@ namespace EarthMap.Core
         /// changed by blocks along the straight line halfway between them (the Daugava, 729 m³/s and 7 blocks, against
         /// Ķīšezers' outflow, 22 m³/s and 1 block).
         /// </summary>
-        public double DepthNear(double x, double z, double within, double none) => ReachBlend(x, z, within, (r, q) => Depth(q), none);
+        public double DepthNear(double x, double z, double within, double none) => ReachBlend(x, z, within, depthOf ??= (r, q) => Depth(q), none);
+
+        /// <summary>EA-0113 (the Fable pass's FP-24): DepthNear's value, made once instead of a closure per column.</summary>
+        Func<int, float, double> depthOf;
 
         /// <summary>
         /// Channel rules 4: a value of each reach within <paramref name="within"/> blocks of (x, z) (value(reach, its
@@ -1098,6 +1030,10 @@ namespace EarthMap.Core
                         if (s.CellX1 < cx0 || s.CellX0 > cx1 || s.CellZ1 < cz0 || s.CellZ0 > cz1) continue;
                         if (Math.Max(Bucket(s.CellX0), bx0) != bx || Math.Max(Bucket(s.CellZ0), bz0) != bz) continue;
                         if (s.Mouth) continue;
+                        // (EA-0113, FP-24) a piece whose box is clearly beyond the search is not projected: it would be dropped
+                        // below (NaN compares false and falls through to the exact test)
+                        double e = within + BoxSlack;
+                        if (x < Math.Min(s.X1, s.X2) - e || x > Math.Max(s.X1, s.X2) + e || z < Math.Min(s.Z1, s.Z2) - e || z > Math.Max(s.Z1, s.Z2) + e) continue;
                         double d = Project(in s, x, z, out _);
                         if (d > within) continue;
                         int j = 0;

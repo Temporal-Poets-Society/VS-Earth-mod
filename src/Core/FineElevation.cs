@@ -7,6 +7,17 @@ using System.Threading;
 namespace EarthMap.Core
 {
     /// <summary>
+    /// EA-0099 (the Fable pass's FP-03): a GLO-90 square a chunk needs could not be fetched while the game runs (the network,
+    /// the release down, no room on the disk). The chunk is not made now: Earth's terrain pass notes it, it is saved empty
+    /// and made again at the next start, instead of taking the built-in heights there for good.
+    /// </summary>
+    public sealed class TileUnavailableException : Exception
+    {
+        public readonly int LatS, LonW;
+        public TileUnavailableException(int latS, int lonW, string message) : base(message) { LatS = latS; LonW = lonW; }
+    }
+
+    /// <summary>
     /// Land heights from Copernicus GLO-90 tiles kept on this machine (decision 0051), bilinear between the 3″ points. Which
     /// squares the source has comes from the tile list shipped with the mod; a square without a tile is open sea (0 m). A
     /// square this world keeps on the built-in heights (for good: a tile no source has; for the session: one that couldn't
@@ -66,7 +77,128 @@ namespace EarthMap.Core
         public Func<int, int, bool> Lacks;
         /// <summary>Called when a square falls back to the built-in heights for this session only (not saved).</summary>
         public Action<int, int> FellBackForSession;
-        /// <summary>0053 item 19 (proposed): modern dams taken out (EarthParams.DamRules): each tile's heights as
+        /// <summary>
+        /// EA-0099 (the Fable pass's FP-03): called, where it is set, for a square whose fetch failed and that the sources
+        /// don't lack (a failure that may pass), before any fallback is marked. Inside one of Earth's chunk passes
+        /// (<see cref="InChunkPass"/>) it may throw <see cref="TileUnavailableException"/>, so that the chunk is not made
+        /// without the square (it is made again later, rather than on the built-in heights, which would meet the GLO-90 chunks
+        /// of later sessions with a step). True: the square is not given up; this read takes the built-in heights and the next
+        /// one tries again. False: the square falls back for this session as before. Null: as before.
+        /// </summary>
+        public Func<int, int, bool> Unavailable;
+        /// <summary>
+        /// EA-0106 (the Fable pass's FP-15): asked at the first read of a square's file in a session whether it is the release's
+        /// tile (DemDownloader.KeptMatches, given the file and the tile read from it); null (nothing to compare with yet) asks
+        /// again at a later read. False (Fable's re-review of 90692fe): the tile here stays in use for this session, so the
+        /// square always has heights, and <see cref="Replace"/> is asked to fetch the release's beside it; it takes the old
+        /// one's place at the next start (<see cref="ApplyReplacements"/>). Null: not asked.
+        /// </summary>
+        public Func<int, int, byte[], DemTiles.Tile, bool?> Verify;
+        /// <summary>See <see cref="Verify"/>: fetch the release's tile for a square into <see cref="ReplacementExtension"/>
+        /// beside the one in use.</summary>
+        public Action<int, int> Replace;
+        /// <summary>The release's tile for a square whose tile here is not the release's, waiting for the next start.</summary>
+        public const string ReplacementExtension = ".release";
+        /// <summary>(EA-0116 T-L10) A tile file's bytes; a read refused for a moment (a sharing violation: another server
+        /// replacing the file) is tried twice more, 20 and 60 ms later. Gone: FileNotFoundException at once.</summary>
+        static byte[] ReadTileFile(string path)
+        {
+            for (int attempt = 0; ; attempt++)
+            {
+                try { return File.ReadAllBytes(path); }
+                catch (IOException) when (attempt < 2 && File.Exists(path)) { System.Threading.Thread.Sleep(attempt == 0 ? 20 : 60); }
+            }
+        }
+
+        /// <summary>
+        /// (EA-0116 D-R3) Leftovers of a process that was killed while it wrote into the store: tiles' temporary files (the
+        /// downloader's unique <c>.xxxxxxxxxxxx.part</c> names, written whole at once, so an hour old is never in use) and
+        /// tiles set aside as damaged (<c>.bad</c>) more than 30 days ago. A release file's own <c>name.part</c> is a download
+        /// cut short, kept to be resumed; tiles set aside as <see cref="DiffersExtension"/> are kept for whoever looks. Never
+        /// throws; the count removed.
+        /// </summary>
+        public int SweepLeftovers()
+        {
+            int removed = 0;
+            try
+            {
+                if (!Directory.Exists(Folder)) return 0;
+                var now = DateTime.UtcNow;
+                foreach (var f in Directory.EnumerateFiles(Folder))
+                {
+                    string name = Path.GetFileName(f);
+                    bool part = name.EndsWith(".part", StringComparison.Ordinal) && UniquePart.IsMatch(name);
+                    bool bad = name.EndsWith(FileExtension + ".bad", StringComparison.Ordinal);
+                    if (!part && !bad) continue;
+                    try
+                    {
+                        if (now - File.GetLastWriteTimeUtc(f) < (part ? TimeSpan.FromHours(1) : TimeSpan.FromDays(30))) continue;
+                        File.Delete(f);
+                        removed++;
+                    }
+                    catch (Exception e) when (e is IOException or UnauthorizedAccessException) { }
+                }
+            }
+            catch (Exception e) when (e is IOException or UnauthorizedAccessException) { }
+            return removed;
+        }
+
+        /// <summary>
+        /// (Fable's re-review of 90692fe) At start, before any tile is read: each release tile fetched beside one that was not
+        /// the release's (<see cref="ReplacementExtension"/>) takes its place. Equal heights (another encoding of the same
+        /// tile): the old file simply goes. Other heights: the old file is kept as <see cref="DiffersExtension"/> and the
+        /// square named in the log, since chunks made before keep the old heights. A replacement that is not a tile of its
+        /// square with GLO-90's dimensions is deleted. Never throws; (replaced with the same heights, replaced with others).
+        /// </summary>
+        public (int Same, int Other) ApplyReplacements(Action<string> log)
+        {
+            int same = 0, other = 0;
+            try
+            {
+                if (!Directory.Exists(Folder)) return (0, 0);
+                foreach (var release in Directory.GetFiles(Folder, "*" + FileExtension + ReplacementExtension))
+                {
+                    string target = release.Substring(0, release.Length - ReplacementExtension.Length);
+                    string square = Path.GetFileNameWithoutExtension(target);
+                    try
+                    {
+                        var next = DemTiles.Decode(File.ReadAllBytes(release));
+                        if (DemTiles.ShortName(next.LatS, next.LonW) != square || next.Rows != DemTiles.Glo90Rows || next.Cols != DemTiles.Glo90Cols(next.LatS))
+                            throw new InvalidDataException("not this square's GLO-90 tile");
+                        bool equal = false;
+                        if (File.Exists(target))
+                        {
+                            try { equal = DemTiles.Decode(File.ReadAllBytes(target)).Heights.AsSpan().SequenceEqual(next.Heights); }
+                            catch (InvalidDataException) { }
+                            if (!equal) File.Move(target, target + DiffersExtension, true);
+                        }
+                        File.Move(release, target, true);
+                        if (equal) same++;
+                        else
+                        {
+                            other++;
+                            log?.Invoke(square + ": the tile here had other heights than the release's; the release's takes its place from now on. " +
+                                "Chunks made before keep the old heights (the old tile is kept as " + square + FileExtension + DiffersExtension + ").");
+                        }
+                    }
+                    catch (Exception e) when (e is IOException or InvalidDataException or UnauthorizedAccessException)
+                    {
+                        log?.Invoke(square + ": the release's tile fetched beside the one here could not take its place (" + e.Message + ")");
+                        if (e is InvalidDataException) try { File.Delete(release); } catch (Exception) { }
+                    }
+                }
+            }
+            catch (Exception e) when (e is IOException or UnauthorizedAccessException) { }
+            return (same, other);
+        }
+
+        static readonly System.Text.RegularExpressions.Regex UniquePart = new(@"\.[0-9a-f]{12}\.part$", System.Text.RegularExpressions.RegexOptions.CultureInvariant);
+
+        /// <summary>A tile set aside because it is not the release's: kept beside the store's tiles under this extension.</summary>
+        public const string DiffersExtension = ".differs";
+        // the squares whose file Verify found to be the release's in this session
+        readonly HashSet<int> verified = new();
+        /// <summary>0053 item 19: modern dams taken out (EarthParams.DamRules): each tile's heights as
         /// <see cref="DamRemovalData"/> has them, applied as it is read. Set before the first height is read; null: GLO-90
         /// as it is.</summary>
         public DamRemovalData Dams;
@@ -105,8 +237,56 @@ namespace EarthMap.Core
         [ThreadStatic] static bool fetchAllowed;
         /// <summary>Whether this thread may wait for a missing tile: chunk generation sets it (EarthElevationSystem.PrepareChunk,
         /// on the generation threads and, for the spawn chunks, the main thread, whose flag is cleared when the game starts
-        /// running), and the story pad's ground mean around its own reads.</summary>
+        /// running), every other generation entry point for its own length (<see cref="Generating"/>), and the story pad's
+        /// ground mean around its own reads.</summary>
         public static bool FetchAllowed { get => fetchAllowed; set => fetchAllowed = value; }
+
+        /// <summary>
+        /// (FP-11, FP-12, R1 of the Fable pass of the 14 November 2026 code review) This thread may wait for missing tiles until
+        /// the returned scope ends, then is as it was: for each of world generation's entry points other than the terrain pass
+        /// (a map region's forest, shrub, climate and ocean maps, Earth's later passes, the deposit pass). Before, only a
+        /// thread that had made a terrain pass could fetch, so the map regions the game makes before a chunk's first terrain
+        /// pass (the spawn regions of a new world, the first new regions of each session, every region on a server with more
+        /// than one generation thread) took the built-in heights where a tile wasn't on the machine, and were saved so.
+        /// </summary>
+        public static FetchScope Generating()
+        {
+            bool was = fetchAllowed;
+            fetchAllowed = true;
+            return new FetchScope(was);
+        }
+
+        /// <summary>See <see cref="Generating"/>.</summary>
+        public readonly struct FetchScope : IDisposable
+        {
+            readonly bool was;
+            internal FetchScope(bool was) { this.was = was; }
+            public void Dispose() => fetchAllowed = was;
+        }
+
+        [ThreadStatic] static int chunkPass;
+        /// <summary>
+        /// EA-0099: whether this thread is in one of Earth's chunk column passes (<see cref="ChunkPass"/>), where a square that
+        /// can't be had may leave the chunk unmade (<see cref="Unavailable"/> throws; EarthWorldGen notes the chunk and makes
+        /// it again at the next start). Elsewhere (a map region, the map layers, the story pad: handlers the game doesn't
+        /// guard, where a throw would end the server) such a read takes the built-in heights and the square is not given up.
+        /// </summary>
+        public static bool InChunkPass => chunkPass > 0;
+
+        /// <summary>See <see cref="InChunkPass"/>: until the returned scope ends.</summary>
+        public static ChunkPassScope ChunkPass()
+        {
+            chunkPass++;
+            return new ChunkPassScope(true);
+        }
+
+        /// <summary>See <see cref="ChunkPass"/>.</summary>
+        public readonly struct ChunkPassScope : IDisposable
+        {
+            readonly bool entered;
+            internal ChunkPassScope(bool entered) { this.entered = entered; }
+            public void Dispose() { if (entered) chunkPass--; }
+        }
 
         [ThreadStatic] static int missedReads;
         /// <summary>
@@ -161,6 +341,10 @@ namespace EarthMap.Core
         public bool IsHere(int latS, int lonW) => File.Exists(PathOf(latS, lonW));
 
         public bool IsFallback(int latS, int lonW) => fallback.ContainsKey(Key(latS, Wrap(lonW)));
+
+        /// <summary>The square keeps the built-in heights for good (from the save, or the source lacks its tile); not a square
+        /// that fell back for this session only, whose tile is fetched again at the next start.</summary>
+        public bool IsFallbackForGood(int latS, int lonW) => fallback.TryGetValue(Key(latS, Wrap(lonW)), out byte kind) && kind == ForGood;
 
         // the fallback squares' kinds: kept on the built-in heights for good (saved with the world), or for this session
         const byte ForGood = 0, ForSession = 1;
@@ -395,7 +579,11 @@ namespace EarthMap.Core
             {
                 // Fetch is true at once for a tile another thread wrote; forget it was missing before reading it
                 if (Fetch(latS, lonW)) { TileArrived(latS, lonW); tile = Load(key, latS, lonW); }
-                if (tile == null) MarkFallback(latS, lonW, Lacks?.Invoke(latS, lonW) ?? true);
+                if (tile == null)
+                {
+                    bool lacks = Lacks?.Invoke(latS, lonW) ?? true;
+                    if (lacks || Unavailable?.Invoke(latS, lonW) != true) MarkFallback(latS, lonW, lacks);
+                }
             }
             if (tile == null)
             {
@@ -418,24 +606,39 @@ namespace EarthMap.Core
             }
             DemTiles.Tile t = null;
             string path = PathOf(latS, lonW);
+            bool damaged = true;
             try
             {
                 if (File.Exists(path))
                 {
-                    t = DemTiles.Decode(File.ReadAllBytes(path));
+                    byte[] data;
+                    try { data = ReadTileFile(path); }
+                    catch (Exception e) when (e is IOException or UnauthorizedAccessException) { damaged = false; throw; }
+                    t = DemTiles.Decode(data);
                     if (t.LatS != latS || t.LonW != lonW) throw new InvalidDataException("holds " + DemTiles.ShortName(t.LatS, t.LonW));
                     // the readers index rows and columns by GLO-90's grid: a tile of other dimensions that passed its checksum
                     // (a mirror's, an odd converter's) would throw out of range on a generation thread (CR-D9)
                     if (t.Rows != DemTiles.Glo90Rows || t.Cols != DemTiles.Glo90Cols(t.LatS))
                         throw new InvalidDataException(t.Cols + " x " + t.Rows + " cells, not GLO-90's " + DemTiles.Glo90Cols(t.LatS) + " x " + DemTiles.Glo90Rows);
+                    // EA-0106: the release's tile? Once a session, before the dams change the heights
+                    bool known;
+                    lock (gate) known = verified.Contains(key);
+                    if (Verify != null && !known)
+                    {
+                        bool? same = Verify(latS, lonW, data, t);
+                        // (Fable's re-review of 90692fe) not the release's: still read this session, the release's fetched beside it
+                        if (same == false) Replace?.Invoke(latS, lonW);
+                        if (same != null) lock (gate) verified.Add(key);
+                    }
                     Dams?.ApplyTo(t);
                 }
             }
             catch (Exception e) when (e is IOException or InvalidDataException or UnauthorizedAccessException)
             {
-                // a damaged file is set aside, so the next fetch replaces it
+                // a damaged file is set aside, so the next fetch replaces it; (EA-0116 T-L10) one that could not be read now
+                // (another process writing it, no access) is left as it is and read again later
                 LastError = DemTiles.ShortName(latS, lonW) + ": " + e.Message;
-                try { File.Move(path, path + ".bad", true); } catch (Exception) { }
+                if (damaged) try { File.Move(path, path + ".bad", true); } catch (Exception) { }
                 t = null;
             }
             lock (gate)

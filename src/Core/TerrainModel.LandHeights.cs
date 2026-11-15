@@ -18,25 +18,25 @@ namespace EarthMap.Core
         }, this);
 
         /// <summary>
-        /// Decision 0051 (proposed): dry land's heights from Copernicus GLO-90 tiles (null: the built-in grid's). Only the
+        /// Decision 0051: dry land's heights from Copernicus GLO-90 tiles (null: the built-in grid's). Only the
         /// height of columns that are dry land changes; which columns are land, sea or lake, the sea floor, lake beds and the
         /// rivers stay the built-in data's.
         /// </summary>
         public FineElevation Fine;
         /// <summary>
-        /// 0053 (proposed): GLO-90 averaged to a coarser grid from Earth's height data packs (null: not used). Dry land takes
+        /// 0053: GLO-90 averaged to a coarser grid from Earth's height data packs (null: not used). Dry land takes
         /// it where full GLO-90 (Fine) has no tile here or isn't used, with a detail noise sized by the grid's own spread
         /// inside each cell and the surveyed peaks restored as on the built-in heights.
         /// </summary>
         public CoarseElevation Coarse;
         /// <summary>The world's included-GLO-90 rules (EarthParams.CoarseElevation, CoarseElevation.Version).</summary>
-        public int CoarseRules;
+        public int CoarseRules { get => rules.Coarse; set => rules = rules with { Coarse = value }; }
         /// <summary>Undulation (m) left on GLO-90's land, so slopes aren't planes between its 90 m points (rules 1 and 2;
         /// rules 3 joins the points by a smooth curve instead and adds none).</summary>
         public const double FineUndulation = 1.0;
 
         /// <summary>The world's GLO-90 rules (EarthParams.FineElevation, FineElevation.Version); 2 adds the summit lift.</summary>
-        public int FineRules;
+        public int FineRules { get => rules.Fine; set => rules = rules with { Fine = value }; }
 
         /// <summary>GLO-90's land height at a column (rules 1 and 2: bilinear with a metre of undulation; rules 3: a smooth
         /// curve, nothing added), NaN where the built-in heights apply.</summary>
@@ -51,8 +51,8 @@ namespace EarthMap.Core
         /// <summary>GLO-90's ground at a column before any summit lift, by the world's GLO-90 rules.</summary>
         bool FineGround(double x, double z, double lat, double lon, out double f)
         {
-            if (FineRules >= 4 && FineFootprint > 1 && FineMean(x, z, FineFootprint, out f)) return true;
-            if (FineRules >= 3) return Fine.TrySmoothHeight(lat, lon, FineRules >= 5, out f);
+            if (Rules.FineFootprintMean && FineFootprint > 1 && FineMean(x, z, FineFootprint, out f)) return true;
+            if (Rules.FineSmooth) return Fine.TrySmoothHeight(lat, lon, Rules.FineBounded, out f);
             if (!Fine.TryHeight(lat, lon, out f)) return false;
             f += FineUndulation * SeamNoise(n2, x, z, 56, 3) * DetailScale;
             return true;
@@ -78,7 +78,7 @@ namespace EarthMap.Core
                 {
                     double px = x + (a + 0.5) / n - 0.5, pz = z + (b + 0.5) / n - 0.5;
                     var g = Geometry.ToGeo(RealSeam ? Geometry.WrapX(px) : px, pz);
-                    if (g.InGutter || !Fine.TrySmoothHeight(g.Lat, g.Lon, FineRules >= 5, out double h)) return false;
+                    if (g.InGutter || !Fine.TrySmoothHeight(g.Lat, g.Lon, Rules.FineBounded, out double h)) return false;
                     sum += h;
                 }
             }
@@ -90,10 +90,10 @@ namespace EarthMap.Core
         /// has no land.</summary>
         double CoarseLand(double x, double z, double lat, double lon, in EarthData.TerrainSample s)
         {
-            if (Coarse == null || CoarseRules < 1) return double.NaN;
+            if (Coarse == null || !Rules.CoarseHeights) return double.NaN;
             double h = CoarseGround(x, z, lat, lon, s);
             if (double.IsNaN(h)) return h;
-            if (Summits && SummitRules >= 2 && SummitMinElevation >= 0 && h > 0)
+            if (Summits && Rules.SummitRestore && SummitMinElevation >= 0 && h > 0)
                 h = KnownSummits.Restore(Geometry, x, z, h, SummitMinElevation, Peaks, SummitRules, CoarseBaseOf, peakSupport);
             return h;
         }
@@ -169,7 +169,7 @@ namespace EarthMap.Core
         /// </summary>
         double FineSummitLift(double x, double z, double lat, double lon)
         {
-            if (FineRules < 2 || SummitRules < 2 || SummitMinElevation < 0) return 0;
+            if (!Rules.FineSummitLift || !Rules.SummitRestore || SummitMinElevation < 0) return 0;
             double reach = (FineElevation.SummitSearch + FineElevation.SummitLiftRadius) / Geo.MetresPerDegree;
             double cosLat = Math.Max(0.01, Math.Cos(lat * Math.PI / 180));
             double best = 0;

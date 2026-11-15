@@ -37,6 +37,11 @@ namespace EarthMap
         int glacierIceId, rules, mapTop;
         /// <summary>0048: the world's soil rules (EarthParams.SoilRules); 2 and newer: ground columns leave real deserts without topsoil.</summary>
         int soilRules;
+        /// <summary>The world's ground rules (EarthParams.GroundColumns): 2 tells the ground the place's temperature (EA-0062).</summary>
+        int groundRules;
+        /// <summary>Ground rules 2 (EA-0062): vanilla's bauxite strata are ordinary rock to the strata pass, so regional geology
+        /// replaces them (Earth's own bauxite comes later, from its layer deposits in terra rossa and laterite). 0: kept.</summary>
+        int strataBauxite;
         long seed;
         double width, cellBlocks;
         const double GravelCoreShare=.4;
@@ -51,7 +56,7 @@ namespace EarthMap
         internal bool DepositColumnsHook=>depositColumnHook;
         readonly Dictionary<string,int> rocks=new(StringComparer.Ordinal);
         string mappingDescription;
-        int generationErrors;
+        int generationErrors, pickFilterErrors;
         public bool Active { get; private set; }
         public RegionalGeologyCatalog Catalog { get; private set; }
         /// <summary>Rules version this world generates with (0 when inactive).</summary>
@@ -152,18 +157,20 @@ namespace EarthMap
             Catalog=catalog;
             BuildBlockTables(catalog);
             ground=null;
-            if(p.GroundColumns>0)
+            if(GroundColumnFacts.Columns(p.GroundColumns))
             {
                 if(p.GroundColumns!=GroundColumns.RulesVersion)
-                    Mod.Logger.Warning("Earth ground columns: this world was saved with ground rules v{0}; this build has v{1}, which new chunks use.",p.GroundColumns,GroundColumns.RulesVersion);
+                    Mod.Logger.Warning("Earth ground columns: this world was saved with ground rules v{0}; this build has v{1}. Rules marked for a later version stay off in this world.",p.GroundColumns,GroundColumns.RulesVersion);
                 // depth scale: the terrain's metres per block at sea level, then the world's Ground depth choice
                 var curve=GroundColumns.DepthCurve.For(p.GroundDepth,1/core.Model.Vertical.Slope(0),core.Model.SeaLevel);
                 ground=EarthGround.TryCreate(api,curve,p.NoiseSeed,id=>replaceRock[id],GroundSets(p),out string groundError);
                 if(ground==null)Mod.Logger.Error("Earth ground columns are off for this session ({0}); new chunks use regional geology only.",groundError);
                 else Mod.Logger.Notification("Earth {0}.",ground.Summary);
             }
-            layers=ground!=null && p.OreLayers>0?CreateLayers(p):null;
+            layers=ground!=null && OreLayerFacts.Layers(p.OreLayers)?CreateLayers(p):null;
             soilRules=p.SoilRules;
+            groundRules=p.GroundColumns;
+            strataBauxite=ground!=null && GroundColumnFacts.NoBauxiteStrata(groundRules)?api.World.GetBlock(new AssetLocation("game:rock-bauxite"))?.Id??0:0;
             if(ground!=null && soilRules>=SoilFertility.GroundRules)
                 Mod.Logger.Notification("Earth ground columns: soil rules v{0}, arid land (aridity index below {1}, {2} excepted) has no topsoil.",soilRules,SoilFertility.DryLandAridity,
                     soilRules<SoilFertility.FloodplainRules?"river belts":"river belts and floodplains");
@@ -173,7 +180,7 @@ namespace EarthMap
             var geometry=core.Model.Geometry;
             cellBlocks=geometry.BlocksPerDegreeZ*.5;
             mapTop=api.WorldManager.MapSizeY-1;
-            if(version>=2)
+            if(GeologyFacts.SmoothedBeds(version))
             {
                 var g=catalog.Generation;
                 reference=new GeologyReference(core.Model,seed,cellBlocks,g.DatumRadiusCells,g.StrataThicknessPerSeaLevel,g.DatumUndulation,g.ThicknessVariation);
@@ -181,9 +188,9 @@ namespace EarthMap
             else reference=null;
             if(!soilHook)Mod.Logger.Warning("Earth geology: the soil-layer hook is unavailable; surface sand/gravel cover and top-rock repair are skipped.");
             if(!depositHook)Mod.Logger.Warning("Earth geology: the deposit hook is unavailable; clay, peat and salt use vanilla placement rules.");
-            if(version>=2 && !depositColumnHook)Mod.Logger.Warning("Earth geology: the deposit-column hook is unavailable; gravel lenses may remain under clay/peat patches.");
+            if(GeologyFacts.GravelLenses(version) && !depositColumnHook)Mod.Logger.Warning("Earth geology: the deposit-column hook is unavailable; gravel lenses may remain under clay/peat patches.");
             Mod.Logger.Notification("Earth geology v{0}: GLiM + GUM 0.5-degree categories, {1} reviewed regional envelope(s){2}. Subsurface thicknesses are synthesized; unknown bedrock preserves vanilla. Proxies: {3}",
-                version,catalog.Provinces.Count,version>=2?string.Format(CultureInfo.InvariantCulture,", bed boundaries below a smoothed reference surface (thickness scale {0:0} blocks), preserved {1}",reference.ThicknessScale,string.Join("/",catalog.Preserve)):"",mappingDescription);
+                version,catalog.Provinces.Count,GeologyFacts.SmoothedBeds(version)?string.Format(CultureInfo.InvariantCulture,", bed boundaries below a smoothed reference surface (thickness scale {0:0} blocks), preserved {1}",reference.ThicknessScale,string.Join("/",catalog.Preserve)):"",mappingDescription);
             Mod.Logger.Notification("Earth geology: ore geography is {0}. GA mudstone is not selected because its crushing recipe yields bauxite. Contact half-width {1} blocks.",p.RegionalOres ? "handled by regional ore rules" : "legacy native",p.GeologyTransitionBlocks);
             Mod.Logger.Notification("Earth geology: clay/peat use frequency multipliers (relief in metres, wetness index); missing salt evidence is unknown, positive surface-salt evidence is favoured.");
             return true;
@@ -205,7 +212,7 @@ namespace EarthMap
                 if(rules.Version!=version)throw new FormatException(asset+" declares rules v"+rules.Version);
                 var made=new EarthOreLayers(api,rules,ground,RebuildLayerTable,(x,z,d,top)=>RegionalRock(x,z,d,top));
                 ground.RewritePreservedStrata(api);
-                Mod.Logger.Notification("Earth ore layers v{0}: deposits keep to their ground layers under either ore choice; the layer pass runs after the deposits{1}.",version,version>=2?" (fire clay also as the underclay of a kept coal block)":"");
+                Mod.Logger.Notification("Earth ore layers v{0}: deposits keep to their ground layers under either ore choice; the layer pass runs after the deposits{1}.",version,OreLayerFacts.Under(version)?" (fire clay also as the underclay of a kept coal block)":"");
                 return made;
             }
             catch(Exception e) when (e is FormatException or KeyNotFoundException or InvalidOperationException or System.Text.Json.JsonException or System.IO.FileNotFoundException)
@@ -230,6 +237,29 @@ namespace EarthMap
             string folder=EarthGround.DataFolder,repo=core.Config?.GroundRepo;
             if(p.GroundData==0 && !core.CreatedThisStart)
             {
+                // (EA-0116 D-L9) checked by their SHA-256 too, as a 30" world's are: a set that is here but damaged failed at its
+                // first column read (the chunk noted, the server stopped: late); it is fetched again before the game runs, and
+                // the server stops if it can't be. A set that isn't here stays away, as these worlds always had it.
+                var damaged=GroundDownloader.Missing(folder,true).Where(s=>System.IO.File.Exists(GroundDownloader.PathOf(folder,s))).ToList();
+                if(damaged.Count>0)
+                {
+                    string names=string.Join(", ",damaged.Select(s=>s.Name));
+                    GroundDownloader.Result again;
+                    try{again=GroundDownloader.Get(folder,repo,s=>Mod.Logger.Notification("Earth ground sets: "+s),core?.Stopping??default,damaged);}
+                    catch(Exception e) when (e is System.IO.IOException or UnauthorizedAccessException or OperationCanceledException or System.Net.Http.HttpRequestException or AggregateException)
+                    {
+                        Mod.Logger.Warning("Earth ground sets: {0}",e.Message);
+                        again=GroundDownloader.Result.Failed;
+                    }
+                    if(again!=GroundDownloader.Result.Here)
+                    {
+                        Mod.Logger.Error("Earth ground columns: the 30\" ground set(s) {0} in {1} are damaged and could not be fetched again. The server stops before the game runs (nothing is saved); put the files from {2} there, or let Earth fetch them (GroundRepo in earth.json), and start again.",
+                            names,System.IO.Path.Combine(folder,GroundDownloader.Subfolder),GroundDownloader.Release);
+                        api.Server.ShutDown();
+                        return false;
+                    }
+                    Mod.Logger.Notification("Earth ground columns: the damaged 30\" ground set(s) {0} were fetched again.",names);
+                }
                 bool here=GroundDownloader.Missing(folder,false).Count==0;
                 Mod.Logger.Notification("Earth ground columns: this world was made before Earth recorded its ground sets; it reads the 30\" sets {0}.",here?"on this machine":"that are here (not all of them are)");
                 return true;
@@ -242,9 +272,14 @@ namespace EarthMap
             GroundDownloader.Result got;
             string error=null;
             // checked against their SHA-256, also for a saved 30″ world: a damaged file of the same size would change its ground
-            try{got=GroundDownloader.Missing(folder,true).Count==0?GroundDownloader.Result.Here:GroundDownloader.Get(folder,repo,s=>Mod.Logger.Notification("Earth ground sets: "+s));}
+            try{got=GroundDownloader.Missing(folder,true).Count==0?GroundDownloader.Result.Here:GroundDownloader.Get(folder,repo,s=>{Mod.Logger.Notification("Earth ground sets: "+s);Mod.Logger.StoryEvent("Earth ground sets: "+s);},core?.Stopping??default);}
             catch(Exception e) when (e is System.IO.IOException or UnauthorizedAccessException or OperationCanceledException or System.Net.Http.HttpRequestException or AggregateException)
             {
+                if(e is OperationCanceledException && core?.Stopping.IsCancellationRequested==true)
+                {
+                    Mod.Logger.Notification("Earth ground sets: the download stopped with the server; it resumes at the next start (nothing is saved).");
+                    return false;
+                }
                 error=e.Message;
                 Mod.Logger.Warning("Earth ground sets: {0}",e.Message);
                 got=GroundDownloader.Result.Failed;
@@ -277,8 +312,27 @@ namespace EarthMap
         /// assets that exist, then Earth's own copy of the rock (gneiss, schist, dolostone), then the vanilla stand-in.
         /// The fingerprint is informational: a change is logged and the new value stored.
         /// </summary>
+        /// <summary>(Decision 0083) The rocks this world was generated with whose block is gone this session (a provider mod
+        /// removed).</summary>
+        readonly List<string> lostBlocks=new();
+
+        /// <summary>(Decision 0083; FP-02) The parts of regional geology this world's saved rules use that are off this session,
+        /// for EarthWorldGen's check before the first chunk; each logged its own line when it went off.</summary>
+        internal void FeaturesOff(EarthParams p,List<string> off)
+        {
+            if(!p.RegionalGeology || core?.Model==null)return;
+            if(!Active){off.Add("regional geology (its line is above)");return;}
+            if(lostBlocks.Count>0)off.Add("regional geology's rocks as generated ("+string.Join(", ",lostBlocks)+": their block no longer exists)");
+            if(GroundColumnFacts.Columns(p.GroundColumns) && ground==null)off.Add("ground columns (their line is above)");
+            if(OreLayerFacts.Layers(p.OreLayers) && ground!=null && layers==null)off.Add("ore layers (their line is above)");
+            if(!soilHook)off.Add("regional geology's surface cover (vanilla's soil-layer hook is missing on this game version)");
+            if(!depositHook)off.Add("regional geology's clay, peat and salt placement (vanilla's deposit hook is missing on this game version)");
+            if(GeologyFacts.GravelLenses(rules) && !depositColumnHook)off.Add("regional geology's deposit layers (vanilla's deposit-column hook is missing on this game version)");
+        }
+
         bool ResolveMaterials(EarthParams p,RegionalGeologyCatalog catalog,string grid,string rulesText)
         {
+            lostBlocks.Clear();
             var saved=ParseSignature(p.GeologyProviderSignature);
             var legacy=new List<string>{"rules="+p.GeologyRulesVersion,"data="+Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(grid+rulesText)))};
             var current=new List<string>{"rules="+p.GeologyRulesVersion,"data="+catalog.Fingerprint};
@@ -301,7 +355,11 @@ namespace EarthMap
                 if(saved.TryGetValue(m.Id,out string savedCode))
                 {
                     if(BlockId(savedCode)>0)chosen=savedCode;
-                    else Mod.Logger.Warning("Earth geology: '{0}' was generated as {1} in this world, but that block no longer exists (provider removed?). New chunks fall back; expect a visible change where they meet existing chunks.",m.Id,savedCode);
+                    else
+                {
+                    Mod.Logger.Warning("Earth geology: '{0}' was generated as {1} in this world, but that block no longer exists (provider removed?). New chunks fall back; expect a visible change where they meet existing chunks.",m.Id,savedCode);
+                    lostBlocks.Add(m.Id+" was "+savedCode);
+                }
                 }
                 if(chosen==null && providerOn && m.Asset!=null)
                 {
@@ -413,7 +471,7 @@ namespace EarthMap
             var self=instance;
             // 0060: the reload brings Earth's layer deposits back; only ore-layer worlds keep them (and Earth's ore and gem
             // deposits only worlds of their deposit set)
-            if(self!=null)try{EarthOreLayers.PruneDeposits(self.api,__instance,self.layers!=null,EarthOreLayers.DepositSetOf(self.core?.Params));}catch(Exception e){self.Mod.Logger.Warning("Earth geology: sorting out Earth's own deposits after a deposit reload failed: {0}",e.Message);}
+            if(self!=null)try{EarthOreLayers.PruneDeposits(self.api,__instance,self.layers?.Rules.Version??0,EarthOreLayers.DepositSetOf(self.core?.Params));}catch(Exception e){self.Mod.Logger.Warning("Earth geology: sorting out Earth's own deposits after a deposit reload failed: {0}",e.Message);}
             if(self?.core?.Params?.Enabled!=true || !self.core.Params.RegionalGeology)return;
             self.layers?.Unbind(); // 0060: the deposit blocks are bound again at the next chunk
             try{self.NormalizeGeologyAdditionsChildGrades(__instance);}
@@ -495,10 +553,13 @@ namespace EarthMap
             return c;
         }
 
-        void ReportGenerationError(string pass,Exception e)
+        /// <summary>ER-08: a pass that threw for a chunk column refuses the world as the terrain does (EarthWorldGen.FailedPass:
+        /// the chunk is made again at the next start, the server stops); throws (but for a second failure of a chunk made anew,
+        /// FP-14, which goes on).</summary>
+        void ReportGenerationError(string pass,IServerChunk[] chunks,int chunkX,int chunkZ,Exception e)
         {
-            if(Interlocked.Increment(ref generationErrors)<=3)
-                Mod.Logger.Error("Earth geology: {0} failed for a chunk; vanilla blocks are kept there. {1}",pass,e);
+            Interlocked.Increment(ref generationErrors);
+            EarthWorldGen.FailedPass("geology ("+pass+")",chunks,chunkX,chunkZ,e);
         }
 
         // ------------------------------------------------------------------ strata
@@ -507,51 +568,122 @@ namespace EarthMap
         {
             var self=instance;
             if(self?.Active!=true)return;
+            // (FP-13) a chunk in flight after a refusal is noted and stops here
+            EarthWorldGen.ThrowIfRefusedChunk(request.Chunks,request.ChunkX,request.ChunkZ);
+            // (FP-11/FP-12) generation: this thread may wait for GLO-90 tiles
+            using var fetch=FineElevation.Generating();
             try{self.ApplyStrata(request);}
-            catch(Exception e){self.ReportGenerationError("rock strata",e);}
+            catch(Exception e){self.ReportGenerationError("rock strata",request.Chunks,request.ChunkX,request.ChunkZ,e);}
         }
         void ApplyStrata(IChunkColumnGenerateRequest request)
+        {
+            var st=strata??=new StrataColumns();
+            // (Fable's overview low 11, 14 November 2026) the per-thread state keeps no geology profile past the pass (ER-22
+            // removed the same pattern elsewhere): only numbers stay between chunks
+            try{ApplyStrata(request,st);}
+            finally{Array.Clear(st.Profile);}
+        }
+
+        void ApplyStrata(IChunkColumnGenerateRequest request,StrataColumns st)
         {
             var chunks=request.Chunks;
             var map=chunks[0].MapChunk;
             var cols=Columns(request.ChunkX,request.ChunkZ);
             int cx=request.ChunkX*32,cz=request.ChunkZ*32,maxY=chunks.Length*32-1;
-            Span<int> bounds=stackalloc int[RegionalGeologyCatalog.MaxBeds];
+            bool v1=!GeologyFacts.SmoothedBeds(rules);
+            // each column's top, beds and bed boundaries first (reads only: StrataTop looks at the column's own ice)
+            bool everyColumn=true;
+            int floor=int.MaxValue;
             for(int z=0;z<32;z++)for(int x=0;x<32;x++)
             {
                 int k=z*32+x;
+                st.Top[k]=0;
                 var sample=cols.Samples[k];
-                if(!sample.HasRegionalBedrock)continue;
+                if(!sample.HasRegionalBedrock){everyColumn=false;continue;}
                 int top=StrataTop(chunks,map.WorldGenTerrainHeightMap[k],x,z,cx+x,cz+z,maxY);
-                if(top<1)continue;
+                if(top<1){everyColumn=false;continue;}
                 var profile=sample.Profile;
-                int beds;
-                if(rules==1)beds=RegionalGeologyCatalog.ColumnV1(profile,top,cols.Lat[k],cols.Lon[k],seed,bounds);
+                var bounds=st.Bounds.AsSpan(k*RegionalGeologyCatalog.MaxBeds,RegionalGeologyCatalog.MaxBeds);
+                if(v1)st.Beds[k]=RegionalGeologyCatalog.ColumnV1(profile,top,cols.Lat[k],cols.Lon[k],seed,bounds);
                 else
                 {
                     reference.At(cx+x,cz+z,out double datum,out double thickness);
-                    beds=RegionalGeologyCatalog.ColumnV2(profile,datum,thickness,bounds);
+                    st.Beds[k]=RegionalGeologyCatalog.ColumnV2(profile,datum,thickness,bounds);
                 }
-                int bed=0;
-                bool topFound=false;
-                for(int y=top;y>0;y--)
-                {
-                    int index=((y%32)*32+z)*32+x;
-                    var data=chunks[y/32].Data;
-                    int existing=data.GetBlockIdUnsafe(index);
-                    if(existing<=0 || existing>=replaceRock.Length)continue;
-                    if(!replaceRock[existing])
-                    {
-                        if(!topFound && isRock[existing]){map.TopRockIdMap[k]=existing;topFound=true;}
-                        continue;
-                    }
-                    bed=rules==1?RegionalGeologyCatalog.BedV1(top-y,bounds,beds,bed):RegionalGeologyCatalog.BedV2(y,bounds,beds,bed);
-                    int rock=materialBlock[RegionalGeologyCatalog.MaterialOfBed(profile,bed)];
-                    data.SetBlockUnsafe(index,rock);
-                    if(!topFound){map.TopRockIdMap[k]=rock;topFound=true;}
-                }
+                st.Top[k]=top;st.Profile[k]=profile;st.Bed[k]=0;st.TopFound[k]=false;
+                floor=Math.Min(floor,top);
             }
+            // (EA-0113, the Fable pass's FP-30) where every column has regional bedrock, the layers below the lowest top go a
+            // layer at a time: read, and where all 1024 blocks are rock to replace and their bed is one material, written
+            // with one SetBlockBulk instead of 1024 writes. Above them, and in a chunk where a column has none, block by block
+            // as before. The blocks written are the same: each column's beds, its top rock and the skips are worked out as the
+            // column-by-column loop did (a bed's search runs forward from the last bed; its answer doesn't depend on where it
+            // starts as long as that isn't past it), only in another order.
+            int deep=everyColumn?floor:0;
+            for(int k=0;k<1024;k++)
+                if(st.Top[k]>=1)for(int y=st.Top[k];y>deep;y--)StrataBlock(chunks,map,st,v1,k,y);
+            for(int y=deep;y>=1;y--)StrataLayer(chunks,map,st,v1,y);
         }
+
+        /// <summary>(FP-30) The strata pass's state for the columns of one chunk, kept per thread; its profiles are cleared at
+        /// the end of each pass (low 11).</summary>
+        sealed class StrataColumns
+        {
+            public readonly int[] Top=new int[1024],Beds=new int[1024],Bed=new int[1024],Rock=new int[1024];
+            public readonly bool[] TopFound=new bool[1024];
+            public readonly RegionalGeologyCatalog.Profile[] Profile=new RegionalGeologyCatalog.Profile[1024];
+            public readonly int[] Bounds=new int[1024*RegionalGeologyCatalog.MaxBeds];
+        }
+        [ThreadStatic] static StrataColumns strata;
+
+        bool Replaceable(int id)=>id>0 && id<replaceRock.Length && (replaceRock[id] || id==strataBauxite);
+
+        /// <summary>One block of column k at height y, as the strata pass always did.</summary>
+        void StrataBlock(IServerChunk[] chunks,IMapChunk map,StrataColumns st,bool v1,int k,int y)
+        {
+            int index=(y%32)*1024+k;
+            var data=chunks[y/32].Data;
+            int existing=data.GetBlockIdUnsafe(index);
+            if(existing<=0 || existing>=replaceRock.Length)return;
+            if(!replaceRock[existing] && existing!=strataBauxite)
+            {
+                if(!st.TopFound[k] && isRock[existing]){map.TopRockIdMap[k]=existing;st.TopFound[k]=true;}
+                return;
+            }
+            int rock=StrataRock(st,v1,k,y);
+            data.SetBlockUnsafe(index,rock);
+            if(!st.TopFound[k]){map.TopRockIdMap[k]=rock;st.TopFound[k]=true;}
+        }
+
+        /// <summary>Column k's rock at height y; moves its bed on.</summary>
+        int StrataRock(StrataColumns st,bool v1,int k,int y)
+        {
+            var bounds=st.Bounds.AsSpan(k*RegionalGeologyCatalog.MaxBeds,RegionalGeologyCatalog.MaxBeds);
+            st.Bed[k]=v1?RegionalGeologyCatalog.BedV1(st.Top[k]-y,bounds,st.Beds[k],st.Bed[k]):RegionalGeologyCatalog.BedV2(y,bounds,st.Beds[k],st.Bed[k]);
+            return materialBlock[RegionalGeologyCatalog.MaterialOfBed(st.Profile[k],st.Bed[k])];
+        }
+
+        /// <summary>(FP-30) One layer of all 1024 columns below every column's top.</summary>
+        void StrataLayer(IServerChunk[] chunks,IMapChunk map,StrataColumns st,bool v1,int y)
+        {
+            var data=chunks[y/32].Data;
+            int at=(y%32)*1024;
+            for(int k=0;k<1024;k++)
+                if(!Replaceable(data.GetBlockIdUnsafe(at+k)))
+                {
+                    for(int c=0;c<1024;c++)StrataBlock(chunks,map,st,v1,c,y);
+                    return;
+                }
+            int one=st.Rock[0]=StrataRock(st,v1,0,y);
+            bool same=true;
+            for(int k=1;k<1024;k++)
+                if((st.Rock[k]=StrataRock(st,v1,k,y))!=one)same=false;
+            if(same)data.SetBlockBulk(at,32,32,one);
+            else for(int k=0;k<1024;k++)data.SetBlockUnsafe(at+k,st.Rock[k]);
+            for(int k=0;k<1024;k++)
+                if(!st.TopFound[k]){map.TopRockIdMap[k]=st.Rock[k];st.TopFound[k]=true;}
+        }
+
         /// <summary>
         /// Highest block the strata pass rewrites: the terrain top, or just below glacier ice. Earth's terrain pass fills
         /// ice contiguously from the model's IceBottom to the top, so scanning the ice blocks equals IceBottom-1
@@ -574,6 +706,8 @@ namespace EarthMap
         {
             var self=instance;
             if(self?.Active!=true)return;
+            EarthWorldGen.ThrowIfRefusedChunk(request.Chunks,request.ChunkX,request.ChunkZ);
+            using var fetch=FineElevation.Generating();
             try
             {
                 var cols=self.Columns(request.ChunkX,request.ChunkZ);
@@ -581,7 +715,7 @@ namespace EarthMap
                 if(self.ground!=null)self.ApplyGround(request,cols);
                 self.RestoreTopRock(request);
             }
-            catch(Exception e){self.ReportGenerationError("surface cover",e);}
+            catch(Exception e){self.ReportGenerationError("surface cover and ground",request.Chunks,request.ChunkX,request.ChunkZ,e);}
             self.AfterGround?.Invoke(request);
         }
         /// <summary>After the ground pass of each chunk column (0060: the ore maps lay their beds here in ore-layer worlds).
@@ -621,7 +755,7 @@ namespace EarthMap
                 int id=dune?sandOf[rock]:gravelOf[rock];
                 if(id<=0)continue;
                 int thickness=2;
-                if(rules>=2 && coarse)
+                if(GeologyFacts.GravelLenses(rules) && coarse)
                 {
                     // v2: discontinuous lenses, mostly one block, two in their cores
                     double coverage=Catalog.GravelCoverage(s.Sediment);
@@ -671,9 +805,14 @@ namespace EarthMap
                 int k=z*32+x;
                 double lat=cols.Lat[k],lon=cols.Lon[k];
                 if(cols.Samples[k].OutsideEarth || !ground.Covers(lat,lon))continue;
-                int top=Math.Min(map.WorldGenTerrainHeightMap[k],maxY);
-                if(top<2)continue;
                 var c=ColumnStore.At(core.Model,cx+x,cz+z);
+                // (W-L3, code review 14 November 2026) a table rebuilt in a later session reads the height map after the
+                // volcano craters lowered it; the ground pass saw the terrain's own top there, which craters only ever lower.
+                // Elsewhere the height map is what the ground pass saw: vanilla's caves (Terrain pass, before it) lower it
+                // at their mouths, and the rebuild must read that too (Fable's review of ae8e89d).
+                int hm=map.WorldGenTerrainHeightMap[k];
+                int top=Math.Min(!write && EarthVolcanoes.Instance?.CraterCarves(cx+x,cz+z)==true?Math.Max(hm,c.Top):hm,maxY);
+                if(top<2)continue;
                 if(c.IceBottom<=c.Top)continue; // glacier ice keeps the strata below it
                 bool water=top+1<=maxY && chunks[(top+1)/32].Data.GetFluid((((top+1)%32)*32+z)*32+x)!=0;
                 var surface=water?(c.River?GroundColumns.Surface.RiverBed:GroundColumns.Surface.Water):c.Beach?GroundColumns.Surface.Beach:GroundColumns.Surface.Land;
@@ -688,9 +827,18 @@ namespace EarthMap
         {
             var place=new GroundColumns.Place{Elevation=c.Elev,Surface=surface,Lake=c.Water is 2 or 3,NearRiver=c.NearRiver||c.River,RegionalRock=regionalRock,Shore=c.Shore,ShoreRiseBlocks=c.Beach&&c.Shore!=0?Math.Clamp(c.Top-(c.NearLakeTop>=0?c.NearLakeTop:core.Model.SeaLevel-1),0,8):0,ShoreRules=core.Model.ShoreRules};
             // 0048 soil rules 2: real deserts carry no topsoil; a river's green belt is counted in as the climate map has it
+            place.GroundRules=groundRules;
+            EarthData.ClimateSample cs=default;bool sampled=false;
+            // ground rules 2 (EA-0062): the yearly mean at the place's own height, for rules such as warm karst's terra rossa
+            if(GroundColumnFacts.WarmKarst(groundRules) && surface!=GroundColumns.Surface.Water)
+            {
+                cs=core.Model.Data.SampleClimate(lat,lon);sampled=true;
+                place.HasTemperature=!double.IsNaN(cs.TMean);
+                place.TMean=cs.TMean-EarthWorldGen.LapsePerMetre*Math.Max(0,c.Elev);
+            }
             if(soilRules>=SoilFertility.GroundRules && surface==GroundColumns.Surface.Land)
             {
-                var cs=core.Model.Data.SampleClimate(lat,lon);
+                if(!sampled)cs=core.Model.Data.SampleClimate(lat,lon);
                 place.Arid=SoilFertility.AridGround(cs.Rain,cs.DrySummer,cs.PenmanFactor) && SoilFertility.AridGround(core.Model.RiparianRain(wx,wz,cs.Rain),cs.DrySummer,cs.PenmanFactor);
                 // soil rules 3: the natural flood of a river with dry-season water keeps its soil (FloodplainGrid), wind-blown
                 // sand excepted (GroundColumns.WindSand, once the cover is known)
@@ -729,14 +877,17 @@ namespace EarthMap
         {
             var self=instance;
             if(self?.Active!=true)return;
-            if(self.rules>=2)
+            EarthWorldGen.ThrowIfRefusedChunk(request.Chunks,request.ChunkX,request.ChunkZ);
+            // (FP-12) the deposit catalogue's bodies (AfterDepositLayers) run their valley search here
+            using var fetch=FineElevation.Generating();
+            if(GeologyFacts.GravelLenses(self.rules))
                 try{self.ClearGravelUnderPatches(request);}
-                catch(Exception e){self.ReportGenerationError("clay/peat cleanup",e);}
+                catch(Exception e){self.ReportGenerationError("clay/peat cleanup",request.Chunks,request.ChunkX,request.ChunkZ,e);}
             // 0060: deposit blocks back out of layers their deposit may not use
             // 0065: the layer table stays for the catalogue's bodies (same layers as the pass) and goes after them
             if(self.layers!=null)
                 try{self.layers.Apply(request.Chunks,request.ChunkX,request.ChunkZ);}
-                catch(Exception e){self.ReportGenerationError("ore layer pass",e);}
+                catch(Exception e){self.ReportGenerationError("ore layer pass",request.Chunks,request.ChunkX,request.ChunkZ,e);}
             // 0065: the deposit catalogue's bodies, already in their layers, after the layer pass
             try{self.AfterDepositLayers?.Invoke(request);}
             finally{self.layers?.Release(request.ChunkX,request.ChunkZ);}
@@ -810,7 +961,8 @@ namespace EarthMap
             public bool Ground;
             /// <summary>Blocks from the top the ground column owns; below that, regional rock (hand-off) when Profile is set.</summary>
             public int GroundDepth;
-            public readonly int[] GroundIds=new int[512];
+            /// <summary>512 long (the top 512 blocks) before GenFixRules 4; from it as deep as the column (ER-20).</summary>
+            public int[] GroundIds=new int[512];
             /// <summary>0060: the column's layer segments (ends, codes), the depth it owns (int.MaxValue unless it hands off),
             /// and the regional rock's age and evaporitic profile below a hand-off.</summary>
             public int Segs,Owned;
@@ -850,7 +1002,7 @@ namespace EarthMap
             int y=top-depth;
             if(c.Ground && depth<c.GroundDepth)return depth>=0 && y>=1 && depth<c.GroundIds.Length?c.GroundIds[depth]:0;
             if(c.Profile==null || y<1 || y>c.StrataTop)return 0;
-            int bed=rules==1?RegionalGeologyCatalog.BedV1(c.StrataTop-y,c.Bounds,c.Beds,0):RegionalGeologyCatalog.BedV2(y,c.Bounds,c.Beds,0);
+            int bed=!GeologyFacts.SmoothedBeds(rules)?RegionalGeologyCatalog.BedV1(c.StrataTop-y,c.Bounds,c.Beds,0):RegionalGeologyCatalog.BedV2(y,c.Bounds,c.Beds,0);
             return materialBlock[RegionalGeologyCatalog.MaterialOfBed(c.Profile,bed)];
         }
 
@@ -873,10 +1025,14 @@ namespace EarthMap
                 tc=ColumnStore.Near(core.Model,x,z);haveColumn=true;
                 if(tc.IceBottom>tc.Top)
                 {
+                    // ER-20 (GenFixRules 4): the whole ground column, not its top 512 blocks (a column whose top is above y 512
+                    // owns everything down to y 1, as EarthGround.Write places it)
+                    bool whole=core.Model.Rules.WholeGroundColumn;
+                    if(whole && c.GroundIds.Length<top+1)c.GroundIds=new int[top+1];
                     Array.Clear(c.GroundIds);
                     var surface=SurfaceOf(tc);
                     var gs=GroundAt(geo.Lat,geo.Lon,x,z,tc,surface,s.HasRegionalBedrock);
-                    c.GroundDepth=ground.Column(gs,surface,c.GroundIds,Math.Max(0,top),out var built);
+                    c.GroundDepth=ground.Column(gs,surface,c.GroundIds.AsSpan(0,whole?c.GroundIds.Length:512),Math.Max(0,top),out var built);
                     c.Ground=true;
                     if(layers!=null)
                     {
@@ -895,7 +1051,7 @@ namespace EarthMap
                 if(strataTop>=1)
                 {
                     c.Profile=s.Profile;c.StrataTop=strataTop;
-                    if(rules==1)c.Beds=RegionalGeologyCatalog.ColumnV1(s.Profile,strataTop,geo.Lat,geo.Lon,seed,c.Bounds);
+                    if(!GeologyFacts.SmoothedBeds(rules))c.Beds=RegionalGeologyCatalog.ColumnV1(s.Profile,strataTop,geo.Lat,geo.Lon,seed,c.Bounds);
                     else
                     {
                         reference.At(x,z,out double datum,out double thickness);
@@ -916,8 +1072,24 @@ namespace EarthMap
             if(self?.Active!=true || variant==null || depoCenterPos==null)return true;
             string code=variant.Code;
             if(code is not ("peat" or "clay" or "redclay" or "halite") && !(self.layers!=null && code is "gravel" or "soil" or "bogironlarge" or "bogironsmall") && !EarthOreLayers.IsLayerDeposit(variant))return true;
-            try{return self.FilterDeposit(chunks,chunkX,chunkZ,depoCenterPos,variant,___blockAccessor,ref ___subDepositsToPlace);}
-            catch(Exception e){self.ReportGenerationError("deposit filter",e);return true;}
+            bool world=__instance==self.api.ModLoader.GetModSystem<GenDeposits>();
+            try
+            {
+                // (FP-12) the world's deposit pass may wait for GLO-90 tiles; the prospecting pick's never does (main thread)
+                if(!world)return self.FilterDeposit(chunks,chunkX,chunkZ,depoCenterPos,variant,___blockAccessor,ref ___subDepositsToPlace);
+                using var fetch=FineElevation.Generating();
+                return self.FilterDeposit(chunks,chunkX,chunkZ,depoCenterPos,variant,___blockAccessor,ref ___subDepositsToPlace);
+            }
+            catch(Exception e)
+            {
+                // (ER-08, Fable's re-review) only the world's own deposit pass refuses a chunk: the prospecting pick builds its own
+                // GenDeposits and runs GeneratePartial on the main thread for a column it simulates and throws away, and a refusal
+                // there would note the real chunk under the player for deletion
+                if(world)self.ReportGenerationError("deposit filter",chunks,chunkX,chunkZ,e);
+                else if(Interlocked.Increment(ref self.pickFilterErrors)==1)
+                    self.Mod.Logger.Warning("Earth geology: the deposit filter failed in a prospecting reading (said once a session; the world is unchanged): {0}",e);
+                return true;
+            }
         }
         bool FilterDeposit(IServerChunk[] chunks,int chunkX,int chunkZ,BlockPos pos,DepositVariant variant,IBlockAccessor blockAccessor,ref Dictionary<BlockPos,DepositVariant> subDeposits)
         {
@@ -982,7 +1154,7 @@ namespace EarthMap
                 return text;
             }
             string strata;
-            if(rules>=2)
+            if(GeologyFacts.SmoothedBeds(rules))
             {
                 reference.At(x,z,out double datum,out double thickness);
                 strata=string.Format(CultureInfo.InvariantCulture,"bed boundaries hang below a smoothed reference surface at y={0:0} (thickness scale {1:0} blocks); surface y={2}",datum,thickness,column.Top);

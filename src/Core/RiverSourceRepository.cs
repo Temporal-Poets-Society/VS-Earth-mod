@@ -11,7 +11,7 @@ namespace EarthMap.Core
     /// </summary>
     public sealed class RiverSourceRepository
     {
-        /// <summary>0053 (proposed): the rivers on GLO-90 (tools/RiverSnap): rivers.bin's reaches with their courses snapped to
+        /// <summary>0053: the rivers on GLO-90 (tools/RiverSnap): rivers.bin's reaches with their courses snapped to
         /// GLO-90's valley floors and levels from GLO-90, in rivers.bin's format.</summary>
         public const string Glo90RiversFile = "rivers-glo90.bin";
 
@@ -19,11 +19,38 @@ namespace EarthMap.Core
         readonly Func<string, Stream> openSource;
         bool riversReleased;
         int glo90Courses = -1;
+        ulong glo90Hash;
+        long glo90HashLength = -1;
+
+        /// <summary>rivers-glo90.bin's Sha8: as Glo90RiverCourses found it when the file is that one, else worked out.</summary>
+        ulong Glo90Hash(byte[] file) => file.LongLength == glo90HashLength ? glo90Hash : EarthBinary.Sha8(file);
 
         internal RiverSourceRepository(Func<string, Stream> open) { openSource = open; }
 
-        /// <summary>The large rivers (rivers.bin), or null when the file isn't there or wasn't requested.</summary>
-        public List<RiverReach> Rivers { get; private set; }
+        // EA-0108 (the Fable pass's FP-18): rivers.bin is read at the first ask, not when the data loads: worlds on river courses
+        // 1 and later (every new world) build from rivers-glo90.bin and never read it, and it held 135 MB through the start's peak
+        readonly object riversGate = new();
+        bool riversWanted, riversRead;
+        List<RiverReach> rivers;
+
+        /// <summary>The large rivers (rivers.bin), read at the first ask; null when the file isn't there, wasn't requested, or
+        /// after <see cref="ReleaseRivers"/> (<see cref="RiverReaches()"/> reads it again then).</summary>
+        public List<RiverReach> Rivers
+        {
+            get
+            {
+                lock (riversGate)
+                {
+                    if (riversWanted && !riversRead && !riversReleased)
+                    {
+                        riversRead = true;
+                        using var rs = openSource?.Invoke("rivers.bin");
+                        if (rs != null) rivers = RiverData.Read(rs);
+                    }
+                    return rivers;
+                }
+            }
+        }
         /// <summary>The moved reaches of the rivers on GLO-90 (rivers-glo90-snap.bin), or null.</summary>
         public RiverSnapData RiverSnap { get; private set; }
         /// <summary>The side arms on the snapped rivers on GLO-90 (rivers-glo90-arms.bin), or null.</summary>
@@ -34,12 +61,8 @@ namespace EarthMap.Core
         /// <summary>0063 (courses rules 4): the side arms on those (rivers-glo90-arms-2.bin), or null.</summary>
         public RiverArmsData RiverArms2 { get; private set; }
 
-        /// <summary>rivers.bin, when it is there (EarthDataset.Load with terrain).</summary>
-        internal void ReadRivers(Func<string, Stream> open)
-        {
-            using var rs = open("rivers.bin");
-            if (rs != null) Rivers = RiverData.Read(rs);
-        }
+        /// <summary>rivers.bin, when it is there, read at the first ask of <see cref="Rivers"/> (EarthDataset.Load with terrain).</summary>
+        internal void WantRivers() => riversWanted = true;
 
         /// <summary>The overlays of the rivers on GLO-90 that are there (EarthDataset.Load with terrain).</summary>
         internal void ReadOverlays(Func<string, Stream> open)
@@ -61,17 +84,28 @@ namespace EarthMap.Core
         /// </summary>
         public void ReleaseRivers()
         {
-            if (Rivers == null || openSource == null) return;
-            Rivers = null;
-            riversReleased = true;
+            lock (riversGate)
+            {
+                // (EA-0108) one never read is released too: nothing reads it until RiverReaches() asks
+                if (!riversWanted || openSource == null || riversRead && rivers == null) return;
+                rivers = null;
+                riversReleased = true;
+            }
         }
 
         /// <summary>The rivers.bin reaches: as loaded, or read again from the mod after <see cref="ReleaseRivers"/> (a new list,
         /// equal to the released one); null without the file or when it wasn't requested.</summary>
         public List<RiverReach> RiverReaches()
         {
-            if (Rivers != null || !riversReleased) return Rivers;
-            using var s = openSource?.Invoke("rivers.bin") ?? throw new FileNotFoundException("rivers.bin");
+            bool had;
+            lock (riversGate)
+            {
+                if (!riversReleased) return Rivers;
+                had = riversRead;
+            }
+            using var s = openSource?.Invoke("rivers.bin");
+            // (EA-0108) released before it was ever read: null without the file, as an ask before the release would have given
+            if (s == null) { if (had) throw new FileNotFoundException("rivers.bin"); return null; }
             return RiverData.Read(s);
         }
 
@@ -88,14 +122,14 @@ namespace EarthMap.Core
             if (courses >= RiverNetwork.Glo90WidthCourses)
             {
                 var snap2 = RiverSnap2 ?? throw new FileNotFoundException("earthdata/rivers-glo90-snap-2.bin");
-                snap2.ApplyTo(list, EarthBinary.Sha8(file));
+                snap2.ApplyTo(list, Glo90Hash(file));
                 var arms2 = RiverArms2 ?? throw new FileNotFoundException("earthdata/rivers-glo90-arms-2.bin");
                 if (!arms2.Fits(snap2)) throw new InvalidDataException("rivers-glo90-arms-2.bin was made for another rivers-glo90-snap-2.bin");
                 return arms2.ApplyTo(list);
             }
             // courses rules 2: with the reaches the water atlas moved into the water mask's rivers
             if (courses >= RiverNetwork.Glo90SnapCourses)
-                (RiverSnap ?? throw new FileNotFoundException("earthdata/rivers-glo90-snap.bin")).ApplyTo(list, EarthBinary.Sha8(file));
+                (RiverSnap ?? throw new FileNotFoundException("earthdata/rivers-glo90-snap.bin")).ApplyTo(list, Glo90Hash(file));
             // courses rules 3: and the side arms round the islands the water mask shows in the rivers
             if (courses >= RiverNetwork.Glo90ArmsCourses)
             {
@@ -122,7 +156,10 @@ namespace EarthMap.Core
                     using var s = openSource?.Invoke(Glo90RiversFile);
                     if (s != null)
                     {
-                        ulong hash = EarthBinary.Sha8(EarthBinary.ReadAll(s));
+                        byte[] bytes = EarthBinary.ReadAll(s);
+                        ulong hash = EarthBinary.Sha8(bytes);
+                        // (EA-0092 A6) kept for RiverReaches, which reads the same file again: one hash of it a start
+                        glo90Hash = hash; glo90HashLength = bytes.LongLength;
                         v = RiverSnap2 != null && RiverSnap2.Fits(hash) && RiverArms2 != null && RiverArms2.Fits(RiverSnap2) ? RiverNetwork.Glo90WidthCourses
                             : RiverSnap == null || !RiverSnap.Fits(hash) ? 1
                             : RiverArms != null && RiverArms.Fits(RiverSnap) ? RiverNetwork.Glo90ArmsCourses : RiverNetwork.Glo90SnapCourses;

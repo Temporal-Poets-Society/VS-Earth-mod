@@ -23,6 +23,14 @@ namespace EarthMap
         /// </summary>
         public void OnGetClimate(ref ClimateCondition climate, BlockPos pos, EnumGetClimateMode mode, double totalDays)
         {
+            if (!ClimateCost.On) { Adjust(climate, pos, mode, totalDays); return; }
+            long start = System.Diagnostics.Stopwatch.GetTimestamp();
+            Adjust(climate, pos, mode, totalDays);
+            ClimateCost.Count(pos, mode, totalDays, System.Diagnostics.Stopwatch.GetTimestamp() - start);
+        }
+
+        void Adjust(ClimateCondition climate, BlockPos pos, EnumGetClimateMode mode, double totalDays)
+        {
             var p = core.Params;
             var m = core.Model;
             if (p == null || !p.Enabled || m == null || pos == null) return;
@@ -54,10 +62,12 @@ namespace EarthMap
             {
                 var side = core.AnyApi?.Side;
                 var w = side == null ? null : EarthWeather.For(side.Value)?.Model;
-                if (w != null && w.Settings.Rules >= 6 && !EarthWeather.PrecipitationOverridden(core.AnyApi))
+                if (w != null && w.Settings.Has.TemperatureAnomaly && !EarthWeather.PrecipitationOverridden(core.AnyApi))
                 {
+                    long start = ClimateCost.On ? System.Diagnostics.Stopwatch.GetTimestamp() : 0;
                     try { climate.Temperature += (float)w.TemperatureAnomaly(pos.X, pos.Z, totalDays * w.Settings.HoursPerDay, EarthWeather.GroundMetres(core.AnyApi, pos.Y)); }
                     catch (Exception e) { EarthWeather.ReportHookFailure(side.Value, "the weather's temperature", e); }
+                    if (start != 0) ClimateCost.CountWeather(System.Diagnostics.Stopwatch.GetTimestamp() - start);
                 }
             }
         }

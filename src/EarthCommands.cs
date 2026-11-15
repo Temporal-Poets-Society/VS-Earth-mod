@@ -71,10 +71,22 @@ namespace EarthMap
                     .RequiresPlayer()
                     .HandleWith(CmdWater)
                 .EndSubCommand()
+                .BeginSubCommand("site")
+                    .WithDescription("Site drivers here (EA-0054 step 1): heat, light by slope and aspect, water supply, soil richness, wetness from the water table, disturbance, and the site type they make")
+                    .RequiresPlayer()
+                    .HandleWith(CmdSite)
+                .EndSubCommand()
                 .BeginSubCommand("ores")
                     .WithDescription("Regional ore evidence, reported burial and saved background settings here")
                     .RequiresPlayer()
                     .HandleWith(CmdOres)
+                .EndSubCommand()
+                .BeginSubCommand("propick")
+                    .WithDescription("The prospecting pick's question here, for child deposits (silver in galena, gold in quartz, sylvite in halite, peridot in olivine): each one's ore map value, its parent's ore blocks in vanilla's simulated column, and the pick's factor, here or over every 4th column within a radius (at most 64) (EA-0075)")
+                    .RequiresPrivilege(Privilege.controlserver)
+                    .RequiresPlayer()
+                    .WithArgs(parsers.OptionalInt("radius", 0), parsers.OptionalWord("old"))
+                    .HandleWith(CmdPropick)
                 .EndSubCommand()
                 .BeginSubCommand("orelayers")
                     .WithDescription("Ores in their ground layer (decision 0060): deposit blocks in loaded chunks around you by layer rule and layer class (radius in blocks, default 32, at most 128), and the layer pass's counts this session")
@@ -98,12 +110,76 @@ namespace EarthMap
                     .RequiresPlayer()
                     .HandleWith(CmdPlacement)
                 .EndSubCommand()
+                .BeginSubCommand("siterules")
+                    .WithDescription("Site rules for chunks generated from now on in this session (EA-0054 step 2): 0 or 1, not saved, for comparing with /wgen regenk; no argument shows the world's. Test worlds: a world not in creative mode needs 'anyway' after the number (its new chunks keep these rules for good)")
+                    .RequiresPrivilege(Privilege.controlserver)
+                    .WithArgs(parsers.OptionalInt("rules", -1), parsers.OptionalWord("anyway"))
+                    .HandleWith(args =>
+                    {
+                        int v = (int)args[0];
+                        if (Model == null) return TextCommandResult.Success("Earth is not active in this world.");
+                        // (S-L4, code review 14 November 2026) a comparison tool for test worlds: elsewhere only when asked for twice
+                        bool creative = string.Equals(sapi.World.Config.GetString("gameMode", ""), "creative", StringComparison.OrdinalIgnoreCase);
+                        if (v >= 0 && v != Model.SiteRules && v != (Params?.SiteRules ?? 0) && !creative && args[1] as string != "anyway")
+                            return TextCommandResult.Error("This world is not a creative test world: chunks generated while the site rules differ from the save (" + (Params?.SiteRules ?? 0) +
+                                ") keep them for good. Add 'anyway' to switch: /earth siterules " + v + " anyway");
+                        if (v >= 0 && v != Model.SiteRules)
+                        {
+                            Model.SiteRules = Math.Min(v, SiteNiche.RulesVersion);
+                            if (Model.SiteRules != (Params?.SiteRules ?? 0))
+                                logger.Warning("Earth: /earth siterules {0} by {1}: chunks generated from now until the world is reopened keep site rules {0} for good (the save says {2}).",
+                                    Model.SiteRules, args.Caller.Player?.PlayerName ?? "the console", Params?.SiteRules ?? 0);
+                            else logger.Notification("Earth: /earth siterules {0}: back to the saved site rules.", Model.SiteRules);
+                        }
+                        return TextCommandResult.Success("Site rules now " + Model.SiteRules + " (saved: " + (Params?.SiteRules ?? 0) + ")" +
+                            (Model.SiteRules != (Params?.SiteRules ?? 0) ? ". Chunks generated now keep these rules permanently; the saved rules return when the world is reopened." : "."));
+                    })
+                .EndSubCommand()
+                .BeginSubCommand("woods")
+                    .WithDescription("Trees in loaded chunks around you by wood (radius in blocks, default 48, at most 128): trunk columns and their mean height; or trace: count the tree and shrub picks of generation from now on (EA-0054)")
+                    .RequiresPrivilege(Privilege.controlserver)
+                    .RequiresPlayer()
+                    .WithArgs(parsers.OptionalWord("radius or trace"))
+                    .HandleWith(CmdWoods)
+                .EndSubCommand()
                 .BeginSubCommand("census")
                     .WithDescription("Count catalogue plants, other crops and berry bushes, fruit trees and animals in loaded chunks around you (radius in blocks, default 64, at most 256)")
                     .RequiresPrivilege(Privilege.controlserver)
                     .RequiresPlayer()
                     .WithArgs(parsers.OptionalInt("radius", 64))
                     .HandleWith(CmdCensus)
+                .EndSubCommand()
+                .BeginSubCommand("cost")
+                    .WithDescription("Measure what Earth's climate hook costs in this session (on, off, or no argument for the figures so far)")
+                    .RequiresPrivilege(Privilege.controlserver)
+                    .WithArgs(parsers.OptionalWord("onoff"))
+                    .HandleWith(args =>
+                    {
+                        if (Params?.Enabled != true) return NotActive();
+                        string w = args[0] as string;
+                        if (w == "on") { ClimateCost.Start(); return TextCommandResult.Success("Counting the climate hook's calls (both sides of this process)."); }
+                        if (w == "off") ClimateCost.On = false;
+                        return TextCommandResult.Success(ClimateCost.Report());
+                    })
+                .EndSubCommand()
+                .BeginSubCommand("snowlight")
+                    .WithDescription("Relight where snow melts (EA-0063): on (default) or off for a comparison")
+                    .RequiresPrivilege(Privilege.controlserver)
+                    .WithArgs(parsers.OptionalWord("onoff"))
+                    .HandleWith(args =>
+                    {
+                        if (Params?.Enabled != true) return NotActive();
+                        string w = args[0] as string;
+                        if (w == "on" || w == "off") SnowMeltLight.Paused = w == "off";
+                        return TextCommandResult.Success("Relight where snow melts: " + (SnowMeltLight.Paused ? "off" : "on") + ".");
+                    })
+                .EndSubCommand()
+                .BeginSubCommand("relight")
+                    .WithDescription("Relight the loaded chunks around you (radius in blocks, default 32, at most 128): rock left dark where snow melted before Earth relit melting snow (EA-0063)")
+                    .RequiresPrivilege(Privilege.controlserver)
+                    .RequiresPlayer()
+                    .WithArgs(parsers.OptionalInt("radius", 32))
+                    .HandleWith(args => Params?.Enabled != true ? NotActive() : TextCommandResult.Success("Relit " + SnowMeltLight.FullRelight(sapi, args.Caller.Player.Entity.Pos.AsBlockPos, (int)args[0]) + "."))
                 .EndSubCommand()
                 .BeginSubCommand("tp")
                     .WithDescription("Teleport to a latitude and longitude in degrees (south and west negative), e.g. /earth tp 51.5 -0.12. " +
@@ -121,7 +197,9 @@ namespace EarthMap
                 .EndSubCommand()
                 .BeginSubCommand("story")
                     .WithDescription("List the story locations with their real coordinates")
-                    .RequiresPrivilege(Privilege.chat)
+                    // (D-L5 of the Fable pass) every story location's place, which vanilla leaves to be found: the server's
+                    // admins only, as /earth map and the other whole-world listings
+                    .RequiresPrivilege(Privilege.controlserver)
                     .HandleWith(CmdStory)
                 .EndSubCommand()
                 .BeginSubCommand("checkrivers")
@@ -139,7 +217,8 @@ namespace EarthMap
                             "here, hours). Stop with /earth elevation cancel; squares already here are skipped next time.")
                         .RequiresPrivilege(Privilege.controlserver)
                         .WithArgs(parsers.Word("all"), parsers.OptionalWord("from"))
-                        .HandleWith(args => (string)args[0] != "all"
+                        .HandleWith(args => Params?.Enabled != true || Params.FineElevation < 1 ? TextCommandResult.Error("This world doesn't read GLO-90 (it isn't an Earth world, or one on the built-in heights); nothing to download.")
+                            : (string)args[0] != "all"
                             ? TextCommandResult.Error("Type /earth elevation download all (about 8.6 GB from Earth's data release), or /earth elevation download all copernicus.")
                             : args[1] is string from && from.Length > 0 && from != "copernicus" && from != "release"
                             ? TextCommandResult.Error("From 'release' (the default) or 'copernicus'.")
@@ -198,6 +277,146 @@ namespace EarthMap
             return TextCommandResult.Success(water.Describe(pos.X, pos.Y, pos.Z));
         }
 
+        /// <summary>
+        /// /earth site: the site drivers at the player's column (src/Core/SiteDrivers.cs; EA-0054 step 1). Read-only: the
+        /// world's generation does not read them yet.
+        /// </summary>
+        TextCommandResult CmdSite(TextCommandCallingArgs args)
+        {
+            if (Params?.Enabled != true || Model == null) return TextCommandResult.Success("Earth is not active in this world.");
+            try
+            {
+                var pos = args.Caller.Player.Entity.Pos;
+                double x = pos.X, z = pos.Z;
+                var c = Model.GetColumn(x, z);
+                var g = Model.TerrainGeoAt(x, z);
+                if (c.Gutter || g.InGutter || g.BeyondPole) return TextCommandResult.Success("No site drivers here: outside the Earth (seam sea or beyond a pole).");
+                double elev = c.Elev;
+                var cs = Data.SampleClimate(g.Lat, g.Lon);
+                // as the terrain model's climate: below sea level (Dead Sea, Caspian) it warms
+                double lapse = 0.0065 * elev;
+                var input = SiteInput.Create(g.Lat, g.Lon);
+                input.ElevationM = elev;
+                input.TMean = cs.TMean - lapse; input.TCold = cs.TCold - lapse; input.TWarm = cs.TWarm - lapse;
+                input.Rain = cs.Rain; input.DrySummer = cs.DrySummer; input.AridityIndex = cs.Aridity;
+                input.OpenWater = c.Water != TerrainModel.WaterNone || c.River && !c.DryRiver;
+
+                // slope and aspect: a least-squares plane through 5 x 5 real heights about 100 m apart (a 400 m square);
+                // a plain two-point difference reads single blocks and forest edges of the surface model as slopes
+                double metresX = Math.Max(1e-3, Geo.MetresPerDegree * Math.Cos(g.Lat * Math.PI / 180) / Model.Geometry.BlocksPerDegreeX);
+                double metresZ = Geo.MetresPerDegree / Model.Geometry.BlocksPerDegreeZ;
+                int d = Math.Max(1, (int)Math.Round(100 / metresZ));
+                double E(double px, double pz)
+                {
+                    var n = Model.GetColumn(px, pz);
+                    return n.WaterTop > n.Top ? Math.Max(n.Elev, Model.Vertical.Elevation(n.WaterTop + 1)) : n.Elev;
+                }
+                SiteTerrain.PlaneSlope(E, x, z, d, metresX, metresZ, out input.SlopeRad, out input.AspectRad);
+
+                // wetness and soil: the water table (0059) and the ground column at this place
+                var water = sapi.ModLoader.GetModSystem<EarthWaterTable>();
+                bool table = false, ground = false;
+                if (water != null && water.SiteWater(x, z, out double depth, out double aboveBase, out double wetland, out bool openWater, out var sample, out ground))
+                {
+                    table = true;
+                    input.WaterTableDepthM = depth; input.HeightAboveDrainageM = aboveBase; input.WetlandShare = wetland;
+                    input.OpenWater |= openWater;
+                    if (ground) input.Soil = SiteSoil.Input.FromSample(sample);
+                }
+
+                // coast: a coarse ring search for sea columns out to 10 km (rings 15 % apart, 32 directions)
+                double mpb = Math.Max(1e-3, (metresX + metresZ) / 2);
+                input.SeaDistanceM = SiteTerrain.SeaDistance((px, pz) => Model.GetColumn(px, pz).Water == TerrainModel.WaterSea, x, z, mpb, 10000);
+
+                // flood: height above the nearest river
+                if (Model.Rivers != null)
+                {
+                    Model.ProjectTerrain(x, z, out double sx, out double sz);
+                    if (Model.Rivers.Nearest(sx, sz, out var hit))
+                    {
+                        input.RiverDistanceM = hit.Dist * mpb;
+                        input.HeightAboveRiverM = c.River ? 0 : Math.Max(0, elev - Model.Vertical.Elevation(hit.WaterTop + 1));
+                    }
+                }
+
+                var site = SiteDrivers.Compute(input);
+                string head = string.Format(CultureInfo.InvariantCulture, "Site at {0}, {1:0} m real elevation{2} (slope: plane through heights over {3:0} m):",
+                    FormatLatLon(g.Lat, g.Lon), elev, input.OpenWater ? ", water" : "", 4 * d * metresZ);
+                string notes = (table ? "" : "\n(no water table in this world: wetness only from the soil)") + (ground ? "" : "\n(soil: no ground column here)");
+                return TextCommandResult.Success(head + "\n" + site.Describe() + notes);
+            }
+            catch (Exception e)
+            {
+                logger.Error("Earth /earth site failed: {0}", e);
+                return TextCommandResult.Error("Site drivers failed here: " + e.Message);
+            }
+        }
+
+        /// <summary>
+        /// /earth propick [radius] (EA-0075): what the prospecting pick computes for each child deposit (silver, gold,
+        /// sylvite, peridot), the same way ItemProspectingPick.GenProbeResults does, Earth's reading prefix included: at the
+        /// player's column, or over every 4th column within the radius. A child's hosts are its parent's ore blocks in
+        /// vanilla's simulated column, which a one-block column crosses only where a parent's disc passes.
+        /// </summary>
+        TextCommandResult CmdPropick(TextCommandCallingArgs args)
+        {
+            if (!(sapi.ObjectCache.TryGetValue("propickworkspace", out object o) && o is Vintagestory.GameContent.ProPickWorkSpace ppws))
+                return TextCommandResult.Success("Use a prospecting pick once in this session first (the game makes the pick's workspace then).");
+            var ba = sapi.World.BlockAccessor;
+            var here = args.Caller.Player.Entity.Pos.AsBlockPos;
+            int radius = Math.Clamp((int)args[0], 0, 64), step = radius == 0 ? 1 : 4, rs = ba.RegionSize;
+            // "old": the reading as before EA-0075's fix (Earth's rock over the simulated ores), for a comparison
+            bool old = args[1] as string == "old";
+            EarthOreLayers.ReadingAsBefore = old;
+            try
+            {
+                var stats = new System.Collections.Generic.Dictionary<string, (double Map, int Hosted, int Read, double Max)>();
+                var ores = new System.Collections.Generic.Dictionary<string, int>();
+                var bearingOf = new System.Collections.Generic.Dictionary<Vintagestory.ServerMods.DiscDepositGenerator, System.Collections.Generic.HashSet<int>>();
+                int columns = 0;
+                for (int dz = -radius; dz <= radius; dz += step)
+                    for (int dx = -radius; dx <= radius; dx += step)
+                    {
+                        var pos = new BlockPos(here.X + dx, 0, here.Z + dz, 0);
+                        pos.Y = ba.GetTerrainMapheightAt(pos);
+                        var region = ba.GetMapRegion(pos.X / rs, pos.Z / rs);
+                        if (region?.OreMaps == null || pos.Y <= 0) continue;
+                        int[] column = ppws.GetRockColumn(pos.X, pos.Z);
+                        columns++;
+                        foreach (int id in column)
+                            if (id > 0 && sapi.World.Blocks[id]?.BlockMaterial == EnumBlockMaterial.Ore)
+                            {
+                                string c = sapi.World.Blocks[id].Code.Path;
+                                ores[c] = ores.TryGetValue(c, out int n) ? n + 1 : 1;
+                            }
+                        foreach (var pair in region.OreMaps)
+                        {
+                            if (!ppws.depositsByCode.TryGetValue(pair.Key, out var variant) || OreVanilla.ParentOf(variant) == null) continue;
+                            var map = pair.Value;
+                            int dist = map.GetUnpaddedColorLerped((float)(pos.X % rs) / rs * map.InnerSize, (float)(pos.Z % rs) / rs * map.InnerSize);
+                            int hosts = 0;
+                            if (variant.GeneratorInst is Vintagestory.ServerMods.DiscDepositGenerator disc)
+                            {
+                                if (!bearingOf.TryGetValue(disc, out var bearing)) bearingOf[disc] = bearing = new System.Collections.Generic.HashSet<int>(disc.GetBearingBlocks());
+                                foreach (int id in column) if (bearing.Contains(id)) hosts++;
+                            }
+                            variant.GetPropickReading(pos, dist, (int[])column.Clone(), out _, out double factor);
+                            string key = variant.Code + " in " + OreVanilla.ParentOf(variant).Code;
+                            var s = stats.TryGetValue(key, out var v) ? v : (0, 0, 0, 0);
+                            stats[key] = (Math.Max(s.Map, (dist & 0xFF) / 255.0), s.Hosted + (hosts > 0 ? 1 : 0), s.Read + (factor > 0 ? 1 : 0), Math.Max(s.Max, factor));
+                        }
+                    }
+                var sb = new System.Text.StringBuilder(string.Format(CultureInfo.InvariantCulture,
+                    "The pick's question for child deposits{2}, {0} column(s) within {1} blocks:", columns, radius, old ? " (as before EA-0075)" : ""));
+                sb.Append("\nOre blocks in vanilla's simulated columns: " + (ores.Count == 0 ? "none" : string.Join(", ", ores.OrderByDescending(e => e.Value).Select(e => e.Key + " x" + e.Value))));
+                foreach (var e in stats.OrderBy(e => e.Key, StringComparer.Ordinal))
+                    sb.Append('\n').AppendFormat(CultureInfo.InvariantCulture, "{0}: ore map up to {1:0.000}; parent ore in {2} column(s), a reading in {3}, factor up to {4:0.0000}",
+                        e.Key, e.Value.Map, e.Value.Hosted, e.Value.Read, e.Value.Max);
+                return TextCommandResult.Success(sb.ToString());
+            }
+            finally { EarthOreLayers.ReadingAsBefore = false; }
+        }
+
         TextCommandResult CmdFauna(TextCommandCallingArgs args)
         {
             var fauna = sapi.ModLoader.GetModSystem<EarthFaunaSystem>();
@@ -224,6 +443,60 @@ namespace EarthMap
             return TextCommandResult.Success(placement.Describe(pos.X, pos.Y, pos.Z));
         }
 
+        /// <summary>
+        /// /earth woods (EA-0054): the trees standing in loaded chunks around the player, by wood: every column whose lowest
+        /// log stands on something else counts as one trunk column (a thick trunk counts each of its columns), with the
+        /// height of its log run; runs under <see cref="MinTreeLogs"/> logs count as shrubs. For comparing species mixes and tree sizes between places and builds.
+        /// </summary>
+        /// <summary>A log run shorter than this is a shrub (vanilla's shrubs grow from oak and other logs).</summary>
+        const int MinTreeLogs = 4;
+
+        TextCommandResult CmdWoods(TextCommandCallingArgs args)
+        {
+            var ba = sapi.World.BlockAccessor;
+            var at = args.Caller.Player.Entity.Pos.AsBlockPos;
+            string a = args[0] as string;
+            if (a == "trace")
+            {
+                // count the picks themselves (generation from now on, e.g. after /wgen regenk), not the logs they leave
+                if (EarthTrees.TracePicks) { EarthTrees.TracePicks = false; return TextCommandResult.Success(EarthTrees.TraceReport() + " (trace off)"); }
+                EarthTrees.ResetTrace(); EarthTrees.TracePicks = true;
+                return TextCommandResult.Success("Counting tree and shrub picks; /earth woods trace again shows them and stops.");
+            }
+            int radius = Math.Clamp(int.TryParse(a, out int ra) ? ra : 48, 8, 128);
+            var count = new System.Collections.Generic.Dictionary<string, (int Trunks, long Height)>();
+            var pos = new BlockPos(0, 0, 0, 0);
+            int columns = 0, shrubs = 0;
+            string WoodOf(Block b) => b?.Code == null || !b.Code.Path.StartsWith("log-grown-", StringComparison.Ordinal) ? null : b.Variant?["wood"] ?? b.Code.Path;
+            for (int z = at.Z - radius; z <= at.Z + radius; z++)
+                for (int x = at.X - radius; x <= at.X + radius; x++)
+                {
+                    pos.Set(x, 0, z);
+                    if (ba.GetChunkAtBlockPos(pos) == null) continue;
+                    columns++;
+                    int ground = ba.GetTerrainMapheightAt(pos), top = Math.Min(ba.MapSizeY - 2, ba.GetRainMapHeightAt(pos));
+                    for (int y = Math.Max(1, ground - 2); y <= top; y++)
+                    {
+                        pos.Y = y;
+                        string wood = WoodOf(ba.GetBlock(pos));
+                        if (wood == null) continue;
+                        pos.Y = y - 1;
+                        if (WoodOf(ba.GetBlock(pos)) != null) continue;
+                        int h = 1;
+                        for (pos.Y = y + 1; pos.Y <= top && WoodOf(ba.GetBlock(pos)) == wood; pos.Y++) h++;
+                        if (h < MinTreeLogs) { shrubs++; break; }
+                        var c = count.TryGetValue(wood, out var v) ? v : (Trunks: 0, Height: 0L);
+                        count[wood] = (c.Trunks + 1, c.Height + h);
+                        break;
+                    }
+                }
+            int total = count.Values.Sum(v => v.Trunks);
+            var sb = new System.Text.StringBuilder(string.Format(CultureInfo.InvariantCulture, "Trees within {0} blocks ({1} loaded columns): {2} trunk columns of {3}+ logs ({4} shorter: shrubs)", radius, columns, total, MinTreeLogs, shrubs));
+            foreach (var e in count.OrderByDescending(e => e.Value.Trunks))
+                sb.AppendFormat(CultureInfo.InvariantCulture, "; {0} {1} ({2:0%}, mean height {3:0.0})", e.Key, e.Value.Trunks, (double)e.Value.Trunks / total, (double)e.Value.Height / e.Value.Trunks);
+            return TextCommandResult.Success(sb.ToString());
+        }
+
         TextCommandResult CmdCensus(TextCommandCallingArgs args)
         {
             var placement = sapi.ModLoader.GetModSystem<EarthPlacement>();
@@ -247,6 +520,7 @@ namespace EarthMap
         /// </summary>
         TextCommandResult CmdBoatTest(TextCommandCallingArgs args)
         {
+            if (Params?.Enabled != true) return NotActive();
             var world = sapi.World;
             int rock = world.GetBlock(new AssetLocation("game:rock-granite"))?.Id ?? 0;
             int still = world.GetBlock(new AssetLocation("game:water-still-7"))?.Id ?? 0;
@@ -300,6 +574,7 @@ namespace EarthMap
                 x0, x0 + Len - 1, z0, z0 + lanes.Length * (Width + 1)));
         }
 
+        /// <summary>The answer of a command that needs an Earth world (ER-23: test and admin commands ran in vanilla worlds too).</summary>
         TextCommandResult NotActive() => TextCommandResult.Error("Earth Map is not active in this world (it only generates new worlds).");
 
         /// <summary>/earth where (WhereReport).</summary>
@@ -313,18 +588,24 @@ namespace EarthMap
         {
             if (Params?.Enabled != true || Model == null) return NotActive();
             var pos = args.Caller.Entity.Pos;
+            int missed = FineElevation.MissedReads;
             var c = Model.GetColumn(pos.X, pos.Z);
+            string approximate = FineElevation.MissedReads != missed ? Approximate : "";
             Model.ClimateAt(c.Lat, c.Lon, out double t, out double rain, out _);
             var cs = Data.SampleClimate(c.Lat, c.Lon);
             double tHere = Model.TrueTemperature(pos.X, pos.Z, pos.Y);
             string water = c.Water switch { TerrainModel.WaterSea => "sea", TerrainModel.WaterLake => "lake", TerrainModel.WaterSaltLake => "salt lake", _ => "land" };
             return TextCommandResult.Success(string.Format(CultureInfo.InvariantCulture,
                 "{0}{1}. Ground: {2:0} m ({3}, top block y={4}{5}). Climate: yearly mean {6:0.0} °C at the surface ({7:0.0} °C at your height), " +
-                "coldest month {8:0.0} °C, warmest {9:0.0} °C, {10:0} mm/year (VS rainfall {11:0}).",
+                "coldest month {8:0.0} °C, warmest {9:0.0} °C, {10:0} mm/year (VS rainfall {11:0}).{12}",
                 FormatLatLon(c.Lat, c.Lon), c.Gutter ? (c.Water != TerrainModel.WaterNone ? " (seam sea)" : " (seam bridge)") : "", c.Elev, water, c.Top,
                 c.IceBottom <= c.Top ? string.Format(", ice {0} blocks", c.Top - c.IceBottom + 1) : "",
-                t, tHere, cs.TCold - EarthWorldGen.LapsePerMetre * Math.Max(0, c.Elev), cs.TWarm - EarthWorldGen.LapsePerMetre * Math.Max(0, c.Elev), cs.Precip, rain));
+                t, tHere, cs.TCold - EarthWorldGen.LapsePerMetre * Math.Max(0, c.Elev), cs.TWarm - EarthWorldGen.LapsePerMetre * Math.Max(0, c.Elev), cs.Precip, rain, approximate));
         }
+
+        /// <summary>ER-30: said where a column was read on the built-in heights because a GLO-90 tile isn't on this machine yet
+        /// (the main thread may not wait for one; chunk generation does).</summary>
+        const string Approximate = " Heights here are approximate: a GLO-90 tile is not on this machine yet (chunks wait for it).";
 
         TextCommandResult CmdTp(TextCommandCallingArgs args)
         {
@@ -339,7 +620,50 @@ namespace EarthMap
             var entity = args.Caller.Entity;
             // every teleport supersedes (and stops) a water search still running for the same entity (main thread only)
             if (waterSearches.Remove(entity.EntityId, out var previous)) previous.Cancel();
-            if (!water) return TextCommandResult.Success(TeleportTo(entity, x, z, false, ""));
+            if (!water)
+            {
+                // ER-30: where this world reads GLO-90 and the square's tile isn't here yet, the main thread would take the
+                // built-in heights (the player lands in the ground or in the air): fetch it first, then teleport
+                var fetch = Elevation?.FetchSquareAt(lat, lon);
+                if (fetch == null) return TextCommandResult.Success(TeleportTo(entity, x, z, false, ""));
+                var wait = new System.Threading.CancellationTokenSource();
+                waterSearches[entity.EntityId] = wait;
+                var asker = args.Caller.Player as IServerPlayer;
+                // (EA-0121) the wait has a limit and says why it gives up; each step is logged, so that a wait that never ends
+                // shows whether the fetch or the main thread's continuation stuck (twice on the bench, not reproduced)
+                string who = asker?.PlayerName ?? "entity " + entity.EntityId, square = EarthElevationSystem.SquareNameAt(lat, lon), place = FormatLatLon(lat, lon);
+                var clock = System.Diagnostics.Stopwatch.StartNew();
+                var limit = TeleportWait.Limit;
+                logger.Notification("Earth tp: {0} waits for GLO-90 square {1} (at most {2:0.#} minutes).", who, square, limit.TotalMinutes);
+                fetch.ContinueWith(t => logger.Notification("Earth tp: the fetch of {0} for {1} ended after {2:0.0} s: {3}.", square, who, clock.Elapsed.TotalSeconds,
+                    t.IsCompletedSuccessfully && t.Result ? "here" : "not had"), System.Threading.Tasks.TaskScheduler.Default);
+                System.Threading.Tasks.Task.WhenAny(fetch, System.Threading.Tasks.Task.Delay(limit, wait.Token)).ContinueWith(_ => sapi.Event.EnqueueMainThreadTask(() =>
+                {
+                    bool stale = !waterSearches.TryGetValue(entity.EntityId, out var current) || current != wait;
+                    logger.Notification("Earth tp: {0}'s teleport to {1} goes on, on the main thread, after {2:0.0} s ({3}).", who, square, clock.Elapsed.TotalSeconds,
+                        stale ? "superseded by a later /earth tp" : fetch.IsCompleted ? "the fetch ended" : "the wait ran out");
+                    if (stale) return;
+                    waterSearches.Remove(entity.EntityId);
+                    wait.Cancel();   // the limit's timer, when the fetch ended first
+                    if (entity == null || !entity.Alive) { logger.Notification("Earth tp: {0} not teleported: no longer alive.", who); return; }
+                    var (lacks, why) = Elevation?.FetchOutcomeAt(lat, lon) ?? (false, (string)null);
+                    var (go, message) = TeleportWait.After(fetch, lacks, why, square, place, limit);
+                    try
+                    {
+                        if (go) message = TeleportTo(entity, x, z, false, "");
+                        else logger.Warning("Earth tp: {0} not teleported to {1}: {2}", who, square, message);
+                    }
+                    catch (Exception e)
+                    {
+                        logger.Error("Earth tp: teleporting {0} to {1} failed: {2}", who, square, e);
+                        go = false;
+                        message = "The teleport failed: " + e.Message;
+                    }
+                    asker?.SendMessage(GlobalConstants.GeneralChatGroup, message, go ? EnumChatType.CommandSuccess : EnumChatType.CommandError);
+                }, "earth-tp"), System.Threading.Tasks.TaskScheduler.Default);
+                return TextCommandResult.Success("Fetching the GLO-90 heights of " + place + " first; you are teleported when they are here (at most " +
+                    limit.TotalMinutes.ToString("0.#", CultureInfo.InvariantCulture) + " minutes).");
+            }
             // the search can visit a million columns where there is no water: off the server thread, teleport on it
             var player = args.Caller.Player as IServerPlayer;
             var search = new System.Threading.CancellationTokenSource();
@@ -349,7 +673,7 @@ namespace EarthMap
                 string msg;
                 bool found = false;
                 double wx = x, wz = z;
-                try { found = FindOpenWater(x, z, 3000, search.Token, out wx, out wz); msg = null; }
+                try { found = OpenWater.Find(Model.GetColumn, x, z, 3000, search.Token, out wx, out wz); msg = null; }
                 catch (OperationCanceledException) { return; }
                 catch (Exception e) { msg = "Looking for open water failed: " + e.Message; }
                 sapi.Event.EnqueueMainThreadTask(() =>
@@ -370,57 +694,20 @@ namespace EarthMap
             return TextCommandResult.Success("Looking for open water near " + FormatLatLon(lat, lon) + "...");
         }
 
-        /// <summary>The water search still running per entity (main thread only): a newer /earth tp cancels it, and a result
-        /// that arrives after it was superseded is dropped. Teleports without a search leave no entry.</summary>
+        /// <summary>The water search or tile fetch still running per entity (main thread only): a newer /earth tp cancels it, and a
+        /// result that arrives after it was superseded is dropped. Teleports that wait for nothing leave no entry.</summary>
         readonly System.Collections.Generic.Dictionary<long, System.Threading.CancellationTokenSource> waterSearches = new();
 
         /// <summary>Teleports on the water surface (a boat or ship floats there) or just above the ground; the message to show.</summary>
         string TeleportTo(Vintagestory.API.Common.Entities.Entity entity, double x, double z, bool water, string note)
         {
+            int missed = FineElevation.MissedReads;
             var c = Model.GetColumn(x, z);
             int y = water ? c.WaterTop + 1 : Math.Max(c.Top, c.WaterTop) + 2;
             entity.TeleportToDouble(Math.Floor(x) + 0.5, y, Math.Floor(z) + 0.5);
             var g = Model.Geometry.ToGeo(x, z);
-            return string.Format(CultureInfo.InvariantCulture, "Teleported to {0} (x={1:0} z={2:0}, y={3}).{4}", FormatLatLon(g.Lat, g.Lon), x, z, y, note);
-        }
-
-        /// <summary>
-        /// The nearest spot with open water around it (sea, lake or river at least 4 blocks deep, and water at least 2
-        /// deep for 8 blocks all round, room for a ship), searching rings every 4 blocks out to the given distance.
-        /// </summary>
-        bool FindOpenWater(double x, double z, double maxDist, System.Threading.CancellationToken cancel, out double wx, out double wz)
-        {
-            bool Open(double px, double pz)
-            {
-                var c = Model.GetColumn(px, pz);
-                if (c.Water == TerrainModel.WaterNone || c.Gutter || c.WaterTop - c.Top < 4) return false;
-                for (int dz = -8; dz <= 8; dz += 4)
-                {
-                    for (int dx = -8; dx <= 8; dx += 4)
-                    {
-                        var n = Model.GetColumn(px + dx, pz + dz);
-                        if (n.Water == TerrainModel.WaterNone || n.WaterTop - n.Top < 2 || Math.Abs(n.WaterTop - c.WaterTop) > 1) return false;
-                    }
-                }
-                return true;
-            }
-            for (double r = 0; r <= maxDist; r += 4)
-            {
-                cancel.ThrowIfCancellationRequested();
-                int n = r == 0 ? 1 : (int)Math.Ceiling(2 * Math.PI * r / 4);
-                for (int i = 0; i < n; i++)
-                {
-                    double a = 2 * Math.PI * i / n;
-                    double px = x + r * Math.Cos(a), pz = z + r * Math.Sin(a);
-                    if (Open(px, pz))
-                    {
-                        wx = px; wz = pz;
-                        return true;
-                    }
-                }
-            }
-            wx = x; wz = z;
-            return false;
+            return string.Format(CultureInfo.InvariantCulture, "Teleported to {0} (x={1:0} z={2:0}, y={3}).{4}{5}", FormatLatLon(g.Lat, g.Lon), x, z, y, note,
+                FineElevation.MissedReads != missed ? Approximate : "");
         }
 
         TextCommandResult CmdCheckRivers(TextCommandCallingArgs args)
@@ -463,12 +750,12 @@ namespace EarthMap
         string WriteRiverCheck(out RiverAudit audit)
         {
             // the network's reaches and courses were released after start-up (decision 0025): built again for the audit, the same
-            // way, from the same courses (with the dam file's levels where the model took them; a few seconds and some hundred
-            // MB, dropped afterwards)
+            // way, from the same courses (with the dam file's levels and the flow file's rerouted mouths where the model took
+            // them; a few seconds and some hundred MB, dropped afterwards)
             var rivers = Model.Rivers;
             if (rivers != null && rivers.Reaches == null)
             {
-                var source = Params.RiverSource(Data, Elevation?.Dams, out _, out _);
+                var source = Params.RiverSourceAsBuilt(Data, Elevation?.Dams, Elevation?.Flow);
                 rivers = source != null ? Params.BuildRivers(Data, Model, source) : null;
             }
             audit = rivers != null ? RiverAudit.Run(Model, rivers: rivers) : new RiverAudit();
@@ -512,13 +799,10 @@ namespace EarthMap
         public string RenderWorldMap(int bpp, System.Collections.Generic.List<(double x, double z, bool spawn)> markers, out string message)
         {
             var g = Model.Geometry;
-            long wl = (long)Math.Ceiling(g.RingLength / bpp);
-            double z0 = Math.Max(0, g.EquatorZ - 90 * g.BlocksPerDegreeZ);
-            double z1 = Math.Min(sapi.WorldManager.MapSizeZ, g.EquatorZ + 90 * g.BlocksPerDegreeZ);
-            long hl = (long)Math.Ceiling((z1 - z0) / bpp);
-            if (MapColors.RenderBytes(wl, hl) > MaxMapBytes)
+            var frame = WorldMapFrame.For(g, sapi.WorldManager.MapSizeZ, bpp);
+            if (frame.Bytes > MaxMapBytes)
             {
-                message = $"That would be a huge image ({wl}x{hl}); use at least {Math.Ceiling(bpp * Math.Sqrt(MapColors.RenderBytes(wl, hl) / (double)MaxMapBytes))} blocks per pixel.";
+                message = $"That would be a huge image ({frame.Width}x{frame.Height}); use at least {frame.BlocksPerPixelWithin(MaxMapBytes)} blocks per pixel.";
                 return null;
             }
             if (System.Threading.Interlocked.CompareExchange(ref renderingMap, 1, 0) != 0)
@@ -528,34 +812,16 @@ namespace EarthMap
             }
             try
             {
-                int w = (int)wl, h = (int)hl;
+                int w = (int)frame.Width, h = (int)frame.Height;
                 var sw = System.Diagnostics.Stopwatch.StartNew();
-                var rgb = MapColors.Render(Model, g.RingStart, z0, w, h, bpp);
-                // markers: 5x5 squares, the spawn last so it stays on top
-                foreach (var (mx, mz, spawn) in markers.OrderBy(m => m.spawn))
-                {
-                    int pi = (int)Math.Round((Wrapped(mx) - g.RingStart) / bpp), pj = (int)Math.Round((mz - z0) / bpp);
-                    for (int j = Math.Max(0, pj - 2); j <= Math.Min(h - 1, pj + 2); j++)
-                        for (int i = Math.Max(0, pi - 2); i <= Math.Min(w - 1, pi + 2); i++)
-                        {
-                            long k = 3L * ((long)j * w + i);
-                            rgb[k] = 255; rgb[k + 1] = spawn ? (byte)40 : (byte)230; rgb[k + 2] = spawn ? (byte)40 : (byte)0;
-                        }
-                }
+                var rgb = MapColors.Render(Model, g.RingStart, frame.Z0, w, h, bpp);
+                frame.DrawMarkers(rgb, markers);
                 string file = Path.Combine(GamePaths.DataPath, "EarthMap", "earth-" + sapi.WorldManager.Seed + ".png");
                 Png.WriteRgb(file, w, h, rgb);
                 message = $"Wrote {file} ({w}x{h}, {bpp} blocks per pixel) in {sw.ElapsedMilliseconds} ms. Red: spawn, yellow: story locations.";
                 return file;
             }
             finally { System.Threading.Interlocked.Exchange(ref renderingMap, 0); }
-        }
-
-        double Wrapped(double x)
-        {
-            var g = Model.Geometry;
-            double pos = (x - g.RingStart) % g.RingLength;
-            if (pos < 0) pos += g.RingLength;
-            return g.RingStart + pos;
         }
 
         TextCommandResult CmdStory(TextCommandCallingArgs args)

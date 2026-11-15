@@ -111,7 +111,7 @@ namespace EarthMap
             Seed = core.Params.NoiseSeed;
             EvidenceMetresPerBlock = tuning.MetresPerBlock;
             Rules = core.Params.OreRules;
-            RulesV4 = Rules >= OreBackground.CatalogueRules;
+            RulesV4 = OreBackground.CatalogueBodies(Rules);
             MetresPerBlock = core.Model.MetresPerBlock;
             feLayer = catalog.LayerIndex("Fe");
             BauxiteId = api.World.GetBlock(new AssetLocation("game:rock-bauxite"))?.Id ?? 0;

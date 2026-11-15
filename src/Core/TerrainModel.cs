@@ -23,10 +23,10 @@ namespace EarthMap.Core
         public int GutterSeabedY;
         /// <summary>The world's climate rules (EarthParams.ClimateRules); from <see cref="RealLapseRules"/> the climate map stores
         /// the sea-level temperature and vanilla's altitude adjustment cools by the real lapse (decision 0009).</summary>
-        public int ClimateRules;
+        public int ClimateRules { get => rules.Climate; set => rules = rules with { Climate = value }; }
         /// <summary>The world's geothermal rules (EarthParams.GeothermalRules); from 1 the climate map's geologic activity is
         /// Earth's (Core.Geothermal.Activity) instead of the vanilla noise passed in.</summary>
-        public int GeothermalRules;
+        public int GeothermalRules { get => rules.Geothermal; set => rules = rules with { Geothermal = value }; }
         public const int RealLapseRules = 2;
         /// <summary>From these rules (decision 0031's test profiles only) the climate map also stores the real rainfall and vanilla's
         /// altitude rain adjustment is off (ClimateLapse); the vanilla-lapse pixel for other readers keeps vanilla's rain.</summary>
@@ -57,13 +57,13 @@ namespace EarthMap.Core
         public const double GutterBlend = 512;
         public double DetailScale = 1.0;
         /// <summary>
-        /// 0053 (proposed): the detail noise's rules (EarthParams.DetailRules). 1: wavelengths in metres, all below the land
+        /// 0053: the detail noise's rules (EarthParams.DetailRules). 1: wavelengths in metres, all below the land
         /// data's own cell (half a cell and shorter, down to 60 m or 3 blocks), amplitude from the data's relief (the built-in
         /// grid's: about a third of the first noise's; GLO-90's included grid: its own spread inside each cell), sized
         /// smoothly between cells, octaves turned against each other (no 45-degree grain). 0: the first noise, fixed in blocks.
         /// </summary>
         public const int DetailRulesVersion = 1;
-        public int DetailRules;
+        public int DetailRules { get => rules.Detail; set => rules = rules with { Detail = value }; }
         /// <summary>Decision 0031 test profile: tree line and forest potential from the planting column's own elevation.</summary>
         public bool LocalAlpineEcology;
         /// <summary>The Earth tab's vanilla biomes (EarthParams.VanillaBiomes, decision 0075): vanilla's forest and shrub maps
@@ -71,12 +71,12 @@ namespace EarthMap.Core
         public bool VanillaBiomes;
         /// <summary>Decision 0031: ridges and peaks raised to ETOPO 2022's 30" elevation (EarthData.SummitElevation).</summary>
         public bool Summits;
-        public int SummitRules;
+        public int SummitRules { get => rules.Summit; set => rules = rules with { Summit = value }; }
         /// <summary>Minimum surveyed summit elevation in metres; -1 off, 0 all peaks (older worlds).</summary>
         public int SummitMinElevation;
         public PeakCatalog Peaks;
         public int AlpineSurfaceRules;
-        public int AridRiverRules;
+        public int AridRiverRules { get => rules.Arid; set => rules = rules with { Arid = value }; }
         public NavigableStraits Straits;
         public WadiFans DryFans;
         /// <summary>Per reach, the part of its flow from moist catchments (AridHydrology.WetSourceFlow; arid river rules), or
@@ -104,7 +104,7 @@ namespace EarthMap.Core
         /// <summary>The big land's coasts from their outlines where the grid's cells are many blocks wide (EarthParams.Coasts), or null.</summary>
         public CoastLayer Coasts;
         /// <summary>
-        /// 0053 item 17 (proposed): the lakes of GLO-90's water mask from their outlines (EarthParams.LakeOutlines), or null.
+        /// 0053 item 17: the lakes of GLO-90's water mask from their outlines (EarthParams.LakeOutlines), or null.
         /// Where this world reads GLO-90 (the square is GLO-90's, not kept on built-in heights, on a thread that reads it)
         /// and the file covers the place, they stand in for the grid's fresh lakes: water at the lake's GLO-90 level inside the
         /// outline, a bed falling from the shore, and dry land at GLO-90's height held up beside it. Earth's own salt lakes and
@@ -112,7 +112,7 @@ namespace EarthMap.Core
         /// </summary>
         public LakeOutlineLayer LakeOutlines;
         /// <summary>
-        /// 0053 item 18 (proposed): the rivers of GLO-90's water mask from their outlines (EarthParams.RiverOutlines,
+        /// 0053 item 18: the rivers of GLO-90's water mask from their outlines (EarthParams.RiverOutlines,
         /// RiverOutlineData), or null. Where this world reads GLO-90 (as LakeOutlines), dry land inside them is river water at
         /// the level of the nearest river course, and a course whose centre line lies in them draws no channel, banks or
         /// valley of its own there (ApplyOutlineRiver): the river has the mask's shores, not a channel of one width along
@@ -129,7 +129,7 @@ namespace EarthMap.Core
         public LakeOutlineLayer Works;
         /// <summary>0064's works rules (EarthParams.Works1318): 3 measures the sea's side near a SEA area to the land of 1318
         /// (CoastDistanceAt, EA-0042); below 3 to today's outline as well.</summary>
-        public int WorksRules;
+        public int WorksRules { get => rules.Works; set => rules = rules with { Works = value }; }
         /// <summary>An outline river's bed deepens this much (blocks per block) from a block below the water at its shore, to
         /// the depth of its course's channel.</summary>
         public const double OutlineRiverSlope = 0.5;
@@ -152,15 +152,17 @@ namespace EarthMap.Core
         /// water (rivers or lakes) along the Suez and Panama canals (SeaChannels.InCanalZone); the flow direction blended
         /// along the course (RiverNetwork). 0: the outlines cut and narrow the channel (older saves).
         /// </summary>
-        public int ChannelRules;
+        public int ChannelRules { get => rules.Channel; set => rules = rules with { Channel = value }; }
         /// <summary>Decision 0069: the flow solved on the water mask's river water (rivers-flow-glo90-1.bin), and its rules;
         /// null and 0 without it.</summary>
         public RiverFlowData Flow;
-        public int FlowRules;
+        public int FlowRules { get => rules.Flow; set => rules = rules with { Flow = value }; }
         /// <summary>Decision 0069 rule 7: the shore zones for plants (ShoreZones.RulesVersion); 0 without.</summary>
         public int ShoreZoneRules;
+        /// <summary>EA-0054 step 2: site rules (EarthParams.SiteRules); 1 = trees and shrubs by each column's site.</summary>
+        public int SiteRules;
         /// <summary>Decision 0070: the shore strip (ShoreMaterial.RulesVersion; 0 without) and OSM's beaches (null without).</summary>
-        public int ShoreRules;
+        public int ShoreRules { get => rules.Shore; set => rules = rules with { Shore = value }; }
         public ShoreMaterialData ShoreData;
         /// <summary>
         /// Generation fixes from the code review of 11 November 2026 (docs/research/code-review-2026-11-11.md), new worlds
@@ -169,10 +171,42 @@ namespace EarthMap.Core
         /// (whole blocks, not half a block off, CR-R1); crops and fruit trees in the river belt judged by its rain (CR-E1); dry
         /// river beds' gravel scattered by a position hash, not in diagonal stripes (CR-G5). 2 (2.0.0-rc.10, EA-0040): on the
         /// grid's land (not GLO-90's), the noise's dips near a water level fade in from 20 to 40 m above it instead of
-        /// switching at 30 m, which left a crease of up to 6 blocks along that contour (Lake Geneva's Rhône plain).
+        /// switching at 30 m, which left a crease of up to 6 blocks along that contour (Lake Geneva's Rhône plain). 3 (EA-0072):
+        /// a grid lake's water ends along an irregular line inside its cells on flat ground, not along the straight line where
+        /// its share reaches 0 (<see cref="GridLakeEdgeDrop"/>; the built-in heights' lakes, and the grid's kept salt and
+        /// terminal lakes on GLO-90). 4 (code review of 14 November 2026): a volcano's conduit without a crater (a wet vent)
+        /// has nothing above the column's own top and lava only 2 blocks or more under it (<see cref="GenFixConduitUnderTop"/>,
+        /// ER-19); the rock under a ground column is read through the whole column, not its top 512 blocks
+        /// (<see cref="GenFixWholeGroundColumn"/>, ER-20). 5 (Fable pass, EA-0111, EA-0112): the river flow read across its 1°
+        /// tiles' edges (<see cref="GenFixFlowAcrossTiles"/>), and a lake's area as the whole lake's, not its piece in one 1°
+        /// tile (<see cref="GenFixWholeLakeArea"/>): no straight seams along whole degrees in wide rivers and lake shores. Also
+        /// 5 (code review of 14 November 2026): SeamNoise reads a place offset beyond the ring inside it
+        /// (<see cref="GenFixSeamNoiseInRing"/>, T-L12), and the grid's kept lakes are told apart by each level near a place,
+        /// not only the highest (<see cref="GenFixKeptLakeLevels"/>, T-L14).
         /// </summary>
-        public int GenFixRules;
-        public const int GenFixRulesVersion = 2;
+        public int GenFixRules { get => rules.GenFix; set => rules = rules with { GenFix = value }; }
+
+        TerrainRules rules;
+        /// <summary>(ER-10) This model's terrain rules as named facts (<see cref="TerrainRules"/>); the int properties above and
+        /// in LandHeights read and write it. A MemberwiseClone (World Map's snapshot) copies it with the rest.</summary>
+        public ref readonly TerrainRules Rules => ref rules;
+        public const int GenFixRulesVersion = 5;
+        /// <summary>GenFixRules 4 (ER-19): VolcanoInterior caps a crater-less conduit at the column's top.</summary>
+        public const int GenFixConduitUnderTop = 4;
+        /// <summary>GenFixRules 4 (ER-20): EarthGeology.RegionalRock knows a ground column's blocks to its bottom.</summary>
+        public const int GenFixWholeGroundColumn = 4;
+        /// <summary>GenFixRules 5 (EA-0111, FP-21): RiverFlowData.At reads the pixels beyond a tile's edge from the next tile.</summary>
+        public const int GenFixFlowAcrossTiles = 5;
+        /// <summary>GenFixRules 5 (EA-0112, FP-22): the lake rules read LakeOutlineLayer.WholeArea.</summary>
+        public const int GenFixWholeLakeArea = 5;
+        /// <summary>GenFixRules 5 (T-L12): SeamNoise wraps a place beyond the ring (an offset noise's) into it first, so its
+        /// blend has no jump where the column wraps.</summary>
+        public const int GenFixSeamNoiseInRing = 5;
+        /// <summary>GenFixRules 5 (T-L14): StripGridLakes keeps a grid lake or ring at any kept level near the place
+        /// (TerrainSampler.KeptLakeLevelsNear), not only at the highest.</summary>
+        public const int GenFixKeptLakeLevels = 5;
+        /// <summary>A lake's area as the rules read it: the whole lake's from GenFixRules 5, else its piece in the tile.</summary>
+        internal double LakeArea(in LakeOutlineLayer.Hit lk) => Rules.WholeLakeArea && lk.Owner != null ? lk.Owner.WholeArea(lk) : lk.Area;
         /// <summary>Rule 4: river water slower than this (m/s) is still water; rule 3: water faster than CarryMin carries the
         /// river's flow (its full depth across the width).</summary>
         public const double StillBelow = 0.05, CarryMin = 0.02;
@@ -197,7 +231,7 @@ namespace EarthMap.Core
 
         /// <summary>Channel rules 4: whether the flow file has the river's flow passing here (at least CarryMin).</summary>
         public bool FlowCarriesAt(double lat, double lon) =>
-            Flow != null && Flow.At(lat, lon, out double e, out double n) && e * e + n * n >= CarryMin * CarryMin;
+            Flow != null && Flow.At(lat, lon, Rules.FlowAcrossTiles, out double e, out double n) && e * e + n * n >= CarryMin * CarryMin;
         /// <summary>Channel rules 1: a mask lake this many blocks or less above or below a river beside it gives way to it.</summary>
         public const int MaskPondRise = 3;
         /// <summary>An outline lake's bed falls this much (m per m) from its shore, to OutlineLakeDeep (m), where the grid
@@ -309,7 +343,7 @@ namespace EarthMap.Core
         /// crosses it. With <see cref="GenFixRules"/> 1 (CR-T2) that land is a block higher, so it continues from the land at
         /// 0 m (and stands a block above a lake at its own level, as land at a lake above 0 m does).
         /// </summary>
-        public int DryLandTop(double h) => (int)Math.Floor(GenFixRules >= 1 && h < 0 ? Vertical.Y(h) + 1 : Vertical.Y(h));
+        public int DryLandTop(double h) => (int)Math.Floor(Rules.DryLandLedge && h < 0 ? Vertical.Y(h) + 1 : Vertical.Y(h));
 
         public Column GetColumn(double x, double z)
         {
@@ -322,6 +356,38 @@ namespace EarthMap.Core
                 int delta = Math.Clamp(site.TargetTop - c.Top, -site.MaxCutFill, site.MaxCutFill);
                 c.Top += (int)Math.Round(delta * w);
             }
+            return c;
+        }
+
+        /// <summary>
+        /// What later generation steps carve into a column after <see cref="GetColumn"/> (EA-0071): the summit craters and
+        /// their lava lakes, which EarthVolcanoes sets once it has indexed the volcano bodies on the server (null elsewhere,
+        /// and where the world has no volcano bodies). An object of its own, made with the model, so that copies of the model
+        /// (World Map samples a MemberwiseClone taken when the game starts) see a layer set after they were taken.
+        /// </summary>
+        public sealed class SurfaceLayers
+        {
+            /// <summary>The surface y a crater or lava lake leaves at a block column, or int.MaxValue where none does.
+            /// Called from any thread.</summary>
+            public volatile Func<int, int, int> Craters;
+        }
+
+        /// <summary>See <see cref="SurfaceLayers"/>.</summary>
+        public readonly SurfaceLayers Carved = new SurfaceLayers();
+
+        /// <summary>
+        /// The column as generation leaves its surface, for maps (World Map reads it by this name, WM-0023): <see
+        /// cref="GetColumn"/> with the top lowered to a crater's floor or walls, or to a lava lake's top (lava is not water:
+        /// <see cref="Column.Water"/> stays as it is). Where no later step changes the surface it is GetColumn's. Never for
+        /// generation itself, which carves the craters from GetColumn.
+        /// </summary>
+        public Column GetSurfaceColumn(double x, double z)
+        {
+            var c = GetColumn(x, z);
+            var craters = Carved.Craters;
+            if (craters == null || c.Water != WaterNone) return c;
+            int y = craters((int)Math.Floor(x), (int)Math.Floor(z));
+            if (y < c.Top) c.Top = y;
             return c;
         }
 
@@ -345,14 +411,15 @@ namespace EarthMap.Core
             // the real seam: both laps of the ring (one jump apart) are the same column
             if (RealSeam) sourceX = Geometry.WrapX(sourceX);
             var g = Geometry.ToGeo(sourceX, sourceZ);
-            Column c = g.InGutter ? GutterColumn(sourceX, sourceZ, g) : NaturalColumn(sourceX, sourceZ, g.Lat, g.Lon);
-            if (Islands != null && !c.Gutter) ApplyIslands(sourceX, sourceZ, ref c);
+            var work = new ColumnWork();
+            Column c = g.InGutter ? GutterColumn(sourceX, sourceZ, g) : NaturalColumn(sourceX, sourceZ, g.Lat, g.Lon, ref work);
+            if (Islands != null && !c.Gutter) ApplyIslands(sourceX, sourceZ, ref c, ref work);
             if (Rivers != null && !c.Gutter) ApplyRiver(sourceX, sourceZ, ref c);
-            if (Rivers != null && !c.Gutter && ChannelRules >= MouthChannelRules && c.Water == WaterSea) ApplyMouth(sourceX, sourceZ, ref c);
+            if (Rivers != null && !c.Gutter && Rules.MouthBed && c.Water == WaterSea) ApplyMouth(sourceX, sourceZ, ref c, ref work);
             DryFans?.Apply(sourceX,sourceZ,ref c);
             Channels?.Apply(this, sourceX, sourceZ, ref c);
             Straits?.Apply(SeaLevel, sourceX, sourceZ, ref c);
-            if (ShoreRules >= 1 && !c.Gutter) ApplyShoreStrip(sourceX, sourceZ, ref c);
+            if (Rules.ShoreStrip && !c.Gutter) ApplyShoreStrip(sourceX, sourceZ, ref c, ref work);
             if (expansion != null)
             {
                 expansion.TransformFlow(x, z, c.FlowX, c.FlowZ, out c.FlowX, out c.FlowZ);

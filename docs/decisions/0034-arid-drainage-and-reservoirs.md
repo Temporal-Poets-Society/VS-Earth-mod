@@ -1,6 +1,6 @@
 # 0034: Dry desert drainage and artificial-lake classification
 
-Status: source implemented; offline checked; game validation pending. Date: 2026-10-30. Issue #25.
+Status: Built in 0.17.0-pre.9 (`bae8dc6`); in Earth 1.0.0 and 2.0.0. In new worlds the wet-source flow comes from GIRES (0069, PerennialRules). Not checked in game (EA-0011 closed on the author's general review). Date: 2026-10-30. Issue #25.
 
 ## Cause and decision
 
@@ -92,3 +92,9 @@ New worlds store AridRiverRules=1 (84), ReservoirRules=1 (86); old saves read 0.
 unchanged; seams are possible at an opt-in boundary. The overlay is packaged on client/server; its cache switch is
 versioned. No save/data folders outside this worktree were touched. Game integration, complete monthly hydrology
 and prehistoric shore reconstruction remain outside the verified result.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: source implemented; offline checked; game validation pending.

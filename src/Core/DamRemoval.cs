@@ -6,7 +6,7 @@ using System.IO.Compression;
 namespace EarthMap.Core
 {
     /// <summary>
-    /// 0053 item 19 (proposed): modern dams taken out of GLO-90 (tools/bake_dam_removal.py). Earth's worlds are set
+    /// 0053 item 19: modern dams taken out of GLO-90 (tools/bake_dam_removal.py). Earth's worlds are set
     /// around 1318; the reservoirs' water is already left out (items 17 and 18), but GLO-90 still has their dams and their flat
     /// water surfaces, and the river courses step down at the dams. The file holds, per GLO-90 square, the heights that
     /// change (dam walls lowered, a valley floor under each reservoir) and the river course levels through the reservoirs
@@ -45,8 +45,6 @@ namespace EarthMap.Core
         public const int CourseRules = 3;
         /// <summary>The course rules whose list dam rules 2's levels are made for (0063: courses rules 4).</summary>
         public const int CourseRules2 = 4;
-        /// <summary>The course rules a world with these dam rules needs (the file's levels are keyed to that list).</summary>
-        public static int CourseRulesFor(int rules) => rules >= Rules2 ? CourseRules2 : CourseRules;
         /// <summary>Dam rules 1's file name in the GLO-90 folder and on Earth's data release; a new version gets a new name.</summary>
         public const string FileName = "dams-glo90-1.bin";
         /// <summary>The rules 1 file this build reads (from the global bake of 8 November 2026); any other is refused.</summary>

@@ -7,9 +7,10 @@ namespace EarthMap.Core
     /// CHELSA v2.1 temperatures on the 2' terrain grid (temperature.bin, tools/bake_chelsa.py): the yearly mean, coldest and
     /// warmest month of 1981-2010, reduced to sea level with 6.5 °C/km from CHELSA's own height for each cell. Unlike the 0.25°
     /// climate grid, they follow the mountains: Hawaii's summits above the trade-wind inversion, the Andes' valleys
-    /// (decision 0009, climate rules v2). The file is a TiledGrid of 7 bytes a cell (three planes of 16-bit planar-predicted
-    /// values, then a byte that is 0 where CHELSA has none); its tiles are decoded on demand into the three temperatures and
-    /// kept in a TileCache. Thread-safe.
+    /// (decision 0009, climate rules v2). The file is a TiledGrid of 7 bytes a cell (three planes of 16-bit values, then a
+    /// byte that is 0 where CHELSA has none): plain, the values as planar-predicted residuals; predicted (PlaneCoding, from
+    /// rc.14), the values themselves after the grid's decoding. Its tiles are decoded on demand into the three temperatures
+    /// and kept in a TileCache. Thread-safe.
     /// </summary>
     public sealed class FineTemperature
     {
@@ -30,7 +31,7 @@ namespace EarthMap.Core
         FineTemperature(byte[] file)
         {
             // the decoded temperatures are cached here, not the grid's raw bytes
-            grid = new TiledGrid(file, "EMTP", 7, 0, "temperature.bin");
+            grid = new TiledGrid(file, "EMTP", 7, 0, "temperature.bin", new[] { PlaneType.I16, PlaneType.I16, PlaneType.I16, PlaneType.U8 });
             if (grid.Version != 1) throw new InvalidDataException("temperature.bin: layout mismatch");
             tile = grid.Tile;
             tiles = new TileCache<Tile>(Decode, MaxCachedTiles);
@@ -107,13 +108,23 @@ namespace EarthMap.Core
                 Array.Fill(none, short.MinValue);
                 return new Tile { Mean = none, Cold = none, Warm = none };
             }
-            var t = new Tile { Mean = UnPaeth(raw, 0), Cold = UnPaeth(raw, 2 * n), Warm = UnPaeth(raw, 4 * n) };
+            var t = grid.Coding == PlaneCoding.Predicted
+                ? new Tile { Mean = Values(raw, 0), Cold = Values(raw, 2 * n), Warm = Values(raw, 4 * n) }
+                : new Tile { Mean = UnPaeth(raw, 0), Cold = UnPaeth(raw, 2 * n), Warm = UnPaeth(raw, 4 * n) };
             for (int i = 0; i < n; i++)
                 if (raw[6 * n + i] == 0) t.Mean[i] = short.MinValue;
             return t;
         }
 
-        /// <summary>Undoes the planar prediction (left + up - upleft) of the bake.</summary>
+        /// <summary>A plane of 16-bit values as the predicted grid gives them.</summary>
+        short[] Values(byte[] raw, int at)
+        {
+            var q = new short[tile * tile];
+            Buffer.BlockCopy(raw, at, q, 0, 2 * q.Length);
+            return q;
+        }
+
+        /// <summary>Undoes the planar prediction (left + up - upleft) of the plain file's bake.</summary>
         short[] UnPaeth(byte[] raw, int at)
         {
             var q = new short[tile * tile];

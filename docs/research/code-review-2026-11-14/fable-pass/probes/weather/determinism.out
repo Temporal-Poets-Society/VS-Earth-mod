@@ -1,0 +1,6 @@
+geometry: ring 25600+204800, wraps True, gutter 0, seam -169.25, 568.89 x 568.36 blocks per degree
+rules 5: 4500 queries x 18 outputs; differing: reverse/fresh 0, warm/shuffled 0, 16 threads 0, two models interleaved 0
+rules 6: 4500 queries x 18 outputs; differing: reverse/fresh 0, warm/shuffled 0, 16 threads 0, two models interleaved 0
+rules 7: 4500 queries x 18 outputs; differing: reverse/fresh 0, warm/shuffled 0, 16 threads 0, two models interleaved 0
+rules 8: 4500 queries x 18 outputs; differing: reverse/fresh 0, warm/shuffled 0, 16 threads 0, two models interleaved 0
+rules 9: 4500 queries x 18 outputs; differing: reverse/fresh 0, warm/shuffled 0, 16 threads 0, two models interleaved 0

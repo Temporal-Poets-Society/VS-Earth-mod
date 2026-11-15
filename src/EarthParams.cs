@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using EarthMap.Core;
 using ProtoBuf;
 
@@ -7,13 +8,24 @@ namespace EarthMap
     /// <summary>
     /// Everything that places the Earth in one world, frozen into the savegame when the world is created and sent to
     /// clients (they need it for the live temperature and latitude).
-    /// ProtoMember numbers (9 November 2026, review round 3): 1-53, 55-93, 95-106, 108, 109, 120-129 and 190-195 are taken;
-    /// 107 is the ore package's of the RC fix pass; 54 and 94 were used on other lines and are never reused. Next free: 110,
-    /// 130, 196. The declarations are grouped by subject, not sorted by number.
+    /// ProtoMember numbers: EarthWorldOptionsTests' PinnedParamsTable is the one list of those taken, each with its name and
+    /// type (append only; S-R3 of the Fable pass: this header kept its own copy, which went stale). 54 and 94 were used on
+    /// other lines and are never reused; 110-119 and 130-189 were never used. A new field takes the number after the
+    /// table's last line, claimed where the other sessions see it before its branch merges. The declarations are grouped by
+    /// subject, not sorted by number.
     /// </summary>
     [ProtoContract]
-    public class EarthParams
+    public partial class EarthParams : IExtensible
     {
+        /// <summary>(FP-04, the Fable pass of the 14 November review) Fields this build doesn't know, as protobuf-net read them:
+        /// kept, so that saving the params again (every start stores LastSavedWith) doesn't drop a newer Earth's fields; and
+        /// seen, so that a world a newer Earth saved is refused (EarthMapSystem.InitWorld) although none of the rules this build
+        /// knows is above its newest. Every new rule so far came as a new field.</summary>
+        IExtension unknownFields;
+        IExtension IExtensible.GetExtensionObject(bool createIfMissing) => Extensible.GetExtensionObject(ref unknownFields, createIfMissing);
+        /// <summary>Whether the save holds fields this build doesn't know (a newer Earth wrote them).</summary>
+        public bool HasUnknownFields => unknownFields != null && unknownFields.GetLength() > 0;
+
         /// <summary>The layout version a world saves (Version). 1: 0.1.0. 2: beaches, coastal lake barriers, retuned rainfall. 3:
         /// stronger height curves, real seasons, summer-dry climates, forest types. 4: large rivers. 5 to 11: Earth Map up to
         /// 0.12 (not listed). It has stayed 11 since every rule got a saved version of its own; nothing reads it but the record.</summary>
@@ -178,7 +190,8 @@ namespace EarthMap
         /// worlds from 0.15.1); 2 = the complete UDel normals, with December's precipitation over the land (climatefix2.bin,
         /// new worlds from 2026-11-07: the missing months and December's 0 mm were a cut-short download); 3 = v2 with UDel's
         /// precipitation faded into GPCP's over a 1° coast band instead of one row, without the rain stripes along the coasts
-        /// (climatefix3.bin, new worlds from 2026-11-13, EA-0016). 0: the climate grid as before (older saves). Older saves
+        /// (climatefix3.bin, new worlds from 2026-11-13, EA-0016); 4 = v3 with GPCP's share at CHELSA's level on desert coasts
+        /// (climatefix4.bin, new worlds from 2026-11-14, EA-0060: Lima 434 → 35 mm). 0: the climate grid as before (older saves). Older saves
         /// move to the newest with UpgradeExistingWorldClimateData.</summary>
         [ProtoMember(70)] public int ClimateData;
         /// <summary>The server's weather.bin fingerprint (WeatherData.Signature): a client with other data keeps vanilla weather.
@@ -210,7 +223,8 @@ namespace EarthMap
         /// block per step (older saves;
         /// it changes the river layout, so they keep theirs).</summary>
         [ProtoMember(73)] public int RiverPoolLayout;
-        // Experimental profile (decision 0031). Missing fields preserve legacy worlds exactly.
+        // The profile of decision 0031 (named "Experimental" in VerticalTerrainOptions; every world made from the menu has it,
+        // 1.0 and 2.0 alike, ER-28). Missing fields preserve legacy worlds exactly.
         [ProtoMember(74)] public bool LinearLand;
         [ProtoMember(75)] public bool LocalAlpineEcology;
         [ProtoMember(76)] public bool PhysicalRockExposure;
@@ -276,6 +290,16 @@ namespace EarthMap
         /// table. 0: worlds made before it, where HoD keeps making its own aquifers (the query and /earth water still answer,
         /// as they save nothing). 193 is OreLayers (0060).</summary>
         [ProtoMember(194)] public int WaterTableRules;
+
+        /// <summary>
+        /// Whether Earth writes Hydrate or Diedrate's aquifer data in this world (decision 0059; the author, 15 November 2026:
+        /// "i am ok for own rock and ground generation. When vanilla settings are selected the goes as vanilla and HoD
+        /// defaults"): the water table (rules 1) with Earth's own rock and ground (regional rock, with or without ground
+        /// columns) and Earth's biomes. With vanilla rock and ground, or biomes back to vanilla (0075), Earth writes nothing and
+        /// changes nothing of HoD's, which makes its own aquifers with its own defaults; the water table still serves Earth's own
+        /// rules there (seeps, the site drivers, /earth water). From the saved fields alone; every 2.0 world is new.
+        /// </summary>
+        public bool WritesHodAquifers() => WaterTableRules >= 1 && RegionalGeology && VanillaBiomes < 1;
         /// <summary>0065: ore rules for "Earth-like ores" (Core.OreBackground.CatalogueRules): 4 = the deposit catalogue's bodies at their
         /// real size, ore-heatmaps-v2.json (v1 when v2 is missing) for the uncatalogued backgrounds, no rules v3 ore bodies,
         /// every background at its class floor in its host rock whether or not a record is near, background sizes by the
@@ -286,15 +310,15 @@ namespace EarthMap
         /// ground is plain rock without caves, ores or lava, so tall worlds don't store deep mixed chunks. 0: none (older saves).</summary>
         [ProtoMember(93)] public int RockFloorDepth;
         // 94: RiverValleyRules (claude/terrain-walls). Don't reuse it.
-        /// <summary>0051 (proposed): dry land's heights from Copernicus GLO-90 tiles downloaded on demand (Core.FineElevation.Version:
+        /// <summary>0051: dry land's heights from Copernicus GLO-90 tiles downloaded on demand (Core.FineElevation.Version:
         /// 1 heights only, 2 with listed summits lifted to the survey, 3 and a smooth curve between GLO-90's points without noise, 4 and the mean over a block's
         /// footprint at 75 m and more per block); 0: the built-in 2′ grid (older saves, or the Earth tab's "Built-in"). The squares that fell back to built-in heights are saved apart (EarthElevationSystem.FallbackKey).</summary>
         [ProtoMember(95)] public int FineElevation;
-        /// <summary>0053 (proposed): dry land's heights from GLO-90 averaged to a coarser grid that ships in Earth's height data
+        /// <summary>0053: dry land's heights from GLO-90 averaged to a coarser grid that ships in Earth's height data
         /// packs (Core.CoarseElevation.Version), with a detail noise sized by GLO-90's own relief inside each cell; with
         /// FineElevation as well it is the fallback for squares that can't be downloaded. 0: none (older saves, "Built-in").</summary>
         [ProtoMember(96)] public int CoarseElevation;
-        /// <summary>0053 (proposed): rivers on GLO-90 (Core.RiverNetwork.Glo90CoursesVersion): courses snapped to GLO-90's valley
+        /// <summary>0053: rivers on GLO-90 (Core.RiverNetwork.Glo90CoursesVersion): courses snapped to GLO-90's valley
         /// floors and levels from GLO-90 (earthdata/rivers-glo90.bin), not straightened for the world's size, with banks and
         /// valleys sized in metres by the land heights' own grid. 2 (item 14, tall.14): with the reaches the water atlas moved
         /// into the water mask's rivers (rivers-glo90-snap.bin). 3 (item 16, tall.16): and the side arms round the islands the
@@ -302,7 +326,7 @@ namespace EarthMap
         /// smoothed, the mask's half width at each vertex (RiverReach.Width), arms rebuilt on them (rivers-glo90-snap-2.bin,
         /// rivers-glo90-arms-2.bin). 0: rivers.bin's courses and levels (older saves).</summary>
         [ProtoMember(97)] public int RiverCourses;
-        /// <summary>0053 (proposed): the detail noise's rules (TerrainModel.DetailRulesVersion). 1: wavelengths in metres below the
+        /// <summary>0053: the detail noise's rules (TerrainModel.DetailRulesVersion). 1: wavelengths in metres below the
         /// land data's own cell, amplitude from the data's relief (smaller), smooth between cells, rotated octaves. 0: the
         /// first noise, fixed in blocks (older saves).</summary>
         [ProtoMember(98)] public int DetailRules;
@@ -318,13 +342,13 @@ namespace EarthMap
         /// tall.15) makes the coastline the mask's wherever GSHHG's differs from it. 0 in older saves: terrain.bin, islands.bin and
         /// coasts.bin as published. 1 was saved only by tall.14's test worlds; they read 2's data (logged).</summary>
         [ProtoMember(101)] public int SeaReferee;
-        /// <summary>0053 item 17 (proposed): the lakes of GLO-90's water mask from their outlines (Core.LakeOutlineData.FileVersion,
+        /// <summary>0053 item 17: the lakes of GLO-90's water mask from their outlines (Core.LakeOutlineData.FileVersion,
         /// lakes-glo90-1.bin, which comes with the GLO-90 heights): wherever this world reads GLO-90, every lake of the mask at
         /// its own outline and GLO-90 level stands in for the grid's fresh lakes (Earth's salt and terminal lakes stay the
         /// grid's). New worlds on full GLO-90 heights only. A world whose file couldn't be had when it first needed it keeps
         /// the grid's lakes for good (EarthElevationSystem.LakeOutlinesOffKey). 0: the grid's lakes (older saves).</summary>
         [ProtoMember(102)] public int LakeOutlines;
-        /// <summary>0053 item 18 (proposed): the rivers of GLO-90's water mask from their outlines (Core.RiverOutlineData.FileVersion,
+        /// <summary>0053 item 18: the rivers of GLO-90's water mask from their outlines (Core.RiverOutlineData.FileVersion,
         /// rivers-outline-glo90-1.bin, which comes with the GLO-90 heights): wherever this world reads GLO-90, dry land in them
         /// is river water at the level of the nearest river course, and a course whose centre line lies in them draws no
         /// channel of its own there (TerrainModel.ApplyOutlineRiver). New worlds on full GLO-90 heights only. A world whose
@@ -338,7 +362,7 @@ namespace EarthMap
         /// noise; the hot springs are the known ones (OpenStreetMap, GeoNames), each placed where its ground allows; vanilla's
         /// lava springs are off. 0: vanilla's activity, lava springs and hot springs (older saves).</summary>
         [ProtoMember(104)] public int GeothermalRules;
-        /// <summary>0053 item 19 (proposed): modern dams taken out of GLO-90 (Core.DamRemovalData.RulesVersion, dams-glo90-1.bin,
+        /// <summary>0053 item 19: modern dams taken out of GLO-90 (Core.DamRemovalData.RulesVersion, dams-glo90-1.bin,
         /// which comes with the GLO-90 heights): dam walls lowered, a valley floor under each left-out reservoir and the river
         /// courses falling evenly through it instead of stepping at the dam; new worlds on full GLO-90 with courses rules 3
         /// get it, with RiverOutlines 2. A world whose file couldn't be had (or didn't fit its courses) when it first needed
@@ -379,12 +403,19 @@ namespace EarthMap
         /// <summary>Generation fixes from the code review of 11 November 2026 (TerrainModel.GenFixRules, GenFixRulesVersion):
         /// 1 = dry land below 0 m without a ledge on the 0 m contour, springs planned at whole blocks, crops and fruit trees in
         /// a river's green belt judged by its rain, dry river beds' gravel scattered; 2 = also the noise's dips near a water
-        /// level faded in over 20-40 m above it on the grid's land (EA-0040). 0: as before (older saves). 200 was free on
-        /// every branch on 12 November 2026.</summary>
+        /// level faded in over 20-40 m above it on the grid's land (EA-0040); 3 = also a grid lake's water ending along an
+        /// irregular line on low ground beside it, not a straight one between cell centres (EA-0072); 4 = also, from the code
+        /// review of 14 November 2026, a crater-less volcano conduit capped at its column's top (ER-19) and the rock under a
+        /// ground column read to its bottom (ER-20). 0: as before (older saves). 200 was free on every branch on 12 November
+        /// 2026.</summary>
         [ProtoMember(200)] public int GenFixRules;
         /// <summary>The weather rules this world's weather follows (WeatherSettings.Rules, frozen at creation): 6 = the cold
         /// sea's low cloud decks, hail from Earth's thunderstorms, and the weather's warm and cold spells, clouds and rain in
-        /// the temperature (EA-0019, EA-0023, EA-0025; new worlds from 13 November 2026). 0: worlds made before, which keep
+        /// the temperature (EA-0019, EA-0023, EA-0025; new worlds from 13 November 2026); 7 = also the ground under the weather
+        /// (the rain rate at the ground's temperature, the desert coasts as dry as climate fix 4) and more thunder in hot dry
+        /// months (EA-0021, EA-0060, EA-0022; new worlds from 14 November 2026); 8 = also the rain in events as long as at
+        /// the airports, through the whole day and skewed in warm months, and the temperature anomaly kept per 32-block cell
+        /// and ten-minute step (EA-0020, EA-0073; new worlds from 14 November 2026, later). 0: worlds made before, which keep
         /// rules 5. Not <see cref="WeatherRules"/>, the server build's newest rules that a client must share. 201 was free on
         /// every branch on 13 November 2026.</summary>
         [ProtoMember(201)] public int WeatherModelRules;
@@ -395,6 +426,119 @@ namespace EarthMap
         /// or scree. 0: Earth's biomes (the default, and every world made before). 202 was free on every branch on 13 November 2026.</summary>
         [ProtoMember(202)] public int VanillaBiomes;
         public const int VanillaBiomesVersion = 1;
+        /// <summary>EA-0068, decision 0077: Earth's crafting rules (<see cref="EarthCrafting"/>). 1 = Earth's extra grid recipes
+        /// for its geology (grog, fire clay from clay with grog or quartz, a fireclay refractory brick without bauxite, kyanite,
+        /// sillimanite, andalusite and corundum in bauxite's place), set at creation where Earth decides where bauxite lies:
+        /// ground rules 2 and later, or Earth's ore maps. 0: vanilla's recipes only (every world made before, and vanilla
+        /// rock with vanilla ores). 203 was free on every branch on 13 November 2026.</summary>
+        [ProtoMember(203)] public int CraftingRules;
+        /// <summary>The newest crafting rules (EarthCrafting.RulesVersion is this): here so that this record, which the offline
+        /// tests and tools compile without the game's types, can name it in RulesAgainstBuild.</summary>
+        public const int CraftingRulesVersion = 1;
+        /// <summary>EA-0054 step 2, decision 0080: site rules (<see cref="SiteNiche"/>). 1 = trees and shrubs by each column's
+        /// own site: the EIVE soil fit reads the column's wetness from the water table, its richness and pH from the ground
+        /// column (instead of the 2' soil grid's shares), and a tree's size follows the site's productivity. 0: as before
+        /// (every world made before, and worlds with vanilla biomes). 204 was free on every branch on 14 November 2026.</summary>
+        [ProtoMember(204)] public int SiteRules;
+        /// <summary>Record only (ER-05, code review 14 November 2026): the Earth version (modinfo) that created this world. Null in
+        /// worlds made before. Read by nothing that generates; left out of the model cache's key.</summary>
+        [ProtoMember(205)] public string CreatedWith;
+        /// <summary>Record only (ER-05): the Earth version that last started this world (set at every start). With
+        /// <see cref="RulesNewerThanBuild"/> it names the version an older build's refusal asks for. Null in worlds made before.</summary>
+        [ProtoMember(206)] public string LastSavedWith;
+        /// <summary>(EA-0118, the Fable pass) What the server's weather ground is (EarthData.WeatherGroundSignature), for
+        /// worlds whose weather rules read it (7 and later), set at every start like <see cref="WeatherDataSignature"/>: a
+        /// client with another keeps vanilla weather. Null from servers before it, which the clients then don't check. 207
+        /// and 208 are taken on other branches (14 November 2026).</summary>
+        [ProtoMember(209)] public string WeatherGroundSignature;
+        /// <summary>(EA-0118) <see cref="WeatherGroundSignature"/> of a server whose rules read the ground and that has none.</summary>
+        public const string NoWeatherGround = "none";
+
+        /// <summary>
+        /// ER-05 (code review 14 November 2026): every saved rules number with the newest this build makes and reads, for the
+        /// refusal of a world saved by a newer Earth (EarthMapSystem.InitWorld): opened by an older build, such a world made the
+        /// older build's chunks for good, some fields clamped, others passed raw into tests. The newest values are the constants
+        /// a new world's creation (EarthWorldOptions.Freeze, EarthMapSystem.ComputeParams) and the one-shots write, or an
+        /// option's highest code. A new rules field goes in here: EarthWorldOptionsTests fails for an int field of this record
+        /// that is neither here nor in its list of plain numbers.
+        /// </summary>
+        public IEnumerable<(string Name, int Saved, int Newest)> RulesAgainstBuild()
+        {
+            yield return (nameof(Version), Version, CurrentVersion);
+            yield return (nameof(TemperatureRangeFrozen), TemperatureRangeFrozen, 1);
+            yield return (nameof(TreeRulesVersion), TreeRulesVersion, RegionalTreeCatalog.RulesVersion);
+            yield return (nameof(GeologyRulesVersion), GeologyRulesVersion, RegionalGeologyCatalog.RulesVersion);
+            yield return (nameof(FaunaRulesVersion), FaunaRulesVersion, RegionalFaunaCatalog.RulesVersion);
+            yield return (nameof(OreRulesVersion), OreRulesVersion, RegionalOreCatalog.Version);
+            yield return (nameof(RiverFalls), RiverFalls, Core.RiverFalls.Version);
+            yield return (nameof(RiverChannels), RiverChannels, SeaChannels.Version);
+            yield return (nameof(Islands), Islands, IslandLayer.RulesVersion);
+            yield return (nameof(RiverEnds), RiverEnds, Core.RiverEnds.Version);
+            yield return (nameof(ClimateRules), ClimateRules, System.Math.Max(TerrainModel.RealRainRules, TerrainModel.RealLapseRules));
+            yield return (nameof(LakeShores), LakeShores, ShoreData.FileVersion);
+            yield return (nameof(Coasts), Coasts, CoastData.FileVersion);
+            yield return (nameof(RiverDeltas), RiverDeltas, Core.RiverDeltas.Version);
+            yield return (nameof(RiverWidths), RiverWidths, RiverNetwork.WidthRulesVersion);
+            yield return (nameof(GutterSeabed), GutterSeabed, TerrainModel.RealSeamVersion);
+            yield return (nameof(ClimateData), ClimateData, EarthData.ClimateFixVersion);
+            yield return (nameof(RiverPoolLayout), RiverPoolLayout, RiverNetwork.PoolLayoutVersion);
+            yield return (nameof(VanillaFaunaRanges), VanillaFaunaRanges, Core.VanillaFaunaRanges.Version);
+            yield return (nameof(FineRain), FineRain, 1);
+            yield return (nameof(Summits), Summits, KnownSummits.Version);
+            yield return (nameof(Glaciers), Glaciers, 1);
+            yield return (nameof(AlpineSurfaceRules), AlpineSurfaceRules, MountainEcology.SurfaceVersion);
+            yield return (nameof(AridRiverRules), AridRiverRules, AridHydrology.Version);
+            yield return (nameof(StraitRules), StraitRules, NavigableStraits.Version);
+            yield return (nameof(ReservoirRules), ReservoirRules, ReservoirRulesVersion);
+            yield return (nameof(CreationOptionsVersion), CreationOptionsVersion, 1);
+            yield return (nameof(PlacementRules), PlacementRules, PlacementCatalogue.RulesVersion);
+            yield return (nameof(SoilRules), SoilRules, SoilFertility.RulesVersion);
+            yield return (nameof(GroundColumns), GroundColumns, Core.GroundColumns.RulesVersion);
+            yield return (nameof(GroundData), GroundData, GroundDownloader.SetsVersion);
+            yield return (nameof(OreLayers), OreLayers, Core.OreLayers.RulesVersion);
+            yield return (nameof(WaterTableRules), WaterTableRules, WaterTable.RulesVersion);
+            yield return (nameof(OreRules), OreRules, OreBackground.CurrentRules);
+            yield return (nameof(FineElevation), FineElevation, Core.FineElevation.Version);
+            yield return (nameof(CoarseElevation), CoarseElevation, Core.CoarseElevation.Version);
+            yield return (nameof(RiverCourses), RiverCourses, System.Math.Max(RiverNetwork.Glo90WidthCourses, DamRemovalData.CourseRules2));
+            yield return (nameof(DetailRules), DetailRules, TerrainModel.DetailRulesVersion);
+            yield return (nameof(LakeOutlets), LakeOutlets, OutletData.FileVersion);
+            yield return (nameof(SeaReferee), SeaReferee, SeaRefereeData.FileVersion);
+            yield return (nameof(LakeOutlines), LakeOutlines, LakeOutlineData.FileVersion);
+            yield return (nameof(RiverOutlines), RiverOutlines, RiverOutlineData.FileVersion);
+            yield return (nameof(GeothermalRules), GeothermalRules, Geothermal.RulesVersion);
+            yield return (nameof(DamRules), DamRules, DamRemovalData.NewestRules);
+            yield return (nameof(Works1318), Works1318, Works1318Data.RulesVersion);
+            yield return (nameof(PerennialRules), PerennialRules, NonPerennialData.RulesVersion);
+            yield return (nameof(FlowRules), FlowRules, RiverFlowData.FileVersion);
+            yield return (nameof(ShoreZoneRules), ShoreZoneRules, Core.ShoreZones.RulesVersion);
+            yield return (nameof(ShoreRules), ShoreRules, Core.ShoreMaterial.RulesVersion);
+            yield return (nameof(GenFixRules), GenFixRules, TerrainModel.GenFixRulesVersion);
+            yield return (nameof(WeatherModelRules), WeatherModelRules, WeatherSettings.Newest);
+            yield return (nameof(VanillaBiomes), VanillaBiomes, VanillaBiomesVersion);
+            yield return (nameof(CraftingRules), CraftingRules, CraftingRulesVersion);
+            yield return (nameof(SiteRules), SiteRules, SiteNiche.RulesVersion);
+            yield return (nameof(DepositSet), DepositSet, EarthDepositSet.Version);
+            yield return (nameof(GroundCoverRules), GroundCoverRules, GroundCover.RulesVersion);
+            yield return (nameof(ZoneRules), ZoneRules, ClimateZones.RulesVersion);
+            yield return (nameof(MoistureRules), MoistureRules, GroundMoisture.RulesVersion);
+            yield return (nameof(GrassWinterRules), GrassWinterRules, GrassWinter.RulesVersion);
+            yield return (nameof(FireRules), FireRules, FireRegime.RulesVersion);
+            yield return (nameof(WetlandRules), WetlandRules, WetlandGrid.RulesVersion);
+            yield return (nameof(PondRules), PondRules, System.Math.Max(PondRulesWetlands, PondRulesNone));
+            yield return (nameof(AridityRules), AridityRules, EarthData.PenmanAridityVersion);
+            yield return (nameof(ChannelRules), ChannelRules, TerrainModel.ChannelRulesVersion);
+            yield return (nameof(SpringRules), SpringRules, System.Math.Max(SpringRulesCaves, SpringRulesStreams));
+        }
+
+        /// <summary>The int fields of this record that are plain numbers, not rules (<see cref="RulesAgainstBuild"/> lists the
+        /// rest): the map's size and sea, the spawn, settings, and the weather's per-start handshake.</summary>
+        public static readonly string[] PlainNumbers = { nameof(MapHeight), nameof(SeaLevel), nameof(GutterSeabedY), nameof(SpawnX), nameof(SpawnZ),
+            nameof(WeatherRules), nameof(SummitMinElevation), nameof(RockFloorDepth), nameof(MinSeaDepth) };
+
+        /// <summary>The rules this world saved above this build's newest (empty for a world of this build or an older one).</summary>
+        public List<string> RulesNewerThanBuild() => RulesAgainstBuild().Where(r => r.Saved > r.Newest)
+            .Select(r => r.Name + " " + r.Saved + " (this build: " + r.Newest + ")").ToList();
 
         /// <summary>The weather rules this world's model runs: its own, at most this build's; 5 for worlds made before they
         /// were saved.</summary>
@@ -476,214 +620,6 @@ namespace EarthMap
         /// draw those rivers: where the world draws every stream down to 20 m³/s.</summary>
         public bool DropsNarrowRiverPieces => ChannelRules >= 1 && StreamMode == "all" && (StreamMinDischarge > 0 ? StreamMinDischarge : 20) <= 20;
 
-        /// <summary>The world's layout, from the saved settings alone: no Earth data needed.</summary>
-        public EarthGeometry BuildGeometry()
-        {
-            return new EarthGeometry
-            {
-                RingStart = RingStart, RingLength = RingLength, Wraps = Wraps, Gutter = Gutter,
-                EquatorZ = EquatorZ, BlocksPerDegreeZ = BlocksPerDegreeZ, SeamLon0 = SeamLon0,
-            };
-        }
-
-        /// <summary>
-        /// The world's frozen terrain settings made usable: one that isn't a finite number, is negative or is absurdly large
-        /// (NaN detail, a negative river width) takes the default from <paramref name="defaults"/>. Zero stays: older saves
-        /// use it for "not set" and the model treats it so. Returns the settings replaced (empty when all were fine).
-        /// </summary>
-        public string RepairSettings(EarthMapConfig defaults)
-        {
-            var bad = new System.Collections.Generic.List<string>();
-            double Fix(string name, double value, double max, double fallback)
-            {
-                if (double.IsFinite(value) && value >= 0 && value <= max) return value;
-                bad.Add(name + " " + value);
-                return fallback;
-            }
-            DetailScale = Fix(nameof(DetailScale), DetailScale, 10, defaults.DetailScale);
-            RiverMinDischarge = Fix(nameof(RiverMinDischarge), RiverMinDischarge, 1e6, defaults.RiverMinDischarge);
-            RiverWidthScale = Fix(nameof(RiverWidthScale), RiverWidthScale, 20, defaults.RiverWidthScale);
-            RiverRelief = Fix(nameof(RiverRelief), RiverRelief, 10, defaults.RiverRelief);
-            StreamMinDischarge = Fix(nameof(StreamMinDischarge), StreamMinDischarge, 1e6, defaults.StreamMinDischarge);
-            RiverStraighten = Fix(nameof(RiverStraighten), RiverStraighten, 1, defaults.RiverStraighten);
-            RiverSmoothWidths = Fix(nameof(RiverSmoothWidths), RiverSmoothWidths, 50, defaults.RiverSmoothWidths);
-            // geology's own limit (GeologyTransitions.IsValidWidth: 0..512); beyond it geology switches itself off for the session
-            GeologyTransitionBlocks = Fix(nameof(GeologyTransitionBlocks), GeologyTransitionBlocks, 512, defaults.GeologyTransitionBlocks);
-            if (!GeologyTransitions.IsValidWidth(GeologyTransitionBlocks)) GeologyTransitionBlocks = 96;
-            MinIslandBlocks = Fix(nameof(MinIslandBlocks), MinIslandBlocks, 1e6, defaults.MinIslandBlocks);
-            return string.Join(", ", bad);
-        }
-
-        public VerticalScale BuildVertical() => new VerticalScale(MapHeight, SeaLevel, TopY, LandH0, MaxDepth, SeaD0, LinearLand);
-
-        PeakCatalog LoadPeaks(EarthData data)
-        {
-            if(Summits < 2 || string.IsNullOrEmpty(PeakCatalogSignature)) return null;
-            var peaks=data.ReadPeaks();
-            if(peaks?.Signature!=PeakCatalogSignature) throw new System.IO.InvalidDataException("this world's surveyed peak catalogue (earthdata/peaks.json, SHA-256 "
-                + PeakCatalogSignature + ") is " + (peaks == null ? "missing" : "changed (this Earth's has " + peaks.Signature + ")") + ". Restore the peaks.json of the " +
-                "Earth version that created this world, or set UpgradeExistingWorldMountainTerrain to true in ModConfig/earth.json once to give chunks generated " +
-                "from now on this Earth's summits (they may meet the older chunks with a step at the summits that changed)");
-            return peaks;
-        }
-
-        /// <summary>The climate data this world's rules read, the same on both sides (BuildModel; the client's climate-only
-        /// model): the climate fix, CHELSA's temperatures and rainfall, the Penman-Monteith aridity.</summary>
-        public void ConfigureClimateData(EarthData data)
-        {
-            data.SetClimateFix(ClimateData);
-            // climate rules v2 (decision 0009): CHELSA's temperatures on the 2' grid
-            data.SetFineTemperature(ClimateRules >= TerrainModel.RealLapseRules);
-            // decision 0031: CHELSA's rainfall
-            data.SetFineRain(FineRain >= 1);
-            data.SetPenmanAridity(AridityRules >= 1);
-        }
-
-        /// <param name="dams">0053 item 19 (proposed): the dam file, whose course levels a world with DamRules sets before its
-        /// rivers are laid out (its heights are FineElevation.Dams'); null: the courses as they are.</param>
-        /// <param name="cache">This world's kept build results (the server's; null: everything is built).</param>
-        public TerrainModel BuildModel(EarthData data, DamRemovalData dams = null, ModelCache cache = null, RiverFlowData flow = null)
-        {
-            var geo = BuildGeometry();
-            ConfigureClimateData(data);
-            // decision 0031: ETOPO's 30" summits, RGI's glaciers
-            data.SetSummits(Summits >= 1);
-            data.SetGlaciers(Glaciers >= 1);
-            // first: everything below (the river exit channels too) reads the grid as this world has it; the water mask's
-            // referee first of all (it is the grid, the islands and the coasts this world starts from)
-            data.SetSeaReferee(SeaReferee >= 1);
-            data.SetIslandOverlay(Islands > 0);
-            data.SetLakeOverlay(RiverEnds > 0);
-            data.SetShoreOverlay(LakeShores > 0);
-            data.SetReservoirExclusions(ReservoirRules >= 1);
-            data.SetOutletOverlay(LakeOutlets >= 1);
-            var model = new TerrainModel(data, geo, BuildVertical(), NoiseSeed)
-            {
-                GutterSeabedY = GutterSeabedY,
-                LocalAlpineEcology = LocalAlpineEcology,
-                VanillaBiomes = VanillaBiomes >= 1,
-                Summits = Summits >= 1 && data.HasSummits,
-                SummitRules = Summits,
-                SummitMinElevation = SummitMinElevation,
-                Peaks = LoadPeaks(data),
-                AlpineSurfaceRules = AlpineSurfaceRules,
-                AridRiverRules = AridRiverRules,
-                DetailScale = DetailScale,
-                // a save from a newer build keeps its number, but only rules this build has run (EarthMapSystem warns)
-                DetailRules = System.Math.Min(DetailRules, TerrainModel.DetailRulesVersion),
-                RiverRelief = RiverRelief > 0 ? RiverRelief : 1.0,
-                GutterBridges = GutterBridges,
-                GutterSeabed = GutterSeabed,
-                MinSeaDepth = MinSeaDepth is > 0 and <= 20 ? MinSeaDepth : TerrainModel.OldSeaDepth,
-                LakeShores = data.ShoreOverlay,
-                ClimateRules = ClimateRules,
-                GeothermalRules = GeothermalRules,
-                ChannelRules = ChannelRules,
-                ShoreZoneRules = ShoreZoneRules,
-                ShoreRules = ShoreRules,
-                ShoreData = ShoreRules >= 1 ? data.ShoreMaterial : null,
-                // (a save from a newer build keeps its number, but only fixes this build has)
-                GenFixRules = System.Math.Min(GenFixRules, TerrainModel.GenFixRulesVersion),
-            };
-            // 0053 (proposed): the included GLO-90 heights (missing packs: the built-in heights, as before the packs)
-            if (CoarseElevation > 0 && data.Coarse != null)
-            {
-                model.Coarse = data.Coarse;
-                model.CoarseRules = System.Math.Min(CoarseElevation, Core.CoarseElevation.Version);
-            }
-            if (data.IslandOverlay) model.Islands = new IslandLayer(data.Islands, geo, MinIslandBlocks > 0 ? MinIslandBlocks : 4, Islands);
-            if (Coasts > 0 && data.Coasts != null && data.IslandOverlay) model.Coasts = new CoastLayer(data.Coasts, geo, MinIslandBlocks > 0 ? MinIslandBlocks : 4);
-            // decision 0064: the sea, lakes and land of 1318, before the river exits (SeaChannels) read the coast
-            if (Works1318 >= 1 && model.Coasts != null && data.Works1318 != null)
-            {
-                model.Works = new LakeOutlineLayer(data.Works1318, geo, model.Coasts.Reach, skipFlags: Works1318Data.SkipFor(Works1318));
-                model.WorksRules = System.Math.Min(Works1318, Works1318Data.RulesVersion);
-            }
-            // the straits' courses and the sea channels' ways are the slow parts: kept between starts (ModelCache)
-            if (StraitRules >= 1) model.Straits = new NavigableStraits(geo, model, ModelCache.Use(cache, NavigableStraits.CachePart,
-                () => NavigableStraits.FollowSea(geo, model), NavigableStraits.WriteRoutes, NavigableStraits.ReadRoutes));
-            var canals = string.IsNullOrWhiteSpace(Canals) ? null : Canals.Split(',');
-            var source = RiverSource(data, dams, out DamCourseLevels, out DamCourseError, FlowRules >= 1 ? flow : null, out FlowReroutes, out ulong courseKey);
-            if (source != null) model.Rivers = BuildRivers(data, model, source);
-            if (model.Rivers != null && AridRiverRules >= 1)
-            {
-                // decision 0069 rule 8: the wet-source flow from GIRES' non-perennial rivers where the world has them
-                model.WetSourceFlow = PerennialRules >= 1 && data.NonPerennial != null && courseKey == data.NonPerennial.CourseKey
-                    ? data.NonPerennial.WetSourceFlow(model.Rivers.Reaches)
-                    : AridHydrology.WetSourceFlow(data, model.Rivers.Reaches);
-                model.DryFans = new WadiFans(model);
-            }
-            if ((RiverChannels > 0 && model.Rivers != null) || canals != null)
-                model.Channels = SeaChannels.Build(model, RiverChannels > 0, canals, RiverChannels > 0 ? RiverChannels : SeaChannels.Version, cache);
-            if (Zones != null)
-            {
-                foreach (var z in Zones)
-                {
-                    model.FlatZones.Add(z.ToZone());
-                }
-            }
-            return model;
-        }
-
-        /// <summary>
-        /// The river courses this world's rivers are laid out on (null without rivers): its courses rules' reaches, and with
-        /// dam rules the dam file's levels through the old reservoirs (0053 item 19: a list read anew, so nothing else sees
-        /// them). <paramref name="damLevels"/>: the stations lowered, -1 when the file was made for other courses
-        /// (<paramref name="damError"/> says why). BuildModel and the river audit both start here, so the audit walks the
-        /// network that was generated.
-        /// </summary>
-        public List<RiverReach> RiverSource(EarthData data, DamRemovalData dams, out int damLevels, out string damError) =>
-            RiverSource(data, dams, out damLevels, out damError, null, out _, out _);
-
-        /// <summary>The courses with the dam file's levels, and (decision 0069 rule 2) the flow file's rerouted mouths when it
-        /// was solved on this list (its key, taken before the dams lower it); <paramref name="reroutes"/> how many, -1 when
-        /// the list isn't the flow file's. <paramref name="courseKey"/>: the list's key as read (DamRemovalData.KeyOf, before the
-        /// dams lower its levels), for the files keyed to it (the flow, decision 0069 rule 8's classes); 0 when not needed.</summary>
-        public List<RiverReach> RiverSource(EarthData data, DamRemovalData dams, out int damLevels, out string damError, RiverFlowData flow, out int reroutes,
-            out ulong courseKey)
-        {
-            damLevels = 0;
-            damError = null;
-            reroutes = 0;
-            var source = Rivers ? data.RiverReaches(RiverCourses) : null;
-            courseKey = source != null && (flow != null || (PerennialRules >= 1 && data.NonPerennial != null)) ? DamRemovalData.KeyOf(source) : 0;
-            bool flowFits = source != null && flow != null && courseKey == flow.CourseKey;
-            if (source != null && DamRules >= 1 && dams != null && RiverCourses >= 1)
-                damLevels = dams.LowerCourses(source, out damError);
-            if (flow != null) reroutes = flowFits ? RiverFlowData.Reroute(source, flow) : -1;
-            return source;
-        }
-
-        /// <summary>
-        /// This world's river network from the courses <see cref="RiverSource"/> gives (with the river ends and deltas its rules
-        /// have), on the grid as BuildModel set it up. Deterministic: the river audit rebuilds the same network after the
-        /// start-up-only data was released (decision 0025).
-        /// </summary>
-        public RiverNetwork BuildRivers(EarthData data, TerrainModel model, List<RiverReach> source)
-        {
-            var geo = model.Geometry;
-            var canals = string.IsNullOrWhiteSpace(Canals) ? null : Canals.Split(',');
-            // widths grow with the world: the reference is the standard 256k world (Cylinder World ring 204 800)
-            double sizeScale = geo.RingLength > 0 ? geo.RingLength / 204800.0 : 1;
-            var reaches = OutletData.ReleaseRiverPoints(data, source);
-            bool[] fade = null;
-            if (RiverEnds > 0)
-            {
-                var ends = Core.RiverEnds.Prepare(data, reaches);
-                reaches = ends.Reaches;
-                fade = ends.Fade;
-                if (RiverDeltas > 0) reaches = Core.RiverDeltas.Apply(reaches).Reaches;
-            }
-            return new RiverNetwork(reaches, geo, RiverMinDischarge, RiverWidthScale > 0 ? RiverWidthScale : 1, model.RiverWaterTop,
-                string.IsNullOrEmpty(StreamMode) ? "none" : StreamMode, StreamMinDischarge > 0 ? StreamMinDischarge : 20,
-                StreamMode == null ? 1 : sizeScale, RiverStraighten, RiverSmoothWidths, falls: RiverFalls > 0 ? Core.RiverFalls.All : null,
-                seaLevelPiece: SeaChannels.CanalCrossing(SeaChannels.CanalCourses(geo, canals)),
-                continueDownstream: RiverEnds > 0, fadeEnds: fade, geometrySeams: RiverEnds > 0, widthRules: RiverWidths,
-                poolLayout: RiverPoolLayout, rapids: !NoRiverRapids,
-                courses: RiverCourses, landCellMetres: RiverCourses < 1 ? 0 : FineElevation >= 1 ? Core.FineElevation.CellMetres
-                    : CoarseElevation >= 1 && data.Coarse != null ? data.Coarse.CellMetres : 0,
-                channelRules: ChannelRules);
-        }
     }
 
     [ProtoContract]

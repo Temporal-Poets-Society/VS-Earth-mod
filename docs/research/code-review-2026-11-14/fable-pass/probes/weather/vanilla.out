@@ -1,0 +1,6 @@
+runtime 10.0.8, VintagestoryAPI 1.22.7.0
+seed 1: yearly noise x3: mean -0.09, sd 1.67, -4.2..4.0 C; daily noise: mean 0.00, sd 0.61, -2.1..2.1 C; together sd 1.78 C; whole game years are 1.65 C off (rms), the worst of 200 by 4.0 C
+seed 12345: yearly noise x3: mean 0.07, sd 1.89, -5.4..4.3 C; daily noise: mean 0.00, sd 0.61, -2.2..2.1 C; together sd 1.99 C; whole game years are 1.86 C off (rms), the worst of 200 by 5.0 C
+seed 987654: yearly noise x3: mean 0.13, sd 1.77, -4.7..4.4 C; daily noise: mean -0.00, sd 0.61, -2.1..2.1 C; together sd 1.88 C; whole game years are 1.75 C off (rms), the worst of 200 by 4.5 C
+vanilla's rain cloudness noise: 0.260 us a reading
+vanilla's temperature noises: 0.140 us a reading

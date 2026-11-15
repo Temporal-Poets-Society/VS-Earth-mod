@@ -42,6 +42,12 @@ namespace EarthMap
         /// <summary>Whether this session writes Hydrate or Diedrate's aquifer data for new chunk columns.</summary>
         public bool WritesHodAquifers => writeHod;
 
+        /// <summary>For the self-test: whether Earth writes Hydrate or Diedrate's aquifer data in this world and why, and how many
+        /// chunk columns it wrote this session (decision 0059).</summary>
+        internal string HodReport() => (api?.ModLoader.IsModEnabled(HodAquiferContract.ModId) == true
+                ? (hodStatus ?? "no status") : "Hydrate or Diedrate is not installed; nothing is written.")
+            + " Writes: " + (writeHod ? "yes" : "no") + "; columns written this session: " + Interlocked.Read(ref columnsWritten) + ".";
+
         // after EarthGeology (0.35), whose WorldReady set-up this reads
         public override double ExecuteOrder() => 0.36;
         public override bool ShouldLoad(EnumAppSide side) => side == EnumAppSide.Server;
@@ -50,7 +56,19 @@ namespace EarthMap
         {
             this.api = api;
             api.Event.ServerRunPhase(EnumServerRunPhase.WorldReady, Init);
-            api.Event.ChunkColumnGeneration(OnPreDone, EnumWorldGenPass.PreDone, "standard");
+            // (FP-13) through EarthWorldGen's net
+            api.Event.ChunkColumnGeneration(EarthWorldGen.Guard(api, "water table (Hydrate or Diedrate's aquifer data)", OnPreDone), EnumWorldGenPass.PreDone, "standard");
+        }
+
+        /// <summary>(Decision 0083; FP-02) The water table where this world's rules read it (water table rules 1, springs rules
+        /// 2's seeps), and Hydrate or Diedrate's aquifer data from it where that mod is installed, off this session, for
+        /// EarthWorldGen's check before the first chunk.</summary>
+        internal void FeaturesOff(EarthParams p, System.Collections.Generic.List<string> off)
+        {
+            if (p.WaterTableRules < 1 && p.SpringRules < EarthParams.SpringRulesStreams) return;
+            if (!active) { off.Add("the water table (its line is above)"); return; }
+            if (p.WritesHodAquifers() && api.ModLoader.IsModEnabled(HodAquiferContract.ModId) && !writeHod)
+                off.Add("Hydrate or Diedrate's aquifer data from the water table (" + hodStatus + ")");
         }
 
         void Init()
@@ -63,7 +81,12 @@ namespace EarthMap
             try
             {
                 string json = api.Assets.TryGet(new AssetLocation(WaterTable.RulesAsset))?.ToText();
-                if (json == null) { Mod.Logger.Error("Earth water table: {0} is missing; the water table is off.", WaterTable.RulesAsset); return; }
+                if (json == null)
+                {
+                    Mod.Logger.Error("Earth water table: {0} is missing; the water table is off.", WaterTable.RulesAsset);
+                    hodStatus = "the water table is off (" + WaterTable.RulesAsset + " is missing); nothing is written.";
+                    return;
+                }
                 rules = new WaterTable(json);
                 curve = geology?.GroundModel?.Curve ?? GroundColumns.DepthCurve.For(p.GroundDepth, 1 / core.Model.Vertical.Slope(0), core.Model.SeaLevel);
                 classOf = BuildClassTable(out string unclassified);
@@ -74,6 +97,7 @@ namespace EarthMap
             catch (Exception e) when (e is FormatException or System.Text.Json.JsonException or InvalidOperationException or System.Collections.Generic.KeyNotFoundException)
             {
                 Mod.Logger.Error("Earth water table: the rules are invalid ({0}); the water table is off.", e.Message);
+                hodStatus = "the water table is off (its rules are invalid: " + e.Message + "); nothing is written.";
                 return;
             }
             if (!api.ModLoader.IsModEnabled(HodAquiferContract.ModId)) return;
@@ -81,6 +105,13 @@ namespace EarthMap
             {
                 // world generation changes for new worlds only: a save made before the water table keeps HoD's own aquifers
                 hodStatus = "this world was made before Earth's water table (rules 0); Hydrate or Diedrate makes its own aquifers, as before.";
+                Mod.Logger.Notification("Earth water table: {0}", hodStatus);
+                return;
+            }
+            if (!p.WritesHodAquifers())
+            {
+                hodStatus = (p.RegionalGeology ? "this world's biomes are vanilla's" : "this world's rock and ground are vanilla's")
+                    + "; Hydrate or Diedrate makes its own aquifers with its own defaults (decision 0059).";
                 Mod.Logger.Notification("Earth water table: {0}", hodStatus);
                 return;
             }
@@ -174,6 +205,8 @@ namespace EarthMap
             public double Elevation, TopK, PerchedTop, Aridity, Precip, Lat, Lon, Wetland;
             public bool Ground, SeaFloor, SaltFlat;
             public string Cover;
+            /// <summary>The ground column's sample where <see cref="Ground"/>.</summary>
+            public GroundColumns.Sample Sample;
         }
 
         WaterTable.Node NodeAt(double x, double z)
@@ -245,7 +278,7 @@ namespace EarthMap
             col.Count = 0;
             if (geology != null && geology.GroundColumnAt(x, z, col, out var sample))
             {
-                r.Ground = true; r.Cover = sample.Cover;
+                r.Ground = true; r.Cover = sample.Cover; r.Sample = sample;
                 rules.TopOf(col, geology.GroundModel.Materials, out r.TopK, out r.PerchedTop);
             }
             bool water = c.Water != TerrainModel.WaterNone || (c.River && !c.DryRiver);
@@ -339,10 +372,12 @@ namespace EarthMap
                 for (int i = 0; i < chunks.Length; i++) chunks[i].SetModdata(HodAquiferContract.ModDataKey, HodAquiferContract.Bytes(rating[i], salty[i]));
                 Interlocked.Increment(ref columnsWritten);
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                if (Interlocked.Increment(ref errors) <= 3)
-                    Mod.Logger.Error("Earth water table: Hydrate or Diedrate's aquifer data failed for chunk column {0},{1}; HoD makes its own there. {2}", request.ChunkX, request.ChunkZ, e);
+                // (FP-13) counted, then a failed pass (EarthWorldGen.Guard: noted, the server stops); before, HoD made its own
+                // aquifer data for that chunk for good
+                Interlocked.Increment(ref errors);
+                throw;
             }
         }
 
@@ -360,23 +395,74 @@ namespace EarthMap
             var col = column ??= new GroundColumns.Column();
             probes = new Probe[n * n];
             double rechargeSum = 0; int rechargeN = 0;
+            // (W-P4) the two readers made once per chunk, reading the sample's place and column through these locals
+            int lx = 0, lz = 0;
+            GroundColumns.Column c = null;
+            System.Func<int, byte> classAt = y =>
+            {
+                int id = blockId(lx, y, lz);
+                return id > 0 && id < classOf.Length ? classOf[id] : (byte)0;
+            };
+            System.Func<int, double> metresAt = d => WaterTable.MetresAt(c, d, curve);
             for (int j = 0; j < n; j++)
                 for (int i = 0; i < n; i++)
                 {
-                    int lx = (int)(off + i * step), lz = (int)(off + j * step);
+                    lx = (int)(off + i * step); lz = (int)(off + j * step);
                     var p = ProbeAt(cx + lx + 0.5, cz + lz + 0.5, bases[j * n + i], col);
                     probes[j * n + i] = p;
                     if (!p.Ok) continue;
                     rechargeSum += rules.Recharge(p.Precip, p.Aridity); rechargeN++;
-                    var c = p.Ground ? col : null;
-                    rules.Accumulate(SampleOf(p), y =>
-                    {
-                        int id = blockId(lx, y, lz);
-                        return id > 0 && id < classOf.Length ? classOf[id] : (byte)0;
-                    }, d => WaterTable.MetresAt(c, d, curve), sums);
+                    c = p.Ground ? col : null;
+                    rules.Accumulate(SampleOf(p), classAt, metresAt, sums);
                 }
             rating = new int[chunkCount]; salty = new bool[chunkCount];
             rules.Rate(sums, n * n, rechargeN > 0 ? rechargeSum / rechargeN : rules.RechargeFloor, rating, salty);
+        }
+
+        /// <summary>
+        /// The water at a column for the site drivers (EA-0054 step 1, /earth site): the table's depth below the ground
+        /// (m, negative above it), the ground's height above its drainage base (m, NaN where there is none), the mapped
+        /// wetland share, whether the column is open water, and the ground column's sample. False where the table is off
+        /// or outside the Earth.
+        /// </summary>
+        internal bool SiteWater(double x, double z, out double depth, out double aboveBase, out double wetland, out bool openWater, out GroundColumns.Sample sample, out bool ground)
+        {
+            depth = aboveBase = wetland = double.NaN; openWater = false; sample = default; ground = false;
+            if (!active) return false;
+            var col = column ??= new GroundColumns.Column();
+            var p = ProbeAt(x, z, col);
+            if (!p.Ok) return false;
+            depth = p.Table.Depth; openWater = p.Table.Water; wetland = p.Wetland;
+            aboveBase = double.IsNaN(p.Base.Level) || double.IsInfinity(p.Base.Level) ? double.NaN : Math.Max(0, p.Elevation - p.Base.Level);
+            col.Count = 0;
+            ground = geology != null && geology.GroundColumnAt(x, z, col, out sample);
+            return true;
+        }
+
+        /// <summary>
+        /// EA-0054 step 2 (site rules 1): the site of an n x n grid of columns in a chunk, 32 / n blocks apart from the
+        /// middle of the first cell, row-major (z outer), for the tree and shrub pick. One drainage-base field for the whole
+        /// grid, as the aquifer rating reads it. False where the table is off; a column outside the Earth stays not Ok.
+        /// </summary>
+        internal bool SiteGrid(int chunkX, int chunkZ, int n, SiteNiche.Column[] into)
+        {
+            if (!active || into == null || into.Length < n * n) return false;
+            double step = 32.0 / n, off = Math.Floor(step / 2);
+            int cx = chunkX * 32, cz = chunkZ * 32;
+            var bases = new WaterTable.Base[n * n];
+            Metres(0, out _, out double mz);
+            rules.BaseField(cx + off, cz + off, n, step, NodeAt, MetresXAt, mz, bases);
+            var col = column ??= new GroundColumns.Column();
+            for (int j = 0; j < n; j++)
+                for (int i = 0; i < n; i++)
+                {
+                    var p = ProbeAt(cx + (int)(off + i * step) + 0.5, cz + (int)(off + j * step) + 0.5, bases[j * n + i], col);
+                    if (!p.Ok) { into[j * n + i] = default; continue; }
+                    double aboveBase = double.IsNaN(p.Base.Level) || double.IsInfinity(p.Base.Level) ? double.NaN : Math.Max(0, p.Elevation - p.Base.Level);
+                    var soil = p.Ground ? SiteSoil.Input.FromSample(p.Sample) : SiteSoil.Input.Unknown;
+                    into[j * n + i] = SiteNiche.From(p.Table.Depth, aboveBase, p.Table.Water, soil, p.Aridity);
+                }
+            return true;
         }
 
         // ------------------------------------------------------------------ /earth water

@@ -492,6 +492,16 @@ namespace EarthMap.Core
             internal readonly object Gate = new();
             public bool Planned => planned;
             internal void Done() => planned = true;
+            internal Body Copy() => (Body)MemberwiseClone();
+            /// <summary>Puts back what <see cref="OreDepositPlan.TryEnsure"/> changes (its search, growth, fill and compact cluster):
+            /// a field Ensure comes to change must be listed here too.</summary>
+            internal void RestoreFrom(Body s)
+            {
+                X = s.X; Z = s.Z; A = s.A; B = s.B; Sheets = s.Sheets; Fill = s.Fill;
+                MinX = s.MinX; MaxX = s.MaxX; MinZ = s.MinZ; MaxZ = s.MaxZ;
+                Compact = s.Compact; CompactX = s.CompactX; CompactZ = s.CompactZ; CompactDepth = s.CompactDepth;
+                MovedM = s.MovedM; LayerFound = s.LayerFound; SearchMs = s.SearchMs;
+            }
             public override string ToString() => D.ToString();
         }
 
@@ -549,8 +559,11 @@ namespace EarthMap.Core
         /// growth (at most 1.9 times its reach, plus the rounding) or a compact cluster's box.</summary>
         static double GrownReachX(Body b) => Math.Max(1.9 * Reach(b) / b.Hx + 3, Math.Ceiling(Math.Cbrt(Math.Max(1, b.Target))) + 3);
 
-        /// <summary>The bodies whose box reaches the 32×32 chunk at (chunkX, chunkZ).</summary>
-        public IEnumerable<Body> BodiesNear(int x0, int z0, int x1, int z1)
+        /// <summary>The bodies whose box reaches the area (x0..x1, z0..z1), each planned (<see cref="TryEnsure"/>); a body
+        /// whose plan this thread could not finish from the real heights is left out. With <paramref name="startSearch"/> false a
+        /// body ore rules v5 would first have to search for is not searched here but returned unplanned, with its catalogue
+        /// place and box (/earth ores on the main thread: a 50 km square of searches one after another; ER-06).</summary>
+        public IEnumerable<Body> BodiesNear(int x0, int z0, int x1, int z1, bool startSearch = true)
         {
             var seen = new HashSet<int>();
             for (long cz = Floor(z0, Cell); cz <= Floor(z1, Cell); cz++)
@@ -560,11 +573,15 @@ namespace EarthMap.Core
                         {
                             var b = Bodies[i];
                             if (!seen.Add(i)) continue;
-                            Ensure(b);   // its final box
+                            bool unsearched = !startSearch && !b.Planned && Searches(b);
+                            if (!unsearched && !TryEnsure(b)) continue;   // its final box
                             if (b.MaxX < x0 || b.MinX > x1 || b.MaxZ < z0 || b.MinZ > z1) continue;
                             yield return b;
                         }
         }
+
+        /// <summary>Whether planning the body runs ore rules v5's valley search (a movable blanket in a world with the search).</summary>
+        public bool Searches(Body b) => search != null && Movable(b);
         public IEnumerable<AreaPlan> AreasNear(int x0, int z0, int x1, int z1)
         {
             foreach (var a in Areas) if (!a.OffRing && !(a.MaxX < x0 || a.MinX > x1 || a.MaxZ < z0 || a.MinZ > z1)) yield return a;
@@ -682,12 +699,39 @@ namespace EarthMap.Core
 
         /// <summary>Fill per envelope block from the exact block count of the envelope (small bodies) or the quadrature; a body
         /// under one block, or one whose envelope holds fewer blocks than it needs, is placed as a compact cluster.</summary>
-        public void Ensure(Body b)
+        public void Ensure(Body b) => TryEnsure(b);
+
+        /// <summary>
+        /// <see cref="Ensure"/>; false where ore rules v5's valley search read heights this thread could not get
+        /// (FineElevation.MissedReads: a GLO-90 tile not on this machine, on a thread that may not fetch it, such as the main
+        /// thread's prospecting pick, or a thread on the built-in heights). The body is then put back as it was and stays
+        /// unplanned, so a later asker (the deposit pass, which waits for its tiles) plans it from the real heights. Before, the
+        /// first asker's answer was kept for the session, and a body's place could differ between the chunks of two sessions
+        /// (ER-06, code review 14 November 2026).
+        /// </summary>
+        public bool TryEnsure(Body b)
         {
-            if (b.Planned) return;
+            if (b.Planned) return true;
             lock (b.Gate)
             {
-                if (b.Planned) return;
+                if (b.Planned) return true;
+                bool searches = Searches(b);
+                var before = searches ? b.Copy() : null;
+                // (L-1 of the Fable pass) a search that ends early (the world closing under a pool thread's search, or any
+                // throw) leaves the body as it was, unplanned, for the next asker
+                try { return PlanLocked(b, searches, before); }
+                catch
+                {
+                    if (searches) b.RestoreFrom(before);
+                    throw;
+                }
+            }
+        }
+
+        bool PlanLocked(Body b, bool searches, Body before)
+        {
+            {
+                int missed = FineElevation.MissedReads;
                 // ore rules v5 (EA-0058): a movable blanket goes where its layers are and is sized by the columns that have them
                 bool layered = false;
                 long t0 = System.Diagnostics.Stopwatch.GetTimestamp();
@@ -730,7 +774,9 @@ namespace EarthMap.Core
                     b.MinX = Math.Min(b.MinX, b.CompactX - reach); b.MaxX = Math.Max(b.MaxX, b.CompactX + reach);
                     b.MinZ = Math.Min(b.MinZ, b.CompactZ - reach); b.MaxZ = Math.Max(b.MaxZ, b.CompactZ + reach);
                 }
+                if (searches && FineElevation.MissedReads != missed) { b.RestoreFrom(before); return false; }
                 b.Done();
+                return true;
             }
         }
         /// <summary>The blanket's depth window (blocks below the top), as PlaceBody snaps it: from its top (never the top block) to
@@ -749,6 +795,8 @@ namespace EarthMap.Core
             Window(b, out int from, out int to);
             double envelope = 0;
             for (int z = b.MinZ; z <= b.MaxZ; z++)
+            {
+                CheckStop();
                 for (int x = b.MinX; x <= b.MaxX; x++)
                 {
                     if (!ColumnBlocks(b, x, z, out double t, out double s)) continue;
@@ -756,12 +804,35 @@ namespace EarthMap.Core
                     if (!asked.TryGetValue(key, out int room)) asked[key] = room = search.LayerBlocks(x, z, b.Where.Classes, from, to);
                     envelope += Math.Min(s - t, room);
                 }
+            }
             return envelope;
         }
 
         /// <summary>Ore rules v5 (<see cref="ValleySearch"/>): keeps the body where its footprint has one of its layers anywhere,
         /// else moves its centre to the nearest sampled point that has one, ring by ring outwards (the first point of the
         /// nearest ring, clockwise from north), within the search radius. Deterministic: the model's columns only.</summary>
+        /// <summary>
+        /// (L-1 of the Fable pass) Set on a thread whose valley searches must end when the world closes: the prospecting pick's
+        /// search on a pool thread (EarthOreDeposits.SearchLater), which could otherwise run seconds into the next world on the
+        /// closed one's model. The deposit pass's searches never stop early.
+        /// </summary>
+        [ThreadStatic] static Func<bool> stopSearch;
+
+        /// <summary><paramref name="work"/> on this thread with <paramref name="stop"/> asked during each valley search; a stop
+        /// throws OperationCanceledException and the body stays as it was (<see cref="TryEnsure"/>).</summary>
+        public static T WithStop<T>(Func<bool> stop, Func<T> work)
+        {
+            var was = stopSearch;
+            stopSearch = stop;
+            try { return work(); }
+            finally { stopSearch = was; }
+        }
+
+        static void CheckStop()
+        {
+            if (stopSearch?.Invoke() == true) throw new OperationCanceledException("the world closed during an ore valley search");
+        }
+
         void Relocate(Body b)
         {
             Window(b, out int from, out int to);
@@ -780,6 +851,7 @@ namespace EarthMap.Core
             double step = Math.Max(search.StepMetres, block), max = search.RadiusKm * 1000;
             for (double r = Math.Max(step, Math.Floor(b.B / step) * step); r <= max; r += step)
             {
+                CheckStop();
                 int n = Math.Max(8, (int)Math.Ceiling(2 * Math.PI * r / step));
                 for (int k = 0; k < n; k++)
                 {
@@ -1132,6 +1204,18 @@ namespace EarthMap.Core
         /// <summary>The first ore rules with the blankets' valley search (EA-0058), and in which a frozen loose block (permafrost
         /// sand or gravel) takes a deposit as the block it froze from would.</summary>
         public const int ValleySearchRules = 5;
+
+        // (ER-10, code review 14 November 2026) What each ore rules version turns on, as named facts: every test of the saved ore
+        // rules (EarthParams.OreRules, OreSession.Rules) goes through these two, and OreDepositsTests pins their first versions.
+        // The ore layers' own versions are checked where their files are read (OreLayers). One strategy object per session in
+        // place of the generator's flags waits for ore rules 6 (the review's W13).
+
+        /// <summary>Ore rules 4 (decision 0065): the catalogue's deposits at their real size in their layers, background attempts
+        /// by heat maps v2 at the heat that raises them (the Ores tab's choice of Earth's ore maps on ground columns).</summary>
+        public static bool CatalogueBodies(int rules) => rules >= CatalogueRules;
+        /// <summary>Ore rules 5 (EA-0058): a cover blanket off its layers moves to the nearest place that has them; a frozen loose
+        /// block takes a deposit as the block it froze from would.</summary>
+        public static bool ValleySearch(int rules) => rules >= ValleySearchRules;
         /// <summary>The heat that raises a background deposit above its class floor. Rules v4: none for the resources the
         /// catalogue places (their real deposits are the catalogue's, at their real size; a hotspot boost would count them
         /// twice and smear them over a 0.5° cell), the heat for quartz veins, clay, peat, bog iron and salt flats. Before v4:
@@ -1139,14 +1223,14 @@ namespace EarthMap.Core
         /// does not mean lack of resource"), so the background is the configurable class floor in its host rock and layer
         /// everywhere, without the surveys' bias towards well-mapped countries.</summary>
         public static double Evidence(int rules, string resource, OreClass cls, double heat, string deposit = null)
-            => rules < CatalogueRules || Uncatalogued(resource, cls, deposit) ? heat : 0;
+            => !CatalogueBodies(rules) || Uncatalogued(resource, cls, deposit) ? heat : 0;
         static bool Uncatalogued(string resource, OreClass cls, string deposit)
             => cls == OreClass.Veins || cls == OreClass.Soil && (resource is "clay" or "peat" || deposit is "earth-bogiron" or "earth-saltflat");
         /// <summary>Rules v4: a background deposit's radius scale at the world's scale (relative to 1:100), capped so the radius
         /// stays within <paramref name="cap"/> blocks and at least half a block; 1 before v4.</summary>
         public static double RadiusScale(int rules, double metresPerBlock, double nativeRadius, double cap = 64)
         {
-            if (rules < CatalogueRules || !(metresPerBlock > 0)) return 1;
+            if (!CatalogueBodies(rules) || !(metresPerBlock > 0)) return 1;
             double r = OreScale.ReferenceMetresPerBlock / metresPerBlock;
             // the 1:100 play style (100.2 m per block north-south) keeps today's calibration exactly
             if (Math.Abs(r - 1) < .02) return 1;
@@ -1177,7 +1261,7 @@ namespace EarthMap.Core
         /// (or not an Earth world) and gets 0.
         /// </summary>
         public static int Of(int saved, int oreLayers, int oreRules, int waterTableRules)
-            => saved > 0 ? saved : oreLayers > 0 || oreRules >= OreBackground.CatalogueRules || waterTableRules > 0 ? Version : 0;
+            => saved > 0 ? saved : oreLayers > 0 || OreBackground.CatalogueBodies(oreRules) || waterTableRules > 0 ? Version : 0;
 
         /// <summary>Whether a deposit variant read from <paramref name="fromFile"/> stays in a world of set <paramref name="set"/>.</summary>
         public static bool Keeps(string fromFile, int set) => set >= Version || Array.IndexOf(Files, fromFile) < 0;

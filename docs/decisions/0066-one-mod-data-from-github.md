@@ -1,7 +1,7 @@
 # 0066: Earth 2.0 is one mod: the server fetches its data from GitHub, the data-pack mods retire
 
 Status: **agreed** (the author, 8 November 2026: "i think one mod + git", then "Yes, go ahead"); data uploaded,
-built in 2.0.0-rc.1 and on `main` (not released). Asked for by the author on 8 November: "Check data split and current
+built in 2.0.0-rc.1; in Earth 2.0.0. Asked for by the author on 8 November: "Check data split and current
 role of these mods (they where made just due to size limit on VS mod database) … as we are now hosting largest data on
 GitHub (if some data is missing then we need to upload). And plan correct update for all of them as in reality it is
 one mod." Uploads approved: "Yes, upload when ready". Date: 2026-11-08.

@@ -69,30 +69,11 @@ namespace EarthMap.Core
 
         public static async Task<Result> GetAsync(string dataFolder, string source, Action<string> log, CancellationToken token = default, IEnumerable<Set> sets = null)
         {
-            log ??= _ => { };
-            var todo = Missing(dataFolder, true, sets);
-            if (todo.Count == 0) return Result.Here;
-            if (string.IsNullOrWhiteSpace(source)) { log("no source set; the 30″ ground sets are not fetched."); return Result.Lacking; }
-            // servers sharing the folder take turns (review A4), and look again once they have it
-            using var turn = await DataTransport.TakeTurnAsync(Path.Combine(dataFolder, Subfolder), log, token).ConfigureAwait(false);
-            todo = Missing(dataFolder, true, sets);
-            if (todo.Count == 0) return Result.Here;
-            log($"fetching {todo.Count} 30″ ground set(s), {TotalBytes(todo) / 1e6:F0} MB, from {source} into {Path.Combine(dataFolder, Subfolder)}.");
-            using var transport = new DataTransport(TimeSpan.FromMinutes(2));
-            bool failed = false, lacking = false;
-            foreach (var s in todo)
-            {
-                token.ThrowIfCancellationRequested();
-                var (ok, _, notThere) = await transport.FileAsync(source, s.Name, PathOf(dataFolder, s), s.Bytes, s.Sha256, DataTransport.FileTries, log, null, token).ConfigureAwait(false);
-                if (ok) log($"{s.Name}: {s.Bytes / 1e6:F1} MB, checked.");
-                else
-                {
-                    log($"{s.Name} could not be fetched{(notThere ? " (the source doesn't have it)" : "")}.");
-                    if (notThere) lacking = true; else failed = true;
-                }
-            }
-            // a set the source doesn't have can't be had however long one waits: that decides
-            return lacking ? Result.Lacking : failed ? Result.Failed : Result.Here;
+            // (EA-0092 A4) the one protocol for a set of published files (DataTransport.EnsureFilesAsync); a set the source
+            // doesn't have can't be had however long one waits: Lacking decides
+            var specs = (sets ?? Sets).Select(s => new DataTransport.FileSpec(s.Name, PathOf(dataFolder, s), s.Bytes, s.Sha256)).ToList();
+            var (result, _) = await DataTransport.EnsureFilesAsync(Path.Combine(dataFolder, Subfolder), specs, source, "GroundRepo", "ground source", "30″ ground set(s)", log, token).ConfigureAwait(false);
+            return result switch { DataTransport.SetResult.Here => Result.Here, DataTransport.SetResult.Lacking => Result.Lacking, _ => Result.Failed };
         }
     }
 }

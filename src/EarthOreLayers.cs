@@ -50,6 +50,11 @@ namespace EarthMap
         /// <summary>Blocks put back by rule and the class of the layer they were in (rule index * class count + class).</summary>
         readonly long[] removedFrom;
         long indicatorsRemoved, tablesRebuilt;
+        /// <summary>Rules v3: the block of each surface rule (0: the block does not exist, the rule is skipped), and how many
+        /// stones each rule laid this session.</summary>
+        readonly int[] surfaceBlock;
+        readonly long[] surfaceLaid;
+        readonly long seed;
         /// <summary>The first put-back block of each rule this session, for /earth orelayers.</summary>
         readonly string[] removedExample;
 
@@ -58,20 +63,26 @@ namespace EarthMap
         /// <summary>Earth's layer deposits (placers, salt flats, bog iron, bauxite, kaolin, gypsum): ordinary deposit assets
         /// that only ore-layer worlds keep, placed only where ground columns own the column.</summary>
         internal const string DepositFile = "earth:worldgen/deposits/earth-layers.json";
-        internal static bool IsLayerDeposit(DepositVariant v) => v?.fromFile == DepositFile;
+        /// <summary>EA-0068, decision 0077: kyanite, sillimanite and andalusite, layer deposits that only worlds with ore layers
+        /// v4 and later keep (<see cref="OreLayers.AluminosilicateVersion"/>), so v1-v3 worlds generate as before.</summary>
+        internal const string AluminosilicateFile = "earth:worldgen/deposits/earth-aluminosilicates.json";
+        internal static bool IsLayerDeposit(DepositVariant v) => v?.fromFile is DepositFile or AluminosilicateFile;
 
         /// <summary>
-        /// Takes Earth's layer deposits out of the deposit list unless this world has ore layers, bog iron unless Geology
+        /// Takes Earth's layer deposits out of the deposit list unless this world has ore layers (the aluminosilicates unless
+        /// they are v4 or later; <paramref name="layers"/> is the world's ore-layer rules version, 0 when off), bog iron unless Geology
         /// Additions' bog iron item exists, and Earth's ore and gem deposits unless the world's deposit set has them
         /// (<see cref="EarthDepositSet"/>, <see cref="DepositSetOf"/>). Removed, not set to 0 attempts: vanilla draws a random
         /// number per variant and chunk even at 0 attempts, so the old list keeps older and non-Earth worlds' deposits
         /// exactly as they were. Idempotent; run at world start and after every deposit reload, before the ore maps bind.
         /// </summary>
-        internal static int PruneDeposits(ICoreServerAPI api, GenDeposits gen, bool layered, int depositSet)
+        internal static int PruneDeposits(ICoreServerAPI api, GenDeposits gen, int layers, int depositSet)
         {
             if (gen?.Deposits == null) return 0;
             bool bogIron = api.World.GetItem(new AssetLocation("game:stone-bogiron")) != null;
-            var keep = gen.Deposits.Where(v => (!IsLayerDeposit(v) || layered && (bogIron || v.Code != "earth-bogiron")) && EarthDepositSet.Keeps(v?.fromFile, depositSet)).ToArray();
+            bool layered = OreLayerFacts.Layers(layers), aluminosilicates = OreLayerFacts.Aluminosilicates(layers);
+            var keep = gen.Deposits.Where(v => (!IsLayerDeposit(v) || layered && (bogIron || v.Code != "earth-bogiron") && (aluminosilicates || v.fromFile != AluminosilicateFile))
+                && EarthDepositSet.Keeps(v?.fromFile, depositSet)).ToArray();
             int n = gen.Deposits.Length - keep.Length;
             if (n > 0) gen.Deposits = keep;
             return n;
@@ -101,6 +112,17 @@ namespace EarthMap
             removedFrom = new long[rules.Rules.Count * OreLayers.ClassNames.Length];
             removedExample = new string[rules.Rules.Count];
             names = OreBlockNames.Of(api);
+            seed = api.World.Seed;
+            surfaceLaid = new long[rules.Surface.Count];
+            surfaceBlock = new int[rules.Surface.Count];
+            for (int i = 0; i < surfaceBlock.Length; i++)
+            {
+                var r = rules.Surface[i];
+                Block b = null;
+                try { b = api.World.GetBlock(new AssetLocation(r.Block)); } catch (Exception) { }
+                surfaceBlock[i] = b?.Id ?? 0;
+                if (surfaceBlock[i] <= 0) api.Logger.Warning("Earth ore layers: surface rule '{0}' names no block ({1}); it is skipped.", r.Name, r.Block);
+            }
         }
 
         // ------------------------------------------------------------------ deposit blocks
@@ -218,11 +240,21 @@ namespace EarthMap
         /// <summary>(CR-O4) This world's latch, not the process's: EarthGeology makes the ore layers anew for each world, so each
         /// logs its own first error.</summary>
         int readingErrors;
+        /// <summary>/earth propick old (EA-0075's comparison): this thread reads columns as before the fix, for that one scan.</summary>
+        [ThreadStatic] internal static bool ReadingAsBefore;
+
         /// <summary>
         /// Prospecting with a generator Earth does not wrap (vanilla ores, other mods' deposits): vanilla's pick reads a
         /// simulated vanilla rock column. It gets Earth's own blocks instead, with every block in a layer this deposit may not
         /// use left out, so the reading counts only hosts the deposit can really fill. Above <paramref name="floor"/> only
         /// (the rock floor, where nothing was placed); the column keeps its length, which vanilla divides by.
+        /// Vanilla's column also holds the ores its deposits would place there (ProPickWorkSpace.GetRockColumn runs
+        /// GenDeposits.GeneratePartial), and a child deposit (silver and gold in quartz, sylvite in halite) counts exactly
+        /// those parent ore blocks as its hosts (EA-0075: replacing them by Earth's rock read every child as 0). An ore block
+        /// of that column stays where Earth's generation could have put the same ore there: the ore exists in Earth's rock
+        /// at that depth (ore-...-galena-{rock}, as the placeblock resolves) and the layer rules of the deposits that place it
+        /// allow that layer; anything else (other non-rock blocks, ores Earth's ground would not hold) becomes Earth's rock as
+        /// before. Then this deposit's own rule applies to every cell, as generation nests the child in its parent.
         /// </summary>
         public void Reading(DiscDepositGenerator gen, BlockPos pos, int floor, ref int[] blockColumn)
         {
@@ -230,15 +262,32 @@ namespace EarthMap
             {
                 var geo = api.ModLoader.GetModSystem<EarthGeology>();
                 if (geo?.Layers != this || gen == null) return;
-                Blocks().RuleOf.TryGetValue(gen, out var rule);
+                var b = Blocks();
+                b.RuleOf.TryGetValue(gen, out var rule);
                 int top = api.World.BlockAccessor.GetTerrainMapheightAt(pos);
                 if (top <= 1) return;
                 var column = (int[])blockColumn.Clone();
+                bool keepOres = !ReadingAsBefore;
                 for (int y = Math.Max(1, floor + 1); y < column.Length && y <= top; y++)
                 {
-                    int d = top - y, r = regionalRock(pos.X, pos.Z, d, top);
-                    if (r > 0) column[y] = r;
-                    if (rule != null && !OreLayers.Allows(rule, geo.LayerCodeAt(pos.X, pos.Z, d, top, column[y]), d, RockName(column[y]))) column[y] = 0;
+                    int d = top - y, r = regionalRock(pos.X, pos.Z, d, top), simulated = column[y];
+                    int rock = r > 0 ? r : simulated;
+                    bool ore = keepOres && r > 0 && IsOre(simulated);
+                    if (ore)
+                    {
+                        // the same ore in Earth's rock here, and the layer rules of the deposits that place it
+                        ore = OreIn(simulated, r) > 0;
+                        var parents = simulated < b.RulesOf.Length ? b.RulesOf[simulated] : null;
+                        if (ore && parents != null && parents.Length > 0)
+                        {
+                            int layer = geo.LayerCodeAt(pos.X, pos.Z, d, top, r);
+                            bool any = false;
+                            foreach (var pr in parents) if (pr == null || OreLayers.Allows(pr, layer, d, RockName(r))) { any = true; break; }
+                            ore = any;
+                        }
+                    }
+                    if (r > 0 && !ore) column[y] = r;
+                    if (rule != null && !OreLayers.Allows(rule, geo.LayerCodeAt(pos.X, pos.Z, d, top, rock), d, RockName(rock))) column[y] = 0;
                 }
                 blockColumn = column;
             }
@@ -247,6 +296,33 @@ namespace EarthMap
                 if (Interlocked.Increment(ref readingErrors) == 1) api.Logger.Error("Earth ore layers: prospecting column failed; vanilla's reading is used. {0}", e);
             }
         }
+
+        /// <summary>Whether a block is an ore block (EnumBlockMaterial.Ore), cached per id.</summary>
+        bool IsOre(int id)
+        {
+            if (id <= 0) return false;
+            var cache = oreCache;
+            if (cache == null || id >= cache.Length) oreCache = cache = new sbyte[Math.Max(id + 1, api.World.Blocks.Count)];
+            if (cache[id] == 0) cache[id] = (sbyte)(api.World.Blocks[id]?.BlockMaterial == EnumBlockMaterial.Ore ? 1 : -1);
+            return cache[id] > 0;
+        }
+        volatile sbyte[] oreCache;
+
+        /// <summary>The id of ore block <paramref name="ore"/> with its rock variant set to rock <paramref name="rock"/>'s
+        /// (ore-medium-galena-granite in limestone: ore-medium-galena-limestone), 0 when the game has no such block.</summary>
+        int OreIn(int ore, int rock)
+        {
+            long key = (long)ore << 32 | (uint)rock;
+            if (oreInCache.TryGetValue(key, out int id)) return id;
+            id = 0;
+            var o = api.World.Blocks[ore];
+            string oreRock = o?.Variant?["rock"], rockName = api.World.Blocks[rock]?.Variant?["rock"] ?? RockName(rock);
+            if (oreRock != null && rockName != null)
+                id = oreRock == rockName ? ore : api.World.GetBlock(o.CodeWithVariant("rock", rockName))?.BlockId ?? 0;
+            oreInCache[key] = id;
+            return id;
+        }
+        readonly System.Collections.Concurrent.ConcurrentDictionary<long, int> oreInCache = new();
 
         // ------------------------------------------------------------------ layer tables
 
@@ -258,6 +334,8 @@ namespace EarthMap
             public readonly int[] Top = new int[1024], Depth = new int[1024], Start = new int[1024], Length = new int[1024];
             public readonly byte[] RegionalAge = new byte[1024];
             public readonly bool[] RegionalEvaporite = new bool[1024];
+            /// <summary>Rules v3: the column's surface rule (index + 1), 0 for none.</summary>
+            public readonly byte[] Surface = new byte[1024];
             public int[] End = new int[8192], Code = new int[8192];
             public int Count;
             /// <summary>Rebuilt from the model (no ground-pass table was waiting).</summary>
@@ -267,7 +345,16 @@ namespace EarthMap
             internal void Reset(int chunkX, int chunkZ)
             {
                 ChunkX = chunkX; ChunkZ = chunkZ; Count = 0; Rebuilt = false;
-                Array.Fill(Top, -1); Array.Clear(Length);
+                Array.Fill(Top, -1); Array.Clear(Length); Array.Clear(Surface);
+            }
+            /// <summary>(EA-0087) The segment arrays cut to the segments recorded: up to <see cref="MaxTables"/> tables wait
+            /// for their chunk's deposit pass, and 8,192 ends and codes each (64 kB) were about 63 MB when full. Record
+            /// grows them again when a pooled table is filled anew.</summary>
+            internal void Trim()
+            {
+                if (End.Length == Count) return;
+                Array.Resize(ref End, Count);
+                Array.Resize(ref Code, Count);
             }
         }
         const int MaxTables = 768;
@@ -298,6 +385,7 @@ namespace EarthMap
             for (int i = 0; i < col.Segments; i++) { t.End[t.Count] = col.SegEnd[i]; t.Code[t.Count] = Rules.CodeOf(col, i); t.Count++; }
             t.RegionalAge[k] = (byte)Rules.AgeOfEra(era);
             t.RegionalEvaporite[k] = Rules.IsEvaporiteProfile(profile);
+            t.Surface[k] = (byte)Rules.SurfaceRuleOf(col);
         }
 
         /// <summary>Keeps a finished table until its chunk's deposit pass; the oldest go when too many wait (they are rebuilt).
@@ -305,6 +393,8 @@ namespace EarthMap
         /// chunk once its table is released, so a long pregeneration does not grow the bookkeeping.</summary>
         public void Keep(Table t)
         {
+            // before it is shared: no other thread reads it yet
+            t.Trim();
             t.Kept = Interlocked.Increment(ref keptCount);
             tables[Key(t.ChunkX, t.ChunkZ)] = t;
             // only while the deposit pass lags far behind the ground pass: a scan of the waiting tables for the oldest
@@ -451,6 +541,45 @@ namespace EarthMap
                     foreach (var r in of) if ((removedMask & 1u << r.Index) == 0 || (keptMask & 1u << r.Index) != 0) { orphan = false; break; }
                     if (orphan) { sd.SetBlockUnsafe(si, 0); Interlocked.Increment(ref indicatorsRemoved); }
                 }
+            if (surfaceBlock.Length > 0) LaySurface(chunks, chunkX, chunkZ, t);
+        }
+
+        /// <summary>
+        /// Rules v3: loose flint and chert on the ground of their cover (<see cref="OreLayers.SurfaceRule"/>), once per column with
+        /// the rule's chance from the world seed and the column's position. After the indicator check, so a vanilla flint
+        /// deposit that was put back does not take these with it. Dry rules want air with no water on the column's top, water
+        /// rules water; a block already there (grass comes later) is never replaced.
+        /// </summary>
+        void LaySurface(IServerChunk[] chunks, int chunkX, int chunkZ, Table t)
+        {
+            int maxY = chunks.Length * 32 - 1;
+            for (int k = 0; k < 1024; k++)
+            {
+                int sr = t.Surface[k] - 1, top = t.Top[k];
+                if (sr < 0 || top < 1 || top + 1 > maxY) continue;
+                int id = surfaceBlock[sr];
+                if (id <= 0) continue;
+                var rule = Rules.Surface[sr];
+                int x = k & 31, z = k >> 5;
+                if (Unit(seed, chunkX * 32 + x, chunkZ * 32 + z, sr) >= rule.Chance) continue;
+                int y = top + 1;
+                var data = chunks[y / 32].Data;
+                int index = ((y % 32) * 32 + z) * 32 + x;
+                if (data.GetBlockIdUnsafe(index) != 0) continue;
+                bool water = data.GetFluid(index) != 0;
+                if (water != rule.InWater) continue;
+                var below = chunks[top / 32].Data;
+                if (below.GetBlockIdUnsafe(((top % 32) * 32 + z) * 32 + x) == 0) continue;
+                data.SetBlockUnsafe(index, id);
+                Interlocked.Increment(ref surfaceLaid[sr]);
+            }
+        }
+        /// <summary>A number in [0, 1) from the seed, a column and a rule (SplitMix64), the same in every run.</summary>
+        static double Unit(long seed, int x, int z, int rule)
+        {
+            ulong h = (ulong)seed ^ (ulong)(uint)x * 0x9E3779B97F4A7C15UL ^ (ulong)(uint)z * 0xC2B2AE3D27D4EB4FUL ^ (ulong)(rule + 1) * 0x165667B19E3779F9UL;
+            h = (h ^ h >> 30) * 0xBF58476D1CE4E5B9UL; h = (h ^ h >> 27) * 0x94D049BB133111EBUL; h ^= h >> 31;
+            return (h >> 11) * (1.0 / (1UL << 53));
         }
 
         /// <summary>
@@ -553,6 +682,13 @@ namespace EarthMap
             }
             if (!any) sb.Append("none yet");
             sb.AppendFormat(CultureInfo.InvariantCulture, ". Indicators removed: {0}. Tables rebuilt: {1}.", Interlocked.Read(ref indicatorsRemoved), Interlocked.Read(ref tablesRebuilt));
+            if (surfaceLaid.Length > 0)
+            {
+                sb.Append(" Surface stones laid:");
+                for (int i = 0; i < surfaceLaid.Length; i++)
+                    sb.AppendFormat(CultureInfo.InvariantCulture, "{0} {1} {2}", i == 0 ? "" : ",", Rules.Surface[i].Name, Interlocked.Read(ref surfaceLaid[i]));
+                sb.Append('.');
+            }
             return sb.ToString();
         }
     }

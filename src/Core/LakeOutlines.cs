@@ -189,6 +189,15 @@ namespace EarthMap.Core
             public byte[] Flags;
             /// <summary>Each lake's area in this tile (blocks²).</summary>
             public float[] Area;
+            /// <summary>Each lake's sides of the tile its outline runs along (SideW, SideE, SideS, SideN): where the lake
+            /// goes on into the next tile.</summary>
+            public byte[] Sides;
+            /// <summary>Where each lake's outline runs along each side of the tile (blocks along that side, from its west or
+            /// south end): [4 * lake + side] with side 0 west, 1 east, 2 south, 3 north; min > max where it doesn't.</summary>
+            public float[] SpanMin, SpanMax;
+            /// <summary>GenFixRules 5 (EA-0112): each lake's area with its pieces in the tiles next door, filled when first
+            /// asked (NaN until then).</summary>
+            public float[] Whole;
             public int Nx, Nz;
             public double Cell;
             /// <summary>Each cell's edges (CellStart, CellEdges) and the lake at its centre (CellLake: -1 none; with
@@ -212,6 +221,12 @@ namespace EarthMap.Core
             /// <summary>That lake's area (blocks², its part in the tile the shore is in): a pond smaller than a block or two
             /// may hold no block's centre and show no water.</summary>
             public double Area;
+            /// <summary>The tile (key + 1, 0: none) and lake index the hit's Area belongs to, for
+            /// <see cref="LakeOutlineLayer.WholeArea"/>.</summary>
+            internal int TileKey1, LakeIndex;
+            /// <summary>The layer that made this hit (its tile and lake numbers are that layer's): the water mask's, the works
+            /// of 1318 or the river outlines' each number their lakes per tile on their own.</summary>
+            internal LakeOutlineLayer Owner;
             /// <summary>Outside: the highest level (m) of the lakes within HoldReach, NaN when there is none.</summary>
             public double HoldLevel;
         }
@@ -268,6 +283,19 @@ namespace EarthMap.Core
 
         public static double ReachFor(EarthGeometry geo) => Math.Clamp(Math.Round(800 / (Geo.MetresPerDegree / geo.BlocksPerDegreeZ)), 6, 64);
 
+        /// <summary>
+        /// The distance (blocks) from a point to the nearest side of its tile. Inside a piece, <see cref="Hit.Dist"/> counts a
+        /// tile side as no shore wherever any piece goes on across it (whatever its flags); a disc that must hold only the
+        /// very pieces of its centre also stops at the sides (TerrainModel.CoastDistanceAt).
+        /// </summary>
+        public double TileSideDistance(double lat, double lon)
+        {
+            Data.TileAt(lat, lon, out double dLat, out double dLon);
+            double w = Data.TileDeg * bpdX, ht = Data.TileDeg * bpdZ;
+            double px = Math.Min(dLon * bpdX, w), pz = Math.Min(dLat * bpdZ, ht);
+            return Math.Min(Math.Min(px, w - px), Math.Min(pz, ht - pz));
+        }
+
         public Hit At(double lat, double lon)
         {
             var h = new Hit { Level = double.NaN, HoldLevel = double.NaN, Dist = Reach };
@@ -285,9 +313,10 @@ namespace EarthMap.Core
                 h.Level = own.Level[lake];
                 h.Flags = own.Flags[lake];
                 h.Area = own.Area[lake];
+                h.TileKey1 = t + 1; h.LakeIndex = lake; h.Owner = this;
             }
             double best = Reach * Reach;
-            if (own != null) Scan(own, px, pz, ref best, ref h);
+            if (own != null) Scan(t, own, px, pz, ref best, ref h);
             int col = t % Data.TilesX, row = t / Data.TilesX;
             for (int dr = -1; dr <= 1; dr++)
             {
@@ -311,7 +340,7 @@ namespace EarthMap.Core
                             if (ds * ds < best) best = ds * ds;
                         }
                     }
-                    if (next != null) Scan(next, px - dc * w, pz - dr * ht, ref best, ref h);
+                    if (next != null) Scan(t2, next, px - dc * w, pz - dr * ht, ref best, ref h);
                 }
             }
             h.Dist = Math.Sqrt(best);
@@ -321,7 +350,7 @@ namespace EarthMap.Core
         /// <summary>The nearest edge within Reach: in a lake its shores only (not the cuts along the tile's edge, which have
         /// the lake on both sides); outside, any edge, since every lake lies wholly inside its tiles' rings. With UnionShores
         /// neither counts the edges with water on both sides.</summary>
-        void Scan(Tile t, double px, double pz, ref double best, ref Hit h)
+        void Scan(int key, Tile t, double px, double pz, ref double best, ref Hit h)
         {
             double cap = Reach, hold2 = HoldReach * HoldReach;
             int c0 = Math.Clamp((int)Math.Floor((px - cap) / t.Cell), 0, t.Nx - 1), c1 = Math.Clamp((int)Math.Floor((px + cap) / t.Cell), 0, t.Nx - 1);
@@ -354,6 +383,7 @@ namespace EarthMap.Core
                             h.Level = t.Level[lake];
                             h.Flags = t.Flags[lake];
                             h.Area = t.Area[lake];
+                            h.TileKey1 = key + 1; h.LakeIndex = lake; h.Owner = this;
                         }
                         if (d2 <= hold2 && !(t.Level[lake] <= h.HoldLevel)) h.HoldLevel = t.Level[lake];
                     }
@@ -409,6 +439,60 @@ namespace EarthMap.Core
 
         Tile GetTile(int key) => tiles.Get(key);
 
+        /// <summary>
+        /// GenFixRules 5 (EA-0112): the area (blocks²) of the lake a hit found, with its pieces across the tile's edges: the
+        /// lake as a whole, so the rules that read the area (the shore strip, a pool joining its river) do not change along a
+        /// whole degree line where one tile holds only a sliver of it. Asked only by worlds with those rules (older worlds
+        /// never touch the neighbouring tiles). One step into the next tiles: a lake over three tiles in a row counts the
+        /// middle one's pieces from either end.
+        /// </summary>
+        public double WholeArea(in Hit h)
+        {
+            if (h.TileKey1 <= 0 || h.Owner == null) return h.Area;
+            // asked of another layer (the works of 1318's hit in the water mask's layer): the hit's own layer answers
+            if (h.Owner != this) return h.Owner.WholeArea(h);
+            return WholeArea(h.TileKey1 - 1, GetTile(h.TileKey1 - 1), h.LakeIndex);
+        }
+
+        /// <summary>
+        /// A lake's area with the pieces of the same lake in the neighbouring tiles: those whose outline runs along the
+        /// shared edge at the same level where this lake's does (the spans along that edge overlap within a 3" pixel), so two
+        /// lakes at one level crossing the same degree line (a lake district, sea-level lagoons) don't lend each other their
+        /// area. Cached in the tile (a race only computes it twice).
+        /// </summary>
+        double WholeArea(int key, Tile tile, int lake)
+        {
+            var whole = tile.Whole;
+            if (whole == null)
+            {
+                whole = new float[tile.Area.Length];
+                Array.Fill(whole, float.NaN);
+                tile.Whole = whole;
+            }
+            float cached = whole[lake];
+            if (!float.IsNaN(cached)) return cached;
+            double a = tile.Area[lake];
+            byte s = tile.Sides == null ? (byte)0 : tile.Sides[lake];
+            int col = key % Data.TilesX, row = key / Data.TilesX;
+            // one 3" pixel of the water mask, in blocks, as the slack between the two tiles' outlines along their edge
+            double slack = Math.Max(1, 3.0 / 3600 * Math.Max(bpdX, bpdZ));
+            foreach (var (side, si, dc, dr, opposite, oi) in new (byte, int, int, int, byte, int)[] { (SideW, 0, -1, 0, SideE, 1), (SideE, 1, 1, 0, SideW, 0), (SideS, 2, 0, -1, SideN, 3), (SideN, 3, 0, 1, SideS, 2) })
+            {
+                if ((s & side) == 0) continue;
+                float lo = tile.SpanMin[4 * lake + si], hi = tile.SpanMax[4 * lake + si];
+                int r2 = row + dr, c2 = ((col + dc) % Data.TilesX + Data.TilesX) % Data.TilesX;
+                if (r2 < 0 || r2 >= Data.TilesY) continue;
+                int k2 = r2 * Data.TilesX + c2;
+                if (Data.State(k2) != LakeOutlineData.HasLakes) continue;
+                var n = GetTile(k2);
+                for (int m = 0; m < n.Area.Length; m++)
+                    if (n.Sides != null && (n.Sides[m] & opposite) != 0 && n.Level[m] == tile.Level[lake]
+                        && n.SpanMin[4 * m + oi] <= hi + slack && n.SpanMax[4 * m + oi] >= lo - slack) a += n.Area[m];
+            }
+            // the stored float, also on this first call: an answer must not depend on whether the tile was cached
+            return whole[lake] = (float)a;
+        }
+
         const byte SideW = 1, SideE = 2, SideS = 4, SideN = 8;
 
         Tile Build(int key)
@@ -434,6 +518,11 @@ namespace EarthMap.Core
             var rs = new List<byte>();
             // signed: a lake's islands wind the other way round from its outer ring
             var area = new double[level.Length];
+            var sides = new byte[level.Length];
+            var spanMin = new float[4 * level.Length];
+            var spanMax = new float[4 * level.Length];
+            Array.Fill(spanMin, float.MaxValue);
+            Array.Fill(spanMax, float.MinValue);
             for (int ring = 0, v = 0; ring < ringLength.Length; v += ringLength[ring++])
             {
                 if (skip != null && skip[ringLake[ring]]) continue;
@@ -460,12 +549,23 @@ namespace EarthMap.Core
                     next.Add(first + k);
                     lakeOf.Add(ringLake[ring]);
                     cut.Add((rs[j] & rs[k]) != 0);
+                    byte on = (byte)(rs[j] & rs[k]);
+                    sides[ringLake[ring]] |= on;
+                    for (int si = 0; si < 4; si++)
+                    {
+                        if ((on & (1 << si)) == 0) continue;
+                        // along the side: north-south (z) on the west and east sides, west-east (x) on the south and north
+                        double p0 = si < 2 ? rz[j] : rx[j], p1 = si < 2 ? rz[k] : rx[k];
+                        int at = 4 * ringLake[ring] + si;
+                        spanMin[at] = (float)Math.Min(spanMin[at], Math.Min(p0, p1));
+                        spanMax[at] = (float)Math.Max(spanMax[at], Math.Max(p0, p1));
+                    }
                 }
             }
             var t = new Tile
             {
                 X = xs.ToArray(), Z = zs.ToArray(), Next = next.ToArray(), Lake = lakeOf.ToArray(), Cut = cut.ToArray(),
-                Level = level, Flags = flags, Area = Array.ConvertAll(area, a => (float)Math.Abs(a)),
+                Level = level, Flags = flags, Area = Array.ConvertAll(area, a => (float)Math.Abs(a)), Sides = sides, SpanMin = spanMin, SpanMax = spanMax,
             };
 
             double w = Data.TileDeg * bpdX, h = Data.TileDeg * bpdZ;

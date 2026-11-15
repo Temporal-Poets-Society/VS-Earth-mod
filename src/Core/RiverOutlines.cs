@@ -9,7 +9,7 @@ namespace EarthMap.Core
     /// dry land only, at the level of the nearest river course. About 30 MB: it comes with the GLO-90 heights, as the
     /// lakes do.
     ///
-    /// rivers-outline-glo90-2.bin (0053 item 19, proposed) goes with the dam file (DamRemovalData): its reservoirs are the
+    /// rivers-outline-glo90-2.bin (0053 item 19) goes with the dam file (DamRemovalData): its reservoirs are the
     /// dam bake's, and the rivers run on through them and across their dams in corridors (tools/bake_dam_removal.py rule 5)
     /// as wide as the river where it comes in or goes out. It also fills the bridges the mask has as land across a river
     /// (Riga's Southern Bridge; tools/bake_river_outlines.py bridges), whose decks don't count towards a piece's level.

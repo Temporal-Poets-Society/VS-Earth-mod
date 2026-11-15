@@ -2,12 +2,7 @@
   <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><LangVersion>12</LangVersion><Nullable>disable</Nullable><ImplicitUsings>enable</ImplicitUsings><EnableDefaultCompileItems>false</EnableDefaultCompileItems></PropertyGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="../../src/Core/GroundColumns.cs" Link="Core/GroundColumns.cs" />
-    <Compile Include="../../src/Core/ShoreMaterial.cs" Link="Core/ShoreMaterial.cs" />
-    <Compile Include="../../src/Core/GeologyTransitions.cs" Link="Core/GeologyTransitions.cs" />
-    <Compile Include="../../src/Core/VerticalScale.cs" Link="Core/VerticalScale.cs" />
-    <Compile Include="../../src/Core/GroundRelief.cs" Link="Core/GroundRelief.cs" />
-    <Compile Include="../../src/Core/DemTiles.cs" Link="Core/DemTiles.cs" />
-    <Compile Include="../../src/Core/StoneRecolour.cs" Link="Core/StoneRecolour.cs" />
+    <ProjectReference Include="..\Earth.Core.Tests.Common\Earth.Core.Tests.Common.csproj" />
+
   </ItemGroup>
 </Project>

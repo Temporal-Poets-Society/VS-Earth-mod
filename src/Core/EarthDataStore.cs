@@ -83,13 +83,47 @@ namespace EarthMap.Core
         public static string Folder(string earthFolder) => Path.Combine(earthFolder, Subfolder);
         public static string PathOf(string earthFolder, string name) => Path.Combine(earthFolder, Subfolder, name);
 
-        /// <summary>A listed file from the store, or null when the name isn't listed or the file isn't there (a file in the
-        /// folder is only ever there whole and checked: <see cref="Ensure"/> moves it in after its check).</summary>
+        /// <summary>
+        /// (EA-0092 A6) Fetches a listed file again after its read found it damaged (it is set aside first), so that the read
+        /// goes on with the release's bytes: the server sets it to its data source and installed packs, as at the start; null
+        /// in tools and tests, where a damaged file throws InvalidDataException.
+        /// </summary>
+        public static Func<string, bool> Repair;
+
+        /// <summary>
+        /// A listed file from the store, or null when the name isn't listed or the file isn't there. (EA-0092 A6, code review
+        /// 14 November 2026) Read whole and checked against its size and SHA-256 in that same read, which the caller then
+        /// gets: before, every start hashed all of the store (289 MB) in a pass of its own and the loaders read it all again.
+        /// A damaged file is still never used: it is set aside (.bad) and fetched again (<see cref="Repair"/>) before anything
+        /// reads it, and when it can't be, InvalidDataException says so.
+        /// </summary>
         public static Stream Open(string earthFolder, string name)
         {
             if (!Lists(name)) return null;
             string path = PathOf(earthFolder, name);
-            return System.IO.File.Exists(path) ? new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read, 1 << 16) : null;
+            if (!System.IO.File.Exists(path)) return null;
+            var f = byName[name];
+            byte[] bytes = System.IO.File.ReadAllBytes(path);
+            if (Checked(bytes, f)) return new MemoryStream(bytes, 0, bytes.Length, false, true);
+            SetAside(path);
+            if (Repair != null && Repair(name) && System.IO.File.Exists(path))
+            {
+                bytes = System.IO.File.ReadAllBytes(path);
+                if (Checked(bytes, f)) return new MemoryStream(bytes, 0, bytes.Length, false, true);
+                SetAside(path);
+            }
+            throw new InvalidDataException($"earthdata/{name} in {Folder(earthFolder)} is damaged (not the release's size and SHA-256) and could not be fetched again; it is set aside as {name}.bad");
+        }
+
+        static bool Checked(byte[] bytes, File f) => bytes.LongLength == f.Bytes && DataTransport.HashMatches(bytes, f.Sha256);
+
+        static void SetAside(string path)
+        {
+            try { System.IO.File.Move(path, path + ".bad", true); }
+            catch (Exception e) when (e is IOException or UnauthorizedAccessException)
+            {
+                try { System.IO.File.Delete(path); } catch (Exception x) when (x is IOException or UnauthorizedAccessException) { }
+            }
         }
 
         /// <summary>A listed file's bytes, or null (see <see cref="Open"/>).</summary>
@@ -136,38 +170,25 @@ namespace EarthMap.Core
 
         static async Task<(bool Ok, string Why)> EnsureCoreAsync(string earthFolder, IEnumerable<Func<string, Stream>> local, string source, Action<string> log, CancellationToken token, IEnumerable<File> files)
         {
-            log ??= _ => { };
-            if (Missing(earthFolder, files).Count == 0) return (true, null);
-            using var turn = await DataTransport.TakeTurnAsync(Folder(earthFolder), log, token).ConfigureAwait(false);
-            var todo = Missing(earthFolder, files);   // another server may have fetched them while this one waited
-            if (todo.Count == 0) return (true, null);
-            // an installed data pack (Earth 1.0) carries the same bytes: copied, checked, moved in
-            foreach (var f in todo.ToList())
-                foreach (var open in local ?? Enumerable.Empty<Func<string, Stream>>())
-                    if (CopyIn(earthFolder, f, open)) { todo.Remove(f); break; }
-            if (todo.Count == 0) { log("all data files are in place (from installed data packs)."); return (true, null); }
-            if (string.IsNullOrWhiteSpace(source))
-            {
-                log($"{todo.Count} data file(s) missing and no data source set (DataRepo in earth.json); nothing is downloaded.");
-                return (false, "no data source is set (DataRepo in earth.json)");
-            }
-            log($"fetching {todo.Count} data file(s), {TotalBytes(todo) / 1e6:F0} MB, from {source} into {Folder(earthFolder)}.");
-            using var transport = new DataTransport(TimeSpan.FromMinutes(2));
-            foreach (var f in todo)
-            {
-                token.ThrowIfCancellationRequested();
-                (bool ok, string why, bool notThere) result;
-                try { result = await transport.FileAsync(source, f.Name, PathOf(earthFolder, f.Name), f.Bytes, f.Sha256, DataTransport.FileTries, log, null, token).ConfigureAwait(false); }
-                catch (Exception e) when (e is UriFormatException or ArgumentException or NotSupportedException) { result = (false, e.Message, false); }
-                if (!result.ok)
+            // (EA-0092 A4) the one protocol for a set of published files (DataTransport.EnsureFilesAsync)
+            var specs = (files ?? Files).Select(f => new DataTransport.FileSpec(f.Name, PathOf(earthFolder, f.Name), f.Bytes, f.Sha256)).ToList();
+            var byName = (files ?? Files).ToDictionary(f => f.Name);
+            var opens = local?.ToList() ?? new List<Func<string, Stream>>();
+            // (EA-0092 A6) present and of the right size here; each file's SHA-256 is checked as it is read (Open)
+            var (result, why) = await DataTransport.EnsureFilesAsync(Folder(earthFolder), specs, source, "DataRepo", "data source", "data file(s)", log, token, hash: false,
+                copyIn: opens.Count == 0 ? null : f => opens.Any(open => CopyIn(earthFolder, byName[f.Name], open)),
+                // (EA-0116 D-R3) a copy from an installed pack that a killed process left half written: with the folder's turn
+                // held, no one else is copying (a download's own name.part is kept, to be resumed)
+                inTurn: () =>
                 {
-                    // the source is unreachable or lacks the file: the rest would only wait the same way (an offline first
-                    // start would otherwise retry every file for many minutes before saying so)
-                    log($"{f.Name} could not be fetched{(result.why != null ? ": " + result.why : "")}; the remaining {todo.Count - todo.IndexOf(f) - 1} file(s) are not tried.");
-                    return (false, f.Name + ": " + (result.why ?? "not fetched"));
-                }
-            }
-            return (true, null);
+                    try
+                    {
+                        foreach (var left in Directory.Exists(Folder(earthFolder)) ? Directory.GetFiles(Folder(earthFolder), "*.copy") : Array.Empty<string>())
+                            try { System.IO.File.Delete(left); } catch (Exception e) when (e is IOException or UnauthorizedAccessException) { }
+                    }
+                    catch (Exception e) when (e is IOException or UnauthorizedAccessException) { }
+                }).ConfigureAwait(false);
+            return (result == DataTransport.SetResult.Here, why);
         }
         /// <summary>
         /// A file inside a mod's source (its folder or zip) at <paramref name="relativePath"/> (forward slashes), read into

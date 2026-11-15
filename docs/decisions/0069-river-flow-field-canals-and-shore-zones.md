@@ -1,9 +1,9 @@
 # 0069: River water by a baked flow field, canals after 1318, and shore zones for plants
 
-Status: **proposed** (the author, 12 November 2026: "Yes write up", of the baked flow field and the Kiel Canal's removal
+Status: **agreed and built** (proposed: the author, 12 November 2026: "Yes write up", of the baked flow field and the Kiel Canal's removal
 as rc.7's water design; "Merit Hydro my mind is not useful as would address only large rivers"; and, of trees on the
 sand and at the water's edge, "My mind some model should fix that. Coastal zones and river banks"); then "Yes, build it".
-**Built in 2.0.0-rc.7 and on `main`** (not released), for new worlds on full GLO-90: rules 1–4 (the baked flow field, `rivers-flow-glo90-1.bin`), 6
+**Built in 2.0.0-rc.7; in Earth 2.0.0**, for new worlds on full GLO-90: rules 1–4 (the baked flow field, `rivers-flow-glo90-1.bin`), 6
 (canals after 1318, works rules 2), 7 (shore zones), 8 (wet or dry by GIRES, `rivers-nonperennial-2.bin` in the mod) and
 9 (newer reservoirs, dam rules 3), with channel rules 2; the GLO-90 files on `egl-v1`. **Rule 5 (trimming the ponds) is
 not built here** ([Build](#build-rc7)); channel rules 5 does it in the game instead, for new worlds after rc.10

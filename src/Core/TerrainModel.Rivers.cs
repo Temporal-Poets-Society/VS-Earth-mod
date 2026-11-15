@@ -25,7 +25,7 @@ namespace EarthMap.Core
             // an island in the sea on the river's line (HydroRIVERS runs its centre line down estuaries): the island stays
             // whole and the water goes around it. Before island rules v3 the channel cut through it, with straight edges.
             if (c.IslandOverSea && Islands.Rules >= 3) return;
-            if (ChannelRules >= 1)
+            if (Rules.Dredged)
             {
                 ApplyChannel(x, z, ref c);
                 return;
@@ -95,7 +95,7 @@ namespace EarthMap.Core
                 hw = Math.Min(hw, gap + OutlineTaper);
             }
             c.NearRiver = true;
-            if (AridRiverRules >= 1 && c.Water == WaterNone)
+            if (Rules.AridRivers && c.Water == WaterNone)
             {
                 var climate=Data.SampleClimate(c.Lat,c.Lon);
                 if(AridHydrology.Dry(climate.Rain,climate.TWarm-.0065*c.Elev,hit.Q, WetSourceFlow != null && hit.Reach < WetSourceFlow.Length ? WetSourceFlow[hit.Reach] : hit.Q))
@@ -203,7 +203,7 @@ namespace EarthMap.Core
             {
                 if (c.OutlineLake && !hit.Mouth && hit.Dist <= hw + bank && MaskPondJoins(x, z, in hit, ref c)) return;
                 // channel rules 3: the sea's bed where a river meets it is ApplyMouth's (no groove of the channel's own)
-                if (c.Water == WaterSea && ChannelRules >= MouthChannelRules) return;
+                if (c.Water == WaterSea && Rules.MouthBed) return;
                 // a lake or the sea at the river's level: the channel's depth through the shallows (ApplyRiver)
                 if (hit.Dist <= hw && hit.WaterTop == c.WaterTop)
                 {
@@ -212,7 +212,7 @@ namespace EarthMap.Core
                     if (hit.Shoal > 0 && dd > 2) { dd += (2 - dd) * hit.Shoal; de = Math.Min(de, dd); }
                     dd += hit.PlungeDepth;
                     // (channel rules 4: the channel's own profile, as on the land beside: ChannelDepthExact)
-                    int bedTop = c.WaterTop - (int)Math.Round(ChannelRules >= FlowChannelRules ? ChannelDepthExact(in hit, tt)
+                    int bedTop = c.WaterTop - (int)Math.Round(Rules.OneBed ? ChannelDepthExact(in hit, tt)
                         : de + (dd - de) * Geo.SmoothStep((1 - tt) / 0.4));
                     if (bedTop < c.Top) c.Top = bedTop;
                     else if (hit.Shoal > 0) c.Top = (int)Math.Round(c.Top + (bedTop - c.Top) * hit.Shoal);
@@ -222,7 +222,7 @@ namespace EarthMap.Core
             if (c.IceBottom <= c.Top) return;
             if (hit.Mouth && (c.Elev > 8 || hit.Dist > hw + bank)) return;
             c.NearRiver = true;
-            if (AridRiverRules >= 1 && DriesOut(in hit, in c))
+            if (Rules.AridRivers && DriesOut(in hit, in c))
             {
                 // a shallow dry channel, easing back into the natural valley on either bank (ApplyRiver)
                 double weight = 1 - Geo.SmoothStep((hit.Dist - hw) / Math.Max(1, bank));
@@ -303,7 +303,7 @@ namespace EarthMap.Core
         /// </list>
         /// Rounded through DepthNoise, so the steps of a block wander.
         /// </summary>
-        void ApplyMouth(double x, double z, ref Column c)
+        void ApplyMouth(double x, double z, ref Column c, ref ColumnWork work)
         {
             int wt = c.WaterTop;
             if (wt != SeaLevel - 1 || c.IceBottom <= c.Top) return;
@@ -315,11 +315,21 @@ namespace EarthMap.Core
                 rv = RiverOutlines.At(c.Lat, c.Lon);
                 mask = rv.Covered && rv.Inside;
             }
+            double fade = CoastLayer.ReachFor(Geometry), within = 2 * fade + 60;
+            // ER-11 (code review 14 November 2026): out of the mask's water and with no river piece in any bucket the trough
+            // search reads, want stays own: the end below as it would be, without the coast distance, the noise and the search
+            // (the open sea's columns, every one of which paid for them)
+            if (!mask && !Rivers.AnyBucketNear(x, z, within))
+            {
+                int plain = wt - Math.Max(1, (int)Math.Round(own));
+                if (plain < c.Top) c.Top = plain;
+                return;
+            }
             // the shore by the coast outline (blocks, up to its reach; infinite without outlines or where they have no data)
-            double fade = CoastLayer.ReachFor(Geometry), shore = double.PositiveInfinity;
+            double shore = double.PositiveInfinity;
             if (Coasts != null)
             {
-                double d = CoastDistanceAt(c.Lat, c.Lon, WorksAt(c.Lat, c.Lon));
+                double d = CoastDistanceAt(ref work, c.Lat, c.Lon);
                 if (!double.IsNaN(d)) shore = Math.Max(0, -d);
             }
             double noise = DepthNoise(x, z), want = own;
@@ -328,21 +338,31 @@ namespace EarthMap.Core
                 bool near = Rivers.Nearest(x, z, out var mh) || Rivers.NearestCourse(x, z, OutlineCourseSearch, out mh);
                 double fx = mh.DirX, fz = mh.DirZ;
                 double full;
-                if (FlowRules >= 1 && Flow != null)
+                if (Rules.SolvedFlow && Flow != null)
                 {
-                    double speed = Flow.At(c.Lat, c.Lon, out double east, out double north) ? Math.Sqrt(east * east + north * north) : CarryFull;
+                    double speed = Flow.At(c.Lat, c.Lon, Rules.FlowAcrossTiles, out double east, out double north) ? Math.Sqrt(east * east + north * north) : CarryFull;
                     full = MaskWaterDepth(x, z, near, in mh, speed, ref fx, ref fz);
                 }
                 else full = OutlineDepthCap(x, z, near, in mh, ref fx, ref fz);
                 want = Math.Max(want, Math.Min(own + ShoreSlope(full, own) * rv.Dist, full) + noise);
             }
-            // every course at the sea's level within reach of its trough, the deepest trough (the branches of a delta)
-            double within = 2 * fade + 60;
-            double trough = Rivers.MaxNear(x, z, within, hit => Trough(in hit, own, shore, within), own);
+            // every course at the sea's level within reach of its trough, the deepest trough (the branches of a delta); one static
+            // delegate, its model and arguments this thread's for the call (no closure per column, ER-11; the model is let go
+            // after it, so a pool thread keeps no world alive, and a MemberwiseClone of the model asks its own Trough)
+            mouthModel = this; mouthOwn = own; mouthShore = shore; mouthWithin = within;
+            double trough;
+            try { trough = Rivers.MaxNear(x, z, within, MouthTrough, own); }
+            finally { mouthModel = null; }
             if (trough > own) want = Math.Max(want, trough + noise * Math.Min(1, trough - own));
             int top = wt - Math.Max(1, (int)Math.Round(want));
             if (top < c.Top) c.Top = top;
         }
+
+        // (Trough may not build a column, GetColumn or anything that reaches ApplyMouth: the finally below would clear
+        // mouthModel under an outer MaxNear on the same thread)
+        [ThreadStatic] static TerrainModel mouthModel;
+        [ThreadStatic] static double mouthOwn, mouthShore, mouthWithin;
+        static readonly System.Func<RiverNetwork.Hit, double> MouthTrough = hit => mouthModel.Trough(in hit, mouthOwn, mouthShore, mouthWithin);
 
         /// <summary>
         /// Channel rules 3: a river at the sea's level near the coast (within the coast outline's reach of it, on the land side)
@@ -353,7 +373,7 @@ namespace EarthMap.Core
         /// </summary>
         int MouthShelf(int wt, int top, in Column c)
         {
-            if (ChannelRules < MouthChannelRules || Coasts == null || wt != SeaLevel - 1) return top;
+            if (!Rules.MouthBed || Coasts == null || wt != SeaLevel - 1) return top;
             double d = CoastDistanceAt(c.Lat, c.Lon, WorksAt(c.Lat, c.Lon));
             if (double.IsNaN(d) || d >= Coasts.Reach) return top;
             double from = Math.Max(0, d);
@@ -375,6 +395,17 @@ namespace EarthMap.Core
             if (hit.WaterTop != SeaLevel - 1) return own;
             double dc = double.NaN;
             double hw = hit.HalfWidth;
+            // the depth on its line: the course's channel depth, easing to the sea's own along the mouth's prolongation and with
+            // the line's distance out to sea, each over at least TroughEase blocks per block it loses
+            double reach = hw + hit.BankWidth + hit.ValleyWidth;
+            double drop = Math.Max(0, ChannelDepthExact(in hit, 0) - own), w = 1;
+            if (hit.Mouth) w *= 1 - Geo.SmoothStep(hit.Beyond / Math.Max(2 * hw + 40, TroughEase * drop));
+            double widen = double.IsInfinity(shore) ? 0 : Math.Min(shore, Math.Min(0.5 * reach, CoastLayer.ReachFor(Geometry)));
+            // EA-0095 (FP-08): the coast's distance at the course's centre (a ring search near the sea of 1318) only where the
+            // answer can depend on it. With no drop left the line is the sea's own depth; and the line's distance out to sea can
+            // only lower w, so a column beyond the widest the trough can reach gets the sea's own depth too (shore is never
+            // negative, so the last clamp below keeps own). own either way, as before
+            if (drop * w == 0 || hit.Dist >= hw + widen + drop * w / OutlineRiverSlope + 1e-6) return own;
             if (Coasts != null)
             {
                 double SeaSideAt(double px, double pz)
@@ -384,18 +415,12 @@ namespace EarthMap.Core
                 }
                 dc = SeaSideAt(hit.CentreX, hit.CentreZ);
             }
-            // the depth on its line: the course's channel depth, easing to the sea's own along the mouth's prolongation and with
-            // the line's distance out to sea, each over at least TroughEase blocks per block it loses
-            double reach = hw + hit.BankWidth + hit.ValleyWidth;
-            double drop = Math.Max(0, ChannelDepthExact(in hit, 0) - own), w = 1;
-            if (hit.Mouth) w *= 1 - Geo.SmoothStep(hit.Beyond / Math.Max(2 * hw + 40, TroughEase * drop));
             if (dc < 0) w *= 1 - Geo.SmoothStep(-dc / Math.Max(Coasts.Reach, TroughEase * drop));
             // (and as it lies inland: a river running along the coast on land deepens no sea beside it)
             else if (dc > 0) w *= 1 - Geo.SmoothStep(dc / Math.Max(hw, TroughEase * drop));
             double line = own + drop * w;
             // across: that depth over its water, widened by the distance from the shore (at most half the course's reach and
-            // the coast profile's reach), then shelving to the sea's at OutlineRiverSlope, reaching it within the search
-            double widen = double.IsInfinity(shore) ? 0 : Math.Min(shore, Math.Min(0.5 * reach, CoastLayer.ReachFor(Geometry)));
+            // the coast profile's reach, widen above), then shelving to the sea's at OutlineRiverSlope, reaching it within the search
             double edge = Math.Min(hw + widen + (line - own) / OutlineRiverSlope, within);
             double r = Math.Min(line, own + OutlineRiverSlope * Math.Max(0, edge - hit.Dist));
             // and to the shore, as the river on the land side shelves to it (MouthShelf): both a block or two at the coast
@@ -439,14 +464,16 @@ namespace EarthMap.Core
             // the lake that made this column (OutlineLakeColumn): a lake of 1318 where there is one, as NaturalColumn takes
             // those first (a drained polder lake is land in the water mask, and the whole lake of 1318 was a "pond"); else
             // the water mask's (none without its layer: a lake of 1318 in a world without the mask's lakes)
-            var lk = WorksAt(c.Lat, c.Lon);
-            if (!Works1318Data.IsLake(lk))
+            var wk = WorksAt(c.Lat, c.Lon);
+            LakeOutlineLayer.Hit lk;
+            if (Works1318Data.IsLake(wk)) lk = wk.LakeOf1318;
+            else
             {
                 if (LakeOutlines == null) return false;
                 lk = LakeOutlines.At(c.Lat, c.Lon);
             }
-            if (lk.Inside && lk.Area > Math.PI * r * r) return false;
-            if (AridRiverRules >= 1 && DriesOut(in hit, in c)) return false;
+            if (lk.Inside && LakeArea(lk) > Math.PI * r * r) return false;
+            if (Rules.AridRivers && DriesOut(in hit, in c)) return false;
             int top = Math.Min(c.Top, wt - 1);
             if (hit.Dist <= hit.HalfWidth && hit.HalfWidth > 0) top = Math.Min(top, wt - ChannelDepthAt(x, z, in hit, hit.Dist / hit.HalfWidth));
             c.Top = top;
@@ -478,10 +505,11 @@ namespace EarthMap.Core
         /// <summary>Channel rules 1: whether the water mask has the river at a hit, so the arid rules leave it wet (its channel,
         /// its green belt, its wet tree sites): the piece has the mask's width, or its reach lies in the mask's river water
         /// (ReachInMaskRiver). Always false before.</summary>
-        public bool MaskKeepsWet(in RiverNetwork.Hit hit) => ChannelRules >= 1 && (hit.Masked || ReachInMaskRiver(hit.Reach));
+        public bool MaskKeepsWet(in RiverNetwork.Hit hit) => Rules.Dredged && (hit.Masked || ReachInMaskRiver(hit.Reach));
 
-        /// <summary>Per reach: 0 not looked at yet, 1 not in the mask's river water, 2 in it (ReachInMaskRiver).</summary>
-        byte[] reachInMask;
+        /// <summary>The facts kept per reach (ReachFacts: in the mask's river water, the solved speed, the pond profile), one
+        /// rule for all of them; a clone of the model shares them.</summary>
+        readonly ReachFacts reachFacts = new ReachFacts();
 
         /// <summary>
         /// The points (latitude, longitude) of each reach the arid rules could dry (a piece of it under 10 m³/s, or its
@@ -510,9 +538,20 @@ namespace EarthMap.Core
         /// course wanders in and out of the mask's water (a dry bed beside wet water is a hollow below it: the Karkheh). The
         /// points come from dryReachCourses, so the rule holds after the start-up data is released; else (a model whose
         /// WetSourceFlow wasn't set) from the network's reaches while it has them.
+        /// ER-01 (code review 14 Nov 2026): the answer is kept for the whole model, so it may not depend on the thread or the
+        /// session that asked first. A thread on the built-in heights (FineElevation.BuiltInOnly: the story search before the
+        /// first chunk, map sweeps) has no square where the outlines decide, so the mask keeps nothing wet for it: it answers
+        /// false and keeps nothing. The points count by ReachPointDecides, which reads no per-thread switch and takes a square
+        /// that fell back for this session only as the GLO-90 square it is in every other session. Before, a story search
+        /// that asked first kept "not in the mask" for good, and generation then dried reaches the mask has wet. On purpose the
+        /// column itself does not do the same: on a square fallen back for the session Glo90Decides is false, so the outlines
+        /// decide no column there, while the reach's flag counts the square (the same flag in every session). Left: a square that
+        /// becomes a for-good fallback during a session (the source lacks its tile) counts for reaches flagged before that and
+        /// not after; from the next session on it is for good from the start.
         /// </summary>
         bool ReachInMaskRiver(int reach)
         {
+            if (FineElevation.BuiltInOnly) return false;
             var courses = dryReachCourses;
             var reaches = Rivers?.Reaches;
             int count = courses?.Length ?? reaches?.Count ?? 0;
@@ -524,25 +563,30 @@ namespace EarthMap.Core
             // released before the first chunk; the offline tests read them and disagreed with the game (CR-R4)
             else if (courses == null && reaches != null && reach < reaches.Count) { lats = reaches[reach].Lat; lons = reaches[reach].Lon; }
             else return false;
-            var known = reachInMask;
-            if (known == null)
-            {
-                System.Threading.Interlocked.CompareExchange(ref reachInMask, new byte[count], null);
-                known = reachInMask;
-            }
+            var known = reachFacts.InMask(count);
             byte v = System.Threading.Volatile.Read(ref known[reach]);
             if (v != 0) return v == 2;
             int inside = 0, n = lats.Length;
             for (int k = 0; k < n; k++)
             {
                 double lat = lats[k], lon = lons[k];
-                if (!RiverOutlinesDecide(lat, lon) || SeaChannels.InCanalZone(lat, lon)) continue;
+                if (!ReachPointDecides(lat, lon) || SeaChannels.InCanalZone(lat, lon)) continue;
                 var rv = RiverOutlines.At(lat, lon);
                 if (rv.Covered && rv.Inside) inside++;
             }
             bool wet = inside > 0 && 3 * inside >= n;
             System.Threading.Volatile.Write(ref known[reach], wet ? (byte)2 : (byte)1);
             return wet;
+        }
+
+        /// <summary>ReachInMaskRiver's test whether the outlines decide at a point of a reach: Glo90Decides without what
+        /// differs by thread or session (ER-01). A square the source has and the world doesn't keep on built-in heights for
+        /// good; a square that fell back for this session only counts, as in every session whose download succeeds.</summary>
+        bool ReachPointDecides(double lat, double lon)
+        {
+            if (Fine == null || RiverOutlines == null) return false;
+            int latS = Math.Clamp((int)Math.Ceiling(lat) - 1, -90, 89), lonW = Math.Clamp((int)Math.Floor(Geo.Wrap180(lon)), -180, 179);
+            return Fine.SourceHas(latS, lonW) && !Fine.IsFallbackForGood(latS, lonW);
         }
 
         /// <summary>The channel's depth (blocks below its water top) at t (0 on the course's centre line, 1 at the channel's
@@ -556,7 +600,7 @@ namespace EarthMap.Core
         int ChannelDepthAt(double x, double z, in RiverNetwork.Hit hit, double t)
         {
             double exact = ChannelDepthExact(in hit, t);
-            if (ChannelRules >= 1 && !hit.Chute && hit.ChuteShoal <= 0 && hit.Shoal <= 0 && !hit.Lip) exact += DepthNoise(x, z);
+            if (Rules.Dredged && !hit.Chute && hit.ChuteShoal <= 0 && hit.Shoal <= 0 && !hit.Lip) exact += DepthNoise(x, z);
             return (int)Math.Max(1, Math.Round(exact));
         }
 
@@ -592,17 +636,17 @@ namespace EarthMap.Core
             // (channel rules 4: no deeper than its width lets its sides be at ChannelSide4 at most, as the bed eases over
             // ChannelEase4 of the half width with a smooth step's steepest slope, 1.5 times its mean: a channel 13 blocks wide
             // was cut 15 deep where the mask narrows the Rhine at Pannerden, the flow's depth doubled; plunge pools as before)
-            if (ChannelRules >= FlowChannelRules && hit.HalfWidth > 0)
+            if (Rules.OneBed && hit.HalfWidth > 0)
                 depth = Math.Min(depth, Math.Max(edge, edge + ChannelSide4 * ChannelEase4 * hit.HalfWidth / 1.5));
             depth += hit.Plunge + hit.PlungeDepth;
             // (channel rules 4: easing from the bank over ChannelEase4 of the half width, not 0.4: a channel a few blocks wide and
             // several deep had walls of 2-3 blocks a step for sides, the Rhine at Pannerden)
-            return edge + (depth - edge) * Geo.SmoothStep((1 - t) / (ChannelRules >= FlowChannelRules ? ChannelEase4 : 0.4));
+            return edge + (depth - edge) * Geo.SmoothStep((1 - t) / (Rules.OneBed ? ChannelEase4 : 0.4));
         }
 
         /// <summary>
         /// Channel rules 1: the deepest the water mask's river water at (x, z) may be (blocks, before the shore's slope):
-        /// every course near it as RiverNetwork.OutlineDepthNear weighs them, OutlineRiverLoneDepth beyond them all, with the
+        /// every course near it as RiverNetwork.BlendNear weighs them, OutlineRiverLoneDepth beyond them all, with the
         /// rapids, a curtain's lip and a plunge pool of the course at hand (found: its hit) as its channel has them, fading
         /// as its depth does. Taking the nearest course's depth alone made straight-edged patches at Rīgas HES.
         /// </summary>
@@ -617,7 +661,7 @@ namespace EarthMap.Core
 
         /// <summary>
         /// Channel rules 3: the depth (blocks, before the banks' shelf) of the water mask's river water where the flow is solved,
-        /// and of the sea the mask has as river (ApplyMouth). Every course near as OutlineDepthNear weighs them (their channels'
+        /// and of the sea the mask has as river (ApplyMouth). Every course near as RiverNetwork.BlendNear weighs them (their channels'
         /// depths, deepened where the mask narrows them, easing out over their reach), over the nearest course's depth for its
         /// flow (RiverNetwork.Depth: one value along a reach) beyond them, with the rapids, a lip or a plunge pool of the course
         /// at hand; and from OutlineRiverLoneDepth in still water to that as the solved speed rises to CarryFull. Before (rules
@@ -628,11 +672,11 @@ namespace EarthMap.Core
         double MaskWaterDepth(double x, double z, bool found, in RiverNetwork.Hit hit, double speed, ref double fx, ref double fz)
         {
             // (channel rules 4: the flow's depth blended over every course near, RiverNetwork.DepthNear; before, the nearest's)
-            double far = Math.Max(OutlineRiverLoneDepth, ChannelRules >= FlowChannelRules ? Rivers.DepthNear(x, z, OutlineCourseSearch, OutlineRiverLoneDepth)
+            double far = Math.Max(OutlineRiverLoneDepth, Rules.OneBed ? Rivers.DepthNear(x, z, OutlineCourseSearch, OutlineRiverLoneDepth)
                 : found ? Rivers.Depth(hit.Q) : OutlineRiverLoneDepth);
             double flowing = Rivers.BlendNear(x, z, far, ref fx, ref fz);
             // (channel rules 4: a shallower course in the wide water makes no ridge along its line: the courses only deepen it)
-            if (ChannelRules >= FlowChannelRules) flowing = Math.Max(far, flowing);
+            if (Rules.OneBed) flowing = Math.Max(far, flowing);
             if (found)
                 flowing += (ChannelDepthExact(in hit, 0) - hit.Depth)
                     * RiverNetwork.OutlineFade(hit.Dist, hit.HalfWidth, hit.HalfWidth + hit.BankWidth + hit.ValleyWidth);
@@ -640,26 +684,17 @@ namespace EarthMap.Core
             return OutlineRiverLoneDepth + (flowing - OutlineRiverLoneDepth) * Geo.SmoothStep(speed / CarryFull);
         }
 
-        /// <summary>Channel rules 4: per reach, the median solved speed (m/s) along its own course where the flow file has
-        /// water (ReachSpeed); NaN not sampled yet.</summary>
-        float[] reachSpeed;
-
         /// <summary>
         /// Channel rules 4: the median of the flow file's speeds along a reach's own course (RiverNetwork.ReachPoints), where it
         /// has the river's water (a course steps onto land at places); 0 where it has none. Sampled once per reach, when a
-        /// column first asks (a pure function of the reach and the flow file, so threads that race compute the same).
+        /// column first asks (a pure function of the reach and the flow file, so threads that race compute the same). Kept for
+        /// the whole model by whichever thread asks first: nothing that differs by thread or session may be read here
+        /// (FineElevation.BuiltInOnly, Glo90Decides, a tile's arrival; ER-01, T-2 of the 14 November review).
         /// </summary>
         public double ReachSpeed(int reach)
         {
             if (Flow == null || Rivers == null || reach < 0) return 0;
-            var a = reachSpeed;
-            if (a == null)
-            {
-                var fresh = new float[Math.Max(0, Rivers.ReachCount)];
-                Array.Fill(fresh, float.NaN);
-                System.Threading.Interlocked.CompareExchange(ref reachSpeed, fresh, null);
-                a = reachSpeed;
-            }
+            var a = reachFacts.Speed(Rivers.ReachCount);
             if (reach >= a.Length) return 0;
             float v = System.Threading.Volatile.Read(ref a[reach]);
             if (!float.IsNaN(v)) return v;
@@ -667,7 +702,7 @@ namespace EarthMap.Core
             Rivers.ReachPoints(reach, (px, pz) =>
             {
                 var g = Geometry.ToGeo(px, pz);
-                if (!g.InGutter && Flow.At(g.Lat, g.Lon, out double e, out double n) && e * e + n * n > 0) samples.Add(Math.Sqrt(e * e + n * n));
+                if (!g.InGutter && Flow.At(g.Lat, g.Lon, Rules.FlowAcrossTiles, out double e, out double n) && e * e + n * n > 0) samples.Add(Math.Sqrt(e * e + n * n));
             });
             samples.Sort();
             v = samples.Count == 0 ? 0 : (float)samples[samples.Count / 2];
@@ -702,7 +737,7 @@ namespace EarthMap.Core
             for (int k = -1; k < 8; k++)
             {
                 double a = k * Math.PI / 4, la = k < 0 ? lat : lat + dLat * Math.Sin(a), lo = k < 0 ? lon : lon + dLon * Math.Cos(a);
-                if (!Flow.At(la, lo, out double e, out double nn)) continue;
+                if (!Flow.At(la, lo, Rules.FlowAcrossTiles, out double e, out double nn)) continue;
                 double v = Math.Sqrt(e * e + nn * nn);
                 if (v <= 0) continue;
                 sum += v;
@@ -722,7 +757,7 @@ namespace EarthMap.Core
         /// water at 1:100 was 3 blocks deep at most (the Mississippi, the Amazon), and its course's channel cut a groove in it.
         /// </summary>
         double ShoreSlope(double full, double shore) =>
-            ChannelRules >= FlowChannelRules && RiverOutlines != null ? Math.Clamp((full - shore) / RiverOutlines.Reach, OutlineRiverSlope, ChannelSide4) : OutlineRiverSlope;
+            Rules.OneBed && RiverOutlines != null ? Math.Clamp((full - shore) / RiverOutlines.Reach, OutlineRiverSlope, ChannelSide4) : OutlineRiverSlope;
 
         /// <summary>Channel rules 4: the share of a channel's half width over which its bed eases from the bank's depth to the
         /// middle's (ChannelDepthExact; 0.4 before).</summary>
@@ -744,7 +779,7 @@ namespace EarthMap.Core
         /// across the river or between two courses (Rīgas HES).</summary>
         void SetFlow(double x, double z, in RiverNetwork.Hit hit, ref Column c, bool blended = false, double fx = 0, double fz = 0)
         {
-            if (ChannelRules < 1)
+            if (!Rules.Dredged)
             {
                 c.FlowX = (float)hit.DirX;
                 c.FlowZ = (float)hit.DirZ;
@@ -784,7 +819,7 @@ namespace EarthMap.Core
         }
 
         /// <summary>
-        /// 0053 item 18 (proposed): dry land in (Column.RiverOutline) the water mask's rivers is river water, at the level of
+        /// 0053 item 18: dry land in (Column.RiverOutline) the water mask's rivers is river water, at the level of
         /// the river course nearest to it (Nearest, or within OutlineCourseSearch beyond the course's own reach): one surface
         /// with the course's channel, its steps where the course's are, and at a lake's level beside a lake as the channel is.
         /// Where no course is that near (a side arm or an oxbow the courses don't have), at its piece's level (the median of
@@ -813,7 +848,7 @@ namespace EarthMap.Core
             if (found)
             {
                 // (channel rules 1: the water mask's river is never dried by the arid rules)
-                if (AridRiverRules >= 1 && ChannelRules < 1)
+                if (Rules.AridRivers && !Rules.Dredged)
                 {
                     var climate = Data.SampleClimate(c.Lat, c.Lon);
                     if (AridHydrology.Dry(climate.Rain, climate.TWarm - .0065 * c.Elev, hit.Q, WetSourceFlow != null && hit.Reach < WetSourceFlow.Length ? WetSourceFlow[hit.Reach] : hit.Q))
@@ -842,7 +877,7 @@ namespace EarthMap.Core
             // it first meets land there, is land at the bank's height with a beach along the water; the water short of it
             // shelves to that new shore. Water past land (a side arm, an oxbow) and water going on to a lake, the sea or far
             // out (wide water of its own) stay.
-            if (found && ChannelRules >= RiverNetwork.PondChannelRules && c.RiverOutline == RiverInOutline)
+            if (found && Rules.OneWidth && c.RiverOutline == RiverInOutline)
             {
                 var pond = PondProfileOf(hit.Reach);
                 if (pond != null && pond.At(hit.Along, ((x - hit.CentreX) * hit.DirZ - (z - hit.CentreZ) * hit.DirX) >= 0 ? 0 : 1,
@@ -877,40 +912,26 @@ namespace EarthMap.Core
             double fx = hit.DirX, fz = hit.DirZ;
             // decision 0069: the flow solved on the mask's water (rivers-flow-glo90-1.bin), where this world reads it
             double east = 0, north = 0;
-            bool solved = FlowRules >= 1 && Flow != null && ChannelRules >= 1 && Flow.At(c.Lat, c.Lon, out east, out north);
+            bool solved = Rules.SolvedFlow && Flow != null && Rules.Dredged && Flow.At(c.Lat, c.Lon, Rules.FlowAcrossTiles, out east, out north);
             double speed = solved ? Math.Sqrt(east * east + north * north) : 0;
-            int depth;
-            if (solved && ChannelRules >= MouthChannelRules)
-            {
-                // channel rules 3: one smooth depth across the water (MaskWaterDepth), shelving to the banks
-                double full = MaskWaterDepth(x, z, found, in hit, speed, ref fx, ref fz);
-                depth = (int)Math.Round(Math.Min(1 + ShoreSlope(full, 1) * c.RiverOutlineDist, full) + DepthNoise(x, z));
-            }
-            else if (solved)
-            {
-                // rule 3: water that carries the river's flow is as deep as the river's channel across its whole width (the
-                // deepest course near, its own channel's depth), shelving to the banks; water that carries none (side arms,
-                // backwaters) keeps the lone depth. Before, wide water shelved to 3 blocks a bank and a valley away from the
-                // course, a groove along its line (the Daugava's mouth: 3 blocks across 170, 7 in 35)
-                double cap = OutlineDepthCap(x, z, found, in hit, ref fx, ref fz);
-                double full = speed >= CarryMin ? Math.Max(cap, found ? ChannelDepthExact(in hit, 0) : OutlineRiverLoneDepth) : OutlineRiverLoneDepth;
-                depth = (int)Math.Round(Math.Min(1 + OutlineRiverSlope * c.RiverOutlineDist, full) + DepthNoise(x, z));
-            }
-            else depth = ChannelRules >= 1
-                ? (int)Math.Round(Math.Min(1 + OutlineRiverSlope * c.RiverOutlineDist, OutlineDepthCap(x, z, found, in hit, ref fx, ref fz)) + DepthNoise(x, z))
-                : (int)Math.Round(Math.Min(1 + OutlineRiverSlope * c.RiverOutlineDist, found ? ChannelDepth(in hit, 0) : OutlineRiverLoneDepth));
+            // (T-R2, code review 14 November 2026) the water's depth, one method per rule set that froze it, so an edit to the
+            // newest never touches the older ones
+            int depth = solved && Rules.MouthBed ? OutlineDepthMouthBed(x, z, in c, found, in hit, speed, ref fx, ref fz)
+                : solved ? OutlineDepthSolved(x, z, in c, found, in hit, speed, ref fx, ref fz)
+                : Rules.Dredged ? OutlineDepthDredged(x, z, in c, found, in hit, ref fx, ref fz)
+                : OutlineDepthRules0(in c, found, in hit);
             int top = wt - Math.Max(1, depth);
             if (found)
             {
                 // (channel rules 1: the channel as its hit has it, narrowed by the water mask and deepened for it)
-                double hw = ChannelRules >= 1 ? hit.HalfWidth : Rivers.HalfWidth(hit.Q);
+                double hw = Rules.Dredged ? hit.HalfWidth : Rivers.HalfWidth(hit.Q);
                 if (hit.Dist <= hw)
                 {
                     // (channel rules 4 where the flow is solved: the water's one depth, which is the course's own over its water
                     // already, and the channel only where the course comes into the mask's water from its edge, fading out a
                     // shore reach in: its channel cut deeper with walls for sides made a groove along the course, the Danube at
                     // Vienna)
-                    if (!(solved && ChannelRules >= FlowChannelRules)) top = Math.Min(top, wt - ChannelDepthAt(x, z, in hit, hit.Dist / hw));
+                    if (!(solved && Rules.OneBed)) top = Math.Min(top, wt - ChannelDepthAt(x, z, in hit, hit.Dist / hw));
                     else
                     {
                         double edgeShare = 1 - Geo.SmoothStep(c.RiverOutlineDist / RiverOutlines.Reach);
@@ -932,7 +953,7 @@ namespace EarthMap.Core
                 // channel rules 4: still where it carries none of the river's flow (a dead end, a backwater), or where the
                 // reaches near are slow ones (FlowingShare) and the water itself is no faster; before, wherever the water was
                 // slower than StillBelow
-                c.Still = (ChannelRules >= FlowChannelRules ? speed < CarryMin || AroundSpeed(c.Lat, c.Lon) < ReachFlowingSpeed && FlowingShare(x, z) < 0.5 : speed < StillBelow)
+                c.Still = (Rules.OneBed ? speed < CarryMin || AroundSpeed(c.Lat, c.Lon) < ReachFlowingSpeed && FlowingShare(x, z) < 0.5 : speed < StillBelow)
                     && !c.Rapid && ramp == 0;
             }
             c.Top = MouthShelf(wt, top, in c);
@@ -944,228 +965,35 @@ namespace EarthMap.Core
             c.Beach = false;
         }
 
+        /// <summary>Channel rules 3 with the solved flow: one smooth depth across the mask's water (MaskWaterDepth), shelving to
+        /// the banks.</summary>
+        int OutlineDepthMouthBed(double x, double z, in Column c, bool found, in RiverNetwork.Hit hit, double speed, ref double fx, ref double fz)
+        {
+            double full = MaskWaterDepth(x, z, found, in hit, speed, ref fx, ref fz);
+            return (int)Math.Round(Math.Min(1 + ShoreSlope(full, 1) * c.RiverOutlineDist, full) + DepthNoise(x, z));
+        }
+
         /// <summary>
-        /// Channel rules 5 (decision 0074): how far the water runs out from a reach's centre line on either side, and the
-        /// river's one width there. Every PondStep blocks along the reach, a line out along the normal on each side from the
-        /// channel's edge: how far the mask's river water goes before land (Run; over an island to water beyond). The water
-        /// goes on (Open) where that line or one at 45° up or down the river reaches an outline lake, the sea or PondOpen half
-        /// widths, or where the water half way out runs on along the river for PondShort widths (a side arm's mouth, a long
-        /// widening). One is the run's running median along the reach over PondShort of the reach's widths either way, eased
-        /// by a Gaussian of half a width and raised in a bell a width wide where the water goes on: it follows a widening
-        /// longer than PondShort widths and not a shorter one. Only for rivers whose water is at most PondMaxMetres across (a
-        /// few of the mask's 90 m pixels); null for wider ones. Built once per reach when a column first asks (a pure function
-        /// of the reach and the outlines, so threads that race build the same).
+        /// Channel rules 1-2 with the solved flow (decision 0069, rule 3): water that carries the river's flow is as deep as
+        /// the river's channel across its whole width (the deepest course near, its own channel's depth), shelving to the
+        /// banks; water that carries none (side arms, backwaters) keeps the lone depth. Before, wide water shelved to 3 blocks
+        /// a bank and a valley away from the course, a groove along its line (the Daugava's mouth: 3 blocks across 170, 7 in 35).
         /// </summary>
-        sealed class PondProfile
+        int OutlineDepthSolved(double x, double z, in Column c, bool found, in RiverNetwork.Hit hit, double speed, ref double fx, ref double fz)
         {
-            public double Step;
-            /// <summary>Per side (0: left of the flow, 1: right) and bin: the run straight out (blocks, at most the far
-            /// limit), whether the water goes on (straight out or at 45°), and the one width.</summary>
-            public float[][] Runs, One;
-            public bool[][] Open;
-            /// <summary>How far past a run's end water still counts as the same water (blocks): half the mask's 90 m pixel, at
-            /// least 1.5 (the outlines' corners round a pixel off; a gap narrower than that is no land of the data's).</summary>
-            public double Touch;
-
-            /// <summary>At a position along the reach on a side: the run (the most of the bins at and beside it) and the one
-            /// width; false where the water goes on there.</summary>
-            public bool At(double along, int side, out double runs, out double one)
-            {
-                var r = Runs[side];
-                var o = Open[side];
-                int k = Math.Clamp((int)Math.Round(along / Step), 0, r.Length - 1);
-                runs = Math.Max(r[k], Math.Max(r[Math.Max(0, k - 1)], r[Math.Min(r.Length - 1, k + 1)]));
-                one = One[side][k];
-                return !(o[k] || o[Math.Max(0, k - 1)] || o[Math.Min(r.Length - 1, k + 1)]);
-            }
+            double cap = OutlineDepthCap(x, z, found, in hit, ref fx, ref fz);
+            double full = speed >= CarryMin ? Math.Max(cap, found ? ChannelDepthExact(in hit, 0) : OutlineRiverLoneDepth) : OutlineRiverLoneDepth;
+            return (int)Math.Round(Math.Min(1 + OutlineRiverSlope * c.RiverOutlineDist, full) + DepthNoise(x, z));
         }
 
-        PondProfile[] pondProfiles;
-        static readonly PondProfile NoPondProfile = new PondProfile();
+        /// <summary>Channel rules 1 without the solved flow: capped by every course near (OutlineDepthCap), rounded through a
+        /// smooth noise.</summary>
+        int OutlineDepthDredged(double x, double z, in Column c, bool found, in RiverNetwork.Hit hit, ref double fx, ref double fz) =>
+            (int)Math.Round(Math.Min(1 + OutlineRiverSlope * c.RiverOutlineDist, OutlineDepthCap(x, z, found, in hit, ref fx, ref fz)) + DepthNoise(x, z));
 
-        PondProfile PondProfileOf(int reach)
-        {
-            if (Rivers == null || RiverOutlines == null || reach < 0) return null;
-            var a = pondProfiles;
-            if (a == null)
-            {
-                System.Threading.Interlocked.CompareExchange(ref pondProfiles, new PondProfile[Math.Max(0, Rivers.ReachCount)], null);
-                a = pondProfiles;
-            }
-            if (reach >= a.Length) return null;
-            var p = System.Threading.Volatile.Read(ref a[reach]);
-            if (p == null)
-            {
-                p = BuildPondProfile(reach) ?? NoPondProfile;
-                System.Threading.Volatile.Write(ref a[reach], p);
-            }
-            return p.Step > 0 ? p : null;
-        }
-
-        PondProfile BuildPondProfile(int reach)
-        {
-            var pts = new List<(double X, double Z, double NX, double NZ, double Along, double Hw)>();
-            double flowHw = Rivers.ReachSamples(reach, PondStep, (px, pz, nx, nz, al, hw) => pts.Add((px, pz, nx, nz, al, hw)));
-            if (pts.Count == 0 || flowHw <= 0) return null;
-            // the reach's own width: the median of its half widths (as HitAt has them, the mask's averaged measure)
-            var hws = new double[pts.Count];
-            for (int i = 0; i < hws.Length; i++) hws[i] = pts[i].Hw;
-            Array.Sort(hws);
-            double width = 2 * Math.Max(hws[hws.Length / 2], 1);
-            double maxAlong = 0;
-            foreach (var q in pts) maxAlong = Math.Max(maxAlong, q.Along);
-            int nb = (int)Math.Ceiling(maxAlong / PondStep) + 1;
-            var runs = new[] { new float[nb], new float[nb] };
-            var open = new[] { new bool[nb], new bool[nb] };
-            var cap = new float[nb];
-            var seen = new bool[nb];
-            const double diag = 0.70710678118654752;
-            foreach (var q in pts)
-            {
-                int k = Math.Clamp((int)Math.Round(q.Along / PondStep), 0, nb - 1);
-                double outTo = PondOpen * Math.Max(q.Hw, 0.5 * width);
-                cap[k] = (float)Math.Max(cap[k], outTo);
-                for (int side = 0; side < 2; side++)
-                {
-                    double sx = side == 0 ? q.NX : -q.NX, sz = side == 0 ? q.NZ : -q.NZ;
-                    // straight out (the run), and 45° up and down the river (water going on that way: a side arm leaving at a
-                    // slant, a backwater)
-                    double run = Run(q.X, q.Z, sx, sz, q.Hw, outTo);
-                    bool goesOn = double.IsPositiveInfinity(run)
-                        || double.IsPositiveInfinity(Run(q.X, q.Z, diag * (sx - q.NZ), diag * (sz + q.NX), q.Hw / diag, outTo))
-                        || double.IsPositiveInfinity(Run(q.X, q.Z, diag * (sx + q.NZ), diag * (sz - q.NX), q.Hw / diag, outTo));
-                    // and along the river from half way out through the water beyond the channel: water going on further
-                    // than PondShort widths that way is a side arm's mouth or a long widening, not a pond
-                    if (!goesOn && run > q.Hw + 2)
-                    {
-                        double mid = 0.5 * (q.Hw + run), mx = q.X + sx * mid, mz = q.Z + sz * mid, along = PondShort * width;
-                        goesOn = Along(mx, mz, -q.NZ, q.NX, along) || Along(mx, mz, q.NZ, -q.NX, along);
-                    }
-                    float rv = (float)Math.Min(run, outTo);
-                    if (!seen[k] || rv > runs[side][k]) runs[side][k] = rv;
-                    open[side][k] |= goesOn;
-                }
-                seen[k] = true;
-            }
-            // bins no sample fell in take the one before (or after, at the start)
-            int first = Array.IndexOf(seen, true);
-            if (first < 0) return null;
-            for (int k = 0; k < nb; k++)
-            {
-                if (seen[k]) continue;
-                int from = k < first ? first : k - 1;
-                runs[0][k] = runs[0][from]; runs[1][k] = runs[1][from]; cap[k] = cap[from];
-                open[0][k] = open[0][from]; open[1][k] = open[1][from];
-            }
-            // only where the mask draws the river a few of its 90 m pixels wide (the median water width across, both runs, at
-            // most PondMaxMetres): there a pixel more or less is half the width again. Wider rivers are the mask's as they are
-            var across = new float[nb];
-            for (int k = 0; k < nb; k++) across[k] = runs[0][k] + runs[1][k];
-            Array.Sort(across);
-            if (across[nb / 2] * Geo.MetresPerDegree / Geometry.BlocksPerDegreeZ > PondMaxMetres) return null;
-            // the running median over PondShort widths either way (a widening shorter than that is gone, a longer one keeps its
-            // shape), then a Gaussian of half a width (no corners)
-            int half = Math.Max(1, (int)Math.Round(PondShort * width / PondStep));
-            double sigma = 0.5 * width / PondStep, inv = 1 / (2 * sigma * sigma);
-            int far = (int)Math.Ceiling(3 * sigma);
-            var one = new[] { new float[nb], new float[nb] };
-            var win = new List<float>();
-            var med = new float[nb];
-            for (int side = 0; side < 2; side++)
-            {
-                for (int k = 0; k < nb; k++)
-                {
-                    win.Clear();
-                    for (int j = Math.Max(0, k - half); j <= Math.Min(nb - 1, k + half); j++) win.Add(runs[side][j]);
-                    win.Sort();
-                    med[k] = win[win.Count / 2];
-                }
-                for (int k = 0; k < nb; k++)
-                {
-                    double sum = 0, ws = 0;
-                    for (int j = Math.Max(0, k - far); j <= Math.Min(nb - 1, k + far); j++)
-                    {
-                        double w = Math.Exp(-(j - k) * (j - k) * inv);
-                        sum += w * med[j];
-                        ws += w;
-                    }
-                    one[side][k] = (float)(sum / ws);
-                }
-                // where the water goes on (a side arm's or a backwater's mouth, wide water), the one width rises to the far
-                // limit in a bell a width wide, so the shore beside it eases out instead of ending straight across
-                double so = width / PondStep, invO = 1 / (2 * so * so);
-                int farO = (int)Math.Ceiling(3 * so);
-                for (int k = 0; k < nb; k++)
-                {
-                    if (!open[side][k]) continue;
-                    for (int j = Math.Max(0, k - farO); j <= Math.Min(nb - 1, k + farO); j++)
-                        one[side][j] = (float)Math.Max(one[side][j], cap[k] * Math.Exp(-(j - k) * (j - k) * invO));
-                }
-            }
-            return new PondProfile { Step = PondStep, Runs = runs, Open = open, One = one,
-                Touch = Math.Max(1.5, 0.5 * MaskPixelMetres * Geometry.BlocksPerDegreeZ / Geo.MetresPerDegree) };
-        }
-
-        /// <summary>Channel rules 5: how far (blocks) from (x, z) along (ux, uz) the mask's river water goes from beyond the
-        /// channel's edge (from) before land; over land narrower than PondIsland half widths (at least PondIslandMin blocks)
-        /// with the river's water beyond (an island, a strip between arms) it goes on; +inf where it goes into an outline lake,
-        /// the sea, or past far.</summary>
-        double Run(double x, double z, double ux, double uz, double from, double far)
-        {
-            double gap = Math.Max(PondIslandMin, PondIsland * from);
-            for (double d = Math.Max(1, Math.Floor(from) + 1); d <= far; d += 1)
-            {
-                double px = x + ux * d, pz = z + uz * d;
-                if (InMaskRiver(px, pz)) continue;
-                if (!OnLand(px, pz)) return double.PositiveInfinity;
-                double on = 0;
-                for (double j = d + 1; j <= d + gap && j <= far; j += 1)
-                    if (InMaskRiver(x + ux * j, z + uz * j)) { on = j; break; }
-                if (on == 0) return d - 1;
-                d = on;
-            }
-            return double.PositiveInfinity;
-        }
-
-        /// <summary>Channel rules 5: whether the mask's river water goes on from (x, z) along (ux, uz) for len blocks.</summary>
-        bool Along(double x, double z, double ux, double uz, double len)
-        {
-            for (double d = 1; d <= len; d += 1)
-                if (!InMaskRiver(x + ux * d, z + uz * d)) return false;
-            return true;
-        }
-
-        /// <summary>Whether the mask's river outlines have water at (x, z).</summary>
-        bool InMaskRiver(double x, double z)
-        {
-            var g = Geometry.ToGeo(x, z);
-            if (g.InGutter) return false;
-            var rv = RiverOutlines.At(g.Lat, g.Lon);
-            return rv.Covered && rv.Inside && !double.IsNaN(rv.Level);
-        }
-
-        /// <summary>Not in an outline lake and not at sea (by the coast outlines where they have data).</summary>
-        bool OnLand(double x, double z)
-        {
-            var g = Geometry.ToGeo(x, z);
-            if (g.InGutter) return false;
-            if (LakeOutlines != null)
-            {
-                var lk = LakeOutlines.At(g.Lat, g.Lon);
-                if (lk.Covered && lk.Inside) return false;
-            }
-            double sd = Coasts?.SignedDistance(g.Lat, g.Lon) ?? double.NaN;
-            return !(sd < 0);
-        }
-
-        /// <summary>Channel rules 5: the profile's spacing (blocks); how far a run goes before the water goes on (half widths);
-        /// how long a widening must be to stay (the river's widths); the one width's slack (a share of it, and blocks); the
-        /// beach along water made land (blocks); how wide land a run crosses to water beyond (half widths, at least
-        /// PondIslandMin blocks); the widest river trimmed (m across its water).</summary>
-        const double PondStep = 2, PondOpen = 6, PondShort = 5, PondSlack = 0.15, PondSlackBlocks = 1, PondBeach = 2,
-            PondIsland = 1, PondIslandMin = 4, PondMaxMetres = 450;
-        /// <summary>The water mask's pixel (m, GLO-90's 3 arc seconds).</summary>
-        const double MaskPixelMetres = 90;
+        /// <summary>Channel rules 0 (0053 item 18): the nearest course's channel depth at its centre, or the lone depth.</summary>
+        int OutlineDepthRules0(in Column c, bool found, in RiverNetwork.Hit hit) =>
+            (int)Math.Round(Math.Min(1 + OutlineRiverSlope * c.RiverOutlineDist, found ? ChannelDepth(in hit, 0) : OutlineRiverLoneDepth));
 
         /// <summary>
         /// Pool layout 9: the water top of the lake data at a position (as a column there would have it in NearLakeTop), -1
@@ -1192,7 +1020,7 @@ namespace EarthMap.Core
                     StripGridLakes(ref s, g.Lat, g.Lon);
                     if (!double.IsNaN(s.LakeLevel) && s.Lake > 0) return WaterTopY(s.LakeLevel);
                     // (channel rules 1: none along the canals, as NaturalColumn)
-                    if (ChannelRules >= 1 && SeaChannels.InCanalZone(g.Lat, g.Lon)) return -1;
+                    if (Rules.Dredged && SeaChannels.InCanalZone(g.Lat, g.Lon)) return -1;
                     return double.IsNaN(lk.Level) ? -1 : WaterTopY(lk.Level);
                 }
             }

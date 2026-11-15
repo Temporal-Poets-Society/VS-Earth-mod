@@ -2,7 +2,7 @@
 
 Status: **agreed** (the author, 9 November 2026: "Yes, parallel and cache", after the start-up breakdown of their own
 1:10 world; and "my pc has powerful CPU and other players might have much longer startup, so parallel could be
-important"). Built in 2.0.0-rc.4. Date: 2026-11-09.
+important"). Built in 2.0.0-rc.4; in Earth 2.0.0. Date: 2026-11-09.
 
 ## What the author saw
 

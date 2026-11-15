@@ -37,7 +37,7 @@ namespace EarthMap.Core
         /// blocks, more rain higher up and near sea level) give back the real values at the surface.
         /// </summary>
         public int ClimatePixel(double x, double z, int geologic, float tempMul, float rainMul)
-            => Pixel(x, z, geologic, tempMul, rainMul, ClimateRules < RealLapseRules);
+            => Pixel(x, z, geologic, tempMul, rainMul, !Rules.RealLapse);
 
         /// <summary>
         /// The climate pixel as <see cref="ClimatePixel"/> stores it for worlds before climate rules v2, in any world: the surface
@@ -60,12 +60,12 @@ namespace EarthMap.Core
             double tStore = vanillaLapse ? tReal + (y - SeaLevel) / 6.375 : cs.TMean;
             // climate rules v3 (decision 0031's test profiles): the real rainfall, which the patched GetRainFall leaves as it is;
             // before: less vanilla's altitude rain, which the byte cuts at 0 on dry high ground (read back as wet)
-            double rainStore = !vanillaLapse && ClimateRules >= RealRainRules ? rainReal
+            double rainStore = !vanillaLapse && Rules.RealRain ? rainReal
                 : rainReal - (y - SeaLevel) / 2.0 - 5 * Math.Clamp(8 + SeaLevel - y, 0, 8);
             int temp = Math.Clamp((int)(Math.Clamp((tStore + 20) * 4.25, 0, 255) * tempMul), 0, 255);
             int rain = Math.Clamp((int)Math.Round(rainStore * rainMul), 0, 255);
             // geothermal rules 1: heat under real volcanoes (decision 0057), never enough for vanilla's random hot springs
-            if (GeothermalRules >= 1) geologic = Geothermal.Activity(g.Lat, g.Lon);
+            if (Rules.GeothermalActivity) geologic = Geothermal.Activity(g.Lat, g.Lon);
             return (temp << 16) | (rain << 8) | (geologic & 0xFF);
         }
 
@@ -78,7 +78,7 @@ namespace EarthMap.Core
         /// </summary>
         public double ClimateCorrection(double x, double z, double y)
         {
-            if (ClimateRules >= RealLapseRules)
+            if (Rules.RealLapse)
             {
                 // climate rules v2: vanilla reads the stored sea-level temperature (cut to the byte's -20..40 °C) less the real
                 // lapse at y (ClimateLapse), cut again to -20..40 on the server and -50..40 on the client; the same on both sides
@@ -155,7 +155,7 @@ namespace EarthMap.Core
             if (Rivers == null) return shore;
             ProjectTerrain(x, z, out double sourceX, out double sourceZ);
             if (!Rivers.Nearest(sourceX, sourceZ, out var hit)) return shore;
-            if (AridRiverRules>=1 && WetSourceFlow!=null && hit.Reach<WetSourceFlow.Length)
+            if (Rules.AridRivers && WetSourceFlow!=null && hit.Reach<WetSourceFlow.Length)
             {
                 var g=TerrainGeoAt(x,z);var cs=Data.SampleClimate(g.Lat,g.Lon);
                 if(AridHydrology.Dry(cs.Rain,cs.TWarm-.0065*Data.ElevBilinear(g.Lat,g.Lon),hit.Q,WetSourceFlow[hit.Reach])
@@ -165,6 +165,35 @@ namespace EarthMap.Core
             double hw = hit.HalfWidth;
             double belt = 20 + 30 * Rivers.StreamT(hit.Q) + 6 * hw;
             return Math.Max(shore, 1 - Geo.SmoothStep((hit.Dist - hw - 8) / belt));
+        }
+
+        /// <summary>
+        /// For maps (decision 0079): how the client colours grass at a column through the year (EarthGrassSeason), for a map
+        /// that draws the land without its chunks. Returns the place's grass season map (<see cref="GrassPhenology.Codes"/>
+        /// index) from the weather's monthly shape around the column's yearly mean at the ground, and fills
+        /// <paramref name="rainCurve"/> (<see cref="GrassSeason.Steps"/> values or more) with the place's wetness curve, which
+        /// <see cref="GrassSeason.SeasonalRain"/> turns into the grass's rainfall byte at a time of year. -1 and zeros where the
+        /// world has no weather (the client then keeps vanilla's season map and the yearly rainfall). The client reads the
+        /// shape per 32-block cell and the yearly mean from the block's temperature byte; this reads both at the column.
+        /// </summary>
+        public int GrassSeasonAt(double x, double z, float[] rainCurve)
+        {
+            if (rainCurve != null) Array.Clear(rainCurve);
+            var w = Data.Weather;
+            if (w == null) return -1;
+            var g = Geometry.ToGeo(x, z);
+            if (g.InGutter || !(Math.Abs(g.Lat) <= 90)) return -1;
+            Span<double> t = stackalloc double[12], p = stackalloc double[12];
+            w.MonthlyNormals(g.Lat, g.Lon, t, p);
+            double mean = 0;
+            for (int m = 0; m < 12; m++) mean += t[m];
+            mean /= 12;
+            if (double.IsNaN(mean)) return -1;
+            var at = TerrainGeoAt(x, z);
+            ClimateAt(at.Lat, at.Lon, out double yearly, out _, out _);
+            for (int m = 0; m < 12; m++) t[m] = yearly + (t[m] - mean);
+            if (rainCurve != null && rainCurve.Length >= GrassSeason.Steps) GrassSeason.Curve(w, g.Lat, g.Lon, rainCurve);
+            return GrassPhenology.MapFor(t, p);
         }
     }
 }

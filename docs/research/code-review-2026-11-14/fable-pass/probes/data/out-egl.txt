@@ -1,0 +1,8 @@
+== .egl tile (DemTiles.Decode); FineElevation.Load's filter takes IOException and InvalidDataException (79,682 B): unchanged -> ok (4 MB allocated, 13 ms)
+    ~ accepted (no error)  x16   <- int32@8=MAX; int32@8=-1; int32@8=0; int32@8=16M; int32@16=MAX; int32@16=-1; ...
+      load: EndOfStreamException  x1
+      load: InvalidDataException  x25
+each of the first 48 bytes set to FF/00/7F/80: InvalidDataException x113, ok x79
+FineElevation with a bit-flipped N56E024.egl: TryHeight -> False; LastError = N56E024: tile data damaged; files now: N56E024.egl.bad
+FineElevation with a zero-length N57E024.egl: TryHeight -> False; LastError = N57E024: not an Earth elevation tile
+FineElevation with a 100 x 100 tile of valid checksum: TryHeight -> False; LastError = N58E024: 100 x 100 cells, not GLO-90's 800 x 1200

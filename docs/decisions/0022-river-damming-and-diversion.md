@@ -1,6 +1,6 @@
 # 0022: River damming and diversion: a river flow query in Earth, the water behaviour in a separate future mod
 
-Status: Proposed | Date: 2026-10-22 | Decided by: not decided (written down at the user's request; proposed by Claude)
+Status: Partly built elsewhere, partly proposed. Part A (the river flow query) built under 0027 in 0.16.13 (in Earth 1.0.0); in Earth 2.0.0. Part B became Hydrology (0024): dams that raise and spill their reach are built in Hydrology 0.6.2 (its decisions 0008-0010), which Earth 2.0.0 requires. Dams that give way (B4), drying below a diversion (B5) and canal locks: proposed, not built | Date: 2026-10-22 | Decided by: not decided (written down at the user's request; proposed by Claude)
 
 ## Context
 
@@ -128,3 +128,9 @@ None. Part A would reuse `RiverNetwork.Nearest` and `RiverReach.Next` behind a p
   ([0024](0024-hydrology-water-mod.md)). Part B's future water mod is Hydrology. Realistic Water and Realistic Rapids
   are no longer proposed as companions: they patch the same water behaviours, so they are incompatible with Hydrology.
   Part A stays as proposed here.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: Proposed

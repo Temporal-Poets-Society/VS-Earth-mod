@@ -35,6 +35,17 @@ namespace EarthMap.Tests
         /// <summary>Game hours at the middle of month m of year y.</summary>
         static double MonthHours(int y, int m, double frac = 0.5) => (y * DaysPerYear + (m + frac) / 12.0 * DaysPerYear) * HoursPerDay;
 
+        /// <summary>The weather's ground (rules 7: weatherground.bin and climate fix 4), as the game hands it to the model.</summary>
+        static WeatherGround ground;
+
+        /// <summary>A model as the game builds it: with the ground (rules 7 reads it; older rules don't).</summary>
+        static WeatherModel NewModel(WeatherData d, EarthGeometry g, WeatherSettings s, long key)
+        {
+            var m = new WeatherModel(d, g, s, key);
+            m.Ground = ground;
+            return m;
+        }
+
         static int Main(string[] args)
         {
             string root = args.Length > 0 && Directory.Exists(args[0]) ? args[0] : FindRoot();
@@ -43,6 +54,8 @@ namespace EarthMap.Tests
             Directory.CreateDirectory(outDir);
             var sw = Stopwatch.StartNew();
             var data = EarthData.LoadFromFolder(root, false);
+            ground = data.WeatherGround;
+            if (ground == null) { Console.WriteLine("FAIL the weather's ground: " + data.WeatherGroundError); return 1; }
             Console.WriteLine($"data loaded in {sw.ElapsedMilliseconds} ms");
             if (data.Weather == null) { Console.WriteLine("FAIL no weather.bin"); return 1; }
             CheckWeatherFilePinned(data.Weather, root);
@@ -57,7 +70,7 @@ namespace EarthMap.Tests
             var geo = EarthLayout.Build(inp, data, out _);
             var settings = new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay };
             sw.Restart();
-            var model = new WeatherModel(data.Weather, geo, settings, 12345);
+            var model = NewModel(data.Weather, geo, settings, 12345);
             Console.WriteLine($"model built in {sw.ElapsedMilliseconds} ms; {model.BlocksPerKm:0.00} blocks per km");
 
             CheckItcz(data.Weather);
@@ -72,6 +85,35 @@ namespace EarthMap.Tests
             if (fi >= 0)
             {
                 RainFrequencyScan(data, geo, args[fi + 1], args[fi + 2]);
+                return 0;
+            }
+            int efi = Array.IndexOf(args, "eventfit");
+            if (efi >= 0 && efi + 2 < args.Length)
+            {
+                EventFit(data, geo, args[efi + 1], args[efi + 2]);
+                return 0;
+            }
+            int evi = Array.IndexOf(args, "events");
+            if (evi >= 0 && evi + 1 < args.Length)
+            {
+                EventScan(data, geo, args[evi + 1], evi + 2 < args.Length && !args[evi + 2].StartsWith("-") ? args[evi + 2] : null);
+                return 0;
+            }
+            int tdi = Array.IndexOf(args, "thunderdays");
+            if (tdi >= 0 && tdi + 1 < args.Length)
+            {
+                ThunderDayScan(model, geo, args[tdi + 1], tdi + 2 < args.Length && !args[tdi + 2].StartsWith("-") ? args[tdi + 2] : null);
+                return 0;
+            }
+            if (args.Contains("africahail"))
+            {
+                AfricaHail(data.Weather, geo);
+                return 0;
+            }
+            int fogi = Array.IndexOf(args, "fog");
+            if (fogi >= 0 && fogi + 1 < args.Length)
+            {
+                FogScan(model, geo, args[fogi + 1]);
                 return 0;
             }
             if (args.Contains("rules6"))
@@ -135,6 +177,7 @@ namespace EarthMap.Tests
             CheckWinds(model);
             CheckThunder(model, geo);
             CheckPerformance(model);
+            CheckNightHours();
             CheckRainOff(data, geo);
             CheckCatchUp(data, geo);
             if (maps) Maps(model, data.Weather, outDir);
@@ -145,8 +188,10 @@ namespace EarthMap.Tests
 
         static void Pos(EarthGeometry geo, double lat, double lon, out double x, out double z) => geo.FromGeo(lat, lon, out x, out z);
 
-        /// <summary>The shipped weather.bin as Earth 2.0.0-rc.2 has it (since a37fc76, 7 November 2026).</summary>
-        const string WeatherSignature = "bc9ea5a04cb1bc1d", WeatherBytes = "3634099";
+        /// <summary>The shipped weather.bin as Earth 2.0.0-rc.2 has it (since a37fc76, 7 November 2026); from rc.14 the same
+        /// values as predicted planes (EA-0077, decision 0082: 2,661,987 bytes instead of 3,634,099), which keep the plain
+        /// file's signature (ClimateDataTests compares every value with the plain file's).</summary>
+        const string WeatherSignature = "bc9ea5a04cb1bc1d", WeatherBytes = "2661987";
 
         /// <summary>
         /// Adversarial review A6: world generation's vegetation zones and fire rules read weather.bin's monthly normals, and a
@@ -242,7 +287,7 @@ namespace EarthMap.Tests
         static void LowCloudScan(WeatherData d, EarthGeometry geo)
         {
             Console.WriteLine("low cloud decks over cold seas (rules 6)");
-            var m6 = new WeatherModel(d, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = 6 }, 12345);
+            var m6 = NewModel(d, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = 6 }, 12345);
             // name, lat0, lat1, lon0, lon1, peak month (1-12), Klein and Hartmann's low stratiform peak (%)
             var regions = new (string Name, double La0, double La1, double Lo0, double Lo1, int Peak, double Target)[]
             {
@@ -299,6 +344,38 @@ namespace EarthMap.Tests
             foreach (var kv in where.OrderByDescending(kv => kv.Value).Take(24)) Console.WriteLine($"    {kv.Key}: {kv.Value}");
         }
 
+        /// <summary>(Rules 9, EA-0074) Hail and thunder days a year in West and Central Africa, rules 8 against 9 (the hail
+        /// follows the raised thunder): the Jos and Cameroon highlands, where the ground is cool enough for hail, and the
+        /// lowlands, where it isn't. Three game years every quarter hour.</summary>
+        static void AfricaHail(WeatherData d, EarthGeometry geo)
+        {
+            foreach (var (name, lat, lon, metres) in new[] { ("Jos", 9.9, 8.9, 1200.0), ("Bamenda", 5.96, 10.15, 1600.0), ("Douala", 4.01, 9.72, 10.0), ("Bamako", 12.53, -7.95, 380.0) })
+            {
+                geo.FromGeo(lat, lon, out double x, out double z);
+                var line = $"  {name,-8}";
+                foreach (int rules in new[] { 8, 9 })
+                {
+                    var m = NewModel(d, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = rules }, 12345);
+                    int hailDays = 0, thunderDays = 0;
+                    for (int day = 0; day < 3 * (int)DaysPerYear; day++)
+                    {
+                        bool hail = false, thunder = false;
+                        for (double h = 0; h < HoursPerDay; h += 0.25)
+                        {
+                            double hours = day * HoursPerDay + h;
+                            if (!hail && m.HailAt(x, z, hours, metres) >= 0.25) hail = true;
+                            if (!thunder && m.ThunderAt(x, z, hours) > 0) thunder = true;
+                        }
+                        if (hail) hailDays++;
+                        if (thunder) thunderDays++;
+                    }
+                    double perYear = 365.0 / (3 * DaysPerYear);
+                    line += $"  rules {rules}: hail {hailDays * perYear,5:0.0}, thunder {thunderDays * perYear,5:0} days a year";
+                }
+                Console.WriteLine(line);
+            }
+        }
+
         /// <summary>
         /// Weather rules 6 (13 November 2026): hail (EA-0019) and the weather's temperature (EA-0025) at stations, three game
         /// years every quarter hour. Hail days a year beside thunder days, where hail should be common (the High Plains,
@@ -309,8 +386,8 @@ namespace EarthMap.Tests
         static void CheckRules6(WeatherData d, EarthGeometry geo)
         {
             Console.WriteLine("weather rules 6: hail and the weather's temperature");
-            var m6 = new WeatherModel(d, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = 6 }, 12345);
-            var m5 = new WeatherModel(d, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = 5 }, 12345);
+            var m6 = NewModel(d, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = 6 }, 12345);
+            var m5 = NewModel(d, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = 5 }, 12345);
             // name, lat, lon, real hail days a year (rough station climatologies), station sd of the daily mean in Jan and Jul
             // (station heights in metres; Tokyo's spread is the station fit's worst, 4.3 fitted against 1.9 measured in January)
             var sites = new (string Name, double Lat, double Lon, double Metres, double Hail, double SdJan, double SdJul)[]
@@ -478,6 +555,24 @@ namespace EarthMap.Tests
             Check(Math.Abs(moscow3 - moscow2) < 1, "inland, away from the coast band, v3 is v2 (Moscow)");
             d.SetClimateFix(2);
             Check(Count() == after2 && Probe() == pa2, "switching from v3 back to v2 gives v2's climate exactly");
+            if (!d.HasClimateFixVersion(4)) { Check(false, "climatefix4.bin is there"); d.SetClimateFix(0); return; }
+            // v4 (EA-0060): GPCP's share of the coast blend at CHELSA's level on desert coasts (GPCP's 2.5° cells put the
+            // Andes' and the tropics' rain on the Humboldt and Benguela coasts: Lima 434 mm in v3, CHELSA 24, real about 15)
+            var places = new[] { ("Lima", -12.05, -77.04), ("Walvis Bay", -22.95, 14.5), ("Antofagasta", -23.65, -70.4), ("Moscow", 55.75, 37.62),
+                ("Riga", 56.95, 24.1), ("Niamey", 13.51, 2.11), ("Agadez", 16.97, 7.99) };
+            d.SetClimateFix(3);
+            var v3 = places.Select(p => d.SampleClimate(p.Item2, p.Item3)).ToArray();
+            d.SetClimateFix(4);
+            var v4 = places.Select(p => d.SampleClimate(p.Item2, p.Item3)).ToArray();
+            Console.WriteLine("  with fix v4 (new worlds from 14 November 2026): " + string.Join(", ", places.Select((p, k) => $"{p.Item1} {v3[k].Precip:0} -> {v4[k].Precip:0} mm")));
+            // (Lima keeps UDel's own share of its coast cell, 94 mm, at a sixth: about 60 mm against CHELSA's 24)
+            Check(v4[0].Precip < 80 && v3[0].Precip > 300, "fix v4 makes Lima's coast a desert (v3 over 300 mm, v4 under 80)");
+            Check(v4[1].Precip < 40 && v3[1].Precip > 60, "fix v4: Walvis Bay under 40 mm (v3 over 60)");
+            Check(v4[2].Precip <= v3[2].Precip, "fix v4 never makes a place wetter (Antofagasta)");
+            Check(Enumerable.Range(3, 4).All(k => v4[k].Precip == v3[k].Precip), "fix v4 leaves Moscow, Riga, Niamey and Agadez (UDel's own, inland) as v3");
+            Check(Enumerable.Range(0, v3.Length).All(k => v4[k].TMean == v3[k].TMean && v4[k].TCold == v3[k].TCold), "fix v4 changes no temperature");
+            d.SetClimateFix(2);
+            Check(Count() == after2 && Probe() == pa2, "switching from v4 back to v2 gives v2's climate exactly");
             d.SetClimateFix(0);
         }
 
@@ -486,8 +581,8 @@ namespace EarthMap.Tests
         static void CheckDeterminism(EarthData data, EarthGeometry geo, WeatherSettings settings, WeatherModel a)
         {
             Console.WriteLine("determinism");
-            var b = new WeatherModel(data.Weather, geo, new WeatherSettings { DaysPerYear = settings.DaysPerYear, HoursPerDay = settings.HoursPerDay }, 12345);
-            var c = new WeatherModel(data.Weather, geo, settings, 999);
+            var b = NewModel(data.Weather, geo, new WeatherSettings { DaysPerYear = settings.DaysPerYear, HoursPerDay = settings.HoursPerDay }, 12345);
+            var c = NewModel(data.Weather, geo, settings, 999);
             var rnd = new Random(7);
             int diff = 0, differs = 0;
             for (int i = 0; i < 2000; i++)
@@ -675,6 +770,29 @@ namespace EarthMap.Tests
             Check(kanoWet > 0.12 && kanoDry < 0.03, "Kano's ground is wet in the monsoon and dry in the dry season");
             // (the rain that fell, in mm: Seville's October rain is several times its July's)
             Check(sevilleSummer < 0.03 && sevilleAutumn > 0.02 && sevilleAutumn > 4 * sevilleSummer, "Seville's ground dries out in summer and wets again in autumn");
+            // the month's millimetres (WeatherModel.RainMmPerHour, which the ground's moisture and Hydrology read) against its
+            // climate's, 20 game years every half hour: rules 8 skews the rain but keeps rules 7's millimetres (WeatherSample.RainShare)
+            var older = new WeatherModel(m.Data, m.Geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = 7 }, 12345) { Ground = m.Ground };
+            double worst = 0;
+            foreach (var (name, lat, lon, mo) in new[] { ("Kano", 12.0, 8.52, 7), ("Singapore", 1.35, 103.99, 11), ("Mumbai", 19.1, 72.85, 6), ("Kansas City", 39.1, -94.6, 6), ("London", 51.48, -0.46, 0), ("Tampa", 27.96, -82.54, 7) })
+            {
+                Pos(m.Geo, lat, lon, out double x, out double z);
+                double Mm(WeatherModel w)
+                {
+                    double sum = 0, normal = 0; int n = 0;
+                    for (int y = 1; y <= 20; y++)
+                        for (int k = 0; k < 9 * 48; k++)
+                        {
+                            var rs = w.RainSample(x, z, MonthHours(y, mo, 0) + k * 0.5);
+                            sum += WeatherModel.RainMmPerHour(rs) * 24; normal += rs.NormalPrecip; n++;
+                        }
+                    return sum / normal;
+                }
+                double r7 = Mm(older), r8 = Mm(m);
+                Console.WriteLine($"  {name} month {mo + 1}: the rain's millimetres over the climate's: rules 7 {r7:0.00}, rules {m.Settings.Rules} {r8:0.00}");
+                worst = Math.Max(worst, Math.Abs(Math.Log(r8 / r7)));
+            }
+            Check(worst < 0.15, $"the month's millimetres stay within 15 % of rules 7's (worst {worst:0.00} in log)");
         }
 
         static void CheckStorms(WeatherModel m)
@@ -802,6 +920,21 @@ namespace EarthMap.Tests
 
         // ------------------------------------------------------------------------------------------ performance
 
+        /// <summary>(ER-17) The night's length from PortableMath alone, against the system's tan and acos.</summary>
+        static void CheckNightHours()
+        {
+            double worst = 0;
+            for (double lat = -66; lat <= 66; lat += 0.7)
+                for (double yr = 0; yr < 1; yr += 0.013)
+                {
+                    double decl = -23.44 * Math.PI / 180 * PortableMath.Cos(2 * Math.PI * (yr + 10 / 365.0));
+                    double x = -Math.Tan(lat * Math.PI / 180) * Math.Tan(decl);
+                    double reference = x <= -1 ? 0 : x >= 1 ? 24 : 24 - 24 / Math.PI * Math.Acos(x);
+                    worst = Math.Max(worst, Math.Abs(WeatherModel.NightHours(lat, yr) - reference));
+                }
+            Check(worst < 1e-9, $"the night's length from the portable maths matches tan and acos (worst {worst:E1} h)");
+        }
+
         static void CheckPerformance(WeatherModel m)
         {
             Console.WriteLine("speed");
@@ -821,6 +954,33 @@ namespace EarthMap.Tests
             double wind = sw.Elapsed.TotalMilliseconds * 1000 / n;
             Console.WriteLine($"  rain cloudness {rain:0.00} µs, wind {wind:0.00} µs per call ({acc:0})");
             Check(rain < 5 && wind < 5, "fast enough to answer the game's rain and wind lookups (under 5 µs)");
+            // (rules 8, EA-0073) the temperature anomaly as the climate hook asks it: places a few blocks apart around a
+            // player (within 64 blocks), the clock moving on a game second a call; rules 7 computes the rain sample every time
+            var near = new WeatherModel(m.Data, m.Geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = 7 }, 12345) { Ground = m.Ground };
+            for (int i = 0; i < n; i++) { xs[i] = 100000 + rnd.NextDouble() * 128; zs[i] = 40000 + rnd.NextDouble() * 128; }
+            double Time(WeatherModel w)
+            {
+                w.TemperatureAnomaly(xs[0], zs[0], h0, 50);
+                var t = Stopwatch.StartNew();
+                for (int i = 0; i < n; i++) acc += w.TemperatureAnomaly(xs[i], zs[i], h0 + i / 3600.0, 50);
+                return t.Elapsed.TotalMilliseconds * 1000 / n;
+            }
+            double a7 = Time(near), a8 = Time(m);
+            Console.WriteLine($"  temperature anomaly around a player: rules 7 {a7:0.00} µs, rules {m.Settings.Rules} {a8:0.00} µs per call");
+            if (m.Settings.Has.AnomalyCells)
+            {
+                Check(a8 < a7 / 3, "rules 8 keep the temperature anomaly per cell and step (EA-0073): a third of rules 7's cost or less");
+                // the same answer from a model that has kept nothing yet (another side, another thread) and in the same cell
+                var fresh = new WeatherModel(m.Data, m.Geo, m.Settings, 12345) { Ground = m.Ground };
+                bool same = true;
+                for (int i = 0; i < 2000 && same; i++)
+                {
+                    double h = h0 + i * 0.37;
+                    same = m.TemperatureAnomaly(xs[i], zs[i], h, 50) == fresh.TemperatureAnomaly(xs[i], zs[i], h, 50)
+                        && fresh.TemperatureAnomaly(xs[i], zs[i], h, 50) == fresh.TemperatureAnomaly(Math.Floor(xs[i] / 32) * 32 + 1, Math.Floor(zs[i] / 32) * 32 + 31, h, 50);
+                }
+                Check(same, "the rules-8 temperature anomaly: the same kept or not, and over its cell");
+            }
         }
 
         // ------------------------------------------------------------------------------------------ thunder
@@ -838,6 +998,8 @@ namespace EarthMap.Tests
                 ("Moscow", 55.75, 37.62, 23), ("Paris", 48.86, 2.35, 19), ("London", 51.50, -0.12, 13), ("Cairo", 30.04, 31.24, 3),
                 ("Reykjavik", 64.13, -21.90, 1.5), ("Kampala", 0.31, 32.58, 240), ("Yakutsk", 62.03, 129.73, double.NaN),
                 ("Central Pacific", 0.0, -150.0, double.NaN), ("Amazon", -3.0, -60.0, double.NaN),
+                // (rules 7, EA-0022) the desert Southwest's summer storms: GHCN-Daily's thunder days (WT03), 1991-2020
+                ("Phoenix", 33.43, -112.00, 21), ("El Paso", 31.81, -106.38, 41), ("Albuquerque", 35.04, -106.62, 46),
             };
             const int Years = 20, PerHour = 4;
             var res = new Dictionary<string, (double days, double clim, double dry, double[] month, double hourShare)>();
@@ -885,6 +1047,9 @@ namespace EarthMap.Tests
             foreach (var s in sites.Where(s => !double.IsNaN(s.real) && s.name != "Kampala" && s.real >= 10))
                 Check(res[s.name].days > s.real / 2 && res[s.name].days < s.real * 2,
                     $"{s.name}: {res[s.name].days:0} thunder days a year in the weather, within a factor of 2 of the real {s.real:0}");
+            if (m.Settings.Has.DryThunder)
+                Check(res["Phoenix"].month[6] > 0.12 && res["Albuquerque"].month[6] > 0.18,
+                    $"(rules 7) the desert Southwest's July storms: Phoenix {100 * res["Phoenix"].month[6]:0} % of the days (real 17), Albuquerque {100 * res["Albuquerque"].month[6]:0} % (real 41)");
             Check(res["Cairo"].days < 10 && res["Reykjavik"].days < 10, $"Cairo ({res["Cairo"].days:0.0}) and Reykjavik ({res["Reykjavik"].days:0.0}) hardly ever hear thunder");
             Check(res["Kampala"].days > 80, $"Kampala, one of the stormiest places, has {res["Kampala"].days:0} thunder days (real 240; WWLLN sees few African strokes)");
             foreach (var s in new[] { "Singapore", "Tampa", "Oklahoma City", "Vienna", "Moscow" })
@@ -911,7 +1076,7 @@ namespace EarthMap.Tests
                 }
             Check(afternoon > 2 * night, $"Oklahoma City: {afternoon / Math.Max(1e-9, night):0.0} times as much thunder from noon to 8 pm as from midnight to 8 am");
             // off with the rain
-            var off = new WeatherModel(m.Data, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, RainFrequency = 0 }, 12345);
+            var off = NewModel(m.Data, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, RainFrequency = 0 }, 12345);
             Pos(geo, 1.35, 103.82, out double sx, out double sz);
             bool none = true;
             for (int k = 0; k < 2000 && none; k++) none = off.ThunderAt(sx, sz, 5000 + k * 0.7) == 0;
@@ -936,8 +1101,10 @@ namespace EarthMap.Tests
                 double sum = 0;
                 for (int k = 0; k < PerDay; k++)
                 {
-                    double c = m.Cloudness(x, z, t0 + (d + k / (double)PerDay) * HoursPerDay);
-                    sum += Math.Max(0, c - 0.5);
+                    var rs = m.RainSample(x, z, t0 + (d + k / (double)PerDay) * HoursPerDay);
+                    double c = rs.Cloudness;
+                    // the millimetres (rules 8: the skewed share, uncut by the drawn intensity's cap)
+                    sum += WeatherModel.RainMmPerHour(rs);
                     if (k % 8 == 0) two[d * 12 + k / 8] = Math.Clamp(c - 0.5, 0, 1);
                 }
                 dm[d] = sum / PerDay;
@@ -980,7 +1147,10 @@ namespace EarthMap.Tests
         static void DrySpellScan(EarthData data, EarthGeometry geo, string path, bool detail)
         {
             var stations = File.ReadAllLines(path).Skip(1).Select(l => l.Split('\t')).Where(c => c[12] == "1").GroupBy(c => c[0]).ToList();
-            var m = new WeatherModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay }, 12345);
+            // EARTH_WEATHER_RULES: the rules to scan (default the newest), to compare
+            int rules = int.TryParse(Environment.GetEnvironmentVariable("EARTH_WEATHER_RULES"), out int r) ? r : WeatherSettings.Newest;
+            var m = NewModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = rules }, 12345);
+            Console.WriteLine($"weather rules {rules}");
             var lines = new System.Collections.Concurrent.ConcurrentBag<(string name, int mo, double mm, double[] real, double[] mod, double temp)>();
             System.Threading.Tasks.Parallel.ForEach(stations, st =>
             {
@@ -1022,6 +1192,223 @@ namespace EarthMap.Tests
         }
 
         /// <summary>
+        /// (Rules 7, EA-0026) Earth's fog against real fog days: the share of days with heavy fog (GHCN-Daily weather type
+        /// WT02, visibility a quarter mile or less) by month at US first-order stations, from a table with columns id, name,
+        /// lat, lon, elev (m), month, days, thunder, fog, heavyfog, hail (the session's audit, not shipped), against the
+        /// model's share of days with ground fog over 0.5 at some hour (20 years, hourly).
+        /// </summary>
+        static void FogScan(WeatherModel m, EarthGeometry geo, string path)
+        {
+            var rows = File.ReadAllLines(path).Skip(1).Select(l => l.Split('\t')).GroupBy(c => c[1]).ToList();
+            double[] md = { 31, 28.25, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+            var outLines = new System.Collections.Concurrent.ConcurrentBag<(string name, string text, double real, double mod)>();
+            System.Threading.Tasks.Parallel.ForEach(rows, g =>
+            {
+                var c0 = g.First();
+                double lat = double.Parse(c0[2], Ci), lon = double.Parse(c0[3], Ci), elev = double.Parse(c0[4], Ci);
+                Pos(geo, lat, lon, out double x, out double z);
+                var real = new double[12];
+                foreach (var c in g) real[int.Parse(c[5]) - 1] = double.Parse(c[9], Ci);
+                var mod = new double[12];
+                const int Years = 20;
+                for (int y = 0; y < Years; y++)
+                    for (int mo = 0; mo < 12; mo++)
+                    {
+                        double d0 = y * DaysPerYear + mo * DaysPerYear / 12;
+                        int days = (int)(DaysPerYear / 12);
+                        for (int d = 0; d < days; d++)
+                        {
+                            bool fog = false;
+                            for (int h = 0; h < 24 && !fog; h++) fog = m.FogAt(x, z, (d0 + d) * HoursPerDay + h, elev).Ground > 0.5;
+                            if (fog) mod[mo] += 1.0 / (days * Years);
+                        }
+                    }
+                double ry = real.Select((v, k) => v * md[k]).Sum(), my = mod.Select((v, k) => v * md[k]).Sum();
+                outLines.Add((g.Key, string.Format(Ci, "  {0,-34} heavy fog days real {1,4:0}/yr {2}\n  {3,-34}                model {4,4:0}/yr {5}", g.Key.Split(',')[0], ry,
+                    string.Join(" ", real.Select(v => (100 * v).ToString("0", Ci).PadLeft(3))), "", my, string.Join(" ", mod.Select(v => (100 * v).ToString("0", Ci).PadLeft(3)))), ry, my));
+            });
+            foreach (var l in outLines.OrderBy(l => l.name)) Console.WriteLine(l.text);
+            var all = outLines.ToList();
+            double Rank(IList<double> v, double x) => v.Count(u => u < x) + 0.5 * v.Count(u => u == x);
+            var rv = all.Select(l => l.real).ToList(); var mv = all.Select(l => l.mod).ToList();
+            var rr = rv.Select(v => Rank(rv, v)).ToArray(); var mr = mv.Select(v => Rank(mv, v)).ToArray();
+            double mrr = rr.Average(), mmr = mr.Average();
+            double cov = rr.Zip(mr, (a, b) => (a - mrr) * (b - mmr)).Sum(), sa = Math.Sqrt(rr.Sum(a => (a - mrr) * (a - mrr))), sb = Math.Sqrt(mr.Sum(b => (b - mmr) * (b - mmr)));
+            Console.WriteLine(string.Format(Ci, "  yearly heavy fog days: real {0:0} model {1:0} on average over {2} stations; rank correlation {3:0.00}", rv.Average(), mv.Average(), all.Count, cov / (sa * sb)));
+            // the cold seas' coastal fog: share of days with sea fog over 0.5 at some hour, by month (Lima's garúa June to
+            // October, the Namib's fog all year, San Francisco's summer fog)
+            foreach (var (name, lat, lon) in new[] { ("Lima coast", -12.05, -77.15), ("Walvis Bay", -22.95, 14.45), ("San Francisco", 37.75, -122.55), ("Sahara (none)", 25.0, 10.0) })
+            {
+                Pos(geo, lat, lon, out double x, out double z);
+                var share = new double[12];
+                for (int y = 0; y < 10; y++)
+                    for (int mo = 0; mo < 12; mo++)
+                        for (int d = 0; d < 9; d++)
+                        {
+                            bool fog = false;
+                            double h0 = (y * DaysPerYear + mo * DaysPerYear / 12 + d) * HoursPerDay;
+                            for (int h = 0; h < 24 && !fog; h++) { var f = m.FogAt(x, z, h0 + h); fog = f.Sea && f.Ground > 0.5; }
+                            if (fog) share[mo] += 1.0 / 90;
+                        }
+                Console.WriteLine($"  {name,-14} days with sea fog by month: " + string.Join(" ", share.Select(v => (100 * v).ToString("0", Ci).PadLeft(3))));
+            }
+        }
+
+        /// <summary>
+        /// (Rules 8, EA-0020) How rain comes, against the airports' routine reports (the table tools/iem_metar_events.py
+        /// writes: per airport and month the share of the hours with precipitation, of the days with any, the mean length of
+        /// a rain event in hours and the share of its precipitation in each quarter of the local day): the model's, hour by
+        /// hour over 20 game years at the place. EARTH_WEATHER_RULES picks the rules (default the newest). With
+        /// <paramref name="outPath"/>, one row per station and month with the model's features too.
+        /// </summary>
+        static void EventScan(EarthData data, EarthGeometry geo, string path, string outPath)
+        {
+            var rows = File.ReadAllLines(path).Skip(1).Select(l => l.Split('\t')).GroupBy(c => c[0]).ToList();
+            int rules = int.TryParse(Environment.GetEnvironmentVariable("EARTH_WEATHER_RULES"), out int r) ? r : WeatherSettings.Newest;
+            var m = NewModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = rules }, 12345);
+            Console.WriteLine($"weather rules {rules}");
+            var res = new System.Collections.Concurrent.ConcurrentBag<(string name, int mo, double[] real, double[] mod, string feat)>();
+            System.Threading.Tasks.Parallel.ForEach(rows, g =>
+            {
+                var c0 = g.First();
+                double lat = double.Parse(c0[2], Ci), lon = double.Parse(c0[3], Ci);
+                Pos(geo, lat, lon, out double x, out double z);
+                var mod = EventStats(m, x, z, 20);
+                foreach (var c in g)
+                {
+                    int mo = int.Parse(c[4]) - 1;
+                    if (int.Parse(c[5]) < 2000) continue;
+                    var real = new[] { double.Parse(c[6], Ci), double.Parse(c[8], Ci), double.Parse(c[9], Ci), double.Parse(c[10], Ci), double.Parse(c[11], Ci), double.Parse(c[12], Ci), double.Parse(c[13], Ci) };
+                    var s = m.RainSample(x, z, MonthHours(3, mo));
+                    string feat = string.Join("\t", new[] { s.NormalTemp, s.NormalPrecip, s.RainChance, s.Convective, data.Weather.MonthCloud(mo, lat, lon), data.Weather.LandAt(lat, lon), data.Weather.AnnualRange(lat, lon) }
+                        .Select(v => v.ToString("0.000", Ci)));
+                    res.Add((g.Key, mo, real, mod[mo], feat));
+                }
+            });
+            var all = res.OrderBy(l => l.name).ThenBy(l => l.mo).ToList();
+            foreach (var g in all.GroupBy(l => l.name))
+                Console.WriteLine(string.Format(Ci, "  {0,-15} days real {1}\n  {2,-15}      model {3}\n  {2,-15} event h real {4}\n  {2,-15}      model {5}\n  {2,-15} hours% real {6}\n  {2,-15}      model {7}", g.Key,
+                    string.Join(" ", g.Select(l => (100 * l.real[1]).ToString("0", Ci).PadLeft(4))), "",
+                    string.Join(" ", g.Select(l => (100 * l.mod[1]).ToString("0", Ci).PadLeft(4))),
+                    string.Join(" ", g.Select(l => l.real[2].ToString("0.0", Ci).PadLeft(4))),
+                    string.Join(" ", g.Select(l => l.mod[2].ToString("0.0", Ci).PadLeft(4))),
+                    string.Join(" ", g.Select(l => (100 * l.real[0]).ToString("0.0", Ci).PadLeft(4))),
+                    string.Join(" ", g.Select(l => (100 * l.mod[0]).ToString("0.0", Ci).PadLeft(4)))));
+            var wet = all.Where(l => l.real[0] >= 0.01).ToList();
+            double Rms(Func<(string name, int mo, double[] real, double[] mod, string feat), double> f) => Math.Sqrt(wet.Average(l => f(l) * f(l)));
+            Console.WriteLine(string.Format(Ci, "station-months with 1% of the hours or more: {0}; days rms {1:0.0} points (bias {2:+0.0;-0.0}), event length rms {3:0.00} h (bias {4:+0.00;-0.00}; log rms {5:0.00}), hours rms {6:0.00} points (log bias {7:+0.00;-0.00}); night share (0-6 h) real {8:0.00} model {9:0.00}",
+                wet.Count, 100 * Rms(l => l.mod[1] - l.real[1]), 100 * wet.Average(l => l.mod[1] - l.real[1]), Rms(l => l.mod[2] - l.real[2]), wet.Average(l => l.mod[2] - l.real[2]),
+                Rms(l => Math.Log(Math.Max(0.5, l.mod[2]) / l.real[2])), 100 * Rms(l => l.mod[0] - l.real[0]), wet.Average(l => Math.Log(Math.Max(1e-4, l.mod[0]) / l.real[0])),
+                wet.Average(l => l.real[3]), wet.Average(l => l.mod[3])));
+            if (outPath != null)
+                File.WriteAllLines(outPath, new[] { "name\tmonth\thours\tdays\teventh\tq0\tq1\tq2\tq3\tm_hours\tm_days\tm_eventh\tm_q0\tm_q1\tm_q2\tm_q3\ttemp\tprecip\tchance\tconv\tcloud\tland\trange" }
+                    .Concat(all.Select(l => string.Join("\t", new[] { l.name, (l.mo + 1).ToString(Ci) }.Concat(l.real.Concat(l.mod).Select(v => v.ToString("0.0000", Ci))).Append(l.feat)))));
+        }
+
+        /// <summary>
+        /// (Rules 8, EA-0020) Calibration of the rain's events: the model's hours, days with rain, event lengths and quarter
+        /// shares at the airports of the METAR table (tools/iem_metar_events.py) for a range of fixed shower weights and
+        /// afternoon peaks (WeatherModel.FastOverride, DiurnalOverride), one row per station, month and setting.
+        /// </summary>
+        static void EventFit(EarthData data, EarthGeometry geo, string path, string outPath)
+        {
+            var stations = File.ReadAllLines(path).Skip(1).Select(l => l.Split('\t')).GroupBy(c => c[0]).ToList();
+            var fasts = new[] { double.NaN, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 };
+            var diurnals = (Environment.GetEnvironmentVariable("EARTH_DIURNALS") ?? "0.45").Split(',').Select(v => double.Parse(v, Ci)).ToArray();
+            var jobs = stations.SelectMany(st => fasts.SelectMany(f => diurnals.Select(d => (st, f, d)))).ToList();
+            var rows = new System.Collections.Concurrent.ConcurrentBag<string>();
+            System.Threading.Tasks.Parallel.ForEach(jobs, job =>
+            {
+                var (st, fast, di) = job;
+                var m = NewModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay }, 12345);
+                m.FastOverride = double.IsNaN(fast) ? 0 : fast;
+                m.DiurnalOverride = di;
+                var c0 = st.First();
+                double lat = double.Parse(c0[2], Ci), lon = double.Parse(c0[3], Ci);
+                Pos(geo, lat, lon, out double x, out double z);
+                var mod = EventStats(m, x, z, 20);
+                foreach (var c in st)
+                {
+                    int mo = int.Parse(c[4]) - 1;
+                    if (int.Parse(c[5]) < 2000) continue;
+                    var s = m.RainSample(x, z, MonthHours(3, mo));
+                    rows.Add(string.Join("\t", new[] { st.Key, (mo + 1).ToString(Ci), (double.IsNaN(fast) ? 0 : fast).ToString(Ci), di.ToString(Ci) }
+                        .Concat(new[] { c[6], c[8], c[9], c[10], c[11], c[12], c[13] })
+                        .Concat(mod[mo].Select(v => v.ToString("0.0000", Ci)))
+                        .Concat(new[] { m.RateTempAt(x, z, MonthHours(3, mo)), s.NormalPrecip, s.RainChance, s.Convective, data.Weather.LandAt(lat, lon) }.Select(v => v.ToString("0.000", Ci)))));
+                }
+            });
+            File.WriteAllLines(outPath, new[] { "name\tmonth\tfast\tdiurnal\thours\tdays\teventh\tq0\tq1\tq2\tq3\tm_hours\tm_days\tm_eventh\tm_q0\tm_q1\tm_q2\tm_q3\ttemp\tprecip\tchance\tconv\tland" }
+                .Concat(rows.OrderBy(r => r, StringComparer.Ordinal)));
+            Console.WriteLine($"wrote {rows.Count} rows to {outPath}");
+        }
+
+        /// <summary>The model's rain hour by hour over some game years at a place: per month (0..11) the share of the hours
+        /// with rain, of the days with any, the mean length of a rain event (hours) and the share of the rain hours in each
+        /// quarter of the day.</summary>
+        static double[][] EventStats(WeatherModel m, double x, double z, int years)
+        {
+            double t0 = 3000 * DaysPerYear * HoursPerDay;
+            int days = years * (int)DaysPerYear;
+            var acc = Enumerable.Range(0, 12).Select(_ => new double[10]).ToArray();
+            int Mo(int d) => (int)(d % DaysPerYear / (DaysPerYear / 12));
+            int run = 0, runMo = 0;
+            for (int d = 0; d < days; d++)
+            {
+                int mo = Mo(d);
+                bool any = false;
+                for (int h = 0; h < 24; h++)
+                {
+                    bool p = m.Cloudness(x, z, t0 + d * HoursPerDay + h + 0.5) > 0.5;
+                    acc[mo][0]++;
+                    if (p)
+                    {
+                        acc[mo][1]++;
+                        acc[mo][6 + h / 6]++;
+                        any = true;
+                        if (run == 0) runMo = mo;
+                        run++;
+                    }
+                    else if (run > 0) { acc[runMo][4]++; acc[runMo][5] += run; run = 0; }
+                }
+                acc[mo][2]++;
+                if (any) acc[mo][3]++;
+            }
+            return acc.Select(a => new[] { a[1] / a[0], a[3] / a[2], a[4] > 0 ? a[5] / a[4] : 0, a[1] > 0 ? a[6] / a[1] : 0, a[1] > 0 ? a[7] / a[1] : 0, a[1] > 0 ? a[8] / a[1] : 0, a[1] > 0 ? a[9] / a[1] : 0 }).ToArray();
+        }
+
+        /// <summary>
+        /// (EA-0074) The model's thunder days (the month's climatological share, WeatherModel.ThunderDays) at the airports of
+        /// the METAR thunder table (tools/iem_metar_thunder.py: id, name, lat, lon, month, days, thunder, coverage), against
+        /// the share of their reported days with thunder. With <paramref name="outPath"/>, one row per station and month with
+        /// the month's normals too.
+        /// </summary>
+        static void ThunderDayScan(WeatherModel m, EarthGeometry geo, string path, string outPath)
+        {
+            double[] md = { 31, 28.25, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+            var rows = new List<string>();
+            foreach (var g in File.ReadAllLines(path).Skip(1).Select(l => l.Split('\t')).GroupBy(c => c[0]))
+            {
+                var c0 = g.First();
+                double lat = double.Parse(c0[2], Ci), lon = double.Parse(c0[3], Ci);
+                Pos(geo, lat, lon, out double x, out double z);
+                double real = 0, mod = 0, n = 0;
+                foreach (var c in g)
+                {
+                    int mo = int.Parse(c[4]) - 1;
+                    double h = MonthHours(3, mo);
+                    double t = m.ThunderDays(x, z, h);
+                    var s = m.RainSample(x, z, h);
+                    if (c[6] != "nan" && int.Parse(c[5]) >= 20) { real += double.Parse(c[6], Ci) * md[mo]; mod += t * md[mo]; n += md[mo]; }
+                    rows.Add(string.Join("\t", new[] { c[0], c[1], c[2], c[3], c[4], c[5], c[6], t.ToString("0.0000", Ci), s.NormalTemp.ToString("0.00", Ci),
+                        s.NormalPrecip.ToString("0.000", Ci), m.Data.LandAt(lat, lon).ToString("0.000", Ci) }));
+                }
+                if (n > 0) Console.WriteLine(string.Format(Ci, "  {0,-5} {1,-20} thunder days a year: METAR {2,4:0} model {3,4:0} ({4:0} of 365 days with data)", c0[0], c0[1], real * 365 / n, mod * 365 / n, n));
+            }
+            if (outPath != null) File.WriteAllLines(outPath, new[] { "id\tname\tlat\tlon\tmonth\tdays\tthunder\tm_thunder\ttemp\tprecip\tland" }.Concat(rows));
+        }
+
+        /// <summary>
         /// Calibration of the rain chance: the model's wet days and ten-day dry spells at the GHCN-Daily stations (the table
         /// tools/ghcnd_dryspells.py writes) with the rain chance scaled by a range of factors (WeatherSettings.RainFrequency),
         /// one row per station, month and factor, written to <paramref name="outPath"/> as a table.
@@ -1030,7 +1417,7 @@ namespace EarthMap.Tests
         {
             var factors = new[] { 0.35, 0.5, 0.7, 1.0, 1.4, 2.0, 2.8, 4.0, 5.6, 8.0 };
             var stations = File.ReadAllLines(path).Skip(1).Select(l => l.Split('\t')).Where(c => c[12] == "1").GroupBy(c => c[0]).ToList();
-            var models = factors.Select(f => new WeatherModel(data.Weather, geo,
+            var models = factors.Select(f => NewModel(data.Weather, geo,
                 new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, RainFrequency = f }, 12345)).ToArray();
             var rows = new System.Collections.Concurrent.ConcurrentBag<string>();
             var jobs = stations.SelectMany(st => Enumerable.Range(0, factors.Length).Select(i => (st, i))).ToList();
@@ -1189,7 +1576,7 @@ namespace EarthMap.Tests
                     CwEquatorZ = standard.CwEquatorZ * scale, CwPoleDistance = standard.CwEquatorZ * scale - 48, CwBandInner = standard.CwBandInner,
                 };
                 var geo = EarthLayout.Build(inp, data, out _);
-                var m = new WeatherModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay }, 4242);
+                var m = NewModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay }, 4242);
                 Console.WriteLine($"world x{scale}: {m.BlocksPerKm:0.00} blocks per km");
                 foreach (var (lat, lon) in new[] { (0.0, -150.0), (12.0, -40.0), (31.0, -40.0), (40.0, -30.0), (48.0, -30.0), (55.0, 40.0), (-48.0, 90.0), (68.0, 100.0) })
                 {
@@ -1240,7 +1627,7 @@ namespace EarthMap.Tests
         static void CheckRainOff(EarthData data, EarthGeometry geo)
         {
             Console.WriteLine("rain switched off");
-            var m = new WeatherModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, RainFrequency = 0 }, 12345);
+            var m = NewModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, RainFrequency = 0 }, 12345);
             int raining = 0, n = 0;
             for (double wh = 2 * 365 * 24; wh < 3 * 365 * 24; wh += 97)
                 foreach (var s in m.Storms.AliveIn(wh))
@@ -1264,7 +1651,7 @@ namespace EarthMap.Tests
         static void CheckCatchUp(EarthData data, EarthGeometry geo)
         {
             Console.WriteLine("catching up on missed hours");
-            var m = new WeatherModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Pace = 8 }, 777);
+            var m = NewModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Pace = 8 }, 777);
             var sw = Stopwatch.StartNew();
             double h0 = 5 * YearHours;
             int calls = 0;
@@ -1280,8 +1667,8 @@ namespace EarthMap.Tests
 
             // many threads asking for more slots than the caches hold (they trim while others read): no exceptions, and the
             // storms are the same as a fresh model's
-            var shared = new WeatherModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay }, 31);
-            var fresh = new WeatherModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay }, 31);
+            var shared = NewModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay }, 31);
+            var fresh = NewModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay }, 31);
             int errors = 0, mismatches = 0;
             var tasks = new System.Threading.Tasks.Task[6];
             for (int t = 0; t < tasks.Length; t++)

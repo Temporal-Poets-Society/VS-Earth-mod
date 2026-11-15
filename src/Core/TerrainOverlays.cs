@@ -85,6 +85,9 @@ namespace EarthMap.Core
                 refereeTilePatches = ByTile(referee.TerrainPatches);
                 refereeIslands = referee.ApplyTo(data.Islands);
                 refereeCoasts = referee.ApplyTo(data.Coasts);
+                // EA-0108: a world reads the referee's; the as-read ones (and their patches by tile) go, read again if asked for
+                baseIslandTilePatches = null;
+                data.DropAsRead();
             }
             tilePatches = refereeTilePatches;
             islands = refereeIslands;
@@ -94,8 +97,9 @@ namespace EarthMap.Core
         /// <summary>The patches of these islands (the files' own or the referee's) by tile.</summary>
         public Dictionary<int, IslandData.Patch[]> IslandTilePatches(IslandData islands)
         {
+            // (EA-0108) the referee's first: asking the data for its own would read them again once dropped
+            if (islands != null && ReferenceEquals(islands, refereeIslands)) return refereeIslandTilePatches ??= ByTile(islands.Patches);
             if (ReferenceEquals(islands, data.Islands)) return baseIslandTilePatches ??= ByTile(islands.Patches);
-            if (ReferenceEquals(islands, refereeIslands)) return refereeIslandTilePatches ??= ByTile(islands.Patches);
             throw new ArgumentException("islands of another data set");
         }
 

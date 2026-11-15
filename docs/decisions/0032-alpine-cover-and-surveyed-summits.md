@@ -1,7 +1,6 @@
 # 0032: Global alpine cover, desert ecology and surveyed summit catalogues
 
-Status: source implemented; offline checks passed; coordinator acceptance and game-assembly validation pending.
-The global peak download/bake is pending separately. Date: 2026-10-30. Issues #16-#18, #21, #23.
+Status: Built in 0.17.0-pre.9 (`bae8dc6`), the peaks baked (EA-0009); in Earth 1.0.0 and 2.0.0. Alpine surfaces revised by alpine surface rules 2; desert plant ranges replaced by 0049's catalogue; switchable by 0075. Date: 2026-10-30. Issues #16-#18, #21, #23.
 
 ## Cause and decision
 
@@ -184,3 +183,10 @@ they were read, not edited outside this working copy.
   the top and gone at the radius, bounded to −0.3…1.0 × the radius. All 15 reference peaks reach their surveyed
   block; next to each summit the lift steepens the ground by at most 0.76 m per metre (Lhotse; Everest 0.57,
   Matterhorn 0.54). Near Burgas rules 3 lowers no ground at all. pre.10 (raise-only caps) was never released.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: source implemented; offline checks passed; coordinator acceptance and game-assembly validation pending.
+The global peak download/bake is pending separately.

@@ -1,6 +1,6 @@
 # 0046: Calm rivers: white water only at the drops of steep rivers, flowing ordinary water elsewhere
 
-Date: 2 November 2026. Status: implemented on `claude/calm-rivers` (from `release/1.0` `34c6c54`) in Earth, Hydrology and Sea, playtest versions Earth 1.0.3-rivers.3, Hydrology 0.6.2-rivers.7 (rivers.2 to .6: filling enclosed pockets, from the author's playtests at the Nile; rivers.7: no white specks on calm river water), Sea 0.5.3-rivers.1. Offline, headless-server and graphical-client verified (below; boat drift not measured). Nothing committed, packaged for release, installed or uploaded. New worlds only.
+Date: 2 November 2026. Status: built (`f058266`; playtest 1.0.3-rivers.3); in Earth 2.0.0 (first in 2.0.0-rc.12), with Hydrology 0.6.2. New worlds only; still or flowing reach by reach in the mask's rivers refined by 0073. Boat drift not measured.
 
 ## Report
 
@@ -77,3 +77,9 @@ Release builds: zero errors in all three. Unless noted, at Earth size 1,024,000,
   - On copies of both of the author's saves, after a single block was placed and broken: the delta nook and the Nile pocket leave no rapid water, no flowing water and no holes. Waking the whole area gives the same result. The installed rivers.3 left the delta nook unchanged even with every cell woken.
   - Regression, headless (rivers.6): the river scenarios match rivers.3 (2 pocket fills, both at a placed-and-broken block). The step-break scenarios were placed at the same spots as the old build's this time, and all twelve match it: 0 pocket fills, and no raised sources. The one extra cell is water filling a dry cell 2 below the surface beside a broken bank block, with no Hydrology fill in the whole run (0), so it is vanilla's own spreading.
 Source: `src/Core/RiverNetwork.cs`, `src/Core/TerrainModel.cs`, `src/EarthWorldGen.cs`, `src/EarthMapSystem.cs`, `src/EarthParams.cs`, `src/EarthWorldOptions.cs`, `worldconfig.json`, `assets/game/lang/worldconfig-en.json`; Hydrology `src/EarthRiverQuery.cs`, `src/Rules/H2Filling.cs`, `src/Rules/H4Rapids.cs`, `src/Rules/C1RapidFoam.cs`, `src/HydrologySystem.cs`, `src/HydrologyConfig.cs`; Sea `src/Water/WaterShader.cs`, `src/Water/CelestialShader.cs`, `src/SeaSystem.cs`.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: implemented on `claude/calm-rivers` (from `release/1.0` `34c6c54`) in Earth, Hydrology and Sea, playtest versions Earth 1.0.3-rivers.3, Hydrology 0.6.2-rivers.7 (rivers.2 to .6: filling enclosed pockets, from the author's playtests at the Nile; rivers.7: no white specks on calm river water), Sea 0.5.3-rivers.1. Offline, headless-server and graphical-client verified (below; boat drift not measured). Nothing committed, packaged for release, installed or uploaded. New worlds only.

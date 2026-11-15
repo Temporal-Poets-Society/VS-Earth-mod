@@ -1,6 +1,6 @@
 # 0031: Mountain height and alpine vegetation playtest
 
-Status: Agreed experimental branch; reviewed and integrated onto the installed playtest line, visual playtest pending | Date: 2026-10-26, integration 2026-10-27 | Decided by: the user
+Status: Agreed (the user, 26-27 October); the experiment became the defaults in 0.17.0-pre.4 to pre.8 (sea 110, curve presets, climate rules 3, real-altitude ecology), in Earth 1.0.0; in Earth 2.0.0. Default sizes and heights since replaced by 0053's scales | Date: 2026-10-26, integration 2026-10-27 | Decided by: the user
 
 ## Context
 
@@ -190,3 +190,9 @@ The package grows from 90 to 143 MB.
 - 2026-10-27: pre.5: real-altitude ecology by default (zones, local tree line, vanilla animal altitude limits).
 - 2026-10-27: downloads approved; pre.6-pre.8: summits, glaciers, CHELSA rain, vanilla animal ranges, real slope below
   the tree line. pre.8 installed in place of pre.5.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: Agreed experimental branch; reviewed and integrated onto the installed playtest line, visual playtest pending

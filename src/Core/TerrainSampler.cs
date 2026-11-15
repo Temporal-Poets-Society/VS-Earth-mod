@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace EarthMap.Core
@@ -58,14 +59,28 @@ namespace EarthMap.Core
         /// </summary>
         public double KeptLakeLevelNear(double lat, double lon)
         {
+            var levels = KeptLakeLevelsNear(lat, lon);
+            float best = float.NaN;
+            foreach (float v in levels)
+                if (float.IsNaN(best) || v > best) best = v;
+            return best;
+        }
+
+        /// <summary>
+        /// GenFixRules 5 (T-L14, code review 14 November 2026): every distinct level of those lakes near a point (the cells
+        /// KeptLakeLevelNear reads), so two kept lakes of different levels near one place are both kept; empty where there is
+        /// none. Kept per cell; the array is shared, never written.
+        /// </summary>
+        public float[] KeptLakeLevelsNear(double lat, double lon)
+        {
             int r0 = (int)Math.Floor((90 - lat) * TerrainRes - 0.5), c0 = (int)Math.Floor((lon + 180) * TerrainRes - 0.5);
             c0 %= TerrainW;
             if (c0 < 0) c0 += TerrainW;
             long key = (long)r0 * TerrainW + c0;
             // the overlays never change under this sampler, so a kept value always holds (a world that changes them gets a
             // new sampler with an empty cache)
-            if (keptNear.TryGetValue(key, out float kept)) return kept;
-            float best = float.NaN;
+            if (keptNear.TryGetValue(key, out float[] kept)) return kept;
+            List<float> found = null;
             for (int r = r0 - 3; r <= r0 + 4; r++)
             {
                 if (r < 0 || r >= TerrainH) continue;
@@ -74,9 +89,11 @@ namespace EarthMap.Core
                     var cell = GetCell(r, c);
                     if ((cell.Flags & EarthData.FlagLake) == 0 || cell.Level == EarthData.NoLevel) continue;
                     if ((cell.Flags & EarthData.FlagSalt) == 0 && !IsTerminalLakeCell(r, c)) continue;
-                    if (float.IsNaN(best) || cell.Level > best) best = cell.Level;
+                    found ??= new List<float>();
+                    if (!found.Contains(cell.Level)) found.Add(cell.Level);
                 }
             }
+            float[] best = found == null ? Array.Empty<float>() : found.ToArray();
             // bounded: past KeptNearMax values the cache starts again (they are pure, so only time is lost)
             if (Interlocked.Increment(ref keptAdds) > KeptNearMax)
             {
@@ -87,9 +104,10 @@ namespace EarthMap.Core
             return best;
         }
 
-        readonly ConcurrentDictionary<long, float> keptNear = new();
+        readonly ConcurrentDictionary<long, float[]> keptNear = new();
         int keptAdds;
-        /// <summary>How many grid cells KeptLakeLevelNear keeps (one per 2' cell near lakes asked about; about 10 MB).</summary>
+        /// <summary>How many grid cells KeptLakeLevelNear keeps (one per 2' cell near lakes asked about; about 10 MB, more where
+        /// a cell has kept lakes: each holds its levels' array, T-L14).</summary>
         const int KeptNearMax = 1 << 18;
 
         long Key(int row, int col)

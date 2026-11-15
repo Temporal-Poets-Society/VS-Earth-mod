@@ -1,6 +1,6 @@
 # 0008: Failed startup steps leave vanilla behaviour
 
-Status: Implemented (0.14.1-pre, not committed) | Date: 2026-10-16 | Decided by: Claude, fixing review findings the user asked to fix
+Status: Implemented in 0.14.1 (in Earth 1.0.0); in Earth 2.0.0. The failure paths are checked by hand only (no automated test) | Date: 2026-10-16 | Decided by: Claude, fixing review findings the user asked to fix
 
 ## Context
 
@@ -45,3 +45,9 @@ after binding or during planning is still a manual check.
 ## History
 
 - 2026-10-16: ore rollback found by review round 1, story placement by round 2; both fixed.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: Implemented (0.14.1-pre, not committed)

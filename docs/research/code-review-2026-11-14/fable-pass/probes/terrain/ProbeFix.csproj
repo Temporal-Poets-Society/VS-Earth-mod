@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>12</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <NoWarn>CS0649;CS0169;CS0414;CS8632;CS0219;CS0168</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- the pinned tree's Core, with three files replaced by patched copies (a prototype of the review's bit-identical fixes) -->
+    <Compile Include="..\..\..\earth-fable\src\Core\*.cs" Exclude="..\..\..\earth-fable\src\Core\TerrainModel.Coasts.cs;..\..\..\earth-fable\src\Core\TerrainModel.NaturalColumn.cs;..\..\..\earth-fable\src\Core\TerrainModel.Rivers.cs" Link="Core\%(Filename)%(Extension)" />
+    <Compile Include="patched\*.cs" />
+    <Compile Include="..\..\..\earth-fable\src\EarthParams.cs" Link="EarthParams.cs" />
+    <Compile Include="..\..\..\earth-fable\src\EarthMapConfig.cs" Link="EarthMapConfig.cs" />
+    <Compile Include="..\..\..\earth-fable\tests\PlaytestReviewTests\ProtoStubs.cs" Link="ProtoStubs.cs" />
+    <Compile Include="..\Probe\World.cs;..\Probe\Program.cs;..\Probe\Probes.cs" />
+  </ItemGroup>
+</Project>

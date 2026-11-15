@@ -3,7 +3,7 @@
 Status: **agreed** (the author in the Cylinder World session, 9 November 2026, relayed to Earth: "vanilla does not have
 any preset ratio. Can choose whatever as width and length is set separately and default is 1M and 1M. Current width is
 confusing. and i dont see any reason for it", "i was considering as extreme 1:5 scale", and "ok can you pass this to main
-session once it is done with current work to do it"). Built in 2.0.0-rc.5. Date: 2026-11-09.
+session once it is done with current work to do it"). Built in 2.0.0-rc.5; in Earth 2.0.0. Date: 2026-11-09.
 
 ## Before
 

@@ -212,7 +212,7 @@ namespace EarthMap.Core
                     throw new ArgumentException("Invalid geological province: "+(p?.Id??"(null)"));
             foreach(var kv in classes)classProfile[kv.Key]=profiles[kv.Value];
             Preserve=rules.Preserve ?? new[]{"rock-bauxite"};
-            if(Version>=2)
+            if(GeologyFacts.GenerationBlock(Version))
             {
                 Generation=rules.Generation ?? new GenerationSettings();
                 var gs=Generation;
@@ -299,7 +299,7 @@ namespace EarthMap.Core
                 return new Sample(0,0,unknown,null,"Outside mapped Earth",true);
             lon=Wrap(lon);
             int x,z;
-            if(Version>=2)VoronoiCell(lat,lon,out x,out z);
+            if(GeologyFacts.CellContacts(Version))VoronoiCell(lat,lon,out x,out z);
             else
             {
                 x=Math.Clamp((int)Math.Floor((lon+180)*2),0,719);

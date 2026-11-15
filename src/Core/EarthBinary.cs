@@ -102,21 +102,27 @@ namespace EarthMap.Core
             // mostly decode to 1.5 to 2.6 times theirs)
             var raw = new byte[(int)Math.Min(Math.Max(3L * length, 4096), maxBytes)];
             int n = 0;
-            while (true)
+            try
             {
-                if (n == raw.Length)
+                while (true)
                 {
-                    if (n >= maxBytes)
+                    if (n == raw.Length)
                     {
-                        if (dec.Read(new byte[1], 0, 1) > 0) throw new InvalidDataException(name + ": decompresses to more than " + maxBytes + " bytes");
-                        break;
+                        if (n >= maxBytes)
+                        {
+                            if (dec.Read(new byte[1], 0, 1) > 0) throw new InvalidDataException(name + ": decompresses to more than " + maxBytes + " bytes");
+                            break;
+                        }
+                        Array.Resize(ref raw, (int)Math.Min(2L * n, maxBytes));
                     }
-                    Array.Resize(ref raw, (int)Math.Min(2L * n, maxBytes));
+                    int got = dec.Read(raw, n, raw.Length - n);
+                    if (got == 0) break;
+                    n += got;
                 }
-                int got = dec.Read(raw, n, raw.Length - n);
-                if (got == 0) break;
-                n += got;
             }
+            // (EA-0116 D-R1) Brotli's own fault for data it can't decode is InvalidOperationException: a damaged file, as
+            // this method says, for the readers' damaged-file filters
+            catch (InvalidOperationException e) { throw new InvalidDataException(name + ": " + e.Message, e); }
             decoded = n;
             return raw;
         }

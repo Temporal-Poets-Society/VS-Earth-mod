@@ -1,8 +1,6 @@
 # 0047: One placement catalogue for flora and fauna, with audits
 
-Date: 3 November 2026. Status: **Agreed** in direction (see Author's decisions). A first slice is **Implemented**
-(see [Implementation](#implementation-first-slice)); the rest of the layers, audits and order of work below remain
-**Proposed**.
+Date: 3 November 2026. Status: **Agreed** in direction (see Author's decisions); the first slice built, in Earth 2.0.0 (see [Implementation](#implementation-first-slice)); animals by 0054 and vanilla flowers and cacti by the ranges work. One shared catalogue format (step 2) and the GBIF audit (step 5) remain **proposed**, not built.
 
 ## Author's decisions
 
@@ -297,3 +295,11 @@ and play in a client.
   limits (0032 History). Their whole-region envelopes would have admitted Arizona's pine plateaus and Bolivia's Amazon
   lowlands. The baked-envelope sanity check now also accepts a taxon whose envelope holds any of a region's
   temperature bins and any of its rain bins, since a desert specialist fits part of a region, not its median.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: **Agreed** in direction (see Author's decisions). A first slice is **Implemented**
+(see [Implementation](#implementation-first-slice)); the rest of the layers, audits and order of work below remain
+**Proposed**.

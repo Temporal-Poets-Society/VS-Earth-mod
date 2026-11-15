@@ -1,0 +1,23 @@
+GroundDownloader.Get(source "http://exa mple.invalid/"): THROWS UriFormatException: Invalid URI: The hostname could not be parsed.  (29 ms)
+EarthDataStore.Ensure(source "http://exa mple.invalid/"): False (x.bin: Invalid URI: The hostname could not be parsed.)  (7 ms)
+GroundDownloader.Get(source "http://"): THROWS InvalidOperationException: An invalid request URI was provided. Either the request URI must be an absolute URI or BaseAddress must be set.  (0 ms)
+EarthDataStore.Ensure(source "http://"): THROWS InvalidOperationException: An invalid request URI was provided. Either the request URI must be an absolute URI or BaseAddress must be set.  (0 ms)
+GroundDownloader.Get(source "https://[::1"): THROWS UriFormatException: Invalid URI: The hostname could not be parsed.  (0 ms)
+EarthDataStore.Ensure(source "https://[::1"): False (x.bin: Invalid URI: The hostname could not be parsed.)  (0 ms)
+GroundDownloader.Get(source "ftp://127.0.0.1/data/"): Failed  (21027 ms)
+EarthDataStore.Ensure(source "ftp://127.0.0.1/data/"): False (x.bin: The filename, directory name, or volume label syntax is incorrect. : '<scratch>\fable\probes-data\ftp:\127.0.0.1\data\x.bin')  (21032 ms)
+GroundDownloader.Get(source "C:\no\such\folder"): Failed  (21027 ms)
+EarthDataStore.Ensure(source "C:\no\such\folder"): False (x.bin: Could not find a part of the path 'C:\no\such\folder\x.bin'.)  (21014 ms)
+GroundDownloader.Get(source "\\?\bad<>|path"): Failed  (21025 ms)
+EarthDataStore.Ensure(source "\\?\bad<>|path"): False (x.bin: Could not find a part of the path '\\?\bad<>|path\x.bin'.)  (21037 ms)
+GroundDownloader.Get(source "relative/folder"): Failed  (21028 ms)
+EarthDataStore.Ensure(source "relative/folder"): False (x.bin: Could not find a part of the path '<scratch>\fable\probes-data\relative\folder\x.bin'.)  (21030 ms)
+GroundDownloader.Get(source "http://127.0.0.1:1/"): Failed  (29224 ms)
+EarthDataStore.Ensure(source "http://127.0.0.1:1/"): False (x.bin: No connection could be made because the target machine actively refused it. (127.0.0.1:1))  (29195 ms)
+GroundDownloader.Get(source "   "): Lacking  (0 ms)
+EarthDataStore.Ensure(source "   "): False (no data source is set (DataRepo in earth.json))  (0 ms)
+GroundDownloader.Get(source "con:"): Failed  (21017 ms)
+EarthDataStore.Ensure(source "con:"): False (x.bin: The filename, directory name, or volume label syntax is incorrect. : '<scratch>\fable\probes-data\con:\x.bin')  (21019 ms)
+Ensure into an unwritable store THROWS IOException: Cannot create '<scratch>\fable\probes-data\work-badsource\blocked' because a file or directory with the same name already exists.
+GroundDownloader.Get into an unwritable folder THROWS IOException: Cannot create '<scratch>\fable\probes-data\work-badsource\blocked' because a file or directory with the same name already exists.
+Ensure with a cancelled token THROWS TaskCanceledException

@@ -49,6 +49,8 @@ namespace EarthMap
 
         internal static bool StructureWherePeopleLivedGuard([HarmonyArgument(2)] BlockPos startPos, ref bool __result)
         {
+            // (FP-11, Fable's low 5 on ad56a74) a generation entry point inside vanilla's pass: this thread may wait for a missing tile
+            using var fetch = Core.FineElevation.Generating();
             if (!OutsideWherePeopleLived(startPos)) return true;
             __result = false;
             return false;
@@ -56,6 +58,7 @@ namespace EarthMap
 
         internal static bool VillageWherePeopleLivedGuard(BlockPos pos, ref bool __result)
         {
+            using var fetch = Core.FineElevation.Generating();
             if (!OutsideWherePeopleLived(pos)) return true;
             __result = false;
             return false;
@@ -69,6 +72,7 @@ namespace EarthMap
         /// </summary>
         internal static bool SurfaceStructureGuard(WorldGenStructure __instance, [HarmonyArgument(2)] BlockPos startPos, ref bool __result)
         {
+            using var fetch = Core.FineElevation.Generating();
             var w = WorldGenerationContext.Current;
             if (w == null || startPos == null) return true;
             int size = __instance != null ? FootprintOf(__instance) : 16;
@@ -128,6 +132,7 @@ namespace EarthMap
 
         internal static bool DeferredUndergroundGuard(WorldGenStructure __instance, [HarmonyArgument(1)] BlockPos pos, [HarmonyArgument(2)] BlockSchematicStructure schematic, ref bool __result)
         {
+            using var fetch = Core.FineElevation.Generating();
             if (deferredStructure == null || deferredStructure != __instance) return true;
             deferredStructure = null;
             var w = WorldGenerationContext.Current;
@@ -149,6 +154,7 @@ namespace EarthMap
         /// <summary>Structures meant for shallow water stay out of the rivers (the navigation channels); shores are fine.</summary>
         internal static bool RiverStructureGuard(WorldGenStructure __instance, [HarmonyArgument(2)] BlockPos startPos, ref bool __result)
         {
+            using var fetch = Core.FineElevation.Generating();
             var w = WorldGenerationContext.Current;
             if (w == null || startPos == null || w.Model.Rivers == null) return true;
             int size = __instance != null ? FootprintOf(__instance) : 16;
@@ -184,6 +190,7 @@ namespace EarthMap
         /// </summary>
         internal static bool UndergroundStructureGuard(WorldGenStructure __instance, [HarmonyArgument(2)] BlockPos pos, ref bool __result)
         {
+            using var fetch = Core.FineElevation.Generating();
             var w = WorldGenerationContext.Current;
             if (w == null || pos == null) return true;
             if (!UndergroundBlocked(w.Model, __instance, pos.X, pos.Y, pos.Z)) return true;
@@ -210,6 +217,7 @@ namespace EarthMap
         /// </summary>
         internal static void VillageBuildingGuard([HarmonyArgument(2)] Cuboidi location, ref bool __result)
         {
+            using var fetch = Core.FineElevation.Generating();
             var w = WorldGenerationContext.Current;
             if (!__result || w == null || location == null) return;
             var model = w.Model;

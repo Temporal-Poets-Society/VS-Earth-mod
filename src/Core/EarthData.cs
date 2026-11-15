@@ -76,8 +76,9 @@ namespace EarthMap.Core
         // ------------------------------------------------------------------------------------------ climate choices
 
         /// <summary>The newest climate fix: 1 = UDel's missing precipitation months filled (no one-row stripes, 0.15.1);
-        /// 2 = the complete UDel normals (December over the land, 2026-11-07).</summary>
-        public const int ClimateFixVersion = 3;
+        /// 2 = the complete UDel normals (December over the land, 2026-11-07); 3 = UDel faded into GPCP over a 1° coast band
+        /// (EA-0016); 4 = GPCP's share at CHELSA's level on desert coasts (Lima, the Namib, EA-0060).</summary>
+        public const int ClimateFixVersion = 4;
         /// <summary>The newest climate fix whose file was found (loaded on both sides), 0 for none.</summary>
         public int ClimateFixAvailable => dataset.ClimateFixAvailable;
         /// <summary>Whether a climate fix file was found.</summary>
@@ -164,6 +165,13 @@ namespace EarthMap.Core
         public WeatherData Weather => dataset.Weather;
         /// <summary>Why weather.bin could not be read (Weather is then null and vanilla's weather stays), or null.</summary>
         public string WeatherError => dataset.WeatherError;
+        /// <summary>(Weather rules 7) the ground the weather reads besides weather.bin (Core.WeatherGround: weatherground.bin
+        /// and climate fix 4), or null when a file is missing (WeatherGroundError).</summary>
+        public WeatherGround WeatherGround => dataset.WeatherGround;
+        /// <summary>(EA-0118) The weather's ground's fingerprint, or null where it can't be had (loads it).</summary>
+        public string WeatherGroundSignature => dataset.WeatherGround != null ? dataset.WeatherGroundSignature : null;
+        /// <summary>Why <see cref="WeatherGround"/> is null, or null.</summary>
+        public string WeatherGroundError => dataset.WeatherGroundError;
 
         /// <summary>An optional data file by name, from where the rest came (the mod, or the data pack the pack index routes it
         /// to); null when it isn't there. The caller disposes the stream.</summary>
@@ -172,7 +180,7 @@ namespace EarthMap.Core
         /// <summary>Why the included GLO-90 heights could not be opened, or null.</summary>
         public string CoarseError => dataset.CoarseError;
 
-        /// <summary>0053 (proposed): GLO-90 averaged to a coarser grid, from Earth's height data packs; null without them.
+        /// <summary>0053: GLO-90 averaged to a coarser grid, from Earth's height data packs; null without them.
         /// Opened on first use.</summary>
         public CoarseElevation Coarse => dataset.Coarse;
 
@@ -192,7 +200,7 @@ namespace EarthMap.Core
         /// equal to the released one); null without the file or when it wasn't requested.</summary>
         public List<RiverReach> RiverReaches() => riverSources.RiverReaches();
 
-        /// <summary>0053 (proposed): the rivers on GLO-90 (tools/RiverSnap): rivers.bin's reaches with their courses snapped to
+        /// <summary>0053: the rivers on GLO-90 (tools/RiverSnap): rivers.bin's reaches with their courses snapped to
         /// GLO-90's valley floors and levels from GLO-90, in rivers.bin's format.</summary>
         public const string Glo90RiversFile = RiverSourceRepository.Glo90RiversFile;
 
@@ -308,6 +316,8 @@ namespace EarthMap.Core
         /// cells of the 2×2 cells around a point (their rings' reach); NaN where there is none. Kept per cell.
         /// </summary>
         public double KeptLakeLevelNear(double lat, double lon) => view.Terrain.KeptLakeLevelNear(lat, lon);
+        /// <summary>Every kept lake level near a place (GenFixRules 5, T-L14; TerrainSampler.KeptLakeLevelsNear).</summary>
+        public float[] KeptLakeLevelsNear(double lat, double lon) => view.Terrain.KeptLakeLevelsNear(lat, lon);
 
         /// <summary>0..1, bilinear between cell centres: how green the land is here for a terminal lake's shore; 0 without the
         /// lakes overlay.</summary>

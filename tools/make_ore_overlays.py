@@ -241,6 +241,13 @@ PAL = {
     "smithpale": P((120, 160, 150), (190, 222, 212), (240, 252, 246)),
     "hemimorphite": P((96, 140, 170), (170, 214, 236), (240, 250, 255)),
     "pyrite": P((128, 104, 34), (214, 188, 84), (252, 242, 176)),
+    # aluminosilicates of metamorphic rock (EA-0068): kyanite's blue blades, sillimanite's white fibres, andalusite's
+    # pink-brown square prisms (chiastolite shows a dark cross in section)
+    "kyanite": P((30, 62, 128), (74, 122, 196), (170, 204, 240)),
+    "kyan_pale": P((96, 120, 150), (150, 178, 210), (220, 232, 246)),
+    "sillimanite": P((126, 120, 108), (204, 198, 184), (246, 244, 236)),
+    "andalusite": P((92, 52, 46), (164, 106, 92), (222, 176, 160)),
+    "chiastolite": P((24, 20, 20), (52, 44, 42), (84, 74, 70)),
     "topaz": P((150, 82, 24), (224, 148, 48), (250, 222, 150)),
     "tourmaline": P((16, 70, 44), (46, 138, 82), (140, 206, 160)),
     "tourm_pink": P((150, 40, 100), (222, 96, 150), (250, 178, 206)),
@@ -378,6 +385,44 @@ def recipe_pyrite(rng):
     return dict(make=cluster(rng, one, (1, 4), 2.0), cover=0.18, seeds=1.0, mind=3.4)
 
 
+def recipe_kyanite(rng):
+    def f(cx, cy):
+        out = []
+        a = rng.uniform(0, 6.28)
+        for i in range(int(rng.integers(1, 3))):    # long flat blades, one or two side by side, blue to grey-blue
+            out.append(Grain(cx + i * 1.2 * np.sin(a), cy + i * 1.2 * np.cos(a), "blade", U(rng, 3.6, 5.6), a + rng.normal(0, 0.06),
+                             PAL["kyanite"] if rng.random() < 0.75 else PAL["kyan_pale"], "ramp", None, noise=0.05,
+                             bands=[U(rng, 0.8, 1.15)]))
+        return out
+    return dict(make=f, cover=0.17, seeds=1.0, mind=5.0)
+
+
+def recipe_sillimanite(rng):
+    def f(cx, cy):
+        out = []
+        base = rng.uniform(0, 6.28)
+        for i in range(int(rng.integers(3, 6))):    # fibrous bundle (fibrolite): thin parallel needles
+            off = (i - 2) * 0.7
+            out.append(Grain(cx + off * np.sin(base), cy + off * np.cos(base), "blade", U(rng, 3.0, 4.6), base + rng.normal(0, 0.05),
+                             PAL["sillimanite"], "ramp", None, noise=0.06, bands=[U(rng, 0.42, 0.6)]))
+        return out
+    return dict(make=f, cover=0.16, seeds=1.0, mind=5.5)
+
+
+def recipe_andalusite(rng):
+    def f(cx, cy):
+        w, h = U(rng, 1.1, 1.6), U(rng, 2.0, 3.0)   # stout square prism, often cut across with chiastolite's dark cross
+        a = rng.uniform(0, 3.14)
+        pts = np.array([[-w, -h], [w, -h], [w, h], [-w, h]])
+        out = [Grain(cx, cy, "poly", h, a, PAL["andalusite"], "bands", pts, noise=0.05, spec=0.1)]
+        if rng.random() < 0.45:
+            s = min(w, h) * 0.45
+            out.append(Grain(cx, cy, "poly", s, a + 0.785, PAL["chiastolite"], "bevel",
+                             np.array([[-s, -0.35], [s, -0.35], [s, 0.35], [-s, 0.35]]), noise=0.03))
+        return out
+    return dict(make=f, cover=0.17, seeds=1.0, mind=4.6)
+
+
 # ---- gems: small glassy crystals, mostly 1-3 px with the odd 4 px one
 def gr(rng, big=0.18):
     return U(rng, 1.9, 2.3) if rng.random() < big else U(rng, 0.8, 1.55)
@@ -468,6 +513,7 @@ RECIPES = {
     "vanadinite": recipe_vanadinite, "wulfenite": recipe_wulfenite,
     "smithsonite": recipe_smithsonite, "hemimorphite": recipe_hemimorphite,
     "pyrite": recipe_pyrite,
+    "kyanite": recipe_kyanite, "sillimanite": recipe_sillimanite, "andalusite": recipe_andalusite,
     "topaz": recipe_topaz, "tourmaline": recipe_tourmaline, "beryl": recipe_beryl,
     "spinel": recipe_spinel, "garnet": recipe_garnet, "ruby": recipe_ruby,
     "sapphire": recipe_sapphire,

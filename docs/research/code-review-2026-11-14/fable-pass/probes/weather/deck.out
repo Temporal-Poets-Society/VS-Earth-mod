@@ -1,0 +1,4 @@
+geometry: ring 25600+204800, wraps True, gutter 0, seam -169.25, 568.89 x 568.36 blocks per degree
+deck Peru 12 S, rules 9: largest step between places 0.57 blocks apart: month cover 0.800 -> 0.305 at lon -77.058 (land share 0.500); sea fog 1.000 -> 0.000 at lon -77.058, hour 5383
+deck Namibia 23 S, rules 9: largest step between places 0.57 blocks apart: month cover 0.800 -> 0.098 at lon 14.492 (land share 0.502); sea fog 1.000 -> 0.000 at lon 14.492, hour 6247
+deck California 36 N, rules 9: largest step between places 0.57 blocks apart: month cover 0.800 -> 0.267 at lon -121.547 (land share 0.500); sea fog 1.000 -> 0.000 at lon -121.547, hour 6799

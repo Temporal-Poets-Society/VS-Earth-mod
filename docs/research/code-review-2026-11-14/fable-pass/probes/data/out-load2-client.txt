@@ -1,0 +1,8 @@
+start                                                               0 ms | live      0 MB (     +0 MB) | LOH     0 MB | allocated in all      1 MB
+client: load (climate.bin, 4 fixes, weather.bin, weatherground)    185 ms | live     53 MB (    +53 MB) | LOH    74 MB | allocated in all     84 MB
+client: climate fix 4 chosen (planes made)                          8 ms | live    103 MB (    +50 MB) | LOH   107 MB | allocated in all    134 MB
+client: temperature.bin read                                        3 ms | live    111 MB (     +8 MB) | LOH   115 MB | allocated in all    142 MB
+client: rain.bin read                                               3 ms | live    123 MB (    +12 MB) | LOH   127 MB | allocated in all    154 MB
+client: aridity.bin read                                            2 ms | live    129 MB (     +6 MB) | LOH   134 MB | allocated in all    161 MB
+client: weather ground made                                         4 ms | live    130 MB (     +1 MB) | LOH   134 MB | allocated in all    163 MB
+client: 250,000 climate samples over 5 x 5 degrees                137 ms | live    132 MB (     +1 MB) | LOH   134 MB | allocated in all    165 MB

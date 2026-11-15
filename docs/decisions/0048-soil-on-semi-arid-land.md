@@ -1,6 +1,6 @@
 # 0048: Soil on semi-arid land, sand for deserts
 
-Date: 3 November 2026. Status: **Implemented** (merged into `release/1.0`, not released);
+Date: 3 November 2026. Status: **Implemented** (merged into `release/1.0`; in Earth 2.0.0);
 offline checks and a native server pass, not played.
 
 ## Author's direction

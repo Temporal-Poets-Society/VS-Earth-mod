@@ -3,11 +3,37 @@ using System.Globalization;
 using System.Linq;
 using EarthMap.Core;
 using Vintagestory.API.Common;
-using Vintagestory.API.Server;
-using Vintagestory.API.Util;
 
 namespace EarthMap
 {
+    /// <summary>
+    /// What WorldUpgrades needs of the game and of the world being started (EA-0088, D-R5 of the Fable pass): the game's is
+    /// <see cref="GameUpgradeHost"/>, tests/EarthWorldOptionsTests has one of its own, so the one-shots run without the game.
+    /// </summary>
+    interface IUpgradeHost
+    {
+        /// <summary>The config this start read (EarthConfigStore.Load).</summary>
+        EarthMapConfig Config { get; }
+        /// <summary>The params a one-shot changed, written into the save's data.</summary>
+        void Store(EarthParams p);
+        /// <summary>The world's params written into the save's data (the rule fixes adopted without a flag).</summary>
+        void SaveParams();
+        /// <summary>The world's canals by its options (earthSuezCanal, earthPanamaCanal), as EarthWorldOptions.CanalCodes.</summary>
+        string CanalCodes();
+        /// <summary>The newest climate fix the loaded Earth data has (0: none).</summary>
+        int ClimateFixAvailable { get; }
+        /// <summary>The loaded summit catalogue's signature, null without one.</summary>
+        string PeakCatalogSignature();
+        /// <summary>The coast outlines a world with this geometry gets by the config (EarthMapSystem.CoastsFor).</summary>
+        int CoastsFor(EarthGeometry geo, bool islands);
+        /// <summary>Once the game runs (RunGame), after which a save event writes the world.</summary>
+        void OnRunGame(Action handler);
+        void AddSaveHandler(Action handler);
+        void RemoveSaveHandler(Action handler);
+        /// <summary>One-shot flags reset in earth.json as it is now (EarthConfigStore.ResetFlags).</summary>
+        void ResetFlags(EarthMapConfig session, Action<EarthMapConfig> reset, string names, ILogger log);
+    }
+
     /// <summary>
     /// The one-shot opt-ins of earth.json (UpgradeExistingWorld*): each applies to the Earth world being started, for the chunks
     /// generated from then on, and is reset in the config file once the world holding it is saved, so it happens once. Older
@@ -19,6 +45,12 @@ namespace EarthMap
     /// Each one-shot is idempotent (it sets the world's rules to this build's, or to the config's choice), so one applied in a
     /// start whose save never reached the disk (the server stopped before the game ran, or crashed before its first save)
     /// simply runs again at the next start, its flag still set (Codex round 3 item 2, review A2).
+    ///
+    /// A world made in this start takes none of them (ER-07, code review 14 November 2026): its params were just frozen from
+    /// the Earth tab, and a flag left set in earth.json for an older world rewrote them (ores "vanilla" on the tab became
+    /// Earth's ore maps). The flags it skips are reset in earth.json once it is saved, as applied ones are (FP-09, the Fable
+    /// pass): left set, its own second start applied them, or the first start after an update. A flag belongs to no world, so
+    /// it is set again for the one it is meant for, while that one is being started.
     /// </summary>
     sealed class WorldUpgrades
     {
@@ -28,21 +60,23 @@ namespace EarthMap
         /// did); and, optionally, what is said about it when it isn't asked for.</summary>
         readonly record struct OneShot(Flag Asked, System.Func<EarthParams, bool> Apply, System.Action<EarthParams> NotAsked = null);
 
-        readonly EarthMapSystem core;
-        readonly ICoreServerAPI sapi;
+        readonly IUpgradeHost host;
         readonly ILogger log;
-        /// <summary>The flags this start applied, reset in earth.json at the world's first save once the game runs.</summary>
+        /// <summary>The flags this start applied, or skipped for a world made in it, reset in earth.json at the world's first save
+        /// once the game runs.</summary>
         readonly System.Collections.Generic.List<(string Name, Flag Asked)> applied = new();
         bool running, hooked;
+        /// <summary>The world was made in this start (EarthMapSystem.InitWorld's fresh): no one-shot applies.</summary>
+        readonly bool fresh;
 
-        public WorldUpgrades(EarthMapSystem core, ICoreServerAPI sapi, ILogger log)
+        public WorldUpgrades(IUpgradeHost host, ILogger log, bool fresh = false)
         {
-            this.core = core;
-            this.sapi = sapi;
+            this.host = host;
             this.log = log;
+            this.fresh = fresh;
         }
 
-        EarthMapConfig Config => core.Config;
+        EarthMapConfig Config => host.Config;
 
         /// <summary>Whether earth.json asks for any one-shot (an UpgradeExistingWorld* flag set): it moves the world to this
         /// build's rules, which may read data its saved rules don't (EarthMapSystem.StoreFilesRead).</summary>
@@ -55,15 +89,22 @@ namespace EarthMap
         /// A one-shot that throws keeps its flag, so it runs again at the next start once the cause is fixed.</summary>
         void Run(EarthParams p, params OneShot[] table)
         {
+            var left = new System.Collections.Generic.List<string>();
             foreach (var u in table)
             {
                 ref bool asked = ref u.Asked(Config);
-                if (!asked) { u.NotAsked?.Invoke(p); continue; }
-                if (u.Apply(p)) Save(p);
+                if (!asked) { if (!fresh) u.NotAsked?.Invoke(p); continue; }
+                string name = u.Apply.Method.Name.Replace("Apply", "UpgradeExistingWorld");
+                if (fresh) left.Add(name);
+                else if (u.Apply(p)) Save(p);
                 asked = false;
-                applied.Add((u.Apply.Method.Name.Replace("Apply", "UpgradeExistingWorld"), u.Asked));
+                applied.Add((name, u.Asked));
                 Hook();
             }
+            if (left.Count > 0)
+                log.Warning("Earth: earth.json asks for {0}; a one-shot is for a world made before this start, so this world, made now with the Earth " +
+                    "tab's choices, keeps them. The flags are reset in earth.json once this world is saved, so that none of its later starts applies " +
+                    "them: set one again while the world it is meant for is the one being started.", string.Join(", ", left));
         }
 
         /// <summary>
@@ -76,8 +117,8 @@ namespace EarthMap
         {
             if (hooked) return;
             hooked = true;
-            sapi.Event.ServerRunPhase(EnumServerRunPhase.RunGame, () => running = true);
-            sapi.Event.GameWorldSave += Saved;
+            host.OnRunGame(() => running = true);
+            host.AddSaveHandler(Saved);
         }
 
         void Saved()
@@ -85,12 +126,12 @@ namespace EarthMap
             if (!running || applied.Count == 0) return;
             var done = applied.ToArray();
             applied.Clear();
-            sapi.Event.GameWorldSave -= Saved;
-            EarthConfigStore.ResetFlags(sapi, Config, c => { foreach (var (_, asked) in done) asked(c) = false; },
+            host.RemoveSaveHandler(Saved);
+            host.ResetFlags(Config, c => { foreach (var (_, asked) in done) asked(c) = false; },
                 string.Join(", ", System.Linq.Enumerable.Select(done, d => d.Name)), log);
         }
 
-        void Save(EarthParams p) => sapi.WorldManager.SaveGame.StoreData(EarthMapSystem.SaveKey, SerializerUtil.Serialize(p));
+        void Save(EarthParams p) => host.Store(p);
 
         // ------------------------------------------------------------------------------------------ the terrain layout
 
@@ -127,7 +168,7 @@ namespace EarthMap
         bool ApplyCanals(EarthParams p)
         {
             string before = p.Canals ?? "";
-            p.Canals = EarthWorldOptions.CanalCodes(sapi.WorldManager.SaveGame.WorldConfiguration);
+            p.Canals = host.CanalCodes();
             log.Warning("UpgradeExistingWorldCanals: canals in this world now '{0}' (were '{1}', from the world's earthSuezCanal and earthPanamaCanal) for chunks generated from now on. " +
                 "Chunks already generated on a canal's course keep their land. The flag is reset once the world is saved.", p.Canals, before);
             return true;
@@ -206,18 +247,18 @@ namespace EarthMap
 
         bool ApplyClimateData(EarthParams p)
         {
-            var data = core.LoadedData();
-            if (p.ClimateData < data.ClimateFixAvailable)
+            int available = host.ClimateFixAvailable;
+            if (p.ClimateData < available)
             {
                 int before = p.ClimateData;
-                p.ClimateData = data.ClimateFixAvailable;
+                p.ClimateData = available;
                 log.Warning("UpgradeExistingWorldClimateData: climate fix v{0} (was v{1}; decision 0018: the complete UDel normals, without the one-row " +
                     "stripes across the land or along the coasts and with December's rain and snow over the land) for chunks generated from now on. Chunks already generated keep their climate; " +
                     "forests, soil and grass may change with a straight edge where new chunks meet them. The flag is reset once the world is saved.", p.ClimateData, before);
                 return true;
             }
             log.Notification("UpgradeExistingWorldClimateData: nothing to do in this world ({0}). The flag is reset once the world is saved.",
-                data.HasClimateFix ? "it has climate fix v" + p.ClimateData + " already" : "earthdata/climatefix.bin to climatefix3.bin are missing");
+                available > 0 ? "it has climate fix v" + p.ClimateData + " already" : "earthdata/climatefix.bin to climatefix4.bin are missing");
             return false;
         }
 
@@ -257,7 +298,7 @@ namespace EarthMap
         bool ApplyCoasts(EarthParams p)
         {
             int before = p.Coasts;
-            p.Coasts = core.CoastsFor(p.BuildGeometry(), p.Islands > 0);
+            p.Coasts = host.CoastsFor(p.BuildGeometry(), p.Islands > 0);
             log.Warning("UpgradeExistingWorldCoasts: coasts from outlines {0} (were {1}) for chunks generated from now on{2}. " +
                 "Chunks already generated keep their coasts and may meet the new ones with a step where they differ. The flag is reset once the world is saved.",
                 p.Coasts > 0 ? "on" : "off", before > 0 ? "on" : "off",
@@ -293,8 +334,8 @@ namespace EarthMap
             if (p.Summits >= 1 && p.Summits < KnownSummits.Version) p.Summits = KnownSummits.Version;
             if (p.Summits >= 2)
             {
-                var peaks=core.LoadedData().ReadPeaks();
-                if(peaks!=null)p.PeakCatalogSignature=peaks.Signature;
+                string peaks = host.PeakCatalogSignature();
+                if (peaks != null) p.PeakCatalogSignature = peaks;
             }
             log.Warning("UpgradeExistingWorldMountainTerrain: summit heights and alpine surfaces updated for future chunks only. Existing chunks stay unchanged and may meet new terrain with a seam. The flag is reset once the world is saved.");
             return true;
@@ -327,14 +368,10 @@ namespace EarthMap
 
             // Rule fixes that don't produce seams reach existing saves without any flag.
             bool saveChanged = false;
+            // (a saved number above this build's is refused before this, InitWorld, ER-05; S-R1 of the Fable pass)
             void Adopt(bool enabled, string name, ref int saved, int current)
             {
-                if (!enabled || saved == current) return;
-                if (saved > current)
-                {
-                    log.Warning("This world's {0} rules (v{1}) are newer than this Earth Map's (v{2}); the current rules are used.", name, saved, current);
-                    return;
-                }
+                if (!enabled || saved >= current) return;
                 log.Notification("Earth {0} rules v{1} → v{2}: fixes apply to new generation in this world; what already exists is unchanged.", name, saved, current);
                 saved = current;
                 saveChanged = true;
@@ -354,7 +391,7 @@ namespace EarthMap
                 saveChanged = true;
                 log.Notification("Extinct animals are {0} for future natural spawns; existing animals remain.", p.IncludeExtinctAnimals ? "enabled" : "disabled");
             }
-            if (saveChanged) core.SaveParams();
+            if (saveChanged) host.SaveParams();
         }
 
         bool ApplyOreRules(EarthParams p)
@@ -365,9 +402,18 @@ namespace EarthMap
                 p.OreRulesVersion = RegionalOreCatalog.Version;
                 // a ground-column world takes the real-size deposits (ore rules v4) as a new world would, not the rules-v3
                 // ore bodies with heat maps v1
-                if (p.OreLayers > 0) p.OreRules = OreBackground.CurrentRules;
+                if (OreLayerFacts.Layers(p.OreLayers)) p.OreRules = OreBackground.CurrentRules;
                 p.OreSettingsJson = System.Text.Json.JsonSerializer.Serialize(Config.Ores ?? new OreTuning());
                 p.OreDataSignature = null;
+            }
+            // decision 0077 (ER-07): the crafting rules follow where Earth decides bauxite, as EarthWorldOptions.Freeze sets them;
+            // recipes only, nothing generated changes
+            int crafting = EarthCrafting.RulesFor(p.GroundColumns, p.RegionalOres);
+            if (crafting != p.CraftingRules)
+            {
+                log.Notification("UpgradeExistingWorldOreRules: crafting rules {0} → {1} from the next start, when the recipes are set (decision 0077: refractory bricks without bauxite {2}).",
+                    p.CraftingRules, crafting, crafting > 0 ? "on" : "off");
+                p.CraftingRules = crafting;
             }
             log.Warning("UpgradeExistingWorldOreRules: regional ores are {0} for new generation in this world{1}. Existing deposits remain. The flag is reset once the world is saved.",
                 p.RegionalOres ? "on" : "off", p.RegionalOres ? ", with the current Ores tuning" : "");
@@ -384,7 +430,9 @@ namespace EarthMap
                 p.GeologyTransitionBlocks = Config.GeologyTransitionBlocks;
             }
             log.Warning("UpgradeExistingWorldGeologyRules: regional geology is {0} for new chunks in this world{1}. Rock layers in new chunks may not line up " +
-                "with chunks already generated. The flag is reset once the world is saved.", p.RegionalGeology ? "on" : "off",
+                "with chunks already generated. With Hydrate or Diedrate installed, its aquifer data for new chunks now comes from " +
+                (p.WritesHodAquifers() ? "Earth's water table" : "Hydrate or Diedrate itself") +
+                " (decision 0059). The flag is reset once the world is saved.", p.RegionalGeology ? "on" : "off",
                 p.RegionalGeology ? string.Format(CultureInfo.InvariantCulture, " (rules v{0}, contact zone {1} blocks)", p.GeologyRulesVersion, p.GeologyTransitionBlocks) : "");
             return true;
         }

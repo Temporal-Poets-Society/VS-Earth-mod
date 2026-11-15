@@ -432,6 +432,10 @@ namespace EarthMap.Core
         /// <summary>EIVE moisture of the drained ground; shares (0..1) of waterlogged, nutrient-poor and grassland soils;
         /// topsoil pH (NaN: unknown).</summary>
         public float SoilMoisture, WetShare, PoorShare, GrassShare, SoilPh;
+        /// <summary>Site rules 1 (EA-0054): the column's own site (<see cref="SiteNiche.Column"/>) instead of the grid's shares:
+        /// EIVE moisture and nutrients of this one place; <see cref="SoilPh"/> is then the ground column's.</summary>
+        public bool ColumnSite;
+        public float SiteMoisture, SiteNutrients;
     }
 
     /// <summary>

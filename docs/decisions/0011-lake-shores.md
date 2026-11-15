@@ -72,6 +72,26 @@ contour: 6 blocks in the Rhône plain by Lake Geneva (EarthMapTests' lake-shore 
 noise there). New worlds (`TerrainModel.GenFixRules` 2) fade the cut in from 20 to 40 m above the water. GLO-90's dry
 land takes its own heights and is not affected.
 
+## Later: the lake's straight edge on low ground (GenFixRules 3, EA-0072, 14 November 2026)
+
+A grid lake's water reached every place below its level where the lake's share (bilinear between the 2′ cells' centres)
+was above 0. Where the ground beside a lake lies below its level in the grid (the bicubic pulls the lake's bed into the
+land cells next to it: 40 m under Lake Geneva's level at the Rhône's mouth), the water ran out to where the share reaches
+0, straight lines between cell centres, with land held flat at the lake's level beyond: a rectangular corner about 30
+blocks a side at 1:100 on the built-in heights, and the lake's gravel flat (the beach rule took any share above 0 too)
+ended along the same line. New worlds (`TerrainModel.GenFixRules` 3, `GridLakeEdgeAt`) first ask whether the ground
+rises out of the water before the share runs out (the column's height plus the smooth grid's rise along the share's
+fall). Where it does (Lake Garda's eastern cliffs) the ground ends water and beach as before; where it does not, the
+water needs the share, wobbled by a noise one cell long (±0.25), above 0.2, and the beach the share times a shorter
+wobble of its own (half a cell, factor ±0.9) above 0.15, a contour that never reaches the cell line; the ground beyond
+is flush grass at the lake's level as before. A first version gated by the grid's grade instead left a flush strip under
+Garda's cliffs at one test scale and a straight gravel edge at the Rhône's mouth; the bench showed the latter. Offline
+(EarthMapTests `shores`, `lakeedge`, `mouthedge`): at the Rhône's mouth the longest straight shore 16 → 11 and 34 → 6
+blocks, the beach's landward edge 16 → 6 and 34 → 9 (test worlds at 1:195 and 1:100); the seven lakes keep their steps
+and have no spills. In game (14 November, 1:100, built-in heights): no rectangle and no straight gravel edge. Reach: the
+built-in heights' lakes, and on GLO-90 only the grid's kept salt and terminal lakes; GLO-90's outline lakes are
+unchanged.
+
 ## History
 
 - 2026-10-17: squares near Rome reported; traced to the 3-cell raise.

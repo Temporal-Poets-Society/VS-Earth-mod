@@ -70,16 +70,24 @@ namespace EarthMap.Core
             public double Lon0, Lat0, DLon, DLat;
         }
 
+        /// <summary>EA-0106 (the Fable pass's FP-17, L3): the most columns, rows, tile columns and tile rows a GeoTIFF may have
+        /// here (GLO-90's are at most 1200, its tiles 1024), and the most values one directory entry may hold.</summary>
+        const int MaxTiffSide = 4096, MaxTiffValues = 1 << 16;
+
         /// <summary>
         /// Reads the full-resolution image of a Copernicus COG: a classic little-endian TIFF with one float32 band in tiles,
-        /// deflate or no compression, and no or the floating-point predictor (3). Other TIFFs throw.
+        /// deflate or no compression, and no or the floating-point predictor (3). Other TIFFs throw. EA-0106: every count,
+        /// offset and size is checked against the file and the limits above before anything is allocated from it (a damaged
+        /// directory allocated up to 4 GB), so that a damaged or foreign file throws InvalidDataException and nothing else.
         /// </summary>
         public static Grid ReadGeoTiff(byte[] f)
         {
             if (f.Length < 8 || f[0] != 'I' || f[1] != 'I') throw new InvalidDataException("not a little-endian TIFF");
             if (BinaryPrimitives.ReadUInt16LittleEndian(f.AsSpan(2)) != 42) throw new InvalidDataException("not a classic TIFF (BigTIFF is not read)");
             long ifd = BinaryPrimitives.ReadUInt32LittleEndian(f.AsSpan(4));
+            if (ifd < 8 || ifd > f.Length - 2) throw new InvalidDataException("TIFF directory outside the file");
             int n = BinaryPrimitives.ReadUInt16LittleEndian(f.AsSpan((int)ifd));
+            if (ifd + 2 + 12L * n > f.Length) throw new InvalidDataException("TIFF directory runs past the file");
             int width = 0, height = 0, bps = 0, compression = 1, predictor = 1, format = 1, spp = 1, planar = 1, tw = 0, th = 0;
             long[] offsets = null, counts = null;
             double[] scale = null, tie = null;
@@ -113,8 +121,11 @@ namespace EarthMap.Core
             if (predictor != 1 && predictor != 3) throw new InvalidDataException("predictor " + predictor);
             if (planar != 1 && spp > 1) throw new InvalidDataException("planar configuration " + planar);
             if (scale == null || tie == null || scale.Length < 2 || tie.Length < 6) throw new InvalidDataException("no georeference");
+            if (width < 1 || height < 1 || width > MaxTiffSide || height > MaxTiffSide || tw > MaxTiffSide || th > MaxTiffSide)
+                throw new InvalidDataException($"{width} x {height} cells in tiles of {tw} x {th}: larger than a GLO-90 tile can be");
+            long tiles = (long)((width + tw - 1) / tw) * ((height + th - 1) / th);
             int across = (width + tw - 1) / tw, down = (height + th - 1) / th;
-            if (offsets.Length < across * down || counts.Length < across * down) throw new InvalidDataException("tile tables too short");
+            if (offsets.Length < tiles || counts.Length < tiles) throw new InvalidDataException("tile tables too short");
 
             var heights = new float[width * height];
             var raw = new byte[tw * th * 4];
@@ -167,11 +178,20 @@ namespace EarthMap.Core
 
         static int Size(int type) => type switch { 1 or 2 or 6 or 7 => 1, 3 or 8 => 2, 4 or 9 or 11 => 4, 5 or 10 or 12 or 16 or 17 => 8, _ => throw new InvalidDataException("TIFF type " + type) };
 
-        static int Where(byte[] f, int e, int type, long count) =>
-            Size(type) * count <= 4 ? e + 8 : (int)BinaryPrimitives.ReadUInt32LittleEndian(f.AsSpan(e + 8));
+        /// <summary>Where an entry's values are: in the entry, or at its offset; EA-0106: all of them within the file, and not
+        /// more than <see cref="MaxTiffValues"/>.</summary>
+        static int Where(byte[] f, int e, int type, long count)
+        {
+            long bytes = Size(type) * count;
+            if (bytes <= 4) return e + 8;
+            long at = BinaryPrimitives.ReadUInt32LittleEndian(f.AsSpan(e + 8));
+            if (count > MaxTiffValues || at > f.Length - bytes) throw new InvalidDataException($"TIFF entry of {count} values at {at}: outside the file or too many");
+            return (int)at;
+        }
 
         static long Value(byte[] f, int e, int type, long count, int i)
         {
+            if (i >= count) throw new InvalidDataException("TIFF entry without a value");
             int at = Where(f, e, type, count) + i * Size(type);
             return type switch
             {
@@ -185,6 +205,7 @@ namespace EarthMap.Core
 
         static long[] Values(byte[] f, int e, int type, long count)
         {
+            Where(f, e, type, count);   // EA-0106: the values are in the file before the array is made
             var v = new long[count];
             for (int i = 0; i < count; i++) v[i] = Value(f, e, type, count, i);
             return v;
@@ -212,6 +233,9 @@ namespace EarthMap.Core
             public int Converter = ConverterVersion;
             public long SourceBytes;
             public string SourceETag = "";
+            /// <summary>(EA-0106) The heights' checksum (<see cref="Checksum"/>) as the file's header gives it and
+            /// <see cref="Decode"/> verified; 0 for a tile not read from a file.</summary>
+            public ulong HeightsChecksum;
 
             /// <summary>Height at a point of the grid; the column is clamped (the caller keeps it within the tile).</summary>
             public short At(int r, int c) => Heights[r * Cols + Math.Clamp(c, 0, Cols - 1)];
@@ -223,9 +247,10 @@ namespace EarthMap.Core
         /// </summary>
         public static Tile FromGrid(Grid g, int latS, int lonW)
         {
-            if (Math.Abs(g.Lat0 - (latS + 1)) > 1e-6 || Math.Abs(g.Lon0 - lonW) > 1e-6)
+            // (EA-0106) written so that NaN fails too
+            if (!(Math.Abs(g.Lat0 - (latS + 1)) <= 1e-6) || !(Math.Abs(g.Lon0 - lonW) <= 1e-6))
                 throw new InvalidDataException($"tile {ShortName(latS, lonW)} starts at {g.Lat0}, {g.Lon0}");
-            if (Math.Abs(g.DLat * g.Rows - 1) > 1e-6 || Math.Abs(g.DLon * g.Cols - 1) > 1e-6)
+            if (!(Math.Abs(g.DLat * g.Rows - 1) <= 1e-6) || !(Math.Abs(g.DLon * g.Cols - 1) <= 1e-6))
                 throw new InvalidDataException($"tile {ShortName(latS, lonW)} isn't one degree ({g.Cols} × {g.Rows}, {g.DLon} × {g.DLat})");
             var t = new Tile { LatS = latS, LonW = lonW, Cols = g.Cols, Rows = g.Rows, Heights = new short[g.Heights.Length] };
             short lo = short.MaxValue, hi = short.MinValue;
@@ -336,6 +361,7 @@ namespace EarthMap.Core
                 }
             }
             if (Checksum(t.Heights) != sum) throw new InvalidDataException("tile checksum differs");
+            t.HeightsChecksum = sum;
             return t;
         }
 

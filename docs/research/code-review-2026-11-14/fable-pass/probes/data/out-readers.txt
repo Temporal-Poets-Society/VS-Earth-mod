@@ -1,0 +1,33 @@
+== client load with earth.json (25,432 B): unchanged -> ok (436 MB allocated, 637 ms)
+    ~ accepted (no error)  x1   <- minus 1 byte
+      load: JsonReaderException  x9
+== client load with climate.bin (3,373,093 B): unchanged -> ok (436 MB allocated, 550 ms)
+    ~ accepted (no error)  x2   <- int32@4=MAX; int32@4=16M
+      load: InvalidDataException  x36
+== client load with climatefix.bin (361,524 B): unchanged -> ok (436 MB allocated, 534 ms)
+      load: InvalidDataException  x38
+== client load with climatefix2.bin (1,860,725 B): unchanged -> ok (436 MB allocated, 556 ms)
+      load: InvalidDataException  x38
+== client load with climatefix3.bin (103,933 B): unchanged -> ok (436 MB allocated, 533 ms)
+      load: InvalidDataException  x38
+== client load with climatefix4.bin (13,119 B): unchanged -> ok (436 MB allocated, 519 ms)
+      load: InvalidDataException  x38
+== client load with weather.bin (3,634,099 B): unchanged -> ok (436 MB allocated, 523 ms)
+   !! use: InvalidDataException  x38   <- zero-length; 3 bytes; header only (16 B); half; minus 1 byte; int32@4=MAX; ...
+== client load with weatherground.bin (40,457 B): unchanged -> ok (436 MB allocated, 611 ms)
+   !! use: InvalidDataException  x38   <- zero-length; 3 bytes; header only (16 B); half; minus 1 byte; int32@4=MAX; ...
+== client load with temperature.bin (8,012,000 B): unchanged -> ok (436 MB allocated, 513 ms)
+    ~ accepted (no error)  x1   <- int32@28=0
+   !! use: InvalidDataException  x37   <- zero-length; 3 bytes; header only (16 B); half; minus 1 byte; int32@4=MAX; ...
+== client load with rain.bin (11,862,158 B): unchanged -> ok (436 MB allocated, 615 ms)
+    ~ accepted (no error)  x6   <- int32@24=MAX; int32@24=-1; int32@24=0; int32@24=16M; int32@28=0; 8 body bytes flipped (seed 3)
+   !! use: InvalidDataException  x32   <- zero-length; 3 bytes; header only (16 B); half; minus 1 byte; int32@4=MAX; ...
+== client load with aridity.bin (6,475,409 B): unchanged -> ok (436 MB allocated, 583 ms)
+    ~ accepted (no error)  x5   <- int32@24=MAX; int32@24=-1; int32@24=0; int32@24=16M; int32@28=0
+   !! use: InvalidDataException  x33   <- zero-length; 3 bytes; header only (16 B); half; minus 1 byte; int32@4=MAX; ...
+== server load with terrain.bin (other optional files left out) (30,347,837 B): unchanged -> ok (1311 MB allocated, 1102 ms)
+    ~ accepted (no error)  x3   <- int32@24=16M; int32@28=0; int32@28=16M
+      load: InvalidDataException  x31
+   !! use: InvalidDataException  x4   <- 8 body bytes flipped (seed 1); 8 body bytes flipped (seed 2); 8 body bytes flipped (seed 3); 8 body bytes flipped (seed 4)
+== rivers.bin (RiverData.Read) (12,132,790 B): unchanged -> ok (171 MB allocated, 280 ms)
+Out of memory.

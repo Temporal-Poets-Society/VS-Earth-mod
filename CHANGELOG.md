@@ -2,7 +2,7 @@
 
 What each version changed. What the current version needs and does is in [README.md](README.md).
 
-## 2.0.0 (release candidate, 13 November 2026)
+## 2.0.0 (15 November 2026)
 
 Earth 2.0 is one mod and makes new worlds. It sums up everything since 1.0.2.
 
@@ -11,9 +11,19 @@ Earth 2.0 is one mod and makes new worlds. It sums up everything since 1.0.2.
 - **One mod** ([decision 0066](docs/decisions/0066-one-mod-data-from-github.md)): Earth Terrain Data, Earth Water Data
   and the test builds' height, water-fix and ground packs are no longer needed. If they are still installed, Earth
   copies its files from them instead of downloading them.
-- **Needs** Vintage Story 1.22, Cylinder World 1.0.4 or newer (1.1.0 also finishes setting up a world whose first start
-  stopped) and Hydrology 0.6.2-rc.4 or newer: its river query version 3 gives new worlds the calm rivers, and older
+- The zip carries Earth's large config JSON brotli-packed and unpacks it when the game loads assets, which leaves room
+  for the habitat steps ([decision 0081](docs/decisions/0081-packed-config-assets.md)).
+- The client climate files (`climate.bin` and its fixes 1 and 2, `temperature.bin`, `rain.bin`, `aridity.bin`,
+  `weather.bin`) put a spatial predictor in front of their compression
+  ([decision 0082](docs/decisions/0082-predicted-climate-files.md), EA-0077): the same values to the bit, about 10 MB
+  less of the zip. Worlds generate and their weather runs as before; each world's model cache is rebuilt once.
+- **Needs** Vintage Story 1.22, Cylinder World 1.1.0 or newer (with 1.0.4 a new world whose first start stopped was
+  taken for an existing one on the next; EA-0096) and Hydrology 0.6.2 or newer: its river query version 3 gives new worlds the calm rivers, and older
   Hydrology could let a water source spilled into the sea make the sea climb and flood the map.
+- **Hydrate or Diedrate** ([decision 0059](docs/decisions/0059-water-table-and-hod-aquifers.md)): with HoD 2.5.8
+  installed, a new world with Earth's own rock and ground gets HoD's aquifers from Earth's water table. With vanilla rock
+  and ground, or vanilla biomes, Earth leaves HoD alone and HoD makes its own aquifers with its own defaults (the author,
+  15 November 2026).
 - **Data from GitHub:** the first start of a server (or a single-player game) downloads Earth's data once per computer
   into `VintagestoryData/ModData/earth` and checks every file: about 290 MB from
   [earth-data](https://github.com/Temporal-Poets-Society/earth-data) (`ed-v1`), about 170 MB of 30″ ground sets from
@@ -21,11 +31,27 @@ Earth 2.0 is one mod and makes new worlds. It sums up everything since 1.0.2.
   and the GLO-90 land heights from [earth-glo90](https://github.com/Temporal-Poets-Society/earth-glo90) (`egl-v1`). A
   game client downloads nothing. Without internet the files can be put there by hand; a server that can't get them
   stops and says which are missing.
-- **New worlds:** worlds made with 1.0.x load and keep generating with their saved rules; they are not upgraded.
+- **New worlds:** worlds from Earth versions before 2.0.0 (0.x, 1.x and the release candidates) are not supported:
+  start a new world. From 2.0.0 on, saves are kept working.
+- **Worlds from a newer Earth:** from this version a world that a newer Earth saved (a rules number above this build's,
+  or settings this build doesn't know) is refused with one line, unchanged. Earlier versions (1.0.x, and the 2.0 test
+  builds before this check) don't look: don't open a world in an older Earth than the one that last saved it, or its
+  new chunks get the older rules for good (S-L3 of the code review of 14 November 2026).
 - **For game updates:** every Harmony patch and non-public game member Earth uses goes through one table
-  (`PatchVanilla`, 45 features). If a game update removes or changes one, Earth logs one line naming the game version
-  and the feature and turns only that feature off. If Earth's own terrain can't hook in, Earth refuses the world
-  instead of making half-Earth chunks.
+  (`PatchVanilla`, 46 features). If a game update removes or changes one, Earth logs one line naming the game version
+  and the feature. A world whose saved rules use a part of generation that is off then (that hook, a competing mod, a
+  missing file) stops before its first chunk and names it ([decision 0083](docs/decisions/0083-generation-starts-with-every-feature-or-not-at-all.md));
+  `AcceptMissingFeatures` in earth.json lets an owner generate without it. If Earth's own terrain can't hook in, Earth
+  refuses the world instead of making half-Earth chunks.
+- **Maps see the craters** ([decision 0079](docs/decisions/0079-maps-read-the-surface-as-generated.md), EA-0071): maps can
+  read `TerrainModel.GetSurfaceColumn`, the terrain column with the summit craters and lava lakes that a later step
+  carves, so World Map (0.5.3-rc.4 and later) draws them; before, every predicted view showed the cones uncarved. A map
+  never plans a volcano from built-in heights. Maps can also read `TerrainModel.GrassSeasonAt`, a place's grass season
+  map and its wet and dry seasons, so World Map's far view (0.5.3-rc.5 and later) colours grass as the client does.
+  Generation is unchanged.
+- **What other mods read from Earth is pinned** (EA-0132): [docs/REFLECTION-SURFACE.md](docs/REFLECTION-SURFACE.md) lists
+  every member World Map, Hydrology and Cylinder World read by reflection, and a test checks each the way its mod looks
+  it up, so a renamed or changed member fails Earth's tests instead of those mods in a world.
 
 ### World size and heights
 
@@ -75,11 +101,29 @@ Earth 2.0 is one mod and makes new worlds. It sums up everything since 1.0.2.
 
 ### Ground, climate and nature
 
+- **Trees by site** ([decision 0080](docs/decisions/0080-habitats-by-site.md), site rules 1, new worlds): in Europe the
+  tree and shrub mix follows each place's own wetness (from the water table) and soil richness and pH (from the ground
+  columns): pine and birch on raised bogs and dry heath, alder in wet hollows, beech, oak, ash and lime on fresh rich
+  ground. Everywhere, trees grow smaller on poor, dry or waterlogged ground.
 - Ground columns from real soil and geology (the default), a rock floor, soil by aridity, biomes, alpine turf and arid
   floodplains.
 - Earth's ore maps put ores at their real size in their ground layers (experimental, on the Earth tab; the default ores
   are vanilla's). Fire clay is no longer put back under coal (ore layers v2), and the Urals' and Kondyor's platinum
   placers place ore in their valleys (ore rules v5).
+- **Terra rossa only on warm karst** ([decision 0076](docs/decisions/0076-warm-karst-terra-rossa-and-surface-flint.md),
+  ground rules 2): karst cooler than a yearly mean of 12 °C has rendzina on limestone rubble, and vanilla's bauxite
+  layers become the region's own rock under either ore choice, so there is no orange clay or bauxite high in the Alps. **Loose flint in the glaciated north and chert on karst** (ore layers v3): flint
+  lies on till, outwash, river beds and gravel shores of the old ice sheets, chert on limestone.
+- **Refractory bricks without bauxite** ([decision 0077](docs/decisions/0077-refractory-bricks-without-bauxite.md),
+  crafting rules 1, in worlds where Earth decides where bauxite lies): grog from fired bricks, fire clay from clay with
+  grog or crushed quartz, a plain fireclay brick (fire clay, quartz, grog) for tier 1, and crushed kyanite, sillimanite,
+  andalusite or corundum in bauxite's place at every tier. Vanilla's recipes stay. **Kyanite, sillimanite and
+  andalusite** (ore layers v4): new ores with loose markers in the schist, gneiss, quartzite, slate and phyllite of
+  metamorphic belts. **Volcanic-ash mortar:** slaked lime and tephra give 6 mortar in a barrel.
+- **Volcanoes inside** ([decision 0078](docs/decisions/0078-volcano-interiors.md), geothermal rules 3): the GVP's
+  volcanoes have interiors in real proportions: a cone of the volcano's own layered rock, a lens-shaped magma chamber,
+  a conduit with a cupola and a funnel up to the crater, dykes and a sill at 1:50 and finer, and no caves right beside
+  them, in basalt, andesite or rhyolitic rock by the volcano's magma.
 - Plants and animals where they lived around 1318.
 - **Biomes: Earth / Vanilla** on the Earth tab ([decision 0075](docs/decisions/0075-biomes-back-to-vanilla.md)):
   Vanilla turns Earth's biome rules (vegetation zones, wetlands, fire openings, ground cover, ground moisture, winter
@@ -88,21 +132,56 @@ Earth 2.0 is one mod and makes new worlds. It sums up everything since 1.0.2.
 - **Climate fix v3** ([decision 0018](docs/decisions/0018-climate-stripes.md)): the land's rain fades into the ocean
   data over a 1° coast band, so soil and plants no longer change in straight lines along the Arctic coasts, Central
   America and SE Asia (227 such stretches, now 67, nearly all real relief).
+- **Climate fix v4** ([decision 0018](docs/decisions/0018-climate-stripes.md), EA-0060): the desert coasts of Peru, Chile
+  and Namibia are as dry as CHELSA has them (Lima 434 → 60 mm a year); the coarse ocean data had put the Andes' rain on
+  them.
 
 ### Weather
 
 - Earth's own rain and thunder; weather rules 6 add cloud decks over cold seas (Peru, Namibia), hail from Earth's
   storms and the weather in the temperature, and give the same weather on every operating system.
+- Weather rules 7 for new worlds ([decision 0017](docs/decisions/0017-weather.md)): high ground rains and snows on as
+  many days as its real stations (the rain rate reads the ground's temperature: Denver, the Great Basin, Iran); no rain
+  on the desert coasts; the desert Southwest's summer thunderstorms (Phoenix about a fifth of July's days); fog and mist
+  from Earth's weather instead of the patterns' (sea fog on the cold coasts, valley fog on clear calm nights after rain);
+  and the clouds drawn as thick as Earth's cloud cover, so their edges follow its rain areas.
+- Weather rules 8 for new worlds ([decision 0017](docs/decisions/0017-weather.md), EA-0020, EA-0073): rain comes in
+  showers of a few hours as at the airports (a cool month's rain had lasted 5-12 hours at a time), through the whole day
+  rather than mostly in the afternoon, and in warm months as a few downpours and much light rain (fewer rainy days reach
+  1 mm: the Great Plains, Florida, Tokyo); Perth's, Adelaide's and Cape Town's winters rain on more days. The month's
+  rain hours and millimetres are as before. The weather's warmth and chill is worked out once per 32 blocks and ten game
+  minutes, a twenty-fifth of its cost. `/earthweather hail` says when hail next falls here. Hail hurts as vanilla's
+  large hail does (it almost never did).
+- Weather rules 9 for new worlds (EA-0074): West and Central Africa get the thunder their airports report (Douala about
+  210 thunder days a year, Abuja 145, Bamako 115; a third more than before), without more rain.
+- A client whose `weatherground.bin` or climate fixes differ from the server's keeps vanilla weather instead of making
+  other weather than the server (EA-0118). `/earthweather hail` searches the year off the main thread and answers when
+  done. The drawn clouds, wind, hail, fog and thunder use the rain's own hour; the clouds' drift cancels vanilla's own push.
+- Earth's hail is drawn and heard in the game (EA-0101): it hurt but showed as rain, because vanilla's weather tick
+  overwrote it with its own event.
+- The weather costs less (the code review of 14 November): the client works out the fog, cloud tiles, region winds and
+  hail once instead of every frame or per asker, vanilla's wind lookup is no longer run and thrown away, and storms out of
+  reach cost nothing; older worlds' weather is unchanged bit for bit.
 - Earth's weather role in the open sea contracts (`seacontracts:weather`) lets Rough Seas or any other mod read Earth's
-  wind, storms and rain without Earth's DLL; it claims itself again if it goes missing.
+  wind, storms and rain without Earth's DLL; it claims itself again if it goes missing. It also gives the sea-level
+  air pressure (`pressure`), the barometer World Map reads.
 
 ### Earth tab and commands
 
 - The Earth tab has choices for surface ponds, mountain springs and biomes. Start and Start coordinates are on a tab
   of their own (**Earth start**), since the game's text field turns clipping off for everything drawn after it in a
   scrolling list.
+- `/earth relight` (above) and `/earth cost`, which measures what Earth's climate hook costs in the running game.
+- `/earth site` shows the site drivers where you stand ([decision 0080](docs/decisions/0080-habitats-by-site.md), step 1):
+  heat, light on the slope, water supply, soil richness, wetness from the water table, disturbance, and the site type
+  they make (dry heath to alder carr), and what plants read from it.
+- `/earth woods` counts the trees around you by wood, or with `trace` the tree and shrub picks of new chunks;
+  `/earth siterules 0|1` switches the site rules for this session only, to compare with `/wgen regenk`.
 - `/earth` subcommands that don't need a position run from the server console. The download status shows the data
   source, its errors and the disk space to admins only.
+- `/earth tp` into a square whose GLO-90 heights aren't on this computer yet waits for them at most 2 minutes
+  (EA-0121). If they can't be had, it says why (the release unreachable, say) and doesn't teleport you over land that
+  can't be made yet; a square no source has still takes the built-in heights, as before.
 
 ### Faster start
 
@@ -115,9 +194,32 @@ Earth 2.0 is one mod and makes new worlds. It sums up everything since 1.0.2.
   `earth.json` turns the cache off. The world is the same either way.
 - A 1:10 server peaks at about 5.5 GB while it starts, then holds 4.5 to 4.8 GB; 1:5 builds its model in about 29 s and
   peaks at about 7.2 GB.
+- **Less memory** (EA-0087): the climate is kept as the data files store it and only the climate fix a world uses, on
+  servers and clients (a new world's climate 104 → 44 MB), and terrain tiles keep their heights and ice as 16-bit codes
+  (114 → 73 MB at the 320 tiles a server keeps). A new world's server holds about 100 MB less after spawn (1:10 and
+  1:5), clients about 60 MB less. Every value is the same. At a server's start (EA-0108) `rivers.bin` is read only by
+  worlds on the old river courses (135 MB less until the river network is built, every new world), and once the sea
+  referee's islands and coasts are built the ones as read are let go (56 MB less for the session). The surveyed peaks
+  (`peaks.json`) take 18.5 MB instead of 50.7 MB (EA-0116 D-R4), with the same summits.
+- **Faster around the sea of 1318** (EA-0095): columns where works rules 3 undo the Dutch delta's land (Rotterdam's port,
+  the Rhine-Maas mouths, Flevoland, the Wadden Sea) search the coast of 1318 with far fewer lookups: Rotterdam about
+  270 → 50 µs a column at 1:100 and 390 → 145 at 1:10, the delta about 5× faster. The terrain is the same block for block.
+- **Faster on large islands and wide rivers** (EA-0113): a column inside a large island searches the coast near it
+  instead of every edge within half the island's width, and asks for its island once: at 1:10 Åland about 49 → 2 µs a
+  column, the islands off Marajó 16 → 6, Maine's 8 → 2. The mask's river water no longer allocates a closure per column
+  and skips pieces out of reach before measuring them; the rock strata below every column's top are written a layer at a
+  time (the pass 3.1 -> 2.0 ms a chunk at 1:10, 1024 high). The terrain is the same block for block.
 
 ### Fixes
 
+- **No straight seams along whole degrees in new worlds** (GenFixRules 5, island rules 4; Fable pass): wide rivers
+  read their flow across the 1° tiles' edges (the Amazon on 3° S had a bed step of up to 4 blocks along it); lake shore
+  strips follow the whole lake, not its piece in one tile; islands crossing 180° (Taveuni, Rabi) have no notch down to
+  the sea along the meridian. Worlds made before keep their terrain (pinned by `SavedWorldDigestTests`).
+- **The prospecting pick finds child ores again** (EA-0075): on Earth's own rock it read silver, gold, sylvite and
+  peridot as nothing, because Earth's rock replaced the parent ores (quartz, halite, olivine) in the pick's simulated
+  column. Those ores now stay, within the layers the deposit may use; `/earth propick [radius]` shows the question
+  per column for admins.
 - **An Earth world never generates without Earth:** a start whose `earth.json` can't be written back, whose Earth or
   world-generation system failed to start, or whose terrain model failed to build stops the server (one error line). A
   chunk whose terrain failed, or that vanilla's terrain made, is noted in the save and generated again at the next
@@ -126,11 +228,40 @@ Earth 2.0 is one mod and makes new worlds. It sums up everything since 1.0.2.
 - **Downloads:** a brief network failure no longer turns a world's GLO-90 squares, outlines or ground data into a
   permanent fallback; one lock for every download into `ModData/earth`; a GLO-90 square that takes too long no longer
   holds chunk loading; a failed prefetch waits before it is asked again; an offline 1.0.x world needs only the files its
-  rules read.
-- **Terrain** (`GenFixRules` 1 and 2, new worlds): dry land below 0 m (the Caspian lowland, the Jordan valley, Death
+  rules read. The GLO-90 download leaves 1 GB free on its disk (EA-0100): "download all" doesn't start without room for
+  what is missing and stops at the first square that can't be written, a square fetched as needed is not fetched without
+  room, and a square the store can't take is no longer fetched again from Copernicus (on a full disk the download used
+  to read four times its size and start again at every opening). A square for chunk generation leaves only 100 MB free,
+  and a write refused for a moment (a virus scanner) is tried again before the store counts as failed. Every GLO-90 tile
+  has egl-v1's heights (EA-0106), judged by a table of the release's heights checksums in the mod (212 kB), not by file
+  bytes, which differ between runtimes: a square converted from Copernicus is kept only with the release's heights, else
+  the release's tile is fetched; a tile already on a computer is checked at its first read in a session, and one with
+  other heights stays in use while the release's is fetched beside it to take its place at the next start (the old kept
+  as `.differs`), so two computers make a world on the same heights. No download or GeoTIFF is taken larger than it can be (a mirror's
+  manifest 16 MB, a tile 8 MB, a GeoTIFF 64 MB), and a GeoTIFF of other dimensions than GLO-90's is not kept. Earth's data
+  store (289 MB) is checked against its SHA-256 in the read that loads each file instead of a pass of its own at every
+  start (EA-0092 A6); a damaged file is still set aside and fetched again before it is used. A local source folder that
+  isn't there (a drive not mounted, a typo in the address) is an error at once, naming the setting and the folder, never
+  a source that lacks the files (which kept a new world on the 2′ ground sets for good). A square from Copernicus no
+  longer waits for the release's manifest first. The Earth tab's "download all", when an opening can't start it (no
+  room, no source set), is told to players who control the server, in chat and in the elevation dialog, not only in the
+  log.
+- **No built-in heights in a GLO-90 world while it runs** (EA-0099): a chunk whose GLO-90 square can't be downloaded
+  while the game runs (the network, the release down, a full disk) is no longer made on the built-in heights, which met
+  the chunks made later from GLO-90 with a step for good. It is left empty, noted in the save and made at the next start
+  with the square's heights; players get a chat line saying the chunks are holes to keep away from and not to build in,
+  since anything built there is deleted when they are made (at most every 10 minutes a square), and the square is tried
+  again 5 minutes after a fetch failed. A volcano's planning that reaches the
+  square leaves the chunk for the next start too. Map regions read there still take the built-in heights for that read.
+- **Terrain** (`GenFixRules` 1 to 3, new worlds): dry land below 0 m (the Caspian lowland, the Jordan valley, Death
   Valley, polders) continues from the land at 0 m without a ledge; springs and seeps sit on whole blocks; crops and
   fruit trees in a river's green belt are judged by its rain (the Nile's onions and peaches); dry river beds' gravel is
-  scattered, not striped; no crease where the noise's dips switch near a water level (Lake Geneva).
+  scattered, not striped; no crease where the noise's dips switch near a water level (Lake Geneva); a grid lake on flat
+  low ground ends along an irregular shore, not a straight one between the 2′ cells (Lake Geneva at the Rhône's mouth
+  on the built-in heights).
+- **No black rock where snow melts:** vanilla melts snow blocks without relighting, so rock along the snow line lay
+  pitch-black in daylight; Earth now relights each melted cell (every Earth world). `/earth relight [radius]` lights
+  patches dark from before.
 - **Hydrology:** its river query says "rapids" exactly where Earth draws white water and gives a river column's bed and
   surface (`RiverSpanAt`); Hydrology is never handed a stand-in rapids answer, and the query settles far fewer chunks.
 - `/wgen regen` keeps rules v4's ore catalogue and the companions' terrain plan; a world upgrade requested in
@@ -144,14 +275,15 @@ Earth 2.0 is one mod and makes new worlds. It sums up everything since 1.0.2.
 ### New data files
 
 - On the GLO-90 release `egl-v1`: `rivers-flow-glo90-1.bin`, `rivers-outline-glo90-4.bin`, `lakes-glo90-2.bin`,
-  `dams-glo90-3.bin`. On `ed-v1`: `shores-osm-1.bin` (2.2 MB). In the mod: `rivers-nonperennial-2.bin` (20 kB). The
+  `dams-glo90-3.bin`. On `ed-v1`: `shores-osm-1.bin` (2.2 MB). In the mod: `rivers-nonperennial-2.bin` (20 kB),
+  `climatefix4.bin` (13 kB) and `weatherground.bin` (40 kB). The
   server fetches them with the rest of Earth's data.
 
 ## 1.0.2 back to the 0.16 play-test builds
 
 The notes as they were written for each version.
 
-**1.0.2 (source, not released):** vanilla's sea-level deposits (saltpeter, most iron and coal, sulfur, borax, gems…) follow
+**1.0.2 (published on Mod DB 2 November 2026):** vanilla's sea-level deposits (saltpeter, most iron and coal, sulfur, borax, gems…) follow
 Earth's sea level. They were scaled for vanilla's level (220 at world height 512, 165 at 384) before Earth lowered it to
 110/128, so tall worlds had saltpeter coating the ground and those ores sat in hills instead of below sea level. New
 chunks only; worlds at height 256 are unchanged. [Decision 0045](docs/decisions/0045-sealevel-deposits.md).

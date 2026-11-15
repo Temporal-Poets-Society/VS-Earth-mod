@@ -1,6 +1,6 @@
 # 0005: River ends — continued rivers, revived terminal lakes, faded wadis
 
-Status: Agreed, implemented (0.14.1-pre, not committed), in-game check pending | Date: 2026-10-16 | Decided by: the user
+Status: Agreed; built in 0.14.1 (in Earth 1.0.0); in Earth 2.0.0. Exit channels since changed by 0071 and desert river ends by 0034; the Aral's level is to give way to 1318's under 0064 step 3 (not built). No in-game check recorded | Date: 2026-10-16 | Decided by: the user
 
 ## Context
 
@@ -52,3 +52,9 @@ Caspian. 18 rivers had gaps or stopped where their discharge dipped below the th
   v1 (older worlds) keep the per-cell search. Same result on the real data (893 channels, 1 with no way out).
 - 2026-10-17 (review round 17): the fjord fallback of a river's way on to the sea keeps a state per (cell, steps), at
   most FjordCells, so a cheaper but longer way can't hide a short fjord. Same result on the real data.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: Agreed, implemented (0.14.1-pre, not committed), in-game check pending

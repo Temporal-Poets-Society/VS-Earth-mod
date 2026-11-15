@@ -8,16 +8,22 @@ namespace EarthMap.Core
     {
         Column NaturalColumn(double x, double z, double lat, double lon)
         {
+            var work = new ColumnWork();
+            return NaturalColumn(x, z, lat, lon, ref work);
+        }
+
+        Column NaturalColumn(double x, double z, double lat, double lon, ref ColumnWork work)
+        {
             var s = Data.SampleTerrain(lat, lon, Coasts != null);
             // 0064: the works after 1318 undone: a lake of 1318 at its level; inside the sea or land of 1318 none of today's
             // lakes, and no grid sea on the land
-            var wk = WorksAt(lat, lon);
-            if (Works1318Data.IsLake(wk)) return OutlineLakeColumn(x, z, lat, lon, wk, 0);
+            var wk = WorksAt(ref work, lat, lon);
+            if (Works1318Data.IsLake(wk)) return OutlineLakeColumn(x, z, lat, lon, wk.LakeOf1318, 0);
             bool undo = Works1318Data.Undoes(wk);
             // channel rules 1: no outline water along the Suez and Panama canals (0020: the land as before them; the canal
             // option cuts its own), nor the grid's lakes there, salt or kept (the Great Bitter Lake was a dry salt basin until
             // the canal filled it in 1869, Gatun Lake is the canal's reservoir)
-            bool canal = ChannelRules >= 1 && (LakeOutlines != null || RiverOutlines != null) && SeaChannels.InCanalZone(lat, lon);
+            bool canal = Rules.Dredged && (LakeOutlines != null || RiverOutlines != null) && SeaChannels.InCanalZone(lat, lon);
             if (canal) StripGridLakes(ref s, lat, lon, all: true);
             // 0053 item 17: the water mask's lakes from their outlines, in place of the grid's fresh lakes
             LakeOutlineLayer.Hit lk = default;
@@ -69,9 +75,9 @@ namespace EarthMap.Core
         bool JoinsRiver(in LakeOutlineLayer.Hit lk, double lat, double lon, out LakeOutlineLayer.Hit river, double riverLevel = double.NaN)
         {
             river = default;
-            if (ChannelRules < FlowChannelRules || RiverOutlines == null || !RiverOutlinesDecide(lat, lon) || double.IsNaN(lk.Level)) return false;
+            if (!Rules.OneBed || RiverOutlines == null || !RiverOutlinesDecide(lat, lon) || double.IsNaN(lk.Level)) return false;
             double px = FineElevation.CellMetres / MetresPerBlock;
-            if (!(lk.Area <= JoinedLakePixels * px * px)) return false;
+            if (!(LakeArea(lk) <= JoinedLakePixels * px * px)) return false;
             river = RiverOutlines.At(lat, lon);
             if (!river.Covered || double.IsNaN(river.Level) || !(river.Inside || river.Dist <= LakeOutlineLayer.HoldReach + px)) return false;
             double level = double.IsNaN(riverLevel) ? river.Level : riverLevel;
@@ -88,15 +94,18 @@ namespace EarthMap.Core
         /// (Works1318Data.Undoes). LakeTopAt and MaskPondJoins ask it again rather than trust a column's OutlineLake, which
         /// a lake of 1318 sets as the water mask's lakes do.
         /// </summary>
-        LakeOutlineLayer.Hit WorksAt(double lat, double lon)
+        WorksHit WorksAt(double lat, double lon)
         {
             if (Works == null || Coasts == null) return default;
             var h = Works.At(lat, lon);
             // works rules 3 (EA-0042): today's water and the slivers the areas' 90 m raster lost, between SEA areas, are
             // the same sea of 1318 (Rotterdam's basins and moles were not drawn as today's river and land inside it)
-            if (WorksRules >= 3 && h.Covered && !h.Inside && !double.IsNaN(h.Level) && (h.Flags & Works1318Data.Sea) != 0)
-                return EnclosedBySea(lat, lon, h);
-            return h;
+            if (Rules.SeaOf1318 && h.Covered && !h.Inside && !double.IsNaN(h.Level) && (h.Flags & Works1318Data.Sea) != 0)
+            {
+                var e = EnclosedBySea(lat, lon, h);
+                return new WorksHit(e, e.Inside);
+            }
+            return new WorksHit(h, false);
         }
 
         /// <summary>
@@ -104,10 +113,10 @@ namespace EarthMap.Core
         /// axes (and no LAND area first), lies between parts of the sea of 1318: the hit of that sea (Inside, Sea), its
         /// distance the nearer of the two. Elsewhere the hit as it was.
         /// </summary>
-        LakeOutlineLayer.Hit EnclosedBySea(double lat, double lon, LakeOutlineLayer.Hit h)
+        LakeOutlineLayer.Hit EnclosedBySea(double lat, double lon, LakeOutlineLayer.Hit h, bool remember = true)
         {
             var cache = enclosedCache ??= new EnclosedEntry();
-            if (cache.Set && cache.Lat == lat && cache.Lon == lon && ReferenceEquals(cache.Owner, this)) return cache.Hit;
+            if (cache.Set && cache.Lat == lat && cache.Lon == lon && cache.Owner == CacheId) return cache.Hit;
             double reach = Coasts.Reach, step = Math.Max(1, reach / 6);
             Geometry.FromGeo(lat, lon, out double x, out double z);
             double SeaAlong(double dx, double dz)
@@ -122,8 +131,7 @@ namespace EarthMap.Core
                 return double.NaN;
             }
             var result = h;
-            const double r = 0.70710678;
-            foreach (var (dx, dz) in new[] { (1.0, 0.0), (0.0, 1.0), (r, r), (r, -r) })
+            foreach (var (dx, dz) in EnclosedAxes)
             {
                 double a = SeaAlong(dx, dz);
                 if (double.IsNaN(a)) continue;
@@ -134,16 +142,24 @@ namespace EarthMap.Core
                 result.Dist = Math.Min(a, b);
                 break;
             }
-            cache.Lat = lat; cache.Lon = lon; cache.Hit = result; cache.Owner = this; cache.Set = true;
+            // (EA-0095) a coast search's own points (Land1318) do not take the place of the column's answer
+            // EnclosedBySea's hits are never lakes the area rules read: no layer is kept alive by this thread's cache
+            // (Fable re-review of 5d25355)
+            result.Owner = null;
+            if (remember) { cache.Lat = lat; cache.Lon = lon; cache.Hit = result; cache.Owner = CacheId; cache.Set = true; }
             return result;
         }
 
-        sealed class EnclosedEntry { public double Lat, Lon; public LakeOutlineLayer.Hit Hit; public TerrainModel Owner; public bool Set; }
+        // the four axes, made once (r = 0.70710678 as before)
+        static readonly (double, double)[] EnclosedAxes = { (1.0, 0.0), (0.0, 1.0), (0.70710678, 0.70710678), (0.70710678, -0.70710678) };
+
+        // Owner: the model's CacheId, not the model, so a pool thread doesn't keep a closed world's model alive (ER-22, T-3)
+        sealed class EnclosedEntry { public double Lat, Lon; public LakeOutlineLayer.Hit Hit; public long Owner; public bool Set; }
         [ThreadStatic] static EnclosedEntry enclosedCache;
 
         /// <summary>0064: inside a SEA or LAND area of 1318 the grid's lakes (salt ones too) and their rings are taken out
         /// of the sample, and on LAND its sea as well: the coast decides there alone.</summary>
-        static void UndoWater(ref EarthData.TerrainSample s, in LakeOutlineLayer.Hit wk)
+        static void UndoWater(ref EarthData.TerrainSample s, in WorksHit wk)
         {
             s.Lake = 0;
             s.LakeLevel = double.NaN;
@@ -168,7 +184,7 @@ namespace EarthMap.Core
         /// GLO-90 and no coast profile there: the grid's own column.</summary>
         static bool OpenOcean(in EarthData.TerrainSample s) => s.Ocean >= 0.999 && s.Elev < -200;
 
-        Column GridColumn(double x, double z, double lat, double lon, EarthData.TerrainSample s, in LakeOutlineLayer.Hit wk)
+        Column GridColumn(double x, double z, double lat, double lon, EarthData.TerrainSample s, in WorksHit wk)
         {
             double fine = FineLand(x, z, lat, lon, s);
             double detail = OpenOcean(s) ? 0 : Detail(x, z, s);
@@ -184,7 +200,7 @@ namespace EarthMap.Core
             if (double.IsNaN(fine))
             {
                 h += SummitExcess(lat, lon, s);
-                if (Summits && SummitRules >= 2 && s.Elev > 0 && s.Ocean <= 0 && s.Lake <= 0)
+                if (Summits && Rules.SummitRestore && s.Elev > 0 && s.Ocean <= 0 && s.Lake <= 0)
                     h = KnownSummits.Restore(Geometry, x, z, h, SummitMinElevation, Peaks, SummitRules, PeakBaseOf, peakSupport);
             }
             // Eased lake shores (a lake's ring, not the sea's): the land is held at the lake's level, and kept from the noise's
@@ -207,9 +223,9 @@ namespace EarthMap.Core
                 // GenFixRules 2 (EA-0040): the dips' cut fades in from 20 to 40 m above the water instead of stopping at 30 m,
                 // where the full dip below and the cut one above met in a crease of a few blocks (5-6 by Lake Geneva's Rhône
                 // plain once eased shores let the land down to it)
-                if (detail < 0 && GenFixRules >= 2 && above < 40)
+                if (detail < 0 && Rules.EasedDips && above < 40)
                     h = s.Elev + detail * (dips + (1 - dips) * Geo.SmoothStep((above - 20) / 20));
-                else if (detail < 0 && GenFixRules < 2 && above < 30) h = s.Elev + detail * dips;
+                else if (detail < 0 && !Rules.EasedDips && above < 30) h = s.Elev + detail * dips;
                 // High ground (a fjord's walls) and anything outside the water's cells never dips below the water: that
                 // made pockets of sea up on the slopes.
                 if (above >= 30 || wet < 0.05) h = Math.Max(h, Math.Min(s.Elev, hold + 0.5));
@@ -260,7 +276,9 @@ namespace EarthMap.Core
                 c.Water = WaterSea;
                 return c;
             }
-            if (!barrier && l > 0 && h < s.LakeLevel)
+            // GenFixRules 3 (EA-0072): where the grid's lake share, not the ground, would end the water, a wobbled edge
+            var edge = l > 0 && h < s.LakeLevel + BeachHeight ? GridLakeEdgeAt(x, z, l, h, s) : GridLakeEdge.AsBefore;
+            if (!barrier && l > 0 && h < s.LakeLevel && edge.Water)
             {
                 // likewise lakes: high up a block is 20 m or more, so Lake Victoria was only 1-2 blocks deep
                 int minDepth = 1 + (int)Math.Round(3 * Geo.SmoothStep((l - 0.5) / 0.5));
@@ -300,7 +318,7 @@ namespace EarthMap.Core
                 top = sea - 1;
                 c.Beach = true;
             }
-            else if (l > 0 && h < s.LakeLevel + BeachHeight * Geo.SmoothStep(l / 0.35))
+            else if (l > 0 && h < s.LakeLevel + BeachHeight * Geo.SmoothStep(l / 0.35) && edge.Beach)
             {
                 top = lakeTop;
                 c.Beach = true;
@@ -315,6 +333,52 @@ namespace EarthMap.Core
             }
             return c;
         }
+
+        /// <summary>GenFixRules 3: whether a grid lake's water, and its flush beach, reach a column below or near its level.</summary>
+        readonly struct GridLakeEdge
+        {
+            public readonly bool Water, Beach;
+            public GridLakeEdge(bool water, bool beach) { Water = water; Beach = beach; }
+            public static readonly GridLakeEdge AsBefore = new GridLakeEdge(true, true);
+        }
+
+        /// <summary>
+        /// GenFixRules 3 (EA-0072): where a grid lake's water and beach end, by the lake's share here (l, bilinear between
+        /// the 2' cells' centres). Before rules 3 any share at all was water below the lake's level, and beach just above it.
+        /// Where the ground beside a lake lies below its level in the grid (the bicubic pulls the lake's bed into the land
+        /// cells next to it: 40 m under Lake Geneva's level at the Rhône's mouth), nothing but the share ended them: the
+        /// water and its gravel flat ran out to where the share reaches 0, straight lines between cell centres, with land
+        /// held flat at the lake's level beyond (a rectangular corner on the built-in heights). From rules 3, where the
+        /// ground (this column's, with its detail, plus the smooth grid's rise along the share's fall) would still lie
+        /// below the level where the share runs out, the water needs the share, wobbled by a noise a cell long, above GridLakeEdgeShare, and the beach the share
+        /// times a shorter wobble of its own (half a cell) above GridLakeBeachShare (a contour that never reaches the share's own
+        /// edge); the ground beyond is
+        /// flush grass at the lake's level as before. Where the ground rises out of the water first (Lake Garda's cliffs),
+        /// the ground ends them, as before.
+        /// </summary>
+        GridLakeEdge GridLakeEdgeAt(double x, double z, double l, double h, in EarthData.TerrainSample s)
+        {
+            if (!Rules.GridLakeEdge || double.IsNaN(s.LakeLevel) || l >= GridLakeEdgeShare + GridLakeEdgeWobble) return GridLakeEdge.AsBefore;
+            // the share's and the smooth ground's gradients from a block either way
+            EarthData.TerrainSample At(double ax, double az) { var g = TerrainGeoAt(ax, az); return Data.SampleTerrain(g.Lat, g.Lon); }
+            var e = At(x + 1, z); var w = At(x - 1, z); var n = At(x, z - 1); var so = At(x, z + 1);
+            double lx = (e.Lake - w.Lake) / 2, lz = (so.Lake - n.Lake) / 2, fall = Math.Sqrt(lx * lx + lz * lz);
+            if (fall > 1e-6)
+            {
+                double ex = (e.Elev - w.Elev) / 2, ez = (so.Elev - n.Elev) / 2;
+                // blocks to where the share reaches 0, going down its gradient, and the ground there
+                double run = l / fall, rise = -(ex * lx + ez * lz) / fall * run;
+                if (h + rise >= s.LakeLevel) return GridLakeEdge.AsBefore;
+            }
+            double cell = Geometry.BlocksPerDegreeZ / Data.TerrainRes;
+            double wobble = SeamNoise(n3, x, z, Math.Max(16, cell), 2);
+            return new GridLakeEdge(l + GridLakeEdgeWobble * wobble > GridLakeEdgeShare,
+                l * (1 + GridLakeBeachWobble * SeamNoise(n2, x + 7919, z - 7919, Math.Max(8, cell / 2), 3)) > GridLakeBeachShare);
+        }
+
+        /// <summary>GenFixRules 3: the lake share a grid lake's water needs at its outer edge where the share ends it, and the
+        /// wobble of that share; the share its beach needs, and the beach's wobble (a factor on the share).</summary>
+        public const double GridLakeEdgeShare = 0.2, GridLakeEdgeWobble = 0.25, GridLakeBeachShare = 0.15, GridLakeBeachWobble = 0.9;
 
         /// <summary>Whether the lake outlines decide at a place (LakeOutlines): this thread reads GLO-90 and the square is
         /// GLO-90's in this world, so the levels are the heights' own.</summary>
@@ -355,16 +419,31 @@ namespace EarthMap.Core
             bool lake = s.Lake > 0 && !double.IsNaN(s.LakeLevel);
             bool ring = !double.IsNaN(s.ShoreLevel) && s.ShoreLevel != 0;
             if (!lake && !ring) return 0;
-            double kept = all ? double.NaN : Data.KeptLakeLevelNear(lat, lon);
+            // GenFixRules 5 (T-L14): any kept level near the place, not only the highest (two kept lakes of different levels
+            // near one place both keep theirs); before, the highest alone
+            bool keptLake, keptRing;
+            if (all) keptLake = keptRing = false;
+            else if (Rules.KeptLakeLevels)
+            {
+                var levels = Data.KeptLakeLevelsNear(lat, lon);
+                keptLake = Array.IndexOf(levels, (float)s.LakeLevel) >= 0 && (double)(float)s.LakeLevel == s.LakeLevel;
+                keptRing = Array.IndexOf(levels, (float)s.ShoreLevel) >= 0 && (double)(float)s.ShoreLevel == s.ShoreLevel;
+            }
+            else
+            {
+                double kept = Data.KeptLakeLevelNear(lat, lon);
+                keptLake = s.LakeLevel == kept;
+                keptRing = s.ShoreLevel == kept;
+            }
             double depth = 0;
-            if (lake && (all || !(s.SaltLake || s.LakeLevel == kept)))
+            if (lake && (all || !(s.SaltLake || keptLake)))
             {
                 if (s.Elev < s.LakeLevel) depth = 0.5 * (s.LakeLevel - s.Elev) * Geo.SmoothStep(s.Lake / 0.5);
                 s.Lake = 0;
                 s.LakeLevel = double.NaN;
                 s.SaltLake = false;
             }
-            if (ring && s.ShoreLevel != kept)
+            if (ring && !keptRing)
             {
                 s.ShoreLevel = s.SeaNear > 0 ? 0 : double.NaN;
                 s.LakeNear = 0;
@@ -432,7 +511,7 @@ namespace EarthMap.Core
             if (holdTop > 0) c.LakeRim = holdTop;
             if (c.IceBottom <= c.Top) return;
             if (c.Top < hold) c.Top = hold;
-            if (lk.Dist <= 1 && lk.Area >= OutlineBeachArea && c.Elev < lk.Level + BeachHeight && c.Top <= lakeTop + 1 && lakeTop >= holdTop)
+            if (lk.Dist <= 1 && LakeArea(lk) >= OutlineBeachArea && c.Elev < lk.Level + BeachHeight && c.Top <= lakeTop + 1 && lakeTop >= holdTop)
             {
                 c.Top = lakeTop;
                 c.Beach = true;

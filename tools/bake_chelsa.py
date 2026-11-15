@@ -15,9 +15,10 @@ Inputs (rawdata/chelsa-v2.1/, see tools/download_data.sh, about 3.7 GB):
 Karger, D.N., Conrad, O., Böhner, J., Kawohl, T., Kreft, H., Soria-Auza, R.W., Zimmermann, N.E., Linder, H.P., Kessler, M.
 (2017): Climatologies at high resolution for the earth's land surface areas. Scientific Data 4, 170122. CC-BY 4.0.
 
-temperature.bin: header EMTP, version, width, height, tile, tile count, then (offset, length) per tile and the tiles: brotli
-of the yearly mean, coldest and warmest month (int16 in 0.1 C units, publication precision 0.5 C, sea level,
-Paeth residuals of the filled planes) and a data
+temperature.bin: header EMTP, version (1; with predicted planes 1 | 1 << 16), width, height, tile, tile count, then (offset,
+length) per tile and the tiles, predicted planes (tools/planecoding.py, EA-0077) of the yearly mean, coldest and warmest
+month (int16 in 0.1 C units, publication precision 0.5 C so a step of 5, sea level, the filled planes; plain files before
+2.0.0-rc.14 held brotli of their Paeth residuals) and a data
 mask (1 byte per cell; 0 where CHELSA has no data, which is only north of 84 N: CHELSA covers the sea too, with its
 orography 0 there; the game keeps climate.bin where the mask is 0).
 
@@ -25,9 +26,11 @@ orography 0 there; the game keeps climate.bin where the mask is 0).
 """
 import argparse, os, struct, sys, time
 
-import brotli
 import numpy as np
 import tifffile
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import planecoding as pc
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "earthdata")
@@ -166,24 +169,16 @@ def quantize_temperature(q, step=DEFAULT_TEMPERATURE_STEP):
 def write(land, planes, step=DEFAULT_TEMPERATURE_STEP):
     H, W = land.shape
     q = [quantize_temperature(np.clip(np.round(p * 10), -32000, 32000), step) for p in planes]
-    blobs = []
+    tiles = []
     for ty in range(H // TILE):
         for tx in range(W // TILE):
             sl = (slice(ty * TILE, (ty + 1) * TILE), slice(tx * TILE, (tx + 1) * TILE))
             m = land[sl]
-            raw = b"".join(paeth_residual(filled(p[sl], m).astype(np.int32)).astype("<i2").tobytes() for p in q)
-            blobs.append(brotli.compress(raw + m.astype(np.uint8).tobytes(), quality=11, lgwin=24))
+            # the values the plain file's Paeth residuals decoded to (int16, wrapped as the reader wraps them)
+            tiles.append([filled(p[sl], m).astype(np.int32).astype("<i2") for p in q] + [m.astype(np.uint8)])
     path = os.path.join(OUT, "temperature.bin")
-    with open(path, "wb") as f:
-        f.write(b"EMTP")
-        f.write(struct.pack("<iiiii", 1, W, H, TILE, len(blobs)))
-        off = 4 + 20 + 8 * len(blobs)
-        for b in blobs:
-            f.write(struct.pack("<ii", off, len(b)))
-            off += len(b)
-        for b in blobs:
-            f.write(b)
-    log(f"temperature.bin {os.path.getsize(path) / 1e6:.1f} MB, {len(blobs)} tiles")
+    pc.write_tiled(path, "EMTP", 1, W, H, TILE, tiles, [pc.I16, pc.I16, pc.I16, pc.U8], steps=["auto", "auto", "auto", 1])
+    log(f"temperature.bin {os.path.getsize(path) / 1e6:.1f} MB, {len(tiles)} tiles")
 
 
 # a quick look while baking: CHELSA at the stations (the in-game check is tests/EarthMapTests CheckFineTemperature)

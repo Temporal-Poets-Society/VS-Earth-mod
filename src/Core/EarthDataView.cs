@@ -78,7 +78,7 @@ namespace EarthMap.Core
                 PenmanAridity = penman != null,
                 // each overlay only where its file is there (the referee only where it fits the files)
                 SeaReferee = requested.SeaReferee && d.RefereeState() == 1,
-                IslandOverlay = requested.IslandOverlay && d.Islands != null,
+                IslandOverlay = requested.IslandOverlay && d.HasIslands,
                 LakeOverlay = requested.LakeOverlay && d.TerminalLakes != null,
                 ShoreOverlay = requested.ShoreOverlay && d.Shores != null,
                 OutletOverlay = requested.OutletOverlay && d.Outlets != null,

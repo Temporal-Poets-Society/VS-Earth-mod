@@ -38,7 +38,7 @@ namespace EarthMap.Core
             double mpb = Math.Max(1e-3, model.MetresPerBlock);
             double keep = 1;
             // the sea coast (the coast outlines' distance, blocks, positive on land)
-            if (model.Coasts != null && (c.Elev < LowCoastMetres || model.ShoreZoneRules >= 2))
+            if (model.Coasts != null && (c.Elev < LowCoastMetres || ShoreZoneFacts.AnyHeight(model.ShoreZoneRules)))
             {
                 double d = model.Coasts.SignedDistance(c.Lat, c.Lon);
                 if (!double.IsNaN(d) && d >= 0 && d * mpb < 2 * SeaScrubMetres

@@ -1,6 +1,6 @@
 # 0036: Earth play style and creation choices
 
-Status: Implemented in 0.17.0-pre.12; offline checks passed, coordinator server/client acceptance pending | Date: 2026-10-31
+Status: Built in 0.17.0-pre.12 (`45efac9`); in Earth 1.0.0 and 2.0.0. The play-style code changed to `earth` by 0044, and one play style per scale by 0068 | Date: 2026-10-31
 
 ## Decision
 
@@ -81,3 +81,9 @@ Coordinator acceptance: build against game, server self-test in Earth and Standa
 config/style, inspect the Earth row/description and shared tab in the menu, and compare an inactive vanilla world's
 terrain/climate/deposit/animal/weather behaviour. The screen's conditional controls are unavailable, so verify the
 descriptions are readable alongside the companion mods' entries.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: Implemented in 0.17.0-pre.12; offline checks passed, coordinator server/client acceptance pending

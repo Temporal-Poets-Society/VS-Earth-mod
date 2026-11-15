@@ -16,27 +16,67 @@
     <EnableDefaultItems>false</EnableDefaultItems>
     <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(VINTAGE_STORY)</VintageStoryPath>
     <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(APPDATA)\Vintagestory</VintageStoryPath>
+    <!-- (D-L1 of the Fable pass) the published DLL and PDB name neither the private repository (SourceLink's URL with the
+         commit, the commit in the informational version) nor the folder they were built in: the zip's bytes are the same
+         from any checkout, and stack traces read /_/src/... -->
+    <EnableSourceLink>false</EnableSourceLink>
+    <EnableSourceControlManagerQueries>false</EnableSourceControlManagerQueries>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <PathMap>$(MSBuildProjectDirectory)=/_/</PathMap>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="src\**\*.cs" />
     <!-- decision 0051: the squares Copernicus GLO-90 has tiles for (tools/bake_glo90_tiles.py) -->
     <EmbeddedResource Include="data\glo90-tiles.bin" LogicalName="EarthMap.glo90-tiles.bin" />
+    <EmbeddedResource Include="data\glo90-heights.bin" LogicalName="EarthMap.glo90-heights.bin" />
+    <!-- Geothermal's site lists (EA-0092, decision 0057; tools/bake_geothermal_sites.py) -->
+    <EmbeddedResource Include="data\geothermal-sites.bin" LogicalName="EarthMap.geothermal-sites.bin" />
+    <EmbeddedResource Include="data\geothermal-osm.bin" LogicalName="EarthMap.geothermal-osm.bin" />
   </ItemGroup>
 
-  <!-- Compile against the game's own .NET runtime (10.x) so the game DLLs' references line up. -->
+  <!-- Compile against the game's own .NET runtime (10.x) so the game DLLs' references line up. (B3 of the code review
+       of 14 November 2026) The highest 10.x installed, by version, not the first folder by name (10.0.10 sorts before
+       10.0.2); none installed is an error that says so, not an index error. -NetCoreRuntimeDir=<folder> picks one. -->
   <PropertyGroup>
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
-    <NetCoreRuntimeDir>$([System.IO.Directory]::GetDirectories('$(NetCoreRoot)shared\Microsoft.NETCore.App', '10.*')[0])</NetCoreRuntimeDir>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="$(NetCoreRuntimeDir)\System.*.dll" Exclude="$(NetCoreRuntimeDir)\System.Private.*.dll;$(NetCoreRuntimeDir)\System.IO.Compression.Native.dll" Private="false" />
-    <Reference Include="$(NetCoreRuntimeDir)\System.Private.CoreLib.dll" Private="false" />
-    <!-- HttpClient's Uri (decision 0051's tile downloads) -->
-    <Reference Include="$(NetCoreRuntimeDir)\System.Private.Uri.dll" Private="false" />
-    <Reference Include="$(NetCoreRuntimeDir)\netstandard.dll" Private="false" />
-    <Reference Include="$(NetCoreRuntimeDir)\mscorlib.dll" Private="false" />
-  </ItemGroup>
+  <UsingTask TaskName="EarthHighestRuntime" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+    <ParameterGroup>
+      <Root ParameterType="System.String" Required="true" />
+      <Dir ParameterType="System.String" Output="true" />
+    </ParameterGroup>
+    <Task>
+      <Using Namespace="System" />
+      <Using Namespace="System.IO" />
+      <Code Type="Fragment" Language="cs"><![CDATA[
+Dir = "";
+Version best = null;
+if (Directory.Exists(Root))
+    foreach (var d in Directory.GetDirectories(Root, "10.*"))
+    {
+        Version v;
+        if (Version.TryParse(Path.GetFileName(d).Split('-')[0], out v) && (best == null || v > best)) { best = v; Dir = d; }
+    }
+]]></Code>
+    </Task>
+  </UsingTask>
+  <Target Name="EarthRuntimeReferences" BeforeTargets="ResolveAssemblyReferences">
+    <EarthHighestRuntime Condition="'$(NetCoreRuntimeDir)' == ''" Root="$(NetCoreRoot)shared\Microsoft.NETCore.App">
+      <Output TaskParameter="Dir" PropertyName="NetCoreRuntimeDir" />
+    </EarthHighestRuntime>
+    <Error Condition="'$(NetCoreRuntimeDir)' == '' or !Exists('$(NetCoreRuntimeDir)\System.Private.CoreLib.dll')"
+           Text="Earth compiles against the game's .NET 10 runtime, and none was found in $(NetCoreRoot)shared\Microsoft.NETCore.App (install the .NET 10 runtime, or pass -p:NetCoreRuntimeDir=&lt;its folder&gt;)." />
+    <Message Importance="normal" Text="Earth compiles against the .NET runtime in $(NetCoreRuntimeDir)" />
+    <ItemGroup>
+      <Reference Include="$(NetCoreRuntimeDir)\System.*.dll" Exclude="$(NetCoreRuntimeDir)\System.Private.*.dll;$(NetCoreRuntimeDir)\System.IO.Compression.Native.dll" Private="false" />
+      <Reference Include="$(NetCoreRuntimeDir)\System.Private.CoreLib.dll" Private="false" />
+      <!-- HttpClient's Uri (decision 0051's tile downloads) -->
+      <Reference Include="$(NetCoreRuntimeDir)\System.Private.Uri.dll" Private="false" />
+      <Reference Include="$(NetCoreRuntimeDir)\netstandard.dll" Private="false" />
+      <Reference Include="$(NetCoreRuntimeDir)\mscorlib.dll" Private="false" />
+    </ItemGroup>
+  </Target>
 
   <ItemGroup>
     <Reference Include="VintagestoryAPI"><HintPath>$(VintageStoryPath)\VintagestoryAPI.dll</HintPath><Private>false</Private></Reference>
@@ -51,7 +91,7 @@
        few small server files; every other data file (terrain, water, the 2' ground sets, wetlands, soil sites,
        floodplains) is in the server's data store, fetched from the earth-data release (src/Core/EarthDataStore.cs). -->
   <ItemGroup>
-    <None Include="earthdata\earth.json;earthdata\climate.bin;earthdata\climatefix.bin;earthdata\climatefix2.bin;earthdata\climatefix3.bin;earthdata\temperature.bin;earthdata\rain.bin;earthdata\weather.bin;earthdata\aridity.bin;earthdata\ATTRIBUTION.txt" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="earthdata\earth.json;earthdata\climate.bin;earthdata\climatefix.bin;earthdata\climatefix2.bin;earthdata\climatefix3.bin;earthdata\climatefix4.bin;earthdata\temperature.bin;earthdata\rain.bin;earthdata\weather.bin;earthdata\weatherground.bin;earthdata\aridity.bin;earthdata\ATTRIBUTION.txt" CopyToOutputDirectory="PreserveNewest" />
     <None Include="earthdata\reservoirs-v1.json;earthdata\outlets.bin;earthdata\works-1318-2.bin;earthdata\rivers-nonperennial-2.bin" CopyToOutputDirectory="PreserveNewest" />
     <None Include="modinfo.json" CopyToOutputDirectory="PreserveNewest" />
     <None Include="LICENSE" CopyToOutputDirectory="PreserveNewest" />
@@ -67,7 +107,9 @@
     <FileVersion>$([System.Text.RegularExpressions.Regex]::Replace('$(ModVersion)', '-.*$', ''))</FileVersion>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <ModId>$([System.Text.RegularExpressions.Regex]::Match($([System.IO.File]::ReadAllText('$(MSBuildProjectDirectory)\modinfo.json')), '"modid"\s*:\s*"([^"]+)"').Groups[1].Value)</ModId>
-    <ReleaseZip>$(MSBuildProjectDirectory)\release\$(ModId)-$(ModVersion).zip</ReleaseZip>
+    <!-- (FP-19) the folder the zip goes to: release\ by default; tests\Run-All.ps1 packs into its own output -->
+    <ReleaseDir Condition="'$(ReleaseDir)' == ''">$(MSBuildProjectDirectory)\release</ReleaseDir>
+    <ReleaseZip>$(ReleaseDir)\$(ModId)-$(ModVersion).zip</ReleaseZip>
     <OverwriteMainArgument Condition="'$(OverwriteRelease)' == 'true'">--overwrite-main</OverwriteMainArgument>
   </PropertyGroup>
   <!-- A published release zip is never replaced: bump "version" in modinfo.json for a new release, or pass
@@ -76,11 +118,50 @@
   <Target Name="CleanModOutput" BeforeTargets="BeforeBuild" Condition="'$(Configuration)' == 'Release'">
     <RemoveDir Directories="$(OutputPath)" />
   </Target>
-  <Target Name="PackageMod" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+  <!-- Brotli-pack Earth's large config JSON for the release zip (name.json -> name.json.br; src/PackedAssets.cs unpacks
+       them when the game loads assets). Lossless: the game reads the same bytes the repository holds. Every
+       assets/earth/config JSON of at least 40 kB except the ore heat maps, whose bytes their bake manifests pin and
+       which gain under 5 kB each (their layers are gzip already). Measured 14 November 2026: about 310 kB less zip. -->
+  <UsingTask TaskName="BrotliPackFiles" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+    <ParameterGroup>
+      <Files ParameterType="Microsoft.Build.Framework.ITaskItem[]" Required="true" />
+    </ParameterGroup>
+    <Task>
+      <Using Namespace="System.IO" />
+      <Using Namespace="System.IO.Compression" />
+      <Code Type="Fragment" Language="cs"><![CDATA[
+        foreach (var item in Files)
+        {
+            string path = item.ItemSpec;
+            if (new FileInfo(path).Length < 40000) continue;
+            byte[] data = File.ReadAllBytes(path);
+            // BrotliStream is not in the task's reference set (netstandard), but in MSBuild's runtime (.NET 8): by reflection.
+            // Compression level 3 is SmallestSize (brotli quality 11).
+            // .NET Framework's msbuild.exe (Visual Studio) has no BrotliStream: the files stay plain there, with a warning
+            var type = Type.GetType("System.IO.Compression.BrotliStream, System.IO.Compression.Brotli", false);
+            if (type == null) { Log.LogWarning("BrotliStream is not available in this MSBuild (use dotnet build): " + Path.GetFileName(path) + " stays unpacked, and the zip may pass 40 MB."); continue; }
+            using (var output = new MemoryStream())
+            {
+                using (var brotli = (Stream)Activator.CreateInstance(type, output, (CompressionLevel)3, true)) brotli.Write(data, 0, data.Length);
+                File.WriteAllBytes(path + ".br", output.ToArray());
+            }
+            File.Delete(path);
+            Log.LogMessage(MessageImportance.High, "packed " + Path.GetFileName(path) + ": " + data.Length + " -> " + new FileInfo(path + ".br").Length + " bytes");
+        }
+      ]]></Code>
+    </Task>
+  </UsingTask>
+  <Target Name="PackJsonAssets" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <ItemGroup>
+      <PackedJson Include="$(OutputPath)assets\earth\config\**\*.json" Exclude="$(OutputPath)assets\earth\config\ore-heatmaps-*.json" />
+    </ItemGroup>
+    <BrotliPackFiles Files="@(PackedJson)" />
+  </Target>
+  <Target Name="PackageMod" AfterTargets="Build" DependsOnTargets="PackJsonAssets" Condition="'$(Configuration)' == 'Release'">
     <Error Condition="'$(ModVersion)' == ''" Text="No version found in modinfo.json" />
     <Error Condition="Exists('$(ReleaseZip)') And '$(OverwriteRelease)' != 'true'" Text="$(ReleaseZip) already exists. Bump the version in modinfo.json, or pass -p:OverwriteRelease=true to replace it on purpose." />
-    <MakeDir Directories="$(MSBuildProjectDirectory)\release" />
-    <Exec Command="python &quot;$([MSBuild]::NormalizePath('$(MSBuildProjectDirectory)', 'tools', 'package-earth.py'))&quot; --input &quot;$([MSBuild]::NormalizeDirectory('$(MSBuildProjectDirectory)', '$(OutputPath)')).&quot; --output &quot;$([MSBuild]::NormalizePath('$(MSBuildProjectDirectory)', 'release'))&quot; $(OverwriteMainArgument)" />
+    <MakeDir Directories="$(ReleaseDir)" />
+    <Exec Command="python &quot;$([MSBuild]::NormalizePath('$(MSBuildProjectDirectory)', 'tools', 'package-earth.py'))&quot; --input &quot;$([MSBuild]::NormalizeDirectory('$(MSBuildProjectDirectory)', '$(OutputPath)')).&quot; --output &quot;$([MSBuild]::NormalizePath('$(ReleaseDir)'))&quot; $(OverwriteMainArgument)" />
   </Target>
 
 </Project>

@@ -1,8 +1,6 @@
 # 0064: Coasts and waters as of 1318 ("works after 1318")
 
-Status: **agreed; step 1 (the Netherlands) built and on `main`; works rules 3 (EA-0042) and 4 (EA-0053, EA-0057) for new worlds** (8 November; `dd167e6` on
-`claude/works-1318`, with release/1.0 `20e86e9` merged in as `a704ed6`; not pushed). Checked offline (probe and
-tests); not in a test build, not seen in a game. Date: 2026-11-08. The survey, probe tables
+Status: **agreed**; step 1 (the Netherlands), the canals (with 0069) and works rules 3 (EA-0042) and 4 (EA-0053, EA-0057) built, in Earth 2.0.0, new worlds only. Steps 2 and 4 and the rest of step 3 (the drained lakes, the Aral as of 1318, the Bitter Lakes) not built. Date: 2026-11-08. The survey, probe tables
 and sources are in [the research note](../research/coasts-1318-2026-11-08.md).
 
 ## What the author asked
@@ -177,3 +175,11 @@ layer's sea-floor distance; open, small); the bench, a new 1:10 world: open sea 
   land and the Middelzee sea.
 - 2026-11-08: the author: "Commit and merge". Step 1 committed (`dd167e6`); release/1.0 `20e86e9` merged into the
   branch (`a704ed6`); the branch merged into release/1.0. Not pushed.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: **agreed; step 1 (the Netherlands) built and on `main`; works rules 3 (EA-0042) and 4 (EA-0053, EA-0057) for new worlds** (8 November; `dd167e6` on
+`claude/works-1318`, with release/1.0 `20e86e9` merged in as `a704ed6`; not pushed). Checked offline (probe and
+tests); not in a test build, not seen in a game.

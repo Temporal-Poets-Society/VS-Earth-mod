@@ -84,6 +84,8 @@ namespace EarthMap
 
         public static int SoilFertilityAt(int rain, int unscaledTemp, float posYRel, float temperature, BlockPos pos)
         {
+            // (FP-11, Fable's low 5 on ad56a74) a generation entry point inside vanilla's pass: this thread may wait for a missing tile
+            using var fetch = Core.FineElevation.Generating();
             int vanilla = Climate.GetFertilityFromUnscaledTemp(rain, unscaledTemp, posYRel);
             var w = WorldGenerationContext.Current;
             if (w == null || w.Rules.SoilRules < 1 || pos == null) return vanilla;
@@ -170,6 +172,7 @@ namespace EarthMap
         /// </summary>
         internal static bool TallGrassCoverPrefix(int x, int z)
         {
+            using var fetch = Core.FineElevation.Generating();
             var w = WorldGenerationContext.Current;
             if (w == null || !layersChunkKnown) return true;
             int wx = layersChunkX * 32 + x, wz = layersChunkZ * 32 + z;
@@ -184,7 +187,8 @@ namespace EarthMap
         /// neither tall grass nor land plants grow.</summary>
         internal static bool OnShoreStrip(WorldGenerationContext w, int wx, int wz)
         {
-            if (w?.Model == null || w.Model.ShoreRules < 1) return false;
+            using var fetch = Core.FineElevation.Generating();
+            if (w?.Model == null || !w.Model.Rules.ShoreStrip) return false;
             var c = ColumnStore.At(w.Model, wx, wz);
             return c.Beach && c.Shore != ShoreMaterial.None && c.Water == TerrainModel.WaterNone;
         }

@@ -1,6 +1,6 @@
 # 0028: Earth suggests its sky look to AstraTerra
 
-Status: Implemented (Earth source, not released; AstraTerra local branch `19d9282`); offline checks pass, not played | Date: 2026-10-25 | Decided by: the user (2026-10-25)
+Status: Implemented (in Earth 2.0.0; AstraTerra local branch `19d9282`); offline checks pass, not played | Date: 2026-10-25 | Decided by: the user (2026-10-25)
 
 ## Context
 

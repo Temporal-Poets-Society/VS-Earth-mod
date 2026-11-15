@@ -75,6 +75,10 @@ namespace EarthMap
         {
             this.api = api;
             if (api.Side == EnumAppSide.Server) serverInstance = this; else clientInstance = this;
+            // ER-18: on as soon as the params are set (EarthWeather, earlier in ExecuteOrder, builds its model first); the
+            // one-second watch stays for the weather's later changes (vanilla's precipitation override, a rebuilt model)
+            var earth = api.ModLoader.GetModSystem<EarthMapSystem>();
+            if (earth != null) earth.ParamsReady += _ => Watch();
             watchId = api.Event.RegisterGameTickListener(_ => Watch(), 1000);
         }
 
@@ -289,7 +293,7 @@ namespace EarthMap
                 if (p is IServerPlayer sp && sp.ConnectionState == EnumClientState.Playing && p.Entity != null) players.Add(p.Entity.Pos.XYZ);
             }
             if (players.Count == 0) return;
-            double hours = sapi.World.Calendar.TotalHours;
+            double hours = EarthWeather.HoursNow(sapi.World, m);
             double area = Math.PI * StrikeRadius * StrikeRadius / StrikeSamples;
             var rand = sapi.World.Rand;
             foreach (var c in players)
@@ -324,7 +328,7 @@ namespace EarthMap
             var m = Model;
             if (m == null) return;
             var pos = capi.World.Player.Entity.Pos;
-            double hours = capi.World.Calendar.TotalHours;
+            double hours = EarthWeather.HoursNow(capi.World, m);
             // near: the storm overhead or just by
             double near = m.ThunderAt(pos.X, pos.Z, hours);
             for (int k = 0; k < 6; k++)

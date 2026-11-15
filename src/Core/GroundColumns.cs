@@ -76,6 +76,8 @@ namespace EarthMap.Core
             if (file != null && file.Length >= 8 && Encoding.ASCII.GetString(file, 0, 4) == "EGTS")
             {
                 int count = (int)BitConverter.ToUInt32(file, 4), o = 8;
+                // (EA-0116 D-L9) every tile takes at least 12 bytes: a damaged count is refused before the list is made
+                if (count < 0 || count > (file.Length - 8) / 12) throw new FormatException("ground tile set holds a damaged count (" + count + ")");
                 var list = new List<GroundTile>(count);
                 for (int i = 0; i < count; i++)
                 {
@@ -191,13 +193,16 @@ namespace EarthMap.Core
                 int got = 0;
                 while (got < bodyLength) { int r = fs.Read(src, got, bodyLength - got); if (r <= 0) throw new FormatException($"ground tile {Name} is truncated in {filePath}"); got += r; }
             }
+            // (EA-0116 D-L9, D-R2) inflated straight into an array of the size the header describes, and no further: no growing
+            // stream and copy of it (three large-object copies a tile became two), and a damaged tile can't inflate without end
+            body = new byte[bodyBytes];
             using (var z = new ZLibStream(new MemoryStream(src, srcOffset, bodyLength), CompressionMode.Decompress))
-            using (var m = new MemoryStream(bodyBytes))
             {
-                z.CopyTo(m);
-                body = m.ToArray();
+                int got = 0, r;
+                while (got < body.Length && (r = z.Read(body, got, body.Length - got)) > 0) got += r;
+                if (got != body.Length) throw new FormatException($"ground tile {Name} holds {got} bytes, its header describes {bodyBytes}");
+                if (z.Read(new byte[1], 0, 1) > 0) throw new FormatException($"ground tile {Name} holds more than the {bodyBytes} bytes its header describes");
             }
-            if (body.Length != bodyBytes) throw new FormatException($"ground tile {Name} holds {body.Length} bytes, its header describes {bodyBytes}");
             int n = Nx * Ny;
             var arrays = new Array[Fields.Count];
             foreach (var f in Fields)
@@ -367,7 +372,11 @@ namespace EarthMap.Core
     /// </summary>
     public sealed class GroundColumns
     {
-        public const int RulesVersion = 1;
+        /// <summary>The rules new worlds are made with (EarthParams.GroundColumns). One rules file serves every version: a rule
+        /// added in a later version names it in its <c>rules</c> condition (<see cref="Place.GroundRules"/>), so older worlds
+        /// keep their ground. 2 (EA-0062, decision 0076): karst carries terra rossa only where it is warm; cooler karst has
+        /// rendzina on limestone rubble.</summary>
+        public const int RulesVersion = 2;
         public const string RulesAsset = "earth:config/ground-rules-v1.json";
 
         /// <summary>The fields the generator reads. Tiles may hold any of them, under exactly these names.</summary>
@@ -561,6 +570,13 @@ namespace EarthMap.Core
             public double Relief, Slope;
             /// <summary>The mean of <see cref="ReliefWeight"/> over the neighbourhood (GroundRelief's norm); 0 or less: 1.</summary>
             public double ReliefNorm;
+            /// <summary>The ground rules the world was made with (EarthParams.GroundColumns), for a rule's <c>rules</c> condition;
+            /// 0 where the game doesn't say (tests), which no versioned rule matches.</summary>
+            public int GroundRules;
+            /// <summary><see cref="TMean"/> is known: the yearly mean temperature (°C) at the place's own elevation (the climate
+            /// map's sea-level mean less the lapse). Ground rules 2 on land, beaches and river beds.</summary>
+            public bool HasTemperature;
+            public double TMean;
             public static Place Unknown => new() { Elevation = double.NaN, RegionalRock = true };
             internal string SurfaceName => Surface switch
             {
@@ -603,12 +619,14 @@ namespace EarthMap.Core
         /// Where a rule applies; every key given must hold. <c>areas</c>: boxes west, south, east, north. <c>field</c> with
         /// <c>values</c> (a category) or <c>min</c>/<c>max</c> (a number), and more such tests in <c>fields</c>. <c>elevation</c>
         /// [from, to) in real metres (unknown elevation fails). <c>absLat</c> [from, to). <c>surface</c>: land, beach, sea,
-        /// lake, riverbed. <c>nearRiver</c>: in a river's water, bank or valley.
+        /// lake, riverbed. <c>nearRiver</c>: in a river's water, bank or valley. <c>rules</c> [from, to): the world's ground
+        /// rules (<see cref="Place.GroundRules"/>). <c>temperature</c> [from, to): the yearly mean (°C) at the place (unknown
+        /// fails).
         /// </summary>
         sealed class Condition
         {
             sealed class Test { public string Field; public HashSet<string> Values; public double Min = double.NegativeInfinity, Max = double.PositiveInfinity; }
-            Condition[] anyOf; double[][] areas; Test[] tests; double[] elevation, absLat, relief, slope; HashSet<string> surfaces; bool? nearRiver;
+            Condition[] anyOf; double[][] areas; Test[] tests; double[] elevation, absLat, relief, slope, rules, temperature; HashSet<string> surfaces; bool? nearRiver;
 
             public static Condition Parse(JsonElement e)
             {
@@ -631,6 +649,8 @@ namespace EarthMap.Core
                     absLat = e.TryGetProperty("absLat", out var al) ? Pair(al) : null,
                     relief = e.TryGetProperty("relief", out var rl) ? Pair(rl) : null,
                     slope = e.TryGetProperty("slope", out var sl) ? Pair(sl) : null,
+                    rules = e.TryGetProperty("rules", out var ru) ? Pair(ru) : null,
+                    temperature = e.TryGetProperty("temperature", out var te) ? Pair(te) : null,
                     anyOf = e.TryGetProperty("anyOf", out var ao) ? ao.EnumerateArray().Select(Parse).ToArray() : null,
                     surfaces = e.TryGetProperty("surface", out var sf) ? new HashSet<string>(sf.EnumerateArray().Select(x => x.GetString()), StringComparer.Ordinal) : null,
                     nearRiver = e.TryGetProperty("nearRiver", out var nr) ? nr.GetBoolean() : null,
@@ -647,6 +667,8 @@ namespace EarthMap.Core
                     foreach (var b in areas) if (lon >= b[0] && lon < b[2] && lat >= b[1] && lat < b[3]) { inArea = true; break; }
                     if (!inArea) return false;
                 }
+                if (rules != null && !(p.GroundRules >= rules[0] && p.GroundRules < rules[1])) return false;
+                if (temperature != null && !(p.HasTemperature && p.TMean >= temperature[0] && p.TMean < temperature[1])) return false;
                 if (absLat != null && (Math.Abs(lat) < absLat[0] || Math.Abs(lat) >= absLat[1])) return false;
                 if (elevation != null && !(p.Elevation >= elevation[0] && p.Elevation < elevation[1])) return false;
                 if (surfaces != null && !surfaces.Contains(p.SurfaceName)) return false;
@@ -711,6 +733,8 @@ namespace EarthMap.Core
         }
         readonly Dictionary<string, Template> provinceTemplates = new(StringComparer.Ordinal);
         readonly Dictionary<string, Recipe> recipes = new(StringComparer.Ordinal);
+        /// <summary>Whether the rules define a cover recipe of this name (ore layer rules check theirs against it).</summary>
+        public bool HasRecipe(string name) => name != null && recipes.ContainsKey(name);
         readonly Dictionary<string, Substrate> seabed = new(StringComparer.Ordinal);
         readonly Substrate seabedDefault, riverBed, beach;
         readonly int shoreGravel, shoreMud, shoreCarbonate, shoreTephra;
@@ -1182,7 +1206,7 @@ namespace EarthMap.Core
             // Connemara, Maine). GLO-90's 90 m cells read these shores at a slope of 0.05 or so, so the cliff test above never
             // fires there; the pocket beaches between the rocks are OSM's, and stay gravel, stones or sand. Knob-till (the
             // ice-scoured crests' patchy till) is the same ground.
-            if (s.ShoreRules >= 3 && s.Cover is "thin-till" or "knob-till" && !osmBeach) { bare = true; return (0, 0, "rock (scoured till)"); }
+            if (ShoreMaterialFacts.ScouredTill(s.ShoreRules) && s.Cover is "thin-till" or "knob-till" && !osmBeach) { bare = true; return (0, 0, "rock (scoured till)"); }
             switch (s.Cover)
             {
                 case "dune": case "dune-on-till": case "sand-sheet": case "coastal": case "marine": case "marine-on-till":

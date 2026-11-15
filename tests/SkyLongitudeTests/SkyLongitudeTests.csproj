@@ -9,6 +9,6 @@
     <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\src\Core\*.cs" Link="Core\%(Filename)%(Extension)" />
+    <ProjectReference Include="..\Earth.Core.Tests.Common\Earth.Core.Tests.Common.csproj" />
   </ItemGroup>
 </Project>

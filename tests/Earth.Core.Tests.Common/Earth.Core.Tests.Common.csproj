@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- EA-0088 (code review 14 November 2026): src/Core compiled once for every test project that reads it (it was
+       compiled into each of them, 29 times a full run, and the projects that listed Core files by hand broke when a Core
+       file gained a dependency). The mod itself still compiles the sources into EarthMap.dll. Optimised in every
+       configuration, as the weather and geology tests asked for themselves. A new test project that reads Core references
+       this and gets a line below (it reads Core's internals, as when it compiled the sources). -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>12</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Optimize>true</Optimize>
+    <NoWarn>$(NoWarn);CS1591;CA1416</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\src\Core\*.cs" Link="Core\%(Filename)%(Extension)" />
+    <!-- Geothermal's site lists (EA-0092): every project that compiles all of src/Core embeds them -->
+    <EmbeddedResource Include="..\..\data\geothermal-sites.bin" LogicalName="EarthMap.geothermal-sites.bin" />
+    <EmbeddedResource Include="..\..\data\geothermal-osm.bin" LogicalName="EarthMap.geothermal-osm.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="ClimateDataTests" />
+    <InternalsVisibleTo Include="ColumnStoreTests" />
+    <InternalsVisibleTo Include="DataReadersTests" />
+    <InternalsVisibleTo Include="EarthMapTests" />
+    <InternalsVisibleTo Include="EarthWorldOptionsTests" />
+    <InternalsVisibleTo Include="SavedWorldDigestTests" />
+    <InternalsVisibleTo Include="ServerToolsTests" />
+    <InternalsVisibleTo Include="ElevationTests" />
+    <InternalsVisibleTo Include="FloodplainTests" />
+    <InternalsVisibleTo Include="GroundColumnsTests" />
+    <InternalsVisibleTo Include="GroundDownloadTests" />
+    <InternalsVisibleTo Include="ModelCacheTests" />
+    <InternalsVisibleTo Include="OreDepositsTests" />
+    <InternalsVisibleTo Include="OreLayersTests" />
+    <InternalsVisibleTo Include="PlacementTests" />
+    <InternalsVisibleTo Include="PlaytestIssuesTests" />
+    <InternalsVisibleTo Include="PlaytestReviewTests" />
+    <InternalsVisibleTo Include="RegionalFaunaTests" />
+    <InternalsVisibleTo Include="RegionalGeologyTests" />
+    <InternalsVisibleTo Include="RegionalOresTests" />
+    <InternalsVisibleTo Include="RegionalPlantsTests" />
+    <InternalsVisibleTo Include="RegionalTreesTests" />
+    <InternalsVisibleTo Include="RiverIndexTests" />
+    <InternalsVisibleTo Include="RiverWaterTests" />
+    <InternalsVisibleTo Include="SiteDriversTests" />
+    <InternalsVisibleTo Include="SkyLongitudeTests" />
+    <InternalsVisibleTo Include="SoilTests" />
+    <InternalsVisibleTo Include="SpawnDistributionTests" />
+    <InternalsVisibleTo Include="TerrainExpansionTests" />
+    <InternalsVisibleTo Include="TerrainRulesTests" />
+    <InternalsVisibleTo Include="VerticalProfileTests" />
+    <InternalsVisibleTo Include="VolcanoTests" />
+    <InternalsVisibleTo Include="WaterTableTests" />
+    <InternalsVisibleTo Include="WeatherContractTests" />
+    <InternalsVisibleTo Include="WeatherTests" />
+    <InternalsVisibleTo Include="WetlandTests" />
+    <InternalsVisibleTo Include="ZoneTests" />
+  </ItemGroup>
+</Project>

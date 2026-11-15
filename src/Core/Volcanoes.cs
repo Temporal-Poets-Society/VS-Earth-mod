@@ -21,6 +21,12 @@ namespace EarthMap.Core
         /// <summary>The GVP's volcanic landform (tools/bake_geothermal_sites.py writes these numbers; its three Minor ones are one).</summary>
         public enum Landform : byte { Composite, Shield, Caldera, Cluster, Minor }
 
+        /// <summary>The family of a volcano's magma, from the GVP's major rock type (tools/bake_geothermal_sites.py writes these
+        /// numbers; geothermal rules 3, decision 0078): basaltic (basalt, trachybasalt, foidite), intermediate (andesite,
+        /// trachyandesite, phonolite, trachyte) or silicic (dacite, rhyolite). Unknown takes the landform's: shields basaltic,
+        /// the others intermediate (<see cref="Volcano.MagmaFamily"/>).</summary>
+        public enum Magma : byte { Unknown, Basaltic, Intermediate, Silicic }
+
         /// <summary>A persistent lava lake (lake and crater radius, crater depth in metres). The vent is searched for within
         /// <see cref="SearchM"/> of the GVP's place, or of <see cref="Lat"/>/<see cref="Lon"/> where the lake is elsewhere.</summary>
         public sealed class LavaLakeSite
@@ -60,11 +66,18 @@ namespace EarthMap.Core
             /// <summary>Erupting in the game's time (see the class notes).</summary>
             public readonly bool Era;
             public readonly LavaLakeSite Lake;
+            /// <summary>The GVP's major rock type as a magma family (Unknown where it has none).</summary>
+            public readonly Magma RockMagma;
 
-            public Volcano(int number, string name, double lat, double lon, SiteKind kind, Landform form, int elevationM, bool era, LavaLakeSite lake)
+            public Volcano(int number, string name, double lat, double lon, SiteKind kind, Landform form, int elevationM, bool era, LavaLakeSite lake,
+                Magma magma = Magma.Unknown)
             {
                 Number = number; Name = name; Lat = lat; Lon = lon; Kind = kind; Form = form; ElevationM = elevationM; Era = era; Lake = lake;
+                RockMagma = magma;
             }
+
+            /// <summary>The magma family its interior is built from: the GVP's, or by the landform where it has none.</summary>
+            public Magma MagmaFamily => RockMagma != Magma.Unknown ? RockMagma : Form == Landform.Shield ? Magma.Basaltic : Magma.Intermediate;
 
             public bool Active => Era || Lake != null;
             public bool HasBody => Lake != null || Kind != SiteKind.Uncertain && Form is Landform.Composite or Landform.Shield or Landform.Caldera;
@@ -88,7 +101,7 @@ namespace EarthMap.Core
             {
                 lakes.TryGetValue(GvpNumber[i], out var lake);
                 var v = new Volcano(GvpNumber[i], GvpName[i], GvpLatLon[2 * i], GvpLatLon[2 * i + 1], (SiteKind)GvpKind[i], (Landform)GvpForm[i],
-                    GvpElevation[i], GvpEra[i], lake);
+                    GvpElevation[i], GvpEra[i], lake, (Magma)GvpMagma[i]);
                 if (v.HasBody) list.Add(v);
             }
             return list.ToArray();
@@ -103,7 +116,7 @@ namespace EarthMap.Core
                 LavaLakeSite lake = null;
                 foreach (var l in LavaLakes) if (l.Number == GvpNumber[i]) lake = l;
                 return new Volcano(GvpNumber[i], GvpName[i], GvpLatLon[2 * i], GvpLatLon[2 * i + 1], (SiteKind)GvpKind[i], (Landform)GvpForm[i],
-                    GvpElevation[i], GvpEra[i], lake);
+                    GvpElevation[i], GvpEra[i], lake, (Magma)GvpMagma[i]);
             }
             return null;
         }
@@ -169,6 +182,15 @@ namespace EarthMap.Core
         /// <summary>How far from the vent any part reaches (blocks).</summary>
         public readonly double Reach;
 
+        /// <summary>The interior of geothermal rules 3 (decision 0078): the cone's layers, the chamber, conduit, dykes and sill
+        /// in their real proportions. Null in rules 2 worlds, whose chamber and conduit are the fields above.</summary>
+        public readonly VolcanoInterior Interior;
+
+        /// <summary>The farthest a volcano's body of this landform can reach in a world of these geothermal rules at this scale (blocks), for
+        /// indexing before planning.</summary>
+        public static double MaxReach(double metresPerBlock, int rules, Geothermal.Landform form) => rules >= 3
+            ? Math.Max(MaxReach(metresPerBlock), VolcanoInterior.MaxReach(metresPerBlock, form)) : MaxReach(metresPerBlock);
+
         /// <summary>The farthest any volcano's body can reach in a world at this scale (blocks), for indexing before planning.</summary>
         public static double MaxReach(double metresPerBlock)
         {
@@ -183,7 +205,12 @@ namespace EarthMap.Core
         /// <summary>Blocks per metre underground: the land's at sea level, at most 10 km between sea level and the bottom.</summary>
         public static double BlocksPerMetreUnder(VerticalScale vs) => Math.Min(vs.Slope(0), (vs.SeaLevel - 16) / 10000.0);
 
-        public VolcanoPlan(Geothermal.Volcano v, TerrainModel model)
+        /// <summary>A plan of geothermal rules 2 (0057 part 2).</summary>
+        public VolcanoPlan(Geothermal.Volcano v, TerrainModel model) : this(v, model, 2) { }
+
+        /// <summary>A plan of these geothermal rules: rules 3 add the <see cref="Interior"/> (decision 0078); the vent, crater,
+        /// lava lake and ash are those of rules 2.</summary>
+        public VolcanoPlan(Geothermal.Volcano v, TerrainModel model, int rules)
         {
             Volcano = v;
             var geo = model.Geometry;
@@ -315,6 +342,11 @@ namespace EarthMap.Core
             }
             AshR = v.Active && !Submarine ? Math.Max(6, AshRadiusM / mpb) : 0;
             Reach = Math.Max(Math.Max(BodyA + 1, Crater ? CraterReach + 3 : 0), AshR + 1);
+            if (rules >= 3)
+            {
+                Interior = new VolcanoInterior(this, model);
+                Reach = Math.Max(Reach, Interior.Reach);
+            }
         }
 
         /// <summary>How far from the vent the crater's edge reaches at its farthest (blocks; 0 without a crater).</summary>
@@ -373,6 +405,19 @@ namespace EarthMap.Core
 
         /// <summary>A lake column (lava over the floor).</summary>
         public bool InLake(double d) => Lake && d <= LakeR;
+
+        /// <summary>
+        /// The surface a column shows once the crater is carved (EarthVolcanoes.Crater writes it as the column's rain
+        /// height): the lava lake's top in the lake, else the crater's floor and walls; int.MaxValue outside the crater.
+        /// A map takes the lower of this and the terrain column's top (<see cref="TerrainModel.GetSurfaceColumn"/>, EA-0071).
+        /// </summary>
+        public int SeenSurface(int x, int z)
+        {
+            if (!Crater) return int.MaxValue;
+            double d = Dist(x, z);
+            if (d > CraterReach + 2) return int.MaxValue;
+            return InLake(d) ? LakeY : CraterSurface(x, z);
+        }
 
         /// <summary>Next to the lake: its rock is made whole from the lake's floor to the lava's top.</summary>
         public bool LakeRim(double d) => Lake && d > LakeR && d <= LakeR + 2;

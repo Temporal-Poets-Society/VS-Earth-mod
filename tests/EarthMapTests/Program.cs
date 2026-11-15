@@ -406,6 +406,30 @@ namespace EarthMap.Tests
             Check(h.Covered && !h.Inside && h.Level == 80 && Near(h.Dist, 2), $"north of M in the tile without lakes: level {h.Level}, {h.Dist:0.00} blocks (2)");
             h = layer.At(0.5, 0.5);
             Check(!h.Covered && double.IsNaN(h.Level), "a tile without data: the grid decides");
+            // GenFixRules 5 (EA-0112, Fable re-review of c4cfa1f): a hit's whole area comes from the layer that made it. A
+            // second layer numbers its lakes on its own (the works of 1318 beside the water mask): its lake 0 in tile A is a
+            // small pond where the first layer's lake 0 is L
+            var tiles2 = new SortedDictionary<int, byte[]> { [Key(50, 10)] = Tile((50, 0, new[] { new[] { 200, 200, 400, 200, 400, 400, 200, 400 } })) };
+            var states2 = new byte[360 * 180];
+            Array.Fill(states2, LakeOutlineData.NoData);
+            states2[Key(50, 10)] = LakeOutlineData.HasLakes;
+            var file2 = new List<byte>();
+            file2.AddRange(Encoding.ASCII.GetBytes("EMLO"));
+            foreach (int v in new[] { LakeOutlineData.FileVersion, 2400, 1, 360, 180 }) file2.AddRange(BitConverter.GetBytes(v));
+            file2.AddRange(states2);
+            int o2 = file2.Count + 8;
+            file2.AddRange(BitConverter.GetBytes(o2)); file2.AddRange(BitConverter.GetBytes(tiles2[Key(50, 10)].Length)); file2.AddRange(tiles2[Key(50, 10)]);
+            var other = new LakeOutlineLayer(LakeOutlineData.Read(file2.ToArray()), new EarthGeometry { RingLength = 36000, Gutter = 0, BlocksPerDegreeZ = 100 });
+            var pond = other.At(50.125, 10.125);
+            var lakeL = layer.At(50.5, 10.55);
+            Check(pond.Inside && pond.Level == 50 && lakeL.Inside && lakeL.Level == 100, "the second layer's pond and the first layer's L, both lake 0 of tile A");
+            Check(layer.WholeArea(pond) == other.WholeArea(pond) && other.WholeArea(pond) < 0.5 * layer.WholeArea(lakeL) && layer.WholeArea(lakeL) > lakeL.Area,
+                $"a hit's whole area is its own layer's, whichever layer is asked (pond {other.WholeArea(pond):0}, asked of the other layer {layer.WholeArea(pond):0}; L with its piece next door {layer.WholeArea(lakeL):0} > {lakeL.Area:0})");
+            // a fresh layer, so the first ask computes and the second reads the stored float
+            var fresh = new LakeOutlineLayer(LakeOutlineData.Read(file.ToArray()), new EarthGeometry { RingLength = 36000, Gutter = 0, BlocksPerDegreeZ = 100 });
+            var lakeF = fresh.At(50.5, 10.55);
+            double firstAsk = fresh.WholeArea(lakeF), secondAsk = fresh.WholeArea(fresh.At(50.5, 10.6));
+            Check(firstAsk == secondAsk && firstAsk == (float)firstAsk, $"the same answer on the first and a repeated ask, a float both times ({firstAsk:R})");
         }
 
         /// <summary>
@@ -427,7 +451,7 @@ namespace EarthMap.Tests
             Check(Works1318Data.Combine(10, nearSea, 16) == 3 && Works1318Data.Combine(2, nearSea, 16) == 2,
                 "beside it: land no farther from the sea than the nearer of the two shores");
             Check(Works1318Data.Combine(-8, inLand, 16) == 5, "inside the land of 1318 over today's water: land");
-            Check(Works1318Data.Combine(-8, none, 16) == -8 && Works1318Data.Combine(-8, default, 16) == -8, "no area near: the outline alone");
+            Check(Works1318Data.Combine(-8, none, 16) == -8 && Works1318Data.Combine(-8, default(LakeOutlineLayer.Hit), 16) == -8, "no area near: the outline alone");
             string path = Path.Combine(FindRoot(), "earthdata", Works1318Data.FileName);
             if (!File.Exists(path)) { Check(false, path + " is missing"); return; }
             var file = Works1318Data.Read(File.ReadAllBytes(path));
@@ -730,6 +754,49 @@ namespace EarthMap.Tests
                 && !a.InCrater(a.VentX, a.VentZ + (int)Math.Ceiling(a.CraterReach) + 4) && a.InCrater(a.VentX + 1, a.VentZ);
             Console.WriteLine($"  Etna's crater edge {near:0.0}-{far:0.0} blocks from the vent (radius {etna.CraterR:0.0}, reach {etna.CraterReach:0.0}); hot ground in and around the craters {hot}");
             Check(etna.Crater && far > near * 1.1 && far <= etna.CraterReach + 1 && hot, "volcano plans: crater edges stray from a circle; no ponds or springs in craters, only there");
+            // EA-0071: maps read the surface as generation leaves it. Without a layer it is GetColumn's; with one, the crater's
+            // floor in the crater (the rain height Crater writes there), the lava's top in a lake, GetColumn's beyond.
+            var plainVent = m.GetSurfaceColumn(etna.VentX + 0.5, etna.VentZ + 0.5);
+            bool plain = plainVent.Top == m.GetColumn(etna.VentX + 0.5, etna.VentZ + 0.5).Top;
+            m.Carved.Craters = (x, z) => Math.Min(etna.SeenSurface(x, z), a.SeenSurface(x, z));
+            int etnaFloor = m.GetSurfaceColumn(etna.VentX + 0.5, etna.VentZ + 0.5).Top, etnaTop = m.GetColumn(etna.VentX + 0.5, etna.VentZ + 0.5).Top;
+            int lakeTop = m.GetSurfaceColumn(a.VentX + 0.5, a.VentZ + 0.5).Top;
+            int ox = etna.VentX + (int)Math.Ceiling(etna.CraterReach) + 6;
+            bool beyond = m.GetSurfaceColumn(ox + 0.5, etna.VentZ + 0.5).Top == m.GetColumn(ox + 0.5, etna.VentZ + 0.5).Top;
+            m.Carved.Craters = null;
+            Console.WriteLine($"  surface columns: Etna's vent {etnaTop} -> {etnaFloor} (floor {etna.FloorY}), Nyiragongo's lake top {lakeTop} (lava {a.LakeY}); beyond the crater unchanged {beyond}");
+            Check(plain && etnaFloor == Math.Min(etnaTop, etna.FloorY) && lakeTop == Math.Min(m.GetColumn(a.VentX + 0.5, a.VentZ + 0.5).Top, a.LakeY) && beyond,
+                "surface columns: GetSurfaceColumn carries the crater floor and the lava lake's top, and is GetColumn elsewhere (EA-0071)");
+        }
+
+        /// <summary>EA-0071 (decision 0079): the grass season a map reads at a column, as the client tints grass there.</summary>
+        static void CheckGrassSeasonAt(EarthData data, EarthGeometry geo, VerticalScale vs)
+        {
+            var m = new TerrainModel(data, geo, vs, 12345);
+            if (data.Weather == null) { Console.WriteLine("  grass season: no weather data loaded (skipped)"); return; }
+            var curve = new float[GrassSeason.Steps];
+            string Name(int k) => k >= 0 && k < GrassPhenology.Codes.Length ? GrassPhenology.Codes[k] : "none";
+            (int Map, double Swing, double WetAt) At(double lat, double lon)
+            {
+                geo.FromGeo(lat, lon, out double x, out double z);
+                int k = m.GrassSeasonAt(x, z, curve);
+                int wettest = 0;
+                for (int i = 1; i < curve.Length; i++) if (curve[i] > curve[wettest]) wettest = i;
+                return (k, curve.Max() - curve.Min(), (wettest + 0.5) / GrassSeason.Steps);
+            }
+            var latvia = At(57.10, 25.20);
+            var amazon = At(-3.1, -60.0);
+            var spain = At(39.5, -4.0);
+            var kazakh = At(50.0, 70.0);
+            var mumbai = At(19.1, 72.9);
+            var sahara = At(23.0, 12.0);
+            Console.WriteLine($"  grass season: Latvia {Name(latvia.Map)}, Amazonas {Name(amazon.Map)}, La Mancha {Name(spain.Map)}, Kazakh steppe {Name(kazakh.Map)}, " +
+                $"Mumbai {Name(mumbai.Map)} (wetness swing {mumbai.Swing:0.00}, wettest at year {mumbai.WetAt:0.00}), Latvia's swing {latvia.Swing:0.00}");
+            bool temperate = latvia.Map >= 1 && latvia.Map <= 4;
+            bool dry = spain.Map == GrassPhenology.SummerDry || spain.Map == GrassPhenology.Steppe;
+            bool monsoon = mumbai.Swing > 1.5 && mumbai.WetAt > 0.5 && mumbai.WetAt < 0.85;
+            Check(temperate && amazon.Map == GrassPhenology.Evergreen && dry && kazakh.Map >= 1 && monsoon && latvia.Swing < mumbai.Swing && sahara.Map >= -1,
+                "grass season: GrassSeasonAt gives each place's grass season map and its wet and dry seasons (EA-0071)");
         }
 
         static string VolcanoPlanProblem(VolcanoPlan p, TerrainModel m)
@@ -770,6 +837,50 @@ namespace EarthMap.Tests
                 "geothermal pixel: older worlds keep vanilla's byte; rules 1 write Earth's, temperature and rain unchanged");
         }
 
+        // EA-0108 (the Fable pass's FP-18): rivers.bin is read only when asked for (and after a release that came first, read
+        // anew); the islands and coasts as read, dropped once the sea referee's are built, come back the same for a view
+        // without the referee, and its terrain samples are the same as before
+        static void CheckStartMemory(string root)
+        {
+            var d = EarthData.LoadFromFolder(root, true);
+            d.SetIslandOverlay(true);
+            d.SetSeaReferee(false);
+            var before = d.Islands;
+            var beforeCoasts = d.Coasts;
+            var places = new List<(double Lat, double Lon)>();
+            for (double lat = -60; lat <= 75; lat += 0.37) for (double lon = -180; lon < 180; lon += 1.13) places.Add((lat, lon));
+            var s0 = places.Select(q => d.SampleTerrain(q.Lat, q.Lon, true)).ToList();
+            d.SetSeaReferee(true);
+            bool refereeOn = d.SeaRefereeOverlay;
+            var refereeIslands = d.Islands;
+            d.SetSeaReferee(false);
+            var again = d.Islands;
+            var s1 = places.Select(q => d.SampleTerrain(q.Lat, q.Lon, true)).ToList();
+            bool sameIslands = again.Islands.Length == before.Islands.Length && again.Patches.SequenceEqual(before.Patches);
+            for (int i = 0; sameIslands && i < again.Islands.Length; i++)
+                sameIslands = again.Islands[i].Lon.AsSpan().SequenceEqual(before.Islands[i].Lon) && again.Islands[i].Lat.AsSpan().SequenceEqual(before.Islands[i].Lat)
+                    && again.Islands[i].AreaKm2 == before.Islands[i].AreaKm2 && again.Islands[i].Height == before.Islands[i].Height;
+            bool sameSamples = true;
+            for (int i = 0; sameSamples && i < s0.Count; i++)
+                sameSamples = s0[i].Elev.Equals(s1[i].Elev) && s0[i].Ocean.Equals(s1[i].Ocean) && s0[i].Lake.Equals(s1[i].Lake);
+            Check(refereeOn && !ReferenceEquals(refereeIslands, before) && !ReferenceEquals(again, before) && !ReferenceEquals(d.Coasts, beforeCoasts)
+                && sameIslands && sameSamples,
+                $"EA-0108: the islands and coasts as read, dropped for the referee's, are read again the same for a view without it " +
+                $"({again.Islands.Length} islands, {again.Patches.Length} patches; {places.Count} terrain samples the same)");
+
+            // rivers.bin: read at the first ask, released, read anew; and released before any ask, read anew too
+            var reaches = d.Rivers;
+            int count = reaches?.Count ?? -1;
+            d.ReleaseRivers();
+            bool released = d.Rivers == null;
+            var anew = d.RiverReaches();
+            var d2 = EarthData.LoadFromFolder(root, true);
+            d2.ReleaseRivers();
+            var neverAsked = d2.RiverReaches();
+            Check(count > 600_000 && released && anew != null && anew.Count == count && !ReferenceEquals(anew, reaches) && neverAsked?.Count == count && d2.Rivers == null,
+                $"EA-0108: rivers.bin read when asked for ({count} reaches), released, read anew ({anew?.Count}); released before any ask, read anew ({neverAsked?.Count})");
+        }
+
         static int Main(string[] args)
         {
             CheckLakeOutlines();
@@ -785,6 +896,8 @@ namespace EarthMap.Tests
             Directory.CreateDirectory(outDir);
 
             var sw = Stopwatch.StartNew();
+            CheckStartMemory(root);
+            sw.Restart();
             var data = EarthData.LoadFromFolder(root, true);
             Console.WriteLine($"data loaded in {sw.ElapsedMilliseconds} ms");
             // the water mask's referee of the sea as a new world has it (0053 item 14); SEAREFEREE=0: the published terrain,
@@ -859,10 +972,182 @@ namespace EarthMap.Tests
                 }
                 return 0;
             }
+            // cost: what the climate hook's lookups and the terrain column cost per call (EA-0070), at a 1:100 world's places
+            if (args.Length > 2 && args[2] == "cost")
+            {
+                model.ClimateRules = TerrainModel.RealRainRules;
+                // (ER-11, P-7: also the open sea, a river mouth and Rotterdam's sea of 1318, whose columns take other steps)
+                var places = new[] { ("Zermatt", 45.98, 7.65), ("Riga", 56.95, 24.1), ("Amazon", -3.1, -60.0), ("Sahara", 23.0, 10.0), ("Siberia", 62.0, 129.7),
+                    ("Open sea", 0.02, -30.02), ("Daugava mouth", 57.05, 24.03), ("Rotterdam", 51.95, 4.1) };
+                double Time(string what, int n, Func<int, double> f)
+                {
+                    double sink = 0;
+                    for (int i = 0; i < Math.Min(n, 20000); i++) sink += f(i);
+                    long bytes = GC.GetAllocatedBytesForCurrentThread();
+                    var t = Stopwatch.StartNew();
+                    for (int i = 0; i < n; i++) sink += f(i);
+                    double us = t.Elapsed.TotalMilliseconds * 1000 / n;
+                    double alloc = (GC.GetAllocatedBytesForCurrentThread() - bytes) / (double)n;
+                    Console.WriteLine($"  {what,-52} {us,8:0.000} us/call {alloc,8:0.0} B/call");
+                    return sink;
+                }
+                var wm = data.Weather == null ? null : new WeatherModel(data.Weather, geo, new WeatherSettings { DaysPerYear = 12, HoursPerDay = 24, Rules = 6 }, 12345);
+                double total = 0;
+                foreach (var (name, la, lo) in places)
+                {
+                    geo.FromGeo(la, lo, out double px, out double pz);
+                    Console.WriteLine($"{name}:");
+                    // the game asks the climate for nearby blocks in turn (block ticks, snow, spawning): a 64 x 64 patch, cycled
+                    double X(int i) => px + (i & 63);
+                    double Z(int i) => pz + ((i >> 6) & 63);
+                    total += Time("ClimateCorrection (rules 3, as the hook)", 400000, i => model.ClimateCorrection(X(i), Z(i), 120));
+                    total += Time("SampleClimate at ToGeo (season correction)", 400000, i => { var g = geo.ToGeo(X(i), Z(i)); return data.SampleClimate(g.Lat, g.Lon).TMean; });
+                    total += Time("TrueTemperature", 400000, i => model.TrueTemperature(X(i), Z(i), 120));
+                    total += Time("StoredTemperature (rules 1 worlds' path)", 400000, i => model.StoredTemperature(X(i), Z(i), out _));
+                    total += Time("ClimatePixel (world generation, per pixel)", 40000, i => model.ClimatePixel(X(i), Z(i), 0, 1, 1));
+                    total += Time("GetColumn (terrain, per block column)", 40000, i => model.GetColumn(X(i * 7), Z(i * 7)).Top);
+                    if (wm != null)
+                    {
+                        total += Time("Weather TemperatureAnomaly (rules 6, as the hook)", 100000, i => wm.TemperatureAnomaly(X(i), Z(i), 5000 + i * 1e-4, 1600));
+                        total += Time("  same, one block and hour (memo upper bound)", 100000, i => wm.TemperatureAnomaly(px, pz, 5000, 1600));
+                    }
+                }
+                // (ER-14, EA-0078, EA-0086) the weather as the game asks it, rules 6 to the newest: one call each, and what one
+                // frame, one GetWindSpeedAt and one snow catch-up cost on the model (the client caches and the skipped wind
+                // handler are outside the model: the composites show what they avoid). "weather" alone runs only this part.
+                if (data.Weather != null)
+                {
+                    int regionSize = 128;
+                    foreach (int rules in new[] { 6, 7, WeatherSettings.Newest })
+                    {
+                        var w = new WeatherModel(data.Weather, geo, new WeatherSettings { DaysPerYear = 12, HoursPerDay = 24, Rules = rules }, 12345) { Ground = data.WeatherGround };
+                        Console.WriteLine($"weather rules {rules}:");
+                        foreach (var (name, la, lo) in new[] { ("Riga", 56.95, 24.1), ("Po plain", 45.1, 10.0), ("Kansas", 39.1, -94.6) })
+                        {
+                            geo.FromGeo(la, lo, out double px, out double pz);
+                            double X(int i) => px + (i & 63);
+                            double Z(int i) => pz + ((i >> 6) & 63);
+                            double H(int i) => 5000 + i * (1 / 3600.0);   // the clock a game second a call
+                            Console.WriteLine($" {name}:");
+                            total += Time("Cloudness (the rain postfix, block centre)", 100000, i => w.Cloudness(X(i) + 0.5, Z(i) + 0.5, H(i)));
+                            total += Time("TemperatureAnomaly (the climate hook)", 100000, i => w.TemperatureAnomaly(X(i), Z(i), H(i), 300));
+                            total += Time("climate reading: Cloudness + anomaly", 100000, i => w.Cloudness(X(i) + 0.5, Z(i) + 0.5, H(i)) + w.TemperatureAnomaly(X(i), Z(i), H(i), 300));
+                            total += Time("WindAt with gusts (Earth's wind handler)", 100000, i => w.WindAt(X(i), Z(i), H(i), true).X);
+                            total += Time("Storms.Influence", 100000, i => w.Storms.Influence(la, lo, H(i)).Presence);
+                            total += Time("CloudCover (one cloud tile)", 40000, i => w.CloudCover(X(i * 37), Z(i * 37), H(i)));
+                            total += Time("FogAt (one weather region)", 40000, i => w.FogAt(X(i), Z(i), H(i), 300).Ground);
+                            total += Time("HailAt", 100000, i => w.HailAt(X(i), Z(i), H(i), 300));
+                            // a frame on the client: four regions' fog (rules 7+), four hail lookups at the player (rules 6+)
+                            total += Time("frame: 4 x FogAt + 4 x HailAt at the player", 10000, i =>
+                            {
+                                double s = 0, h = H(i);
+                                for (int k = 0; k < 4; k++) s += w.FogAt(px + (k & 1) * regionSize, pz + (k >> 1) * regionSize, h, 300).Ground + w.HailAt(px, pz, h, 300);
+                                return s;
+                            });
+                            // GetWindSpeedAt as vanilla chains it: its handler (4 region winds, a climate reading) then Earth's
+                            total += Time("GetWindSpeedAt: vanilla's handler + Earth's", 20000, i =>
+                            {
+                                double s = 0, h = H(i);
+                                for (int k = 0; k < 4; k++) s += w.WindAt(px + (k & 1) * regionSize, pz + (k >> 1) * regionSize, h, false).X;
+                                s += w.Cloudness(X(i) + 0.5, Z(i) + 0.5, h) + w.TemperatureAnomaly(X(i), Z(i), h, 300);
+                                return s + w.WindAt(X(i), Z(i), h, true).X;
+                            });
+                            // the snow catch-up: 8 corners of a region, 480 hours each (corners outside, hours inside)
+                            total += Time("snow catch-up: 8 corners x 480 hours (per region)", 3, i =>
+                            {
+                                double s = 0;
+                                for (int c = 0; c < 8; c++)
+                                    for (int k = 0; k < 480; k++)
+                                    {
+                                        double cx = px + (c & 1) * regionSize + i * 4 * regionSize, cz = pz + ((c >> 1) & 3) * 42, h = 4000 + k;
+                                        s += w.Cloudness(cx + 0.5, cz + 0.5, h) + w.TemperatureAnomaly(cx, cz, h, 300);
+                                    }
+                                return s;
+                            });
+                        }
+                    }
+                }
+                Console.WriteLine(total == 0 ? "" : "done");
+                return 0;
+            }
+            // mouthedge lat lon [half]: the test world's model with its rivers, as a new world has the lake shores (GenFixRules
+            // newest): ~ lake, r river water, b beach (flush), digits the dry top's last digit (EA-0072's mouth)
+            if (args.Length > 4 && args[2] == "mouthedge")
+            {
+                var ci = System.Globalization.CultureInfo.InvariantCulture;
+                double la = double.Parse(args[3], ci), lo = double.Parse(args[4], ci);
+                int half = args.Length > 5 ? int.Parse(args[5]) : 40;
+                geo.FromGeo(la, lo, out double cx, out double cz);
+                foreach (int gen in new[] { 2, TerrainModel.GenFixRulesVersion })
+                {
+                    model.GenFixRules = gen;
+                    Console.WriteLine($"GenFixRules {gen} (rivers)");
+                    for (int j = -half; j <= half; j++)
+                    {
+                        var sb = new System.Text.StringBuilder();
+                        for (int i = -half; i <= half; i++)
+                        {
+                            var c = model.GetColumn(cx + i, cz + j);
+                            sb.Append(c.Water != TerrainModel.WaterNone ? (c.River ? 'r' : '~') : c.Beach ? 'b' : (char)('0' + ((c.Top % 10) + 10) % 10));
+                        }
+                        Console.WriteLine(sb);
+                    }
+                }
+                return 0;
+            }
+            // lakeedge lat lon [half]: the grid lakes' water edge around a place on the built-in heights, eased shores as a new
+            // world has them, GenFixRules 2 and the newest side by side (EA-0072): ~ water, digits the dry top's last digit
+            if (args.Length > 4 && args[2] == "lakeedge")
+            {
+                var ci = System.Globalization.CultureInfo.InvariantCulture;
+                double la = double.Parse(args[3], ci), lo = double.Parse(args[4], ci);
+                int half = args.Length > 5 ? int.Parse(args[5]) : 40;
+                geo.FromGeo(la, lo, out double cx, out double cz);
+                data.SetShoreOverlay(true);
+                foreach (int gen in new[] { 2, TerrainModel.GenFixRulesVersion })
+                {
+                    var m = new TerrainModel(data, geo, vs, 12345) { LakeShores = data.ShoreOverlay, GenFixRules = gen };
+                    Console.WriteLine($"GenFixRules {gen}");
+                    for (int j = -half; j <= half; j += 1)
+                    {
+                        var sb = new System.Text.StringBuilder();
+                        for (int i = -half; i <= half; i++)
+                        {
+                            var c = m.GetColumn(cx + i, cz + j);
+                            sb.Append(c.Water != TerrainModel.WaterNone ? '~' : c.Beach ? 'b' : (char)('0' + ((c.Top % 10) + 10) % 10));
+                        }
+                        Console.WriteLine(sb);
+                    }
+                }
+                if (Environment.GetEnvironmentVariable("EDGEROW") is string dbr && dbr.Length > 0)
+                {
+                    int dj = int.Parse(dbr);
+                    var m3 = new TerrainModel(data, geo, vs, 12345) { LakeShores = data.ShoreOverlay, GenFixRules = TerrainModel.GenFixRulesVersion };
+                    for (int i = -half; i <= half; i++)
+                    {
+                        var g = geo.ToGeo(cx + i, cz + dj);
+                        var st = data.SampleTerrain(g.Lat, g.Lon, true);
+                        var c3 = m3.GetColumn(cx + i, cz + dj);
+                        Console.WriteLine($"i {i,4} elev {st.Elev:0.0} lake {st.Lake:0.00} level {st.LakeLevel} relief {st.Relief:0} col {(c3.Water != 0 ? "water" : "dry")} top {c3.Top} elevh {c3.Elev:0.0}");
+                    }
+                }
+                if (Environment.GetEnvironmentVariable("EDGEDEBUG") is string dbg && dbg.Length > 0)
+                {
+                    int di = int.Parse(dbg);
+                    for (int j = -half; j <= half; j++)
+                    {
+                        var g = geo.ToGeo(cx + di, cz + j);
+                        var st = data.SampleTerrain(g.Lat, g.Lon, true);
+                        Console.WriteLine($"j {j,4} lat {g.Lat:0.0000} elev {st.Elev:0.0} lake {st.Lake:0.00} level {st.LakeLevel} ocean {st.Ocean:0.00} shore {st.ShoreLevel} near {st.LakeNear:0.00}");
+                    }
+                }
+                return 0;
+            }
             // shores mode: the lake shore checks only
             if (args.Length > 2 && args[2] == "shores")
             {
                 CheckLakeShores(data, geo, vs);
+            CheckGridLakeEdge(data, geo, vs);
                 Console.WriteLine(failures == 0 ? "all checks passed" : failures + " check(s) failed");
                 return failures == 0 ? 0 : 1;
             }
@@ -1681,11 +1966,13 @@ namespace EarthMap.Tests
             CheckGeothermalPixel(data, geo, vs);
             CheckCanalsWithoutRivers(data, geo, vs);
             CheckVolcanoPlans(data, geo, vs);
+            CheckGrassSeasonAt(data, geo, vs);
             CheckRealLapse(data, geo, root);
             CheckClimateClientV1(data, geo, root);
             CheckFineTemperature(data, geo, vs);
             CheckDataViews(data);
             CheckLakeShores(data, geo, vs);
+            CheckGridLakeEdge(data, geo, vs);
             CheckCoasts(data, vs, outDir, false);
             if (Environment.GetEnvironmentVariable("RIVERDEBUG") == "1") return failures == 0 ? 0 : 1;
             Console.WriteLine("renders");
@@ -2112,6 +2399,48 @@ namespace EarthMap.Tests
                     Check(now.step <= 4, $"{name}: with eased shores the land slopes down to the outlet valley ({now.step} blocks at most)");
                 }
             }
+            data.SetShoreOverlay(was);
+        }
+
+        /// <summary>
+        /// GenFixRules 3 (EA-0072): on the built-in heights Lake Geneva's water at the Rhône's mouth ends along an irregular
+        /// line, not along the straight line where the grid lake's share reaches 0 (a rectangular corner before): the longest
+        /// straight run of lake water beside dry land along one row or column, in a window around the mouth, rules 2 and 3.
+        /// </summary>
+        static void CheckGridLakeEdge(EarthData data, EarthGeometry geo, VerticalScale vs)
+        {
+            bool was = data.ShoreOverlay;
+            data.SetShoreOverlay(true);
+            int Run(int gen, bool beach)
+            {
+                var m = new TerrainModel(data, geo, vs, 12345) { LakeShores = data.ShoreOverlay, GenFixRules = gen };
+                geo.FromGeo(46.40, 6.86, out double x0, out double z0);
+                geo.FromGeo(46.37, 6.94, out double x1, out double z1);
+                int w = (int)(x1 - x0), h = (int)(z1 - z0), best = 0;
+                var wet = new bool[w + 1, h + 1];
+                for (int j = 0; j <= h; j++)
+                    for (int i = 0; i <= w; i++)
+                    {
+                        var c = m.GetColumn(x0 + i, z0 + j);
+                        wet[i, j] = c.Water != TerrainModel.WaterNone || beach && c.Beach;
+                    }
+                for (int j = 0; j < h; j++)
+                {
+                    int run = 0;
+                    for (int i = 0; i <= w; i++) { run = wet[i, j] && !wet[i, j + 1] ? run + 1 : 0; best = Math.Max(best, run); }
+                }
+                for (int i = 0; i < w; i++)
+                {
+                    int run = 0;
+                    for (int j = 0; j <= h; j++) { run = wet[i, j] && !wet[i + 1, j] ? run + 1 : 0; best = Math.Max(best, run); }
+                }
+                return best;
+            }
+            int before = Run(2, false), now = Run(TerrainModel.GenFixRulesVersion, false);
+            int beachBefore = Run(2, true), beachNow = Run(TerrainModel.GenFixRulesVersion, true);
+            Console.WriteLine($"grid lake edge at the Rhone's mouth: longest straight shore {before} -> {now} blocks, beach's landward edge {beachBefore} -> {beachNow}");
+            Check(now <= 12 && now < before, $"Lake Geneva at the Rhone's mouth ends along an irregular line on the built-in heights ({now} blocks straight at most)");
+            Check(beachNow <= 12 && beachNow < beachBefore, $"its beach ends along an irregular line too ({beachNow} blocks straight at most)");
             data.SetShoreOverlay(was);
         }
 

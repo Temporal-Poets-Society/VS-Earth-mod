@@ -10,11 +10,18 @@ namespace EarthMap.Core
     /// length) per tile from the north-west, row by row; a tile of length 0 holds no data. Cell (row, col) is centred at
     /// latitude 90 - (row + 0.5) / Res and longitude -180 + (col + 0.5) / Res. Tiles are decoded on demand and kept in a
     /// TileCache. Thread-safe.
+    ///
+    /// The header's version carries the coding in its high 16 bits (PlaneCoding): 0, a tile is brotli of its planes; 1 (the
+    /// mod's own grids from rc.14, EA-0077), a block of predicted planes that decodes to the same bytes. <see cref="Version"/>
+    /// is the content version in the low 16 bits.
     /// </summary>
     public sealed class TiledGrid
     {
         public readonly int Width, Height, Res, Tile, Version;
+        /// <summary>How the tiles are coded: <see cref="PlaneCoding.Plain"/> or <see cref="PlaneCoding.Predicted"/>.</summary>
+        public readonly int Coding;
         readonly int tilesX, bytesPerCell;
+        readonly PlaneType[] types;
         readonly string name;
         readonly byte[] file;
         readonly int[] offset, length;
@@ -22,14 +29,25 @@ namespace EarthMap.Core
         static readonly byte[] Empty = new byte[0];
 
         /// <summary>bytesPerCell: the bytes all planes of one cell take after decompression. <paramref name="name"/>: the
-        /// file's name in error messages (the magic when not given).</summary>
-        public TiledGrid(byte[] file, string magic, int bytesPerCell, int maxCachedTiles = 48, string name = null)
+        /// file's name in error messages (the magic when not given). <paramref name="types"/>: the planes' types for a
+        /// predicted file (their bytes add up to bytesPerCell); by default bytesPerCell planes of bytes.</summary>
+        public TiledGrid(byte[] file, string magic, int bytesPerCell, int maxCachedTiles = 48, string name = null, PlaneType[] types = null)
         {
             this.file = file;
             this.bytesPerCell = bytesPerCell;
             this.name = name ?? magic;
+            if (types == null)
+            {
+                types = new PlaneType[bytesPerCell];
+                Array.Fill(types, PlaneType.U8);
+            }
+            if (PlaneCoding.RawSize(types, 1) != bytesPerCell) throw new ArgumentException(this.name + ": plane types of another size");
+            this.types = types;
             EarthBinary.Expect(file, magic, 24, this.name);
-            Version = BitConverter.ToInt32(file, 4);
+            int headerVersion = BitConverter.ToInt32(file, 4);
+            Version = PlaneCoding.ContentVersion(headerVersion);
+            Coding = PlaneCoding.Coding(headerVersion);
+            if (Coding != PlaneCoding.Plain && Coding != PlaneCoding.Predicted) throw new InvalidDataException(this.name + ": unknown coding " + Coding);
             Width = BitConverter.ToInt32(file, 8);
             Height = BitConverter.ToInt32(file, 12);
             Tile = BitConverter.ToInt32(file, 16);
@@ -78,6 +96,7 @@ namespace EarthMap.Core
         public byte[] Decode(int key)
         {
             if (length[key] == 0) return Empty;
+            if (Coding == PlaneCoding.Predicted) return PlaneCoding.Decode(file, offset[key], length[key], Tile, Tile, types, name + ": tile " + key);
             return EarthBinary.Unbrotli(file, offset[key], length[key], Tile * Tile * bytesPerCell, name + ": tile " + key);
         }
 

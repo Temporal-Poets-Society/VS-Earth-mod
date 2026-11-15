@@ -1,0 +1,34 @@
+aridity.bin: 6,475,409 bytes, 10800x5400 tile 180, 825 tiles with data of 1800; sample 104 tiles = 0.130 of the bytes
+  orig                  841,792  x1.000  -> whole file about 6.46 MB
+  med                   726,839  x0.863  -> whole file about 5.58 MB
+  planar                792,550  x0.942  -> whole file about 6.08 MB
+  left                  726,592  x0.863  -> whole file about 5.58 MB
+  lzma_raw              841,540  x1.000  -> whole file about 6.46 MB
+  lzma_med              777,416  x0.924  -> whole file about 5.97 MB
+  ctx-entropy           806,893  x0.959  -> whole file about 6.19 MB (27 gradient contexts per plane, static)
+    plane 0: 6.19 MB
+  3 s
+rain.bin: 11,862,158 bytes, 10800x5400 tile 180, 1740 tiles with data of 1800; sample 218 tiles = 0.118 of the bytes
+  orig                1,395,815  x1.000  -> whole file about 11.85 MB
+  med                 1,108,294  x0.794  -> whole file about 9.41 MB
+  planar              1,175,604  x0.842  -> whole file about 9.98 MB
+  left                1,100,636  x0.789  -> whole file about 9.34 MB
+  lzma_raw            1,375,932  x0.986  -> whole file about 11.68 MB
+  lzma_med            1,183,632  x0.848  -> whole file about 10.05 MB
+  ctx-entropy         1,255,053  x0.899  -> whole file about 10.65 MB (27 gradient contexts per plane, static)
+    plane 0: 8.36 MB
+    plane 1: 2.29 MB
+    plane 2: 0.00 MB
+  11 s
+temperature.bin: 8,012,000 bytes, 10800x5400 tile 180, 1800 tiles with data of 1800; sample 225 tiles = 0.122 of the bytes
+  orig                  975,917  x1.000  -> whole file about 8.00 MB
+  step5                     225  x0.000  -> whole file about 0.00 MB
+  planar_split          850,617  x0.872  -> whole file about 6.97 MB
+  med_split             753,820  x0.772  -> whole file about 6.18 MB
+  q5_med_split          944,490  x0.968  -> whole file about 7.74 MB
+  q5_med_nodiff         741,088  x0.759  -> whole file about 6.07 MB
+  ctx-entropy         1,009,635  x1.035  -> whole file about 8.27 MB (27 gradient contexts per plane, static)
+    plane 0: 1.98 MB
+    plane 1: 3.41 MB
+    plane 2: 2.88 MB
+  17 s

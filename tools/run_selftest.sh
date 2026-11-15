@@ -12,6 +12,8 @@
 #   HYDRO_ZIP  default the newest hydrology-*.zip in ../Hydrology/release or the player's VintagestoryData/Mods
 #   EXTRA_MODS="../Sea/release/sea-0.6.0.zip;..."  more mods for combination tests
 # TESTSERVER (default <this checkout>/testserver) holds the server's data; PORT overrides its config's port.
+# SELFTEST='{"Digest": true, "DigestPasses": ["Terrain"], "MeasureStorage": true}' adds self-test settings (EarthMapConfig
+# SelfTestConfig) to the run's earth.json: a digest of every generated chunk column to compare two builds, the memory.
 # Earth's data store, ModData/earth, is set up once from EARTH_DATA (default the player's
 # VintagestoryData/ModData/earth): data/, ground/ and cache/ are copied, glo90/ (8.5 GB of heights) is linked as a
 # directory junction. Earth's download addresses are switched off, so a missing file fails the run instead of
@@ -89,11 +91,12 @@ if [ -n "$DATA" ] && [ -d "$DATA" ]; then
   fi
 fi
 
-"$PY" - "$TS" "$W" "$L" "$HEIGHT" "$SEED" "$PLACES" "$SIZE" "$EARTH" "$STYLE" "$EARTH_ZIP" "${PORT:-}" <<'EOF'
+"$PY" - "$TS" "$W" "$L" "$HEIGHT" "$SEED" "$PLACES" "$SIZE" "$EARTH" "$STYLE" "$EARTH_ZIP" "${PORT:-}" "${SELFTEST:-}" <<'EOF'
 import json, os, sys, zipfile
 ts, w, l, h, seed, places = sys.argv[1], int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]), sys.argv[5], sys.argv[6]
 size_set, earth, style, package = sys.argv[7] == "1", sys.argv[8], sys.argv[9], sys.argv[10]
 port = sys.argv[11] if len(sys.argv) > 11 else ""
+selftest = json.loads(sys.argv[12]) if len(sys.argv) > 12 and sys.argv[12] else {}
 if os.path.isdir(package): text = open(os.path.join(package, "worldconfig.json"), encoding="utf-8-sig").read()
 else: text = zipfile.ZipFile(package).read("worldconfig.json").decode("utf-8-sig")
 styles = {s["code"]: s for s in json.loads(text)["playStyles"]}
@@ -129,6 +132,7 @@ c = {"ConfigVersion": 5, "SelfTest": {"Enabled": True, "Shutdown": True}, "DataR
      "ElevationSource": off, "GroundRepo": off}
 if places:
     c["SelfTest"]["Places"] = places.split(";")
+c["SelfTest"].update(selftest)
 json.dump(c, open(cfg, "w", encoding="utf-8"), indent=2)
 print("play style", style, "world", w, "x", l, "height", h, "seed", seed, "size", world.get("earthWorldSize"))
 EOF

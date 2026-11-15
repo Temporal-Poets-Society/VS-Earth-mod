@@ -2,6 +2,12 @@
 
 Status: Agreed direction (the user, 2026-10-21); implemented 0.15.0 (climate, rain, clouds, winds, storms); offline tests
 and server self-test passed; not played; the Sea side is in progress in its own session | Date: 2026-10-21 |
+14 November 2026, later: weather rules 8 for new worlds (rain in showers of a few hours through the whole day and warm
+months' downpours, from the airports' reports; the weather's warmth per 32-block cell;
+[below](#weather-rules-8-showers-downpours-and-the-airports-hours-14-november-2026)).
+14 November 2026: weather rules 7 for new worlds (the ground's temperature for the rain rate, the desert coasts as dry as
+climate fix 4, more thunder in hot dry months, Earth's fog and cloud tiles;
+[below](#weather-rules-7-the-ground-under-the-weather-14-november-2026)).
 13 November 2026: weather rules 6 for new worlds (cold-sea cloud decks, hail, the weather in the temperature) and
 the same weather bits on every system ([below](#weather-rules-6-and-the-same-weather-on-every-system-13-november-2026)).
 7 November 2026: Earth's weather published as the open sea contracts' `weather` role and vanilla's wind written as a
@@ -127,8 +133,9 @@ Proposed and built for checking (0.15.0):
   data changes.
 - **Local time:** the showers' afternoon peak follows the local sun (the calendar's hour plus longitude / 15) where
   AstraTerra's sky follows Earth's meridians (0010), else the calendar's hour like vanilla's single sun.
-- **Not yet:** thunderstorms and hail are still vanilla's weather events, not tied to Earth's convection; snow cover follows the rain
-  but vanilla's accumulation rules.
+- **Not yet (rules 5):** thunderstorms and hail were vanilla's weather events, not tied to Earth's convection; snow cover follows
+  the rain but vanilla's accumulation rules. From rules 6 hail falls from Earth's thunderstorms (EA-0019) and Earth's
+  lightning follows them (Earth's thunder): see the rules below.
 
 ## Open sea contracts: the weather role (7 November 2026)
 
@@ -143,7 +150,9 @@ Seas merge, the weather hook only) and 7 November (our side open to other mods);
   `Func<long>` that changes when this side's weather is built, rebuilt or dropped), `wind(x, z, hours, gusts)` and
   `prevailing(x, z, hours)` toward (X east, Z south) in m/s (Earth's wind unit × 25; without gusts the steady wind seas grow
   from), `storm(x, z, hours)` → (Presence, WindMps, Kind), `rain(x, z, hours)` → (Cloudness, Precipitation), and
-  `writesVanilla` true. Every function is a pure function of the world's parameters and game time (this decision's item 4),
+  `writesVanilla` true. (15 November 2026, a member added under the contract's R6, within version 1) `pressure(x, z,
+  hours)`: the sea-level pressure in hPa, the model's own (`WeatherSample.Pressure`), which World Map 0.5.3's barometer
+  reads from `EarthWeather.Model` by reflection; a later World Map can read it here instead. Every function is a pure function of the world's parameters and game time (this decision's item 4),
   so it is thread-safe and the same on every side. There is no height: the answers are at sea level. While a side has no
   weather built, every answer is NaN (the contract's "no answer").
 - **Claiming.** The server claims in `StartServerSide` when the save has Earth's parameters or is a new Earth world, so
@@ -208,7 +217,7 @@ rocking from the length, the vane, rain blowing without the transpiler, and Sea 
 
 ## Weather rules 6 and the same weather on every system (13 November 2026)
 
-Status: built on `claude/weather-items` for the 2.0.0 release candidate (the author's request to close the weather
+Status: in Earth 2.0.0, built on `claude/weather-items` (the author's request to close the weather
 items, 13 November, by way of the coordinating session); offline-tested; seen in a game on the AgentBridge bench (one
 client); hail not yet seen falling. Items EA-0019, EA-0023, EA-0025 (rules 6) and EA-0029.
 
@@ -221,7 +230,7 @@ client); hail not yet seen falling. Items EA-0019, EA-0023, EA-0025 (rules 6) an
   .NET 8.0.33) 1-2 % of the answers at 40,000 places and hours had other last bits than on Windows (.NET 8.0.25): .NET's
   `Math.Exp`, `Log`, `Pow`, `Sin`, `Cos`, `Atan2` call the system's C library. None switched rain or thunder in that
   sample, but a Linux server with Windows clients could. `Core.PortableMath` (fdlibm's algorithms with only operations
-  IEEE defines exactly) is used throughout the weather code; Windows .NET 8, Windows .NET 10 and Ubuntu .NET 8 now give
+  IEEE defines exactly) is used throughout the weather code (and from 14 November in `NightHours` too, ER-17); Windows .NET 8, Windows .NET 10 and Ubuntu .NET 8 now give
   the same fingerprint, as do Release and Debug builds, separate processes and a CPU without AVX/FMA intrinsics. Against
   the old maths the answers move by at most 1.5e-13 and nothing switches, so it applies to every world (no rules bump).
   Not tried: macOS and ARM (the same arithmetic; no machine here).
@@ -271,11 +280,295 @@ Left open, with what they need:
   is about 1.4 times UDel on Arctic coasts), mostly at 55°N and north. The fix is a climate fix v3 for new worlds (and
   the same blend in `build_weather`); not built.
 
+## Weather rules 7: the ground under the weather (14 November 2026)
+
+Status: in Earth 2.0.0, built on `claude/weather-items` (the author's request of 14 November to work
+through the backlog, by way of the coordinating session); offline-tested against station records; the fog and the cloud
+tiles seen on the AgentBridge bench (one client, a new 1:100 world), not judged by the author. Items EA-0021, EA-0022,
+EA-0026, EA-0027, EA-0060. New worlds get rules 7 (`EarthParams.WeatherModelRules` 7); worlds made before keep theirs
+(`WeatherContractTests hash rules5` and `rules6` give the fingerprints from before, 18C6D3C6B8B0F4E7 and C99BE19573CD5E22).
+
+- **The ground's temperature for the rain rate (EA-0021).** The rate (rules 5) was fitted at airports below 1000 m with
+  the weather's sea-level normals, so high ground rained and snowed on too few days in its cool months (Denver's January
+  7 % of the days against GHCN-Daily's 11, Elko's 12 against 20, Albuquerque's 3 against 9). From rules 7 the rate and the
+  wet spells read the month's temperature less 6.5 °C/km of the height above 250 m (about the fit airports' height: three
+  quarters below 250 m) that the cell's sea-level temperatures were reduced from: `earthdata/weatherground.bin` (40 kB,
+  0.5°, weather.bin's own grid; `tools/bake_earth.py --weather-ground-only`), read through `Core.WeatherGround`. The weather
+  can't take the ground from the world: the client has no terrain heights away from its loaded chunks, and the weather
+  must give every side and every caller the same answer. `WeatherTests dryspells` at the nine stations from 850 m up:
+  wet-day rms 4.0 → 3.1 points, bias -2.7 → 0.0; at the 39 others 4.8 → 4.9.
+- **The desert coasts as dry as climate fix 4 (EA-0060).** The monthly precipitation is scaled by fix 4's over fix 3's at
+  the place ([0018](0018-climate-stripes.md#correction-2026-11-14-the-desert-coasts-fix-v4-ea-0060)): Lima's coast
+  rained on a desert from weather.bin's 320 mm a year; its July is now 0.0 mm a day. 1 wherever fix 4 changes nothing.
+- **More thunder in hot dry months (EA-0022).** The thunder density fit (rules 3) gave the desert Southwest about half its
+  summer thunder (Phoenix 9 % of July's days against the 17 % GHCN-Daily's thunder reports (WT03) show, El Paso 17
+  against 38, Albuquerque 14 against 41), though WGLC's own strokes give about the real days there: a month of 1 mm/day
+  weighs as little rain. `Core.Thunder.DryFactor` raises the density by 1 + 4.93·smoothstep(T: 24.9 → 32.9 °C at sea
+  level)·e^(−P/0.70 mm/day), fitted (`tools/fit_thunder.py --dry`, `tools/ghcnd_weathertypes.py`) to 13 US first-order
+  stations' monthly thunder days with the twelve yearly stations of the rules-3 fit kept as they were: the West's
+  June-September error 8 → 4 points, the US stations' monthly error 4.3 → 3.5 points; in the weather Phoenix's July 22 %
+  (real 17), Albuquerque's 24 % (41). Toward WGLC elsewhere too (thunder days from the fit: Arabia 10 → 17, Iran 14 → 21,
+  inland Australia 28 → 39, the Sahel 34 → 46); Kampala stays at 126 against 240 (WWLLN sees few of tropical Africa's
+  strokes, so no fit to it can find them). Denver's hail days follow its thunder (rules 6).
+- **Fog and mist from Earth's weather (EA-0026).** `WeatherModel.FogAt` (0 before rules 7): sea fog where the cold seas'
+  low cloud deck (rules 6) is strong and the weather settled (high pressure), over the land at night and in the morning
+  only; radiation fog over land on a clear, calm, long night in the cool season after rain has wetted the ground in the
+  last day and a half, more in a humid month; heavy rain thickens the air. The client draws each weather region's fog at
+  its centre (a postfix on `WeatherSimulationRegion.UpdateWeatherData`): vanilla's flat fog as a layer from the sea up to
+  150 m (sea fog) or from the ground at the player up 6 blocks (land fog), and the distance fog, in place of the
+  patterns' random fog and mist, with Earth's weight (vanilla's leaves dry places without fog whatever the weather).
+  Not fitted: against the heavy-fog days (WT02) of 14 US first-order stations, 10 a year on average against 11, rank
+  correlation 0.50, winter-peaked as the real ones and none in the deserts; the Central Valley's tule fog is too rare
+  (Fresno 12 against 27) and Kansas City's, Salt Lake City's and Seattle's too frequent (20, 22, 29 against 5, 12, 13).
+  Sea fog: Walvis Bay April-August, San Francisco July-December, none in the Sahara; Lima's coast has it all year (its
+  deck doesn't weaken in the austral summer in the reanalysis' temperatures). `/earthweather` reports it.
+- **Cloud tiles by Earth's cloud cover (EA-0027).** Each cloud tile's thickness is the pattern's own (its shapes) scaled by
+  Earth's cloud cover at the tile (a postfix on `WeatherDataReaderBase.pgetBlendedCloudThicknessAt`, which both cloud
+  renderers read): half under a sky a third covered, one and a half times at four-fifths, more where it rains, none
+  under a clear sky. Vanilla's thickness came from the 512-block region's pattern alone, so its edges ran along region
+  borders; now they follow Earth's fronts, showers and storms.
+- **On the bench** (a new 1:100 world, `2.0.0-rc.12-weather7.2`): both sides log rules v7 and the five new patches go in;
+  Lima's coast in July at 7:00 lies under a sea-fog layer with the island of San Lorenzo dim offshore (`/earthweather`: sea
+  fog 100 %), thinner at 14:00 (62 %); the Sahara's sky clears as its 0 % cover reaches the tiles; under the Mumbai
+  monsoon (79 % cover) the tiles keep their shapes, thick on one side and broken on the other. A first cut that set the
+  tiles from the cover alone drew one flat grey deck. 60 fps, no hook errors. Not checked: multiplayer, a dedicated server.
+- **Looked at in game (14 November, second bench, `main` `ebceed0` with the helpers below):** valley fog in the Po plain on
+  a clearing December night after rain: from midnight to 3:00 at 96-99 %, a layer over the river and the fields at 8:30
+  with the crowns of the trees above it and the low sun behind, gone by 12:30 as the next front's cloud arrived. Under a
+  Florida thunderstorm in July the air is the same grey wall as vanilla's own heavy rain (`/weather setprecip 1`), so the
+  rain fog adds nothing harsher. Cloud edges: at 15:00 in central Florida in July `/ew map` showed showers to the north
+  and west and broken to fair sky south and east; from the ground the sky matched, towering banks north and west, mostly
+  blue south, thin wisps east. Seen from above the cloud layer nothing is drawn (vanilla's clouds), so the edges were
+  judged from below. Lima's sea fog all year stays: its cold-water anomaly is 11-12 °C in every month in weather.bin, and
+  its summer mornings are often grey in reality too, the land clearing by the afternoon as in the model.
+- **Helpers:** `/earthweather fog` lists when fog starts here in the next 30 days (for `/time add N hours`); `/earthweather
+  map` draws the rain and clouds around the player as characters (128 blocks each at 1:100, north up).
+
+(The author said yes to the download on 14 November; EA-0020 became [weather rules 8](#weather-rules-8-showers-downpours-and-the-airports-hours-14-november-2026).)
+Left open, both waiting on one decision of the author's (14 November): whether to download the airports' hourly reports
+again (the Iowa Environmental Mesonet's METAR archive, 2017-2023, about 100 MB, `tools/iem_metar_precip.py --download`;
+the rain rate of rules 5 was fitted to them, but they are no longer on this PC). EA-0020 (the Great Plains' summers rain on
+too many days, the Mediterranean winters of Perth, Adelaide and Cape Town on too few) is the length of rain events by
+regime (organised night-time storms against frontal showers): only hourly reports show event length, and only they keep
+the fitted rain hours while the days move. EA-0024 (fronts) would put a shower line, a wind veer and a temperature step
+behind a cold front trailing each low into `WeatherStorms.Influence`; its sharpness is hourly too, and the temperature step
+would overlap rules 6's warm and cold spells, whose spread was fitted to the stations' daily variance and would need
+refitting with it. Whether sudden fronts are wanted in play at all is the author's call as well.
+
+## Weather rules 8: showers, downpours and the airports' hours (14 November 2026)
+
+Status: in Earth 2.0.0, built on `claude/weather-rules-8` (the author's yes of 14 November, by way of the
+coordinating session, to download the airports' reports again and fix EA-0020; EA-0073 and EA-0019's test command in the
+same rules version); offline-tested against the reports and the stations; hail seen falling on the bench, the rest not
+looked at in game. New worlds get rules 8 (`EarthParams.WeatherModelRules` 8); worlds made before keep theirs:
+`WeatherContractTests hash rules5`, `rules6` and `rules7` give the same fingerprints as before (ALL 18C6D3C6B8B0F4E7,
+C99BE19573CD5E22, 04AE435FBB7B4301; the hash now also prints the anomaly, hail and fog parts, outside ALL). Rules 8:
+ALL 4D19B0486DDC9A14 (wind, storms, pressure, thunder and hail as rules 7; cloudness, cover, anomaly and fog differ).
+
+**The data.** The routine METAR reports of the 61 airports of `tools/iem_metar_precip.py`, 2017-2023 (Iowa Environmental
+Mesonet, downloaded again to `data\earth-raw\metar-iem`, 79 MB, 14 November). `tools/iem_metar_events.py` gives per
+airport and month the share of the hours with precipitation, of the local days with any, the mean length of a rain event
+(a run of such reports an hour apart) and the share in each quarter of the local day. `WeatherTests events <table>`
+compares the model's (hourly, 20 game years) and `eventfit` sweeps the new constants. 520 airport-months with 1 % of the
+hours or more.
+
+**What rules 7 got wrong.** The hours were right, but:
+- cool months' rain fell in events about twice as long as the airports' (log ratio of event length +0.65 below 8 °C,
+  +0.61 at 8-14 °C; warm months +0.15): their rain field was 80-90 % fronts and wet spells (days) and 10-20 % showers
+  (hours), so Perth's, Adelaide's and Cape Town's winters rained on too few days;
+- the showers peaked in the afternoon (34-39 % of warm months' rain from 12 to 18 h, 11-14 % at night), where the
+  airports report it nearly evenly through the day (23-28 % in each quarter; only Florida peaks in the afternoon);
+- in warm months the rain was too even: 82 % of the model's rainy days reached 1 mm at 24 °C and over (GHCN-Daily's
+  1 mm against the METAR days with any precipitation) where the stations have 70 %: Kansas City, Oklahoma City, Tokyo
+  and Singapore 0.74-0.85 against 0.61-0.68. The Great Plains' too many wet days (EA-0020) were this, not the events'
+  length: their METAR rainy days were right.
+
+**Rules 8** (`WeatherModel`):
+- **Showers at least 0.3 of the rain field** (`FastShare`), the fronts and wet spells keeping their ratio in the rest
+  (warm months had more already and are unchanged). 0.4 would match the airports' event lengths, but in the model shorter
+  events fall on more days (+9 points at 5-15 °C) where the real ones cluster as a day's showers; 0.3 is the best for the
+  rainy days.
+- **The afternoon peak 0.1** (`DiurnalAmplitude`; rules 5-7 0.45).
+- **Warm months' rain skewed** (`RainSkew`: weight w of the square of the rain field's excess over its threshold, 0 up to
+  18 °C, 1 from 26 °C): the drawn intensity is (1 - w)·x + w·x²/E[x²] (x the excess in its mean, E[x²] the normal tail's),
+  capped as before. The millimetres (`WeatherSample.RainShare`, read by `RainMmPerHour`, so the ground's moisture and
+  Hydrology) keep rules 7's mean: (1 - w) of rules 7's capped share and w of the square's, cut at twice its mean
+  (`SquareMost`: thunderstorms and storms push the field past the normal tail, and uncut they doubled Kansas City's July)
+  and scaled by the cut square's mean over the tail (closed form). The months' millimetres stay within 11 % of rules
+  7's at Kano, Singapore, Mumbai, Kansas City, London and Tampa (`WeatherTests moisture`). An uncut square with
+  rules 7's mean gave the strongest effect on the days but doubled the Plains' rain; a cap on both cut the tropics' rain
+  by 15 %.
+
+**Against the data** (rules 7 → 8): rain events' log ratio +0.37 → +0.20 (below 0 °C +0.65 → -0.10); METAR rainy days
+rms 10.0 → 9.5 points (bias -2.3 → -0.5); night share 0.17 → 0.22 (real 0.25), afternoon 0.34 → 0.28 (0.25); the share
+of rainy days reaching 1 mm at 24 °C and over 0.82 → 0.76 (real 0.70). GHCN-Daily wet days (1 mm or more) at the 48
+stations with full records: rms 4.98 → 4.85 points, bias +0.35 → +0.23; Perth 9.2 → 7.9, Adelaide 9.5 → 8.4, Cape Town
+6.5 → 5.6, Kansas City 8.0 → 7.2, Tampa 6.2 → 5.4; Oklahoma City 7.2 → 7.3 and Tokyo 6.7 → 7.2 (the showers' share
+gives their summers more rainy days); ten-day dry spells as before. The rain hours (the threshold) are rules 5's: the
+airports report about 12 % fewer than the model (log), as before.
+
+**Left open:** the extremes moved but are still off. Kansas City's July rains on 32 % of the days (rules 7 38, real 22)
+and Tokyo's August on 42 % (45, real 30): the game's drawn intensity is capped at 1.1 over the rain line and the
+millimetres stay within the month's budget, so rules 8 skews the rain only so far, where real Plains storms drop 20-50 mm
+in a few hours. Perth's July rains on 29 % (27, real 46): more showers in the rain field would give it more days but
+the other cool climates too many. The airports' hours (the rate) were not refitted.
+
+**The weather's warmth per cell (EA-0073).** `TemperatureAnomaly` (rules 6's warm and cold spells and the rain's chill),
+which the climate hook asks 1,200-1,800 times a second at places a few blocks apart, was most of the hook's cost: from
+rules 8 its weather part is the same over a 32-block cell and a ten-minute step (the spells are fronts hundreds of
+kilometres across; at a rain's edge the rain's own 1-3 °C comes up to a cell sooner) and is kept per thread (512 entries,
+two ways, by a mixed hash of the cell and step); the ground's height is applied after. Every side computes the same
+numbers for the same cell and step, kept or not (`WeatherTests`: the same from a fresh model and over its cell). Around
+a player: 1.96 → 0.07 µs per call.
+
+**Hail looked at (EA-0019).** `/earthweather hail` lists when hail next starts here (a quarter-hour at a time over a game
+year) and the strongest hail within 3000 blocks now. On the bench (a new 1:100 world, `2.0.0-rc.13-weather8.1`), on the
+Nebraska High Plains (41.1 N, 100.8 W): in May and July thunderstorms brought hail as listed ("falling now", 93-100 %);
+pale blue ice pellets fall and lie on the grass among the rain streaks, with the storm's sounds and near strikes; the
+listing is the same from one hour to the next. In 20 seconds of survival under 93 % hail the player's health stayed at
+15: vanilla's hail damage (a hit for particle size/15 hp with a chance of level/2 each second, only from particle size
+0.5, which is precipitation - 0.5) wasn't seen; whether Earth's hail hurts is open (EA-0093).
+
+**Hail hurts (rules 8, EA-0093, the same day).** The reason it didn't: vanilla's precipitation state subtracts the rain
+line twice (`GetPrecipitationState`: its level and particle size are `GetPrecipitation` - 0.5, which is already the rain
+cloudness - 0.5), so its hail damage needs a cloudness of 1.5, and Earth's storms reach 1.6 at most; Earth's postfix also
+returned where that level was 0, so on the server Earth's hail was often not typed as hail at all. From rules 8
+(`WeatherRules.HailHurts`) Earth's hail sets the state's particle size to 0.6-1.0 by its strength (vanilla's large hail
+event: 0.8 ± 0.2) and its level to at least the strength: a hit of 0.04-0.07 HP with a chance of 1/8 to 1/2 a second.
+Only vanilla's hail damage reads that state (1.22.7). Rules 6 and 7 keep the type alone. On the bench (`2.0.0-rc.13-
+weatherreview.2`, High Plains, September): `/earthweather hail` now also prints the game's state at the player (hail,
+level 1.00, particle size 1.00 under the storm), and in survival on the ground health went 15 → 14.47 in 25 seconds of
+full hail, about 1.3 HP a minute. The hurting hail came to rules 8 after rules 8 itself (`f793ef7` after `00c6716`): a world
+made with a build in between has rules 8 with harmless hail and gets the hurting hail now. Such worlds are only the
+unpublished bench worlds of that afternoon (rules 8 was never in a release candidate); none was kept.
+
+**EA-0024 (fronts)** stays the author's call. The reports downloaded are present weather only; the temperature and wind
+of a front's passage would need the same archive's temperature and wind columns (`tools/iem_metar_precip.py` asks only for
+`wxcodes`), a new download.
+
+## Weather rules 9: West and Central Africa's thunder (14 November 2026)
+
+Status: built on `claude/africa-thunder` (the author's yes of 14 November, by way of the coordinating session, to station
+thunder records for tropical Africa, EA-0074); offline-tested; not looked at in game. New worlds get rules 9; worlds
+made before keep theirs (`WeatherContractTests` pins rules 5 to 8: rules 8's ALL 4D19B0486DDC9A14).
+
+**The data.** Thunder days from the routine METAR reports of 48 airports, 2017-2023 (the same Iowa Environmental
+Mesonet archive as rules 5 and 8, 27 more airports downloaded, `tools/iem_metar_thunder.py`): the share of the local
+days with 18 or more reports on which a report has thunder at the station or in its vicinity (TS, VCTS: thunder heard,
+as a thunderstorm day is defined). Against GHCN-Daily's own thunder days (WT03) at 11 US stations the method agrees
+within 0-30 % (Denver 38/38, Kansas City 42/43, Oklahoma City 50/52; Salt Lake City 21/33; Tampa 92/73). Thunder-day
+records from WMO climatologies or satellite lightning (LIS/OTD, behind a login) were not used. `WeatherTests
+thunderdays <table>` compares the model's.
+
+**What it showed.** Not all of Africa is short: West and Central Africa are, by about a third (log mean -0.31 at 15
+airports: Douala 157 thunder days a year against 244, Yaoundé 127/220, Bangui 128/197, Abuja 104/166, Brazzaville 117/171,
+Bamako 82/131, Kano 73/105, N'Djamena 61/99), as WWLLN's weak detection there would make them. Entebbe (139/153), Kigali
+(113/115) and Johannesburg (72/69) fit; Lusaka, Harare, Dar es Salaam and above all the highlands of Nairobi (101/20)
+and Addis Ababa (102/23) have too many, as does Bogotá (107/70): high tropical plateaus, not explained by height alone
+(Denver and Albuquerque fit). Kampala's own 240 (EA-0074's figure) is the city's; its airport on the lake has 153.
+
+**Rules 9** (`Thunder.RegionFactor`, `WeatherRules.AfricaThunder`): the stroke density times 1.7 over West and Central
+Africa, faded in from 16 to 10 °W and out from 22 to 30 °E, from 10 to 5 °S and from 14 to 19 °N (fitted: 1.5-1.8 within
+0.01 of each other in rms; log mean inside -0.31 → +0.02, rms 0.37 → 0.21). Douala → 212, Yaoundé 176, Bangui 178, Abuja
+144, Bamako 114, Kano 103. The Guinea coast overshoots (Accra 131 against 74, the dry "Dahomey gap"; Abidjan 165/131).
+The extra thunder brings no extra rain: a thunderstorm makes it rain at the threshold the thunder had without the
+factor, so the extra storms are heard and strike, but the rain hours, days and millimetres are rules 8's
+(the Sahel's rain hours are already too many: Bamako's August 20 % of the hours against 9 %, which the raised thunder's
+rain had made 25 %). Where only the raised thunder is crossed the sky is a storm's dark sky, under the rain line (cloudness
+0.45: no rain, the cover of a storm), not a clear one; and the hail is the unraised thunder's too, so the region gets no
+more hail (`WeatherTests africahail`: Bamenda 23.7 hail days a year in rules 8 and 9, which the raised thunder had made
+40.6; Jos 11.3). (Both from the Fable review of rules 9, 14 November.) Left: the plateaus' surplus (a separate item if
+wanted) and the Guinea coast.
+
+## The Fable pass's weather notes (EA-0116, 14 November 2026)
+
+Behaviour-preserving for rules 5 to 9 (the rules table and every pin unchanged):
+- **One hour for everything** (X-L2): the drawn clouds, wind, hail, fog and thunder ask the weather at the calendar's
+  TotalDays times the day's hours (`EarthWeather.HoursNow`), as vanilla asks the rain and climate hooks, not at
+  TotalHours: the same bits as the rain (they differed by up to 8.8e-13 h, and by vanilla's timelapse while one ran).
+- **Vanilla's rain noise skipped** (X-R3) where Earth answers (a prefix that only skips the original; the answer is still
+  the postfix's, which has the last word over Cylinder World's prefix). If Earth's rain hook throws, that call answers 0
+  and vanilla's method runs again from the next one until a model is built.
+- **The clouds' drift** (X-L9): the cancel takes off what vanilla's cloud renderer adds, 3 x its own blended reading at the
+  player (`WeatherDataAtPlayer`), no longer Earth's wind at the player.
+- **Ground moisture** (X-L7): a 64-block cell's value is worked out at its 6-hour bucket's start, not at the first asker's
+  hour, so it is the same whoever asked first.
+- **A storm lookup** (X-R1) allocates nothing on a hit (the closure was made on every call).
+- **`/earthweather hail`** (D-L10) searches on a worker thread and answers when done, one search per player at a time.
+- **The handshake** (EA-0118, X-L6): the server also sends the weather ground's fingerprint (`WeatherGroundSignature`,
+  params field 209: weatherground.bin and the fix 3 and 4 precipitation it reads) for worlds on rules 7 and later; a client
+  with another keeps vanilla weather, as with another weather.bin; a server without its ground sends "none" and its
+  clients keep vanilla weather as it does. Servers before it send nothing and are not checked. A
+  client also keeps vanilla weather where the pace, rain or storm frequency it receives is not a number or below 0.
+- **Rules 7's fog** (S-L1) and rules 9 are pinned (`WeatherContractTests`), with the hail under thunder.
+- **Worlds from Earth 1.0.x** (S-L8) were made with weather rules 2 and run rules 5 (`WeatherModelRulesOrOld`), on a
+  weather.bin rebaked in 2.0 (`a37fc76`, December's rain; fingerprint 6dc1c95b299ecec1 -> bc9ea5a04cb1bc1d). Their live
+  weather is 2.0's, which is meant: the 1.0 weather is not kept. Where such a world recorded its weather.bin, the start
+  says that new chunks' vegetation zones and fire rules follow the installed file (A6).
+
+Left for the post-2.0 rules 10 round, as each changes the weather: a hard edge at the dry-month line (X-L1, rain cloud on
+one side only in 1.12 % of pairs), the calendar's season override (X-L3, the weather follows the real date), the live
+temperature's step across the equator in January and July (X-L4, 1.8 °C on average), and land fog's top following the
+player's rain-map height over canopies and roofs (X-L5, drawn only). The squall kind (L-4) is rules 10 code, fixed on its
+branch.
+
+## After 2.0: weather rules 10 (14 November 2026)
+
+Earth 2.0 ships weather rules 9 (the author, 14 November: weather that is not game-breaking goes after the release).
+The next rules version, built and tested but taken out of `main` before any world was made with it, is kept on the branch
+`claude/weather-rules-10`: cold and warm fronts on the mid-latitude lows (EA-0024), the rainy days steered by CRU TS
+4.08's wet-day map (EA-0094), the equator, storm-edge and coastal-deck seams with a portable tanh (EA-0102, EA-0114). It
+goes out in one round after 2.0, with the snow catch-up cost (EA-0115) and the author's choice on vanilla's temperature
+noise; its section of this record is on that branch.
+
+Earth's hail drawn (EA-0101, no rules version): the client's hail patch is a postfix on vanilla's whole 25 ms region tick
+(`WeatherSimulationRegion.TickEvery25ms`), whose last line sets the blended precipitation type from vanilla's own weather
+event after `clientUpdate`, where the patch had been. On the bench the hail sound took over from the rain's the moment
+Earth's hail began (Kansas City, August), with pellets in the grass; the hail seen on earlier benches can only have been
+vanilla's events. Rules 9's fingerprints and fog are pinned with rules 5 to 8's (`WeatherContractTests`), and with them
+the hail at 3000 places under thunder (about 50 hailing), as the random places hold almost none (Fable's re-review).
+
+Worlds made by the builds from `0cff689` to `bf84bba` (weather rules 10 on `main` for a day, never released) were bench
+worlds and are not kept: rules 10 will change before it comes back, and such a world would then run other weather under
+the same number. This build refuses them as saved by a newer Earth.
+
+## The review's weather fixes (14 November 2026)
+
+From the code review of 14 November (`docs/research/code-review-2026-11-14.md`, ER-03, ER-04, ER-10, ER-12, ER-14,
+ER-17; EA-0078, EA-0084, EA-0086), all bit-identical for every rules version (`WeatherContractTests hash rules5`,
+`rules6`, `rules7` and rules 8's) except the drawn fog of rules 7 and 8:
+- **What the client draws** (`WeatherDrawCache`, per thread): each weather region's fog for 0.02 game hours (about a
+  second of play; vanilla asks the four regions round the player every frame) and while the player's ground moves under
+  2 m; each cloud tile's cover for 0.02 game hours; each region's wind and the hail at the player for the exact same
+  hour and place only. A new model misses everything.
+- **Vanilla's wind handler skipped** (ER-04): a prefix on `WeatherSystemBase.Event_OnGetWindSpeed` writes Earth's wind
+  and skips vanilla's (four region winds and a climate reading with Earth's rain and temperature hooks, all thrown away
+  before); where Earth doesn't answer (no model, an older Sea's wind, a failed lookup) vanilla's runs as before, and
+  where the patch is refused Earth's handler answers after vanilla's as before.
+- **The model** (ER-12): a storm's strength only for storms in reach (`Storm.Centre`, `IntensityAt`); the storm slot last
+  asked kept per thread; `Rain` hands the anomaly the steering it computed; the ground's rain scale looks up nothing
+  outside each row's span of changed cells (W-10). Not done: a per-thread memo of storms alive at an exact hour and the
+  "last place" memo of the snow catch-up (W-5 B, W-7).
+- **`NightHours` portable** (ER-17): tan and acos from `PortableMath`'s sine, cosine and atan2 (within 7e-15 h of the
+  system's), so the whole weather is the same bits on every system again; the drawn fog of rules 7 and 8 moved by an ulp
+  (fog fingerprints 4450DF488F399D91 and 2E3EC4B7A86D4C7A; everything else unchanged).
+- **`WeatherRules`** (ER-10): what each rules version turns on as named facts (`ColdSeaDecks`, `Hail`,
+  `TemperatureAnomaly`; `Ground`, `DryThunder`, `Fog`, `CloudTiles`; `RainEvents`, `AnomalyCells`, `HailHurts`), read
+  through `WeatherSettings.Has`; every weather rules test goes through it. `WeatherContractTests` checks the table (written
+  from the literals before the move) and pins rules 5, 6 and 7's fingerprints (ALL, anomaly, hail) in its normal run.
+- **Measuring** (ER-14): `EarthMapTests <root> 384 cost` now times the weather as the game asks it under rules 6, 7 and
+  8 (the rain postfix, the anomaly, wind, storms, a cloud tile, fog, hail, a client frame, one `GetWindSpeedAt` as
+  vanilla chained it, a region's snow catch-up); `/earth cost` also counts the rain cloudness postfix and the wind.
+  Before → after at the Po plain (rules 7): a storm lookup 0.34 → 0.12 µs, a climate reading 2.97 → 2.63 µs, a region's
+  snow catch-up 13.1 → 9.9 ms; the client's frame (four regions' fog and hail, 21 µs) now about once a second, and a
+  `GetWindSpeedAt` Earth's one `WindAt` (0.7 µs) in place of vanilla's chain and Earth's (5.0 µs).
+
 ## Implementation
 
 0.15.0. `tools/bake_earth.py --weather-only` → `earthdata/weather.bin` (0.5°, monthly precipitation and sea-level
 temperature, land fraction). `src/Core/WeatherData.cs` (normals, ITCZ), `WeatherNoise.cs` (hash, value noise, normal
-distribution; Sea's noise moved here), `WeatherModel.cs` (winds, rain, clouds, pressure), `WeatherStorms.cs` (genesis,
+distribution; Sea's noise moved here), `WeatherModel.cs` and its partials by subject (`.Circulation`, `.Rain`, `.Clouds`, `.Fog`, `.Thunder`,
+`.Temperature`, `.Wind`; the value types in `WeatherTypes.cs`, EA-0089), `WeatherStorms.cs` (genesis,
 tracks, effects); `src/EarthWeather.cs` (patches, rain streaks, Sea link, `/earthweather`); config and `EarthParams` fields;
 `SelfTest.CheckWeather`. The weather role (7 November): `src/Core/WeatherContract.cs` (the entry, storm kinds, rain,
 the wind vector), `WeatherStorms.Effect.Presence` and `PresenceOf`, `EarthWeather` (claiming, `OnGetWindSpeed`'s vector,
@@ -397,3 +690,9 @@ ground as much as their amount says.
 - 2026-11-13: the author asked to close as many of the weather items as possible for the release candidate. Portable
   maths (EA-0029), weather rules 6 frozen per world (EA-0019, EA-0023, EA-0025), audits of EA-0016 and EA-0018; see
   [Weather rules 6](#weather-rules-6-and-the-same-weather-on-every-system-13-november-2026).
+- 2026-11-14: the author's yes to tropical thunder records (EA-0074): weather rules 9, see
+  [Weather rules 9](#weather-rules-9-west-and-central-africas-thunder-14-november-2026).
+- 2026-11-14: the review's weather fixes (EA-0078, EA-0084, EA-0086) and hail that hurts in rules 8 (EA-0093); see
+  [The review's weather fixes](#the-reviews-weather-fixes-14-november-2026).
+- 2026-11-14: the author's yes to downloading the airports' METAR reports again and fixing EA-0020; weather rules 8 (EA-0020,
+  EA-0073, `/earthweather hail` for EA-0019); see [Weather rules 8](#weather-rules-8-showers-downpours-and-the-airports-hours-14-november-2026).

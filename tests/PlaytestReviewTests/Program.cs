@@ -22,7 +22,7 @@ using(var csv=new StreamWriter(Path.Combine(output,"arid-reaches.csv")))
     }
 }
 // Read the local Natural Earth source metadata; no downloads or Python dependencies.
-string raw=Path.GetFullPath(Path.Combine(root,"../../../rawdata/ne_lakes/ne_10m_lakes"));
+string raw=Path.GetFullPath(Path.Combine(RawData.Folder(root),"ne_lakes/ne_10m_lakes"));
 foreach(string suffix in new[]{"","_europe","_north_america"})
 {
 using(var db=new BinaryReader(File.OpenRead(raw+suffix+".dbf")))
@@ -352,8 +352,7 @@ using(var csv=new StreamWriter(Path.Combine(output,"strait-clearance.csv")))
     model.Straits=null;
 }
 Console.WriteLine($"Review checks: {checks}, failures: {failures}");
-var tags=typeof(EarthMap.EarthParams).GetFields().Select(f=>f.GetCustomAttributes(typeof(ProtoBuf.ProtoMemberAttribute),false).Cast<ProtoBuf.ProtoMemberAttribute>().FirstOrDefault()?.Tag).Where(t=>t!=null).ToArray();
-Check(tags.Distinct().Count()==tags.Length,"Unique protobuf field numbers");
+// (S-R2 of the Fable pass) EarthParams' protobuf numbers: EarthWorldOptionsTests pins every one (number, name, type)
 var legacy=new EarthMap.EarthParams();
 Check(legacy.AridRiverRules==0&&legacy.StraitRules==0&&legacy.ReservoirRules==0&&legacy.PeakCatalogSignature==null,"Missing save fields keep legacy terrain");
 Console.WriteLine($"Final review checks: {checks}, failures: {failures}");

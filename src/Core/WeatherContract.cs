@@ -32,7 +32,7 @@ namespace EarthMap.Core
         public const string Squall = "squall", Gale = "gale", Hurricane = "hurricane";
 
         /// <summary>The members the entry has, in the contract's order.</summary>
-        public static readonly string[] Members = { "owner", "version", "priority", "revision", "wind", "prevailing", "storm", "rain", "writesVanilla" };
+        public static readonly string[] Members = { "owner", "version", "priority", "revision", "wind", "prevailing", "storm", "rain", "writesVanilla", "pressure" };
 
         /// <summary>
         /// The entry: <paramref name="model"/> gives this side's weather now (null: none, every answer NaN);
@@ -58,6 +58,9 @@ namespace EarthMap.Core
                 // SetWindProvider keeps its own wind (EarthWeather.ControlsWind false: the wind is Sea's, the rest Earth's),
                 // and a client has no model yet until the server's parameters arrive (every answer NaN, nothing written)
                 ["writesVanilla"] = true,
+                // (15 November 2026) a member added under the contract's R6 (a minor change within version 1): the barometer
+                // a map or HUD shows, read through the contract instead of EarthWeather's model
+                ["pressure"] = new Func<double, double, double, double>((x, z, h) => Pressure(model(), x, z, h)),
             };
         }
 
@@ -124,6 +127,12 @@ namespace EarthMap.Core
             double c = m.Cloudness(x, z, hours);
             return (Math.Clamp(c, 0, 1), Math.Clamp(c - 0.5, 0, 1));
         }
+
+        /// <summary>
+        /// The air pressure at sea level here, in hPa: <see cref="WeatherModel.Sample"/>'s <c>Pressure</c> (1013 less the large-scale
+        /// weather's lows and the storms' own drop), what World Map 0.5.3's barometer reads from Earth's model by reflection.
+        /// </summary>
+        public static double Pressure(WeatherModel m, double x, double z, double hours) => m == null ? double.NaN : m.Sample(x, z, hours).Pressure;
 
         // ------------------------------------------------------------------------------------------ vanilla's wind (section 5)
 

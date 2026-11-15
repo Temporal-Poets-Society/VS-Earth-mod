@@ -1,0 +1,10 @@
+weather rules 9, 9-day months (the game's default):
+  Riga      /ew hail     26.0 ms (10992 HailAt) | /ew fog    43.2 ms (720 FogAt) | /ew thunder     3.2 ms (1009 ThunderAt) | /ew map    5.8 ms (425 Sample)
+  Kinshasa  /ew hail      4.8 ms (10992 HailAt) | /ew fog    10.9 ms (720 FogAt) | /ew thunder     2.1 ms (724 ThunderAt) | /ew map    2.2 ms (425 Sample)
+  Kansas    /ew hail     20.7 ms (10992 HailAt) | /ew fog    11.3 ms (720 FogAt) | /ew thunder     3.0 ms (1009 ThunderAt) | /ew map    2.3 ms (425 Sample)
+  Sahara    /ew hail      8.8 ms (10992 HailAt) | /ew fog    11.1 ms (720 FogAt) | /ew thunder     1.8 ms (1009 ThunderAt) | /ew map    2.3 ms (425 Sample)
+weather rules 9, 30-day months:
+  Riga      /ew hail     63.5 ms (35184 HailAt) | /ew fog    37.2 ms (720 FogAt) | /ew thunder     1.0 ms (869 ThunderAt) | /ew map    1.0 ms (425 Sample)
+  Kinshasa  /ew hail      5.4 ms (35184 HailAt) | /ew fog     3.2 ms (720 FogAt) | /ew thunder     0.7 ms (1009 ThunderAt) | /ew map    0.6 ms (425 Sample)
+  Kansas    /ew hail     17.3 ms (35184 HailAt) | /ew fog     3.1 ms (720 FogAt) | /ew thunder     0.8 ms (1009 ThunderAt) | /ew map    0.6 ms (425 Sample)
+  Sahara    /ew hail      7.5 ms (35184 HailAt) | /ew fog     3.8 ms (720 FogAt) | /ew thunder     0.6 ms (1009 ThunderAt) | /ew map    0.6 ms (425 Sample)

@@ -1,6 +1,6 @@
 # 0029: Land carried across the seam gutter (St. Lawrence Island)
 
-Status: Agreed (the user, 2026-10-25); implemented in play-test build 0.16.12-playtest.2, not played | Date: 2026-10-25 |
+Status: Agreed (the user, 2026-10-25); built in 0.16.12-playtest.2 (in Earth 1.0.0); in Earth 2.0.0. Superseded by 0030 for new worlds: GutterSeabed 2 remains only with `SeamGutter: true` or without Cylinder World's seam band. Not played | Date: 2026-10-25 |
 Decided by: the user, in the Cylinder World session
 
 ## Context
@@ -56,3 +56,9 @@ Geneva shore check (0019).
   chunk on both sides of the jump: 1 024 land columns at 63.26°N, 0 cells differing, all at Earth's height.
 - 2026-10-25: the play-test showed the carried profile as a straight bar of constant width across the gutter. New worlds
   have no gutter and the real island instead ([0030](0030-real-seam.md), GutterSeabed 3); saves with 2 keep the bar.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: Agreed (the user, 2026-10-25); implemented in play-test build 0.16.12-playtest.2, not played

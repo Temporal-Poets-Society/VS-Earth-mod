@@ -58,28 +58,22 @@ namespace EarthMap.Core
             // Each reach belongs to one chain (a reach with one kept inflow only to that inflow's), and a chain reads and
             // replaces only its own reaches' lines, so the chains run in parallel with the same result as one after another:
             // about two thirds of the river index's start-up time at the 1.1 million river pieces of a 512k world.
-            System.Threading.Tasks.Parallel.ForEach(
-                System.Collections.Concurrent.Partitioner.Create(0, starts.Count, 4),
-                () => (Chain: new List<int>(), Scratch: new Scratch()),
-                (range, _, local) =>
+            // (ER-25: on ParallelWork's few long-lived workers, each with its own chain list and scratch, not a raw uncapped
+            // Parallel.ForEach that made a scratch per task replica)
+            ParallelWork.For(starts.Count, () => (Chain: new List<int>(), Scratch: new Scratch()), (i, local) =>
+            {
+                var chain = local.Chain;
+                chain.Clear();
+                int c = starts[i];
+                while (true)
                 {
-                    var chain = local.Chain;
-                    for (int i = range.Item1; i < range.Item2; i++)
-                    {
-                        chain.Clear();
-                        int c = starts[i];
-                        while (true)
-                        {
-                            chain.Add(c);
-                            int nx = reaches[c].Next;
-                            if (nx < 0 || nx >= nr || !keep[nx] || inCount[nx] != 1 || xs[nx] == null) break;
-                            c = nx;
-                        }
-                        StraightenChain(chain, local.Scratch, reaches, xs, zs, lev, fix, halfWidth, strength, smoothWidths, seamGeo, cutWidths, wid, cornerSigma, hold);
-                    }
-                    return local;
-                },
-                _ => { });
+                    chain.Add(c);
+                    int nx = reaches[c].Next;
+                    if (nx < 0 || nx >= nr || !keep[nx] || inCount[nx] != 1 || xs[nx] == null) break;
+                    c = nx;
+                }
+                StraightenChain(chain, local.Scratch, reaches, xs, zs, lev, fix, halfWidth, strength, smoothWidths, seamGeo, cutWidths, wid, cornerSigma, hold);
+            }, null, chunk: 4);
         }
 
         struct Pt
@@ -310,7 +304,10 @@ namespace EarthMap.Core
                 {
                     double sg = sigma[i], reach = 3 * sg;
                     if (sg <= 0) { sx[i] = surv[i].X; sz[i] = surv[i].Z; continue; }
-                    // (cornerSigma: the window may widen again after a reach without one)
+                    // (cornerSigma: the window may widen again after a reach without one. T-L9, code review 14 November
+                    // 2026: without it the window only moves forward, so after a narrow stretch a wider sigma sums from the
+                    // narrow stretch's start: a shorter tail behind the point, never more weight than it should have. The
+                    // rules that have it fixed it; older rules keep their lines.)
                     if (corners)
                     {
                         while (lo > 0 && sAlong[lo - 1] >= sAlong[i] - reach) lo--;
@@ -451,25 +448,35 @@ namespace EarthMap.Core
             }
         }
 
-        static void Dp(List<Pt> l, bool[] keep, int a, int b, double[] tolAt)
+        /// <summary>Douglas-Peucker between kept points a and b: marks the points to keep. (T-L13, code review 14 November 2026)
+        /// An explicit stack, not recursion: a chain is one point per 4 blocks, tens of thousands at 1:10, and a curve whose
+        /// farthest point is always next to an end recursed once per point. Each span's choice depends only on its own ends and
+        /// points, so the order the spans are taken in changes no result.</summary>
+        static void Dp(List<Pt> l, bool[] keep, int a0, int b0, double[] tolAt)
         {
-            if (b <= a + 1) return;
-            double tol = Math.Min(tolAt[a], tolAt[b]);
-            double ax = l[a].X, az = l[a].Z, bx = l[b].X, bz = l[b].Z;
-            double dx = bx - ax, dz = bz - az, len2 = dx * dx + dz * dz;
-            int best = -1;
-            double bestD = tol;
-            for (int i = a + 1; i < b; i++)
+            var spans = new Stack<(int A, int B)>();
+            spans.Push((a0, b0));
+            while (spans.Count > 0)
             {
-                double px = l[i].X - ax, pz = l[i].Z - az;
-                double t = len2 > 0 ? Math.Clamp((px * dx + pz * dz) / len2, 0, 1) : 0;
-                double ex = px - t * dx, ez = pz - t * dz, dd = Math.Sqrt(ex * ex + ez * ez);
-                if (dd > bestD) { bestD = dd; best = i; }
+                var (a, b) = spans.Pop();
+                if (b <= a + 1) continue;
+                double tol = Math.Min(tolAt[a], tolAt[b]);
+                double ax = l[a].X, az = l[a].Z, bx = l[b].X, bz = l[b].Z;
+                double dx = bx - ax, dz = bz - az, len2 = dx * dx + dz * dz;
+                int best = -1;
+                double bestD = tol;
+                for (int i = a + 1; i < b; i++)
+                {
+                    double px = l[i].X - ax, pz = l[i].Z - az;
+                    double t = len2 > 0 ? Math.Clamp((px * dx + pz * dz) / len2, 0, 1) : 0;
+                    double ex = px - t * dx, ez = pz - t * dz, dd = Math.Sqrt(ex * ex + ez * ez);
+                    if (dd > bestD) { bestD = dd; best = i; }
+                }
+                if (best < 0) continue;
+                keep[best] = true;
+                spans.Push((best, b));
+                spans.Push((a, best));
             }
-            if (best < 0) return;
-            keep[best] = true;
-            Dp(l, keep, a, best, tolAt);
-            Dp(l, keep, best, b, tolAt);
         }
     }
 }

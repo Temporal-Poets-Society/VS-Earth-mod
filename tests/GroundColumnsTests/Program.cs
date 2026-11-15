@@ -536,5 +536,36 @@ static WeakReference ClosedWorldTile(byte[] file, out double value)
     return new WeakReference(tile);
 }
 
+// ground rules 2 (EA-0062): karst (GUM Rk) keeps terra rossa where it is warm, rendzina where it is cooler than 12 °C;
+// worlds made with rules 1 keep terra rossa everywhere, and an unknown temperature changes nothing
+Check(GroundColumns.RulesVersion == 2, "new worlds get ground rules 2");
+{
+    int karst = 0;
+    foreach (var (name, la, lo) in new[] { ("Slovenian Karst", 45.70, 13.90), ("Dalmatia", 43.50, 16.50), ("Velebit", 44.60, 15.20),
+        ("Attica", 38.00, 23.80), ("Provence", 43.80, 4.80), ("Apulia", 40.90, 16.60), ("Causses", 44.30, 3.30), ("Jura", 46.90, 6.50),
+        ("Northern Calcareous Alps", 47.60, 13.00), ("Yucatan", 20.50, -89.00), ("Guangxi", 24.80, 110.40), ("Jamaica", 18.20, -77.50) })
+    {
+        GroundColumns.Place P(int rules, bool known, double t) => new() { Elevation = 400, Surface = GroundColumns.Surface.Land, RegionalRock = true, GroundRules = rules, HasTemperature = known, TMean = t };
+        var old = model.At(la, lo, P(1, true, 5));
+        if (old.CoverUnit != "Rk" || old.Cover != "residual-karst") { Console.WriteLine($"  {name}: unit {old.CoverUnit}, recipe {old.Cover} (not plain karst)"); continue; }
+        karst++;
+        string cool = model.At(la, lo, P(2, true, 8)).Cover, warm = model.At(la, lo, P(2, true, 16)).Cover, unknownT = model.At(la, lo, P(2, false, 0)).Cover;
+        Check(cool == "rendzina" && warm == "residual-karst" && unknownT == "residual-karst",
+            $"karst at {name}: rules 1 terra rossa; rules 2 rendzina at 8 °C (got {cool}), terra rossa at 16 °C (got {warm}) and when unknown (got {unknownT})");
+    }
+    Check(karst >= 3, $"at least three of the karst places are plain karst in the data ({karst})");
+}
+
+// EA-0116 D-L9: a set whose count is damaged is refused before anything is made from the count
+{
+    var damagedSet = new byte[64];
+    System.Text.Encoding.ASCII.GetBytes("EGTS").CopyTo(damagedSet, 0);
+    BitConverter.GetBytes(uint.MaxValue).CopyTo(damagedSet, 4);
+    string kind = "none";
+    try { GroundTile.ReadAll(damagedSet); }
+    catch (Exception e) { kind = e.GetType().Name; }
+    Check(kind == "FormatException", $"EA-0116 D-L9: a ground set with a count of 4,294,967,295 in 64 bytes is a FormatException ({kind})");
+}
+
 Console.WriteLine(failures == 0 ? "\nALL PASS" : $"\n{failures} FAILURES");
 return failures == 0 ? 0 : 1;

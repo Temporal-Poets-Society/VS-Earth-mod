@@ -14,6 +14,17 @@ Then the share of days with thunder in a month, from the density, is fitted to k
 
 Usage: python -I tools/fit_thunder.py [--weather earthdata/weather.bin] [--wglc <rawdata>/wglc/wglc_climatology_30m_monthly.nc]
 Prints the constants for src/Core/Thunder.cs and the checks.
+
+Weather rules 7 (EA-0022): the density fit gives the desert Southwest about half its real summer thunder (WGLC's own strokes
+give about the real days there), because a month of 1 mm/day weighs as little rain. The hot dry months' boost
+
+  D' = D * (1 + c * smoothstep(T: t0 -> t0 + 8) * exp(-P / pd))
+
+is fitted with --dry <table> to the monthly share of thunder days (WT03) at US first-order stations (tools/
+ghcnd_weathertypes.py), with the yearly stations above in the fit as well and Dt, b and the density constants kept, so the
+rest of the world keeps its thunder:
+
+  python -I tools/fit_thunder.py --dry tests/out/weather/ghcnd-weathertypes.tsv
 """
 import argparse
 import math
@@ -40,16 +51,14 @@ STATIONS = [
 
 
 def read_weather(path):
-    data = open(path, 'rb').read()
-    assert data[:4] == b'EMWX'
-    version, w, h, months = struct.unpack_from('<iiii', data, 4)
-    raw = brotli.decompress(data[20:])
-    n = w * h
-    planes = np.frombuffer(raw, dtype=np.uint8)
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import planecoding as pc
+    planes, _ = pc.read_weather(path)        # plain or predicted (EA-0077)
+    h, w = planes[0].shape
     lut = np.exp(np.arange(256) / 32.0) - 1
-    precip = lut[planes[:12 * n].reshape(12, h, w)]
-    temp = planes[12 * n:24 * n].reshape(12, h, w) / 2.0 - 50
-    land = planes[24 * n:25 * n].reshape(h, w) / 255.0
+    precip = lut[np.stack(planes[:12])]
+    temp = np.stack(planes[12:24]) / 2.0 - 50
+    land = planes[24] / 255.0
     return precip, temp, land, w // 360
 
 
@@ -146,5 +155,79 @@ def main():
         print('  %-14s %8.0f %8.1f %8.1f %8.2f' % (name, td, days(q, dens), days(q, mod), np.sum(dens * MONTH_DAYS)))
 
 
+# the constants in src/Core/Thunder.cs (the density and the thunder days), which --dry keeps
+DENSITY = [-5.6707, 1.7736, 18.541, 3.772, 7.6689, 1.3957, 0.1827]
+DAYS = (0.0100, 0.8822)
+WEST = ('PHOENIX', 'EL PASO', 'ALBUQUERQUE', 'HARRY REID', 'ELKO', 'SALT LAKE', 'DENVER', 'BOISE')
+
+
+def smoothstep(x, a, b):
+    t = np.clip((x - a) / (b - a), 0, 1)
+    return t * t * (3 - 2 * t)
+
+
+def fit_dry(weather, table):
+    """Rules 7's hot dry months' boost (Core.Thunder.DryFactor), fitted to the US stations' monthly thunder days."""
+    import csv
+    P, T, L, res = read_weather(weather)
+    P, T, L = to_half_degree(P, res), to_half_degree(T, res), to_half_degree(L, res)
+
+    def cell(la, lo_):
+        return int((90 - la) * 2), int((lo_ + 180) * 2) % 720
+
+    us = {}
+    with open(table) as f:
+        for row in csv.DictReader(f, delimiter='	'):
+            us.setdefault(row['name'].split(',')[0], [float(row['lat']), float(row['lon']), np.zeros(12)])[2][int(row['month']) - 1] = float(row['thunder'])
+    obs = []
+    for name, la, lo_, td in STATIONS:
+        i, j = cell(la, lo_)
+        obs.append((name, td, T[:, i, j], P[:, i, j], L[i, j], None))
+    for name, (la, lo_, m) in us.items():
+        if m.sum() == 0 or name.startswith('SEATTLE'):   # Seattle: six years of reports
+            continue
+        i, j = cell(la, lo_)
+        obs.append((name, float(np.sum(m * MONTH_DAYS)), T[:, i, j], P[:, i, j], L[i, j], m))
+
+    def share(q, t, pr, l):
+        c, t0, pd = q
+        dens = model(DENSITY, t, pr, l) * (1 + c * smoothstep(t, t0, t0 + 8) * np.exp(-pr / pd))
+        return 1 - np.exp(-(dens / DAYS[0]) ** DAYS[1])
+
+    def resid(q):
+        out = []
+        for name, td, t, pr, l, m in obs:
+            if name == 'Kampala':
+                continue
+            if m is None:
+                out.append(math.log(np.sum(MONTH_DAYS * share(q, t, pr, l)) + 0.5) - math.log(td + 0.5))
+            else:
+                out += list(2 * (np.log(share(q, t, pr, l) + 0.02) - np.log(m + 0.02)) / math.sqrt(12))
+        return out
+
+    def report(q, label):
+        mae, west = [], []
+        print('%s: DryBoost %.4f  DryWarm %.4f  DryRain %.4f' % (label, *q))
+        for name, td, t, pr, l, m in obs:
+            s = share(q, t, pr, l)
+            line = '  %-22s real %5.0f model %5.0f' % (name[:22], td, np.sum(MONTH_DAYS * s))
+            if m is not None:
+                mae.append(np.abs(s - m).mean())
+                if name.startswith(WEST):
+                    west.append(np.abs(s - m)[5:9].mean())
+                line += '  July real %3.0f %% model %3.0f %%' % (m[6] * 100, s[6] * 100)
+            print(line)
+        print('  US monthly mean error %.3f, the West June-September %.3f' % (np.mean(mae), np.mean(west)))
+
+    report([0, 25, 1], 'rules 6 (no boost)')
+    q = least_squares(resid, [2, 24, 0.7], bounds=([0, 15, .1], [60, 34, 5])).x
+    report(q, 'rules 7')
+
+
 if __name__ == '__main__':
-    main()
+    if '--dry' in sys.argv:
+        k = sys.argv.index('--dry')
+        w = sys.argv[sys.argv.index('--weather') + 1] if '--weather' in sys.argv else 'earthdata/weather.bin'
+        fit_dry(w, sys.argv[k + 1])
+    else:
+        main()

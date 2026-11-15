@@ -38,6 +38,16 @@ namespace EarthMap
         public RegionalOreCatalog Catalog => current?.Catalog;
         public OreTuning Tuning => current?.Tuning;
         internal OreSession Session => current;
+
+        /// <summary>(Decision 0083; FP-02) Earth's ore layer where this world's saved rules use it, off this session (each way it
+        /// goes off logs its own line), for EarthWorldGen's check before the first chunk.</summary>
+        internal void FeaturesOff(EarthParams p, System.Collections.Generic.List<string> off)
+        {
+            if (!p.RegionalOres) return;
+            var s = current;
+            if (s == null) { off.Add("Earth's ore layer (regional ores; its line is above)"); return; }
+            if (s.RulesV4 && s.Deposits == null) off.Add("the ore deposit catalogue of ore rules " + s.Rules + " (its line is above)");
+        }
         internal ILogger Log => Mod.Logger;
         public override double ExecuteOrder() => .40;
         public override bool ShouldLoad(EnumAppSide side) => side == EnumAppSide.Server;
@@ -65,7 +75,7 @@ namespace EarthMap
                     p.DepositSet = set;
                     core.SaveParams();
                 }
-                EarthOreLayers.PruneDeposits(api, api.ModLoader.GetModSystem<GenDeposits>(), api.ModLoader.GetModSystem<EarthGeology>()?.Layers != null, set);
+                EarthOreLayers.PruneDeposits(api, api.ModLoader.GetModSystem<GenDeposits>(), api.ModLoader.GetModSystem<EarthGeology>()?.Layers?.Rules.Version ?? 0, set);
                 if (p?.Enabled == true && set < EarthDepositSet.Version)
                     Mod.Logger.Notification("Earth ores: this world was made before Earth's own ore and gem deposits; they stay out of it, so its other deposits keep their places in new chunks.");
             }
@@ -100,7 +110,7 @@ namespace EarthMap
             string rescaled = SealevelDeposits.Rescale(api, TerraGenConfig.seaLevel);
             if (rescaled != null) Mod.Logger.Warning(rescaled + " (late, at the ore layer)");
             // 0065: rules v4 read the rebaked heat maps when they ship, else v1; older worlds always v1
-            var asset = p.OreRules >= OreBackground.CatalogueRules ? api.Assets.TryGet(new AssetLocation("earth:config/ore-heatmaps-v2.json")) : null;
+            var asset = OreBackground.CatalogueBodies(p.OreRules) ? api.Assets.TryGet(new AssetLocation("earth:config/ore-heatmaps-v2.json")) : null;
             if (asset == null) asset = api.Assets.TryGet(new AssetLocation("earth:config/ore-heatmaps-v1.json"));
             if (asset == null) { Mod.Logger.Error("Earth regional ores: earth:config/ore-heatmaps-v1.json is missing; Earth's ore layer is inactive this session."); return; }
             RegionalOreCatalog catalog;
@@ -252,7 +262,7 @@ namespace EarthMap
 
         /// <summary>Whether a world's ore rules place a deposit catalogue (rules v4), whose bodies need regional geology's hook
         /// after vanilla's deposit pass.</summary>
-        internal static bool OreRulesNeedDepositColumns(int oreRules) => oreRules >= OreBackground.CatalogueRules;
+        internal static bool OreRulesNeedDepositColumns(int oreRules) => OreBackground.CatalogueBodies(oreRules);
 
         /// <summary>
         /// Whether vanilla made new deposit generators since the session bound its own (<paramref name="bound"/>: the list Earth
@@ -289,7 +299,7 @@ namespace EarthMap
         {
             var self = instance;
             if (self == null) return;
-            try { EarthOreLayers.PruneDeposits(self.api, __instance, self.api.ModLoader.GetModSystem<EarthGeology>()?.Layers != null, EarthOreLayers.DepositSetOf(self.core?.Params)); }
+            try { EarthOreLayers.PruneDeposits(self.api, __instance, self.api.ModLoader.GetModSystem<EarthGeology>()?.Layers?.Rules.Version ?? 0, EarthOreLayers.DepositSetOf(self.core?.Params)); }
             catch (Exception e) { self.Mod.Logger.Warning("Earth ores: sorting out Earth's own deposits after the reload failed ({0}).", e.Message); }
             try { if (__instance == self.api.ModLoader.GetModSystem<GenDeposits>()) self.DropDuplicateAuthoredDeposits(__instance); }
             catch (Exception e) { self.Mod.Logger.Warning("Earth ores: checking Earth's own deposits after the reload failed ({0}).", e.Message); }
@@ -345,13 +355,19 @@ namespace EarthMap
         {
             var s = session;
             if (s == null) return;
+            // (FP-13) a chunk in flight after a refusal is noted and stops here
+            EarthWorldGen.ThrowIfRefusedChunk(request.Chunks, request.ChunkX, request.ChunkZ);
+            // (FP-12) generation: this thread may wait for GLO-90 tiles
+            using var fetch = FineElevation.Generating();
             var bauxite = s.Bauxite;
             if (bauxite != null)
             {
                 try { bauxite.Replace(request); }
                 catch (Exception e)
                 {
-                    if (Interlocked.Increment(ref s.StrataErrors) == 1) instance?.Mod.Logger.Error("Earth ores bauxite strata replacement failed; continuing. {0}", e);
+                    // ER-08: refused as the terrain is (the chunk is made again at the next start, the server stops)
+                    Interlocked.Increment(ref s.StrataErrors);
+                    EarthWorldGen.FailedPass("bauxite strata replacement", request.Chunks, request.ChunkX, request.ChunkZ, e);
                 }
             }
             var bodies = s.BodiesAfterStrata;
@@ -360,7 +376,8 @@ namespace EarthMap
                 try { bodies.Place(request); }
                 catch (Exception e)
                 {
-                    if (Interlocked.Increment(ref s.SeamErrors) == 1) instance?.Mod.Logger.Error("Earth ores coal measures failed in a chunk; continuing without them there. {0}", e);
+                    Interlocked.Increment(ref s.SeamErrors);
+                    EarthWorldGen.FailedPass("coal measures", request.Chunks, request.ChunkX, request.ChunkZ, e);
                 }
             }
         }
@@ -374,7 +391,8 @@ namespace EarthMap
             try { d.Place(request); }
             catch (Exception e)
             {
-                if (Interlocked.Increment(ref s.DepositErrors) == 1) instance?.Mod.Logger.Error("Earth ore deposits failed in a chunk; continuing without them there. {0}", e);
+                Interlocked.Increment(ref s.DepositErrors);
+                EarthWorldGen.FailedPass("ore deposits", request.Chunks, request.ChunkX, request.ChunkZ, e);
             }
         }
 
@@ -387,7 +405,8 @@ namespace EarthMap
             try { bodies.Place(request); }
             catch (Exception e)
             {
-                if (Interlocked.Increment(ref s.SeamErrors) == 1) instance?.Mod.Logger.Error("Earth ores coal measures failed in a chunk; continuing without them there. {0}", e);
+                Interlocked.Increment(ref s.SeamErrors);
+                EarthWorldGen.FailedPass("coal measures", request.Chunks, request.ChunkX, request.ChunkZ, e);
             }
         }
 

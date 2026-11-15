@@ -39,7 +39,10 @@ namespace EarthMap.Core
             return string.Join(", ", bad);
         }
 
-        public static EarthGeometry Build(LayoutInput inp, EarthData data, out string report)
+        /// <summary>The layout; <paramref name="data"/> is not read (kept for its callers).</summary>
+        public static EarthGeometry Build(LayoutInput inp, EarthData data, out string report) => Build(inp, out report);
+
+        public static EarthGeometry Build(LayoutInput inp, out string report)
         {
             Sanitize(inp);
             var g = new EarthGeometry

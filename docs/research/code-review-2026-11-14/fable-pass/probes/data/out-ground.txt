@@ -1,0 +1,22 @@
+== global-crust1.egt (GroundTile.ReadAll, then every tile unpacked as a column read would) (54,610 B): unchanged -> ok (1 MB allocated, 15 ms)
+    ~ accepted (no error)  x1   <- minus 1 byte
+      load: ArgumentOutOfRangeException  x1
+      load: FormatException  x8
+      load: InvalidDataException  x4
+      load: InvalidOperationException  x4
+      load: JsonReaderException  x20
+== global-glaciation.egts (GroundTile.ReadAll, then every tile unpacked as a column read would) (138,764 B): unchanged -> ok (40 MB allocated, 28 ms)
+      load: ArgumentOutOfRangeException  x3
+      load: FormatException  x17
+      load: InvalidOperationException  x1
+      load: JsonReaderException  x14
+      load: KeyNotFoundException  x1
+   !! load: OutOfMemoryException  x2   <- int32@4=MAX; garbage (random bytes, same length, magic kept)
+== global-permafrost.egts (GroundTile.ReadAll, then every tile unpacked as a column read would) (1,364,328 B): unchanged -> ok (41 MB allocated, 131 ms)
+      load: ArgumentOutOfRangeException  x3
+      load: FormatException  x17
+      load: JsonReaderException  x12
+   !! load: OutOfMemoryException  x2   <- int32@4=MAX; garbage (random bytes, same length, magic kept)
+   !! use: InvalidDataException  x4   <- 8 body bytes flipped (seed 1); 8 body bytes flipped (seed 2); 8 body bytes flipped (seed 3); 8 body bytes flipped (seed 4)
+lazy set: 152 tiles' headers read from 1,364,328 bytes
+after the file was cut to a third while 'the server ran': 75 tiles still read, 77 throw at first column read; first: FormatException: ground tile global-permafrost +60 +70 is truncated in <user folder>\AppData\Local\Temp\probe-egts-ba5ba357913647d0bd5f2615ce39e1c1.egts

@@ -54,6 +54,25 @@ namespace EarthMap
         /// <summary>VintagestoryData/ModData/earth/glo90: one store per machine, shared by every world (a new world reuses what is here).</summary>
         public static string Folder => Path.Combine(GamePaths.DataPath, "ModData", "earth", "glo90");
 
+        /// <summary>(EA-0106) The release's heights checksum for each square (data/glo90-heights.bin, embedded), or null with an
+        /// error in the log: tiles are then not judged.</summary>
+        Glo90Heights ReleaseHeights(byte[] tileList)
+        {
+            try
+            {
+                using var s = typeof(EarthElevationSystem).Assembly.GetManifestResourceStream(Glo90Heights.ResourceName)
+                    ?? throw new FileNotFoundException("embedded " + Glo90Heights.FileName);
+                using var m = new MemoryStream();
+                s.CopyTo(m);
+                return Glo90Heights.Read(m.ToArray(), tileList);
+            }
+            catch (Exception e) when (e is IOException or InvalidDataException)
+            {
+                Mod.Logger.Error("Earth elevation: the release's heights table can't be read ({0}); GLO-90 tiles are not compared with the release's.", e.Message);
+                return null;
+            }
+        }
+
         /// <summary>The squares GLO-90 has tiles for (data/glo90-tiles.bin, embedded).</summary>
         public static byte[] TileList()
         {
@@ -88,13 +107,26 @@ namespace EarthMap
         {
             if (Fine != null) return;
             var cfg = core?.Config;
-            Fine = new FineElevation(Folder, TileList());
+            byte[] tileList = TileList();
+            Fine = new FineElevation(Folder, tileList);
+            // (EA-0116 D-R3) what a killed process left in the store
+            if (Fine.SweepLeftovers() is int swept and > 0) Mod.Logger.Notification("Earth elevation: {0} file(s) a stopped download left in {1} removed.", swept, Folder);
+            // (Fable's re-review of 90692fe) the release's tiles fetched in an earlier session beside ones that were not the release's
+            var (sameHeights, otherHeights) = Fine.ApplyReplacements(s => Mod.Logger.Warning("Earth elevation: " + s));
+            if (sameHeights + otherHeights > 0)
+                Mod.Logger.Notification("Earth elevation: {0} tile(s) replaced by the release's ({1} with the same heights, {2} with others).", sameHeights + otherHeights, sameHeights, otherHeights);
             // an empty setting means none: the config file's own values decide, the defaults only when the file lacks them
             Downloader = new DemDownloader(Fine, cfg != null ? cfg.ElevationSource : DemDownloader.Glo90Bucket,
                 Math.Clamp(cfg?.ElevationDownloads ?? 3, 1, 8), cfg != null ? cfg.ElevationRepo : DemDownloader.Glo90Repo)
             {
                 Log = s => Mod.Logger.Notification("Earth elevation: " + s),
+                // FP-01: a chunk's wait for a square ends when the server stops, so the generation thread pauses before the
+                // game disposes Earth (EarthWorldGen notes that chunk to be made again)
+                Stopping = () => sapi?.Server?.IsShuttingDown == true || core?.Stopping.IsCancellationRequested == true,
+                // EA-0106 (Fable's re-review of 255baa7): tiles are judged by their heights, on any runtime
+                ReleaseHeights = ReleaseHeights(tileList),
             };
+            if (Downloader.SettingProblem != null) Mod.Logger.Error("Earth elevation: {0}; GLO-90 tiles can't be fetched from there until it is corrected.", Downloader.SettingProblem);
         }
 
         /// <summary>Called by EarthMapSystem once the world's model is built: GLO-90 heights for a world that chose them.</summary>
@@ -103,18 +135,24 @@ namespace EarthMap
             model = terrain;
             if (p.FineElevation < 1) return;
             Ensure();
-            if (p.FineElevation > FineElevation.Version)
-                Mod.Logger.Warning("Earth elevation: this world's GLO-90 rules ({0}) are newer than this build's ({1}); current rules are used.", p.FineElevation, FineElevation.Version);
             byte[] saved = sapi.WorldManager.SaveGame.GetData(FallbackKey);
             int[] keys = saved != null ? SerializerUtil.Deserialize<int[]>(saved) ?? Array.Empty<int>() : Array.Empty<int>();
             Fine.SetFallback(keys);
-            Fine.Fetch = (latS, lonW) => Downloader.AwaitForGeneration(latS, lonW, Downloader.FetchAsync(latS, lonW), GenerationWait);
+            // (EA-0099) a square that just failed is not waited for again until RetryAfter has passed: its chunks fail at once
+            Fine.Fetch = (latS, lonW) => !RecentlyUnavailable(latS, lonW)
+                && Downloader.AwaitForGeneration(latS, lonW, Downloader.FetchAsync(latS, lonW), GenerationWait);
             Fine.FellBack = OnFellBack;
             Fine.Lacks = Downloader.Lacks;
             Fine.FellBackForSession = OnFetchFailed;
-            terrain.FineRules = Math.Min(p.FineElevation, FineElevation.Version);
+            Fine.Unavailable = OnUnavailable;
+            // (EA-0116 S-R1) a world with newer rules than this build's is refused before it gets here
+            terrain.FineRules = p.FineElevation;
             terrain.Fine = Fine;
             WorldUses = true;
+            // EA-0106 (the Fable pass's FP-15): every tile here is compared with the release's heights at its first read in a
+            // session (the table is in the mod: no manifest needed)
+            Fine.Verify = Downloader.KeptMatches;
+            Fine.Replace = Downloader.FetchReplacement;
             if (dams != null) AttachDams(p);
             if (p.LakeOutlines >= 1) AttachLakeOutlines(terrain, p);
             if (p.RiverOutlines >= 1) AttachRiverOutlines(terrain, p);
@@ -136,16 +174,12 @@ namespace EarthMap
 
         // ---- the release files that come with the GLO-90 heights (0053 items 17-19): lake and river outlines, the dam file
 
-        /// <summary>Whether a file's bytes are the ones this build reads (each data class's IsExpected), and if not why.</summary>
-        delegate bool FileCheck(byte[] file, out string why);
-
-        /// <summary>
-        /// How a world uses one of the release files: its save keys and what it has without the file. A world whose source
-        /// answered that it lacks the file when the world first needed it goes without it for good (OffKey), so its chunks
-        /// match each other; any other failure, or a world that has generated with it (OnKey), stops the server (review A3,
-        /// <see cref="Unavailable"/>).
-        /// </summary>
-        sealed record ReleaseFileUse(string Label, string OnKey, string OffKey, string With, string Without);
+        /// <summary>The release files' start-up policy (Core.ReleaseFiles, EA-0088) on this world's save, folder and release.</summary>
+        ReleaseFiles Files => new ReleaseFiles(k => sapi.WorldManager.SaveGame.GetData(k), (k, v) => sapi.WorldManager.SaveGame.StoreData(k, v), Folder,
+            () => Downloader.Repo,
+            (string name, string path, long bytes, string sha256, out string error, out bool lacking)
+                => Downloader.FetchFile(name, path, bytes, sha256, out error, out lacking, core?.Stopping ?? default),
+            m => Mod.Logger.Notification("{0}", m), m => Mod.Logger.Warning("{0}", m));
 
         /// <summary>Save data: this world keeps the grid's lakes for good (0053 item 17: the lake outlines' file couldn't be had
         /// the first time the world needed it), so its chunks match each other.</summary>
@@ -178,70 +212,28 @@ namespace EarthMap
             "this world has the modern dams taken out", "GLO-90's modern dams and reservoir floors");
 
         /// <summary>Whether this world goes without the file for good (logged).</summary>
-        bool KeptWithout(ReleaseFileUse use, string name)
-        {
-            if (sapi.WorldManager.SaveGame.GetData(use.OffKey) == null) return false;
-            Mod.Logger.Notification("{0}: this world keeps {1} ({2} couldn't be used when it first needed it).", use.Label, use.Without, name);
-            return true;
-        }
+        bool KeptWithout(ReleaseFileUse use, string name) => Files.KeptWithout(use, name);
+
+        /// <summary>A release file from the GLO-90 folder, fetched from Earth's data release when it is missing or not the one this
+        /// build reads (ReleaseFiles.Obtain); null, with the reason, when it can't be had.</summary>
+        byte[] ReleaseFile(ReleaseFileUse use, string name, long bytes, string sha256, ReleaseFiles.FileCheck check, out string why, out bool lacking)
+            => Files.Obtain(use, name, bytes, sha256, check, out why, out lacking);
 
         /// <summary>
-        /// A release file from the GLO-90 folder, fetched from Earth's data release (blocking: before any chunk) when it is
-        /// missing or not the one this build reads; null, with the reason, when it can't be had. <paramref name="lacking"/>:
-        /// whether that is for good (review A3): no release is set, the release answered that it doesn't have the file, or the
-        /// file it has isn't one this build reads; not a network error or a download that didn't check out.
-        /// </summary>
-        byte[] ReleaseFile(ReleaseFileUse use, string name, long bytes, string sha256, FileCheck check, out string why, out bool lacking)
-        {
-            lacking = false;
-            string path = Path.Combine(Folder, name);
-            byte[] file = null;
-            try { if (File.Exists(path)) file = File.ReadAllBytes(path); } catch (Exception e) { Mod.Logger.Warning("{0}: {1}: {2}", use.Label, path, e.Message); }
-            if (check(file, out why)) return file;
-            if (file != null) Mod.Logger.Warning("{0}: {1} isn't the file this build reads ({2}); fetching it again.", use.Label, path, why);
-            if (Downloader.Repo == null) { why = "no data release set (ElevationRepo)"; lacking = true; return null; }
-            Mod.Logger.Notification("{0}: fetching {1} ({2:F1} MB) from {3}.", use.Label, name, bytes / 1e6, Downloader.Repo);
-            if (!Downloader.FetchFile(name, path, bytes, sha256, out string error, out lacking)) { why = error; return null; }
-            try { file = File.ReadAllBytes(path); }
-            catch (Exception e) when (e is IOException or UnauthorizedAccessException) { why = e.Message; return null; }
-            if (check(file, out why)) return file;
-            lacking = true;   // fetched and checked against the release, yet not a file this build reads
-            return null;
-        }
-
-        /// <summary>
-        /// The file can't be had or used. A world that never generated with it goes without it for good only when that is the
-        /// source's answer (<paramref name="lacking"/>; its chunks then all match). Otherwise the server stops, nothing saved
-        /// (review A3): a failure that may pass (the network) must not become the world's choice for good, and a world that
-        /// has generated with the file must not go on without it (its new chunks would differ from the rest).
+        /// The file can't be had or used: the world goes without it for good, or the server stops, nothing saved (review A3;
+        /// ReleaseFiles.Unavailable says which).
         /// </summary>
         void Unavailable(ReleaseFileUse use, string name, string why, bool lacking)
         {
-            var save = sapi.WorldManager.SaveGame;
-            bool used = save.GetData(use.OnKey) != null;
-            if (!used && lacking)
-            {
-                save.StoreData(use.OffKey, System.Text.Encoding.UTF8.GetBytes(why ?? "missing"));
-                Mod.Logger.Warning("{0}: {1} can't be used ({2}); this world keeps {3} for good, so its chunks match.", use.Label, name, why, use.Without);
-                return;
-            }
-            string message = used
-                ? string.Format("{0}: {1}, but {2} can't be had now ({3}). The server stops, so that no chunk of this world gets {4}; put the file in {5} " +
-                    "(from {6}), or let the server reach it, and start again.", use.Label, use.With, name, why, use.Without, Folder, Downloader?.Repo ?? DemDownloader.Glo90Repo)
-                : string.Format("{0}: {1} could not be fetched ({2}) while the world starts. The server stops (nothing is saved), so that a failure " +
-                    "that may pass doesn't leave this world with {3} for good; start again once the server reaches {4}, or put the file in {5}.",
-                    use.Label, name, why, use.Without, Downloader?.Repo ?? DemDownloader.Glo90Repo, Folder);
-            Mod.Logger.Error("{0}", message);
+            string stop = Files.Unavailable(use, name, why, lacking, Downloader?.Repo ?? DemDownloader.Glo90Repo);
+            if (stop == null) return;
+            Mod.Logger.Error("{0}", stop);
             sapi.Server.ShutDown();
-            throw new InvalidOperationException(message);
+            throw new InvalidOperationException(stop);
         }
 
         /// <summary>The world generates with the file from now on.</summary>
-        void Used(ReleaseFileUse use)
-        {
-            var save = sapi.WorldManager.SaveGame;
-            if (save.GetData(use.OnKey) == null) save.StoreData(use.OnKey, new byte[] { 1 });
-        }
+        void Used(ReleaseFileUse use) => Files.Used(use);
 
         /// <summary>
         /// 0053 item 17: the water mask's lake outlines for a world that has them (EarthParams.LakeOutlines). Without the file
@@ -253,8 +245,6 @@ namespace EarthMap
             int version = Math.Clamp(p.LakeOutlines, 1, LakeOutlineData.FileVersion);
             string name = LakeOutlineData.FileNameFor(version);
             if (KeptWithout(LakeOutlinesUse, name)) return;
-            if (p.LakeOutlines > LakeOutlineData.FileVersion)
-                Mod.Logger.Warning("Earth lakes: this world's lake outlines ({0}) are newer than this build's ({1}); this build's are used.", p.LakeOutlines, LakeOutlineData.FileVersion);
             byte[] file = ReleaseFile(LakeOutlinesUse, name, LakeOutlineData.FileBytesFor(version), LakeOutlineData.FileSha256For(version),
                 (byte[] f, out string w) => LakeOutlineData.IsExpected(version, f, out w), out string why, out bool lacking);
             if (file == null) { Unavailable(LakeOutlinesUse, name, why, lacking); return; }
@@ -275,8 +265,6 @@ namespace EarthMap
             if (version >= 2 && sapi.WorldManager.SaveGame.GetData(DamsOffKey) != null) version = 1;
             string name = RiverOutlineData.FileName(version);
             if (KeptWithout(RiverOutlinesUse, name)) return;
-            if (p.RiverOutlines > RiverOutlineData.FileVersion)
-                Mod.Logger.Warning("Earth rivers: this world's river outlines ({0}) are newer than this build's ({1}); this build's are used.", p.RiverOutlines, RiverOutlineData.FileVersion);
             byte[] file = ReleaseFile(RiverOutlinesUse, name, RiverOutlineData.FileBytes(version), RiverOutlineData.FileSha256(version),
                 (byte[] f, out string w) => RiverOutlineData.IsExpected(version, f, out w), out string why, out bool lacking);
             if (file == null) { Unavailable(RiverOutlinesUse, name, why, lacking); return; }
@@ -296,7 +284,7 @@ namespace EarthMap
         public DamRemovalData Dams => dams;
 
         /// <summary>
-        /// 0053 item 19 (proposed): the dam file for a world that takes the modern dams out (EarthParams.DamRules). Called
+        /// 0053 item 19: the dam file for a world that takes the modern dams out (EarthParams.DamRules). Called
         /// before the world's model is built, which sets the file's river course levels (AttachServer then gives its heights
         /// to the GLO-90 tiles). Null: GLO-90's dams stay (ReleaseFileUse).
         /// </summary>
@@ -309,8 +297,6 @@ namespace EarthMap
             int rules = Math.Min(p.DamRules, DamRemovalData.NewestRules);
             string name = DamRemovalData.FileNameFor(rules);
             if (KeptWithout(DamsUse, name)) return null;
-            if (p.DamRules > DamRemovalData.NewestRules)
-                Mod.Logger.Warning("Earth dams: this world's dam rules ({0}) are newer than this build's ({1}); this build's are used.", p.DamRules, DamRemovalData.NewestRules);
             byte[] file = ReleaseFile(DamsUse, name, DamRemovalData.FileBytesFor(rules), DamRemovalData.FileSha256For(rules),
                 (byte[] f, out string w) => DamRemovalData.IsExpected(f, rules, out w), out string why, out bool lacking);
             if (file == null) { Unavailable(DamsUse, name, why, lacking); return null; }
@@ -321,6 +307,9 @@ namespace EarthMap
         }
 
         RiverFlowData flow;
+        /// <summary>The flow file this world's river courses were rerouted with (EarthParams.RiverSourceAsBuilt), for the river
+        /// audit; null when the world's rules read none or it is kept without it this session.</summary>
+        public RiverFlowData Flow => flow;
 
         /// <summary>
         /// Decision 0069: the river flow file for a world whose rules read it (EarthParams.FlowRules), before the model is
@@ -334,8 +323,6 @@ namespace EarthMap
             Ensure();
             string name = RiverFlowData.FileName;
             if (KeptWithout(FlowUse, name)) return null;
-            if (p.FlowRules > RiverFlowData.FileVersion)
-                Mod.Logger.Warning("Earth river flow: this world's flow rules ({0}) are newer than this build's ({1}); this build's are used.", p.FlowRules, RiverFlowData.FileVersion);
             byte[] file = ReleaseFile(FlowUse, name, RiverFlowData.FileBytes, RiverFlowData.FileSha256, RiverFlowData.IsExpected, out string why, out bool lacking);
             if (file == null) { Unavailable(FlowUse, name, why, lacking); return null; }
             // (checked against the release and still unreadable: a property of the file, not a failure that may pass)
@@ -372,11 +359,54 @@ namespace EarthMap
         /// <summary>Whether the game runs (RunGame): before, nothing of the world is saved yet.</summary>
         bool running;
 
+        // ---- EA-0099 (the Fable pass's FP-03): a square that can't be had while the game runs
+
+        /// <summary>The squares that couldn't be fetched while the game runs: when each is tried again, when the players were
+        /// told (Core.UnavailableSquares, EA-0088).</summary>
+        readonly UnavailableSquares squares = new();
+
+        bool RecentlyUnavailable(int latS, int lonW) => running && squares.Recently(FineElevation.Key(latS, lonW), Environment.TickCount64);
+
+        /// <summary>
+        /// EA-0099, option (a), the author's decision (14 November 2026), taken knowing that the chunks left unmade are open
+        /// holes a player can fall into and that anything built in them is deleted when they are made at the next start; no
+        /// placeholder floor. While the game runs, a chunk whose GLO-90 square can't be fetched
+        /// now is not made. The chunk's terrain pass throws <see cref="TileUnavailableException"/>; EarthWorldGen notes the
+        /// chunk, the game saves it empty, and it is made again at the next start, when the square can be had. Before, it was
+        /// made on the built-in heights and met later GLO-90 chunks with a step for good. The players are told, once in a while
+        /// per square; the square is tried again after UnavailableSquares.RetryAfter. Before the game runs nothing changes: the
+        /// fallback's handler (<see cref="OnFetchFailed"/>) stops the server.
+        /// </summary>
+        bool OnUnavailable(int latS, int lonW)
+        {
+            if (!running) return false;
+            // (Fable's re-review of f55cba9) the wait starts from a fetch that failed; a chunk that only found the square
+            // recently failed doesn't push the next try out again (UnavailableSquares.Failed)
+            string square = DemTiles.ShortName(latS, lonW);
+            if (squares.Failed(FineElevation.Key(latS, lonW), Environment.TickCount64))
+            {
+                Mod.Logger.Warning("Earth elevation: GLO-90 tile {0} could not be fetched now (see the lines above). Chunks there are not made in this " +
+                    "session: they stay empty and are made at the next start, once the tile is here. Tried again in {1} minutes.", square, UnavailableSquares.RetryAfter.TotalMinutes);
+                // (Fable's re-review of f55cba9; the author's decision, 14 November 2026) said plainly: the chunks there are open
+                // holes until the next start, and anything built in them is deleted when they are made
+                string chat = "Earth: the land of " + square + " (" + latS + "\u00b0 to " + (latS + 1) + "\u00b0 latitude, " + lonW + "\u00b0 to " + (lonW + 1) +
+                    "\u00b0 longitude) can't be made yet: its height data could not be downloaded. Chunks there are left as empty holes " +
+                    "with nothing to stand on: keep away from them and don't build there. They are made when the world is next started " +
+                    "with the data here, and anything built in them is deleted then.";
+                sapi.Event.EnqueueMainThreadTask(() => sapi.SendMessageToGroup(GlobalConstants.GeneralChatGroup, chat, EnumChatType.Notification), "earth-tile-unavailable");
+            }
+            if (FineElevation.InChunkPass)
+                throw new TileUnavailableException(latS, lonW, "GLO-90 tile " + square + " could not be fetched; the chunk is made again at the next start");
+            // a read outside a chunk pass (a map region, the map layers: the game doesn't guard them): the built-in heights for
+            // this read, and the square stays one to fetch
+            return true;
+        }
+
         /// <summary>
         /// Review A3: a square whose tile couldn't be fetched now (the network, a download that didn't check out, the disk), not
         /// one the sources lack. Nothing is saved: before the game runs (the spawn chunks) the server stops, so the world opens
-        /// as it was at the next start; while it runs, the square takes the built-in heights for this session only, said once,
-        /// and is fetched again at the next start.
+        /// as it was at the next start. While it runs (EA-0099) generation never gets here: <see cref="OnUnavailable"/> throws
+        /// first; a reader that isn't generation takes the built-in heights there for this session, said once.
         /// </summary>
         void OnFetchFailed(int latS, int lonW)
         {
@@ -390,8 +420,8 @@ namespace EarthMap
                 sapi.Server.ShutDown();
                 throw new InvalidOperationException(message);
             }
-            Mod.Logger.Warning("Earth elevation: GLO-90 tile {0} could not be fetched now (see the lines above); chunks generated in that square " +
-                "in this session take the built-in heights and may meet later ones with a step. It is fetched again at the next start.", square);
+            Mod.Logger.Warning("Earth elevation: GLO-90 tile {0} could not be fetched now (see the lines above); what is read there outside chunk " +
+                "generation takes the built-in heights in this session. It is fetched again at the next start.", square);
         }
 
         /// <summary>
@@ -402,14 +432,53 @@ namespace EarthMap
         {
             if (!WorldUses || model == null) return;
             FineElevation.FetchAllowed = true;
-            var waits = new List<(int latS, int lonW, Task<bool> task)>();
+            // (W-P4) the list only where a square is still to come: most chunks have all theirs
+            List<(int latS, int lonW, Task<bool> task)> waits = null;
+            (int latS, int lonW)? recent = null;
             foreach (var (latS, lonW) in ChunkSquares(chunkX, chunkZ))
                 if (Fine.SourceHas(latS, lonW) && !Fine.IsFallback(latS, lonW) && !Fine.IsHere(latS, lonW))
-                    waits.Add((latS, lonW, Downloader.FetchAsync(latS, lonW)));
+                {
+                    // (EA-0099) one that failed a moment ago: not waited for again yet
+                    if (RecentlyUnavailable(latS, lonW)) recent ??= (latS, lonW);
+                    else (waits ??= new List<(int latS, int lonW, Task<bool> task)>()).Add((latS, lonW, Downloader.FetchAsync(latS, lonW)));
+                }
+            if (recent.HasValue) OnUnavailable(recent.Value.latS, recent.Value.lonW);   // throws (PrepareChunk runs in the terrain pass)
+            if (waits == null) return;
             // CR-D2: the squares are waited for in turn, all fetched at once: one backstop for the chunk, not one more per square
             long since = Environment.TickCount64;
             foreach (var (latS, lonW, task) in waits)
-                if (!Downloader.AwaitForGeneration(latS, lonW, task, GenerationWait, since)) Fine.MarkFallback(latS, lonW, Downloader.Lacks(latS, lonW));
+                if (!Downloader.AwaitForGeneration(latS, lonW, task, GenerationWait, since))
+                {
+                    bool lacks = Downloader.Lacks(latS, lonW);
+                    // (EA-0099) while the game runs a failure that may pass leaves the chunk unmade (throws) rather than a fallback
+                    if (lacks || !OnUnavailable(latS, lonW)) Fine.MarkFallback(latS, lonW, lacks);
+                }
+        }
+
+        /// <summary>For a command on the main thread, which may not wait for a tile (ER-30): the download of the GLO-90 square at
+        /// a place where this world reads GLO-90 and the tile isn't on this machine yet; null where there is nothing to fetch.</summary>
+        public Task<bool> FetchSquareAt(double lat, double lon)
+        {
+            if (!WorldUses || Fine == null || Downloader == null) return null;
+            var (latS, lonW) = SquareOf(lat, lon);
+            if (!Fine.SourceHas(latS, lonW) || Fine.IsFallback(latS, lonW) || Fine.IsHere(latS, lonW)) return null;
+            return Downloader.FetchAsync(latS, lonW);
+        }
+
+        /// <summary>The GLO-90 square holding a place (its south-west corner).</summary>
+        static (int LatS, int LonW) SquareOf(double lat, double lon)
+            => (Math.Clamp((int)Math.Ceiling(lat) - 1, -90, 89), Math.Clamp((int)Math.Floor(Geo.Wrap180(lon)), -180, 179));
+
+        /// <summary>The GLO-90 square's name at a place (N61E006).</summary>
+        public static string SquareNameAt(double lat, double lon) { var (latS, lonW) = SquareOf(lat, lon); return DemTiles.ShortName(latS, lonW); }
+
+        /// <summary>(EA-0121) After a fetch of <see cref="FetchSquareAt"/> ended: whether the sources answered that they lack the
+        /// square (it keeps the built-in heights for good), and the downloader's last reason for a failure there.</summary>
+        public (bool Lacks, string Why) FetchOutcomeAt(double lat, double lon)
+        {
+            if (Downloader == null) return (false, null);
+            var (latS, lonW) = SquareOf(lat, lon);
+            return (Downloader.Lacks(latS, lonW), Downloader.WhyFailed(latS, lonW));
         }
 
         /// <summary>
@@ -422,15 +491,20 @@ namespace EarthMap
         /// </summary>
         TimeSpan GenerationWait => running ? TimeSpan.FromMinutes(2) : System.Threading.Timeout.InfiniteTimeSpan;
 
+        [ThreadStatic] static HashSet<(int, int)> chunkSquares;
+
         /// <summary>The GLO-90 squares under a chunk and a 64-block margin, the ones PrepareChunk has here before the chunk's
         /// columns are made.</summary>
+        /// <remarks>(W-P4) One set per thread, cleared on each call: both callers read it at once and keep nothing.</remarks>
         HashSet<(int, int)> ChunkSquares(int chunkX, int chunkZ)
         {
             const int margin = 64;
             double x0 = chunkX * 32 - margin, z0 = chunkZ * 32 - margin, x1 = chunkX * 32 + 32 + margin, z1 = chunkZ * 32 + 32 + margin;
-            var squares = new HashSet<(int, int)>();
-            foreach (var (x, z) in new[] { (x0, z0), (x1, z0), (x0, z1), (x1, z1) })
+            var squares = chunkSquares ??= new HashSet<(int, int)>();
+            squares.Clear();
+            for (int corner = 0; corner < 4; corner++)
             {
+                double x = (corner & 1) == 0 ? x0 : x1, z = (corner & 2) == 0 ? z0 : z1;
                 var g = model.Geometry.ToGeo(model.RealSeam ? model.Geometry.WrapX(x) : x, z);
                 if (g.InGutter) continue;
                 const double spare = 1.0 / DemTiles.Glo90Rows;
@@ -472,7 +546,7 @@ namespace EarthMap
                         if (g.InGutter) continue;
                         int latS = Math.Clamp((int)Math.Ceiling(g.Lat) - 1, -90, 89), lonW = Math.Clamp((int)Math.Floor(g.Lon), -180, 179);
                         if (!Fine.SourceHas(latS, lonW) || Fine.IsFallback(latS, lonW) || Fine.IsHere(latS, lonW)) continue;
-                        int key = latS * 360 + lonW;
+                        int key = FineElevation.Key(latS, lonW);   // (EA-0092 A4) the one key for a square
                         long now = Environment.TickCount64;
                         if (prefetchFailed.TryGetValue(key, out var failed) && now < failed.retryAt) continue;
                         // CR-D3: while a square's fetch runs, FetchAsync hands every tick and every player the same task, and
@@ -542,7 +616,9 @@ namespace EarthMap
                 ElapsedMinutes = b == null ? 0 : ((b.Running || b.Ended == default ? DateTime.UtcNow : b.Ended) - b.Started).TotalMinutes,
                 CanControl = canControl,
                 FreeBytes = free,
-                Message = message,
+                // (the release's bench check) a refused download all stays said in the dialog, which asks for a fresh status as it
+                // opens and every 2 s: before, only the chat line kept the reason
+                Message = message ?? (canControl ? RefusedText : null),
                 SourceBytes = DemDownloader.Glo90SourceBytes,
                 StoredBytes = DemDownloader.Glo90StoredBytes,
                 // the admin's earth.json settings (local paths, a private mirror): for whoever controls the server only (CR-D6)
@@ -562,6 +638,8 @@ namespace EarthMap
             if (req.Action == "start" || req.Action == "cancel")
             {
                 if (!control) message = "Only a player with the server's control privilege can start or stop the download.";
+                // (EA-0116 D-L6) as /earth elevation download does: not in a world that doesn't read GLO-90
+                else if (req.Action == "start" && !WorldUses) message = "This world doesn't read GLO-90 (it isn't an Earth world, or one on the built-in heights); nothing to download.";
                 else message = req.Action == "start"
                     ? StartAll(player.PlayerName, req.From == "copernicus" ? DemDownloader.Origin.Copernicus : DemDownloader.Origin.Repo)
                     : CancelAll(player.PlayerName);
@@ -575,6 +653,9 @@ namespace EarthMap
             var c = Census();
             string origin = from == DemDownloader.Origin.Repo ? Downloader.Repo : Downloader.Source;
             if (origin == null) return from == DemDownloader.Origin.Repo ? "This server has no data release set (ElevationRepo)." : "This server has no Copernicus source set (ElevationSource).";
+            // EA-0100: not without room for the squares still missing (the release's average size) beyond the reserve
+            long missing = (long)(DemDownloader.Glo90StoredBytes * Math.Max(0, c.source - c.here) / (double)Math.Max(1, c.source));
+            if (Downloader.RoomFor(missing) is string room) return "Not started: " + room + ". Free some space, or keep the heights downloaded as needed.";
             if (!Downloader.StartAll(Math.Clamp(core?.Config?.ElevationDownloads ?? 3, 1, 8), from)) return "The download is already running.";
             Mod.Logger.Notification("Earth elevation: download all started by {0}: {1} of {2} squares already here, from {3} into {4}.",
                 who, c.here, c.source, origin, Folder);
@@ -595,6 +676,14 @@ namespace EarthMap
         /// <summary>Save data: how the Earth tab's download all ended in this world ("done" or "stopped").</summary>
         public const string AutoDownloadKey = "earth-glo90-download-all";
         bool autoRunning, stopAsked;
+        /// <summary>(Fable's overview low 6) Why this opening's download all was not started (no room, no source), for the
+        /// players who can act on it; null when it started or wasn't asked.</summary>
+        string autoRefused;
+
+        /// <summary>What a player who can act is told of a refused download all, in chat and in the dialog's status; null when
+        /// none was refused, or a download was started by hand since.</summary>
+        string RefusedText => autoRefused == null || Downloader?.All != null ? null
+            : "This world's Earth tab asks for every GLO-90 square. " + autoRefused + " It is asked again each time the world opens.";
 
         /// <summary>
         /// The Earth tab's GLO-90 land heights set to "Download all": the download starts when the world opens, since the world
@@ -615,7 +704,11 @@ namespace EarthMap
             if (c.here >= c.source) { MarkAutoDownload("done"); return; }
             string result = StartAll("this world's Earth tab", from == "copernicus" ? DemDownloader.Origin.Copernicus : DemDownloader.Origin.Repo);
             autoRunning = Downloader.All?.Running == true;
-            if (!autoRunning) Mod.Logger.Warning("Earth elevation: the Earth tab asks to download all GLO-90 squares, but: {0}", result);
+            if (!autoRunning)
+            {
+                autoRefused = result;
+                Mod.Logger.Warning("Earth elevation: the Earth tab asks to download all GLO-90 squares, but: {0}", result);
+            }
         }
 
         void AutoDownloadEnded()
@@ -637,7 +730,19 @@ namespace EarthMap
 
         void OnNowPlaying(IServerPlayer player)
         {
-            if (!autoRunning || Downloader?.All?.Running != true || !player.HasPrivilege(Privilege.controlserver)) return;
+            if (!player.HasPrivilege(Privilege.controlserver)) return;
+            // (Fable's overview low 6, 14 November 2026) a download all the Earth tab asked for and this opening refused (no
+            // room beyond the reserve, no source set) was said only in the server log, at every opening: whoever can act on it
+            // is told in chat and gets the dialog, unless a download was started by hand since
+            if (RefusedText is string text)
+            {
+                player.SendMessage(GlobalConstants.GeneralChatGroup, "Earth elevation: " + text + " (.earthelevation opens the dialog)", EnumChatType.Notification);
+                var refused = Status(true, text);
+                refused.Open = true;
+                serverChannel.SendPacket(refused, player);
+                return;
+            }
+            if (!autoRunning || Downloader?.All?.Running != true) return;
             var s = Status(true, "This world's Earth tab asked for every GLO-90 square. You can play meanwhile.");
             s.Open = true;
             serverChannel.SendPacket(s, player);
@@ -807,6 +912,18 @@ namespace EarthMap
             "Copernicus originals (Amazon S3, 71 GB, converted here)",
         };
 
+        /// <summary>The sources as offered, saying which one this server has no address for (earth.json's ElevationRepo or
+        /// ElevationSource empty; known only to a player who can control the server, CR-D6).</summary>
+        static string[] SourceNames(ElevationStatus s)
+        {
+            if (s?.CanControl != true) return FromNames;
+            return new[]
+            {
+                s.Repo == null ? "Earth's data release (not set on this server: ElevationRepo)" : FromNames[0],
+                s.Source == null ? "Copernicus originals (not set on this server: ElevationSource)" : FromNames[1],
+            };
+        }
+
         public override string ToggleKeyCombinationCode => null;
 
         public ElevationDialog(ICoreClientAPI capi, Action<string, string> send, Action closed) : base(capi)
@@ -858,7 +975,7 @@ namespace EarthMap
                     .AddDynamicText(s == null ? "Asking the server..." : ElevationStatus.Describe(s) + (s.Message != null ? "\n" + s.Message : ""),
                         CairoFont.WhiteSmallText(), status, "status")
                     .AddStaticText("Download from", CairoFont.WhiteSmallText(), fromLabel)
-                    .AddDropDown(FromCodes, FromNames, Math.Max(0, Array.IndexOf(FromCodes, from)), (code, selected) =>
+                    .AddDropDown(FromCodes, SourceNames(s), Math.Max(0, Array.IndexOf(FromCodes, from)), (code, selected) =>
                         {
                             from = code;
                             SingleComposer?.GetDynamicText("explain")?.SetNewText(Explain());

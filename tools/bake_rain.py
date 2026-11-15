@@ -24,9 +24,10 @@ All 43200 x 20880 pixels, rows from 84 N to 90 S. The planes are read in strips 
 Karger, D.N. et al. (2017): Climatologies at high resolution for the earth's land surface areas. Scientific Data 4,
 170122; Karger, D.N. et al. (2021), Version 2.1, EnviDat, https://doi.org/10.16904/envidat.228.v2.1. CC BY 4.0.
 
-rain.bin (little-endian): header EMRN, version 1, width 10800, height 5400, tile 180, tile count 1800, then (offset,
-length) per tile (row-major from the north-west) and the tiles: brotli of three tile x tile u8 planes, rain
-(clip(round(rain), 0, 255)), dryness (clip(round(dry x 255), 0, 255)) and a data mask (1 = data). A cell needs at least 4
+rain.bin (little-endian): header EMRN, version 1 (with predicted planes, tools/planecoding.py: 1 | 1 << 16), width 10800,
+height 5400, tile 180, tile count 1800, then (offset, length) per tile (row-major from the north-west) and the tiles:
+three tile x tile u8 planes, rain (clip(round(rain), 0, 255)), dryness (clip(round(dry x 255), 0, 255)) and a data mask
+(1 = data), as predicted planes (EA-0077; plain brotli of the planes before 2.0.0-rc.14). A cell needs at least 4
 of its 16 pixels with data; a tile without any data has length 0. Cell (r, c) is centred at lat 90 - (r + 0.5) / 30,
 lon -180 + (c + 0.5) / 30, as temperature.bin. CHELSA covers the sea too, so the mask is 0 only north of 84 N.
 
@@ -35,9 +36,11 @@ lon -180 + (c + 0.5) / 30, as temperature.bin. CHELSA covers the sea too, so the
 import os, re, struct, sys, time
 from concurrent.futures import ThreadPoolExecutor
 
-import brotli
 import numpy as np
 import tifffile
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import planecoding as pc
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "earthdata")
@@ -203,26 +206,14 @@ def bake(tas_dir=TAS, bio_dir=BIO):
 
 def write(rain_c, dry_c, mask):
     H, W = mask.shape
-    blobs = []
+    tiles = []
     for ty in range(H // TILE):
         for tx in range(W // TILE):
             sl = (slice(ty * TILE, (ty + 1) * TILE), slice(tx * TILE, (tx + 1) * TILE))
-            if not mask[sl].any():
-                blobs.append(b"")
-                continue
-            raw = rain_c[sl].tobytes() + dry_c[sl].tobytes() + mask[sl].tobytes()
-            blobs.append(brotli.compress(raw, quality=11, lgwin=24))
+            tiles.append([rain_c[sl], dry_c[sl], mask[sl]] if mask[sl].any() else None)
     path = os.path.join(OUT, "rain.bin")
-    with open(path, "wb") as f:
-        f.write(b"EMRN")
-        f.write(struct.pack("<iiiii", 1, W, H, TILE, len(blobs)))
-        off = 4 + 20 + 8 * len(blobs)
-        for b in blobs:
-            f.write(struct.pack("<ii", off, len(b)))
-            off += len(b)
-        for b in blobs:
-            f.write(b)
-    log(f"rain.bin {os.path.getsize(path) / 1e6:.2f} MB, {len(blobs)} tiles, {sum(1 for b in blobs if not b)} empty")
+    pc.write_tiled(path, "EMRN", 1, W, H, TILE, tiles, [pc.U8] * 3)
+    log(f"rain.bin {os.path.getsize(path) / 1e6:.2f} MB, {len(tiles)} tiles, {sum(1 for t in tiles if t is None)} empty")
 
 
 PLACES = [

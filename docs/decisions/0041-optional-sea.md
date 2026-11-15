@@ -1,5 +1,7 @@
 # 0041 — Sea is strongly recommended and optional
 
+Status: built in 0.17.0-pre.16; in Earth 1.0.0 and 2.0.0. The two data packs it kept required are superseded by 0066 (one mod, data from GitHub).
+
 Author direction, 31 October 2026, boat compatibility chat: **Make Sea optional.** This supersedes decision 0038's
 Sea requirement. Cylinder World, Hydrology's river-query contract and the two content data packs remain required.
 

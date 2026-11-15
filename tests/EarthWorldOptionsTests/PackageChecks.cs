@@ -10,7 +10,7 @@ using System.Text.Json;
 static class PackageChecks
 {
     /// <summary>The data files inside the mod: what a client reads, and a few small server files.</summary>
-    static readonly string[] InZip = { "earth.json", "climate.bin", "climatefix.bin", "climatefix2.bin", "climatefix3.bin", "temperature.bin", "rain.bin", "weather.bin", "aridity.bin" };
+    static readonly string[] InZip = { "earth.json", "climate.bin", "climatefix.bin", "climatefix2.bin", "climatefix3.bin", "climatefix4.bin", "temperature.bin", "rain.bin", "weather.bin", "weatherground.bin", "aridity.bin" };
 
     public static void Run(string root, Action<bool, string> check)
     {
@@ -56,15 +56,35 @@ static class PackageChecks
             File.WriteAllText(EarthDataStore.PathOf(store, "shores.bin") + ".part", "half a download");
             EarthDataStore.Ensure(store, new[] { EarthDataStore.FromPack(pack) }, null, null, default, new[] { shores });
             check(File.ReadAllText(EarthDataStore.PathOf(store, "shores.bin") + ".part") == "half a download", "A wrong local copy leaves a cut-short download alone");
-            // a file changed on disk after its check is not trusted (no stamps: every start hashes)
+            // a file changed on disk after its check is not trusted (no stamps: Missing hashes, and every read checks the hash)
             File.WriteAllBytes(EarthDataStore.PathOf(store, "lakes.bin"), new byte[lakes.Bytes]);
             check(EarthDataStore.Missing(store, new[] { lakes }).Count == 1, "A same-size changed file counts as missing");
             check(EarthDataStore.Open(store, "not-listed.bin") == null && EarthDataStore.Open(store, "shores.bin") == null, "Only listed files that are there open");
+            // (EA-0092 A6) the start looks at sizes only; the hash is checked in the read that loads a file: the same-size
+            // changed lakes.bin passes Ensure, and its read refuses it and sets it aside; with a repair it is fetched again
+            // (here: copied from the pack) and the read goes on with the release's bytes
+            check(EarthDataStore.Ensure(store, null, null, null, default, new[] { lakes }), "A6: the start's check is the size only");
+            string refused = null;
+            try { using var damaged = EarthDataStore.Open(store, "lakes.bin"); } catch (InvalidDataException e) { refused = e.Message; }
+            check(refused != null && refused.Contains("lakes.bin") && !File.Exists(EarthDataStore.PathOf(store, "lakes.bin")) && File.Exists(EarthDataStore.PathOf(store, "lakes.bin") + ".bad"),
+                "A6: a damaged file's read refuses it and sets it aside (" + refused + ")");
+            File.WriteAllBytes(EarthDataStore.PathOf(store, "lakes.bin"), new byte[lakes.Bytes]);
+            string repaired = null;
+            EarthDataStore.Repair = name => { repaired = name; return EarthDataStore.Ensure(store, new[] { EarthDataStore.FromPack(pack) }, null, null, default, new[] { lakes }); };
+            try
+            {
+                using var good = EarthDataStore.Open(store, "lakes.bin");
+                var bytes = EarthBinary.ReadAll(good);
+                check(repaired == "lakes.bin" && DataTransport.HashMatches(bytes, lakes.Sha256) && DataTransport.FileMatches(EarthDataStore.PathOf(store, "lakes.bin"), lakes.Bytes, lakes.Sha256),
+                    "A6: with a repair the damaged file is fetched again and the read gets the release's bytes");
+            }
+            finally { EarthDataStore.Repair = null; }
         }
         finally { try { Directory.Delete(temp, true); } catch (IOException) { } }
 
         // the release zip, when one is built
-        string main = Path.Combine(root, "release", "earth-" + version + ".zip");
+        // (FP-19: tests\Run-All.ps1 packs into its own folder and names it in EARTH_RELEASE_DIR)
+        string main = Path.Combine(Environment.GetEnvironmentVariable("EARTH_RELEASE_DIR") is { Length: > 0 } dir ? dir : Path.Combine(root, "release"), "earth-" + version + ".zip");
         if (!File.Exists(main))
         {
             Console.WriteLine("Skipping the release-zip checks: no built release zip at " + main + " (tools/package-earth.py makes it after dotnet build EarthMap.csproj -c Release).");
@@ -73,8 +93,19 @@ static class PackageChecks
         check(new FileInfo(main).Length <= 40_000_000, "Earth's zip within the Mod DB's 40 MB: " + new FileInfo(main).Length.ToString("N0"));
         using (var zip = System.IO.Compression.ZipFile.OpenRead(main))
         {
-            check(zip.GetEntry("assets/earth/config/regionaltrees.json") != null && !zip.Entries.Any(e => e.FullName.StartsWith("assets/earthmap/")),
+            check(zip.GetEntry("assets/earth/config/regionaltrees.json.br") != null && !zip.Entries.Any(e => e.FullName.StartsWith("assets/earthmap/")),
                 "Published assets use the earth domain only");
+            // decision 0081: large config JSON is brotli-packed, and decodes to the repository's bytes
+            var packed = zip.Entries.Where(e => e.FullName.EndsWith(".json.br", StringComparison.Ordinal)).ToList();
+            int same = 0;
+            foreach (var e in packed)
+            {
+                using var s = e.Open(); using var m = new MemoryStream(); s.CopyTo(m);
+                string repo = Path.Combine(root, e.FullName.Substring(0, e.FullName.Length - 3).Replace('/', Path.DirectorySeparatorChar));
+                if (File.Exists(repo) && EarthMap.PackedAssets.Unpack(m.ToArray()).AsSpan().SequenceEqual(File.ReadAllBytes(repo))) same++;
+                if (zip.GetEntry(e.FullName.Substring(0, e.FullName.Length - 3)) != null) same = -1000;
+            }
+            check(packed.Count >= 10 && same == packed.Count, "Packed config assets decode to the repository's JSON, without a plain twin (" + same + " of " + packed.Count + ")");
             var leaked = zip.Entries.Where(e => EarthDataStore.Lists(e.Name)).Select(e => e.FullName).ToList();
             check(leaked.Count == 0, "No data store file in the zip" + (leaked.Count > 0 ? ": " + string.Join(", ", leaked.Take(5)) : ""));
             foreach (string n in InZip) check(zip.GetEntry("earthdata/" + n) != null, "Client data in the zip: " + n);

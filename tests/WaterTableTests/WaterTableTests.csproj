@@ -5,15 +5,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="../../src/Core/WaterTable.cs" Link="Core/WaterTable.cs" />
-    <Compile Include="../../src/Core/GroundColumns.cs" Link="Core/GroundColumns.cs" />
-    <Compile Include="../../src/Core/ShoreMaterial.cs" Link="Core/ShoreMaterial.cs" />
-    <Compile Include="../../src/Core/WetlandGrid.cs" Link="Core/WetlandGrid.cs" />
-    <Compile Include="../../src/Core/GeologyTransitions.cs" Link="Core/GeologyTransitions.cs" />
-    <Compile Include="../../src/Core/VerticalScale.cs" Link="Core/VerticalScale.cs" />
-    <Compile Include="../../src/Core/GroundRelief.cs" Link="Core/GroundRelief.cs" />
-    <Compile Include="../../src/Core/DemTiles.cs" Link="Core/DemTiles.cs" />
-    <Compile Include="../../src/Core/StoneRecolour.cs" Link="Core/StoneRecolour.cs" />
+    <ProjectReference Include="..\Earth.Core.Tests.Common\Earth.Core.Tests.Common.csproj" />
+
     <!-- Earth's contract for Hydrate or Diedrate's aquiferData, serialized with the game's own protobuf-net -->
     <Compile Include="../../src/HodAquiferContract.cs" Link="HodAquiferContract.cs" />
     <Reference Include="protobuf-net"><HintPath>$(VintageStoryPath)\Lib\protobuf-net.dll</HintPath></Reference>

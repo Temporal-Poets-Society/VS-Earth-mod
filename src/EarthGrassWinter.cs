@@ -44,6 +44,8 @@ namespace EarthMap
         {
             sapi = api;
             earth = api.ModLoader.GetModSystem<EarthMapSystem>();
+            // ER-18: at once when the params are set, not at the first five-second watch
+            if (earth != null) earth.ParamsReady += _ => Watch();
             api.Event.SaveGameLoaded += () => tickId = api.Event.RegisterGameTickListener(_ => Watch(), 5000, 1000);
         }
 

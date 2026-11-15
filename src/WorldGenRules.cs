@@ -58,13 +58,19 @@ namespace EarthMap
                 var asset = sapi.Assets.TryGet(new AssetLocation(path));
                 if (asset != null) return parse(asset);
                 logger.Error("Earth Map: {0} is missing; {1}. Reinstall the mod.", name, without);
+                Missing.Add(name + " (missing: " + without + ")");
             }
             catch (Exception e)
             {
                 logger.Error("Earth Map: {0} can't be read ({1}); {2}.", name, e.Message, without);
+                Missing.Add(name + " (unreadable: " + without + ")");
             }
             return null;
         }
+
+        /// <summary>(Decision 0083) The rule data this world's rules read that is missing or unreadable this session: the
+        /// world is refused before its first chunk (EarthWorldGen.CheckFeatures) unless earth.json accepts it.</summary>
+        public System.Collections.Generic.List<string> Missing { get; } = new();
 
         /// <summary>
         /// A binary data grid at <paramref name="path"/>, parsed: the mod's asset if it carries one, else the file of that name
@@ -79,10 +85,12 @@ namespace EarthMap
                     ?? EarthDataStore.Bytes(EarthGround.DataFolder, System.IO.Path.GetFileName(new AssetLocation(path).Path));
                 if (bytes != null) return parse(bytes);
                 logger.Error("Earth Map: {0} is missing from the mod and from {1}; {2}.", name, EarthDataStore.Folder(EarthGround.DataFolder), without);
+                Missing.Add(name + " (missing: " + without + ")");
             }
             catch (Exception e)
             {
                 logger.Error("Earth Map: {0} can't be read ({1}); {2}.", name, e.Message, without);
+                Missing.Add(name + " (unreadable: " + without + ")");
             }
             return null;
         }
@@ -95,14 +103,14 @@ namespace EarthMap
             model.NoTreeFloor = false;
             if (p.VanillaBiomes >= 1)
                 logger.Notification("Earth biomes: vanilla (world setting, decision 0075): vanilla's forest and shrub maps and tall grass; no vegetation zones, fire, open wetlands, ground moisture, grass in winter or alpine turf and scree.");
-            if (p.ZoneRules >= 1)
+            if (ZoneFacts.Zones(p.ZoneRules))
             {
                 Zones = LoadAsset("earth:config/zones.json", a => new ClimateZones(a.ToText(), p.AridityRules >= 1), "zones.json", "forests and shrubs follow the rain alone");
                 if (Zones != null)
                 {
                     model.Zones = Zones;
                     // zone rules 2: trees as dense as the forest map says, without vanilla's floor (EarthTrees)
-                    model.NoTreeFloor = p.ZoneRules >= 2;
+                    model.NoTreeFloor = ZoneFacts.NoTreeFloor(p.ZoneRules);
                     logger.Notification("Earth zone rules v{0}: {1} vegetation zones from climate set the forest and shrub density{2}; aridity index with {3} evapotranspiration.", p.ZoneRules, Zones.Count,
                         model.NoTreeFloor ? ", trees without vanilla's floor" : "", model.Data.PenmanAridity ? "Penman-Monteith" : "Holdridge");
                 }
@@ -113,7 +121,7 @@ namespace EarthMap
             model.Wetlands = LoadGrid(WetlandGrid.Asset, WetlandGrid.Read, "the wetland grid (" + WetlandGrid.Asset + ")",
                 "trees ignore them and bogs and marshes keep the zones' forest");
             model.Floodplains = null;
-            if (p.SoilRules >= SoilFertility.FloodplainRules && p.GroundColumns > 0)   // only ground columns read it (EarthGeology.GroundAt)
+            if (p.SoilRules >= SoilFertility.FloodplainRules && GroundColumnFacts.Columns(p.GroundColumns))   // only ground columns read it (EarthGeology.GroundAt)
                 model.Floodplains = LoadGrid(FloodplainGrid.Asset, FloodplainGrid.Read, "the floodplain grid (" + FloodplainGrid.Asset + ")",
                     "arid floodplains outside the river belts have no topsoil");
             model.OpenWetlands = p.WetlandRules >= 1 && model.Zones != null && model.Wetlands != null;
@@ -135,14 +143,14 @@ namespace EarthMap
                     model.Fire.Rules >= 2 ? "; the surest grassland keeps no groves (steppe, Pampas, tallgrass prairie)" : "");
             }
             IceSheets = null;
-            if (model.AlpineSurfaceRules >= 2)
+            if (AlpineSurfaceFacts.IceSheetGround(model.AlpineSurfaceRules))
             {
                 IceSheets = LoadGrid(MountainEcology.IceSheetAsset, MountainEcology.ReadIceSheets, MountainEcology.IceSheetAsset,
                     "mountains the last ice sheets covered (Scandinavia, Scotland, the Canadian Rockies) get the alpine turf of the others");
                 logger.Notification("Earth alpine surface rules v{0}: closed turf from the tree line to a warmest month of about 6 °C, scree towards the snow line and in dry mountains; on the last ice sheets' ground turf closes only near the tree line.",
                     model.AlpineSurfaceRules);
             }
-            if (model.ShoreRules >= 1)
+            if (model.Rules.ShoreStrip)
                 logger.Notification("Earth shore rules v{0}: the sea's and big lakes' shores are a beach strip at any height (sand {1:0} m, gravel {2:0} m, rock {3:0} m), of OSM's material {4}, else the coast's ground (dunes sand, till gravel and stones, bedrock and cliffs rock, marshes mud); no grass or land plants on it.",
                     model.ShoreRules, ShoreMaterial.WidthMetres(ShoreMaterial.Sand), ShoreMaterial.WidthMetres(ShoreMaterial.Gravel), ShoreMaterial.WidthMetres(ShoreMaterial.Rock),
                     model.ShoreData != null ? $"({model.ShoreData.Squares} squares of beaches)" : "(none: shores-osm-1.bin missing)");

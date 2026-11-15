@@ -41,8 +41,12 @@ namespace EarthMap.Core
         /// <summary>Whether the file has the reanalysis' monthly winds and cloud cover (weather.bin v2).</summary>
         public bool HasWindsAndClouds => v2;
 
-        /// <summary>A fingerprint of the file (FNV-1a of its bytes): the server sends it so a client with other data keeps
-        /// vanilla weather instead of computing other weather.</summary>
+        /// <summary>The planes as decoded (plain layout), for the checks that a predicted file holds the plain one's values.</summary>
+        internal ReadOnlySpan<byte> RawPlanes => raw;
+
+        /// <summary>A fingerprint of the file (FNV-1a of its bytes; a predicted file stores the one of the plain file it was
+        /// made from, so worlds that froze it, EarthParams.WeatherDataMade, see the same normals): the server sends it so a
+        /// client with other data keeps vanilla weather instead of computing other weather.</summary>
         public string Signature { get; private set; }
 
         /// <summary>[month][degree of longitude 0..359, from -180]: ITCZ latitude (°).</summary>
@@ -54,13 +58,31 @@ namespace EarthMap.Core
         {
             byte[] file = EarthBinary.ReadAll(s);
             EarthBinary.Expect(file, "EMWX", 20, "weather.bin");
-            int version = BitConverter.ToInt32(file, 4), w = BitConverter.ToInt32(file, 8), h = BitConverter.ToInt32(file, 12), months = BitConverter.ToInt32(file, 16);
-            if (version < 1 || version > 2 || months != Months || w <= 0 || w % 360 != 0 || w / 360 > MaxRes || h != w / 2)
+            int headerVersion = BitConverter.ToInt32(file, 4), w = BitConverter.ToInt32(file, 8), h = BitConverter.ToInt32(file, 12), months = BitConverter.ToInt32(file, 16);
+            int version = PlaneCoding.ContentVersion(headerVersion), coding = PlaneCoding.Coding(headerVersion);
+            if (version < 1 || version > 2 || coding > PlaneCoding.Predicted || months != Months || w <= 0 || w % 360 != 0 || w / 360 > MaxRes || h != w / 2)
                 throw new InvalidDataException("weather.bin: unsupported layout");
             var d = new WeatherData { W = w, H = h, Res = w / 360, n = w * h, v2 = version >= 2 };
             int planes = 2 * Months + 1 + (d.v2 ? 3 * Months : 0);
-            d.raw = EarthBinary.Unbrotli(file, 20, file.Length - 20, checked(d.n * planes), "weather.bin");
-            d.Signature = WeatherNoise.Fnv1a(file).ToString("x16");
+            if (coding == PlaneCoding.Predicted)
+            {
+                // (EA-0077) the plain file's signature and the Sha8 of the planes it was made of, then the planes:
+                // precipitation and temperature by month and the land as bytes, the winds as signed bytes, the cloud cover
+                // as bytes. The decoded planes must be the ones named, so the signature stays tied to what is read (L-3)
+                EarthBinary.Expect(file, "EMWX", 36, "weather.bin");
+                var types = new PlaneType[planes];
+                Array.Fill(types, PlaneType.U8);
+                if (d.v2) Array.Fill(types, PlaneType.I8, 2 * Months + 1, 2 * Months);
+                d.raw = PlaneCoding.Decode(file, 36, file.Length - 36, h, w, types, "weather.bin");
+                if (EarthBinary.Sha8(d.raw) != BitConverter.ToUInt64(file, 28))
+                    throw new InvalidDataException("weather.bin: its planes are not the ones its signature was made of");
+                d.Signature = BitConverter.ToUInt64(file, 20).ToString("x16");
+            }
+            else
+            {
+                d.raw = EarthBinary.Unbrotli(file, 20, file.Length - 20, checked(d.n * planes), "weather.bin");
+                d.Signature = WeatherNoise.Fnv1a(file).ToString("x16");
+            }
             d.FindItcz();
             return d;
         }

@@ -1,0 +1,11 @@
+{
+  "type": "code",
+  "modid": "craftprobe",
+  "name": "Craft probe (Earth test tool)",
+  "description": "/cprobe grid lays stacks in the calling player's own crafting grid, /cprobe take takes the output through the grid's output slot as a click does, /cprobe barrel fills a barrel. For benches that cannot click GUI slots. Not for release.",
+  "version": "0.1.0",
+  "side": "Universal",
+  "requiredOnClient": false,
+  "requiredOnServer": false,
+  "dependencies": { "game": "" }
+}

@@ -1,6 +1,6 @@
 # 0073: River water as one bed, open side channels, and still or flowing water reach by reach
 
-Status: **built** on `claude/river-flow` for 2.0.0 (EA-0048, EA-0049, EA-0051, EA-0052; the author's report on rc.9 at 1:10,
+Status: **in Earth 2.0.0**, built on `claude/river-flow` (EA-0048, EA-0049, EA-0051, EA-0052; the author's report on rc.9 at 1:10,
 13 November 2026). New worlds only: channel rules 4 (`EarthParams.ChannelRules`, `TerrainModel.FlowChannelRules`); older
 worlds keep the rules they saved (0002). Date: 2026-11-13.
 

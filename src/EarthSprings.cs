@@ -54,7 +54,21 @@ namespace EarthMap
             if (!TerraGenConfig.DoDecorationPass) return;
             api.Event.InitWorldGenerator(Init, "standard");
             api.Event.GetWorldgenBlockAccessor(provider => accessor = provider.GetBlockAccessor(false));
-            api.Event.ChunkColumnGeneration(OnVegetation, EnumWorldGenPass.Vegetation, "standard");
+            // (FP-13) through EarthWorldGen's net
+            api.Event.ChunkColumnGeneration(EarthWorldGen.Guard(api, "springs", OnVegetation), EnumWorldGenPass.Vegetation, "standard");
+        }
+
+        /// <summary>(Decision 0083; FP-02) The springs at stream heads where this world's rules use them (springs rules 2), off
+        /// this session or without their data, for EarthWorldGen's check before the first chunk.</summary>
+        internal void FeaturesOff(EarthParams p, List<string> off)
+        {
+            if (p.SpringRules < EarthParams.SpringRulesStreams) return;
+            if (!active) off.Add("the springs at stream heads (springs rules " + p.SpringRules + ")");
+            else
+            {
+                if (heads == null) off.Add("the springs at stream heads (" + StreamHeads.FileName + " is missing or unreadable)");
+                if (rules == null) off.Add("the seeps (the water table's rules are missing or invalid)");
+            }
         }
 
         void Init()
@@ -121,10 +135,12 @@ namespace EarthMap
             {
                 Generate(request);
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                if (Interlocked.Increment(ref errors) <= 3)
-                    Mod.Logger.Error("Earth springs: chunk column {0},{1} failed and has no springs of its own. {2}", request.ChunkX, request.ChunkZ, e);
+                // (FP-13) counted, then a failed pass (EarthWorldGen.Guard: noted, the server stops); before, the chunk was kept
+                // without its springs for good
+                Interlocked.Increment(ref errors);
+                throw;
             }
         }
 

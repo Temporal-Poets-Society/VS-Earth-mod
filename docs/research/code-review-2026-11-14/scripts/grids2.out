@@ -1,0 +1,23 @@
+aridity.bin: 6,475,409 bytes (14,424 of header and index), 825 tiles, 14 s
+  orig                                                              6,475,409            +0
+  left                                                              5,597,225      -878,184
+  med                                                               5,579,488      -895,921
+  avg                                                               5,510,075      -965,334
+  best of three + 1 byte                                            5,412,623    -1,062,786
+  best incl. raw + 1 byte                                           5,407,835    -1,067,574
+  left, even values only (lossy)                                    4,132,870    -2,342,539
+rain.bin: 11,862,158 bytes (14,424 of header and index), 1740 tiles, 109 s
+  orig                                                             11,862,158            +0
+  left                                                              9,373,826    -2,488,332
+  med                                                               9,366,231    -2,495,927
+  avg                                                               9,403,348    -2,458,810
+  best of three + 1 byte                                            8,868,884    -2,993,274
+  best incl. raw + 1 byte                                           8,868,795    -2,993,363
+  left, even values only (lossy)                                    6,827,655    -5,034,503
+temperature.bin: 8,012,000 bytes (14,424 of header and index), 1800 tiles, 233 s
+  orig                                                              8,012,000            +0
+  MED, byte planes                                                  6,264,518    -1,747,482
+  in 0.5 C steps, MED, byte planes                                  6,107,905    -1,904,095
+  in 0.5 C steps, left, byte planes                                 5,400,888    -2,611,112
+  in 0.5 C steps, avg, byte planes                                  5,942,964    -2,069,036
+  in 0.5 C steps, MED, one byte where every residual fits (+1)      6,074,653    -1,937,347

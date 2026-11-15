@@ -10,22 +10,28 @@ namespace EarthMap.Core
     public sealed class ClimateSampler
     {
         readonly int ClimateRes, ClimateW, ClimateH;
-        readonly float[] tMean, tCold, tWarm, precip, rain, drySummer;
+        // the planes as stored (EA-0087: codes, read through ClimateCodes' tables of the floats they were kept as before)
+        readonly short[] tMean, tCold, tWarm;
+        readonly ushort[] precip;
+        readonly byte[] rain, drySummer;
         // null where the world doesn't read them
         readonly FineTemperature fine;
         readonly TiledGrid fineRain, penman;
 
         /// <param name="planes">The climate grid's planes with the world's fix (EarthDataset.ClimatePlanes).</param>
-        internal ClimateSampler(EarthDataset data, float[][] planes, FineTemperature fine, TiledGrid fineRain, TiledGrid penman)
+        internal ClimateSampler(EarthDataset data, ClimateCodes planes, FineTemperature fine, TiledGrid fineRain, TiledGrid penman)
         {
             ClimateRes = data.ClimateRes;
             ClimateW = data.ClimateW;
             ClimateH = data.ClimateH;
-            tMean = planes[0]; tCold = planes[1]; tWarm = planes[2]; precip = planes[3]; rain = planes[4]; drySummer = planes[5];
+            tMean = planes.Mean; tCold = planes.Cold; tWarm = planes.Warm; precip = planes.Precip; rain = planes.Rain; drySummer = planes.Dry;
             this.fine = fine;
             this.fineRain = fineRain;
             this.penman = penman;
         }
+
+        static float T(short c) => ClimateCodes.Temperature(c);
+        static float D(byte c) => ClimateCodes.Dryness(c);
 
         public EarthData.ClimateSample SampleClimate(double lat, double lon)
         {
@@ -39,12 +45,12 @@ namespace EarthMap.Core
             double w00 = (1 - tr) * (1 - tc), w01 = (1 - tr) * tc, w10 = tr * (1 - tc), w11 = tr * tc;
             var s = new EarthData.ClimateSample
             {
-                TMean = w00 * tMean[i00] + w01 * tMean[i01] + w10 * tMean[i10] + w11 * tMean[i11],
-                TCold = w00 * tCold[i00] + w01 * tCold[i01] + w10 * tCold[i10] + w11 * tCold[i11],
-                TWarm = w00 * tWarm[i00] + w01 * tWarm[i01] + w10 * tWarm[i10] + w11 * tWarm[i11],
-                Precip = w00 * precip[i00] + w01 * precip[i01] + w10 * precip[i10] + w11 * precip[i11],
-                Rain = w00 * rain[i00] + w01 * rain[i01] + w10 * rain[i10] + w11 * rain[i11],
-                DrySummer = w00 * drySummer[i00] + w01 * drySummer[i01] + w10 * drySummer[i10] + w11 * drySummer[i11],
+                TMean = w00 * T(tMean[i00]) + w01 * T(tMean[i01]) + w10 * T(tMean[i10]) + w11 * T(tMean[i11]),
+                TCold = w00 * T(tCold[i00]) + w01 * T(tCold[i01]) + w10 * T(tCold[i10]) + w11 * T(tCold[i11]),
+                TWarm = w00 * T(tWarm[i00]) + w01 * T(tWarm[i01]) + w10 * T(tWarm[i10]) + w11 * T(tWarm[i11]),
+                Precip = w00 * (float)precip[i00] + w01 * (float)precip[i01] + w10 * (float)precip[i10] + w11 * (float)precip[i11],
+                Rain = w00 * (float)rain[i00] + w01 * (float)rain[i01] + w10 * (float)rain[i10] + w11 * (float)rain[i11],
+                DrySummer = w00 * D(drySummer[i00]) + w01 * D(drySummer[i01]) + w10 * D(drySummer[i10]) + w11 * D(drySummer[i11]),
             };
             if (fine != null) FineTemperatureAt(lat, lon, ref s);
             if (fineRain != null) FineRainAt(lat, lon, ref s);

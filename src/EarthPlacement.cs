@@ -56,6 +56,13 @@ namespace EarthMap
         /// <summary>The loaded catalogue in a 1318 world, else null (EarthPlants gates crops and berries with it).</summary>
         public PlacementCatalogue Catalogue => catalogue;
         public bool Active => state != null;
+
+        /// <summary>(Decision 0083; FP-02) Plants as around 1318 where this world's rules use them (placement rules 1), off this
+        /// session, for EarthWorldGen's check before the first chunk.</summary>
+        internal void FeaturesOff(EarthParams p, System.Collections.Generic.List<string> off)
+        {
+            if (p.PlacementRules >= 1 && !Active) off.Add("plants as around 1318 (placement rules " + p.PlacementRules + "; " + status + ")");
+        }
         public override double ExecuteOrder() => 0.069;
         public override bool ShouldLoad(EnumAppSide side) => side == EnumAppSide.Server;
 
@@ -146,6 +153,8 @@ namespace EarthMap
 
         internal static bool FruitTreePrefix(BlockFruitTreeBranch __instance, IBlockAccessor blockAccessor, BlockPos pos, IRandom worldgenRandom, ref bool __result)
         {
+            // (FP-11, Fable's low 5 on ad56a74) a generation entry point inside vanilla's pass: this thread may wait for a missing tile
+            using var fetch = Core.FineElevation.Generating();
             var s = state;
             var conds = __instance?.WorldGenConds;
             if (s == null || conds == null || conds.Length == 0 || blockAccessor == null || pos == null) return true;
@@ -292,7 +301,7 @@ namespace EarthMap
         /// (TerrainModel.RiparianRain, as trees, animals, soil and the plant packs read it; CR-E1: peaches and pomegranates
         /// along the Nile were vetoed on the desert's rain).</summary>
         static double EnvelopeRain(TerrainModel model, double x, double z, double rain)
-            => model.GenFixRules >= 1 ? model.RiparianRain(x, z, rain) : rain;
+            => model.Rules.RiparianEnvelopes ? model.RiparianRain(x, z, rain) : rain;
 
         /// <summary>/earth placement: the site, which catalogue taxa may grow here and why not, and this session's fruit trees.</summary>
         public string Describe(double x, double y, double z)

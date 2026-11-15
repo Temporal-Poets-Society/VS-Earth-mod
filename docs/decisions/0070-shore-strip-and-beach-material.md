@@ -1,6 +1,6 @@
 # 0070: A shore strip at any height, of the coast's own material
 
-Status: **built** in 2.0.0-rc.7 (local, not pushed). The author, 12 November 2026: "For beaches. I suppose almost all
+Status: **built** in 2.0.0-rc.7; in Earth 2.0.0. The author, 12 November 2026: "For beaches. I suppose almost all
 beaches has either, sand, gravel or rocks and combination. Either we make it up or get data then"; then "my mind problem
 is not so much height as not having soil till sea and but about correct material"; chose "OSM plus the rule".
 `shores-osm-1.bin` was uploaded to the data release ed-v1 on the author's yes ("Yes, upload it", 12 November); the

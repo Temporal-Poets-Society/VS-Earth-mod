@@ -1,0 +1,11 @@
+== rc13 hash
+fingerprint of 40000 places and hours (7427 raining, 141 under thunder) on Microsoft Windows 10.0.26300, .NET 8.0.25, X64, Release:
+  ALL        04AE435FBB7B4301
+== rc13 hash rules6
+fingerprint of 40000 places and hours (7139 raining, 138 under thunder) on Microsoft Windows 10.0.26300, .NET 8.0.25, X64, Release:
+  ALL        C99BE19573CD5E22
+== rc13 hash rules5
+fingerprint of 40000 places and hours (7139 raining, 138 under thunder) on Microsoft Windows 10.0.26300, .NET 8.0.25, X64, Release:
+  ALL        18C6D3C6B8B0F4E7
+== rc9 hash
+ALL OK

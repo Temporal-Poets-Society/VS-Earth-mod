@@ -1,7 +1,7 @@
 # Earth 2.0 Mod DB page: draft notes
 
 Draft for the author (EA-0043, 13 November 2026). Nothing here is published; the upload, the page edits and the wording
-are the author's. It describes Earth 2.0 as it is on `main` (2.0.0 release candidates). The 1.0 page draft is
+are the author's. It describes Earth 2.0.0. The 1.0 page draft is
 [moddb-page.md](moddb-page.md); its description, logo and screenshot notes still apply where this file does not replace
 them.
 
@@ -10,7 +10,7 @@ them.
 | Field | 1.0 | 2.0 |
 | --- | --- | --- |
 | Files | Earth, Earth Terrain Data, Earth Water Data (three downloads) | one download, `earth-2.0.0.zip` (under 40 MB) |
-| Required dependencies | Earth Terrain Data, Earth Water Data, Cylinder World, Hydrology | [Cylinder World](https://mods.vintagestory.at/cylinderworld) and [Hydrology](https://mods.vintagestory.at/hydrology), at the minimums in `modinfo.json` when it is built (today: Cylinder World 1.0.4, Hydrology 0.6.2-rc.4; the author still chooses the Cylinder World minimum, 1.0.4 or 1.1.0) |
+| Required dependencies | Earth Terrain Data, Earth Water Data, Cylinder World, Hydrology | [Cylinder World](https://mods.vintagestory.at/cylinderworld) and [Hydrology](https://mods.vintagestory.at/hydrology), at the minimums in `modinfo.json` when it is built (Cylinder World 1.1.0, EA-0096; Hydrology 0.6.2) |
 | Game version | 1.22 | 1.22 (unchanged) |
 | Side | client and server | client and server (unchanged); clients download no data |
 
@@ -27,8 +27,8 @@ Remove Earth Terrain Data and Earth Water Data from Earth 2.0's dependencies. Le
 > joining a server downloads nothing. Without internet, the files can be put into that folder by hand; a server that
 > cannot get them stops and says which are missing.
 >
-> **For new worlds.** Earth 2.0 makes new worlds. Worlds made with Earth 1.0 still load with the rules they were made
-> with, but they are not upgraded to 2.0's terrain.
+> **For new worlds.** Earth 2.0 makes new worlds. Worlds from older Earth versions (0.x, 1.x and the 2.0.0 release
+> candidates) are not supported: start a new world. From 2.0.0 on, saves are kept working.
 >
 > **Story locations on real land.** The game's story locations (the Resonance Archive and the other story places) keep
 > vanilla's distances from your spawn, but Earth moves each one onto suitable real land nearby:
@@ -65,5 +65,4 @@ Summary line: "Data for Earth 1.0.x (not needed by Earth 2.0)". Do not mark thei
 - Licences and credits on the page: Copernicus GLO-90 (its required notice, also on the Earth tab), OpenStreetMap
   (ODbL), GIRES (CC BY-SA), TDWG and PHYLACINE/IUCN ranges; the full list is `earthdata/ATTRIBUTION.txt` and the data
   repos' READMEs.
-- The Cylinder World minimum (1.0.4 or 1.1.0) and the final Hydrology version.
 - Screenshots from a 2.0 world (the 1.0 shot list in [moddb-page.md](moddb-page.md) still fits).

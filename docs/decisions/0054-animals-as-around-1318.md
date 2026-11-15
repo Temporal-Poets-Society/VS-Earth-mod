@@ -1,7 +1,6 @@
 # 0054: Animals live where they lived around 1318
 
-Date: 5 November 2026. Status: **Agreed**; **implemented** 5 November 2026 on `claude/fauna-1318` (from `release/1.0`,
-not released). Offline tests pass; not checked in game.
+Date: 5 November 2026. Status: **Agreed**; **built** 5 November 2026; in Earth 2.0.0. Offline tests pass; not checked in game.
 
 ## Report
 

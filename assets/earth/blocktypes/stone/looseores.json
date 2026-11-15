@@ -1,0 +1,206 @@
+{
+ "code": "looseores",
+ "class": "BlockLooseOres",
+ "behaviors": [
+  {
+   "name": "UnstableFalling"
+  },
+  {
+   "name": "RightClickPickup",
+   "properties": {
+    "dropsPickupMode": true,
+    "sound": "game:sounds/block/loosestone"
+   }
+  }
+ ],
+ "variantgroups": [
+  {
+   "code": "ore",
+   "states": [
+    "kyanite",
+    "sillimanite",
+    "andalusite"
+   ]
+  },
+  {
+   "code": "rock",
+   "states": [
+    "schist",
+    "gneiss",
+    "quartzite",
+    "slate",
+    "phyllite"
+   ]
+  },
+  {
+   "code": "cover",
+   "states": [
+    "free",
+    "snow"
+   ]
+  }
+ ],
+ "allowedVariants": [
+  "looseores-kyanite-schist-free",
+  "looseores-kyanite-schist-snow",
+  "looseores-kyanite-gneiss-free",
+  "looseores-kyanite-gneiss-snow",
+  "looseores-kyanite-quartzite-free",
+  "looseores-kyanite-quartzite-snow",
+  "looseores-sillimanite-gneiss-free",
+  "looseores-sillimanite-gneiss-snow",
+  "looseores-sillimanite-schist-free",
+  "looseores-sillimanite-schist-snow",
+  "looseores-andalusite-slate-free",
+  "looseores-andalusite-slate-snow",
+  "looseores-andalusite-phyllite-free",
+  "looseores-andalusite-phyllite-snow",
+  "looseores-andalusite-schist-free",
+  "looseores-andalusite-schist-snow"
+ ],
+ "attributes": {
+  "handbook": {
+   "groupBy": [
+    "looseores-{ore}-*"
+   ],
+   "searchWeightOffset": -0.25
+  }
+ },
+ "creativeinventory": {
+  "general": [
+   "*-free"
+  ],
+  "terrain": [
+   "*-free"
+  ]
+ },
+ "doNotRenderAtLod2": true,
+ "shape": {
+  "base": "game:block/stone/loosestones/{cover}1",
+  "alternates": [
+   {
+    "base": "game:block/stone/loosestones/{cover}1",
+    "rotateY": 90
+   },
+   {
+    "base": "game:block/stone/loosestones/{cover}1",
+    "rotateY": 180
+   },
+   {
+    "base": "game:block/stone/loosestones/{cover}1",
+    "rotateY": 270
+   },
+   {
+    "base": "game:block/stone/loosestones/{cover}2",
+    "rotateY": 0
+   },
+   {
+    "base": "game:block/stone/loosestones/{cover}2",
+    "rotateY": 90
+   },
+   {
+    "base": "game:block/stone/loosestones/{cover}2",
+    "rotateY": 180
+   },
+   {
+    "base": "game:block/stone/loosestones/{cover}2",
+    "rotateY": 270
+   },
+   {
+    "base": "game:block/stone/loosestones/{cover}3",
+    "rotateY": 0
+   },
+   {
+    "base": "game:block/stone/loosestones/{cover}3",
+    "rotateY": 90
+   },
+   {
+    "base": "game:block/stone/loosestones/{cover}3",
+    "rotateY": 180
+   },
+   {
+    "base": "game:block/stone/loosestones/{cover}3",
+    "rotateY": 270
+   }
+  ]
+ },
+ "drawtypeByType": {
+  "*-free": "JSON",
+  "*-snow": "JSONAndSnowLayer"
+ },
+ "resistance": 0.15,
+ "replaceable": 6500,
+ "textures": {
+  "rock": {
+   "base": "game:block/stone/rock/{rock}1",
+   "overlays": [
+    "earth:block/stone/ore/{ore}1"
+   ]
+  }
+ },
+ "sounds": {
+  "walk": "game:walk/stone*"
+ },
+ "drops": [
+  {
+   "type": "item",
+   "code": "earth:ore-{ore}",
+   "quantity": {
+    "avg": 1,
+    "var": 0
+   }
+  }
+ ],
+ "rainPermeableByType": {
+  "*-free": true,
+  "*": false
+ },
+ "sidesolid": {
+  "all": false
+ },
+ "sideopaqueByType": {
+  "*-snow": {
+   "all": false,
+   "down": true
+  },
+  "*": {
+   "all": false
+  }
+ },
+ "lightAbsorption": 0,
+ "selectionbox": {
+  "x1": 0,
+  "y1": 0,
+  "z1": 0,
+  "x2": 1,
+  "y2": 0.125,
+  "z2": 1
+ },
+ "collisionbox": null,
+ "guiTransform": {
+  "rotation": {
+   "x": -25,
+   "y": 0,
+   "z": 0
+  },
+  "origin": {
+   "x": 0.34,
+   "y": 0.1,
+   "z": 0.47
+  },
+  "scale": 2.75
+ },
+ "tpHandTransform": {
+  "translation": {
+   "x": -1,
+   "y": -0.61,
+   "z": -0.84
+  },
+  "rotation": {
+   "x": 0,
+   "y": 149,
+   "z": 1
+  },
+  "scale": 0.5
+ }
+}

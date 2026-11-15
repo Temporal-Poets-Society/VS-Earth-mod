@@ -1,0 +1,127 @@
+[
+ {
+  "_comment": "EA-0068, decision 0077: Barrovian kyanite: blades in mica schist, gneiss and quartzite of mountain belts (Scottish Highlands, Lepontine Alps, Scandinavian Caledonides, Appalachians, Indian shield). Only in worlds with ore layers v4 and later (EarthOreLayers.PruneDeposits) and only where ground columns own the column; the layer pass keeps it in bed and basement rock (ore-layers-v4.json). The host rocks themselves carry the geography: regional geology lays schist, gneiss, quartzite, slate and phyllite only in mapped metamorphic belts.",
+  "code": "earth-kyanite",
+  "handbookPageCode": "item-earth:ore-kyanite",
+  "triesPerChunk": 0.6,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "schist",
+     "gneiss",
+     "quartzite"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-kyanite-{rock}"
+   },
+   "surfaceBlock": {
+    "code": "earth:looseores-kyanite-{rock}-free"
+   },
+   "genSurfaceBlockChance": 0.4,
+   "surfaceBlockChance": 0.08,
+   "radius": {
+    "dist": "uniform",
+    "avg": 9,
+    "var": 3
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 3,
+    "var": 1
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 20,
+    "var": 16
+   }
+  }
+ },
+ {
+  "_comment": "Sillimanite (fibrolite) in the highest-grade gneiss and schist of the same belts.",
+  "code": "earth-sillimanite",
+  "handbookPageCode": "item-earth:ore-sillimanite",
+  "triesPerChunk": 0.4,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "gneiss",
+     "schist"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-sillimanite-{rock}"
+   },
+   "surfaceBlock": {
+    "code": "earth:looseores-sillimanite-{rock}-free"
+   },
+   "genSurfaceBlockChance": 0.4,
+   "surfaceBlockChance": 0.08,
+   "radius": {
+    "dist": "uniform",
+    "avg": 9,
+    "var": 3
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 3,
+    "var": 1
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 20,
+    "var": 16
+   }
+  }
+ },
+ {
+  "_comment": "Andalusite and chiastolite in slate, phyllite and schist of contact aureoles round granite (Skiddaw, Pyrenees, Bushveld, Brittany) and low-pressure belts.",
+  "code": "earth-andalusite",
+  "handbookPageCode": "item-earth:ore-andalusite",
+  "triesPerChunk": 0.5,
+  "scaleWithWorldheight": false,
+  "generator": "disc-followsurfacebelow",
+  "attributes": {
+   "inblock": {
+    "code": "game:rock-*",
+    "name": "rock",
+    "allowedVariants": [
+     "slate",
+     "phyllite",
+     "schist"
+    ]
+   },
+   "placeblock": {
+    "code": "earth:ore-andalusite-{rock}"
+   },
+   "surfaceBlock": {
+    "code": "earth:looseores-andalusite-{rock}-free"
+   },
+   "genSurfaceBlockChance": 0.4,
+   "surfaceBlockChance": 0.08,
+   "radius": {
+    "dist": "uniform",
+    "avg": 9,
+    "var": 3
+   },
+   "thickness": {
+    "dist": "uniform",
+    "avg": 3,
+    "var": 1
+   },
+   "depth": {
+    "dist": "uniform",
+    "avg": 20,
+    "var": 16
+   }
+  }
+ }
+]

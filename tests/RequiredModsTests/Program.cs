@@ -8,9 +8,9 @@ void Check(bool ok, string message) { checks++; if (!ok) throw new Exception(mes
 string Problem(string hv = RequiredMods.HydrologyMinimum, object hydro = null, bool server = true)
     => RequiredMods.Problem(hv, hydro ?? new Hydro(), server);
 Check(Problem() == null, "Minimum provider versions and APIs load");
-Check(Problem("0.6.2-rc.4") == null && Problem("0.6.2-rc.5") == null && Problem("0.6.2") == null && Problem("0.6.3") == null,
-    "Hydrology 0.6.2's release candidates and releases (river query version 3) load");
-foreach (string version in new[] { null, "", "garbage", "0.1.9", "0.1.10", "0.1.13", "0.6.0", "0.6.1", "0.6.1-pre.1", "0.6.1-rivers.1", "0.6.2-rivers.7", "0.6.2-rc.1", "0.6.2-rc.2", "0.6.2-rc.3" })
+Check(Problem("0.6.2") == null && Problem("0.6.3") == null && Problem("0.7.0") == null,
+    "Hydrology 0.6.2 and later releases (river query version 3) load");
+foreach (string version in new[] { null, "", "garbage", "0.1.9", "0.1.10", "0.1.13", "0.6.0", "0.6.1", "0.6.1-pre.1", "0.6.1-rivers.1", "0.6.2-rivers.7", "0.6.2-rc.1", "0.6.2-rc.3", "0.6.2-rc.4", "0.6.2-rc.13" })
     Check(Problem(hv: version)?.Contains("Hydrology") == true, "Reject old/missing/invalid Hydrology: " + version);
 Check(Problem(hydro: new OldHydro())?.Contains("EarthRiverQueryVersion") == true, "Reject version 2 river capabilities (Hydrology 0.6.1)");
 Check(Problem(hydro: new object())?.Contains("EarthRiverQueryVersion") == true, "Reject a missing Hydrology API despite its version");

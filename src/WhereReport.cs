@@ -133,7 +133,7 @@ namespace EarthMap
             var moisture = sapi.ModLoader.GetModSystem<EarthGroundMoisture>();
             if (moisture != null && Params.MoistureRules >= 1)
             {
-                double gm = moisture.MoistureAt(ground.X, ground.Y, ground.Z, sapi.World.Calendar.TotalHours, out double mt);
+                double gm = moisture.MoistureAt(ground.X, ground.Y, ground.Z, sapi.World.Calendar.TotalDays * sapi.World.Calendar.HoursPerDay, out double mt);
                 lines.Add(string.Format(CultureInfo.InvariantCulture, "Ground moisture now: {0:0.00} (tufts grow from {1:0.00}, wither below {2:0.00}; month's mean at the ground {3:0.0} °C, dormant below 5 °C); only where some tall grass is thinned out.",
                     gm, EarthGroundMoisture.Wet, EarthGroundMoisture.Dry, mt));
             }

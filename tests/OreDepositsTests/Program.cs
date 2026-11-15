@@ -362,6 +362,31 @@ Console.WriteLine();
         "rules v5: a placer with alluvium in its footprint stays where it is");
     var none = Run(Plan(true, (x, z, c, f, t) => 0), "t:dry");
     Check(!none.Body.LayerFound && none.Body.MovedM == 0 && none.Placed == 0, "rules v5: with no alluvium within the radius it stays and places nothing");
+    // ER-06: a search that read heights this thread could not get (FineElevation.MissedReads: a tile not on the machine on the
+    // main thread, a thread on the built-in heights) is put back and not kept; a thread with the heights then plans it as before
+    {
+        var fine = new FineElevation(Path.GetTempPath(), new byte[360 * 180 / 8]);
+        var missing = Plan(true, (x, z, c, f, t) => { fine.TryHeight(59.2, 60, out _); return LayerBlocks(x, z, c, f, t); });
+        var b = missing.Bodies.First(q => q.D.Id == "t:dry");
+        var (bx, bz, minX, maxX, minZ, maxZ, fill) = (b.X, b.Z, b.MinX, b.MaxX, b.MinZ, b.MaxZ, b.Fill);
+        bool kept = true, listed = true;
+        var sweep = new Thread(() =>
+        {
+            FineElevation.BuiltInOnly = true;
+            kept = missing.TryEnsure(b);
+            listed = missing.BodiesNear(minX, minZ, maxX, maxZ).Contains(b);
+        });
+        sweep.Start(); sweep.Join();
+        Check(!kept && !listed && !b.Planned && b.X == bx && b.Z == bz && b.MinX == minX && b.MaxX == maxX && b.MinZ == minZ && b.MaxZ == maxZ
+            && b.Fill.Equals(fill) && b.MovedM == 0 && b.LayerFound,
+            "ER-06: a valley search with a missed read leaves the body unplanned and as it was, and BodiesNear leaves it out");
+        Check(missing.TryEnsure(b) && b.Planned && b.X == v5.Body.X && b.Z == v5.Body.Z && b.MovedM == v5.Body.MovedM && b.Fill.Equals(v5.Body.Fill),
+            "ER-06: a thread that has the heights then plans it as the deposit pass does");
+        var fresh = Plan(true);
+        var u = fresh.Bodies.First(q => q.D.Id == "t:dry");
+        Check(fresh.BodiesNear(u.MinX, u.MinZ, u.MaxX, u.MaxZ, startSearch: false).Contains(u) && !u.Planned && u.MovedM == 0,
+            "ER-06: /earth ores lists a body not searched yet at its catalogue place without searching on its thread");
+    }
     Check(OreDepositPlan.Movable(Plan(true).Bodies.First(b => b.D.Id == "t:dry"))
         && new OreDepositPlan(cat, scale, 1, 1).Bodies.All(b => OreDepositPlan.Movable(b) == (b.D.Shape == Shape.Blanket && (b.Where.Classes & ~OreDepositPlan.CoverClasses) == 0 && b.Where.Classes != 0))
         && new OreDepositPlan(cat, scale, 1, 1).Bodies.Any(b => !OreDepositPlan.Movable(b)),
@@ -370,6 +395,10 @@ Console.WriteLine();
 
 // ---------------------------------------------------------------- older rules unchanged
 Console.WriteLine();
+// ER-10: the ore rules' facts against the comparisons they replaced ("Rules >= OreBackground.CatalogueRules", 4;
+// "Rules >= OreBackground.ValleySearchRules", 5)
+Check(Enumerable.Range(0, 9).All(v => OreBackground.CatalogueBodies(v) == (v >= 4) && OreBackground.ValleySearch(v) == (v >= 5)),
+    "ore rules: the catalogue's bodies from 4, the valley search from 5");
 Check(OreBackground.RadiusScale(3, 10, 5) == 1 && OreBackground.RadiusScale(3, 400, 5) == 1, "rules before v4: background sizes never change with the scale");
 {
     // no record is not no ore: with no heat at all, every background keeps its class floor (host rock and layer decide where)
@@ -412,9 +441,12 @@ Console.WriteLine();
     string folder = Path.GetFullPath(Path.Combine(here, "../../assets/earth/worldgen/deposits"));
     var shipped = Directory.Exists(folder) ? Directory.GetFiles(folder, "*.json", SearchOption.AllDirectories)
         .Select(f => "earth:worldgen/deposits/" + Path.GetRelativePath(folder, f).Replace('\\', '/')).OrderBy(s => s, StringComparer.Ordinal).ToArray() : Array.Empty<string>();
-    var unlisted = shipped.Where(f => f != "earth:worldgen/deposits/earth-layers.json" && !EarthDepositSet.Files.Contains(f)).ToArray();
+    // the layer files carry their own gate: the world's ore-layer version (EarthOreLayers.PruneDeposits; the aluminosilicates
+    // from ore layers v4, decision 0077)
+    var layerFiles = new[] { "earth:worldgen/deposits/earth-layers.json", "earth:worldgen/deposits/earth-aluminosilicates.json" };
+    var unlisted = shipped.Where(f => !layerFiles.Contains(f) && !EarthDepositSet.Files.Contains(f)).ToArray();
     Check(shipped.Length > 0 && unlisted.Length == 0 && EarthDepositSet.Files.All(shipped.Contains),
-        "every Earth deposit file is the layer file or in a deposit set, and every listed file ships" + (unlisted.Length > 0 ? " (unlisted: " + string.Join(", ", unlisted) + ")" : ""));
+        "every Earth deposit file is a layer file or in a deposit set, and every listed file ships" + (unlisted.Length > 0 ? " (unlisted: " + string.Join(", ", unlisted) + ")" : ""));
 }
 
 // ---------------------------------------------------------------- frozen hashes (StableHash: saved worlds depend on every bit)

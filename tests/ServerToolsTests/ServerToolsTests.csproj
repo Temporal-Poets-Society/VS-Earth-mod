@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- EA-0088 (D-R5 of the Fable pass, code review 14 November 2026): the parts of the server's tools that need no game,
+       moved to Core: /earth tp's open-water search, /earth site's slope, aspect and coast distance, /earth map's frame and
+       markers (EarthCommands), and the self test's chunk digest (SelfTest), its format pinned. -->
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><LangVersion>12</LangVersion><ImplicitUsings>enable</ImplicitUsings><Nullable>disable</Nullable></PropertyGroup>
+  <ItemGroup><ProjectReference Include="..\Earth.Core.Tests.Common\Earth.Core.Tests.Common.csproj" /></ItemGroup>
+</Project>

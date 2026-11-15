@@ -4,6 +4,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="GoldenWorlds.cs" />
-    <Compile Include="../../src/Core/*.cs" Link="Core/%(Filename)%(Extension)" />
+    <ProjectReference Include="..\Earth.Core.Tests.Common\Earth.Core.Tests.Common.csproj" />
   </ItemGroup>
 </Project>

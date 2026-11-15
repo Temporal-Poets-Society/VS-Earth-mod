@@ -1,6 +1,6 @@
 # 0062: Vanilla's surface ponds only in the mapped wetlands
 
-Status: **implemented** at the author's choice in test build 1.0.3-tall.23; since tall.25 a choice on the Earth tab,
+Status: **built** at the author's choice (test build 1.0.3-tall.23), in Earth 2.0.0; since tall.25 a choice on the Earth tab,
 **Surface ponds**, off by default (the author, 8 November: "have we removed vanilla ponds? (in Earth setting UI make
 default off)"); checked offline and on a private bench, not installed. Date: 2026-11-08.
 

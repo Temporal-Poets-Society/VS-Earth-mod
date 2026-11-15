@@ -71,7 +71,7 @@ namespace EarthMap
             rockIndex = new int[count];
             int rocks = 0;
             for (int id = 0; id < count; id++) rockIndex[id] = rockName[id] != null ? rocks++ : -1;
-            if (session.Rules >= OreBackground.ValleySearchRules && geology?.GroundModel is { } model)
+            if (OreBackground.ValleySearch(session.Rules) && geology?.GroundModel is { } model)
             {
                 int BlockOf(int m)
                 {
@@ -171,7 +171,7 @@ namespace EarthMap
             var curve = geology.GroundModel.Curve;
             var scale = new OreScale(geo, curve);
             // ore rules v5 (EA-0058): a cover blanket with none of its layers in its footprint moves to the nearest that has one
-            var search = session.Rules >= OreBackground.ValleySearchRules
+            var search = OreBackground.ValleySearch(session.Rules)
                 ? new OreDepositPlan.ValleySearch { LayerBlocks = (x, z, classes, from, to) => LayerBlocks(session, geology, x, z, classes, from, to) }
                 : null;
             var plan = new OreDepositPlan(catalog, scale, p0.NoiseSeed ^ 0x0de9051, session.DepositRate, search);
@@ -317,7 +317,7 @@ namespace EarthMap
             col.Owner = this; col.Chunks = chunks; col.ChunkX = request.ChunkX; col.ChunkZ = request.ChunkZ;
             col.Table = null; col.TableRead = false;
             // the rock floor is one height per map chunk
-            int floor = Math.Max(1, EarthWorldGen.RockFloorTop(bx, bz));
+            int floor = Math.Max(1, EarthWorldGen.RockFloorTop(bx, bz, map));
             long n = 0;
             foreach (var b in Plan.BodiesNear(bx, bz, bx + 31, bz + 31))
             {
@@ -387,14 +387,40 @@ namespace EarthMap
             public bool Place(OreDepositCatalog.Ore ore, int depth, int tier, double roll, OreWhere where) => false;
         }
 
+        /// <summary>The bodies whose valley search a pick reading started on a pool thread, while it runs (one at a time each).</summary>
+        readonly System.Collections.Concurrent.ConcurrentDictionary<int, byte> searching = new();
+
+        /// <summary>Plans a body ore rules v5 must search for, off the main thread (OreDepositPlan.TryEnsure: a pool thread may not
+        /// fetch a tile, so a search that misses one leaves the body unplanned for the deposit pass, as on any thread).</summary>
+        void SearchLater(OreDepositPlan.Body b)
+        {
+            if (!searching.TryAdd(b.Index, 0)) return;
+            // (L-1 of the Fable pass) the search ends when this world closes (EarthMapSystem.Stopping: its shutdown, or Dispose),
+            // the body unplanned as it was
+            var stopping = api?.ModLoader.GetModSystem<EarthMapSystem>()?.Stopping ?? default;
+            System.Threading.Tasks.Task.Run(() =>
+            {
+                try { OreDepositPlan.WithStop(() => stopping.IsCancellationRequested, () => Plan.TryEnsure(b)); }
+                catch (OperationCanceledException) when (stopping.IsCancellationRequested) { }
+                catch (Exception e) { if (Interlocked.Increment(ref searchErrors) == 1) api?.Logger.Warning("Earth ore deposits: a valley search for the prospecting pick failed ({0}); the deposit pass plans that body.", e.Message); }
+                finally { searching.TryRemove(b.Index, out _); }
+            });
+        }
+        int searchErrors;
+
         /// <summary>Expected catalogue blocks of one deposit code in the column at (x, z), for the prospecting pick (0065 §6).</summary>
         public double ColumnBlocks(string code, int x, int z, int top, int floor, int[] rock)
         {
             if (top <= 2) return 0;
             var col = new ModelColumn { Owner = this, Rock = rock, X = x, Z = z, TopY = top, FloorY = floor };
             double sum = 0;
-            foreach (var b in Plan.BodiesNear(x, z, x, z))
+            // (ER-06, Fable's re-review) no valley search on the main thread here: a body not searched yet this session (an area
+            // generated in an earlier one) is searched on a pool thread and left out of this one reading; the next has it
+            foreach (var b in Plan.BodiesNear(x, z, x, z, startSearch: false))
+            {
+                if (!b.Planned) { SearchLater(b); continue; }
                 if (b.D.Ores.Any(o => o.Code == code)) sum += Plan.PlaceBody(b, x, z, col, place: false, only: code);
+            }
             var xs = new List<double>();
             foreach (var a in Plan.AreasNear(x, z, x, z))
             {
@@ -410,11 +436,20 @@ namespace EarthMap
         {
             var found = new List<(double Dist, string Text)>();
             int x0 = (int)Math.Floor(x) - radius, x1 = (int)Math.Floor(x) + radius, z0 = (int)Math.Floor(z) - radius, z1 = (int)Math.Floor(z) + radius;
-            foreach (var b in Plan.BodiesNear(x0, z0, x1, z1))
+            // ER-06: no valley search on the main thread here; a body not searched yet this session shows its catalogue place
+            foreach (var b in Plan.BodiesNear(x0, z0, x1, z1, startSearch: false))
             {
                 double dist = Math.Sqrt((b.X - x) * (b.X - x) + (b.Z - z) * (b.Z - z));
                 if (dist > radius + Math.Max(b.MaxX - b.MinX, b.MaxZ - b.MinZ) / 2.0) continue;
                 var d = b.D;
+                if (!b.Planned)
+                {
+                    found.Add((dist, string.Format(CultureInfo.InvariantCulture,
+                        "{0} ({1}, {2}): {3:0.###} Mt of {4}, {5} {6:0}-{7:0} m down; catalogue place {8:0} blocks {9}, not placed yet this session (it moves to its {10} when a chunk near it is made)",
+                        d.Name, d.Layer, d.Id, d.Mt, string.Join("/", d.Ores.Select(o => o.Code)), d.Shape.ToString().ToLowerInvariant(), b.TopM, b.BaseM,
+                        dist, Direction(b.X - x, b.Z - z), b.Where)));
+                    continue;
+                }
                 found.Add((dist, string.Format(CultureInfo.InvariantCulture,
                     "{0} ({1}, {2}): {3:0.###} Mt{4} of {5}, {6} {7:0}-{8:0} m down, {9:0.#}x{10:0.#} km; {11:0.#} blocks expected{12}, {13} placed this session; centre {14:0} blocks {15}{16}",
                     d.Name, d.Layer, d.Id, d.Mt, double.IsFinite(d.Grade) ? string.Format(CultureInfo.InvariantCulture, " at {0:0.###} {1}", d.Grade, d.Unit) : "",

@@ -42,11 +42,24 @@ namespace EarthMap.Tests
 
         static EarthGeometry geo;
 
+        /// <summary>The weather's ground (rules 7: weatherground.bin and climate fix 4), as the game hands it to the model.</summary>
+        static WeatherGround ground;
+
+        /// <summary>A model as the game builds it: with the ground (rules 7 reads it; older rules don't).</summary>
+        static WeatherModel NewModel(WeatherData d, EarthGeometry g, WeatherSettings s, long key)
+        {
+            var m = new WeatherModel(d, g, s, key);
+            m.Ground = ground;
+            return m;
+        }
+
         static int Main(string[] args)
         {
             string root = args.Length > 0 && Directory.Exists(args[0]) ? args[0] : FindRoot();
             var sw = Stopwatch.StartNew();
             var data = EarthData.LoadFromFolder(root, false);
+            ground = data.WeatherGround;
+            if (ground == null) { Console.WriteLine("FAIL the weather's ground: " + data.WeatherGroundError); return 1; }
             Console.WriteLine($"data loaded from {root} in {sw.ElapsedMilliseconds} ms");
             if (data.Weather == null) { Console.WriteLine("FAIL no weather.bin (pass a folder with earthdata/weather.bin)"); return 1; }
 
@@ -60,21 +73,27 @@ namespace EarthMap.Tests
             geo = EarthLayout.Build(inp, data, out _);
             WeatherSettings Settings() => new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay };
             // the server's and a client's weather: each side builds its own from the same parameters (decision 0017)
-            var server = new WeatherModel(data.Weather, geo, Settings(), 12345);
+            var server = NewModel(data.Weather, geo, Settings(), 12345);
             if (args.Contains("hash"))
             {
                 // "rules5": a world made before rules 6 (its weather must not change with rules 6's additions)
-                var hashed = args.Contains("rules5") ? new WeatherModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = 5 }, 12345) : server;
+                // "rules6": a world made with rules 6 (likewise with rules 7's); "rules7" (likewise with rules 8's)
+                int hashRules = args.Contains("rules5") ? 5 : args.Contains("rules6") ? 6 : args.Contains("rules7") ? 7 : args.Contains("rules8") ? 8 : args.Contains("rules9") ? 9 : WeatherSettings.Newest;
+                var hashed = hashRules != WeatherSettings.Newest ? NewModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = hashRules }, 12345) : server;
                 int di = Array.IndexOf(args, "dump");
                 return Fingerprint(hashed, di >= 0 && di + 1 < args.Length ? args[di + 1] : null);
             }
-            var client = new WeatherModel(data.Weather, geo, Settings(), 12345);
+            // (EA-0115) "catchup": vanilla's snow catch-up as Earth answers it, timed, and its answers fingerprinted per rules
+            if (args.Contains("catchup")) return CatchUp(data, args);
+            var client = NewModel(data.Weather, geo, Settings(), 12345);
 
             WeatherModel current = null;
             long revision = 1;
             var entry = WeatherContract.Build(() => Volatile.Read(ref current), () => Interlocked.Read(ref revision));
 
             CheckPortableMath();
+            CheckRulesTable();
+            CheckOlderRulesPinned(data);
             CheckShape(entry);
             CheckClaim(entry);
             CheckNoModel(entry);
@@ -85,6 +104,7 @@ namespace EarthMap.Tests
             CheckDirections(entry);
             CheckStorms(entry, server);
             CheckRain(entry, server);
+            CheckPressure(entry, server);
             CheckSides(entry, client);
             CheckThreads(data, Settings);
             CheckVanillaVector(server);
@@ -100,13 +120,198 @@ namespace EarthMap.Tests
         /// with one hash per quantity so a difference names its source. Debug: build with -p:Optimize=false. "hash dump FILE"
         /// also writes every answer (a byte for the quantity, the double) to compare two runs value by value.
         /// </summary>
+        /// <summary>
+        /// (ER-10, EA-0084) What each weather rules version turns on, written out from the code as it was before the rules
+        /// record (the literals 6, 7 and 8 at each call site): a change to <see cref="WeatherRules"/> that moves a fact to
+        /// another version fails here.
+        /// </summary>
+        static void CheckRulesTable()
+        {
+            Console.WriteLine("weather rules table");
+            // version: decks, hail, anomaly, ground, dry thunder, fog, cloud tiles, rain events, anomaly cells, hail hurts, Africa thunder
+            var table = new (int v, bool[] facts)[]
+            {
+                (0, new[] { false, false, false, false, false, false, false, false, false, false, false }),
+                (5, new[] { false, false, false, false, false, false, false, false, false, false, false }),
+                (6, new[] { true, true, true, false, false, false, false, false, false, false, false }),
+                (7, new[] { true, true, true, true, true, true, true, false, false, false, false }),
+                (8, new[] { true, true, true, true, true, true, true, true, true, true, false }),
+                (9, new[] { true, true, true, true, true, true, true, true, true, true, true }),
+            };
+            bool ok = true;
+            foreach (var (v, f) in table)
+            {
+                var r = WeatherRules.For(v);
+                var got = new[] { r.ColdSeaDecks, r.Hail, r.TemperatureAnomaly, r.Ground, r.DryThunder, r.Fog, r.CloudTiles, r.RainEvents, r.AnomalyCells, r.HailHurts, r.AfricaThunder };
+                if (!got.SequenceEqual(f)) { ok = false; Console.WriteLine($"  rules {v}: {string.Join(",", got)} where {string.Join(",", f)}"); }
+            }
+            Check(ok, "each weather rules version turns on what it did before the rules record (6, 7, 8)");
+            Check(WeatherSettings.Newest == 9 && new WeatherSettings().Has.AfricaThunder, "new worlds get the newest weather rules (9)");
+            Check(WeatherRules.For(WeatherRules.GroundFrom).Ground && !WeatherRules.For(WeatherRules.GroundFrom - 1).Ground, "the ground is read from rules 7 on");
+        }
+
+        /// <summary>
+        /// (ER-10) Worlds made with older weather rules keep their weather bit for bit: the fingerprints of rules 5 to 9 as
+        /// built (rules 5 and 6: 2.0.0-rc.9 to rc.12; rules 7: rc.13; rules 8 and 9: main after rc.13), with the fog of rules 7
+        /// to 9 (it moved by an ulp when NightHours went to the portable maths, ER-17; pinned as it is since), and the hail at
+        /// 3000 places under thunder (about 50 hailing; the random places' hail part holds two).
+        /// </summary>
+        static void CheckOlderRulesPinned(EarthData data)
+        {
+            Console.WriteLine("older weather rules, pinned");
+            foreach (var (rules, all, anomaly, hail, fog, hailstorms) in new[]
+            {
+                (5, "18C6D3C6B8B0F4E7", (string)null, (string)null, (string)null, "151FF79F29E96D21"),
+                (6, "C99BE19573CD5E22", "B15FF6CA45CE773B", "771BC10DED7B5F52", (string)null, "02258BBF92AFC0D0"),
+                (7, "04AE435FBB7B4301", "4D6A17C62BD10123", "771BC10DED7B5F52", "4450DF488F399D91", "BDCE760A6CB62986"),
+                (8, "4D19B0486DDC9A14", "44EFC9EA945B58DE", "771BC10DED7B5F52", "2E3EC4B7A86D4C7A", "BDCE760A6CB62986"),
+                (9, "C6064590B48B6E2D", "44EFC9EA945B58DE", "771BC10DED7B5F52", "2E3EC4B7A86D4C7A", "A922D2D5A027FB7E"),
+            })
+            {
+                var m = NewModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = rules }, 12345);
+                var h = Hashes(m, null, false);
+                Check(h["ALL"] == all && (anomaly == null || h["anomaly"] == anomaly) && (hail == null || h["hail"] == hail) && (fog == null || h["fog"] == fog) && h["hailstorms"] == hailstorms,
+                    $"weather rules {rules} as built: ALL {h["ALL"]}, anomaly {h["anomaly"]}, hail {h["hail"]}, fog {h["fog"]}, hail under thunder {h["hailstorms"]}");
+            }
+        }
+
+        /// <summary>
+        /// (EA-0115) Vanilla's snow catch-up (WeatherSimulationRegion.UpdateSnowAccumulation) asks the climate at a region's
+        /// 8 corners (4 places, at sea level and at the world's top) for each hour in turn, up to 480 hours a tick; with Earth's
+        /// weather each reading is a rain cloudness (the rain postfix) and a temperature anomaly (the climate hook). Times a
+        /// region's 8 x 480 readings, and fingerprints the readings over a whole game year at 8 places' regions for rules 5 to
+        /// 9, asked as vanilla does (a corner's hours in turn) and again with the corners interleaved hour by hour: the two
+        /// must be equal (a memo of the place must not change an answer), and both equal to the build before (compare the
+        /// printed fingerprints).
+        /// </summary>
+        static int CatchUp(EarthData data, string[] args)
+        {
+            const int Region = 512;
+            var places = new (string, double, double)[] { ("London", 51.5, -0.12), ("Kansas City", 39.1, -94.6), ("Tokyo", 35.7, 139.7),
+                ("Mumbai", 19.1, 72.9), ("Sahara", 23.0, 5.5), ("Riga", 56.95, 24.1), ("Santiago", -33.45, -70.67), ("Darwin", -12.46, 130.84) };
+            int hoursYear = (int)YearHours;
+            foreach (int rules in new[] { 5, 6, 7, 8, 9 })
+            {
+                var m = NewModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = rules }, 12345);
+                var corners = new List<(double x, double z, double metres)>();
+                foreach (var (_, la, lo) in places)
+                {
+                    geo.FromGeo(la, lo, out double px, out double pz);
+                    double rx = Math.Floor(px / Region) * Region, rz = Math.Floor(pz / Region) * Region;
+                    for (int j = 0; j < 2; j++)
+                        for (int k = 0; k < 2; k++)
+                            for (int l = 0; l < 2; l++)
+                                corners.Add((rx + j * (Region - 1), rz + l * (Region - 1), k == 0 ? 0 : 3000));
+                }
+                double Hour(int i) => 3 * YearHours + i + 0.5;
+                // as vanilla asks: each corner's hours in turn
+                var a = new double[corners.Count * hoursYear * 2];
+                for (int c = 0; c < corners.Count; c++)
+                    for (int i = 0; i < hoursYear; i++)
+                    {
+                        var (x, z, metres) = corners[c];
+                        a[(c * hoursYear + i) * 2] = m.Cloudness(x + 0.5, z + 0.5, Hour(i));
+                        a[(c * hoursYear + i) * 2 + 1] = m.TemperatureAnomaly(x, z, Hour(i), metres);
+                    }
+                // interleaved: every corner at an hour, then the next hour (a fresh model, so nothing is shared but the code)
+                var m2 = NewModel(data.Weather, geo, new WeatherSettings { DaysPerYear = DaysPerYear, HoursPerDay = HoursPerDay, Rules = rules }, 12345);
+                var b = new double[a.Length];
+                for (int i = 0; i < hoursYear; i++)
+                    for (int c = 0; c < corners.Count; c++)
+                    {
+                        var (x, z, metres) = corners[c];
+                        b[(c * hoursYear + i) * 2] = m2.Cloudness(x + 0.5, z + 0.5, Hour(i));
+                        b[(c * hoursYear + i) * 2 + 1] = m2.TemperatureAnomaly(x, z, Hour(i), metres);
+                    }
+                var bytes = new byte[a.Length * 8];
+                Buffer.BlockCopy(a, 0, bytes, 0, bytes.Length);
+                string fa = Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(bytes))[..16];
+                Buffer.BlockCopy(b, 0, bytes, 0, bytes.Length);
+                string fb = Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(bytes))[..16];
+                Check(fa == fb, $"rules {rules}: the catch-up's answers, a corner's hours in turn {fa}, corners interleaved {fb}");
+                // the cost: a region's 8 corners x 480 hours, at fresh hours each run (as a returning player's region)
+                double Time(Func<int, double> f, int runs)
+                {
+                    f(0);
+                    var sw = System.Diagnostics.Stopwatch.StartNew();
+                    double sink = 0;
+                    for (int r = 1; r <= runs; r++) sink += f(r);
+                    if (sink == 12345.678) Console.Write("");
+                    return sw.Elapsed.TotalMilliseconds / runs;
+                }
+                var cost = new List<string>();
+                int variant = 0;
+                foreach (var (what, rain, anomaly) in new[] { ("both", true, true), ("rain", true, false), ("anomaly", false, true) })
+                {
+                    // (each variant at hours of its own: the storms of an hour are built once and kept, as for every region)
+                    double baseHours = (5 + 40 * variant++) * YearHours;
+                    double ms = Time(r =>
+                    {
+                        double sum = 0;
+                        var (x0, z0, _) = corners[(r * 8) % corners.Count];
+                        for (int c = 0; c < 8; c++)
+                        {
+                            double x = x0 + (c & 1) * (Region - 1), z = z0 + ((c >> 2) & 1) * (Region - 1), metres = (c >> 1 & 1) * 3000;
+                            for (int i = 0; i < 480; i++)
+                            {
+                                double h = baseHours + r * 480 + i + 0.5;
+                                if (rain) sum += m.Cloudness(x + 0.5, z + 0.5, h);
+                                if (anomaly) sum += m.TemperatureAnomaly(x, z, h, metres);
+                            }
+                        }
+                        return sum;
+                    }, 24);
+                    cost.Add($"{what} {ms:0.00} ms");
+                }
+                Console.WriteLine($"  rules {rules}: a region's catch-up (8 corners x 480 hours): " + string.Join(", ", cost));
+                if (args.Contains("parts"))
+                {
+                    // one corner's 480 hours, the storms of those hours already built: what a reading's parts cost (us a call)
+                    var (cx0, cz0, _) = corners[0];
+                    double hb = 7 * YearHours;
+                    for (int i = 0; i < 480; i++) { m.Cloudness(cx0 + 0.5, cz0 + 0.5, hb + i + 0.5); m.TemperatureAnomaly(cx0, cz0, hb + i + 0.5, 0); }
+                    double Us(Func<int, double> f)
+                    {
+                        var sw = System.Diagnostics.Stopwatch.StartNew(); double sink = 0;
+                        for (int rep = 0; rep < 40; rep++) for (int i = 0; i < 480; i++) sink += f(i);
+                        if (sink == 12345.678) Console.Write("");
+                        return sw.Elapsed.TotalMilliseconds * 1000 / (40 * 480);
+                    }
+                    var g0 = geo.ToGeo(cx0 + 0.5, cz0 + 0.5);
+                    Console.WriteLine($"    parts (us a call): ToGeo {Us(i => geo.ToGeo(cx0 + 0.5, cz0 + 0.5).Lat):0.000}, Place {Us(i => { m.Place(cx0 + 0.5, cz0 + 0.5, hb + i + 0.5, out double la, out _, out _, out var n); return la + n.Precip; }):0.000}" +
+                        $", Data.Sample {Us(i => data.Weather.Sample(g0.Lat, g0.Lon, m.YearRel(hb + i + 0.5)).Precip):0.000}" +
+                        $", storms {Us(i => m.Storms.Influence(g0.Lat, g0.Lon, (hb + i + 0.5) * m.Settings.Pace).RainBoost):0.000}" +
+                        $", Cloudness {Us(i => m.Cloudness(cx0 + 0.5, cz0 + 0.5, hb + i + 0.5)):0.000}, anomaly {Us(i => m.TemperatureAnomaly(cx0, cz0, hb + i + 0.5, 0)):0.000}");
+                }
+            }
+            Console.WriteLine(failures == 0 ? "ALL OK" : $"{failures} FAILED");
+            return failures == 0 ? 0 : 1;
+        }
+
         static int Fingerprint(WeatherModel m, string dumpFile)
+        {
+            Hashes(m, dumpFile, true);
+            return 0;
+        }
+
+        /// <summary>The fingerprint's parts by name (wind ... thunder, ALL, and anomaly, hail, fog outside ALL).</summary>
+        static Dictionary<string, string> Hashes(WeatherModel m, string dumpFile, bool print)
         {
             using var dump = dumpFile != null ? new BinaryWriter(File.Create(dumpFile)) : null;
             var names = new[] { "wind", "steady", "prevailing", "storm", "cloudness", "cover", "pressure", "thunder" };
             var parts = names.Select(_ => System.Security.Cryptography.IncrementalHash.CreateHash(System.Security.Cryptography.HashAlgorithmName.SHA256)).ToArray();
             var all = System.Security.Cryptography.IncrementalHash.CreateHash(System.Security.Cryptography.HashAlgorithmName.SHA256);
             var buf = new byte[8];
+            // the later rules' parts (not in ALL, which stays as it was before them): the weather's own warmth (rules 6),
+            // hail (6) and fog (7), at the ground 300 m up; and hail where it falls ("hailstorms": the random places above
+            // hold almost none, Fable's re-review of 14 November)
+            var extraNames = new[] { "anomaly", "hail", "fog", "hailstorms" };
+            var extra = extraNames.Select(_ => System.Security.Cryptography.IncrementalHash.CreateHash(System.Security.Cryptography.HashAlgorithmName.SHA256)).ToArray();
+            void AddExtra(int i, double v)
+            {
+                BitConverter.TryWriteBytes(buf, BitConverter.DoubleToInt64Bits(v));
+                extra[i].AppendData(buf);
+            }
             void Add(int i, double v)
             {
                 BitConverter.TryWriteBytes(buf, BitConverter.DoubleToInt64Bits(v));
@@ -128,16 +333,42 @@ namespace EarthMap.Tests
                 Add(2, s.Prevailing.X); Add(2, s.Prevailing.Z);
                 var e = m.Storms.Influence(s.Lat, s.Lon, h); Add(3, e.Presence); Add(3, e.Wind.X); Add(3, e.Wind.Z); Add(3, e.RainBoost);
                 Add(4, s.Cloudness); Add(5, s.CloudCover); Add(6, s.Pressure); Add(7, s.Thunder); Add(7, m.ThunderAt(x, z, h));
+                AddExtra(0, m.TemperatureAnomaly(x, z, h, 300)); AddExtra(1, m.HailAt(x, z, h, 300));
+                var fg = m.FogAt(x, z, h, 300); AddExtra(2, fg.Ground); AddExtra(2, fg.Air);
                 if (s.Cloudness > 0.5) raining++;
                 if (s.Thunder > 0) thunder++;
             }
+            // hail where it can fall: places and hours under thunder (ThunderAt above 0), until 3000 of them, the hail there
+            // (0 under a storm that hails not, so where it starts and stops counts too)
+            var hrnd = new Random(20261114);
+            int stormy = 0, hailing = 0;
+            for (int i = 0; i < 4000000 && stormy < 3000; i++)
+            {
+                double lat = -45 + 100 * hrnd.NextDouble(), lon = -180 + 360 * hrnd.NextDouble();
+                geo.FromGeo(lat, lon, out double x, out double z);
+                double h = hrnd.NextDouble() * 3 * YearHours;
+                if (m.ThunderAt(x, z, h) <= 0) continue;
+                stormy++;
+                double hail = m.HailAt(x, z, h, 300);
+                if (hail > 0) hailing++;
+                AddExtra(3, hail);
+            }
             string Hex(System.Security.Cryptography.IncrementalHash ih) => Convert.ToHexString(ih.GetHashAndReset())[..16];
-            Console.WriteLine($"fingerprint of {n} places and hours ({raining} raining, {thunder} under thunder) on {System.Runtime.InteropServices.RuntimeInformation.OSDescription.Trim()}, " +
+            if (print) Console.WriteLine($"fingerprint of {n} places and hours ({raining} raining, {thunder} under thunder) on {System.Runtime.InteropServices.RuntimeInformation.OSDescription.Trim()}, " +
                 $"{System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription}, {System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture}, " +
                 $"{(typeof(Program).Assembly.GetCustomAttributes(typeof(DebuggableAttribute), false).OfType<DebuggableAttribute>().FirstOrDefault()?.IsJITOptimizerDisabled == true ? "Debug" : "Release")}:");
-            for (int i = 0; i < names.Length; i++) Console.WriteLine($"  {names[i],-10} {Hex(parts[i])}");
-            Console.WriteLine($"  ALL        {Hex(all)}");
-            return 0;
+            var result = new Dictionary<string, string>();
+            for (int i = 0; i < names.Length; i++) result[names[i]] = Hex(parts[i]);
+            result["ALL"] = Hex(all);
+            for (int i = 0; i < extraNames.Length; i++) result[extraNames[i]] = Hex(extra[i]);
+            if (print)
+            {
+                foreach (var name in names) Console.WriteLine($"  {name,-10} {result[name]}");
+                Console.WriteLine($"  ALL        {result["ALL"]}");
+                foreach (var name in extraNames) Console.WriteLine($"  {name,-10} {result[name]} (not in ALL)");
+                Console.WriteLine($"  (hailstorms: {stormy} places under thunder, {hailing} with hail)");
+            }
+            return result;
         }
 
         static T Invoke<T>(Dictionary<string, object> e, string name) where T : class => e.TryGetValue(name, out var o) ? o as T : null;
@@ -146,6 +377,7 @@ namespace EarthMap.Tests
         static Func<double, double, double, (double X, double Z)> PrevailingOf(Dictionary<string, object> e) => Invoke<Func<double, double, double, (double X, double Z)>>(e, "prevailing");
         static Func<double, double, double, (double Presence, double WindMps, string Kind)> StormOf(Dictionary<string, object> e) => Invoke<Func<double, double, double, (double Presence, double WindMps, string Kind)>>(e, "storm");
         static Func<double, double, double, (double Cloudness, double Precipitation)> RainOf(Dictionary<string, object> e) => Invoke<Func<double, double, double, (double Cloudness, double Precipitation)>>(e, "rain");
+        static Func<double, double, double, double> PressureOf(Dictionary<string, object> e) => Invoke<Func<double, double, double, double>>(e, "pressure");
 
         static void Pos(double lat, double lon, out double x, out double z) => geo.FromGeo(lat, lon, out x, out z);
 
@@ -174,6 +406,7 @@ namespace EarthMap.Tests
             Check(e["storm"] is Func<double, double, double, (double Presence, double WindMps, string Kind)>, "storm is Func<double, double, double, (double, double, string)>");
             Check(e["rain"] is Func<double, double, double, (double Cloudness, double Precipitation)>, "rain is Func<double, double, double, (double, double)>");
             Check(e["writesVanilla"] is bool wv && wv, "writesVanilla is true (bool)");
+            Check(e["pressure"] is Func<double, double, double, double>, "pressure is Func<double, double, double, double> (added under R6, 15 November 2026)");
             var foreign = e.Where(kv => kv.Value == null || !BaseTypesOnly(kv.Value.GetType())).Select(kv => kv.Key).ToList();
             Check(foreign.Count == 0, "every member's type is from the base class library" + (foreign.Count > 0 ? ": not " + string.Join(", ", foreign) : ""));
         }
@@ -235,9 +468,41 @@ namespace EarthMap.Tests
             var pr = PrevailingOf(e)(x, z, 100);
             var s = StormOf(e)(x, z, 100);
             var r = RainOf(e)(x, z, 100);
+            double hpa = PressureOf(e)(x, z, 100);
             Check(double.IsNaN(w.X) && double.IsNaN(w.Z) && double.IsNaN(pr.X) && double.IsNaN(s.Presence) && double.IsNaN(s.WindMps) && s.Kind == null
-                && double.IsNaN(r.Cloudness) && double.IsNaN(r.Precipitation), "every answer is NaN (no answer, R7)");
+                && double.IsNaN(r.Cloudness) && double.IsNaN(r.Precipitation) && double.IsNaN(hpa), "every answer is NaN (no answer, R7)");
             Check(Invoke<Func<long>>(e, "revision")() == 1, "revision answers");
+        }
+
+        // ------------------------------------------------------------------------------------------ pressure
+
+        /// <summary>(15 November 2026, R6) The pressure member: Earth's model's own sea-level pressure (what World Map's
+        /// barometer read from the model by reflection), in hPa, lower in storms.</summary>
+        static void CheckPressure(Dictionary<string, object> e, WeatherModel m)
+        {
+            Console.WriteLine("pressure: hPa at sea level");
+            var pressure = PressureOf(e);
+            var storm = StormOf(e);
+            var rnd = new Random(11);
+            int exact = 0, n = 0, stormy = 0;
+            double min = double.MaxValue, max = double.MinValue, calm = 0, inStorm = 0;
+            int calmN = 0;
+            for (int i = 0; i < 3000; i++)
+            {
+                double lat = -65 + 130 * rnd.NextDouble(), lon = -180 + 360 * rnd.NextDouble();
+                Pos(lat, lon, out double x, out double z);
+                double h = rnd.NextDouble() * 5 * YearHours;
+                double a = pressure(x, z, h);
+                n++;
+                if (a == m.Sample(x, z, h).Pressure) exact++;
+                min = Math.Min(min, a); max = Math.Max(max, a);
+                if (storm(x, z, h).Presence > 0.5) { inStorm += a; stormy++; }
+                else { calm += a; calmN++; }
+            }
+            Check(exact == n, $"pressure is the model's WeatherSample.Pressure at {exact} of {n} places and times");
+            Check(min > 900 && max < 1050, $"between 900 and 1050 hPa ({min:0} to {max:0})");
+            if (stormy > 0)
+                Check(inStorm / stormy < calm / Math.Max(1, calmN), $"lower within storms ({inStorm / stormy:0} hPa at {stormy} places) than elsewhere ({calm / Math.Max(1, calmN):0})");
         }
 
         // ------------------------------------------------------------------------------------------ units
@@ -504,10 +769,10 @@ namespace EarthMap.Tests
             Console.WriteLine("the same answer from several threads");
             var q = Queries(2500, 31);
             // one thread, in order (tests/WeatherTests checks the storm caches against fresh models)
-            var single = new WeatherModel(data.Weather, geo, settings(), 12345);
+            var single = NewModel(data.Weather, geo, settings(), 12345);
             var one = Ask(WeatherContract.Build(() => single, () => 1), q, Enumerable.Range(0, q.Count));
 
-            var shared = new WeatherModel(data.Weather, geo, settings(), 12345);
+            var shared = NewModel(data.Weather, geo, settings(), 12345);
             var entry = WeatherContract.Build(() => shared, () => 1);
             int threads = Math.Max(8, Environment.ProcessorCount);
             var results = new Answers[threads];

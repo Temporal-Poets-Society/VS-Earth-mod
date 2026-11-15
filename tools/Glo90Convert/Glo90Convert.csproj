@@ -2,4 +2,9 @@
   <!-- Decision 0051: converts published GLO-90 GeoTIFFs in a local folder into Earth's tile store, with the mod's own code. -->
   <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><LangVersion>12</LangVersion><ImplicitUsings>enable</ImplicitUsings><Nullable>disable</Nullable></PropertyGroup>
   <ItemGroup><Compile Include="../../src/Core/*.cs" Link="Core/%(Filename)%(Extension)" /></ItemGroup>
+  <ItemGroup>
+    <!-- Geothermal's site lists (EA-0092): every project that compiles all of src/Core embeds them -->
+    <EmbeddedResource Include="../../data/geothermal-sites.bin" LogicalName="EarthMap.geothermal-sites.bin" />
+    <EmbeddedResource Include="../../data/geothermal-osm.bin" LogicalName="EarthMap.geothermal-osm.bin" />
+  </ItemGroup>
 </Project>

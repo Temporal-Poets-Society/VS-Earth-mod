@@ -1,6 +1,6 @@
 # 0007: River seam crossings found by the ring's geometry
 
-Status: Implemented (0.14.1-pre, not committed) | Date: 2026-10-16 | Decided by: Claude, fixing a review finding the user asked to fix; follows [0002](0002-save-compatibility.md)
+Status: Implemented in 0.14.1 (in Earth 1.0.0); in Earth 2.0.0 | Date: 2026-10-16 | Decided by: Claude, fixing a review finding the user asked to fix; follows [0002](0002-save-compatibility.md)
 
 ## Context
 
@@ -54,3 +54,9 @@ long pieces).
 ## History
 
 - 2026-10-16: found by the adversarial review; fixed.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: Implemented (0.14.1-pre, not committed)

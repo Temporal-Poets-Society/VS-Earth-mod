@@ -14,14 +14,15 @@ namespace EarthMap
     /// </summary>
     static class RegionMaps
     {
-        /// <summary>Wraps vanilla's climate layer and replaces its ocean layer (once: a layer already Earth's is kept).</summary>
-        internal static void Install(ICoreServerAPI sapi, TerrainModel model, ILogger logger)
+        /// <summary>Wraps vanilla's climate layer and replaces its ocean layer (once: a layer already Earth's is kept); false
+        /// when vanilla's map generator isn't there (EarthWorldGen refuses the world then, decision 0083).</summary>
+        internal static bool Install(ICoreServerAPI sapi, TerrainModel model, ILogger logger)
         {
             var genMaps = sapi.ModLoader.GetModSystem<GenMaps>();
             if (genMaps?.climateGen == null)
             {
-                logger.Warning("Vanilla GenMaps not found; Earth climate not applied.");
-                return;
+                logger.Error("Vanilla GenMaps not found; Earth climate not applied.");
+                return false;
             }
             var wc = sapi.WorldManager.SaveGame.WorldConfiguration;
             float tempMul = wc.GetString("globalTemperature", "1").ToFloat(1);
@@ -35,6 +36,7 @@ namespace EarthMap
             {
                 genMaps.oceanGen = new EarthOceanLayer(sapi.WorldManager.Seed + 4343, model, (double)regionSize / genMaps.noiseSizeOcean);
             }
+            return true;
         }
 
         /// <summary>
@@ -94,15 +96,22 @@ namespace EarthMap
 
         public override int[] GenLayer(int xCoord, int zCoord, int sizeX, int sizeZ)
         {
+            // (FP-11) map generation may wait for GLO-90 tiles: the pixels read the surface's height
+            using var fetch = FineElevation.Generating();
             int[] result = inner.GenLayer(xCoord, zCoord, sizeX, sizeZ);
-            for (int z = 0; z < sizeZ; z++)
+            try
             {
-                for (int x = 0; x < sizeX; x++)
+                for (int z = 0; z < sizeZ; z++)
                 {
-                    int i = z * sizeX + x;
-                    result[i] = model.ClimatePixel((xCoord + x) * blocksPerPixel, (zCoord + z) * blocksPerPixel, result[i] & 0xFF, tempMul, rainMul);
+                    for (int x = 0; x < sizeX; x++)
+                    {
+                        int i = z * sizeX + x;
+                        result[i] = model.ClimatePixel((xCoord + x) * blocksPerPixel, (zCoord + z) * blocksPerPixel, result[i] & 0xFF, tempMul, rainMul);
+                    }
                 }
             }
+            // (FP-01) the server stops before its game runs: nothing is saved, the start ends without this map
+            catch (ServerStoppingException) when (EarthWorldGen.StoppingBeforeRunning) { }
             return result;
         }
     }
@@ -121,7 +130,16 @@ namespace EarthMap
 
         public override int[] GenLayer(int xCoord, int zCoord, int sizeX, int sizeZ)
         {
+            using var fetch = FineElevation.Generating();
             var result = new int[sizeX * sizeZ];
+            try { Fill(result, xCoord, zCoord, sizeX, sizeZ); }
+            // (FP-01) the server stops before its game runs: nothing is saved, the start ends without this map
+            catch (ServerStoppingException) when (EarthWorldGen.StoppingBeforeRunning) { }
+            return result;
+        }
+
+        void Fill(int[] result, int xCoord, int zCoord, int sizeX, int sizeZ)
+        {
             for (int z = 0; z < sizeZ; z++)
             {
                 for (int x = 0; x < sizeX; x++)
@@ -136,7 +154,6 @@ namespace EarthMap
                     result[z * sizeX + x] = (int)Math.Round(255 * o);
                 }
             }
-            return result;
         }
     }
 }

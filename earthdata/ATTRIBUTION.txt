@@ -1,6 +1,7 @@
 Earth Map data sources (all free to use and redistribute):
 
-- ETOPO 2022 60 Arc-Second Global Relief Model (surface and bed elevation).
+- ETOPO 2022 60 Arc-Second Global Relief Model (surface and bed elevation; also the 0.5 degree land heights of
+  weatherground.bin, weather rules 7).
   NOAA National Centers for Environmental Information. Public domain. doi:10.25921/fd45-gt74
 - University of Delaware Air Temperature & Precipitation v5.01 (monthly normals, land).
   Provided by the NOAA PSL, Boulder, Colorado, USA, https://psl.noaa.gov
@@ -56,7 +57,8 @@ Earth Map data sources (all free to use and redistribute):
   6.5 C/km from CHELSA's own heights, yearly mean and coldest and warmest month, quantised to 0.1 C.
 - CHELSA V2.1 bioclimatic variables 1981-2010: bio12 (annual precipitation) and bio18 (precipitation of the warmest
   quarter), with the monthly temperatures above (for rain.bin, decision 0031). Same citation and licence (CC BY 4.0);
-  changed: Vintage Story rainfall and summer dryness computed per 30" pixel, averaged to 2 arc-minutes.
+  changed: Vintage Story rainfall and summer dryness computed per 30" pixel, averaged to 2 arc-minutes. bio12 also as
+  0.25 degree means for climatefix4.bin (the desert coasts' precipitation, EA-0060).
 - CHELSA V2.1 BIOCLIM+ 1981-2010: pet_penman_mean (mean monthly Penman-Monteith potential evapotranspiration), with the
   monthly temperatures above (for aridity.bin, worlds with aridity rules v1). Same citation and licence (CC BY 4.0);
   changed: the ratio of a Holdridge estimate from the temperatures to the Penman-Monteith evapotranspiration per 30"
@@ -77,12 +79,15 @@ Earth Map data sources (all free to use and redistribute):
   M.J., Durre, I., Vose, R.S., Gleason, B.E., Houston, T.G. (2012): An overview of the Global Historical Climatology
   Network-Daily Database. Journal of Atmospheric and Oceanic Technology 29, 897-910, doi:10.1175/JTECH-D-11-00103.1;
   dataset doi:10.7289/V5D21VHZ (accessed 7 November 2026). The daily precipitation of 56 stations gave the monthly
-  wet-day and dry-spell numbers the weather's wet and dry spells were fitted to (tools/ghcnd_dryspells.py); none of its
-  data is in this folder.
+  wet-day and dry-spell numbers the weather's wet and dry spells were fitted to (tools/ghcnd_dryspells.py), and the
+  weather types reported at its US first-order stations (thunder, fog) gave the hot dry months' thunder and checked the
+  fog of weather rules 7 (tools/ghcnd_weathertypes.py); none of its data is in this folder.
 - METAR reports from the Iowa Environmental Mesonet's archive, Iowa State University, https://mesonet.agron.iastate.edu/
   (accessed 8 November 2026). The share of routine reports with precipitation, month by month at the airports next to
-  those stations in 2017-2023, gave the rain rate of src/Core/WeatherModel.cs (tools/iem_metar_precip.py); none of the
-  reports is in this folder.
+  those stations in 2017-2023, gave the rain rate of src/Core/WeatherModel.cs (tools/iem_metar_precip.py), and (accessed
+  again 14 November 2026) how long the rain lasts, on how many days and at what hours it falls, for weather rules 8
+  (tools/iem_metar_events.py), and the thunder days of 48 airports, 27 of them in tropical Africa and the other tropics,
+  for weather rules 9 (tools/iem_metar_thunder.py); none of the reports is in this folder.
 
 Not in this folder: worlds made with Land heights "Copernicus GLO-90" (decision 0051, test) download tiles from the public
 copernicus-dem-90m bucket and keep them converted (whole metres, compressed) in VintagestoryData/ModData/earth/glo90.
@@ -108,17 +113,17 @@ Historical coordinates/heights are approximate; this is not the current complete
 Optional peaks.json: GeoNames allCountries, CC BY 4.0, https://download.geonames.org/export/dump/readme.txt.
 Changed by tools/bake_peaks.ps1: class T, PK/PKS/MT/VLC; explicit elevation only; deduplicated and spatially thinned.
 peaks.json is baked from allCountries.zip downloaded 30 October 2026 (tools/bake_peaks.ps1); 155 318 peaks with explicit elevations. Mount Everest (GeoNames 1283416) uses the 2020 survey, 8849 m. The nine summit anchors are the fallback when the file is absent.
-Decision 0057 geothermal sites, compiled into the mod by tools/bake_geothermal_sites.py (positions and kind only):
-- Holocene volcanoes (src/Core/GeothermalSites.cs): Global Volcanism Program, Smithsonian Institution, Volcanoes of the
+Decision 0057 geothermal sites, baked by tools/bake_geothermal_sites.py into data files embedded in the mod (positions and kind only):
+- Holocene volcanoes (data/geothermal-sites.bin, embedded in the mod): Global Volcanism Program, Smithsonian Institution, Volcanoes of the
   World, Holocene volcano list, https://volcano.si.edu, retrieved 7 November 2026 through its web feature service
   (GVP-VOTW:Smithsonian_VOTW_Holocene_Volcanoes). Changed: 1,214 volcanoes classed by evidence and last eruption; names kept.
   Landform and summit elevation kept for volcano bodies (geothermal rules 2).
 - Activity in the game's time: Global Volcanism Program, Smithsonian Institution, Volcanoes of the World, Holocene
   eruption list, same service (GVP-VOTW:Smithsonian_VOTW_Holocene_Eruptions), retrieved 7 November 2026. Changed: reduced
   to one flag per volcano, a confirmed eruption starting 1300-1700 or at least five since.
-- Hot springs and geysers (src/Core/GeothermalSites.cs): GeoNames allCountries, CC BY 4.0, the download above; feature
+- Hot springs and geysers (data/geothermal-sites.bin): GeoNames allCountries, CC BY 4.0, the download above; feature
   codes SPNT and GYSR without an OpenStreetMap spring within 1 km (287).
-- Hot springs and geysers (src/Core/GeothermalSitesOsm.cs): (c) OpenStreetMap contributors, https://www.openstreetmap.org/copyright.
+- Hot springs and geysers (data/geothermal-osm.bin, embedded in the mod): (c) OpenStreetMap contributors, https://www.openstreetmap.org/copyright.
   That list is a derivative database of OpenStreetMap and is available under the Open Database License 1.0,
   https://opendatacommons.org/licenses/odbl/1-0/. Changed: natural=hot_spring and natural=geyser of 7 November 2026
   (Overpass API), areas by their centre, those tagged below 25 C and cold-water geysers left out, duplicates within 100 m

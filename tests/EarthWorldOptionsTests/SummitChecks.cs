@@ -23,7 +23,7 @@ static class SummitChecks
         foreach (string choice in choices)
         {
             var wc = new TreeAttribute(); wc.SetString(EarthWorldOptions.SummitKey, choice);
-            var p = new EarthParams(); EarthWorldOptions.Freeze(wc, new EarthMapConfig(), p);
+            var p = ParamsBuilderChecks.NewParams(wc, new EarthMapConfig());
             p = Saved(p);
             int expected = choice == "off" ? -1 : int.Parse(choice);
             check(p.SummitMinElevation == expected, "Summit choice survives protobuf: " + choice);

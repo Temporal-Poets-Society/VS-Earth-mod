@@ -36,12 +36,35 @@ namespace EarthMap.Core
         /// Every beach of the older rules (low ground at the sea, a lake's or a river's water) takes the class too, so its
         /// material is the place's own. Glacier ice, river water and dry river beds stay as they are.
         /// </summary>
-        void ApplyShoreStrip(double x, double z, ref Column c)
+        void ApplyShoreStrip(double x, double z, ref Column c, ref ColumnWork work)
         {
             if (c.River || c.DryRiver || c.IceBottom <= c.Top) return;
             bool water = c.Water != WaterNone;
-            if (water && ShoreRules < 2) return;
+            if (water && !Rules.ShoreAtWater) return;
             double mpb = Math.Max(1e-3, MetresPerBlock);
+            // (T-L7, code review 14 November 2026) dry land that no strip can reach is left before the class lookup and the
+            // noise. The widest strip there can be (the widest class, the noise at 1.5 times its range of 1) bounds the reach:
+            // a column with no coast, small island or lake shore that close ends at "dist > reach" below, unchanged. An older
+            // beach goes the whole way (its class is kept or the beach undone). The coast's distance is kept for below
+            // (ColumnWork).
+            if (!water && !c.Beach)
+            {
+                double widest = Math.Max(1, ShoreMaterial.WidestMetres * (1 + 1.5 * ShoreMaterial.WidthVary) / mpb);
+                double reachMax = widest * (1 + ShoreDuneShare) + ShoreRampBlocks;
+                bool near = false;
+                if (Coasts != null)
+                {
+                    double screenD = CoastDistanceAt(ref work, c.Lat, c.Lon);
+                    near = !double.IsNaN(screenD) && screenD <= reachMax + Coasts.ChannelBlocks;
+                }
+                if (!near && Islands != null && IslandAt(ref work, c.Lat, c.Lon, out var ih0) && ih0.Inside && ih0.Dist <= reachMax) near = true;
+                if (!near && LakeOutlines != null && OutlinesDecide(c.Lat, c.Lon))
+                {
+                    var lk0 = LakeOutlines.At(c.Lat, c.Lon);
+                    near = lk0.Covered && !lk0.Inside && !double.IsNaN(lk0.Level) && Math.Max(0, lk0.Dist - 0.5) / ShoreMaterial.LakeShare <= reachMax;
+                }
+                if (!near) return;
+            }
             byte cls = ShoreData?.At(c.Lat, c.Lon) ?? ShoreMaterial.None;
             if (cls == ShoreMaterial.None) cls = ShoreMaterial.Rule;
             double vary = 1 + ShoreMaterial.WidthVary * SeamNoise(n3, x, z, Math.Max(8, 400 / mpb), 2);
@@ -53,13 +76,13 @@ namespace EarthMap.Core
                 double out_ = Math.Max(1, NearshoreShare * width);
                 if (c.Water == WaterSea && Coasts != null)
                 {
-                    double d = CoastDistanceAt(c.Lat, c.Lon, WorksAt(c.Lat, c.Lon));
+                    double d = CoastDistanceAt(ref work, c.Lat, c.Lon);
                     if (!double.IsNaN(d) && d <= 0 && -d <= out_) c.Shore = cls;
                 }
                 else if (c.Water is WaterLake or WaterSaltLake && LakeOutlines != null && c.OutlineLake)
                 {
                     var lk = LakeOutlines.At(c.Lat, c.Lon);
-                    if (lk.Inside && lk.Area * mpb * mpb >= ShoreMaterial.LakeMinKm2 * 1e6 && lk.Dist <= Math.Max(1, out_ * ShoreMaterial.LakeShare))
+                    if (lk.Inside && LakeArea(lk) * mpb * mpb >= ShoreMaterial.LakeMinKm2 * 1e6 && lk.Dist <= Math.Max(1, out_ * ShoreMaterial.LakeShare))
                         c.Shore = cls;
                 }
                 return;
@@ -69,13 +92,13 @@ namespace EarthMap.Core
             // only within the strip of the sea's, an island's or a big lake's shore (below), river banks and lake beaches as
             // they are
             bool older = c.Beach;
-            if (older && (ShoreRules < 2 || c.NearRiver || c.NearLakeTop >= 0))
+            if (older && (!Rules.ShoreAtWater || c.NearRiver || c.NearLakeTop >= 0))
             {
                 c.Shore = cls;
                 return;
             }
-            double dune = ShoreRules >= 2 ? width * ShoreDuneShare : 0;
-            double strip = width + dune, reach = ShoreRules >= 2 ? strip + ShoreRampBlocks : strip;
+            double dune = Rules.ShoreAtWater ? width * ShoreDuneShare : 0;
+            double strip = width + dune, reach = Rules.ShoreAtWater ? strip + ShoreRampBlocks : strip;
 
             // distance (blocks, as strip widths at the sea) to the nearest water that has a strip, that water's top block
             // and level (m), and how rugged the land around is (m)
@@ -84,8 +107,8 @@ namespace EarthMap.Core
             // the sea, where the coast outlines decide (as CoastColumn: the outline's side, its narrow channels kept)
             if (Coasts != null)
             {
-                var wk = WorksAt(c.Lat, c.Lon);
-                double d = CoastDistanceAt(c.Lat, c.Lon, wk);
+                var wk = WorksAt(ref work, c.Lat, c.Lon);
+                double d = CoastDistanceAt(ref work, c.Lat, c.Lon);
                 if (!double.IsNaN(d) && d <= reach + Coasts.ChannelBlocks)
                 {
                     var s = Data.SampleTerrain(c.Lat, c.Lon);
@@ -98,7 +121,7 @@ namespace EarthMap.Core
                 }
             }
             // a small island's coast
-            if (dist > reach && Islands != null && Islands.Query(c.Lat, c.Lon, out var ih) && ih.Inside && ih.Dist < dist)
+            if (dist > reach && Islands != null && IslandAt(ref work, c.Lat, c.Lon, out var ih) && ih.Inside && ih.Dist < dist)
             {
                 dist = ih.Dist;
                 relief = double.NaN;
@@ -108,7 +131,7 @@ namespace EarthMap.Core
             {
                 var lk = LakeOutlines.At(c.Lat, c.Lon);
                 double ld = Math.Max(0, lk.Dist - 0.5) / ShoreMaterial.LakeShare;
-                if (lk.Covered && !lk.Inside && !double.IsNaN(lk.Level) && lk.Area * mpb * mpb >= ShoreMaterial.LakeMinKm2 * 1e6 && ld < dist)
+                if (lk.Covered && !lk.Inside && !double.IsNaN(lk.Level) && LakeArea(lk) * mpb * mpb >= ShoreMaterial.LakeMinKm2 * 1e6 && ld < dist)
                 {
                     dist = ld;
                     level = lk.Level;
@@ -134,7 +157,7 @@ namespace EarthMap.Core
                 c.Beach = true;
                 c.Shore = cls;
             }
-            if (ShoreRules < 2 || cls == ShoreMaterial.Rock || c.Top <= waterTop) return;
+            if (!Rules.ShoreAtWater || cls == ShoreMaterial.Rock || c.Top <= waterTop) return;
             // the beach at the water's level and the slope behind it, where the shore is low
             if (double.IsNaN(relief)) relief = Data.SampleTerrain(c.Lat, c.Lon).Relief;
             int cap = dist <= width ? waterTop : waterTop + (int)Math.Ceiling(dist - width);

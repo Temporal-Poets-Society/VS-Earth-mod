@@ -147,7 +147,15 @@ namespace EarthMap.Core
         /// The flow at a place (m/s east and north), interpolated between the four nearest pixels' centres (a pixel without
         /// flow counts as none, so the flow slows towards the banks): false where the file has no tile there.
         /// </summary>
-        public bool At(double lat, double lon, out double east, out double north)
+        public bool At(double lat, double lon, out double east, out double north) => At(lat, lon, false, out east, out north);
+
+        /// <summary>
+        /// The same; with <paramref name="acrossTiles"/> (GenFixRules 5, EA-0111) a corner pixel beyond this tile's edge is
+        /// read from the tile that holds it, as one grid: before, the four pixels were clamped to the place's own tile, so
+        /// the flow stepped at every whole degree (a straight seam across wide rivers at 1:10: the Amazon on 3° S, the Lena
+        /// on 130° E).
+        /// </summary>
+        public bool At(double lat, double lon, bool acrossTiles, out double east, out double north)
         {
             east = north = 0;
             byte st = State(lat, lon, out int t, out int lat0, out int lon0);
@@ -160,16 +168,45 @@ namespace EarthMap.Core
             for (int di = 0; di <= 1; di++)
                 for (int dj = 0; dj <= 1; dj++)
                 {
-                    int i = Math.Clamp(i0 + di, 0, tile.H - 1), j = Math.Clamp(j0 + dj, 0, tile.W - 1);
-                    int k = i * tile.W + j;
-                    double v = tile.Speed[k] / 100.0;
+                    int i = i0 + di, j = j0 + dj;
+                    double v, ang;
+                    byte next = HasFlow;
+                    if (acrossTiles && (i < 0 || i >= tile.H || j < 0 || j >= tile.W))
+                        // the pixel's centre in degrees, from the neighbouring tile: still water there fades the flow out;
+                        // where the file has no tile (or beyond a pole) the edge pixel stands in, as before
+                        next = PixelAt(lat0 + 1 - (i + 0.5) / tile.H, lon0 + (j + 0.5) / tile.W, out v, out ang);
+                    else v = ang = 0;
+                    if (next == NoFlow) continue;
+                    if (!acrossTiles || next == NoData || i >= 0 && i < tile.H && j >= 0 && j < tile.W)
+                    {
+                        i = Math.Clamp(i, 0, tile.H - 1); j = Math.Clamp(j, 0, tile.W - 1);
+                        int k = i * tile.W + j;
+                        v = tile.Speed[k] / 100.0;
+                        ang = tile.Dir[k] * (Math.PI / 128);
+                    }
                     if (v <= 0) continue;
                     double wgt = (di == 0 ? 1 - a : a) * (dj == 0 ? 1 - b : b);
-                    double ang = tile.Dir[k] * (Math.PI / 128);
                     east += wgt * v * Math.Cos(ang);
                     north += wgt * v * Math.Sin(ang);
                 }
             return true;
+        }
+
+        /// <summary>The speed (m/s) and direction (radians) of the pixel holding a place, and its tile's state: HasFlow,
+        /// NoFlow (still water) or NoData (no tile, or beyond a pole).</summary>
+        byte PixelAt(double lat, double lon, out double speed, out double angle)
+        {
+            speed = angle = 0;
+            if (lat >= 90 || lat < -90) return NoData;
+            lon = ((lon + 180) % 360 + 360) % 360 - 180;
+            byte st = State(lat, lon, out int t, out int lat0, out int lon0);
+            if (st != HasFlow) return st;
+            var tile = tiles.Get(t);
+            int i = Math.Clamp((int)Math.Floor((lat0 + 1 - lat) * tile.H), 0, tile.H - 1), j = Math.Clamp((int)Math.Floor((lon - lon0) * tile.W), 0, tile.W - 1);
+            int k = i * tile.W + j;
+            speed = tile.Speed[k] / 100.0;
+            angle = tile.Dir[k] * (Math.PI / 128);
+            return HasFlow;
         }
     }
 }

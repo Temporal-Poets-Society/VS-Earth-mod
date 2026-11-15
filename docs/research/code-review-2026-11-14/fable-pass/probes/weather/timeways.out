@@ -1,0 +1,2 @@
+geometry: ring 25600+204800, wraps True, gutter 0, seam -169.25, 568.89 x 568.36 blocks per degree
+time two ways: of 200000, hours differ in bits 32471; cloudness bits differ 13052, largest difference 8.78E-013, rain on/off flips 0

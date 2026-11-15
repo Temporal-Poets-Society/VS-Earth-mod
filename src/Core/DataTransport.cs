@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -63,6 +65,45 @@ namespace EarthMap.Core
         public void Dispose() => http.Dispose();
 
         public static bool IsUrl(string source) => source.StartsWith("http://", StringComparison.OrdinalIgnoreCase) || source.StartsWith("https://", StringComparison.OrdinalIgnoreCase);
+
+        /// <summary>
+        /// (EA-0116 D-L4) Why a source setting (DataRepo, GroundRepo, ElevationRepo, ElevationSource) can't be used, or null: an
+        /// http(s) address must parse with a host; anything else is a folder, whose path must be one this system accepts. A
+        /// folder that isn't there is not a fault of the setting's form (a drive may be mounted later): a fetch from it fails
+        /// as one that may pass, naming the folder (<see cref="FolderThere"/>), and never counts as the source lacking the
+        /// files (Fable's overview low 5). Null or blank: none set, not a problem. Before,
+        /// "http://exa mple/" or "http://" ended the start with a raw UriFormatException or InvalidOperationException that
+        /// didn't name the setting.
+        /// </summary>
+        public static string SourceProblem(string source)
+        {
+            if (string.IsNullOrWhiteSpace(source)) return null;
+            source = source.Trim();
+            if (IsUrl(source))
+                return Uri.TryCreate(source, UriKind.Absolute, out var uri) && !string.IsNullOrEmpty(uri.Host) && !source.Contains(' ')
+                    ? null : $"\"{source}\" is not a usable web address";
+            try
+            {
+                Path.GetFullPath(source);
+                return source.IndexOfAny(Path.GetInvalidPathChars()) >= 0 ? $"\"{source}\" is not a usable folder" : null;
+            }
+            catch (Exception e) when (e is ArgumentException or NotSupportedException or PathTooLongException or System.Security.SecurityException)
+            {
+                return $"\"{source}\" is not a usable folder ({e.Message})";
+            }
+        }
+
+        /// <summary>
+        /// (Fable's overview low 5, 14 November 2026) A local source's folder that isn't there (a drive not mounted, a typo in
+        /// the address, "htps://" read as a folder) throws <see cref="DirectoryNotFoundException"/> naming it: a failure that
+        /// may pass, never the source's answer that it lacks a file, which a world may record for good (review A3: a new world
+        /// made while the folder was away would keep the 2' ground sets for good).
+        /// </summary>
+        public static void FolderThere(string folder)
+        {
+            string full = Path.GetFullPath(folder);
+            if (!Directory.Exists(full)) throw new DirectoryNotFoundException($"the source folder {full} isn't there");
+        }
 
         /// <summary>Where a published name is in a source: the URL below it, or the file in the folder.</summary>
         public static string Locate(string source, string name) => IsUrl(source) ? source.TrimEnd('/') + "/" + name : Path.Combine(source, name);
@@ -221,6 +262,7 @@ namespace EarthMap.Core
         {
             if (!IsUrl(source))
             {
+                FolderThere(source);
                 FileStream fs;
                 try { fs = new FileStream(Locate(source, name), FileMode.Open, FileAccess.Read, FileShare.Read, 1 << 20, true); }
                 catch (FileNotFoundException e) { throw new NotThereException($"{name} is not in {source}", e); }
@@ -258,6 +300,7 @@ namespace EarthMap.Core
             var data = new byte[length];
             if (!IsUrl(source))
             {
+                FolderThere(source);
                 using var fs = new FileStream(Locate(source, name), FileMode.Open, FileAccess.Read, FileShare.Read, 1 << 16, true);
                 fs.Seek(offset, SeekOrigin.Begin);
                 await fs.ReadExactlyAsync(data, token).ConfigureAwait(false);
@@ -273,25 +316,141 @@ namespace EarthMap.Core
             return data;
         }
 
-        /// <summary>A whole file at <paramref name="location"/> (a URL, or a path), read with the read timeout; Found false
-        /// when the source doesn't have it (HTTP 404, no such file). ETag: the server's, "local" for a file.</summary>
-        public async Task<(bool Found, byte[] Data, string ETag)> GetAsync(string location, CancellationToken token = default)
+        /// <summary>
+        /// A whole file at <paramref name="location"/> (a URL, or a path), read with the read timeout; Found false when the
+        /// source doesn't have it (HTTP 404, no such file). ETag: the server's, "local" for a file. EA-0106 (the Fable pass's
+        /// FP-17): at most <paramref name="maxBytes"/>; a file that is larger, or a body that says it is or turns out to be,
+        /// throws <see cref="InvalidDataException"/> before more is read (a body without end from a mirror or a proxy took
+        /// 1.5 GB in 3 s).
+        /// </summary>
+        public async Task<(bool Found, byte[] Data, string ETag)> GetAsync(string location, long maxBytes, CancellationToken token = default)
         {
+            if (maxBytes <= 0 || maxBytes > Array.MaxLength) throw new ArgumentOutOfRangeException(nameof(maxBytes));
             if (!IsUrl(location))
             {
+                // (Fable's re-review, 14 November) a source folder that isn't there (a drive not mounted, a typo) is no answer
+                // that it lacks the file, which a world may record for good (review A3): a failure that may pass
+                FolderThere(Path.GetDirectoryName(Path.GetFullPath(location)));
                 if (!File.Exists(location)) return (false, null, null);
+                long size = new FileInfo(location).Length;
+                if (size > maxBytes) throw TooLarge(location, size, maxBytes);
                 return (true, await File.ReadAllBytesAsync(location, token).ConfigureAwait(false), "local");
             }
             using var resp = await http.GetAsync(location, HttpCompletionOption.ResponseHeadersRead, token).ConfigureAwait(false);
             if (resp.StatusCode == HttpStatusCode.NotFound) return (false, null, null);
             resp.EnsureSuccessStatusCode();
             string etag = resp.Headers.ETag?.Tag?.Trim('"') ?? "";
+            long? said = resp.Content.Headers.ContentLength;
+            if (said > maxBytes) throw TooLarge(location, said.Value, maxBytes);
             using var body = await resp.Content.ReadAsStreamAsync(token).ConfigureAwait(false);
-            using var memory = resp.Content.Headers.ContentLength is long n and > 0 and < int.MaxValue ? new MemoryStream((int)n) : new MemoryStream();
+            using var memory = said is long n and > 0 ? new MemoryStream((int)n) : new MemoryStream();
             var buffer = new byte[1 << 16];
             int got;
-            while ((got = await ReadAsync(body, buffer, token).ConfigureAwait(false)) > 0) memory.Write(buffer, 0, got);
+            while ((got = await ReadAsync(body, buffer, token).ConfigureAwait(false)) > 0)
+            {
+                if (memory.Length + got > maxBytes) throw TooLarge(location, memory.Length + got, maxBytes, atLeast: true);
+                memory.Write(buffer, 0, got);
+            }
             return (true, memory.ToArray(), etag);
+        }
+
+        static InvalidDataException TooLarge(string location, long bytes, long maxBytes, bool atLeast = false)
+            => new($"{location}: {(atLeast ? "more than " + (bytes - 1).ToString("N0") : bytes.ToString("N0"))} bytes, more than the {maxBytes:N0} expected at most; not read");
+
+
+        // ------------------------------------------------------------------------------------------ a set of published files
+
+        /// <summary>EA-0092 A4: one of a set of published files: its name in the source, where it goes, its size and SHA-256.</summary>
+        public readonly record struct FileSpec(string Name, string Target, long Bytes, string Sha256);
+
+        /// <summary>A set's answer: every file here and checked; the source answered that it lacks one (or none is set); a
+        /// failure that may pass (the network, a download that didn't check out, a source setting that can't be used, another
+        /// server's turn that ran out).</summary>
+        public enum SetResult { Here, Lacking, Failed }
+
+        /// <summary>
+        /// EA-0092 A4 (code review 14 November 2026; CR-A11): the one protocol for a set of published files, used by Earth's
+        /// data store, the 30″ ground sets and the GLO-90 release's files, which had it written three times with drifting
+        /// policy. The files missing or wrong (size and SHA-256); none: Here. Then the folder's turn (servers sharing it take
+        /// turns, review A4), and a second look (another server may have fetched them meanwhile); <paramref name="inTurn"/>
+        /// runs with the turn held. Then <paramref name="copyIn"/> (an installed Earth 1.0 data pack carries the same bytes).
+        /// Then each file from <paramref name="source"/>, stopping at the first that fails: the source is unreachable or
+        /// lacks it, and the rest would only wait the same way (an offline first start retried every file for many minutes).
+        /// No source set: Lacking; a source setting that can't be used (DataTransport.SourceProblem), or a local source folder
+        /// that isn't there (Fable's overview low 5): Failed at once, naming <paramref name="setting"/> and the folder; all
+        /// before the turn when there is nothing to copy in. The caller's cancellation
+        /// ends it with OperationCanceledException, nothing left as if fetched. Why: the reason, the file's name first.
+        /// </summary>
+        public static async Task<(SetResult Result, string Why)> EnsureFilesAsync(string folder, IReadOnlyList<FileSpec> files, string source,
+            string setting, string sourceLabel, string what, Action<string> log, CancellationToken token = default,
+            bool hash = true, Func<FileSpec, bool> copyIn = null, Action inTurn = null, Action<int> received = null, DataTransport transport = null)
+        {
+            log ??= _ => { };
+            // (EA-0092 A6) hash: false looks at the sizes only, for a caller that checks each file's hash as it reads it
+            var todo = files.Where(f => !FileMatches(f.Target, f.Bytes, f.Sha256, hash)).ToList();
+            if (todo.Count == 0) return (SetResult.Here, null);
+            (SetResult, string)? NoSource()
+            {
+                if (string.IsNullOrWhiteSpace(source))
+                {
+                    log($"{todo.Count} {what} missing and no {sourceLabel} set ({setting} in earth.json); nothing is downloaded.");
+                    return (SetResult.Lacking, $"no {sourceLabel} is set ({setting} in earth.json)");
+                }
+                // (EA-0116 D-L4) a setting that can't be used is named: a failure that may pass (a setting can be corrected)
+                if (SourceProblem(source) is string bad)
+                {
+                    log($"{setting} in earth.json: {bad}; nothing is downloaded.");
+                    return (SetResult.Failed, $"{setting} in earth.json: {bad}");
+                }
+                // (Fable's overview low 5) a folder that isn't there doesn't lack the files: a drive not mounted, a typo; the
+                // setting and the folder are named, and nothing is recorded for good (review A3)
+                if (!IsUrl(source))
+                {
+                    try { FolderThere(source); }
+                    catch (DirectoryNotFoundException e)
+                    {
+                        log($"{setting} in earth.json: {e.Message}; nothing is downloaded.");
+                        return (SetResult.Failed, $"{setting} in earth.json: {e.Message}");
+                    }
+                }
+                return null;
+            }
+            if (copyIn == null && NoSource() is { } early) return early;
+            IDisposable turn;
+            try { turn = await TakeTurnAsync(folder, log, token).ConfigureAwait(false); }
+            catch (IOException e) when (e is not NotThereException) { log(e.Message); return (SetResult.Failed, e.Message); }   // another server's turn ran out
+            using (turn)
+            {
+                inTurn?.Invoke();
+                todo = todo.Where(f => !FileMatches(f.Target, f.Bytes, f.Sha256, hash)).ToList();
+                if (todo.Count == 0) return (SetResult.Here, null);
+                if (copyIn != null)
+                {
+                    foreach (var f in todo.ToList()) if (copyIn(f)) todo.Remove(f);
+                    if (todo.Count == 0) { log($"all {what} are in place (from installed data packs)."); return (SetResult.Here, null); }
+                    if (NoSource() is { } late) return late;
+                }
+                log($"fetching {todo.Count} {what}, {todo.Sum(f => f.Bytes) / 1e6:F0} MB, from {source} into {folder}.");
+                var own = transport == null ? new DataTransport(TimeSpan.FromMinutes(2)) : null;
+                try
+                {
+                    var t = transport ?? own;
+                    for (int i = 0; i < todo.Count; i++)
+                    {
+                        token.ThrowIfCancellationRequested();
+                        var f = todo[i];
+                        (bool Ok, string Why, bool NotThere) r;
+                        try { r = await t.FileAsync(source, f.Name, f.Target, f.Bytes, f.Sha256, FileTries, log, received, token).ConfigureAwait(false); }
+                        catch (Exception e) when (e is UriFormatException or ArgumentException or NotSupportedException or InvalidOperationException) { r = (false, e.Message, false); }
+                        if (r.Ok) { log($"{f.Name}: {f.Bytes / 1e6:F1} MB, checked."); continue; }
+                        string why = r.Why ?? (r.NotThere ? "the source doesn't have it" : "not fetched");
+                        log($"{f.Name} could not be fetched: {why}" + (i < todo.Count - 1 ? $"; the remaining {todo.Count - i - 1} file(s) are not tried." : "."));
+                        return (r.NotThere ? SetResult.Lacking : SetResult.Failed, f.Name + ": " + why);
+                    }
+                }
+                finally { own?.Dispose(); }
+            }
+            return (SetResult.Here, null);
         }
 
         // ------------------------------------------------------------------------------------------ whole files
@@ -332,6 +491,8 @@ namespace EarthMap.Core
                         since = DateTime.UtcNow;
                     }
                 }
+                // (EA-0092 A10) on the disk before it is checked and renamed: after a power cut a renamed file could hold zeros
+                output.Flush(true);
             }
             long length = new FileInfo(part).Length;
             if (length < bytes) throw new IOException($"the download stopped at {length:N0} of {bytes:N0} bytes");

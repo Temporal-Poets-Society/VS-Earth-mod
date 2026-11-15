@@ -51,6 +51,10 @@ namespace EarthMap
         public RegionalTreeCatalog DesertTreeRanges => core?.DesertTreeRanges;
         public bool TraceTreeSelections => core?.Config?.SelfTest?.Enabled == true;
         internal ICoreServerAPI Api => sapi;
+        EarthWaterTable waterTable;
+        /// <summary>EA-0054 step 2: this world's water table system for the tree pick's column site (looked up once; the
+        /// generator object belongs to the world, so nothing outlives it).</summary>
+        internal EarthWaterTable WaterTable => waterTable ??= sapi?.ModLoader.GetModSystem<EarthWaterTable>();
 
         // this world's generation, set up by InitWorldGen (null before)
         WorldGenRules rules;
@@ -98,17 +102,51 @@ namespace EarthMap
                     "Use one or the other; Earth Map generates its own real rivers.");
             }
             api.Event.InitWorldGenerator(InitWorldGen, "standard");
+            api.Event.ServerRunPhase(EnumServerRunPhase.RunGame, () => running = true);
             api.Event.ServerRunPhase(EnumServerRunPhase.RunGame, CheckTerrainBeforeRunning);
             api.Event.MapRegionGeneration(OnMapRegionGen, "standard");
             // after vanilla's block layers (GenBlockLayers, 0.4) in the same pass, before any vegetation
-            api.Event.ChunkColumnGeneration(BareRock, EnumWorldGenPass.Terrain, "standard");
+            api.Event.ChunkColumnGeneration(Guarded("surface pass", BareRock), EnumWorldGenPass.Terrain, "standard");
             // after vanilla's caves (0.3), which mark their hot springs in the same pass, before GenHotSprings (TerrainFeatures)
-            api.Event.ChunkColumnGeneration(KnownHotSprings, EnumWorldGenPass.Terrain, "standard");
+            api.Event.ChunkColumnGeneration(Guarded("known hot springs", KnownHotSprings), EnumWorldGenPass.Terrain, "standard");
+            // (FP-13) a terrain pass cut short before the surface pass
+            api.Event.ChunkColumnGeneration(Guarded("terrain pass", SurfacePassRan), EnumWorldGenPass.TerrainFeatures, "standard");
             // after caves and ores (TerrainFeatures), before sunlight
-            api.Event.ChunkColumnGeneration(FillRockFloor, EnumWorldGenPass.Vegetation, "standard");
+            api.Event.ChunkColumnGeneration(Guarded("rock floor", FillRockFloor), EnumWorldGenPass.Vegetation, "standard");
             // decision 0070: after every plant pass (block patches scatter round a centre the patch check sees alone)
-            api.Event.ChunkColumnGeneration(ClearShorePlants, EnumWorldGenPass.PreDone, "standard");
+            api.Event.ChunkColumnGeneration(Guarded("shore strip plants", ClearShorePlants), EnumWorldGenPass.PreDone, "standard");
             Started = true;
+        }
+
+        /// <summary>
+        /// (FP-13, the Fable pass of the 14 November 2026 code review) One of Earth's chunk column handlers with the net every
+        /// one of them needs. After a refusal, or once this generator is closed (<see cref="Dispose"/>, FP-01), a chunk that
+        /// reaches it is noted to be made again and its pass throws, so no chunk in flight finishes a pass half Earth's and is
+        /// saved so. A throw of the handler is a failed pass (<see cref="FailedPass"/>: noted, the server stops), as for the
+        /// geology and ore passes; before, these handlers had no catch and the game kept the chunk with half a pass. Earth's
+        /// other systems register theirs through <see cref="Guard"/>.
+        /// </summary>
+        internal ChunkColumnGenerationDelegate Guarded(string pass, Action<IChunkColumnGenerateRequest> handler) => request =>
+        {
+            ThrowIfRefused(request);
+            // (FP-11/FP-12) generation: this thread may wait for GLO-90 tiles for the handler's length; (EA-0099) a chunk pass,
+            // which a square that can't be had leaves unmade
+            using var fetch = FineElevation.Generating();
+            using var inPass = FineElevation.ChunkPass();
+            try { handler(request); }
+            catch (Exception e) when (e is not RefusedException) { Failed(pass, request.Chunks, request.ChunkX, request.ChunkZ, e); }
+        };
+
+        /// <summary><see cref="Guarded"/> for a handler of another of Earth's systems (any start order: the mod systems exist
+        /// before any of them starts).</summary>
+        internal static ChunkColumnGenerationDelegate Guard(ICoreServerAPI api, string pass, Action<IChunkColumnGenerateRequest> handler)
+            => api.ModLoader.GetModSystem<EarthWorldGen>() is EarthWorldGen gen ? gen.Guarded(pass, handler) : request => handler(request);
+
+        /// <summary>What Earth throws when it refuses a world or a chunk after a refusal: a pass's catch lets it through (the
+        /// chunk is noted already) instead of reporting it as the pass's own failure.</summary>
+        internal sealed class RefusedException : InvalidOperationException
+        {
+            public RefusedException(string message, Exception inner = null) : base(message, inner) { }
         }
 
         /// <summary>
@@ -121,7 +159,8 @@ namespace EarthMap
         {
             string game = sapi.ModLoader.GetMod("game")?.Info?.Version ?? Vintagestory.API.Config.GameVersion.ShortGameVersion;
             patches = new PatchVanilla(harmony, Mod.Info.Version, game, line => Mod.Logger.Warning("{0}", line), line => Mod.Logger.Error("{0}", line));
-            patches.Apply(EarthMap.PatchVanilla.Table(sapi.Event.GetRegisteredWorldGenHandlers("standard")));
+            // (FP-01) the terrain handler in this server's list asks this generator, also once Dispose has closed it
+            patches.Apply(EarthMap.PatchVanilla.Table(sapi.Event.GetRegisteredWorldGenHandlers("standard"), InPlaceOfGenTerraHere));
             TerrainReservationPatchGuardReady = patches.On(EarthMap.PatchVanilla.Feature.PatchReservations);
         }
 
@@ -132,71 +171,257 @@ namespace EarthMap
             var gen = Instance;
             gen?.ThrowIfRefused(request);
             if (gen == null || !gen.Active) return true;
+            gen.CheckFeaturesFor(request);
             gen.MakeTerrain(request);
             return false;
         }
 
-        /// <summary>Set by <see cref="Refuse"/>: this Earth world is stopping and nothing more is generated in it.</summary>
+        /// <summary>Set by <see cref="Refuse"/>, and by <see cref="Dispose"/> in an Earth world (FP-01): this Earth world is
+        /// stopping and nothing more is generated in it.</summary>
         volatile bool refused;
 
+        /// <summary>The game runs (RunGame): before, nothing of the world is saved.</summary>
+        volatile bool running;
+
         /// <summary>
-        /// A chunk asked for after a refusal (another generation thread, in the seconds before the server stops): Active is off
-        /// by then, and vanilla's terrain would make it. It is noted for the next start and its terrain pass throws instead.
+        /// (FP-01) The server stops before its game runs (a player leaving a world that is still loading its spawn area): a
+        /// map region's handler that waited for a tile goes on without it, since nothing of the world is saved yet. The
+        /// spawn area is made on the server's main thread, where an exception out of a region's handlers (the game guards
+        /// none) ends the start as a fatal error.
         /// </summary>
-        void ThrowIfRefused(IChunkColumnGenerateRequest request)
+        internal static bool StoppingBeforeRunning => Instance is { } gen && !gen.running;
+
+        /// <summary>
+        /// A chunk that reaches one of Earth's handlers after a refusal (the generation threads go on for the seconds before the
+        /// server stops) or after <see cref="Dispose"/>: Active is off and the context withdrawn by then, so vanilla's terrain
+        /// would make it, or a later pass would run with vanilla's guards. It is noted for the next start and its pass throws
+        /// instead (M4 of the Fable pass: before, a later pass let it through un-noted).
+        /// </summary>
+        void ThrowIfRefused(IChunkColumnGenerateRequest request) => ThrowIfRefused(request.Chunks, request.ChunkX, request.ChunkZ);
+
+        void ThrowIfRefused(IServerChunk[] chunks, int chunkX, int chunkZ)
         {
+            // EA-0099: a chunk whose terrain waits for a GLO-90 square gets none of Earth's later passes either (already noted)
+            if (WaitsForHeights(chunkX, chunkZ))
+                throw new RefusedException("chunk " + chunkX + "," + chunkZ + " waits for its GLO-90 heights; it is made at the next start.");
             if (!refused) return;
-            NoteFailedChunk(request.ChunkX, request.ChunkZ);
-            throw new InvalidOperationException("Earth refused this world; chunk " + request.ChunkX + "," + request.ChunkZ + " is made at the next start.");
+            NoteChunk(chunks, chunkX, chunkZ, passFailed: false);
+            throw new RefusedException("Earth refused this world; chunk " + chunkX + "," + chunkZ + " is made at the next start.");
         }
+
+        /// <summary>(FP-13) A refusal is in force: Earth's passes that are patches on vanilla's (geology, ores) check it for each
+        /// chunk as the registered handlers do (<see cref="Guarded"/>), and throw for a chunk in flight.</summary>
+        internal static void ThrowIfRefusedChunk(IServerChunk[] chunks, int chunkX, int chunkZ) => Instance?.ThrowIfRefused(chunks, chunkX, chunkZ);
 
         /// <summary>
         /// Earth's terrain for one chunk column. A throw is a refusal (CR-G2): the game catches it, skips the terrain pass's
         /// other handlers (the surface pass's check among them) and still saves the chunk past that pass, so the chunk is noted
-        /// for deletion at the next start (<see cref="NoteFailedChunk"/>) and the server stops.
+        /// for deletion at the next start (<see cref="NoteChunk"/>) and the server stops. The server stopping while the chunk
+        /// waits for a GLO-90 tile (FP-01) only notes it: the thread pauses, the game saves the chunk empty past the pass, and the
+        /// next start makes it again.
         /// </summary>
         void MakeTerrain(IChunkColumnGenerateRequest request)
         {
-            try { terrain.Generate(request); }
-            catch (Exception e)
+            try
+            {
+                using var inPass = FineElevation.ChunkPass();
+                terrain.Generate(request);
+            }
+            catch (TileUnavailableException e)
+            {
+                LeaveForNextStart(request.Chunks, request.ChunkX, request.ChunkZ, "terrain", e);
+                throw;
+            }
+            catch (ServerStoppingException e)
+            {
+                NoteChunk(request.Chunks, request.ChunkX, request.ChunkZ, passFailed: false);
+                Mod.Logger.Notification("Earth: chunk {0},{1} waited for a GLO-90 tile when the server stopped ({2}); it is made again at the next start.", request.ChunkX, request.ChunkZ, e.Message);
+                throw;
+            }
+            catch (Exception e) when (e is not RefusedException)
             {
                 Mod.Logger.Error("Earth's terrain for chunk {0},{1} failed: {2}", request.ChunkX, request.ChunkZ, e);
-                NoteFailedChunk(request.ChunkX, request.ChunkZ);
+                NoteChunk(request.Chunks, request.ChunkX, request.ChunkZ, passFailed: false);
                 Refuse("its terrain for chunk " + request.ChunkX + "," + request.ChunkZ + " could not be made (" + e.Message + "); that chunk is made again at the next start");
             }
         }
 
-        /// <summary>The save's list of chunk columns Earth refused or could not make the terrain of (pairs of ints, chunk x then z).</summary>
-        const string FailedChunksKey = "earth-failed-chunks";
-        static readonly object failedChunksLock = new object();
+        /// <summary>
+        /// One of Earth's later passes for a chunk column threw (rock strata, surface cover and ground, the ore layer pass, the
+        /// deposit filter, Earth's ores, and every handler registered through <see cref="Guarded"/>): as for the terrain
+        /// (CR-G2), the chunk is noted to be made again at the next start (<see cref="NoteChunk"/>) and the server stops, so no
+        /// chunk with vanilla's blocks where Earth's belong, or with half a pass, stays in the save. Before, each pass logged
+        /// three errors a session, "vanilla blocks are kept there", and went on (ER-08, code review 14 November 2026). It refuses
+        /// at the first failure: a chunk noted while the game went on would be deleted at the next start with whatever players
+        /// had built in it since. Called from the pass's catch; throws (the game catches it and stops the chunk's pass), except:
+        /// - FP-14 (the Fable pass): a chunk that a failed pass had noted in an earlier start, deleted and made anew, which fails
+        ///   again: the failure is a function of the place (a deposit of another content mod, a case of the data), and refusing
+        ///   again would stop the server whenever a player comes near. It is kept as the pass left it, said loudly, and the
+        ///   world goes on (the behaviour before ER-08, for that chunk only).
+        /// - the server stopping during the pass (FP-01): noted, no refusal.
+        /// - a chunk the game only peeks at (a static translocator's search, M2 of the Fable pass): nothing is noted, since the
+        ///   coordinates are a real chunk's that this pass never made; the server still stops, as the same failure would in
+        ///   that chunk's real generation.
+        /// Without Earth's generation (no instance) it does nothing.
+        /// </summary>
+        internal static void FailedPass(string pass, IServerChunk[] chunks, int chunkX, int chunkZ, Exception e) => Instance?.Failed(pass, chunks, chunkX, chunkZ, e);
+
+        void Failed(string pass, IServerChunk[] chunks, int chunkX, int chunkZ, Exception e)
+        {
+            if (e is RefusedException || refused)
+            {
+                NoteChunk(chunks, chunkX, chunkZ, passFailed: false);
+                throw new RefusedException("Earth refused this world; chunk " + chunkX + "," + chunkZ + " is made at the next start.", e);
+            }
+            if (e is TileUnavailableException || e.InnerException is TileUnavailableException)
+            {
+                LeaveForNextStart(chunks, chunkX, chunkZ, pass, e.InnerException as TileUnavailableException ?? (TileUnavailableException)e);
+                throw new RefusedException("chunk " + chunkX + "," + chunkZ + " waits for its GLO-90 heights; it is made at the next start.", e);
+            }
+            if (e is ServerStoppingException || e.InnerException is ServerStoppingException)
+            {
+                NoteChunk(chunks, chunkX, chunkZ, passFailed: false);
+                Mod.Logger.Notification("Earth: chunk {0},{1} waited for a GLO-90 tile in its {2} when the server stopped; it is made again at the next start.", chunkX, chunkZ, pass);
+                throw new RefusedException("the server is stopping; chunk " + chunkX + "," + chunkZ + " is made at the next start.", e);
+            }
+            if (!IsPeek(chunks, chunkX, chunkZ) && Retried(chunkX, chunkZ))
+            {
+                Mod.Logger.Error("Earth's {0} for chunk {1},{2} failed again after that chunk was made anew (an earlier start stopped at its failure there): " +
+                    "it is kept as the pass left it, which can leave vanilla blocks or half a pass where Earth's belong, and the world goes on, so that " +
+                    "this place can be entered. The cause is in the error: a block or deposit of another content mod (remove or update that mod), or a " +
+                    "fault in Earth (report it with this log). {3}", pass, chunkX, chunkZ, e);
+                return;
+            }
+            NoteChunk(chunks, chunkX, chunkZ, passFailed: true);
+            if (!running && !IsPeek(chunks, chunkX, chunkZ)) KeepOutsideSave(chunkX, chunkZ);
+            Mod.Logger.Error("Earth's {0} for chunk {1},{2} failed: {3}", pass, chunkX, chunkZ, e);
+            Refuse("its " + pass + " for chunk " + chunkX + "," + chunkZ + " could not be made (" + e.Message + "); that chunk is made again at the next start. " +
+                "If it fails there again, Earth keeps it as that pass left it and says so; the error above names the cause: a block or deposit of " +
+                "another content mod (remove or update that mod), or a fault in Earth (report it with this log)");
+        }
 
         /// <summary>
-        /// Notes a chunk column the game will save although Earth's terrain didn't make it (CR-G2): the game advances a chunk past
-        /// a pass that threw and saves it, so without this the chunk would stay in the save for good. The next start that sets
-        /// this world's generation up deletes it (<see cref="DeleteFailedChunks"/>) before any chunk generates. Never throws.
+        /// (M2 of the Fable pass) Whether the chunks are the game's peek at a place (a static translocator's search runs the
+        /// passes on throwaway chunks at real coordinates): their map chunk is a new one the game never stores, while a chunk
+        /// generated for the world has the world's map chunk at its coordinates (Lib ServerSystemSupplyChunks:
+        /// PeekChunkAreaLocking makes its own map chunks; GetOrCreateMapChunk stores the world's in loadedMapChunks, which
+        /// WorldManager.GetMapChunk reads). Without chunks to tell by: not a peek.
         /// </summary>
-        void NoteFailedChunk(int cx, int cz)
+        bool IsPeek(IServerChunk[] chunks, int chunkX, int chunkZ)
         {
+            var mine = chunks != null && chunks.Length > 0 ? chunks[0]?.MapChunk : null;
+            if (mine == null) return false;
+            try { return !ReferenceEquals(sapi.WorldManager.GetMapChunk(chunkX, chunkZ), mine); }
+            catch (Exception) { return false; }
+        }
+
+        // ---- EA-0099 (the Fable pass's FP-03): chunks a GLO-90 square that can't be had leaves for the next start
+
+        /// <summary>Chunk columns of this session whose pass threw <see cref="TileUnavailableException"/>.</summary>
+        readonly System.Collections.Concurrent.ConcurrentDictionary<(int x, int z), byte> waitingForHeights = new();
+
+        bool WaitsForHeights(int chunkX, int chunkZ) => !waitingForHeights.IsEmpty && waitingForHeights.ContainsKey((chunkX, chunkZ));
+
+        /// <summary>
+        /// EA-0099, option (a), the author's decision (14 November 2026), taken knowing that the chunks left unmade are open
+        /// holes a player can fall into and that anything built in them is deleted when they are made at the next start; no
+        /// placeholder floor. While the game runs, a chunk whose GLO-90 square can't be fetched
+        /// (the network, the release down, a full disk) is not made: it is noted (<see cref="NoteChunk"/>, no refusal: the
+        /// world goes on), the game saves it empty past the pass, Earth's later passes skip it (<see cref="ThrowIfRefused"/>),
+        /// and the next start deletes it so that it is made again, on the square's heights once they are here. The players
+        /// are told by EarthElevationSystem. Before, it was made on the built-in heights and met later chunks with a step.
+        /// </summary>
+        void LeaveForNextStart(IServerChunk[] chunks, int chunkX, int chunkZ, string pass, TileUnavailableException e)
+        {
+            NoteChunk(chunks, chunkX, chunkZ, passFailed: false);
+            if (IsPeek(chunks, chunkX, chunkZ)) return;
+            if (waitingForHeights.TryAdd((chunkX, chunkZ), 0))
+                Mod.Logger.Notification("Earth: chunk {0},{1} is not made in this session ({2}: {3}); it is made at the next start.", chunkX, chunkZ, pass, e.Message);
+        }
+
+        /// <summary>The save's list of chunk columns Earth refused or could not make the terrain of (pairs of ints, chunk x then z).</summary>
+        const string FailedChunksKey = "earth-failed-chunks";
+        /// <summary>(FP-14) Those of <see cref="FailedChunksKey"/> that a failed pass noted (same format), not a refusal elsewhere
+        /// or a stop: at the next start they move to <see cref="RetriedChunksKey"/>.</summary>
+        const string FailedPassChunksKey = "earth-failed-pass-chunks";
+        /// <summary>(FP-14) Chunk columns made anew after a failed pass (same format): a second failure there keeps the chunk.</summary>
+        const string RetriedChunksKey = "earth-retried-chunks";
+        static readonly object failedChunksLock = new object();
+        /// <summary>This world's <see cref="RetriedChunksKey"/>, read when its generation is set up.</summary>
+        HashSet<(int x, int z)> retried = new();
+
+        bool Retried(int chunkX, int chunkZ)
+        {
+            lock (failedChunksLock) return retried.Contains((chunkX, chunkZ));
+        }
+
+        /// <summary>
+        /// Notes a chunk column the game will save although Earth didn't make it as the world's rules say (CR-G2): the game
+        /// advances a chunk past a pass that threw and saves it, so without this the chunk would stay in the save for good. The
+        /// next start deletes it once the game runs (<see cref="DeleteFailedChunks"/>). A peeked chunk is not noted
+        /// (<see cref="IsPeek"/>). <paramref name="passFailed"/>: Earth's own pass failed there (FP-14's retry). Never throws.
+        /// </summary>
+        void NoteChunk(IServerChunk[] chunks, int cx, int cz, bool passFailed)
+        {
+            if (IsPeek(chunks, cx, cz)) return;
             try
             {
                 lock (failedChunksLock)
                 {
                     var save = sapi.WorldManager.SaveGame;
-                    var chunks = FailedChunks(save.GetData(FailedChunksKey));
-                    if (!chunks.Contains((cx, cz))) chunks.Add((cx, cz));
-                    save.StoreData(FailedChunksKey, FailedChunksBytes(chunks));
+                    Add(save, FailedChunksKey, cx, cz);
+                    if (passFailed) Add(save, FailedPassChunksKey, cx, cz);
                 }
             }
             catch (Exception e)
             {
                 Mod.Logger.Error("Earth could not note chunk column {0},{1} for deletion ({2}): it keeps what was saved of it; delete or regenerate that chunk column by hand before the world is played.", cx, cz, e.Message);
             }
+
+            static void Add(ISaveGame save, string key, int cx, int cz)
+            {
+                var list = FailedChunks(save.GetData(key));
+                if (!list.Contains((cx, cz))) list.Add((cx, cz));
+                save.StoreData(key, FailedChunksBytes(list));
+            }
         }
 
-        /// <summary>The chunk columns <see cref="NoteFailedChunk"/> noted in earlier starts, deleted (the game queues it and deletes them
-        /// on its chunk thread once it runs, also where the spawn area loaded one; they generate again when asked for). Called once
-        /// this world's generation is set up; the list is emptied (a start that stops before the game runs saves nothing, so it
-        /// keeps the list).</summary>
+        /// <summary>
+        /// (FP-14) When this world's generation is set up: the chunks a failed pass noted in an earlier start join the retried
+        /// ones (a second failure there keeps the chunk; <see cref="Failed"/>), and those are read. Saved with the world from the
+        /// next save on (a start that stops before the game runs saves nothing, and leaves the lists as they were).
+        /// </summary>
+        void ReadRetriedChunks()
+        {
+            var save = sapi.WorldManager.SaveGame;
+            lock (failedChunksLock)
+            {
+                try
+                {
+                    var known = FailedChunks(save.GetData(RetriedChunksKey));
+                    foreach (var c in FailedChunks(save.GetData(FailedPassChunksKey))) if (!known.Contains(c)) known.Add(c);
+                    // a start that stopped before its game ran (a new world's spawn area) kept its failed chunks outside the save
+                    string kept = StartingFile;
+                    if (kept != null && System.IO.File.Exists(kept))
+                        foreach (var c in FailedChunks(System.IO.File.ReadAllBytes(kept))) if (!known.Contains(c)) known.Add(c);
+                    save.StoreData(RetriedChunksKey, FailedChunksBytes(known));
+                    save.StoreData(FailedPassChunksKey, Array.Empty<byte>());
+                    retried = new HashSet<(int x, int z)>(known);
+                }
+                catch (Exception e)
+                {
+                    Mod.Logger.Error("Earth's list of chunks made anew after a failed pass can't be read ({0}); it is dropped.", e.Message);
+                    save.StoreData(RetriedChunksKey, Array.Empty<byte>());
+                    save.StoreData(FailedPassChunksKey, Array.Empty<byte>());
+                    retried = new HashSet<(int x, int z)>();
+                }
+            }
+        }
+
+        /// <summary>The chunk columns <see cref="NoteChunk"/> noted in earlier starts, deleted (the game queues it and deletes them
+        /// on its chunk thread's next tick; they generate again when asked for). Called when the game starts running (L1 of the
+        /// Fable pass: called earlier, before the spawn area loaded, a noted chunk there was loaded after the unload and played as
+        /// it was); the list is emptied (a start that stops before the game runs saves nothing, so it keeps the list).</summary>
         void DeleteFailedChunks()
         {
             var save = sapi.WorldManager.SaveGame;
@@ -213,7 +438,7 @@ namespace EarthMap
             foreach (var (x, z) in chunks) sapi.WorldManager.DeleteChunkColumn(x, z);
             save.StoreData(FailedChunksKey, Array.Empty<byte>());
             if (chunks.Count > 0)
-                Mod.Logger.Warning("Earth: {0} chunk column(s) whose terrain Earth refused or could not make in an earlier start are deleted and generate again: {1}.",
+                Mod.Logger.Warning("Earth: {0} chunk column(s) that Earth refused, could not make, or left unfinished when the server stopped in an earlier start are deleted and generate again: {1}.",
                     chunks.Count, string.Join("; ", chunks.Select(c => c.x + "," + c.z)));
         }
 
@@ -254,14 +479,70 @@ namespace EarthMap
             WorldGenerationContext.Withdraw(context);
             Mod.Logger.Error("{0}", message);
             sapi.Server.ShutDown();
-            throw new InvalidOperationException(message);
+            throw new RefusedException(message);
+        }
+
+        /// <summary><see cref="Refuse(string)"/> with its own advice in place of the terrain's (decision 0083).</summary>
+        void Refuse(string cause, string advice)
+        {
+            string message = "Earth cannot generate this world: " + cause + ". " + advice + " Nothing more is generated in this session.";
+            refused = true;
+            Active = false;
+            WorldGenerationContext.Withdraw(context);
+            Mod.Logger.Error("{0}", message);
+            sapi.Server.ShutDown();
+            throw new RefusedException(message);
         }
 
         /// <summary>The terrain check at the last moment before the game runs: a mod that changed Earth's terrain handler after
-        /// Earth's set-up is caught here.</summary>
+        /// Earth's set-up is caught here. Then the chunks earlier starts noted are deleted (L1 of the Fable pass: the spawn area
+        /// is loaded by now, so the unload finds a noted chunk there).</summary>
         void CheckTerrainBeforeRunning()
         {
-            if (Active) CheckTerrain();
+            if (!Active) return;
+            CheckTerrain();
+            // (decision 0083) also for a world whose start made no chunk
+            CheckFeatures();
+            DeleteFailedChunks();
+            // the chunks a start before this one kept outside the save are in the save's retried list from here on
+            try { if (StartingFile is string kept && System.IO.File.Exists(kept)) System.IO.File.Delete(kept); }
+            catch (Exception e) { Mod.Logger.Warning("Earth could not remove {0} ({1}); it is read again at the next start, which does no harm.", StartingFile, e.Message); }
+        }
+
+        /// <summary>
+        /// (The Fable reviewer's note on 854af7b) Where a start before its game runs keeps the chunks a failed pass noted:
+        /// nothing is saved before RunGame, so a new world whose spawn area failed at the same chunk at every start never
+        /// reached the retry (<see cref="Retried"/>) and could never be made. Keyed by the save's identifier and seed; read when
+        /// the next start sets generation up, removed once a start's game runs. Null where the save has no identifier.
+        /// </summary>
+        string StartingFile
+        {
+            get
+            {
+                var save = sapi?.WorldManager?.SaveGame;
+                string id = save?.SavegameIdentifier;
+                if (string.IsNullOrEmpty(id)) return null;
+                var safe = new string(id.Where(ch => char.IsLetterOrDigit(ch) || ch == '-').ToArray());
+                return System.IO.Path.Combine(EarthGround.DataFolder, "starting-" + safe + "-" + save.Seed + ".bin");
+            }
+        }
+
+        void KeepOutsideSave(int cx, int cz)
+        {
+            try
+            {
+                string file = StartingFile;
+                if (file == null) return;
+                lock (failedChunksLock)
+                {
+                    var list = System.IO.File.Exists(file) ? FailedChunks(System.IO.File.ReadAllBytes(file)) : new List<(int x, int z)>();
+                    if (list.Contains((cx, cz))) return;
+                    list.Add((cx, cz));
+                    System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(file));
+                    System.IO.File.WriteAllBytes(file, FailedChunksBytes(list));
+                }
+            }
+            catch (Exception e) { Mod.Logger.Warning("Earth could not keep chunk {0},{1} for the next start's retry ({2}).", cx, cz, e.Message); }
         }
 
         bool saidUnverified;
@@ -284,7 +565,8 @@ namespace EarthMap
         }
 
         /// <summary>Vanilla's terrain pass handler (GenTerra's), wrapped in the terrain pass's handler list by PatchVanilla: in an
-        /// active Earth world <see cref="TerrainChunkWriter"/> makes the chunk instead, otherwise vanilla does.</summary>
+        /// active Earth world <see cref="TerrainChunkWriter"/> makes the chunk instead, otherwise vanilla does. (The table's
+        /// default, for the tests; a server binds <see cref="InPlaceOfGenTerraHere"/>.)</summary>
         internal static ChunkColumnGenerationDelegate InPlaceOfGenTerra(ChunkColumnGenerationDelegate genTerra) => request =>
         {
             var gen = Instance;
@@ -292,6 +574,107 @@ namespace EarthMap
             if (gen == null || !gen.Active) genTerra(request);
             else gen.MakeTerrain(request);
         };
+
+        /// <summary>
+        /// <see cref="InPlaceOfGenTerra"/> bound to this generator (FP-01): the handler list is this server's, and a generation
+        /// thread the game could not pause before it disposed the mods still asks it. Through <see cref="Instance"/>, which
+        /// Dispose clears, that thread got vanilla's terrain; this generator, closed by Dispose, notes the chunk and throws.
+        /// </summary>
+        ChunkColumnGenerationDelegate InPlaceOfGenTerraHere(ChunkColumnGenerationDelegate genTerra) => request =>
+        {
+            ThrowIfRefused(request);
+            if (!Active) genTerra(request);
+            else
+            {
+                CheckFeaturesFor(request);
+                MakeTerrain(request);
+            }
+        };
+
+        // ------------------------------------------------------------------------------------------ the parts a world needs
+
+        /// <summary>0: the parts of generation not checked yet this start (<see cref="CheckFeatures"/>).</summary>
+        int featuresChecked;
+
+        /// <summary><see cref="CheckFeatures"/> before a chunk's terrain; a refusal there notes the chunk (once the game runs it
+        /// is saved past the pass that threw).</summary>
+        void CheckFeaturesFor(IChunkColumnGenerateRequest request)
+        {
+            try { CheckFeatures(); }
+            catch (RefusedException) { NoteChunk(request.Chunks, request.ChunkX, request.ChunkZ, passFailed: false); throw; }
+        }
+
+        /// <summary>
+        /// (Decision 0083; FP-02, the Fable pass of the 14 November 2026 code review) Once a start, before the first chunk's
+        /// terrain (all of the world's set-ups have run by then: some come with the world generator's set-up after this one)
+        /// and when the game starts running: every part of generation this world's saved rules use is asked whether it is on.
+        /// When one is off (a hook a game update changed, a competing mod, a missing or unreadable file, a block a removed mod
+        /// supplied), the world is refused with all of them named; before, each part logged one line and the chunks of that
+        /// session kept vanilla's blocks there for good. earth.json's AcceptMissingFeatures lets an owner generate without them.
+        /// </summary>
+        void CheckFeatures()
+        {
+            if (System.Threading.Interlocked.Exchange(ref featuresChecked, 1) != 0) return;
+            var p = core?.Params;
+            if (p?.Enabled != true) return;
+            var off = new List<string>();
+            try { FeaturesOff(p, off); }
+            catch (Exception e) { off.Add("the check of the parts of generation itself (" + e.Message + ")"); }
+            if (off.Count == 0) return;
+            string list = string.Join("; ", off);
+            if (core.Config?.AcceptMissingFeatures == true)
+            {
+                Mod.Logger.Warning("Earth: parts of generation this world's rules use are off this session, and earth.json's AcceptMissingFeatures lets it " +
+                    "generate without them: {0}. New chunks get vanilla's blocks there and may meet other chunks with a seam.", list);
+                return;
+            }
+            Refuse("parts of generation this world's rules use are off this session: " + list,
+                "Each has its line above. Update or remove the mod that keeps one out, use an Earth version made for this game version, " +
+                "reinstall Earth, or let it fetch a data file again (a file in ModData/earth that is missing or damaged); nothing of this world is changed. An owner who accepts seams where new chunks lack them sets AcceptMissingFeatures " +
+                "to true in earth.json (decision 0083).");
+        }
+
+        /// <summary>What <see cref="CheckFeatures"/> finds off, each where this world's saved rules use it (decision 0083).</summary>
+        void FeaturesOff(EarthParams p, List<string> off)
+        {
+            var mods = sapi.ModLoader;
+            mods.GetModSystem<EarthGeology>()?.FeaturesOff(p, off);
+            mods.GetModSystem<EarthOres>()?.FeaturesOff(p, off);
+            mods.GetModSystem<EarthSprings>()?.FeaturesOff(p, off);
+            mods.GetModSystem<EarthWaterTable>()?.FeaturesOff(p, off);
+            mods.GetModSystem<EarthPlacement>()?.FeaturesOff(p, off);
+            mods.GetModSystem<EarthPlants>()?.FeaturesOff(off);
+            mods.GetModSystem<EarthVolcanoes>()?.FeaturesOff(p, off);
+            if (!climateMaps) off.Add("Earth's climate and ocean maps (vanilla's GenMaps was not found)");
+            if (rules != null) off.AddRange(rules.Missing);
+            // Earth's guards on vanilla's generation that change blocks (not: the animal range guards, whose animals move and
+            // die; prospecting readings; the companions' reserved-site guard, which each companion checks itself)
+            foreach (var (feature, used) in new (EarthMap.PatchVanilla.Feature, bool)[]
+            {
+                (EarthMap.PatchVanilla.Feature.AridBasins, true),
+                (EarthMap.PatchVanilla.Feature.SoilFertility, p.SoilRules >= 1),
+                (EarthMap.PatchVanilla.Feature.TallGrass, p.GroundCoverRules >= 1),
+                (EarthMap.PatchVanilla.Feature.TallGrassAroundStructures, p.GroundCoverRules >= 1),
+                (EarthMap.PatchVanilla.Feature.TreeSpecies, p.RegionalTrees),
+                (EarthMap.PatchVanilla.Feature.CoralSalinity, true),
+                (EarthMap.PatchVanilla.Feature.StructuresWherePeopleLived, true),
+                (EarthMap.PatchVanilla.Feature.VillagesWherePeopleLived, true),
+                (EarthMap.PatchVanilla.Feature.SurfaceRuinsOutOfWater, true),
+                (EarthMap.PatchVanilla.Feature.SurfaceStructuresOutOfWater, true),
+                (EarthMap.PatchVanilla.Feature.ShallowWaterStructures, true),
+                (EarthMap.PatchVanilla.Feature.UndergroundStructures, true),
+                (EarthMap.PatchVanilla.Feature.VillageBuildings, true),
+                (EarthMap.PatchVanilla.Feature.StructureSizes, true),
+                (EarthMap.PatchVanilla.Feature.Ponds, p.PondRules >= 1),
+                (EarthMap.PatchVanilla.Feature.Springs, p.SpringRules >= EarthParams.SpringRulesCaves),
+                (EarthMap.PatchVanilla.Feature.StorySchematics, true),
+            })
+                // (Fable's re-review of ad56a74) bound at start and still in place: a mod starting later may have taken it out
+                if (used && patches.StillInPlace(feature) is string why) off.Add("Earth's " + feature + " guard on vanilla's generation (" + why + ")");
+        }
+
+        /// <summary>Earth's climate and ocean maps are in vanilla's map generator (<see cref="RegionMaps.Install"/>).</summary>
+        bool climateMaps = true;
 
         // ------------------------------------------------------------------------------------------ the passes, in order
 
@@ -305,11 +688,26 @@ namespace EarthMap
             if (!s.MadeByEarth)
             {
                 // the game saves this chunk anyway (past the pass that threw): noted, it is deleted at the next start (CR-G2)
-                NoteFailedChunk(request.ChunkX, request.ChunkZ);
+                NoteChunk(request.Chunks, request.ChunkX, request.ChunkZ, passFailed: false);
                 Refuse("vanilla's terrain pass made chunk " + request.ChunkX + "," + request.ChunkZ + " without Earth's terrain (a mod replaced Earth's terrain handler)");
             }
             rivers.PlaceRamps(request.Chunks, request.ChunkX, request.ChunkZ);
             surface.Columns(s);
+        }
+
+        /// <summary>
+        /// (M1 of the Fable pass) The first of Earth's handlers in the pass after the terrain pass: a chunk whose terrain-writer
+        /// flags are still in the handoff had its terrain pass cut short between Earth's terrain and the surface pass (a handler
+        /// there threw, Earth's code inside vanilla's block layers among them, and the game skipped the rest of the pass), so it
+        /// has no surface pass and no check that Earth's terrain made it: a failed pass (noted, the server stops). A peek's
+        /// entries are dropped.
+        /// </summary>
+        void SurfacePassRan(IChunkColumnGenerateRequest request)
+        {
+            if (!Active || handoff == null || !handoff.Untaken(request.ChunkX, request.ChunkZ)) return;
+            handoff.Drop(request.ChunkX, request.ChunkZ);
+            if (IsPeek(request.Chunks, request.ChunkX, request.ChunkZ)) return;
+            throw new InvalidOperationException("the terrain pass of chunk " + request.ChunkX + "," + request.ChunkZ + " ended before Earth's surface pass (a handler between them threw; the worldgen log has its error)");
         }
 
         void KnownHotSprings(IChunkColumnGenerateRequest request)
@@ -333,7 +731,7 @@ namespace EarthMap
         /// </summary>
         void ClearShorePlants(IChunkColumnGenerateRequest request)
         {
-            if (!Active || model == null || model.ShoreRules < 1) return;
+            if (!Active || model == null || !model.Rules.ShoreStrip) return;
             var chunks = request.Chunks;
             var heights = chunks[0].MapChunk.WorldGenTerrainHeightMap;
             var all = sapi.World.Blocks;
@@ -351,6 +749,8 @@ namespace EarthMap
                     if (all[id].Code?.Path.StartsWith("tallplant-", StringComparison.Ordinal) == true) continue;
                     var c = ColumnStore.At(model, cx + lx, cz + lz);
                     if (!c.Beach || c.Shore == ShoreMaterial.None || c.Water != TerrainModel.WaterNone) continue;
+                    // (W-L2) a plant with a block entity (a wild fruiting bush) takes its entity with it, as vanilla's GenRivulets does
+                    if (all[id].EntityClass != null) chunks[y >> 5].RemoveBlockEntity(new BlockPos(cx + lx, y, cz + lz, 0));
                     data.SetBlockUnsafe(idx, 0);
                 }
         }
@@ -359,7 +759,21 @@ namespace EarthMap
         {
             // decision 0075: vanilla biomes keep vanilla's forest and shrub maps (its noise, thinned by Earth's climate as vanilla thins it)
             if (!Active || model.VanillaBiomes) return;
-            RegionMaps.ForestAndShrubs(sapi, model, region, regionX, regionZ);
+            // (FP-11) a region is made before its chunk's terrain pass: without this a thread that had made none read the
+            // built-in heights where a tile wasn't on the machine, and the region's maps were saved so
+            using var fetch = FineElevation.Generating();
+            try { RegionMaps.ForestAndShrubs(sapi, model, region, regionX, regionZ); }
+            catch (ServerStoppingException) when (!running)
+            {
+                // (FP-01) before the game runs nothing is saved: the start ends without this region's maps
+            }
+            catch (ServerStoppingException e)
+            {
+                // (FP-01) the game stores a region only once its handlers return: this one is made again at the next start
+                // (the exception ends this thread quietly, as the server is stopping)
+                Mod.Logger.Notification("Earth: map region {0},{1} waited for a GLO-90 tile when the server stopped ({2}); it is made again at the next start.", regionX, regionZ, e.Message);
+                throw;
+            }
         }
 
         // ------------------------------------------------------------------------------------------ what others ask
@@ -377,8 +791,14 @@ namespace EarthMap
             foreach (string line in SpawnRangeGuards.Describe(w, ground)) yield return line;
         }
 
-        /// <summary>The rock floor's top under a column (0: none), for prospecting (RockFloorPass.Top).</summary>
-        internal static int RockFloorTop(int x, int z) => RockFloorPass.Top(x, z);
+        /// <summary>The rock floor's top under a column (0: none), for prospecting (RockFloorPass.Top), from the world's map
+        /// chunk. World Map binds this two-argument form by its exact parameter types (docs/REFLECTION-SURFACE.md): keep it
+        /// a real overload, not an optional parameter, which that lookup doesn't find.</summary>
+        internal static int RockFloorTop(int x, int z) => RockFloorPass.Top(x, z, null);
+
+        /// <summary>The rock floor's top under a column, read from the map chunk being generated (W-L4: a peeked chunk's own,
+        /// not the world's at those coordinates).</summary>
+        internal static int RockFloorTop(int x, int z, IMapChunk mapChunk) => RockFloorPass.Top(x, z, mapChunk);
 
         /// <summary>How many structures the water guards turned away since the server started (for the self-test).</summary>
         public static string StructureGuardReport() => StructurePlacementGuards.Report();
@@ -413,8 +833,18 @@ namespace EarthMap
             return FineElevation.MissedReads == missed ? drawn : null;
         }
 
+        /// <summary>
+        /// (FP-01, R2 of the Fable pass) The generator is closed first: in an Earth world it counts as refused from here on.
+        /// The game disposes the mods once its threads have paused or after 10 seconds without; a generation thread that was
+        /// still waiting (a GLO-90 tile on a slow link, before DemDownloader.Stopping) comes back after this, and its next chunks
+        /// reach this generator's terrain handler and passes, which note them and throw. Vanilla's terrain handler is not put
+        /// back in the list (it was, and that thread made vanilla terrain that the shutdown save kept): the list is this
+        /// server's and ends with it.
+        /// </summary>
         public override void Dispose()
         {
+            if (Active) refused = true;
+            Active = false;
             if (Instance == this && model?.PondRules >= 1) Mod?.Logger.Notification("Earth pond rules this session: {0}.", PondGuardReport());
             if (Instance == this && core?.Params?.SpringRules >= EarthParams.SpringRulesCaves) Mod?.Logger.Notification("Earth springs rules this session: {0}.", SpringGuardReport());
             if (ColumnStore.Of(model) is { } columns)
@@ -422,9 +852,11 @@ namespace EarthMap
                 Mod?.Logger.Notification("Earth column store this session: {0}.", columns.Report());
                 ColumnStore.Detach(model);
             }
-            patches?.Release();
             harmony?.UnpatchAll(EarthMap.PatchVanilla.HarmonyId);
             WorldGenerationContext.Withdraw(context);
+            // (C-R2) the statics that outlived the world: the tree pickers (its catalogue) and /earth cost's switch
+            EarthTrees.ReleasePickers();
+            ClimateCost.On = false;
             if (Instance == this) Instance = null;
             base.Dispose();
         }
@@ -441,6 +873,9 @@ namespace EarthMap
         void InitWorldGen()
         {
             Active = false;
+            // (Fable's re-review of ad56a74) /wgen regen sets the parts up again, and one can go off there: checked again at the
+            // next chunk
+            featuresChecked = 0;
             WorldGenerationContext.Withdraw(context);
             context = null;
             var p = core.Params;
@@ -454,9 +889,9 @@ namespace EarthMap
             try
             {
                 InitWorldGen(p);
+                ReadRetriedChunks();
                 WorldGenerationContext.Publish(context);
                 Active = true;
-                DeleteFailedChunks();
             }
             catch (Exception e)
             {
@@ -486,15 +921,20 @@ namespace EarthMap
             rivers = new RiverBlockPass(sapi, model, blocks, gcfg, handoff);
             surface = new AlpineSurfacePass(sapi, model, p, blocks, worldRules.IceSheets, handoff);
             rockFloor = new RockFloorPass(blocks, gcfg);
-            RegionMaps.Install(sapi, model, Mod.Logger);
+            climateMaps = RegionMaps.Install(sapi, model, Mod.Logger);
             PlaceStories(p);
             PlanTerrain(p);
             context = new WorldGenerationContext(sapi, model, p, worldRules);
         }
 
-        /// <summary>The story locations moved onto real land once (a new world), their heights set at every start.</summary>
+        /// <summary>
+        /// The story locations moved onto real land once (a new world), their heights set at every start. (Decision 0083) A
+        /// failure stops the start (InitWorldGen: nothing is generated, StoryPlaced is not saved, the next start tries again)
+        /// unless earth.json accepts missing parts: before, a new world kept vanilla's sites for good, its StoryPlaced saved.
+        /// </summary>
         void PlaceStories(EarthParams p)
         {
+            bool accept = core.Config?.AcceptMissingFeatures == true;
             if (!p.StoryPlaced)
             {
                 if (core.Config.MoveStoryLocations)
@@ -503,9 +943,13 @@ namespace EarthMap
                     {
                         StoryPlacer.Place(sapi, core, Mod.Logger);
                     }
+                    catch (Exception e) when (accept)
+                    {
+                        Mod.Logger.Error("Placing the story locations failed; earth.json's AcceptMissingFeatures keeps vanilla's positions for good: {0}", e);
+                    }
                     catch (Exception e)
                     {
-                        Mod.Logger.Error("Placing the story locations failed, vanilla's positions are kept: {0}", e);
+                        throw new InvalidOperationException("placing the story locations failed (" + e.Message + "); nothing is saved, the next start tries again", e);
                     }
                 }
                 p.StoryPlaced = true;
@@ -515,9 +959,13 @@ namespace EarthMap
             {
                 StoryPlacer.ApplyHeights(sapi, core);
             }
+            catch (Exception e) when (accept)
+            {
+                Mod.Logger.Error("Setting the story locations' heights failed; earth.json's AcceptMissingFeatures keeps vanilla's for this session: {0}", e);
+            }
             catch (Exception e)
             {
-                Mod.Logger.Error("Setting the story locations' heights failed, vanilla's are kept: {0}", e);
+                throw new InvalidOperationException("setting the story locations' heights failed (" + e.Message + ")", e);
             }
         }
 

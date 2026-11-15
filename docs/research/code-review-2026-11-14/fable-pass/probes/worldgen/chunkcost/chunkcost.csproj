@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><LangVersion>12</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings><RollForward>LatestMajor</RollForward><UseAppHost>false</UseAppHost><NoWarn>CA1416</NoWarn>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <NetCoreRuntimeDir>$([System.IO.Directory]::GetDirectories('$(NetCoreRoot)shared\Microsoft.NETCore.App', '10.*')[0])</NetCoreRuntimeDir>
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(APPDATA)\Vintagestory</VintageStoryPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(NetCoreRuntimeDir)\System.*.dll" Exclude="$(NetCoreRuntimeDir)\System.Private.*.dll;$(NetCoreRuntimeDir)\System.IO.Compression.Native.dll" Private="false" />
+    <Reference Include="$(NetCoreRuntimeDir)\System.Private.CoreLib.dll;$(NetCoreRuntimeDir)\netstandard.dll;$(NetCoreRuntimeDir)\mscorlib.dll" Private="false" />
+    <Reference Include="VintagestoryAPI"><HintPath>$(VintageStoryPath)/VintagestoryAPI.dll</HintPath></Reference>
+    <Reference Include="VintagestoryLib"><HintPath>$(VintageStoryPath)/VintagestoryLib.dll</HintPath></Reference>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute"><_Parameter1>VintageStoryPath</_Parameter1><_Parameter2>$(VintageStoryPath)</_Parameter2></AssemblyAttribute>
+  </ItemGroup>
+</Project>

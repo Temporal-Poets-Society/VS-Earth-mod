@@ -1,6 +1,6 @@
 # 0024: Hydrology, a water mod Earth will require; river drops that follow the real slope
 
-Status: Agreed direction (the user, 2026-10-22); rule details and interfaces Proposed; step 1 implemented 0.16.2, offline tests pass, not played | Date: 2026-10-22 | Decided by: the user (direction), Claude (proposed details)
+Status: Agreed direction (the user, 2026-10-22). Built: drops that follow the slope (0.16.2; pool layouts 2-7 agreed and built 0.16.4-0.16.11, since layout 11), Hydrology's rules H1-H5, Earth requiring Hydrology; in Earth 2.0.0. H6 reversed by Hydrology's decision 0003. Section 3's generation function was not built: 0027's river query took its place. Section 4: dam pools and wheel power from the query built in Hydrology 0.6.2; failing dams, drying, locks and flowing water below sea level proposed, not built | Date: 2026-10-22 | Decided by: the user (direction), Claude (proposed details)
 
 ## Context
 
@@ -332,3 +332,9 @@ The later targets (section 4) come after that.
 - 2026-10-24: 0.16.11, pool layout 7. White water grouped into gorge sections (continuous white water is not possible
   with the Congo's fall at this scale), sections 3 deep across the full width. Hydrology 0.1.7 shape test 0 at all sites,
   sill-break test at most 7 cells; audit falls 125 -> 91, uphill 92 -> 78. Not played.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: Agreed direction (the user, 2026-10-22); rule details and interfaces Proposed; step 1 implemented 0.16.2, offline tests pass, not played

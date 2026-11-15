@@ -3,7 +3,7 @@
 Status: agreed (the author, 7 November 2026: "Yes, build it", with the recommended answers below); built on
 `claude/ores-in-layers` (see "Built" at the end); offline probe passes; bench check under both ore choices done on
 8 November (see "Bench"); merged into `release/1.0` on 8 November (merge 1cb597c, in Earth 1.0.3-tall.21 at
-03dddab) by the combined build, on the author's instruction.
+03dddab) by the combined build, on the author's instruction; in Earth 2.0.0, new worlds only.
 Date: 2026-11-07.
 
 ## What the author asked
@@ -142,7 +142,8 @@ the changed deposit list alter no saved block.
   to make up for it. I expect hard-rock ores to be nearly unchanged, and coal and salt to drop where the beds are old
   or of the wrong rock.
 - **Surface starters.** Most lowlands have cover, so near-surface copper, tin and flint stay in the rock under it. In
-  the Baltic, flint comes from the till; a till flint block is a follow-up. The ore maps' surface starters no longer
+  the Baltic, flint comes from the till: ore layers v3 lay loose flint on glacial till, outwash, river beds and shingle
+  (decision 0076). The ore maps' surface starters no longer
   fill any rock.
 - **Speed.** The layer pass is one walk per chunk column after the deposits, with one lookup per block. It will be
   measured on the bench.

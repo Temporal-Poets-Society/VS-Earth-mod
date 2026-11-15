@@ -1,6 +1,6 @@
 # 0033: Coral worldgen requires warm marine water
 
-Status: source implemented; offline policy checked; game-assembly hook validation pending. Date: 2026-10-30.
+Status: Built in 0.17.0-pre.9 (`bae8dc6`); in Earth 1.0.0 and 2.0.0. Not checked in game (EA-0010 closed on the author's general review). Date: 2026-10-30.
 Issue #24, Hammar Lake and freshwater habitats worldwide.
 
 ## Cause and decision
@@ -43,3 +43,9 @@ The screenshot was read; no game was launched. These are eligibility results, no
 chunks. The coordinator must validate Harmony binding against installed game assemblies, including target reads,
 cross-shore scatter and aquatic-plant replacement. Existing generated coral is not removed; 0002 species-rule fixes
 apply to future worldgen only. Files: `src/EarthCorals.cs`, `src/Core/MarineEcology.cs`, `src/EarthWorldGen.cs`.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: source implemented; offline policy checked; game-assembly hook validation pending.

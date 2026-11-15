@@ -24,8 +24,9 @@ Inputs (see tools/download_data.sh):
 Karger, D.N. et al. (2017): Climatologies at high resolution for the earth's land surface areas. Scientific Data 4,
 170122; Karger, D.N. et al. (2021), Version 2.1, EnviDat, https://doi.org/10.16904/envidat.228.v2.1. CC BY 4.0.
 
-aridity.bin (little-endian): header EMAI, version 1, width 10800, height 5400, tile 180, tile count 1800, then (offset,
-length) per tile (row-major from the north-west) and the tiles: brotli of one tile x tile u8 plane, 0 where there is no
+aridity.bin (little-endian): header EMAI, version 1 (with predicted planes, tools/planecoding.py: 1 | 1 << 16), width
+10800, height 5400, tile 180, tile count 1800, then (offset, length) per tile (row-major from the north-west) and the
+tiles: one tile x tile u8 plane as predicted planes (EA-0077; plain brotli before 2.0.0-rc.14), 0 where there is no
 data (a cell needs at least 4 of its 16 pixels with both values), else clip(round(128 + 64 log2 k), 1, 255): k from
 0.25 to 4 in steps of 1.1 %. Cell (r, c) is centred at lat 90 - (r + 0.5) / 30, lon -180 + (c + 0.5) / 30, as rain.bin.
 
@@ -34,8 +35,8 @@ data (a cell needs at least 4 of its 16 pixels with both values), else clip(roun
 import os, struct, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import brotli
 import numpy as np
+import planecoding as pc
 from bake_rain import Raster, log, ROOT, OUT, TAS, BIO, RES, TILE, SUB, MIN_PIXELS, STRIP, BLOCK
 
 PET = "CHELSA_pet_penman_mean_1981-2010_V.2.1.tif"
@@ -95,22 +96,14 @@ def bake(tas_dir=TAS, bio_dir=BIO):
 
 def write(code):
     H, W = code.shape
-    blobs = []
+    tiles = []
     for ty in range(H // TILE):
         for tx in range(W // TILE):
             t = code[ty * TILE:(ty + 1) * TILE, tx * TILE:(tx + 1) * TILE]
-            blobs.append(brotli.compress(t.tobytes(), quality=11, lgwin=24) if t.any() else b"")
+            tiles.append([t] if t.any() else None)
     path = os.path.join(OUT, "aridity.bin")
-    with open(path, "wb") as f:
-        f.write(b"EMAI")
-        f.write(struct.pack("<iiiii", 1, W, H, TILE, len(blobs)))
-        off = 4 + 20 + 8 * len(blobs)
-        for b in blobs:
-            f.write(struct.pack("<ii", off, len(b)))
-            off += len(b)
-        for b in blobs:
-            f.write(b)
-    log(f"aridity.bin {os.path.getsize(path) / 1e6:.2f} MB, {len(blobs)} tiles, {sum(1 for b in blobs if not b)} empty")
+    pc.write_tiled(path, "EMAI", 1, W, H, TILE, tiles, [pc.U8])
+    log(f"aridity.bin {os.path.getsize(path) / 1e6:.2f} MB, {len(tiles)} tiles, {sum(1 for t in tiles if t is None)} empty")
 
 
 PLACES = [

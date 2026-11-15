@@ -20,12 +20,14 @@ namespace EarthMap.Core
         {
             // each piece's cells, on all cores (a piece's cells are its own; its reach is a pure function of its discharge,
             // and the pieces come reach by reach, so a run of one discharge computes it once, as the queries' cache does)
-            if (segs.Length > 0) Parallel.ForEach(Partitioner.Create(0, segs.Length, 1 << 16), range =>
+            // (ER-25: in runs of 65,536 pieces on ParallelWork's few workers, not a raw uncapped Parallel.ForEach)
+            const int Run = 1 << 16;
+            if (segs.Length > 0) ParallelWork.For((segs.Length + Run - 1) / Run, k =>
             {
                 int lastQ = 0;
                 bool haveQ = false;
                 double reach = 0, halfWidth = 0;
-                for (int i = range.Item1; i < range.Item2; i++)
+                for (int i = k * Run, end = Math.Min(segs.Length, i + Run); i < end; i++)
                 {
                     ref var s = ref segs[i];
                     int qBits = BitConverter.SingleToInt32Bits(s.Q);

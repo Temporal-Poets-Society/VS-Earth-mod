@@ -53,7 +53,7 @@ namespace EarthMap
             int mapHeight = sapi.WorldManager.MapSizeY;
             int sea = model.SeaLevel;
             var cols = columnsCache.Value;
-            // decision 0051 (proposed): the GLO-90 tiles under this chunk (and a margin) are here before its columns are made;
+            // decision 0051: the GLO-90 tiles under this chunk (and a margin) are here before its columns are made;
             // from now on this generation thread waits for any other tile its columns reach
             if (model.Fine != null) (elevation ??= sapi.ModLoader.GetModSystem<EarthElevationSystem>())?.PrepareChunk(cx, cz);
 
@@ -64,7 +64,7 @@ namespace EarthMap
             settler.Settle(cx, cz, ext);
             // the surface pass's flags per column (TerrainHandoff): dry river beds and beaches (settling changes neither)
             byte[] flags = null;
-            bool dryRivers = model.AridRiverRules >= 1;
+            bool dryRivers = model.Rules.AridRivers;
 
             int minFill = int.MaxValue;
             uint[] ramp = null;
@@ -115,9 +115,13 @@ namespace EarthMap
                 {
                     int i2 = lz * 32 + lx;
                     var c = cols[i2];
+                    // (W-P3, code review 14 November 2026) SetBlockUnsafe as vanilla's GenBlockLayers: the chunks are this
+                    // thread's while it generates them, so the layer's write lock and index check are not needed; the same
+                    // palette and bits as the indexer (ChunkDataLayer.Set and SetUnsafe differ only in those). Fluids keep
+                    // SetFluid, which has no unlocked form.
                     for (int y = minFill + 1; y <= c.Top; y++)
                     {
-                        chunks[y / 32].Data[((y % 32) * 32 + lz) * 32 + lx] = y >= c.IceBottom ? glacierIceId : rockId;
+                        chunks[y / 32].Data.SetBlockUnsafe(((y % 32) * 32 + lz) * 32 + lx, y >= c.IceBottom ? glacierIceId : rockId);
                     }
                     int top = c.Top;
                     if (c.WaterTop > c.Top)

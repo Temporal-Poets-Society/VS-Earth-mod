@@ -38,9 +38,7 @@ namespace EarthMap.Core
         /// <summary>Reads stream-heads-1.bin; throws InvalidDataException when it isn't that file.</summary>
         public static StreamHeads Read(Stream stream)
         {
-            using var ms = new MemoryStream();
-            stream.CopyTo(ms);
-            byte[] file = ms.ToArray();
+            byte[] file = EarthBinary.ReadAll(stream);
             if (file.Length < 24 || file[0] != 'E' || file[1] != 'M' || file[2] != 'S' || file[3] != 'H')
                 throw new InvalidDataException(FileName + ": not a stream heads file");
             int version = BitConverter.ToInt32(file, 4), perDegree = BitConverter.ToInt32(file, 8), count = BitConverter.ToInt32(file, 12);
@@ -48,13 +46,7 @@ namespace EarthMap.Core
             if (version != FileVersion) throw new InvalidDataException(FileName + ": version " + version + ", expected " + FileVersion);
             if (perDegree < 1 || perDegree * perDegree > 65536 || count < 0 || steps < 1 || floor < 0 || floor > 255)
                 throw new InvalidDataException(FileName + ": bad header");
-            byte[] body;
-            using (var dec = new BrotliStream(new MemoryStream(file, 24, file.Length - 24), CompressionMode.Decompress))
-            using (var o = new MemoryStream())
-            {
-                dec.CopyTo(o);
-                body = o.ToArray();
-            }
+            byte[] body = EarthBinary.UnbrotliAll(file, 24, FileName);
             int p = 0;
             int Varint()
             {

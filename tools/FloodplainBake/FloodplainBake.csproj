@@ -13,7 +13,10 @@
   <ItemGroup>
     <!-- the mod's own terrain model, linked rather than copied -->
     <Compile Include="../../src/Core/*.cs" Link="Core/%(Filename)%(Extension)" />
-    <Compile Include="../../src/EarthParams.cs;../../src/EarthMapConfig.cs" Link="%(Filename)%(Extension)" />
+    <!-- Geothermal's site lists (EA-0092): every project that compiles all of src/Core embeds them -->
+    <EmbeddedResource Include="../../data/geothermal-sites.bin" LogicalName="EarthMap.geothermal-sites.bin" />
+    <EmbeddedResource Include="../../data/geothermal-osm.bin" LogicalName="EarthMap.geothermal-osm.bin" />
+    <Compile Include="../../src/EarthParams.cs;../../src/EarthParams.Model.cs;../../src/EarthMapConfig.cs" Link="%(Filename)%(Extension)" />
     <Reference Include="VintagestoryAPI"><HintPath>$(VintageStoryPath)\VintagestoryAPI.dll</HintPath></Reference>
     <Reference Include="protobuf-net"><HintPath>$(VintageStoryPath)\Lib\protobuf-net.dll</HintPath></Reference>
     <Reference Include="Newtonsoft.Json"><HintPath>$(VintageStoryPath)\Lib\Newtonsoft.Json.dll</HintPath></Reference>

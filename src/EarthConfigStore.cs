@@ -1,7 +1,10 @@
 using System;
+using System.IO;
 using System.Linq;
 using EarthMap.Core;
+using Newtonsoft.Json;
 using Vintagestory.API.Common;
+using Vintagestory.API.Config;
 using Vintagestory.API.Server;
 
 namespace EarthMap
@@ -10,18 +13,38 @@ namespace EarthMap
     /// ModConfig/earth.json (EarthMapConfig): read at every server start, moved to the current defaults where a setting's
     /// meaning changed, checked before anything is frozen into a save (an invalid value must never stop a world from
     /// loading), and written back; also written when one-shot UpgradeExistingWorld* flags are reset (once the world that took
-    /// them is saved).
+    /// them is saved). A file that can't be read is never written over (FP-16, the Fable pass of the 14 November 2026 code
+    /// review): before, its defaults replaced it, and one missing comma lost every setting (Enabled, a mirror's DataRepo or
+    /// ElevationRepo, every one-shot flag). Writes go through a temporary file, so a crash or a full disk mid-write leaves the
+    /// file as it was.
     /// </summary>
     static class EarthConfigStore
     {
         public const string FileName = "earth.json";
 
-        /// <summary>The config, migrated and checked, written back to the file.</summary>
-        public static EarthMapConfig Load(ICoreServerAPI api, ILogger log)
+        /// <summary>The config, migrated and checked, written back to the file. <paramref name="unreadable"/>: the parser's
+        /// error when the file is there but can't be read (the defaults are returned, the file left as it was).</summary>
+        public static EarthMapConfig Load(ICoreServerAPI api, ILogger log) => Load(api, log, out _);
+
+        public static EarthMapConfig Load(ICoreServerAPI api, ILogger log, out string unreadable) => Load(GamePaths.ModConfig, log, out unreadable);
+
+        /// <summary>(EA-0088, D-R5 of the Fable pass) <see cref="Load(ICoreServerAPI, ILogger, out string)"/> on the earth.json
+        /// in <paramref name="folder"/>, read as the game reads a mod config (LoadModConfig: Newtonsoft over the file's text):
+        /// what tests/EarthWorldOptionsTests checks, without the game.</summary>
+        internal static EarthMapConfig Load(string folder, ILogger log, out string unreadable)
         {
+            unreadable = null;
             EarthMapConfig cfg = null;
-            try { cfg = api.LoadModConfig<EarthMapConfig>(FileName); }
-            catch (Exception e) { log.Error("Failed to read {0}, using defaults: {1}", FileName, e.Message); }
+            try { cfg = Read(folder); }
+            catch (Exception e)
+            {
+                // (FP-16) the admin's file stays as it is, with a copy beside it; this session runs on the defaults
+                unreadable = e.Message;
+                string copy = KeepCopy(folder);
+                log.Error("{0} can't be read: {1}. Earth does not write the file{2}; an Earth world is not started on the defaults " +
+                    "(it could freeze them, or fetch data from GitHub instead of a mirror the file names): fix the place the error names, or " +
+                    "delete the file to start from the defaults.", FileName, e.Message, copy != null ? " (a copy of it is kept as " + copy + ")" : "");
+            }
             if (cfg == null)
             {
                 cfg = new EarthMapConfig { ConfigVersion = EarthMapConfig.CurrentConfigVersion };
@@ -107,9 +130,44 @@ namespace EarthMap
             // a file that can't be written back (read-only, locked by an editor or a backup tool, a full disk) is no reason to stop:
             // thrown here it would end StartServerSide before the world's set-up is registered, and the game's mod loader would
             // go on with vanilla's terrain in an Earth world (code review 2026-11-11, CR-L1)
-            try { api.StoreModConfig(cfg, FileName); }
+            if (unreadable != null) return cfg;
+            try { Store(cfg, folder); }
             catch (Exception e) { log.Warning("Could not write {0} back ({1}); the settings read are used, the file is left as it was.", FileName, e.Message); }
             return cfg;
+        }
+
+        static string ConfigPath(string folder) => Path.Combine(folder, FileName);
+
+        /// <summary>The earth.json in <paramref name="folder"/> as the game's LoadModConfig reads it (null when there is none;
+        /// throws when it can't be parsed).</summary>
+        internal static EarthMapConfig Read(string folder)
+        {
+            string path = ConfigPath(folder);
+            return File.Exists(path) ? JsonConvert.DeserializeObject<EarthMapConfig>(File.ReadAllText(path)) : null;
+        }
+
+        /// <summary>(FP-16) The config written as the game writes a mod config (StoreModConfig: indented JSON), through a
+        /// temporary file moved over the old one.</summary>
+        internal static void Store(EarthMapConfig cfg, string folder)
+        {
+            string path = ConfigPath(folder), temp = path + ".tmp";
+            Directory.CreateDirectory(folder);
+            File.WriteAllText(temp, JsonConvert.SerializeObject(cfg, Formatting.Indented));
+            try { File.Move(temp, path, true); }
+            catch (Exception) { try { File.Delete(temp); } catch (Exception) { } throw; }
+        }
+
+        /// <summary>(FP-16) A copy of an unreadable earth.json beside it (earth.json.bad-yyyyMMdd-HHmmss); null when it can't be
+        /// made.</summary>
+        static string KeepCopy(string folder)
+        {
+            try
+            {
+                string copy = ConfigPath(folder) + ".bad-" + DateTime.Now.ToString("yyyyMMdd-HHmmss", System.Globalization.CultureInfo.InvariantCulture);
+                File.Copy(ConfigPath(folder), copy, true);
+                return Path.GetFileName(copy);
+            }
+            catch (Exception) { return null; }
         }
 
         /// <summary>
@@ -119,13 +177,16 @@ namespace EarthMap
         /// hand (a file that can't be read is left as it is).
         /// </summary>
         public static void ResetFlags(ICoreServerAPI api, EarthMapConfig session, Action<EarthMapConfig> reset, string names, ILogger log)
+            => ResetFlags(GamePaths.ModConfig, session, reset, names, log);
+
+        internal static void ResetFlags(string folder, EarthMapConfig session, Action<EarthMapConfig> reset, string names, ILogger log)
         {
             try
             {
-                var file = api.LoadModConfig<EarthMapConfig>(FileName) ?? session;
+                var file = Read(folder) ?? session;
                 reset(file);
-                api.StoreModConfig(file, FileName);
-                log.Notification("{0}: the world is saved with {1}; the flag(s) are reset.", FileName, names);
+                Store(file, folder);
+                log.Notification("{0}: {1} reset, now that the world that took or skipped them is saved.", FileName, names);
             }
             catch (Exception e) { log.Error("Could not reset {0} in {1}: {2}. Set them back to false by hand.", names, FileName, e.Message); }
         }

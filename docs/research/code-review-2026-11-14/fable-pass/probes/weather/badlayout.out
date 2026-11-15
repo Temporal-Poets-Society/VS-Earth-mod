@@ -1,0 +1,7 @@
+geometry: ring 25600+204800, wraps True, gutter 0, seam -169.25, 568.89 x 568.36 blocks per degree
+bad layout, blocks per degree 0: throws IndexOutOfRangeException: Index was outside the bounds of the array.
+bad layout, blocks per degree NaN: throws IndexOutOfRangeException: Index was outside the bounds of the array.
+bad layout, ring length NaN: throws IndexOutOfRangeException: Index was outside the bounds of the array.
+bad layout, ring length 0: throws IndexOutOfRangeException: Index was outside the bounds of the array.
+storm frequency NaN: cloudness 1.6, 0 storms alive, first lookup 2 ms
+storm frequency ì: cloudness 1.6, 15918 storms alive, first lookup 320 ms

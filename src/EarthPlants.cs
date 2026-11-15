@@ -117,6 +117,17 @@ namespace EarthMap
         [ThreadStatic] static int treeX, treeZ;
 
         public bool Active => state != null;
+
+        /// <summary>Whether this start's set-up meant the gates to run (regional trees with RegionalPlants, or plants as around
+        /// 1318); they then count for EarthWorldGen's check (decision 0083).</summary>
+        bool wanted;
+
+        /// <summary>(Decision 0083; FP-02) The plant gates, meant to run this start, off: for EarthWorldGen's check before the
+        /// first chunk.</summary>
+        internal void FeaturesOff(System.Collections.Generic.List<string> off)
+        {
+            if (wanted && !Active) off.Add("the regional plant gates (" + (inactiveReason ?? "off") + ")");
+        }
         public RegionalPlantCatalog Catalog => catalog;
         public override double ExecuteOrder() => 0.07;
         public override bool ShouldLoad(EnumAppSide side) => side == EnumAppSide.Server;
@@ -141,6 +152,7 @@ namespace EarthMap
 
         void Initialize()
         {
+            wanted = false;
             var p = core?.Params;
             if (p?.Enabled != true || core.Model == null) { inactiveReason = "not an Earth world"; return; }
             // Plants as around 1318 (decision 0047): the placement catalogue gates the crops and berry bushes it maps, with
@@ -149,6 +161,7 @@ namespace EarthMap
             string packsOff = !p.RegionalTrees ? "this Earth world was created without regional trees"
                 : core.Config?.RegionalPlants != true ? "RegionalPlants is off in earth.json" : null;
             if (packsOff != null && placement == null) { Inactive(packsOff); return; }
+            wanted = true;
             if (packsOff == null)
             {
                 var rules = api.Assets.TryGet(new AssetLocation("earth:config/regionalplants.json"));
@@ -338,7 +351,7 @@ namespace EarthMap
                 c.Mean[i] = (float)cs.TMean; c.Cold[i] = (float)cs.TCold; c.Rain[i] = (float)cs.Rain;
                 // CR-E1: a river's green belt counts as arable (Arable) and gives trees, animals and soil its rain; with
                 // GenFixRules the envelopes read that rain too, so crops along the Nile are not vetoed on Cairo's rain
-                c.EnvelopeRain[i] = s.Model.GenFixRules >= 1 ? (float)s.Model.RiparianRain(CellCentre(cx), CellCentre(cz), cs.Rain) : c.Rain[i];
+                c.EnvelopeRain[i] = s.Model.Rules.RiparianEnvelopes ? (float)s.Model.RiparianRain(CellCentre(cx), CellCentre(cz), cs.Rain) : c.Rain[i];
                 c.HasClimate[i] = true;
             }
             double lapse = TerrainModel.Lapse(s.Model.Vertical, y);
@@ -382,6 +395,8 @@ namespace EarthMap
 
         internal static bool GeneratePrefix(BlockPatch __instance, int posX, int posY, int posZ)
         {
+            // (FP-11, Fable's low 5 on ad56a74) a generation entry point inside vanilla's pass: this thread may wait for a missing tile
+            using var fetch = Core.FineElevation.Generating();
             // decision 0070: land plants (ferns, flowers, bushes) stay off the shore strip; reeds and water plants keep the
             // water's edge
             if (__instance != null && __instance.Placement is EnumBlockPatchPlacement.OnSurface or EnumBlockPatchPlacement.OnSurfacePlusUnderTrees
@@ -437,6 +452,7 @@ namespace EarthMap
         /// <summary>Replaces bpc.IsPatchSuitableUnderTree(...) inside ForestFloorSystem.GenPatches (same stack shape).</summary>
         public static bool SuitableUnderTree(BlockPatchConfig config, BlockPatch patch, int mapSizeY, ClimateCondition climate, int y)
         {
+            using var fetch = Core.FineElevation.Generating();
             if (!config.IsPatchSuitableUnderTree(patch, mapSizeY, climate, y)) return false;
             if (!treeScope) return true;
             var s = state;

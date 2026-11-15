@@ -1,5 +1,6 @@
 {
-  "version": 1,
+  "version": 2,
+  "versionNote": "One file for every version: a rule added later names its first version in a \"rules\" condition [from, to), so worlds made with older rules keep their ground (EarthParams.GroundColumns). 2 (EA-0062, decision 0076, 13 November 2026): karst-cool.",
   "note": "Ground columns (prototype: Baltic), 6 November 2026. Fields come from the tiles below; everything here is matched by the names the tiles use (GUM codes, IGME ages, WRB groups, EMODnet Folk classes), so new data needs entries here, not code. Layers are in metres below each column's own top. Design: docs/research/geology-columns-2026-11-06/global-design.md; sources: README.md there.",
 
   "tiles": [
@@ -146,7 +147,8 @@
       {"name": "salt-flat", "field": "soil_group", "values": ["Solonchaks"], "units": {"Rx": "playa", "Rm": "playa", "Zu": "playa", "Us": "playa", "Ca": "playa", "Cu": "playa", "default": "playa"}},
       {"name": "rock-land", "note": "Shallow soil on rock: a metre or two of weathered rock.", "field": "soil_group", "values": ["Leptosols"], "units": {"Rx": "thin", "Rm": "thin", "Zu": "thin", "Us": "thin", "Ca": "thin", "Cu": "thin", "default": "thin"}},
       {"name": "sand-sheet", "field": "soil_group", "values": ["Arenosols"], "units": {"Rx": "sand-sheet", "Zu": "sand-sheet", "Us": "sand-sheet", "default": "sand-sheet"}},
-      {"name": "steppe-loess", "field": "soil_group", "values": ["Chernozems", "Kastanozems"], "units": {"Rx": "loess", "Rm": "loess", "Zu": "loess", "Us": "loess", "Ca": "loess", "Cu": "loess", "default": "loess"}}
+      {"name": "steppe-loess", "field": "soil_group", "values": ["Chernozems", "Kastanozems"], "units": {"Rx": "loess", "Rm": "loess", "Zu": "loess", "Us": "loess", "Ca": "loess", "Cu": "loess", "default": "loess"}},
+      {"name": "karst-cool", "note": "Ground rules 2: terra rossa is a warm-climate soil (the Mediterranean, the subtropics and tropics); karst cooler than a yearly mean of 12 °C at its own height (the Alps, the Dinaric highlands, central and northern Europe) has rendzina: dark topsoil on limestone rubble.", "rules": [2, 1000], "surface": ["land", "beach", "riverbed"], "temperature": [-100, 12], "units": {"Rk": "rendzina"}}
     ],
     "recipes": {
       "thin-till": {"typicalMetres": 3, "maxMetres": 8,  "layers": [{"m": "till-reddish", "share": 0.6, "vary": 0.3}, {"m": "till-grey"}]},
@@ -248,6 +250,7 @@
       "ooze-siliceous": {"typicalMetres": 100, "layers": [{"m": "ooze-siliceous"}]},
       "carbonate-shelf": {"typicalMetres": 20, "layers": [{"m": "carbonate-sand", "share": 0.6, "vary": 0.4}, {"m": "mud"}]},
       "residual-mafic": {"typicalMetres": 4, "maxMetres": 25, "layers": [{"m": "saprolite-mafic", "share": 0.7, "vary": 0.3}, {"m": "regolith"}]},
+      "rendzina": {"typicalMetres": 0.8, "maxMetres": 2, "layers": [{"m": "rubble-limestone"}]},
       "residual-karst": {"typicalMetres": 1.5, "maxMetres": 4, "layers": [{"m": "terra-rossa", "share": 0.5, "vary": 0.5}, {"m": "rubble-limestone"}]}
     }
   },

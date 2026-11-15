@@ -48,20 +48,6 @@ namespace EarthMap
         /// </summary>
         public static bool VanillaBiomes(ITreeAttribute wc) => Choice(wc, BiomesKey, BiomesVanilla, BiomesEarth, false);
 
-        /// <summary>Decision 0075: turns a new world's biome rules back to vanilla (the rules Freeze's caller, ComputeParams,
-        /// saved). Terrain, water, coasts, rocks, soil and ores keep Earth's rules.</summary>
-        public static void FreezeVanillaBiomes(EarthParams p)
-        {
-            p.VanillaBiomes = EarthParams.VanillaBiomesVersion;
-            p.ZoneRules = 0;
-            p.FireRules = 0;
-            p.WetlandRules = 0;
-            p.GroundCoverRules = 0;
-            p.MoistureRules = 0;
-            p.GrassWinterRules = 0;
-            p.AlpineSurfaceRules = 0;
-        }
-
         public static bool RegionalAnimals(ITreeAttribute wc, bool fallback)
             => Choice(wc, "earthAnimals", "regional", "vanilla", fallback);
 
@@ -88,11 +74,40 @@ namespace EarthMap
                 && double.IsFinite(value) && value >= 0 && value <= max ? value : fallback;
         }
 
-        /// <summary>Creation-only choices. Existing saves never pass through this method.</summary>
-        public static void Freeze(ITreeAttribute wc, EarthMapConfig cfg, EarthParams p, EarthData data = null)
+        /// <summary>
+        /// A new world's Earth-tab choices (EA-0089 C, CR-A5 of the 14 November 2026 code review), each resolved the one way:
+        /// the tab's key, else earth.json (the server config's switches from before the tab), else the default.
+        /// WorldParamsBuilder.Build writes a new world's params from them, each field once. Creation only: existing saves never
+        /// pass through this.
+        /// </summary>
+        public sealed class EarthTab
         {
-            p.CreationOptionsVersion = 1;
-            p.SummitMinElevation = SummitMinElevation(wc);
+            /// <summary>Summits corrected from this height (m), -1 off (<see cref="SummitMinElevation(ITreeAttribute)"/>).</summary>
+            public int SummitMinElevation;
+            /// <summary>"Ores": Earth's ore maps (decision 0077's bauxite with them).</summary>
+            public bool RegionalOres;
+            /// <summary>"Rocks and ground": regional rock regions (not vanilla).</summary>
+            public bool RegionalGeology;
+            /// <summary>"Rocks and ground": ground columns on the rock regions.</summary>
+            public bool GroundColumns;
+            /// <summary>Ground depth for ground columns: one of GroundColumns.DepthCurve.Choices.</summary>
+            public string GroundDepth;
+            /// <summary>"Nature": plants and animals as around 1318 (decision 0047).</summary>
+            public bool Nature1318;
+            /// <summary>"Nature" is on the tab ("vanilla" there also means no regional tree allocation).</summary>
+            public bool NatureOnTab;
+            /// <summary>"Biomes": vanilla's (decision 0075).</summary>
+            public bool VanillaBiomes;
+            public bool IncludeExtinctAnimals, ChickensByRange, Weather, NoRiverRapids;
+            public double RainFrequency, StormFrequency;
+            public int SpringRules, PondRules, RockFloorDepth;
+            /// <summary>Land heights: "glo90", "glo90coarse" or "builtin" (<see cref="Elevation"/>).</summary>
+            public string Elevation;
+        }
+
+        /// <summary>The Earth tab's choices for a new world of <paramref name="mapHeight"/> blocks (<see cref="EarthTab"/>).</summary>
+        public static EarthTab ReadTab(ITreeAttribute wc, EarthMapConfig cfg, EarthData data, int mapHeight)
+        {
             // Two Earth-tab choices (the author, 7 November). "Rocks and ground": ground columns (the default: regional rock
             // regions, plus real ground columns where the ground data reaches), regional (rock regions only) or vanilla.
             // "Ores": vanilla (the default for now) or Earth's ore maps. Worlds set up with the earlier single "Rocks and
@@ -105,76 +120,28 @@ namespace EarthMap
             string deposits = Get(wc, OreDepositsKey, "").Trim().ToLowerInvariant();
             if (!(deposits is OreDepositsVanilla or OreDepositsMaps) && legacyKnown) deposits = legacy == OresVanilla ? OreDepositsVanilla : OreDepositsMaps;
             bool rocksKnown = rocks is OresRegional or OresGroundColumns or OresVanilla;
-            bool ores = deposits is OreDepositsVanilla or OreDepositsMaps ? deposits == OreDepositsMaps : cfg.RegionalOres;
-            p.RegionalOres = ores;
-            p.RegionalGeology = rocksKnown ? rocks != OresVanilla : cfg.RegionalGeology;
-            p.OreRulesVersion = ores ? RegionalOreCatalog.Version : 0;
-            p.GeologyRulesVersion = p.RegionalGeology ? RegionalGeologyCatalog.RulesVersion : 0;
-            bool ground = rocksKnown ? rocks == OresGroundColumns : cfg.GroundColumnsPrototype;
-            p.GroundColumns = ground && p.RegionalGeology ? GroundColumns.RulesVersion : 0;
-            p.OreLayers = p.GroundColumns > 0 ? EarthMap.Core.OreLayers.RulesVersion : 0;
-            // 0065: the ore maps in a ground-column world use ore rules v4 (catalogue bodies in their layers)
-            p.OreRules = ores && p.OreLayers > 0 ? OreBackground.CurrentRules : 0;
-            p.DepositSet = EarthDepositSet.Version;
             string depth = Get(wc, GroundDepthKey, "").Trim().ToLowerInvariant();
-            p.GroundDepth = p.GroundColumns > 0 ? (Array.IndexOf(GroundColumns.DepthCurve.Choices, depth) >= 0 ? depth : GroundColumns.DepthCurve.Default) : null;
-            bool nature = Nature1318(wc, cfg.RegionalFauna);
-            p.RegionalFauna = nature;
-            p.PlacementRules = nature ? PlacementCatalogue.RulesVersion : 0;
-            if (!nature && wc?.HasAttribute(NatureKey) == true)
+            return new EarthTab
             {
-                // Vanilla by climate alone: no regional tree allocation either.
-                p.RegionalTrees = false;
-                p.TreeRulesVersion = 0;
-            }
-            // decision 0075: "Biomes" on its own; either Nature goes with either Biomes
-            if (VanillaBiomes(wc)) FreezeVanillaBiomes(p);
-            else p.VanillaBiomes = 0;
-            p.FaunaRulesVersion = p.RegionalFauna ? RegionalFaunaCatalog.RulesVersion : 0;
-            p.VanillaFaunaRanges = p.RegionalFauna ? VanillaFaunaRanges.Version : 0;
-            p.IncludeExtinctAnimals = wc?.GetBool("earthIncludeExtinctAnimals", cfg.IncludeExtinctAnimals) ?? cfg.IncludeExtinctAnimals;
-            p.ChickensByRange = !(wc?.GetBool(ChickensEverywhereKey, true) ?? true);
-            // Decision 0054: worlds placed as around 1318 get animal ranges as around 1318 unless earth.json asks for "current".
-            p.FaunaRangeProfile = nature && cfg.FaunaRangeProfile != RegionalFaunaCatalog.CurrentProfile ? RegionalFaunaCatalog.Profile1318 : cfg.FaunaRangeProfile;
-            p.Weather = Choice(wc, "earthWeather", "earth", "vanilla", cfg.Weather);
-            p.WeatherModelRules = WeatherSettings.Newest;
-            p.WeatherPace = cfg.WeatherPace;
-            p.RainFrequency = Frequency(wc, "earthRainFrequency", cfg.RainFrequency, 3);
-            p.StormFrequency = Frequency(wc, "earthStormFrequency", cfg.StormFrequency, 5);
-            p.NoRiverRapids = !Choice(wc, RiverRapidsKey, "steep", "off", true);
-            p.SpringRules = SpringRules(wc);
-            p.PondRules = PondRules(wc);
-            string elevation = Elevation(wc, data);
-            p.FineElevation = elevation == "glo90" ? FineElevation.Version : 0;
-            // the included GLO-90 heights: the land heights of "glo90coarse", and where full GLO-90 can't be downloaded
-            p.CoarseElevation = elevation != "builtin" && data?.Coarse != null ? CoarseElevation.Version : 0;
-            // rivers on GLO-90 with either GLO-90 choice (their valleys are in the land then)
-            // (2: with the reaches the water atlas moved, 3: and the side arms, where the installed data allows; 0053 items 14, 16)
-            p.RiverCourses = elevation != "builtin" && data != null ? data.Glo90RiverCourses : 0;
-            // the water mask's lakes from their outlines with full GLO-90 (their levels are its heights'; 0053 item 17)
-            p.LakeOutlines = elevation == "glo90" ? LakeOutlineData.FileVersion : 0;
-            // modern dams taken out (no dams in 1318: 0053 item 19, proposed), on the courses the dam file was made for
-            // (rules 2, 0063: on courses rules 4; rules 1 on courses rules 3)
-            p.DamRules = elevation != "glo90" ? 0
-                : p.RiverCourses == DamRemovalData.CourseRules2 ? DamRemovalData.NewestRules
-                : p.RiverCourses == DamRemovalData.CourseRules ? DamRemovalData.RulesVersion : 0;
-            // and its rivers, at the river courses' levels (0053 item 18), through the old reservoirs with the dams out: the
-            // outlines baked with that dam file's corridors (dam rules 2: version 3, 0063; rules 1: version 2)
-            // (dam rules 3, decision 0069: version 4, on its reservoirs and corridors)
-            p.RiverOutlines = elevation == "glo90" ? (p.DamRules >= DamRemovalData.Rules3 ? 4 : p.DamRules >= DamRemovalData.Rules2 ? 3 : p.DamRules >= 1 ? 2 : 1) : 0;
-            // the channel rules with them (0063 channel rules 1, "dredging": the course's channel everywhere, at the flow's width
-            // or the river's measured one where narrower)
-            p.ChannelRules = p.RiverOutlines >= 1 && p.RiverCourses >= 1 ? TerrainModel.ChannelRulesVersion : 0;
-            // decision 0069: the flow solved on river outlines 4's water, with its rerouted mouths (on courses rules 4's list)
-            p.ShoreZoneRules = Core.ShoreZones.RulesVersion;
-            // decision 0070: the shore strip of the coast's own material
-            p.ShoreRules = Core.ShoreMaterial.RulesVersion;
-            p.FlowRules = p.RiverOutlines >= 4 && p.ChannelRules >= 1 && p.RiverCourses == DamRemovalData.CourseRules2 ? RiverFlowData.FileVersion : 0;
-            p.DetailRules = TerrainModel.DetailRulesVersion;
-            // the code review of 11 November 2026: dry land below 0 m, springs at whole blocks, crops in the river belt, dry
-            // river beds' gravel (TerrainModel.GenFixRules)
-            p.GenFixRules = TerrainModel.GenFixRulesVersion;
-            p.RockFloorDepth = RockFloorDepth(wc, p.MapHeight);
+                SummitMinElevation = SummitMinElevation(wc),
+                RegionalOres = deposits is OreDepositsVanilla or OreDepositsMaps ? deposits == OreDepositsMaps : cfg.RegionalOres,
+                RegionalGeology = rocksKnown ? rocks != OresVanilla : cfg.RegionalGeology,
+                GroundColumns = rocksKnown ? rocks == OresGroundColumns : cfg.GroundColumnsPrototype,
+                GroundDepth = Array.IndexOf(GroundColumns.DepthCurve.Choices, depth) >= 0 ? depth : GroundColumns.DepthCurve.Default,
+                Nature1318 = Nature1318(wc, cfg.RegionalFauna),
+                NatureOnTab = wc?.HasAttribute(NatureKey) == true,
+                VanillaBiomes = VanillaBiomes(wc),
+                IncludeExtinctAnimals = wc?.GetBool("earthIncludeExtinctAnimals", cfg.IncludeExtinctAnimals) ?? cfg.IncludeExtinctAnimals,
+                ChickensByRange = !(wc?.GetBool(ChickensEverywhereKey, true) ?? true),
+                Weather = Choice(wc, "earthWeather", "earth", "vanilla", cfg.Weather),
+                RainFrequency = Frequency(wc, "earthRainFrequency", cfg.RainFrequency, 3),
+                StormFrequency = Frequency(wc, "earthStormFrequency", cfg.StormFrequency, 5),
+                NoRiverRapids = !Choice(wc, RiverRapidsKey, "steep", "off", true),
+                SpringRules = SpringRules(wc),
+                PondRules = PondRules(wc),
+                Elevation = Elevation(wc, data),
+                RockFloorDepth = RockFloorDepth(wc, mapHeight),
+            };
         }
 
         /// <summary>"Rocks and ground": OresGroundColumns (default), OresRegional or OresVanilla.</summary>
@@ -340,7 +307,7 @@ namespace EarthMap
             return mapHeight > 512 ? AutoRockFloor : 0;
         }
 
-        /// <summary>0051/0053 (proposed): land heights from Copernicus GLO-90, full ("glo90") or included ("glo90coarse"), or the
+        /// <summary>0051/0053: land heights from Copernicus GLO-90, full ("glo90") or included ("glo90coarse"), or the
         /// built-in grid ("builtin"); "auto" (the default) picks by the Earth size (Elevation).</summary>
         public const string ElevationKey = "earthElevation";
 

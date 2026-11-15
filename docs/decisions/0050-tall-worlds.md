@@ -1,9 +1,6 @@
 # 0050: Tall Earth worlds: an Earth-tab world height up to 1024 and a rock floor
 
-Date: 3 November 2026. Status: **agreed** (the author, below); **implemented** on `claude/tall-1to10` (from `release/1.0`
-`bbd00c0`), playtest version Earth 1.0.3-tall.3, installed. Headless servers checked (below); not played, committed or
-released. New worlds only. Combined test build 1.0.3-tall.4 on `claude/tall-glo90` (with 0051's GLO-90 prototype and the
-river speed-up; built and server-checked, installed 4 November, not committed; History).
+Date: 3 November 2026. Status: **agreed** (the author, below); built, in Earth 2.0.0: the world height and the rock floor (since 0068 each play style sets the height by its scale). New worlds only.
 
 ## Context
 
@@ -184,3 +181,12 @@ columns below the floor, structures below the floor, generation time without two
   Data packs, companions, settings and saves unchanged; the game was not running. GLO-90 tiles come from the
   author's converted store (all 26,475 tiles), so new worlds on GLO-90 need no downloads.
 - 5 November 2026: [0053](0053-scales-included-glo90-and-glo90-rivers.md) (proposed, test build tall.5) adds exact scales with Automatic settings, included GLO-90 heights and rivers on GLO-90.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: **agreed** (the author, below); **implemented** on `claude/tall-1to10` (from `release/1.0`
+`bbd00c0`), playtest version Earth 1.0.3-tall.3, installed. Headless servers checked (below); not played, committed or
+released. New worlds only. Combined test build 1.0.3-tall.4 on `claude/tall-glo90` (with 0051's GLO-90 prototype and the
+river speed-up; built and server-checked, installed 4 November, not committed; History).

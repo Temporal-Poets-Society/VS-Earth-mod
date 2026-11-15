@@ -1,0 +1,8 @@
+http [manifest redirected to file://]: UriFormatException: Invalid URI: The hostname could not be parsed.  (0 MB allocated, 37 ms)
+http [manifest redirected to another local port (an internal address)]: found True, 6 bytes: 'secret', inner server saw 1 request(s)  (0 MB allocated, 7 ms)
+http [redirect loop]: HttpRequestException: Response status code does not indicate success: 302 (Found).  (2 MB allocated, 42 ms)
+http [file:// as a source (IsUrl is false: read as a folder path)]: found False,  bytes  (0 MB allocated, 0 ms)
+http [ftp:// as a source for a whole file]: ok False, notThere False, error The filename, directory name, or volume label syntax is incorrect. : '<scratch>\fable\probes-data\ftp:\127.0.0.1\x\a.bin'  (0 MB allocated, 4 ms)
+http [range answered with other bytes of a 206 (start 0 asked 5)]: got 0123456789 (the caller checks the hash)  (0 MB allocated, 2 ms)
+http [mirror's manifest.json is an endless body]: fetch ended False after 3355 ms; server sent 1573 MB; process working set peaked at 4541 MB
+      log: the release's manifest could not be had from http://127.0.0.1:58102/endless/: '0x00' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.

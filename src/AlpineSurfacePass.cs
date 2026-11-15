@@ -94,7 +94,7 @@ namespace EarthMap
                 MetresX = Math.Max(1, OreScale.MetresPerDegree * Math.Cos(g.Lat * Math.PI / 180) / model.Geometry.BlocksPerDegreeX);
                 MetresZ = OreScale.MetresPerDegree / model.Geometry.BlocksPerDegreeZ;
                 Glaciers = pass.p.Glaciers >= 1 && model.Data.HasGlaciers && pass.blocks.GlacierIce > 0;
-                Scoured = Zones && model.AlpineSurfaceRules >= 2 && !g.InGutter && !g.BeyondPole
+                Scoured = Zones && AlpineSurfaceFacts.IceSheetGround(model.AlpineSurfaceRules) && !g.InGutter && !g.BeyondPole
                     ? MountainEcology.IceSheetGround(pass.iceSheets, g.Lat, g.Lon, pass.p.NoiseSeed) : 0;
             }
 
@@ -133,11 +133,11 @@ namespace EarthMap
             var chunks = s.Chunks;
             int i2 = lz * 32 + lx;
             int h = s.Heights[i2];
-            if(model.AridRiverRules>=1 && h>0 && h<s.MapHeight-2 && s.Rain[i2]==h && s.DryRiverAt(lx,lz))
+            if(model.Rules.AridRivers && h>0 && h<s.MapHeight-2 && s.Rain[i2]==h && s.DryRiverAt(lx,lz))
             {
                 // gravel on a quarter of the bed: (x ^ z) % 4 is 0 exactly where x and z agree mod 4, every fourth diagonal;
                 // with GenFixRules a position hash scatters it (CR-G5)
-                bool gravel = model.GenFixRules >= 1 ? TerrainColumns.Hash(s.Cx + lx, s.Cz + lz) % 4 == 0 : ((s.Cx + lx) ^ (s.Cz + lz)) % 4 == 0;
+                bool gravel = model.Rules.ScatteredBedGravel ? TerrainColumns.Hash(s.Cx + lx, s.Cz + lz) % 4 == 0 : ((s.Cx + lx) ^ (s.Cz + lz)) % 4 == 0;
                 MakeBeach(chunks,lx,lz,h,s.TopRock[i2],gravel);
                 return;
             }
@@ -147,18 +147,18 @@ namespace EarthMap
                 if ((geology ??= sapi.ModLoader.GetModSystem<EarthGeology>())?.GroundCovers(s.Cx + lx, s.Cz + lz) == true)
                 {
                     // (decision 0069 rule 7: no tall grass on a beach's sand)
-                    if (model.ShoreZoneRules >= 1) ClearPlantAbove(chunks, lx, lz, h);
+                    if (ShoreZoneFacts.Zones(model.ShoreZoneRules)) ClearPlantAbove(chunks, lx, lz, h);
                     return;
                 }
                 MakeBeach(chunks, lx, lz, h, s.TopRock[i2], s.ColdCoast);
                 return;
             }
-            if (h < s.Sea || h >= s.MapHeight - (model.AlpineSurfaceRules >= 1 ? 1 : 2) || s.Rain[i2] != h) return;
+            if (h < s.Sea || h >= s.MapHeight - (AlpineSurfaceFacts.Turf(model.AlpineSurfaceRules) ? 1 : 2) || s.Rain[i2] != h) return;
             double warm = s.Climate.TWarm - EarthWorldGen.LapsePerMetre * model.Vertical.Elevation(h);
             // the column's own place: its climate (surface rules 1), glaciers, loose volcanic ground, the physical slope's metres
             var localGeo = model.TerrainGeoAt(s.Cx + lx, s.Cz + lz);
             double localRain = s.Climate.Rain;
-            if (s.Zones && model.AlpineSurfaceRules >= 1)
+            if (s.Zones && AlpineSurfaceFacts.Turf(model.AlpineSurfaceRules))
             {
                 var localClimate = model.Data.SampleClimate(localGeo.Lat, localGeo.Lon);
                 warm = localClimate.TWarm - EarthWorldGen.LapsePerMetre * model.Vertical.Elevation(h);
@@ -179,7 +179,7 @@ namespace EarthMap
                 // only: the curve stretches low ground (6 m per block near the sea against ~100 m across), and a block slope
                 // alone bared every island's flanks
                 double real = double.PositiveInfinity;
-                if (model.AlpineSurfaceRules >= 1)
+                if (AlpineSurfaceFacts.Turf(model.AlpineSurfaceRules))
                 {
                     real = MountainEcology.Slope(model.Vertical.Elevation(s.H(lx-2,lz)), model.Vertical.Elevation(s.H(lx+2,lz)),
                         model.Vertical.Elevation(s.H(lx,lz-2)), model.Vertical.Elevation(s.H(lx,lz+2)), s.MetresX, s.MetresZ, 4);
@@ -190,7 +190,7 @@ namespace EarthMap
                     double ez = Math.Abs(model.Vertical.Elevation(s.H(lx, lz + 1)) - model.Vertical.Elevation(s.H(lx, lz - 1))) / (2 * s.MetresZ);
                     real = Math.Max(ex, ez);
                 }
-                double localSnowLine = model.AlpineSurfaceRules >= 1 ? .5 + 2.5 * Geo.SmoothStep((localRain-110)/90) : s.SnowLine;
+                double localSnowLine = AlpineSurfaceFacts.Turf(model.AlpineSurfaceRules) ? .5 + 2.5 * Geo.SmoothStep((localRain-110)/90) : s.SnowLine;
                 double volcanic = MountainEcology.LooseVolcanicGround(localGeo.Lat, localGeo.Lon, model.Vertical.Elevation(h));
                 AlpineColumn(chunks, s.Cx + lx, s.Cz + lz, lx, lz, h, slope, real, warm, localSnowLine, s.TopRock[i2], volcanic, localRain, s.Scoured);
                 return;
@@ -290,9 +290,9 @@ namespace EarthMap
         {
             bool snow = false, scree = false, strip = false;
             int keep = int.MaxValue;
-            if (model.AlpineSurfaceRules >= 1)
+            if (AlpineSurfaceFacts.Turf(model.AlpineSurfaceRules))
             {
-                var cover = model.AlpineSurfaceRules >= 2
+                var cover = AlpineSurfaceFacts.IceSheetGround(model.AlpineSurfaceRules)
                     ? MountainEcology.Surface2(warm, snowLine, realSlope, volcanic, MountainEcology.TurfPatch(x, z, p.NoiseSeed), slope, rain, scoured)
                     : MountainEcology.Surface(warm, snowLine, realSlope, volcanic, GeologyTransitions.Hash(p.NoiseSeed, x >> 2, 0, z >> 2, 31), slope);
                 snow = cover == MountainEcology.Cover.Snow && blocks.Snow > 0;

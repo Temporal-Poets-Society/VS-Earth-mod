@@ -1,0 +1,9 @@
+geometry: ring 25600+204800, wraps True, gutter 0, seam -169.25, 568.89 x 568.36 blocks per degree
+equator, land (1536 points 0.05 deg apart): warmest minus coldest month 1.83 C on average, 3.97 C at most (lon 40.10); over 1 C at 91 %, over 2 C at 37 % of the land on the equator
+  Kampala's meridian: swing 1.85 C (the live temperature steps by this across the equator in mid-January and mid-July)
+  Nairobi's meridian (Mt Kenya): swing 2.54 C (the live temperature steps by this across the equator in mid-January and mid-July)
+  Quito's meridian: swing 0.60 C (the live temperature steps by this across the equator in mid-January and mid-July)
+  Macapa: swing 2.41 C (the live temperature steps by this across the equator in mid-January and mid-July)
+  Pontianak: swing 1.10 C (the live temperature steps by this across the equator in mid-January and mid-July)
+  Libreville: swing 2.46 C (the live temperature steps by this across the equator in mid-January and mid-July)
+  Sumatra: swing 0.91 C (the live temperature steps by this across the equator in mid-January and mid-July)

@@ -1,7 +1,6 @@
 # 0055: Lakes end at their outlet (outlet tongues as land)
 
-Status: implemented in source (`claude/lake-outlets`, from release/1.0), offline checked; not built into a release,
-not played. New worlds only. Date: 2026-11-05. On the tall line (`claude/tall-glo90`) since test build
+Status: built, in Earth 2.0.0, new worlds only; not played. Date: 2026-11-05. On the tall line (`claude/tall-glo90`) since test build
 1.0.3-tall.13, loaded on the bench and installed in the author's game on 6 November 07:34 ([0053](0053-scales-included-glo90-and-glo90-rivers.md)
 History); the two lines merged on 7 November at the author's request.
 
@@ -91,3 +90,10 @@ Offline harness (`tests/EarthMapTests`, `OUTLETS=0/1`, the author's world size):
   the island) carries water.
 - HydroLAKES polygons are not used (only its points are in rawdata); a chain of lakes is recognised by the pour
   points in or by the tongue. Lakes whose pour point lies further off can still be trimmed as river.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: implemented in source (`claude/lake-outlets`, from release/1.0), offline checked; not built into a release,
+not played. New worlds only.

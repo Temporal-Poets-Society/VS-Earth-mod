@@ -15,7 +15,17 @@ namespace EarthMap.Core
         {
             double Plain(double at) => ridged ? n.Ridged(at, z, wavelength, octaves) : n.Fbm(at, z, wavelength, octaves);
             if (!RealSeam) return Plain(x);
-            double ring = Geometry.RingLength, p = x - Geometry.RingStart, edge = Math.Min(p, ring - p);
+            double ring = Geometry.RingLength, p = x - Geometry.RingStart;
+            // GenFixRules 5 (T-L12, code review 14 November 2026): a place beyond the ring (GridLakeEdgeAt's noise offset by
+            // 7919) is read inside it, so the blend below holds there too; before, the offset noise jumped where the column
+            // wraps. A place in the ring is read as it was (no round trip through the ring's start).
+            if (Rules.SeamNoiseInRing && (p < 0 || p >= ring))
+            {
+                p %= ring;
+                if (p < 0) p += ring;
+                x = Geometry.RingStart + p;
+            }
+            double edge = Math.Min(p, ring - p);
             if (edge >= SeamNoiseBlend) return Plain(x);
             double own = 0.5 + 0.5 * Geo.SmoothStep(Math.Max(0, edge) / SeamNoiseBlend);
             return own * Plain(x) + (1 - own) * Plain(p < ring / 2 ? x + ring : x - ring);
@@ -24,7 +34,7 @@ namespace EarthMap.Core
         /// <summary>Detail noise (m) for a column: gentle undulation everywhere, ridges and valleys where the land is rugged.</summary>
         double Detail(double x, double z, in EarthData.TerrainSample s)
         {
-            if (DetailRules >= 1) return BuiltInDetail(x, z, s);
+            if (Rules.CellDetail) return BuiltInDetail(x, z, s);
             double relief = Math.Min(s.Relief, 2500);
             double mountain = Geo.SmoothStep((relief - 150) / 1200);
             double baseAmp = 1.5 + 0.03 * Math.Max(0, s.Elev);
@@ -36,7 +46,7 @@ namespace EarthMap.Core
 
         double SummitExcess(double lat, double lon, in EarthData.TerrainSample s)
             => Summits && s.Elev > 0 && s.Ocean <= 0 && (double.IsNaN(s.LakeLevel) || s.Lake <= 0)
-                ? (DetailRules >= 1 ? Data.SummitExcessCubic(lat, lon) * Geo.SmoothStep((s.ReliefSmooth - 60) / 300)
+                ? (Rules.CellDetail ? Data.SummitExcessCubic(lat, lon) * Geo.SmoothStep((s.ReliefSmooth - 60) / 300)
                     : Data.SummitExcess(lat, lon) * Geo.SmoothStep((s.Relief - 60) / 300)) : 0;
 
         /// <summary>The built-in grid's cell north-south (2', m): the detail noise of rules 1 stays below it.</summary>

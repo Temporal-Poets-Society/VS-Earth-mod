@@ -30,7 +30,7 @@ namespace EarthMap
         /// </summary>
         internal static void KnownHotSprings(TerrainModel model, IChunkColumnGenerateRequest request)
         {
-            if (model == null || model.GeothermalRules < 1) return;
+            if (model == null || !model.Rules.GeothermalActivity) return;
             int x0 = request.ChunkX * 32, z0 = request.ChunkZ * 32;
             var geo = model.Geometry;
             double latA = geo.ToGeo(x0, z0).Lat, latB = geo.ToGeo(x0, z0 + 32).Lat;
@@ -58,6 +58,8 @@ namespace EarthMap
         /// </summary>
         internal static bool PondGuard(int dx, int pondYPos, int dz, int chunkX, int chunkZ)
         {
+            // (FP-11, Fable's low 5 on ad56a74) a generation entry point inside vanilla's pass: this thread may wait for a missing tile
+            using var fetch = Core.FineElevation.Generating();
             var w = WorldGenerationContext.Current;
             if (w == null) return true;
             var model = w.Model;
@@ -123,11 +125,12 @@ namespace EarthMap
         /// them without their draws moves no water spring. Older worlds keep them.
         /// </summary>
         internal static bool SpringGuard(GenRivulets __instance, [HarmonyArgument(0)] IServerChunk[] chunks, [HarmonyArgument(1)] int chunkX,
-            [HarmonyArgument(2)] int chunkZ, [HarmonyArgument(4)] bool lava)
+            [HarmonyArgument(2)] int chunkZ, [HarmonyArgument(3)] float geoActivityYThreshold, [HarmonyArgument(4)] bool lava)
         {
+            using var fetch = Core.FineElevation.Generating();
             var w = WorldGenerationContext.Current;
             if (w == null) return true;
-            if (lava) return w.Model.GeothermalRules < 1;
+            if (lava) return !w.Model.Rules.GeothermalActivity;
             var rnd = RivuletRandom(__instance);
             int mapHeight = w.MapHeight;
             int low = (int)(TerraGenConfig.seaLevel * 1.1f), high = mapHeight - low;
@@ -136,6 +139,11 @@ namespace EarthMap
             int lx = 1 + rnd.NextInt(30);
             int y = Math.Min(1 + rnd.NextInt(low) + rnd.NextInt(high) * rnd.NextInt(high), mapHeight - 2);
             int lz = 1 + rnd.NextInt(30);
+            // (W-P4, code review 14 November 2026) vanilla's own refusal first: a water spring under the activity line, at or
+            // below its column's ground, is refused by vanilla after these three draws and no other, so refusing it here
+            // leaves the same draws and the same chunk without the climate and crater lookups (a spot above the ground draws
+            // once more in vanilla and goes the long way)
+            if (y < geoActivityYThreshold && y <= chunks[0].MapChunk.WorldGenTerrainHeightMap[lz * 32 + lx]) return false;
             if (FrozenRock(w.Model, chunkX * 32 + lx, y, chunkZ * 32 + lz) || HotGround(chunkX * 32 + lx, chunkZ * 32 + lz)) return false;
             // springs rules caves and streams: only in cave walls (at least 2 blocks under the ground of the column and its
             // four neighbours, so not in an open cliff face, whose open side's column is lower than the spring); streams adds
@@ -162,6 +170,7 @@ namespace EarthMap
         internal static bool SideRiverGuard(GenRivulets __instance, [HarmonyArgument(0)] IServerChunk[] chunks, [HarmonyArgument(1)] int chunkX,
             [HarmonyArgument(2)] int chunkZ)
         {
+            using var fetch = Core.FineElevation.Generating();
             var w = WorldGenerationContext.Current;
             if (w == null) return true;
             // springs rules (cave springs only, or streams): no mountain-side streams
@@ -193,8 +202,10 @@ namespace EarthMap
         }
 
         /// <summary>Vanilla's spring and mountain-side stream tries the springs rules turned away since the server started (for
-        /// the self-test and the shutdown log).</summary>
-        public static string SpringReport() => string.Format("springs at the surface turned away: {0}, mountain-side streams turned away: {1}",
+        /// the self-test and the shutdown log). Since EA-0116 batch 2 (W-P4) the springs count leaves out the spots vanilla
+        /// refuses itself (under the activity line, at or below the ground), so it is smaller than an older build's for the
+        /// same world.</summary>
+        public static string SpringReport() => string.Format("springs at the surface turned away (not counting vanilla's own refusals): {0}, mountain-side streams turned away: {1}",
             System.Threading.Interlocked.Read(ref springsAtSurface), System.Threading.Interlocked.Read(ref sideStreamsSkipped));
     }
 }

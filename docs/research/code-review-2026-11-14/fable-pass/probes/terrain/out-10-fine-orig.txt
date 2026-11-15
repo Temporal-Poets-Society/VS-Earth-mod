@@ -1,0 +1,84 @@
+data loaded in 743 ms
+Earth layout: 11133.2 blocks per degree east-west (10 m per block at the equator), 11132.6 north-south (stretch 1.00), latitudes shown ñ90ø, seam gutter 0 blocks, world centre at 10.8øE.
+1:10: world 4040704 x 2003968, ring 4007936 from 16384, 10.00 m/block; coasts 1 courses 4 channelRules 5 flowRules 1 dams 3 outlines L2 R4 streams all works 4 referee 2 coarse 1
+model built in 15377 ms (cache reused [strait-routes-1,sea-channel-ways-1] built []); rivers 9367660 pieces; managed 3199 MB, working set 3478 MB
+== cost
+place               cold us  warm us   B/col |  -shore -strait   -chan -mouth* -rivers    -isl  -works   -outl  -coast   -fine | kinds
+Open ocean             3.82     2.62       0 |    1.62    0.84    0.83    0.41    0.31    0.30    0.33    0.27    0.18    0.21 | sea:16384
+Daugava at Riga       25.35     3.55      32 |    3.43    2.98    3.24    2.43    1.24    1.35    1.34    0.79    0.42    0.41 | land:8169 river:7252 bank:963
+Daugava mouth          6.68     3.27       3 |    2.81    2.77    2.90    1.29    1.15    0.98    0.94    0.67    0.51    0.39 | sea:14408 land:1498 beach:478
+Rotterdam Nieuwe Maas   475.69   420.28     882 |  303.49  300.42  282.59  130.72  144.89  140.79    1.23    0.71    0.40    0.38 | sea:16175 land:152 beach:57
+Rotterdam sea of 1318   165.63   165.94     997 |  161.77  162.84  161.77  157.57  156.17  156.87    0.99    0.74    0.37    0.38 | sea:16384
+Hoek van Holland      69.54    66.55     279 |   63.37   62.63   62.43   52.75   50.03   51.72    1.42    0.86    0.44    0.38 | land:9445 sea:4654 bank:1105 beach:735 river:445
+Amazon meeting of waters    25.03     6.78      70 |    6.72    6.92    7.06    2.97    0.75    0.80    0.86    0.46    0.45    0.33 | river:16384
+Zermatt                3.39     1.32       0 |    1.04    1.02    0.93    0.92    0.91    0.90    0.86    0.63    0.58    0.47 | land:16384
+Sahara                 5.53     0.79       0 |    0.62    0.62    0.59    0.89    0.55    0.55    0.54    0.66    0.60    0.24 | land:16384
+Kansas (flat)          2.94     1.27       0 |    0.87    0.89    0.89    0.88    0.77    0.57    0.73    0.55    0.48    0.32 | land:16384
+Jurmala beach coast     5.19     3.53       0 |    3.04    2.94    2.97    1.36    1.22    1.18    1.13    1.00    0.64    0.46 | sea:6660 land:6640 bank:1751 beach:911 river:422
+Bergen harbour         5.65     3.97       0 |    2.92    2.28    2.92    1.95    1.93    1.55    1.77    1.58    0.56    0.48 | land:7132 sea:6801 beach:2451
+Montreux lake shore     3.19     1.37       0 |    0.86    0.87    0.86    0.81    0.78    0.79    0.77    0.68    0.65    0.51 | lake:12489 land:3514 beach:381
+Rhine at Cologne       9.32     2.03      29 |    2.19    2.02    1.81    1.36    0.75    0.77    0.92    0.48    0.45    0.27 | river:7468 land:7303 bank:1613
+== flowedge
+  flow at Amazon lon -60  : 476 wet points of 3501; speed differs by more than 0.02 m/s across the edge at 183; largest 0.228 m/s (0.604 vs 0.833 at -3.2412)
+  flow at Amazon lat -3   : 879 wet points of 8501; speed differs by more than 0.02 m/s across the edge at 790; largest 0.249 m/s (0.259 vs 0.010 at -60.4262)
+  flow at Daugava lon 25  : 21 wet points of 2001; speed differs by more than 0.02 m/s across the edge at 17; largest 0.138 m/s (0.581 vs 0.720 at 56.6054)
+  flow at Rhine lat 51    : 31 wet points of 1500; speed differs by more than 0.02 m/s across the edge at 27; largest 0.268 m/s (0.288 vs 0.020 at 6.9656)
+  flow at Rhine lat 52    : 0 wet points of 2000; speed differs by more than 0.02 m/s across the edge at 0; largest 0.000 m/s (0.000 vs 0.000 at 0.0000)
+  flow at Lena lon 130    : 488 wet points of 2000; speed differs by more than 0.02 m/s across the edge at 344; largest 0.120 m/s (0.239 vs 0.359 at 62.3096)
+  flow at Volga lat 48    : 128 wet points of 5501; speed differs by more than 0.02 m/s across the edge at 83; largest 0.265 m/s (0.418 vs 0.153 at 46.2530)
+  flow at Danube lon 19   : 318 wet points of 13501; speed differs by more than 0.02 m/s across the edge at 287; largest 1.327 m/s (1.128 vs 2.455 at 45.4938)
+  detail noise FbmTurned (cell 185.3 to 6 blocks)                   94 ns
+  detail noise RidgedTurned                                         95 ns
+  at Rotterdam:
+    Geometry.ToGeo                                                  17 ns
+    Data.SampleTerrain (with coast refs)                           165 ns
+    Coasts.SignedDistance                                           87 ns
+    Works.At                                                       203 ns
+    LakeOutlines.At                                                 86 ns
+    RiverOutlines.At                                                74 ns
+    Islands.Query                                                   84 ns
+    Rivers.Nearest                                                  27 ns
+    Rivers.AnyBucketNear (ApplyMouth's reach)                       77 ns
+    Rivers.DepthNear (ReachBlend, 2 km)                           1560 ns
+    Fine.TrySmoothHeight                                           108 ns
+    CoastSideAt (works + coast distance of 1318)                 53615 ns
+    GetColumn                                                    68893 ns
+  at Kansas:
+    Geometry.ToGeo                                                  13 ns
+    Data.SampleTerrain (with coast refs)                            77 ns
+    Coasts.SignedDistance                                           23 ns
+    Works.At                                                        29 ns
+    LakeOutlines.At                                                 79 ns
+    RiverOutlines.At                                                57 ns
+    Islands.Query                                                   18 ns
+    Rivers.Nearest                                                  11 ns
+    Rivers.AnyBucketNear (ApplyMouth's reach)                      141 ns
+    Rivers.DepthNear (ReachBlend, 2 km)                            504 ns
+    Fine.TrySmoothHeight                                           104 ns
+    CoastSideAt (works + coast distance of 1318)                    95 ns
+    GetColumn                                                      793 ns
+  at Daugava mouth:
+    Geometry.ToGeo                                                  13 ns
+    Data.SampleTerrain (with coast refs)                           114 ns
+    Coasts.SignedDistance                                          162 ns
+    Works.At                                                        28 ns
+    LakeOutlines.At                                                 62 ns
+    RiverOutlines.At                                                69 ns
+    Islands.Query                                                  753 ns
+    Rivers.Nearest                                                  11 ns
+    Rivers.AnyBucketNear (ApplyMouth's reach)                       82 ns
+    Rivers.DepthNear (ReachBlend, 2 km)                            807 ns
+    Fine.TrySmoothHeight                                           110 ns
+    CoastSideAt (works + coast distance of 1318)                   254 ns
+    GetColumn                                                     3162 ns
+== dump
+  Rotterdam              512x512:   420.61 us/column,   4273 B/column | sea:254500 river:7166 beach:407 land:71
+  Rhine-Maas delta       384x384:   534.94 us/column,   4516 B/column | sea:86751 land:38079 beach:22600 lake:26
+  Flevoland              384x384:    27.83 us/column,    121 B/column | sea:147456
+  Wadden / Afsluitdijk   384x384:    76.67 us/column,    629 B/column | sea:147206 beach:204 land:46
+  Zeeland                384x384:    11.57 us/column,    254 B/column | sea:111651 beach:13748 land:11526 river:10514 bank:17
+  Daugava mouth          256x256:     3.54 us/column,    155 B/column | land:39773 sea:20453 beach:4654 river:562 bank:94
+  Amazon mouth           256x256:     3.37 us/column,   1272 B/column | sea:65536
+  Elbe mouth             256x256:     3.50 us/column,    347 B/column | sea:65536
+  Thames mouth           256x256:     3.50 us/column,    364 B/column | land:31548 sea:28900 beach:5088
+  written <scratch>\fable\probes-terrain\scratch\dump-10-orig.bin

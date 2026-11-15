@@ -17,11 +17,10 @@ namespace EarthMap
         /// <summary>The Hydrology this Earth needs: modinfo.json's dependency (RequiredModsTests checks they agree). Hydrology
         /// 0.6.2 reads river flow query version 3 (its EarthRiverQueryVersion), RiverQueryMinimum, so every new world gets
         /// the calm rivers (pool layout 11, decision 0046); Earth 2.0 no longer serves the 0.6.1 pairing (the author, 8
-        /// November: "old save does not matter with this release"). 0.6.2-rc.4, not rc.1: Hydrology 0.6.2-rc.1 to rc.3 let a
-        /// source spilled into the sea make the sea climb and flood the map (Hydrology decision 0005, fixed in rc.3, refined
-        /// in rc.4), and rc.4 also takes a throw from RiverAt as "not ready" (Earth 2.0.0-rc.3). VS ranks 0.6.2-rc.4 below
-        /// 0.6.2 and above 0.6.2's development builds, so the release and later release candidates load too.</summary>
-        public const string HydrologyMinimum = "0.6.2-rc.4";
+        /// November: "old save does not matter with this release"). Earth 2.0.0 needs the released 0.6.2 (its release
+        /// candidates before rc.4 let a source spilled into the sea make the sea climb and flood the map, Hydrology decision
+        /// 0005; the 2.0.0 release candidates accepted rc.4 and later). VS ranks 0.6.2's release candidates below 0.6.2.</summary>
+        public const string HydrologyMinimum = "0.6.2";
         public const int RiverQueryMinimum = 3;
 
         public static bool NeedsProviders(EarthParams saved, bool isNew, string worldType, string playStyle, bool enabled)

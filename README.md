@@ -1,6 +1,7 @@
-# Earth 2.0.0-rc.12 — Vintage Story 1.22
+# Earth 2.0.0 — Vintage Story 1.22
 
-**2.0.0-rc.12 (release candidate, 13 November 2026, not released).** Earth 2.0 is one mod and makes new worlds. What it
+**2.0.0 (15 November 2026).** Earth 2.0 is one mod and makes new worlds. Worlds from older Earth versions (0.x, 1.x and
+the 2.0.0 release candidates) are not supported: start a new world. From 2.0.0 on, saves are kept working. What it
 brings over 1.0.x, and every earlier version, is in [CHANGELOG.md](CHANGELOG.md).
 
 Earth generates the real Earth in new worlds of its play styles: land and sea floor from real elevation (Copernicus
@@ -9,15 +10,15 @@ real climate and Earth's own weather, regional rocks, soil and ores, and trees, 
 around 1318. The world wraps east–west on Cylinder World's ring (the seam runs through the Bering Strait, the poles are
 its walls), at a scale from 1:200 to 1:5.
 
-- **Needs:** Vintage Story 1.22, **Cylinder World 1.0.4** or newer (1.1.0 also finishes setting up a world whose first
-  start stopped) and **Hydrology 0.6.2-rc.4** or newer (its river query version 3; older Hydrology could let a water
+- **Needs:** Vintage Story 1.22, **Cylinder World 1.1.0** or newer (with 1.0.4 a new world whose first start stopped
+  was taken for an existing one on the next) and **Hydrology 0.6.2** or newer (its river query version 3; older Hydrology could let a water
   source spilled into the sea make the sea climb and flood the map), on the server and every client. Sea is
   recommended.
 - **Data:** the first start of a server (or a single-player game) downloads Earth's data from GitHub once per computer:
-  about 290 MB, 170 MB more of ground data for the default ground columns, and the GLO-90 land heights (see
-  [Quick start](#quick-start)). A game client downloads nothing.
-- **New worlds only:** worlds made with Earth 1.0.x load and keep generating with their saved rules; they are not
-  upgraded to 2.0's terrain.
+  about 290 MB, 170 MB more of ground data for the default ground columns, and the GLO-90 land heights with about
+  190 MB of lake, river and dam files beside them (see [Quick start](#quick-start)). A game client downloads nothing.
+- **New worlds only:** worlds from Earth versions before 2.0.0 (0.x, 1.x, the release candidates) are not supported:
+  start a new world (the author, 15 November 2026). Worlds made with 2.0.0 and later are kept working.
 - **Memory and start:** a 1:10 server peaks at about 5.5 GB while it starts, then holds 4.5 to 4.8 GB; 1:5 peaks at
   about 7.2 GB. A world's slowest map-model results are cached in `VintagestoryData/ModData/earth/cache`, so its later
   starts are faster (`ModelCache` in the config).
@@ -56,7 +57,7 @@ Copernicus GLO-90 land heights (its required notice is also on the Earth tab), O
 ## Quick start
 
 1. **Install** on the server and on every client: `earth-<version>.zip` (one mod since 2.0, [decision 0066](docs/decisions/0066-one-mod-data-from-github.md)),
-   Cylinder World (`cylinderworld` 1.0.4 or later, required) and Hydrology (`hydrology` 0.6.2-rc.4 or later, required:
+   Cylinder World (`cylinderworld` 1.1.0 or later, required) and Hydrology (`hydrology` 0.6.2 or later, required:
    its river query version 3). Sea is recommended. The 1.0.x data-pack mods (Earth Terrain Data, Earth Water Data and the
    test builds' height, water-fix and ground packs) are no longer needed; if they are still installed, Earth copies its
    files from them instead of downloading them. To build the zip yourself: `dotnet build EarthMap.csproj -c Release`
@@ -66,8 +67,8 @@ Copernicus GLO-90 land heights (its required notice is also on the Earth tab), O
    384 high), 1:200, 1:50, 1:25 or 1:10 (4 040 704 × 2 003 968 blocks, 1024 high); 1:5 is on the Earth tab. Each style
    sets the world size, height and mountain curve for its scale (decision
    [0068](docs/decisions/0068-world-size-by-scale.md)); the start is on the Earth start tab, the other choices on the
-   Earth tab. Other play styles keep vanilla generation. Earth 2.0 is for new worlds: older Earth worlds load with
-   their saved rules, but are not upgraded.
+   Earth tab. Other play styles keep vanilla generation. Earth 2.0 is for new worlds: worlds from Earth versions
+   before 2.0.0 are not supported.
 3. **First start downloads Earth's data** (the server, or the single-player game; a game client downloads nothing), once
    per computer into `VintagestoryData/ModData/earth`, shared by every world and every later Earth version:
    - about 290 MB of data files from the release `ed-v1` of
@@ -78,11 +79,14 @@ Copernicus GLO-90 land heights (its required notice is also on the Earth tab), O
    - the GLO-90 land heights from the release `egl-v1` of
      [earth-glo90](https://github.com/Temporal-Poets-Society/earth-glo90) into `ModData/earth/glo90`: all of it (8.6 GB)
      by default, starting when the world opens, with its progress in a window (`.earthelevation`); or, on the Earth tab,
-     each square as the world reaches it, or Copernicus's originals (about 71 GB, converted on the machine).
+     each square as the world reaches it, or Copernicus's originals (about 71 GB, converted on the machine). Beside the
+     heights a new world fetches the release's lake and river outlines, river flow and dam files (about 190 MB:
+     `lakes-glo90-2.bin`, `rivers-outline-glo90-4.bin`, `rivers-flow-glo90-1.bin`, `dams-glo90-3.bin`).
 
    Without internet, put the releases' files into those folders by hand (or set `DataRepo` in `earth.json` to a mirror
    or a local folder). A server that can't get the files a world needs stops and says which are missing, rather than
-   generate a world with parts of its data missing.
+   generate a world with parts of its data missing. A GLO-90 square that can't be downloaded while the game runs leaves
+   its chunks empty, with a chat line; they are made at the next start, once the square is there.
 4. Check `server-main.log` for Earth's lines: the data it loaded, the layout, the spawn and where each story location went.
 5. In game: `/earth` shows latitude, longitude, the real elevation and climate where you stand.
    `/earth tp 27.99 86.93` takes you to Everest (aboard a boat or ship, or with `water` at the end, you land on the
@@ -297,7 +301,7 @@ reach ~85 % of Everest's height, the deep ocean and the Mariana Trench differ li
   dry savannas have soil and deserts keep their sand. Shrubs follow the same rainfall (none on desert sand). Live temperatures are also extended beyond vanilla's −20..40 °C where the
   real climate is that extreme (−50 °C on the Antarctic plateau, with reversed seasons in the south via Cylinder
   World's latitude).
-- **Seasons**: vanilla swings temperatures by 65 °C × latitude between winter and summer everywhere. Earth Map
+- **Seasons**: vanilla swings temperatures by 65 °C × latitude between winter and summer everywhere. Earth
   replaces that with each place's real swing between its coldest and warmest month, so continental, maritime and
   Gulf Stream climates come straight from the data: London about 4 °C in January / 20 °C in July, southern Italy
   9 / 29 °C, Finland −10 / 17 °C, Yakutsk −38 / 21 °C (measured in game).
@@ -320,7 +324,7 @@ reach ~85 % of Everest's height, the deep ocean and the Mariana Trench differ li
 - **Spawn**: by the world's starting climate (temperate: Upper Rhine valley 48.6°N 7.8°E; warm: Andalusia;
   hot: the Sahel on the Niger; cool: the White Sea coast; icy: Taymyr), or any `lat,lon` in the config;
   the nearest gentle dry land is used.
-- **Story locations**: vanilla picks them at random offsets from spawn. Earth Map keeps those distances, anchors
+- **Story locations**: vanilla picks them at random offsets from spawn. Earth keeps those distances, anchors
   the chain at the new spawn, tries the four mirror images of each offset and moves each location to the best
   suitable real land nearby, never closer than 75 % of vanilla's distance to spawn or to its parent location: flat, dry, ice-free lowland for the surface ones (the site is flattened, since vanilla's
   forced "veryflat" landform doesn't apply to real terrain), dry land a few blocks above sea level for the
@@ -348,13 +352,13 @@ reach ~85 % of Everest's height, the deep ocean and the Mariana Trench differ li
   and depends only on the position across the gutter: the two sides of the jump line match block for block at the
   surface. Cylinder World (0.11.3+) keeps it instead of flattening its seam band there. Older worlds keep the strait
   unless `UpgradeExistingWorldGutterBridges` is set once.
-- Earth Map wraps Cylinder World's climate layer (temperature and rainfall come from the Earth, geologic activity
+- Earth wraps Cylinder World's climate layer (temperature and rainfall come from the Earth, geologic activity
   stays vanilla's) and turns off Cylinder World's own temperature extension at runtime (it would add its latitude
   curve on top of the real climate). Cylinder World's winter rule on the ice sheet still works with the real
   temperatures (the Antarctic plateau is −46 °C yearly, −60 °C in the southern winter).
 - Spawn and the story locations are placed after Cylinder World moved them.
 - Cylinder World 0.11.11 or newer is a required dependency (decision 0023);
-  its geometry is still read by reflection, so Earth Map doesn't compile against it.
+  its geometry is still read by reflection, so Earth doesn't compile against it.
 
 Known interplay issues, best fixed in Cylinder World (suggestions for its next version):
 1. **Ice sheet height**: Cylinder World's ice sheet from 85° is a fixed plateau (70 blocks above sea). The real
@@ -364,7 +368,7 @@ Known interplay issues, best fixed in Cylinder World (suggestions for its next v
    Suggestion: let another mod provide the ice sheet's surface height (or skip the sheet where the Earth has sea ice).
 2. **Hooks instead of reflection**: an interface in Cylinder World (e.g. `ISurfaceProvider` with base temperature,
    rainfall and "true" temperature at a position, plus an event before spawn and story locations are moved) would let
-   Earth Map plug in cleanly and let Cylinder World's `/cyl map` and temperature code use the Earth's values.
+   Earth plug in cleanly and let Cylinder World's `/cyl map` and temperature code use the Earth's values.
 3. `/cyl map` shows vanilla's ocean map, not the Earth; use `/earth map`.
 
 ## Without Cylinder World
@@ -373,7 +377,7 @@ Not supported ([decision 0023](docs/decisions/0023-world-creation-tab-and-cylind
 Cylinder World active with its planet layout: `"Enabled"`, `"PolarWalls"` and `"PolarClimate"` true in
 `ModConfig/cylinderworld.json` (the defaults), and a map wide and long enough that it keeps its seam and walls.
 Otherwise the log has an error saying what is missing, and the world keeps vanilla terrain (create a new one after
-fixing the config). A world made by an older Earth Map without Cylinder World, or one whose Cylinder World has been
+fixing the config). A world made by an older Earth (then Earth Map) without Cylinder World, or one whose Cylinder World has been
 switched off, loads with vanilla generation and an error in the log; its save is left unchanged.
 
 ## With Terrain Slabs
@@ -451,7 +455,17 @@ off (`Weather: false`) gives vanilla's weather back.
 - **Thunder, hail and cloud decks** (weather rules 6 in new worlds, [decision 0017](docs/decisions/0017-weather.md)):
   thunderstorms follow Earth's storms, hail falls from the strongest of them, low cloud decks lie over the cold seas
   off Peru and Namibia, and the weather is part of the temperature. The weather is the same on every operating system.
-  Hail has not yet been seen falling in game.
+  `/earthweather hail` says when hail next falls where you stand.
+- **Ground, fog and clouds** (weather rules 7 in new worlds, [decision 0017](docs/decisions/0017-weather.md)): high
+  ground rains and snows on as many days as its stations (the rain rate reads the ground's temperature); the desert
+  coasts get no rain (climate fix 4); the desert Southwest has its summer thunderstorms; fog and mist come from Earth's
+  weather (sea fog on the cold coasts, valley fog on clear calm nights after rain) and the clouds are drawn as thick as
+  Earth's cloud cover, so their edges follow its rain areas. `/earthweather` says the fog.
+- **Showers and downpours** (weather rules 8 in new worlds, [decision 0017](docs/decisions/0017-weather.md)): rain comes
+  in showers of a few hours through the whole day, as the airports report it, and warm months' rain as a few downpours
+  and much light rain, so rainy days come as often as at real stations; the month's rain is as before. Hail hurts.
+- **Africa's thunder** (weather rules 9 in new worlds, [decision 0017](docs/decisions/0017-weather.md)): West and Central
+  Africa thunder on as many days as their airports report, a third more than before, without more rain.
 
 ## The Earth tab — world creation screen
 
@@ -540,8 +554,8 @@ Everything that shapes terrain is frozen into the savegame at world creation (`e
 | `RegionalOres` | true | Earth-like ores (rules v3: deposits where the evidence is, coal measures under the coal basins, copper near every start); false: vanilla ore generation on Earth's rocks (clay, peat and salt still follow `RegionalGeology`). Both follow the world's ore settings. Frozen in the save |
 | `Ores` | see [ores](docs/regional-ores-implementation.md) | ore tuning (background/hotspot chance, frequency, size, depth, the weights of the background and real-data maps, ore-body ramps and richness, per-resource overrides); frozen in the save; invalid values fall back to the defaults with an error in the log |
 | `RegionalFauna` | true | range checks for supported optional fauna in new worlds; frozen in the save |
-| `FaunaRangeProfile` | natural | `natural` (ranges without human impact) or `current` (present-day ranges where known); frozen for pre.12+ worlds, applied on restart in older saves |
-| `IncludeExtinctAnimals` | false | creation fallback; pre.12+ worlds save their choice, older saves apply this on restart; existing animals remain |
+| `FaunaRangeProfile` | natural | `natural` (ranges without human impact) or `current` (present-day ranges where known); frozen in each world from 0.17.0-pre.12 on, applied on restart in older saves |
+| `IncludeExtinctAnimals` | false | creation fallback; worlds from 0.17.0-pre.12 on save their choice, older saves apply this on restart; existing animals remain |
 | `Islands` | true | small islands from their outlines instead of the grid's blobs, without ETOPO's false reef islands, in new worlds; frozen in the save |
 | `MinIslandBlocks` | 4 | islands narrower than this many blocks are left out (1..64), so how many show follows the world's size; frozen in the save |
 | `UpgradeExistingWorldIslands` | false | one-shot: the next Earth world started takes `Islands`, the current island rules (rounded corners, estuary islands not cut by rivers) and `MinIslandBlocks` for chunks generated from then on; chunks already generated keep their coasts and may meet the new ones with a step near small islands and reefs. The flag then resets itself |
@@ -575,7 +589,7 @@ Everything that shapes terrain is frozen into the savegame at world creation (`e
 | `RiverStraighten` | 0.5 | 0..1: cut off loops where a widened river would touch itself (slivers, steps between its arms); higher cuts earlier, 0 keeps every loop |
 | `RiverSmoothWidths` | 2 | smooth out bends shorter than this many river widths (Gaussian along the river); 0 keeps the real courses |
 | `RiverRelief` | 1 | share of the land's relief the river surface follows; below 1 = deeper valleys and fewer steps, but a step where a river leaves a lake |
-| `Weather` | true | Earth's weather (rain, clouds, winds, storms from the real climate); false = vanilla weather. Creation fallback in pre.12+; config on restart in older Earth saves |
+| `Weather` | true | Earth's weather (rain, clouds, winds, storms from the real climate); false = vanilla weather. Creation fallback in worlds from 0.17.0-pre.12 on; config on restart in older Earth saves |
 | `WeatherPace` | 1 | weather hours per game hour (0.25..8): 1 = real speeds; higher = more weather per season, faster changes |
 | `UpgradeExistingWorldClimateData` | false | one-shot: the newest climate fix ([decision 0018](docs/decisions/0018-climate-stripes.md): v2, the complete UDel normals, without one-row stripes and with December's precipitation) for this world's new chunks |
 | `RainFrequency` / `StormFrequency` | 1 / 1 | multiply how often it rains (0..3) / storms form (0..5, 0 = none) |
@@ -585,7 +599,7 @@ Everything that shapes terrain is frozen into the savegame at world creation (`e
 ## Data pipeline
 
 ```
-tools/download_data.sh                  # ~700 MB into rawdata/
+tools/download_data.sh                  # the bakes' sources into rawdata/ (about 87 GB today)
 python -m venv .venv
 .venv/Scripts/python -m pip install numpy scipy netCDF4 tifffile imagecodecs pyshp pillow brotli
 .venv/Scripts/python tools/bake_earth.py # ~5 min → earthdata/terrain.bin, climate.bin, earth.json
@@ -605,8 +619,12 @@ python -m venv .venv
 - `terrain.bin` (30 MB): 2′ grid (10 800 × 5 400) in 6° tiles, Brotli per tile: elevation (log-quantised,
   ≈0.1 m steps near sea level, 4 m at 3 000 m), water level of the nearest sea/lake, flags (sea, lake, salt, ice),
   ice thickness. Decoded on demand, ~320 tiles cached.
-- `climate.bin` (3 MB): 0.25° grid: sea-level-equivalent yearly mean, coldest and warmest month, yearly
+- `climate.bin` (1.8 MB): 0.25° grid: sea-level-equivalent yearly mean, coldest and warmest month, yearly
   precipitation, VS rainfall.
+- The client climate files (`climate.bin` and its fixes 1 and 2, `temperature.bin`, `rain.bin`, `aridity.bin`,
+  `weather.bin`) are predicted planes ([decision 0082](docs/decisions/0082-predicted-climate-files.md),
+  `tools/planecoding.py`): a spatial predictor in front of brotli, the same values in about 10 MB less of the zip. The
+  bakes write that form; `tools/repack-client-data.py` turns a plain file into it.
 - `rivers.bin` (12 MB, v2): 620 000 HydroRIVERS reaches with discharge ≥ 20 m³/s in network order (each with its
   downstream reach), simplified to ~1 block, with a de-dammed, smoothed water level (m) per vertex and a flag for
   vertices in a lake or the sea. The pools and ramps are laid out from it when a world loads (~0.6 s).
@@ -683,7 +701,7 @@ python -m venv .venv
 | `src/Core/EarthGeometry.cs` | both | world x/z ↔ latitude/longitude, gutter, straight seam |
 | `src/Core/EarthLayout.cs` | both | places the Earth on Cylinder World's ring and latitudes |
 | `src/Core/VerticalScale.cs` | both | elevation ↔ block height for a world height |
-| `src/Core/TerrainModel.cs` | both | one column's terrain (sea, lakes, land, ice, flattened sites); climate pixels; forest potential |
+| `src/Core/TerrainModel.cs` | both | one column's terrain (sea, lakes, land, ice, flattened sites); climate pixels; forest potential; `GetSurfaceColumn` with what later steps carve, for maps (0079) |
 | `src/Core/ColumnStore.cs` | server | the terrain columns of recently generated chunks, built once by the terrain pass and read by the later passes and the neighbours' river margins (audit B03) |
 | `src/Core/Noise.cs`, `Png.cs` | both | simplex noise, PNG writer and map colours |
 | `src/EarthMapSystem.cs` | both | config, per-world params, spawn, network sync, temperature extension, latitude, `/earth` |
@@ -708,7 +726,7 @@ python -m venv .venv
 | `src/Core/RiverNetwork.cs` | server | the rivers in world coordinates with a grid index; pools, steps and ramps; widths, depths, banks |
 | `src/CylinderCompat.cs` | both | reads Cylinder World's geometry by reflection |
 | `src/Core/SkyLongitude.cs`, `src/Core/LongitudeProviderBinding.cs`, `src/AstraTerraLongitude.cs` | both | the sky longitude service (`LongitudeAt`) and handing it to AstraTerra by reflection |
-| `src/Core/WeatherData.cs`, `WeatherNoise.cs`, `WeatherModel.cs`, `WeatherStorms.cs` | both | the weather: monthly normals and ITCZ, noise, winds, rain, clouds, storms |
+| `src/Core/WeatherData.cs`, `WeatherNoise.cs`, `WeatherTypes.cs`, `WeatherModel*.cs` (one partial per subject), `WeatherStorms.cs` | both | the weather: monthly normals and ITCZ, noise, winds, rain, clouds, storms |
 | `src/EarthWeather.cs` | both | the weather in the game: vanilla rain/cloud/wind patches, Sea's wind provider, `/earthweather` |
 | `src/SelfTest.cs` | server | the automated in-game test |
 
@@ -718,7 +736,7 @@ Every version's changes are in [CHANGELOG.md](CHANGELOG.md).
 
 ## Known gaps / next steps
 
-- Weather and climate: see [docs/open-issues-weather.md](docs/open-issues-weather.md) (leftover climate stripes, model gaps, what is not verified yet).
+- Weather and climate: the open items are in the suite backlog (`tools\Update-Backlog.ps1 -Mod earth` from `C:\VS mods`).
 
 - **Ore balance** (rules v3, 0.14.1; measured in game on 2026-10-16/17, `docs/regional-ores-implementation.md`,
   "Validation status"): the inflation of host-limited ores and the empty districts of rules v2 are fixed, and the

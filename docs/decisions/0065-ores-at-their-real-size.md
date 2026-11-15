@@ -1,7 +1,7 @@
 # 0065: Ores at their real size (ore rules v4)
 
 Status: **implemented, on `main`** (built 8 November 2026 on `claude/ore-rework`, merged into release/1.0 as `0c2d78f`
-and `63d5615`, with tungsten and platinum as `853f85f`; in every Earth 2.0.0 release candidate; not released). Ore rules v4
+and `63d5615`, with tungsten and platinum as `853f85f`; in Earth 2.0.0). Ore rules v4
 apply in new worlds whose Earth tab chooses Earth's ore maps with ground columns (`EarthParams.OreRules` 195); the tab's
 default ores are vanilla's, so v4 is experimental for now. Decided by: Claude, with the author's delegation ("Make all
 decisions on own for next 4h"); builds on [0006](0006-ore-balance.md) and [0060](0060-ores-in-their-layers.md)

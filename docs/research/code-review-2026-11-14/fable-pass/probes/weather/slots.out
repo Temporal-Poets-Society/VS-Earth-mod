@@ -1,0 +1,3 @@
+geometry: ring 25600+204800, wraps True, gutter 0, seam -169.25, 568.89 x 568.36 blocks per degree
+storm slots, StormFrequency 1: the first lookup of a world 25.7 ms (35 kB); the first lookup in each next 12-hour slot 0.81 ms on average, 1.75 ms at most, 3 kB; 12 storms alive in a slot; a lookup in a built slot 1.36 us
+storm slots, StormFrequency 5: the first lookup of a world 7.5 ms (142 kB); the first lookup in each next 12-hour slot 0.34 ms on average, 0.76 ms at most, 11 kB; 65 storms alive in a slot; a lookup in a built slot 2.10 us

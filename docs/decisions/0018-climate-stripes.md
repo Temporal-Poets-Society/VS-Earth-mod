@@ -3,7 +3,8 @@
 Status: Agreed (the user, 2026-10-21: "fix climate.bin with version gate"); implemented 0.15.1; cause corrected
 2026-11-07 (a cut-short download, see Correction): fix v2 (climatefix2.bin, the complete UDel normals) for new worlds,
 the user's "rebake for full data" (2026-11-07); fix v3 (climatefix3.bin, the coast band) for new worlds from 2026-11-13,
-the author's "fix open issues that would change new worlds' terrain before the release" (EA-0016) | Date: 2026-10-21 |
+the author's "fix open issues that would change new worlds' terrain before the release" (EA-0016); fix v4
+(climatefix4.bin, the desert coasts) for new worlds from 2026-11-14 (EA-0060) | Date: 2026-10-21 |
 Decided by: the user
 
 ## Context
@@ -134,6 +135,31 @@ gradient for anyway, 10 are UDel's own.
   weather file and a new zone and fire rules version. Its own stripe count (`CheckStripes`, land rows only) is 240 cells,
   all UDel's own (EA-0018).
 
+## Correction (2026-11-14): the desert coasts (fix v4, EA-0060)
+
+The coastal deserts left too wet by v3 (Lima's cell 434 mm against CHELSA's 24) were traced through the bake: at Lima
+UDel's own 0.5° value is 94 mm, GPCP's is 497, and the coast band gives GPCP 84 % of the cell. GPCP's 2.5° cells mix the
+Humboldt and Benguela coasts with the Andes and the tropics (Arica UDel 31 / GPCP 210, Walvis Bay 20 / 125, Antofagasta
+5 / 37). Inland, where the grid is UDel's alone, the other cells the audit counted (the Sahel's northern edge, Arabia) are
+not settled: at 16-18°N UDel is wetter than CHELSA, and the stations there (Agadez about 160 mm against CHELSA's 60 and the
+grid's 250 at 16°N 10°E) side with neither.
+
+- **What new worlds read already:** worlds made from the menu read CHELSA's rain and summer dryness from rain.bin
+  (climate rules 3, decision 0031), so Lima's VS rain there is 10.6 and its aridity 0.03 (a desert) whatever the grid says.
+  The grid's millimetres still reach the water table, the springs and the regional geology, and the weather's own normals
+  (weather.bin, the same blend at 0.5°: Lima 320 mm a year) made it rain on the desert coast.
+- **Fix v4, `earthdata/climatefix4.bin`** (13 kB, against v3): GPCP's share of the blend at CHELSA's level where GPCP is
+  much wetter than CHELSA on a dry coast: GPCP's year becomes GPCP^(1-k) CHELSA^k, k = smooth((ln(GPCP/CHELSA) - ln 2) /
+  ln 2) smooth((300 - CHELSA) / 150) (fully from four times CHELSA and under 150 mm), its months scaled alike
+  (`desert_coast_factor`, CHELSA bio12 as 0.25° means). UDel's share is untouched, so inland cells keep v3. 7 756 cells
+  change (precipitation, rainfall and summer dryness planes): Lima 434 → 60 mm (UDel's 94 keeps a sixth of the cell),
+  Walvis Bay 81 → 19, Moscow, Riga, Niamey and Agadez as v3; no temperature changes. `EarthParams.ClimateData` 4 for new
+  worlds; older worlds keep theirs.
+- **The weather reads it** (weather rules 7, [0017](0017-weather.md#weather-rules-7-the-ground-under-the-weather-14-november-2026)):
+  weather.bin stays pinned; a rules-7 world scales its monthly precipitation by fix 4's over fix 3's at the place (1 where
+  v4 changes nothing), so Lima's July is 0.0 mm a day and its weather no longer rains on the desert.
+- **Not changed**: the Sahel and Arabia cells (UDel's own), for want of stations that settle which source is right.
+
 ## History
 
 - 2026-10-21: found from Wmap's terrain map; cause traced to UDel's missing months; the user chose the per-world fix.
@@ -143,3 +169,6 @@ gradient for anyway, 10 are UDel's own.
   new worlds, older worlds unchanged; `tests/WeatherTests` checks v0/v1/v2 and switching between them.
 - 2026-11-13: EA-0016 audited (142 of v2's 227 rain spans from the coast switch); fix v3 (climatefix3.bin, the coast
   band, in a layered file against v2) for new worlds on `claude/climate-fix-v3`; `tests/WeatherTests` checks v3 too.
+- 2026-11-14: EA-0060 (the author's request to work through the backlog, by way of the coordinating session): fix v4
+  (climatefix4.bin, GPCP's share on desert coasts at CHELSA's level) for new worlds on `claude/weather-items`, read by
+  the weather from rules 7; `tests/WeatherTests` checks v4.

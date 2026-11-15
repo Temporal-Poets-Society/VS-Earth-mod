@@ -1,0 +1,20 @@
+start                                                               0 ms | live      0 MB (     +0 MB) | LOH     0 MB | allocated in all      1 MB
+rivers.bin bytes read                                               3 ms | live     12 MB (    +12 MB) | LOH    12 MB | allocated in all     13 MB
+RiverData.Read(rivers.bin): 619723 reaches, 2205168 points        271 ms | live    135 MB (   +123 MB) | LOH    17 MB | allocated in all    184 MB
+(released)                                                          0 ms | live    135 MB (    -+0 MB) | LOH    17 MB | allocated in all    184 MB
+server: EarthData.Load with terrain                               752 ms | live    485 MB (   +350 MB) | LOH   210 MB | allocated in all    685 MB
+server: rivers.bin's reaches released (EarthData.ReleaseRivers)      0 ms | live    350 MB (   -135 MB) | LOH   210 MB | allocated in all    685 MB
+server: climate fix 4                                               6 ms | live    400 MB (    +50 MB) | LOH   210 MB | allocated in all    734 MB
+server: temperature.bin                                             2 ms | live    408 MB (     +8 MB) | LOH   210 MB | allocated in all    742 MB
+server: rain.bin                                                    3 ms | live    420 MB (    +12 MB) | LOH   210 MB | allocated in all    754 MB
+server: aridity.bin                                                 1 ms | live    426 MB (     +6 MB) | LOH   210 MB | allocated in all    761 MB
+server: summits.bin                                                 1 ms | live    429 MB (     +3 MB) | LOH   210 MB | allocated in all    763 MB
+server: glaciers.bin                                                0 ms | live    430 MB (     +1 MB) | LOH   212 MB | allocated in all    765 MB
+server: sea referee                                               793 ms | live    588 MB (   +158 MB) | LOH   230 MB | allocated in all   1302 MB
+server: island overlay                                              2 ms | live    590 MB (     +2 MB) | LOH   230 MB | allocated in all   1311 MB
+server: lake overlay                                               38 ms | live    592 MB (     +2 MB) | LOH   230 MB | allocated in all   1317 MB
+server: shore overlay                                               6 ms | live    593 MB (     +1 MB) | LOH   230 MB | allocated in all   1322 MB
+server: outlet overlay                                              0 ms | live    594 MB (     +0 MB) | LOH   230 MB | allocated in all   1323 MB
+server: peaks.json (155318)                                       232 ms | live    644 MB (    +51 MB) | LOH   255 MB | allocated in all   1383 MB
+server: terrain sampled every 2.9 degrees (tile cache full)      1743 ms | live    739 MB (    +95 MB) | LOH   489 MB | allocated in all   2677 MB
+peak working set 1639 MB

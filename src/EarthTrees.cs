@@ -1,5 +1,8 @@
 using System;
 using System.Collections.Concurrent;
+using System.Globalization;
+using System.Text;
+using System.Threading;
 using System.Linq;
 using EarthMap.Core;
 using HarmonyLib;
@@ -28,6 +31,24 @@ namespace EarthMap
         static readonly ConcurrentDictionary<string, long> testSelections = new();
         public static string SelectionReport() => "Regional tree selections (self-test only; t1 native, t2 analogue, t3 climate fallback):\n" +
             string.Join("\n", testSelections.OrderBy(p => p.Key).Select(p => p.Key + ": " + p.Value));
+        /// <summary>/earth woods trace (EA-0054): counts every pick of this session's generation by species, with the
+        /// attempts, until turned off (the self-test's trace without the self-test).</summary>
+        internal static volatile bool TracePicks;
+        static long traceTreeAttempts, traceTreePicks, traceShrubAttempts, traceShrubPicks, traceSiteGrids, traceSiteTicks;
+        static readonly ConcurrentDictionary<string, long> tracePicks = new();
+        internal static void ResetTrace() { tracePicks.Clear(); traceTreeAttempts = traceTreePicks = traceShrubAttempts = traceShrubPicks = traceSiteGrids = traceSiteTicks = 0; }
+        internal static string TraceReport()
+        {
+            var sb = new StringBuilder();
+            sb.AppendFormat(CultureInfo.InvariantCulture, "Picks this trace: trees {0} of {1} attempts, shrubs {2} of {3}",
+                Interlocked.Read(ref traceTreePicks), Interlocked.Read(ref traceTreeAttempts), Interlocked.Read(ref traceShrubPicks), Interlocked.Read(ref traceShrubAttempts));
+            long grids = Interlocked.Read(ref traceSiteGrids);
+            if (grids > 0)
+                sb.AppendFormat(CultureInfo.InvariantCulture, "; site grids {0}, {1:0.00} ms each", grids,
+                    Interlocked.Read(ref traceSiteTicks) * 1000.0 / System.Diagnostics.Stopwatch.Frequency / grids);
+            foreach (var e in tracePicks.OrderByDescending(e => e.Value)) sb.Append("; ").Append(e.Key).Append(' ').Append(e.Value);
+            return sb.ToString();
+        }
         [ThreadStatic] static bool ctxSet;
         [ThreadStatic] static GenVegetationAndPatches ctxOwner;
         [ThreadStatic] static int ctxX, ctxZ;
@@ -39,6 +60,14 @@ namespace EarthMap
         // the chunk's soil for the species' soil indicators (SoilNiche); cachedSoil.HasSoil false: none mapped
         [ThreadStatic] static TreeSite cachedSoil;
         [ThreadStatic] static double cachedAridity;
+        // EA-0054 step 2 (site rules 1): the chunk's site grid (SiteGrid cells a side), from the water table and ground columns
+        const int SiteGrid = 4;
+        /// <summary>Trees keep at least this share of their size on the poorest sites (smaller sizes risk stumps in some
+        /// generators); shrubs keep theirs.</summary>
+        const float MinProductivity = 0.5f;
+        [ThreadStatic] static SiteNiche.Column[] siteCells;
+        [ThreadStatic] static long siteKey, siteModel;
+        [ThreadStatic] static bool siteReady;
         [ThreadStatic] static long cachedModel;   // TerrainModel.CacheId (not the model: a thread would keep an unloaded world alive)
         // the chunk centre's climate, for its forest-type weights, worked out only for the attempts that use them (with local
         // alpine ecology every attempt has its own)
@@ -130,6 +159,8 @@ namespace EarthMap
         /// <summary>Replaces vanilla's species pick in Earth worlds (see the class summary).</summary>
         public static bool PickPrefix(WgenTreeSupplier __instance, LCGRandom rnd, TreeVariant[] gens, int climate, int forest, int y, bool isUnderwater, ref TreeGenInstance __result)
         {
+            // (FP-11, Fable's low 5 on ad56a74) a generation entry point inside vanilla's pass: this thread may wait for a missing tile
+            using var fetch = Core.FineElevation.Generating();
             var gen = EarthWorldGen.Instance;
             if (!ctxSet || ctxOwner == null || gen == null || !gen.Active || gens == null || rnd == null) return true;
             try
@@ -158,7 +189,7 @@ namespace EarthMap
             // decision 0069 rule 7: the shore zones (no trees or shrubs on a beach, the open belts of a low sea coast, a
             // river's low bank, a lake's sedge shore; the forest thinning in beyond). A position hash, so the plants that
             // stay keep their places.
-            if (model.ShoreZoneRules >= 1 && pos != null && !isUnderwater)
+            if (ShoreZoneFacts.Zones(model.ShoreZoneRules) && pos != null && !isUnderwater)
             {
                 var sc = ColumnStore.Near(model, pos.X, pos.Z);
                 double keepShore = ShoreZones.Keep(model, pos.X, pos.Z, in sc, picker.Shrubs);
@@ -255,7 +286,7 @@ namespace EarthMap
                     {
                         model.ProjectTerrain(pos.X, pos.Z, out double sx, out double sz);
                         site.Wet = model.Rivers.Nearest(sx, sz, out var hit) && hit.Dist <= hit.HalfWidth + WetBelt;
-                        if(site.Wet && model.AridRiverRules>=1 && model.WetSourceFlow!=null && hit.Reach<model.WetSourceFlow.Length)
+                        if(site.Wet && model.Rules.AridRivers && model.WetSourceFlow!=null && hit.Reach<model.WetSourceFlow.Length)
                             site.Wet=!AridHydrology.Dry(site.AmbientRain??site.Rain,site.WarmMonth,hit.Q,model.WetSourceFlow[hit.Reach]) || model.MaskKeepsWet(in hit);
                     }
                 }
@@ -316,8 +347,36 @@ namespace EarthMap
                 site.GrassShare = cachedSoil.GrassShare; site.SoilPh = cachedSoil.SoilPh;
                 site.SoilMoisture = site.Wet ? SoilNiche.DrainedMoisture(cachedAridity, true) : cachedSoil.SoilMoisture;
             }
+            // EA-0054 step 2 (site rules 1): this column's own site (water table, ground column) instead of the 2' soil grid's
+            // shares, and a tree's size by the site's productivity. Not under water: water trees keep their own rules.
+            float productivity = 1f;
+            if (model.SiteRules >= 1 && pos != null && !isUnderwater)
+            {
+                var cell = ColumnSiteAt(gen, model, pos.X, pos.Z);
+                if (cell.Ok && !cell.OpenWater)
+                {
+                    productivity = cell.Productivity;
+                    // wet and waterlogged ground (the table within 1 m) suits the floodplain trees too: alder carr and
+                    // willow scrub stand in mires and wet hollows away from any river
+                    if (cell.Wetness >= SiteNiche.WetGround) site.Wet = true;
+                    if (regional)
+                    {
+                        site.HasSoil = true;
+                        site.ColumnSite = true;
+                        site.SiteMoisture = cell.Moisture;
+                        site.SiteNutrients = cell.Nutrients;
+                        site.SoilPh = !float.IsNaN(cell.Ph) ? cell.Ph : cachedSoil.HasSoil ? cachedSoil.SoilPh : float.NaN;
+                    }
+                }
+            }
             var random = new LcgSource(rnd);
             int index = picker.Pick(site, ref random, out float sizeWeight, out int tier);
+            if (TracePicks)
+            {
+                if (picker.Shrubs) { Interlocked.Increment(ref traceShrubAttempts); if (index >= 0) Interlocked.Increment(ref traceShrubPicks); }
+                else { Interlocked.Increment(ref traceTreeAttempts); if (index >= 0) Interlocked.Increment(ref traceTreePicks); }
+                if (index >= 0) tracePicks.AddOrUpdate((picker.Shrubs ? "shrub " : "") + gens[index]?.Generator?.Path, 1, (_, n) => n + 1);
+            }
             __result = null;
             if (index < 0) return false;
             var v = gens[index];
@@ -345,7 +404,7 @@ namespace EarthMap
             __result = new TreeGenInstance
             {
                 treeGen = treeGen,
-                size = v.MinSize + (float)rnd.NextDouble() * (v.MaxSize - v.MinSize) + sizeBonus,
+                size = (v.MinSize + (float)rnd.NextDouble() * (v.MaxSize - v.MinSize) + sizeBonus) * (picker.Shrubs ? 1f : Math.Max(MinProductivity, productivity)),
                 vinesGrowthChance = 1.5f * vineRain * vineTemp + 0.5f * vineRain * Math.Clamp((vineTemp + 0.33f) / 1.33f, 0f, 1f),
                 mossGrowthChance = (float)Math.Clamp(2.25 * rainRel - 0.5 + Math.Sqrt(tempRel) * 3.0 * Math.Max(-0.5, 0.5 - tempRel), 0, 1),
             };
@@ -353,6 +412,40 @@ namespace EarthMap
                 testSelections.AddOrUpdate((catalog.Geography.Code(site.Region) ?? "unmapped") + " " + v.Generator + " t" + tier, 1, (_, n) => n + 1);
             return false;
         }
+
+        /// <summary>The site of the cell of the chunk's <see cref="SiteGrid"/> x <see cref="SiteGrid"/> grid this column lies in
+        /// (computed once per chunk and thread; not Ok where the water table is off).</summary>
+        static SiteNiche.Column ColumnSiteAt(EarthWorldGen gen, TerrainModel model, int x, int z)
+        {
+            long key = ((long)(x >> 5) << 32) | (uint)(z >> 5);
+            if (siteCells == null || siteKey != key || siteModel != model.CacheId)
+            {
+                siteCells ??= new SiteNiche.Column[SiteGrid * SiteGrid];
+                siteKey = key; siteModel = model.CacheId;
+                var water = gen.WaterTable;
+                siteReady = false;
+                long t0 = TracePicks ? System.Diagnostics.Stopwatch.GetTimestamp() : 0;
+                try { siteReady = water != null && water.SiteGrid(x >> 5, z >> 5, SiteGrid, siteCells); }
+                catch (Exception e)
+                {
+                    if (System.Threading.Interlocked.Increment(ref siteErrors) == 1) gen.Mod.Logger.Error("Earth trees: the column site failed; trees use the soil grid. {0}", e);
+                }
+                if (t0 != 0)   // timed from the start (the trace may have been switched on meanwhile)
+                {
+                    Interlocked.Increment(ref traceSiteGrids);
+                    Interlocked.Add(ref traceSiteTicks, System.Diagnostics.Stopwatch.GetTimestamp() - t0);
+                }
+            }
+            if (!siteReady) return default;
+            int cellSize = 32 / SiteGrid;
+            return siteCells[((z & 31) / cellSize) * SiteGrid + (x & 31) / cellSize];
+        }
+        /// <summary>This world's binding says its first column-site failure (reset in <see cref="BeginBinding"/>).</summary>
+        static int siteErrors;
+
+        /// <summary>(C-R2 of the Fable pass) The compiled pickers let go when the world closes (EarthWorldGen.Dispose): they held
+        /// the closed world's tree catalogue and vanilla's variant arrays until the next world's trees loaded.</summary>
+        internal static void ReleasePickers() => pickers = Array.Empty<PickerEntry>();
 
         public static void LoadedTreesPostfix(WgenTreeSupplier __instance)
         {
@@ -408,6 +501,8 @@ namespace EarthMap
         {
             testSelections.Clear();
             pickers = Array.Empty<PickerEntry>();
+            // EA-0054 (review of step 2): a new world starts without the last one's trace and says its first site failure
+            TracePicks = false; ResetTrace(); siteErrors = 0;
             Patched = false;
             PatchError = null;
             // a new binding (a new world in this process) says its first failure again (CR-E4)

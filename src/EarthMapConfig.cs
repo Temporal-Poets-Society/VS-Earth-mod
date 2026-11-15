@@ -13,6 +13,13 @@ namespace EarthMap
         /// <summary>Allow new worlds with the earth play style to get Earth. Existing worlds without Earth Map data are never changed.</summary>
         public bool Enabled = true;
 
+        /// <summary>(Decision 0083) An Earth world generates only with every part of generation its saved rules use (regional
+        /// geology, ground columns, ore layers, Earth's ores, springs, the water table, plants as around 1318, volcanoes, the
+        /// rule data, Earth's guards on vanilla's generation): when one is off this session (a game update changed a hook, a
+        /// competing mod, a missing file), the server stops before the first chunk and the log names it. True: the world
+        /// generates without those parts, so new chunks get vanilla's blocks there and may meet other chunks with a seam.</summary>
+        public bool AcceptMissingFeatures = false;
+
         /// <summary>Keep the slow parts of a world's model build (the straits' courses, the sea channels' ways) in
         /// ModData/earth/cache between starts (Core.ModelCache): later starts of the world skip them. Off: every start builds
         /// them; the world is the same either way.</summary>

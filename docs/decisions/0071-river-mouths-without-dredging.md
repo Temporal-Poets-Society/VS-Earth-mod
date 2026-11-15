@@ -1,7 +1,7 @@
 # 0071: River mouths without dredging; one bed where a river meets the sea
 
 Status: **built**, on `main` (from `claude/river-mouths`, merged as `2d36d58`) for 2.0.0 (EA-0038, EA-0039; the author
-asleep, "take our own decisions", 12-13 November 2026; not released). New worlds only: sea channel rules 5 (`EarthParams.RiverChannels`) and channel rules 3
+asleep, "take our own decisions", 12-13 November 2026); in Earth 2.0.0. New worlds only: sea channel rules 5 (`EarthParams.RiverChannels`) and channel rules 3
 (`EarthParams.ChannelRules`); older worlds keep the rules they saved (0002). Date: 2026-11-13.
 
 ## What the author reported

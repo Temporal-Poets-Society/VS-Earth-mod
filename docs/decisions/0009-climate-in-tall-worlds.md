@@ -1,6 +1,6 @@
 # 0009: Climate temperatures in tall worlds
 
-Status: Agreed (the user, 2026-10-24); hook implemented 0.14.1; real lapse (climate rules v2) implemented for new worlds on branch `claude/review-fixes-earth` (not yet released), offline checks only | Date: 2026-10-16 | Decided by: Claude, fixing a review finding the user asked to fix; the real lapse agreed by the user 2026-10-24
+Status: Agreed (the user, 2026-10-24); the hook built in 0.14.1, climate rules 2 (real lapse, CHELSA temperatures) in Earth 1.0.0; in Earth 2.0.0. New worlds take climate rules 3 (0031), which build on it. No in-game check recorded | Date: 2026-10-16 | Decided by: Claude, fixing a review finding the user asked to fix; the real lapse agreed by the user 2026-10-24
 
 ## Context
 
@@ -189,3 +189,9 @@ rainfall while vanilla's `GetRainFall` leaves it unadjusted (`ClimateLapse`), pl
   claims on the lapse table (E4-2), `temperature.bin` read only when used and guarded (E4-4), the climate sampled once per
   map pixel (E4-5), a self-test check through vanilla's own patch placement (E4-6), `ClimatePixelForVanillaLapse` for Wmap
   (E4-3). Offline: complete readings on both sides agree within the byte's step down to −107 °C in v2 worlds.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: Agreed (the user, 2026-10-24); hook implemented 0.14.1; real lapse (climate rules v2) implemented for new worlds on branch `claude/review-fixes-earth` (not yet released), offline checks only

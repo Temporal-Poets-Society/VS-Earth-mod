@@ -55,6 +55,16 @@ namespace EarthMap
                 return imgs.Count == 0 ? null : StoneRecolour.Measure(imgs);
             }
             string[] RockFiles(string rock) => Enumerable.Range(1, 4).Select(i => Stone + "rock/" + rock + i).ToArray();
+            var origins = new Dictionary<IAssetOrigin, RegeneratedOrigin>();
+
+            // Decision 0077: Earth's crushed minerals and grog from vanilla's crushed template nearest in colour, moved into
+            // the palette of Earth's own drawing (which stays as the fallback).
+            try
+            {
+                string made = Crushed(assets, Pixels, origins);
+                if (made != null) Mod.Logger.Notification("Earth crushed textures drawn from vanilla's crushed templates: {0}.", made);
+            }
+            catch (Exception e) { Mod.Logger.Warning("Earth crushed textures: kept Earth's own drawings ({0}).", e.Message); }
 
             // Vanilla's rocks: every rock with a cobblestone template, a rock texture and a sand, not drawn by Earth.
             var references = new Dictionary<string, StoneRecolour.Palette>(StringComparer.Ordinal);
@@ -69,7 +79,6 @@ namespace EarthMap
             }
             if (references.Count == 0) { Mod.Logger.Notification("Earth stone textures: no vanilla stone templates found; Earth's own drawings kept."); return; }
 
-            var origins = new Dictionary<IAssetOrigin, RegeneratedOrigin>();
             var report = new List<string>();
             foreach (string code in Rocks)
             {
@@ -118,6 +127,39 @@ namespace EarthMap
             bitmaps.Clear();
             if (report.Count > 0)
                 Mod.Logger.Notification("Earth stone textures: crafted stone of Earth's rocks drawn as vanilla draws its own (shared template, rock palette): {0}.", string.Join(", ", report));
+        }
+
+        /// <summary>Vanilla's crushed minerals: their templates share one drawing, recoloured per mineral.</summary>
+        static readonly string[] CrushedTemplates = { "alum", "quartz", "bauxite", "olivine", "peridotite", "ilmenite", "cassiterite",
+            "chromite", "galena", "lapislazuli", "cinnabar", "hematite", "sphalerite" };
+
+        /// <summary>Earth's crushed textures are its own by their domain, not by the origin test above: from a release
+        /// zip the assets come from the unpack cache, not the zip's path, so that test never matches there (CR-O10).</summary>
+        static string Crushed(IAssetManager assets, System.Func<IAsset, (int[] px, int w, int h)?> pixels,
+            Dictionary<IAssetOrigin, RegeneratedOrigin> origins)
+        {
+            const string dir = "item/resource/crushed/";
+            var refs = new Dictionary<string, StoneRecolour.Palette>(StringComparer.Ordinal);
+            foreach (string name in CrushedTemplates)
+            {
+                var a = assets.TryGet(new AssetLocation("game", "textures/" + dir + name + ".png"));
+                if (a == null || pixels(a) is not { } b) continue;
+                refs[name] = StoneRecolour.Measure(new[] { b.px });
+            }
+            if (refs.Count == 0) return null;
+            var made = new List<string>();
+            foreach (var a in assets.GetManyInCategory("textures", dir, "earth", true).OrderBy(a => a.Location.Path, StringComparer.Ordinal))
+            {
+                string name = a.Location.Path.Substring(("textures/" + dir).Length);
+                if (name.Contains('/') || !name.EndsWith(".png", StringComparison.Ordinal) || a.Location.Domain != "earth" || a.Origin is RegeneratedOrigin) continue;
+                if (pixels(a) is not { } own) continue;
+                var to = StoneRecolour.Measure(new[] { own.px });
+                string reference = StoneRecolour.Nearest(refs, to);
+                if (pixels(assets.TryGet(new AssetLocation("game", "textures/" + dir + reference + ".png"))) is not { } src) continue;
+                Replace(a, StoneRecolour.EncodePng(StoneRecolour.Transfer(src.px, refs[reference], to), src.w, src.h), origins);
+                made.Add(name.Substring(0, name.Length - 4) + " from " + reference);
+            }
+            return made.Count > 0 ? string.Join(", ", made) : null;
         }
 
         /// <summary>Puts generated PNG data into the asset, and an origin that hands the same data back if the game reloads it.</summary>

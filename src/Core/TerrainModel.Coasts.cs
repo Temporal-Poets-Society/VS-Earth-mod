@@ -26,22 +26,38 @@ namespace EarthMap.Core
         /// over it nor today's water beside it shelves towards today's outline. Searched in rings up to Reach, only where a
         /// SEA area is within Reach and today's land is no nearer than that area.
         /// </summary>
-        double CoastDistanceAt(double lat, double lon, in LakeOutlineLayer.Hit wk)
+        double CoastDistanceAt(double lat, double lon, in WorksHit wk)
         {
             double dG = Coasts.SignedDistance(lat, lon);
             double d = Works1318Data.Combine(dG, wk, Coasts.Reach);
-            if (WorksRules < 3 || Works == null || double.IsNaN(d) || d >= 0 || !wk.Covered || double.IsNaN(wk.Level)
+            if (!Rules.SeaOf1318 || Works == null || double.IsNaN(d) || d >= 0 || !wk.Covered || double.IsNaN(wk.Level)
                 || (wk.Flags & Works1318Data.Sea) == 0) return d;
             // outside the SEA area with today's land nearer than the area: that land is still there in 1318
             if (!wk.Inside && !double.IsNaN(dG) && -dG < wk.Dist) return d;
-            var cache = coast1318Cache ??= new double[4];
-            if (cache[3] == 1 && cache[0] == lat && cache[1] == lon && ReferenceEquals(coast1318Owner, this)) return cache[2];
+            // EA-0095 (FP-08): the last few searches of this thread, not the last one: a column asks for its own place up to
+            // four times (CoastColumn, MouthShelf, ApplyMouth, the shore strip) with each course's centre (Trough) in between.
+            // The answer is a function of the place alone (every caller's wk is WorksAt there), so it is the same either way
+            var memo = coast1318Memo ??= new double[3 * Coast1318MemoSize];
+            var owners = coast1318Owners ??= new long[Coast1318MemoSize];
+            for (int e = 0; e < Coast1318MemoSize; e++)
+                if (owners[e] == CacheId && memo[3 * e] == lat && memo[3 * e + 1] == lon) return memo[3 * e + 2];
             double reach = Coasts.Reach, step = Math.Max(1, reach / 12);
             double near = !wk.Inside && !double.IsNaN(dG) && dG < 0 ? -dG : 0;
+            // (EA-0095) inside a SEA area itself (not one only enclosed by them): no edge of any area lies nearer than its Dist,
+            // nor a side of its tile, so every point of a ring within both is in that same sea and no land of 1318: those
+            // rings are passed over (the first ring that can hold land is searched as before)
+            double clear = 0;
+            if (wk.Inside)
+            {
+                var own = Works.At(lat, lon);
+                if (own.Covered && own.Inside && (own.Flags & Works1318Data.Sea) != 0 && (own.Flags & Works1318Data.Land) == 0)
+                    clear = Math.Min(own.Dist, Works.TileSideDistance(lat, lon)) - 0.01;
+            }
             Geometry.FromGeo(lat, lon, out double x, out double z);
             double found = reach;
             for (double r = Math.Max(step, near); r < reach && found >= reach; r += step)
             {
+                if (r <= clear) continue;
                 int n = Math.Clamp((int)Math.Ceiling(2 * Math.PI * r / step), 8, 32);
                 for (int k = 0; k < n; k++)
                 {
@@ -53,22 +69,38 @@ namespace EarthMap.Core
             // the land found lies between the last ring and this one; never nearer than today's land
             double dist = found >= reach ? reach : Math.Max(near, found - 0.5 * step);
             double result = -Math.Clamp(dist, 0.5, reach);
-            cache[0] = lat; cache[1] = lon; cache[2] = result; cache[3] = 1; coast1318Owner = this;
+            int slot = coast1318Next;
+            coast1318Next = (slot + 1) % Coast1318MemoSize;
+            memo[3 * slot] = lat; memo[3 * slot + 1] = lon; memo[3 * slot + 2] = result; owners[slot] = CacheId;
             return result;
         }
 
-        /// <summary>Land of 1318 for <see cref="CoastDistanceAt"/>: a LAND area of 0064, or the outline's land outside its SEA areas.</summary>
+        /// <summary>
+        /// Land of 1318 for <see cref="CoastDistanceAt"/>: a LAND area of 0064, or the outline's land outside its SEA areas.
+        /// The same answer as WorksAt's hit and then the outline (EA-0095): the enclosure search (EnclosedBySea) can only make
+        /// a place outside every area "inside the sea", so it is asked only where the outline has land, and its answer for a
+        /// ring's point is not kept in place of the column's own.
+        /// </summary>
         bool Land1318(double lat, double lon)
         {
-            var h = WorksAt(lat, lon);
+            var h = Works.At(lat, lon);
             if (h.Covered && h.Inside && (h.Flags & Works1318Data.Land) != 0) return true;
             if (h.Covered && h.Inside && (h.Flags & Works1318Data.Sea) != 0) return false;
             double s = Coasts.SignedDistance(lat, lon);
-            return !double.IsNaN(s) && s >= 0;
+            if (double.IsNaN(s) || s < 0) return false;
+            if (Rules.SeaOf1318 && h.Covered && !h.Inside && !double.IsNaN(h.Level) && (h.Flags & Works1318Data.Sea) != 0)
+            {
+                var e = EnclosedBySea(lat, lon, h, remember: false);
+                if (e.Covered && e.Inside && (e.Flags & Works1318Data.Sea) != 0) return false;
+            }
+            return true;
         }
 
-        [ThreadStatic] static double[] coast1318Cache;
-        [ThreadStatic] static TerrainModel coast1318Owner;
+        const int Coast1318MemoSize = 8;
+        [ThreadStatic] static double[] coast1318Memo;
+        // the model's CacheId, not the model: a pool thread would keep a closed world's model alive (ER-22, T-3)
+        [ThreadStatic] static long[] coast1318Owners;
+        [ThreadStatic] static int coast1318Next;
 
         /// <summary>
         /// Outline signed distance for the land/sea decision (blocks, + land, ±Reach): the grid's narrow channels (sea fraction
@@ -92,7 +124,7 @@ namespace EarthMap.Core
         /// The sea deepens to MinSeaDepth a Reach out, and dry land is held at the level NaturalColumn holds it at (hold:
         /// with eased lake shores it sinks away from a lake). False where the grid decides alone.
         /// </summary>
-        bool CoastColumn(double x, double z, EarthData.TerrainSample s, double detail, double h, double hold, int lakeTop, double fine, in LakeOutlineLayer.Hit wk, ref Column c)
+        bool CoastColumn(double x, double z, EarthData.TerrainSample s, double detail, double h, double hold, int lakeTop, double fine, in WorksHit wk, ref Column c)
         {
             // the open sea far from any coast, and ice: the grid's own column
             if (s.Ice >= 30 || OpenOcean(s)) return false;
@@ -146,9 +178,9 @@ namespace EarthMap.Core
             // ponds a metre below the sea 30 km from the coast near Suez, nearly all of the Dutch polders). The fade runs
             // from the outline itself where that is further than the side's narrowed channel: where the grid has sea over
             // the land (polders) the channel moved the coast inland, so dist never reached Reach and the top stayed above 0.
-            double beachDist = FineRules >= 5 && d > dist ? Math.Min(d, reach) : dist;
+            double beachDist = Rules.FineBounded && d > dist ? Math.Min(d, reach) : dist;
             double beachTop = BeachHeight * (landSide ? 1 - Geo.SmoothStep(beachDist / reach) : 1);
-            if (e < beachTop && (FineRules < 5 || beachTop > 0))
+            if (e < beachTop && (!Rules.FineBounded || beachTop > 0))
             {
                 top = sea - 1;
                 c.Beach = true;
@@ -200,12 +232,12 @@ namespace EarthMap.Core
         /// 4: not inside a SEA area those rules add (Works1318Data.Late): the island layer holds pieces of land made there after
         /// 1318 (the water mask's Maasvlakte 2), while 0064's own SEA areas keep their islands (Urk, Schokland).
         /// </summary>
-        void ApplyIslands(double x, double z, ref Column c)
+        void ApplyIslands(double x, double z, ref Column c, ref ColumnWork work)
         {
-            if (c.Water == WaterLake || c.Water == WaterSaltLake || !Islands.Query(c.Lat, c.Lon, out var hit)) return;
-            if (WorksRules >= 4)
+            if (c.Water == WaterLake || c.Water == WaterSaltLake || !IslandAt(ref work, c.Lat, c.Lon, out var hit)) return;
+            if (Rules.IslandsOf1318)
             {
-                var wk = WorksAt(c.Lat, c.Lon);
+                var wk = WorksAt(ref work, c.Lat, c.Lon);
                 if (wk.Inside && (wk.Flags & (Works1318Data.Sea | Works1318Data.Late)) == (Works1318Data.Sea | Works1318Data.Late)) return;
             }
             int sea = SeaLevel;

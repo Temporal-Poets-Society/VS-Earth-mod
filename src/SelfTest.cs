@@ -79,29 +79,22 @@ namespace EarthMap
         void HashGenerated(IChunkColumnGenerateRequest request, EnumWorldGenPass pass)
         {
             var chunks = request.Chunks;
-            var buffer = new byte[32 * 32 * 32 * 8];
-            var sb = new StringBuilder();
-            var canon = HashAs();
-            using var column = System.Security.Cryptography.IncrementalHash.CreateHash(System.Security.Cryptography.HashAlgorithmName.SHA256);
+            // (EA-0088) the format is Core.ColumnDigest's, pinned in tests/ServerToolsTests
+            using var column = new ColumnDigest(HashAs());
             foreach (var chunk in chunks)
             {
                 chunk.Unpack_ReadOnly();
                 var data = chunk.Data;
-                for (int i = 0; i < 32 * 32 * 32; i++)
-                {
-                    int id = data[i];
-                    BitConverter.TryWriteBytes(buffer.AsSpan(i * 8), (uint)id < (uint)canon.Length ? canon[id] : id);
-                    BitConverter.TryWriteBytes(buffer.AsSpan(i * 8 + 4), data.GetFluid(i));
-                }
-                column.AppendData(buffer);
-                sb.Append(' ').Append(Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(buffer))[..8]);
+                column.AddChunk(i => data[i], data.GetFluid);
             }
             var map = chunks.Length > 0 ? chunks[0].MapChunk : null;
             if (map != null)
-                foreach (var h in new[] { map.WorldGenTerrainHeightMap, map.RainHeightMap })
-                    if (h != null) foreach (ushort v in h) column.AppendData(BitConverter.GetBytes(v));
+            {
+                column.AddHeights(map.WorldGenTerrainHeightMap);
+                column.AddHeights(map.RainHeightMap);
+            }
             long key = ((long)request.ChunkX << 32) | (uint)request.ChunkZ;
-            generated[(pass, key)] = (column.GetHashAndReset(), sb.ToString());
+            generated[(pass, key)] = (column.Finish(), column.Chunks);
             generatedMeta[(pass, key)] = MetaHash(chunks, map);
             if (core.Config.SelfTest.DigestDumpColumns?.Contains(request.ChunkX + "," + request.ChunkZ) == true)
                 DumpGenerated(request, pass);
@@ -116,19 +109,8 @@ namespace EarthMap
         readonly System.Collections.Concurrent.ConcurrentDictionary<(EnumWorldGenPass Pass, long Column), byte[]> generatedMeta = new();
 
         static byte[] MetaHash(IServerChunk[] chunks, IMapChunk map)
-        {
-            using var h = System.Security.Cryptography.IncrementalHash.CreateHash(System.Security.Cryptography.HashAlgorithmName.SHA256);
-            void Add(byte[] b)
-            {
-                h.AppendData(BitConverter.GetBytes(b?.Length ?? -1));
-                if (b != null) h.AppendData(b);
-            }
-            if (map?.TopRockIdMap != null) foreach (int v in map.TopRockIdMap) h.AppendData(BitConverter.GetBytes(v));
-            foreach (var k in MetaMapKeys) Add(map?.GetModdata(k));
-            foreach (var chunk in chunks)
-                foreach (var k in MetaChunkKeys) Add(chunk.GetModdata(k));
-            return h.GetHashAndReset();
-        }
+            => ColumnDigest.Meta(map?.TopRockIdMap, MetaMapKeys.Select(k => map?.GetModdata(k))
+                .Concat(chunks.SelectMany(chunk => MetaChunkKeys.Select(k => chunk.GetModdata(k)))));
 
         /// <summary>A raw copy of a column as a pass left it (DigestDumpColumns), to see which blocks two runs disagree on.</summary>
         void DumpGenerated(IChunkColumnGenerateRequest request, EnumWorldGenPass pass)
@@ -185,6 +167,7 @@ namespace EarthMap
                 core.Params.RegionalFauna, core.Params.FaunaRulesVersion, core.Params.IncludeExtinctAnimals,
                 core.Params.CreationOptionsVersion > 0 && core.Params.FaunaRangeProfile != null ? core.Params.FaunaRangeProfile : core.Config.FaunaRangeProfile + " (earth.json)",
                 sapi.ModLoader.GetModSystem<EarthPlants>()?.Active == true ? "active" : "inactive");
+            CheckCrafting();
             var fauna = sapi.ModLoader.GetModSystem<EarthFaunaSystem>();
             if (fauna?.Active == true)
             {
@@ -352,6 +335,22 @@ namespace EarthMap
                 }
                 try
                 {
+                    GroundCensus(name, cx0, cz0, cx1, cz1);
+                }
+                catch (Exception e)
+                {
+                    Log("{0}: ground census failed: {1}", name, e);
+                }
+                try
+                {
+                    CheckSurfaceColumns(name, cx0, cz0, cx1, cz1);
+                }
+                catch (Exception e)
+                {
+                    Log("{0}: surface column check failed: {1}", name, e);
+                }
+                try
+                {
                     if (core.Config.SelfTest.MeasureStorage) MeasureStorage(name, cx0, cz0, cx1, cz1);
                 }
                 catch (Exception e)
@@ -418,6 +417,9 @@ namespace EarthMap
             sapi.Event.RegisterCallback(_ => { if (!done) { Log("{0}: timed out with {1}/{2} chunk columns", name, loaded, total); Analyze(); } }, 240000);
         }
 
+        /// <summary>A highest height for the report: "none" where no dry land was sampled (a place at sea).</summary>
+        static string Highest(double metres) => metres == double.MinValue ? "none" : metres.ToString("F0", CultureInfo.InvariantCulture);
+
         /// <summary>0053: the included GLO-90 heights over an area: dry-land columns on them and how far the columns stand from
         /// the grid (the sub-cell noise and restored peaks), and the rivers' water against the grid.</summary>
         void ReportCoarse(string name, int cx0, int cz0, int cx1, int cz1)
@@ -444,9 +446,9 @@ namespace EarthMap
                 }
             }
             Log("{0}: included GLO-90 heights ({1:F0} m cells) on {2} of {3} dry-land columns sampled; column - grid mean {4:F1} m, spread {5:F1} m; " +
-                "highest column {6:F0} m, grid {7:F0} m; {8} river columns, their water on average {9:F0} m below the grid there",
+                "highest column {6} m, grid {7} m; {8} river columns, their water on average {9:F0} m below the grid there",
                 name, coarse.CellMetres, used, land, used > 0 ? sum / used : 0, used > 0 ? Math.Sqrt(Math.Max(0, sq / used - (sum / used) * (sum / used))) : 0,
-                maxCol, maxGrid, river, river > 0 ? riverBelow / river : 0);
+                Highest(maxCol), Highest(maxGrid), river, river > 0 ? riverBelow / river : 0);
         }
 
         /// <summary>Decision 0051: how much of the area's dry land took GLO-90's heights, against the built-in ones, and a
@@ -474,9 +476,9 @@ namespace EarthMap
                     offset += Math.Abs(c.Elev - f);
                 }
             }
-            Log("{0}: GLO-90 heights on {1} of {2} dry-land columns sampled; highest GLO-90 {3:F0} m, built-in {4:F0} m; mean |GLO-90 - built-in| {5:F0} m; " +
+            Log("{0}: GLO-90 heights on {1} of {2} dry-land columns sampled; highest GLO-90 {3} m, built-in {4} m; mean |GLO-90 - built-in| {5:F0} m; " +
                 "mean |column - GLO-90| {6:F1} m; lookups {7}, tiles read {8}, looks for absent tiles {12}, tiles fetched {9}, failed {10}, squares on built-in heights {11}",
-                name, used, land, maxFine, maxBuilt, used > 0 ? diff / used : 0, used > 0 ? offset / used : 0, fine.Lookups, fine.Loads,
+                name, used, land, Highest(maxFine), Highest(maxBuilt), used > 0 ? diff / used : 0, used > 0 ? offset / used : 0, fine.Lookups, fine.Loads,
                 sapi.ModLoader.GetModSystem<EarthElevationSystem>()?.Downloader?.TilesStored ?? 0,
                 sapi.ModLoader.GetModSystem<EarthElevationSystem>()?.Downloader?.TilesFailed ?? 0, fine.FallbackKeys.Length, fine.Absent);
             // rules 2: the listed peaks looked at in this area, lifted or not
@@ -636,6 +638,147 @@ namespace EarthMap
         /// block (the palette always holds air), a mixed one 2-15 bits. Unpacked is what a chunk in use takes in memory; the
         /// engine compresses idle server chunks, and compressed is also roughly what is saved and sent to clients.
         /// </summary>
+        /// <summary>
+        /// Ground surface census of the area (EA-0062, EA-0064): of the land columns, how many carry terra rossa or bauxite in
+        /// their top 8 blocks, and the loose flint and chert on top. Columns from the terrain height map down.
+        /// </summary>
+        void GroundCensus(string name, int cx0, int cz0, int cx1, int cz1)
+        {
+            int ys = sapi.WorldManager.MapSizeY;
+            long columns = 0, rossa = 0, bauxite = 0, flint = 0, chert = 0, rendzina = 0, bauxiteIce = 0, bauxiteDeep = 0;
+            // decision 0077: Earth's kyanite, sillimanite and andalusite in the top 48 blocks, and their loose markers
+            var alu = new SortedDictionary<string, long>(StringComparer.Ordinal);
+            string aluExample = null;
+            string bauxiteExample = null;
+            var counts = new Dictionary<string, long>(StringComparer.Ordinal);
+            for (int cx = cx0; cx <= cx1; cx++)
+                for (int cz = cz0; cz <= cz1; cz++)
+                {
+                    var map = sapi.WorldManager.GetMapChunk(cx, cz);
+                    if (map == null) continue;
+                    for (int k = 0; k < 1024; k++)
+                    {
+                        int top = map.WorldGenTerrainHeightMap[k];
+                        if (top < 2 || top + 1 >= ys) continue;
+                        int x = cx * 32 + (k & 31), z = cz * 32 + (k >> 5);
+                        columns++;
+                        var above = sapi.World.BlockAccessor.GetBlock(new BlockPos(x, top + 1, z, 0));
+                        string a = above?.Code?.Path ?? "";
+                        if (above?.Code?.Domain == "earth" && a.StartsWith("looseores-", StringComparison.Ordinal)) alu[a.Substring(0, a.IndexOf('-', 10))] = alu.GetValueOrDefault(a.Substring(0, a.IndexOf('-', 10))) + 1;
+                        for (int y = top; y > top - 48 && y > 0; y--)
+                        {
+                            var ob = sapi.World.BlockAccessor.GetBlock(new BlockPos(x, y, z, 0));
+                            if (ob?.Code?.Domain != "earth") continue;
+                            string oc = ob.Code.Path;
+                            if (!(oc.StartsWith("ore-kyanite-", StringComparison.Ordinal) || oc.StartsWith("ore-sillimanite-", StringComparison.Ordinal) || oc.StartsWith("ore-andalusite-", StringComparison.Ordinal))) continue;
+                            alu[oc] = alu.GetValueOrDefault(oc) + 1;
+                            aluExample ??= string.Format(CultureInfo.InvariantCulture, "{0} at ={1} {2} ={3}", oc, x, y, z);
+                        }
+                        if (a.StartsWith("looseflints-", StringComparison.Ordinal)) flint++;
+                        else if (a.StartsWith("loosestones-chert", StringComparison.Ordinal)) chert++;
+                        bool r = false, b = false, g = false;
+                        for (int d = 0; d < 8 && top - d > 0; d++)
+                        {
+                            var bl = sapi.World.BlockAccessor.GetBlock(new BlockPos(x, top - d, z, 0));
+                            string c = bl?.Code?.Path ?? "";
+                            if (d == 1 || d == 2) { string key = bl?.Code?.ToShortString() ?? "air"; counts[key] = counts.GetValueOrDefault(key) + 1; }
+                            if (c == "terrarossa") r = true;
+                            else if (c == "rock-bauxite") b = true;
+                            else if (c == "gravel-limestone" && d <= 2) g = true;
+                        }
+                        if (r) rossa++;
+                        if (b)
+                        {
+                            bauxite++;
+                            var tc = ColumnStore.At(core.Model, x, z);
+                            if (tc.IceBottom <= tc.Top) bauxiteIce++;
+                            else bauxiteExample ??= string.Format(CultureInfo.InvariantCulture, "={0} {1} ={2}", x, top, z);
+                        }
+                        for (int y = top - 8; y > top - 60 && y > 0; y--)
+                            if (sapi.World.BlockAccessor.GetBlock(new BlockPos(x, y, z, 0))?.Code?.Path == "rock-bauxite") { bauxiteDeep++; break; }
+                        if (g && !r) rendzina++;
+                    }
+                }
+            var common = string.Join(", ", counts.OrderByDescending(p => p.Value).Take(6).Select(p => p.Key + " " + p.Value.ToString(CultureInfo.InvariantCulture)));
+            Log("{0}: ground census of {1} columns: terra rossa {2}, bauxite {3} ({8} under glacier ice, e.g. elsewhere {9}; {10} with bauxite 8-60 blocks down), limestone rubble under the topsoil without terra rossa {4}; loose flint {5}, loose chert {6}; blocks 1-2 down: {7}",
+                name, columns, rossa, bauxite, rendzina, flint, chert, common, bauxiteIce, bauxiteExample ?? "none", bauxiteDeep);
+            Log("{0}: aluminosilicates in the top 48 blocks: {1}; e.g. {2}", name,
+                alu.Count == 0 ? "none" : string.Join(", ", alu.Select(p => p.Key + " " + p.Value.ToString(CultureInfo.InvariantCulture))), aluExample ?? "none");
+        }
+
+        /// <summary>Decision 0077: Earth's crafting recipes are in the world (and resolve) exactly when its crafting rules are on,
+        /// and its aluminosilicate deposits exactly when its ore layers are v4 or later.</summary>
+        void CheckCrafting()
+        {
+            var p = core.Params;
+            var (count, resolved) = EarthCrafting.Census(sapi);
+            bool on = p.CraftingRules > 0;
+            Log("crafting rules v{0} (ground rules {1}, ore maps {2}): {3} of Earth's grid recipes in the world, {4} resolved ({5})",
+                p.CraftingRules, p.GroundColumns, p.RegionalOres, count, resolved,
+                on ? (count > 0 && resolved == count ? "PASS" : "FAIL") : (count == 0 ? "PASS" : "FAIL"));
+            int findable = EarthCrafting.Findable(sapi);
+            Log("crafting rules: {0} of Earth's grid recipes findable by the crafting grid's ingredient index ({1})", findable,
+                on ? (findable > 0 ? "PASS" : "FAIL") : (findable == 0 ? "PASS" : "FAIL"));
+            if (on)
+            {
+                // real stacks laid in a grid: a recipe of Earth's must take them, one stack per ingredient, and make the output
+                foreach (var (what, output, inputs) in new (string, string, string[])[]
+                {
+                    ("hammer + kyanite", "earth:crushed-kyanite", new[] { "item:game:hammer-copper", "item:earth:ore-kyanite" }),
+                    ("hammer + andalusite", "earth:crushed-andalusite", new[] { "item:game:hammer-copper", "item:earth:ore-andalusite" }),
+                    ("hammer + fired brick", "earth:grog", new[] { "item:game:hammer-copper", "item:game:burnedbrick-red" }),
+                    ("8 blue clay + grog", "game:clay-fire", new[] { "item:game:clay-blue*8", "item:earth:grog" }),
+                    ("fireclay brick", "game:refractorybrick-raw-tier1", new[] { "item:game:clay-fire*3", "item:game:crushed-quartz", "item:earth:grog" }),
+                    ("tier 2 with kyanite", "game:refractorybrick-raw-tier2", new[] { "item:game:clay-fire*2", "item:game:crushed-quartz", "item:earth:crushed-kyanite", "item:game:crushed-olivine" }),
+                    ("tier 3 with corundum", "game:refractorybrick-raw-tier3", new[] { "item:game:clay-fire*2", "item:game:crushed-quartz", "item:game:ore-corundum", "item:game:crushed-olivine", "item:game:crushed-ilmenite" }),
+                })
+                {
+                    string got = GridMatch(output, inputs);
+                    Log("crafting rules: {0} -> {1}: {2} ({3})", what, output, got ?? "no recipe of Earth's takes it", got != null ? "PASS" : "FAIL");
+                }
+            }
+            int tephra = sapi.ModLoader.GetModSystem<Vintagestory.GameContent.RecipeRegistrySystem>()?.BarrelRecipes
+                .Count(r => r.Name?.Domain == "earth" && r.Name.Path.Contains("mortar-tephra")) ?? -1;
+            Log("volcanic-ash mortar barrel recipes: {0} ({1})", tephra, tephra > 0 ? "PASS" : "FAIL");
+            var gen = sapi.ModLoader.GetModSystem<Vintagestory.ServerMods.GenDeposits>();
+            var codes = (gen?.Deposits ?? Array.Empty<Vintagestory.ServerMods.DepositVariant>()).Where(v => v.fromFile == EarthOreLayers.AluminosilicateFile).Select(v => v.Code).ToList();
+            bool want = OreLayerFacts.Aluminosilicates(p.OreLayers) && sapi.ModLoader.GetModSystem<EarthGeology>()?.Layers != null;
+            Log("aluminosilicate deposits (ore layers v{0}): {1} ({2})", p.OreLayers, codes.Count == 0 ? "none" : string.Join(", ", codes),
+                want ? (codes.Count == 3 ? "PASS" : "FAIL") : (codes.Count == 0 ? "PASS" : "FAIL"));
+        }
+
+        /// <summary>Earth's crafting recipe whose output is <paramref name="output"/> and whose ingredients take exactly these
+        /// stacks ("item:domain:code" or "...*N" for N single stacks), one each; null when none does.</summary>
+        string GridMatch(string output, string[] inputs)
+        {
+            var stacks = new List<ItemStack>();
+            foreach (string spec in inputs)
+            {
+                string code = spec.Substring(5);
+                int n = 1, star = code.IndexOf('*');
+                if (star > 0) { n = int.Parse(code.Substring(star + 1), CultureInfo.InvariantCulture); code = code.Substring(0, star); }
+                var item = sapi.World.GetItem(new AssetLocation(code));
+                if (item == null) return null;
+                for (int i = 0; i < n; i++) stacks.Add(new ItemStack(item));
+            }
+            foreach (var r in sapi.World.GridRecipes.Where(EarthCrafting.IsEarthCrafting))
+            {
+                if (r.Output?.ResolvedItemStack?.Collectible?.Code?.ToString() != output || r.ResolvedIngredients == null) continue;
+                var ings = r.ResolvedIngredients.Where(i => i != null).ToList();
+                if (ings.Count != stacks.Count) continue;
+                var used = new bool[stacks.Count];
+                bool all = true;
+                foreach (var ing in ings)
+                {
+                    int k = Enumerable.Range(0, stacks.Count).FirstOrDefault(j => !used[j] && ing.SatisfiesAsIngredient(stacks[j], false), -1);
+                    if (k < 0) { all = false; break; }
+                    used[k] = true;
+                }
+                if (all) return r.Name + " (" + r.Output.ResolvedItemStack.StackSize + " made)";
+            }
+            return null;
+        }
+
         void MeasureStorage(string name, int cx0, int cz0, int cx1, int cz1)
         {
             int ys = sapi.WorldManager.MapSizeY / 32;
@@ -694,6 +837,41 @@ namespace EarthMap
             if (l == null) return 0;
             var f = l.GetType().GetField("bitsize", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
             return (int)f.GetValue(l) * 4096L;
+        }
+
+        /// <summary>
+        /// EA-0071: where a later step carved the surface (a crater, a lava lake), the map's surface column
+        /// (<see cref="TerrainModel.GetSurfaceColumn"/>) must be what the generated chunk shows: its rain height, give or take a
+        /// block of snow or plants. Logged only where the area has such columns.
+        /// </summary>
+        void CheckSurfaceColumns(string name, int cx0, int cz0, int cx1, int cz1)
+        {
+            var model = core.Model;
+            if (model?.Carved.Craters == null) return;
+            int carved = 0, exact = 0, within1 = 0, worst = 0;
+            string first = null;
+            for (int cx = cx0; cx <= cx1; cx++)
+            {
+                for (int cz = cz0; cz <= cz1; cz++)
+                {
+                    var mc = sapi.WorldManager.GetMapChunk(cx, cz);
+                    if (mc?.RainHeightMap == null) continue;
+                    for (int i = 0; i < 1024; i++)
+                    {
+                        double x = cx * 32 + (i & 31) + 0.5, z = cz * 32 + (i >> 5) + 0.5;
+                        int surface = model.GetSurfaceColumn(x, z).Top;
+                        if (surface >= model.GetColumn(x, z).Top) continue;
+                        carved++;
+                        int diff = Math.Abs(mc.RainHeightMap[i] - surface);
+                        if (diff == 0) exact++;
+                        if (diff <= 1) within1++;
+                        if (diff > worst) { worst = diff; first = $"{(int)x},{(int)z}: surface column {surface}, rain height {mc.RainHeightMap[i]}"; }
+                    }
+                }
+            }
+            if (carved == 0) return;
+            Log("{0}: surface columns: {1} carved columns (craters, lava lakes), {2} exactly at the generated rain height, {3} within a block{4} ({5})",
+                name, carved, exact, within1, worst > 1 ? "; worst " + first : "", within1 == carved ? "PASS" : "FAIL");
         }
 
         void AnalyzeArea(string name, int cx0, int cz0, int cx1, int cz1, double seconds)
@@ -1155,24 +1333,41 @@ namespace EarthMap
                 : rainFrequency != 1 ? "rain x" + rainFrequency.ToString(CultureInfo.InvariantCulture) + ", not compared"
                 : julRain > n / 4 && janRain < n / 30 ? "PASS" : "FAIL");
 
-            // cloud patterns: a weather region in the Sahara picks clear skies far more often than one on Norway's west coast in winter
+            // cloud patterns (rules 7): a weather region in Egypt's Western Desert picks fair-weather patterns more often than one
+            // in western Norway. A region's pick weighs vanilla's chances by Earth's cloud cover at its centre then
+            // (EarthWeather.RandomWeatherPatternPrefix, CoverWeight); this is the share of fair patterns those weights give, at 24
+            // moments through the coming year. Both points are among the self test's places (Places), so their regions are
+            // loaded, and both on land. (Before 2.0.0 it drew patterns at the one moment the test ran, its desert point in the
+            // Persian Gulf: a clear spell on the coast that May made it fail.)
+            double daysNow = sapi.World.Calendar.TotalDays, daysPerYear = sapi.World.Calendar.DaysPerYear, modelHoursPerDay = m.Settings.HoursPerDay;
+            const int fairMoments = 24;
             double Fair(double lat, double lon)
             {
                 geo.FromGeo(lat, lon, out double x, out double z);
                 int rs = sapi.World.BlockAccessor.RegionSize;
                 var region = ws.getOrCreateWeatherSimForRegion((int)(x / rs), (int)(z / rs));
-                if (region == null) return double.NaN;
-                int fair = 0, total = 400;
-                for (int i = 0; i < total; i++)
+                var patterns = region?.WeatherPatterns;
+                if (patterns == null || patterns.Length == 0) return double.NaN;
+                var cond = region.weatherData?.climateCond;
+                double share = 0;
+                for (int k = 0; k < fairMoments; k++)
                 {
-                    string code = region.RandomWeatherPattern()?.config?.Code ?? "";
-                    if (EarthWeather.CoverWeight(code, 0) > 1.5) fair++;
+                    double cover = m.CloudCover((region.regionX + 0.5) * rs, (region.regionZ + 0.5) * rs, (daysNow + k * daysPerYear / fairMoments) * modelHoursPerDay);
+                    double fair = 0, all = 0;
+                    foreach (var pattern in patterns)
+                    {
+                        pattern.updateHereChance(cond?.Rainfall ?? 0, cond?.Temperature ?? 15);
+                        double w = Math.Max(0, pattern.hereChance) * EarthWeather.CoverWeight(pattern.config?.Code, cover);
+                        all += w;
+                        if (EarthWeather.CoverWeight(pattern.config?.Code, 0) > 1.5) fair += w;
+                    }
+                    if (all > 0) share += fair / all;
                 }
-                return fair / (double)total;
+                return share / fairMoments;
             }
-            double desert = Fair(25.3, 55.0), wet = Fair(61.1, 6.5);
-            Log("weather: fair-weather cloud patterns picked {0:0}% of the time over the desert, {1:0}% on Norway's coast ({2})", desert * 100, wet * 100,
-                double.IsNaN(desert) || double.IsNaN(wet) ? "skipped, regions not loaded" : desert > wet ? "PASS" : "FAIL");
+            double desert = Fair(29.8, 27.0), wet = Fair(61.1, 6.5);
+            Log("weather: fair-weather cloud patterns {0:0}% of the picks in the Western Desert, {1:0}% in western Norway, over {2} moments of a year ({3})", desert * 100, wet * 100,
+                fairMoments, double.IsNaN(desert) || double.IsNaN(wet) ? "skipped, regions not loaded" : desert > wet ? "PASS" : "FAIL");
             // with Sea 0.4+ as the wind's consumer: Sea's own WindAt (what ships and waves use) is Earth's wind
             if (weather.SeaLink == "provider")
             {
@@ -1207,22 +1402,24 @@ namespace EarthMap
             var wind = role.TryGetValue("wind", out var a) ? a as System.Func<double, double, double, bool, (double X, double Z)> : null;
             var rain = role.TryGetValue("rain", out var b) ? b as System.Func<double, double, double, (double Cloudness, double Precipitation)> : null;
             var storm = role.TryGetValue("storm", out var c) ? c as System.Func<double, double, double, (double Presence, double WindMps, string Kind)> : null;
+            var pressure = role.TryGetValue("pressure", out var d) ? d as System.Func<double, double, double, double> : null;
             int same = 0, total = 0;
             foreach (var (lat, lon) in new[] { (50.0, -20.0), (15.0, 70.0), (-45.0, 60.0), (20.0, -150.0), (19.1, 72.9) })
             {
                 geo.FromGeo(lat, lon, out double x, out double z);
                 total++;
-                if (wind == null || rain == null || storm == null) continue;
+                if (wind == null || rain == null || storm == null || pressure == null) continue;
                 var w = wind(x, z, hours, false);
                 var e = m.WindAt(x, z, hours, false);
                 var r = rain(x, z, hours);
                 double cl = m.Cloudness(x, z, hours);
                 var s = storm(x, z, hours);
-                if (Math.Abs(w.X - e.X * 25) < 1e-9 && Math.Abs(w.Z - e.Z * 25) < 1e-9
+                double hpa = pressure(x, z, hours);
+                if (hpa == m.Sample(x, z, hours).Pressure && Math.Abs(w.X - e.X * 25) < 1e-9 && Math.Abs(w.Z - e.Z * 25) < 1e-9
                     && Math.Abs(r.Cloudness - Math.Clamp(cl, 0, 1)) < 1e-9 && Math.Abs(r.Precipitation - Math.Clamp(cl - 0.5, 0, 1)) < 1e-9
                     && s.Presence >= 0 && s.Presence <= 1 && s.WindMps >= 0 && (s.Kind == null || s.Kind == "gale" || s.Kind == "hurricane")) same++;
             }
-            Log("weather: the weather role is {0} (owner {1}, revision {2}); {3} of {4} places answer Earth's weather in m/s and vanilla's rain ({5})",
+            Log("weather: the weather role is {0} (owner {1}, revision {2}); {3} of {4} places answer Earth's weather in m/s, vanilla's rain and the sea-level pressure ({5})",
                 weather.RoleStatus, role.TryGetValue("owner", out var ow) ? ow : "-", weather.Revision, same, total,
                 weather.HoldsRole && same == total ? "PASS" : "FAIL");
         }
@@ -1245,6 +1442,10 @@ namespace EarthMap
                 if (core.RegionalTrees != null) Log("{0}", EarthTrees.SelectionReport());
                 Log("structure water guards: {0}", EarthWorldGen.StructureGuardReport());
                 Log("pond rules: {0}", EarthWorldGen.PondGuardReport());
+                var waterTable = sapi.ModLoader.GetModSystem<EarthWaterTable>();
+                if (waterTable != null) Log("Hydrate or Diedrate aquifers: {0}", waterTable.HodReport());
+                var layers = sapi.ModLoader.GetModSystem<EarthGeology>()?.Layers;
+                if (layers != null) Log("{0}", layers.Counts());
                 string file = Path.Combine(GamePaths.DataPath, "EarthMap", "selftest-report.txt");
                 Directory.CreateDirectory(Path.GetDirectoryName(file));
                 File.WriteAllText(file, report.ToString());

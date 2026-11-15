@@ -5,11 +5,15 @@ server's data store (src/Core/EarthDataStore.cs, release ed-v1 of Temporal-Poets
 the zip. Writes release/earth-<version>.zip and release/earth-<version>-package.json. A published archive is never replaced:
 bump "version" in modinfo.json, or pass --overwrite-main to replace an unpublished one (the old one is backed up).
 """
-import argparse, hashlib, io, json, pathlib, re, zipfile
+import argparse, hashlib, io, json, pathlib, re, struct, zipfile
 
 LIMIT = 40_000_000
 STORE_LIST = pathlib.Path(__file__).resolve().parent.parent / 'src' / 'Core' / 'EarthDataStore.cs'
-CLIENT_DATA = ['earth.json', 'climate.bin', 'climatefix.bin', 'climatefix2.bin', 'climatefix3.bin', 'temperature.bin', 'rain.bin', 'weather.bin', 'aridity.bin']
+CLIENT_DATA = ['earth.json', 'climate.bin', 'climatefix.bin', 'climatefix2.bin', 'climatefix3.bin', 'climatefix4.bin', 'temperature.bin', 'rain.bin', 'weather.bin', 'weatherground.bin', 'aridity.bin']
+# the client climate files written as predicted planes (EA-0077) and the most each may take: about 1 % above their size
+# at 2.0.0-rc.14, far below the plain files' (a bake that wrote plain brotli would bring back about 10 MB)
+PREDICTED_DATA = {'rain.bin': 8_940_000, 'aridity.bin': 5_465_000, 'temperature.bin': 5_480_000, 'climate.bin': 1_775_000,
+                  'climatefix.bin': 220_000, 'climatefix2.bin': 585_000, 'weather.bin': 2_690_000}
 DATA_PACKS = ['earthterraindata', 'earthwaterdata', 'earthwaterfixdata', 'earthheightdata1', 'earthheightdata2',
               'earthheightdata3', 'earthheightdata4', 'earthgrounddata']
 
@@ -22,10 +26,14 @@ def store_names():
 
 
 def archive(files):
+    # ER-29 (code review 14 November 2026): every entry dated 1980-01-01, so the same tree packs to the same bytes (and the
+    # report's sha256 can be reproduced); still deflated at level 9
     memory = io.BytesIO()
     with zipfile.ZipFile(memory, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         for name, data in sorted(files.items()):
-            z.writestr(name, data)
+            info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
+            info.external_attr = 0o644 << 16
+            z.writestr(info, data, compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
     return memory.getvalue()
 
 
@@ -57,6 +65,13 @@ def main():
     missing = [n for n in CLIENT_DATA if 'earthdata/' + n not in files]
     if missing:
         raise SystemExit('The client data must be in the zip: ' + ', '.join(missing))
+    plain = [n for n in PREDICTED_DATA if (struct.unpack_from('<i', files['earthdata/' + n], 4)[0] & 0xFFFFFFFF) >> 16 != 1]
+    if plain:
+        raise SystemExit('Write these as predicted planes (tools/planecoding.py, EA-0077; tools/repack-client-data.py turns '
+                         'a plain file into one): ' + ', '.join(plain))
+    big = [f'{n} ({len(files["earthdata/" + n]):,} > {limit:,})' for n, limit in PREDICTED_DATA.items() if len(files['earthdata/' + n]) > limit]
+    if big:
+        raise SystemExit('Client climate files above their ceiling (a bake that predicts badly, or a plain file): ' + ', '.join(big))
     data = archive(files)
     if len(data) > LIMIT:
         raise SystemExit(f'{modid}-{version}.zip is {len(data):,} bytes; the Mod DB takes at most {LIMIT:,}')
@@ -76,7 +91,7 @@ def main():
             stream.write(data)
     else:
         data = target.read_bytes()
-    report = {'limit_bytes': LIMIT, 'file': str(target), 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest(),
+    report = {'limit_bytes': LIMIT, 'file': target.name, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest(),
               'headroom_bytes': LIMIT - len(data)}
     (output / f'{modid}-{version}-package.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(report))

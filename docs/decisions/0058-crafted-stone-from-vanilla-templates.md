@@ -1,9 +1,6 @@
 # 0058: Crafted stone of Earth's rocks from vanilla's templates, recoloured in the game
 
-Status: implemented in source (`claude/ground-columns`, commit ea95f13); offline tests pass; seen in game on the
-AgentBridge bench on 7 November (Earth as a folder mod at 1:200: the client logged 55 recoloured textures for each of
-the five rocks, gneiss and schist from granite, quartzite from limestone, gypsum and dolostone from chalk; placed
-cobble, ashlar and polished walls look like vanilla's beside granite, limestone and chalk, no seams; no errors); merged into release/1.0 at 35eea55 with the author's "Yes, merge" (7 November).
+Status: built, in Earth 2.0.0, merged with the author's "Yes, merge" (7 November); seen on the AgentBridge bench on 7 November.
 Date: 2026-11-07. (0057 is the tall line's geothermal sites.)
 
 ## What the author asked
@@ -40,3 +37,12 @@ due to visible repeating patterns."
 
 - Checked only with Earth as a folder mod; the zip install uses the same origin check (zip path against the mod's
   source path).
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: implemented in source (`claude/ground-columns`, commit ea95f13); offline tests pass; seen in game on the
+AgentBridge bench on 7 November (Earth as a folder mod at 1:200: the client logged 55 recoloured textures for each of
+the five rocks, gneiss and schist from granite, quartzite from limestone, gypsum and dolostone from chalk; placed
+cobble, ashlar and polished walls look like vanilla's beside granite, limestone and chalk, no seams; no errors); merged into release/1.0 at 35eea55 with the author's "Yes, merge" (7 November).

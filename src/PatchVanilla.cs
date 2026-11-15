@@ -49,7 +49,14 @@ namespace EarthMap
     /// its feature off the same way. Each feature's members are written in a lambda of their own, so even a game type that
     /// is gone (a type load failure) only turns off the feature that names it.
     ///
-    /// Why each is a patch (no public event or API for it in 1.22.7, checked against C:\VS-ref): see the table's comments.
+    /// Why each is a patch (no public event or API for it in 1.22.7, checked against C:\VS mods\devtools\vs-ref): see the
+    /// table's comments.
+    ///
+    /// Two lifetimes (ER-22, code review 14 November 2026). Most systems undo their patches in Dispose (UnpatchAll). Six
+    /// patch once for the process and leave them in: ClimateLapse, EarthGrassSeason, EarthGrassWinter, EarthGroundMoisture,
+    /// SeasonTintAltitude and SnowMeltLight (each a static <c>patched</c>). That is allowed only where every patched method
+    /// first tests a static switch the system clears in Dispose and sets for an Earth world alone, so a later world in the
+    /// same process (a vanilla one, or the other side of a singleplayer game) runs vanilla's code plus one early return.
     /// </summary>
     internal sealed partial class PatchVanilla
     {
@@ -70,7 +77,7 @@ namespace EarthMap
             StorySchematics, RegionalPlants, RegionalPlantsOnTrees, Placement1318, SealevelDeposits, ClimateLapseTemperature, ClimateLapseRain,
             RegionalFauna, DungeonMapSize,
             // the running game's and the client's features (the runtime tables, at the end of this file)
-            GrassWinter, GroundMoisture, GrassSeason, SeasonTint, Thunder, CreativeDate,
+            GrassWinter, GroundMoisture, GrassSeason, SeasonTint, Thunder, CreativeDate, SnowMeltLight,
         }
 
         /// <summary>One feature: the members it needs, bound all together or not at all.</summary>
@@ -414,14 +421,15 @@ namespace EarthMap
         /// "standard" world type's generation handlers, for the vanilla handlers Earth replaces). Order: as they were patched
         /// before this table (the order matters only for the log).
         /// </summary>
-        internal static Spec[] Table(IWorldGenHandler handlers) => new[]
+        internal static Spec[] Table(IWorldGenHandler handlers, System.Func<ChunkColumnGenerationDelegate, ChunkColumnGenerationDelegate> inPlaceOfGenTerra = null) => new[]
         {
             // vanilla's terrain pass, replaced in Earth worlds through the public handler list (no event replaces a handler);
             // where another mod has wrapped GenTerra's handler already, a prefix on GenTerra's own (private) method, which its
             // wrapper still calls. Without either an Earth world is refused (EarthWorldGen), never generated on vanilla terrain.
+            // (FP-01: the server's generator passes its own wrapper, bound to itself)
             new Spec(Feature.Terrain, "Earth's terrain through vanilla's handler list", "it runs as a Harmony prefix on GenTerra's own method instead", () => new Bind[]
             {
-                new ReplaceHandler(handlers, EnumWorldGenPass.Terrain, typeof(GenTerra), EarthWorldGen.InPlaceOfGenTerra),
+                new ReplaceHandler(handlers, EnumWorldGenPass.Terrain, typeof(GenTerra), inPlaceOfGenTerra ?? EarthWorldGen.InPlaceOfGenTerra),
             })
             {
                 Instead = new Spec(Feature.Terrain, "Earth's terrain", "this server refuses Earth worlds (vanilla's terrain generator can't be replaced)", () => new Bind[]
@@ -447,6 +455,8 @@ namespace EarthMap
                 new PatchMethod(typeof(GenBlockLayers), "PlaceTallGrass", prefix: P(typeof(BlockLayerAdjustments), nameof(BlockLayerAdjustments.TallGrassCoverPrefix))),
             })
             {
+                // ER-22: set again by this server's binding, not left from an earlier one in the same process
+                Before = () => BlockLayerAdjustments.TallGrassPatched = false,
                 Bound = () => BlockLayerAdjustments.TallGrassPatched = true,
                 // where another mod has wrapped GenBlockLayers' handler already: the same scope around its own (private) method
                 Instead = new Spec(Feature.TallGrass, "the tall grass share of dry land (ranges step 5a)", "dry land keeps vanilla's tall grass density", () => new Bind[]
@@ -879,7 +889,9 @@ namespace EarthMap
             return null;
         }
 
-        /// <summary>Puts vanilla's replaced handlers back (the server stops; Harmony's patches go with UnpatchAll).</summary>
+        /// <summary>Puts vanilla's replaced handlers back. (EarthWorldGen no longer calls it when the server stops, FP-01: the
+        /// handler list is that server's, and vanilla's terrain handler back in it gave a generation thread still running
+        /// after the dispose vanilla terrain.)</summary>
         internal void Release()
         {
             foreach (var r in replaced) r.Undo(harmony);
@@ -985,6 +997,17 @@ namespace EarthMap
                 new PatchMethod(typeof(Block), nameof(Block.PerformSnowLevelUpdate), prefix: P(typeof(EarthGrassWinter), nameof(EarthGrassWinter.SnowPrefix))),
                 new PatchMethod(typeof(BlockSoil), nameof(BlockSoil.ShouldReceiveServerGameTicks), postfix: P(typeof(EarthGrassWinter), nameof(EarthGrassWinter.ShouldTickPostfix))),
                 new PatchMethod(typeof(BlockSoil), nameof(BlockSoil.OnServerGameTick), prefix: P(typeof(EarthGrassWinter), nameof(EarthGrassWinter.OnTickPrefix))),
+            }),
+        };
+
+        /// <summary>Light where snow melts (SnowMeltLight, EA-0063, on the server in Earth worlds): vanilla's snow accumulation
+        /// swaps melting snow through a bulk accessor that does not relight, and no event says a block melted, so a postfix on
+        /// the swap (Block.PerformSnowLevelUpdate, also patched by <see cref="GrassWinterTable"/>) notes the cell.</summary>
+        internal static Spec[] SnowMeltLightTable() => new[]
+        {
+            new Spec(Feature.SnowMeltLight, "light where snow melts (EA-0063)", "rock where a snow block melted stays dark until something else relights it", () => new Bind[]
+            {
+                new PatchMethod(typeof(Block), nameof(Block.PerformSnowLevelUpdate), postfix: P(typeof(SnowMeltLight), nameof(SnowMeltLight.SnowPostfix))),
             }),
         };
 

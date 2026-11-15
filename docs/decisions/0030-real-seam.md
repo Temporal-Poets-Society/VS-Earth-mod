@@ -1,6 +1,6 @@
 # 0030: The real Earth across the seam (no gutter)
 
-Status: Agreed (the user, 2026-10-25); implemented in 0.16.14-realseam.1; installed 2026-10-26 in 0.16.14-playtest.2, not played | Date: 2026-10-25 |
+Status: Agreed (the user, 2026-10-25); built in 0.16.14-realseam.1 (in Earth 1.0.0); in Earth 2.0.0. A new world's seam band has not been checked in game (EA-0001 closed on the author's general review, 12 November) | Date: 2026-10-25 |
 Decided by: the user, after the play-test report on St. Lawrence Island
 
 ## Context
@@ -74,3 +74,9 @@ line. `render` mode takes `NOGUTTER=1`, `GUTTER=n` and `COASTS=1`.
 ## History
 
 - 2026-10-25: capes and a spit tried first; the user chose the real Earth. Implemented in 0.16.14-realseam.1. Not played.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: Agreed (the user, 2026-10-25); implemented in 0.16.14-realseam.1; installed 2026-10-26 in 0.16.14-playtest.2, not played

@@ -42,6 +42,17 @@ namespace EarthMap
             surfaceFlags.TryRemove(ChunkKey(cx, cz), out byte[] flags);
             return flags;
         }
+
+        /// <summary>(FP-13) Whether the terrain writer's flags for a chunk column are still here: past the terrain pass, its surface
+        /// pass never ran (a handler before it in the pass threw, and the game skipped the rest of the pass).</summary>
+        public bool Untaken(int cx, int cz) => surfaceFlags.ContainsKey(ChunkKey(cx, cz));
+
+        /// <summary>Drops a chunk column's entries (a peek's, which no surface pass will take).</summary>
+        public void Drop(int cx, int cz)
+        {
+            surfaceFlags.TryRemove(ChunkKey(cx, cz), out _);
+            ramps.TryRemove(ChunkKey(cx, cz), out _);
+        }
     }
 
     /// <summary>

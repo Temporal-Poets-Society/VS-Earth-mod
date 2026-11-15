@@ -1,0 +1,11 @@
+geometry: ring 25600+204800, wraps True, gutter 0, seam -169.25, 568.89 x 568.36 blocks per degree
+storm edges, rules 5: 3396 storm-moments, 81504 edge points (0.05 % of the radius inside against outside)
+  rain boost jump histogram (0.1 sd bins, last 0.7+): 59645 12162 6546 2631 508 12 0 0
+  largest boost jump 0.550 sd; largest cloudness jump 1.000; largest cover jump 0.640; rain on one side only at 1647, any rain cloud on one side only at 1872 of 81504
+  worst boost: Low 736 (low, R 1094 km, strength 0.94) centre -69.4,-130.5, bearing 255 deg from east, hour 4428: boost 0.550 -> 0.000, cloudness 0.000 -> 0.000, cover 0.000 -> 0.000 over 7.6 blocks
+  worst cloudness: Low 790 (low, R 1543 km, strength 0.48) centre -66.8,52.9, bearing 300 deg from east, hour 5352: boost 0.239 -> 0.000, cloudness 1.000 -> 0.000, cover 1.000 -> 0.989 over 15.0 blocks
+storm edges, rules 9: 3396 storm-moments, 81504 edge points (0.05 % of the radius inside against outside)
+  rain boost jump histogram (0.1 sd bins, last 0.7+): 59645 12162 6546 2631 508 12 0 0
+  largest boost jump 0.550 sd; largest cloudness jump 0.951; largest cover jump 0.696; rain on one side only at 1627, any rain cloud on one side only at 1942 of 81504
+  worst boost: Low 736 (low, R 1094 km, strength 0.94) centre -69.4,-130.5, bearing 255 deg from east, hour 4428: boost 0.550 -> 0.000, cloudness 0.000 -> 0.000, cover 0.000 -> 0.000 over 7.6 blocks
+  worst cloudness: Tropical cyclone 253 (tropical, R 606 km, strength 1.38) centre -16.3,114.7, bearing 210 deg from east, hour 3102: boost 0.422 -> 0.000, cloudness 1.600 -> 0.649, cover 1.000 -> 1.000 over 3.2 blocks

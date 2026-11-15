@@ -24,9 +24,11 @@ namespace EarthMap.Core
             // each cell's own sample, so the cells are read in parallel (in runs of neighbouring cells, as the order keeps them)
             var keys=cell.Distinct().OrderBy(key=>key/1440/24*60+key%1440/24).ThenBy(key=>key).ToArray();
             var wetShare=new double[keys.Length];
-            System.Threading.Tasks.Parallel.ForEach(System.Collections.Concurrent.Partitioner.Create(0,keys.Length,1024),range=>
+            // (ER-25: in runs of 1,024 cells on ParallelWork's few workers, not a raw uncapped Parallel.ForEach)
+            const int Run=1024;
+            ParallelWork.For((keys.Length+Run-1)/Run,j=>
             {
-                for(int k=range.Item1;k<range.Item2;k++)
+                for(int k=j*Run,end=Math.Min(keys.Length,k+Run);k<end;k++)
                 {
                     int key=keys[k];
                     var cs=data.SampleClimate(90-(key/1440+.5)/4,-180+(key%1440+.5)/4);

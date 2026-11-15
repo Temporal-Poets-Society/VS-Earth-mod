@@ -1,6 +1,6 @@
 # 0035: Ship clearance through reviewed sea straits
 
-Status: source implemented; offline clearance/renders checked; game acceptance pending. Date: 2026-10-30. Issue #26.
+Status: Built in 0.17.0-pre.9 (`bae8dc6`); in Earth 1.0.0 and 2.0.0. No ship has been sailed through in game. Date: 2026-10-30. Issue #26.
 
 ## Cause and decision
 
@@ -51,3 +51,9 @@ StraitRules (85) is 1 in new worlds, 0 when absent. Existing worlds only adopt i
 be generated with consistent rules along its full length to form a continuous passage. Ship mods can have larger
 dimensions: six-block depth follows SeaChannels' existing ship contract, not every possible vessel.
 No game client, install, push or commit. Coordinator game-assembly build and ship play-test remain required.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: source implemented; offline clearance/renders checked; game acceptance pending.

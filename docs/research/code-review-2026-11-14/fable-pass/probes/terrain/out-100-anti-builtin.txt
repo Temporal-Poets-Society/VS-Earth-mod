@@ -1,0 +1,39 @@
+data loaded in 960 ms
+Earth layout: 1112.2 blocks per degree east-west (100 m per block at the equator), 1111.6 north-south (stretch 1.00), latitudes shown ñ90ø, seam gutter 0 blocks, world centre at 10.8øE.
+1:100: world 433152 x 200192, ring 400384 from 16384, 100.09 m/block; coasts 1 courses 0 channelRules 0 flowRules 0 dams 0 outlines L0 R0 streams ends works 4 referee 2 coarse 0
+model built in 5941 ms (cache reused [] built [strait-routes-1,sea-channel-ways-1]); rivers 1125856 pieces; managed 1476 MB, working set 1601 MB
+== floats
+  Chukotka (offsets in blocks from the meridian: -40 -20 -10 -5 -3 -2 -1 0 1 2 4 9 19 39)
+    lat  66.00 grid elev    238 ocean 0.00  coast dist:    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0
+                                         column top:   208    208    207    205    205    205    205    204    204    204    204    202    203    205 
+    lat  66.50 grid elev    512 ocean 0.00  coast dist:    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0
+                                         column top:   234    230    231    231    231    230    231    231    230    230    230    229    228    228 
+    lat  67.00 grid elev    383 ocean 0.00  coast dist:    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0
+                                         column top:   218    218    220    219    219    219    219    219    219    219    219    220    220    220 
+    lat  67.50 grid elev    344 ocean 0.00  coast dist:    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0
+                                         column top:   217    216    215    217    217    217    216    216    215    215    215    215    214    219 
+    lat  68.00 grid elev    454 ocean 0.00  coast dist:    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0
+                                         column top:   233    235    230    228    227    227    226    225    224    223    222    217    216    209 
+    lat  68.50 grid elev    248 ocean 0.00  coast dist:    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0
+                                         column top:   195    200    205    207    206    205    205    205    206    206    206    208    210    220 
+  Wrangel (offsets in blocks from the meridian: -40 -20 -10 -5 -3 -2 -1 0 1 2 4 9 19 39)
+    lat  71.00 grid elev    116 ocean 0.00  coast dist:    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0
+                                         column top:   190    185    185    187    188    189    189    188    188    188    188    186    190    190 
+    lat  71.20 grid elev    217 ocean 0.00  coast dist:    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0
+                                         column top:   204    202    203    201    201    201    201    201    201    202    202    203    202    203 
+  Fiji Vanua Levu / Taveuni (offsets in blocks from the meridian: -40 -20 -10 -5 -3 -2 -1 0 1 2 4 9 19 39)
+    lat -16.50 grid elev      8 ocean 0.75  coast dist:   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0
+                                         column top:~  155 ~  161    178    175    166 b  165 b  164 b  164    164    166    168    178    199    201 
+    lat -16.60 grid elev    -42 ocean 1.00  coast dist:   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0
+                                         column top:~  157 ~  154 ~  157 ~  152 ~  150 ~  149 ~  149 ~  150 ~  149 ~  149 ~  149 ~  149 ~  148 ~  146 
+    lat -16.70 grid elev   -233 ocean 1.00  coast dist:   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0
+                                         column top:~  141 ~  137 ~  136 ~  135 ~  135 ~  135 ~  135 ~  135 ~  135 ~  135 ~  135 ~  135 ~  135 ~  138 
+    lat -16.80 grid elev    -19 ocean 1.00  coast dist:   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0
+                                         column top:~  156 ~  159 ~  163    174    166 b  165 b  164 b  164    165    166    168    172    183    215 
+    lat -16.90 grid elev     -2 ocean 1.00  coast dist:   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0   -8.0
+                                         column top:   210    211    177    164    164 b  164 b  164 b  164    164    164    164    179    205    209 
+  control lon 175 Chukotka (offsets in blocks from the meridian: -40 -20 -10 -5 -3 -2 -1 0 1 2 4 9 19 39)
+    lat  67.00 grid elev    523 ocean 0.00  coast dist:    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0
+                                         column top:   232    228    231    229    229    230    230    230    230    231    231    232    232    232 
+    lat  67.50 grid elev    595 ocean 0.00  coast dist:    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0    8.0
+                                         column top:   239    237    237    236    235    235    235    235    234    234    234    233    233    227 

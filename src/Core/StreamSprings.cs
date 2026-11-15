@@ -112,7 +112,7 @@ namespace EarthMap.Core
         /// the block's centre, half a block off, where slopes and banks dropped many springs as "ground".
         /// </summary>
         static TerrainModel.Column BlockColumn(TerrainModel model, int bx, int bz)
-            => model.GenFixRules >= 1 ? model.GetColumn(bx, bz) : model.GetColumn(bx + .5, bz + .5);
+            => model.Rules.CornerColumns ? model.GetColumn(bx, bz) : model.GetColumn(bx + .5, bz + .5);
 
         /// <summary>
         /// Plans a head's spring from the model alone: the same answer in every chunk and at any time. The head is at block

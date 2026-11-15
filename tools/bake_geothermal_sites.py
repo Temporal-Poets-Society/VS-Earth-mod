@@ -1,10 +1,12 @@
 """Bake Earth's geothermal sites (Core.Geothermal; decision 0057; the author: "Hot springs should be only in places with
-hot springs") into two generated C# files:
+hot springs") into two data files the build embeds (EA-0092: generated C# until 14 November 2026, the same values):
 
-- src/Core/GeothermalSites.cs: the Smithsonian Global Volcanism Program's Holocene volcanoes, and GeoNames' hot springs
+- data/geothermal-sites.bin: the Smithsonian Global Volcanism Program's Holocene volcanoes, and GeoNames' hot springs
   (SPNT) and geysers (GYSR) that OpenStreetMap doesn't have within 1 km.
-- src/Core/GeothermalSitesOsm.cs: OpenStreetMap's natural=hot_spring and natural=geyser. It is kept apart because it
+- data/geothermal-osm.bin: OpenStreetMap's natural=hot_spring and natural=geyser. It is kept apart because it
   is ODbL data (a derivative database: offered under ODbL 1.0, (c) OpenStreetMap contributors).
+
+The format is Core.Geothermal.SiteFiles' (src/Core/GeothermalSiteFiles.cs); each file carries its sources' notice.
 
 Sources (each downloaded with the author's permission, 7 November 2026):
 - GVP, Volcanoes of the World, Holocene volcano list: the GVP web feature service
@@ -24,7 +26,8 @@ GeoNames' own volcanoes (VLC) are not used: they carry no ages and include long-
 years), and the GVP list covers the Holocene ones.
 
 For volcano bodies (geothermal rules 2, 0057 part 2) each volcano also gets its GVP number, landform (Core.Geothermal.
-Landform), summit elevation and whether it was active in the game's time. The game happens an unknown time after 1318,
+Landform), summit elevation and whether it was active in the game's time; for their interiors (rules 3, decision 0078)
+the family of its magma from the GVP's major rock type (Core.Geothermal.Magma). The game happens an unknown time after 1318,
 the author's guess 100-200 years: active then is a confirmed eruption starting 1300-1700, or one of the volcanoes erupting
 at least FREQUENT times since (the record before 1700 is thin away from Europe, Japan and Indonesia; a volcano that busy
 now was busy then too).
@@ -32,9 +35,10 @@ now was busy then too).
 Springs: a spring or geyser tagged with a temperature below 25 C, or named as a cold-water geyser (Andernach's,
 driven by gas), is left out. Duplicates within 100 m (a spring mapped as a point and an area) are merged.
 
-Usage: python -I tools/bake_geothermal_sites.py [--gvp CSV] [--eruptions CSV] [--osm JSON] [--geonames ZIP]
+Usage: python -I tools/bake_geothermal_sites.py [--gvp CSV] [--eruptions CSV] [--osm JSON] [--geonames ZIP] [--out DIR]
 """
-import argparse, csv, io, json, math, os, re, zipfile
+import argparse, csv, io, json, math, os, re, struct, zipfile
+from fractions import Fraction
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.environ.get("EARTH_RAW", os.path.join(ROOT, "rawdata"))
@@ -45,6 +49,14 @@ KIND = {"Active": 0, "Holocene": 1, "Uncertain": 2, "HotSpring": 3, "Geyser": 4}
 FORM = {"Composite": 0, "Shield": 1, "Caldera": 2, "Cluster": 3, "Minor": 4}
 ERA = (1300, 1700)
 FREQUENT = 5
+# Core.Geothermal.Magma, in its order (geothermal rules 3, EA-0067): the GVP's Major_Rock_Type as the family of the magma
+# that builds the volcano's interior. No data: by the landform (shields basaltic, the others intermediate), in the game.
+MAGMA = {
+    "Basalt / Picro-Basalt": 1, "Trachybasalt / Tephrite Basanite": 1, "Foidite": 1,
+    "Andesite / Basaltic Andesite": 2, "Trachyandesite / Basaltic Trachyandesite": 2, "Phonolite": 2,
+    "Phono-tephrite /  Tephri-phonolite": 2, "Trachyte / Trachydacite": 2,
+    "Dacite": 3, "Rhyolite": 3,
+}
 
 
 def form(landform):
@@ -67,8 +79,24 @@ def read_era(path):
     return during | {n for n, k in after.items() if k >= FREQUENT}, len(during)
 
 
-def cs(s):
-    return '"' + s.replace("\\", "\\\\").replace('"', '\\"') + '"'
+def f32(text):
+    """The float32 nearest the decimal text (ties to even), as the C# compiler reads a float literal: the generated C# had
+    each coordinate as "%.5f" text, so the data files keep exactly those values. Not through a double (double rounding)."""
+    want = Fraction(text)
+    # the float32 rounding of the double, and its float32 neighbours either side (one step of the bit pattern; a step that
+    # crosses zero or leaves the finite floats is skipped): the nearest of the three is the correctly rounded one
+    bits = struct.unpack("<I", struct.pack("<f", float(text)))[0]
+    best = None
+    for b in (bits, bits - 1, bits + 1):
+        if not 0 <= b <= 0xFFFFFFFF or (b ^ bits) & 0x80000000:
+            continue
+        c = struct.unpack("<f", struct.pack("<I", b))[0]
+        if math.isnan(c) or math.isinf(c):
+            continue
+        d = abs(Fraction(c) - want)
+        if best is None or d < best[0] or (d == best[0] and b % 2 == 0):
+            best = (d, c)
+    return best[1]
 
 
 def km(a, b):
@@ -116,7 +144,7 @@ def read_gvp(path):
                 kind = "Holocene"
             elevation = int(round(float(r["Elevation"]))) if r["Elevation"].strip() else 0
             sites.append((lat, lon, kind, r["Volcano_Name"].strip(), r["Volcano_Number"].strip(),
-                          form(r["Volcanic_Landform"].strip()), elevation))
+                          form(r["Volcanic_Landform"].strip()), elevation, MAGMA.get(r["Major_Rock_Type"].strip(), 0)))
     return sites
 
 
@@ -172,22 +200,21 @@ def dedupe(points, limit_km):
     return kept
 
 
-def write(path, header, arrays):
-    lines = [f"// {h}" if h else "//" for h in header]
-    lines += ["namespace EarthMap.Core", "{", "    public static partial class Geothermal", "    {"]
-    for name, typ, values in arrays:
-        lines.append(f"        static readonly {typ}[] {name} = {{")
-        per = 8 if typ != "string" else 4
-        for i in range(0, len(values), per):
-            lines.append("            " + " ".join(v + "," for v in values[i:i + per]))
-        lines.append("        };")
-    lines += ["    }", "}", ""]
-    with open(path, "w", encoding="utf8", newline="\n") as f:
-        f.write("\n".join(lines))
+def head(magic, notice):
+    n = "\n".join(notice).strip("\n").encode("utf8")
+    return magic.encode("ascii") + struct.pack("<ii", 1, len(n)) + n
 
 
-def latlon(sites):
-    return [f"{v:.5f}f" for s in sites for v in (s[0], s[1])]
+def springs(sites):
+    out = struct.pack("<i", len(sites))
+    out += b"".join(struct.pack("<f", f32(f"{v:.5f}")) for s in sites for v in (s[0], s[1]))
+    out += bytes(KIND[s[2]] for s in sites)
+    return out
+
+
+def write(path, data):
+    with open(path, "wb") as f:
+        f.write(data)
 
 
 def main():
@@ -196,7 +223,7 @@ def main():
     ap.add_argument("--eruptions", default=os.path.join(RAW, "gvp-eruptions", "Smithsonian_VOTW_Holocene_Eruptions.csv"))
     ap.add_argument("--osm", default=os.path.join(RAW, "osm-geothermal", "osm-hot-springs-geysers.json"))
     ap.add_argument("--geonames", default=os.path.join(RAW, "geonames", "allCountries.zip"))
-    ap.add_argument("--out", default=os.path.join(ROOT, "src", "Core"))
+    ap.add_argument("--out", default=os.path.join(ROOT, "data"))
     a = ap.parse_args()
 
     volcanoes = sorted(read_gvp(a.gvp))
@@ -214,8 +241,8 @@ def main():
     oc = {k: sum(1 for v in osm if v[2] == k) for k in ("HotSpring", "Geyser")}
     gc = {k: sum(1 for v in geonames if v[2] == k) for k in ("HotSpring", "Geyser")}
 
-    write(os.path.join(a.out, "GeothermalSites.cs"), [
-        "Generated by tools/bake_geothermal_sites.py. Do not edit.",
+    n = len(volcanoes)
+    sites = head("EGEO", [
         "Holocene volcanoes: Global Volcanism Program, Smithsonian Institution, Volcanoes of the World, Holocene volcano",
         "list (web feature service GVP-VOTW:Smithsonian_VOTW_Holocene_Volcanoes, retrieved 7 November 2026): "
         + ", ".join(f"{n} {k}" for k, n in vc.items()) + ".",
@@ -224,29 +251,29 @@ def main():
         "Hot springs and geysers: GeoNames allCountries (CC BY 4.0, https://download.geonames.org/export/dump/),",
         "feature codes SPNT and GYSR, those without an OpenStreetMap one within 1 km: "
         + ", ".join(f"{n} {k}" for k, n in gc.items()) + ".",
-    ], [
-        ("GvpLatLon", "float", latlon(volcanoes)),
-        ("GvpKind", "byte", [str(KIND[v[2]]) for v in volcanoes]),
-        ("GvpName", "string", [cs(v[3]) for v in volcanoes]),
-        ("GvpNumber", "int", [v[4] for v in volcanoes]),
-        ("GvpForm", "byte", [str(v[5]) for v in volcanoes]),
-        ("GvpElevation", "short", [str(max(-11000, min(9000, v[6]))) for v in volcanoes]),
-        ("GvpEra", "bool", ["true" if v[4] in era else "false" for v in volcanoes]),
-        ("GeoNamesSpringLatLon", "float", latlon(geonames)),
-        ("GeoNamesSpringKind", "byte", [str(KIND[v[2]]) for v in geonames]),
     ])
-    write(os.path.join(a.out, "GeothermalSitesOsm.cs"), [
-        "Generated by tools/bake_geothermal_sites.py. Do not edit.",
+    sites += struct.pack("<i", n)
+    sites += b"".join(struct.pack("<f", f32(f"{x:.5f}")) for v in volcanoes for x in (v[0], v[1]))
+    sites += bytes(KIND[v[2]] for v in volcanoes)
+    for v in volcanoes:
+        name = v[3].encode("utf8")
+        sites += struct.pack("<i", len(name)) + name
+    sites += b"".join(struct.pack("<i", int(v[4])) for v in volcanoes)
+    sites += bytes(int(v[5]) for v in volcanoes)
+    sites += b"".join(struct.pack("<h", max(-11000, min(9000, int(v[6])))) for v in volcanoes)
+    sites += bytes(1 if v[4] in era else 0 for v in volcanoes)
+    sites += bytes(int(v[7]) for v in volcanoes)
+    sites += springs(geonames)
+    write(os.path.join(a.out, "geothermal-sites.bin"), sites)
+    osm_file = head("EGOS", [
         "",
         "Hot springs and geysers from OpenStreetMap (natural=hot_spring, natural=geyser; Overpass API, data of " + stamp + ").",
         "(c) OpenStreetMap contributors. This list is a derivative database of OpenStreetMap and is available under the",
         "Open Database License 1.0 (https://opendatacommons.org/licenses/odbl/1-0/); see https://www.openstreetmap.org/copyright.",
         "Changed: positions (areas by their centre) and kind only; springs tagged below 25 C and cold-water geysers left out ("
         + str(cold) + "); duplicates within 100 m merged. " + ", ".join(f"{n} {k}" for k, n in oc.items()) + ".",
-    ], [
-        ("OsmSpringLatLon", "float", latlon(osm)),
-        ("OsmSpringKind", "byte", [str(KIND[v[2]]) for v in osm]),
-    ])
+    ]) + springs(osm)
+    write(os.path.join(a.out, "geothermal-osm.bin"), osm_file)
     print("volcanoes", vc, "| active in the game's time", era_count, f"({during} with an eruption {ERA[0]}-{ERA[1]})",
           "| OSM", oc, "cold left out", cold, "| GeoNames kept", gc, "of", len(geonames_all))
 

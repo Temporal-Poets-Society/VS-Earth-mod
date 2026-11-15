@@ -3,6 +3,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <!-- all of Core: the catalogue's scale is the world's EarthGeometry, which needs the rest of Core -->
-    <Compile Include="../../src/Core/*.cs" Link="Core/%(Filename)%(Extension)" />
+    <ProjectReference Include="..\Earth.Core.Tests.Common\Earth.Core.Tests.Common.csproj" />
   </ItemGroup>
 </Project>

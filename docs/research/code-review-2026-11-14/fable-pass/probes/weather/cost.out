@@ -1,0 +1,256 @@
+lake outlines (synthetic)
+  ok   reach at 1113 m per block: 6 blocks (6)
+  ok   in L by its west shore: inside True, level 100, 5.00 blocks (5)
+  ok   in L by the tile's cut, west of it: 6.00 blocks (Reach: the cut is no shore)
+  ok   in L by the tile's cut, east of it: inside True, 6.00 blocks (Reach)
+  ok   in L by its east shore in the next tile: 3.00 blocks (3)
+  ok   on the island beside the pond: inside False, level 120, 0.67 blocks (0.67), hold 120
+  ok   in the salt pond on the island: inside True, level 120, flags 1
+  ok   north of L: level 100, 5.00 blocks (5), no hold
+  ok   north of L across the tile edge: level 100, 3.00 blocks (3)
+  ok   in M against a tile without lakes: 1.00 blocks (1: that side is a shore)
+  ok   north of M in the tile without lakes: level 80, 2.00 blocks (2)
+  ok   a tile without data: the grid decides
+works after 1318
+  ok   inside the sea of 1318: sea, as far from its shore as the area's edge, with or without an outline there
+  ok   beside it: land no farther from the sea than the nearer of the two shores
+  ok   inside the land of 1318 over today's water: land
+  ok   no area near: the outline alone
+  ok   Maasvlakte 2: sea in 1318 (works rules 4)
+  ok   Maasvlakte 2: as today in a world of works rules 3
+  ok   the Corinth Canal: land in 1318 (works rules 4)
+  ok   the Corinth Canal: as today in a world of works rules 3
+  ok   the White Sea-Baltic Canal at Belomorsk: land in 1318 (works rules 4)
+  ok   the White Sea-Baltic Canal at Belomorsk: as today in a world of works rules 3
+  ok   the Ismailia Canal: land in 1318 (works rules 4)
+  ok   the Ismailia Canal: as today in a world of works rules 3
+  ok   Flevoland: sea in 1318
+  ok   the Noordoostpolder: sea in 1318
+  ok   the Wieringermeer: sea in 1318
+  ok   the Lauwerszee: sea in 1318
+  ok   the Beemster: lake in 1318
+  ok   the Haarlemmermeer: lake in 1318
+  ok   Loosdrecht's lakes: land in 1318
+  ok   Utrecht: as today in 1318
+  ok   the Middelzee: as today in 1318
+  ok   the Biesbosch: as today in 1318
+  ok   Paris: as today in 1318
+river outlines: course search and file (synthetic)
+  ok   within the course's reach (44.6 blocks) NearestCourse gives Nearest's hit
+  ok   beyond its reach: Nearest has none, NearestCourse the course 64.6 blocks off, at its level there
+  ok   nothing beyond the search distance
+  ok   the rivers' file reads as rivers, not as lakes; reach at 1:10 16 blocks (16)
+river outlines: Riga at 57°N, narrow pieces in wide water (synthetic)
+  ok   version 3 counts overlapping pieces as one water, version 2 not; reach 4 blocks (4)
+  ok   Riga, version 2: the Daugava just south of 57°N inside True (4.00 blocks: the tile's edge is no shore), north of it True (4.00), land east of it False (2.88, 2.88)
+  ok   Riga, version 3: the Daugava just south of 57°N inside True (4.00 blocks: the tile's edge is no shore), north of it True (4.00), land east of it False (2.88, 2.88)
+  ok   junction, in both pieces: version 2 0.14 blocks (0.14), version 3 0.94 (0.94)
+  ok   junction, in the wide water off the mouth: version 2 0.74 blocks (0.74), version 3 1.38 (1.38)
+  ok   junction, in the narrow piece by the wide water: version 2 0.37 blocks (0.37), version 3 0.93 (0.93)
+  ok   junction, land beside the mouth: 0.46 blocks (0.46), hold 0, the same in both
+  ok   a cell whose centre is in a wide and a narrow piece, in its wide water: version 3 inside True (version 2 False)
+river outlines: which narrow pieces channel rules 1 leave out (synthetic)
+  ok   the channel between them: water with every piece True, with no narrow piece False, with channel rules 1 True (True)
+  ok   the canal: water with every piece True, with no narrow piece False, with channel rules 1 False (False)
+  ok   the river along a course: water with every piece True, with no narrow piece False, with channel rules 1 False (False)
+geothermal: 1214 volcanoes, 5521 hot springs and geysers; Riga 0, Russian plain 0, Hohentwiel 0, Etna 128 (10 km off 85), Kilauea 128, West Eifel 128, hottest site 128; nearest spring to Strokkur 0.00 km, Old Faithful 0.06 km, Hanmer Springs 0.00 km
+  ok   geothermal: no activity at Riga, on the Russian plain or at Hohentwiel (no deep lava)
+  ok   geothermal: 128 under Holocene volcanoes (Etna, Kilauea, West Eifel), less away from them
+  ok   geothermal: never over 128 anywhere, springs add none (no random hot springs, no lava under spa towns)
+  ok   geothermal: the GVP's Holocene volcanoes and over 5000 known hot springs and geysers
+  ok   geothermal: Strokkur, Old Faithful and Hanmer Springs are known springs
+volcanoes: 825 bodies, 332 active in the game's time, 8 lava lakes; Etna Composite active True, Vesuvius active True, Shasta active False, West Eifel body False
+  ok   volcanoes: the GVP's volcanic mountains get bodies (not fields or minor vents), all eight lava lakes among them
+  ok   volcanoes: Etna and Vesuvius (1631) active in the game's time, Shasta (last 1250) dormant, West Eifel (a field) has no body
+  ok   volcanoes: Kilauea's lava lake at Halemaumau, Masaya's at the GVP's place
+data loaded in 646 ms
+sea referee on (sea-referee.bin fits True)
+Earth layout: 562.7 blocks per degree east-west (198 m per block at the equator), 568.4 north-south (stretch 1.01), latitudes shown ±90°, seam gutter 2240 blocks, world centre at 10.8°E.
+  delta Mekong: Tiền (Cổ Chiên): 34 reaches from 10.54,105.527 to 9.852,106.496, +7458 m³/s (now 7548 at the mouth)
+  delta Mekong: main stem below the split 14916 -> 7458 m³/s (43 reaches)
+rivers: 829355 segments indexed in 4108 ms
+Zermatt:
+  ClimateCorrection (rules 3, as the hook)                0.153 us/call      0.0 B/call
+  SampleClimate at ToGeo (season correction)              0.117 us/call      0.0 B/call
+  TrueTemperature                                         0.139 us/call      0.0 B/call
+  StoredTemperature (rules 1 worlds' path)                0.603 us/call      0.0 B/call
+  ClimatePixel (world generation, per pixel)              0.220 us/call      0.0 B/call
+  GetColumn (terrain, per block column)                   1.419 us/call      0.0 B/call
+  Weather TemperatureAnomaly (rules 6, as the hook)       3.176 us/call     32.0 B/call
+    same, one block and hour (memo upper bound)           1.932 us/call     32.0 B/call
+Riga:
+  ClimateCorrection (rules 3, as the hook)                0.065 us/call      0.0 B/call
+  SampleClimate at ToGeo (season correction)              0.048 us/call      0.0 B/call
+  TrueTemperature                                         0.057 us/call      0.0 B/call
+  StoredTemperature (rules 1 worlds' path)                0.183 us/call      0.0 B/call
+  ClimatePixel (world generation, per pixel)              1.485 us/call      0.0 B/call
+  GetColumn (terrain, per block column)                   2.398 us/call      0.0 B/call
+  Weather TemperatureAnomaly (rules 6, as the hook)       2.615 us/call     32.0 B/call
+    same, one block and hour (memo upper bound)           2.204 us/call     32.0 B/call
+Amazon:
+  ClimateCorrection (rules 3, as the hook)                0.063 us/call      0.0 B/call
+  SampleClimate at ToGeo (season correction)              0.051 us/call      0.0 B/call
+  TrueTemperature                                         0.063 us/call      0.0 B/call
+  StoredTemperature (rules 1 worlds' path)                0.194 us/call      0.0 B/call
+  ClimatePixel (world generation, per pixel)              0.196 us/call      0.0 B/call
+  GetColumn (terrain, per block column)                   1.536 us/call      0.0 B/call
+  Weather TemperatureAnomaly (rules 6, as the hook)       2.130 us/call     32.0 B/call
+    same, one block and hour (memo upper bound)           2.093 us/call     32.0 B/call
+Sahara:
+  ClimateCorrection (rules 3, as the hook)                0.048 us/call      0.0 B/call
+  SampleClimate at ToGeo (season correction)              0.041 us/call      0.0 B/call
+  TrueTemperature                                         0.059 us/call      0.0 B/call
+  StoredTemperature (rules 1 worlds' path)                0.182 us/call      0.0 B/call
+  ClimatePixel (world generation, per pixel)              0.266 us/call      0.0 B/call
+  GetColumn (terrain, per block column)                   0.481 us/call      0.0 B/call
+  Weather TemperatureAnomaly (rules 6, as the hook)       2.058 us/call     32.0 B/call
+    same, one block and hour (memo upper bound)           2.086 us/call     32.0 B/call
+Siberia:
+  ClimateCorrection (rules 3, as the hook)                0.059 us/call      0.0 B/call
+  SampleClimate at ToGeo (season correction)              0.046 us/call      0.0 B/call
+  TrueTemperature                                         0.039 us/call      0.0 B/call
+  StoredTemperature (rules 1 worlds' path)                0.162 us/call      0.0 B/call
+  ClimatePixel (world generation, per pixel)              0.517 us/call      0.0 B/call
+  GetColumn (terrain, per block column)                   1.263 us/call      0.0 B/call
+  Weather TemperatureAnomaly (rules 6, as the hook)       2.350 us/call     32.0 B/call
+    same, one block and hour (memo upper bound)           2.115 us/call     32.0 B/call
+Open sea:
+  ClimateCorrection (rules 3, as the hook)                0.057 us/call      0.0 B/call
+  SampleClimate at ToGeo (season correction)              0.044 us/call      0.0 B/call
+  TrueTemperature                                         0.055 us/call      0.0 B/call
+  StoredTemperature (rules 1 worlds' path)                0.178 us/call      0.0 B/call
+  ClimatePixel (world generation, per pixel)              0.193 us/call      0.0 B/call
+  GetColumn (terrain, per block column)                   0.430 us/call      0.0 B/call
+  Weather TemperatureAnomaly (rules 6, as the hook)       2.288 us/call     32.0 B/call
+    same, one block and hour (memo upper bound)           2.063 us/call     32.0 B/call
+Daugava mouth:
+  ClimateCorrection (rules 3, as the hook)                0.058 us/call      0.0 B/call
+  SampleClimate at ToGeo (season correction)              0.047 us/call      0.0 B/call
+  TrueTemperature                                         0.057 us/call      0.0 B/call
+  StoredTemperature (rules 1 worlds' path)                0.159 us/call      0.0 B/call
+  ClimatePixel (world generation, per pixel)              0.714 us/call      0.0 B/call
+  GetColumn (terrain, per block column)                   1.756 us/call      0.0 B/call
+  Weather TemperatureAnomaly (rules 6, as the hook)       2.418 us/call     32.0 B/call
+    same, one block and hour (memo upper bound)           2.064 us/call     32.0 B/call
+Rotterdam:
+  ClimateCorrection (rules 3, as the hook)                0.058 us/call      0.0 B/call
+  SampleClimate at ToGeo (season correction)              0.045 us/call      0.0 B/call
+  TrueTemperature                                         0.057 us/call      0.0 B/call
+  StoredTemperature (rules 1 worlds' path)                0.175 us/call      0.0 B/call
+  ClimatePixel (world generation, per pixel)              0.190 us/call      0.0 B/call
+  GetColumn (terrain, per block column)                   1.502 us/call      0.0 B/call
+  Weather TemperatureAnomaly (rules 6, as the hook)       2.347 us/call     32.0 B/call
+    same, one block and hour (memo upper bound)           2.107 us/call     32.0 B/call
+weather rules 6:
+ Riga:
+  Cloudness (the rain postfix, block centre)              1.914 us/call     32.0 B/call
+  TemperatureAnomaly (the climate hook)                   2.353 us/call     32.0 B/call
+  climate reading: Cloudness + anomaly                    3.966 us/call     64.0 B/call
+  WindAt with gusts (Earth's wind handler)                1.347 us/call     32.0 B/call
+  Storms.Influence                                        0.359 us/call     32.0 B/call
+  CloudCover (one cloud tile)                             1.984 us/call     32.0 B/call
+  FogAt (one weather region)                              0.022 us/call      0.0 B/call
+  HailAt                                                  1.269 us/call      0.0 B/call
+  frame: 4 x FogAt + 4 x HailAt at the player             5.375 us/call      0.0 B/call
+  GetWindSpeedAt: vanilla's handler + Earth's             8.831 us/call    224.0 B/call
+  snow catch-up: 8 corners x 480 hours (per region)    16649.833 us/call 245773.3 B/call
+ Po plain:
+  Cloudness (the rain postfix, block centre)              1.720 us/call     32.0 B/call
+  TemperatureAnomaly (the climate hook)                   1.977 us/call     32.0 B/call
+  climate reading: Cloudness + anomaly                    4.131 us/call     64.0 B/call
+  WindAt with gusts (Earth's wind handler)                1.111 us/call     32.0 B/call
+  Storms.Influence                                        0.206 us/call     32.0 B/call
+  CloudCover (one cloud tile)                             1.684 us/call     32.0 B/call
+  FogAt (one weather region)                              0.023 us/call      0.0 B/call
+  HailAt                                                  1.229 us/call      0.0 B/call
+  frame: 4 x FogAt + 4 x HailAt at the player             4.739 us/call      0.0 B/call
+  GetWindSpeedAt: vanilla's handler + Earth's             7.866 us/call    224.0 B/call
+  snow catch-up: 8 corners x 480 hours (per region)    16322.367 us/call 245773.3 B/call
+ Kansas:
+  Cloudness (the rain postfix, block centre)              1.826 us/call     32.0 B/call
+  TemperatureAnomaly (the climate hook)                   2.135 us/call     32.0 B/call
+  climate reading: Cloudness + anomaly                    4.181 us/call     64.0 B/call
+  WindAt with gusts (Earth's wind handler)                1.123 us/call     32.0 B/call
+  Storms.Influence                                        0.187 us/call     32.0 B/call
+  CloudCover (one cloud tile)                             1.377 us/call     32.0 B/call
+  FogAt (one weather region)                              0.013 us/call      0.0 B/call
+  HailAt                                                  1.129 us/call      0.0 B/call
+  frame: 4 x FogAt + 4 x HailAt at the player             3.815 us/call      0.0 B/call
+  GetWindSpeedAt: vanilla's handler + Earth's             7.991 us/call    224.0 B/call
+  snow catch-up: 8 corners x 480 hours (per region)    14652.800 us/call 245773.3 B/call
+weather rules 7:
+ Riga:
+  Cloudness (the rain postfix, block centre)              1.959 us/call     32.0 B/call
+  TemperatureAnomaly (the climate hook)                   2.497 us/call     32.0 B/call
+  climate reading: Cloudness + anomaly                    4.460 us/call     64.0 B/call
+  WindAt with gusts (Earth's wind handler)                1.310 us/call     32.0 B/call
+  Storms.Influence                                        0.339 us/call     32.0 B/call
+  CloudCover (one cloud tile)                             1.946 us/call     32.0 B/call
+  FogAt (one weather region)                              6.539 us/call     96.0 B/call
+  HailAt                                                  1.322 us/call      0.0 B/call
+  frame: 4 x FogAt + 4 x HailAt at the player            31.338 us/call    384.0 B/call
+  GetWindSpeedAt: vanilla's handler + Earth's             9.616 us/call    224.0 B/call
+  snow catch-up: 8 corners x 480 hours (per region)    16563.467 us/call 245773.3 B/call
+ Po plain:
+  Cloudness (the rain postfix, block centre)              1.737 us/call     32.0 B/call
+  TemperatureAnomaly (the climate hook)                   2.179 us/call     32.0 B/call
+  climate reading: Cloudness + anomaly                    3.891 us/call     64.0 B/call
+  WindAt with gusts (Earth's wind handler)                1.043 us/call     32.0 B/call
+  Storms.Influence                                        0.179 us/call     32.0 B/call
+  CloudCover (one cloud tile)                             1.561 us/call     32.0 B/call
+  FogAt (one weather region)                              6.183 us/call     96.0 B/call
+  HailAt                                                  1.170 us/call      0.0 B/call
+  frame: 4 x FogAt + 4 x HailAt at the player            29.000 us/call    384.0 B/call
+  GetWindSpeedAt: vanilla's handler + Earth's             7.960 us/call    224.0 B/call
+  snow catch-up: 8 corners x 480 hours (per region)    15735.533 us/call 245773.3 B/call
+ Kansas:
+  Cloudness (the rain postfix, block centre)              1.813 us/call     32.0 B/call
+  TemperatureAnomaly (the climate hook)                   2.221 us/call     32.0 B/call
+  climate reading: Cloudness + anomaly                    4.071 us/call     64.0 B/call
+  WindAt with gusts (Earth's wind handler)                1.120 us/call     32.0 B/call
+  Storms.Influence                                        0.173 us/call     32.0 B/call
+  CloudCover (one cloud tile)                             1.861 us/call     32.0 B/call
+  FogAt (one weather region)                              6.337 us/call     96.0 B/call
+  HailAt                                                  1.219 us/call      0.0 B/call
+  frame: 4 x FogAt + 4 x HailAt at the player            30.505 us/call    384.0 B/call
+  GetWindSpeedAt: vanilla's handler + Earth's             8.350 us/call    224.0 B/call
+  snow catch-up: 8 corners x 480 hours (per region)    14497.767 us/call 245773.3 B/call
+weather rules 9:
+ Riga:
+  Cloudness (the rain postfix, block centre)              1.959 us/call     32.0 B/call
+  TemperatureAnomaly (the climate hook)                   0.062 us/call      0.2 B/call
+  climate reading: Cloudness + anomaly                    2.022 us/call     32.1 B/call
+  WindAt with gusts (Earth's wind handler)                1.262 us/call     32.0 B/call
+  Storms.Influence                                        0.352 us/call     32.0 B/call
+  CloudCover (one cloud tile)                             2.021 us/call     32.0 B/call
+  FogAt (one weather region)                              6.528 us/call     96.0 B/call
+  HailAt                                                  1.194 us/call      0.0 B/call
+  frame: 4 x FogAt + 4 x HailAt at the player            31.730 us/call    384.0 B/call
+  GetWindSpeedAt: vanilla's handler + Earth's             6.496 us/call    192.0 B/call
+  snow catch-up: 8 corners x 480 hours (per region)    16060.833 us/call 245773.3 B/call
+ Po plain:
+  Cloudness (the rain postfix, block centre)              1.729 us/call     32.0 B/call
+  TemperatureAnomaly (the climate hook)                   0.059 us/call      0.2 B/call
+  climate reading: Cloudness + anomaly                    1.793 us/call     32.1 B/call
+  WindAt with gusts (Earth's wind handler)                1.087 us/call     32.0 B/call
+  Storms.Influence                                        0.191 us/call     32.0 B/call
+  CloudCover (one cloud tile)                             2.031 us/call     32.0 B/call
+  FogAt (one weather region)                              6.009 us/call     96.0 B/call
+  HailAt                                                  1.212 us/call      0.0 B/call
+  frame: 4 x FogAt + 4 x HailAt at the player            28.965 us/call    384.0 B/call
+  GetWindSpeedAt: vanilla's handler + Earth's             5.350 us/call    192.0 B/call
+  snow catch-up: 8 corners x 480 hours (per region)    15073.133 us/call 245773.3 B/call
+ Kansas:
+  Cloudness (the rain postfix, block centre)              1.908 us/call     32.0 B/call
+  TemperatureAnomaly (the climate hook)                   0.059 us/call      0.2 B/call
+  climate reading: Cloudness + anomaly                    1.922 us/call     32.1 B/call
+  WindAt with gusts (Earth's wind handler)                1.089 us/call     32.0 B/call
+  Storms.Influence                                        0.187 us/call     32.0 B/call
+  CloudCover (one cloud tile)                             1.863 us/call     32.0 B/call
+  FogAt (one weather region)                              6.219 us/call     96.0 B/call
+  HailAt                                                  1.199 us/call      0.0 B/call
+  frame: 4 x FogAt + 4 x HailAt at the player            29.977 us/call    384.0 B/call
+  GetWindSpeedAt: vanilla's handler + Earth's             5.998 us/call    192.0 B/call
+  snow catch-up: 8 corners x 480 hours (per region)    16607.033 us/call 245773.3 B/call
+done
+EXIT 0

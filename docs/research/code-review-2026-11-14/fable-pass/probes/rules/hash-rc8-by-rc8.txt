@@ -1,0 +1,80 @@
+dam course levels 149953 (ok), flow reroutes 448
+model built in 7033 ms; rivers 2766401 segments
+columns 573440 in 12811 ms
+field Beach              FA162C5F8D6B51E5
+field DryRiver           D02399D9B29A2325
+field Edge               D02399D9B29A2325
+field EdgeDepth          D02399D9B29A2325
+field Elev               DED0AAFF65B7844B
+field Fall               D02399D9B29A2325
+field FlowX              FE3A7BE2D18A2E89
+field FlowZ              40044CDF3DCF2AAB
+field Glo90Land          8A7873FDE765E084
+field GridElev           4CD55A3AE021B2C6
+field Gutter             D02399D9B29A2325
+field IceBottom          0BA8BC3DC3B95939
+field IslandOverSea      E48A26F62126A9E4
+field LakeHoldTop        9595EBE5B8FD8E6B
+field LakeRim            9B77F2FCE79E678D
+field LakeRingTop        27CB1397132DD8E3
+field Lat                D7BF871051432325
+field Lon                0E13D9301709B825
+field NearLakeTop        2B13E0D53B93C165
+field NearRiver          4BD09094A9CB2DE5
+field OutlineLake        3DC0FDBF08A158C5
+field Ramp               856F338B6D94E526
+field Rapid              41EA52F0057745E5
+field RapidsReach        DF31364A58511A84
+field River              AB4EAED037FE9465
+field RiverOutline       D0B22109EE1E5304
+field RiverOutlineDist   31EA9BA772982D82
+field RiverOutlineLevel  AF599EBE7318AA3D
+field Shore              94A9F9517B88CA64
+field Spill              D02399D9B29A2325
+field Still              D8C013918CFC6DE4
+field Top                54FA469484DB1FA6
+field Water              9972AF28A56CAAE4
+field WaterTop           100E0087F34D2CF1
+climatepixel BA2DF4BEB88EBFD6
+climate DrySummer        35D42192B9E4A5AC
+climate PenmanFactor     6A9C506A40E88E87
+climate Precip           8614B3B35D394C17
+climate Rain             F7A22F4FF2AD6900
+climate TCold            4B78D2140A271905
+climate TMean            3D37F7CC894973E6
+climate TWarm            EAC7AF8155813416
+place Daugava mouth      9A03A19CF0DF534F
+place Rotterdam          B37B5A04695B13AC
+place Damietta           F6CCC3554283A0F5
+place Rhone mouth        5567CEDBB6390C06
+place Bergen             BBA82C6F9D51A2A7
+place Lake Geneva        2AE210BD717E692A
+place Karkheh            E7C3CCF4D4C22D4B
+place Niger inland       26483314A20C6A59
+place Colorado           976F614C54C9118F
+place Matterhorn         FF5D8A4CAB314AB4
+place Venice             6B0DB162D6677A0A
+place Lena               AE607273CAA1A5C6
+place Amazon mouth       4C22B1ECAE43B209
+place Mississippi delta  686B11F3E99656C2
+place Dead Sea           39E80CCE04DC7425
+place Aral               7F644514F5BE2325
+place Tigris             9247FE6D3F31DEFD
+place Santorini          13A7C4571024C1F5
+place Etna               3D703E5F3DAB233C
+place Panama             8A0ECACFF7BB9BBC
+place Suez               EF6E6F5A3A090542
+place Bosporus           FDCDE5C5D5D5DBF2
+place Messina            D2A42BC88E9A7CD2
+place IJsselmeer         F60E63268C1F092E
+place Riga               CCB73A98D8E42B33
+place Okavango           7D98CF9D35242227
+place Lake Victoria      6A511D697865E624
+place Ganges delta       67283C05A98BA7CC
+place Bering seam        AA4CF1D06D493BC6
+place Fuji               F1ACB7C2BFD9076C
+place Open ocean         D5583D9422C8AC64
+place Niagara            782C5426986E1F55
+place Antarctic coast    0A01635D2492914E
+place Mekong             D001D8C1F6F8E4F0
+place Caspian north      475A366AEF333AED

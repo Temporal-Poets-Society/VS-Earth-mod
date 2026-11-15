@@ -59,14 +59,27 @@ namespace EarthMap.Core
             /// <summary>Centre and strength (wind units at the strongest winds) at a weather hour.</summary>
             public void At(double wh, out double lat, out double lon, out double intensity)
             {
-                double a = (wh - T0) / Life;
+                Centre(wh, out lat, out lon, out int i, out double t);
+                intensity = IntensityAt(wh, i, t);
+            }
+
+            /// <summary>(ER-12) The centre alone, and where along its track it is (step i, fraction t) for
+            /// <see cref="IntensityAt"/>: the two lerps, so a storm out of reach costs no Sin, Log and Exp.</summary>
+            public void Centre(double wh, out double lat, out double lon, out int i, out double t)
+            {
                 double f = (wh - T0) / Step;
-                int i = Math.Clamp((int)Math.Floor(f), 0, Lat.Length - 2);
-                double t = Math.Clamp(f - i, 0, 1);
+                i = Math.Clamp((int)Math.Floor(f), 0, Lat.Length - 2);
+                t = Math.Clamp(f - i, 0, 1);
                 lat = Lat[i] + (Lat[i + 1] - Lat[i]) * t;
                 lon = Geo.Wrap180(Lon[i] + Geo.Wrap180(Lon[i + 1] - Lon[i]) * t);
+            }
+
+            /// <summary>The strength at a weather hour, at step i and fraction t of the track (<see cref="Centre"/>).</summary>
+            public double IntensityAt(double wh, int i, double t)
+            {
+                double a = (wh - T0) / Life;
                 double keep = Keep[i] + (Keep[i + 1] - Keep[i]) * t;
-                intensity = a <= 0 || a >= 1 ? 0 : Peak * PortableMath.Pow(PortableMath.Sin(Math.PI * a), 1.2) * keep;
+                return a <= 0 || a >= 1 ? 0 : Peak * PortableMath.Pow(PortableMath.Sin(Math.PI * a), 1.2) * keep;
             }
 
             /// <summary>Direction of travel (east, north) at a weather hour, unit length.</summary>
@@ -113,19 +126,20 @@ namespace EarthMap.Core
                 public long Used;
             }
 
-            sealed class Last
-            {
-                public long Slot;
-                public Entry Entry;
-            }
-
             readonly ConcurrentDictionary<long, Entry> map = new ConcurrentDictionary<long, Entry>();
             readonly Func<long, Storm[]> build;
             readonly int capacity;
             long clock;
             int count, trimming;
-            // the slot asked for last: nearly every lookup in a game hour asks for the same one (no dictionary, no locks)
-            volatile Last last;
+            // the slot this thread asked for last: nearly every lookup in a game hour asks for the same one (no dictionary, no
+            // locks); per thread (ER-12, W-9), so the server's snow catch-up at past hours and the client at "now" don't take
+            // turns replacing one shared entry
+            // (the owner by number, not the cache: a cache keeps its build delegate and so the model alive)
+            [ThreadStatic] static long lastOwner;
+            static long lastCacheId;
+            readonly long cacheId = Interlocked.Increment(ref lastCacheId);
+            [ThreadStatic] static long lastSlot;
+            [ThreadStatic] static Entry lastEntry;
 
             public SlotCache(int capacity, Func<long, Storm[]> build)
             {
@@ -135,19 +149,23 @@ namespace EarthMap.Core
 
             public Storm[] Get(long slot)
             {
-                var l = last;
-                if (l != null && l.Slot == slot) return l.Entry.Value.Value;
-                if (!map.TryGetValue(slot, out var e))
-                {
-                    // (stamped before it goes in, so a trim right after can't take it for the least recently used)
-                    var made = new Entry { Value = new Lazy<Storm[]>(() => build(slot), LazyThreadSafetyMode.ExecutionAndPublication), Used = Interlocked.Increment(ref clock) };
-                    e = map.GetOrAdd(slot, made);
-                    // (ConcurrentDictionary.Count takes every lock: counted here instead, only when something was added)
-                    if (e == made && Interlocked.Increment(ref count) > capacity) Trim();
-                }
+                if (lastOwner == cacheId && lastSlot == slot) return lastEntry.Value.Value;
+                if (!map.TryGetValue(slot, out var e)) e = Add(slot);
                 Volatile.Write(ref e.Used, Interlocked.Increment(ref clock));
-                last = new Last { Slot = slot, Entry = e };
+                lastOwner = cacheId; lastSlot = slot; lastEntry = e;
                 return e.Value.Value;
+            }
+
+            /// <summary>A slot not in the cache. Its own method (X-R1, the Fable pass): the closure over the slot was made at
+            /// the start of <see cref="Get"/>, 32 bytes on every lookup, hits included.</summary>
+            Entry Add(long slot)
+            {
+                // (stamped before it goes in, so a trim right after can't take it for the least recently used)
+                var made = new Entry { Value = new Lazy<Storm[]>(() => build(slot), LazyThreadSafetyMode.ExecutionAndPublication), Used = Interlocked.Increment(ref clock) };
+                var e = map.GetOrAdd(slot, made);
+                // (ConcurrentDictionary.Count takes every lock: counted here instead, only when something was added)
+                if (e == made && Interlocked.Increment(ref count) > capacity) Trim();
+                return e;
             }
 
             void Trim()
@@ -320,13 +338,15 @@ namespace EarthMap.Core
             foreach (var s in AliveIn(wh))
             {
                 if (!s.AliveAt(wh)) continue;
-                s.At(wh, out double clat, out double clon, out double inten);
-                if (inten <= 0) continue;
+                // (ER-12) the reach first, the strength only for a storm in reach: the same values for those that count
+                s.Centre(wh, out double clat, out double clon, out int step, out double along);
                 double dn = (lat - clat) * 111.32;
                 if (Math.Abs(dn) >= s.RadiusKm) continue;
                 double de = Geo.Wrap180(lon - clon) * 111.32 * PortableMath.Cos((lat + clat) * Math.PI / 360);
                 double r = Math.Sqrt(de * de + dn * dn);
                 if (r >= s.RadiusKm) continue;
+                double inten = s.IntensityAt(wh, step, along);
+                if (inten <= 0) continue;
                 var w = WindOf(s, wh, de, dn, r, clat, inten);
                 e.Wind += w;
                 // rain and pressure scale with the strength now

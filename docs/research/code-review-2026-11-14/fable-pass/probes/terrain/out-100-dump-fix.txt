@@ -1,0 +1,15 @@
+data loaded in 818 ms
+Earth layout: 1112.2 blocks per degree east-west (100 m per block at the equator), 1111.6 north-south (stretch 1.00), latitudes shown ñ90ø, seam gutter 0 blocks, world centre at 10.8øE.
+1:100: world 433152 x 200192, ring 400384 from 16384, 100.09 m/block; coasts 1 courses 4 channelRules 5 flowRules 1 dams 3 outlines L2 R4 streams ends works 4 referee 2 coarse 1
+model built in 7119 ms (cache reused [strait-routes-1,sea-channel-ways-1] built []); rivers 2766401 pieces; managed 2119 MB, working set 2268 MB
+== dump
+  Rotterdam              512x512:    60.18 us/column,    159 B/column | sea:164821 land:67688 bank:11515 beach:9184 river:8093 lake:843
+  Rhine-Maas delta       384x384:    97.17 us/column,      9 B/column | land:62843 sea:57931 bank:12484 beach:7055 river:6633 lake:510
+  Flevoland              384x384:     4.16 us/column,    126 B/column | sea:146584 land:660 beach:211 river:1
+  Wadden / Afsluitdijk   384x384:     4.08 us/column,     38 B/column | sea:147143 land:162 beach:133 river:11 bank:5 lake:2
+  Zeeland                384x384:    12.99 us/column,     80 B/column | land:68513 sea:66512 beach:8958 river:2227 lake:687 bank:559
+  Daugava mouth          256x256:     5.89 us/column,    892 B/column | sea:33825 land:15235 river:8397 bank:6041 beach:1650 lake:388
+  Amazon mouth           256x256:     7.58 us/column,    895 B/column | sea:37562 land:20221 bank:3298 river:3113 beach:1341 lake:1
+  Elbe mouth             256x256:     4.43 us/column,    500 B/column | land:31796 sea:31199 beach:978 river:835 bank:663 lake:65
+  Thames mouth           256x256:     3.85 us/column,    264 B/column | land:41618 sea:18944 beach:3215 bank:1256 river:353 lake:150
+  written <scratch>\fable\probes-terrain\scratch\dump-100-fix.bin

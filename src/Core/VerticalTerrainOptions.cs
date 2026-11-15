@@ -21,7 +21,7 @@ namespace EarthMap.Core
         public bool LocalEcology, PhysicalRock;
         /// <summary>Anything but the pre-0.17 layout: such worlds get climate rules 3 (real rainfall, decision 0009/0031). Every
         /// world made from the menu is; only the test-only legacy profile isn't, so the non-experimental branches where a new
-        /// world's rules are chosen (EarthMapSystem.ComputeParams) are test-only too.</summary>
+        /// world's rules are chosen (WorldParamsBuilder.Build) are test-only too.</summary>
         public bool Experimental => Budget != "legacy" || Curve != "legacy" || Detail != "normal" || LocalEcology || PhysicalRock;
         public int SeaLevel(int height, int vanilla) => Budget == "110" ? Math.Min(110, height / 2) : Budget == "128" ? Math.Min(128, height / 2)
             : Budget == "160" ? Math.Min(160, height / 2) : vanilla;

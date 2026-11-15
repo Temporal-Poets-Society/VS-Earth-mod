@@ -29,7 +29,10 @@
   {
    "code": "type",
    "states": [
-    "pyrite"
+    "pyrite",
+    "kyanite",
+    "sillimanite",
+    "andalusite"
    ]
   },
   {
@@ -39,7 +42,10 @@
     "slate",
     "granite",
     "basalt",
-    "schist"
+    "schist",
+    "gneiss",
+    "quartzite",
+    "phyllite"
    ]
   }
  ],
@@ -48,7 +54,15 @@
   "ore-pyrite-slate",
   "ore-pyrite-granite",
   "ore-pyrite-basalt",
-  "ore-pyrite-schist"
+  "ore-pyrite-schist",
+  "ore-kyanite-schist",
+  "ore-kyanite-gneiss",
+  "ore-kyanite-quartzite",
+  "ore-sillimanite-gneiss",
+  "ore-sillimanite-schist",
+  "ore-andalusite-slate",
+  "ore-andalusite-phyllite",
+  "ore-andalusite-schist"
  ],
  "creativeinventory": {
   "general": [

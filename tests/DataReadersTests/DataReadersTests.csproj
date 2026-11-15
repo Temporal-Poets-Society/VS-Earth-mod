@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- EA-0116 D-R5 (the Fable pass of the 14 November 2026 code review): the Core data readers no test named before,
+       DamRemovalData, TiledGrid and the water overlays (SeaRefereeData, RiverSnapData, RiverArmsData), on the files a
+       server reads. -->
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><LangVersion>12</LangVersion><ImplicitUsings>enable</ImplicitUsings><Nullable>disable</Nullable></PropertyGroup>
+  <ItemGroup><ProjectReference Include="..\Earth.Core.Tests.Common\Earth.Core.Tests.Common.csproj" /></ItemGroup>
+</Project>

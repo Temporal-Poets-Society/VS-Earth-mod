@@ -1,6 +1,6 @@
 # 0010: Real day and night on the Earth map (UTC clock, longitude sun, local time)
 
-Status: **Agreed** (18 October; animal scheduling updated 31 October). Phases 1–2 implemented in 0.14.2 (offline tests pass; in-game checks pending). Phase 5's animal AI schedules are implemented in **Astra Terra for Earth 0.15.0-dev.24** (1356/1356 tests, in-game pending); scripted NPC schedules remain deferred. Phase 3 is **deferred** (the real sun needs AstraTerra for now). Phase 4 is still open | Date: 2026-10-18 |
+Status: **Agreed** (18 October; animal scheduling updated 31 October). Phases 1-2 built in 0.14.2 (in Earth 1.0.0); in Earth 2.0.0. Phase 5's animal schedules are in the Astra Terra fork (earth-dev.24); scripted NPC schedules deferred. Phase 3 deferred (needs Astra Terra). Phase 4 (local civil time) proposed, not built. In-game checks not run | Date: 2026-10-18 |
 Decided by: the user (phases 1–2 asked for on 17 October; option C chosen on 18 October)
 
 Plan and evidence: [`../real-day-night-cycle-plan.md`](../real-day-night-cycle-plan.md) (written 17 October by a Sea
@@ -161,3 +161,9 @@ Earth 0.14.2 + Cylinder World + the branch AstraTerra build, `LongitudeAwareSun:
   the work needed to make it work without AstraTerra. Record Agreed. Phase 4 still open.
 - 2026-10-21: the map's seam is straight from 0.15.3 ([0019](0019-straight-seam.md)): the sky's meridian (`SkyLonAt`) now
   equals the map's longitude everywhere, so the shear exception above no longer applies.
+
+## Status before 15 November 2026
+
+The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):
+
+Status: **Agreed** (18 October; animal scheduling updated 31 October). Phases 1–2 implemented in 0.14.2 (offline tests pass; in-game checks pending). Phase 5's animal AI schedules are implemented in **Astra Terra for Earth 0.15.0-dev.24** (1356/1356 tests, in-game pending); scripted NPC schedules remain deferred. Phase 3 is **deferred** (the real sun needs AstraTerra for now). Phase 4 is still open
