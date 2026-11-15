@@ -247,13 +247,17 @@ foreach(var attr in doc.RootElement.GetProperty("worldConfigAttributes").Enumera
 // 2.0.0-rc.6: the game's text field (GuiElementTextInput.RenderInteractiveElements) turns GL clipping off after it draws,
 // so in a scrolling option list everything drawn after it ran over the screen's edges on a small window (the author: "on
 // smaller resolution in Earth setting GUI if scroll up then text goes over window limit"). No mod code runs on that screen,
-// so the field is the last option of a tab short enough never to scroll (Earth start), and every tab has a name. (2.0.1,
-// decision 0084: kept. Last on the scrolling Earth tab, the field would still draw its own text and caret outside the list
-// when scrolled out of view, since it scissors to its own box and then turns clipping off.)
+// so the field is the last option of a tab short enough never to scroll, and every tab of Earth's own has a name. Since
+// 2.0.3 (decision 0085, the author's choice) Start and Start coordinates are the last options of vanilla's Player spawn and
+// death tab ("spawnndeath", named by the game; mods' options follow the game's own there), after Starting climate, which
+// the random start uses. On the scrolling Earth tab even the best place (right before World height, the only slider:
+// a slider's resting text pushes and pops the list's clip) left the typed coordinates and that slider's bar drawn above
+// the list whenever the tab was scrolled.
+var vanillaTabs=new HashSet<string>{"gamemode","spawnndeath","survivalchallenges","temporalstability","worldgen","multiplayer"};
 var onScreen=doc.RootElement.GetProperty("worldConfigAttributes").EnumerateArray().Where(a=>!a.TryGetProperty("onCustomizeScreen",out var s)||s.GetBoolean()).ToList();
 foreach(var tab in onScreen.GroupBy(a=>a.GetProperty("category").GetString()))
 {
-    Check(lang.RootElement.TryGetProperty("worldconfig-category-"+tab.Key,out _),"Tab name for "+tab.Key);
+    Check(vanillaTabs.Contains(tab.Key) || lang.RootElement.TryGetProperty("worldconfig-category-"+tab.Key,out _),"Tab name for "+tab.Key);
     var list=tab.ToList();
     for(int i=0;i<list.Count;i++)
     {
@@ -262,7 +266,19 @@ foreach(var tab in onScreen.GroupBy(a=>a.GetProperty("category").GetString()))
             Check(i==list.Count-1 && list.Count<=4,$"text field {list[i].GetProperty("code").GetString()} is the last option of a tab that never scrolls ({tab.Key}: {i+1} of {list.Count})");
     }
 }
-Check(onScreen.Any(a=>a.GetProperty("code").GetString()=="earthSpawnCoordinates" && a.GetProperty("category").GetString()=="earthstart"),"Start coordinates is on the Earth start tab");
+{
+    var spawnTab=onScreen.Where(a=>a.GetProperty("category").GetString()=="spawnndeath").Select(a=>a.GetProperty("code").GetString()).ToList();
+    Check(spawnTab.SequenceEqual(new[]{"earthSpawn","earthSpawnCoordinates"}),
+        "Start, then Start coordinates, are Earth's only options on the Player spawn and death tab (2.0.3): "+string.Join(", ",spawnTab));
+    Check(!onScreen.Any(a=>a.GetProperty("category").GetString()=="earthstart") && !lang.RootElement.TryGetProperty("worldconfig-category-earthstart",out _),
+        "No Earth start tab any more (2.0.3)");
+    foreach(var tabTextKey in new[]{"worldattribute-earthSpawn-desc","playstyle-desc-preset-earth","playstyle-desc-preset-earth-200",
+        "playstyle-desc-preset-earth-50","playstyle-desc-preset-earth-25","playstyle-desc-preset-earth-10"})
+    {
+        string tabText=lang.RootElement.TryGetProperty(tabTextKey,out var tabTextEl)?tabTextEl.GetString()??"":"";
+        Check(tabText.Length>0 && !tabText.Contains("Earth start tab") && !tabText.Contains("Spawn & Death"),tabTextKey+" names the tabs as the game does");
+    }
+}
 foreach(var attr in doc.RootElement.GetProperty("worldConfigAttributes").EnumerateArray())
 {
     if(attr.GetProperty("code").GetString()=="earthRocks")Check(attr.GetProperty("default").GetString()=="vanilla","Rocks and ground defaults to vanilla (the author, 15 November 2026, Earth 2.0.1, decision 0084)");

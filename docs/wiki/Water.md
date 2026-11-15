@@ -10,12 +10,13 @@ banks, drains away where it is opened, and every source block you take out leave
 
 **Earth (with Hydrology):** Earth tells Hydrology where its rivers are, how high each stretch stands and which way it
 flows. Hydrology, which Earth needs, then keeps the water where it belongs:
-- **Calm rivers flow.** A calm river's surface is gently flowing water: boats drift slowly with it, and it sounds like
-  a creek. Placing or breaking a block in it doesn't leave patches of still water around it.
+- **Calm rivers flow.** A calm river's surface is gently flowing water: it carries the game's gentle current, and it
+  sounds like a creek. Placing or breaking a block in it doesn't leave patches of still water around it.
 - **Steps and rapids.** A river steps down its valley as a staircase of flat pools. Where it falls steeply for its size,
   the drops between the pools are white water (rapid water), which pushes boats harder and is loud. Between the drops,
   and on every other river, the current is gentle.
-- **Water stays put.** Water stands where it is held. Dig a channel from a river or a lake and it fills; open a pond's
+- **Water stays put.** Water stands where it is held. Dig a channel two blocks wide from a river or a lake and it fills (a one-wide channel carries
+  flowing water only a few blocks); open a pond's
   bank and it drains downhill over time. Build a dam across a river and the pool behind it fills up to the crest.
 - Water wheels on rapids turn with the river's real fall and flow.
 
@@ -58,7 +59,7 @@ Ponds in caves are the game's in every case.
 
 ## Hot springs and lava
 
-Hot springs come only where real ones are, and lava lies deep under real volcanoes only, never springing out of a
+Hot springs come only where real ones are, and lava lies only in and under real volcanoes, never springing out of a
 mountain side. See [Terrain](Terrain#volcanoes-and-hot-springs).
 
 ## Hydrate or Diedrate
@@ -71,11 +72,13 @@ others, and salty in some.
 - **With Earth's own rocks and ground** (Ground columns or Regional, and Earth biomes), Earth gives HoD its aquifers from
   a real water table: the ground water lies close under the surface near rivers, lakes and wetlands, and deeper under
   hills and in dry land. How much water a place holds comes from the real ground there: sand, gravel, karst and
-  fractured rock hold a lot, clay and unbroken granite little. Water is salty under salt flats and salt lakes, and
-  everywhere deeper than about 500 m.
+  fractured rock hold a lot, clay and unbroken granite little. Water is salty under salt flats and salt lakes, under the sea floor and near
+  the coast below the fresh water, and everywhere deeper than about 500 m.
 - This needs a HoD that uses aquifer data version 2 (2.5.8 does); with another, HoD makes its own aquifers and the log
   says so.
 - Only ground made while HoD is installed gets Earth's aquifers. Add HoD to an existing world and only new land has them.
 
-HoD's wells have their own rules about which blocks take a well (a pickaxe in rock, a shovel in soil, sand and gravel).
-Some of Earth's ground blocks, such as till, silt, marl and loess, don't take a well in HoD yet.
+HoD's wells have their own rules. In HoD 2.5.8 only a well dug with a pickaxe in rock reads Earth's aquifers. A well dug
+with a shovel in soil, sand or gravel is a shallow well: it ignores the aquifer and needs surface water within 3 blocks,
+so the water held in sand and gravel doesn't reach it. Some of Earth's ground blocks, such as till, silt, marl and
+loess, don't take a well in HoD yet.

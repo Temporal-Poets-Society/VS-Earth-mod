@@ -2,7 +2,17 @@
 
 What each version changed. What the current version needs and does is in [README.md](README.md).
 
-## 2.0.2 (16 November 2026)
+## 2.0.3 (15 November 2026)
+
+- **Start and Start coordinates are on the game's Player spawn and death tab**, below Starting climate, which a random
+  start uses; the separate Earth start tab is gone ([decision 0085](docs/decisions/0085-start-on-the-spawn-tab.md)).
+  They are named Earth · Start and Earth · Start coordinates. The game's text field draws outside a list that scrolls,
+  so it stays off the long Earth tab, which now scrolls cleanly. The keys and values are the same, so world
+  configurations and saved worlds are unchanged.
+- Start's description points to Starting climate instead of a "Spawn & Death tab"; the play styles' texts say where the
+  start is.
+
+## 2.0.2 (15 November 2026)
 
 - **A new world whose first start stopped opens again** with Astra Terra for Earth. 2.0.1's morning start moved a new
   world's clock back for a spawn east of longitude 0, and the game's rift weather then failed the start of a world whose

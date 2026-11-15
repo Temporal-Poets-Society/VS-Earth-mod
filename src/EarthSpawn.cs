@@ -45,7 +45,7 @@ namespace EarthMap
                 }
                 else
                 {
-                    notice = string.Format("Earth: the Earth start tab's coordinates '{0}' couldn't be read ({1}), so this world starts at a random place " +
+                    notice = string.Format("Earth: Start coordinates '{0}' couldn't be read ({1}), so this world starts at a random place " +
                         "at the starting climate. Coordinates work as {2}.", coords, why, Coordinates.Formats);
                     log.Warning("{0}", notice);
                 }

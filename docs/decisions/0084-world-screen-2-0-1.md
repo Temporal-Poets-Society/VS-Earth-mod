@@ -1,6 +1,8 @@
 # 0084: The world screen in 2.0.1: vanilla rocks by default, the start options' own tab kept, rain and storm frequency off the screen, one canals switch, coordinates from Google Maps
 
 Status: built, in Earth 2.0.1 (EA-0134; items 4 and 5 EA-0136). New worlds only: saved worlds keep the choices their params froze.
+Item 2 is replaced by [0085](0085-start-on-the-spawn-tab.md) (2.0.3): Start and Start coordinates are on the game's
+Player spawn and death tab.
 Date: 2026-11-15.
 
 ## What the author asked
@@ -35,7 +37,7 @@ How each is built was left to the maintainer (D72).
      (SavedWorldDigestTests `2.0.1`) equal 2.0.0's in all 77 hashes: the digest covers the terrain model's columns, which
      the rock choice doesn't touch, so they keep the release's record but say nothing about the rocks; a default world's
      rocks were seen in the 2.0.1 self test and bench start (EA-0134).
-2. **The start options keep their own tab.** The game forces it. Its text field (`GuiElementTextInput`, decompiled
+2. **The start options keep their own tab** (replaced by [0085](0085-start-on-the-spawn-tab.md) in 2.0.3). The game forces it. Its text field (`GuiElementTextInput`, decompiled
    1.22.7) sets a scissor to its own box, draws its text and caret, then turns scissoring off, and the option list
    (`GuiElementContainer`) draws every option of the tab each frame in order. On the scrolling Earth tab (twenty
    options), everything after the field would draw over the window's edges (what the author saw before 2.0.0-rc.6),

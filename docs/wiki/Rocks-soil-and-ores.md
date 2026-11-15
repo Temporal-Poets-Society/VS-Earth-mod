@@ -12,12 +12,15 @@ them, with soil, sand or gravel on top by climate.
 - **Vanilla rock layers** (default): the game makes its own rock layers under Earth's landscape, as in any vanilla
   world. Soil still follows Earth's real climate (below).
 - **Ground columns: real soil, sediments and rock.** The rock is the real rock of each region, from real geological maps:
-  limestone where the land is limestone, granite where it is granite, basalt in Iceland. Over it, the ground is built from real data:
-  the soil by its real soil type, and the real sediments below it, metre by metre, such as glacial till over northern
-  Europe, loess in China and on the Danube plains, laterite in the tropics, salt crust and gypsum crust in deserts,
-  frozen ground in the Arctic. The sea floor gets its own sediment, and beaches their sand, gravel or rock. Around the
-  Baltic (20–29° E, 53.5–60° N) the real bedrock layers continue down to the crystalline basement.
+  limestone where the land is limestone, granite where it is granite, basalt in Iceland. Over it, the ground is built
+  from real data: the soil by its real soil type, and the real sediments below it, metre by metre, such as glacial till
+  over northern Europe, loess in China and on the Danube plains, laterite in the tropics, salt crust and gypsum crust in
+  deserts, frozen ground in the Arctic. The sea floor gets its own sediment, and beaches their sand, gravel or rock.
+  Around the Baltic (20–29° E, 53.5–60° N) the real bedrock layers continue down to the crystalline basement.
 - **Regional rock regions only:** the real rock regions and surface materials, without the deep ground columns.
+
+With both of Earth's choices, five rocks join vanilla's where the real land has them: **gneiss, schist, quartzite,
+dolostone and gypsum**.
 
 The first ground-column world on a machine downloads Earth's finer ground data (about 172 MB, kept for every world).
 
@@ -29,7 +32,7 @@ choices; see [Settings](Settings).
 
 ### Earth's ground blocks
 
-With ground columns or regional rocks you'll meet blocks vanilla doesn't have:
+With ground columns you'll meet blocks vanilla doesn't have:
 
 | Block | What it is | Where |
 |---|---|---|
@@ -39,17 +42,25 @@ With ground columns or regional rocks you'll meet blocks vanilla doesn't have:
 | Silt, Colluvium, Weathered rock | Flood silt, slope rubble, rock rotted in place | Valleys, hill slopes, old land |
 | Saprolite, Red saprolite | Rock weathered deep in warm wet climates | The tropics |
 | Mottled laterite, Ironstone crust | Red tropical ground and its hard iron crust | The tropics |
-| Terra rossa | Red clay soil on limestone | Warm karst: the Mediterranean and the subtropics |
+| Terra rossa | Red clay soil on limestone | Warm karst (a yearly mean of 12 °C or more) |
 | Calcrete, Gypcrete, Salt crust | Lime, gypsum and salt crusts | Dry lands and salt flats |
 | Grey-green marl, Lake marl | Limy clay | The Baltic's Devonian beds, old lake beds |
-| Peat with bog iron | Bog peat with iron ore in it | Bogs |
-| Tephra | Volcanic ash | Around volcanoes and on volcanic soils |
+| Peat with bog iron | Bog peat with iron ore in it | Bogs (only with Geology Additions installed) |
+| Tephra | Volcanic ash | On volcanic soils. Fresh ash also lies around every active volcano on land, in every Earth world. |
 | Chalk ooze, Siliceous ooze | Deep-sea sediment | The ocean floor |
-| Gold-, tin- and platinum-bearing sand and gravel | Placer deposits | Sand and gravel in gold, tin and platinum regions |
+| Gold-, tin- and platinum-bearing sand and gravel | Placer deposits | River and outwash sand and gravel; with the ore maps, weighted to the real gold, tin and platinum districts |
 
 Placer sand and gravel can be panned like vanilla's sand and gravel. The crusts, marl, calcrete, laterite's ironstone
 crust and the rock answer a prospecting pick; loose cover such as till, loess and silt doesn't, just as vanilla's soil
 and gravel don't.
+
+### Everyday materials with ground columns
+
+- Vanilla's random patches of clay, peat, gravel and soil are off. Clay and peat come as layers where the ground data
+  maps them.
+- Hard-rock ores lie in the bedrock under the cover, not in the cover itself; where the cover is thick, dig down.
+- Salt lies in evaporite beds and under salt flats.
+- Bauxite, gypsum, natural fire clay (in saprolite) and placers are laid with the ground, whatever the Ores choice.
 
 ## Soil
 
@@ -58,13 +69,15 @@ climate data that formula turns a lot of farmland into sand: olive groves, wheat
 
 **Earth:** every new Earth world, whatever the rock choice, keeps soil on land that is semi-arid or wetter (real
 rainfall at least a fifth of what the land could evaporate), so the Mediterranean, the steppes and the dry savannas
-have soil, grass and farmland. True deserts keep vanilla's sand (warm) and gravel (cold).
+have soil, grass and farmland. True deserts keep vanilla's sand (warm) and gravel (cold). With ground columns, arid land
+shows the top of its own cover instead (sand sheets, silt, fan gravel, salt crust, weathered rock), and the floodplains
+of desert rivers keep their soil.
 
 With ground columns:
 - Naturally black, fertile ground (the chernozem of the steppes) is vanilla's **high fertility soil**.
 - **Terra rossa** lies only on warm karst. Cool or high limestone has dark soil on limestone rubble, or bare rock.
-- **Flint** lies loose in the till, outwash, river gravel and beach shingle of the glaciated north, as the ice spread it
-  from the chalk of Denmark and the North Sea; chert weathers out of limestone almost everywhere.
+- **Flint** lies loose in the till, outwash, river gravel and beach shingle of the lands the ice sheets covered; chert
+  weathers out of limestone almost everywhere.
 
 ## Ores
 
@@ -73,32 +86,37 @@ With ground columns:
 **Earth:** **Terrain · Ores** on the Earth tab:
 - **Vanilla ore deposits, plus Earth's gems and ores** (default): the game places its own deposits, and Earth adds ores
   and gems the game doesn't place, by the game's own deposit rules, in whatever rock the rock choice gives.
-- **Earth ore maps (experimental):** ore districts from real geology and mining records, in suitable host rocks. It also places deposits the game never
-  places (uranium, bauxite, gypsum). This choice is being reworked; expect changes.
+- **Earth ore maps (experimental):** ores are richest in their real districts, from real geology and mining records, in
+  suitable host rocks; copper, tin, iron and coal also occur, more thinly, in suitable rock everywhere. The ore maps also
+  add uranium and the game's corundum ore. This choice is being reworked; expect changes.
 
 ### Earth's ores and gems
 
-| Ore | Smelts to |
-|---|---|
-| Chalcopyrite, Tetrahedrite, Azurite | Copper |
-| Cerussite, Vanadinite, Wulfenite | Lead |
-| Smithsonite, Hemimorphite | Zinc |
-| Sperrylite, native platinum | Platinum |
-| Wolframite (tungsten) | Nothing yet |
+| Ore | Smelts to | Pickaxe |
+|---|---|---|
+| Chalcopyrite, Tetrahedrite, Azurite | Copper | Copper |
+| Cerussite, Vanadinite, Wulfenite | Lead | Copper |
+| Smithsonite, Hemimorphite | Zinc | Copper |
+| Sperrylite | Platinum (see below) | Steel |
+| Native platinum (from platinum placers, ground columns only) | Platinum (see below) | Panning |
+| Wolframite (tungsten) | Nothing yet | Iron |
+| Pyrite | Grinds to sulfur powder | |
 
 Break the chunks into nuggets with a hammer in the crafting grid, as with vanilla's ores, then smelt the nuggets.
+Platinum melts at 1,770 °C, hotter than any vanilla fire, and nothing uses it yet.
 
-**Kyanite, sillimanite and andalusite** are heat-resistant minerals from metamorphic rock: they stand in for bauxite in
-refractory bricks (see [Progression](Progression)). **Pyrite** is there too.
+**Kyanite, sillimanite and andalusite** (ground-column worlds only; copper pickaxe) are heat-resistant minerals from
+metamorphic rock: they stand in for bauxite in refractory bricks (see [Progression](Progression)).
 
-The gems are **beryl, corundum (ruby and sapphire), garnet, spinel, topaz and tourmaline**, in low, medium and high
-grade, in the rocks they form in. They drop rough gems; no recipe uses them yet.
+The gems are **beryl, ruby and sapphire (corundum), garnet, spinel, topaz and tourmaline**, in low, medium and high
+grade, in the rocks they form in. They need a bronze pickaxe and drop rough gems; no recipe uses them yet.
 
 ## Prospecting
 
-The prospecting pick works as in vanilla: break a rock block and it reads the ores around. With ground columns, the
-deep loose cover (till, loess, silt, weathered rock) can be tens of blocks thick in some places, and the pick reads
-nothing in it. Dig down to rock, or to one of the crusts or marls, and prospect there.
+The prospecting pick works as in vanilla: break rock blocks and it reads the ores around (its density search needs
+three samples, as in vanilla). With ground columns, the deep loose cover (till, loess, silt, weathered rock) can be tens
+of blocks thick in some places, and the pick reads nothing in it. Dig down to rock, or to one of the crusts or marls,
+and prospect there.
 
 ## Rock floor
 

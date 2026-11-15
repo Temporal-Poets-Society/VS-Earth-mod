@@ -2,8 +2,8 @@ using System;
 using EarthMap.Core;
 
 /// <summary>
-/// (2.0.1, the author: "make custom starting coordinates format work with copy paste from Google maps coordinates") The Earth
-/// start tab's coordinates, read by Core.Coordinates: what Google Maps gives (the decimal pair of a clicked place, degrees,
+/// (2.0.1, the author: "make custom starting coordinates format work with copy paste from Google maps coordinates") Start
+/// coordinates (on the Player spawn and death tab since 2.0.3), read by Core.Coordinates: what Google Maps gives (the decimal pair of a clicked place, degrees,
 /// minutes and seconds, a link) and the plain form from before, in both hemispheres and signs, at 0 and ±180; and the
 /// reasons it gives for what it can't read.
 /// </summary>

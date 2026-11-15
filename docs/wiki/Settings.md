@@ -2,8 +2,8 @@
 
 Earth has settings in three places:
 
-- **The world creation screen:** the **Earth** play styles, and the **Earth** and **Earth start** tabs under
-  **Customize**. This is where almost every player chooses.
+- **The world creation screen:** the **Earth** play styles, the **Earth** tab under **Customize**, and
+  Earth's two start options on the game's **Player spawn and death** tab. This is where almost every player chooses.
 - **A few hidden world options** that admins can set in a world's configuration, but that aren't on the screen.
 - **The server's `ModConfig/earth.json`:** downloads, start-up and tuning, for server owners.
 
@@ -81,12 +81,14 @@ Two other mods put an option on the Earth tab: Hydrology's **Water flooding** (a
 required) and World Map's **Wmap: explore by sight**. Unlike Earth's own options, both can be changed after the world
 is made. Their own wikis explain them.
 
-## The Earth start tab
+## Start options (Player spawn and death tab)
+
+The last two options of the game's **Player spawn and death** tab, below **Starting climate**:
 
 | Option | Values | What it does |
 | --- | --- | --- |
-| **Map · Start** | **Random place at the starting climate**, 36 capitals (London to Santiago), Coordinates below | Random: dry lowland anywhere whose real yearly mean temperature matches the **Starting climate** on the Player spawn and death tab, the same place for the same seed. A capital or coordinates: the nearest dry, gentle land there. |
-| **Map · Start coordinates** | text | Used when Start is **Coordinates below**. See below. |
+| **Earth · Start** | **Random place at the starting climate**, 36 capitals (London to Santiago), Coordinates below | Random: dry lowland anywhere whose real yearly mean temperature matches the **Starting climate** above it, the same place for the same seed. A capital or coordinates: the nearest dry, gentle land there. |
+| **Earth · Start coordinates** | text | Used when Start is **Coordinates below**. See below. |
 
 **Start coordinates** take what you copy from Google Maps:
 - the numbers it shows when you click a place: `56.949600, 24.105200` (south and west negative);
@@ -97,11 +99,12 @@ You can also type `latitude, longitude` in degrees. If the coordinates can't be 
 at the starting climate, and the host (or a server's admins) are told why in chat. A short share link
 (`maps.app.goo.gl/...`) has no coordinates in it: open it and copy the numbers instead.
 
-These two options have a tab of their own because the game's text field doesn't draw correctly in a list that
-scrolls, and the Earth tab does.
+These two options are not on the Earth tab because the game's text field doesn't draw correctly in a list that
+scrolls, and the Earth tab does. On a window too small for the Player spawn and death tab (1024 × 600), coordinates
+scrolled out of view can draw below the dialog.
 
 **Morning start:** a new world starts in the morning at its spawn. With **Astra Terra for Earth**, whose sun follows the
-real longitudes, Earth moves the new world's clock once (by at most half a day) so that the spawn's local time is the
+real longitudes, Earth moves the new world's clock forward once (by less than a day) so that the spawn's local time is the
 game's start hour. Without it, the sky keeps one clock for the whole world and the start is morning everywhere anyway.
 
 ## Hidden world options
@@ -152,8 +155,8 @@ gets its default.
 | `earthIncludeExtinctAnimals` | `false`, `true` | Nature · Include extinct animals |
 | `earthChickensEverywhere` | `true`, `false` | Nature · Chickens everywhere |
 | `earthWeather` | `"earth"`, `"vanilla"` | Weather · Source |
-| `earthSpawn` | `"random"`, a capital (`"london"`, `"riga"`, `"buenosaires"`, ...: the name in lower case without spaces), `"custom"` | Map · Start |
-| `earthSpawnCoordinates` | `""`, or coordinates as on the screen | Map · Start coordinates |
+| `earthSpawn` | `"random"`, a capital (`"london"`, `"riga"`, `"buenosaires"`, ...: the name in lower case without spaces), `"custom"` | Earth · Start |
+| `earthSpawnCoordinates` | `""`, or coordinates as on the screen | Earth · Start coordinates |
 
 ## `earth.json` (server owners)
 

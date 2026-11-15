@@ -56,7 +56,7 @@ lose their soil.
 **Vanilla:** live temperatures stay between −20 °C and 40 °C.
 
 **Earth:** where the real climate goes further, so does the game (config `ExtendTemperatureRange`, on by default). The
-Antarctic plateau reaches about −50 °C and colder in its winter, and the hottest deserts go past 40 °C in summer. Dress
+Antarctic plateau reaches about −60 °C in its winter, and the hottest deserts go past 40 °C in summer. Dress
 and shelter for it: body temperature, crops and food spoilage all follow these live temperatures.
 
 ## Seasons

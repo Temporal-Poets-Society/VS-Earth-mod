@@ -7,7 +7,8 @@ What happens to your world across Earth updates, and what to keep in mind when y
 **Worlds made with Earth 2.0.0 or later are kept working.** Update Earth and your world goes on as before.
 
 **Worlds made with older Earth versions aren't supported**: 0.x, 1.x (then called Earth Map) and the 2.0.0 release
-candidates. Earth 2.0 is one mod and makes new worlds. Start a new world to play 2.0.
+candidates. Earth 2.0 doesn't refuse to open them, but nothing is promised about what they look like or whether they
+work. Earth 2.0 is one mod and makes new worlds. Start a new world to play 2.0.
 
 ## How Earth keeps a world the same
 
@@ -19,10 +20,12 @@ ground, soil, plants, volcanoes and the rest). After an update, your world keeps
 rock rules it started with, so new chunks always fit the old ones. Improvements to terrain reach **new worlds** only;
 fixes to tree, plant, animal and ore rules do reach new land in existing worlds.
 
-- **Settings are fixed when the world is created.** The choices on the Earth tab (scale, rocks, ores, plants and
-  animals, rivers, springs, ponds, weather) are saved with the world and can't be changed later.
-- **A world can't go back to an older Earth.** Once a world has been opened with a newer Earth, an older Earth refuses to
-  start it, with a message in the server log that names the version that last opened it. The world itself isn't changed.
+- **Settings are fixed when the world is created.** Earth's choices on the Earth tab (scale, rocks, ores, plants and
+  animals, rivers, springs, ponds, weather) are saved with the world; the screen doesn't let you change them later.
+  (Hydrology's Water flooding on that tab can be changed. A few one-shot switches in `earth.json` let an owner change a
+  saved world's canals, rocks, ores or ranges for new land; see [Settings](Settings).)
+- **A world can't always go back to an older Earth.** A world that a newer Earth saved with newer rules or settings is
+  refused by an older Earth, with a message in the server log that names the version that last opened it. The world itself isn't changed.
   Keep the newer Earth, or restore a backup made before the update.
 
 ## When something is missing
@@ -35,7 +38,8 @@ it was. What to do, and the `AcceptMissingFeatures` setting for owners who would
 
 ## Adding and removing mods
 
-- **Cylinder World and Hydrology** must stay installed. Without Cylinder World an Earth world isn't generated as Earth.
+- **Cylinder World and Hydrology** must stay installed. A saved Earth world whose Cylinder World is missing or switched
+  off is refused: the server stops and the world is unchanged.
 - **Hydrate or Diedrate added later:** only land generated from then on gets Earth's aquifers. See [Water](Water).
 - **Plant and animal mods added later** (Floral Zones, Wildcraft Trees, Fauna of the Stone Age): Earth's ranges apply to
   them in land generated from then on; existing forests stay as they are.

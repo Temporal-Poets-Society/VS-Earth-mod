@@ -18,7 +18,11 @@ and it sets the world's size and height for you:
 | Earth · 1:25 | 25 m | 1,635,328 × 801,280 blocks | 512 | in proportion |
 | Earth · 1:10 | 10 m | 4,040,704 × 2,003,968 blocks | 1024 | in proportion |
 
-A sixth scale, **1:5** (5 m a block), is on the Earth tab (**Map · Earth size**), not a play style of its own.
+A sixth scale, **1:5** (5 m a block), is only on the Earth tab (**Map · Earth size**), not a play style of its own. It
+keeps the play style's world height and mountain heights, and its server needs about 7 GB of memory while it starts.
+
+The east-west size includes 16,384 hidden blocks of sea beyond each end of the jump line. The way round the world is
+twice its north-south length: 400,384 blocks at 1:100.
 
 What the scale means for you:
 - **Distances.** At 1:100, London to Paris is about 4,000 blocks; at 1:10 it's ten times that. Coarse scales make a
@@ -45,7 +49,7 @@ Above sea level, the real height of the land is mapped into the blocks left:
   Everest stands near the top of the world.
 - **Map · Mountain heights** and **Map · World height** on the Earth tab change this. See [Settings](Settings).
 
-Real summits are lifted to their surveyed heights where the height data rounds them off (**Map · Summit height
+Real summits are lifted to their surveyed heights where the height data rounds them off (**Terrain · Summit height
 correction**, peaks of 3,000 m and more by default).
 
 ## Latitude and the ring
@@ -67,11 +71,12 @@ the open ocean, most crossings are by sea. Land on the line continues across: St
 
 What it means for you:
 - **Crossing is seamless.** On foot, flying and by boat, the jump keeps your height, your speed, your health and your
-  seat in a boat, and the land ahead is loaded when you arrive.
-- **Building near the seam.** The strip beside the jump line exists twice, once on each side. Blocks you place or break
-  there, and chests you fill, show on the other copy too.
+  seat in a boat, and the land ahead is loaded when you arrive. On a boat you may feel a short tug at the jump.
+- **Building near the seam.** In survival you can't place or break blocks in the strip beside the jump line (Cylinder
+  World protects it; creative players can). The strip exists twice, and what changes in one copy, chests included,
+  shows in the other.
 - **Mist.** Cylinder World can hide the jump in sea mist (its **Seam mist** world option, off by default; admins can
-  turn it on with `/worldconfig cylinderSeamMist true`).
+  turn it on with `/worldconfig cylinderSeamMist true`; it applies from the next start of the world or server).
 - Not yet checked: crossing with several players at once, and crossing in a ship from a ship mod.
 
 ## The ice walls
@@ -85,4 +90,5 @@ it. The walls are Cylinder World's: see its wiki for how they look and are made.
 What it means for you:
 - The walls can't be crossed. A survival player who climbs onto one or gets behind it is put back in front of it.
 - In survival you can't mine the wall, blow it up, or build within 32 blocks of it. Creative players can.
-- The polar regions are cold: down to about −50 °C on the Antarctic plateau in winter. Dress for it.
+- The polar regions are cold: about −60 °C on the Antarctic plateau in winter. Dress for it.
+- Cylinder World's wiki explains the cold near the walls, the lifeless last stretch before them and the sea ice.
