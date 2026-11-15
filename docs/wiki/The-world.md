@@ -62,8 +62,8 @@ See [Climate and seasons](Climate-and-seasons).
 **Earth (with Cylinder World):** the world wraps east to west. Walk, ride, sail or fly far enough east and you arrive in
 the far west, and the other way round, without a loading screen or a fall. Earth cuts the globe along the meridian at
 169.25° W, which runs through the **Bering Strait** between Asia and Alaska and then through the open Pacific to
-Antarctica. The jump happens in a strip of open sea laid along that line, so most crossings are by sea. Land on the line
-continues across: St. Lawrence Island in the Bering Sea, and the Antarctic ice south of about 78.5° S.
+Antarctica. The real Earth runs across the line with no extra strip of sea; since the line runs through the strait and
+the open ocean, most crossings are by sea. Land on the line continues across: St. Lawrence Island in the Bering Sea, and the Antarctic ice south of about 78.5° S.
 
 What it means for you:
 - **Crossing is seamless.** On foot, flying and by boat, the jump keeps your height, your speed, your health and your

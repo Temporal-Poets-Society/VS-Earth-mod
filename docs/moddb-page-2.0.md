@@ -1,7 +1,7 @@
 # Earth 2.0 Mod DB page: draft notes
 
 Draft for the author (EA-0043, 13 November 2026). Nothing here is published; the upload, the page edits and the wording
-are the author's. It describes Earth 2.0.0. The 1.0 page draft is
+are the author's. It describes Earth 2.0.0. **The texts for the 2.0.2 upload are final in [moddb-description.html](moddb-description.html) and [moddb-2.0/](moddb-2.0/) (changelog since 1.0.2, the upload form's facts, the notices for the two old data pages; 15 November 2026); this file stays as the notes they came from.** The 1.0 page draft is
 [moddb-page.md](moddb-page.md); its description, logo and screenshot notes still apply where this file does not replace
 them.
 

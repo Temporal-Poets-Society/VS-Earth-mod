@@ -2,6 +2,14 @@
 
 What each version changed. What the current version needs and does is in [README.md](README.md).
 
+## 2.0.2 (16 November 2026)
+
+- **A new world whose first start stopped opens again** with Astra Terra for Earth. 2.0.1's morning start moved a new
+  world's clock back for a spawn east of longitude 0, and the game's rift weather then failed the start of a world whose
+  first start had stopped before it ran (Cancel while downloading before the world starts, a missing download, a
+  refused start): every later start failed the same way. The clock now only moves forward, by less than a day, and the
+  spawn still starts at 08:00 local. Worlds that started fine are unchanged.
+
 ## 2.0.1 (15 November 2026)
 
 The world creation screen as the author asked after 2.0.0 ([decision 0084](docs/decisions/0084-world-screen-2-0-1.md)),

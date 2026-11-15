@@ -178,7 +178,7 @@ namespace EarthMap
 
         /// <summary>
         /// (2.0.1, EA-0141) A new world starts at the game's morning hour at its spawn, wherever that is: where AstraTerra's sun
-        /// follows Earth's meridians, the clock is moved once (at most half a day either way, Core.SpawnTime) so the spawn's
+        /// follows Earth's meridians, the clock is moved once (forward only, less than a day, Core.SpawnTime) so the spawn's
         /// local hour is the hour the game starts at. Without that, the sky keeps one clock and the start hour is morning
         /// everywhere already, so nothing changes. On a dedicated server too: its first players also start at the world's
         /// spawn, and moving a new world's clock before anyone has played changes nothing else (no saved world's clock moves).
@@ -190,7 +190,7 @@ namespace EarthMap
             if (cal == null) return;
             double lon = LongitudeAt(p.SpawnX) ?? p.SpawnLon;
             double before = cal.HourOfDay;
-            double shift = SpawnTime.MorningShift(lon, cal.HoursPerDay, cal.TotalHours);
+            double shift = SpawnTime.MorningShift(lon, cal.HoursPerDay);
             if (Math.Abs(shift) < 1e-6) return;
             cal.Add((float)shift);
             double after = SpawnTime.LocalHour(cal.HourOfDay, lon, cal.HoursPerDay);

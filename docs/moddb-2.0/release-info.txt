@@ -1,0 +1,60 @@
+Earth: Mod DB upload form
+=========================
+
+File:            {{FILE}}            (e.g. earth-2.0.2.zip; the coordinator fills it in)
+SHA-256:         {{SHA256}}
+Mod version:     {{VERSION}}         (2.0.2)
+Mod id:          earth
+Game versions:   tick 1.22.x (1.22.0 and newer; built and tested on 1.22.7)
+Side:            Both (client and server). Earth must be installed on the server and on every player's game.
+                 Only the server downloads Earth's data; clients download nothing beyond the mods.
+
+Required mods (mark as dependencies on this file):
+- Cylinder World 1.1.0 or newer   https://mods.vintagestory.at/cylinderworld
+- Hydrology 0.6.2 or newer        https://mods.vintagestory.at/hydrology
+
+Remove from this file's dependencies (they were required by 1.0.x only):
+- Earth Terrain Data (earthterraindata)
+- Earth Water Data (earthwaterdata)
+Leave them on the 1.0.x files.
+
+Optional, recommended (not dependencies):
+- Sea                         https://mods.vintagestory.at/sea
+- Astra Terra for Earth       https://mods.vintagestory.at/astraearth
+- World Map                   https://mods.vintagestory.at/wmap
+- Floral Zones packs, Wildcraft: Trees and Shrubs (with Herbarium), Fauna of the Stone Age packs, Terrain Slabs
+  (with Place On Slabs): see the description.
+- Hydrate or Diedrate: supported (Earth gives it aquifers from a real water table in worlds with Earth's own rocks).
+
+Not compatible: Realistic Water and Realistic Rapids (through Hydrology, which warns at start).
+
+Suggested category: World generation (worldgen)
+Suggested tags:     Worldgen, Exploration, Climate, Weather, Realism, Geography, Survival
+
+Links:
+- GitHub release:   https://github.com/Temporal-Poets-Society/VS-Earth-mod/releases/tag/v{{VERSION}}
+- Wiki:             https://github.com/Temporal-Poets-Society/VS-Earth-mod/wiki
+- Source:           https://github.com/Temporal-Poets-Society/VS-Earth-mod
+- Issues:           the Mod DB page's comments (or the GitHub repo's issues, if the author enables them)
+- Earth's data:     https://github.com/Temporal-Poets-Society/earth-data , .../earth-ground , .../earth-glo90
+                    (downloaded by the mod at run time; say so on the page, as the description does)
+
+Licence: GPL-3.0 (code). Data under their own licences: earthdata/ATTRIBUTION.txt in the zip. The Copernicus GLO-90
+notice is in the description's credits and on the Earth tab.
+
+Page texts in this folder:
+- description.html                    the whole description field
+- changelog.txt                       this file's changelog field
+- logo.png                            the page's logo (unchanged from 1.0)
+- notice-earth-terrain-data.html      for the top of the Earth Terrain Data page; summary line below
+- notice-earth-water-data.html        for the top of the Earth Water Data page; summary line below
+Summary line for both old pages: "Data for Earth 1.0.x (not needed by Earth 2.0)". Don't mark their files as
+compatible with Earth 2.0.
+
+Summary line for Earth (the short text under the title), suggested:
+"The real Earth: real heights, rivers, coasts, climate and weather, rocks, plants and animals as around 1318."
+
+Before uploading: the Mod DB's rules on mods that download data at run time. The description says what is
+downloaded, from where and how much.
+
+Check: the notices link Earth's page as https://mods.vintagestory.at/earth. If its slug differs, change that link in both notices.

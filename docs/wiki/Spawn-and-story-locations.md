@@ -4,11 +4,11 @@ Where you start, and where the game's story sites and ruins end up on the real E
 
 ## Where you start
 
-**Vanilla:** you start near the middle of the world, in a climate you choose on the **Spawn & Death** tab.
+**Vanilla:** you start near the middle of the world, in a climate you choose on the **Player spawn and death** tab.
 
 **Earth:** **Map · Start** on the **Earth start** tab:
 - **Random place at the starting climate** (default): dry lowland somewhere on Earth whose real yearly mean temperature
-  matches the starting climate you choose on the Spawn & Death tab. Each part of the world (western Europe, East Asia,
+  matches the starting climate you choose on the Player spawn and death tab. Each part of the world (western Europe, East Asia,
   sub-Saharan Africa, eastern North America and so on) gets an equal chance, so starts don't pile up in the big
   continental interiors. The same seed gives the same place.
 - **A capital city:** one of 36 capitals, from London, Paris and Riga to Cairo, Nairobi, Tokyo, Canberra, Washington,

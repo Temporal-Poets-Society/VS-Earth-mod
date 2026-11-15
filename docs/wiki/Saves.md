@@ -15,8 +15,9 @@ candidates. Earth 2.0 is one mod and makes new worlds. Start a new world to play
 with the new rules and can meet old ones with a visible seam.
 
 **Earth:** every world remembers the version of each of Earth's rules it was made with (coasts, rivers, lakes, rocks,
-ground, soil, plants, volcanoes and the rest). After an update, your world keeps making new land with the rules it
-started with, so new chunks always fit the old ones. Improvements to terrain reach **new worlds** only.
+ground, soil, plants, volcanoes and the rest). After an update, your world keeps making new land with the terrain and
+rock rules it started with, so new chunks always fit the old ones. Improvements to terrain reach **new worlds** only;
+fixes to tree, plant, animal and ore rules do reach new land in existing worlds.
 
 - **Settings are fixed when the world is created.** The choices on the Earth tab (scale, rocks, ores, plants and
   animals, rivers, springs, ponds, weather) are saved with the world and can't be changed later.

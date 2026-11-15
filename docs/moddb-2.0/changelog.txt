@@ -1,0 +1,52 @@
+Earth {{VERSION}}: everything since 1.0.2. Earth 2.0 makes new worlds: worlds from 0.x and 1.x are not supported. From 2.0.0 on, saves are kept working.
+
+{{VERSION}}
+- {{2.0.2 FIX: the coordinator fills this in when 2.0.2 is built}}
+
+2.0.1
+- A new world starts in the morning at its spawn, wherever it is. With Astra Terra for Earth, whose sun follows longitude, a start far from Greenwich used to begin at night.
+- Rocks and ground: the game's own rock layers are now the default. Ground columns and regional rocks are still there to choose.
+- Start coordinates can be pasted straight from Google Maps: the numbers for a clicked place, degrees-minutes-seconds, or the map's link. Coordinates that can't be read give a random start and a chat line saying why.
+- New GLO-90 choice, "Download all before the world starts": a new single-player world waits on its loading screen while the land heights download.
+- One "Suez and Panama canals" switch instead of two.
+- Rain and storm frequency are off the world screen; admins can still set them in earth.json or the world's configuration.
+- The Ores choice is now called "Vanilla ore deposits, plus Earth's gems and ores", which is what it always placed.
+- The prospecting pick reads Earth's rock blocks (marl, calcrete, gypcrete, salt crust, ironstone crust). Before, it read nothing where they make the ground.
+
+2.0.0
+Install
+- One mod. Earth Terrain Data and Earth Water Data are no longer needed. The first start downloads Earth's data from GitHub, once per computer: about 290 MB, 170 MB more for ground columns, and the GLO-90 land heights (8.6 GB, in the background, with a progress window). Players joining a server download nothing.
+- Needs Cylinder World 1.1.0 and Hydrology 0.6.2 or newer.
+- A world that a newer Earth saved is refused instead of being damaged. If something a world needs can't start (a removed mod, a game update, a missing file), the server stops and says what, instead of generating wrong land.
+
+World
+- One play style per scale: Earth 1:200, 1:100 (default), 1:50, 1:25 and 1:10, plus 1:5 on the Earth tab. Each sets the world size, height and mountains for its scale.
+- Copernicus GLO-90 land heights at every scale.
+
+Rivers, lakes and coasts as around 1318
+- Rivers follow their real channels, with a gentle current, still backwaters, side channels and one even bed. White water only at the drops of steep rivers. River mouths meet the sea without dredged channels.
+- Rivers in hot deserts that only run after rain are dry beds; fish live in rivers.
+- Reservoirs behind modern dams are gone. 29 canals dug after 1318 are land again (the Kiel, Corinth, Karakum and others). The Zuiderzee and the Dutch lakes are back.
+- Beaches of the coast's own material (sand, gravel or rock), from OpenStreetMap where it maps them. No trees on beaches and low shores.
+- Hot springs only at real hot springs and geysers. Volcanoes have magma chambers and conduits; 332 active ones have craters, fresh ash and, at eight, lava lakes. No more lava pouring out of random mountain sides.
+
+Ground and nature
+- Rocks and ground: the game's rocks, ground columns (real rock, soil and sediments with new ground blocks: till, loess, laterite, salt crust, permafrost and more), or real rock regions only.
+- Soil by real aridity: semi-arid land keeps farmable soil; deserts are sand and gravel.
+- Terra rossa only on warm limestone; loose flint in glacial till; chert on limestone.
+- Refractory bricks without bauxite where Earth's ground decides where bauxite lies: fireclay brick with grog, and kyanite, sillimanite or andalusite (new ores). Volcanic ash in a barrel makes more mortar.
+- Earth's gems and new ores (chalcopyrite, tetrahedrite, azurite, cerussite, vanadinite, wulfenite, smithsonite, hemimorphite, sperrylite) smelt to vanilla metals. Earth's ore maps are an experimental choice.
+- Plants and animals as around 1318: fruit trees, crops and berries in their 1318 ranges; animals in their 1318 ranges; farm animals gone wild where people kept them. Chickens everywhere is on by default.
+- Biomes from the real climate (open prairies and steppes, treeless bogs, dry grass that greens after rain, alpine turf and scree), or the game's own biomes.
+- Trees in Europe chosen by the site's wetness and soil as well as climate.
+- Ruins, traders and translocators only where people lived around 1318.
+
+Weather
+- Earth's own weather from the real climate: wet and dry seasons, monsoons, prevailing winds, moving rain systems, thunderstorms and hail, shared with Sea and other mods.
+
+Faster and lighter
+- Faster world start (a cached model) and less memory.
+
+Fixes
+- No straight seams along whole degrees; no black rock where snow melts; downloads that fail briefly no longer leave coarse heights for good.
+- Many more: the full list is in CHANGELOG.md on GitHub.

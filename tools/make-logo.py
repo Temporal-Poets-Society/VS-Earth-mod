@@ -13,7 +13,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 
-def render(map_path, output_path, scale=1, seam=144):
+def render(map_path, output_path, scale=1, seam=144, badge=None):
     aa = 3 * scale
     width, height = 480 * aa, 320 * aa
     with Image.open(map_path) as source:
@@ -73,6 +73,12 @@ def render(map_path, output_path, scale=1, seam=144):
     heading = font(["georgiab.ttf", "timesbd.ttf"], 50)
     body = font(["georgia.ttf", "times.ttf"], 16)
     draw.text((267 * aa, 57 * aa), "Earth", font=heading, fill=(240, 244, 250))
+    if badge:
+        # A version mark after the title, in the arrow's gold, its baseline on the title's.
+        mark = font(["georgiab.ttf", "timesbd.ttf"], 42)
+        title_box = draw.textbbox((267 * aa, 57 * aa), "Earth", font=heading)
+        mark_box = draw.textbbox((0, 0), badge, font=mark)
+        draw.text((title_box[2] + 8 * aa - mark_box[0], title_box[3] - mark_box[3]), badge, font=mark, fill=(255, 214, 120))
     for line, y_pos in zip(("Real-world terrain", "Climate and weather", "Regional flora and fauna"), (137, 162, 187)):
         draw.text((269 * aa, y_pos * aa), line, font=body, fill=(190, 205, 225))
 
@@ -86,5 +92,6 @@ if __name__ == "__main__":
     parser.add_argument("output", type=Path)
     parser.add_argument("--scale", type=int, choices=(1, 2, 3), default=1)
     parser.add_argument("--seam", type=int, default=144)
+    parser.add_argument("--badge", help="a version mark after the title, e.g. v2")
     args = parser.parse_args()
-    render(args.map, args.output, args.scale, args.seam)
+    render(args.map, args.output, args.scale, args.seam, args.badge)

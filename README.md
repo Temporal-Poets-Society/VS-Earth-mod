@@ -1,10 +1,11 @@
-# Earth 2.0.1 — Vintage Story 1.22
+# Earth 2.0.2 — Vintage Story 1.22
 
-**2.0.1 (15 November 2026).** Earth 2.0 is one mod and makes new worlds. Worlds from older Earth versions (0.x, 1.x and
+**2.0.2 (16 November 2026).** Earth 2.0 is one mod and makes new worlds. Worlds from older Earth versions (0.x, 1.x and
 the 2.0.0 release candidates) are not supported: start a new world. From 2.0.0 on, saves are kept working. 2.0.1 makes
 vanilla rocks the Earth tab's default, takes rain and storm frequency off the world screen, joins the two canal switches,
 reads start coordinates pasted from Google Maps, adds downloading the GLO-90 heights before a world starts, and lets
-the prospecting pick read Earth's rock blocks. What it brings over 1.0.x, and every earlier version, is in
+the prospecting pick read Earth's rock blocks; 2.0.2 fixes a new world that couldn't start again after its first start
+stopped. What it brings over 1.0.x, and every earlier version, is in
 [CHANGELOG.md](CHANGELOG.md).
 
 Earth generates the real Earth in new worlds of its play styles: land and sea floor from real elevation (Copernicus
