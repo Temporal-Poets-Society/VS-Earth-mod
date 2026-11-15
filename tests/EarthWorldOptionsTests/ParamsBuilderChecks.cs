@@ -105,7 +105,12 @@ static class ParamsBuilderChecks
         yield return T("rock floor 128", t => t.SetString("earthRockFloor", "128"));
         yield return T("ground depth terrain", t => t.SetString("earthGroundDepth", "terrain"));
         yield return T("ground depth linear2000", t => t.SetString("earthGroundDepth", "linear2000"));
-        yield return T("both canals", t => { t.SetBool("earthSuezCanal", true); t.SetBool("earthPanamaCanal", true); });
+        // 2.0.1: one canals option ("both canals" keeps its pinned params). With it off (as every new world has it), the two
+        // keys before 2.0.1, now off the screen, each on its own: what a server's world configuration that names them gives
+        yield return T("both canals", t => t.SetBool("earthCanals", true));
+        yield return T("both canals by the keys before 2.0.1", t => { t.SetBool("earthSuezCanal", true); t.SetBool("earthPanamaCanal", true); });
+        yield return T("Suez only by the key before 2.0.1", t => t.SetBool("earthSuezCanal", true));
+        yield return T("Panama only by the key before 2.0.1", t => t.SetBool("earthPanamaCanal", true));
         yield return C("rivers off", c => c.Rivers = false);
         yield return C("islands off", c => c.Islands = false);
         yield return C("coasts off", c => c.Coasts = false);

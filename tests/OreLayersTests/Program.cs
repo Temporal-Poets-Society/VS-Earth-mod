@@ -352,6 +352,48 @@ Check(hard > 0 && hardKept * 2 > hard, "most hard-rock host blocks the draws rea
     Check(threw, "ore layers: a v1 file may not name an underclay rule");
 }
 
+// The prospecting pick reads only blocks marked propickable (ItemProspectingPick.isPropickable). Vanilla marks its rock and
+// ore blocks (Stone and Ore material) and nothing else; every Earth block variant of those materials must be too (the
+// 2.0.1 playtest: Latvia's Devonian marl gave no reading; Fable: laterite-hard, Stone through blockmaterialByType). Each
+// variant is resolved as the game's RegistryObjectType.solveByType does: the first matching wildcard of an XByType key,
+// attributesByType merged into attributes. A variant group loaded from properties counts as one placeholder state.
+{
+    static bool Wild(string pattern, string code) => Regex.IsMatch(code, "^" + Regex.Escape(pattern).Replace("\\*", ".*") + "$");
+    static JsonElement? ByType(JsonElement r, string key, string code)
+    {
+        if (!r.TryGetProperty(key + "ByType", out var bt) || bt.ValueKind != JsonValueKind.Object) return null;
+        foreach (var e in bt.EnumerateObject()) if (Wild(e.Name, code)) return e.Value;
+        return null;
+    }
+    int variants = 0, rockVariants = 0;
+    foreach (var file in Directory.GetFiles(Path.Combine(root, "assets/earth/blocktypes"), "*.json", SearchOption.AllDirectories))
+    {
+        using var doc = JsonDocument.Parse(Json5(File.ReadAllText(file)), new JsonDocumentOptions { AllowTrailingCommas = true, CommentHandling = JsonCommentHandling.Skip });
+        var r = doc.RootElement;
+        if (!r.TryGetProperty("code", out var codeEl)) continue;
+        var codes = new List<string> { codeEl.GetString() };
+        if (r.TryGetProperty("variantgroups", out var groups))
+            foreach (var g in groups.EnumerateArray())
+            {
+                var states = g.TryGetProperty("states", out var st) ? st.EnumerateArray().Select(s => s.GetString()).ToList() : new List<string>();
+                if (states.Count == 0) states.Add("x");
+                codes = codes.SelectMany(c => states.Select(s => c + "-" + s)).ToList();
+            }
+        foreach (var code in codes)
+        {
+            variants++;
+            string mat = ByType(r, "blockmaterial", code)?.GetString() ?? (r.TryGetProperty("blockmaterial", out var m) ? m.GetString() : null);
+            if (mat != "Stone" && mat != "Ore") continue;
+            rockVariants++;
+            bool pick = r.TryGetProperty("attributes", out var at) && at.TryGetProperty("propickable", out var pp) && pp.ValueKind == JsonValueKind.True;
+            var atb = ByType(r, "attributes", code);
+            if (atb is JsonElement a && a.TryGetProperty("propickable", out var pb)) pick = pb.ValueKind == JsonValueKind.True;
+            if (!pick) Check(false, $"{Path.GetRelativePath(root, file)}: {code} is {mat} but the prospecting pick can't read it (propickable)");
+        }
+    }
+    Check(rockVariants > 0, $"prospecting pick: every one of {rockVariants} Stone or Ore variants of Earth's blocks (of {variants}) is propickable");
+}
+
 Console.WriteLine(failures == 0 ? "\nALL PASS" : $"\n{failures} FAILURES");
 return failures == 0 ? 0 : 1;
 

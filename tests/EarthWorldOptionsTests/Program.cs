@@ -247,7 +247,9 @@ foreach(var attr in doc.RootElement.GetProperty("worldConfigAttributes").Enumera
 // 2.0.0-rc.6: the game's text field (GuiElementTextInput.RenderInteractiveElements) turns GL clipping off after it draws,
 // so in a scrolling option list everything drawn after it ran over the screen's edges on a small window (the author: "on
 // smaller resolution in Earth setting GUI if scroll up then text goes over window limit"). No mod code runs on that screen,
-// so the field is the last option of a tab short enough never to scroll (Earth start), and every tab has a name.
+// so the field is the last option of a tab short enough never to scroll (Earth start), and every tab has a name. (2.0.1,
+// decision 0084: kept. Last on the scrolling Earth tab, the field would still draw its own text and caret outside the list
+// when scrolled out of view, since it scissors to its own box and then turns clipping off.)
 var onScreen=doc.RootElement.GetProperty("worldConfigAttributes").EnumerateArray().Where(a=>!a.TryGetProperty("onCustomizeScreen",out var s)||s.GetBoolean()).ToList();
 foreach(var tab in onScreen.GroupBy(a=>a.GetProperty("category").GetString()))
 {
@@ -263,7 +265,7 @@ foreach(var tab in onScreen.GroupBy(a=>a.GetProperty("category").GetString()))
 Check(onScreen.Any(a=>a.GetProperty("code").GetString()=="earthSpawnCoordinates" && a.GetProperty("category").GetString()=="earthstart"),"Start coordinates is on the Earth start tab");
 foreach(var attr in doc.RootElement.GetProperty("worldConfigAttributes").EnumerateArray())
 {
-    if(attr.GetProperty("code").GetString()=="earthRocks")Check(attr.GetProperty("default").GetString()=="groundcolumns","Rocks and ground defaults to ground columns (the author, 7 November)");
+    if(attr.GetProperty("code").GetString()=="earthRocks")Check(attr.GetProperty("default").GetString()=="vanilla","Rocks and ground defaults to vanilla (the author, 15 November 2026, Earth 2.0.1, decision 0084)");
     if(attr.GetProperty("code").GetString()=="earthOreDeposits")Check(attr.GetProperty("default").GetString()=="vanilla","Ores default to vanilla for now (the author, 6 and 7 November)");
     Check(attr.GetProperty("code").GetString()!="earthOres","The single Rocks and ores menu entry is split in two");
     if(attr.GetProperty("code").GetString()=="earthGroundDepth")Check(attr.GetProperty("default").GetString()==EarthMap.Core.GroundColumns.DepthCurve.Default,"Ground depth menu default matches the code's");
@@ -275,14 +277,66 @@ Check(new[]{"125440","500736","5009920"}.All(size=>Elev(null,size)=="glo90" && E
 string Dl(string v){var t=new TreeAttribute();if(v!=null)t.SetString("earthGlo90Download",v);return EarthWorldOptions.Glo90Download(t);}
 Check(Dl(null)==null && Dl("needed")==null && Dl("release")=="release" && Dl("copernicus")=="copernicus" && Dl("bogus")==null,
     "GLO-90 land heights: download all only when the Earth tab asks, from the release or Copernicus");
+bool First(string v){var t=new TreeAttribute();if(v!=null)t.SetString("earthGlo90Download",v);return EarthWorldOptions.Glo90DownloadFirst(t);}
+Check(Dl("first")=="release" && First("first") && !First("release") && !First(null) && !First("copernicus"),
+    "EA-0133: \"before the world starts\" downloads from the release, and only it waits");
+Check(Attr0("earthGlo90Download").GetProperty("values").EnumerateArray().Select(v=>v.GetString()).SequenceEqual(new[]{"needed","release","first","copernicus"}),
+    "EA-0133: the Earth tab offers download all before the world starts beside the other three");
+JsonElement Attr0(string code)=>doc.RootElement.GetProperty("worldConfigAttributes").EnumerateArray().Single(a=>a.GetProperty("code").GetString()==code);
 Check(doc.RootElement.GetProperty("worldConfigAttributes").EnumerateArray().Single(a=>a.GetProperty("code").GetString()=="earthGlo90Download").GetProperty("default").GetString()=="release"
     && doc.RootElement.GetProperty("playStyles").EnumerateArray().Single(p=>p.GetProperty("code").GetString()=="earth").GetProperty("worldConfig").GetProperty("earthGlo90Download").GetString()=="release",
     "GLO-90 land heights: new Earth worlds download all from Earth's data release by default (an older world without the key does not)");
 Check(!doc.RootElement.GetProperty("worldConfigAttributes").EnumerateArray().Single(a=>a.GetProperty("code").GetString()=="earthGlo90Download").TryGetProperty("onCustomizeScreen",out _),
     "GLO-90 land heights is on the Earth tab");
-foreach(var offTab in new[]{"earthElevation"})
+foreach(var offTab in new[]{"earthElevation","earthRainFrequency","earthStormFrequency"})
     Check(doc.RootElement.GetProperty("worldConfigAttributes").EnumerateArray().Single(a=>a.GetProperty("code").GetString()==offTab).TryGetProperty("onCustomizeScreen",out var shown) && !shown.GetBoolean(),
         offTab+" is kept for configs but not on the Earth tab");
+// 2.0.1 (the author, 15 November 2026; decision 0084): every play style takes vanilla rocks, as the row's default does
+foreach(var style in doc.RootElement.GetProperty("playStyles").EnumerateArray())
+    Check(style.GetProperty("worldConfig").GetProperty("earthRocks").GetString()=="vanilla",style.GetProperty("code").GetString()+" takes vanilla rocks and ground");
+// 2.0.1: rain and storm frequency off the screen, kept for admins. The game writes every attribute's default into a new world
+// (WorldConfig.allDefaultValues), so their default is empty and no play style sets them: earth.json decides, unless a
+// world config sets a value
+foreach(var freqKey in new[]{"earthRainFrequency","earthStormFrequency"})
+{
+    Check(Attr(freqKey).GetProperty("default").GetString()=="" && Attr(freqKey).GetProperty("dataType").GetString()=="string",freqKey+": an empty string by default (earth.json decides)");
+    Check(doc.RootElement.GetProperty("playStyles").EnumerateArray().All(ps=>!ps.GetProperty("worldConfig").TryGetProperty(freqKey,out _)),freqKey+": no play style sets it");
+}
+{
+    var admin=new EarthMapConfig{RainFrequency=2,StormFrequency=4};
+    var none=new TreeAttribute();none.SetString("earthRainFrequency","");none.SetString("earthStormFrequency","");
+    var tabNone=EarthWorldOptions.ReadTab(none,admin,null,384);
+    Check(tabNone.RainFrequency==2 && tabNone.StormFrequency==4,"an empty world-config value takes earth.json's rain and storm frequency");
+    var set=new TreeAttribute();set.SetString("earthRainFrequency","0.5");set.SetString("earthStormFrequency","0");
+    var tabSet=EarthWorldOptions.ReadTab(set,admin,null,384);
+    Check(tabSet.RainFrequency==0.5 && tabSet.StormFrequency==0,"a world config's own rain and storm frequency win over earth.json's");
+    var plain=EarthWorldOptions.ReadTab(none,new EarthMapConfig(),null,384);
+    Check(plain.RainFrequency==1 && plain.StormFrequency==1,"without either, the real climate's (1)");
+}
+// 2.0.1 (the author: "panama and Suez can be one setting"): one canals switch, off by default as both were. The two keys
+// before it stay declared but off the screen (Fable's re-review of ee0110f, F1: the game copies only declared options into
+// a new world, and its Modify world screen writes a missing option's default into an older one), and are read whenever the
+// new switch is off
+{
+    var canals=Attr("earthCanals");
+    Check(canals.GetProperty("dataType").GetString()=="bool" && canals.GetProperty("default").GetString()=="false" && canals.GetProperty("category").GetString()=="earth"
+        && !canals.TryGetProperty("onCustomizeScreen",out _),"Map · Suez and Panama canals: one switch on the Earth tab, off by default");
+    foreach(var oldKey in new[]{"earthSuezCanal","earthPanamaCanal"})
+        Check(Attr(oldKey).GetProperty("dataType").GetString()=="bool" && Attr(oldKey).GetProperty("default").GetString()=="false"
+            && Attr(oldKey).TryGetProperty("onCustomizeScreen",out var shownOld) && !shownOld.GetBoolean(),oldKey+": still declared (a server's configuration reaches a new world), off the screen, off by default");
+    Check(doc.RootElement.GetProperty("playStyles").EnumerateArray().All(ps=>ps.GetProperty("worldConfig").TryGetProperty("earthCanals",out var c) && !c.GetBoolean()
+        && !ps.GetProperty("worldConfig").TryGetProperty("earthSuezCanal",out _) && !ps.GetProperty("worldConfig").TryGetProperty("earthPanamaCanal",out _)),
+        "every play style: canals off by the new key alone");
+    string Canals(bool? both,bool? suez,bool? panama){var t=new TreeAttribute();if(both is bool b)t.SetBool("earthCanals",b);if(suez is bool s)t.SetBool("earthSuezCanal",s);if(panama is bool p)t.SetBool("earthPanamaCanal",p);return EarthWorldOptions.CanalCodes(t);}
+    Check(Canals(true,null,null)=="suez,panama" && Canals(true,false,false)=="suez,panama" && Canals(false,false,false)=="" && Canals(false,null,null)=="",
+        "a new world: the canals switch on gives both; off with the old keys off (their defaults), none");
+    Check(Canals(false,true,null)=="suez" && Canals(false,null,true)=="panama" && Canals(false,true,true)=="suez,panama",
+        "the switch off: a server configuration's old keys, each on its own; and an older world edited on the Modify world screen (canals off written in) keeps its own");
+    Check(Canals(null,true,true)=="suez,panama" && Canals(null,true,null)=="suez" && Canals(null,null,true)=="panama" && Canals(null,false,false)=="" && Canals(null,null,null)==""
+        && EarthWorldOptions.CanalCodes(null)=="","a world configuration from before 2.0.1 (no canals key): Suez and Panama each as before");
+}
+CoordinateChecks.Run(Check);
+SpawnTimeChecks.Run(Check);
 // Scale presets (5 November): one Earth play style per scale, each with its world height and mountain heights; no 1:400,
 // no Automatic on the tab
 JsonElement Attr(string code)=>doc.RootElement.GetProperty("worldConfigAttributes").EnumerateArray().Single(a=>a.GetProperty("code").GetString()==code);

@@ -108,9 +108,9 @@ namespace EarthMap
         /// <summary>The Earth tab's choices for a new world of <paramref name="mapHeight"/> blocks (<see cref="EarthTab"/>).</summary>
         public static EarthTab ReadTab(ITreeAttribute wc, EarthMapConfig cfg, EarthData data, int mapHeight)
         {
-            // Two Earth-tab choices (the author, 7 November). "Rocks and ground": ground columns (the default: regional rock
-            // regions, plus real ground columns where the ground data reaches), regional (rock regions only) or vanilla.
-            // "Ores": vanilla (the default for now) or Earth's ore maps. Worlds set up with the earlier single "Rocks and
+            // Two Earth-tab choices (the author, 7 November). "Rocks and ground": vanilla (the menu's default from 2.0.1, the
+            // author on 15 November, decision 0084), ground columns (regional rock regions, plus real ground columns where the
+            // ground data reaches) or regional (rock regions only). "Ores": vanilla (the default for now) or Earth's ore maps. Worlds set up with the earlier single "Rocks and
             // ores" key (earthOres) keep its meaning: vanilla is vanilla rocks and ores, regional and ground columns are
             // that rock choice with the ore maps. Without any key the server config decides, as before.
             string legacy = Get(wc, OresKey, "").Trim().ToLowerInvariant();
@@ -134,6 +134,8 @@ namespace EarthMap
                 IncludeExtinctAnimals = wc?.GetBool("earthIncludeExtinctAnimals", cfg.IncludeExtinctAnimals) ?? cfg.IncludeExtinctAnimals,
                 ChickensByRange = !(wc?.GetBool(ChickensEverywhereKey, true) ?? true),
                 Weather = Choice(wc, "earthWeather", "earth", "vanilla", cfg.Weather),
+                // (2.0.1, decision 0084) not on the world screen: the attributes' default is empty and no play style sets them,
+                // so earth.json decides unless a world config sets a value
                 RainFrequency = Frequency(wc, "earthRainFrequency", cfg.RainFrequency, 3),
                 StormFrequency = Frequency(wc, "earthStormFrequency", cfg.StormFrequency, 5),
                 NoRiverRapids = !Choice(wc, RiverRapidsKey, "steep", "off", true),
@@ -144,7 +146,8 @@ namespace EarthMap
             };
         }
 
-        /// <summary>"Rocks and ground": OresGroundColumns (default), OresRegional or OresVanilla.</summary>
+        /// <summary>"Rocks and ground": OresVanilla (the menu's default from 2.0.1, decision 0084), OresGroundColumns or
+        /// OresRegional.</summary>
         public const string RocksKey = "earthRocks";
         /// <summary>"Ores": OreDepositsVanilla (default for now) or OreDepositsMaps.</summary>
         public const string OreDepositsKey = "earthOreDeposits", OreDepositsVanilla = "vanilla", OreDepositsMaps = "maps";
@@ -316,16 +319,21 @@ namespace EarthMap
         /// the new world opens, from Earth's data release or from Copernicus's originals), or "needed" (squares as the world
         /// reaches them). A world without the key (made before the row existed) downloads as needed: opening an older world
         /// never starts the full download. The world creation screen runs no mod code, so the download can only start once
-        /// the world does.
+        /// the world does. "first" (EA-0133): as "release", but a new single-player world's first opening waits for it on
+        /// the game's loading screen (Core.DownloadFirst).
         /// </summary>
         public const string Glo90DownloadKey = "earthGlo90Download";
 
-        /// <summary>"release" or "copernicus" when the Earth tab asks to download all GLO-90 squares, else null.</summary>
+        /// <summary>"release" or "copernicus" when the Earth tab asks to download all GLO-90 squares ("first" is the release's),
+        /// else null.</summary>
         public static string Glo90Download(ITreeAttribute wc)
         {
             string value = Get(wc, Glo90DownloadKey, "needed").Trim().ToLowerInvariant();
-            return value == "release" || value == "copernicus" ? value : null;
+            return value == "release" || value == "first" ? "release" : value == "copernicus" ? value : null;
         }
+
+        /// <summary>(EA-0133) The Earth tab asks for every GLO-90 square before the world starts.</summary>
+        public static bool Glo90DownloadFirst(ITreeAttribute wc) => Get(wc, Glo90DownloadKey, "needed").Trim().ToLowerInvariant() == "first";
 
         /// <summary>0054: wild chickens wherever the climate suits them (default) instead of their range, so the Americas and
         /// Australia have feathers for arrows until a feather bird covers them.</summary>
@@ -381,6 +389,12 @@ namespace EarthMap
         public const string SizeKey = "earthWorldSize";
         public const string SpawnKey = "earthSpawn";
         public const string SpawnCoordinatesKey = "earthSpawnCoordinates";
+        /// <summary>(2.0.1, the author: "panama and Suez can be one setting") on: both canals. Off: <see cref="SuezKey"/> and
+        /// <see cref="PanamaKey"/> each, the two switches before 2.0.1, still declared but off the screen, so a dedicated
+        /// server's world configuration that names them reaches a new world and a world made before keeps its own (Fable's
+        /// re-review of ee0110f, F1: the game copies only declared options into a new world, and its Modify world screen
+        /// writes a missing option's default into an older world).</summary>
+        public const string CanalsKey = "earthCanals";
         public const string SuezKey = "earthSuezCanal";
         public const string PanamaKey = "earthPanamaCanal";
 
@@ -459,9 +473,12 @@ namespace EarthMap
                     SpawnSearch.ScaleOf(length), width, length, 2 * length, SpawnSearch.SeamMargin);
         }
 
-        /// <summary>The canals switched on in this world, as stored in its EarthParams.Canals.</summary>
+        /// <summary>The canals switched on in this world, as stored in its EarthParams.Canals: both where <see cref="CanalsKey"/>
+        /// is on, else each from the two keys before 2.0.1 (off in a new world unless a server's configuration sets them; an
+        /// existing world keeps its own, so UpgradeExistingWorldCanals reads them as before).</summary>
         public static string CanalCodes(ITreeAttribute wc)
         {
+            if (wc?.GetBool(CanalsKey, false) == true) return "suez,panama";
             bool suez = wc?.GetBool(SuezKey, false) == true, panama = wc?.GetBool(PanamaKey, false) == true;
             return suez && panama ? "suez,panama" : suez ? "suez" : panama ? "panama" : "";
         }

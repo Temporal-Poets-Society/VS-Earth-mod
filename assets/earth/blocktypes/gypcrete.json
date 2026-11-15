@@ -1,6 +1,7 @@
 {
 	"code": "gypcrete",
 	"attributes": {
+		"propickable": true,
 		"handbook": {"extraSections": [{"title": "earth:handbooktitle-geology", "text": "earth:handbooktext-gypcrete"}]},
 		"mapColorCode": "land",
 		"preventsDecay": true

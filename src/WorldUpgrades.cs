@@ -18,7 +18,7 @@ namespace EarthMap
         void Store(EarthParams p);
         /// <summary>The world's params written into the save's data (the rule fixes adopted without a flag).</summary>
         void SaveParams();
-        /// <summary>The world's canals by its options (earthSuezCanal, earthPanamaCanal), as EarthWorldOptions.CanalCodes.</summary>
+        /// <summary>The world's canals by its options (earthCanals, or earthSuezCanal and earthPanamaCanal), as EarthWorldOptions.CanalCodes.</summary>
         string CanalCodes();
         /// <summary>The newest climate fix the loaded Earth data has (0: none).</summary>
         int ClimateFixAvailable { get; }
@@ -169,7 +169,7 @@ namespace EarthMap
         {
             string before = p.Canals ?? "";
             p.Canals = host.CanalCodes();
-            log.Warning("UpgradeExistingWorldCanals: canals in this world now '{0}' (were '{1}', from the world's earthSuezCanal and earthPanamaCanal) for chunks generated from now on. " +
+            log.Warning("UpgradeExistingWorldCanals: canals in this world now '{0}' (were '{1}', from the world's earthCanals, or earthSuezCanal and earthPanamaCanal in a world made before 2.0.1) for chunks generated from now on. " +
                 "Chunks already generated on a canal's course keep their land. The flag is reset once the world is saved.", p.Canals, before);
             return true;
         }

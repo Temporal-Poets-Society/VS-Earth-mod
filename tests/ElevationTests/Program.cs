@@ -897,6 +897,49 @@ if (storeArg != null && Directory.Exists(storeArg))
         Check(b.Expected == part1Upto + part2.Take(2).Sum(n => (long)(int)manifestTiles[n][2]) && dl.BytesDownloaded >= b.Expected,
             $"part 1 read once up to its last square, part 2's two squares alone: {b.Expected:N0} bytes expected, {dl.BytesDownloaded:N0} read");
     }
+    // EA-0133: download all before the world starts (Core.DownloadFirst), the wait the loading screen shows: it ends when
+    // every square is here, with progress lines in between (no gap here); the loading screen's Cancel (the server
+    // stopping) stops the download; the loading screen's line limit holds
+    var fineDf = new FineElevation(Fresh("-relW"), bitmap);
+    Directory.CreateDirectory(fineDf.Folder);
+    foreach (var n in part2.Skip(2)) File.Copy(Path.Combine(storeArg, n + FineElevation.FileExtension), Path.Combine(fineDf.Folder, n + FineElevation.FileExtension));
+    using (var dl = new DemDownloader(fineDf, src, 3, rel) { Retries = 1, Log = s => Console.WriteLine("  log: " + s) })
+    {
+        var said = new List<string>();
+        Check(dl.StartAll(3, DemDownloader.Origin.Repo), "EA-0133: download all starts for the wait");
+        var (how, line) = DownloadFirst.Wait(dl, () => false, said.Add, 5, TimeSpan.Zero, TimeSpan.Zero);
+        Check(how == DownloadFirst.End.Done && dl.All.Done == 28 && line.Contains("every square is here") && said[^1] == line
+            && said.Count >= 2 && said.Count <= DownloadFirst.MaxLines + 1 && said.All(s => !s.Contains('{') && s.Length < 200),
+            $"EA-0133: the wait ends when every square is here, {said.Count - 1} progress line(s) before ('{said[0]}' ... '{line}')");
+    }
+    var fineDs = new FineElevation(Fresh("-relWs"), bitmap);
+    using (var dl = new DemDownloader(fineDs, src, 3, rel) { Retries = 1, Log = s => Console.WriteLine("  log: " + s) })
+    {
+        var said = new List<string>();
+        dl.StartAll(3, DemDownloader.Origin.Repo);
+        var (how, line) = DownloadFirst.Wait(dl, () => true, said.Add, 1);
+        var sw = Stopwatch.StartNew();
+        while (dl.All.Running && sw.Elapsed.TotalSeconds < 30) Thread.Sleep(20);
+        Check(how == DownloadFirst.End.Stopped && dl.All.Cancelled && !dl.All.Running && line.Contains("Open the world again"),
+            $"EA-0133: the server stopping (the loading screen's Cancel) stops the download ({dl.All.Done} squares had come; '{line}')");
+    }
+    var b0 = new DemDownloader.Batch { Total = 26475, Skipped = 475, Done = 2600, Expected = 8_600_000_000 };
+    string p0 = DownloadFirst.Progress(b0, 1_000_000_000, TimeSpan.FromMinutes(2));
+    Check(DownloadFirst.Percent(b0, 1_000_000_000) == 11 && p0.Contains("11%") && p0.Contains("1.0 GB of 8.6 GB") && p0.Contains("3,075 of 26,475 squares")
+        && p0.Contains("about 16 min left") && DownloadFirst.Percent(new DemDownloader.Batch { Total = 10, Skipped = 2, Done = 4 }, 0) == 50,
+        $"EA-0133: a progress line by bytes, squares and the time left; by squares before the manifest's size ('{p0}')");
+    string s0 = DownloadFirst.StartLine(475, 26475, DemDownloader.Glo90RepoBytes);
+    Check(s0.Contains("the 26,000 squares not on this machine") && s0.Contains("475 of 26,475 already here") && s0.Contains("up to 8.6 GB") && s0.Contains("Cancel") && !s0.Contains('{'), $"EA-0133: the first line ('{s0}')");
+    // a release that can't be reached: the wait ends at once, saying why, and the world starts
+    var fineDu = new FineElevation(Fresh("-relWu"), bitmap);
+    using (var dl = new DemDownloader(fineDu, null, 3, work + "-nowhere") { Log = s => Console.WriteLine("  log: " + s) })
+    {
+        var said = new List<string>();
+        dl.StartAll(3, DemDownloader.Origin.Repo);
+        var (how, line) = DownloadFirst.Wait(dl, () => false, said.Add, 5);
+        Check(how == DownloadFirst.End.Failed && line.Contains("the download stopped") && line.Contains("can't be reached") && line.Contains("The world starts"),
+            $"EA-0133: a release that can't be reached ends the wait with the reason ('{line}')");
+    }
     // a release that can't be reached
     var fineD = new FineElevation(Fresh("-relD"), bitmap);
     using (var dl = new DemDownloader(fineD, null, 3, work + "-nowhere") { Log = s => Console.WriteLine("  log: " + s) })

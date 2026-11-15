@@ -110,8 +110,8 @@ namespace EarthMap
         /// from now on. Chunks already generated keep their climate, so forests, soil and grass may change with a straight edge
         /// where new chunks meet old ones. Reset to false once applied.</summary>
         public bool UpgradeExistingWorldClimateData = false;
-        /// <summary>One-shot: the next Earth world started takes its own canal options (earthSuezCanal and earthPanamaCanal on
-        /// the world creation screen's Earth tab; change them with /worldconfig first) for chunks generated from then on, then
+        /// <summary>One-shot: the next Earth world started takes its own canal options (earthCanals, or earthSuezCanal and
+        /// earthPanamaCanal each, EarthWorldOptions.CanalCodes; change them with /worldconfig first) for chunks generated from then on, then
         /// this resets to false. Chunks already generated on a canal's course keep their land: dig through them or regenerate
         /// them.</summary>
         public bool UpgradeExistingWorldCanals = false;

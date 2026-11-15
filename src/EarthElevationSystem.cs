@@ -98,6 +98,8 @@ namespace EarthMap
             // generation threads, and a command or plan on the main thread must not wait minutes for a download (CR-D1)
             api.Event.ServerRunPhase(EnumServerRunPhase.RunGame, () => { running = true; FineElevation.FetchAllowed = false; });
             api.Event.ServerRunPhase(EnumServerRunPhase.RunGame, AutoDownload);
+            // (EA-0133) after EarthMapSystem's WorldReady step (it registered first) attached the world, before the spawn chunks
+            api.Event.ServerRunPhase(EnumServerRunPhase.WorldReady, DownloadBeforeStart);
             api.Event.PlayerNowPlaying += OnNowPlaying;
             api.Event.RegisterGameTickListener(_ => AutoDownloadEnded(), 3000, 3000);
         }
@@ -709,6 +711,38 @@ namespace EarthMap
                 autoRefused = result;
                 Mod.Logger.Warning("Earth elevation: the Earth tab asks to download all GLO-90 squares, but: {0}", result);
             }
+        }
+
+        /// <summary>
+        /// (EA-0133) The Earth tab's GLO-90 land heights set to "Download all before the world starts": a new single-player
+        /// world's first opening waits here, on the game's loading screen, after its model is built and before its spawn
+        /// chunks are made, while every square comes from Earth's data release (StartAll: the same store, checks and
+        /// free-space rule as every download all). Its progress goes to the loading screen as story-event lines
+        /// (Core.DownloadFirst). The screen's Cancel stops the server, and the download with it; the world was created but
+        /// nothing in it generated, and its next opening isn't new: it plays while the rest downloads (AutoDownload, as
+        /// "release"). A refused or failed download says why there and lets the world start, also as "release". A dedicated
+        /// server has no loading screen, and waiting would keep its players out: it downloads while it runs.
+        /// </summary>
+        void DownloadBeforeStart()
+        {
+            if (core?.Params?.Enabled != true || !WorldUses) return;
+            var save = sapi.WorldManager.SaveGame;
+            if (!EarthWorldOptions.Glo90DownloadFirst(save.WorldConfiguration) || !save.IsNew || sapi.Server.IsDedicated) return;
+            Ensure();
+            var c = Census();
+            if (c.here >= c.source) return;
+            // (the loading screen shows story events; the "{0}" keeps a brace in a reason from breaking its formatting)
+            void Say(string line) => Mod.Logger.StoryEvent("{0}", line);
+            string result = StartAll("this world's Earth tab, before the world starts", DemDownloader.Origin.Repo);
+            if (Downloader.All?.Running != true)
+            {
+                Say("GLO-90 land heights: not downloaded before the world starts. " + result + " The world starts without them.");
+                return;
+            }
+            Say(DownloadFirst.StartLine(c.here, c.source, DemDownloader.Glo90RepoBytes));
+            var (how, line) = DownloadFirst.Wait(Downloader, () => sapi.Server.IsShuttingDown || core?.Stopping.IsCancellationRequested == true, Say);
+            Mod.Logger.Notification("Earth elevation: the wait before the world starts ended ({0}): {1}", how, line);
+            censusAt = default;
         }
 
         void AutoDownloadEnded()

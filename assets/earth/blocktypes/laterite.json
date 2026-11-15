@@ -29,6 +29,9 @@
 			"*"
 		]
 	},
+	"attributesByType": {
+		"*-hard": { "propickable": true }
+	},
 	"blockmaterialByType": {
 		"*-mottled": "Soil",
 		"*-hard": "Stone"

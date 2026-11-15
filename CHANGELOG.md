@@ -2,6 +2,42 @@
 
 What each version changed. What the current version needs and does is in [README.md](README.md).
 
+## 2.0.1 (15 November 2026)
+
+The world creation screen as the author asked after 2.0.0 ([decision 0084](docs/decisions/0084-world-screen-2-0-1.md)),
+a choice to download the GLO-90 heights before a world starts, and a fix from the 2.0.1 playtest. Saved worlds are
+unchanged.
+
+- **Rocks and ground: vanilla by default**, in every Earth play style. Ground columns and regional rocks are still
+  there to choose. With vanilla rocks, Hydrate or Diedrate keeps its own aquifers.
+- **Rain frequency and storm frequency are off the screen.** Admins still set them: in earth.json (`RainFrequency`,
+  `StormFrequency`, for every new world) or in a world's own configuration before it is made, as a string
+  (`"earthRainFrequency": "2"`).
+- **One switch for the Suez and Panama canals** instead of two. Worlds made before keep theirs; a server's world
+  configuration that still names one of the two old keys (`earthSuezCanal`, `earthPanamaCanal`) gets that canal.
+- **Start coordinates can be pasted from Google Maps**: the numbers it shows for a clicked place, degrees, minutes and
+  seconds, or the map's link. Coordinates that can't be read give a random start and, for the host or the server's
+  admins, a chat line saying why and what works, instead of a line in the server log only.
+- Start and Start coordinates stay on their own Earth start tab: the game's text field draws outside a list that
+  scrolls, which the Earth tab does.
+- **GLO-90 land heights: "Download all before the world starts (GitHub, 8.6 GB)"**, a fourth choice
+  ([decision 0051](docs/decisions/0051-glo90-elevation-on-demand.md), EA-0133). A new single-player world waits on its
+  loading screen while every square comes from Earth's data release, with the progress there; Cancel goes back to the
+  menu, and the world then plays while the rest downloads. "Download all" (play while it downloads) stays the default.
+  A dedicated server downloads while it runs.
+- **Ores: "Vanilla ore deposits, plus Earth's gems and ores"**: the option's name and text now say what it places
+  (EA-0138). Earth's gems (beryl, corundum, garnet, spinel, topaz, tourmaline) and the ores the game doesn't place
+  (such as chalcopyrite, tetrahedrite, wolframite and wulfenite) were always added by the game's own deposit rules;
+  nothing generates differently.
+- **A new world starts in the morning at its spawn** (the author, from the playtest). With Astra Terra for Earth, whose
+  sun follows the meridians, a start far from longitude 0 began at night: the game's start hour is the same clock
+  everywhere. The new world's clock now moves once, at most half a day, so the spawn's local time is the game's start
+  hour (08:00), in single player and on a dedicated server. Without Astra Terra the sky keeps one clock and nothing
+  changes; saved worlds keep their time.
+- **The prospecting pick reads Earth's rock blocks** (from the playtest): marl, calcrete, gypcrete, saltcrust and hard
+  laterite are propickable like vanilla's rock, so the pick gives readings on them (before, none at all where they make the ground,
+  as on Latvia's Devonian marl with ground columns). Already generated worlds read them too.
+
 ## 2.0.0 (15 November 2026)
 
 Earth 2.0 is one mod and makes new worlds. It sums up everything since 1.0.2.

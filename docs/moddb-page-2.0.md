@@ -22,7 +22,7 @@ Remove Earth Terrain Data and Earth Water Data from Earth 2.0's dependencies. Le
 > server (or a single-player game) starts Earth 2.0, it downloads Earth's data once per computer from Earth's data
 > releases on GitHub (Temporal-Poets-Society: `earth-data`, `earth-ground`, `earth-glo90`) into
 > `VintagestoryData/ModData/earth`, and checks every file: about 290 MB of map data, about 170 MB of ground data for
-> worlds with ground columns (the default), and the GLO-90 land heights (8.6 GB, by default all of them when a new world
+> worlds with ground columns (a Rocks and ground choice), and the GLO-90 land heights (8.6 GB, by default all of them when a new world
 > first opens, in the background with a progress window; or square by square as the world reaches them). A game client
 > joining a server downloads nothing. Without internet, the files can be put into that folder by hand; a server that
 > cannot get them stops and says which are missing.
@@ -39,8 +39,9 @@ Remove Earth Terrain Data and Earth Water Data from Earth 2.0's dependencies. Le
 > **New in 2.0:** one play style per scale (Earth · 1:200 to 1:10, 1:100 the default; 1:5 on the Earth tab), each with
 > the world size, height and mountains that suit it; Copernicus GLO-90 land heights at every scale; rivers on their
 > real channels, with a current, still backwaters and seasonal rivers; coasts, lakes and rivers as they were around
-> 1318 (reservoirs and canals dug since then undone, the Zuiderzee back); beaches of the coast's own material; rocks,
-> soil and ground from real geology and soil maps; plants and animals where they lived around 1318; hot springs at
+> 1318 (reservoirs and canals dug since then undone, the Zuiderzee back); beaches of the coast's own material; soil by
+> real aridity, and rocks and ground from real geology and soil maps to choose on the Earth tab (the game's rocks by
+> default); plants and animals where they lived around 1318; hot springs at
 > known sites and lava under Holocene volcanoes; Earth's own weather, shared with other mods through the open sea
 > contracts. Earth's ore maps (real deposits at their real size) are an experimental choice on the Earth tab; the
 > default ores are vanilla's.

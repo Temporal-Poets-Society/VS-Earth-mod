@@ -1,13 +1,16 @@
-# Earth 2.0.0 — Vintage Story 1.22
+# Earth 2.0.1 — Vintage Story 1.22
 
-**2.0.0 (15 November 2026).** Earth 2.0 is one mod and makes new worlds. Worlds from older Earth versions (0.x, 1.x and
-the 2.0.0 release candidates) are not supported: start a new world. From 2.0.0 on, saves are kept working. What it
-brings over 1.0.x, and every earlier version, is in [CHANGELOG.md](CHANGELOG.md).
+**2.0.1 (15 November 2026).** Earth 2.0 is one mod and makes new worlds. Worlds from older Earth versions (0.x, 1.x and
+the 2.0.0 release candidates) are not supported: start a new world. From 2.0.0 on, saves are kept working. 2.0.1 makes
+vanilla rocks the Earth tab's default, takes rain and storm frequency off the world screen, joins the two canal switches,
+reads start coordinates pasted from Google Maps, adds downloading the GLO-90 heights before a world starts, and lets
+the prospecting pick read Earth's rock blocks. What it brings over 1.0.x, and every earlier version, is in
+[CHANGELOG.md](CHANGELOG.md).
 
 Earth generates the real Earth in new worlds of its play styles: land and sea floor from real elevation (Copernicus
 GLO-90 on land), real rivers, lakes and coasts as they were around 1318, the Greenland and Antarctic ice sheets, the
-real climate and Earth's own weather, regional rocks, soil and ores, and trees, plants and animals where they lived
-around 1318. The world wraps east–west on Cylinder World's ring (the seam runs through the Bering Strait, the poles are
+real climate and Earth's own weather, soil by real aridity, real rocks and ground to choose on the Earth tab (the
+game's rocks by default), and trees, plants and animals where they lived around 1318. The world wraps east–west on Cylinder World's ring (the seam runs through the Bering Strait, the poles are
 its walls), at a scale from 1:200 to 1:5.
 
 - **Needs:** Vintage Story 1.22, **Cylinder World 1.1.0** or newer (with 1.0.4 a new world whose first start stopped
@@ -15,7 +18,7 @@ its walls), at a scale from 1:200 to 1:5.
   source spilled into the sea make the sea climb and flood the map), on the server and every client. Sea is
   recommended.
 - **Data:** the first start of a server (or a single-player game) downloads Earth's data from GitHub once per computer:
-  about 290 MB, 170 MB more of ground data for the default ground columns, and the GLO-90 land heights with about
+  about 290 MB, 170 MB more of ground data for worlds with ground columns, and the GLO-90 land heights with about
   190 MB of lake, river and dam files beside them (see [Quick start](#quick-start)). A game client downloads nothing.
 - **New worlds only:** worlds from Earth versions before 2.0.0 (0.x, 1.x, the release candidates) are not supported:
   start a new world (the author, 15 November 2026). Worlds made with 2.0.0 and later are kept working.
@@ -75,11 +78,12 @@ Copernicus GLO-90 land heights (its required notice is also on the Earth tab), O
      [earth-data](https://github.com/Temporal-Poets-Society/earth-data) into `ModData/earth/data`, before the first
      chunk, each checked against its size and SHA-256;
    - about 170 MB of 30″ ground sets from the release `egts-v1` of
-     [earth-ground](https://github.com/Temporal-Poets-Society/earth-ground) for worlds with ground columns (the default);
+     [earth-ground](https://github.com/Temporal-Poets-Society/earth-ground) for worlds with ground columns;
    - the GLO-90 land heights from the release `egl-v1` of
      [earth-glo90](https://github.com/Temporal-Poets-Society/earth-glo90) into `ModData/earth/glo90`: all of it (8.6 GB)
      by default, starting when the world opens, with its progress in a window (`.earthelevation`); or, on the Earth tab,
-     each square as the world reaches it, or Copernicus's originals (about 71 GB, converted on the machine). Beside the
+     all of it before a new single-player world starts (on its loading screen), each square as the world reaches it, or
+     Copernicus's originals (about 71 GB, converted on the machine). Beside the
      heights a new world fetches the release's lake and river outlines, river flow and dam files (about 190 MB:
      `lakes-glo90-2.bin`, `rivers-outline-glo90-4.bin`, `rivers-flow-glo90-1.bin`, `dams-glo90-3.bin`).
 
@@ -493,18 +497,18 @@ Dedicated servers set `WorldConfig.PlayStyle` to one of the codes above and put 
 |---|---|---|---|
 | Earth size | `earthWorldSize` | 100 (the play style's) | the scale: `200` (1:200), `100` (1:100), `50` (1:50), `25` (1:25), `10` (1:10) or `5` (1:5). The length is the Equator over twice the scale (100 352 to 4 007 424 blocks), the width twice the length (Cylinder World's ring) plus 16 384 blocks of hidden seam ocean beyond each end (decision 0068; a width given in blocks, as an older world configuration has it, is still read: the same length, this width). `vanilla` keeps World generation tab dimensions (at least twice as wide as long, such as 1 024 000 × 512 000, or the Earth is stretched north-south) |
 | World height | `earthWorldHeight` | 384 (the play style's) | 256 to 1024 blocks in steps of 64 (a server config may give any multiple of 32); replaces World Height at the top of the screen. `0` keeps that slider's height |
-| Start | `earthSpawn` | random | on the **Earth start** tab with Start coordinates (a tab of their own: the game's text field turns clipping off for everything drawn after it in a scrolling list, so on a small window later options would draw over the screen's edges; a short tab never scrolls). Regional random dry, gentle lowland at the chosen starting climate; 36 capitals; or `custom`. Random gives each qualifying major region a fair chance, permits coasts and avoids tiny islands ([decision 0037](docs/decisions/0037-varied-random-starts.md)). The same seed and settings give the same place. Capitals and coordinates find nearby dry land at any height |
-| Start coordinates | `earthSpawnCoordinates` | (empty) | for `custom`: `latitude, longitude` in degrees; south/west negative, e.g. `56.95, 24.11` |
-| Suez / Panama Canal | `earthSuezCanal`, `earthPanamaCanal` | off | optional navigable sea-level cuts, including their lakes; Panama has no locks |
+| Start | `earthSpawn` | random | on the **Earth start** tab with Start coordinates (a tab of their own: the game's text field turns clipping off for everything drawn after it in a scrolling list, so on a small window later options would draw over the screen's edges, and as the Earth tab's last option it would still draw its own text outside the list when scrolled away; a short tab never scrolls; [decision 0084](docs/decisions/0084-world-screen-2-0-1.md)). Regional random dry, gentle lowland at the chosen starting climate; 36 capitals; or `custom`. Random gives each qualifying major region a fair chance, permits coasts and avoids tiny islands ([decision 0037](docs/decisions/0037-varied-random-starts.md)). The same seed and settings give the same place. Capitals and coordinates find nearby dry land at any height |
+| Start coordinates | `earthSpawnCoordinates` | (empty) | for `custom`: pasted from Google Maps (the decimal pair a clicked place shows, `56.949600, 24.105200`; degrees, minutes and seconds, `56°56'58.6"N 24°06'18.7"E`; or a Maps link, whose place pin or `@latitude,longitude` is read), or `latitude, longitude` in degrees, south and west negative. Unreadable: a random place, and the host or the server's admins are told why in chat when they join while the world is made (from 2.0.1, [decision 0084](docs/decisions/0084-world-screen-2-0-1.md)) |
+| Suez and Panama canals | `earthCanals` | off | both navigable sea-level cuts, including their lakes; Panama has no locks. Off: `earthSuezCanal` and `earthPanamaCanal`, the switches before 2.0.1 (off the screen, off by default), each on its own: a server's world configuration can still name them, and a world made before keeps its own |
 | Sea level | `earthVerticalBudget` | 110 | `110`, `128` or `160` blocks below sea (at most half the world height), independent of world height |
 | GLO-90 land heights | `earthGlo90Download` | release | `release` or `copernicus`: every GLO-90 square is downloaded when the new world first opens (Earth's data release, 8.6 GB, or Copernicus's originals, about 71 GB converted here), squares already on the machine skipped; `needed`: each square as the world reaches it. A world without the key downloads as needed |
 | Mountain heights | `earthHeightCurve` | log1000 | `log1000`, `log250`, `log500`, `log2000` or `linear`. Smaller log values exaggerate lowlands and compress high mountains; linear preserves proportions |
 | Summit height correction | `earthSummitCorrection` | 3000 | `off` or minimum surveyed elevations `1000` through `8000` in 1,000 m steps. Corrects listed peaks at or above that real elevation; excluded peaks do not narrow qualifying peaks' correction footprints. The finer terrain-detail layer stays active. Saved at creation; older saves keep all previously eligible peaks |
 | Land heights | `earthElevation` | auto | not on the tab ([decisions 0051, 0053](docs/decisions/0051-glo90-elevation-on-demand.md)): `auto` (as `glo90`) takes dry land's heights from Copernicus GLO-90 (3″, about 90 m), per 1° square as chunks need them, kept in `VintagestoryData/ModData/earth/glo90` for every world on the machine, with the included coarser GLO-90 grid where a square can't be had; rivers, lakes and dams follow GLO-90 too. `glo90coarse`: the included grid; `builtin` (and any other value): the older 2′ heights. Listed peaks at or above the summit cutoff get a narrow lift at GLO-90's own top to their surveyed height (never lowered). `.earthelevation` opens the download dialog |
 | Rock floor | `earthRockFloor` | auto | how far below the lowest ground of each 32 × 32 column the ground turns to plain rock (no caves, ores or lava; mantle only in the bottom layer): `off`, `96`, `128`, `160`, `192` or `256` blocks; `auto` is 160 in worlds taller than 512, none otherwise |
-| Rocks and ground | `earthRocks` | groundcolumns | `groundcolumns`: regional rock regions and ground built from real data (soil, sediments in metres, sea-floor sediment; bedrock layers in the Baltic); the first such world on a machine fetches the 30″ ground data (about 172 MB, [earth-ground](https://github.com/Temporal-Poets-Society/earth-ground)); `regional`: rock regions only (`RegionalGeology`); `vanilla`: the game's rock layers |
+| Rocks and ground | `earthRocks` | vanilla | `vanilla` (the default from 2.0.1, [decision 0084](docs/decisions/0084-world-screen-2-0-1.md)): the game's rock layers, and Hydrate or Diedrate keeps its own aquifers ([decision 0059](docs/decisions/0059-water-table-and-hod-aquifers.md)); `groundcolumns`: regional rock regions and ground built from real data (soil, sediments in metres, sea-floor sediment; bedrock layers in the Baltic); the first such world on a machine fetches the 30″ ground data (about 172 MB, [earth-ground](https://github.com/Temporal-Poets-Society/earth-ground)); `regional`: rock regions only (`RegionalGeology`) |
 | Ground depth | `earthGroundDepth` | log4000 | ground columns only: how real depth becomes blocks (`log4000`, `log2000`, `terrain`, `linear2000`) |
-| Ores | `earthOreDeposits` | vanilla | `vanilla`: the game's ore deposits; `maps`: Earth's ore maps (`RegionalOres`, experimental, being reworked). Worlds set up with the earlier single key `earthOres` keep its meaning: `vanilla` is vanilla rocks and ores, `regional` and `groundcolumns` are that rock choice with the ore maps |
+| Ores | `earthOreDeposits` | vanilla | `vanilla`: the game's ore deposits, plus Earth's gems (beryl, corundum, garnet, spinel, topaz, tourmaline) and added ores (`earth-gems.json`, `earth-ores.json`, by the game's deposit rules; the author, 15 November 2026: keep them); `maps`: Earth's ore maps (`RegionalOres`, experimental, being reworked). Worlds set up with the earlier single key `earthOres` keep its meaning: `vanilla` is vanilla rocks and ores, `regional` and `groundcolumns` are that rock choice with the ore maps |
 | Plants and animals | `earthNature` | 1318 | `1318`: plants and animals where they lived around 1318 ([decisions 0049, 0047](docs/decisions/0047-placement-catalogue-and-audit.md)): fruit trees, wild crops and berry bushes by their 1318 range and Earth climate, regional trees, real animal ranges. `vanilla`: placement by climate alone (no regional trees, plant gates or animal ranges). Worlds made before this option read the old `earthAnimals` key; older saves keep vanilla fruit, crop and berry placement |
 | Biomes | `earthBiomes` | earth | `earth`: Earth's biome rules (vegetation zones from the real climate, wetlands, fire openings, ground cover, ground moisture, winter grass, alpine surfaces); `vanilla`: the game's own forest and shrub maps (fed by Earth's climate) and tall grass ([decision 0075](docs/decisions/0075-biomes-back-to-vanilla.md)). Terrain, rivers, coasts, rocks and ores stay Earth's; works with either Plants and animals choice |
 | River rapids | `earthRiverRapids` | steep | `steep`: white water at the drops of rivers whose real fall is strong for their size ([decision 0046](docs/decisions/0046-calm-rivers.md)); `off`: no rapids reaches, waterfalls stay |
@@ -513,8 +517,8 @@ Dedicated servers set `WorldConfig.PlayStyle` to one of the codes above and put 
 | Include extinct animals | `earthIncludeExtinctAnimals` | off | used with 1318; also spawns species that died out before 1318 (mammoths, cave lions) from supported animal mods. Animals still alive in 1318 (aurochs, moa) spawn without it |
 | Chickens everywhere | `earthChickensEverywhere` | on | used with 1318 ([decision 0054](docs/decisions/0054-animals-as-around-1318.md)): on lets wild chickens spawn wherever the climate suits them (every region but Antarctica); off keeps them where people kept them around 1318. With `vanilla` nature every animal spawns by climate alone, so this changes nothing there |
 | Weather | `earthWeather` | earth | real-climate rain, storms, clouds and wind, or vanilla weather |
-| Rain frequency | `earthRainFrequency` | 1 | Earth weather only: 0, 0.5, 1, 1.5, 2 or 3 times the real monthly rain chance |
-| Storm frequency | `earthStormFrequency` | 1 | Earth weather only: 0, 0.5, 1, 1.5, 2, 3 or 5 times the real storm frequency |
+| Rain frequency | `earthRainFrequency` | (empty) | not on the world screen from 2.0.1 (an admin's setting, [decision 0084](docs/decisions/0084-world-screen-2-0-1.md)): Earth weather only, 0 to 3 times the real monthly rain chance, as a string in a world configuration (`"earthRainFrequency": "2"`; a bare number is dropped by the game); empty takes earth.json's `RainFrequency` (1) |
+| Storm frequency | `earthStormFrequency` | (empty) | not on the world screen from 2.0.1: Earth weather only, 0 to 5 times the real storm frequency, as a string (`"0.5"`); empty takes earth.json's `StormFrequency` (1) |
 
 Full terrain detail and real-altitude mountain ecology are the defaults. Legacy sea/height curves and test detail,
 ecology and rock-exposure switches have left the menu; old saves retain their stored values and behaviour. Default

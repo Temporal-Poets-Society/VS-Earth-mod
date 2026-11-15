@@ -23,8 +23,11 @@ namespace EarthMap
         /// The Earth tab's start (decision 0023): a random place at the starting climate (SpawnSearch.FindClimatePlace,
         /// lowland), a capital, or coordinates (the nearest dry, gentle land at any height).
         /// </summary>
-        public static void Choose(ICoreServerAPI sapi, TerrainModel model, EarthMapConfig config, EarthParams p, ILogger log)
+        /// <returns>A line for the players who join while this world is being made, or null: the start coordinates couldn't be
+        /// read (2.0.1: said in chat with the formats that work, not only in the server log).</returns>
+        public static string Choose(ICoreServerAPI sapi, TerrainModel model, EarthMapConfig config, EarthParams p, ILogger log)
         {
+            string notice = null;
             var wc = sapi.WorldManager.SaveGame.WorldConfiguration;
             int mapX = sapi.WorldManager.MapSizeX, mapZ = sapi.WorldManager.MapSizeZ;
             string choice = EarthWorldOptions.Spawn(wc);
@@ -34,13 +37,18 @@ namespace EarthMap
             if (choice == EarthWorldOptions.CustomSpawn)
             {
                 string coords = EarthWorldOptions.SpawnCoordinates(wc);
-                if (SpawnSearch.TryParseLatLon(coords, out double la, out double lo))
+                if (Coordinates.TryParse(coords, out double la, out double lo, out string why))
                 {
                     lat = Math.Clamp(la, -85, 85);
                     lon = Geo.Wrap180(lo);
                     where = EarthMapSystem.FormatLatLon(lat, lon);
                 }
-                else log.Warning("Earth tab: start coordinates '{0}' are not 'latitude, longitude' in degrees; using a random place at the starting climate.", coords);
+                else
+                {
+                    notice = string.Format("Earth: the Earth start tab's coordinates '{0}' couldn't be read ({1}), so this world starts at a random place " +
+                        "at the starting climate. Coordinates work as {2}.", coords, why, Coordinates.Formats);
+                    log.Warning("{0}", notice);
+                }
             }
             else if (choice != EarthWorldOptions.RandomSpawn)
             {
@@ -76,6 +84,7 @@ namespace EarthMap
             // y = null: the engine puts players on the surface there
             sapi.WorldManager.SaveGame.DefaultSpawn = new PlayerSpawnPos(sx, null, sz);
             log.Notification("Earth Map: spawn in {0}, at {1}.", where, EarthMapSystem.FormatLatLon(g.Lat, g.Lon));
+            return notice;
         }
     }
 }

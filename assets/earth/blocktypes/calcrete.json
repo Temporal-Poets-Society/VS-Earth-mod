@@ -1,6 +1,7 @@
 {
 	"code": "calcrete",
 	"attributes": {
+		"propickable": true,
 		"handbook": {"extraSections": [{"title": "earth:handbooktitle-geology", "text": "earth:handbooktext-calcrete"}]},
 		"mapColorCode": "land",
 		"preventsDecay": true

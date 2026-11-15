@@ -1,6 +1,7 @@
 {
 	"code": "saltcrust",
 	"attributes": {
+		"propickable": true,
 		"handbook": {"extraSections": [{"title": "earth:handbooktitle-geology", "text": "earth:handbooktext-saltcrust"}]},
 		"mapColorCode": "land",
 		"preventsDecay": true

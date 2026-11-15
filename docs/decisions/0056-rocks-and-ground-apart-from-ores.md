@@ -1,6 +1,6 @@
 # 0056: Rocks and ground apart from Ores; the ground pack required
 
-Status: built, in Earth 2.0.0 (two choices, ground columns by default), merged with the author's "Yes, merge" (7 November); the required ground data pack is replaced by 0066's download. New worlds only.
+Status: built, in Earth 2.0.0 (two choices, ground columns by default; vanilla rocks by default from 2.0.1, [0084](0084-world-screen-2-0-1.md)), merged with the author's "Yes, merge" (7 November); the required ground data pack is replaced by 0066's download. New worlds only.
 Date: 2026-11-07.
 
 ## What the author asked

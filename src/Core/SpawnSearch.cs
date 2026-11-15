@@ -244,16 +244,9 @@ namespace EarthMap.Core
             }
         }
 
-        /// <summary>"lat, lon" in degrees (also "lat lon" or "lat;lon").</summary>
-        public static bool TryParseLatLon(string s, out double lat, out double lon)
-        {
-            lat = lon = double.NaN;
-            var parts = (s ?? "").Split(new[] { ',', ';', ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            return parts.Length == 2
-                && double.TryParse(parts[0], NumberStyles.Float, CultureInfo.InvariantCulture, out lat)
-                && double.TryParse(parts[1], NumberStyles.Float, CultureInfo.InvariantCulture, out lon)
-                && double.IsFinite(lat) && double.IsFinite(lon) && Math.Abs(lat) <= 90;
-        }
+        /// <summary>The Earth tab's start coordinates: "lat, lon" in degrees (also "lat lon" or "lat;lon"), and from 2.0.1 what
+        /// people paste from Google Maps (<see cref="Coordinates"/>).</summary>
+        public static bool TryParseLatLon(string s, out double lat, out double lon) => Coordinates.TryParse(s, out lat, out lon, out _);
 
         /// <summary>The Equator (m): the Earth tab's scale 1:S makes Cylinder World's ring (2 × the world's length) this over S.</summary>
         public const double EquatorMetres = 40_075_017;

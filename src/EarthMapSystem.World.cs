@@ -176,12 +176,39 @@ namespace EarthMap
             p.WeatherRules = EarthWeather.RulesVersion;
         }
 
+        /// <summary>
+        /// (2.0.1, EA-0141) A new world starts at the game's morning hour at its spawn, wherever that is: where AstraTerra's sun
+        /// follows Earth's meridians, the clock is moved once (at most half a day either way, Core.SpawnTime) so the spawn's
+        /// local hour is the hour the game starts at. Without that, the sky keeps one clock and the start hour is morning
+        /// everywhere already, so nothing changes. On a dedicated server too: its first players also start at the world's
+        /// spawn, and moving a new world's clock before anyone has played changes nothing else (no saved world's clock moves).
+        /// </summary>
+        void MorningAtSpawn(EarthParams p)
+        {
+            if (!astraTerra.SunFollowsLongitude) return;
+            var cal = sapi.World.Calendar;
+            if (cal == null) return;
+            double lon = LongitudeAt(p.SpawnX) ?? p.SpawnLon;
+            double before = cal.HourOfDay;
+            double shift = SpawnTime.MorningShift(lon, cal.HoursPerDay, cal.TotalHours);
+            if (Math.Abs(shift) < 1e-6) return;
+            cal.Add((float)shift);
+            double after = SpawnTime.LocalHour(cal.HourOfDay, lon, cal.HoursPerDay);
+            Mod.Logger.Notification("{0}", string.Format(CultureInfo.InvariantCulture,
+                "Earth: the new world's clock moved {0:+0.0;-0.0} h, so its first day starts at {1:0.0} local at the spawn (longitude {2:0.0}°; AstraTerra's sun follows the meridians); the calendar shows {3:0.0}.",
+                shift, after, lon, cal.HourOfDay));
+            double miss = Math.Abs(after - before);
+            if (Math.Min(miss, cal.HoursPerDay - miss) > 0.05)
+                Mod.Logger.Warning("Earth: the spawn's local hour is {0:0.0}, not the start hour {1:0.0}; the calendar didn't take the whole move.", after, before);
+        }
+
         /// <summary>A new world's spawn, handed to Cylinder World so vanilla's story chain starts there too.</summary>
         void FinishNewWorld(EarthParams p, ISaveGame save, CylinderCompat cw)
         {
             if (sapi.WorldManager.MapSizeY < 384)
                 Mod.Logger.Notification("Earth Map: this world is {0} blocks high; Earth's heights are tuned for 384 (World height on the world creation screen).", sapi.WorldManager.MapSizeY);
-            EarthSpawn.Choose(sapi, Model, Config, p, Mod.Logger);
+            spawnNotice = EarthSpawn.Choose(sapi, Model, Config, p, Mod.Logger);
+            MorningAtSpawn(p);
             // Cylinder World picked its own spawn (map centre, starting-climate latitude) and moves vanilla's story
             // chain there; make it ours, so the chain and its vanilla spots (the devastation area's) start from here. Also on
             // the second start of a world whose first start did not finish (SaveGame.IsNew is false then; only a world

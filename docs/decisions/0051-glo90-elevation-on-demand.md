@@ -7,8 +7,9 @@ GLO-90 at every scale (`earthElevation` `auto`, as `glo90`); the squares come fr
 (`Temporal-Poets-Society/earth-glo90`, release `egl-v1`, 8.6 GB; [Data release](#data-release-tall10)), all of them
 when a new world first opens unless the Earth tab says "as the world reaches them", with Copernicus's bucket as the
 fallback and as a choice on that tab, and the included coarser GLO-90 grid for the session where a square can't be had
-([A tile or file that can't be had](#a-tile-or-file-that-cant-be-had-rc3)). The prototype and test builds are in
-[History](#history).
+([A tile or file that can't be had](#a-tile-or-file-that-cant-be-had-rc3)). From Earth 2.0.1 the tab also offers to
+download all before a new single-player world starts, on its loading screen (EA-0133, the author's choice of 15 November
+2026). The prototype and test builds are in [History](#history).
 
 ## Author's direction
 
@@ -231,8 +232,10 @@ store is release `egl-v1` of [Temporal-Poets-Society/earth-glo90](https://github
   kept and failed, GB downloaded of about the expected and the time left. The command takes the same choice:
   `/earth elevation download all [release|copernicus]`.
 - **On the Earth tab:** "Terrain · GLO-90 land heights" (`earthGlo90Download`): "Download as the world reaches them"
-  (default), "Download all: Earth's data release (GitHub, 8.6 GB)" or "Download all: Copernicus originals (71 GB,
-  converted here)". Its hover text holds what the Earth size's used to say about GLO-90, and the licence's notices.
+  (`needed`), "Download all: Earth's data release (GitHub, 8.6 GB)" (`release`, the default since the 1.0.3 test build
+  tall.12), "Download all before the world starts (GitHub, 8.6 GB)" (`first`, from 2.0.1) or "Download all: Copernicus
+  originals (71 GB, converted here)" (`copernicus`). Its hover text holds what the Earth size's used to say about GLO-90,
+  what each choice does, and the licence's notices.
   - The tab can't hold a button. The 1.22.7 main menu only reads each mod's `modinfo` (`ScreenManager.loadMods` calls
     `ModLoader.LoadModInfos`); mod assemblies load and run when a world starts (`SystemModHandler`,
     `ServerSystemModHandler`). So the choice is saved with the world, and the download starts when the world opens
@@ -243,6 +246,28 @@ store is release `egl-v1` of [Temporal-Poets-Society/earth-glo90](https://github
   - It starts again each time the world opens until every square is here or a player stops it. The save remembers
     which (`earth-glo90-download-all`: "done" or "stopped"); the server shutting down mid-way or failed squares don't
     count, so the next opening goes on.
+- **Download all before the world starts** (EA-0133, Earth 2.0.1). The author asked for a button that downloads
+  everything before the game is joined; of the places the author named, 1.22.7 runs mod code at none before a world
+  starts (above: the main menu, the world creation screen; the game has no mod config screen). The first is the
+  server's start-up, and a single-player world shows it on its loading screen (`GuiScreenConnectingToServer`), which
+  prints the server's story-event log lines as they come and whose Cancel stops the server (`IServerAPI.IsShuttingDown`).
+  The author chose (15 November 2026) a fourth choice on the tab, with "Download all" (play while it downloads) staying
+  the default, over making "Download all" itself wait: on a slow connection the wait is 15 minutes to hours.
+  - `EarthElevationSystem.DownloadBeforeStart`, at the `WorldReady` phase after `EarthMapSystem` attached the world and
+    before the spawn chunks (`TriggerWorldgenStartup`): only an Earth world on GLO-90 heights, with `first`, at its first
+    opening (`SaveGame.IsNew`), not on a dedicated server, and not when every square is here. It starts download all from
+    the release through `StartAll` (the free-space rule, the store and its checks as for every download all) and waits
+    on the server's main thread (`Core.DownloadFirst.Wait`, polling every 250 ms).
+  - Progress goes to the loading screen as story-event lines: a first line (the squares missing, "up to 8.6 GB", that
+    Cancel goes back to the menu and opening the world again plays while the rest downloads), then a line when the
+    download has moved on 5 %, at most one per 20 s and at least one every 3 minutes, at most 40 (the screen stops
+    updating past 10,000 characters), and a last line (done; squares that couldn't be had; or the error). The size comes
+    from the progress lines, not the first one: a mostly missing part of the release is read whole.
+  - Cancel stops the download with the server. A new world's save is stored when it is created, but nothing generated
+    and no mod save data is kept before the RunGame phase; its next opening isn't new, so it plays while the rest
+    downloads (`first` downloads as `release` from then on). A refused (no room) or failed download says why there and
+    lets the world start, as `release`.
+  - A dedicated server doesn't wait: it has no loading screen, and its players couldn't join meanwhile.
 - `tests/ElevationTests`: a small release built from the store (two parts, 41 squares, one damaged copy): range reads,
   the cached manifest, the damaged copy refused and that square converted from the bucket instead, download all (28
   kept, 13 skipped, 27 from the release and 1 from the bucket, the expected bytes), an unreachable release reported as
@@ -427,6 +452,14 @@ Yosemite, the Grand Canyon, the Nærøyfjord, Glen Coe, the Middle Rhine and the
   - A world closed mid-download wasn't marked; its squares' fetches ended as cancelled.
   - Not seen: the tab's row on the world creation screen itself (the bench makes worlds from the play style's defaults
     and can't reach the main menu).
+- **Download all before the world starts** (EA-0133, 15 November 2026), on a private bench (its own data folder, the
+  default bench's store minus 1,500 squares, the real release, the play style set to `first`): the loading screen showed
+  the first line, "71% (1.3 GB of 1.8 GB; 25,125 of 26,475 squares here), under a minute left" and "every square is here
+  (1.8 GB downloaded in 31 s). The world starts.", then vanilla's spawn chunks; the save was marked "done". A second new
+  world: Cancel on the loading screen stopped the download ("stopped with the world") and the game was back in the main
+  menu within 4 s; opened again, the world played at once, the dialog opened and the 1,500 squares came in the
+  background. Offline: ElevationTests (a whole wait with its lines, a stop, a release that can't be reached) and
+  EarthWorldOptionsTests (the choice and its row).
 - **Story locations on a small Earth with the whole store.** The first of those worlds didn't open within 3 minutes.
   A dump of the server thread showed `StoryPlacer.Place` → `Search` → `Evaluate` → `TerrainModel.FineMean` →
   `FineElevation.Load` → `DemTiles.Decode`: the story-location searches (thousands of sites within up to ±12,000 blocks
@@ -546,3 +579,7 @@ as the source's answer would let a typo in a setting take a square for good (rul
 - 14 November 2026: EA-0106 (the Fable pass's FP-15, FP-17): every tile the release's where its manifest lists it, tiles
   here compared at their first read, limits on every download and the GeoTIFF reader
   ([Every tile the release's](#every-tile-the-releases-ea-0106)); `claude/tile-checks`.
+- 15 November 2026: EA-0133, the author's question whether a button could download all before the game is joined:
+  the places 1.22.7 offers were read in the decompiled game, a fourth choice on the Earth tab was prototyped and run on
+  the bench, and the author chose it as a separate choice with "Download all" staying the default
+  ([Data release](#data-release-tall10)); `claude/glo90-download-first`, in Earth 2.0.1.

@@ -4,6 +4,7 @@
 		{ "code": "type", "states": ["devonian", "lake"] }
 	],
 	"attributes": {
+		"propickable": true,
 		"handbook": {"extraSections": [{"title": "earth:handbooktitle-geology", "text": "earth:handbooktext-marl-{type}"}]},
 		"mapColorCode": "land"
 	},

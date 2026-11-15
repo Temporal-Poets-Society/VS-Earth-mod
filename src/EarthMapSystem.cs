@@ -98,6 +98,10 @@ namespace EarthMap
         public EarthData Data { get; private set; }
         /// <summary>Server: full terrain model. Client: climate only (no terrain data loaded).</summary>
         public TerrainModel Model { get; private set; }
+
+        /// <summary>For the players who join in the session that made this world: why its start isn't the Earth tab's
+        /// coordinates (EarthSpawn.Choose), or null.</summary>
+        string spawnNotice;
         public RegionalTreeCatalog RegionalTrees { get; private set; }
         /// <summary>Server: /earth, and the diagnostics the self-test runs too.</summary>
         internal EarthCommands Commands { get; private set; }
@@ -300,6 +304,9 @@ namespace EarthMap
                 }
             });
             api.Event.PlayerJoin += plr => { if (Params != null) serverChannel.SendPacket(Params, plr); };
+            // (2.0.1) start coordinates the new world couldn't read: told, with the formats, to whoever can act on it and joins
+            // while it is being made (the single player's host; a server's admins, not every player: Fable's re-review, P4)
+            api.Event.PlayerNowPlaying += plr => { if (spawnNotice != null && plr.HasPrivilege(Privilege.controlserver)) plr.SendMessage(GlobalConstants.GeneralChatGroup, spawnNotice, EnumChatType.Notification); };
             Commands = new EarthCommands(this, api, Mod.Logger);
             Commands.Register(api);
             // after every mod's Start(): vanilla's season handler (ModTemperature) subscribes there and overwrites the live temperature
