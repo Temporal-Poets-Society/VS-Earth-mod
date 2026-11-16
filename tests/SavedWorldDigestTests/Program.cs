@@ -13,7 +13,8 @@ using EarthMap.Core;
 // difference is a change to old worlds' terrain: fix it, or put the change behind a rules version for new worlds.
 //
 // The built-in-heights world (v1.0.2) needs only earthdata\; the GLO-90 worlds need the data store and its GLO-90 tiles
-// (EARTH_STORE, else the player's or the AgentBridge bench's ModData\earth) and are skipped without them (exit 3).
+// (EARTH_STORE, else the player's or the AgentBridge bench's ModData\earth; per world the first that holds the lake, river
+// and dam files its rules read) and are skipped without them (exit 3).
 // The hashes were taken on Windows x64 with the game's .NET 10: the terrain uses Math.Log, Exp and Pow, whose last bits
 // may differ on another platform (code review T-L11). Build with -p:VintageStoryPath (the game's API and protobuf-net).
 //
@@ -40,11 +41,13 @@ static class Digest
         CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
         string root = args.Length > 0 ? Path.GetFullPath(args[0]) : Directory.GetCurrentDirectory();
         string worlds = Path.Combine(root, "tests", "SavedWorldDigestTests", "worlds");
-        string store = FindStore();
+        var stores = FindStores();
+        string store = stores.FirstOrDefault();
         if (args.Length > 2 && args[1] == "--make") { Make(root, store, Path.Combine(worlds, args[2] + ".params.txt")); return 0; }
         if (args.Length > 2 && args[1] == "--write")
         {
-            var lines = Hash(root, store, LoadParams(Path.Combine(worlds, args[2] + ".params.txt")), out string skip);
+            var wp = LoadParams(Path.Combine(worlds, args[2] + ".params.txt"));
+            var lines = Hash(root, StoreFor(stores, wp), wp, out string skip);
             if (lines == null) { Console.WriteLine("cannot write: " + skip); return 2; }
             File.WriteAllLines(Path.Combine(worlds, args[2] + ".hash.txt"), lines);
             Console.WriteLine("wrote " + args[2] + ".hash.txt (" + lines.Count + " lines)");
@@ -54,12 +57,14 @@ static class Digest
             : Directory.GetFiles(worlds, "*.params.txt").Select(f => Path.GetFileName(f)[..^".params.txt".Length]).OrderBy(n => n, StringComparer.Ordinal).ToArray();
         int failures = 0, checkedWorlds = 0, skipped = 0;
         string skipWhy = null;
-        Console.WriteLine("data store: " + (store ?? "none (GLO-90 worlds are skipped)"));
+        Console.WriteLine("data stores: " + (stores.Count > 0 ? string.Join(", ", stores) : "none (GLO-90 worlds are skipped)"));
         foreach (string name in names)
         {
             var sw = System.Diagnostics.Stopwatch.StartNew();
             var p = LoadParams(Path.Combine(worlds, name + ".params.txt"));
-            var got = Hash(root, store, p, out string skip);
+            string own = StoreFor(stores, p);
+            if (own != null && own != store) Console.WriteLine($"  {name}: from {own} (the first store lacks one of its files)");
+            var got = Hash(root, own, p, out string skip);
             if (got == null) { Console.WriteLine($"skip {name}: {skip}"); skipped++; skipWhy = skip; continue; }
             var want = File.ReadAllLines(Path.Combine(worlds, name + ".hash.txt")).Where(l => l.Length > 0).ToList();
             var gotByKey = got.ToDictionary(Key, l => l);
@@ -85,14 +90,29 @@ static class Digest
     static string Key(string line) { int i = line.LastIndexOf(' '); return line[..i].TrimEnd(); }
     static string Value(string line) => line[(line.LastIndexOf(' ') + 1)..];
 
-    static string FindStore()
+    /// <summary>The data stores on this machine, in order: EARTH_STORE, the player's ModData\earth, the AgentBridge bench's.</summary>
+    static List<string> FindStores()
     {
+        var found = new List<string>();
         string env = Environment.GetEnvironmentVariable("EARTH_STORE");
-        if (env == "none") return null;   // checks the built-in-heights worlds only
+        if (env == "none") return found;   // checks the built-in-heights worlds only
         string appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         foreach (string s in new[] { env, Path.Combine(appData, "VintagestoryData", "ModData", "earth"), Path.Combine(appData, "VintagestoryData-agentbridge", "ModData", "earth") })
-            if (!string.IsNullOrEmpty(s) && Directory.Exists(Path.Combine(s, "data")) && Directory.Exists(Path.Combine(s, "glo90"))) return s;
-        return null;
+            if (!string.IsNullOrEmpty(s) && Directory.Exists(Path.Combine(s, "data")) && Directory.Exists(Path.Combine(s, "glo90")) && !found.Contains(s)) found.Add(s);
+        return found;
+    }
+
+    /// <summary>The first store holding every GLO-90 release file a world reads (a store fetches a file only when a world of
+    /// its rules is made: the player's may lack a newer release's lakes file), or null.</summary>
+    static string StoreFor(List<string> stores, EarthParams p)
+    {
+        if (p.FineElevation < 1) return stores.FirstOrDefault();
+        var need = new List<string>();
+        if (p.DamRules >= 1) need.Add(DamRemovalData.FileNameFor(Math.Min(p.DamRules, DamRemovalData.NewestRules)));
+        if (p.FlowRules >= 1) need.Add(RiverFlowData.FileName);
+        if (p.LakeOutlines >= 1) need.Add(LakeOutlineData.FileNameFor(Math.Clamp(p.LakeOutlines, 1, LakeOutlineData.FileVersion)));
+        if (p.RiverOutlines >= 1) need.Add(RiverOutlineData.FileName(RiverOutlineData.Usable(p.RiverOutlines)));
+        return stores.FirstOrDefault(s => need.All(f => File.Exists(Path.Combine(s, "glo90", f))));
     }
 
     // ------------------------------------------------------------------ params files
@@ -191,7 +211,7 @@ static class Digest
     static List<string> Hash(string root, string store, EarthParams p, out string skip)
     {
         skip = null;
-        if (p.FineElevation >= 1 && store == null) { skip = "a GLO-90 world needs the data store (EARTH_STORE or ModData\\earth)"; return null; }
+        if (p.FineElevation >= 1 && store == null) { skip = "a GLO-90 world needs a data store with its lake, river and dam files (EARTH_STORE or ModData\\earth)"; return null; }
         var data = LoadData(root, store);
         var model = Build(root, store, data, p);
         var fields = typeof(TerrainModel.Column).GetFields(BindingFlags.Public | BindingFlags.Instance).OrderBy(f => f.Name, StringComparer.Ordinal).ToArray();

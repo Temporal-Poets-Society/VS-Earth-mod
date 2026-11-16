@@ -2,6 +2,16 @@
 
 What each version changed. What the current version needs and does is in [README.md](README.md).
 
+## 2.1.1 (16 November 2026)
+
+- **Lakes meet across the whole degrees** (lake outlines rules 3, [decision 0088](docs/decisions/0088-lake-outlines-across-tile-edges.md),
+  EA-0147): in new worlds on full GLO-90 heights a lake that crosses a whole degree of latitude or longitude no longer
+  steps or narrows along it. Before, each 1° square's lakes were outlined on their own, so the two pieces of a lake met
+  the line at different points: at 1:10 a straight shore piece of about 9 to 19 blocks on the line at each side of the
+  lake, and a notch where the pieces met (Tamula and the lakes near Mikkeli on 27°E). The lakes, their levels and
+  everything else stay as they were; where the water mask itself has a shore running along the line, it stays there.
+  New worlds download `lakes-glo90-3.bin` (58 MB) instead of `lakes-glo90-2.bin`. Worlds made before keep their lakes.
+
 ## 2.1.0 (16 November 2026)
 
 New worlds get each place's real temperatures month by month and hour by hour, and the climate as it was around 1318

@@ -16,8 +16,12 @@ namespace EarthMap.Core
     public sealed class LakeOutlineData
     {
         /// <summary>The newest version this build reads. 2 (decision 0069 rule 9): the same rules with Global Dam Watch's
-        /// reservoirs left out too (tools/reservoir_list.py; the Seimare Dam's reservoir of 2013 among them).</summary>
-        public const int FileVersion = 2;
+        /// reservoirs left out too (tools/reservoir_list.py; the Seimare Dam's reservoir of 2013 among them). 3 (EA-0147):
+        /// version 2's lakes, levels and flags, each tile outlined with its neighbours' facing mask cells
+        /// (tools/recontour_lake_outlines.py), so a lake's pieces meet where its shore crosses a tile's edge: version 2 drew
+        /// each tile alone, and its pieces stepped by a whole mask cell, or were notched by half of one, along every whole
+        /// degree a lake crosses (straight seams on World Map's chart along 27°E at 1:10).</summary>
+        public const int FileVersion = 3;
         /// <summary>Version 1's file name in the GLO-90 folder and on Earth's data release; a new version gets a new name.</summary>
         public const string FileName = "lakes-glo90-1.bin";
         /// <summary>The version 1 file this build reads (from the bake of 7 November 2026); any other is refused.</summary>
@@ -27,9 +31,13 @@ namespace EarthMap.Core
         public const string FileName2 = "lakes-glo90-2.bin";
         public const long FileBytes2 = 57_734_593;
         public const string FileSha2562 = "51e2a4b63a6a42343a50c77a5bc9a15dfda1f7e97d5e3e96cadf17ed130f53d6";
-        public static string FileNameFor(int version) => version >= 2 ? FileName2 : FileName;
-        public static long FileBytesFor(int version) => version >= 2 ? FileBytes2 : FileBytes;
-        public static string FileSha256For(int version) => version >= 2 ? FileSha2562 : FileSha256;
+        /// <summary>Version 3's file (EA-0147, re-contoured from version 2 on 16 November 2026).</summary>
+        public const string FileName3 = "lakes-glo90-3.bin";
+        public const long FileBytes3 = 57_742_609;
+        public const string FileSha2563 = "ea3d4cd1b690192fe9613cf9ccafbf4bc4f15413bcb68b88b9bac3ffa18d163c";
+        public static string FileNameFor(int version) => version >= 3 ? FileName3 : version >= 2 ? FileName2 : FileName;
+        public static long FileBytesFor(int version) => version >= 3 ? FileBytes3 : version >= 2 ? FileBytes2 : FileBytes;
+        public static string FileSha256For(int version) => version >= 3 ? FileSha2563 : version >= 2 ? FileSha2562 : FileSha256;
         /// <summary>Whether these bytes are this version's file this build reads (size and SHA-256).</summary>
         public static bool IsExpected(int version, byte[] bytes, out string why) => Matches(bytes, FileBytesFor(version), FileSha256For(version), out why);
         public const byte NoData = 255, NoLakes = 0, HasLakes = 1;
@@ -61,11 +69,11 @@ namespace EarthMap.Core
             return true;
         }
 
-        /// <summary>A lake outlines file of version 1 or 2, by its header.</summary>
+        /// <summary>A lake outlines file of version 1 to 3, by its header.</summary>
         public static LakeOutlineData Read(byte[] file)
         {
             int v = file != null && file.Length >= 8 ? BitConverter.ToInt32(file, 4) : 0;
-            return Read(file, FileNameFor(v), "EMLO", v is 1 or 2 ? v : FileVersion);
+            return Read(file, FileNameFor(v), "EMLO", v is >= 1 and <= FileVersion ? v : FileVersion);
         }
 
         /// <summary>A file of this layout (also RiverOutlineData's, with its own magic).</summary>

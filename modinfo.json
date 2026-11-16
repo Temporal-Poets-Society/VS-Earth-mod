@@ -2,7 +2,7 @@
   "type": "code",
   "modid": "earth",
   "name": "Earth",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "The Earth play style generates the real Earth: Copernicus GLO-90 heights, real rivers, lakes and coasts as of 1318, climate and weather, real rocks and ground to choose (the game's by default), and trees, plants and animals as around 1318. One mod: the first time, the server downloads Earth's data from GitHub (about 290 MB, 58 MB more of monthly temperatures for new worlds, and 170 MB more of ground data for worlds with ground columns, once per machine) and, as a world needs them, the GLO-90 heights (8.6 GB by default, with about 190 MB of lake, river and dam files beside them). Needs Cylinder World (the world wraps east-west, its walls are the poles) and Hydrology. Supports Floral Zones, Wildcraft Trees, Fauna of the Stone Age and Geology Additions.",
   "authors": [
     "Andris"

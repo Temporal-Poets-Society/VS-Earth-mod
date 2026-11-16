@@ -63,7 +63,7 @@ water.
 
 ## Version and problems
 
-This wiki describes **Earth 2.1.0**, with Cylinder World 1.1.1, Hydrology 0.6.2, Sea 0.6.1 and World Map 0.5.4. Earth 2.0
+This wiki describes **Earth 2.1.1**, with Cylinder World 1.1.1, Hydrology 0.6.2, Sea 0.6.1 and World Map 0.5.4. Earth 2.0
 makes new worlds only: worlds made with an Earth older than 2.0.0 aren't supported (see [Saves](Saves)).
 
 Report problems on Earth's Mod DB page. Say which Earth version you run, the world's scale and settings, where in the
