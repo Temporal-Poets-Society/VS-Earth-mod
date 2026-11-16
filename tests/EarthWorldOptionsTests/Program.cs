@@ -193,7 +193,7 @@ Check(RoundTrip(new EarthParams {Enabled=true}).SiteRules==0 && RoundTrip(new Ea
 // Tall worlds: the Earth tab's height slider (the menu stores an int) and the rock floor.
 int Height(Action<TreeAttribute> set,out string badHeight){var t=new TreeAttribute();set(t);return EarthWorldOptions.Height(t,out badHeight);}
 Check(Height(t=>{},out var hb)==0 && hb==null,"No height key keeps the World generation tab's height");
-Check(Height(t=>t.SetInt("earthWorldHeight",0),out hb)==0 && hb==null,"Slider at 0 keeps the World generation tab's height");
+Check(Height(t=>t.SetInt("earthWorldHeight",0),out hb)==0 && hb==null,"A config's 0 keeps the World generation tab's height");
 Check(Height(t=>t.SetInt("earthWorldHeight",1024),out hb)==1024 && hb==null,"Slider int 1024");
 Check(Height(t=>t.SetString("earthWorldHeight","768"),out hb)==768 && hb==null,"Server config string 768");
 foreach(string badValue in new[]{"128","1000","2048","tall"})
@@ -400,8 +400,11 @@ Check(!Attr("earthWorldSize").GetProperty("values").EnumerateArray().Any(v=>v.Ge
 Check(Attr("earthWorldSize").GetProperty("values").EnumerateArray().Any(v=>v.GetString()=="5") && Attr("earthWorldSize").GetProperty("default").GetString()=="100","1:5 is offered (the author: \"as extreme 1:5 scale\"); 1:100 is the default");
 Check(!Attr("earthHeightCurve").GetProperty("values").EnumerateArray().Any(v=>v.GetString()=="auto") && !Attr("earthHeightCurve").TryGetProperty("onCustomizeScreen",out _),
     "Mountain heights is on the Earth tab, without Automatic");
-Check(Attr("earthWorldHeight").GetProperty("default").GetString()=="384" && !Attr("earthWorldHeight").GetProperty("values").EnumerateArray().Any(v=>v.GetString()=="64")
-    && Attr("earthWorldHeight").GetProperty("skipValues").EnumerateArray().Any(v=>v.GetString()=="64...192"),"World height: a number, no Follows Earth size");
+Check(Attr("earthWorldHeight").GetProperty("default").GetString()=="384" && Attr("earthWorldHeight").GetProperty("min").GetInt32()==EarthWorldOptions.MinHeight
+    && Attr("earthWorldHeight").GetProperty("max").GetInt32()==EarthWorldOptions.MaxHeight && Attr("earthWorldHeight").GetProperty("step").GetInt32()==64
+    && !Attr("earthWorldHeight").TryGetProperty("values",out _),"World height: 256 to 1024 in steps of 64, every value one Height() accepts (2.1.2, decision 0089)");
+for(int hv=EarthWorldOptions.MinHeight;hv<=EarthWorldOptions.MaxHeight;hv+=64)
+    if(Height(t=>t.SetInt("earthWorldHeight",hv),out hb)!=hv || hb!=null) Check(false,"the World height slider's "+hv+" is a height Height() takes");
 using(var langDoc=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"assets","game","lang","worldconfig-en.json")))){
     var tabLang=langDoc.RootElement;
     foreach(var w in want){
@@ -490,6 +493,7 @@ Check(Attr("earthBiomes").GetProperty("default").GetString()=="earth","Biomes de
     Check(again.Length==bytes.Length && ProtoBuf.Serializer.Deserialize<EarthParams>(new MemoryStream(again)).HasUnknownFields,"FP-04: saved again, the unknown field is kept ("+again.Length+" of "+bytes.Length+" bytes)");
 }
 PackageChecks.Run(root, Check);
+ModDbChecks.Run(root, Check);
 ConfigStoreChecks.Run(Check);
 WorldUpgradeChecks.Run(Check);
 ParamsBuilderChecks.Run(root, Check);

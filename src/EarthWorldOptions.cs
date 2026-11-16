@@ -156,12 +156,13 @@ namespace EarthMap
         public const string OresKey = "earthOres", OresRegional = "regional", OresGroundColumns = "groundcolumns", OresVanilla = "vanilla";
         /// <summary>Ground depth for ground columns: GroundColumns.DepthCurve.Choices, "log4000" by default.</summary>
         public const string GroundDepthKey = "earthGroundDepth";
-        /// <summary>The Earth tab's world height. 0 keeps the World generation tab's, whose slider stops at 512 outside
-        /// creative building.</summary>
+        /// <summary>The Earth tab's world height: its slider runs 256 to 1024 in steps of 64 (2.1.2, decision 0089: the Mod DB's
+        /// parser refuses the game's skipValues and alarm keys). 0, from a config or /worldconfig, keeps the World generation
+        /// tab's, whose slider stops at 512 outside creative building.</summary>
         public const string HeightKey = "earthWorldHeight";
         public const int MinHeight = 256, MaxHeight = 1024;
         /// <summary>The slider's former "Automatic (for the Earth size)" (0053): a value no world height can have. The slider
-        /// skips it now (worldconfig.json); a world config that holds it (made before, or typed by hand) still resolves.</summary>
+        /// no longer offers it (worldconfig.json); a world config that holds it (made before, or typed by hand) still resolves.</summary>
         public const int AutoHeight = 64;
         /// <summary>The Equator (m): a world's metres per block across are this over its Cylinder World ring.</summary>
         public const double EquatorMetres = SpawnSearch.EquatorMetres;

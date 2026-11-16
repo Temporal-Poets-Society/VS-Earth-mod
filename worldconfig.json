@@ -243,7 +243,7 @@
   ],
   "worldConfigAttributes": [
     {"category":"earth","code":"earthWorldSize","dataType":"dropdown","values":["vanilla","200","100","50","25","10","5"],"names":["vanilla","200","100","50","25","10","5"],"default":"100","onlyDuringWorldCreate":true},
-    {"category":"earth","code":"earthWorldHeight","dataType":"intRange","min":0,"max":1024,"step":64,"skipValues":["64...192"],"alarm":512,"values":["0"],"names":["0"],"default":"384","onlyDuringWorldCreate":true},
+    {"category":"earth","code":"earthWorldHeight","dataType":"intRange","min":256,"max":1024,"step":64,"default":"384","onlyDuringWorldCreate":true},
     {"category":"earth","code":"earthHeightCurve","dataType":"dropdown","values":["log1000","log250","log500","log2000","linear"],"names":["log1000","log250","log500","log2000","linear"],"default":"log1000","onlyDuringWorldCreate":true},
     {"category":"earth","code":"earthVerticalBudget","dataType":"dropdown","values":["110","128","160"],"names":["110","128","160"],"default":"110","onlyDuringWorldCreate":true},
     {"category":"earth","code":"earthCanals","dataType":"bool","default":"false","onlyDuringWorldCreate":true},

@@ -137,7 +137,7 @@ gets its default.
 | Key | Values (default first) | Option |
 | --- | --- | --- |
 | `earthWorldSize` | `"100"`, `"200"`, `"50"`, `"25"`, `"10"`, `"5"`, `"vanilla"` | Map · Earth size |
-| `earthWorldHeight` | `384`, or 256 to 1024 in steps of 64; `0` uses World Height | Map · World height |
+| `earthWorldHeight` | `384`, or 256 to 1024 in steps of 64 (a config or `/worldconfig` may also give `0`: World Height's) | Map · World height |
 | `earthHeightCurve` | `"log1000"`, `"log250"`, `"log500"`, `"log2000"`, `"linear"` | Map · Mountain heights |
 | `earthVerticalBudget` | `"110"`, `"128"`, `"160"` | Map · Sea level |
 | `earthCanals` | `false`, `true` | Map · Suez and Panama canals |

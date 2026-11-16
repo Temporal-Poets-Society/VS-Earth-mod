@@ -2,6 +2,14 @@
 
 What each version changed. What the current version needs and does is in [README.md](README.md).
 
+## 2.1.2 (16 November 2026)
+
+- **The Mod DB couldn't read Earth's world options** ([decision 0089](docs/decisions/0089-world-options-the-mod-db-reads.md)):
+  the World height slider carried two settings the game reads but the Mod DB's checker refuses, so the 2.1.1 file was
+  turned down on upload. The World height slider now runs from 256 to 1024 blocks in steps of 64 (384 by default, as
+  before). Its old 0 ("World Height at the top") is gone from the slider; a server config can still give 0. Worlds keep
+  their height, and the terrain is the same as 2.1.1's.
+
 ## 2.1.1 (16 November 2026)
 
 - **Lakes meet across the whole degrees** (lake outlines rules 3, [decision 0088](docs/decisions/0088-lake-outlines-across-tile-edges.md),

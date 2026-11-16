@@ -1,12 +1,13 @@
-# Earth 2.1.1 — Vintage Story 1.22
+# Earth 2.1.2 — Vintage Story 1.22
 
-**2.1.1 (16 November 2026).** Earth 2.0 is one mod and makes new worlds. Worlds from older Earth versions (0.x, 1.x and
+**2.1.2 (16 November 2026).** Earth 2.0 is one mod and makes new worlds. Worlds from older Earth versions (0.x, 1.x and
 the 2.0.0 release candidates) are not supported: start a new world. From 2.0.0 on, saves are kept working. 2.0.1 makes
 vanilla rocks the Earth tab's default, takes rain and storm frequency off the world screen, joins the two canal switches,
 reads start coordinates pasted from Google Maps, adds downloading the GLO-90 heights before a world starts, and lets
 the prospecting pick read Earth's rock blocks; 2.0.2 fixes a new world that couldn't start again after its first start
 stopped; 2.0.3 moves Start and Start coordinates to the game's Player spawn and death tab; 2.1.0 gives new worlds each place's real monthly temperatures, day-night range and warm and cold spells, and the climate as around 1318 (worlds made with 2.0 keep theirs unless they opt in); 2.1.1 makes new worlds' lakes
-meet where they cross a whole degree of latitude or longitude, without a step or notch on the line. What it brings over 1.0.x,
+meet where they cross a whole degree of latitude or longitude, without a step or notch on the line; 2.1.2 lets the Mod DB
+read Earth's world options (the World height slider runs 256 to 1024). What it brings over 1.0.x,
 and every earlier version, is in
 [CHANGELOG.md](CHANGELOG.md).
 
@@ -510,7 +511,7 @@ Dedicated servers set `WorldConfig.PlayStyle` to one of the codes above and put 
 | Option | Key | Default | Meaning |
 |---|---|---|---|
 | Earth size | `earthWorldSize` | 100 (the play style's) | the scale: `200` (1:200), `100` (1:100), `50` (1:50), `25` (1:25), `10` (1:10) or `5` (1:5). The length is the Equator over twice the scale (100 352 to 4 007 424 blocks), the width twice the length (Cylinder World's ring) plus 16 384 blocks of hidden seam ocean beyond each end (decision 0068; a width given in blocks, as an older world configuration has it, is still read: the same length, this width). `vanilla` keeps World generation tab dimensions (at least twice as wide as long, such as 1 024 000 × 512 000, or the Earth is stretched north-south) |
-| World height | `earthWorldHeight` | 384 (the play style's) | 256 to 1024 blocks in steps of 64 (a server config may give any multiple of 32); replaces World Height at the top of the screen. `0` keeps that slider's height |
+| World height | `earthWorldHeight` | 384 (the play style's) | 256 to 1024 blocks in steps of 64 (a server config may give any multiple of 32); replaces World Height at the top of the screen. `0`, from a config or `/worldconfig` (no longer on the slider, from 2.1.2), keeps that slider's height |
 | Start | `earthSpawn` | random | **Earth · Start**, on the game's **Player spawn and death** tab with Start coordinates, its last two options, below Starting climate (the game's text field turns clipping off for everything drawn after it in a list, so on the scrolling Earth tab the typed coordinates and the next options would draw outside the list; that tab doesn't scroll; from 2.0.3, [decision 0085](docs/decisions/0085-start-on-the-spawn-tab.md)). Regional random dry, gentle lowland at the chosen starting climate; 36 capitals; or `custom`. Random gives each qualifying major region a fair chance, permits coasts and avoids tiny islands ([decision 0037](docs/decisions/0037-varied-random-starts.md)). The same seed and settings give the same place. Capitals and coordinates find nearby dry land at any height |
 | Start coordinates | `earthSpawnCoordinates` | (empty) | for `custom`: pasted from Google Maps (the decimal pair a clicked place shows, `56.949600, 24.105200`; degrees, minutes and seconds, `56°56'58.6"N 24°06'18.7"E`; or a Maps link, whose place pin or `@latitude,longitude` is read), or `latitude, longitude` in degrees, south and west negative. Unreadable: a random place, and the host or the server's admins are told why in chat when they join while the world is made (from 2.0.1, [decision 0084](docs/decisions/0084-world-screen-2-0-1.md)) |
 | Suez and Panama canals | `earthCanals` | off | both navigable sea-level cuts, including their lakes; Panama has no locks. Off: `earthSuezCanal` and `earthPanamaCanal`, the switches before 2.0.1 (off the screen, off by default), each on its own: a server's world configuration can still name them, and a world made before keeps its own |
