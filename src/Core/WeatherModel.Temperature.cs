@@ -29,30 +29,10 @@ namespace EarthMap.Core
         {
             var has = Settings.Has;
             if (!has.TemperatureAnomaly) return 0;
-            AnomalyParts p;
-            if (has.AnomalyCells)
-            {
-                // (rules 8, EA-0073) the weather's part at the cell's centre and the step's start, kept per thread: every
-                // side computes the same numbers for the same cell and step, cached or not
-                long cx = (long)Math.Floor(x / AnomalyCellBlocks), cz = (long)Math.Floor(z / AnomalyCellBlocks), step = (long)Math.Floor(hours / AnomalyStepHours);
-                var cache = anomalyCache ??= new AnomalyEntry[AnomalyCacheSize];
-                // two ways per set (the older one replaced), sets by a mixed hash of the cell and step
-                ulong h = (ulong)cx * 0x9E3779B97F4A7C15UL ^ (ulong)cz * 0xC2B2AE3D27D4EB4FUL ^ (ulong)step * 0x165667B19E3779F9UL;
-                h ^= h >> 31;
-                h *= 0xBF58476D1CE4E5B9UL;
-                int set = (int)(h >> 55) & ~1;
-                ref var a = ref cache[set];
-                ref var b = ref cache[set + 1];
-                if (a.Owner == Id && a.Cx == cx && a.Cz == cz && a.Step == step) p = a.Parts;
-                else if (b.Owner == Id && b.Cx == cx && b.Cz == cz && b.Step == step) p = b.Parts;
-                else
-                {
-                    p = AnomalyPartsAt((cx + 0.5) * AnomalyCellBlocks, (cz + 0.5) * AnomalyCellBlocks, step * AnomalyStepHours);
-                    b = a;
-                    a = new AnomalyEntry { Owner = Id, Cx = cx, Cz = cz, Step = step, Parts = p };
-                }
-            }
-            else p = AnomalyPartsAt(x, z, hours);
+            // (rules 8, EA-0073) the weather's part at the cell's centre and the step's start, kept per thread: every side
+            // computes the same numbers for the same cell and step, cached or not (two ways per set, the older one replaced,
+            // sets by a mixed hash of the cell and step)
+            AnomalyParts p = has.AnomalyCells ? CachedParts(x, z, hours) : AnomalyPartsAt(x, z, hours);
             double ground = p.Temp - GroundLapse * Math.Max(0, metres);
             double sd = SpellSdBase + SpellSdRange * (1 - PortableMath.Exp(-p.Range / SpellSdScale)) * (1 - SpellSdSummer * WeatherNoise.SmoothStep(0, 20, ground));
             double rain = 0;
@@ -62,6 +42,44 @@ namespace EarthMap.Core
                 rain = p.Wet * (low + (high - low) * p.Day);
             }
             return sd * p.Spell + rain;
+        }
+
+        /// <summary>
+        /// (Decision 0086, seasons rules 1) The weather's part of the live temperature split for the monthly temperature
+        /// layer: <paramref name="spell"/> the warm or cold spell in standard deviations (the caller sizes it with the place's
+        /// own day-to-day spread), and the return value the rain's day-night part only (°C): a wet afternoon cooler and a wet
+        /// night milder by what the stations show, with the level shift of <see cref="TemperatureAnomaly"/>'s rain term taken
+        /// out, since the layer's monthly means and ranges already include the month's wet days. 0 and spell 0 where the
+        /// weather rules have no temperature (before 6). The same cache and numbers as <see cref="TemperatureAnomaly"/>.
+        /// </summary>
+        public double SeasonWeather(double x, double z, double hours, double metres, out double spell)
+        {
+            spell = 0;
+            if (!Settings.Has.TemperatureAnomaly) return 0;
+            var p = Settings.Has.AnomalyCells ? CachedParts(x, z, hours) : AnomalyPartsAt(x, z, hours);
+            spell = p.Spell;
+            if (p.Wet <= 0) return 0;
+            double ground = p.Temp - GroundLapse * Math.Max(0, metres);
+            double high = Interpolate(WetT, WetHigh, ground), low = Interpolate(WetT, WetLow, ground);
+            return p.Wet * (high - low) * (p.Day - 0.5);
+        }
+
+        AnomalyParts CachedParts(double x, double z, double hours)
+        {
+            long cx = (long)Math.Floor(x / AnomalyCellBlocks), cz = (long)Math.Floor(z / AnomalyCellBlocks), step = (long)Math.Floor(hours / AnomalyStepHours);
+            var cache = anomalyCache ??= new AnomalyEntry[AnomalyCacheSize];
+            ulong h = (ulong)cx * 0x9E3779B97F4A7C15UL ^ (ulong)cz * 0xC2B2AE3D27D4EB4FUL ^ (ulong)step * 0x165667B19E3779F9UL;
+            h ^= h >> 31;
+            h *= 0xBF58476D1CE4E5B9UL;
+            int set = (int)(h >> 55) & ~1;
+            ref var a = ref cache[set];
+            ref var b = ref cache[set + 1];
+            if (a.Owner == Id && a.Cx == cx && a.Cz == cz && a.Step == step) return a.Parts;
+            if (b.Owner == Id && b.Cx == cx && b.Cz == cz && b.Step == step) return b.Parts;
+            var p = AnomalyPartsAt((cx + 0.5) * AnomalyCellBlocks, (cz + 0.5) * AnomalyCellBlocks, step * AnomalyStepHours);
+            b = a;
+            a = new AnomalyEntry { Owner = Id, Cx = cx, Cz = cz, Step = step, Parts = p };
+            return p;
         }
 
         /// <summary>The parts of <see cref="TemperatureAnomaly"/> that don't depend on the ground's height: the month's

@@ -632,5 +632,7 @@ partial class Program
 204 SiteRules Int32
 205 CreatedWith String
 206 LastSavedWith String
-209 WeatherGroundSignature String";
+209 WeatherGroundSignature String
+210 SeasonRules Int32
+212 Climate1318 Int32";
 }

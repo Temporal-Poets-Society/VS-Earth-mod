@@ -13,13 +13,14 @@ Earth in memory (1.3 to 1.8 GB more than vanilla), and generates new land about 
 
 ## Installing
 
-Install three mods on the server and on every player's game: Earth 2.0.3, Cylinder World (1.1.0 or newer) and
+Install three mods on the server and on every player's game: Earth 2.1.0, Cylinder World (1.1.0 or newer) and
 Hydrology (0.6.2 or newer). Sea is recommended. Then make a new world with one of the Earth play styles (Earth · 1:100
 is the default). Earth 2.0 is one mod: the data-pack mods of Earth 1.0 (Earth Terrain Data, Earth Water Data) are no
 longer needed. If they are still installed, Earth copies its files from them instead of downloading them again.
 
 Only the server downloads. In a single-player game your own computer is the server. A player who joins a server
-downloads nothing beyond the mods: the climate the players' games need is inside the mod.
+downloads nothing beyond the mods: the climate the players' games need is inside the mod, and the monthly temperatures
+of the land around each player come from the server as they play.
 
 ## What is downloaded, and when
 
@@ -31,6 +32,7 @@ used.
 |---|---|---|---|
 | Earth's data files (terrain, water, ground, ecology) | 289 MB | the first time the server starts any Earth world, before the first chunk | `data` |
 | Ground sets (soil types, depth to bedrock, permafrost) | 172 MB | only for a world with **Rocks and ground: Ground columns**, before its first chunk | `ground` |
+| Monthly temperatures (`seasons-1.bin`: each place's months, day-night range and day-to-day spread) | 58.2 MB | the first start of a world made with Earth 2.1.0 or later (or a 2.0 world opted in with `UpgradeExistingWorldSeasons`); without it that session plays with 2.0's temperatures and fetches it at a later start | `data` |
 | Lake outlines, river outlines, river flow, dams | 193 MB | when a new world on GLO-90 heights first starts | `glo90` |
 | GLO-90 land heights | 8.6 GB in all (26,475 squares of 1° × 1°, about 0.3 MB each) | by the world's choice below | `glo90` |
 | The world's model cache | under 1 MB a world | at the world's first start | `cache` |
@@ -88,11 +90,12 @@ each other. A square that can't be had for another reason (no network, a timeout
 |---|---|
 | Data files | 289 MB |
 | Ground sets (worlds with ground columns only) | 172 MB |
+| Monthly temperatures (worlds made with 2.1.0 or later) | 58.2 MB |
 | GLO-90 land heights, all of them | 8.6 GB |
 | Lake, river and dam files beside them | 193 MB |
 | Free space a download all leaves on that disk | 1 GB (a single square fetched for new land needs 100 MB left free) |
 
-So a computer with full heights needs about **9.1 GB** for Earth's data, 9.3 GB with ground columns, plus the worlds'
+So a computer with full heights needs about **9.2 GB** for Earth's data, 9.4 GB with ground columns, plus the worlds'
 own saves, which grow as players explore (more at finer scales). The Copernicus choice converts square by square and
 keeps only the result: it needs the same 8.6 GB, not 71 GB.
 
@@ -117,6 +120,8 @@ start and after generating a 17 × 17-chunk area (Earth 2.0.0 with its default s
 - A 1:5 world peaks at about 7.2 GB while it starts.
 - An earlier build's 1:10 server held 4.5 to 4.8 GB after its start.
 - Memory grows with the chunks players keep loaded, as in vanilla.
+- A world with the monthly temperatures keeps the decoded parts around its players in memory: about 5 MB, a little
+  more for each player (at most about 100 MB). Each player's game holds only the land around it.
 - In single player your computer runs the server and the game together: count the game's own memory on top. As a
   rough guide (not measured at every scale), 16 GB of RAM is comfortable at 1:100; take 1:10 and 1:5 only with RAM to
   spare.

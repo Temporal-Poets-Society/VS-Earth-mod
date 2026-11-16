@@ -110,6 +110,11 @@ namespace EarthMap
         /// from now on. Chunks already generated keep their climate, so forests, soil and grass may change with a straight edge
         /// where new chunks meet old ones. Reset to false once applied.</summary>
         public bool UpgradeExistingWorldClimateData = false;
+        /// <summary>One-shot (decision 0086): give the Earth world being started the monthly temperature layer for its live
+        /// temperature (seasons rules 1: each place's own months, day-night range and spells). Nothing generated changes; the
+        /// temperature players feel does from then on (crops, food, body temperature, rain or snow). Reset to false once
+        /// applied.</summary>
+        public bool UpgradeExistingWorldSeasons = false;
         /// <summary>One-shot: the next Earth world started takes its own canal options (earthCanals, or earthSuezCanal and
         /// earthPanamaCanal each, EarthWorldOptions.CanalCodes; change them with /worldconfig first) for chunks generated from then on, then
         /// this resets to false. Chunks already generated on a canal's course keep their land: dig through them or regenerate

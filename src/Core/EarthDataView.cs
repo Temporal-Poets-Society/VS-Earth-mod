@@ -11,7 +11,7 @@ namespace EarthMap.Core
     /// </summary>
     public readonly record struct EarthDataChoice(int ClimateFix, bool FineTemperatures, bool FineRain, bool PenmanAridity,
         bool Summits, bool Glaciers, bool SeaReferee, bool IslandOverlay, bool LakeOverlay, bool ShoreOverlay,
-        bool ReservoirExclusions, bool OutletOverlay)
+        bool ReservoirExclusions, bool OutletOverlay, bool Paleo1318 = false)
     {
         /// <summary>Whether two choices read the terrain grid with the same overlays.</summary>
         public bool SameTerrain(in EarthDataChoice o) => SeaReferee == o.SeaReferee && IslandOverlay == o.IslandOverlay && LakeOverlay == o.LakeOverlay
@@ -19,7 +19,7 @@ namespace EarthMap.Core
 
         /// <summary>Whether two choices read the same climate.</summary>
         public bool SameClimate(in EarthDataChoice o) => ClimateFix == o.ClimateFix && FineTemperatures == o.FineTemperatures && FineRain == o.FineRain
-            && PenmanAridity == o.PenmanAridity;
+            && PenmanAridity == o.PenmanAridity && Paleo1318 == o.Paleo1318;
     }
 
     /// <summary>
@@ -65,7 +65,9 @@ namespace EarthMap.Core
             var d = Dataset;
             int fix = Math.Clamp(requested.ClimateFix, 0, EarthData.ClimateFixVersion);
             while (fix > 0 && !d.HasClimateFixVersion(fix)) fix--;
-            var fine = requested.FineTemperatures ? d.FineTemperatures() : null;
+            // (decision 0087) a world as around 1318 reads the CHELSA temperatures moved to 1318 (temperature-1318.bin)
+            var fine1318 = requested.FineTemperatures && requested.Paleo1318 ? d.FineTemperatures1318() : null;
+            var fine = !requested.FineTemperatures ? null : fine1318 ?? d.FineTemperatures();
             var rain = requested.FineRain ? d.FineRain() : null;
             var penman = requested.PenmanAridity ? d.PenmanAridity() : null;
             var summitGrid = requested.Summits ? d.Summits() : null;
@@ -76,6 +78,7 @@ namespace EarthMap.Core
                 FineTemperatures = fine != null,
                 FineRain = rain != null,
                 PenmanAridity = penman != null,
+                Paleo1318 = fine1318 != null,
                 // each overlay only where its file is there (the referee only where it fits the files)
                 SeaReferee = requested.SeaReferee && d.RefereeState() == 1,
                 IslandOverlay = requested.IslandOverlay && d.HasIslands,

@@ -73,6 +73,8 @@ namespace EarthMap
             // decision 0031: CHELSA's rainfall
             data.SetFineRain(FineRain >= 1);
             data.SetPenmanAridity(AridityRules >= 1);
+            // decision 0087: the temperatures as around 1318
+            data.SetPaleo1318(Climate1318 >= 1);
         }
 
         /// <param name="dams">0053 item 19: the dam file, whose course levels a world with DamRules sets before its

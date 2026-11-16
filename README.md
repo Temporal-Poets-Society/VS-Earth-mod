@@ -1,11 +1,11 @@
-# Earth 2.0.3 — Vintage Story 1.22
+# Earth 2.1.0 — Vintage Story 1.22
 
-**2.0.3 (15 November 2026).** Earth 2.0 is one mod and makes new worlds. Worlds from older Earth versions (0.x, 1.x and
+**2.1.0 (16 November 2026).** Earth 2.0 is one mod and makes new worlds. Worlds from older Earth versions (0.x, 1.x and
 the 2.0.0 release candidates) are not supported: start a new world. From 2.0.0 on, saves are kept working. 2.0.1 makes
 vanilla rocks the Earth tab's default, takes rain and storm frequency off the world screen, joins the two canal switches,
 reads start coordinates pasted from Google Maps, adds downloading the GLO-90 heights before a world starts, and lets
 the prospecting pick read Earth's rock blocks; 2.0.2 fixes a new world that couldn't start again after its first start
-stopped; 2.0.3 moves Start and Start coordinates to the game's Player spawn and death tab. What it brings over 1.0.x,
+stopped; 2.0.3 moves Start and Start coordinates to the game's Player spawn and death tab; 2.1.0 gives new worlds each place's real monthly temperatures, day-night range and warm and cold spells, and the climate as around 1318 (worlds made with 2.0 keep theirs unless they opt in). What it brings over 1.0.x,
 and every earlier version, is in
 [CHANGELOG.md](CHANGELOG.md).
 
@@ -21,7 +21,8 @@ its walls), at a scale from 1:200 to 1:5.
   recommended.
 - **Data:** the first start of a server (or a single-player game) downloads Earth's data from GitHub once per computer:
   about 290 MB, 170 MB more of ground data for worlds with ground columns, and the GLO-90 land heights with about
-  190 MB of lake, river and dam files beside them (see [Quick start](#quick-start)). A game client downloads nothing.
+  190 MB of lake, river and dam files beside them (see [Quick start](#quick-start)), and about 58 MB of monthly
+  temperatures for worlds made with 2.1.0 (or opted in). A game client downloads nothing.
 - **New worlds only:** worlds from Earth versions before 2.0.0 (0.x, 1.x, the release candidates) are not supported:
   start a new world (the author, 15 November 2026). Worlds made with 2.0.0 and later are kept working.
 - **Memory and start:** a 1:10 server peaks at about 5.5 GB while it starts, then holds 4.5 to 4.8 GB; 1:5 peaks at
@@ -308,9 +309,18 @@ reach ~85 % of Everest's height, the deep ocean and the Mariana Trench differ li
   real climate is that extreme (−50 °C on the Antarctic plateau, with reversed seasons in the south via Cylinder
   World's latitude).
 - **Seasons**: vanilla swings temperatures by 65 °C × latitude between winter and summer everywhere. Earth
-  replaces that with each place's real swing between its coldest and warmest month, so continental, maritime and
-  Gulf Stream climates come straight from the data: London about 4 °C in January / 20 °C in July, southern Italy
-  9 / 29 °C, Finland −10 / 17 °C, Yakutsk −38 / 21 °C (measured in game).
+  replaces that with each place's real seasons, so continental, maritime and Gulf Stream climates come straight from
+  the data: London about 4 °C in January / 20 °C in July, southern Italy 9 / 29 °C, Finland −10 / 17 °C, Yakutsk
+  −38 / 21 °C (measured in game, 2.0 worlds). Worlds made with 2.1.0 read a monthly temperature layer
+  ([decision 0086](docs/decisions/0086-monthly-temperature-layer.md)): each 2′ cell's mean for every month (CHELSA
+  1981–2010) on a smooth curve, its day-night range for the month (CHELSA's daily maximum and minimum) on a day shaped by
+  the sun (coldest after sunrise, warmest about two hours after noon), and warm and cold spells sized by its day-to-day
+  spread (ERA5); vanilla's world-wide temperature noise is taken out. At 47 GHCN stations the monthly means are off by
+  0.79 °C rms (2.0: 1.96), the warmest month right at 40 (2.0: 30).
+- **The climate as around 1318** (worlds made with 2.1.0, [decision 0087](docs/decisions/0087-climate-as-of-1318.md)):
+  the temperatures, monthly and yearly, are moved to 1300–1330 (the Last Millennium Reanalysis' level, the CMIP6
+  past1000 models' split over the months): about −0.5 °C over the globe, −1.1 °C at Paris, −1.4 °C at Moscow (−2.3 in
+  January), −1.8 °C in the Arctic. World generation reads it too (snow, crops, vegetation, tree lines, forests).
 - **Mediterranean**: climates with dry summers (from the monthly precipitation) get a lower rainfall value, so they
   are sparser and drier: southern Italy, Greece, Spain, California, central Chile.
 - **Forests** follow the real climate: vanilla's forest noise is scaled by a forest potential (warmest month
@@ -582,7 +592,8 @@ Everything that shapes terrain is frozen into the savegame at world creation (`e
 | `TopMargin` | 0.0625 | share of the world height above Everest |
 | `LandCurve` / `SeaCurve` | 200 / 20 | curve constants (m); smaller = more exaggeration near sea level, more compression higher up |
 | `MaxSeaDepth` | 0.43 | deepest floor as a share of the sea level's height (71 blocks in a 384 world) |
-| `RealSeasons` | true | each place's real seasonal swing instead of vanilla's latitude-only one |
+| `RealSeasons` | true | each place's real seasons (and, in new worlds, its monthly temperature layer: each month's mean, day-night range and spells, decision 0086); false = vanilla's seasons and day-night swing by latitude, in every world. Read at every start |
+| `UpgradeExistingWorldSeasons` | false | one-shot: the next Earth world started that was made before 2.1.0 takes the monthly temperature layer (seasons rules 1) for its live temperature from then on; nothing generated changes and its climate map stays modern, while its months' shape is 1318's. The flag then resets itself |
 | `DetailScale` | 1 | strength of the detail noise |
 | `GutterMargin` | 512 | open sea beyond Cylinder World's seam band on each side |
 | `ExtendTemperatureRange` | true | live temperatures below −20 °C / above 40 °C where the real climate is |

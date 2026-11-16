@@ -241,6 +241,12 @@ namespace EarthMap
                 VanillaBiomes = earthBiomes ? 0 : EarthParams.VanillaBiomesVersion,
                 // EA-0054 step 2: trees and shrubs by each column's site
                 SiteRules = earthBiomes ? Core.SiteNiche.RulesVersion : 0,
+                // (decision 0086) the monthly temperature layer for the live temperature; without the file a reading keeps rules 0's shape
+                SeasonRules = EarthParams.SeasonRulesVersion,
+                // (decision 0087) the climate as around 1318, in world generation and the live temperature alike; only where
+                // this Earth has temperature-1318.bin (Fable's F4), as the other data files
+                Climate1318 = data != null && DataHas(data, d => { d.SetFineTemperature(true); d.SetPaleo1318(true); return d.Paleo1318; }, d => d.Paleo1318Error, log)
+                    ? EarthParams.Climate1318Version : 0,
                 ZoneRules = earthBiomes ? ClimateZones.RulesVersion : 0,
                 FireRules = earthBiomes ? FireRegime.RulesVersion : 0,
                 WetlandRules = earthBiomes ? WetlandGrid.RulesVersion : 0,

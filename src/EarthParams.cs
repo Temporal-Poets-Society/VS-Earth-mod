@@ -453,6 +453,22 @@ namespace EarthMap
         [ProtoMember(209)] public string WeatherGroundSignature;
         /// <summary>(EA-0118) <see cref="WeatherGroundSignature"/> of a server whose rules read the ground and that has none.</summary>
         public const string NoWeatherGround = "none";
+        /// <summary>(EA-0144, decision 0086) The live temperature's rules. 1 = the monthly temperature layer: each place's
+        /// own monthly means through a mean-preserving curve, its own day-night range on a day shaped by the sun, spells sized
+        /// by its own day-to-day spread, and vanilla's date-only noise taken out (<see cref="Core.SeasonCurve"/>). 0 = vanilla's
+        /// season shape stretched to the place's coldest and warmest month (every world made before, and new worlds where the
+        /// layer isn't there). The live temperature only: world generation never reads it. 210 was free on every branch on
+        /// 16 November 2026 (207 and 208 on claude/landuse-1318, 211 kept for the data side).</summary>
+        [ProtoMember(210)] public int SeasonRules;
+        public const int SeasonRulesVersion = 1;
+        /// <summary>(Decision 0087) The temperatures as around 1318: 1 = CHELSA's temperatures read from temperature-1318.bin
+        /// (each month moved by how much colder 1300-1330 was than 1981-2010: the Last Millennium Reanalysis' level, GISTEMP's
+        /// bridge, five CMIP6 past1000 models' split over the months), so every climate reading (world generation's climate
+        /// map, Earth's zones, tree lines, soil and ecology, the live temperature) is as around 1318; the monthly layer's
+        /// means carry the same shift. 0 = the modern normals (every world made before). 211 is kept for the data side, so
+        /// 212 (free on every branch on 16 November 2026).</summary>
+        [ProtoMember(212)] public int Climate1318;
+        public const int Climate1318Version = 1;
 
         /// <summary>
         /// ER-05 (code review 14 November 2026): every saved rules number with the newest this build makes and reads, for the
@@ -518,6 +534,8 @@ namespace EarthMap
             yield return (nameof(VanillaBiomes), VanillaBiomes, VanillaBiomesVersion);
             yield return (nameof(CraftingRules), CraftingRules, CraftingRulesVersion);
             yield return (nameof(SiteRules), SiteRules, SiteNiche.RulesVersion);
+            yield return (nameof(SeasonRules), SeasonRules, SeasonRulesVersion);
+            yield return (nameof(Climate1318), Climate1318, Climate1318Version);
             yield return (nameof(DepositSet), DepositSet, EarthDepositSet.Version);
             yield return (nameof(GroundCoverRules), GroundCoverRules, GroundCover.RulesVersion);
             yield return (nameof(ZoneRules), ZoneRules, ClimateZones.RulesVersion);

@@ -86,7 +86,9 @@ def read_tas(folder, month):
     return v, tags
 
 
-def bake(folder):
+def bake(folder, paleo=None):
+    """paleo: (decision 0087) a 1318 correction file (tools/bake_1318.py): each month's correction is added to that
+    month's mean before the yearly mean, coldest and warmest month are taken (temperature-1318.bin)."""
     dem, top_lat, west = load_dem(folder)
     log(f"dem {dem.shape}, top edge {top_lat:.4f}, west edge {west:.4f}, {np.isfinite(dem).mean() * 100:.1f}% with data")
     n, w = dem.shape
@@ -113,6 +115,12 @@ def bake(folder):
         log(f"month {m}: {np.nanmin(tas):.1f}..{np.nanmax(tas):.1f} C")
         del tas, sl, valid
     ok = count >= MIN_PIXELS
+    if paleo:
+        import bake_seasons
+        r0p = int(round((90 - top_lat) * RES))
+        for m in range(12):
+            sums[m] += bake_seasons.paleo1318_on_grid(paleo, m)[r0p:r0p + ch].astype(np.float64)
+        log(f"the months moved to 1318 by {paleo}")
     t_mean = sums.mean(axis=0)
     t_cold = sums.min(axis=0)
     t_warm = sums.max(axis=0)
@@ -166,7 +174,7 @@ def quantize_temperature(q, step=DEFAULT_TEMPERATURE_STEP):
     return (np.rint(q.astype(np.float64) / units) * units).astype('<i2')
 
 
-def write(land, planes, step=DEFAULT_TEMPERATURE_STEP):
+def write(land, planes, step=DEFAULT_TEMPERATURE_STEP, name="temperature.bin"):
     H, W = land.shape
     q = [quantize_temperature(np.clip(np.round(p * 10), -32000, 32000), step) for p in planes]
     tiles = []
@@ -176,9 +184,9 @@ def write(land, planes, step=DEFAULT_TEMPERATURE_STEP):
             m = land[sl]
             # the values the plain file's Paeth residuals decoded to (int16, wrapped as the reader wraps them)
             tiles.append([filled(p[sl], m).astype(np.int32).astype("<i2") for p in q] + [m.astype(np.uint8)])
-    path = os.path.join(OUT, "temperature.bin")
+    path = os.path.join(OUT, name)
     pc.write_tiled(path, "EMTP", 1, W, H, TILE, tiles, [pc.I16, pc.I16, pc.I16, pc.U8], steps=["auto", "auto", "auto", 1])
-    log(f"temperature.bin {os.path.getsize(path) / 1e6:.1f} MB, {len(tiles)} tiles")
+    log(f"{name} {os.path.getsize(path) / 1e6:.1f} MB, {len(tiles)} tiles")
 
 
 # a quick look while baking: CHELSA at the stations (the in-game check is tests/EarthMapTests CheckFineTemperature)
@@ -204,9 +212,10 @@ if __name__ == "__main__":
     ap.add_argument('folder', nargs='?', default=os.path.join(ROOT, 'rawdata', 'chelsa-v2.1'))
     ap.add_argument('--temperature-step', type=float, default=DEFAULT_TEMPERATURE_STEP)
     ap.add_argument('--check', action='store_true')
+    ap.add_argument('--paleo', help="(decision 0087) a 1318 correction (tools/bake_1318.py); writes temperature-1318.bin")
     args = ap.parse_args()
     quantize_temperature(np.zeros((1, 1)), args.temperature_step)
-    land, planes, href = bake(args.folder)
+    land, planes, href = bake(args.folder, args.paleo)
     report(land, planes, href)
     if not args.check:
-        write(land, planes, args.temperature_step)
+        write(land, planes, args.temperature_step, "temperature-1318.bin" if args.paleo else "temperature.bin")

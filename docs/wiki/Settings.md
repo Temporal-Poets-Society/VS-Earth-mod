@@ -239,7 +239,7 @@ them out. To choose them on a dedicated server, set the option's key (see [The k
 | `RainFrequency` | 1 | How often it rains (0 to 3), for every new world whose `earthRainFrequency` is empty. |
 | `StormFrequency` | 1 | How often storms form (0 to 5), likewise. |
 | `ExtendTemperatureRange` | true | Temperatures below −20 °C and above 40 °C where the real climate has them. New worlds. |
-| `RealSeasons` | true | Each place's real seasonal swing instead of vanilla's latitude-only one. Every start. |
+| `RealSeasons` | true | Each place's real seasons; false gives vanilla's seasons and day-night swing by latitude, in every world. Every start. |
 
 ### When something is missing
 
@@ -265,6 +265,7 @@ they are switched off when it is saved: set one, then start the existing world, 
 | `UpgradeExistingWorldFaunaRules` | `RegionalFauna`, for animals that spawn from then on. |
 | `UpgradeExistingWorldMountainTerrain` | The current summit heights and alpine surfaces. |
 | `UpgradeExistingWorldClimateData` | Newer climate data, when a release brings it. |
+| `UpgradeExistingWorldSeasons` | The monthly temperatures of Earth 2.1.0 (each place's months, day-night range and spells) for a world made with 2.0. It changes the temperature you feel from then on, not the land. |
 
 The other `UpgradeExistingWorld…` switches in the file bring worlds from Earth's early versions up to date and do
 nothing in worlds made with Earth 2.0.

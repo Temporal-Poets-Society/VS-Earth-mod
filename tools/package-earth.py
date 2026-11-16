@@ -9,10 +9,10 @@ import argparse, hashlib, io, json, pathlib, re, struct, zipfile
 
 LIMIT = 40_000_000
 STORE_LIST = pathlib.Path(__file__).resolve().parent.parent / 'src' / 'Core' / 'EarthDataStore.cs'
-CLIENT_DATA = ['earth.json', 'climate.bin', 'climatefix.bin', 'climatefix2.bin', 'climatefix3.bin', 'climatefix4.bin', 'temperature.bin', 'rain.bin', 'weather.bin', 'weatherground.bin', 'aridity.bin']
+CLIENT_DATA = ['earth.json', 'climate.bin', 'climatefix.bin', 'climatefix2.bin', 'climatefix3.bin', 'climatefix4.bin', 'temperature.bin', 'rain.bin', 'weather.bin', 'weatherground.bin', 'aridity.bin', 'temperature-1318.bin']
 # the client climate files written as predicted planes (EA-0077) and the most each may take: about 1 % above their size
 # at 2.0.0-rc.14, far below the plain files' (a bake that wrote plain brotli would bring back about 10 MB)
-PREDICTED_DATA = {'rain.bin': 8_940_000, 'aridity.bin': 5_465_000, 'temperature.bin': 5_480_000, 'climate.bin': 1_775_000,
+PREDICTED_DATA = {'rain.bin': 8_940_000, 'aridity.bin': 5_465_000, 'temperature.bin': 5_480_000, 'temperature-1318.bin': 5_550_000, 'climate.bin': 1_775_000,
                   'climatefix.bin': 220_000, 'climatefix2.bin': 585_000, 'weather.bin': 2_690_000}
 DATA_PACKS = ['earthterraindata', 'earthwaterdata', 'earthwaterfixdata', 'earthheightdata1', 'earthheightdata2',
               'earthheightdata3', 'earthheightdata4', 'earthgrounddata']

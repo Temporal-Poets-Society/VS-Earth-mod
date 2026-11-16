@@ -27,7 +27,7 @@ and **Geology Additions**. See [Compatibility](Compatibility).
 ## Install
 
 1. Put the Earth zip, Cylinder World and Hydrology in the `Mods` folder of the server and of every player.
-2. Start the game or the server. The first time, Earth downloads its data from GitHub: about 290 MB, then all the real land
+2. Start the game or the server. The first time, Earth downloads its data from GitHub: about 290 MB, 58 MB more of monthly temperatures for a new world, then all the real land
    heights (8.6 GB by default; the download starts when your first world opens, and you can play meanwhile). Only the server or the single-player game downloads; a
    client joining a server downloads nothing. Details, disk space and memory are on
    [Data and performance](Data-and-performance).
@@ -63,7 +63,7 @@ water.
 
 ## Version and problems
 
-This wiki describes **Earth 2.0.3**, with Cylinder World 1.1.1, Hydrology 0.6.2, Sea 0.6.1 and World Map 0.5.4. Earth 2.0
+This wiki describes **Earth 2.1.0**, with Cylinder World 1.1.1, Hydrology 0.6.2, Sea 0.6.1 and World Map 0.5.4. Earth 2.0
 makes new worlds only: worlds made with an Earth older than 2.0.0 aren't supported (see [Saves](Saves)).
 
 Report problems on Earth's Mod DB page. Say which Earth version you run, the world's scale and settings, where in the

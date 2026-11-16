@@ -100,7 +100,8 @@ on clear, calm nights after rain. `/earthweather fog` lists when fog comes here 
 
 **Earth:** the weather is part of the temperature. Under clouds and rain a warm month's afternoon is cooler, and a
 winter's snowy night is milder, by about 3 °C at most places. Warm and cold spells come on top, small in the tropics
-and up to about 6 °C in a continental winter. `/earthweather` says by how
+and up to about 6 °C in a continental winter; in worlds made with 2.1.0 each place's spells are as large as its real
+day-to-day swings at that time of year (see [Climate and seasons](Climate-and-seasons)). `/earthweather` says by how
 much the weather is warming or cooling it here right now. Your body temperature, crops and food follow the
 temperature with the weather included.
 

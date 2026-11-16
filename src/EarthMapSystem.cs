@@ -98,6 +98,21 @@ namespace EarthMap
         public EarthData Data { get; private set; }
         /// <summary>Server: full terrain model. Client: climate only (no terrain data loaded).</summary>
         public TerrainModel Model { get; private set; }
+        /// <summary>(Decision 0086) The monthly temperature layer as the model reads it, over <see cref="Seasons"/> (the
+        /// server's downloaded file, a player's tiles from the server); null where there is none, and the live temperature
+        /// then keeps seasons rules 0's shape.</summary>
+        public Core.ISeasonLayer SeasonLayer
+        {
+            get
+            {
+                var data = Seasons;
+                if (data == null) return null;
+                var layer = seasonLayer;
+                if (layer == null || !ReferenceEquals(layer.Data, data)) seasonLayer = layer = new Core.SeasonDataLayer(data);
+                return layer;
+            }
+        }
+        Core.SeasonDataLayer seasonLayer;
 
         /// <summary>For the players who join in the session that made this world: why its start isn't the Earth tab's
         /// coordinates (EarthSpawn.Choose), or null.</summary>
@@ -307,6 +322,7 @@ namespace EarthMap
             // (2.0.1) start coordinates the new world couldn't read: told, with the formats, to whoever can act on it and joins
             // while it is being made (the single player's host; a server's admins, not every player: Fable's re-review, P4)
             api.Event.PlayerNowPlaying += plr => { if (spawnNotice != null && plr.HasPrivilege(Privilege.controlserver)) plr.SendMessage(GlobalConstants.GeneralChatGroup, spawnNotice, EnumChatType.Notification); };
+            StartSeasonsServer(api);
             Commands = new EarthCommands(this, api, Mod.Logger);
             Commands.Register(api);
             // after every mod's Start(): vanilla's season handler (ModTemperature) subscribes there and overwrites the live temperature
@@ -410,6 +426,8 @@ namespace EarthMap
             }
 
             if (fresh) FinishNewWorld(p, save, cw);
+            // (EA-0144) the monthly temperature layer, where this world's rules read it: fetched and opened before the game runs
+            LoadSeasons(p);
             Mod.Logger.Notification("Earth Map: spawn at {0} (x={1} z={2}); world centre meridian {3}; wrapping with Cylinder World, seam through the Bering Strait",
                 FormatLatLon(p.SpawnLat, p.SpawnLon), p.SpawnX, p.SpawnZ, FormatLon(Model.Geometry.CenterLon));
             if (!sapi.ModLoader.IsModEnabled("wmap"))
@@ -448,6 +466,8 @@ namespace EarthMap
         {
             StopDownloads();
             ParamsReady = null;
+            Seasons?.Dispose();
+            Seasons = null;
             // (Fable's final pass before 2.0.0) the store's repair hook holds this system, and with it a closed single-player
             // world's data and model, until the next world sets it
             EarthDataStore.Repair = null;
@@ -467,6 +487,8 @@ namespace EarthMap
 
         /// <summary>The climate hook (both sides): temperatures beyond vanilla's range and each place's real seasons.</summary>
         EarthClimateHooks climateHooks;
+        /// <summary>(Decision 0086) /earthweather's line on the seasons rules here (EarthClimateHooks.Report).</summary>
+        internal string SeasonsReport(BlockPos pos, double totalDays) => (climateHooks ??= new EarthClimateHooks(this)).Report(pos, totalDays);
         /// <summary>For the climate hook: the side this system started on.</summary>
         internal ICoreAPI AnyApi => anyApi;
 

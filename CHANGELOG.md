@@ -2,6 +2,39 @@
 
 What each version changed. What the current version needs and does is in [README.md](README.md).
 
+## 2.1.0 (16 November 2026)
+
+New worlds get each place's real temperatures month by month and hour by hour, and the climate as it was around 1318
+([decisions 0086](docs/decisions/0086-monthly-temperature-layer.md) and
+[0087](docs/decisions/0087-climate-as-of-1318.md)). Worlds made with 2.0 keep their temperatures unless you opt in.
+
+- **Each place's own year.** A new world reads every place's real mean temperature for each month (climate records on
+  a grid of about 3.7 km) and runs a smooth curve through the twelve months. The seasons no longer follow one shape
+  everywhere: Mumbai is hottest in May, before the monsoon, Delhi in June, Tokyo and Lisbon in August, San Francisco in
+  September, and the tropics swing only a little. At 47 weather stations the monthly temperatures are now off by
+  0.8 °C on average (2.0: 2.0 °C), and the warmest month is right at 40 of them (2.0: 30).
+- **Day and night.** Each place has its real day-night range for the month: 15 °C and more in a desert, a few degrees
+  on a cloudy coast or in a northern winter, instead of the game's one rule. The day follows the sun: coldest just after
+  sunrise, warmest about two hours after noon, so long summer days and short winter days have their real shape, and
+  the polar day and night swing gently.
+- **Warm and cold spells** are as large as each place's real day-to-day swings at that time of year: small in the
+  tropics, several degrees in a continental winter. The game's two world-wide random temperature swings (the same
+  everywhere at once) are gone from these worlds.
+- **The climate as around 1318.** A new world's temperatures, and everything they decide when the world is made (snow,
+  crops, vegetation, tree lines, forests), are those of the early 1300s, before the modern warming and early in the
+  Little Ice Age: about 0.5 °C colder over the globe, 1 °C in western Europe and the Alps, 1.4 °C in Moscow (2 °C in
+  its winter), almost 2 °C in the Arctic; Greenland's Norse settlements keep their summers.
+- **Data:** a server (or a single-player game) downloads the monthly temperatures once, about 58 MB, at the first
+  start of a world that uses them. A game client downloads nothing: the server sends each player the land around them.
+  Without the file (offline) the world plays with 2.0's temperatures that session and fetches it at a later start.
+- **Worlds made with 2.0** keep 2.0's temperatures. To give one the new months, days and spells, set
+  `UpgradeExistingWorldSeasons` to `true` in `earth.json` once and start that world. Nothing generated changes: its
+  land and climate map stay 2.0's (today's climate), while the shape of its year is that of 1318 (its winter about a
+  degree colder against its yearly mean in Moscow, more in the Arctic).
+- `RealSeasons: false` in `earth.json` now gives vanilla's seasons and day-night swing in every world.
+- `/earthweather` shows how the temperature here is made up: the month's curve, the day-night range and the hour's
+  place in it, sunrise and sunset, the day-to-day spread and the spell now.
+
 ## 2.0.3 (15 November 2026)
 
 - **Start and Start coordinates are on the game's Player spawn and death tab**, below Starting climate, which a random

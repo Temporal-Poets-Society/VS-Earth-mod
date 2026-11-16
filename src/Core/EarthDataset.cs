@@ -281,6 +281,37 @@ namespace EarthMap.Core
             return fine;
         }
 
+        FineTemperature fine1318;
+        bool fine1318Tried;
+        /// <summary>Why temperature-1318.bin could not be read, or null.</summary>
+        public string Paleo1318Error { get; private set; }
+        /// <summary>(Decision 0087) The file of CHELSA's temperatures moved to 1318 (tools/bake_chelsa.py --paleo).</summary>
+        public const string Temperature1318File = "temperature-1318.bin";
+
+        /// <summary>(Decision 0087) CHELSA's temperatures as around 1318 (temperature-1318.bin: each month moved by 1300-1330
+        /// against 1981-2010 before the yearly mean, coldest and warmest month were taken), read the first time a world asks;
+        /// null when the file isn't there or can't be read (Paleo1318Error).</summary>
+        public FineTemperature FineTemperatures1318()
+        {
+            lock (loadLock)
+            if (!fine1318Tried)
+            {
+                fine1318Tried = true;
+                try
+                {
+                    using var s = openSource?.Invoke(Temperature1318File);
+                    if (s != null) fine1318 = FineTemperature.Read(s);
+                    else Paleo1318Error = "earthdata/" + Temperature1318File + " is missing";
+                }
+                catch (Exception e)
+                {
+                    fine1318 = null;
+                    Paleo1318Error = "earthdata/" + Temperature1318File + ": " + e.Message;
+                }
+            }
+            return fine1318;
+        }
+
         public PeakCatalog ReadPeaks()
         {
             using var s = openSource?.Invoke("peaks.json");

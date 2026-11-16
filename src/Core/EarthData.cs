@@ -112,6 +112,15 @@ namespace EarthMap.Core
         /// </summary>
         public void SetFineTemperature(bool on) => Select(c => c with { FineTemperatures = on });
 
+        /// <summary>(Decision 0087) Worlds with Climate1318 read CHELSA's temperatures as around 1318 (temperature-1318.bin in
+        /// place of temperature.bin): every SampleClimate's yearly mean, coldest and warmest month. A missing or damaged file
+        /// leaves the modern temperatures of temperature.bin (Paleo1318 false, Paleo1318Error says why).</summary>
+        public void SetPaleo1318(bool on) => Select(c => c with { Paleo1318 = on });
+        /// <summary>Whether SampleClimate's temperatures are as around 1318 (SetPaleo1318).</summary>
+        public bool Paleo1318 => view.Choice.Paleo1318;
+        /// <summary>Why temperature-1318.bin could not be read, or null.</summary>
+        public string Paleo1318Error => dataset.Paleo1318Error;
+
         /// <summary>Why rain.bin, summits.bin or glaciers.bin could not be read, or null.</summary>
         public string FineRainError => dataset.FineRainError;
         public string SummitsError => dataset.SummitsError;

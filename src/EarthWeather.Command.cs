@@ -255,6 +255,8 @@ namespace EarthMap
                     fog.Ground < 0.05 ? "none" : string.Format(ci, "{0} {1:0}%", fog.Sea ? "sea fog" : "ground fog", fog.Ground * 100), fog.Air * 100,
                     WeatherModel.NightHours(s0.Lat, s0.YearRel)));
             }
+            var earth = api.ModLoader.GetModSystem<EarthMapSystem>();
+            if (earth != null) sb.Append("\n" + earth.SeasonsReport(pos.AsBlockPos, api.World.Calendar.TotalDays));
             sb.Append($"\nWeather rules v{m.Settings.Rules} (this build v{RulesVersion}). Wind: {(ControlsWind ? "Earth's" : "an older Sea's own")}; Sea: {SeaLink}; weather role ({WeatherContract.Key}): {RoleStatus}, revision {Revision}; patches: {string.Join(", ", Active)}.");
             return TextCommandResult.Success(sb.ToString());
         }

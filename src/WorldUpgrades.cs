@@ -146,6 +146,7 @@ namespace EarthMap
             new OneShot(c => ref c.UpgradeExistingWorldRiverWidths, ApplyRiverWidths),
             new OneShot(c => ref c.UpgradeExistingWorldSeaDepth, ApplySeaDepth),
             new OneShot(c => ref c.UpgradeExistingWorldClimateData, ApplyClimateData),
+            new OneShot(c => ref c.UpgradeExistingWorldSeasons, ApplySeasons),
             new OneShot(c => ref c.UpgradeExistingWorldLakeShores, ApplyLakeShores),
             new OneShot(c => ref c.UpgradeExistingWorldIslands, ApplyIslands, KeptIslands),
             new OneShot(c => ref c.UpgradeExistingWorldCoasts, ApplyCoasts),
@@ -259,6 +260,23 @@ namespace EarthMap
             }
             log.Notification("UpgradeExistingWorldClimateData: nothing to do in this world ({0}). The flag is reset once the world is saved.",
                 available > 0 ? "it has climate fix v" + p.ClimateData + " already" : "earthdata/climatefix.bin to climatefix4.bin are missing");
+            return false;
+        }
+
+        /// <summary>(Decision 0086) The live temperature only: world generation never reads the seasons rules, so no chunk
+        /// changes; a server without the layer's file keeps rules 0's shape reading by reading until it has it.</summary>
+        bool ApplySeasons(EarthParams p)
+        {
+            if (p.SeasonRules < EarthParams.SeasonRulesVersion)
+            {
+                int before = p.SeasonRules;
+                p.SeasonRules = EarthParams.SeasonRulesVersion;
+                log.Warning("UpgradeExistingWorldSeasons: seasons rules v{0} (was v{1}; decision 0086: each place's own monthly temperatures, " +
+                    "day-night range and spells) for the live temperature from now on. Nothing generated changes; crops, food, body temperature " +
+                    "and rain or snow follow the new temperatures. The flag is reset once the world is saved.", p.SeasonRules, before);
+                return true;
+            }
+            log.Notification("UpgradeExistingWorldSeasons: nothing to do in this world (it has seasons rules v{0} already). The flag is reset once the world is saved.", p.SeasonRules);
             return false;
         }
 

@@ -199,6 +199,10 @@ namespace EarthMap
             if (p.ClimateRules >= TerrainModel.RealLapseRules && !Data.FineTemperatures)
                 Mod.Logger.Error("Earth Map: this world uses CHELSA's temperatures (earthdata/temperature.bin), which this Earth Map doesn't have{0}: {1}. Reinstall the mod.",
                     Data.FineTemperatureError != null ? " (" + Data.FineTemperatureError + ")" : "", withoutFineTemperatures);
+            if (p.Climate1318 >= 1 && p.ClimateRules >= TerrainModel.RealLapseRules && Data.FineTemperatures && !Data.Paleo1318)
+                Mod.Logger.Error("Earth Map: this world uses the temperatures as around 1318 (earthdata/{0}), which this Earth Map doesn't have{1}: the modern " +
+                    "temperatures of temperature.bin instead ({2}). Reinstall the mod.", Core.EarthDataset.Temperature1318File,
+                    Data.Paleo1318Error != null ? " (" + Data.Paleo1318Error + ")" : "", withoutFineTemperatures);
             if (p.ClimateData > 0 && Data.ClimateFixApplied != p.ClimateData)
                 Mod.Logger.Error("Earth Map: this world uses the climate fix v{0} (earthdata/climatefix{1}.bin), which this Earth Map doesn't have: {2}. Reinstall the mod.",
                     p.ClimateData, p.ClimateData == 1 ? "" : p.ClimateData.ToString(), withoutClimateFix);

@@ -26,11 +26,14 @@ namespace EarthMap
             api.Network.RegisterChannel(ChannelName)
                 .RegisterMessageType<EarthParams>()
                 .SetMessageHandler<EarthParams>(OnParams);
+            StartSeasonsClient(api);
             api.Event.OnGetClimate += (climateHooks ??= new EarthClimateHooks(this)).OnGetClimate;
         }
 
         void OnParams(EarthParams p)
         {
+            // (EA-0144) a world's params start its monthly temperature layer afresh: the server sends its tiles after this
+            ResetClientSeasons();
             // (no provider check here: the required providers are server-side, RequiredMods, and the server checked them)
             Params = p;
             if (!p.Enabled)

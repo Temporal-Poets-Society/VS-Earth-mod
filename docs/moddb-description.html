@@ -21,11 +21,12 @@
 
 <ul>
   <li>about <strong>290 MB</strong> of map data, before the first world starts;</li>
+  <li>about <strong>58 MB</strong> of monthly temperatures, at the first start of a world made with Earth 2.1;</li>
   <li>about <strong>170 MB</strong> of ground data, only for worlds with <em>Rocks and ground: Ground columns</em>;</li>
   <li>the <strong>Copernicus GLO-90 land heights</strong>, <strong>8.6 GB</strong> in all, with about 190 MB of lake, river and dam files beside them. By default all of them download in the background when a new world first opens, with a progress window; you can play meanwhile. You can also download them before the world starts, or square by square as the world reaches them.</li>
 </ul>
 
-<p>A player joining a server downloads nothing beyond the mods. Without internet the files can be put in place by hand; a server that can't get them stops and says which are missing. Details: <a href="https://github.com/Temporal-Poets-Society/VS-Earth-mod/wiki/Data-and-performance">Data and performance</a>.</p>
+<p>A player joining a server downloads nothing beyond the mods: the server sends each player the monthly temperatures of the land around them. Without internet the files can be put in place by hand; a server that can't get them stops and says which are missing. Details: <a href="https://github.com/Temporal-Poets-Society/VS-Earth-mod/wiki/Data-and-performance">Data and performance</a>.</p>
 
 <h2>Quick start</h2>
 
@@ -58,6 +59,15 @@
 <h2>Climate and weather</h2>
 
 <p>Every place has its real climate, month by month: temperature and rainfall by latitude, altitude and season, opposite seasons in the two hemispheres, midnight sun and polar night. Earth's own weather follows it: wet and dry seasons, monsoons, prevailing winds, moving rain systems, thunderstorms and hail. Choose vanilla weather on the Earth tab if you prefer it.</p>
+
+<ul>
+  <li><strong>Each place's own year</strong> (new in 2.1): every place's real mean temperature for each month, so Mumbai is hottest in May, before the monsoon, San Francisco in September, and the tropics swing only a little.</li>
+  <li><strong>Day and night:</strong> each place's real day-night range for the month, 15 °C and more in a desert, a few degrees on a cloudy coast. The day follows the sun: coldest just after sunrise, warmest about two hours after noon.</li>
+  <li><strong>Warm and cold spells</strong> as large as the place's real day-to-day swings at that time of year.</li>
+  <li><strong>The climate as around 1318:</strong> early in the Little Ice Age, about 0.5 °C colder over the globe, 1 °C in western Europe, almost 2 °C in the Arctic. Snow, crops, vegetation and tree lines follow it.</li>
+</ul>
+
+<p>Worlds made with Earth 2.0 keep their temperatures; <code>UpgradeExistingWorldSeasons</code> in <code>earth.json</code> gives one the new months, days and spells. Details: <a href="https://github.com/Temporal-Poets-Society/VS-Earth-mod/wiki/Climate-and-seasons">Climate and seasons</a>.</p>
 
 <h2>Rocks, soil and ores</h2>
 
@@ -196,9 +206,11 @@
 
 <h2>Credits</h2>
 
-<p>Earth uses free public data, among them Copernicus GLO-90, NOAA ETOPO, CHELSA and NOAA PSL climate data, GSHHG, Natural Earth, HydroSHEDS (HydroRIVERS, HydroLAKES), GIRES, Global Dam Watch, OpenStreetMap (ODbL), the Smithsonian Global Volcanism Program, GeoNames, the Randolph Glacier Inventory, Kew WCVP, TDWG, PHYLACINE and regional geological and soil maps. The full list with every licence is in the mod's <code>earthdata/ATTRIBUTION.txt</code> (plants and trees: <code>assets/earth/config/PLANT-DATA-ATTRIBUTION.txt</code> and <code>TREE-DATA-ATTRIBUTION.txt</code>) and the data repositories' READMEs. Optional content remains credited to its respective mod authors.</p>
+<p>Earth uses free public data, among them Copernicus GLO-90, NOAA ETOPO, CHELSA and NOAA PSL climate data, ERA5 (Copernicus Climate Change Service), the Last Millennium Reanalysis, NASA GISTEMP and CMIP6 climate models, GSHHG, Natural Earth, HydroSHEDS (HydroRIVERS, HydroLAKES), GIRES, Global Dam Watch, OpenStreetMap (ODbL), the Smithsonian Global Volcanism Program, GeoNames, the Randolph Glacier Inventory, Kew WCVP, TDWG, PHYLACINE and regional geological and soil maps. The full list with every licence is in the mod's <code>earthdata/ATTRIBUTION.txt</code> (plants and trees: <code>assets/earth/config/PLANT-DATA-ATTRIBUTION.txt</code> and <code>TREE-DATA-ATTRIBUTION.txt</code>) and the data repositories' READMEs. Optional content remains credited to its respective mod authors.</p>
 
 <p><em>Produced using Copernicus WorldDEM™-90 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the Copernicus WorldDEM™-90.</em></p>
+
+<p><em>Contains modified Copernicus Climate Change Service information (2026). Neither the European Commission nor ECMWF is responsible for any use that may be made of the Copernicus information or data it contains.</em></p>
 
 <h2>Contact and development</h2>
 

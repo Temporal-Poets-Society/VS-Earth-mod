@@ -48,6 +48,7 @@ New-Item -ItemType Directory -Force $Out | Out-Null
 # Store: --store={the GLO-90 store} added where there is one; Game: run on the game's .NET (DOTNET_ROLL_FORWARD=LatestMajor)
 $table = @(
     @{ P = 'ClimateDataTests';        A = @('{root}');                 N = @();        M = 0.3 }
+    @{ P = 'SeasonTests';             A = @('{root}');                         N = @();        M = 0.1 }
     @{ P = 'ColumnStoreTests';        A = @('{root}');                 N = @();        M = 0.2 }
     @{ P = 'DataReadersTests';        A = @('{root}');                 N = @();        M = 0.3 }
     @{ P = 'EarthMapTests';           A = @('{root}', '384');          N = @();        M = 3.5; Slow = $true }
@@ -73,6 +74,7 @@ $table = @(
     @{ P = 'RiverIndexTests';         A = @('{out}\riverindex-report.txt'); N = @();   M = 0.2 }
     @{ P = 'RiverWaterTests';         A = @('{root}');                 N = @();        M = 0.1 }
     @{ P = 'SavedWorldDigestTests';   A = @('{root}');                 N = @('game');  M = 1.0 }
+    @{ P = 'SeasonDataTests';         A = @('{root}');                 N = @();        M = 0.1 }
     @{ P = 'ServerToolsTests';        A = @();                         N = @();        M = 0.2 }
     @{ P = 'SiteDriversTests';        A = @();                         N = @();        M = 0.1 }
     @{ P = 'SkyLongitudeTests';       A = @('{root}');                 N = @('game');  M = 0.1 }
