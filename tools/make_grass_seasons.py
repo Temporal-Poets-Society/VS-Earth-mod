@@ -1,4 +1,5 @@
-"""Earth's grass season colour maps (assets/earth/textures/environment/seasons/earthgrass-*.png).
+"""Earth's grass season colour map (assets/earth/textures/environment/seasons/earthgrass-seasons.png: seven calendars) and
+its seven calendars as strips (earthgrass-<name>.png, which World Map's far terrain reads).
 
 Vanilla tints grass by one calendar for the whole world ("seasonalGrass": brown in January to March, olive in April and
 May, green to September, straw after). Earth gives each place one of these maps instead, picked from its own monthly
@@ -20,6 +21,9 @@ from PIL import Image
 
 OUT = os.path.join(os.path.dirname(__file__), '..', 'assets', 'earth', 'textures', 'environment', 'seasons')
 W, H = 128, 16
+# the packed map's bands: PAD repeated rows above and below each 16-row calendar (Core.GrassSeasonShader.Pad, Pitch)
+PAD = 4
+PITCH = H + 2 * PAD
 
 # tint colours (r, g, b), multipliers on the grey grass texture
 MATTED = (122, 92, 46)      # last year's grass, flattened under the snow
@@ -95,19 +99,38 @@ def row_shift(v):
     return 1 + 0.06 * a, 0.04 * b
 
 
+def strip(f):
+    """One calendar as vanilla's 128 x 16 season map: u the time of year, v the noise rows."""
+    im = Image.new('RGB', (W, H))
+    for y in range(H):
+        light, hue = row_shift(y)
+        for x in range(W):
+            r, g, b = f((x + 0.5) / W)
+            r, g = r * (1 + hue), g * (1 - hue / 2)
+            im.putpixel((x, y), tuple(int(max(0, min(255, round(c * light)))) for c in (r, g, b)))
+    return im
+
+
 def main():
+    """The seven calendars packed into one colour map (EA-0154, decision 0091): band k (GrassPhenology.MapFor's index, the
+    order of MAPS) is rows k * PITCH + PAD to + 16 of earthgrass-seasons.png, with PAD rows above and below repeating its
+    first and last row, so that a band filtered at a coarser mip level blends only with itself. The chunk shaders take the
+    band from the colour data's bits 13-15 (Core.GrassSeasonShader); the rows inside a band are vanilla's for a 16-row map."""
     os.makedirs(OUT, exist_ok=True)
-    for name, f in MAPS:
-        im = Image.new('RGB', (W, H))
-        for y in range(H):
-            light, hue = row_shift(y)
-            for x in range(W):
-                r, g, b = f((x + 0.5) / W)
-                r, g = r * (1 + hue), g * (1 - hue / 2)
-                im.putpixel((x, y), tuple(int(max(0, min(255, round(c * light)))) for c in (r, g, b)))
-        p = os.path.join(OUT, f'earthgrass-{name}.png')
-        im.save(p)
-        print(p)
+    packed = Image.new('RGB', (W, PITCH * len(MAPS)))
+    for k, (name, f) in enumerate(MAPS):
+        im = strip(f)
+        # the strips themselves stay for World Map, whose far terrain reads them by GrassPhenology.Codes' names
+        # (docs/REFLECTION-SURFACE.md); the game's colour maps have the packed one alone
+        im.save(os.path.join(OUT, f'earthgrass-{name}.png'))
+        top = k * PITCH
+        for y in range(PAD):
+            packed.paste(im.crop((0, 0, W, 1)), (0, top + y))
+            packed.paste(im.crop((0, H - 1, W, H)), (0, top + PAD + H + y))
+        packed.paste(im, (0, top + PAD))
+    p = os.path.join(OUT, 'earthgrass-seasons.png')
+    packed.save(p)
+    print(p, packed.size)
 
 
 if __name__ == '__main__':

@@ -3,6 +3,7 @@ using EarthMap.Core;
 using HarmonyLib;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.Config;
 
 namespace EarthMap
 {
@@ -22,7 +23,8 @@ namespace EarthMap
     /// wetter or drier by the place's own seasons. The mesh keeps the colour it was built with, so all chunks are drawn again
     /// twice a game month. Applies to every Earth world with weather data (nothing is saved). No shader is changed.
     /// The same blocks also follow the place's own growing season (Core.GrassPhenology): instead of vanilla's one calendar
-    /// ("seasonalGrass"), each place gets one of Earth's season maps (earthgrass-*.png): dead and brown while it is cold,
+    /// ("seasonalGrass"), each place gets one of Earth's grass calendars (a band of its one colour map, GrassSeasonShader): dead
+    /// and brown while it is cold,
     /// a bright fresh green in the weeks after it warms, summer green, then straw. In 1.22.7 the chunk mesh builds the colour
     /// data in ChunkTesselator.TesselateBlock, so that call is replaced (a transpiler); getColorMapData keeps the postfix for
     /// blocks drawn through the world accessor.
@@ -78,6 +80,7 @@ namespace EarthMap
                 var pv = PatchVanilla.For(api, Mod, new Harmony(HarmonyId));
                 pv.Apply(PatchVanilla.GrassSeasonTable());
                 if (!pv.On(PatchVanilla.Feature.GrassSeason)) return;
+                shaderOn = pv.On(PatchVanilla.Feature.GrassSeasonShader);
                 patched = true;
             }
             tickId = api.Event.RegisterGameTickListener(_ => Tick(), 2000);
@@ -90,7 +93,8 @@ namespace EarthMap
             geometry = null;
             weather = null;
             curves.Clear();
-            phenologyMaps = null;
+            packedSeason = 0;
+            lock (shaderGate) { shaderPlace = -1; passPlace.Clear(); }
             monthShapes.Clear();
             phenologyCache.Clear();
             generation++;
@@ -119,8 +123,17 @@ namespace EarthMap
             if (!phenologyResolved && TesselatorPatched && ResolvePhenologyMaps())
             {
                 phenologyResolved = true;
-                // chunks drawn before the maps were known
-                if (phenologyMaps != null) RedrawAll();
+                // chunks drawn before the map was known
+                if (packedSeason > 0) RedrawAll();
+            }
+            // the shaders loaded again since (graphics settings, another mod) without Earth's band rows: never draw the packed
+            // map with vanilla's rows (they would mix the calendars)
+            int inUse = packedSeason - 1;
+            if (inUse >= 0 && !ShaderCarries(inUse, out string lacking))
+            {
+                packedSeason = 0;
+                Mod.Logger.Warning("Earth Map: the {0} shader was loaded again without Earth's grass season rows; grass keeps vanilla's seasons.", lacking ?? "chunk");
+                RedrawAll();
             }
             var cal = capi.World.Calendar;
             double days = cal.TotalHours / Math.Max(1, cal.HoursPerDay), y = cal.DaysPerYear > 0 ? cal.DaysPerYear : 108;
@@ -162,9 +175,9 @@ namespace EarthMap
         // ---- the chunk mesh (1.22.7 builds ColorMapData in ChunkTesselator.TesselateBlock, not through getColorMapData)
         /// <summary>The transpiler found and replaced the mesh's colour data (PatchVanilla turns the feature off when not).</summary>
         internal static bool TesselatorPatched;
-        /// <summary>Season map index + 1 of each GrassPhenology map once the colour maps are loaded; null before (or when
-        /// they are missing), and grass then keeps vanilla's season map.</summary>
-        static volatile int[] phenologyMaps;
+        /// <summary>Earth's packed season map's place + 1 (GrassSeasonShader) once the map is loaded and the chunk shaders carry
+        /// its band rows; 0 before (or when either is missing), and grass then keeps vanilla's season map.</summary>
+        static volatile int packedSeason;
         static readonly BoundedCache<long, float[]> monthShapes = new(100_000);
         static readonly BoundedCache<long, byte> phenologyCache = new(400_000);
 
@@ -215,11 +228,13 @@ namespace EarthMap
                 double anomaly = Anomaly(posX, posZ);
                 if (anomaly != 0) rain = GrassSeason.SeasonalRain(rain, anomaly);
             }
-            var maps = phenologyMaps;
-            if (maps != null)
+            int packed = packedSeason;
+            if (packed > 0)
             {
+                // the place's calendar: a band of Earth's one season map, in bits 13-15 (GrassSeasonShader)
                 int k = Phenology(posX, posZ, temperature);
-                if (k >= 0 && k < maps.Length && maps[k] > 0) season = maps[k];
+                if (k >= 0 && k < GrassSeasonShader.Bands)
+                    return new ColorMapData(GrassSeasonShader.WithBand(new ColorMapData(season, climate, temperature, rain, frostable).Value, packed, k));
             }
             return new ColorMapData(season, climate, temperature, rain, frostable);
         }
@@ -299,7 +314,7 @@ namespace EarthMap
             return result;
         }
 
-        /// <summary>Finds Earth's grass season maps (assets/earth/patches/grass-season-colormaps.json) among the loaded colour
+        /// <summary>Finds Earth's grass season map (assets/earth/patches/grass-season-colormaps.json) among the loaded colour
         /// maps; true once they are known (or known to be missing).</summary>
         bool ResolvePhenologyMaps()
         {
@@ -311,27 +326,108 @@ namespace EarthMap
                     field == null ? "not found" : "is not a dictionary of colour maps");
                 return true;
             }
-            var idx = new int[GrassPhenology.Codes.Length];
-            for (int i = 0; i < idx.Length; i++)
+            int place = PackedMapPlace(maps, EarthColorMapBudget.GaveWay, out bool loading, out string off);
+            if (loading) return false;
+            if (place < 0)
             {
-                if (!maps.TryGetValue(GrassPhenology.Codes[i], out var cm) || !cm.LoadIntoBlockTextureAtlas)
-                {
-                    Mod.Logger.Warning("Earth Map: the grass season map {0} is missing; grass keeps vanilla's seasons.", GrassPhenology.Codes[i]);
-                    return true;
-                }
-                if (cm.Pixels == null) return false; // not loaded yet
-                if (cm.RectIndex < 0 || cm.RectIndex >= 40 || cm.ExtraFlags != 0)
-                {
-                    Mod.Logger.Warning("Earth Map: the grass season map {0} has no place in the shader's 40 colour maps; grass keeps vanilla's seasons.", cm.Code);
-                    return true;
-                }
-                idx[i] = cm.RectIndex + 1;
+                // gave way to the game's limit of colour maps: EarthColorMapBudget said so
+                if (off != null) Mod.Logger.Warning("Earth Map: {0}; grass keeps vanilla's seasons.", off);
+                return true;
             }
-            phenologyMaps = idx;
-            Mod.Logger.Notification("Earth Map: grass follows each place's growing season ({0} season maps).", idx.Length);
+            if (!shaderOn)
+            {
+                Mod.Logger.Warning("Earth Map: the chunk shaders can't take Earth's grass season rows (PatchVanilla said why); grass keeps vanilla's seasons.");
+                return true;
+            }
+            if (!ShaderCarries(place, out string lacking) && lacking == null)
+            {
+                // the chunk shaders were loaded before vanilla numbered the maps: again, with the map's place
+                lock (shaderGate) shaderPlace = place;
+                if (!capi.Shader.ReloadShaders())
+                {
+                    Mod.Logger.Warning("Earth Map: reloading the shaders for Earth's grass seasons failed (see the client log); grass keeps vanilla's seasons.");
+                    return true;
+                }
+            }
+            if (!ShaderCarries(place, out lacking))
+            {
+                Mod.Logger.Warning("Earth Map: the {0} shader lacks vanilla's season map row Earth extends (a game update, or another mod's colormap.vsh); " +
+                    "grass keeps vanilla's seasons.", lacking ?? "chunk");
+                return true;
+            }
+            packedSeason = place + 1;
+            Mod.Logger.Notification("Earth Map: grass follows each place's growing season ({0} calendars in one colour map).", GrassSeasonShader.Bands);
             return true;
         }
         bool phenologyResolved;
+
+        /// <summary>
+        /// The place (RectIndex) of Earth's packed season map in the shader's array, or -1 where grass keeps vanilla's seasons:
+        /// <paramref name="loading"/> while vanilla hasn't read it yet; otherwise <paramref name="off"/> says why, or is null
+        /// where it gave way to the game's limit (<paramref name="gaveWay"/>, EarthColorMapBudget, which said so). No map is
+        /// looked up by a code that isn't there.
+        /// </summary>
+        public static int PackedMapPlace(System.Collections.Generic.IDictionary<string, ColorMap> maps, bool gaveWay, out bool loading, out string off)
+        {
+            loading = false; off = null;
+            if (gaveWay) return -1;
+            if (!maps.TryGetValue(GrassSeasonShader.MapCode, out var cm) || cm == null || !cm.LoadIntoBlockTextureAtlas)
+            {
+                off = "the grass season map " + GrassSeasonShader.MapCode + " is missing";
+                return -1;
+            }
+            if (cm.Pixels == null) { loading = true; return -1; }
+            if (cm.RectIndex < 0 || cm.RectIndex >= GlobalConstants.MaxColorMaps || cm.ExtraFlags != 0)
+            {
+                off = "the grass season map " + cm.Code + " has no place in the shader's " + GlobalConstants.MaxColorMaps + " colour maps";
+                return -1;
+            }
+            if (cm.OuterSize.Height != GrassSeasonShader.Height)
+            {
+                off = "the grass season map " + cm.Code + " is " + cm.OuterSize.Height + " pixels high, not " + GrassSeasonShader.Height;
+                return -1;
+            }
+            return cm.RectIndex;
+        }
+
+        // ---- the chunk shaders: Earth's band rows (GrassSeasonShader), written when vanilla's shader loader reads a program
+        static readonly object shaderGate = new object();
+        /// <summary>The map's place the shaders are loaded with (-1: vanilla's code).</summary>
+        static int shaderPlace = -1;
+        /// <summary>Each chunk pass's last load: the place it carries, -1 vanilla's code, -2 without vanilla's row to rewrite.</summary>
+        static readonly System.Collections.Generic.Dictionary<string, int> passPlace = new();
+        /// <summary>PatchVanilla's GrassSeasonShader: the loader's postfix is in.</summary>
+        static bool shaderOn;
+
+        /// <summary>After vanilla's shader loader has read a program: a chunk pass gets Earth's band rows for the map's place.</summary>
+        internal static void ShaderLoaded(object program)
+        {
+            if (program is not IShaderProgram p || p.VertexShader?.Code is not string code) return;
+            if (Array.IndexOf(GrassSeasonShader.ChunkPasses, p.PassName) < 0) return;
+            lock (shaderGate)
+            {
+                if (shaderPlace < 0) { passPlace[p.PassName] = -1; return; }
+                string edited = GrassSeasonShader.Patch(code, shaderPlace);
+                if (edited == null || !GrassSeasonShader.Carries(edited, shaderPlace)) { passPlace[p.PassName] = -2; return; }
+                p.VertexShader.Code = edited;
+                passPlace[p.PassName] = shaderPlace;
+            }
+        }
+
+        /// <summary>Whether every chunk pass was last loaded carrying the map's place; else <paramref name="lacking"/> names a
+        /// pass without vanilla's row to rewrite (null where they simply haven't been loaded with it yet).</summary>
+        internal static bool ShaderCarries(int place, out string lacking)
+        {
+            lacking = null;
+            bool all = true;
+            lock (shaderGate)
+                foreach (string pass in GrassSeasonShader.ChunkPasses)
+                {
+                    if (!passPlace.TryGetValue(pass, out int at) || at != place) all = false;
+                    if (at == -2) { lacking = pass; return false; }
+                }
+            return all;
+        }
 
         /// <summary>The wetness anomaly now, bilinear between the curves at the corners of a 32-block lattice.</summary>
         static double Anomaly(int x, int z)

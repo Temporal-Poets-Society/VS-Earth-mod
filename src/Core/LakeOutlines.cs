@@ -20,8 +20,13 @@ namespace EarthMap.Core
         /// version 2's lakes, levels and flags, each tile outlined with its neighbours' facing mask cells
         /// (tools/recontour_lake_outlines.py), so a lake's pieces meet where its shore crosses a tile's edge: version 2 drew
         /// each tile alone, and its pieces stepped by a whole mask cell, or were notched by half of one, along every whole
-        /// degree a lake crosses (straight seams on World Map's chart along 27°E at 1:10).</summary>
-        public const int FileVersion = 3;
+        /// degree a lake crosses (straight seams on World Map's chart along 27°E at 1:10). 4 (decision 0090, EA-0150):
+        /// version 3's lakes cut into their water bodies, each at its own level (tools/relevel_lake_outlines.py): the bake
+        /// joined everything the mask connects into one lake at its largest piece's level, so a reservoir or a lake the mask
+        /// joins to a bigger one at another level was drawn metres above or below its own water (the Pielisjoki's Kuurna
+        /// reservoir at Pielinen's level, 10 m up, held by rims with the river in a trench below; Cross Lake at Lake
+        /// Winnipeg's), and the reservoirs among them now left out.</summary>
+        public const int FileVersion = 4;
         /// <summary>Version 1's file name in the GLO-90 folder and on Earth's data release; a new version gets a new name.</summary>
         public const string FileName = "lakes-glo90-1.bin";
         /// <summary>The version 1 file this build reads (from the bake of 7 November 2026); any other is refused.</summary>
@@ -35,9 +40,13 @@ namespace EarthMap.Core
         public const string FileName3 = "lakes-glo90-3.bin";
         public const long FileBytes3 = 57_742_609;
         public const string FileSha2563 = "ea3d4cd1b690192fe9613cf9ccafbf4bc4f15413bcb68b88b9bac3ffa18d163c";
-        public static string FileNameFor(int version) => version >= 3 ? FileName3 : version >= 2 ? FileName2 : FileName;
-        public static long FileBytesFor(int version) => version >= 3 ? FileBytes3 : version >= 2 ? FileBytes2 : FileBytes;
-        public static string FileSha256For(int version) => version >= 3 ? FileSha2563 : version >= 2 ? FileSha2562 : FileSha256;
+        /// <summary>Version 4's file (EA-0150, version 3 cut into water bodies on 16 November 2026).</summary>
+        public const string FileName4 = "lakes-glo90-4.bin";
+        public const long FileBytes4 = 56_791_888;
+        public const string FileSha2564 = "269f85a763de2b3c443657f18f7bbbc5a01939462bef08a584ec2372d87c9795";
+        public static string FileNameFor(int version) => version >= 4 ? FileName4 : version >= 3 ? FileName3 : version >= 2 ? FileName2 : FileName;
+        public static long FileBytesFor(int version) => version >= 4 ? FileBytes4 : version >= 3 ? FileBytes3 : version >= 2 ? FileBytes2 : FileBytes;
+        public static string FileSha256For(int version) => version >= 4 ? FileSha2564 : version >= 3 ? FileSha2563 : version >= 2 ? FileSha2562 : FileSha256;
         /// <summary>Whether these bytes are this version's file this build reads (size and SHA-256).</summary>
         public static bool IsExpected(int version, byte[] bytes, out string why) => Matches(bytes, FileBytesFor(version), FileSha256For(version), out why);
         public const byte NoData = 255, NoLakes = 0, HasLakes = 1;
@@ -69,7 +78,7 @@ namespace EarthMap.Core
             return true;
         }
 
-        /// <summary>A lake outlines file of version 1 to 3, by its header.</summary>
+        /// <summary>A lake outlines file of version 1 to 4, by its header.</summary>
         public static LakeOutlineData Read(byte[] file)
         {
             int v = file != null && file.Length >= 8 ? BitConverter.ToInt32(file, 4) : 0;

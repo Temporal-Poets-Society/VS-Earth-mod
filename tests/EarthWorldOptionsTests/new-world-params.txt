@@ -1,296 +1,296 @@
 # data: referee=2 courses=4 climatefix=4 weather=bc9ea5a04cb1bc1d coarse=True outlets=True works=True perennial=True penman=True rain=True summits=True glaciers=True
-earth-200 | as the style has it | 3206022417D76D0D
-earth-200 | tab rocks groundcolumns, ores maps | E7EDC1DA085610C9
-earth-200 | tab rocks regional, ores vanilla | DE2F874C599CD848
-earth-200 | tab rocks regional, ores maps | BFDFE9C35954EC59
-earth-200 | tab rocks vanilla, ores vanilla | 3206022417D76D0D
-earth-200 | tab rocks vanilla, ores maps | 11ACC125D5DDB735
-earth-200 | tab only the old rocks-and-ores key regional | BFDFE9C35954EC59
-earth-200 | tab only the old rocks-and-ores key groundcolumns | E7EDC1DA085610C9
-earth-200 | tab only the old rocks-and-ores key vanilla | 3206022417D76D0D
-earth-200 | tab no rocks or ores key | BFDFE9C35954EC59
-earth-200 | tab nature vanilla | 1292B8E9B73D1FB1
-earth-200 | tab no nature key, old animals vanilla | B605E77A4A432C7D
-earth-200 | tab no nature key | 3206022417D76D0D
-earth-200 | tab biomes vanilla | 904B45ACE7C727FB
-earth-200 | tab nature and biomes vanilla | A3121E30ECACEB8C
-earth-200 | tab weather vanilla | E50FD48B9C8A1656
-earth-200 | tab rain 0.5, storms 5 | AF4F5DC316FA5498
-earth-200 | tab rain not a number | 3206022417D76D0D
-earth-200 | tab elevation glo90 | 3206022417D76D0D
+earth-200 | as the style has it | 527109B88F7C9DE8
+earth-200 | tab rocks groundcolumns, ores maps | 98F9F4CC67F50972
+earth-200 | tab rocks regional, ores vanilla | EFE905426C444F04
+earth-200 | tab rocks regional, ores maps | 49BE9FC2E2E4899C
+earth-200 | tab rocks vanilla, ores vanilla | 527109B88F7C9DE8
+earth-200 | tab rocks vanilla, ores maps | 0AE1B08DAA046567
+earth-200 | tab only the old rocks-and-ores key regional | 49BE9FC2E2E4899C
+earth-200 | tab only the old rocks-and-ores key groundcolumns | 98F9F4CC67F50972
+earth-200 | tab only the old rocks-and-ores key vanilla | 527109B88F7C9DE8
+earth-200 | tab no rocks or ores key | 49BE9FC2E2E4899C
+earth-200 | tab nature vanilla | 9A4F484AB9BFDEE1
+earth-200 | tab no nature key, old animals vanilla | AE66621DBD5E8005
+earth-200 | tab no nature key | 527109B88F7C9DE8
+earth-200 | tab biomes vanilla | E827EA3851CFEA3A
+earth-200 | tab nature and biomes vanilla | 0B8887FE13887E85
+earth-200 | tab weather vanilla | 443556D016632694
+earth-200 | tab rain 0.5, storms 5 | CAD35F3D97D35B64
+earth-200 | tab rain not a number | 527109B88F7C9DE8
+earth-200 | tab elevation glo90 | 527109B88F7C9DE8
 earth-200 | tab elevation glo90coarse | 2C754AB33711C1DB
 earth-200 | tab elevation builtin | 29C26965733DA6DB
-earth-200 | tab springs streams, ponds wetlands | 454B4E195BB99C85
-earth-200 | tab springs and ponds vanilla, rapids off | EC29D9BFDDB92AFC
-earth-200 | tab extinct animals, chickens by range | BF6BDEE7BDE0298D
-earth-200 | tab curve log250 | CB2578BE2991712E
-earth-200 | tab curve linear | 7954EBD3275CAE05
-earth-200 | tab vertical budget 128 | F5C0E50EF8568AB5
-earth-200 | tab vertical budget 160 | E44C60C8A8F23C10
-earth-200 | tab height 512 | 3C860892925A34AE
-earth-200 | tab summits off | 1A6E556738AAC118
-earth-200 | tab summits from 1000 m | 1F10676537BF30ED
-earth-200 | tab rock floor off | 3206022417D76D0D
-earth-200 | tab rock floor 128 | 18A9ABE1A4CCE4C4
-earth-200 | tab ground depth terrain | 3206022417D76D0D
-earth-200 | tab ground depth linear2000 | 3206022417D76D0D
-earth-200 | tab both canals | C13902EAF7F95C8F
-earth-200 | tab both canals by the keys before 2.0.1 | C13902EAF7F95C8F
-earth-200 | tab Suez only by the key before 2.0.1 | 7755F7CE2EC07A12
-earth-200 | tab Panama only by the key before 2.0.1 | DB57024A77BE48BD
-earth-200 | earth.json rivers off | E4CCDA7340D28C68
-earth-200 | earth.json islands off | E1ACA882B062EF6B
-earth-200 | earth.json coasts off | 3206022417D76D0D
-earth-200 | earth.json seam gutter | B89FEAC531C19223
-earth-200 | earth.json regional trees off | 7C9E3342FF31FEC6
-earth-200 | earth.json regional geology off | 3206022417D76D0D
-earth-200 | earth.json ground columns off | 3206022417D76D0D
-earth-200 | earth.json regional ores on | 3206022417D76D0D
-earth-200 | earth.json regional fauna off, extinct animals | 3206022417D76D0D
-earth-200 | earth.json fauna ranges current | 0761A3C5E0CC8177
-earth-200 | earth.json streams all | FB0D0DB82042443B
-earth-200 | earth.json streams none | 7FEB5E9C90E961C8
-earth-200 | earth.json weather off, pace 2 | 3066CC2D47A285A3
-earth-200 | earth.json temperature range extended | 84412010557F3620
-earth-200 | earth.json detail scale not a number | 3206022417D76D0D
-earth-200 | earth.json land curve 0, gutter margin -5 | 3206022417D76D0D
-earth-200 | earth.json min island 4, coast cells 2000 | 3206022417D76D0D
-earth-200 | earth.json ores tuned | EE00E821CE40D48B
-earth-200 | Hydrology query 2 | AE14BD68352DC556
-earth-200 | Cylinder World without its Earth seam | B89FEAC531C19223
-earth | as the style has it | 178AA1B70013CF31
-earth | tab rocks groundcolumns, ores maps | 57B6F0E063682016
-earth | tab rocks regional, ores vanilla | 6C8AEE3A83A1C865
-earth | tab rocks regional, ores maps | B9394262ED3BC5E6
-earth | tab rocks vanilla, ores vanilla | 178AA1B70013CF31
-earth | tab rocks vanilla, ores maps | 03DCE2EFFC3E34E4
-earth | tab only the old rocks-and-ores key regional | B9394262ED3BC5E6
-earth | tab only the old rocks-and-ores key groundcolumns | 57B6F0E063682016
-earth | tab only the old rocks-and-ores key vanilla | 178AA1B70013CF31
-earth | tab no rocks or ores key | B9394262ED3BC5E6
-earth | tab nature vanilla | A800C75929B52B6B
-earth | tab no nature key, old animals vanilla | AECEC89F635A33F9
-earth | tab no nature key | 178AA1B70013CF31
-earth | tab biomes vanilla | 447BC9AEE3607914
-earth | tab nature and biomes vanilla | 1D90934414336A7E
-earth | tab weather vanilla | A635CBFABF3E1554
-earth | tab rain 0.5, storms 5 | AA9FA496D8CD162E
-earth | tab rain not a number | 178AA1B70013CF31
-earth | tab elevation glo90 | 178AA1B70013CF31
+earth-200 | tab springs streams, ponds wetlands | 03531D49FFAAA8AA
+earth-200 | tab springs and ponds vanilla, rapids off | E15157E29780B275
+earth-200 | tab extinct animals, chickens by range | 04EDF4828D497E98
+earth-200 | tab curve log250 | 12FE84FB3AE16AA2
+earth-200 | tab curve linear | 456E0C7DB1A29A90
+earth-200 | tab vertical budget 128 | 224BD5359D3CB40A
+earth-200 | tab vertical budget 160 | BF11FC83FA3E71D8
+earth-200 | tab height 512 | 5345D923A338B349
+earth-200 | tab summits off | 95D380E266928019
+earth-200 | tab summits from 1000 m | CC4D2C5C899D6966
+earth-200 | tab rock floor off | 527109B88F7C9DE8
+earth-200 | tab rock floor 128 | 0CA1DD85EAB28180
+earth-200 | tab ground depth terrain | 527109B88F7C9DE8
+earth-200 | tab ground depth linear2000 | 527109B88F7C9DE8
+earth-200 | tab both canals | 1150D4805CCDEB5C
+earth-200 | tab both canals by the keys before 2.0.1 | 1150D4805CCDEB5C
+earth-200 | tab Suez only by the key before 2.0.1 | F7A79CAC49E3655E
+earth-200 | tab Panama only by the key before 2.0.1 | D1FABA29F1BFFF96
+earth-200 | earth.json rivers off | 3F61695303D1B577
+earth-200 | earth.json islands off | 91A535302BFA5ACB
+earth-200 | earth.json coasts off | 527109B88F7C9DE8
+earth-200 | earth.json seam gutter | D0739BFA2C895E3A
+earth-200 | earth.json regional trees off | EB6258DE7F402DDC
+earth-200 | earth.json regional geology off | 527109B88F7C9DE8
+earth-200 | earth.json ground columns off | 527109B88F7C9DE8
+earth-200 | earth.json regional ores on | 527109B88F7C9DE8
+earth-200 | earth.json regional fauna off, extinct animals | 527109B88F7C9DE8
+earth-200 | earth.json fauna ranges current | 8C91217ABCD87868
+earth-200 | earth.json streams all | A1D00B41084ACFCD
+earth-200 | earth.json streams none | 9183D1B3C98F09BE
+earth-200 | earth.json weather off, pace 2 | 30B5CBEA3C639572
+earth-200 | earth.json temperature range extended | 032D0656D0D80613
+earth-200 | earth.json detail scale not a number | 527109B88F7C9DE8
+earth-200 | earth.json land curve 0, gutter margin -5 | 527109B88F7C9DE8
+earth-200 | earth.json min island 4, coast cells 2000 | 527109B88F7C9DE8
+earth-200 | earth.json ores tuned | 99C34EE1F5DC46B0
+earth-200 | Hydrology query 2 | CC0B1DD419C5442C
+earth-200 | Cylinder World without its Earth seam | D0739BFA2C895E3A
+earth | as the style has it | 6793BCE770D75166
+earth | tab rocks groundcolumns, ores maps | 7B06E9D0BF268579
+earth | tab rocks regional, ores vanilla | CB18719C2FF5C9E2
+earth | tab rocks regional, ores maps | 5D9BA524EE84CA43
+earth | tab rocks vanilla, ores vanilla | 6793BCE770D75166
+earth | tab rocks vanilla, ores maps | 7F9F344E3A77D971
+earth | tab only the old rocks-and-ores key regional | 5D9BA524EE84CA43
+earth | tab only the old rocks-and-ores key groundcolumns | 7B06E9D0BF268579
+earth | tab only the old rocks-and-ores key vanilla | 6793BCE770D75166
+earth | tab no rocks or ores key | 5D9BA524EE84CA43
+earth | tab nature vanilla | A67204D84FC426A5
+earth | tab no nature key, old animals vanilla | 90475554B289F8F0
+earth | tab no nature key | 6793BCE770D75166
+earth | tab biomes vanilla | 9F0FFA75206790A3
+earth | tab nature and biomes vanilla | D4FAE0D558922FB4
+earth | tab weather vanilla | DDED18324E67F769
+earth | tab rain 0.5, storms 5 | 0CF0FF933C0126AA
+earth | tab rain not a number | 6793BCE770D75166
+earth | tab elevation glo90 | 6793BCE770D75166
 earth | tab elevation glo90coarse | 7CB5BB16703603BC
 earth | tab elevation builtin | 30A838644CC68B7F
-earth | tab springs streams, ponds wetlands | 3108E9E745F9D852
-earth | tab springs and ponds vanilla, rapids off | DF99C44A7C01353F
-earth | tab extinct animals, chickens by range | CDC60C78008DC0B7
-earth | tab curve log250 | EACA9CD5F246C182
-earth | tab curve linear | 2A17AC284DBD8B48
-earth | tab vertical budget 128 | EB27FD5705A61969
-earth | tab vertical budget 160 | 58BDDD19D7744AE7
-earth | tab height 512 | C291BC1749E1255E
-earth | tab summits off | D43AE4072712AC8A
-earth | tab summits from 1000 m | 3AD43101AC1FA88E
-earth | tab rock floor off | 178AA1B70013CF31
-earth | tab rock floor 128 | 0608B7DE3455143C
-earth | tab ground depth terrain | 178AA1B70013CF31
-earth | tab ground depth linear2000 | 178AA1B70013CF31
-earth | tab both canals | 2F998429E3102420
-earth | tab both canals by the keys before 2.0.1 | 2F998429E3102420
-earth | tab Suez only by the key before 2.0.1 | 7DD240418F320565
-earth | tab Panama only by the key before 2.0.1 | B94212DEB7463171
-earth | earth.json rivers off | 9FB6DA4298D094DF
-earth | earth.json islands off | CFA72156E6F057B5
-earth | earth.json coasts off | 178E9AC6AAE47A9D
-earth | earth.json seam gutter | E91BB558E0351880
-earth | earth.json regional trees off | 846CF510D0F58A4D
-earth | earth.json regional geology off | 178AA1B70013CF31
-earth | earth.json ground columns off | 178AA1B70013CF31
-earth | earth.json regional ores on | 178AA1B70013CF31
-earth | earth.json regional fauna off, extinct animals | 178AA1B70013CF31
-earth | earth.json fauna ranges current | 74D03273624D9FDD
-earth | earth.json streams all | D6EE484B8D716293
-earth | earth.json streams none | 0DE4810B9389E4F0
-earth | earth.json weather off, pace 2 | D8F16751BA13F72A
-earth | earth.json temperature range extended | AEC117298CC3796C
-earth | earth.json detail scale not a number | 178AA1B70013CF31
-earth | earth.json land curve 0, gutter margin -5 | 178AA1B70013CF31
-earth | earth.json min island 4, coast cells 2000 | 178E9AC6AAE47A9D
-earth | earth.json ores tuned | C99C87766B42DA3C
-earth | Hydrology query 2 | 876B9F3F1AD45FE7
-earth | Cylinder World without its Earth seam | E91BB558E0351880
-earth-50 | as the style has it | D0B1A60DA8804D4E
-earth-50 | tab rocks groundcolumns, ores maps | 90018AEAE03E89EE
-earth-50 | tab rocks regional, ores vanilla | 615A96C083285CF3
-earth-50 | tab rocks regional, ores maps | 5BDCF8C05F5D07DD
-earth-50 | tab rocks vanilla, ores vanilla | D0B1A60DA8804D4E
-earth-50 | tab rocks vanilla, ores maps | 80228B349615127F
-earth-50 | tab only the old rocks-and-ores key regional | 5BDCF8C05F5D07DD
-earth-50 | tab only the old rocks-and-ores key groundcolumns | 90018AEAE03E89EE
-earth-50 | tab only the old rocks-and-ores key vanilla | D0B1A60DA8804D4E
-earth-50 | tab no rocks or ores key | 5BDCF8C05F5D07DD
-earth-50 | tab nature vanilla | 3A523CB43F84795A
-earth-50 | tab no nature key, old animals vanilla | 93459A5EFD58E3EB
-earth-50 | tab no nature key | D0B1A60DA8804D4E
-earth-50 | tab biomes vanilla | B2DC236C4DED414E
-earth-50 | tab nature and biomes vanilla | F562EE7707AF1C05
-earth-50 | tab weather vanilla | FF909DA93FE0CB13
-earth-50 | tab rain 0.5, storms 5 | C5E31E738FA16CF3
-earth-50 | tab rain not a number | D0B1A60DA8804D4E
-earth-50 | tab elevation glo90 | D0B1A60DA8804D4E
+earth | tab springs streams, ponds wetlands | 22081AB616DE839C
+earth | tab springs and ponds vanilla, rapids off | AA6C046E0BD37E62
+earth | tab extinct animals, chickens by range | 202912FBE0D69B77
+earth | tab curve log250 | CEB3F4DDDE1A1E72
+earth | tab curve linear | D6CB58A9AA751DB7
+earth | tab vertical budget 128 | 2D45298B82AD923F
+earth | tab vertical budget 160 | 258F9E71E6295A94
+earth | tab height 512 | 4F9E5430349379E1
+earth | tab summits off | 5CD712447FE76994
+earth | tab summits from 1000 m | F8E2EF78BD7426F4
+earth | tab rock floor off | 6793BCE770D75166
+earth | tab rock floor 128 | 5DEF24A48E5DE2BC
+earth | tab ground depth terrain | 6793BCE770D75166
+earth | tab ground depth linear2000 | 6793BCE770D75166
+earth | tab both canals | 01A89F00207394E3
+earth | tab both canals by the keys before 2.0.1 | 01A89F00207394E3
+earth | tab Suez only by the key before 2.0.1 | 7781EE2791E737FA
+earth | tab Panama only by the key before 2.0.1 | 36DB353A6026E186
+earth | earth.json rivers off | CF8AC35B98B08D68
+earth | earth.json islands off | EA25B06654A5F4B6
+earth | earth.json coasts off | 1D227487C0EB8235
+earth | earth.json seam gutter | 46909442A6295504
+earth | earth.json regional trees off | 6259C910B48F60A8
+earth | earth.json regional geology off | 6793BCE770D75166
+earth | earth.json ground columns off | 6793BCE770D75166
+earth | earth.json regional ores on | 6793BCE770D75166
+earth | earth.json regional fauna off, extinct animals | 6793BCE770D75166
+earth | earth.json fauna ranges current | 0815130588D8F890
+earth | earth.json streams all | 362253DE2BC1212E
+earth | earth.json streams none | 9A15F12024C2EAA4
+earth | earth.json weather off, pace 2 | 7396D9850FC25F2B
+earth | earth.json temperature range extended | 60597F335D108F66
+earth | earth.json detail scale not a number | 6793BCE770D75166
+earth | earth.json land curve 0, gutter margin -5 | 6793BCE770D75166
+earth | earth.json min island 4, coast cells 2000 | 1D227487C0EB8235
+earth | earth.json ores tuned | 835D5552F22ABC58
+earth | Hydrology query 2 | 27B4E9C9A858B7AE
+earth | Cylinder World without its Earth seam | 46909442A6295504
+earth-50 | as the style has it | 079F4F7EAB9E0D0A
+earth-50 | tab rocks groundcolumns, ores maps | 817BD91101DE688A
+earth-50 | tab rocks regional, ores vanilla | F8CCA84DEFF275D7
+earth-50 | tab rocks regional, ores maps | EC58244AF4D0EC02
+earth-50 | tab rocks vanilla, ores vanilla | 079F4F7EAB9E0D0A
+earth-50 | tab rocks vanilla, ores maps | 4A2110ABE3CA63A4
+earth-50 | tab only the old rocks-and-ores key regional | EC58244AF4D0EC02
+earth-50 | tab only the old rocks-and-ores key groundcolumns | 817BD91101DE688A
+earth-50 | tab only the old rocks-and-ores key vanilla | 079F4F7EAB9E0D0A
+earth-50 | tab no rocks or ores key | EC58244AF4D0EC02
+earth-50 | tab nature vanilla | 6184B0AB3541BE93
+earth-50 | tab no nature key, old animals vanilla | 474DBD0B62E161ED
+earth-50 | tab no nature key | 079F4F7EAB9E0D0A
+earth-50 | tab biomes vanilla | 58C13365D0BE8300
+earth-50 | tab nature and biomes vanilla | C52C6C61FB8B7DDF
+earth-50 | tab weather vanilla | 2B13C3AF11F43800
+earth-50 | tab rain 0.5, storms 5 | E4C21493A31C5C27
+earth-50 | tab rain not a number | 079F4F7EAB9E0D0A
+earth-50 | tab elevation glo90 | 079F4F7EAB9E0D0A
 earth-50 | tab elevation glo90coarse | 35BDF4BB61431F5B
 earth-50 | tab elevation builtin | DF2867495643FFB6
-earth-50 | tab springs streams, ponds wetlands | 119F1302FBEF9E25
-earth-50 | tab springs and ponds vanilla, rapids off | 5E67D46F56B06DE7
-earth-50 | tab extinct animals, chickens by range | B9430DA0977FCB00
-earth-50 | tab curve log250 | C3663A0FF7346DBB
-earth-50 | tab curve linear | EE2DB687E5A9BB66
-earth-50 | tab vertical budget 128 | 5EC49273B47F5A2F
-earth-50 | tab vertical budget 160 | 0FFB8FF4F03F9B61
-earth-50 | tab height 512 | 2E795A28B8C3F193
-earth-50 | tab summits off | 426C1EAFA43833B6
-earth-50 | tab summits from 1000 m | CA782708922CFD97
-earth-50 | tab rock floor off | D0B1A60DA8804D4E
-earth-50 | tab rock floor 128 | 32F9B22C03C5EED9
-earth-50 | tab ground depth terrain | D0B1A60DA8804D4E
-earth-50 | tab ground depth linear2000 | D0B1A60DA8804D4E
-earth-50 | tab both canals | 1DF33C8033C9B7F5
-earth-50 | tab both canals by the keys before 2.0.1 | 1DF33C8033C9B7F5
-earth-50 | tab Suez only by the key before 2.0.1 | 54F5819342F07B2B
-earth-50 | tab Panama only by the key before 2.0.1 | 4C86F74DF7EF9A54
-earth-50 | earth.json rivers off | DAC8522EFBE5D814
-earth-50 | earth.json islands off | AE12835FA8F108D1
-earth-50 | earth.json coasts off | 3CB6CF35D1D69E96
-earth-50 | earth.json seam gutter | 3483CBCF6C35D591
-earth-50 | earth.json regional trees off | 63EBBB5C36AD1462
-earth-50 | earth.json regional geology off | D0B1A60DA8804D4E
-earth-50 | earth.json ground columns off | D0B1A60DA8804D4E
-earth-50 | earth.json regional ores on | D0B1A60DA8804D4E
-earth-50 | earth.json regional fauna off, extinct animals | D0B1A60DA8804D4E
-earth-50 | earth.json fauna ranges current | 175306AB38E6B0AB
-earth-50 | earth.json streams all | 530072E7DD3AFF39
-earth-50 | earth.json streams none | 672283ED98659C7D
-earth-50 | earth.json weather off, pace 2 | D3964BCFB3CE8665
-earth-50 | earth.json temperature range extended | C51AE11E6D882149
-earth-50 | earth.json detail scale not a number | D0B1A60DA8804D4E
-earth-50 | earth.json land curve 0, gutter margin -5 | D0B1A60DA8804D4E
-earth-50 | earth.json min island 4, coast cells 2000 | 3CB6CF35D1D69E96
-earth-50 | earth.json ores tuned | 9DA2A87B4B099B71
-earth-50 | Hydrology query 2 | F740B4959C511A64
-earth-50 | Cylinder World without its Earth seam | 3483CBCF6C35D591
-earth-25 | as the style has it | 9C68501214F9AA01
-earth-25 | tab rocks groundcolumns, ores maps | 2791C70DD5A41059
-earth-25 | tab rocks regional, ores vanilla | 9B8D64840959B4A5
-earth-25 | tab rocks regional, ores maps | 42889609D2E4CC35
-earth-25 | tab rocks vanilla, ores vanilla | 9C68501214F9AA01
-earth-25 | tab rocks vanilla, ores maps | 465C4E4463F87B5C
-earth-25 | tab only the old rocks-and-ores key regional | 42889609D2E4CC35
-earth-25 | tab only the old rocks-and-ores key groundcolumns | 2791C70DD5A41059
-earth-25 | tab only the old rocks-and-ores key vanilla | 9C68501214F9AA01
-earth-25 | tab no rocks or ores key | 42889609D2E4CC35
-earth-25 | tab nature vanilla | 5D60F1AF3AA75A42
-earth-25 | tab no nature key, old animals vanilla | 416CAE5E6B2625C2
-earth-25 | tab no nature key | 9C68501214F9AA01
-earth-25 | tab biomes vanilla | D376EE0E8D080DEE
-earth-25 | tab nature and biomes vanilla | 70FA9BE91B12DED9
-earth-25 | tab weather vanilla | A0DDB0E256D4DC2A
-earth-25 | tab rain 0.5, storms 5 | 502E61F2C012340F
-earth-25 | tab rain not a number | 9C68501214F9AA01
-earth-25 | tab elevation glo90 | 9C68501214F9AA01
+earth-50 | tab springs streams, ponds wetlands | 10FBE7F0271C37A0
+earth-50 | tab springs and ponds vanilla, rapids off | BFA107B363C62799
+earth-50 | tab extinct animals, chickens by range | 51A6DF81EE6A3027
+earth-50 | tab curve log250 | AB3FD08A24CBAD1C
+earth-50 | tab curve linear | 41B305CD289389F0
+earth-50 | tab vertical budget 128 | 5E3A74BDAC7D0900
+earth-50 | tab vertical budget 160 | 316A0F157F2F7E78
+earth-50 | tab height 512 | 48DC6D7537B940D0
+earth-50 | tab summits off | F76E5BBA0D7BA8E1
+earth-50 | tab summits from 1000 m | 06C1D8D98D28796E
+earth-50 | tab rock floor off | 079F4F7EAB9E0D0A
+earth-50 | tab rock floor 128 | 1D668B2A82A06E35
+earth-50 | tab ground depth terrain | 079F4F7EAB9E0D0A
+earth-50 | tab ground depth linear2000 | 079F4F7EAB9E0D0A
+earth-50 | tab both canals | 6915513F4D569061
+earth-50 | tab both canals by the keys before 2.0.1 | 6915513F4D569061
+earth-50 | tab Suez only by the key before 2.0.1 | BDEFB429DC7B7B32
+earth-50 | tab Panama only by the key before 2.0.1 | 80E223F45D812C05
+earth-50 | earth.json rivers off | 50CF72847247B576
+earth-50 | earth.json islands off | 47CC129B5DA3B095
+earth-50 | earth.json coasts off | 2E6F42E6A6783CF5
+earth-50 | earth.json seam gutter | F531D698FE22127F
+earth-50 | earth.json regional trees off | 530F547D72071F1C
+earth-50 | earth.json regional geology off | 079F4F7EAB9E0D0A
+earth-50 | earth.json ground columns off | 079F4F7EAB9E0D0A
+earth-50 | earth.json regional ores on | 079F4F7EAB9E0D0A
+earth-50 | earth.json regional fauna off, extinct animals | 079F4F7EAB9E0D0A
+earth-50 | earth.json fauna ranges current | 3B25B8F50B5FB45A
+earth-50 | earth.json streams all | C3542A3629AB6768
+earth-50 | earth.json streams none | 98A07C5B18FED33A
+earth-50 | earth.json weather off, pace 2 | 0496BB04205264AC
+earth-50 | earth.json temperature range extended | F605D57F46B764C7
+earth-50 | earth.json detail scale not a number | 079F4F7EAB9E0D0A
+earth-50 | earth.json land curve 0, gutter margin -5 | 079F4F7EAB9E0D0A
+earth-50 | earth.json min island 4, coast cells 2000 | 2E6F42E6A6783CF5
+earth-50 | earth.json ores tuned | 6E58C88DCD6F1D53
+earth-50 | Hydrology query 2 | BFECDFA149836FDC
+earth-50 | Cylinder World without its Earth seam | F531D698FE22127F
+earth-25 | as the style has it | 778201554F815ADD
+earth-25 | tab rocks groundcolumns, ores maps | FA595638F35CB458
+earth-25 | tab rocks regional, ores vanilla | 7C8DC52DCEDD9865
+earth-25 | tab rocks regional, ores maps | CC7324CE500BA11E
+earth-25 | tab rocks vanilla, ores vanilla | 778201554F815ADD
+earth-25 | tab rocks vanilla, ores maps | 1BA14B4ADA73FE1E
+earth-25 | tab only the old rocks-and-ores key regional | CC7324CE500BA11E
+earth-25 | tab only the old rocks-and-ores key groundcolumns | FA595638F35CB458
+earth-25 | tab only the old rocks-and-ores key vanilla | 778201554F815ADD
+earth-25 | tab no rocks or ores key | CC7324CE500BA11E
+earth-25 | tab nature vanilla | CB791EB70ABEB9C5
+earth-25 | tab no nature key, old animals vanilla | 182A6C985C5CDCD3
+earth-25 | tab no nature key | 778201554F815ADD
+earth-25 | tab biomes vanilla | F2A40EE0F07EE2F1
+earth-25 | tab nature and biomes vanilla | D493E44437C0AB9A
+earth-25 | tab weather vanilla | E9FEE89F5B3F922A
+earth-25 | tab rain 0.5, storms 5 | 6D9FD6B98DFA4740
+earth-25 | tab rain not a number | 778201554F815ADD
+earth-25 | tab elevation glo90 | 778201554F815ADD
 earth-25 | tab elevation glo90coarse | CDB5AAA54C41FFB0
 earth-25 | tab elevation builtin | 762CA4EDA894EB31
-earth-25 | tab springs streams, ponds wetlands | 0CDED2A8F387BC80
-earth-25 | tab springs and ponds vanilla, rapids off | 0434159FFA9D992C
-earth-25 | tab extinct animals, chickens by range | FE0FA4998003EB30
-earth-25 | tab curve log250 | DD5293A829F10D46
-earth-25 | tab curve linear | 9C68501214F9AA01
-earth-25 | tab vertical budget 128 | 5490F5C42A13D7CC
-earth-25 | tab vertical budget 160 | FC5902881908FC2C
-earth-25 | tab height 512 | 9C68501214F9AA01
-earth-25 | tab summits off | F261B8D81238FC6D
-earth-25 | tab summits from 1000 m | FF6039040CF8E3E7
-earth-25 | tab rock floor off | 9C68501214F9AA01
-earth-25 | tab rock floor 128 | B98048771F3F7397
-earth-25 | tab ground depth terrain | 9C68501214F9AA01
-earth-25 | tab ground depth linear2000 | 9C68501214F9AA01
-earth-25 | tab both canals | 9D8A00519C3D0384
-earth-25 | tab both canals by the keys before 2.0.1 | 9D8A00519C3D0384
-earth-25 | tab Suez only by the key before 2.0.1 | 6E261A7FE19FC847
-earth-25 | tab Panama only by the key before 2.0.1 | 91278915A6FD20B6
-earth-25 | earth.json rivers off | D55D1ADCBA190680
-earth-25 | earth.json islands off | 66F5211412A51AC3
-earth-25 | earth.json coasts off | DC62ACA2D5ED9878
-earth-25 | earth.json seam gutter | 95A030B4B3D09639
-earth-25 | earth.json regional trees off | 60DC60DAF25DA28E
-earth-25 | earth.json regional geology off | 9C68501214F9AA01
-earth-25 | earth.json ground columns off | 9C68501214F9AA01
-earth-25 | earth.json regional ores on | 9C68501214F9AA01
-earth-25 | earth.json regional fauna off, extinct animals | 9C68501214F9AA01
-earth-25 | earth.json fauna ranges current | C3368BEEAFEEBE71
-earth-25 | earth.json streams all | 9C68501214F9AA01
-earth-25 | earth.json streams none | 49E4747BC13114AE
-earth-25 | earth.json weather off, pace 2 | 95C1A728D1F33610
-earth-25 | earth.json temperature range extended | EA3168160291673C
-earth-25 | earth.json detail scale not a number | 9C68501214F9AA01
-earth-25 | earth.json land curve 0, gutter margin -5 | 9C68501214F9AA01
-earth-25 | earth.json min island 4, coast cells 2000 | DC62ACA2D5ED9878
-earth-25 | earth.json ores tuned | 220985F4308C6B2D
-earth-25 | Hydrology query 2 | 6E29CF10647B748A
-earth-25 | Cylinder World without its Earth seam | 95A030B4B3D09639
-earth-10 | as the style has it | 82EB7E8DD13FF315
-earth-10 | tab rocks groundcolumns, ores maps | 6246614656DE2FCF
-earth-10 | tab rocks regional, ores vanilla | EB1E5D5395508A63
-earth-10 | tab rocks regional, ores maps | 6370B510DDC89C13
-earth-10 | tab rocks vanilla, ores vanilla | 82EB7E8DD13FF315
-earth-10 | tab rocks vanilla, ores maps | 0B21630B9A7BDA3C
-earth-10 | tab only the old rocks-and-ores key regional | 6370B510DDC89C13
-earth-10 | tab only the old rocks-and-ores key groundcolumns | 6246614656DE2FCF
-earth-10 | tab only the old rocks-and-ores key vanilla | 82EB7E8DD13FF315
-earth-10 | tab no rocks or ores key | 6370B510DDC89C13
-earth-10 | tab nature vanilla | D23DEE606F436E66
-earth-10 | tab no nature key, old animals vanilla | D9BA38C70954D059
-earth-10 | tab no nature key | 82EB7E8DD13FF315
-earth-10 | tab biomes vanilla | 6CC8F0C31F9F6C0E
-earth-10 | tab nature and biomes vanilla | 5C329C48F8E7210D
-earth-10 | tab weather vanilla | DD134757BE026126
-earth-10 | tab rain 0.5, storms 5 | EFE55DDFC4C76B7F
-earth-10 | tab rain not a number | 82EB7E8DD13FF315
-earth-10 | tab elevation glo90 | 82EB7E8DD13FF315
+earth-25 | tab springs streams, ponds wetlands | 28DC48C1CD361872
+earth-25 | tab springs and ponds vanilla, rapids off | 32B0642AD1171105
+earth-25 | tab extinct animals, chickens by range | 1E85D74164F925B8
+earth-25 | tab curve log250 | D4D73E3F26442D59
+earth-25 | tab curve linear | 778201554F815ADD
+earth-25 | tab vertical budget 128 | 9E6FF0263FD61FB7
+earth-25 | tab vertical budget 160 | C97543CD95F7CDEF
+earth-25 | tab height 512 | 778201554F815ADD
+earth-25 | tab summits off | 848C7EF021955754
+earth-25 | tab summits from 1000 m | 8B67027C1514C7F4
+earth-25 | tab rock floor off | 778201554F815ADD
+earth-25 | tab rock floor 128 | A22E66513E1E3D0E
+earth-25 | tab ground depth terrain | 778201554F815ADD
+earth-25 | tab ground depth linear2000 | 778201554F815ADD
+earth-25 | tab both canals | 57F24D488D52A2B0
+earth-25 | tab both canals by the keys before 2.0.1 | 57F24D488D52A2B0
+earth-25 | tab Suez only by the key before 2.0.1 | 889CD259988E9C95
+earth-25 | tab Panama only by the key before 2.0.1 | FB131EE5CACBFBED
+earth-25 | earth.json rivers off | 001FF3145FE5E25B
+earth-25 | earth.json islands off | 886C2C2C53FA6F49
+earth-25 | earth.json coasts off | 24C91D13873C6623
+earth-25 | earth.json seam gutter | A5F93F580DAC130B
+earth-25 | earth.json regional trees off | D1FDA11B1D101134
+earth-25 | earth.json regional geology off | 778201554F815ADD
+earth-25 | earth.json ground columns off | 778201554F815ADD
+earth-25 | earth.json regional ores on | 778201554F815ADD
+earth-25 | earth.json regional fauna off, extinct animals | 778201554F815ADD
+earth-25 | earth.json fauna ranges current | 552933A48EA67124
+earth-25 | earth.json streams all | 778201554F815ADD
+earth-25 | earth.json streams none | B19E9C2A65CFB251
+earth-25 | earth.json weather off, pace 2 | 842A7C206307CE0C
+earth-25 | earth.json temperature range extended | 55D6D40D253E9FA3
+earth-25 | earth.json detail scale not a number | 778201554F815ADD
+earth-25 | earth.json land curve 0, gutter margin -5 | 778201554F815ADD
+earth-25 | earth.json min island 4, coast cells 2000 | 24C91D13873C6623
+earth-25 | earth.json ores tuned | C54FB82A327C2E0B
+earth-25 | Hydrology query 2 | 641F005ED3ED8EC4
+earth-25 | Cylinder World without its Earth seam | A5F93F580DAC130B
+earth-10 | as the style has it | 3CB4EBF870562DC4
+earth-10 | tab rocks groundcolumns, ores maps | 1C7DD372E0DF1012
+earth-10 | tab rocks regional, ores vanilla | A58DAE6D5935528A
+earth-10 | tab rocks regional, ores maps | 23F249A2C07BC0BF
+earth-10 | tab rocks vanilla, ores vanilla | 3CB4EBF870562DC4
+earth-10 | tab rocks vanilla, ores maps | 14C3057E4990D089
+earth-10 | tab only the old rocks-and-ores key regional | 23F249A2C07BC0BF
+earth-10 | tab only the old rocks-and-ores key groundcolumns | 1C7DD372E0DF1012
+earth-10 | tab only the old rocks-and-ores key vanilla | 3CB4EBF870562DC4
+earth-10 | tab no rocks or ores key | 23F249A2C07BC0BF
+earth-10 | tab nature vanilla | D838D1E13FA3860A
+earth-10 | tab no nature key, old animals vanilla | F7055A1C1541741D
+earth-10 | tab no nature key | 3CB4EBF870562DC4
+earth-10 | tab biomes vanilla | 1C6399179891713C
+earth-10 | tab nature and biomes vanilla | 6D2ADB6BA0560324
+earth-10 | tab weather vanilla | DEFCB458DCC55F30
+earth-10 | tab rain 0.5, storms 5 | DFFF2C512747E222
+earth-10 | tab rain not a number | 3CB4EBF870562DC4
+earth-10 | tab elevation glo90 | 3CB4EBF870562DC4
 earth-10 | tab elevation glo90coarse | 80A427633D00F48E
 earth-10 | tab elevation builtin | FF74C4433E30F435
-earth-10 | tab springs streams, ponds wetlands | 8EC41D08B0BEA06D
-earth-10 | tab springs and ponds vanilla, rapids off | 3C7F9F8D72C5CA02
-earth-10 | tab extinct animals, chickens by range | 75F28A27D9454468
-earth-10 | tab curve log250 | 4C08F27ABC574B27
-earth-10 | tab curve linear | 82EB7E8DD13FF315
-earth-10 | tab vertical budget 128 | 2EF8B16CDE5A2741
-earth-10 | tab vertical budget 160 | 4943F4EDD52E99E6
-earth-10 | tab height 512 | CD1D2260CDCBBA29
-earth-10 | tab summits off | 137C64024B69ABF5
-earth-10 | tab summits from 1000 m | A721E6B5A19A9446
-earth-10 | tab rock floor off | C992F6B9AFE15440
-earth-10 | tab rock floor 128 | 5F99D7C669200065
-earth-10 | tab ground depth terrain | 82EB7E8DD13FF315
-earth-10 | tab ground depth linear2000 | 82EB7E8DD13FF315
-earth-10 | tab both canals | 6AE5D3CA8C2C7FE6
-earth-10 | tab both canals by the keys before 2.0.1 | 6AE5D3CA8C2C7FE6
-earth-10 | tab Suez only by the key before 2.0.1 | 755E1D3245A677DC
-earth-10 | tab Panama only by the key before 2.0.1 | 58BD94ED2CDDE117
-earth-10 | earth.json rivers off | A2A82F1C37A08399
-earth-10 | earth.json islands off | FA9490FD9E62ED02
-earth-10 | earth.json coasts off | BBD42FA610E5782A
-earth-10 | earth.json seam gutter | A15754838121BCC3
-earth-10 | earth.json regional trees off | 34114F6CE118333A
-earth-10 | earth.json regional geology off | 82EB7E8DD13FF315
-earth-10 | earth.json ground columns off | 82EB7E8DD13FF315
-earth-10 | earth.json regional ores on | 82EB7E8DD13FF315
-earth-10 | earth.json regional fauna off, extinct animals | 82EB7E8DD13FF315
-earth-10 | earth.json fauna ranges current | C6C4835B348E10C4
-earth-10 | earth.json streams all | 82EB7E8DD13FF315
-earth-10 | earth.json streams none | EBB6CEB71D276E65
-earth-10 | earth.json weather off, pace 2 | 0015D28A34B8223C
-earth-10 | earth.json temperature range extended | 5764F4C901F717C6
-earth-10 | earth.json detail scale not a number | 82EB7E8DD13FF315
-earth-10 | earth.json land curve 0, gutter margin -5 | 82EB7E8DD13FF315
-earth-10 | earth.json min island 4, coast cells 2000 | BBD42FA610E5782A
-earth-10 | earth.json ores tuned | 87B5462C21819222
-earth-10 | Hydrology query 2 | A8DBBDC859282E6C
-earth-10 | Cylinder World without its Earth seam | A15754838121BCC3
+earth-10 | tab springs streams, ponds wetlands | 2535E915E828FFAB
+earth-10 | tab springs and ponds vanilla, rapids off | B50A544F6EAF9BF1
+earth-10 | tab extinct animals, chickens by range | E779E207A153A5EE
+earth-10 | tab curve log250 | CDA97C8458249B7D
+earth-10 | tab curve linear | 3CB4EBF870562DC4
+earth-10 | tab vertical budget 128 | B330F84970D9D2E7
+earth-10 | tab vertical budget 160 | 400D611DB84C2E4C
+earth-10 | tab height 512 | 23070E3D70142B5E
+earth-10 | tab summits off | 9B9B2563068EC715
+earth-10 | tab summits from 1000 m | 6D6EEB5BAF0817B3
+earth-10 | tab rock floor off | 541A0639638BDD9F
+earth-10 | tab rock floor 128 | A154F3563978F23B
+earth-10 | tab ground depth terrain | 3CB4EBF870562DC4
+earth-10 | tab ground depth linear2000 | 3CB4EBF870562DC4
+earth-10 | tab both canals | 3A9D76C131181E20
+earth-10 | tab both canals by the keys before 2.0.1 | 3A9D76C131181E20
+earth-10 | tab Suez only by the key before 2.0.1 | C8C5D20DEF9A1B73
+earth-10 | tab Panama only by the key before 2.0.1 | 1AADA35E2FD65032
+earth-10 | earth.json rivers off | 90818B5812792756
+earth-10 | earth.json islands off | 867A3B03C1A49943
+earth-10 | earth.json coasts off | 1ADEEBF9A254B9F0
+earth-10 | earth.json seam gutter | 9F5F69131A440D78
+earth-10 | earth.json regional trees off | C9137ED8F443ACAD
+earth-10 | earth.json regional geology off | 3CB4EBF870562DC4
+earth-10 | earth.json ground columns off | 3CB4EBF870562DC4
+earth-10 | earth.json regional ores on | 3CB4EBF870562DC4
+earth-10 | earth.json regional fauna off, extinct animals | 3CB4EBF870562DC4
+earth-10 | earth.json fauna ranges current | 4FE47EDB09FCF51B
+earth-10 | earth.json streams all | 3CB4EBF870562DC4
+earth-10 | earth.json streams none | 3B01A729679B0E16
+earth-10 | earth.json weather off, pace 2 | 41582FC53E700838
+earth-10 | earth.json temperature range extended | 57441B45416CBA1A
+earth-10 | earth.json detail scale not a number | 3CB4EBF870562DC4
+earth-10 | earth.json land curve 0, gutter margin -5 | 3CB4EBF870562DC4
+earth-10 | earth.json min island 4, coast cells 2000 | 1ADEEBF9A254B9F0
+earth-10 | earth.json ores tuned | 2D2B25117707E831
+earth-10 | Hydrology query 2 | EBFFD7792A533531
+earth-10 | Cylinder World without its Earth seam | 9F5F69131A440D78

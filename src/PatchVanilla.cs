@@ -77,7 +77,7 @@ namespace EarthMap
             StorySchematics, RegionalPlants, RegionalPlantsOnTrees, Placement1318, SealevelDeposits, ClimateLapseTemperature, ClimateLapseRain,
             RegionalFauna, DungeonMapSize,
             // the running game's and the client's features (the runtime tables, at the end of this file)
-            GrassWinter, GroundMoisture, GrassSeason, SeasonTint, Thunder, CreativeDate, SnowMeltLight,
+            GrassWinter, GroundMoisture, GrassSeason, SeasonTint, Thunder, CreativeDate, SnowMeltLight, GrassSeasonShader,
         }
 
         /// <summary>One feature: the members it needs, bound all together or not at all.</summary>
@@ -1040,6 +1040,14 @@ namespace EarthMap
                 new PatchMethod(AccessTools.TypeByName("Vintagestory.Client.NoObf.ClientWorldMap"), "getColorMapData",
                     postfix: P(typeof(EarthGrassSeason), nameof(EarthGrassSeason.ColorMapDataPostfix)), typeName: "ClientWorldMap"),
             }) { Before = () => EarthGrassSeason.TesselatorPatched = false, Rewrote = () => EarthGrassSeason.TesselatorPatched },
+            // EA-0154 (decision 0091): the seven calendars in one colour map; the chunk shaders take the band from the colour
+            // data (Core.GrassSeasonShader), written where the client's shader loader reads a program (as SeasonTintTable). Off:
+            // grass keeps vanilla's seasons (the wet and dry seasons from the rain stay)
+            new Spec(Feature.GrassSeasonShader, "Earth's grass calendars in one colour map", "grass keeps vanilla's seasons", () => new Bind[]
+            {
+                new PatchMethod(AccessTools.TypeByName("Vintagestory.Client.NoObf.ShaderRegistry"), "LoadShaderProgram",
+                    postfix: P(typeof(EarthGrassSeason), nameof(EarthGrassSeason.ShaderLoaded)), typeName: "ShaderRegistry"),
+            }),
         };
 
         /// <summary>The season tint at the real lapse (SeasonTintAltitude, climate rules 3, on the client at its start): the line

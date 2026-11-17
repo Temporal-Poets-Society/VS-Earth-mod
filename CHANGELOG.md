@@ -2,6 +2,28 @@
 
 What each version changed. What the current version needs and does is in [README.md](README.md).
 
+## 2.1.3 (17 November 2026)
+
+Earth's grass seasons use 1 colour map instead of 7, and step aside past the game's limit of 40: the crash on joining
+with many plant mods. New worlds no longer draw a reservoir or lake at a neighbouring lake's level: the river near
+Joensuu runs in its valley again.
+
+- **No crash joining a world with many colour maps** ([decision 0091](docs/decisions/0091-grass-season-maps-give-way.md),
+  EA-0154): the game holds at most 40 colour maps, and Earth's 7 grass season maps with vanilla's 26 and those of flora
+  mods such as Wildcraft Trees and Wildcraft Fruit could pass that, crashing the game while it joined a world. Earth's
+  seven grass calendars are now one colour map, so Earth takes 1 of the 40 places instead of 7; the grass looks the same.
+  Where even that would pass 40, Earth's map stays out and the grass follows the game's own seasons instead of each
+  place's (its wet and dry seasons stay); the log says so and how many maps the other mods use. If the other mods alone
+  have more than 40, the game still can't load them, and the log names the mods that add the most.
+- **Each lake at its own level, and reservoirs joined to a lake left out** (lake outlines rules 4,
+  [decision 0090](docs/decisions/0090-lakes-cut-into-water-bodies.md), EA-0150): in new worlds on full GLO-90 heights,
+  water the water mask happens to connect, such as a lake, the river below it and a reservoir further down, is no longer
+  one lake at the level of its largest part. Before, the Pielisjoki's Kuurna reservoir near Joensuu was drawn at
+  Pielinen's level, 10 m above its own water, and in tall worlds the river ran below it in a straight trench with walls
+  several blocks high; Cross Lake on the Nelson stood at Lake Winnipeg's level. Each part now sits at its own level, and
+  a modern reservoir among them is left out, as other reservoirs already were. New worlds download `lakes-glo90-4.bin`
+  (57 MB) instead of `lakes-glo90-3.bin`. Worlds made before keep their lakes.
+
 ## 2.1.2 (16 November 2026)
 
 - **The Mod DB couldn't read Earth's world options** ([decision 0089](docs/decisions/0089-world-options-the-mod-db-reads.md)):

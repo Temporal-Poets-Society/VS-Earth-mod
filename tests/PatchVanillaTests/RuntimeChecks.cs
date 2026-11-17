@@ -94,11 +94,13 @@ static partial class Checks
         var tesselator = AccessTools.TypeByName("Vintagestory.Client.NoObf.ChunkTesselator");
         var colorMap = AccessTools.Method(AccessTools.TypeByName("Vintagestory.Client.NoObf.ClientWorldMap"), "getColorMapData");
         var season = Bind(PatchVanilla.GrassSeasonTable());
+        var loader = AccessTools.Method(AccessTools.TypeByName("Vintagestory.Client.NoObf.ShaderRegistry"), "LoadShaderProgram");
         Check(season.Pv.On(Feature.GrassSeason) && EarthGrassSeason.TesselatorPatched && Earth(colorMap, season.Harmony.Id) == 1, "the grass colour's mesh and accessor hooks go in");
+        Check(season.Pv.On(Feature.GrassSeasonShader) && loader != null && Earth(loader, season.Harmony.Id) == 1, "the packed grass map's shader hook goes in (EA-0154)");
         season.Harmony.UnpatchAll(season.Harmony.Id);
         // Codex 4: the mesh's colour data moved (the transpiler finds nothing): the whole feature is off, the accessor's postfix
         // taken back with it (before, it stayed: microblocks in Earth's colour, terrain grass in vanilla's)
-        var noMesh = Bind(PatchVanilla.GrassSeasonTable().Select(s => Like(s, () => new Bind[]
+        var noMesh = Bind(PatchVanilla.GrassSeasonTable().Select(s => s.Feature != Feature.GrassSeason ? s : Like(s, () => new Bind[]
         {
             new PatchMethod(tesselator, "TesselateBlock", new[] { typeof(int), typeof(int), typeof(int), typeof(int), typeof(int) },
                 transpiler: (typeof(EarthGrassSeason), nameof(EarthGrassSeason.TesselateTranspiler))),
@@ -110,7 +112,7 @@ static partial class Checks
         noMesh.Harmony.UnpatchAll(noMesh.Harmony.Id);
         // the accessor's method gone: off, the mesh's transpiler taken back (it was applied first)
         var tesselate = AccessTools.Method(tesselator, "TesselateBlock", new[] { typeof(Block), typeof(int), typeof(int), typeof(int), typeof(int), typeof(int) });
-        var noAccessor = Bind(PatchVanilla.GrassSeasonTable().Select(s => Like(s, () => new Bind[]
+        var noAccessor = Bind(PatchVanilla.GrassSeasonTable().Select(s => s.Feature != Feature.GrassSeason ? s : Like(s, () => new Bind[]
         {
             new PatchMethod(tesselator, "TesselateBlock", new[] { typeof(Block), typeof(int), typeof(int), typeof(int), typeof(int), typeof(int) },
                 transpiler: (typeof(EarthGrassSeason), nameof(EarthGrassSeason.TesselateTranspiler))),
@@ -119,6 +121,13 @@ static partial class Checks
         Check(!noAccessor.Pv.On(Feature.GrassSeason) && noAccessor.Lines.Single().Contains("ClientWorldMap.getColorMapDataRenamed not found") && Earth(tesselate, noAccessor.Harmony.Id) == 0,
             "a missing accessor turns the grass colour off before the mesh is patched");
         noAccessor.Harmony.UnpatchAll(noAccessor.Harmony.Id);
+        // EA-0154: the shader loader renamed: only the packed map is off (grass keeps vanilla's seasons, its rain seasons stay)
+        var noLoader = Bind(PatchVanilla.GrassSeasonTable().Select(s => s.Feature != Feature.GrassSeasonShader ? s : Like(s, () => new Bind[]
+            { new PatchMethod(typeof(Checks), nameof(LoadShaderProgramRenamed), postfix: (typeof(EarthGrassSeason), nameof(EarthGrassSeason.ShaderLoaded))) })).ToArray());
+        Console.WriteLine("  grass season shader, renamed loader: " + noLoader.Lines.Single());
+        Check(noLoader.Pv.On(Feature.GrassSeason) && !noLoader.Pv.On(Feature.GrassSeasonShader) && noLoader.Lines.Single().Contains("grass keeps vanilla's seasons"),
+            "a changed shader loader turns only the packed grass map off");
+        noLoader.Harmony.UnpatchAll(noLoader.Harmony.Id);
 
         // the season tint: the shader loader's parameter renamed (before, Harmony threw out of the client's mod start)
         var renamedProgram = Bind(PatchVanilla.SeasonTintTable().Select(s => Like(s, () => new Bind[]

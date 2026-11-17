@@ -3,7 +3,8 @@ using System;
 namespace EarthMap.Core
 {
     /// <summary>
-    /// Which of Earth's grass season maps (tools/make_grass_seasons.py, earthgrass-*.png) a place's grass follows, from its
+    /// Which of Earth's grass calendars (tools/make_grass_seasons.py: earthgrass-*.png, and since 2.1.3 the bands of the one
+    /// colour map earthgrass-seasons.png, GrassSeasonShader) a place's grass follows, from its
     /// own monthly temperature and rain. Vanilla tints all grass by one calendar ("seasonalGrass"). Here grass is dormant
     /// and brown while the month is below <see cref="GrowingBase"/>, turns a bright fresh green in the weeks after it warms,
     /// settles to summer green and goes to straw after the autumn frosts, so the growing season sets the map. Places with
@@ -14,7 +15,8 @@ namespace EarthMap.Core
     public static class GrassPhenology
     {
         public const double GrowingBase = 5;
-        /// <summary>Colour map codes (colormaps.json patch), indexed by <see cref="MapFor"/>.</summary>
+        /// <summary>The calendars' codes, indexed by <see cref="MapFor"/> (their bands in GrassSeasonShader's map, in this order;
+        /// World Map reads the names, docs/REFLECTION-SURFACE.md). Colour maps of their own until 2.1.2.</summary>
         public static readonly string[] Codes =
         {
             "earthGrassEvergreen", "earthGrassSeason80", "earthGrassSeason66", "earthGrassSeason52", "earthGrassSeason38",

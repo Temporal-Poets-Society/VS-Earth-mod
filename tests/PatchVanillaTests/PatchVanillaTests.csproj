@@ -15,6 +15,8 @@
     <Reference Include="VSEssentials"><HintPath>$(VintageStoryPath)/Mods/VSEssentials.dll</HintPath></Reference>
     <Reference Include="VSSurvivalMod"><HintPath>$(VintageStoryPath)/Mods/VSSurvivalMod.dll</HintPath></Reference>
     <Reference Include="0Harmony"><HintPath>$(VintageStoryPath)/Lib/0Harmony.dll</HintPath></Reference>
+    <!-- the packed grass season map (ColorMapChecks.cs, EA-0154) -->
+    <None Include="../../assets/earth/textures/environment/seasons/earthgrass-seasons.png" Link="earthgrass-seasons.png" CopyToOutputDirectory="PreserveNewest" />
     <!-- where the game's other assemblies are found at run time -->
     <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute"><_Parameter1>VintageStoryPath</_Parameter1><_Parameter2>$(VintageStoryPath)</_Parameter2></AssemblyAttribute>
   </ItemGroup>

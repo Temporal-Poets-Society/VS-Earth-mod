@@ -60,7 +60,7 @@ World Map also serializes the whole `EarthParams` (JSON) into its chart cache ke
 | `ForestPotential(double, double)` | returning `double` | World Map |
 | `ClimatePixelForVanillaLapse(double, double, int, float, float)` | returning `int` (else `ClimatePixel`, the same) | World Map |
 | `GrassSeasonAt(double, double, float[])` | returning `int`, the index into `GrassPhenology.Codes`; fills a curve of `GrassSeason.Steps` (24) | World Map |
-| `GrassPhenology.Codes` | the order evergreen, season80, season66, season52, season38, summerdry, steppe, and the assets `earth:textures/environment/seasons/earthgrass-<code>.png` | World Map (its share table and far terrain's maps, by index and name) |
+| `GrassPhenology.Codes` | the order evergreen, season80, season66, season52, season38, summerdry, steppe, and the assets `earth:textures/environment/seasons/earthgrass-<code>.png` (kept for World Map: from 2.1.3 the game's colour maps hold the seven as bands of one map, `earthGrassSeasons`, decision 0091) | World Map (its share table and far terrain's maps, by index and name) |
 | `Rivers`: the private field `segs` (an array of a struct with `X1`, `Z1`, `X2`, `Z2`, `Q`) and `HalfWidth(double)` | any visibility for the fields; public method | World Map |
 | `GutterSeabed` | public `int` **field** | Cylinder World |
 | `RealSeam` | public `bool` property | Cylinder World |

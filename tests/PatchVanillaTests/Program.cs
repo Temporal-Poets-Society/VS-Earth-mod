@@ -374,6 +374,8 @@ static partial class Checks
 
         // the running game's and the client's tables (RuntimeChecks.cs)
         RunRuntime();
+        // the colour map budget (ColorMapChecks.cs, EA-0154)
+        RunColorMaps();
 
         Console.WriteLine($"PatchVanilla checks: {checks} passed ({Enum.GetValues<Feature>().Length} features in {Tables} tables).");
     }

@@ -55,6 +55,7 @@ $table = @(
     @{ P = 'EarthWorldOptionsTests';  A = @('{root}');                 N = @('game');  M = 0.2 }
     @{ P = 'ElevationTests';          A = @('{raw}\copernicus-glo90-sample', '{root}\data\glo90-tiles.bin', '{out}\elevation-work'); N = @('raw'); M = 1.1; Store = $true; Game = $true }
     @{ P = 'FloodplainTests';         A = @('{root}');                 N = @();        M = 0.2 }
+    @{ P = 'GrassShaderCheck';        A = @();                         N = @('game');  M = 0.1 }
     @{ P = 'GroundColumnsTests';      A = @('{root}');                 N = @();        M = 0.1 }
     @{ P = 'GroundDownloadTests';     A = @();                         N = @();        M = 1 }
     @{ P = 'ModelCacheTests';         A = @('{root}');                 N = @();        M = 0.1 }

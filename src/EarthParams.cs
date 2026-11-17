@@ -348,7 +348,8 @@ namespace EarthMap
         /// grid's). New worlds on full GLO-90 heights only. A world whose file couldn't be had when it first needed it keeps
         /// the grid's lakes for good (EarthElevationSystem.LakeOutlinesOffKey). 0: the grid's lakes (older saves). 2: Global
         /// Dam Watch's reservoirs left out too (0069 rule 9). 3 (decision 0088, EA-0147): the same lakes outlined across the
-        /// 1° tiles' edges, so a lake's pieces meet where its shore crosses a whole degree.</summary>
+        /// 1° tiles' edges, so a lake's pieces meet where its shore crosses a whole degree. 4 (decision 0090, EA-0150): each
+        /// water body at its own level, and the reservoirs the mask joined to a natural lake left out.</summary>
         [ProtoMember(102)] public int LakeOutlines;
         /// <summary>0053 item 18: the rivers of GLO-90's water mask from their outlines (Core.RiverOutlineData.FileVersion,
         /// rivers-outline-glo90-1.bin, which comes with the GLO-90 heights): wherever this world reads GLO-90, dry land in them

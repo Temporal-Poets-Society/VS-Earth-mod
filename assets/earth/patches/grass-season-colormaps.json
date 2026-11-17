@@ -1,9 +1,3 @@
 [
-  { "op": "add", "file": "game:config/colormaps.json", "path": "/-", "value": { "code": "earthGrassEvergreen", "texture": { "base": "earth:environment/seasons/earthgrass-evergreen" }, "loadIntoBlockTextureAtlas": true } },
-  { "op": "add", "file": "game:config/colormaps.json", "path": "/-", "value": { "code": "earthGrassSeason80", "texture": { "base": "earth:environment/seasons/earthgrass-season80" }, "loadIntoBlockTextureAtlas": true } },
-  { "op": "add", "file": "game:config/colormaps.json", "path": "/-", "value": { "code": "earthGrassSeason66", "texture": { "base": "earth:environment/seasons/earthgrass-season66" }, "loadIntoBlockTextureAtlas": true } },
-  { "op": "add", "file": "game:config/colormaps.json", "path": "/-", "value": { "code": "earthGrassSeason52", "texture": { "base": "earth:environment/seasons/earthgrass-season52" }, "loadIntoBlockTextureAtlas": true } },
-  { "op": "add", "file": "game:config/colormaps.json", "path": "/-", "value": { "code": "earthGrassSeason38", "texture": { "base": "earth:environment/seasons/earthgrass-season38" }, "loadIntoBlockTextureAtlas": true } },
-  { "op": "add", "file": "game:config/colormaps.json", "path": "/-", "value": { "code": "earthGrassSummerDry", "texture": { "base": "earth:environment/seasons/earthgrass-summerdry" }, "loadIntoBlockTextureAtlas": true } },
-  { "op": "add", "file": "game:config/colormaps.json", "path": "/-", "value": { "code": "earthGrassSteppe", "texture": { "base": "earth:environment/seasons/earthgrass-steppe" }, "loadIntoBlockTextureAtlas": true } }
+  { "op": "add", "file": "game:config/colormaps.json", "path": "/-", "value": { "code": "earthGrassSeasons", "texture": { "base": "earth:environment/seasons/earthgrass-seasons" }, "loadIntoBlockTextureAtlas": true } }
 ]
