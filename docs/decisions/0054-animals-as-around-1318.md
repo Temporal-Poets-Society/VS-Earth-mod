@@ -1,6 +1,7 @@
 # 0054: Animals live where they lived around 1318
 
-Date: 5 November 2026. Status: **Agreed**; **built** 5 November 2026; in Earth 2.0.0. Offline tests pass; not checked in game.
+Date: 5 November 2026. Status: **Agreed**; **built** 5 November 2026; in Earth 2.0.0; the packs of 17 November 2026
+(Moschidae, the steppe bison, the domestic dog) in Earth 2.1.4. Offline tests pass; not checked in game.
 
 ## Report
 
@@ -96,3 +97,14 @@ Not done: an in-game census in a 1318 world; the low-confidence calls listed in 
   `ChickensByRange` keeps proto 99. `tests/RegionalFaunaTests` (972), `tests/PlacementTests` (413) and the option tests
   pass; a new 1:100 world on the AgentBridge bench loaded without errors. Animal spawns not yet looked at in game.
 - 5 November 2026, 22:47:48 Europe/Riga: tall.11 installed in the author's game at their request (0053 History).
+- 17 November 2026 (EA-0156, the author: "can we update Fauna pack and ranges for the release?"): the catalogue
+  reviewed against the packs' newest 1.22 releases ([fauna-packs-2026-11-17](../research/fauna-packs-2026-11-17/README.md)).
+  Moschidae 1.0.1 is a supported provider (five musk deer on their PHYLACINE ranges, whose present-natural and current
+  ranges are the same, so no 1318 losses). Bovinae 1.0.3's steppe bison is extinct, so it needs *Include extinct
+  animals*. Caninae's domestic dog follows this record's domestic rule: it went feral where people kept dogs around
+  1318 (a region list: the Old World and settled Pacific of the chicken study without islands where dogs are not
+  attested, plus Siberia, most of the Americas and New Zealand; not Australia, where the dingo is its own rule). Its
+  pack gives the dog no natural spawn chance, so no wild dogs appear yet; the generic canid carcass now also appears
+  where only dogs lived. FotSA's domestic cattle, water buffalo and reindeer stay held (no natural spawning in their
+  packs either). The fauna rules version stays 4: new mappings for new entities, no rule changes; saved worlds load
+  them for future natural spawns. 285 taxa, 274 enabled; Earth 2.1.4.

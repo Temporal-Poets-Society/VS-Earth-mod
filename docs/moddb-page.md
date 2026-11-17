@@ -180,6 +180,7 @@ For a richer regional animal world, install the supported **Fauna of the Stone A
 - [Machairodontinae](https://mods.vintagestory.at/machairodontinae).
 - [Manidae](https://mods.vintagestory.at/manidae).
 - [Meiolaniidae](https://mods.vintagestory.at/meiolaniidae).
+- [Moschidae](https://mods.vintagestory.at/moschidae).
 - [Pantherinae](https://mods.vintagestory.at/pantherinae).
 - [Rhinocerotidae](https://mods.vintagestory.at/rhinocerotidae).
 - [Sirenia](https://mods.vintagestory.at/sirenia).

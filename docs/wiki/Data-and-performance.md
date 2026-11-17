@@ -13,7 +13,7 @@ Earth in memory (1.3 to 1.8 GB more than vanilla), and generates new land about 
 
 ## Installing
 
-Install three mods on the server and on every player's game: Earth 2.1.3, Cylinder World (1.1.0 or newer) and
+Install three mods on the server and on every player's game: Earth 2.1.4, Cylinder World (1.1.0 or newer) and
 Hydrology (0.6.2 or newer). Sea is recommended. Then make a new world with one of the Earth play styles (Earth · 1:100
 is the default). Earth 2.0 is one mod: the data-pack mods of Earth 1.0 (Earth Terrain Data, Earth Water Data) are no
 longer needed. If they are still installed, Earth copies its files from them instead of downloading them again.

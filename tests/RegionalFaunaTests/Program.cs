@@ -35,7 +35,7 @@ Check(all.Allows("othermod:rhino",default,true),"unrelated mods untouched");
 Check(!all.Allows("rhinocerotidae:brand-new-rhino",default,true),"unknown species of a mapped provider fail closed");
 // Every audited entity code (all variant cross-products, valid or not): no ambiguity, and every rule is reachable.
 var auditCodes=new List<string>();
-using(var inventory=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"docs/research/ecology-2026-09-28/entity-spawn-audit.json"))))
+using(var inventory=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"docs/research/fauna-packs-2026-11-17/entity-spawn-audit.json"))))
 foreach(var asset in inventory.RootElement.EnumerateArray())
 {
     string provider=asset.GetProperty("modid").GetString()!;
@@ -98,6 +98,26 @@ Check(At(R("viverridae","genettaplesictoides"),35,33) && !At(R("viverridae","gen
 Check(At(R("bovinae","bubaluscebuensis"),10.3,123.9) && !At(R("bovinae","bubaluscebuensis"),14.6,121),"(3) Cebu buffalo on Cebu, not Luzon");
 Check(At(R("vombatidae","vombatushacketti"),-33.5,115.5) && !At(R("vombatidae","vombatushacketti"),-37,145),"(3) Hackett's wombat in south-western Australia only");
 Check(At(R("caninae","dusicyon","avus"),-35,-61) && !At(R("caninae","dusicyon","avus"),-3,-60),"(3) Dusicyon avus in the Pampas, not Amazonia");
+// EA-0156: the packs of 17 November 2026 (Bovinae 1.0.3's steppe bison, Caninae's domestic dog, Moschidae 1.0.1's musk deer).
+var bison=R("bovinae","bospriscus");
+Check(bison.Extinct && !bison.Quarantined && At(bison,50,10) && At(bison,63,130) && At(bison,64,-147) && At(bison,61,-135)
+    && !At(bison,40,-100) && !At(bison,36,138) && !At(bison,10,20) && !At(bison,50,10,false),
+    "steppe bison: extinct, from Germany and Yakutia to Alaska and Yukon; not the Great Plains, Japan or Africa; off without extinct animals");
+var dog=R("caninae","canis","familiaris");
+Check(!dog.Quarantined && !dog.Extinct && dog.Mask==null && At(dog,51,10) && At(dog,19.4,-99.1) && At(dog,-13.5,-72) && At(dog,64,-51) && At(dog,-41.3,174.8)
+    && At(dog,19.6,-155.5) && At(dog,62,130),
+    "domestic dog (gone feral, decision 0054): Germany, Mexico, the Andes, Greenland, New Zealand, Hawaii, Yakutia");
+Check(!At(dog,-25,133) && !At(dog,-42,147) && !At(dog,-27.1,-109.4) && !At(dog,-3,-60) && !At(dog,-50,-70) && !At(dog,-20.5,57.5),
+    "domestic dog: not Australia (the dingo's), Tasmania, Easter Island, Amazonia, Patagonia or uninhabited Mauritius");
+Check(all.Find("caninae:caninae-canina-baby-female-canis-familiaris")==dog && all.Find("caninae:caninae-canina-adult-male-canis-familiaris-semitamed")==dog,
+    "the pack's dog pups and semi-tame dogs map to the dog rule");
+foreach(var (tok,lat,lon,name) in new[]{("moschusmoschiferus",64.6,128.5,"Siberian musk deer, Yakutia"),("moschusmoschiferus",48.24,142.5,"Siberian musk deer, Sakhalin"),
+    ("moschuscupreus",34.5,74.5,"Kashmir musk deer, Kashmir"),("moschusfuscus",28.5,92.0,"black musk deer, eastern Himalaya"),
+    ("moschusberezovskii",28.0,105.0,"dwarf musk deer, south China")})
+    Check(!R("moschidae",tok).Extinct && R("moschidae",tok).Mask!=null && R("moschidae",tok).CurrentMask!=null && At(R("moschidae",tok),lat,lon),"Moschidae: "+name);
+Check(!At(R("moschidae","moschusmoschiferus"),55,37) && !At(R("moschidae","moschuscupreus"),62,130),"musk deer: none in European Russia; the Kashmir musk deer not in Siberia");
+Check(file.Providers.Any(p=>p.Id=="moschidae" && p.Version=="1.0.1") && file.Providers.Any(p=>p.Id=="bovinae" && p.Version=="1.0.3") && file.Providers.Length==21,
+    "21 reviewed providers, Moschidae 1.0.1 among them");
 // Previous single-point regressions, unchanged behaviour.
 var rhino=R("rhinocerotidae","dicerosbicornis"); var woolly=R("rhinocerotidae","coelodontaantiquitatis");
 Check(At(rhino,-2,36) && !At(rhino,15,100),"black rhino East Africa, not equally warm Asia");
@@ -121,11 +141,14 @@ foreach(var code in auditCodes.Where(c=>RegionalFaunaCatalog.GenericCarcassPrefi
     if(g!=null) groupsByCode[code]=g;
 }
 foreach(var code in new[]{"caninae:caninae-canina-carcass","caninae:caninae-cerdocyonina-carcass","pantherinae:pantherinae-neofelis-carcass",
-    "pantherinae:pantherinae-panthera-carcass","machairodontinae:machairodontinae-carcass","casuariidae:casuariidae-carcass"})
+    "pantherinae:pantherinae-panthera-carcass","machairodontinae:machairodontinae-carcass","casuariidae:casuariidae-carcass",
+    // new in Cervinae 0.1.19 and Vombatidae 0.4.8 (EA-0156)
+    "cervinae:cervidae-cervini-carcass","vombatidae:diprotodontidae-carcass","vombatidae:thylacoleonidae-carcass"})
     Check(groupsByCode.TryGetValue(code,out var g) && g.Length>0 && g.All(r=>!r.Quarantined && code.StartsWith(r.Provider+":")),"(4) "+code+" has a non-empty species group");
 var canina=groupsByCode["caninae:caninae-canina-carcass"];
 Check(canina.Contains(R("caninae","canis","lupus")) && !canina.Contains(R("caninae","vulpes","vulpes")),"(4) canina carcass group: wolves yes, foxes no");
-Check(RegionalFaunaCatalog.AllowsAny(canina,S(44.5,-110.5),true) && !RegionalFaunaCatalog.AllowsAny(canina,S(19.7,-155.5),true),"(4) canid carcass where canids live (Yellowstone), not Hawaii");
+// (Hawaii until EA-0156: its feral dogs (decision 0054) now count for the group; Easter Island had none)
+Check(RegionalFaunaCatalog.AllowsAny(canina,S(44.5,-110.5),true) && !RegionalFaunaCatalog.AllowsAny(canina,S(-27.1,-109.4),true) && !RegionalFaunaCatalog.AllowsAny(canina,S(-42,147),true),"(4) canid carcass where canids live (Yellowstone), not Easter Island or Tasmania");
 var sabre=groupsByCode["machairodontinae:machairodontinae-carcass"];
 Check(RegionalFaunaCatalog.AllowsAny(sabre,S(40,-100),true) && !RegionalFaunaCatalog.AllowsAny(sabre,S(40,-100),false),"(4) sabre-tooth carcass follows the extinct toggle of its all-extinct group");
 Check(!RegionalFaunaCatalog.AllowsAny(groupsByCode["casuariidae:casuariidae-carcass"],S(50,10),true) && RegionalFaunaCatalog.AllowsAny(groupsByCode["casuariidae:casuariidae-carcass"],S(-25,133),true),"(4) cassowary/emu carcass in Australia, not Europe");

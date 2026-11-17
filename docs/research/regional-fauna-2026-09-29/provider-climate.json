@@ -2672,15 +2672,31 @@
     ],
     "example": "bovinae:bovinae-adult-female-bosprimigeniusprimigenius",
     "climate": {
-      "minTemp": 2,
-      "maxTemp": 14,
+      "minTemp": -8,
+      "maxTemp": 22,
       "minRain": 0.25,
       "maxRain": 0.8,
       "minForest": 0.0,
       "maxForest": 0.6,
       "maxShrubs": 0.9,
-      "minY": 1.0,
       "maxY": 1.3
+    }
+  },
+  {
+    "provider": "bovinae",
+    "tokens": [
+      "bospriscus"
+    ],
+    "example": "bovinae:bovinae-adult-female-bospriscus",
+    "climate": {
+      "minTemp": -20,
+      "maxTemp": 18,
+      "minRain": 0.12,
+      "maxRain": 0.8,
+      "minForest": 0.0,
+      "maxForest": 0.6,
+      "maxShrubs": 0.9,
+      "maxY": 1.6
     }
   },
   {
@@ -2690,14 +2706,13 @@
     ],
     "example": "bovinae:bovinae-adult-female-boselaphustragocamelus",
     "climate": {
-      "minTemp": 24,
-      "maxTemp": 34,
+      "minTemp": 18,
+      "maxTemp": 40,
       "minRain": 0.4,
       "maxRain": 0.85,
       "minShrubs": 0.4,
       "maxShrubs": 1.0,
       "maxForest": 0.6,
-      "minY": 1.0,
       "maxY": 1.4
     }
   },
@@ -2708,13 +2723,12 @@
     ],
     "example": "bovinae:bovinae-adult-female-bubalusarnee",
     "climate": {
-      "minTemp": 20,
-      "maxTemp": 34,
+      "minTemp": 18,
+      "maxTemp": 40,
       "minRain": 0.5,
       "maxRain": 1,
       "minForest": 0.0,
       "maxForest": 0.7,
-      "minY": 1.0,
       "maxY": 1.3
     }
   },
@@ -2725,13 +2739,12 @@
     ],
     "example": "bovinae:bovinae-adult-female-bubalusbrevicornis",
     "climate": {
-      "minTemp": 4,
+      "minTemp": 10,
       "maxTemp": 22,
       "minRain": 0.5,
       "maxRain": 1,
       "minForest": 0.0,
       "maxForest": 0.7,
-      "minY": 1.0,
       "maxY": 1.3
     }
   },
@@ -2743,12 +2756,11 @@
     "example": "bovinae:bovinae-adult-female-bubaluscebuensis",
     "climate": {
       "minTemp": 24,
-      "maxTemp": 30,
+      "maxTemp": 40,
       "minRain": 0.85,
       "maxRain": 1,
       "minForest": 0.6,
       "maxForest": 0.9,
-      "minY": 1.0,
       "maxY": 1.3
     }
   },
@@ -2760,12 +2772,11 @@
     "example": "bovinae:bovinae-adult-female-bubalusdepressicornis",
     "climate": {
       "minTemp": 22,
-      "maxTemp": 28,
+      "maxTemp": 40,
       "minRain": 0.75,
       "maxRain": 1,
       "minForest": 0.4,
       "maxForest": 1,
-      "minY": 1.0,
       "maxY": 1.4
     }
   },
@@ -2776,8 +2787,8 @@
     ],
     "example": "bovinae:bovinae-adult-female-bubalusgrovesi",
     "climate": {
-      "minTemp": 22,
-      "maxTemp": 28,
+      "minTemp": 24,
+      "maxTemp": 40,
       "minRain": 0.75,
       "maxRain": 1,
       "minForest": 0.4,
@@ -2794,12 +2805,11 @@
     "example": "bovinae:bovinae-adult-female-bubalusmephistopheles",
     "climate": {
       "minTemp": 12,
-      "maxTemp": 22,
+      "maxTemp": 24,
       "minRain": 0.45,
       "maxRain": 0.85,
       "minForest": 0.0,
       "maxForest": 0.7,
-      "minY": 1.0,
       "maxY": 1.3
     }
   },
@@ -2810,13 +2820,12 @@
     ],
     "example": "bovinae:bovinae-adult-female-bubalusmindorensis",
     "climate": {
-      "minTemp": 28,
-      "maxTemp": 34,
+      "minTemp": 22,
+      "maxTemp": 40,
       "minRain": 0.85,
       "maxRain": 1,
       "minForest": 0.6,
       "maxForest": 1,
-      "minY": 1.0,
       "maxY": 1.6
     }
   },
@@ -2827,13 +2836,12 @@
     ],
     "example": "bovinae:bovinae-adult-female-bubalusmurrensis",
     "climate": {
-      "minTemp": 8,
-      "maxTemp": 14,
+      "minTemp": -2,
+      "maxTemp": 20,
       "minRain": 0.55,
       "maxRain": 0.8,
       "minForest": 0.0,
       "maxForest": 0.7,
-      "minY": 1.0,
       "maxY": 1.3
     }
   },
@@ -2844,7 +2852,7 @@
     ],
     "example": "bovinae:bovinae-adult-female-bubalusquarlesi",
     "climate": {
-      "minTemp": 22,
+      "minTemp": 20,
       "maxTemp": 28,
       "minRain": 0.75,
       "maxRain": 1,
@@ -2861,7 +2869,7 @@
     ],
     "example": "bovinae:bovinae-adult-female-pseudoryxnghetinhensis",
     "climate": {
-      "minTemp": 22,
+      "minTemp": 18,
       "maxTemp": 26,
       "minRain": 0.75,
       "maxRain": 1,
@@ -2878,13 +2886,12 @@
     ],
     "example": "bovinae:bovinae-adult-female-syncerusantiquus",
     "climate": {
-      "minTemp": 14,
-      "maxTemp": 34,
+      "minTemp": 10,
+      "maxTemp": 40,
       "minRain": 0.3,
       "maxRain": 0.9,
       "minForest": 0.0,
       "maxForest": 0.6,
-      "minY": 1.0,
       "maxY": 1.8
     }
   },
@@ -2896,12 +2903,11 @@
     "example": "bovinae:bovinae-adult-female-synceruscaffer",
     "climate": {
       "minTemp": 14,
-      "maxTemp": 34,
+      "maxTemp": 40,
       "minRain": 0.3,
       "maxRain": 0.9,
       "minForest": 0.1,
       "maxForest": 0.9,
-      "minY": 1.0,
       "maxY": 1.8
     }
   },
@@ -2913,12 +2919,11 @@
     "example": "bovinae:bovinae-adult-female-syncerusnanus",
     "climate": {
       "minTemp": 22,
-      "maxTemp": 34,
+      "maxTemp": 40,
       "minRain": 0.75,
       "maxRain": 1.0,
       "minForest": 0.2,
       "maxForest": 1.0,
-      "minY": 1.0,
       "maxY": 1.5
     }
   },
@@ -2929,15 +2934,14 @@
     ],
     "example": "bovinae:bovinae-adult-female-taurotragusderbianus",
     "climate": {
-      "minTemp": 22,
-      "maxTemp": 34,
+      "minTemp": 20,
+      "maxTemp": 40,
       "minRain": 0.2,
       "maxRain": 0.75,
       "minShrubs": 0.0,
       "maxShrubs": 0.75,
       "minForest": 0.4,
       "maxForest": 0.9,
-      "minY": 1.0,
       "maxY": 1.85
     }
   },
@@ -2948,15 +2952,14 @@
     ],
     "example": "bovinae:bovinae-adult-female-taurotragusoryx",
     "climate": {
-      "minTemp": 14,
-      "maxTemp": 28,
+      "minTemp": 10,
+      "maxTemp": 27,
       "minRain": 0.2,
       "maxRain": 0.75,
       "minShrubs": 0.0,
       "maxShrubs": 0.75,
       "minForest": 0.4,
       "maxForest": 0.9,
-      "minY": 1.0,
       "maxY": 1.85
     }
   },
@@ -2967,13 +2970,12 @@
     ],
     "example": "bovinae:bovinae-adult-female-tetracerusquadricornis",
     "climate": {
-      "minTemp": 24,
-      "maxTemp": 34,
+      "minTemp": 18,
+      "maxTemp": 40,
       "minRain": 0.4,
       "maxRain": 0.9,
       "minShrubs": 0.4,
       "maxShrubs": 1.0,
-      "minY": 1.0,
       "maxY": 1.35
     }
   },
@@ -2984,14 +2986,13 @@
     ],
     "example": "bovinae:bovinae-adult-female-tragelaphusangasii",
     "climate": {
-      "minTemp": 20,
+      "minTemp": 16,
       "maxTemp": 26,
       "minRain": 0.5,
       "maxRain": 0.75,
       "minForest": 0.4,
       "maxForest": 1.0,
       "maxShrubs": 1.0,
-      "minY": 1.0,
       "maxY": 1.5
     }
   },
@@ -3002,8 +3003,8 @@
     ],
     "example": "bovinae:bovinae-adult-female-tragelaphusbuxtoni",
     "climate": {
-      "minTemp": 28,
-      "maxTemp": 34,
+      "minTemp": 18,
+      "maxTemp": 26,
       "minRain": 0.55,
       "maxRain": 1.0,
       "minForestOrShrubs": 0.3,
@@ -3019,8 +3020,8 @@
     ],
     "example": "bovinae:bovinae-adult-female-tragelaphuseurycerus",
     "climate": {
-      "minTemp": 21,
-      "maxTemp": 34,
+      "minTemp": 20,
+      "maxTemp": 40,
       "minRain": 0.65,
       "maxRain": 1.0,
       "minForest": 0.5,
@@ -3037,14 +3038,13 @@
     ],
     "example": "bovinae:bovinae-adult-female-tragelaphusimberbis",
     "climate": {
-      "minTemp": 22,
-      "maxTemp": 36,
+      "minTemp": 20,
+      "maxTemp": 40,
       "minRain": 0.2,
       "maxRain": 0.65,
       "minForest": 0.4,
       "maxForest": 1.0,
       "maxShrubs": 0.9,
-      "minY": 1.0,
       "maxY": 1.5
     }
   },
@@ -3056,13 +3056,12 @@
     "example": "bovinae:bovinae-adult-female-tragelaphusscriptus",
     "climate": {
       "minTemp": 14,
-      "maxTemp": 34,
+      "maxTemp": 40,
       "minRain": 0.4,
       "maxRain": 0.9,
       "minForest": 0.1,
       "maxForest": 0.9,
       "maxShrubs": 0.9,
-      "minY": 1.0,
       "maxY": 1.8
     }
   },
@@ -3073,14 +3072,13 @@
     ],
     "example": "bovinae:bovinae-adult-female-tragelaphusspekii",
     "climate": {
-      "minTemp": 22,
-      "maxTemp": 34,
+      "minTemp": 18,
+      "maxTemp": 40,
       "minRain": 0.55,
       "maxRain": 1.0,
       "minForest": 0.0,
       "maxForest": 1.0,
       "maxShrubs": 1.0,
-      "minY": 1.0,
       "maxY": 1.5
     }
   },
@@ -3091,13 +3089,12 @@
     ],
     "example": "bovinae:bovinae-adult-female-tragelaphusstrepsiceros",
     "climate": {
-      "minTemp": 14,
-      "maxTemp": 34,
+      "minTemp": 12,
+      "maxTemp": 40,
       "minRain": 0.2,
       "maxRain": 0.65,
       "minForest": 0.4,
       "maxForest": 1.0,
-      "minY": 1.0,
       "maxY": 1.65
     }
   },
@@ -3108,14 +3105,13 @@
     ],
     "example": "bovinae:bovinae-adult-female-tragelaphussylvaticus",
     "climate": {
-      "minTemp": 14,
-      "maxTemp": 28,
+      "minTemp": 10,
+      "maxTemp": 27,
       "minRain": 0.3,
       "maxRain": 0.9,
       "minForest": 0.1,
       "maxForest": 0.9,
       "maxShrubs": 0.9,
-      "minY": 1.0,
       "maxY": 1.8
     }
   },
@@ -3240,7 +3236,6 @@
       "minForestOrShrubs": 0.3,
       "maxForest": 1.0,
       "maxShrubs": 1.0,
-      "minY": 1.0,
       "maxY": 1.4
     }
   },
@@ -3258,7 +3253,6 @@
       "minForestOrShrubs": 0.2,
       "maxForest": 1.0,
       "maxShrubs": 1.0,
-      "minY": 1.0,
       "maxY": 1.4
     }
   },
@@ -3284,14 +3278,13 @@
     ],
     "example": "cervinae:cervidae-cervini-adult-female-megalocerosgiganteus",
     "climate": {
-      "minTemp": -4,
+      "minTemp": 1,
       "maxTemp": 10,
       "minRain": 0.1,
       "maxRain": 1.0,
       "minForestOrShrubs": 0.1,
       "maxForest": 0.9,
       "maxShrubs": 0.9,
-      "minY": 1.0,
       "maxY": 1.6
     }
   },
@@ -3929,7 +3922,6 @@
       "minForest": 0.2,
       "maxForest": 0.8,
       "maxShrubs": 1,
-      "minY": 1.0,
       "maxY": 1.2
     }
   },
@@ -3947,7 +3939,6 @@
       "minForestOrShrubs": 0.2,
       "maxForest": 1.0,
       "maxShrubs": 1.0,
-      "minY": 1.0,
       "maxY": 1.4
     }
   },
@@ -3965,7 +3956,6 @@
       "minForestOrShrubs": 0.0,
       "maxForest": 1.0,
       "maxShrubs": 1.0,
-      "minY": 1.0,
       "maxY": 1.4
     }
   },
@@ -3983,7 +3973,6 @@
       "minForest": 0.0,
       "maxForest": 1.0,
       "maxShrubs": 1.0,
-      "minY": 1.0,
       "maxY": 1.4
     }
   },
@@ -4001,7 +3990,6 @@
       "minForest": 0.0,
       "maxForest": 0.6,
       "maxShrubs": 0.6,
-      "minY": 1.0,
       "maxY": 1.4
     }
   },
@@ -4019,7 +4007,6 @@
       "minForest": 0.0,
       "maxForest": 1.0,
       "maxShrubs": 1.0,
-      "minY": 1.0,
       "maxY": 1.4
     }
   },
@@ -4037,7 +4024,6 @@
       "minForestOrShrubs": 0.0,
       "maxForest": 1.0,
       "maxShrubs": 1.0,
-      "minY": 1.0,
       "maxY": 1.6
     }
   },
@@ -4055,7 +4041,6 @@
       "minForestOrShrubs": 0.25,
       "maxForest": 1.0,
       "maxShrubs": 1.0,
-      "minY": 1.0,
       "maxY": 1.7
     }
   },
@@ -4073,7 +4058,6 @@
       "minForestOrShrubs": 0.25,
       "maxForest": 1.0,
       "maxShrubs": 1.0,
-      "minY": 1.0,
       "maxY": 1.8
     }
   },
@@ -4091,7 +4075,6 @@
       "minForestOrShrubs": 0.25,
       "maxForest": 1.0,
       "maxShrubs": 1.0,
-      "minY": 1.0,
       "maxY": 1.8
     }
   },
@@ -4109,7 +4092,6 @@
       "minForestOrShrubs": 0.25,
       "maxForest": 1.0,
       "maxShrubs": 1.0,
-      "minY": 1.0,
       "maxY": 1.6
     }
   },
@@ -4820,5 +4802,97 @@
       "maxShrubs": 1.0,
       "maxY": 1.5
     }
+  },
+  {
+    "provider": "moschidae",
+    "tokens": [
+      "moschusanhuiensis"
+    ],
+    "example": "moschidae:moschidae-adult-female-moschusanhuiensis",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 16,
+      "minRain": 0.63,
+      "maxRain": 0.7,
+      "minForest": 0.6,
+      "maxForest": 1,
+      "maxY": 1.55
+    }
+  },
+  {
+    "provider": "moschidae",
+    "tokens": [
+      "moschusberezovskii"
+    ],
+    "example": "moschidae:moschidae-adult-female-moschusberezovskii",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 22,
+      "minRain": 0.6,
+      "maxRain": 0.75,
+      "minForest": 0.6,
+      "maxForest": 1,
+      "minY": 1.6,
+      "maxY": 1.8
+    }
+  },
+  {
+    "provider": "moschidae",
+    "tokens": [
+      "moschuscupreus"
+    ],
+    "example": "moschidae:moschidae-adult-female-moschuscupreus",
+    "climate": {
+      "minTemp": 12,
+      "maxTemp": 16,
+      "minRain": 0.65,
+      "maxRain": 0.75,
+      "minForest": 0.6,
+      "maxForest": 1,
+      "minY": 1.6,
+      "maxY": 1.85
+    }
+  },
+  {
+    "provider": "moschidae",
+    "tokens": [
+      "moschusfuscus"
+    ],
+    "example": "moschidae:moschidae-adult-female-moschusfuscus",
+    "climate": {
+      "minTemp": 14,
+      "maxTemp": 18,
+      "minRain": 0.65,
+      "maxRain": 1,
+      "minForest": 0.6,
+      "maxForest": 1,
+      "minY": 1.6,
+      "maxY": 1.75
+    }
+  },
+  {
+    "provider": "moschidae",
+    "tokens": [
+      "moschusmoschiferus"
+    ],
+    "example": "moschidae:moschidae-adult-female-moschusmoschiferus",
+    "climate": {
+      "minTemp": -12,
+      "maxTemp": 10,
+      "minRain": 0.3,
+      "maxRain": 0.65,
+      "minForest": 0.4,
+      "maxForest": 1,
+      "maxY": 1.65
+    }
+  },
+  {
+    "provider": "caninae",
+    "tokens": [
+      "canis",
+      "familiaris"
+    ],
+    "example": "caninae:caninae-canina-adult-female-canis-familiaris-semitamed",
+    "climate": {}
   }
 ]

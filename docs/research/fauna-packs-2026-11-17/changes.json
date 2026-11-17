@@ -1,0 +1,519 @@
+{
+ "floralzonescircumborealregion": {
+  "old": "1.0.2",
+  "new": "1.0.5",
+  "zip": "FloralZonesCircumborealRegion-v1.0.5.zip",
+  "sha256": "848085D63C939B3B7A47F5EDF61BA9602AB8536C83A24A3FC3FBE66AAECD7DA3",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "floralzonescosmopolitanregion": {
+  "old": "1.0.13",
+  "new": "1.0.15",
+  "zip": "FloralZonesCosmopolitanRegion-v1.0.15.zip",
+  "sha256": "C3FCB688D2763F7EDF57E96A538957188244CB557F7E8CACBA84482682BD9032",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "floralzonesmediterraneanregion": {
+  "old": "1.0.24",
+  "new": "1.0.26",
+  "zip": "FloralZonesMediterraneanRegion-v1.0.26.zip",
+  "sha256": "16D4A4D6847E385B99B75BDE2712B31DDD58BDFE079BBCABE5AA868D0274F8C1",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "floralzonesneozeylandicregion": {
+  "old": "1.0.24",
+  "new": "1.0.27",
+  "zip": "FloralZonesNeozeylandicRegion-v1.0.27.zip",
+  "sha256": "55DCC97542461F1A6BCD18FE85DD8CE12DD78793E0C35225AD57667568A5FC8E",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "floralzoneseastasiaticregion": {
+  "old": "1.0.24",
+  "new": "1.0.26",
+  "zip": "FloralZonesEastAsiaticRegion-v1.0.26.zip",
+  "sha256": "D856DD24F5B18AB7608390549E77B8D6C8BC869BC20FB63D14163F51FA623AAB",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "floralzonescentralaustralianregion": {
+  "old": "1.0.27",
+  "new": "1.0.29",
+  "zip": "FloralZonesCentralAustralianRegion-v1.0.29.zip",
+  "sha256": "F23CED08166F5130F52ADBBFB2FDAC7B05DE2B40019FF59F2CEB144ED91EB4B0",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "floralzonescaribbeanregion": {
+  "old": "1.0.29",
+  "new": "1.0.31",
+  "zip": "FloralZonesCaribbeanRegion-v1.0.31.zip",
+  "sha256": "488E0E4000021629D7189EB5C845290869591DB78CB82C3C30BB88C7C11C108E",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "floralzonescaperegion": {
+  "old": "1.0.37",
+  "new": "1.0.39",
+  "zip": "FloralZonesCapeRegion-v1.0.39.zip",
+  "sha256": "26F127D403F8E7D8C4CA3CFEA57051DB959CCF00EB557426F109C401E85C3FB4",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "elephantidae": {
+  "old": "1.0.20",
+  "new": "1.0.23",
+  "zip": "FotSA-Elephantidae-v1.0.23.zip",
+  "sha256": "F8D50C02D722660F57220204309ABA013103647BE9E4CB3EC23E66313EDAA5C8",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "manidae": {
+  "old": "1.0.23",
+  "new": "1.0.24",
+  "zip": "FotSA-Manidae-v1.0.24.zip",
+  "sha256": "C7ED310283A830FBE03F8D750D0EA4258E9DF2EE5EFF2858CF2672CD5AF5CEA2",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "rhinocerotidae": {
+  "old": "1.0.28",
+  "new": "1.0.29",
+  "zip": "FotSA-Rhinocerotidae-v1.0.29.zip",
+  "sha256": "757C739DA130985FD9C1A9D4CF3205F392C0E7CA9C3AF50423FDA2EE94230DCC",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "casuariidae": {
+  "old": "1.1.13",
+  "new": "1.1.14",
+  "zip": "FotSA-Casuariidae-v1.1.14.zip",
+  "sha256": "25F5CDDEFBB73BED165B9793212536A74EBFEE58C161234F6CDB6142915AB63A",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "sirenia": {
+  "old": "1.0.32",
+  "new": "1.0.33",
+  "zip": "FotSA-Sirenia-v1.0.33.zip",
+  "sha256": "84C427CB1438D6A927089CD69CBB84A86FC9A9625E5223A8D8E6C2CB1974A551",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "machairodontinae": {
+  "old": "1.1.13",
+  "new": "1.1.13",
+  "zip": "FotSA-Machairodontinae-v1.1.13.zip",
+  "sha256": "D6AB10FCB17B8FDB45FC80554859CC9E6578F7D8361783EBB0A9F5001D82A64B",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "capreolinae": {
+  "old": "2.0.18",
+  "new": "2.0.21",
+  "zip": "FotSA-Capreolinae-v2.0.21.zip",
+  "sha256": "BAAE8F7755EA92A9E6061811F22EAB9EEE7F6E9E36294A18E94CCF4C58CB19F3",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "spheniscidae": {
+  "old": "1.0.18",
+  "new": "1.0.20",
+  "zip": "FotSA-Spheniscidae-v1.0.20.zip",
+  "sha256": "8F6CC91A63256893A614188B0A1C0E48946BC4876643467D27D3C595A28C877B",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "caninae": {
+  "old": "1.1.9",
+  "new": "1.1.10",
+  "zip": "FotSA-Caninae-v1.1.10.zip",
+  "sha256": "98890571781AFABEABCBB410D05B5792280EB8670D49201139E91412B86C3842",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "pantherinae": {
+  "old": "1.2.18",
+  "new": "1.2.18",
+  "zip": "FotSA-Pantherinae-v1.2.18.zip",
+  "sha256": "05FED854C50E9E69AC682FC937317AEB8609E0B514B4098F7446891C6E0402C1",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "bovinae": {
+  "old": "0.3.6",
+  "new": "1.0.3",
+  "zip": "FotSA-Bovinae-v1.0.3.zip",
+  "sha256": "A4A726AAF9F99E2535316F286E21564C01E7BED2B266EF480D929BFE30C3BBF2",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {
+   "bovinae-adult.json type": {
+    "added": [
+     "bospriscus"
+    ],
+    "removed": []
+   },
+   "bovinae-baby.json type": {
+    "added": [
+     "bospriscus"
+    ],
+    "removed": []
+   },
+   "bovinae-tamed.json type": {
+    "added": [
+     "bosprimigeniusprimigenius"
+    ],
+    "removed": []
+   }
+  },
+  "entityCodesAdded": [
+   "bovinae-adult-female-bosprimigeniusprimigenius-tamed",
+   "bovinae-adult-female-bospriscus",
+   "bovinae-adult-male-bosprimigeniusprimigenius-tamed",
+   "bovinae-adult-male-bospriscus",
+   "bovinae-baby-female-bospriscus",
+   "bovinae-baby-male-bospriscus"
+  ],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "chelonioidea": {
+  "old": "1.0.8",
+  "new": "1.0.10",
+  "zip": "FotSA-Chelonioidea-v1.0.10.zip",
+  "sha256": "B544B27243F5A4B6956740BDEFE68E1B72641F3C5AF1D729D8E37A1BF25DF83B",
+  "entityFilesAdded": [
+   "assets/chelonioidea/entities/animal/reptile/chelonioidea-adult.json",
+   "assets/chelonioidea/entities/animal/reptile/chelonioidea-baby.json",
+   "assets/chelonioidea/entities/animal/reptile/chelonioidea-egg.json"
+  ],
+  "entityFilesRemoved": [
+   "assets/chelonioidea/entities/water/chelonioidea-adult.json",
+   "assets/chelonioidea/entities/water/chelonioidea-baby.json",
+   "assets/chelonioidea/entities/water/chelonioidea-egg.json"
+  ],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "thylacinidae": {
+  "old": "0.1.7",
+  "new": "0.1.9",
+  "zip": "FotSA-Thylacinidae-v0.1.9.zip",
+  "sha256": "263C8AB808FBBCD2B3D69FA95761F8A4A754A572FEBF3E6549064C77CE04D1DA",
+  "entityFilesAdded": [
+   "assets/thylacinidae/entities/animal/mammal/dasyuridae-adult.json",
+   "assets/thylacinidae/entities/animal/mammal/dasyuridae-baby.json"
+  ],
+  "entityFilesRemoved": [
+   "assets/thylacinidae/entities/land/dasyuridae-adult.json",
+   "assets/thylacinidae/entities/land/dasyuridae-baby.json"
+  ],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "iniidae": {
+  "old": "0.1.7",
+  "new": "0.1.8",
+  "zip": "FotSA-Iniidae-v0.1.8.zip",
+  "sha256": "D8FA18BF2C6E8744E9093F12289B3D00ABDE760E018D04E84E81D82A358562FC",
+  "entityFilesAdded": [
+   "assets/iniidae/entities/animal/mammal/iniidae-adult.json",
+   "assets/iniidae/entities/animal/mammal/iniidae-baby.json"
+  ],
+  "entityFilesRemoved": [
+   "assets/iniidae/entities/water/iniidae-adult.json",
+   "assets/iniidae/entities/water/iniidae-baby.json"
+  ],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "cervinae": {
+  "old": "0.1.14",
+  "new": "0.1.19",
+  "zip": "FotSA-Cervinae-v0.1.19.zip",
+  "sha256": "244DA96FBDF41EC87D2448019C53BF11E2737B29A81C7E98C201086919C7167C",
+  "entityFilesAdded": [
+   "assets/cervinae/entities/animal/mammal/hooved/cervidae-carcass.json",
+   "assets/cervinae/entities/animal/mammal/hooved/cervini-adult.json",
+   "assets/cervinae/entities/animal/mammal/hooved/cervini-baby.json",
+   "assets/cervinae/entities/animal/mammal/hooved/cervini-semitamed.json",
+   "assets/cervinae/entities/animal/mammal/hooved/cervini-tamed.json"
+  ],
+  "entityFilesRemoved": [
+   "assets/cervinae/entities/land/cervini.json"
+  ],
+  "variantStates": {},
+  "entityCodesAdded": [
+   "cervidae-cervini-adult-female-megalocerosgiganteus-semitamed",
+   "cervidae-cervini-adult-female-megalocerosgiganteus-tamed",
+   "cervidae-cervini-adult-male-megalocerosgiganteus-semitamed",
+   "cervidae-cervini-adult-male-megalocerosgiganteus-tamed",
+   "cervidae-cervini-carcass"
+  ],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "viverridae": {
+  "old": "1.0.10",
+  "new": "1.0.11",
+  "zip": "FotSA-Viverridae-v1.0.11.zip",
+  "sha256": "B507144D07DEC965E387979345CD000A3EC2F903E53CB9A64F8E009E0B5AD303",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "meiolaniidae": {
+  "old": "0.1.11",
+  "new": "0.1.13",
+  "zip": "FotSA-Meiolaniidae-v0.1.13.zip",
+  "sha256": "554C6659266A39779813290FB7CEAADEFF3F8DC8E590D89F31F440AA03070582",
+  "entityFilesAdded": [
+   "assets/meiolaniidae/entities/animal/reptile/meiolaniidae-adult.json",
+   "assets/meiolaniidae/entities/animal/reptile/meiolaniidae-baby.json",
+   "assets/meiolaniidae/entities/animal/reptile/meiolaniidae-egg.json"
+  ],
+  "entityFilesRemoved": [
+   "assets/meiolaniidae/entities/land/meiolaniidae-egg.json",
+   "assets/meiolaniidae/entities/land/meiolaniidae.json"
+  ],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "vombatidae": {
+  "old": "0.4.6",
+  "new": "0.4.8",
+  "zip": "FotSA-Vombatidae-v0.4.8.zip",
+  "sha256": "5479B16B6223E72BAF9C4F8D2C818C2B0D65F051956A17BE0D254CDED6712156",
+  "entityFilesAdded": [
+   "assets/vombatidae/entities/animal/mammal/diprotodontidae-adult.json",
+   "assets/vombatidae/entities/animal/mammal/diprotodontidae-baby.json",
+   "assets/vombatidae/entities/animal/mammal/diprotodontidae-carcass.json",
+   "assets/vombatidae/entities/animal/mammal/thylacoleonidae-adult.json",
+   "assets/vombatidae/entities/animal/mammal/thylacoleonidae-baby.json",
+   "assets/vombatidae/entities/animal/mammal/thylacoleonidae-carcass.json",
+   "assets/vombatidae/entities/animal/mammal/vombatidae-adult.json",
+   "assets/vombatidae/entities/animal/mammal/vombatidae-baby.json"
+  ],
+  "entityFilesRemoved": [
+   "assets/vombatidae/entities/land/diprotodontidae-adult.json",
+   "assets/vombatidae/entities/land/diprotodontidae-baby.json",
+   "assets/vombatidae/entities/land/thylacoleonidae-adult.json",
+   "assets/vombatidae/entities/land/thylacoleonidae-baby.json",
+   "assets/vombatidae/entities/land/vombatidae-adult.json",
+   "assets/vombatidae/entities/land/vombatidae-baby.json"
+  ],
+  "variantStates": {},
+  "entityCodesAdded": [
+   "diprotodontidae-carcass",
+   "thylacoleonidae-carcass"
+  ],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "felinae": {
+  "old": "0.2.14",
+  "new": "0.2.16",
+  "zip": "FotSA-Felinae-v0.2.16.zip",
+  "sha256": "7BD347A71EB599CF17B43E75402CA9FD7D290C30A139C947767E73B30FBA70A3",
+  "entityFilesAdded": [
+   "assets/felinae/entities/animal/mammal/felinae-adult.json",
+   "assets/felinae/entities/animal/mammal/felinae-baby.json"
+  ],
+  "entityFilesRemoved": [
+   "assets/felinae/entities/land/felinae.json"
+  ],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "dinornithidae": {
+  "old": "1.0.25",
+  "new": "1.0.27",
+  "zip": "FotSA-Dinornithidae-v1.0.27.zip",
+  "sha256": "2416137738AB7950B2EE4A209062A36AD3F15420294259B0C691C95811C511EA",
+  "entityFilesAdded": [],
+  "entityFilesRemoved": [],
+  "variantStates": {},
+  "entityCodesAdded": [],
+  "entityCodesRemoved": [],
+  "patchCodesAdded": [],
+  "patchCodesRemoved": [],
+  "treegenAdded": [],
+  "treegenRemoved": []
+ },
+ "moschidae": {
+  "old": null,
+  "new": "1.0.1",
+  "zip": "FotSA-Moschidae-v1.0.1.zip",
+  "sha256": "3FB72A3EE1E3434BFDC3286ED555272DC8FDCCB2D1F58E48A02BE3825531C84F"
+ }
+}

@@ -1,4 +1,4 @@
-Earth regional fauna, rules version 3 (2026-11-05)
+Earth regional fauna, rules version 4 (catalogue of 2026-11-17)
 
 What the ranges mean
 Living mammal ranges are PHYLACINE "present-natural" ranges: an estimate of each
@@ -6,11 +6,13 @@ species' natural range without human impact. They are counterfactual by design:
 they include places the species has lost to people (for example leopards in
 Scotland, tigers in Japan, dholes in Florida). They are not today's ranges and
 not dated historical maps. An optional "current" profile uses PHYLACINE's
-current ranges for the same mammals instead (157 rules); other rules are
+current ranges for the same mammals instead (162 rules); other rules are
 identical in both profiles. The "1318" profile (decision 0054), used by worlds
 placed as around 1318, removes from the present-natural range the regions each
 species no longer lived in around 1318, by historical and archaeozoological
 sources listed per rule (evidence1318), and never removes its current range.
+Domestic animals went feral where people kept them around 1318; the domestic
+dog's rule is a list of regions, the same in every profile.
 Extinct taxa use documented regions or coarse boxes for their last natural
 range before human-driven range loss or extinction (late Pleistocene to
 Holocene); each rule states its period. PHYLACINE rasters are never used for
@@ -45,8 +47,8 @@ Changes: a subset of PHYLACINE present-natural and current rasters is converted 
 
 Region boundaries reuse Earth's treeregions.json. Boundary provenance and
 underlying credits are in TREE-DATA-ATTRIBUTION.txt in this directory. Every
-site south of 60 S counts as Antarctica, because the polygons do not follow the
-whole terrain coastline.
+land or coastal site outside every polygon takes the nearest region (the polygons
+do not follow the whole terrain coastline, e.g. half of Antarctica's).
 
 Additional factual range sources (facts only; no text, maps or images copied):
 New Zealand Birds Online (Te Papa, DOC and Birds New Zealand):
@@ -58,7 +60,8 @@ NOAA Fisheries sea-turtle species accounts:
 https://www.fisheries.noaa.gov/sea-turtles
 Australian Museum, Queensland Museum, Natural History Museum and US National
 Park Service species/fossil accounts; Wikipedia species articles for
-cassowaries and several fossil taxa; primary literature (e.g. Koepfli et al.
+cassowaries, the steppe bison, musk deer, Polynesian and Native American dogs
+and several fossil taxa; primary literature (e.g. Koepfli et al.
 2015 for the African golden wolf, Peres et al. 2021 for Mazama rufa, Crerar et
 al. 2014 for Steller's sea cow, Gaffney 1992 for Ninjemys). Exact rule-level
 links, periods and notes are in tools/fauna-taxa.json, tools/fauna-birds.json
@@ -69,5 +72,6 @@ combination of extinct animals with today's climate is not a paleoclimate
 reconstruction. Taxa without a defensible range are held from spawning.
 Provider animal models, textures, sounds and behaviour remain in the original
 optional mods and are not included in this derived range catalogue.
-Source hashes, provider versions, coverage tests and held taxa:
-docs/research/regional-fauna-2026-09-29/ in the Earth source repository.
+Source hashes, coverage tests and held taxa: docs/research/regional-fauna-2026-09-29/;
+reviewed provider versions: docs/research/fauna-packs-2026-11-17/ in the Earth
+source repository.

@@ -66,6 +66,11 @@ What this means, to be confirmed taxon by taxon with sources in the catalogue (0
   animals already have natural ranges since 0031.
 - 3 November 2026: renumbered from 0046 to 0049 when merged with calm rivers, which had taken 0046 in an installed
   playtest build and in Hydrology.
+- 17 November 2026 (EA-0156, Earth 2.1.4): the eight Floral Zones packs reviewed at their newest 1.22 releases
+  (Cape 1.0.39, Caribbean 1.0.31, Central Australian 1.0.29, Circumboreal 1.0.5, Cosmopolitan 1.0.15, East Asiatic
+  1.0.26, Mediterranean 1.0.26, Neozeylandic 1.0.27). No worldgen file changed: the same 275 block patches and tree
+  generators, so no new plant to map; only the reviewed versions were raised
+  ([fauna-packs-2026-11-17](../research/fauna-packs-2026-11-17/README.md)).
 
 ## Status before 15 November 2026
 

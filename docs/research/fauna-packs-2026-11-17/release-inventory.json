@@ -1,0 +1,292 @@
+[
+ {
+  "id": "floralzonescircumborealregion",
+  "name": "Floral Zones: Circumboreal Region",
+  "version": "1.0.5",
+  "game": "1.22.7",
+  "released": "2026-11-09 21:55:04",
+  "url": "https://mods.vintagestory.at/floralzonescircumborealregion",
+  "archive": "https://moddbcdn.vintagestory.at/FloralZonesCircumbor_e3f25e9d774b74333ba2c709ca4eab74.zip?dl=FloralZonesCircumborealRegion-v1.0.5.zip",
+  "changelog": "Fixed-Berrybush error around cuttings and young plants Fixed-Leaf decay Fixed-Pie strings (Thanks Droseran!)"
+ },
+ {
+  "id": "floralzonescosmopolitanregion",
+  "name": "Floral Zones: Cosmopolitan Region",
+  "version": "1.0.15",
+  "game": "1.22.7",
+  "released": "2026-11-09 21:54:28",
+  "url": "https://mods.vintagestory.at/floralzonescosmopolitanregion",
+  "archive": "https://moddbcdn.vintagestory.at/FloralZonesCosmopoli_7c5cf755ed32fe54972c0228ee62b5ce.zip?dl=FloralZonesCosmopolitanRegion-v1.0.15.zip",
+  "changelog": "Fixed-Berrybush error around cuttings and young plants"
+ },
+ {
+  "id": "floralzonesmediterraneanregion",
+  "name": "Floral Zones: Mediterranean Region",
+  "version": "1.0.26",
+  "game": "1.22.7",
+  "released": "2026-11-09 21:53:50",
+  "url": "https://mods.vintagestory.at/floralzonesmediterraneanregion",
+  "archive": "https://moddbcdn.vintagestory.at/FloralZonesMediterra_c777bfde50d59e050ef189882ce8d8c0.zip?dl=FloralZonesMediterraneanRegion-v1.0.26.zip",
+  "changelog": "Fixed-Berrybush error around cuttings and young plants Fixed-Leaf decay Tweak-snapdragons have new planter model"
+ },
+ {
+  "id": "floralzonesneozeylandicregion",
+  "name": "Floral Zones: Neozeylandic Region",
+  "version": "1.0.27",
+  "game": "1.22.7",
+  "released": "2026-11-09 21:53:18",
+  "url": "https://mods.vintagestory.at/floralzonesneozeylandicregion",
+  "archive": "https://moddbcdn.vintagestory.at/FloralZonesNeozeylan_e946e9592cc85aa7bafe01657dda1788.zip?dl=FloralZonesNeozeylandicRegion-v1.0.27.zip",
+  "changelog": "Fixed-Berrybush error around cuttings and young plants Fixed-Leaf decay Fixed-Typo in lancewood species name"
+ },
+ {
+  "id": "floralzoneseastasiaticregion",
+  "name": "Floral Zones: East Asiatic Region",
+  "version": "1.0.26",
+  "game": "1.22.7",
+  "released": "2026-11-09 21:52:22",
+  "url": "https://mods.vintagestory.at/floralzoneseastasiaticregion",
+  "archive": "https://moddbcdn.vintagestory.at/FloralZonesEastAsiat_25323e1f58a93d32872dbdc4267a8c42.zip?dl=FloralZonesEastAsiaticRegion-v1.0.26.zip",
+  "changelog": "Fixed-Berrybush error around cuttings and young plants"
+ },
+ {
+  "id": "floralzonescentralaustralianregion",
+  "name": "Floral Zones: Central Australian Region",
+  "version": "1.0.29",
+  "game": "1.22.7",
+  "released": "2026-11-09 21:51:49",
+  "url": "https://mods.vintagestory.at/floralzonescentralaustralianregion",
+  "archive": "https://moddbcdn.vintagestory.at/FloralZonesCentralAu_5784e98e18a95d4bdf906868c99d5ec4.zip?dl=FloralZonesCentralAustralianRegion-v1.0.29.zip",
+  "changelog": "Fixed-Berrybush error around cuttings and young plants Fixed-Leaf decay Fixed-Legume and Vegetable attributes (Thanks Droseran!) Fixed-Pie strings (Thanks Droseran!)"
+ },
+ {
+  "id": "floralzonescaribbeanregion",
+  "name": "Floral Zones: Caribbean Region",
+  "version": "1.0.31",
+  "game": "1.22.7",
+  "released": "2026-11-09 21:51:07",
+  "url": "https://mods.vintagestory.at/floralzonescaribbeanregion",
+  "archive": "https://moddbcdn.vintagestory.at/FloralZonesCaribbean_6faa413484765ca863adb852ab1696ac.zip?dl=FloralZonesCaribbeanRegion-v1.0.31.zip",
+  "changelog": "Fixed-Berrybush error around cuttings and young plants Fixed-Leaf decay Fixed-Pie strings (Thanks Droseran!) Fixed-Readded narrow log firewood recipe Fixed-Vegetable attributes (Thanks Droseran!)"
+ },
+ {
+  "id": "floralzonescaperegion",
+  "name": "Floral Zones: Cape Region",
+  "version": "1.0.39",
+  "game": "1.22.7",
+  "released": "2026-11-09 21:50:29",
+  "url": "https://mods.vintagestory.at/floralzonescaperegion",
+  "archive": "https://moddbcdn.vintagestory.at/FloralZonesCapeRegio_b35a9d03aa751259eb01cda51705833b.zip?dl=FloralZonesCapeRegion-v1.0.39.zip",
+  "changelog": "Fixed-Berrybush error around cuttings and young plants Fixed-Leaf decay Fixed-Missing sounds on quarter log block"
+ },
+ {
+  "id": "elephantidae",
+  "name": "Fauna of the Stone Age: Elephantidae",
+  "version": "1.0.23",
+  "game": "1.22.7",
+  "released": "2026-11-06 02:56:41",
+  "url": "https://mods.vintagestory.at/elephantidae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Elephantidae-v_7abcf2a31b5a99affc665439cb7bd792.zip?dl=FotSA-Elephantidae-v1.0.23.zip",
+  "changelog": "Fixed-Babies missing food seeking tasks Fixed-Mortally woundable not recoverable Tweak-Hid cheddar and blue cheese until cheesemaking isn&rsquo;t hardcoded"
+ },
+ {
+  "id": "manidae",
+  "name": "Fauna of the Stone Age: Manidae",
+  "version": "1.0.24",
+  "game": "1.22.7",
+  "released": "2026-10-14 18:32:21",
+  "url": "https://mods.vintagestory.at/manidae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Manidae-v1.0.2_9ea3a25bc606c84a7e3c3434163c3913.zip?dl=FotSA-Manidae-v1.0.24.zip",
+  "changelog": "Added-Entity state tags"
+ },
+ {
+  "id": "rhinocerotidae",
+  "name": "Fauna of the Stone Age: Rhinocerotidae",
+  "version": "1.0.29",
+  "game": "1.22.7",
+  "released": "2026-10-14 18:29:52",
+  "url": "https://mods.vintagestory.at/rhinocerotidae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Rhinocerotidae_c8df6f30193ae4b89ffe873554197ba8.zip?dl=FotSA-Rhinocerotidae-v1.0.29.zip",
+  "changelog": "Added-Entity state tags"
+ },
+ {
+  "id": "casuariidae",
+  "name": "Fauna of the Stone Age: Casuariidae Plus",
+  "version": "1.1.14",
+  "game": "1.22.7",
+  "released": "2026-10-14 18:29:08",
+  "url": "https://mods.vintagestory.at/casuariidae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Casuariidae-v1_fc5a3b038f2102fe1e1e22a1198a93ae.zip?dl=FotSA-Casuariidae-v1.1.14.zip",
+  "changelog": "Added-Entity state tags Tweak-Set ropetieable to gen 1"
+ },
+ {
+  "id": "sirenia",
+  "name": "Fauna of the Stone Age: Sirenia",
+  "version": "1.0.33",
+  "game": "1.22.7",
+  "released": "2026-10-01 18:36:11",
+  "url": "https://mods.vintagestory.at/sirenia",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Sirenia-v1.0.3_10dd5f4ae5bf92c4e4dc2e1072c20e45.zip?dl=FotSA-Sirenia-v1.0.33.zip",
+  "changelog": "Fixed-Malformed entity item"
+ },
+ {
+  "id": "machairodontinae",
+  "name": "Fauna of the Stone Age: Machairodontinae",
+  "version": "1.1.13",
+  "game": "1.22.7",
+  "released": "2026-09-23 19:15:44",
+  "url": "https://mods.vintagestory.at/machairodontinae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Machairodontin_f42423f2fa79de5326868efc23d85652.zip?dl=FotSA-Machairodontinae-v1.1.13.zip",
+  "changelog": "Fixed-Adult saber cats not dropping fat correctly Fixed-Missing center point in carcass"
+ },
+ {
+  "id": "capreolinae",
+  "name": "Fauna of the Stone Age: Capreolinae",
+  "version": "2.0.21",
+  "game": "1.22.7",
+  "released": "2026-11-06 02:53:13",
+  "url": "https://mods.vintagestory.at/capreolinae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Capreolinae-v2_9c3def825be5c59713c6ae0ede1bb268.zip?dl=FotSA-Capreolinae-v2.0.21.zip",
+  "changelog": "Fixed-Mortally woundable not recoverable Tweak-Hid cheddar and blue cheese until cheesemaking isn’t hardcoded"
+ },
+ {
+  "id": "spheniscidae",
+  "name": "Fauna of the Stone Age: Spheniscidae",
+  "version": "1.0.20",
+  "game": "1.22.7",
+  "released": "2026-11-06 02:55:42",
+  "url": "https://mods.vintagestory.at/spheniscidae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Spheniscidae-v_0e0abf4cb258feaf1c60cbbcb9ab1115.zip?dl=FotSA-Spheniscidae-v1.0.20.zip",
+  "changelog": "Fixed-Removed unintended baby variant from hides Fixed-Oiled hide recipes giving correct number of hides"
+ },
+ {
+  "id": "caninae",
+  "name": "Fauna of the Stone Age: Caninae",
+  "version": "1.1.10",
+  "game": "1.22.7",
+  "released": "2026-10-01 18:32:58",
+  "url": "https://mods.vintagestory.at/caninae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Caninae-v1.1.1_44ee0f22733ed81f6c289f348ad91577.zip?dl=FotSA-Caninae-v1.1.10.zip",
+  "changelog": "Fixed-African wolf not using bark sound Fixed-Coyote not using all howl sounds"
+ },
+ {
+  "id": "pantherinae",
+  "name": "Fauna of the Stone Age: Pantherinae",
+  "version": "1.2.18",
+  "game": "1.22.7",
+  "released": "2026-09-11 15:41:03",
+  "url": "https://mods.vintagestory.at/pantherinae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Pantherinae-v1_8fa84519bab0bd5c26eedc907f70e3d8.zip?dl=FotSA-Pantherinae-v1.2.18.zip",
+  "changelog": "Fixed-Pelts grouped in handbook"
+ },
+ {
+  "id": "bovinae",
+  "name": "Fauna of the Stone Age: Bovinae",
+  "version": "1.0.3",
+  "game": "1.22.7",
+  "released": "2026-11-12 02:35:52",
+  "url": "https://mods.vintagestory.at/bovinae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Bovinae-v1.0.3_bf1239f24c9fe7a6a93454d7185a43b3.zip?dl=FotSA-Bovinae-v1.0.3.zip",
+  "changelog": "Fixed-Female tamed bovines using wrong requires nearby entity format"
+ },
+ {
+  "id": "chelonioidea",
+  "name": "Fauna of the Stone Age: Chelonioidea",
+  "version": "1.0.10",
+  "game": "1.22.7",
+  "released": "2026-10-14 18:37:49",
+  "url": "https://mods.vintagestory.at/chelonioidea",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Chelonioidea-v_b70cb390b867f2fdd6f46470e2a0abb2.zip?dl=FotSA-Chelonioidea-v1.0.10.zip",
+  "changelog": "Added-Entity state tags Fixed-Eggs not using proper models in henboxes Fixed-Eggs not scaled correctly in henboxes Tweak-Set ropetieable to gen 1"
+ },
+ {
+  "id": "thylacinidae",
+  "name": "Fauna of the Stone Age: Thylacinidae Plus",
+  "version": "0.1.9",
+  "game": "1.22.7",
+  "released": "2026-11-06 02:59:00",
+  "url": "https://mods.vintagestory.at/thylacinidae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Thylacinidae-v_404d91b6cf5eac38736f2dff8ed19f41.zip?dl=FotSA-Thylacinidae-v0.1.9.zip",
+  "changelog": "Fixed-combat overhaul patch entity address"
+ },
+ {
+  "id": "iniidae",
+  "name": "Fauna of the Stone Age: Iniidae Plus",
+  "version": "0.1.8",
+  "game": "1.22.7",
+  "released": "2026-10-08 19:21:18",
+  "url": "https://mods.vintagestory.at/iniidae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Iniidae-v0.1.8_65c74e4c56ab2869933dde1e9cf90b65.zip?dl=FotSA-Iniidae-v0.1.8.zip",
+  "changelog": "Added-Ancient Tools Brain drops (Thanks Whiskey Sunshine!) Added-Entity state tags Added-Freshwater fish interaction Added-Oiled, Raw, Salted hides and associated recipes Fixed-Large troughs can’t be used for dolphin feeding Fixed-Pelt group category code Tweak-Dolphin movement speeds Tweak-Reduced despawn light threshold to 2 Tweak-Reduced spawn checks to single per species for optimization Tweak-Set ropetieable to gen 1 Updated-Refactored AI tasks to the new version Updated-Reformatted folders to match base game’s folder layout"
+ },
+ {
+  "id": "cervinae",
+  "name": "Fauna of the Stone Age: Cervinae",
+  "version": "0.1.19",
+  "game": "1.22.7",
+  "released": "2026-11-09 22:12:31",
+  "url": "https://mods.vintagestory.at/cervinae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Cervinae-v0.1._e8cfdc359c1a69ef6302877a76ef9252.zip?dl=FotSA-Cervinae-v0.1.19.zip",
+  "changelog": "Fixed-Centered headmounts Fixed-Malformed requires nearby entity format for reproduction"
+ },
+ {
+  "id": "viverridae",
+  "name": "Fauna of the Stone Age: Viverridae Plus",
+  "version": "1.0.11",
+  "game": "1.22.7",
+  "released": "2026-10-14 18:36:26",
+  "url": "https://mods.vintagestory.at/viverridae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Viverridae-v1._a5623dfcb3523620aa8ac78cb88cc6be.zip?dl=FotSA-Viverridae-v1.0.11.zip",
+  "changelog": "Added-Entity state tags"
+ },
+ {
+  "id": "meiolaniidae",
+  "name": "Fauna of the Stone Age: Meiolaniidae",
+  "version": "0.1.13",
+  "game": "1.22.7",
+  "released": "2026-10-14 18:35:48",
+  "url": "https://mods.vintagestory.at/meiolaniidae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Meiolaniidae-v_854fb2abec8155d827cbc3ffe9b9df00.zip?dl=FotSA-Meiolaniidae-v0.1.13.zip",
+  "changelog": "Fixed-Eggs not using proper models in henboxes Fixed-Eggs not scaled correctly in henboxes"
+ },
+ {
+  "id": "vombatidae",
+  "name": "Fauna of the Stone Age: Vombatidae Plus",
+  "version": "0.4.8",
+  "game": "1.22.7",
+  "released": "2026-10-13 01:08:16",
+  "url": "https://mods.vintagestory.at/vombatidae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Vombatidae-v0._94ee471bfd6bc20ac6cc0b3f50295159.zip?dl=FotSA-Vombatidae-v0.4.8.zip",
+  "changelog": "Fixed-Missing code in flee entity task in wombats Fixed-Wildcard in baby pelt drops causing errors"
+ },
+ {
+  "id": "felinae",
+  "name": "Fauna of the Stone Age: Felinae",
+  "version": "0.2.16",
+  "game": "1.22.7",
+  "released": "2026-10-14 18:34:14",
+  "url": "https://mods.vintagestory.at/felinae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Felinae-v0.2.1_f348add50094054487cc1a789da794c6.zip?dl=FotSA-Felinae-v0.2.16.zip",
+  "changelog": "Fixed-Pelt stack count Fixed-Pelt group category code"
+ },
+ {
+  "id": "dinornithidae",
+  "name": "Fauna of the Stone Age: Dinornithiformes Plus",
+  "version": "1.0.27",
+  "game": "1.22.7",
+  "released": "2026-11-06 02:54:02",
+  "url": "https://mods.vintagestory.at/dinornithidae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Dinornithidae-_42d55c46f07f679117a81380336f9515.zip?dl=FotSA-Dinornithidae-v1.0.27.zip",
+  "changelog": "Fixed-Oiled hide recipes giving correct number of hides"
+ },
+ {
+  "id": "moschidae",
+  "name": "Fauna of the Stone Age: Moschidae",
+  "version": "1.0.1",
+  "game": "1.22.7",
+  "released": "2026-11-06 02:57:24",
+  "url": "https://mods.vintagestory.at/moschidae",
+  "archive": "https://moddbcdn.vintagestory.at/FotSA-Moschidae-v1.0_e47da30eafbc6fda48d487993654dbac.zip?dl=FotSA-Moschidae-v1.0.1.zip",
+  "changelog": "Added-Entity state tags to baby"
+ }
+]

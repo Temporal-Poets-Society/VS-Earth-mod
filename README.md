@@ -1,6 +1,6 @@
-# Earth 2.1.3 — Vintage Story 1.22
+# Earth 2.1.4 — Vintage Story 1.22
 
-**2.1.3 (17 November 2026).** Earth 2.0 is one mod and makes new worlds. Worlds from older Earth versions (0.x, 1.x and
+**2.1.4 (17 November 2026).** Earth 2.0 is one mod and makes new worlds. Worlds from older Earth versions (0.x, 1.x and
 the 2.0.0 release candidates) are not supported: start a new world. From 2.0.0 on, saves are kept working. 2.0.1 makes
 vanilla rocks the Earth tab's default, takes rain and storm frequency off the world screen, joins the two canal switches,
 reads start coordinates pasted from Google Maps, adds downloading the GLO-90 heights before a world starts, and lets
@@ -9,7 +9,9 @@ stopped; 2.0.3 moves Start and Start coordinates to the game's Player spawn and 
 meet where they cross a whole degree of latitude or longitude, without a step or notch on the line; 2.1.2 lets the Mod DB
 read Earth's world options (the World height slider runs 256 to 1024); 2.1.3 keeps Earth's grass seasons in one
 colour map instead of 7 and has them step aside past the game's limit of 40 (the crash on joining with many plant
-mods), and new worlds draw each lake at its own level. What it brings over 1.0.x,
+mods), and new worlds draw each lake at its own level; 2.1.4 knows the current Fauna of the Stone Age and Floral
+Zones versions, supports Moschidae's musk deer, and gives the steppe bison (with the extinct animals) and the domestic
+dog their ranges. What it brings over 1.0.x,
 and every earlier version, is in
 [CHANGELOG.md](CHANGELOG.md).
 

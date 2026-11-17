@@ -1863,6 +1863,66 @@
     "https://repository.lsu.edu/agrnr_pubs/832"
    ],
    "confidence": "medium"
+  },
+  "Moschus anhuiensis": {
+   "keys": [
+    "moschidae:moschusanhuiensis"
+   ],
+   "lost1318Regions": [],
+   "evidence": "PHYLACINE 1.2.1's present-natural and current ranges are the same cells (no counterfactual additions), and today's native range is never removed, so the 1318 range is the PHYLACINE range. Anhui musk deer, eastern China (the Dabie Shan cells of PHYLACINE). The declines the sources describe (hunting for the musk gland, deforestation, fragmentation) are modern.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Musk_deer",
+    "https://github.com/MegaPast2Future/PHYLACINE_1.2/tree/v1.2.1"
+   ],
+   "confidence": "high for the rule (natural equals current); pre-1318 losses not researched further"
+  },
+  "Moschus berezovskii": {
+   "keys": [
+    "moschidae:moschusberezovskii"
+   ],
+   "lost1318Regions": [],
+   "evidence": "PHYLACINE 1.2.1's present-natural and current ranges are the same cells (no counterfactual additions), and today's native range is never removed, so the 1318 range is the PHYLACINE range. Dwarf (Chinese forest) musk deer, southern China to northern Vietnam. The declines the sources describe (hunting for the musk gland, deforestation, fragmentation) are modern.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Musk_deer",
+    "https://github.com/MegaPast2Future/PHYLACINE_1.2/tree/v1.2.1"
+   ],
+   "confidence": "high for the rule (natural equals current); pre-1318 losses not researched further"
+  },
+  "Moschus cupreus": {
+   "keys": [
+    "moschidae:moschuscupreus"
+   ],
+   "lost1318Regions": [],
+   "evidence": "PHYLACINE 1.2.1's present-natural and current ranges are the same cells (no counterfactual additions), and today's native range is never removed, so the 1318 range is the PHYLACINE range. Kashmir musk deer, western Himalaya and Hindu Kush. The declines the sources describe (hunting for the musk gland, deforestation, fragmentation) are modern.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Musk_deer",
+    "https://github.com/MegaPast2Future/PHYLACINE_1.2/tree/v1.2.1"
+   ],
+   "confidence": "high for the rule (natural equals current); pre-1318 losses not researched further"
+  },
+  "Moschus fuscus": {
+   "keys": [
+    "moschidae:moschusfuscus"
+   ],
+   "lost1318Regions": [],
+   "evidence": "PHYLACINE 1.2.1's present-natural and current ranges are the same cells (no counterfactual additions), and today's native range is never removed, so the 1318 range is the PHYLACINE range. Black (dusky) musk deer, eastern Himalaya. The declines the sources describe (hunting for the musk gland, deforestation, fragmentation) are modern.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Musk_deer",
+    "https://github.com/MegaPast2Future/PHYLACINE_1.2/tree/v1.2.1"
+   ],
+   "confidence": "high for the rule (natural equals current); pre-1318 losses not researched further"
+  },
+  "Moschus moschiferus": {
+   "keys": [
+    "moschidae:moschusmoschiferus"
+   ],
+   "lost1318Regions": [],
+   "evidence": "PHYLACINE 1.2.1's present-natural and current ranges are the same cells (no counterfactual additions), and today's native range is never removed, so the 1318 range is the PHYLACINE range. Siberian musk deer, north-east Asia from the Altai to Sakhalin and Korea. The declines the sources describe (hunting for the musk gland, deforestation, fragmentation) are modern.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Musk_deer",
+    "https://github.com/MegaPast2Future/PHYLACINE_1.2/tree/v1.2.1"
+   ],
+   "confidence": "high for the rule (natural equals current); pre-1318 losses not researched further"
   }
  },
  "vanilla": {

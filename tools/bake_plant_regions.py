@@ -12,6 +12,9 @@ in WCVP (accepted names first, synonyms to their accepted taxon) and its native,
 used, mirroring bake_tree_regions.py. Tokens marked range=packRegion use the pack's floristic region; range=climateOnly
 (and every patch from a climateOnlyFiles file) keeps the pack's own climate rules. Nothing here is needed at runtime
 except the output JSON. Run with the project venv:  .venv\\Scripts\\python.exe tools\\bake_plant_regions.py
+--ranges-from FILE takes the WCVP ranges from an earlier output (assets/earth/config/regionalplants.json) instead of
+wcvp.zip, for a pack update that adds no species: every WCVP-ranged species must be in that file, and its WCVP source and
+hash are carried over, so the ranges stay those of the reviewed WCVP (EA-0156).
 """
 import argparse, csv, glob, hashlib, io, json, os, re, sys, zipfile
 from collections import Counter
@@ -22,6 +25,7 @@ p = argparse.ArgumentParser()
 p.add_argument('--sources', type=Path, default=ROOT/'obj/ecology-inspect')
 p.add_argument('--mods', type=Path, default=Path(os.environ.get('APPDATA', ''))/'VintagestoryData/Mods')
 p.add_argument('--check', action='store_true', help='verify only; do not write the output')
+p.add_argument('--ranges-from', type=Path, help='take the WCVP ranges from an earlier regionalplants.json instead of wcvp.zip')
 args = p.parse_args()
 sys.path.insert(0, str(args.sources/'pylibs'))
 import json5  # provider assets use JSON5 features (comments, trailing commas)
@@ -108,35 +112,47 @@ for t, s in species.items():
 
 # ---------------------------------------------------------------- WCVP native ranges
 wanted = {compact(s['taxon']) for s in species.values() if s.get('range', 'wcvp') == 'wcvp'}
-archive = zipfile.ZipFile(args.sources/'wcvp.zip')
-def rows(filename):
-    with io.TextIOWrapper(archive.open(filename), encoding='utf-8', errors='replace', newline='') as stream:
-        yield from csv.DictReader(stream, delimiter='|')
-STATUS = {'Accepted': 0, 'Synonym': 1}
-found = {}
-for r in rows('wcvp_names.csv'):
-    key = compact(r['taxon_name'])
-    if key in wanted and r['taxon_status'] in STATUS:
-        old = found.get(key)
-        if old is None or STATUS[r['taxon_status']] < STATUS[old['taxon_status']]: found[key] = r
-missing = wanted - found.keys()
-if missing: fail('taxa without an accepted or synonym WCVP name: ' + ', '.join(sorted(missing)))
-accepted_ids = {r['accepted_plant_name_id'] or r['plant_name_id'] for r in found.values()}
-accepted = {}
-for r in rows('wcvp_names.csv'):
-    if r['plant_name_id'] in accepted_ids: accepted[r['plant_name_id']] = r
-ranges = {k: set() for k in accepted_ids}
-for r in rows('wcvp_distribution.csv'):
-    if r['plant_name_id'] in ranges and r['introduced'] == '0' and r['location_doubtful'] == '0':
-        ranges[r['plant_name_id']].add(r['area_code_l3'])
 taxa = {}
-for key, original in found.items():
-    ident = original['accepted_plant_name_id'] or original['plant_name_id']
-    regions = ranges[ident] & region_codes
-    if not regions: fail('no native range: ' + accepted[ident]['taxon_name'])
-    if ranges[ident] - region_codes: print('WARNING: dropped unknown region codes', ranges[ident] - region_codes)
-    taxa[key] = {'name': accepted[ident]['taxon_name'], 'id': ident, 'status': original['taxon_status'],
-                 'area': accepted[ident]['geographic_area'], 'regions': sorted(regions)}
+if args.ranges_from:
+    earlier = json.loads(args.ranges_from.read_text(encoding='utf-8'))
+    wcvp_source = earlier['sources']['wcvp']
+    for r in earlier['rules']:
+        if r['basis'] == 'species':
+            taxa[compact(r['packTaxon'])] = {'name': r['taxa'][0], 'id': r['taxonIds'][0], 'status': None, 'area': r['wcvpArea'],
+                                             'regions': r['regions']}
+    missing = wanted - taxa.keys()
+    if missing: fail(f'species without a WCVP range in {args.ranges_from} (bake with wcvp.zip): ' + ', '.join(sorted(missing)))
+    taxa = {k: v for k, v in taxa.items() if k in wanted}
+else:
+    wcvp_source = {'url': 'https://sftp.kew.org/pub/data-repositories/WCVP/wcvp.zip', 'sha256': sha(args.sources/'wcvp.zip'), 'license': 'CC BY 3.0'}
+    archive = zipfile.ZipFile(args.sources/'wcvp.zip')
+    def rows(filename):
+        with io.TextIOWrapper(archive.open(filename), encoding='utf-8', errors='replace', newline='') as stream:
+            yield from csv.DictReader(stream, delimiter='|')
+    STATUS = {'Accepted': 0, 'Synonym': 1}
+    found = {}
+    for r in rows('wcvp_names.csv'):
+        key = compact(r['taxon_name'])
+        if key in wanted and r['taxon_status'] in STATUS:
+            old = found.get(key)
+            if old is None or STATUS[r['taxon_status']] < STATUS[old['taxon_status']]: found[key] = r
+    missing = wanted - found.keys()
+    if missing: fail('taxa without an accepted or synonym WCVP name: ' + ', '.join(sorted(missing)))
+    accepted_ids = {r['accepted_plant_name_id'] or r['plant_name_id'] for r in found.values()}
+    accepted = {}
+    for r in rows('wcvp_names.csv'):
+        if r['plant_name_id'] in accepted_ids: accepted[r['plant_name_id']] = r
+    ranges = {k: set() for k in accepted_ids}
+    for r in rows('wcvp_distribution.csv'):
+        if r['plant_name_id'] in ranges and r['introduced'] == '0' and r['location_doubtful'] == '0':
+            ranges[r['plant_name_id']].add(r['area_code_l3'])
+    for key, original in found.items():
+        ident = original['accepted_plant_name_id'] or original['plant_name_id']
+        regions = ranges[ident] & region_codes
+        if not regions: fail('no native range: ' + accepted[ident]['taxon_name'])
+        if ranges[ident] - region_codes: print('WARNING: dropped unknown region codes', ranges[ident] - region_codes)
+        taxa[key] = {'name': accepted[ident]['taxon_name'], 'id': ident, 'status': original['taxon_status'],
+                     'area': accepted[ident]['geographic_area'], 'regions': sorted(regions)}
 
 # ---------------------------------------------------------------- rules
 rules = []
@@ -177,7 +193,7 @@ summary = {'patches': len(inventory), 'bySpecies': stats['species'], 'byPackRegi
 output = {
     'version': 1,
     'about': 'Earth regional ground plants: native ranges for block patches of regional plant packs. Generated by tools/bake_plant_regions.py from tools/plant-taxa.json; do not edit.',
-    'sources': {'wcvp': {'url': 'https://sftp.kew.org/pub/data-repositories/WCVP/wcvp.zip', 'sha256': sha(args.sources/'wcvp.zip'), 'license': 'CC BY 3.0'},
+    'sources': {'wcvp': wcvp_source,
                 'boundaries': 'treeregions.json (WGSRPD level 3, see TREE-DATA-ATTRIBUTION.txt)',
                 'mapping': 'tools/plant-taxa.json', 'mappingSha256': sha(ROOT/'tools/plant-taxa.json')},
     'summary': summary,
@@ -208,4 +224,4 @@ for prov in providers:
     c = Counter(e['basis'] for e in inventory if e['provider'] == prov['id'])
     print(f'  {prov["id"]} {prov["version"]}: {prov["patches"]} patches ({dict(c)})')
 for key, t in sorted(taxa.items()):
-    if t['status'] != 'Accepted': print(f'  synonym resolved: {key} -> {t["name"]}')
+    if t['status'] not in ('Accepted', None): print(f'  synonym resolved: {key} -> {t["name"]}')

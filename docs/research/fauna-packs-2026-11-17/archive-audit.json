@@ -1,0 +1,580 @@
+[
+ {
+  "id": "floralzonescircumborealregion",
+  "version": "1.0.5",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": {},
+  "biomesFiles": [
+   "assets/floralzonescircumborealregion/config/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/floralzonescircumborealregion/entities/nonliving/boat-construction.json",
+   "assets/floralzonescircumborealregion/entities/nonliving/boat-raft.json",
+   "assets/floralzonescircumborealregion/entities/nonliving/boat-sailed.json"
+  ],
+  "dlls": [],
+  "sha256": "848085D63C939B3B7A47F5EDF61BA9602AB8536C83A24A3FC3FBE66AAECD7DA3"
+ },
+ {
+  "id": "floralzonescosmopolitanregion",
+  "version": "1.0.15",
+  "type": "code",
+  "side": "Universal",
+  "dependencies": {},
+  "biomesFiles": [
+   "assets/floralzonescosmopolitanregion/config/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/floralzonescosmopolitanregion/entities/coconut.json"
+  ],
+  "dlls": [
+   "FloralZonesBerryBushes.dll"
+  ],
+  "sha256": "C3FCB688D2763F7EDF57E96A538957188244CB557F7E8CACBA84482682BD9032"
+ },
+ {
+  "id": "floralzonesmediterraneanregion",
+  "version": "1.0.26",
+  "type": "code",
+  "side": "Universal",
+  "dependencies": {},
+  "biomesFiles": [
+   "assets/floralzonesmediterraneanregion/config/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/floralzonesmediterraneanregion/entities/nonliving/boat-construction.json",
+   "assets/floralzonesmediterraneanregion/entities/nonliving/boat-raft.json",
+   "assets/floralzonesmediterraneanregion/entities/nonliving/boat-sailed.json"
+  ],
+  "dlls": [
+   "FloralZonesBerryBushes.dll"
+  ],
+  "sha256": "16D4A4D6847E385B99B75BDE2712B31DDD58BDFE079BBCABE5AA868D0274F8C1"
+ },
+ {
+  "id": "floralzonesneozeylandicregion",
+  "version": "1.0.27",
+  "type": "code",
+  "side": "Universal",
+  "dependencies": {},
+  "biomesFiles": [
+   "assets/floralzonesneozeylandicregion/config/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/floralzonesneozeylandicregion/entities/nonliving/boat-construction.json",
+   "assets/floralzonesneozeylandicregion/entities/nonliving/boat-raft.json",
+   "assets/floralzonesneozeylandicregion/entities/nonliving/boat-sailed.json"
+  ],
+  "dlls": [
+   "FloralZonesBerryBushes.dll"
+  ],
+  "sha256": "55DCC97542461F1A6BCD18FE85DD8CE12DD78793E0C35225AD57667568A5FC8E"
+ },
+ {
+  "id": "floralzoneseastasiaticregion",
+  "version": "1.0.26",
+  "type": "code",
+  "side": "Universal",
+  "dependencies": {},
+  "biomesFiles": [
+   "assets/floralzoneseastasiaticregion/config/biomes.json"
+  ],
+  "entityFiles": [],
+  "dlls": [
+   "FloralZonesBerryBushes.dll"
+  ],
+  "sha256": "D856DD24F5B18AB7608390549E77B8D6C8BC869BC20FB63D14163F51FA623AAB"
+ },
+ {
+  "id": "floralzonescentralaustralianregion",
+  "version": "1.0.29",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": {},
+  "biomesFiles": [
+   "assets/floralzonescentralaustralianregion/config/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/floralzonescentralaustralianregion/entities/nonliving/boat-construction.json",
+   "assets/floralzonescentralaustralianregion/entities/nonliving/boat-raft.json",
+   "assets/floralzonescentralaustralianregion/entities/nonliving/boat-sailed.json"
+  ],
+  "dlls": [],
+  "sha256": "F23CED08166F5130F52ADBBFB2FDAC7B05DE2B40019FF59F2CEB144ED91EB4B0"
+ },
+ {
+  "id": "floralzonescaribbeanregion",
+  "version": "1.0.31",
+  "type": "code",
+  "side": "Universal",
+  "dependencies": {},
+  "biomesFiles": [
+   "assets/floralzonescaribbeanregion/config/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/floralzonescaribbeanregion/entities/nonliving/boat-construction.json",
+   "assets/floralzonescaribbeanregion/entities/nonliving/boat-raft.json",
+   "assets/floralzonescaribbeanregion/entities/nonliving/boat-sailed.json"
+  ],
+  "dlls": [
+   "FloralZonesBerryBushes.dll"
+  ],
+  "sha256": "488E0E4000021629D7189EB5C845290869591DB78CB82C3C30BB88C7C11C108E"
+ },
+ {
+  "id": "floralzonescaperegion",
+  "version": "1.0.39",
+  "type": "code",
+  "side": "Universal",
+  "dependencies": {},
+  "biomesFiles": [
+   "assets/floralzonescaperegion/config/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/floralzonescaperegion/entities/nonliving/boat-construction.json",
+   "assets/floralzonescaperegion/entities/nonliving/boat-raft.json",
+   "assets/floralzonescaperegion/entities/nonliving/boat-sailed.json"
+  ],
+  "dlls": [
+   "FloralZonesBerryBushes.dll"
+  ],
+  "sha256": "26F127D403F8E7D8C4CA3CFEA57051DB959CCF00EB557426F109C401E85C3FB4"
+ },
+ {
+  "id": "elephantidae",
+  "version": "1.0.23",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/elephantidae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/elephantidae/entities/animal/mammal/elephantidae-adult.json",
+   "assets/elephantidae/entities/animal/mammal/elephantidae-baby.json",
+   "assets/elephantidae/entities/animal/mammal/elephantidae-carcass.json",
+   "assets/elephantidae/entities/animal/mammal/elephantidae-semitamed.json",
+   "assets/elephantidae/entities/animal/mammal/elephantidae-tamed.json"
+  ],
+  "dlls": [],
+  "sha256": "F8D50C02D722660F57220204309ABA013103647BE9E4CB3EC23E66313EDAA5C8"
+ },
+ {
+  "id": "manidae",
+  "version": "1.0.24",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/manidae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/manidae/entities/animal/mammal/manidae-adult.json",
+   "assets/manidae/entities/animal/mammal/manidae-baby.json"
+  ],
+  "dlls": [],
+  "sha256": "C7ED310283A830FBE03F8D750D0EA4258E9DF2EE5EFF2858CF2672CD5AF5CEA2"
+ },
+ {
+  "id": "rhinocerotidae",
+  "version": "1.0.29",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/rhinocerotidae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/rhinocerotidae/entities/animal/mammal/hooved/rhinocerotidae-adult.json",
+   "assets/rhinocerotidae/entities/animal/mammal/hooved/rhinocerotidae-baby.json",
+   "assets/rhinocerotidae/entities/animal/mammal/hooved/rhinocerotidae-carcass.json"
+  ],
+  "dlls": [],
+  "sha256": "757C739DA130985FD9C1A9D4CF3205F392C0E7CA9C3AF50423FDA2EE94230DCC"
+ },
+ {
+  "id": "casuariidae",
+  "version": "1.1.14",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/casuariidae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/casuariidae/entities/animal/bird/anatidae-adult.json",
+   "assets/casuariidae/entities/animal/bird/anatidae-baby.json",
+   "assets/casuariidae/entities/animal/bird/anatidae-egg.json",
+   "assets/casuariidae/entities/animal/bird/anatidae-nest.json",
+   "assets/casuariidae/entities/animal/bird/casuariidae-adult.json",
+   "assets/casuariidae/entities/animal/bird/casuariidae-baby.json",
+   "assets/casuariidae/entities/animal/bird/casuariidae-carcass.json",
+   "assets/casuariidae/entities/animal/bird/casuariidae-egg.json",
+   "assets/casuariidae/entities/animal/bird/casuariidae-nest.json",
+   "assets/casuariidae/entities/animal/bird/dromornithidae-adult.json",
+   "assets/casuariidae/entities/animal/bird/dromornithidae-baby.json",
+   "assets/casuariidae/entities/animal/bird/dromornithidae-egg.json",
+   "assets/casuariidae/entities/animal/bird/dromornithidae-nest.json",
+   "assets/casuariidae/entities/animal/bird/rallidae-adult.json",
+   "assets/casuariidae/entities/animal/bird/rallidae-baby.json",
+   "assets/casuariidae/entities/animal/bird/rallidae-egg.json",
+   "assets/casuariidae/entities/animal/bird/rallidae-nest.json"
+  ],
+  "dlls": [],
+  "sha256": "25F5CDDEFBB73BED165B9793212536A74EBFEE58C161234F6CDB6142915AB63A"
+ },
+ {
+  "id": "sirenia",
+  "version": "1.0.33",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/sirenia/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/sirenia/entities/animal/mammal/sirenia-adult.json",
+   "assets/sirenia/entities/animal/mammal/sirenia-baby.json"
+  ],
+  "dlls": [],
+  "sha256": "84C427CB1438D6A927089CD69CBB84A86FC9A9625E5223A8D8E6C2CB1974A551"
+ },
+ {
+  "id": "machairodontinae",
+  "version": "1.1.13",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/machairodontinae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/machairodontinae/entities/animal/mammal/machairodontinae-adult.json",
+   "assets/machairodontinae/entities/animal/mammal/machairodontinae-baby.json",
+   "assets/machairodontinae/entities/animal/mammal/machairodontinae-carcass.json"
+  ],
+  "dlls": [],
+  "sha256": "D6AB10FCB17B8FDB45FC80554859CC9E6578F7D8361783EBB0A9F5001D82A64B"
+ },
+ {
+  "id": "capreolinae",
+  "version": "2.0.21",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/capreolinae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/capreolinae/entities/animal/mammal/hooved/alceini-adult.json",
+   "assets/capreolinae/entities/animal/mammal/hooved/alceini-baby.json",
+   "assets/capreolinae/entities/animal/mammal/hooved/alceini-semitamed.json",
+   "assets/capreolinae/entities/animal/mammal/hooved/alceini-tamed.json",
+   "assets/capreolinae/entities/animal/mammal/hooved/capreolini-adult.json",
+   "assets/capreolinae/entities/animal/mammal/hooved/capreolini-baby.json",
+   "assets/capreolinae/entities/animal/mammal/hooved/cervidae-carcass.json",
+   "assets/capreolinae/entities/animal/mammal/hooved/odocoileini-adult.json",
+   "assets/capreolinae/entities/animal/mammal/hooved/odocoileini-baby.json",
+   "assets/capreolinae/entities/animal/mammal/hooved/odocoileini-semitamed.json",
+   "assets/capreolinae/entities/animal/mammal/hooved/odocoileini-tamed.json"
+  ],
+  "dlls": [],
+  "sha256": "BAAE8F7755EA92A9E6061811F22EAB9EEE7F6E9E36294A18E94CCF4C58CB19F3"
+ },
+ {
+  "id": "spheniscidae",
+  "version": "1.0.20",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/spheniscidae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/spheniscidae/entities/animal/bird/spheniscidae-adult.json",
+   "assets/spheniscidae/entities/animal/bird/spheniscidae-baby.json",
+   "assets/spheniscidae/entities/animal/bird/spheniscidae-egg.json"
+  ],
+  "dlls": [],
+  "sha256": "8F6CC91A63256893A614188B0A1C0E48946BC4876643467D27D3C595A28C877B"
+ },
+ {
+  "id": "caninae",
+  "version": "1.1.10",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/caninae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/caninae/entities/animal/mammal/canina-adult.json",
+   "assets/caninae/entities/animal/mammal/canina-baby.json",
+   "assets/caninae/entities/animal/mammal/canina-carcass.json",
+   "assets/caninae/entities/animal/mammal/canina-semitamed.json",
+   "assets/caninae/entities/animal/mammal/cerdocyonina-adult.json",
+   "assets/caninae/entities/animal/mammal/cerdocyonina-baby.json",
+   "assets/caninae/entities/animal/mammal/cerdocyonina-carcass.json",
+   "assets/caninae/entities/animal/mammal/urocyonini-adult.json",
+   "assets/caninae/entities/animal/mammal/urocyonini-baby.json",
+   "assets/caninae/entities/animal/mammal/urocyonini-carcass.json",
+   "assets/caninae/entities/animal/mammal/vulpini-adult.json",
+   "assets/caninae/entities/animal/mammal/vulpini-baby.json",
+   "assets/caninae/entities/animal/mammal/vulpini-carcass.json"
+  ],
+  "dlls": [],
+  "sha256": "98890571781AFABEABCBB410D05B5792280EB8670D49201139E91412B86C3842"
+ },
+ {
+  "id": "pantherinae",
+  "version": "1.2.18",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/pantherinae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/pantherinae/entities/animal/mammal/pantherinae-neofelis-adult.json",
+   "assets/pantherinae/entities/animal/mammal/pantherinae-neofelis-baby.json",
+   "assets/pantherinae/entities/animal/mammal/pantherinae-neofelis-carcass.json",
+   "assets/pantherinae/entities/animal/mammal/pantherinae-panthera-adult.json",
+   "assets/pantherinae/entities/animal/mammal/pantherinae-panthera-baby.json",
+   "assets/pantherinae/entities/animal/mammal/pantherinae-panthera-carcass.json"
+  ],
+  "dlls": [],
+  "sha256": "05FED854C50E9E69AC682FC937317AEB8609E0B514B4098F7446891C6E0402C1"
+ },
+ {
+  "id": "bovinae",
+  "version": "1.0.3",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/bovinae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/bovinae/entities/animal/mammal/hooved/bovinae-adult.json",
+   "assets/bovinae/entities/animal/mammal/hooved/bovinae-baby.json",
+   "assets/bovinae/entities/animal/mammal/hooved/bovinae-carcass.json",
+   "assets/bovinae/entities/animal/mammal/hooved/bovinae-semitamed.json",
+   "assets/bovinae/entities/animal/mammal/hooved/bovinae-tamed.json"
+  ],
+  "dlls": [],
+  "sha256": "A4A726AAF9F99E2535316F286E21564C01E7BED2B266EF480D929BFE30C3BBF2"
+ },
+ {
+  "id": "chelonioidea",
+  "version": "1.0.10",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/chelonioidea/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/chelonioidea/entities/animal/reptile/chelonioidea-adult.json",
+   "assets/chelonioidea/entities/animal/reptile/chelonioidea-baby.json",
+   "assets/chelonioidea/entities/animal/reptile/chelonioidea-egg.json"
+  ],
+  "dlls": [],
+  "sha256": "B544B27243F5A4B6956740BDEFE68E1B72641F3C5AF1D729D8E37A1BF25DF83B"
+ },
+ {
+  "id": "thylacinidae",
+  "version": "0.1.9",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/thylacinidae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/thylacinidae/entities/animal/mammal/dasyuridae-adult.json",
+   "assets/thylacinidae/entities/animal/mammal/dasyuridae-baby.json"
+  ],
+  "dlls": [],
+  "sha256": "263C8AB808FBBCD2B3D69FA95761F8A4A754A572FEBF3E6549064C77CE04D1DA"
+ },
+ {
+  "id": "iniidae",
+  "version": "0.1.8",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/iniidae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/iniidae/entities/animal/mammal/iniidae-adult.json",
+   "assets/iniidae/entities/animal/mammal/iniidae-baby.json"
+  ],
+  "dlls": [],
+  "sha256": "D8FA18BF2C6E8744E9093F12289B3D00ABDE760E018D04E84E81D82A358562FC"
+ },
+ {
+  "id": "cervinae",
+  "version": "0.1.19",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/cervinae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/cervinae/entities/animal/mammal/hooved/cervidae-carcass.json",
+   "assets/cervinae/entities/animal/mammal/hooved/cervini-adult.json",
+   "assets/cervinae/entities/animal/mammal/hooved/cervini-baby.json",
+   "assets/cervinae/entities/animal/mammal/hooved/cervini-semitamed.json",
+   "assets/cervinae/entities/animal/mammal/hooved/cervini-tamed.json"
+  ],
+  "dlls": [],
+  "sha256": "244DA96FBDF41EC87D2448019C53BF11E2737B29A81C7E98C201086919C7167C"
+ },
+ {
+  "id": "viverridae",
+  "version": "1.0.11",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/viverridae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/viverridae/entities/animal/mammal/nandiniidae-adult.json",
+   "assets/viverridae/entities/animal/mammal/nandiniidae-baby.json",
+   "assets/viverridae/entities/animal/mammal/viverridae-adult.json",
+   "assets/viverridae/entities/animal/mammal/viverridae-baby.json"
+  ],
+  "dlls": [],
+  "sha256": "B507144D07DEC965E387979345CD000A3EC2F903E53CB9A64F8E009E0B5AD303"
+ },
+ {
+  "id": "meiolaniidae",
+  "version": "0.1.13",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/meiolaniidae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/meiolaniidae/entities/animal/reptile/meiolaniidae-adult.json",
+   "assets/meiolaniidae/entities/animal/reptile/meiolaniidae-baby.json",
+   "assets/meiolaniidae/entities/animal/reptile/meiolaniidae-egg.json"
+  ],
+  "dlls": [],
+  "sha256": "554C6659266A39779813290FB7CEAADEFF3F8DC8E590D89F31F440AA03070582"
+ },
+ {
+  "id": "vombatidae",
+  "version": "0.4.8",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/vombatidae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/vombatidae/entities/animal/mammal/diprotodontidae-adult.json",
+   "assets/vombatidae/entities/animal/mammal/diprotodontidae-baby.json",
+   "assets/vombatidae/entities/animal/mammal/diprotodontidae-carcass.json",
+   "assets/vombatidae/entities/animal/mammal/thylacoleonidae-adult.json",
+   "assets/vombatidae/entities/animal/mammal/thylacoleonidae-baby.json",
+   "assets/vombatidae/entities/animal/mammal/thylacoleonidae-carcass.json",
+   "assets/vombatidae/entities/animal/mammal/vombatidae-adult.json",
+   "assets/vombatidae/entities/animal/mammal/vombatidae-baby.json"
+  ],
+  "dlls": [],
+  "sha256": "5479B16B6223E72BAF9C4F8D2C818C2B0D65F051956A17BE0D254CDED6712156"
+ },
+ {
+  "id": "felinae",
+  "version": "0.2.16",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/felinae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/felinae/entities/animal/mammal/felinae-adult.json",
+   "assets/felinae/entities/animal/mammal/felinae-baby.json"
+  ],
+  "dlls": [],
+  "sha256": "7BD347A71EB599CF17B43E75402CA9FD7D290C30A139C947767E73B30FBA70A3"
+ },
+ {
+  "id": "dinornithidae",
+  "version": "1.0.27",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/dinornithidae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/dinornithidae/entities/animal/bird/acanthisittidae-adult.json",
+   "assets/dinornithidae/entities/animal/bird/acanthisittidae-baby.json",
+   "assets/dinornithidae/entities/animal/bird/acanthisittidae-egg.json",
+   "assets/dinornithidae/entities/animal/bird/acanthisittidae-nest.json",
+   "assets/dinornithidae/entities/animal/bird/aegothelidae-adult.json",
+   "assets/dinornithidae/entities/animal/bird/aegothelidae-baby.json",
+   "assets/dinornithidae/entities/animal/bird/aegothelidae-egg.json",
+   "assets/dinornithidae/entities/animal/bird/aegothelidae-nest.json",
+   "assets/dinornithidae/entities/animal/bird/anatidae-adult.json",
+   "assets/dinornithidae/entities/animal/bird/anatidae-baby.json",
+   "assets/dinornithidae/entities/animal/bird/anatidae-egg.json",
+   "assets/dinornithidae/entities/animal/bird/anatidae-nest.json",
+   "assets/dinornithidae/entities/animal/bird/apterygidae-adult.json",
+   "assets/dinornithidae/entities/animal/bird/apterygidae-baby.json",
+   "assets/dinornithidae/entities/animal/bird/apterygidae-egg.json",
+   "assets/dinornithidae/entities/animal/bird/apterygidae-nest.json",
+   "assets/dinornithidae/entities/animal/bird/aptornithidae-adult.json",
+   "assets/dinornithidae/entities/animal/bird/aptornithidae-baby.json",
+   "assets/dinornithidae/entities/animal/bird/aptornithidae-egg.json",
+   "assets/dinornithidae/entities/animal/bird/aptornithidae-nest.json",
+   "assets/dinornithidae/entities/animal/bird/dinornithidae-adult.json",
+   "assets/dinornithidae/entities/animal/bird/dinornithidae-baby.json",
+   "assets/dinornithidae/entities/animal/bird/dinornithidae-carcass.json",
+   "assets/dinornithidae/entities/animal/bird/dinornithidae-egg.json",
+   "assets/dinornithidae/entities/animal/bird/dinornithidae-nest.json",
+   "assets/dinornithidae/entities/animal/bird/emeidae-adult.json",
+   "assets/dinornithidae/entities/animal/bird/emeidae-baby.json",
+   "assets/dinornithidae/entities/animal/bird/emeidae-egg.json",
+   "assets/dinornithidae/entities/animal/bird/emeidae-nest.json",
+   "assets/dinornithidae/entities/animal/bird/megalapterygidae-adult.json",
+   "assets/dinornithidae/entities/animal/bird/megalapterygidae-baby.json",
+   "assets/dinornithidae/entities/animal/bird/megalapterygidae-egg.json",
+   "assets/dinornithidae/entities/animal/bird/megalapterygidae-nest.json",
+   "assets/dinornithidae/entities/animal/bird/rallidae-adult.json",
+   "assets/dinornithidae/entities/animal/bird/rallidae-baby.json",
+   "assets/dinornithidae/entities/animal/bird/rallidae-egg.json",
+   "assets/dinornithidae/entities/animal/bird/rallidae-nest.json",
+   "assets/dinornithidae/entities/animal/bird/strigopidae-adult.json",
+   "assets/dinornithidae/entities/animal/bird/strigopidae-baby.json",
+   "assets/dinornithidae/entities/animal/bird/strigopidae-egg.json",
+   "assets/dinornithidae/entities/animal/bird/strigopidae-nest.json"
+  ],
+  "dlls": [],
+  "sha256": "2416137738AB7950B2EE4A209062A36AD3F15420294259B0C691C95811C511EA"
+ },
+ {
+  "id": "moschidae",
+  "version": "1.0.1",
+  "type": "content",
+  "side": "Universal",
+  "dependencies": null,
+  "biomesFiles": [
+   "assets/moschidae/patches/biomes.json"
+  ],
+  "entityFiles": [
+   "assets/moschidae/entities/animal/mammal/hooved/moschidae-adult.json",
+   "assets/moschidae/entities/animal/mammal/hooved/moschidae-baby.json"
+  ],
+  "dlls": [],
+  "sha256": "3FB72A3EE1E3434BFDC3286ED555272DC8FDCCB2D1F58E48A02BE3825531C84F"
+ }
+]

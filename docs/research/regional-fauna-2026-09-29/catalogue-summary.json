@@ -1,15 +1,15 @@
 {
-  "rules": 278,
-  "enabled": 267,
+  "rules": 285,
+  "enabled": 274,
   "held": 11,
-  "extinct": 66,
-  "enabledExtinct": 59,
+  "extinct": 67,
+  "enabledExtinct": 60,
   "heldLiving": 4,
   "heldExtinct": 7,
-  "presentNaturalRasters": 157,
-  "currentRasters": 157,
+  "presentNaturalRasters": 162,
+  "currentRasters": 162,
   "lost1318": 31,
-  "active": 267,
+  "active": 274,
   "quarantined": [
     "manidae:mysteria",
     "capreolinae:bretzianebrascensis",
@@ -27,23 +27,23 @@
   "providers": [
     {
       "id": "elephantidae",
-      "version": "1.0.20"
-    },
-    {
-      "id": "manidae",
       "version": "1.0.23"
     },
     {
+      "id": "manidae",
+      "version": "1.0.24"
+    },
+    {
       "id": "rhinocerotidae",
-      "version": "1.0.28"
+      "version": "1.0.29"
     },
     {
       "id": "casuariidae",
-      "version": "1.1.13"
+      "version": "1.1.14"
     },
     {
       "id": "sirenia",
-      "version": "1.0.32"
+      "version": "1.0.33"
     },
     {
       "id": "machairodontinae",
@@ -51,15 +51,15 @@
     },
     {
       "id": "capreolinae",
-      "version": "2.0.18"
+      "version": "2.0.21"
     },
     {
       "id": "spheniscidae",
-      "version": "1.0.18"
+      "version": "1.0.20"
     },
     {
       "id": "caninae",
-      "version": "1.1.9"
+      "version": "1.1.10"
     },
     {
       "id": "pantherinae",
@@ -67,43 +67,47 @@
     },
     {
       "id": "bovinae",
-      "version": "0.3.6"
+      "version": "1.0.3"
     },
     {
       "id": "chelonioidea",
-      "version": "1.0.8"
-    },
-    {
-      "id": "thylacinidae",
-      "version": "0.1.7"
-    },
-    {
-      "id": "iniidae",
-      "version": "0.1.7"
-    },
-    {
-      "id": "cervinae",
-      "version": "0.1.14"
-    },
-    {
-      "id": "viverridae",
       "version": "1.0.10"
     },
     {
+      "id": "thylacinidae",
+      "version": "0.1.9"
+    },
+    {
+      "id": "iniidae",
+      "version": "0.1.8"
+    },
+    {
+      "id": "cervinae",
+      "version": "0.1.19"
+    },
+    {
+      "id": "viverridae",
+      "version": "1.0.11"
+    },
+    {
       "id": "meiolaniidae",
-      "version": "0.1.11"
+      "version": "0.1.13"
     },
     {
       "id": "vombatidae",
-      "version": "0.4.6"
+      "version": "0.4.8"
     },
     {
       "id": "felinae",
-      "version": "0.2.14"
+      "version": "0.2.16"
     },
     {
       "id": "dinornithidae",
-      "version": "1.0.25"
+      "version": "1.0.27"
+    },
+    {
+      "id": "moschidae",
+      "version": "1.0.1"
     }
   ],
   "rasterSources": {
@@ -189,6 +193,11 @@
         "Mazama_pandora.tif": "2407048336d0d5f8b9a30c37e13e38b651a82d53a7c304ff4a5b2d66a3a5b170",
         "Mazama_rufina.tif": "67f30e9ddb7274fef19a6f4b33aca576e4e6bd4fa40d42e5d2262527599d92bb",
         "Mazama_temama.tif": "94457eb170e5cef23a839b5bd902398d5504cc6d4e56c686aa433e6d8b3f1715",
+        "Moschus_anhuiensis.tif": "cbcb2e4af1521c0efe55d39243e0a44fc27ee6528e81069b8d035f59328d1d86",
+        "Moschus_berezovskii.tif": "d8010da5c98dd82f5e490efb5186571bde3ecdb872eb945455f886a075eff8ee",
+        "Moschus_cupreus.tif": "233131813e2845f76723f158f94677950c2e6fff13861435379d4f41f45f5cb3",
+        "Moschus_fuscus.tif": "93e15857804208515a04b4e7a060748d55ba36609a92546eb2e5a91cd91124cd",
+        "Moschus_moschiferus.tif": "21fe5d9cd484a3b0cba6d00ac6afd1f87e2298ec286807adfb6e6d3b77617b5e",
         "Nandinia_binotata.tif": "1fd92a53140a22d4f9c35ce2faa9c5244c785d652b00937e95690018f30cb16c",
         "Neofelis_diardi.tif": "1975813a76f6ddc3967f258555e4f254516d14f3a017939a4dc4df85e8650e4a",
         "Neofelis_nebulosa.tif": "5d3d82d1690025f02dc4247c456ab8a226fc5a6ecfd97fab50d8048c10b3dae0",
@@ -336,6 +345,11 @@
         "Mazama_pandora.tif": "2407048336d0d5f8b9a30c37e13e38b651a82d53a7c304ff4a5b2d66a3a5b170",
         "Mazama_rufina.tif": "67f30e9ddb7274fef19a6f4b33aca576e4e6bd4fa40d42e5d2262527599d92bb",
         "Mazama_temama.tif": "94457eb170e5cef23a839b5bd902398d5504cc6d4e56c686aa433e6d8b3f1715",
+        "Moschus_anhuiensis.tif": "cbcb2e4af1521c0efe55d39243e0a44fc27ee6528e81069b8d035f59328d1d86",
+        "Moschus_berezovskii.tif": "d8010da5c98dd82f5e490efb5186571bde3ecdb872eb945455f886a075eff8ee",
+        "Moschus_cupreus.tif": "233131813e2845f76723f158f94677950c2e6fff13861435379d4f41f45f5cb3",
+        "Moschus_fuscus.tif": "93e15857804208515a04b4e7a060748d55ba36609a92546eb2e5a91cd91124cd",
+        "Moschus_moschiferus.tif": "21fe5d9cd484a3b0cba6d00ac6afd1f87e2298ec286807adfb6e6d3b77617b5e",
         "Nandinia_binotata.tif": "1fd92a53140a22d4f9c35ce2faa9c5244c785d652b00937e95690018f30cb16c",
         "Neofelis_diardi.tif": "86c05abdc043875f9a00e12eadd1c2d406af72932bdf60c2c390c5bb799a32dd",
         "Neofelis_nebulosa.tif": "3fd7e61388351b3ebaa2621ac8d3f8891b98400d2e7d8daa8c458e547979f40b",
@@ -407,10 +421,10 @@
     "docs/research/regional-fauna-2026-09-29/traits.csv": "ab035a8fab3d18673dea1d4a56f741e3ea9f8ba460461c7a1e738621ca315ec7",
     "docs/research/regional-fauna-2026-09-29/spatial-metadata.csv": "ac70e5925cdbdb085757d84fcff7fa6fbab9fe285b2fd5b182233ee19ecfc479",
     "docs/research/regional-fauna-2026-09-29/phylacine-tree.json": "47f80edb7f7a918748e12a17978b78645ef039d237d4520a6ee1911e55bbef6a",
-    "tools/fauna-taxa.json": "7f154a2068f10bb5b7f188b1bd03f16b5a11ec0a02c050b5070cdbaaed275c32",
+    "tools/fauna-taxa.json": "46cbe05a1abcdd7fd94266b70d396cc7c2f51b91278ab73a27aff2d6e38fee05",
     "tools/fauna-birds.json": "09cd0b1e602bf604d2cb3e9310d66277b11e7c12500393769970e466ae167a77",
-    "tools/fauna-1318.json": "126d5fca627db6cda9dbcf39cebed26f2ce8ebb2c00208a0b6fde83d4add7f3f",
-    "docs/research/ecology-2026-09-28/entity-spawn-audit.json": "e51c2accf2a9f1b3eeeec917ad33ead51c811431e1ac424712d65a8e42917dc4",
-    "docs/research/ecology-2026-09-28/release-inventory.json": "eda2bd67e35d0c2a570a05f4a5d06e720732d4b9fca8e09c11efad6311f0b4f5"
+    "tools/fauna-1318.json": "72f72b6b81b3e955e4fbec354e036fed4dac28d21efea1bf6f242994d356ba08",
+    "docs/research/fauna-packs-2026-11-17/entity-spawn-audit.json": "51c6c00aada2fea2dd1e39d52afd6f0f98ee7d6c089c1d93300bc3f46951f372",
+    "docs/research/fauna-packs-2026-11-17/release-inventory.json": "4a87ba7763f9f21a895f4250f825e1fa9eb37e316bc2291494ff0a1853d363b9"
   }
 }

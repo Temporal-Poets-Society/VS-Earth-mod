@@ -75,8 +75,8 @@ across Europe and no lions or leopards in Greece. Animals that live in a place t
 
 ### Animal mods
 
-With Plants and animals as around 1318 and **Fauna of the Stone Age** installed, the animals of its 20 packs that Earth
-knows spawn only within their real ranges and habitats too; an animal from a pack Earth doesn't list keeps its own
+With Plants and animals as around 1318 and **Fauna of the Stone Age** installed, the animals of its 21 packs that Earth
+knows (Moschidae's musk deer among them) spawn only within their real ranges and habitats too; an animal from a pack Earth doesn't list keeps its own
 rules. Animals still alive in 1318, such as the aurochs and the moa, spawn where they lived. **Nature · Include extinct
 animals** (off by default) also lets species that had died out before 1318 spawn, such as mammoths, cave lions and
 woolly rhinos. It adds no animals by itself: it needs a mod that has them. With Plants and animals: Vanilla, those mods'

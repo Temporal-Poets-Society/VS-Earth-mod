@@ -15,3 +15,5 @@ The report is ../../ecology-integration-plan.md. The user requested a report and
 Primary endpoints: https://mods.vintagestory.at/api/mod/{modid} and https://github.com/spooq/biomes. Download URLs came from the corresponding release metadata. No executable mod content was run.
 
 Validation performed: all 28 inventory IDs are unique and have matching inspected archive manifests; all 28 include Biomes metadata; all 151 entity files parsed; six shared DLL hashes match. No combined game startup, natural spawn measurement, AI test or performance benchmark was performed.
+
+Superseded as the catalogue's input on 17 November 2026 by [fauna-packs-2026-11-17](../fauna-packs-2026-11-17/README.md) (EA-0156: the packs' newest 1.22 releases, and Moschidae); kept as the first review's record.

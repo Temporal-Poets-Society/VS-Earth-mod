@@ -10,6 +10,9 @@ When the current cache holds a living taxon's raster, its rule also gets 'curren
 The raster base URLs, licence and SHA-256 of every raster used are written to catalogue-summary.json.
 Rules version 3 adds the "1318" profile (decision 0054): tools/fauna-1318.json lists, per living taxon, the regions (and boxes)
 it had lost by about 1318; they become each rule's lost1318Regions/lost1318Envelopes/evidence1318.
+The provider releases and their entity inventory are the dated snapshot in PACKS (tools/inventory-fauna-packs.py writes it).
+Rules come from the inventory's adult entities; a tools/fauna-taxa.json entry with its own "tokens" adds a rule the inventory
+does not derive (a species only in baby or tame entities, e.g. the domestic dog), and must match an inventoried entity code.
 """
 import argparse, base64, csv, hashlib, json, re, sys, urllib.request, fnmatch
 from pathlib import Path
@@ -18,6 +21,8 @@ sys.path.insert(0,str(ROOT/'obj/fauna-inspect/pylibs'))
 import numpy as np
 import tifffile
 SRC=ROOT/'docs/research/regional-fauna-2026-09-29'
+# The reviewed provider releases (decision 0054's catalogue was built on ecology-2026-09-28; EA-0156 moved it to this one).
+PACKS=ROOT/'docs/research/fauna-packs-2026-11-17'
 ap=argparse.ArgumentParser()
 ap.add_argument('--range-cache',type=Path,default=SRC/'ranges')
 ap.add_argument('--current-cache',type=Path,default=SRC/'ranges-current')
@@ -36,8 +41,8 @@ tree=json.loads((SRC/'phylacine-tree.json').read_text())
 names={re.sub('[^a-z]','',Path(x['path']).stem.lower()):Path(x['path']).stem for x in tree['tree'] if x['path'].startswith('Data/Ranges/Present_natural/') and x['path'].endswith('.tif')}
 traits=list(csv.DictReader((SRC/'traits.csv').open(encoding='utf-8-sig')))
 traitby={re.sub('[^a-z]','',r['Binomial.1.2'].lower()):r for r in traits}
-audit=json.loads((ROOT/'docs/research/ecology-2026-09-28/entity-spawn-audit.json').read_text(encoding='utf-8-sig'))
-releases=json.loads((ROOT/'docs/research/ecology-2026-09-28/release-inventory.json').read_text(encoding='utf-8-sig'))
+audit=json.loads((PACKS/'entity-spawn-audit.json').read_text(encoding='utf-8-sig'))
+releases=json.loads((PACKS/'release-inventory.json').read_text(encoding='utf-8-sig'))
 manual=json.loads((ROOT/'tools/fauna-taxa.json').read_text(encoding='utf-8'))
 birds=json.loads((ROOT/'tools/fauna-birds.json').read_text(encoding='utf-8'))
 for provider in ['dinornithidae','spheniscidae']:
@@ -58,24 +63,43 @@ def box_area(b):
     w,s,e,n=b
     return ((e-w)%360 or (360 if e!=w else 0))*(n-s)
 
-rules=[]; seen=set(); climate=[]
-for entry in audit:
+def candidates_of(entry):
+    """(tokens, key) of each taxon an adult provider entity defines; [] for flora and non-adult entities."""
     mod=entry['modid']
-    if mod.startswith('floral'): continue
     groups={g['code']:g.get('states',[]) for g in entry.get('variantgroups') or []}
-    if 'adult' not in groups.get('age',[]): continue
-    if 'type' in groups: candidates=[([v],v) for v in groups['type']]
-    elif 'genus' in groups:
+    if mod.startswith('floral') or 'adult' not in groups.get('age',[]): return []
+    if 'type' in groups: return [([v],v) for v in groups['type']]
+    if 'genus' in groups:
         # Provider audit's spawn condition keys disambiguate constrained genus/species combinations.
         keys=list((entry.get('spawnConditionsByType') or {}).keys())
-        candidates=[]
-        for genus in groups['genus']:
-            for species in groups['species']:
-                if any('-'+genus+'-'+species in k for k in keys): candidates.append(([genus,species],genus+species))
-    elif 'species' in groups:
+        return [([genus,species],genus+species) for genus in groups['genus'] for species in groups['species']
+                if any('-'+genus+'-'+species in k for k in keys)]
+    if 'species' in groups:
         prefix={'sirenia':'','chelonioidea':'','pantherinae':'neofelis' if 'neofeli' in entry['code'] else 'panthera'}.get(mod,'')
-        candidates=[([v],prefix+v) for v in groups['species']]
-    else: continue
+        return [([v],prefix+v) for v in groups['species']]
+    return []
+def entity_codes(entry):
+    codes=[entry['code']]
+    for g in entry.get('variantgroups') or []:
+        if g.get('states'): codes=[c+'-'+s for c in codes for s in g['states']]
+    return codes
+def has_tokens(code,tokens):
+    parts=code.split('-')
+    return any(parts[i:i+len(tokens)]==tokens for i in range(len(parts)-len(tokens)+1))
+work=[(entry,candidates_of(entry)) for entry in audit]
+# Rules the inventory does not derive (after the derived ones): the first inventoried entity code holding the tokens.
+for ident,t in manual['taxa'].items():
+    if 'tokens' not in t: continue
+    mod,key=ident.split(':')
+    matches=[e for e in audit if e['modid']==mod and any(has_tokens(c,t['tokens']) for c in entity_codes(e))]
+    # (an adult entity first: the climate audit below reads it as the representative adult)
+    entry=next((e for e in matches if any(g['code']=='age' and 'adult' in g.get('states',[]) for g in e.get('variantgroups') or [])),matches[0] if matches else None)
+    if entry is None: raise SystemExit('fauna-taxa.json: '+ident+' tokens '+'-'.join(t['tokens'])+' match no inventoried entity')
+    work.append((entry,[(t['tokens'],key)]))
+
+rules=[]; seen=set(); climate=[]
+for entry,candidates in work:
+    mod=entry['modid']
     for tokens,key in candidates:
         ident=mod+':'+key
         if ident in seen: continue
@@ -169,7 +193,7 @@ rasters={'licence':'CC0 1.0 (PHYLACINE v1.2.1 README: https://github.com/MegaPas
     'current':{'url':BASE+'Data/Ranges/Current/{name}.tif','sha256':{n+'.tif':sha(args.current_cache/(n+'.tif')) for n in sorted(current_used)}}}
 (SRC/'catalogue-summary.json').write_text(json.dumps({**counts,'active':counts['enabled'],
     'quarantined':[r['provider']+':'+r['taxon'] for r in held],'currentRastersMissing':sorted(current_missing),'providers':providers,
-    'rasterSources':rasters,'inputHashes':{str(p.relative_to(ROOT)).replace('\\','/'):hashlib.sha256(p.read_bytes()).hexdigest() for p in [SRC/'traits.csv',SRC/'spatial-metadata.csv',SRC/'phylacine-tree.json',ROOT/'tools/fauna-taxa.json',ROOT/'tools/fauna-birds.json',ROOT/'tools/fauna-1318.json',ROOT/'docs/research/ecology-2026-09-28/entity-spawn-audit.json',ROOT/'docs/research/ecology-2026-09-28/release-inventory.json']}},indent=2))
+    'rasterSources':rasters,'inputHashes':{str(p.relative_to(ROOT)).replace('\\','/'):hashlib.sha256(p.read_bytes()).hexdigest() for p in [SRC/'traits.csv',SRC/'spatial-metadata.csv',SRC/'phylacine-tree.json',ROOT/'tools/fauna-taxa.json',ROOT/'tools/fauna-birds.json',ROOT/'tools/fauna-1318.json',PACKS/'entity-spawn-audit.json',PACKS/'release-inventory.json']}},indent=2))
 (SRC/'provider-climate.json').write_text(json.dumps(climate,indent=2))
 with (SRC/'held-species.csv').open('w',newline='',encoding='utf-8') as f:
     writer=csv.writer(f);writer.writerow(['provider','taxon','extinct','reason'])

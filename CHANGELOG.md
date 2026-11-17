@@ -2,6 +2,23 @@
 
 What each version changed. What the current version needs and does is in [README.md](README.md).
 
+## 2.1.4 (17 November 2026)
+
+Earth knows the current versions of the Fauna of the Stone Age and Floral Zones packs, and Moschidae's musk deer
+live in their real ranges.
+
+- **Fauna of the Stone Age and Floral Zones at their current versions** (EA-0156,
+  [decision 0054](docs/decisions/0054-animals-as-around-1318.md)): Earth now knows the newest 1.22 releases of the
+  twenty Fauna of the Stone Age packs and the eight Floral Zones packs, so their "newer than reviewed" warnings are
+  gone. **Moschidae** (musk deer) is supported: the Siberian musk deer lives from the Altai and Mongolia to Yakutia,
+  Sakhalin and Korea, the Kashmir musk deer in the western Himalaya and Hindu Kush, the black musk deer in the eastern
+  Himalaya, the dwarf musk deer in southern China and the Anhui musk deer in the Dabie mountains. Bovinae's new
+  **steppe bison** died out long before 1318, so it spawns only with *Include extinct animals*, on the old mammoth
+  steppe from Spain and Britain to Siberia, Alaska and Yukon. Caninae's **domestic dog** is given the range where people
+  kept dogs around 1318, like the farm animals gone wild (its pack doesn't spawn dogs in the wild yet; puppies still
+  come from traders). The Floral Zones updates add no new wild plants: every plant keeps its range. Worlds already made
+  get the new animals' ranges for later spawns; their terrain doesn't change.
+
 ## 2.1.3 (17 November 2026)
 
 Earth's grass seasons use 1 colour map instead of 7, and step aside past the game's limit of 40: the crash on joining

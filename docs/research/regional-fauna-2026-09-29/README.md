@@ -9,7 +9,7 @@ The implementation and limitations are explained in [regional-fauna-implementati
 | `traits.csv`, `spatial-metadata.csv`, `phylacine-tree.json` | Pinned PHYLACINE 1.2.1 traits, per-species range provenance and repository tree. |
 | `phylacine-release-metadata.json` | Primary Zenodo release metadata; license field is `other-open`. The pinned [v1.2.1 README](https://github.com/MegaPast2Future/PHYLACINE_1.2/blob/v1.2.1/README.md) explicitly states CC0; packaged attribution retains both release citations and underlying-source credits. |
 | `ranges/*.tif` | Cached reference rasters. A cached extinct raster does not imply it is enabled or copied into runtime data. Only selected living rasters are used. Gitignored. |
-| `ranges-current/*.tif` | Cached PHYLACINE 1.2.1 current-range rasters (142 files used by 157 rules) for the "current" profile, fetched 2026-10-02 from the pinned tag. Gitignored; hashes in `catalogue-summary.json`. |
+| `ranges-current/*.tif` | Cached PHYLACINE 1.2.1 current-range rasters (147 files used by 162 rules) for the "current" profile, fetched 2026-10-02 from the pinned tag (the five musk deer on 2026-11-17). Gitignored; hashes in `catalogue-summary.json`. |
 | `provider-climate.json` | Representative resolved adult climate constraints from the reviewed provider entity JSON inventory; not a full live resolved-asset dump. |
 | `coverage.csv` | 76 scenario points: range candidates and the provider temperature/rain/height screen at the local ground climate, extinction on/off. |
 | `native-climate-scan.csv` | Global 2° grid (79°S to 81°N) plus 0.25° island grids on real terrain, including coast classification. Zero samples means unassessed, not proven missing; the feasibility test covers every enabled rule instead. |
