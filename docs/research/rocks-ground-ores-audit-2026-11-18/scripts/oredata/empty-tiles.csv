@@ -1,0 +1,511 @@
+code,tile_lat_n,tile_lon_w,land_km2,empty_%,permissive_%,empty_permissive_km2,countries
+Cu,70.0,-95.0,105062,98,77,78352,Canada
+Cu,70.0,105.0,118253,90,39,35420,Russia
+Cu,65.0,-105.0,142685,91,59,71081,Canada
+Cu,30.0,-10.0,274096,98,36,97046,Algeria; Morocco; Mauritania
+Cu,25.0,-15.0,285489,99,43,119673,Mauritania; Western Sahara; Morocco
+Cu,15.0,-10.0,301686,94,81,226632,Mali; Guinea; Ivory Coast
+Cu,15.0,0.0,301686,94,58,157362,Niger; Nigeria; Benin
+Cu,15.0,5.0,301686,100,52,157515,Nigeria; Niger
+Cu,15.0,20.0,301686,95,56,156542,Sudan; Chad; Central African Republic
+Cu,15.0,30.0,301686,99,37,108961,Sudan; South Sudan; Ethiopia
+Cu,10.0,-10.0,303289,95,100,287939,Ivory Coast; Liberia; Guinea
+Cu,10.0,-5.0,300211,91,83,220497,Ghana; Ivory Coast
+Cu,10.0,0.0,226395,96,80,171238,Nigeria; Benin; Togo
+Cu,10.0,5.0,303289,98,41,119295,Nigeria; Cameroon
+Cu,10.0,15.0,306367,100,52,159690,Central African Republic; Chad; Cameroon
+Cu,10.0,20.0,306367,95,71,211648,Central African Republic; Sudan; South Sudan
+Cu,10.0,25.0,306367,100,69,211638,South Sudan; Central African Republic; Sudan
+Cu,5.0,-70.0,308717,91,73,203806,Venezuela; Colombia; Brazil
+Cu,5.0,-55.0,265542,95,85,213040,Brazil; France; Suriname
+Cu,5.0,10.0,308717,100,100,308717,Cameroon; Gabon; Republic of the Congo
+Cu,5.0,15.0,308717,100,33,101798,Republic of the Congo; Democratic Republic of the Congo; Central African Republic
+Cu,5.0,20.0,308717,100,39,120261,Democratic Republic of the Congo; Central African Republic
+Cu,5.0,25.0,308717,98,97,296353,Democratic Republic of the Congo; South Sudan
+Cu,0.0,-55.0,308717,92,37,104861,Brazil
+Cu,-5.0,20.0,306367,100,38,116440,Democratic Republic of the Congo; Angola
+Cu,-10.0,-65.0,301686,91,49,132891,Brazil; Bolivia
+Cu,-10.0,-40.0,124012,90,54,57366,Brazil
+Cu,-10.0,30.0,301686,92,74,198918,Zambia; Malawi; Mozambique
+Cu,-10.0,35.0,301686,95,72,207871,Mozambique; United Republic of Tanzania; Malawi
+Cu,-15.0,35.0,168818,91,69,103927,Mozambique; Malawi
+Sn,70.0,-110.0,104684,100,42,44143,Canada
+Sn,70.0,-95.0,105062,100,75,78352,Canada
+Sn,70.0,15.0,101827,100,83,84600,Sweden; Norway
+Sn,70.0,20.0,104116,100,73,75613,Sweden; Norway; Finland
+Sn,70.0,25.0,116959,100,82,95544,Finland; Russia; Norway
+Sn,70.0,30.0,106955,100,90,96474,Russia; Norway
+Sn,65.0,-140.0,142685,95,37,53291,Canada; United States of America
+Sn,65.0,-115.0,142685,100,62,88811,Canada
+Sn,65.0,-110.0,142685,100,79,112686,Canada
+Sn,65.0,-105.0,142685,100,51,72614,Canada
+Sn,65.0,-100.0,142685,100,48,68098,Canada
+Sn,65.0,10.0,137387,100,55,75199,Norway; Sweden
+Sn,65.0,25.0,131949,100,91,120462,Finland; Russia
+Sn,65.0,30.0,142685,100,67,95984,Russia; Finland
+Sn,65.0,35.0,129402,100,31,40657,Russia
+Sn,60.0,-110.0,166032,100,34,56610,Canada
+Sn,60.0,-105.0,166032,100,82,135938,Canada
+Sn,60.0,-100.0,166032,100,97,161152,Canada
+Sn,60.0,-75.0,166032,100,99,164451,Canada
+Sn,60.0,-70.0,134516,100,75,100695,Canada
+Sn,60.0,-65.0,101166,100,90,91114,Canada
+Sn,60.0,10.0,111832,100,68,76595,Sweden; Denmark; Norway
+Sn,60.0,110.0,166032,100,59,97235,Russia
+Sn,60.0,115.0,166032,90,76,109228,Russia
+Sn,60.0,120.0,166032,100,61,101739,Russia
+Sn,60.0,125.0,166032,100,59,97941,Russia
+Sn,60.0,130.0,166032,96,35,51197,Russia
+Sn,55.0,-130.0,143681,100,52,75205,Canada
+Sn,55.0,-100.0,188114,99,47,87182,Canada
+Sn,55.0,-95.0,188114,100,91,171539,Canada
+Sn,55.0,-90.0,188114,100,52,97024,Canada
+Sn,55.0,-80.0,163923,100,88,144682,Canada
+Sn,55.0,-75.0,188114,100,91,170807,Canada
+Sn,55.0,-70.0,184161,100,84,154278,Canada
+Sn,55.0,-65.0,180208,100,80,144648,Canada
+Sn,55.0,-60.0,106881,100,74,79015,Canada
+Sn,55.0,95.0,188114,100,68,127507,Russia; Mongolia
+Sn,55.0,100.0,188114,100,36,67160,Russia; Mongolia
+Sn,55.0,120.0,188114,91,41,75892,China; Russia
+Sn,55.0,125.0,188114,100,38,72152,Russia; China
+Sn,50.0,-95.0,208765,100,44,90855,United States of America; Canada
+Sn,50.0,-85.0,208765,91,51,96879,Canada; United States of America
+Sn,50.0,-80.0,208765,99,73,152911,Canada
+Sn,50.0,-75.0,208765,96,67,134958,Canada; United States of America
+Sn,50.0,10.0,200079,96,34,64475,Germany; Austria; Italy
+Sn,50.0,95.0,208765,100,42,88703,Mongolia; Russia
+Sn,45.0,125.0,216084,100,43,91854,China; North Korea
+Sn,40.0,-80.0,200680,94,33,58938,United States of America
+Sn,40.0,125.0,137388,93,62,83124,South Korea; North Korea
+Sn,35.0,-85.0,226224,98,32,69209,United States of America
+Sn,30.0,-10.0,274096,100,35,97046,Algeria; Morocco; Mauritania
+Sn,30.0,90.0,274096,100,32,87521,India; China; Bhutan
+Sn,30.0,95.0,274096,95,41,101051,China; Myanmar; India
+Sn,25.0,-15.0,285489,100,43,122480,Mauritania; Western Sahara; Morocco
+Sn,25.0,30.0,285489,99,36,100361,Egypt; Sudan; Bir Tawil
+Sn,25.0,35.0,139895,100,57,79894,Saudi Arabia; Sudan; Egypt
+Sn,25.0,40.0,285489,100,68,193905,Saudi Arabia
+Sn,25.0,80.0,285489,100,47,134862,India
+Sn,25.0,85.0,224818,100,33,73777,India; Bangladesh
+Sn,20.0,35.0,206719,100,58,120845,Sudan; Eritrea
+Sn,20.0,40.0,176418,100,57,99765,Saudi Arabia; Yemen
+Sn,20.0,75.0,294709,100,49,144891,India
+Sn,20.0,80.0,170148,100,67,114268,India
+Sn,15.0,-15.0,298645,100,46,138854,Guinea; Senegal; Mali
+Sn,15.0,-10.0,301686,100,76,229669,Mali; Guinea; Ivory Coast
+Sn,15.0,-5.0,301686,100,83,250731,Burkina Faso; Mali; Ghana
+Sn,15.0,0.0,301686,100,58,175389,Niger; Nigeria; Benin
+Sn,15.0,20.0,301686,100,53,159584,Sudan; Chad; Central African Republic
+Sn,15.0,30.0,301686,100,36,108961,Sudan; South Sudan; Ethiopia
+Sn,15.0,75.0,277398,100,89,247191,India
+Sn,10.0,-65.0,288071,100,44,125774,Venezuela; Guyana; Brazil
+Sn,10.0,-60.0,107563,100,31,33789,Guyana; Suriname
+Sn,10.0,-15.0,122291,100,85,103935,Sierra Leone; Liberia; Guinea
+Sn,10.0,-10.0,303289,100,99,300230,Ivory Coast; Liberia; Guinea
+Sn,10.0,-5.0,300211,100,83,248133,Ghana; Ivory Coast
+Sn,10.0,0.0,226395,100,80,180410,Nigeria; Benin; Togo
+Sn,10.0,10.0,306367,99,73,223817,Cameroon; Nigeria; Chad
+Sn,10.0,15.0,306367,100,52,159690,Central African Republic; Chad; Cameroon
+Sn,10.0,20.0,306367,100,71,217745,Central African Republic; Sudan; South Sudan
+Sn,10.0,25.0,306367,100,69,211638,South Sudan; Central African Republic; Sudan
+Sn,5.0,-70.0,308717,99,66,203806,Venezuela; Colombia; Brazil
+Sn,5.0,-65.0,308717,96,52,154403,Brazil; Venezuela
+Sn,5.0,-60.0,308717,99,78,237748,Brazil; Guyana; Suriname
+Sn,5.0,-55.0,265542,94,83,203761,Brazil; France; Suriname
+Sn,5.0,10.0,308717,100,100,308717,Cameroon; Gabon; Republic of the Congo
+Sn,5.0,15.0,308717,100,33,101798,Republic of the Congo; Democratic Republic of the Congo; Central African Republic
+Sn,5.0,20.0,308717,100,39,120261,Democratic Republic of the Congo; Central African Republic
+Sn,5.0,30.0,308717,98,80,240811,Uganda; South Sudan; Democratic Republic of the Congo
+Sn,0.0,-55.0,308717,97,35,98693,Brazil
+Sn,0.0,10.0,277892,100,78,216129,Gabon; Republic of the Congo; Democratic Republic of the Congo
+Sn,0.0,35.0,299473,100,36,108004,Kenya; United Republic of Tanzania
+Sn,-5.0,-40.0,294146,93,75,199104,Brazil
+Sn,-5.0,10.0,131836,100,70,92013,Angola; Democratic Republic of the Congo
+Sn,-5.0,20.0,306367,100,38,116440,Democratic Republic of the Congo; Angola
+Sn,-5.0,30.0,306367,95,79,232892,United Republic of Tanzania; Zambia; Democratic Republic of the Congo
+Sn,-5.0,35.0,266504,100,48,128797,United Republic of Tanzania
+Sn,-10.0,-50.0,301686,95,42,111613,Brazil
+Sn,-10.0,-40.0,124012,100,51,63444,Brazil
+Sn,-10.0,10.0,108419,100,81,87299,Angola
+Sn,-10.0,25.0,301686,92,74,205029,Zambia; Democratic Republic of the Congo
+Sn,-10.0,30.0,301686,100,74,223124,Zambia; Malawi; Mozambique
+Sn,-10.0,35.0,301686,100,68,204845,Mozambique; United Republic of Tanzania; Malawi
+Sn,-15.0,-50.0,294709,97,41,112132,Brazil
+Sn,-15.0,-45.0,294709,99,58,167776,Brazil
+Sn,-15.0,10.0,165162,100,59,97357,Namibia; Angola
+Sn,-15.0,25.0,294709,93,40,115333,Zimbabwe; Zambia; Botswana
+Sn,-15.0,30.0,294709,96,71,197357,Mozambique; Zimbabwe; Malawi
+Sn,-15.0,35.0,168818,100,69,115826,Mozambique; Malawi
+Sn,-15.0,45.0,247514,100,65,161817,Madagascar
+Sn,-20.0,-50.0,257351,98,41,102692,Brazil
+Sn,-20.0,15.0,285489,91,39,94429,Namibia
+Sn,-20.0,45.0,165863,100,64,105830,Madagascar
+Sn,-30.0,-55.0,133863,98,35,47017,Brazil; Uruguay
+Sn,-40.0,-75.0,159605,100,37,58888,Argentina; Chile
+Sn,-45.0,-75.0,200255,100,33,66669,Argentina; Chile
+Fe,70.0,-95.0,105062,100,71,74445,Canada
+Fe,70.0,95.0,118253,100,95,112803,Russia
+Fe,70.0,105.0,118253,100,39,45748,Russia
+Fe,65.0,-115.0,142685,100,32,45138,Canada
+Fe,65.0,-110.0,142685,100,65,92301,Canada
+Fe,65.0,-105.0,142685,100,40,57145,Canada
+Fe,65.0,95.0,142685,100,74,105330,Russia
+Fe,65.0,100.0,142685,95,85,116987,Russia
+Fe,65.0,105.0,142685,100,74,105975,Russia
+Fe,60.0,-75.0,166032,97,80,128416,Canada
+Fe,60.0,-65.0,101166,90,73,72358,Canada
+Fe,60.0,130.0,166032,100,31,51466,Russia
+Fe,55.0,95.0,188114,92,38,71413,Russia; Mongolia
+Fe,55.0,100.0,188114,98,33,59738,Russia; Mongolia
+Fe,30.0,40.0,274096,96,30,72122,Saudi Arabia; Iraq
+Fe,20.0,35.0,206719,91,63,114849,Sudan; Eritrea
+Fe,20.0,40.0,176418,90,58,90989,Saudi Arabia; Yemen
+Fe,15.0,-10.0,301686,100,81,244734,Mali; Guinea; Ivory Coast
+Fe,15.0,-5.0,301686,98,84,247696,Burkina Faso; Mali; Ghana
+Fe,15.0,5.0,301686,94,50,133241,Nigeria; Niger
+Fe,15.0,20.0,301686,96,56,156568,Sudan; Chad; Central African Republic
+Fe,15.0,30.0,301686,94,37,93813,Sudan; South Sudan; Ethiopia
+Fe,15.0,35.0,301686,98,69,205408,Ethiopia; Sudan; Eritrea
+Fe,15.0,40.0,226353,100,49,111719,Ethiopia; Yemen; Eritrea
+Fe,10.0,0.0,226395,91,80,159054,Nigeria; Benin; Togo
+Fe,10.0,10.0,306367,100,83,254481,Cameroon; Nigeria; Chad
+Fe,10.0,15.0,306367,100,51,156620,Central African Republic; Chad; Cameroon
+Fe,10.0,20.0,306367,100,71,217745,Central African Republic; Sudan; South Sudan
+Fe,10.0,25.0,306367,100,69,211638,South Sudan; Central African Republic; Sudan
+Fe,5.0,-60.0,308717,94,44,126518,Brazil; Guyana; Suriname
+Fe,5.0,15.0,308717,100,33,101798,Republic of the Congo; Democratic Republic of the Congo; Central African Republic
+Fe,5.0,20.0,308717,100,39,120261,Democratic Republic of the Congo; Central African Republic
+Fe,5.0,25.0,308717,97,97,290171,Democratic Republic of the Congo; South Sudan
+Fe,5.0,35.0,308717,93,30,86468,Kenya; Ethiopia; South Sudan
+Fe,0.0,30.0,308717,91,55,145114,United Republic of Tanzania; Uganda; Kenya
+Fe,-5.0,20.0,306367,100,38,116440,Democratic Republic of the Congo; Angola
+Fe,-5.0,25.0,306367,100,57,174624,Democratic Republic of the Congo; Zambia; United Republic of Tanzania
+Fe,-5.0,30.0,306367,94,80,229875,United Republic of Tanzania; Zambia; Democratic Republic of the Congo
+Fe,-5.0,35.0,266504,92,48,113458,United Republic of Tanzania
+Fe,-10.0,-40.0,124012,95,51,57446,Brazil
+Fe,-10.0,10.0,108419,100,81,87299,Angola
+Fe,-10.0,30.0,301686,91,70,187115,Zambia; Malawi; Mozambique
+Fe,-10.0,35.0,301686,99,46,138548,Mozambique; United Republic of Tanzania; Malawi
+Fe,-15.0,10.0,165162,93,59,88447,Namibia; Angola
+Fe,-15.0,35.0,168818,100,42,71301,Mozambique; Malawi
+Fe,-20.0,-55.0,285489,100,32,90947,Brazil; Paraguay
+Au,70.0,95.0,118253,91,90,104143,Russia
+Au,65.0,40.0,142685,100,50,71454,Russia
+Au,65.0,45.0,142685,100,35,49568,Russia
+Au,65.0,50.0,142685,100,43,60974,Russia
+Au,65.0,65.0,142685,94,33,47069,Russia
+Au,65.0,70.0,142685,100,64,91913,Russia
+Au,65.0,75.0,142685,100,37,53280,Russia
+Au,65.0,95.0,142685,99,59,84898,Russia
+Au,65.0,105.0,142685,100,66,94467,Russia
+Au,60.0,40.0,166032,98,33,55318,Russia
+Au,60.0,45.0,166032,100,50,82669,Russia
+Au,60.0,50.0,166032,96,55,88439,Russia
+Au,60.0,65.0,166032,100,51,83867,Russia; Kazakhstan
+Au,60.0,70.0,166032,100,48,79178,Russia; Kazakhstan
+Au,60.0,75.0,166032,100,85,140731,Russia
+Au,60.0,80.0,166032,95,73,115880,Russia
+Au,55.0,20.0,188114,100,64,120869,Poland; Belarus; Ukraine
+Au,55.0,50.0,188114,100,32,60811,Russia; Kazakhstan
+Au,50.0,-105.0,208765,96,50,104522,United States of America; Canada
+Au,45.0,80.0,227827,95,65,137598,China; Kazakhstan
+Au,45.0,100.0,227827,97,54,117110,Mongolia; China
+Au,40.0,-100.0,245155,95,38,92647,United States of America
+Au,40.0,50.0,245155,91,30,63929,Iran; Turkmenistan
+Au,40.0,60.0,245155,100,48,117939,Turkmenistan; Afghanistan; Uzbekistan
+Au,40.0,75.0,245155,95,61,135961,China; Pakistan; Siachen Glacier
+Au,40.0,80.0,245155,99,71,172534,China
+Au,40.0,85.0,245155,100,50,123770,China
+Au,35.0,-105.0,260617,96,65,163838,United States of America; Mexico
+Au,35.0,-100.0,260617,95,37,91516,United States of America
+Au,35.0,-95.0,257947,97,83,211722,United States of America
+Au,35.0,5.0,260617,100,65,169915,Algeria; Tunisia; Libya
+Au,35.0,45.0,257947,93,59,138761,Iran; Iraq
+Au,35.0,60.0,260617,93,48,112780,Afghanistan; Iran
+Au,30.0,-100.0,180298,100,67,119907,United States of America; Mexico
+Au,30.0,5.0,274096,96,41,101240,Algeria; Libya
+Au,30.0,15.0,274096,100,44,121109,Libya
+Au,30.0,20.0,274096,100,87,238301,Libya
+Au,30.0,25.0,274096,100,39,107478,Egypt
+Au,30.0,45.0,228056,99,32,73905,Saudi Arabia; Iraq; Kuwait
+Au,30.0,50.0,138747,100,37,51532,Iran; Qatar; Saudi Arabia
+Au,30.0,65.0,265709,100,52,137412,Pakistan; Afghanistan; India
+Au,30.0,70.0,274096,95,87,224299,India; Pakistan
+Au,30.0,75.0,274096,93,86,216114,India
+Au,25.0,-5.0,285489,100,44,125641,Mali; Algeria
+Au,25.0,0.0,285489,94,79,208196,Algeria; Mali
+Au,25.0,10.0,285489,96,41,105544,Niger; Libya; Algeria
+Au,25.0,20.0,285489,98,86,240034,Libya; Chad
+Au,25.0,25.0,285489,98,69,191733,Egypt; Sudan
+Au,25.0,50.0,254555,100,92,234670,Saudi Arabia; United Arab Emirates; Qatar
+Au,25.0,75.0,285489,93,88,231301,India
+Au,20.0,-10.0,294709,94,96,265022,Mauritania; Mali
+Au,20.0,0.0,294709,96,31,79237,Mali; Niger; Algeria
+Au,20.0,10.0,294709,100,90,265454,Niger; Chad
+Au,20.0,15.0,294709,100,60,177366,Chad; Niger
+Au,20.0,45.0,294709,99,74,214644,Yemen; Saudi Arabia
+Au,20.0,50.0,232266,100,43,99428,Yemen; Oman; Saudi Arabia
+Au,15.0,15.0,301686,97,83,241114,Chad; Cameroon
+Au,15.0,40.0,226353,93,87,181188,Ethiopia; Yemen; Eritrea
+Au,10.0,-70.0,306367,90,77,205405,Venezuela; Colombia
+Au,10.0,45.0,275631,100,43,119566,Somalia; Somaliland; Ethiopia
+Au,5.0,-75.0,308717,94,33,89519,Colombia
+Au,5.0,40.0,280900,98,32,86479,Somalia; Kenya; Ethiopia
+Au,5.0,110.0,194605,94,30,49419,Malaysia; Indonesia; Brunei
+Au,0.0,-75.0,308717,98,32,92592,Peru; Colombia; Brazil
+Au,0.0,-70.0,308717,95,89,259317,Brazil; Colombia
+Au,0.0,15.0,308717,95,71,210036,Democratic Republic of the Congo; Republic of the Congo
+Au,0.0,20.0,308717,100,72,222402,Democratic Republic of the Congo
+Au,-5.0,-75.0,306367,93,31,85869,Brazil; Peru
+Au,-5.0,-70.0,306367,91,56,153513,Brazil
+Au,-15.0,15.0,294709,94,90,247865,Angola; Namibia
+Au,-15.0,20.0,294709,99,98,285964,Botswana; Angola; Zambia
+Au,-15.0,120.0,140840,100,94,131930,Australia
+Au,-15.0,130.0,294709,90,85,221119,Australia
+Au,-20.0,-65.0,285489,94,68,184964,Argentina; Paraguay; Bolivia
+Au,-20.0,-60.0,285489,96,66,176953,Paraguay; Brazil; Argentina
+Au,-20.0,-55.0,285489,95,40,110962,Brazil; Paraguay
+Au,-20.0,125.0,285489,92,92,239557,Australia
+Au,-25.0,-65.0,274096,93,33,80468,Argentina
+Au,-25.0,-60.0,274096,94,49,117883,Argentina; Paraguay; Brazil
+Au,-25.0,130.0,274096,91,91,224977,Australia
+Au,-25.0,135.0,274096,91,74,195031,Australia
+Au,-25.0,140.0,274096,98,75,199685,Australia
+Au,-25.0,145.0,274096,97,72,193764,Australia
+Au,-35.0,-65.0,226074,98,52,113504,Argentina
+C_coal,70.0,-130.0,115044,93,100,107229,Canada
+C_coal,70.0,-120.0,103073,100,60,62020,Canada
+C_coal,70.0,-110.0,104684,100,46,48490,Canada
+C_coal,70.0,75.0,115988,100,97,112551,Russia
+C_coal,70.0,80.0,118253,100,100,118253,Russia
+C_coal,70.0,130.0,118253,100,100,118253,Russia
+C_coal,70.0,135.0,118253,97,82,93579,Russia
+C_coal,70.0,145.0,118253,95,80,87983,Russia
+C_coal,70.0,150.0,118253,96,76,85393,Russia
+C_coal,70.0,155.0,118253,100,70,82674,Russia
+C_coal,70.0,160.0,107555,100,49,52382,Russia
+C_coal,70.0,165.0,107479,100,49,52157,Russia
+C_coal,65.0,-165.0,111196,96,71,75777,United States of America
+C_coal,65.0,-160.0,142685,93,91,120816,United States of America
+C_coal,65.0,-120.0,142685,100,83,118321,Canada
+C_coal,65.0,-105.0,142685,100,41,58347,Canada
+C_coal,65.0,-100.0,142685,100,32,45805,Canada
+C_coal,65.0,10.0,137387,90,30,29911,Norway; Sweden
+C_coal,65.0,35.0,129402,100,36,46419,Russia
+C_coal,65.0,40.0,142685,100,81,116182,Russia
+C_coal,65.0,45.0,142685,100,100,142685,Russia
+C_coal,65.0,50.0,142685,100,96,137169,Russia
+C_coal,65.0,65.0,142685,100,100,142685,Russia
+C_coal,65.0,70.0,142685,100,100,142685,Russia
+C_coal,65.0,75.0,142685,100,100,142685,Russia
+C_coal,65.0,80.0,142685,100,100,142685,Russia
+C_coal,65.0,140.0,142685,98,63,87509,Russia
+C_coal,65.0,160.0,114249,97,56,63672,Russia
+C_coal,65.0,165.0,131949,91,63,78594,Russia
+C_coal,60.0,-110.0,166032,100,66,109422,Canada
+C_coal,60.0,25.0,155131,100,99,153551,Russia; Latvia; Estonia
+C_coal,60.0,40.0,166032,100,96,159073,Russia
+C_coal,60.0,45.0,166032,100,100,166032,Russia
+C_coal,60.0,50.0,166032,100,100,166032,Russia
+C_coal,60.0,65.0,166032,100,100,166032,Russia; Kazakhstan
+C_coal,60.0,70.0,166032,100,100,166032,Russia; Kazakhstan
+C_coal,60.0,75.0,166032,100,100,166032,Russia
+C_coal,60.0,80.0,166032,98,100,162530,Russia
+C_coal,60.0,130.0,166032,100,53,88321,Russia
+C_coal,60.0,135.0,126200,100,44,54995,Russia
+C_coal,55.0,-105.0,188114,97,74,133247,Canada
+C_coal,55.0,-90.0,188114,100,38,72170,Canada
+C_coal,55.0,-85.0,140380,97,44,59704,Canada
+C_coal,55.0,30.0,188114,90,65,108750,Russia; Ukraine; Belarus
+C_coal,55.0,40.0,188114,96,72,127743,Russia
+C_coal,55.0,45.0,188114,93,85,146919,Russia; Kazakhstan
+C_coal,55.0,50.0,188114,97,100,182674,Russia; Kazakhstan
+C_coal,55.0,135.0,159351,96,85,128889,Russia
+C_coal,50.0,-70.0,176104,96,57,94723,Canada; United States of America
+C_coal,50.0,45.0,208765,100,86,178888,Russia; Kazakhstan
+C_coal,50.0,50.0,208765,99,79,163802,Kazakhstan
+C_coal,50.0,60.0,208765,100,89,185238,Kazakhstan; Baykonur Cosmodrome
+C_coal,50.0,75.0,208765,100,63,132543,Kazakhstan
+C_coal,50.0,95.0,208765,100,43,88836,Mongolia; Russia
+C_coal,50.0,100.0,208765,100,57,118241,Mongolia
+C_coal,45.0,-120.0,227827,96,38,80426,United States of America
+C_coal,45.0,-75.0,164944,92,36,50089,United States of America
+C_coal,45.0,-5.0,179136,92,59,103246,Spain; France
+C_coal,45.0,45.0,227827,95,63,137408,Russia; Azerbaijan; Georgia
+C_coal,45.0,50.0,227827,92,62,127200,Kazakhstan; Turkmenistan
+C_coal,45.0,55.0,227827,99,93,210007,Uzbekistan; Turkmenistan; Kazakhstan
+C_coal,45.0,60.0,227827,100,87,198404,Uzbekistan; Kazakhstan; Turkmenistan
+C_coal,40.0,-120.0,245155,94,60,137021,United States of America
+C_coal,40.0,5.0,109549,98,61,64822,Algeria; Tunisia; Italy
+C_coal,40.0,30.0,174994,100,65,114002,Turkey; Northern Cyprus
+C_coal,40.0,40.0,245155,100,61,148403,Turkey; Iraq; Syria
+C_coal,40.0,45.0,245155,100,42,103037,Iran; Azerbaijan; Iraq
+C_coal,40.0,60.0,245155,100,96,235300,Turkmenistan; Afghanistan; Uzbekistan
+C_coal,40.0,80.0,245155,93,90,210258,China
+C_coal,40.0,90.0,245155,96,76,178953,China
+C_coal,35.0,-120.0,124062,98,52,61846,United States of America; Mexico
+C_coal,35.0,-115.0,236709,92,73,156290,United States of America; Mexico
+C_coal,35.0,-105.0,260617,97,82,207759,United States of America; Mexico
+C_coal,35.0,-10.0,191235,100,47,89017,Morocco
+C_coal,35.0,-5.0,260617,98,65,167122,Morocco; Algeria
+C_coal,35.0,0.0,260617,100,90,235010,Algeria
+C_coal,35.0,5.0,260617,100,88,229501,Algeria; Tunisia; Libya
+C_coal,35.0,10.0,168323,100,53,89290,Libya; Tunisia
+C_coal,35.0,35.0,250413,100,52,130117,Syria; Jordan; Saudi Arabia
+C_coal,35.0,40.0,260617,100,77,200129,Iraq; Saudi Arabia; Syria
+C_coal,35.0,45.0,257947,100,75,193177,Iran; Iraq
+C_coal,35.0,50.0,260617,94,56,135474,Iran
+C_coal,35.0,60.0,260617,93,90,219294,Afghanistan; Iran
+C_coal,35.0,65.0,260617,95,65,162212,Afghanistan; Pakistan
+C_coal,35.0,70.0,260617,95,76,185751,Pakistan; India; Afghanistan
+C_coal,35.0,75.0,260617,98,56,141078,India; China; Pakistan
+C_coal,35.0,80.0,260617,99,62,158529,China; India; Nepal
+C_coal,35.0,85.0,260617,100,43,111983,China
+C_coal,35.0,90.0,260617,93,70,166912,China
+C_coal,30.0,-115.0,122653,91,56,57319,Mexico
+C_coal,30.0,-110.0,257392,99,37,95842,Mexico
+C_coal,30.0,-15.0,149223,100,57,85567,Morocco; Mauritania; Western Sahara
+C_coal,30.0,-10.0,274096,100,60,163402,Algeria; Morocco; Mauritania
+C_coal,30.0,-5.0,274096,100,79,215974,Algeria
+C_coal,30.0,0.0,274096,100,90,246484,Algeria
+C_coal,30.0,5.0,274096,100,77,211140,Algeria; Libya
+C_coal,30.0,10.0,274096,100,79,216822,Libya
+C_coal,30.0,15.0,274096,100,65,177668,Libya
+C_coal,30.0,20.0,274096,100,92,252163,Libya
+C_coal,30.0,25.0,274096,100,46,126940,Egypt
+C_coal,30.0,30.0,241124,100,33,79441,Egypt; Saudi Arabia
+C_coal,30.0,35.0,232456,100,69,160743,Saudi Arabia; Jordan
+C_coal,30.0,40.0,274096,100,58,158313,Saudi Arabia; Iraq
+C_coal,30.0,45.0,228056,100,90,205845,Saudi Arabia; Iraq; Kuwait
+C_coal,30.0,50.0,138747,100,57,78941,Iran; Qatar; Saudi Arabia
+C_coal,30.0,55.0,221224,100,53,117169,Iran; Oman; United Arab Emirates
+C_coal,30.0,60.0,260117,100,79,205480,Pakistan; Iran; Afghanistan
+C_coal,30.0,75.0,274096,100,86,235419,India
+C_coal,30.0,80.0,274096,95,77,198185,India; Nepal; China
+C_coal,25.0,-105.0,285489,99,46,130620,Mexico
+C_coal,25.0,-15.0,285489,100,53,151587,Mauritania; Western Sahara; Morocco
+C_coal,25.0,-10.0,285489,100,65,186528,Mauritania; Mali
+C_coal,25.0,-5.0,285489,100,77,219504,Mali; Algeria
+C_coal,25.0,0.0,285489,100,90,256822,Algeria; Mali
+C_coal,25.0,5.0,285489,100,84,239726,Algeria; Niger
+C_coal,25.0,10.0,285489,100,64,182307,Niger; Libya; Algeria
+C_coal,25.0,15.0,285489,100,65,185278,Chad; Libya; Niger
+C_coal,25.0,20.0,285489,100,94,268387,Libya; Chad
+C_coal,25.0,25.0,285489,100,96,273996,Egypt; Sudan
+C_coal,25.0,30.0,285489,100,45,128582,Egypt; Sudan; Bir Tawil
+C_coal,25.0,35.0,139895,100,33,45760,Saudi Arabia; Sudan; Egypt
+C_coal,25.0,45.0,285489,100,73,208572,Saudi Arabia
+C_coal,25.0,50.0,254555,100,96,243114,Saudi Arabia; United Arab Emirates; Qatar
+C_coal,25.0,55.0,200176,100,76,151745,Oman; United Arab Emirates; Saudi Arabia
+C_coal,25.0,90.0,224906,92,89,184962,Myanmar; Bangladesh; India
+C_coal,20.0,-15.0,294709,100,74,217870,Mauritania; Senegal; Mali
+C_coal,20.0,-10.0,294709,100,92,270957,Mauritania; Mali
+C_coal,20.0,-5.0,294709,100,81,238301,Mali
+C_coal,20.0,0.0,294709,100,93,273987,Mali; Niger; Algeria
+C_coal,20.0,5.0,294709,95,54,150137,Niger; Algeria
+C_coal,20.0,10.0,294709,100,96,283037,Niger; Chad
+C_coal,20.0,15.0,294709,100,98,288891,Chad; Niger
+C_coal,20.0,20.0,294709,100,83,244242,Chad; Sudan; Libya
+C_coal,20.0,25.0,294709,100,84,247433,Sudan
+C_coal,20.0,30.0,294709,100,87,256653,Sudan
+C_coal,20.0,35.0,206719,100,36,73990,Sudan; Eritrea
+C_coal,20.0,40.0,176418,100,38,67767,Saudi Arabia; Yemen
+C_coal,20.0,45.0,294709,100,74,217611,Yemen; Saudi Arabia
+C_coal,20.0,50.0,232266,100,67,155363,Yemen; Oman; Saudi Arabia
+C_coal,20.0,95.0,250078,92,68,156022,Myanmar; Thailand
+C_coal,15.0,-15.0,298645,100,30,90204,Guinea; Senegal; Mali
+C_coal,15.0,0.0,301686,100,42,126297,Niger; Nigeria; Benin
+C_coal,15.0,5.0,301686,100,48,144171,Nigeria; Niger
+C_coal,15.0,10.0,301686,100,78,235204,Nigeria; Niger; Chad
+C_coal,15.0,15.0,301686,100,95,286562,Chad; Cameroon
+C_coal,15.0,20.0,301686,100,44,133095,Sudan; Chad; Central African Republic
+C_coal,15.0,25.0,301686,100,74,223350,Sudan; South Sudan
+C_coal,15.0,30.0,301686,100,63,189684,Sudan; South Sudan; Ethiopia
+C_coal,15.0,40.0,226353,100,35,78522,Ethiopia; Yemen; Eritrea
+C_coal,15.0,45.0,132699,100,43,57364,Yemen; Somaliland; Somalia
+C_coal,15.0,100.0,189554,97,90,165531,Cambodia; Thailand; Vietnam
+C_coal,15.0,105.0,232135,100,70,162967,Vietnam; Cambodia; Laos
+C_coal,10.0,-70.0,306367,92,78,223601,Venezuela; Colombia
+C_coal,10.0,-65.0,288071,96,48,125510,Venezuela; Guyana; Brazil
+C_coal,10.0,-60.0,107563,100,63,67617,Guyana; Suriname
+C_coal,10.0,15.0,306367,100,48,146678,Central African Republic; Chad; Cameroon
+C_coal,10.0,25.0,306367,100,31,94729,South Sudan; Central African Republic; Sudan
+C_coal,10.0,30.0,306367,100,81,248103,South Sudan; Ethiopia; Sudan
+C_coal,10.0,45.0,275631,100,69,190081,Somalia; Somaliland; Ethiopia
+C_coal,5.0,-80.0,209988,91,43,83406,Colombia; Ecuador
+C_coal,5.0,-75.0,308717,96,87,256242,Colombia
+C_coal,5.0,-65.0,308717,100,35,108069,Brazil; Venezuela
+C_coal,5.0,15.0,308717,100,66,203828,Republic of the Congo; Democratic Republic of the Congo; Central African Republic
+C_coal,5.0,20.0,308717,100,61,188456,Democratic Republic of the Congo; Central African Republic
+C_coal,5.0,35.0,308717,100,46,141955,Kenya; Ethiopia; South Sudan
+C_coal,5.0,40.0,280900,100,59,166780,Somalia; Kenya; Ethiopia
+C_coal,5.0,95.0,117274,100,53,61695,Indonesia
+C_coal,5.0,100.0,169797,100,47,80313,Malaysia; Indonesia
+C_coal,5.0,110.0,194605,100,92,179154,Malaysia; Indonesia; Brunei
+C_coal,0.0,-70.0,308717,100,97,299444,Brazil; Colombia
+C_coal,0.0,-65.0,308717,100,90,277811,Brazil
+C_coal,0.0,-60.0,308717,100,69,212984,Brazil
+C_coal,0.0,-55.0,308717,100,63,194593,Brazil
+C_coal,0.0,-50.0,268535,100,94,253107,Brazil
+C_coal,0.0,15.0,308717,100,98,302536,Democratic Republic of the Congo; Republic of the Congo
+C_coal,0.0,20.0,308717,100,100,308717,Democratic Republic of the Congo
+C_coal,0.0,25.0,308717,100,38,117276,Democratic Republic of the Congo; Burundi; Rwanda
+C_coal,0.0,35.0,299473,100,37,111159,Kenya; United Republic of Tanzania
+C_coal,0.0,130.0,101920,100,64,64855,Indonesia
+C_coal,0.0,135.0,160420,100,69,111040,Indonesia
+C_coal,0.0,140.0,110999,100,69,77074,Papua New Guinea; Indonesia
+C_coal,-5.0,-70.0,306367,100,96,294160,Brazil
+C_coal,-5.0,-65.0,306367,100,79,242251,Brazil
+C_coal,-5.0,-60.0,306367,100,50,153255,Brazil
+C_coal,-5.0,-50.0,306367,91,70,196083,Brazil
+C_coal,-5.0,-45.0,306367,97,70,205380,Brazil
+C_coal,-5.0,15.0,306367,100,85,260529,Angola; Democratic Republic of the Congo
+C_coal,-5.0,20.0,306367,100,62,189928,Democratic Republic of the Congo; Angola
+C_coal,-5.0,35.0,266504,100,47,125486,United Republic of Tanzania
+C_coal,-5.0,140.0,220922,100,74,162527,Papua New Guinea; Indonesia
+C_coal,-10.0,-75.0,301686,94,71,211517,Peru; Brazil
+C_coal,-10.0,-70.0,301686,100,99,298645,Bolivia; Peru; Brazil
+C_coal,-10.0,-65.0,301686,100,51,153719,Brazil; Bolivia
+C_coal,-10.0,-60.0,301686,100,80,241035,Brazil
+C_coal,-10.0,-55.0,301686,100,86,259300,Brazil
+C_coal,-10.0,-50.0,301686,100,52,157031,Brazil
+C_coal,-10.0,-45.0,301686,100,66,199307,Brazil
+C_coal,-10.0,-40.0,124012,100,44,54542,Brazil
+C_coal,-10.0,15.0,301686,100,82,247319,Angola
+C_coal,-10.0,20.0,301686,100,82,247171,Angola; Zambia; Democratic Republic of the Congo
+C_coal,-10.0,130.0,177322,100,86,153310,Australia
+C_coal,-15.0,-65.0,294709,100,74,217529,Bolivia; Paraguay; Brazil
+C_coal,-15.0,-60.0,294709,100,85,250213,Brazil; Bolivia; Paraguay
+C_coal,-15.0,-55.0,294709,100,84,247424,Brazil
+C_coal,-15.0,-50.0,294709,100,49,144315,Brazil
+C_coal,-15.0,-45.0,294709,100,35,103266,Brazil
+C_coal,-15.0,15.0,294709,100,86,253780,Angola; Namibia
+C_coal,-15.0,20.0,294709,100,96,283028,Botswana; Angola; Zambia
+C_coal,-15.0,45.0,247514,100,31,76844,Madagascar
+C_coal,-15.0,125.0,294709,92,84,224034,Australia
+C_coal,-15.0,130.0,294709,100,95,279912,Australia
+C_coal,-15.0,135.0,223356,100,92,205737,Australia
+C_coal,-20.0,-70.0,285489,100,61,174301,Chile; Bolivia; Argentina
+C_coal,-20.0,-65.0,285489,100,99,282628,Argentina; Paraguay; Bolivia
+C_coal,-20.0,-60.0,285489,99,85,239611,Paraguay; Brazil; Argentina
+C_coal,-20.0,-55.0,285489,95,67,177654,Brazil; Paraguay
+C_coal,-20.0,15.0,285489,100,46,130907,Namibia
+C_coal,-20.0,20.0,285489,94,87,233783,Botswana; Namibia
+C_coal,-20.0,30.0,282589,96,60,162473,Mozambique; Zimbabwe; South Africa
+C_coal,-20.0,115.0,253636,94,69,162426,Australia
+C_coal,-20.0,120.0,285489,100,94,268284,Australia
+C_coal,-20.0,125.0,285489,100,97,276970,Australia
+C_coal,-20.0,130.0,285489,99,94,265674,Australia
+C_coal,-20.0,135.0,285489,95,82,219860,Australia
+C_coal,-25.0,-65.0,274096,100,95,260587,Argentina
+C_coal,-25.0,-60.0,274096,95,76,197542,Argentina; Paraguay; Brazil
+C_coal,-25.0,15.0,233514,100,73,170652,Namibia; South Africa
+C_coal,-25.0,20.0,274096,100,73,200919,South Africa; Botswana
+C_coal,-25.0,120.0,274096,99,94,254978,Australia
+C_coal,-30.0,-65.0,260617,100,92,239493,Argentina
+C_coal,-30.0,20.0,219889,98,90,193742,South Africa
+C_coal,-35.0,-70.0,245155,97,79,188599,Argentina
+C_coal,-35.0,-65.0,226074,100,100,226074,Argentina
+C_coal,-40.0,-70.0,221185,100,45,99604,Argentina
+C_coal,-45.0,-70.0,127361,100,61,77389,Argentina

@@ -51,6 +51,9 @@ namespace EarthMap
         public static bool RegionalAnimals(ITreeAttribute wc, bool fallback)
             => Choice(wc, "earthAnimals", "regional", "vanilla", fallback);
 
+        /// <summary>Summit height correction (decision 0039): listed peaks at or above this real elevation get their missing height
+        /// back. Off the Earth tab from 2.2.0-rc.13 (EA-0204, the author: "if we still use [it] we may take [it] off the GUI"): a
+        /// new world takes DefaultSummitMinElevation, unless its world config says otherwise (servers, tests).</summary>
         public const string SummitKey = "earthSummitCorrection";
         public const int DefaultSummitMinElevation = 3000;
 
@@ -92,6 +95,8 @@ namespace EarthMap
             public bool GroundColumns;
             /// <summary>Ground depth for ground columns: one of GroundColumns.DepthCurve.Choices.</summary>
             public string GroundDepth;
+            /// <summary>"Soil": Core.Topsoil.ClimateOnly, VanillaTiers or RealisticTiers (<see cref="Soil(ITreeAttribute)"/>).</summary>
+            public int Topsoil;
             /// <summary>"Nature": plants and animals as around 1318 (decision 0047).</summary>
             public bool Nature1318;
             /// <summary>"Nature" is on the tab ("vanilla" there also means no regional tree allocation).</summary>
@@ -99,6 +104,10 @@ namespace EarthMap
             /// <summary>"Biomes": vanilla's (decision 0075).</summary>
             public bool VanillaBiomes;
             public bool IncludeExtinctAnimals, ChickensByRange, Weather, NoRiverRapids;
+            /// <summary>"River width" as the world config holds it, in % (RiverWidthKey; RiverWidthMultiplier with the world's ring).</summary>
+            public string RiverWidth;
+            /// <summary>"Smallest stream" as the world config holds it, in m³/s (SmallestStreamKey; SmallestStream with the world's ring).</summary>
+            public string SmallestStream;
             public double RainFrequency, StormFrequency;
             public int SpringRules, PondRules, RockFloorDepth;
             /// <summary>Land heights: "glo90", "glo90coarse" or "builtin" (<see cref="Elevation"/>).</summary>
@@ -108,26 +117,32 @@ namespace EarthMap
         /// <summary>The Earth tab's choices for a new world of <paramref name="mapHeight"/> blocks (<see cref="EarthTab"/>).</summary>
         public static EarthTab ReadTab(ITreeAttribute wc, EarthMapConfig cfg, EarthData data, int mapHeight)
         {
-            // Two Earth-tab choices (the author, 7 November). "Rocks and ground": vanilla (the menu's default from 2.0.1, the
-            // author on 15 November, decision 0084), ground columns (regional rock regions, plus real ground columns where the
-            // ground data reaches) or regional (rock regions only). "Ores": vanilla (the default for now) or Earth's ore maps. Worlds set up with the earlier single "Rocks and
-            // ores" key (earthOres) keep its meaning: vanilla is vanilla rocks and ores, regional and ground columns are
-            // that rock choice with the ore maps. Without any key the server config decides, as before.
+            // "Rocks and ground" on the Earth tab: vanilla (the menu's default from 2.0.1, the author on 15 November, decision
+            // 0084) or regional (rock regions only). In 2.2 (the author, 20 November 2026, decision 0104) the tab no longer
+            // offers ground columns or their Ground depth, and "Ores" has one value, vanilla deposits plus Earth's gems and ores:
+            // every new world gets them, unless earth.json's experimental switches say otherwise. The keys are still read so a
+            // world config from before means what it can: ground columns or the earlier single "Rocks and ores" key (earthOres)
+            // give their rock choice. Without a rock key the server config decides, as before.
             string legacy = Get(wc, OresKey, "").Trim().ToLowerInvariant();
             bool legacyKnown = legacy is OresRegional or OresGroundColumns or OresVanilla;
             string rocks = Get(wc, RocksKey, "").Trim().ToLowerInvariant();
             if (!(rocks is OresRegional or OresGroundColumns or OresVanilla) && legacyKnown) rocks = legacy;
-            string deposits = Get(wc, OreDepositsKey, "").Trim().ToLowerInvariant();
-            if (!(deposits is OreDepositsVanilla or OreDepositsMaps) && legacyKnown) deposits = legacy == OresVanilla ? OreDepositsVanilla : OreDepositsMaps;
             bool rocksKnown = rocks is OresRegional or OresGroundColumns or OresVanilla;
             string depth = Get(wc, GroundDepthKey, "").Trim().ToLowerInvariant();
+            bool regional = rocksKnown ? rocks != OresVanilla : cfg.RegionalGeology;
+            // (EA-0197, decision 0104) ground columns and Earth's ore maps are off the Earth tab in 2.2 (they need more work): a
+            // world config's "groundcolumns" or "maps" (an older template, /worldconfig, the old earthOres key) gives regional rock
+            // and vanilla's deposits. Only earth.json's experimental switches give them, for development: ground columns for any
+            // world whose rock is regional, the ore maps for every new world. The Ores key isn't read: its one value on the tab,
+            // vanilla, is in every new world's config, so it can't tell a choice from the default.
             return new EarthTab
             {
                 SummitMinElevation = SummitMinElevation(wc),
-                RegionalOres = deposits is OreDepositsVanilla or OreDepositsMaps ? deposits == OreDepositsMaps : cfg.RegionalOres,
-                RegionalGeology = rocksKnown ? rocks != OresVanilla : cfg.RegionalGeology,
-                GroundColumns = rocksKnown ? rocks == OresGroundColumns : cfg.GroundColumnsPrototype,
+                RegionalOres = cfg.ExperimentalOreMaps,
+                RegionalGeology = regional,
+                GroundColumns = cfg.ExperimentalGroundColumns && regional,
                 GroundDepth = Array.IndexOf(GroundColumns.DepthCurve.Choices, depth) >= 0 ? depth : GroundColumns.DepthCurve.Default,
+                Topsoil = Soil(wc),
                 Nature1318 = Nature1318(wc, cfg.RegionalFauna),
                 NatureOnTab = wc?.HasAttribute(NatureKey) == true,
                 VanillaBiomes = VanillaBiomes(wc),
@@ -139,6 +154,8 @@ namespace EarthMap
                 RainFrequency = Frequency(wc, "earthRainFrequency", cfg.RainFrequency, 3),
                 StormFrequency = Frequency(wc, "earthStormFrequency", cfg.StormFrequency, 5),
                 NoRiverRapids = !Choice(wc, RiverRapidsKey, "steep", "off", true),
+                RiverWidth = Get(wc, RiverWidthKey, ""),
+                SmallestStream = Get(wc, SmallestStreamKey, ""),
                 SpringRules = SpringRules(wc),
                 PondRules = PondRules(wc),
                 Elevation = Elevation(wc, data),
@@ -146,10 +163,12 @@ namespace EarthMap
             };
         }
 
-        /// <summary>"Rocks and ground": OresVanilla (the menu's default from 2.0.1, decision 0084), OresGroundColumns or
-        /// OresRegional.</summary>
+        /// <summary>"Rocks and ground": OresVanilla (the menu's default from 2.0.1, decision 0084) or OresRegional; OresGroundColumns,
+        /// no longer on the tab (decision 0104), gives regional rock, with ground columns only under earth.json's
+        /// ExperimentalGroundColumns.</summary>
         public const string RocksKey = "earthRocks";
-        /// <summary>"Ores": OreDepositsVanilla (default for now) or OreDepositsMaps.</summary>
+        /// <summary>Ores: on the tab with OreDepositsVanilla only in 2.2 (decision 0104); OreDepositsMaps, from before, is no longer
+        /// read. earth.json's ExperimentalOreMaps alone gives the ore maps.</summary>
         public const string OreDepositsKey = "earthOreDeposits", OreDepositsVanilla = "vanilla", OreDepositsMaps = "maps";
         /// <summary>The earlier single "Rocks and ores" key, read only where the two keys above are missing; its values
         /// are also the rock choices.</summary>
@@ -224,6 +243,9 @@ namespace EarthMap
         /// valleys ("all"), and each river's upper main branch in coarser ones ("ends"). Any other value is kept as it is. A
         /// world saves the result, so a later default never changes its rivers.
         /// </summary>
+        /// <summary>Whether a ring this long is a world at 1:25 or finer (under FineScaleMetres per block at the equator).</summary>
+        public static bool FineScale(double ringLength) => ringLength > 0 && EquatorMetres / ringLength < FineScaleMetres;
+
         public static string StreamsFor(string configured, double ringLength)
         {
             if (!string.Equals((configured ?? "").Trim(), "auto", StringComparison.OrdinalIgnoreCase)) return configured;
@@ -343,6 +365,93 @@ namespace EarthMap
         /// <summary>0046: rapids reaches where the current is strong ("steep", the default) or none ("off").</summary>
         public const string RiverRapidsKey = "earthRiverRapids";
 
+        /// <summary>(EA-0159, decision 0095) "River width": a slider in percent, RiverWidthMinPercent to RiverWidthMaxPercent in
+        /// steps of RiverWidthStepPercent; 100 % draws rivers as at 1:10, and each Earth size's play style sets its recommended
+        /// value (RecommendedRiverWidthPercent). A slider in percent because the Mod DB's parser refuses the game's "multiplier"
+        /// key a decimal slider needs (decision 0089).</summary>
+        public const string RiverWidthKey = "earthRiverWidth";
+        public const int RiverWidthMinPercent = 50, RiverWidthMaxPercent = 1000, RiverWidthStepPercent = 25;
+
+        /// <summary>
+        /// The recommended River width (%) at 1:N, each Earth size's play style's value (the author, 18 November 2026: "1:10 does
+        /// not needs scaling. but others might"; measured offline, decision 0095): 100 at 1:10 and finer (2.1's widths), 200 at
+        /// 1:25, 300 at 1:50, 500 at 1:100 (a river of 100 m³/s 6 blocks, the Daugava at Riga 11), 700 at 1:200; between them
+        /// along the logarithm of the scale, coarser than 1:200 as √N, to the slider's step and range.
+        /// </summary>
+        public static int RecommendedRiverWidthPercent(double scale)
+        {
+            var t = RecommendedRiverWidths;
+            if (!(scale > t[0].Scale)) return t[0].Percent;
+            for (int i = 1; i < t.Length; i++)
+                if (scale <= t[i].Scale)
+                    return SnapRiverWidth(t[i - 1].Percent + Math.Log(scale / t[i - 1].Scale) / Math.Log(t[i].Scale / t[i - 1].Scale) * (t[i].Percent - t[i - 1].Percent));
+            return SnapRiverWidth(t[^1].Percent * Math.Sqrt(scale / t[^1].Scale));
+        }
+        /// <summary>(EA-0179, decision 0098; EA-0200, decision 0098) "Smallest stream" (m³/s), a slider from 1 to 100: the smallest
+        /// stream drawn. At 1:50 and coarser the smallest river drawn, as a one-block stream up to the rivers (RiverMinDischarge,
+        /// 100), never under the river data's CoarseStreamMin (20). At 1:25 and finer the streams layer's smallest
+        /// (EarthParams.StreamLayerMinDischarge): its streams below it are left out; the courses' own streams from 20 stay, so 20 and
+        /// more leave out the whole layer. Each Earth size's play style sets RecommendedSmallestStream.</summary>
+        public const string SmallestStreamKey = "earthSmallestStream";
+        public const int SmallestStreamMin = 1, SmallestStreamMax = 100, SmallestStreamStep = 1;
+        /// <summary>The river data's smallest river (m³/s): at 1:50 and coarser no stream is drawn below it, and at 1:25 and finer
+        /// the courses' streams start there (EarthMapConfig.StreamMinDischarge), the streams layer below.</summary>
+        public const int CoarseStreamMin = 20;
+        /// <summary>The recommended values at 1:50 and coarser are rounded to this many m³/s.</summary>
+        const int RecommendedStreamStep = 5;
+
+        /// <summary>
+        /// The recommended Smallest stream (m³/s) at 1:N. At 1:25 and finer 1: every stream of the streams layer (EA-0200). Coarser,
+        /// the discharge whose real width (RiverNetwork.RealWidthMetres, 8·√Q m) is a block, (N ÷ 8)², to 5 m³/s, from the river
+        /// data's 20 up to the rivers' 100 (1:100 and coarser: no streams, rivers only): 40 at 1:50, 100 at 1:100 and 1:200. The
+        /// author, 18 November 2026: "What is decent river at 1:10 becomes maybe 1 block stream at 1:50 and 1:100 disappears".
+        /// </summary>
+        public static int RecommendedSmallestStream(double scale) =>
+            scale < FineScaleMetres ? SmallestStreamMin
+            : Math.Clamp((int)(Math.Round(scale / 8 * (scale / 8) / RecommendedStreamStep) * RecommendedStreamStep), CoarseStreamMin, SmallestStreamMax);
+
+        /// <summary>The smallest stream (m³/s) a new world at 1:50 or coarser saves (EarthParams.StreamMinDischarge): the tab's value
+        /// within the slider's range and never above the rivers' riverMinDischarge; a world config without one, or without a number
+        /// in it, gets the recommended value for its scale.</summary>
+        public static double SmallestStream(string tabValue, double ringLength, double riverMinDischarge)
+        {
+            // (EA-0200) values under the river data's 20 act as 20: the coarse rules draw no stream smaller
+            double q = double.TryParse((tabValue ?? "").Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out double v) && double.IsFinite(v)
+                ? Math.Clamp(v, CoarseStreamMin, SmallestStreamMax) : RecommendedSmallestStream(RiverNetwork.ScaleOf(ringLength));
+            return riverMinDischarge > 0 ? Math.Min(q, riverMinDischarge) : q;
+        }
+
+        /// <summary>
+        /// (EA-0200, decision 0098) The streams layer's smallest stream (m³/s) a new world at 1:25 or finer saves
+        /// (EarthParams.StreamLayerMinDischarge): the tab's value, at most the courses' 20 (the layer's streams are all under it, so
+        /// 20 leaves out the whole layer). 0, every stream of the layer as before, for 1 (the layer's own smallest, the play
+        /// styles' value), less, or no number: a world made so has exactly the params and terrain of one made before.
+        /// </summary>
+        public static double SmallestLayerStream(string tabValue)
+        {
+            if (!double.TryParse((tabValue ?? "").Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out double v) || !double.IsFinite(v)) return 0;
+            return v <= SmallestStreamMin ? 0 : Math.Min(v, CoarseStreamMin);
+        }
+
+                static readonly (double Scale, int Percent)[] RecommendedRiverWidths = { (10, 100), (25, 200), (50, 300), (100, 500), (200, 700) };
+        static int SnapRiverWidth(double percent) =>
+            Math.Clamp((int)(Math.Round(percent / RiverWidthStepPercent) * RiverWidthStepPercent), RiverWidthMinPercent, RiverWidthMaxPercent);
+
+        /// <summary>
+        /// The river width multiplier a new world saves (EarthParams.RiverWidthMultiplier): the tab's percent over 100, within the
+        /// slider's range; a world config without the key, or without a number in it, gets the recommended value for its scale.
+        /// 0 where the multiplier gives exactly 1:10's floor in blocks (×1 at 1:10, ×2.5 at 1:25, ×5 at 1:50): those worlds draw 2.1's widths
+        /// by its own code paths, and their params are as before.
+        /// </summary>
+        public static double RiverWidthMultiplier(string tabValue, double ringLength)
+        {
+            string value = (tabValue ?? "").Trim().TrimEnd('%').Trim();
+            double pct = double.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out double v) && double.IsFinite(v)
+                ? Math.Clamp(v, RiverWidthMinPercent, RiverWidthMaxPercent) : RecommendedRiverWidthPercent(RiverNetwork.ScaleOf(ringLength));
+            double multiplier = pct / 100;
+            return Math.Abs(RiverNetwork.FloorFactorFor(multiplier, ringLength) - 1) < 1e-9 ? 0 : multiplier;
+        }
+
         /// <summary>Vanilla's springs and mountain-side streams (GenRivulets): "caves" (default: springs in cave walls only),
         /// "streams" (as caves, plus springs at the real streams' heads and where the water table meets a slope) or "vanilla"
         /// (EarthParams.SpringRules).</summary>
@@ -354,6 +463,23 @@ namespace EarthMap
         {
             string value = Get(wc, MountainSpringsKey, "caves").Trim().ToLowerInvariant();
             return value == "vanilla" ? 0 : value == "streams" ? EarthParams.SpringRulesStreams : EarthParams.SpringRulesCaves;
+        }
+
+        /// <summary>(EA-0199, decision 0105) "Soil": "climate" (vanilla's rain and warmth formula with soil rule 0048's floor,
+        /// as before), "vanilla" (Earth soil from the real soil map in vanilla's four tiers, barren only on inhospitable land) or
+        /// "realistic" (Earth soil in five tiers, barren on the poorest soils and black earth, vanilla's soil-high, on the
+        /// Chernozems), the tab's default from 2.2.0-rc.13 (the author, 21 November 2026: "Earth soil, realistic tiers - should
+        /// be default"). EarthParams.Topsoil.</summary>
+        public const string SoilKey = "earthSoil", SoilClimate = "climate", SoilVanillaTiers = "vanilla", SoilRealisticTiers = "realistic";
+
+        /// <summary>The topsoil a world's choice gives (Core.Topsoil.ClimateOnly, VanillaTiers or RealisticTiers). A world
+        /// config without the key or with another value gets the tab's default, realistic tiers: a world made from the menu always
+        /// has the key (the game writes every attribute's default into a new world), so this is a hand-typed or older server
+        /// configuration, and it gets what the menu gives.</summary>
+        public static int Soil(ITreeAttribute wc)
+        {
+            string value = Get(wc, SoilKey, SoilRealisticTiers).Trim().ToLowerInvariant();
+            return value == SoilVanillaTiers ? Core.Topsoil.VanillaTiers : value == SoilClimate ? Core.Topsoil.ClimateOnly : Core.Topsoil.RealisticTiers;
         }
 
         /// <summary>Vanilla's surface ponds: "off" (default: none), "wetlands" (only in the mapped wetlands, by their share) or

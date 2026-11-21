@@ -43,6 +43,7 @@ from scipy.sparse.csgraph import dijkstra
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from water_atlas_cards import mosaic_wbm
+import glo90grid as gg
 from snap_rivers_wbm import read_full, write_full, densify, length_m, rdp
 
 MIN_Q = 200.0              # m³/s: rivers whose arms show in the game at all
@@ -127,6 +128,9 @@ def work(tile):
         return [], {}
     W = mosaic_wbm(la0, lo0, la1, lo1)
     H_, W_ = W.shape
+    # pixel (r, c)'s area runs from (oy - r/1200, ox + c/1200) (glo90grid: half a pixel north-west of la1, lo0 on the
+    # pixel-is-point grid)
+    oy, ox = gg.top(la1), gg.left(lo0, 1200)
     if not ((W == 3).any()):
         return [], {"no river water": 1}
     dx = PX_M * math.cos(math.radians(tl + 0.5))
@@ -138,7 +142,7 @@ def work(tile):
     gap = wet & ~water
 
     def to_rc(lat, lon):
-        return ((la1 - lat) * 1200).astype(int), ((lon - lo0) * 1200).astype(int)
+        return np.floor((oy - lat) * 1200).astype(int), np.floor((lon - ox) * 1200).astype(int)
 
     # the big courses, densified: point -> (reach, vertex position, distance to mouth)
     P_r, P_k, P_d, P_lat, P_lon, P_f = [], [], [], [], [], []
@@ -205,7 +209,7 @@ def work(tile):
         sl = slices[i - 1]
         # the island's centre must be in this tile (each island once)
         cy, cx = (sl[0].start + sl[0].stop) / 2, (sl[1].start + sl[1].stop) / 2
-        clat, clon = la1 - cy / 1200, lo0 + cx / 1200
+        clat, clon = oy - cy / 1200, ox + cx / 1200
         if not (tl <= clat < tl + 1 and tc <= clon < tc + 1):
             continue
         isl = lab == i
@@ -269,7 +273,7 @@ def work(tile):
         path.reverse()
         qr, qc = np.nonzero(wl)
         qr, qc = qr[path] + a0, qc[path] + b0
-        plat, plon = la1 - (qr + 0.5) / 1200, lo0 + (qc + 0.5) / 1200
+        plat, plon = oy - (qr + 0.5) / 1200, ox + (qc + 0.5) / 1200
         L_arm = length_m(plat, plon)
         L_main = P_d[s_pt] - P_d[e_pt]
         off = float(D[qr, qc].max())

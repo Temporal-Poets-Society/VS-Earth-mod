@@ -15,6 +15,10 @@ namespace EarthMap.Core
     public sealed class LakeData
     {
         public const int FileVersion = 1;
+        /// <summary>River ends rules 3 (decision 0107, tools/bake_terminal_lakes_1318.py): lakes.bin's lakes with the Aral at its
+        /// level of 1318 (29 m: the 2' grid's cells below it joined to the western basin), in the mod's earthdata; the same
+        /// layout and file version.</summary>
+        public const string FileName2 = "lakes-2.bin";
 
         public sealed class Lake
         {

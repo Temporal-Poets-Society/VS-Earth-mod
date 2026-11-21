@@ -4,7 +4,8 @@ What happens to your world across Earth updates, and what to keep in mind when y
 
 ## Which worlds Earth 2.0 keeps working
 
-**Worlds made with Earth 2.0.0 or later are kept working.** Update Earth and your world goes on as before.
+**Worlds made with Earth 2.0.0 or later are kept working.** Update Earth and your world goes on as before: a world made
+with 2.0 or 2.1 keeps its terrain in 2.2, rivers, lakes, rocks and soil included.
 
 **Worlds made with older Earth versions aren't supported**: 0.x, 1.x (then called Earth Map) and the 2.0.0 release
 candidates. Earth 2.0 doesn't refuse to open them, but nothing is promised about what they look like or whether they
@@ -20,12 +21,13 @@ ground, soil, plants, volcanoes and the rest). After an update, your world keeps
 rock rules it started with, so new chunks always fit the old ones. Improvements to terrain reach **new worlds** only;
 fixes to tree, plant, animal and ore rules do reach new land in existing worlds.
 
-- **Settings are fixed when the world is created.** Earth's choices on the Earth tab (scale, rocks, ores, plants and
-  animals, rivers, springs, ponds, weather) are saved with the world; the screen doesn't let you change them later.
+- **Settings are fixed when the world is created.** Earth's choices on the Earth tab (scale, rocks, soil, ores, plants
+  and animals, rivers, springs, ponds, weather) are saved with the world; the screen doesn't let you change them later.
   (Hydrology's Water flooding on that tab can be changed. A few one-shot switches in `earth.json` let an owner change a
   saved world's canals, rocks, ores or ranges for new land; see [Settings](Settings).)
 - **A world can't always go back to an older Earth.** A world that a newer Earth saved with newer rules or settings is
-  refused by an older Earth, with a message in the server log that names the version that last opened it. The world itself isn't changed.
+  refused by an older Earth ("this world was saved by a newer Earth"), with a message in the server log that names the
+  version that last opened it. The world itself isn't changed. A world made with Earth 2.2.0 needs 2.2.0 or newer.
   Keep the newer Earth, or restore a backup made before the update.
 
 ## When something is missing

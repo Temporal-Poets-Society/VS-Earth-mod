@@ -155,11 +155,24 @@ static class WorldUpgradeChecks
             p = new EarthParams { Enabled = true, RegionalOres = true, OreRulesVersion = 1, CraftingRules = EarthCrafting.RulesVersion };
             new WorldUpgrades(host, TestLog.Create().Logger).Regional(p);
             check(!p.RegionalOres && p.CraftingRules == EarthCrafting.RulesFor(p.GroundColumns, false), "world upgrades: ore maps off takes the crafting rules with them");
+            // (EA-0197, decision 0104) the ore maps are off the world creation screen in 2.2: RegionalOres, true in every earth.json
+            // written before, doesn't turn them on in a world without them; ExperimentalOreMaps does
             host = Start("UpgradeExistingWorldOreRules");
             p = new EarthParams { Enabled = true, OreLayers = 1, OreDataSignature = "old" };
+            (logger, log) = TestLog.Create();
+            new WorldUpgrades(host, logger).Regional(p);
+            check(host.Config.RegionalOres && !p.RegionalOres && p.OreRulesVersion == 0 && log.Says(EnumLogType.Warning, "ExperimentalOreMaps"),
+                "world upgrades: RegionalOres alone doesn't turn the ore maps on in a world without them, and says what does (decision 0104)");
+            host = Start("UpgradeExistingWorldOreRules");
+            host.Config.ExperimentalOreMaps = true;
+            p = new EarthParams { Enabled = true, OreLayers = 1, OreDataSignature = "old" };
             new WorldUpgrades(host, TestLog.Create().Logger).Regional(p);
-            check(p.RegionalOres == host.Config.RegionalOres && (!p.RegionalOres || (p.OreRulesVersion == RegionalOreCatalog.Version && p.OreRules == OreBackground.CurrentRules
-                && p.OreDataSignature == null && p.OreSettingsJson != null)), "world upgrades: ore maps on take this build's ore rules, the real-size deposits in a ground-column world");
+            check(p.RegionalOres && p.OreRulesVersion == RegionalOreCatalog.Version && p.OreRules == OreBackground.CurrentRules
+                && p.OreDataSignature == null && p.OreSettingsJson != null, "world upgrades: under ExperimentalOreMaps, ore maps on take this build's ore rules, the real-size deposits in a ground-column world");
+            host = Start("UpgradeExistingWorldOreRules");
+            p = new EarthParams { Enabled = true, RegionalOres = true, OreRulesVersion = 1 };
+            new WorldUpgrades(host, TestLog.Create().Logger).Regional(p);
+            check(p.RegionalOres && p.OreRulesVersion == RegionalOreCatalog.Version, "world upgrades: a world with the ore maps keeps them and takes this build's ore rules, without the experimental switch");
 
             // the rule fixes without a flag: adopted when on and older, never lowered (S-R1), stored only when something changed
             host = Start();

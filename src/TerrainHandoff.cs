@@ -1,6 +1,7 @@
 using System;
-using System.Collections.Concurrent;
+using System.Runtime.CompilerServices;
 using EarthMap.Core;
+using Vintagestory.API.Server;
 
 namespace EarthMap
 {
@@ -9,49 +10,110 @@ namespace EarthMap
     /// after vanilla's block layers in the same pass (<see cref="RiverBlockPass"/>, <see cref="AlpineSurfacePass"/>): the river
     /// ramps' words and each column's surface flags. One per world, made by EarthWorldGen and handed to the passes that write and
     /// read it; the surface pass takes a chunk's entries out when it reads them.
+    /// EA-0162: an entry belongs to the chunk column being generated (its bottom chunk, the object every handler of the pass is
+    /// given), not to its coordinates. The game runs a column's terrain pass once, on one thread, from the terrain writer to the
+    /// surface pass; but another generation at the same coordinates (a mod running the terrain pass's handlers on chunks of its
+    /// own, as a far-terrain preview does, at the same time) took or overwrote a coordinate-keyed entry, and the column the game
+    /// was making then reached its surface pass without one: Earth refused a healthy world. Entries go with their chunks (a
+    /// weak table: an entry a cut-short pass left behind does not outlive the column's chunk objects).
     /// </summary>
     sealed class TerrainHandoff
     {
-        /// <summary>River ramps per chunk column (<see cref="RampWord"/>), only for chunks that have any.</summary>
-        readonly ConcurrentDictionary<long, uint[]> ramps = new ConcurrentDictionary<long, uint[]>();
+        /// <summary>One column's entry: its coordinates (a chunk object a mod pools and reuses elsewhere doesn't hand on an old
+        /// entry), its flags until the surface pass takes them, its ramps until the river pass takes them.</summary>
+        sealed class Entry
+        {
+            public int Cx, Cz;
+            public byte[] Flags;
+            public bool FlagsTaken;
+            public uint[] Ramps;
+        }
+
+        readonly ConditionalWeakTable<object, Entry> entries = new ConditionalWeakTable<object, Entry>();
+
         /// <summary>
-        /// Per chunk column, each column's flags, <see cref="FlagBeach"/> (a beach, as settled) and <see cref="FlagDryRiver"/> (a
+        /// Per column of the chunk, its flags: <see cref="FlagBeach"/> (a beach, as settled) and <see cref="FlagDryRiver"/> (a
         /// dry river bed, arid river rules), or <see cref="NoFlags"/> when none is flagged. The surface pass runs in the same
         /// terrain pass as the writer, so a chunk without an entry was not made by Earth's terrain writer: EarthWorldGen refuses
         /// to go on (B02: the dry river beds are recorded here so the model's column is not built a second time for that flag).
         /// </summary>
-        readonly ConcurrentDictionary<long, byte[]> surfaceFlags = new ConcurrentDictionary<long, byte[]>();
         public const byte FlagBeach = 1, FlagDryRiver = 2;
         public static readonly byte[] NoFlags = Array.Empty<byte>();
 
-        public static long ChunkKey(int cx, int cz) => ((long)cx << 32) | (uint)cz;
+        /// <summary>The object a chunk column's entry is kept under: its bottom chunk (null without chunks).</summary>
+        static object Column(IServerChunk[] chunks) => chunks != null && chunks.Length > 0 ? chunks[0] : null;
 
-        /// <summary>The terrain pass's ramp words for a chunk column.</summary>
-        public void PutRamps(int cx, int cz, uint[] ramp) => ramps[ChunkKey(cx, cz)] = ramp;
+        /// <summary>The terrain writer's flags and river ramps (null: none, or not to be drawn) for the chunk column it made:
+        /// always an entry, so that the surface pass tells "nothing flagged" (<see cref="NoFlags"/>) from "not made by Earth's
+        /// terrain writer" (no entry).</summary>
+        public void Put(IServerChunk[] chunks, int cx, int cz, byte[] flags, uint[] ramps) => Put(Column(chunks), cx, cz, flags, ramps);
 
-        /// <summary>The surface pass takes a chunk column's ramp words; false when it has none.</summary>
-        public bool TakeRamps(int cx, int cz, out uint[] ramp) => ramps.TryRemove(ChunkKey(cx, cz), out ramp);
-
-        /// <summary>The terrain pass's flags for a chunk column: always an entry, so that the surface pass tells "nothing
-        /// flagged" (<see cref="NoFlags"/>) from "not made by Earth's terrain writer" (no entry).</summary>
-        public void PutFlags(int cx, int cz, byte[] flags) => surfaceFlags[ChunkKey(cx, cz)] = flags ?? NoFlags;
+        internal void Put(object column, int cx, int cz, byte[] flags, uint[] ramps)
+        {
+            if (column == null) return;
+            entries.AddOrUpdate(column, new Entry { Cx = cx, Cz = cz, Flags = flags ?? NoFlags, Ramps = ramps });
+        }
 
         /// <summary>The surface pass takes a chunk column's flags; null when Earth's terrain writer did not make it.</summary>
-        public byte[] TakeFlags(int cx, int cz)
+        public byte[] TakeFlags(IServerChunk[] chunks, int cx, int cz) => TakeFlags(Column(chunks), cx, cz);
+
+        internal byte[] TakeFlags(object column, int cx, int cz)
         {
-            surfaceFlags.TryRemove(ChunkKey(cx, cz), out byte[] flags);
-            return flags;
+            var e = Find(column, cx, cz);
+            if (e == null) return null;
+            lock (e)
+            {
+                if (e.FlagsTaken) return null;
+                e.FlagsTaken = true;
+                if (e.Ramps == null) entries.Remove(column);
+                return e.Flags;
+            }
+        }
+
+        /// <summary>The surface pass takes a chunk column's ramp words; false when it has none.</summary>
+        public bool TakeRamps(IServerChunk[] chunks, int cx, int cz, out uint[] ramp) => TakeRamps(Column(chunks), cx, cz, out ramp);
+
+        internal bool TakeRamps(object column, int cx, int cz, out uint[] ramp)
+        {
+            ramp = null;
+            var e = Find(column, cx, cz);
+            if (e == null) return false;
+            lock (e)
+            {
+                ramp = e.Ramps;
+                e.Ramps = null;
+                if (e.FlagsTaken) entries.Remove(column);
+                return ramp != null;
+            }
         }
 
         /// <summary>(FP-13) Whether the terrain writer's flags for a chunk column are still here: past the terrain pass, its surface
         /// pass never ran (a handler before it in the pass threw, and the game skipped the rest of the pass).</summary>
-        public bool Untaken(int cx, int cz) => surfaceFlags.ContainsKey(ChunkKey(cx, cz));
+        public bool Untaken(IServerChunk[] chunks, int cx, int cz) => Untaken(Column(chunks), cx, cz);
 
-        /// <summary>Drops a chunk column's entries (a peek's, which no surface pass will take).</summary>
-        public void Drop(int cx, int cz)
+        internal bool Untaken(object column, int cx, int cz)
         {
-            surfaceFlags.TryRemove(ChunkKey(cx, cz), out _);
-            ramps.TryRemove(ChunkKey(cx, cz), out _);
+            var e = Find(column, cx, cz);
+            if (e == null) return false;
+            lock (e) return !e.FlagsTaken;
+        }
+
+        /// <summary>Drops a chunk column's entry (one no surface pass will take).</summary>
+        public void Drop(IServerChunk[] chunks) => Drop(Column(chunks));
+
+        internal void Drop(object column)
+        {
+            if (column != null) entries.Remove(column);
+        }
+
+        /// <summary>The column's entry when it was made at these coordinates; an entry from elsewhere (a reused chunk object) is
+        /// dropped.</summary>
+        Entry Find(object column, int cx, int cz)
+        {
+            if (column == null || !entries.TryGetValue(column, out var e)) return null;
+            if (e.Cx == cx && e.Cz == cz) return e;
+            entries.Remove(column);
+            return null;
         }
     }
 

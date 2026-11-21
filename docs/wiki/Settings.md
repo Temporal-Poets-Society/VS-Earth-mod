@@ -53,12 +53,13 @@ The key of each option, for a server without the screen, is in [The keys](#the-k
 | Option | Values | What it does |
 | --- | --- | --- |
 | **Terrain · GLO-90 land heights** | **Download all: Earth's data release (GitHub, 8.6 GB)**, Download all before the world starts (GitHub, 8.6 GB), Download as the world reaches them, Download all: Copernicus originals (71 GB, converted here) | Where the real land heights come from and when they are downloaded. They are kept once per machine and shared by every world. **Download all:** the whole set starts downloading when the world opens, with a progress window; you can play meanwhile. **Before the world starts:** a new single-player world waits on its loading screen until the download is done (Cancel goes back to the menu; opening the world again plays while the rest downloads); a dedicated server downloads while it runs. **As the world reaches them:** each 1° square (about 0.3 MB) when the world first needs it. See [Data and performance](Data-and-performance). |
-| **Terrain · Summit height correction** | Off, 1,000 m to 8,000 m and higher (**3,000 m and higher**) | Restores the full height of listed peaks at or above this real elevation, which the height data tends to cut short. |
 | **Terrain · Rock floor** | **Automatic**, None, 96, 128, 160, 192 or 256 blocks down | How far below the lowest ground in each 32 × 32 area the ground turns to plain rock, with no caves, ores or lava. It keeps tall worlds' saves small. Automatic: 160 blocks in worlds taller than 512, none otherwise. |
-| **Terrain · Rocks and ground** | **Vanilla rock layers**, Ground columns: real soil, sediments and rock, Regional rock regions only | Vanilla: the game's own rock layers. Ground columns: real rock regions, and the ground built from real data (soil, the sediments below it in metres, sea-floor sediment, beach sand; in the Baltic also the real bedrock layers). The first such world on a machine downloads about 172 MB of ground data. Regional: real rock regions and surface materials, without ground columns. See [Rocks, soil and ores](Rocks-soil-and-ores). |
-| **Terrain · Ground depth** | **Log, strong: 2,000 m about 30 blocks above the bottom**, Linear at the terrain's scale, Log, mild: 2,000 m at the bottom, Linear, 2,000 m at the bottom | Only with Ground columns: how real depth below the surface becomes blocks. With the other rock choices it does nothing. |
-| **Terrain · Ores** | **Vanilla ore deposits, plus Earth's gems and ores**, Earth ore maps (experimental) | Vanilla: the game's own ore deposits, plus Earth's gems (beryl, corundum, garnet, spinel, topaz, tourmaline) and ores the game doesn't place, by the game's own deposit rules. Earth ore maps: ore districts from real geology and mining records; experimental and being reworked. |
+| **Terrain · Rocks and ground** | **Vanilla rock layers**, Regional rock regions only | Vanilla: the game's own rock layers, laid under the real ground, so a plateau has a lowland's layers within reach; Hydrate or Diedrate keeps its own aquifers. Regional: the real rock regions and surface materials, from a 30″ rock map (about 0.9 km) of real geological maps; the first such world on a machine downloads it (45 MB). See [Rocks, soil and ores](Rocks-soil-and-ores). Ground columns are not on the screen: they are experimental, for development (`ExperimentalGroundColumns` in [`earth.json`](#rocks-ores-plants-and-animals)). |
+| **Terrain · Ores** | **Vanilla ore deposits, plus Earth's gems and ores** (the only value) | The game's own ore deposits, at their depth below the real ground, plus Earth's gems (beryl, corundum, garnet, spinel, topaz, tourmaline) and ores the game doesn't place, by the game's own deposit rules, in whatever rock Rocks and ground gives. Earth's ore maps are not on the screen: they are experimental, for development (`ExperimentalOreMaps` in `earth.json`). |
+| **Terrain · Soil** | Climate only, Earth soil, vanilla tiers, **Earth soil, realistic tiers** | The topsoil; the rocks underneath don't change. Realistic tiers: the real soil map in five tiers, from barren on the poorest soils (thin soil on rock, sands, peat, salt and gypsum soils, tropical laterites) to black earth on the steppes' chernozems. Vanilla tiers: the same map in the game's barren, low, medium and high fertility soils. With either Earth soil, deserts are bare except where a river floods them, and the first such world on a machine downloads the soil map (21 MB). Climate only: the game's own soil from rain and warmth, with land that isn't truly arid kept at low fertility or better. See [Rocks, soil and ores](Rocks-soil-and-ores#soil). |
 | **Terrain · River rapids** | **At the drops of steep rivers**, Off | Where white water runs: at the drops of rivers whose real fall is strong for their size; a gentle current elsewhere. Off: no white water; waterfalls stay. |
+| **Terrain · River width** | 50-1000 % in steps of 25; each Earth size its own (1:10 100 %, 1:25 200 %, 1:50 300 %, **1:100 500 %**, 1:200 700 %) | How wide rivers are drawn, as a share of their width at 1:10: rivers at least as wide as boats need there (a 100 m³/s river 12 blocks), the real width where wider. A coarser scale needs more (at 1:100 500 %: a 100 m³/s river 6 blocks, the Daugava at Riga 11). Never narrower than the real river or one block. Set it again after changing the Earth size. |
+| **Terrain · Smallest stream** | 1-100 m³/s in steps of 1; each Earth size its own (1:10 and 1:25 1, 1:50 40, **1:100 100**, 1:200 100) | The smallest stream drawn, by its flow. At 1:25 and finer: 1 draws every stream down to the smallest brooks; a higher value leaves out the smaller headwaters (every stream left still reaches its river), and from 20 only the rivers' own streams remain. At 1:50 and coarser: rivers from 100 m³/s by River width, one-block streams from this flow up, nothing below (nor its water); values under 20 act as 20. 1:100 and 1:200 draw rivers only. |
 | **Terrain · Mountain springs and streams** | **Cave springs only**, Real stream heads, Vanilla | Vanilla's springs in cliff faces and mountain-side streams come out at random spots on real terrain. Cave springs only: springs in cave walls only. Real stream heads: also a spring where each real all-year stream starts, and small springs in wet climates. |
 | **Terrain · Surface ponds** | **Off**, Wetlands only, Vanilla | Vanilla digs small round ponds into hollows everywhere. Wetlands only: only in mapped bogs, marshes and swamps. Earth's own lakes and rivers aren't affected. |
 
@@ -118,6 +119,7 @@ values go in quotes, also numbers: `"earthRainFrequency": "2"`; a bare number is
 | `earthRainFrequency` | `"0"` to `"3"`; empty by default | Multiplies how often it rains (Earth weather only): `"1"` is the real climate, `"0"` no rain. Empty: `RainFrequency` from `earth.json` (1). |
 | `earthStormFrequency` | `"0"` to `"5"`; empty by default | Multiplies how often storms form: `"1"` is the real climate, `"0"` no storms. Empty: `StormFrequency` from `earth.json` (1). |
 | `earthElevation` | `auto` (default), `glo90`, `glo90coarse`, `builtin` | Where dry land's heights come from. `auto` and `glo90`: Copernicus GLO-90; `glo90coarse`: the coarser GLO-90 grid that comes with Earth's data download, no per-square downloads; `builtin`: the older built-in heights. |
+| `earthSummitCorrection` | `"3000"` (default), `"off"`, `"1000"` to `"8000"` in steps of 1000 | Summit height correction, no longer on the Earth tab: restores the full height of listed peaks at or above this real elevation, which the height data tends to cut short. A new world without the key takes 3000. |
 | `earthSuezCanal`, `earthPanamaCanal` | `true` / `false` (default false) | The two canals on their own, from before 2.0.1. Read only when **Suez and Panama canals** is off. |
 
 `/worldconfig <key> <value>` (alias `/wc`, admins) also changes these and the Earth tab's options in a running world,
@@ -131,8 +133,8 @@ but Earth only reads them when a world is made, so a change does nothing by itse
 
 On a dedicated server there is no world creation screen. To choose Earth's options there, set their keys in the world
 configuration (`serverconfig.json`, `WorldConfig` → `WorldConfiguration`) before the world's first start, with the play
-style's code as above. Values are strings in quotes, except `true`/`false` and the world height. A key that is left out
-gets its default.
+style's code as above. Values are strings in quotes, except `true`/`false` and the sliders' numbers (world height, river
+width, smallest stream). A key that is left out gets its default.
 
 | Key | Values (default first) | Option |
 | --- | --- | --- |
@@ -142,12 +144,13 @@ gets its default.
 | `earthVerticalBudget` | `"110"`, `"128"`, `"160"` | Map · Sea level |
 | `earthCanals` | `false`, `true` | Map · Suez and Panama canals |
 | `earthGlo90Download` | `"release"`, `"first"`, `"needed"`, `"copernicus"` | Terrain · GLO-90 land heights (download all; before the world starts; as the world reaches them; Copernicus originals) |
-| `earthSummitCorrection` | `"3000"`, `"off"`, `"1000"` to `"8000"` | Terrain · Summit height correction |
 | `earthRockFloor` | `"auto"`, `"off"`, `"96"`, `"128"`, `"160"`, `"192"`, `"256"` | Terrain · Rock floor |
-| `earthRocks` | `"vanilla"`, `"groundcolumns"`, `"regional"` | Terrain · Rocks and ground |
-| `earthGroundDepth` | `"log4000"`, `"terrain"`, `"log2000"`, `"linear2000"` | Terrain · Ground depth |
-| `earthOreDeposits` | `"vanilla"`, `"maps"` | Terrain · Ores |
+| `earthRocks` | `"vanilla"`, `"regional"` (an older configuration's `"groundcolumns"` gives `"regional"`) | Terrain · Rocks and ground |
+| `earthOreDeposits` | `"vanilla"` (the only value; the key isn't read, an older configuration's `"maps"` included) | Terrain · Ores |
+| `earthSoil` | `"realistic"`, `"vanilla"`, `"climate"` (a missing key or another value gives `"realistic"`) | Terrain · Soil |
 | `earthRiverRapids` | `"steep"`, `"off"` | Terrain · River rapids |
+| `earthRiverWidth` | 50 to 1000 (%), steps of 25; the play styles set 100 (1:10), 200 (1:25), 300 (1:50), 500 (1:100), 700 (1:200) | Terrain · River width |
+| `earthSmallestStream` | 1 to 100 (m³/s), steps of 1; the play styles set 1 (1:10, 1:25), 40 (1:50), 100 (1:100, 1:200). A configuration copied from an earlier 1:10 or 1:25 world may hold 20, which leaves out the whole streams layer (every stream under 20 m³/s) | Terrain · Smallest stream |
 | `earthMountainSprings` | `"caves"`, `"streams"`, `"vanilla"` | Terrain · Mountain springs and streams |
 | `earthSurfacePonds` | `"off"`, `"wetlands"`, `"vanilla"` | Terrain · Surface ponds |
 | `earthNature` | `"1318"`, `"vanilla"` | Nature · Plants and animals |
@@ -167,18 +170,19 @@ and `StorySearchRadius` are brought to the nearest limit instead).
 
 Many settings only affect **new worlds**: they are saved into a world when it's made.
 
-`RegionalGeology`, `GroundColumnsPrototype`, `RegionalOres`, `RegionalFauna`, `IncludeExtinctAnimals` and `Weather`
-**don't decide for new worlds**: the world's own options do (Rocks and ground, Ores, Plants and animals, Include
-extinct animals, Weather · Source), and the game fills in their defaults when a server's world configuration leaves
-them out. To choose them on a dedicated server, set the option's key (see [The keys](#the-keys)). `RegionalGeology`,
-`RegionalOres` and `RegionalFauna` are what the one-shot upgrades below apply to an existing world.
+`RegionalGeology`, `RegionalOres`, `RegionalFauna`, `IncludeExtinctAnimals` and `Weather` **don't decide for new
+worlds**: the world's own options do (Rocks and ground, Ores, Plants and animals, Include extinct animals, Weather ·
+Source), and the game fills in their defaults when a server's world configuration leaves them out. To choose them on a
+dedicated server, set the option's key (see [The keys](#the-keys)). `RegionalGeology`, `RegionalOres` and
+`RegionalFauna` are what the one-shot upgrades below apply to an existing world. `GroundColumnsPrototype`, from earlier
+Earth versions, is no longer read.
 
 ### Data and downloads (every start)
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `DataRepo` | Earth's `earth-data` release on GitHub | Where Earth's map data (about 289 MB) comes from the first time. A mirror or a local folder works; empty: never download. |
-| `GroundRepo` | Earth's `earth-ground` release | Where the ground data for Ground columns worlds (about 172 MB) comes from. Empty: never download. |
+| `DataRepo` | Earth's `earth-data` release on GitHub | Where Earth's map data (about 296 MB) comes from the first time. A mirror or a local folder works; empty: never download. |
+| `GroundRepo` | Earth's `earth-ground` release | Where the soil map (21 MB, for worlds with Earth soil), the rock map (45 MB, for worlds with regional rock) and the ground sets of experimental ground columns (about 172 MB) come from. Empty: never download. |
 | `ElevationRepo` | Earth's `earth-glo90` release | The first source of the GLO-90 land heights (already converted). Empty: none. |
 | `ElevationSource` | Copernicus's own server | The originals, used for squares the release lacks and for "Copernicus originals". Empty: none. |
 | `ElevationDownloads` | 3 | Height squares downloaded at the same time (1 to 8). |
@@ -211,6 +215,7 @@ them out. To choose them on a dedicated server, set the option's key (see [The k
 | `RiverWidthScale` | 1.5 | Multiplies river widths (0 to 20). |
 | `Streams` | auto | Small streams: `ends` (rivers narrow to a stream upstream), `all`, `none`, or `auto` (`all` at 1:25 and finer, `ends` coarser). |
 | `StreamMinDischarge` | 20 | The smallest stream in m³/s (0 to 1,000,000). |
+| `StreamsLayer` | true | The streams layer (every stream from 1 m³/s, `streams-glo90-1.bin`, 65 MB, fetched with the land heights) in new worlds at 1:25 and finer. false: new worlds there go without it. Worlds keep what they were made with. |
 | `RiverStraighten` | 0.5 | Cuts off tight loops where a widened river would touch itself (0 to 1). |
 | `RiverSmoothWidths` | 2 | Straightens wiggles smaller than this many river widths (0: the real course; up to 50). |
 | `RiverRelief` | 1.0 | How much of the land's relief a river's surface follows; lower gives deeper valleys (0 to 10). |
@@ -220,9 +225,10 @@ them out. To choose them on a dedicated server, set the option's key (see [The k
 | Setting | Default | What it does |
 | --- | --- | --- |
 | `RegionalGeology` | true | Regional rocks. No effect on new worlds (Rocks and ground decides); used by `UpgradeExistingWorldGeologyRules`. |
-| `GroundColumnsPrototype` | false | No effect on new worlds (Rocks and ground decides). |
+| `ExperimentalGroundColumns` | false | **Experimental, for development.** true: new worlds whose rock is regional (the Earth tab's Regional rock regions only) get ground columns: the ground built from real data (soil, the sediments below it in metres, sea-floor sediment; in the Baltic the real bedrock layers), with the 30″ ground sets (about 172 MB) downloaded once, and the world configuration's `earthGroundDepth` (`log4000`, the default, `log2000`, `terrain` or `linear2000`) for how real depth becomes blocks. The server log says so for each new world. Worlds made with ground columns keep them either way. |
+| `ExperimentalOreMaps` | false | **Experimental, for development.** true: every new world gets Earth's ore maps (ore districts from real geology and mining records) instead of the game's deposits. The server log says so for each new world. Worlds made with the ore maps keep them either way. |
 | `GeologyTransitionBlocks` | 96 | Half-width of the blend between rock regions, 0 to 512; 0 gives sharp contacts (new worlds). |
-| `RegionalOres` | true | Earth's ore maps. No effect on new worlds (Ores decides); used by `UpgradeExistingWorldOreRules`. |
+| `RegionalOres` | true | No effect on new worlds. What `UpgradeExistingWorldOreRules` does with an existing world's ore maps: keeps them (true) or turns them off (false); turning them on in a world without them also needs `ExperimentalOreMaps`. |
 | `Ores` | (a group of settings) | Tuning for Earth's ore maps: how often, how big and how rich deposits are, coal basins, iron formations, rich districts, bog iron. For ore-map worlds; new worlds. |
 | `RegionalTrees` | true | Trees and shrubs only in their native ranges (new worlds; off with Plants and animals: Vanilla). |
 | `RegionalPlants` | true | Ground plants from plant packs (Floral Zones) only in their native ranges, in worlds made with Plants and animals: As around 1318; every start, new land only. |
@@ -260,7 +266,7 @@ they are switched off when it is saved: set one, then start the existing world, 
 | `UpgradeExistingWorldIslands` | `Islands` and `MinIslandBlocks`. |
 | `UpgradeExistingWorldCoasts` | `Coasts`. |
 | `UpgradeExistingWorldGeologyRules` | `RegionalGeology` and `GeologyTransitionBlocks`: turns regional rocks on (or off) for new land. It doesn't add ground columns. |
-| `UpgradeExistingWorldOreRules` | `RegionalOres` and the `Ores` tuning: turns Earth's ore maps on (or off) for new land. |
+| `UpgradeExistingWorldOreRules` | `RegionalOres` and the `Ores` tuning: keeps Earth's ore maps (or turns them off) for new land; turning them on in a world without them also needs `ExperimentalOreMaps`. |
 | `UpgradeExistingWorldTreeRules` | `RegionalTrees`. |
 | `UpgradeExistingWorldFaunaRules` | `RegionalFauna`, for animals that spawn from then on. |
 | `UpgradeExistingWorldMountainTerrain` | The current summit heights and alpine surfaces. |

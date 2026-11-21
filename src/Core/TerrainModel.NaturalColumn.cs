@@ -46,12 +46,20 @@ namespace EarthMap.Core
                             return jc;
                         }
                     }
-                    if (lk.Inside && !undo) return OutlineLakeColumn(x, z, lat, lon, lk, gridDepth);
+                    if (lk.Inside && !undo)
+                    {
+                        var oc = OutlineLakeColumn(x, z, lat, lon, lk, gridDepth);
+                        // works rules 6 (decision 0107): a lower lake of today right beside a lake of 1318 gives way to its shore
+                        if (Rules.ShoresOf1318 && wk.BesideLake1318(out var by1318)) ShoreOf1318(ref oc, by1318);
+                        return oc;
+                    }
                 }
             }
             if (undo) UndoWater(ref s, wk);
             var c = GridColumn(x, z, lat, lon, s, wk);
             if (lk.Covered && !undo) OutlineShore(ref c, lk);
+            // works rules 6 (decision 0107): beside a lake of 1318 the land is held at its water top as beside the mask's lakes
+            if (Rules.ShoresOf1318 && !undo && wk.BesideLake1318(out var lake1318)) ShoreOf1318(ref c, lake1318);
             // 0053 item 18: dry land in or beside the water mask's rivers, for ApplyRiver
             if (RiverOutlines != null && !undo && !canal && c.Water == WaterNone && !c.Gutter && c.IceBottom > c.Top && RiverOutlinesDecide(lat, lon))
             {
@@ -62,6 +70,29 @@ namespace EarthMap.Core
                     c.RiverOutlineDist = (float)RiverOutlines.Reach;
             }
             return c;
+        }
+
+        /// <summary>
+        /// Works rules 6 (decision 0107): a column beside a lake of 1318 (outside it, the nearest works area a LAKE area): dry
+        /// land held at its water top as beside the water mask's lakes (OutlineShore); and water of a lower lake (today's
+        /// fishponds and reservoirs in the drained bed, the grid's lakes) within LakeOutlineLayer.HoldReach of it gives way to a
+        /// strip of shore at the higher of the two tops, as a lower lake beside a higher one does, so no water stands against
+        /// another at a different level.
+        /// </summary>
+        void ShoreOf1318(ref Column c, in LakeOutlineLayer.Hit lake)
+        {
+            if (c.Water == WaterNone || c.Gutter) { OutlineShore(ref c, lake); return; }
+            int top = WaterTopY(lake.Level);
+            if (c.River || c.Water == WaterSea || lake.Dist > LakeOutlineLayer.HoldReach || top == c.WaterTop) return;
+            // (a higher lake of today, Zumpango's regulated lagoon, keeps a rim at its own top between them)
+            top = Math.Max(top, c.WaterTop);
+            c.Water = WaterNone;
+            c.WaterTop = -1;
+            c.Top = c.LakeRim = c.LakeRingTop = c.LakeHoldTop = top;
+            c.Beach = true;
+            c.OutlineLake = false;
+            c.IceBottom = int.MaxValue;
+            c.NearLakeTop = top;
         }
 
         /// <summary>
@@ -457,19 +488,33 @@ namespace EarthMap.Core
         {
             int lakeTop = WaterTopY(lk.Level);
             double distM = lk.Dist * MetresPerBlock;
-            double depth = Math.Min(OutlineLakeSlope * distM, OutlineLakeDeep);
-            if (gridDepth > depth)
+            double depth;
+            // lake rules 1 (decision 0100, EA-0184): the lake's real depth (HydroLAKES), steep from the shore, the 2' grid's
+            // bathymetry where ETOPO holds the lake's bed (the whole of it: gridDepth is half the grid's)
+            bool real = Rules.RealLakeDepths && LakeDepths != null && lk.Owner == LakeOutlines;
+            if (real) depth = LakeDepthAt(x, z, in lk, 2 * gridDepth);
+            else
             {
-                // steeper from the shore, without limit at Reach, so the grid's deep basins (Baikal, Tanganyika) keep their depth
-                double room = Math.Max(1e-3, 1 - lk.Dist / LakeOutlines.Reach);
-                depth = Math.Max(depth, Math.Min(gridDepth, OutlineGridSlope * distM / room));
+                depth = Math.Min(OutlineLakeSlope * distM, OutlineLakeDeep);
+                if (gridDepth > depth)
+                {
+                    // steeper from the shore, without limit at Reach, so the grid's deep basins (Baikal, Tanganyika) keep their depth
+                    double room = Math.Max(1e-3, 1 - lk.Dist / LakeOutlines.Reach);
+                    depth = Math.Max(depth, Math.Min(gridDepth, OutlineGridSlope * distM / room));
+                }
             }
-            depth *= 1 + 0.25 * SeamNoise(n2, x, z, 40, 2);
+            // (lake rules 1: at most 3 m of it, so a deep lake's floor lies flat, as lake floors do; before, a quarter of the depth)
+            double wobble = SeamNoise(n2, x, z, 40, 2);
+            depth = real ? depth + Math.Min(0.25 * depth, 3) * wobble : depth * (1 + 0.25 * wobble);
             double bed = lk.Level - depth;
-            int minDepth = 1 + (int)Math.Round(2 * Geo.SmoothStep((lk.Dist - 0.5) / 4));
+            // (lake rules 1: a shallow lake keeps its one block; before, every lake was 3 blocks deep from 4.5 blocks out)
+            int minDepth = real ? 1 : 1 + (int)Math.Round(2 * Geo.SmoothStep((lk.Dist - 0.5) / 4));
+            int top = Math.Min((int)Math.Floor(Vertical.Y(bed)), lakeTop - minDepth);
+            // (lake rules 1: never below the deepest sea floor's block, well above the world's rock floor)
+            if (real) top = Math.Min(Math.Max(top, LakeFloorY), lakeTop - minDepth);
             return new Column
             {
-                Top = Math.Min((int)Math.Floor(Vertical.Y(bed)), lakeTop - minDepth),
+                Top = top,
                 WaterTop = lakeTop,
                 Water = (lk.Flags & LakeOutlineData.FlagSalt) != 0 ? WaterSaltLake : WaterLake,
                 IceBottom = int.MaxValue, Elev = bed, Lat = lat, Lon = lon, NearLakeTop = lakeTop, OutlineLake = true,

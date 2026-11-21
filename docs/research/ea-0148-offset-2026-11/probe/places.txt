@@ -1,0 +1,21 @@
+# name; lat; lon; half height (deg); half width (deg). Windows are sampled on the 1:10 world's blocks (11,132 a degree).
+nasijarvi-62n; 62.005; 24.40; 0.02; 0.025
+nasijarvi-south; 61.505; 23.76; 0.02; 0.025
+kuurna; 62.70; 30.00; 0.02; 0.025
+pielinen; 62.95; 30.10; 0.02; 0.025
+tamula-27e; 57.835; 27.00; 0.02; 0.025
+mikkeli-27e; 61.74; 27.00; 0.02; 0.025
+daugava-riga; 56.95; 24.10; 0.02; 0.025
+brienz; 46.73; 7.98; 0.02; 0.025
+titicaca-puno; -15.83; -69.98; 0.02; 0.025
+wakatipu; -45.04; 168.65; 0.02; 0.025
+tahoe-south; 38.95; -120.00; 0.02; 0.025
+mississippi-natchez; 31.56; -91.41; 0.02; 0.025
+amazon-manaus; -3.14; -59.93; 0.02; 0.025
+victoria-kampala; 0.28; 32.62; 0.02; 0.025
+rhine-cologne; 50.94; 6.97; 0.02; 0.025
+danube-budapest; 47.50; 19.05; 0.02; 0.025
+lena-kyusyur; 70.68; 127.37; 0.02; 0.025
+balaton-siofok; 46.91; 18.05; 0.02; 0.025
+bergen-coast; 60.39; 5.30; 0.02; 0.025
+kiel-canal; 54.21; 9.55; 0.02; 0.025

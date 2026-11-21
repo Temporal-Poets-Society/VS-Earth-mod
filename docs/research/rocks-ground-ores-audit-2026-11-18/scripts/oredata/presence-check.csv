@@ -1,0 +1,369 @@
+check,layer,lat,lon,radiusKm,status,nearest,distKm,mt,n_within
+Collahuasi,Cu,-20.98,-68.64,30,present,Ujina,1.4,1298.0,3
+Los Pelambres,Cu,-31.72,-70.49,30,present,Los Pelambres,1.5,7458.0,1
+Cerro Verde,Cu,-16.53,-71.59,30,present,Cerro Verde,0.6,2528.0,2
+Toquepala,Cu,-17.25,-70.61,30,present,Toquepala,0.7,2320.0,3
+Cuajone,Cu,-17.04,-70.7,30,present,Cuajone,1.0,1630.0,3
+Antamina,Cu,-9.54,-77.05,30,MISSING,,,,0
+Las Bambas,Cu,-14.07,-72.3,30,present,Las Bambas,5.9,1710.0,2
+Morenci,Cu,33.08,-109.36,30,present,Morenci-Metcalf,2.2,6470.0,3
+Resolution,Cu,33.3,-111.1,30,present,Resolution,4.5,1787.0,5
+Pebble,Cu,59.9,-155.3,30,present,Pebble,0.3,7510.0,1
+Kamoa-Kakula,Cu,-10.8,25.25,40,present,Kamoa-Kakula (Copperbelt),0.0,2597,9
+Cobre Panama,Cu,8.83,-80.65,30,present,Cobre Panama,1.5,6405.0,1
+Cananea,Cu,30.98,-110.3,30,present,Cananea,3.2,7140.0,3
+Aktogay,Cu,46.95,79.95,30,present,Aktogai-Aidarly,2.7,2636.0,1
+Almalyk Kalmakyr,Cu,40.85,69.62,30,present,Almalyk Group,3.7,6080.0,3
+Dexing,Cu,28.98,117.72,30,present,Dexing,3.9,1825.0,2
+Yulong,Cu,31.4,97.73,30,present,Yulong,0.9,850.0,3
+Reko Diq,Cu,29.1,62.05,30,present,Reko Diq H13,1.0,212.0,5
+Sar Cheshmeh,Cu,29.95,55.87,30,present,Sar Cheshmeh,0.2,1538.0,5
+Bor-Majdanpek,Cu,44.07,22.1,40,present,Bor,1.4,800.0,8
+Batu Hijau,Cu,-8.97,116.87,30,present,Batu Hijau,1.1,1640.0,1
+Mount Isa Cu,Cu,-20.73,139.48,15,MISSING,,,,0
+Butte,Cu,46.01,-112.53,30,present,Continental/Butte,1.6,5220.0,1
+Panguna,Cu,-6.32,155.5,30,present,Panguna,0.8,1420.0,1
+Kennecott (Alaska),Cu,61.5,-142.88,30,MISSING,,,,0
+Keweenaw native copper,Cu,47.2,-88.5,60,present,Osceola amygdaloid lode,1.6,30.0,8
+Dzhezkazgan,Cu,47.8,67.7,40,present,Dzhezkazgan,20.9,2000.0,6
+Troodos/Cyprus,Cu,35.0,33.0,60,present,Kokkinoyia,6.8,0.91,18
+Aitik,Cu,67.07,20.95,30,present,Aitik,0.3,1340.0,1
+Palabora,Cu,-23.98,31.13,30,MISSING,,,,0
+Kounrad,Cu,46.98,75.0,30,present,Kounrad,1.3,637.0,2
+Erdenet,Cu,49.03,104.07,30,present,Erdenet,4.5,2370.0,1
+Tampakan,Cu,6.48,125.04,30,present,Tampakan Group,1.8,2940.0,1
+Salobo/Sossego (Carajas Cu),Cu,-5.8,-50.55,60,present,Salobo,2.5,1500.0,3
+Spence/Sierra Gorda,Cu,-22.8,-69.3,40,present,Spence,4.0,497.0,4
+Radomiro Tomic,Cu,-22.18,-68.9,12,present,Chuquicamata,9.8,21277.0,1
+Ok Tedi,Cu,-5.2,141.13,30,present,Ok Tedi,0.4,854.0,3
+Frieda River,Cu,-4.7,141.75,40,present,Frieda River,3.7,1900.0,1
+Bystrinskoe,Cu,51.48,118.57,30,present,Bystrinskoe,0.0,349.0,1
+Peschanka/Baimskaya,Cu,66.75,164.6,60,present,Peschanka,10.9,1517.0,1
+Mufulira etc (Zambia),Cu,-12.55,28.24,30,present,Mufulira (Copperbelt),1.0,332.59,12
+Kipushi,Zn,-11.77,27.24,30,MISSING,,,,0
+Mansfeld,Cu,51.55,11.5,40,present,Mansfeld (Kupferschiefer),0.3,80.76,4
+Falun,Cu,60.6,15.62,20,present,Falun (Stora Kopparberg),0.4,28.0,1
+Outokumpu,Cu,62.72,29.02,30,present,Outokumpu,1.2,28.0,2
+Kidd Creek,Zn,48.69,-81.37,30,present,Kidd Creek,0.3,138.0,5
+Brunswick No. 12,Zn,47.47,-65.81,30,present,Brunswick No. 6,4.5,12.5,15
+Flin Flon,Cu,54.77,-101.88,30,present,Flin Flon,0.5,62.4,18
+Neves-Corvo,Cu,37.57,-7.97,30,present,Neves-Corvo,0.4,219.0,1
+Tharsis,Cu,37.6,-7.12,30,present,San Guillermo-Sierra,0.9,127.5,29
+Mount Lyell,Cu,-42.07,145.58,30,present,Mount Lyell,0.7,312.0,5
+Gai/Urals VMS,Cu,51.48,58.43,40,present,Gaiskoe,4.2,469.0,6
+Lihir,Au,-3.12,152.64,30,present,Lihir (Ladolam),0.0,800.0,1
+Porgera,Au,-5.47,143.1,30,present,Porgera,2.2,210.0,1
+Pueblo Viejo,Au,18.93,-70.17,30,present,Pueblo Viejo,1.5,600.0,2
+Yanacocha,Au,-6.98,-78.52,30,present,Yanacocha,0.0,1600.0,4
+Natalka,Au,61.95,148.95,40,present,Natalka,44.8,600.0,1
+Olimpiada,Au,59.9,92.9,40,present,Olimpiada,33.5,400.0,1
+Kibali,Au,2.95,29.6,40,present,Kibali (KCD),20.1,230.0,1
+Geita,Au,-2.87,32.2,30,present,Geita,2.2,200.0,1
+Boddington,Au,-32.75,116.37,30,present,Boddington,0.0,1570.0,1
+Cadia,Au,-33.45,148.98,30,present,Cadia Quarry,1.1,50.0,7
+Telfer,Au,-21.71,122.21,30,present,Telfer,0.0,800.0,1
+Homestake,Au,44.35,-103.75,30,present,Homestake,0.3,160.0,1
+Hemlo,Au,48.7,-85.9,30,present,Hemlo (Williams-David Bell-Golden Giant),0.7,100.0,1
+Porcupine (Timmins),Au,48.47,-81.33,40,present,Porcupine camp (Hollinger-McIntyre-Dome),2.2,270.0,4
+Kirkland Lake,Au,48.15,-80.03,30,present,Kirkland Lake (Macassa and the Main Break),0.0,52.0,1
+Red Lake,Au,51.05,-93.8,30,present,Red Lake (Campbell-Red Lake),3.5,60.0,2
+Cortez,Au,40.18,-116.6,40,present,Cortez (Pipeline-Cortez Hills-Goldrush),10.4,450.0,1
+Mother Lode,Au,38.0,-120.5,80,present,Mother Lode belt,9.8,45.0,11
+Klondike,Au,63.9,-139.1,40,present,Klondike placers (Bonanza-Eldorado-Hunker-Dominion),3.5,1240.0,1
+Ballarat,Au,-37.56,143.85,30,present,Ballarat reefs,0.9,10.0,2
+Bendigo,Au,-36.76,144.28,30,present,Bendigo reefs,0.0,45.0,3
+Tarkwa,Au,5.3,-1.99,30,present,Tarkwa banket reefs,0.0,600.0,2
+Sadiola/Loulo (Mali),Au,13.9,-11.4,60,present,Sadiola,32.4,150.0,2
+Sukari,Au,24.95,34.7,30,present,Sukari,1.0,410.0,1
+Jiaodong (Linglong-Jiaojia),Au,37.3,120.4,60,present,Linglong (Jiaodong),12.0,160.0,3
+Morro Velho,Au,-19.98,-43.85,30,present,Morro Velho (Nova Lima),3.1,55.0,2
+Serra Pelada,Au,-5.95,-49.65,30,present,Serra Pelada,0.0,4.0,1
+Barberton,Au,-25.78,31.05,30,present,Barberton (Fairview-Sheba-New Consort),5.8,40.0,1
+Berezovsk,Au,56.9,60.8,30,present,Berezovsk,0.9,30.0,1
+Fort Knox,Au,65.0,-147.36,30,present,Fort Knox,0.0,500.0,2
+Juneau (A-J/Treadwell),Au,58.3,-134.4,30,present,Juneau (Alaska-Juneau and Treadwell),0.0,110.0,1
+Nome placers,Au,64.5,-165.4,40,present,Nome beach placers,2.4,300.0,1
+Waihi,Au,-37.39,175.84,30,present,Waihi (Martha),0.0,30.0,1
+Otago placers,Au,-45.5,169.5,80,present,Otago goldfields placers,24.6,260.0,2
+Hishikari,Au,31.98,130.68,30,present,Hishikari,2.1,14.0,1
+Kumtor,Au,41.865,78.19,30,present,Kumtor,0.0,180.0,1
+Zarmitan/Kochbulak,Au,39.8,66.9,60,MISSING,,,,0
+Kuranakh/Aldan,Au,58.6,125.4,60,present,Aldan placers,0.0,600.0,2
+Vatukoula,Au,-17.5,177.85,30,MISSING,,,,0
+Ashanti Ahafo,Au,7.0,-2.33,30,present,Ahafo,2.2,300.0,1
+Kalimantan Kelian,Au,0.15,115.35,30,present,Kelian,35.6,100.0,1
+Wits (any),Au,-26.2,27.9,30,present,Witwatersrand: Central Rand goldfield (Johannesburg),0.0,1388.9,7
+Siberian Kolyma placers,Au,62.5,150.0,150,present,Kolyma placers (Susuman-Yagodnoye),96.1,2500.0,3
+Minas Gerais placers (Ouro Preto),Au,-20.38,-43.5,40,present,Minas Gerais placers (Ouro Preto-Mariana-Sabara),13.3,800.0,2
+Akan (Gold Coast),Au,6.0,-1.8,30,present,Akan placers (Pra-Ofin-Birim),0.0,500.0,2
+Bambuk/Bure (W. Africa medieval),Au,12.5,-11.0,120,present,Fekola,42.2,110.0,5
+Tri-State,Zn,37.0,-94.6,40,present,Tri-State district (Picher-Joplin),13.3,500.0,1
+Viburnum Trend / Old Lead Belt,Pb,37.6,-91.1,60,present,Magmont,3.2,23.4,6
+Coeur d'Alene,Ag,47.5,-115.9,40,present,Galena-Coeur (Silver Belt east),4.5,10.0,4
+Leadville,Pb,39.25,-106.3,30,present,Leadville,3.0,25.0,2
+Santa Eulalia,Pb,28.6,-105.9,30,present,Santa Eulalia,2.0,45.0,1
+Naica,Pb,27.85,-105.5,30,present,Naica,0.4,30.0,1
+Penasquito,Zn,24.65,-101.7,30,MISSING,,,,0
+San Cristobal (Bolivia),Zn,-21.1,-67.2,30,MISSING,,,,0
+Zinkgruvan,Zn,58.82,15.1,30,MISSING,,,,0
+Garpenberg,Zn,60.32,16.2,30,MISSING,,,,0
+McArthur River HYC,Zn,-16.43,136.1,30,present,HYC,0.0,227.0,1
+Century,Zn,-18.72,138.6,30,present,Century,4.5,94.6,1
+Rosebery,Zn,-41.77,145.53,30,present,Rosebery-Read,0.9,28.29,6
+Zawar,Zn,24.35,73.7,30,present,Zawar,1.1,160.0,5
+Jinding,Zn,26.42,99.42,30,present,Jinding,1.6,220.0,1
+Fankou,Zn,25.05,113.65,30,present,Fankou,5.9,51.68,1
+Huize,Zn,26.6,103.3,40,MISSING,,,,0
+Ozernoye,Zn,52.4,111.6,40,present,Ozernoe,36.5,180.0,1
+Kholodninskoye,Zn,56.0,111.5,60,present,Kholodninskoye,106.1,340.0,1
+Ridder-Sokolny,Zn,50.35,83.5,30,present,Ridder-Sokolnoe,3.0,125.0,8
+Bleiberg,Pb,46.63,13.68,30,present,Bleiberg,3.1,43.0,2
+Reocin,Zn,43.35,-4.1,30,present,Reocin,25.7,62.0,1
+Mezica,Pb,46.52,14.85,30,present,Mezica,30.3,16.2,1
+Trepca,Pb,42.95,20.9,40,present,Trepča (Stari Trg),1.9,45.0,1
+Laisvall,Pb,66.07,17.15,30,MISSING,,,,0
+Pine Point,Zn,60.8,-114.5,40,MISSING,,,,0
+Polaris,Zn,75.38,-96.95,30,present,Polaris,0.0,22.0,2
+Faro/Anvil,Zn,62.35,-133.4,30,present,Faro,1.6,57.6,5
+Howards Pass,Zn,62.47,-129.2,40,present,Howards Pass,1.5,388.5,1
+Gamsberg,Zn,-29.2,18.95,30,present,Gamsberg,5.2,150.0,4
+Skorpion,Zn,-27.83,16.6,30,present,Rosh Pinah,20.5,25.5,1
+Tsumeb,Cu,-19.25,17.71,30,present,Tsumeb,1.1,30.0,1
+Kabwe,Zn,-14.44,28.45,30,MISSING,,,,0
+Touissit-Bou Beker,Pb,34.48,-1.77,30,present,Touissit-Bou Beker,2.0,29.0,1
+Laurion,Pb,37.72,24.05,30,present,Laurion (Lavrion),2.6,30.0,1
+Iglesiente (Sardinia),Zn,39.3,8.53,40,present,"Iglesias (Monteponi, San Giovanni, Campo Pisano)",1.3,50.0,2
+Silvermines/Lisheen/Galmoy,Zn,52.75,-7.9,60,present,Lisheen,10.1,22.0,6
+North Pennines orefield,Pb,54.75,-2.2,40,present,North Pennine orefield (Alston Moor and Weardale),6.4,40.0,1
+Derbyshire Peak orefield,Pb,53.2,-1.7,40,present,Derbyshire Peak District orefield,3.6,25.0,1
+Mendip,Pb,51.27,-2.65,40,present,Mendip Hills (Charterhouse),3.0,3.0,1
+Banska Stiavnica,Ag,48.45,18.9,30,present,Banská Štiavnica-Hodruša,0.4,30.0,2
+Kremnica,Au,48.7,18.92,30,present,Kremnica,0.5,7.0,4
+Iwami Ginzan,Ag,35.11,132.44,30,present,Iwami Ginzan,0.0,8.0,1
+Guanajuato,Ag,21.02,-101.26,30,present,Guanajuato (Veta Madre),2.1,120.0,1
+Comstock,Ag,39.31,-119.65,30,present,Comstock Lode,0.6,8.0,1
+Taxco,Ag,18.56,-99.6,30,present,Taxco,0.7,20.0,2
+Schwaz,Ag,47.35,11.71,30,present,Schwaz (Falkenstein),2.3,19.0,1
+Sala,Ag,59.92,16.6,30,present,Sala,0.2,2.5,1
+Kongsberg,Ag,59.67,9.62,30,present,Kongsberg,2.0,1.35,1
+Jachymov,U,50.37,12.92,30,present,Jachymov (Joachimsthal),0.0,2.0,2
+Zeravshan/Kansai (Ag-Pb),Pb,40.5,69.6,80,MISSING,,,,0
+Dukat,Ag,62.53,155.38,40,present,Dukat,1.8,47.0,1
+Cannington,Ag,-21.87,140.92,30,present,Cannington,0.0,43.8,2
+Imiter,Ag,31.38,-5.8,30,MISSING,,,,0
+Renison,Sn,-41.8,145.43,30,present,Renison Bell,0.6,40.0,1
+Mount Bischoff,Sn,-41.42,145.53,30,present,Mount Bischoff,0.9,6.0,1
+Greenbushes,Sn,-33.86,116.06,30,MISSING,,,,0
+Dachang,Sn,24.85,107.6,30,present,Dachang (Changpo-Tongkeng),1.8,120.0,1
+Phuket,Sn,7.9,98.35,40,present,Phuket placers (Kathu),3.1,1500.0,1
+Jos Plateau,Sn,9.6,8.9,60,present,Jos Plateau placers,12.3,1500.0,1
+Uis (Namibia),Sn,-21.2,14.87,30,present,Uis (V1/V2 pegmatites),1.9,90.0,1
+Deputatskoye,Sn,69.3,139.9,60,present,Deputatskoe,2.0,20.0,1
+Solnechnoye/Komsomolsk,Sn,50.7,136.6,60,present,Solnechnoe (Komsomolsk district),11.7,30.0,2
+Kavalerovo,Sn,44.3,135.1,60,MISSING,,,,0
+Iultin,Sn,67.85,-178.75,60,MISSING,,,,0
+Dartmoor/Devon,Sn,50.55,-4.0,40,present,Dartmoor tin streams,4.3,25.0,2
+Mawchi,W,18.82,97.17,40,present,Mawchi,0.4,5.0,1
+Shizhuyuan,W,25.75,113.12,30,present,Shizhuyuan,1.6,200.0,1
+Sangdong,W,37.15,128.85,30,present,Sangdong,1.8,75.0,1
+Tyrnyauz,W,43.4,42.92,30,present,Tyrnyauz,3.3,150.0,1
+Climax,Mo,39.37,-106.18,30,present,Climax,0.2,900.0,1
+Henderson,Mo,39.77,-105.85,30,present,Henderson-Urad,1.0,440.0,1
+Questa,Mo,36.7,-105.55,30,present,Questa,2.2,300.0,1
+Jinduicheng,Mo,34.33,109.9,40,present,Jinduicheng,5.0,1400.0,1
+Voisey's Bay,Ni,56.33,-62.1,30,present,Voisey's Bay,0.0,141.0,1
+Thompson,Ni,55.73,-97.86,30,present,Thompson nickel belt,0.0,150.0,1
+Kambalda,Ni,-31.2,121.67,30,present,Kambalda dome,0.0,50.0,1
+Jinchuan,Ni,38.5,102.2,30,present,Jinchuan,0.0,515.0,1
+Pechenga,Ni,69.4,30.8,40,present,Pechenga (Nikel-Zapolyarny),3.9,340.0,1
+Monchegorsk,Ni,67.93,32.9,40,present,Monchegorsk (Nittis-Kumuzhya),0.4,50.0,1
+New Caledonia laterites,Ni,-21.5,165.5,150,present,Kouaoua,26.2,30.0,7
+Sorowako,Ni,-2.53,121.36,40,present,Soroako,1.4,264.0,1
+Stillwater,Pt,45.4,-109.9,40,present,Stillwater J-M Reef,3.9,250.0,1
+Kemi,Cr,65.78,24.55,30,present,Kemi,2.3,150.0,1
+Sukinda,Cr,21.0,85.75,40,present,Sukinda,5.2,200.0,1
+Guleman,Cr,38.6,39.7,40,present,Agos-Ahirderesi,5.6,0.00018,18
+Panzhihua,Ti,26.6,101.7,40,present,Panzhihua,2.8,1300.0,2
+Tellnes,Ti,58.33,6.42,30,present,Tellnes,0.0,550.0,1
+Lac Tio (Allard Lake),Ti,50.55,-63.45,30,present,Lac Tio (Allard Lake),3.5,125.0,1
+Richards Bay sands,Ti,-28.7,32.1,60,present,Richards Bay dunes (Hillendale-Zulti),10.9,2000.0,1
+Kachkanar,V,58.7,59.5,40,present,Kachkanar (Gusevogorsk),2.9,9000.0,1
+Moanda,Mn,-1.55,13.2,30,present,Moanda (Bangombe),2.2,450.0,1
+Labrador Trough (Schefferville),Fe,54.8,-66.8,60,present,Labrador Trough (Sokoman Formation),0.0,20000,3
+Labrador City/Wabush,Fe,52.95,-66.9,40,present,Labrador Trough (Sokoman Formation),0.0,20000,3
+Mont-Wright/Fermont,Fe,52.77,-67.35,40,present,Labrador Trough (Sokoman Formation),0.0,20000,3
+Kostomuksha,Fe,64.6,30.6,30,present,Kostomuksha,1.3,2200.0,1
+Kachkanar Fe,Fe,58.7,59.5,40,MISSING,,,,0
+Magnitogorsk,Fe,53.4,59.05,30,present,Magnitnaya Gora (Magnitogorsk),2.4,500.0,1
+Sishen,Fe,-27.7,23.0,40,present,Sishen,7.9,2000.0,2
+Kediet ej Jill (Zouerate),Fe,22.7,-12.6,40,present,Kedia d'Idjil (F'Derik-Zouerat),10.5,400.0,2
+Gara Djebilet,Fe,26.75,-7.4,40,present,Gara Djebilet,7.0,1700.0,1
+Bailadila,Fe,18.65,81.25,40,present,Bailadila,6.1,2000.0,1
+Bellary-Hospet,Fe,15.1,76.6,60,present,Bellary-Hospet (Sandur),5.4,1000.0,1
+Singhbhum (Noamundi),Fe,22.15,85.5,60,present,Singhbhum-Bonai-Keonjhar iron ore group (horseshoe synclinorium),0.0,12000,1
+Goa,Fe,15.4,74.1,40,present,Goa iron belt,0.0,1000.0,1
+Panzhihua Fe,Fe,26.6,101.7,40,MISSING,,,,0
+Sokolov-Sarbai,Fe,52.95,63.1,40,present,Sokolov-Sarbai and Kachar (Rudny),1.9,3500.0,1
+Lisakovsk,Fe,52.55,62.5,40,present,Lisakovsk,0.0,1700.0,1
+Gol-e-Gohar,Fe,29.1,55.3,40,present,Gol-e-Gohar,3.5,1200.0,1
+Chador Malu,Fe,32.35,55.5,40,present,Chadormalu (Bafq),63.3,400.0,1
+Divrigi,Fe,39.4,38.1,40,present,Divrigi,3.4,150.0,1
+Erzberg,Fe,47.52,14.9,30,present,Erzberg,0.0,350.0,1
+Bilbao (Vizcaya),Fe,43.25,-3.0,40,present,Bilbao (Somorrostro),7.2,250.0,1
+Cleveland ironstone,Fe,54.55,-1.1,40,present,Cleveland ironstone (Main Seam),2.1,600,1
+Salzgitter,Fe,52.1,10.4,30,present,Salzgitter-Peine (Konrad),5.9,2000.0,1
+Grangesberg (Bergslagen),Fe,60.08,14.98,40,present,Grangesberg,0.0,270.0,1
+Sydvaranger,Fe,69.7,30.0,40,present,Sydvaranger (Bjornevatn),1.2,1000.0,1
+Red Mountain (Birmingham AL),Fe,33.5,-86.8,40,present,"Clinton ironstone, Birmingham district (Red Mountain Formation)",0.0,1500,1
+Iron Mountain/Pilot Knob MO,Fe,37.6,-90.65,40,present,Iron Mountain and Pilot Knob,1.8,70.0,2
+Marcona,Fe,-15.2,-75.1,30,present,Marcona,0.0,1800.0,1
+Cerro Bolivar,Fe,7.5,-63.4,40,present,Cerro Bolivar,3.3,800.0,2
+El Romeral / Chilean IOA,Fe,-29.7,-71.25,60,present,El Romeral,4.8,300.0,2
+Iron Knob (Middleback),Fe,-32.73,137.15,40,present,Middleback Ranges (Iron Knob-Iron Duke),25.7,500.0,1
+Savage River,Fe,-41.5,145.2,30,present,Savage River,0.0,400.0,1
+Itakpe,Fe,7.6,6.3,40,MISSING,,,,0
+Chongqing/Hainan Shilu,Fe,19.25,109.05,40,present,Shilu,0.0,300.0,1
+Illinois basin,C_coal,38.5,-88.5,60,present,Illinois basin,0.0,300000,1
+Western Interior,C_coal,38.5,-94.5,80,present,"Western Interior coal region (Iowa, Missouri, Kansas, Oklahoma)",0.0,50000,1
+Gulf Coast lignite,C_coal,31.5,-96.0,100,present,"Gulf Coast lignite (Wilcox, Jackson; Texas to Mississippi)",0.0,100000,1
+Elk Valley (BC),C_coal,49.8,-114.8,60,present,"Rocky Mountain foothills and Elk Valley (Kootenay, Mist Mountain)",8.3,60000,1
+Alberta plains coal,C_coal,53.0,-114.0,100,present,"Alberta plains coal (Horseshoe Canyon, Paskapoo, Scollard)",0.0,600000,2
+Cerrejon,C_coal,11.1,-72.6,40,present,Cerrejon coalfield (La Guajira),0.0,5000,1
+Rio Grande do Sul coal,C_coal,-30.5,-52.5,100,present,"Parana basin coal of Rio Grande do Sul (Candiota, Leao)",0.0,28000,1
+Moatize,C_coal,-16.1,33.7,40,present,Moatize coalfield (Tete),0.0,25000,1
+Hwange,C_coal,-18.37,26.5,40,present,Hwange coalfield,0.0,5000,1
+Tavan Tolgoi,C_coal,43.6,105.5,40,present,Tavan Tolgoi coalfield,0.0,7500,1
+Zonguldak,C_coal,41.45,31.8,40,present,Zonguldak coal basin,0.0,1500,1
+Asturias,C_coal,43.25,-5.7,40,present,Central Asturian coal basin,0.0,2000,1
+Saar,C_coal,49.3,7.0,30,present,Saar coalfield (Saarkohlenwald),0.0,6000,2
+Campine/Limburg,C_coal,51.0,5.5,40,present,Campine (Kempen) coal basin (concealed),0.0,6000,4
+Nord-Pas-de-Calais,C_coal,50.45,2.8,30,present,Nord-Pas-de-Calais coal basin (under the Chalk),0.0,5000,1
+Yorkshire coalfield,C_coal,53.6,-1.3,40,present,Yorkshire and Nottinghamshire coalfield (concealed),0.0,16000,3
+South Wales coalfield,C_coal,51.7,-3.5,30,present,"South Wales coalfield, eastern (bituminous)",0.0,8000,3
+Lusatia lignite,C_coal,51.5,14.3,40,present,Lusatian lignite (Lausitz),0.0,12000,1
+Central German lignite,C_coal,51.2,12.3,40,present,"Central German lignite (Leipzig, Halle, Geiseltal, Zeitz)",0.0,10000,2
+North Bohemian lignite,C_coal,50.5,13.5,40,present,"North Bohemian lignite basins (Most, Sokolov)",0.0,10000,1
+Maritsa East,C_coal,42.15,25.9,40,present,Maritsa East lignite,0.0,2500,1
+Kosovo lignite,C_coal,42.65,21.05,40,present,Kosovo lignite basin,0.0,12000,1
+Ptolemais,C_coal,40.5,21.7,40,present,Ptolemais-Amyntaio lignite,0.0,4000,1
+Afsin-Elbistan,C_coal,38.3,37.0,40,present,Afsin-Elbistan lignite,0.0,4800,1
+Moscow basin,C_coal,54.1,37.4,60,present,"Moscow brown-coal basin (Tula, Kaluga, Ryazan)",0.0,20000,1
+Kansk-Achinsk,C_coal,56.1,93.75,100,present,Kansk-Achinsk lignite basin,0.0,600000,2
+Irkutsk basin,C_coal,53.0,103.0,100,present,Irkutsk coal basin (Cheremkhovo),0.0,30000,1
+South Yakutia (Neryungri),C_coal,56.66,124.7,60,present,South Yakutian coal basin (Neryungri),0.0,40000,1
+Bureya,C_coal,50.5,131.0,80,MISSING,,,,0
+Sakhalin,C_coal,49.0,142.5,100,MISSING,,,,0
+Ekibastuz,C_coal,51.72,75.3,40,present,Ekibastuz coalfield,0.0,12000,1
+Junggar (Xinjiang),C_coal,44.5,87.0,200,present,"Xinjiang Jurassic coal (Junggar, Turpan-Hami, Ili)",54.0,800000,1
+Turpan-Hami,C_coal,42.8,91.5,150,present,"Xinjiang Jurassic coal (Junggar, Turpan-Hami, Ili)",23.2,800000,1
+Huainan-Huaibei,C_coal,33.0,116.8,80,present,Huainan and Huaibei coalfields,4.9,60000,2
+Pingdingshan,C_coal,33.73,113.3,60,present,"Henan coalfields (Pingdingshan, Hebi, Jiaozuo, Yima)",0.0,40000,1
+Kailuan (Tangshan),C_coal,39.7,118.3,40,present,"Hebei coalfields (Kaiping, Fengfeng, Xingtai)",0.0,20000,1
+Fushun,C_coal,41.85,123.9,30,present,Fushun coalfield,0.0,1500,1
+"Heilongjiang (Hegang, Jixi)",C_coal,46.0,131.0,150,present,"Heilongjiang coalfields (Hegang, Jixi, Shuangyashan, Qitaihe)",13.1,20000,1
+Chikuho (Kyushu),C_coal,33.65,130.7,40,present,Chikuho and Miike coalfields (Kyushu),0.0,5000,1
+Ishikari (Hokkaido),C_coal,43.3,141.9,60,present,Ishikari coalfield (Hokkaido),0.0,7000,1
+Quang Ninh,C_coal,21.0,107.2,40,present,"Quang Ninh anthracite (Hon Gai, Cam Pha)",0.0,10000,1
+Singareni (Godavari),C_coal,17.6,80.3,80,present,Pranhita-Godavari coalfields (Singareni),1.3,23000,1
+Thar,C_coal,24.8,70.3,60,present,Thar lignite field,0.0,175000,1
+Surat/Galilee,C_coal,-23.6,145.7,60,present,Galilee basin,0.0,30000,1
+Collie,C_coal,-33.36,116.15,30,MISSING,,,,0
+Leigh Creek,C_coal,-30.47,138.42,30,MISSING,,,,0
+Waikato (NZ),C_coal,-37.6,175.1,60,MISSING,,,,0
+West Coast NZ,C_coal,-41.8,171.8,60,present,Buller and Greymouth coalfields (West Coast),0.0,1000,1
+Morupule/Kalahari (Botswana),C_coal,-22.5,26.8,150,present,"Botswana Karoo coalfields (Morupule, Mmamabula)",0.0,200000,2
+Enugu,C_coal,6.45,7.5,40,present,Enugu coalfield,0.0,2000,1
+Sabinas (Mexico),C_coal,27.9,-101.2,60,present,Sabinas basin (Coahuila),0.0,3000,1
+Rio Turbio,C_coal,-51.55,-72.3,40,present,"Magallanes basin lignite (Pecket, Isla Riesco)",65.0,5000,1
+Sakoa (Madagascar),C_coal,-22.5,44.6,60,MISSING,,,,0
+Maamba (Zambia),C_coal,-17.37,27.15,60,present,Hwange coalfield,38.5,5000,1
+Carlsbad potash (Delaware basin),K,32.4,-103.8,60,present,Delaware basin Salado potash (Carlsbad district),0.0,2000,1
+Qarhan (Qinghai),K,36.8,95.0,80,present,Qarhan salt lake (Qaidam basin),0.0,1000,1
+Khorat (Thailand/Laos),K,16.0,103.0,150,present,Khorat and Sakon Nakhon basins (Maha Sarakham Formation),0.0,50000,1
+Uyuni,K,-20.2,-67.5,80,MISSING,,,,0
+Sergipe potash,K,-10.8,-37.2,60,present,Sergipe potash (Taquari-Vassouras),0.0,500,1
+Solikamsk,K,59.6,56.8,30,present,"Upper Kama potash basin (Verkhnekamskoye; Solikamsk, Berezniki)",0.0,20000,1
+Atacama nitrates,N,-21.5,-69.6,150,MISSING,,,,0
+Searles Lake borates,B,35.75,-117.35,40,present,Searles Lake borate and potash evaporites,2.6,1000,2
+Turkey borates (Kirka/Emet/Bigadic),B,39.4,29.3,120,present,Emet and Hisarcik colemanite,6.2,800,4
+Inder borates,B,48.4,51.9,40,MISSING,,,,0
+Frasch salt-dome sulfur (Gulf Coast),S,29.5,-94.5,150,present,Spindletop salt dome (sulfur cap rock),64.7,17207,3
+Hallstatt,NaCl,47.56,13.64,20,present,Hallstatt salt body (Haselgebirge),0.8,2290,3
+Cheshire salt,NaCl,53.25,-2.5,40,present,Cheshire salt field (Northwich Halite),0.0,,1
+Hormuz salt domes,NaCl,27.0,55.5,150,present,Hormuz salt diapirs (Persian Gulf),0.0,,4
+Lake Assal/Danakil,NaCl,14.2,40.3,150,present,Danakil depression salt and potash (Dallol),0.0,3000,1
+Taoudenni,NaCl,22.67,-3.98,60,present,Taghaza and Taoudenni rock-salt pans,0.0,,1
+Khibiny apatite,P,67.65,33.7,40,MISSING,,,,0
+Kola Kovdor,P,67.56,30.46,30,MISSING,,,,0
+Karatau phosphorite,P,43.5,69.5,100,present,"Karatau phosphorite basin (Zhanatas, Koksu)",12.7,4000,1
+Jordan/Eshidiya,P,29.9,36.2,100,present,"Jordan phosphate (Eshidiya, Al-Hasa)",0.0,2000,1
+Gafsa,P,34.4,8.5,60,present,Gafsa-Metlaoui phosphate basin,0.0,2500,2
+Florida,P,27.8,-81.9,40,present,"Central Florida phosphate district (Bone Valley, Peace River)",0.0,8000,1
+Ruby: Mogok,corundum,22.92,96.5,30,present,Mogok gem gravels (byon),1.0,300.0,2
+Sapphire: Ratnapura,corundum,6.7,80.4,40,present,Ratnapura gem gravels (illam),2.2,1000.0,1
+Sapphire: Chanthaburi,corundum,12.6,102.1,40,present,Chanthaburi-Trat gem field,27.1,300.0,1
+Sapphire: Ilakaka,corundum,-22.7,45.2,40,present,Ilakaka,2.1,200.0,1
+Emerald: Sandawana,emerald,-20.9,29.95,40,present,Sandawana,4.4,1.0,1
+Emerald: Kafubu (Zambia),emerald,-13.0,28.3,60,present,Kagem (Kafubu),11.3,10.0,1
+Emerald: Itabira/Carnaiba,emerald,-10.55,-40.2,300,present,Carnaiba,23.2,2.0,1
+Emerald: Panjshir,emerald,35.3,69.7,60,present,Panjshir (Darkhenj),11.4,3.0,1
+Emerald: Habachtal,emerald,47.2,12.35,30,present,Habachtal,0.0,0.2,1
+Emerald: Urals (Malysheva),emerald,57.1,61.4,40,present,Ural emerald mines (Malyshevo),0.0,10.0,1
+Emerald: Sikait (Egypt),emerald,24.6,34.8,60,present,Wadi Sikait (Mons Smaragdus),5.1,0.5,1
+Peridot: Zabargad,olivine,23.61,36.2,40,present,Zabargad (St John's Island) peridot,0.0,0.5,1
+Lapis: Sar-e-Sang,lapis,36.2,70.8,30,present,Sar-e-Sang,0.9,0.5,1
+Garnet: Bohemian pyrope,garnet,50.5,13.9,60,present,Bohemian pyrope (Trebenice-Podsedice),5.8,50.0,1
+Diamond: Ekati/Diavik,diamond,64.6,-110.5,60,present,Ekati (Panda-Koala-Misery-Fox),8.1,150.0,2
+Diamond: Venetia,diamond,-22.43,29.32,30,present,Venetia,1.5,160.0,1
+Diamond: Premier/Cullinan,diamond,-25.67,28.52,30,present,Cullinan (Premier),0.0,650.0,1
+Diamond: Namibia coast (Namdeb),diamond,-28.0,16.0,150,present,Sperrgebiet coastal diamonds (Oranjemund),41.7,2000.0,3
+Diamond: Mbuji-Mayi,diamond,-6.15,23.6,60,present,Mbuji-Mayi (MIBA),0.0,300.0,2
+Diamond: Koidu/Kono,diamond,8.65,-10.97,60,present,Koidu kimberlites,0.0,10.0,2
+Diamond: Marange,diamond,-19.95,32.4,60,present,Marange,4.4,300.0,1
+Diamond: Grib/Lomonosov (Arkhangelsk),diamond,65.3,41.8,80,present,Lomonosov field (Arkhangelsk),10.4,250.0,1
+Diamond: Diamantina,diamond,-18.24,-43.6,60,present,Diamantina (Minas Gerais),0.0,500.0,1
+Diamond: Panna,diamond,24.73,80.04,40,present,Majhgawan (Panna),0.0,20.0,1
+U: Athabasca,U,57.8,-105.0,60,present,McArthur River,3.7,3.4,4
+U: Elliot Lake,U,46.4,-82.65,40,present,Elliot Lake (Blind River),1.5,170.0,1
+U: Ranger/Jabiluka,U,-12.68,132.9,40,present,Ranger (Nos 1 and 3),1.1,60.0,2
+U: Rossing/Husab,U,-22.48,15.05,40,present,Rossing,1.1,750.0,2
+U: Arlit (Niger),U,18.75,7.35,40,present,Arlit and Akouta (Tim Mersoi basin),5.3,60.0,1
+U: Grants (NM),U,35.3,-107.8,60,present,Ambrosia Lake (Grants mineral belt),9.1,40.0,1
+U: Colorado Plateau (Uravan),U,38.37,-108.73,80,present,Uravan mineral belt,0.9,15.0,1
+U: Schlema-Alberoda (Wismut),U,50.6,12.67,30,present,Schlema-Alberoda,0.0,25.0,2
+U: Ronneburg,U,50.85,12.18,30,MISSING,,,,0
+U: Streltsovka,U,50.4,118.1,40,present,Streltsovsky ore field (Krasnokamensk),22.4,150.0,1
+U: Olympic Dam U,U,-30.44,136.88,10,present,Olympic Dam,0.0,10800.0,1
+U: Jaduguda,U,22.65,86.35,40,present,Jaduguda,0.0,20.0,1
+U: Shinkolobwe,U,-11.05,26.55,30,present,Shinkolobwe,0.0,3.0,1
+U: Mounana/Oklo,U,-1.4,13.15,40,present,Oklo and Mounana (Franceville basin),1.1,7.0,1
+U: Kvanefjeld,U,60.97,-45.98,30,present,Kvanefjeld (Ilimaussaq),0.0,1010.0,1
+U: Zhovti Vody,U,48.35,33.5,30,present,Zhovti Vody (Kryvyi Rih-Kremenchuk belt),0.0,30.0,1
+Graphite: Borrowdale,C_graphite,54.5,-3.17,30,present,Borrowdale wad mine (Seathwaite),1.1,0.002,1
+Graphite: Passau/Kropfmuehl,C_graphite,48.62,13.6,30,present,Kropfmuehl (Passau),5.6,5.0,1
+Graphite: Balama,C_graphite,-13.33,38.6,40,present,Balama,5.4,1150.0,1
+Graphite: Heilongjiang (Jixi/Luobei),C_graphite,46.0,131.0,200,present,Jixi (Liumao),58.1,300.0,2
+Graphite: Sri Lanka (Bogala),C_graphite,7.05,80.3,60,present,Bogala,11.7,0.2,2
+Fluorite: Illinois-Kentucky,F,37.45,-88.2,60,present,Illinois-Kentucky fluorspar district (Cave-in-Rock and Rosiclare),4.4,40.0,1
+Fluorite: Las Cuevas (Mexico),F,21.8,-100.6,60,present,Las Cuevas (Villa de Zaragoza),19.9,20.0,1
+Fluorite: Vergenoeg,F,-25.3,28.55,40,present,Vergenoeg,6.4,200.0,1
+Fluorite: Inner Mongolia (Sumochagan),F,42.4,112.6,200,MISSING,,,,0
+Hg: Wanshan,Hg,27.5,109.2,60,present,Wanshan,1.8,6.0,1
+Hg: Monte Amiata,Hg,42.88,11.62,30,present,Monte Amiata - Abbadia San Salvatore,4.6,8.5,2
+Hg: Nikitovka,Hg,48.32,38.06,30,present,Nikitovka (Mykytivka),0.4,11.0,1
+Sb: Kadamjay,Sb,40.13,71.73,30,present,Kadamjay,0.0,7.0,1
+Sb: Murchison/Gravelotte,Sb,-23.9,30.7,40,present,Antimony Line (Consolidated Murchison),0.0,15.0,1
+Bi: Tasna,Bi,-20.8,-65.95,60,present,Tasna,6.1,2.0,2
+Bi: Shizhuyuan,Bi,25.75,113.12,30,present,Shizhuyuan,1.6,200.0,1
+Alum: Tolfa,alum,42.15,11.93,30,present,Tolfa alunite,0.0,50,1
+Alum: Phocaea/Karahisar,alum,40.27,38.4,120,present,Sebinkarahisar alum (Koloneia),2.4,20,1
+Bauxite: Les Baux,Al,43.75,4.8,40,present,Les Baux,0.8,5.0,2
+Bauxite: Jamaica,Al,18.1,-77.4,80,present,Jamaica Manchester plateau,11.8,1000.0,3
+Bauxite: Trombetas,Al,-1.5,-56.4,60,present,Trombetas (MRN plateaux),11.1,1500.0,1
+Bauxite: Paragominas,Al,-3.2,-47.7,80,present,Paragominas,44.8,2000.0,1
+Bauxite: Darling Range,Al,-32.7,116.1,80,present,Darling Range (Huntly-Willowdale),9.4,2500.0,1
+Bauxite: Odisha (Panchpatmali),Al,18.8,82.95,80,present,Panchpatmali (Koraput),5.7,300.0,2
+Bauxite: Guangxi (Pingguo),Al,23.3,107.6,80,present,Pingguo,3.7,300.0,1
+Bauxite: Suriname/Guyana,Al,5.3,-55.0,200,present,Moengo-Lelydorp,74.3,300.0,2
+Bauxite: North Urals (Severouralsk),Al,60.15,60.0,60,present,North Urals bauxite (SUBR),5.5,300.0,1
+Bauxite: Fria/Kindia (Guinea),Al,10.4,-13.5,60,present,Fria (Kimbo),5.5,1000.0,3

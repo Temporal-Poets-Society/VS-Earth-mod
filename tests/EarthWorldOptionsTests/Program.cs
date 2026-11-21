@@ -25,28 +25,39 @@ var p=Freeze(wc,cfg);p=RoundTrip(p);
 Check(!p.RegionalOres && !p.RegionalGeology,"Vanilla ores also disable regional rock and resource alterations");
 Check(p.GroundColumns==0,"Vanilla rocks build no ground columns");
 Check(p.CraftingRules==0,"Vanilla rocks and ores keep vanilla's recipes (decision 0077)");
-// Rocks and ground: ground columns on top of regional geology; the ore choice is its own (the author, 7 November)
+Check(p.DepositDepthRules==EarthParams.DepositDepthRulesVersion,"Vanilla rocks and ores: vanilla's deposits at their depth below the local ground (decision 0097)");
+Check(p.VanillaStrataRules==EarthParams.VanillaStrataRulesVersion,"Vanilla rocks: vanilla's rock layers under the local ground (decision 0099)");
+// Rocks and ground: ground columns on top of regional geology; the ore choice is its own (the author, 7 November). Off the
+// Earth tab in 2.2 (decision 0104): only earth.json's experimental switches give them, so these run with the switches on
 foreach(var (choice,columns) in new[]{("groundcolumns",true),("regional",false)})
 foreach(var maps in new[]{true,false})
 {
     var g=new TreeAttribute();g.SetString("earthRocks",choice);g.SetString("earthOreDeposits",maps?"maps":"vanilla");
-    var pg=Freeze(g,new EarthMapConfig {GroundColumnsPrototype=!columns,RegionalOres=!maps});pg=RoundTrip(pg);
-    Check(pg.RegionalGeology && pg.RegionalOres==maps && (pg.OreRulesVersion>0)==maps,choice+" keeps regional geology; Ores alone decides the ore maps");
-    Check(pg.GroundColumns==(columns?EarthMap.Core.GroundColumns.RulesVersion:0),choice+": the tab, not the config flag, decides ground columns");
+    var pg=Freeze(g,new EarthMapConfig {ExperimentalGroundColumns=columns,ExperimentalOreMaps=maps,GroundColumnsPrototype=!columns,RegionalOres=!maps});pg=RoundTrip(pg);
+    Check(pg.RegionalGeology && pg.RegionalOres==maps && (pg.OreRulesVersion>0)==maps,choice+" keeps regional geology; ExperimentalOreMaps alone decides the ore maps");
+    Check(pg.GroundColumns==(columns?EarthMap.Core.GroundColumns.RulesVersion:0),choice+": ExperimentalGroundColumns, not GroundColumnsPrototype, decides ground columns");
     Check(pg.DepositSet==EarthMap.Core.EarthDepositSet.Version,choice+": a new world saves Earth's deposit set (D2)");
+    Check(pg.VanillaStrataRules==0,choice+": Earth's regional rock lays its own layers, not vanilla's (decision 0099)");
+    Check(pg.DepositDepthRules==(maps?0:EarthParams.DepositDepthRulesVersion),choice+(maps?" with the ore maps: vanilla's deposit heights (the maps place their own)":" with vanilla ores: deposits at their depth below the local ground")+" (decision 0097)");
     Check(pg.CraftingRules==(columns||maps?EarthCrafting.RulesVersion:0),choice+(maps?" with the ore maps":" with vanilla ores")+": Earth's crafting rules where Earth decides bauxite (decision 0077)");
 }{
     var g=new TreeAttribute();g.SetString("earthRocks","vanilla");g.SetString("earthOreDeposits","maps");
-    var pg=Freeze(g,new EarthMapConfig {GroundColumnsPrototype=true});pg=RoundTrip(pg);
-    Check(!pg.RegionalGeology && pg.GroundColumns==0 && pg.RegionalOres,"Vanilla rocks with the Earth ore maps");
+    var pg=Freeze(g,new EarthMapConfig {GroundColumnsPrototype=true,ExperimentalGroundColumns=true,ExperimentalOreMaps=true});pg=RoundTrip(pg);
+    Check(!pg.RegionalGeology && pg.GroundColumns==0 && pg.RegionalOres,"Vanilla rocks with the Earth ore maps (no ground columns on vanilla rock, even with ExperimentalGroundColumns)");
     Check(pg.CraftingRules==EarthCrafting.RulesVersion,"Vanilla rocks with the Earth ore maps get Earth's crafting rules");
+    Check(pg.DepositDepthRules==0,"Vanilla rocks with the Earth ore maps keep vanilla's deposit heights (decision 0097)");
+    Check(pg.VanillaStrataRules==EarthParams.VanillaStrataRulesVersion,"Vanilla rocks with the Earth ore maps: vanilla's rock layers under the local ground (decision 0099)");
 }
 // The earlier single "Rocks and ores" key (earthOres) still means the same where the two new keys are missing
 foreach(var (legacyChoice,geology,columns,maps) in new[]{("vanilla",false,false,false),("regional",true,false,true),("groundcolumns",true,true,true)})
 {
     var g=new TreeAttribute();g.SetString("earthOres",legacyChoice);
-    var pg=Freeze(g,new EarthMapConfig {RegionalOres=!maps,RegionalGeology=!geology,GroundColumnsPrototype=!columns});
-    Check(pg.RegionalGeology==geology && (pg.GroundColumns>0)==columns && pg.RegionalOres==maps,"Old Rocks and ores key "+legacyChoice+" keeps its meaning");
+    var pg=Freeze(g,new EarthMapConfig {RegionalOres=!maps,RegionalGeology=!geology,GroundColumnsPrototype=!columns,ExperimentalGroundColumns=columns,ExperimentalOreMaps=maps});
+    Check(pg.RegionalGeology==geology && (pg.GroundColumns>0)==columns && pg.RegionalOres==maps,"Old Rocks and ores key "+legacyChoice+" keeps its meaning under the experimental switches");
+    // (decision 0104) without them, only its rock choice: no ground columns, vanilla's deposits
+    var off=Freeze(g,new EarthMapConfig {RegionalOres=true,GroundColumnsPrototype=true});
+    Check(off.RegionalGeology==geology && off.GroundColumns==0 && !off.RegionalOres && off.DepositDepthRules==EarthParams.DepositDepthRulesVersion,
+        "Old Rocks and ores key "+legacyChoice+" without the experimental switches: its rock choice, no ground columns, vanilla's deposits (decision 0104)");
 }
 {
     var g=new TreeAttribute();g.SetString("earthOres","regional");g.SetString("earthRocks","vanilla");g.SetString("earthOreDeposits","vanilla");
@@ -57,7 +68,7 @@ foreach(var (legacyChoice,geology,columns,maps) in new[]{("vanilla",false,false,
 foreach (var (value,expect) in new[]{("terrain","terrain"),("linear2000","linear2000"),("bad","log4000"),(null,"log4000")})
 {
     var g=new TreeAttribute();g.SetString("earthRocks","groundcolumns");if(value!=null)g.SetString("earthGroundDepth",value);
-    var pg=Freeze(g,new EarthMapConfig());
+    var pg=Freeze(g,new EarthMapConfig {ExperimentalGroundColumns=true});
     Check(RoundTrip(pg).GroundDepth==expect,"Ground depth "+(value??"missing")+" saves as "+expect);
 }
 {
@@ -66,13 +77,69 @@ foreach (var (value,expect) in new[]{("terrain","terrain"),("linear2000","linear
     Check(pg.GroundDepth==null,"No ground depth without ground columns");
 }
 var noKey=Freeze(new TreeAttribute(),new EarthMapConfig {GroundColumnsPrototype=true});
-Check(noKey.GroundColumns==EarthMap.Core.GroundColumns.RulesVersion,"Without the tab key the config flag decides");
+Check(noKey.GroundColumns==0 && noKey.RegionalGeology,"Without the tab key a stale GroundColumnsPrototype gives no ground columns (decision 0104)");
+noKey=Freeze(new TreeAttribute(),new EarthMapConfig {ExperimentalGroundColumns=true});
+Check(noKey.GroundColumns==EarthMap.Core.GroundColumns.RulesVersion,"Without the tab key ExperimentalGroundColumns gives them where the rock is regional");
+// (EA-0197, decision 0104) ground columns and Earth's ore maps are off the Earth tab in 2.2: a world config's values from before,
+// or typed in, give regional rock and vanilla's deposits, whatever a stale earth.json says; earth.json's experimental switches give them
+foreach(var (rocks,ores) in new[]{("groundcolumns","maps"),("groundcolumns",null),("regional","maps"),("vanilla","maps"),((string)null,(string)null)})
+{
+    var g=new TreeAttribute();if(rocks!=null)g.SetString("earthRocks",rocks);if(ores!=null)g.SetString("earthOreDeposits",ores);g.SetString("earthGroundDepth","terrain");
+    var pg=RoundTrip(Freeze(g,new EarthMapConfig {GroundColumnsPrototype=true,RegionalOres=true}));
+    Check(pg.GroundColumns==0 && pg.GroundDepth==null && !pg.RegionalOres && pg.OreRulesVersion==0 && pg.DepositDepthRules==EarthParams.DepositDepthRulesVersion
+        && pg.RegionalGeology==(rocks!="vanilla"),$"rocks {rocks??"(none)"}, ores {ores??"(none)"} with the switches off: no ground columns, vanilla's deposits (decision 0104)");
+}
+{
+    var g=new TreeAttribute();g.SetString("earthRocks","regional");
+    var pg=Freeze(g,new EarthMapConfig {ExperimentalGroundColumns=true,ExperimentalOreMaps=true});
+    Check(pg.GroundColumns==EarthMap.Core.GroundColumns.RulesVersion && pg.RegionalOres,"Under the experimental switches the tab's regional rock gets ground columns, and the world the ore maps");
+    g.SetString("earthOreDeposits","vanilla");
+    pg=Freeze(g,new EarthMapConfig {ExperimentalOreMaps=true});
+    Check(pg.GroundColumns==0 && pg.RegionalOres,"Under ExperimentalOreMaps the tab's one Ores value, vanilla, in every new world's config, still gives the ore maps");
+}
 Check(!p.RegionalFauna && p.VanillaFaunaRanges==0 && !p.IncludeExtinctAnimals,"Vanilla animals disable both range systems");
 Check(!p.Weather && p.RainFrequency==.5 && p.StormFrequency==0,"Weather choices serialize, including zero");
 Check(!p.NoRiverRapids,"Rapids stay on when the tab has no rapids key");
 var calm=new TreeAttribute();calm.SetString("earthRiverRapids","off");var pc=Freeze(calm,cfg);
 Check(RoundTrip(pc).NoRiverRapids,"River rapids off serializes");
 Check(!RoundTrip(new EarthParams {Enabled=true}).NoRiverRapids,"Older saves keep rapids reaches");
+// EA-0159 (decision 0095): River width, in % of 1:10's widths. A missing or unreadable value is the recommended one for the
+// scale; a value is kept within 50-1000 %; one that gives exactly 1:10's floor in blocks (100 % at 1:10, 250 % at 1:25, 500 % at
+// 1:50) saves 0
+// (2.1's widths, the params as before); older saves read 0; rivers off save 0
+foreach(var (value,scale,expect) in new (string,string,double)[]{(null,"10",0),(null,"25",2),(null,"50",3),(null,"100",5),(null,"200",7),(null,"5",0),("500","50",0),
+    ("100","10",0),("250","25",0),("200","25",2),("500","100",5),("300","50",3),("700","200",7),("50","100",0.5),("200","100",2),("1000","10",10),
+    ("5000","100",0),("5000","200",10),("10","100",0.5),("lots","100",5),("150 %","25",1.5),("100","100",1),("50","10",0.5)})
+{
+    var rw=new TreeAttribute();if(value!=null)rw.SetString(EarthWorldOptions.RiverWidthKey,value);
+    var prw=ParamsBuilderChecks.NewParams(rw,cfg,null,384,scale);
+    Check(prw.RiverWidthMultiplier==expect&&RoundTrip(prw).RiverWidthMultiplier==expect,"River width "+(value??"(no key)")+" at 1:"+scale+" saves "+expect+" (got "+prw.RiverWidthMultiplier+")");
+}
+{var ri=new TreeAttribute();ri.SetInt(EarthWorldOptions.RiverWidthKey,500);Check(ParamsBuilderChecks.NewParams(ri,cfg,null,384,"100").RiverWidthMultiplier==5,"River width as the slider's int (500) saves ×5");}
+foreach(var (scale,pct) in new[]{(5.0,100),(10.0,100),(25.0,200),(50.0,300),(100.0,500),(200.0,700),(400.0,1000),(70.0,400),(35.0,250)})
+    Check(EarthWorldOptions.RecommendedRiverWidthPercent(scale)==pct,"the recommended River width at 1:"+scale+" is "+pct+" % (got "+EarthWorldOptions.RecommendedRiverWidthPercent(scale)+")");
+Check(RoundTrip(new EarthParams {Enabled=true}).RiverWidthMultiplier==0,"Older saves keep 2.1's river widths");
+{var rr=new TreeAttribute();rr.SetString(EarthWorldOptions.RiverWidthKey,"200");Check(ParamsBuilderChecks.NewParams(rr,new EarthMapConfig{Rivers=false},null,384,"100").RiverWidthMultiplier==0,"Rivers off: River width saves 0");}
+// EA-0179 (decision 0098): Smallest stream, the recommended at each scale; at 1:50 and coarser the tab's value within 20-100.
+// EA-0200 (decision 0098): 1 at 1:25 and finer, the streams layer's every stream; the slider runs from 1
+foreach(var (scale,q) in new[]{(5.0,1),(10.0,1),(25.0,1),(50.0,40),(70.0,75),(100.0,100),(200.0,100)})
+    Check(EarthWorldOptions.RecommendedSmallestStream(scale)==q,"the recommended Smallest stream at 1:"+scale+" is "+q+" (got "+EarthWorldOptions.RecommendedSmallestStream(scale)+")");
+foreach(var (value,scale,expect) in new (string,string,double)[]{(null,"50",40),(null,"100",100),("60","50",60),("5","50",20),("500","50",100),("lots","200",100),("30","100",30),("60","10",20)})
+{
+    var ss=new TreeAttribute();if(value!=null)ss.SetString(EarthWorldOptions.SmallestStreamKey,value);
+    var ps=ParamsBuilderChecks.NewParams(ss,cfg,null,384,scale);
+    Check(ps.StreamMinDischarge==expect,"Smallest stream "+(value??"(no key)")+" at 1:"+scale+" saves "+expect+" (got "+ps.StreamMinDischarge+")");
+}
+// every play style's River width is the recommended one for its Earth size
+{
+    using var wcDoc=System.Text.Json.JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"worldconfig.json")));
+    foreach(var st in wcDoc.RootElement.GetProperty("playStyles").EnumerateArray()){
+        var wcs=st.GetProperty("worldConfig");
+        double sc=double.Parse(wcs.GetProperty("earthWorldSize").GetString(),System.Globalization.CultureInfo.InvariantCulture);
+        Check(wcs.GetProperty("earthRiverWidth").GetInt32()==EarthWorldOptions.RecommendedRiverWidthPercent(sc),"play style "+st.GetProperty("code").GetString()+" sets the recommended River width for 1:"+sc);
+        Check(wcs.GetProperty("earthSmallestStream").GetInt32()==EarthWorldOptions.RecommendedSmallestStream(sc),"play style "+st.GetProperty("code").GetString()+" sets the recommended Smallest stream for 1:"+sc);
+    }
+}
 Check(noKey.SpringRules==EarthParams.SpringRulesCaves,"Mountain springs default to cave springs only");
 // "off" is gone (the author, 8 November: "Instead of 'off' - better placement"): a stray value gets the default
 foreach(var (value,expect) in new[]{("caves",EarthParams.SpringRulesCaves),("streams",EarthParams.SpringRulesStreams),("Streams ",EarthParams.SpringRulesStreams),("off",EarthParams.SpringRulesCaves),("vanilla",0),("Vanilla ",0)})
@@ -126,9 +193,9 @@ var terrain=EarthWorldOptions.Terrain(hidden);
 Check(terrain.Budget=="legacy" && terrain.Curve=="legacy" && terrain.DetailMultiplier==.5 && !terrain.LocalEcology && terrain.PhysicalRock,"Hidden old world options still parse");
 var bad=new TreeAttribute();bad.SetString("earthRainFrequency","NaN");bad.SetString("earthStormFrequency","-1");bad.SetString("earthOres","bad");bad.SetString("earthRocks","bad");bad.SetString("earthOreDeposits","bad");
 p=Freeze(bad,cfg);
-Check(p.RainFrequency==3 && p.StormFrequency==5 && p.RegionalOres,"Invalid options fall back safely");
+Check(p.RainFrequency==3 && p.StormFrequency==5 && !p.RegionalOres,"Invalid options fall back safely (vanilla's deposits: the ore maps only under ExperimentalOreMaps, decision 0104)");
 p=Freeze(null,new EarthMapConfig());
-Check(p.RegionalFauna && p.RegionalOres && p.Weather && p.RainFrequency==1,"No options use config fallbacks");
+Check(p.RegionalFauna && !p.RegionalOres && p.RegionalGeology && p.Weather && p.RainFrequency==1,"No options use config fallbacks (but no ore maps: they take ExperimentalOreMaps, decision 0104)");
 // Decision 0047: plants and animals as around 1318 by default; vanilla means placement by climate alone.
 Check(!new EarthMapConfig().IncludeExtinctAnimals,"Animals extinct before 1318 are opt-in");
 var nature=new TreeAttribute();nature.SetString("earthNature","1318");nature.SetString("earthAnimals","vanilla");
@@ -168,7 +235,7 @@ bool EarthBiomes(EarthParams b)=>b.VanillaBiomes==0 && b.SiteRules==SiteNiche.Ru
     && b.WetlandRules==WetlandGrid.RulesVersion && b.GroundCoverRules==GroundCover.RulesVersion && b.MoistureRules==GroundMoisture.RulesVersion && b.GrassWinterRules==GrassWinter.RulesVersion
     && b.AlpineSurfaceRules==MountainEcology.SurfaceVersion;
 bool VanillaBiomes(EarthParams b)=>b.VanillaBiomes==EarthParams.VanillaBiomesVersion && b.SiteRules==0 && b.ZoneRules==0 && b.FireRules==0 && b.WetlandRules==0 && b.GroundCoverRules==0 && b.MoistureRules==0 && b.GrassWinterRules==0 && b.AlpineSurfaceRules==0;
-bool KeepsTheRest(EarthParams b,EarthParams e)=>b.SoilRules==SoilFertility.RulesVersion && b.AridityRules==e.AridityRules && b.PondRules==e.PondRules && b.ShoreZoneRules==e.ShoreZoneRules && b.ShoreRules==e.ShoreRules && b.SpringRules==e.SpringRules && b.LocalAlpineEcology;
+bool KeepsTheRest(EarthParams b,EarthParams e)=>b.SoilRules==e.SoilRules && b.Topsoil==e.Topsoil && b.AridityRules==e.AridityRules && b.PondRules==e.PondRules && b.ShoreZoneRules==e.ShoreZoneRules && b.ShoreRules==e.ShoreRules && b.SpringRules==e.SpringRules && b.LocalAlpineEcology;
 Check(EarthBiomes(Biomes(null,null)) && EarthBiomes(Biomes("1318","earth")) && EarthBiomes(Biomes("1318","bad")),"Earth's biomes by default, and for an unknown value");
 foreach(string n in new[]{"1318","vanilla"})
 {
@@ -282,9 +349,16 @@ foreach(var tab in onScreen.GroupBy(a=>a.GetProperty("category").GetString()))
 foreach(var attr in doc.RootElement.GetProperty("worldConfigAttributes").EnumerateArray())
 {
     if(attr.GetProperty("code").GetString()=="earthRocks")Check(attr.GetProperty("default").GetString()=="vanilla","Rocks and ground defaults to vanilla (the author, 15 November 2026, Earth 2.0.1, decision 0084)");
-    if(attr.GetProperty("code").GetString()=="earthOreDeposits")Check(attr.GetProperty("default").GetString()=="vanilla","Ores default to vanilla for now (the author, 6 and 7 November)");
     Check(attr.GetProperty("code").GetString()!="earthOres","The single Rocks and ores menu entry is split in two");
-    if(attr.GetProperty("code").GetString()=="earthGroundDepth")Check(attr.GetProperty("default").GetString()==EarthMap.Core.GroundColumns.DepthCurve.Default,"Ground depth menu default matches the code's");
+    // (EA-0197, decision 0104) no Ground depth on the screen; Ores with one value (the author, 20 November 2026: "leave the config
+    // but having just one choice"); Rocks and ground offers vanilla and regional only
+    Check(attr.GetProperty("code").GetString()!="earthGroundDepth","Ground depth is off the world creation screen in 2.2 (decision 0104)");
+    if(attr.GetProperty("code").GetString()=="earthSmallestStream")Check(attr.GetProperty("min").GetInt32()==EarthWorldOptions.SmallestStreamMin && attr.GetProperty("min").GetInt32()==1
+        && attr.GetProperty("max").GetInt32()==EarthWorldOptions.SmallestStreamMax && attr.GetProperty("step").GetInt32()==EarthWorldOptions.SmallestStreamStep
+        && attr.GetProperty("default").GetString()=="1" && !attr.TryGetProperty("skipValues",out _),"Smallest stream runs 1-100 in steps of 1, default 1, no skipValues (EA-0200; decision 0089)");
+    if(attr.GetProperty("code").GetString()=="earthSoil")Check(attr.GetProperty("default").GetString()=="realistic","Soil defaults to Earth soil, realistic tiers (the author, 21 November 2026; decision 0105)");
+    if(attr.GetProperty("code").GetString()=="earthOreDeposits")Check(attr.GetProperty("default").GetString()=="vanilla" && string.Join(",",attr.GetProperty("values").EnumerateArray().Select(v=>v.GetString()))=="vanilla","Ores offers one value, vanilla deposits plus Earth's gems and ores (decision 0104)");
+    if(attr.GetProperty("code").GetString()=="earthRocks")Check(string.Join(",",attr.GetProperty("values").EnumerateArray().Select(v=>v.GetString()))=="vanilla,regional","Rocks and ground offers vanilla and regional only (no ground columns, decision 0104)");
 }
 SummitChecks.Run(root, Check);
 string Elev(string v,string size){var t=new TreeAttribute();if(v!=null)t.SetString("earthElevation",v);t.SetString("earthWorldSize",size);return EarthWorldOptions.Elevation(t,null);}
@@ -309,7 +383,12 @@ foreach(var offTab in new[]{"earthElevation","earthRainFrequency","earthStormFre
         offTab+" is kept for configs but not on the Earth tab");
 // 2.0.1 (the author, 15 November 2026; decision 0084): every play style takes vanilla rocks, as the row's default does
 foreach(var style in doc.RootElement.GetProperty("playStyles").EnumerateArray())
+{
     Check(style.GetProperty("worldConfig").GetProperty("earthRocks").GetString()=="vanilla",style.GetProperty("code").GetString()+" takes vanilla rocks and ground");
+    Check(style.GetProperty("worldConfig").GetProperty("earthSoil").GetString()=="realistic",style.GetProperty("code").GetString()+" takes Earth soil, realistic tiers (decision 0105)");
+    Check(style.GetProperty("worldConfig").GetProperty("earthOreDeposits").GetString()=="vanilla" && !style.GetProperty("worldConfig").TryGetProperty("earthGroundDepth",out _),
+        style.GetProperty("code").GetString()+" takes the vanilla Ores and sets no Ground depth, which is off the screen (decision 0104)");
+}
 // 2.0.1: rain and storm frequency off the screen, kept for admins. The game writes every attribute's default into a new world
 // (WorldConfig.allDefaultValues), so their default is empty and no play style sets them: earth.json decides, unless a
 // world config sets a value
@@ -393,9 +472,9 @@ foreach(var w in want)
     Check(EarthWorldOptions.ApplyPolarEquatorDistance(v,Bpd(100))!=null && v.GetAsString("polarEquatorDistance")=="100048","polarEquatorDistance is written where it was not set");
 }
 string Rest(JsonElement p){var d=new SortedDictionary<string,string>();foreach(var kv in p.GetProperty("worldConfig").EnumerateObject())
-    if(kv.Name!="earthWorldSize"&&kv.Name!="earthWorldHeight"&&kv.Name!="earthHeightCurve"&&kv.Name!="polarEquatorDistance")d[kv.Name]=kv.Value.ToString();
+    if(kv.Name!="earthWorldSize"&&kv.Name!="earthWorldHeight"&&kv.Name!="earthHeightCurve"&&kv.Name!="polarEquatorDistance"&&kv.Name!="earthRiverWidth"&&kv.Name!="earthSmallestStream")d[kv.Name]=kv.Value.ToString();
     return string.Join(";",d.Select(kv=>kv.Key+"="+kv.Value))+"|"+string.Join(",",p.GetProperty("mods").EnumerateArray().Select(m=>m.GetString()))+"|"+p.GetProperty("worldType").GetString();}
-Check(styles.Select(Rest).Distinct().Count()==1,"the Earth play styles differ only in size, world height, mountain heights and polarEquatorDistance");
+Check(styles.Select(Rest).Distinct().Count()==1,"the Earth play styles differ only in size, world height, mountain heights, polarEquatorDistance, River width (EA-0159) and Smallest stream (EA-0179)");
 Check(!Attr("earthWorldSize").GetProperty("values").EnumerateArray().Any(v=>v.GetString()=="125440"||v.GetString()=="400"),"1:400 is not offered");
 Check(Attr("earthWorldSize").GetProperty("values").EnumerateArray().Any(v=>v.GetString()=="5") && Attr("earthWorldSize").GetProperty("default").GetString()=="100","1:5 is offered (the author: \"as extreme 1:5 scale\"); 1:100 is the default");
 Check(!Attr("earthHeightCurve").GetProperty("values").EnumerateArray().Any(v=>v.GetString()=="auto") && !Attr("earthHeightCurve").TryGetProperty("onCustomizeScreen",out _),
@@ -463,12 +542,66 @@ Check(Attr("earthBiomes").GetProperty("default").GetString()=="earth","Biomes de
         // here, not only one above it (EA-0089 C: the builder sets every field offline, so only two are named)
         {
             var t=new TreeAttribute();t.SetString(EarthWorldOptions.ElevationKey,"glo90");
-            foreach(var (k,v) in new[]{("earthRocks","groundcolumns"),("earthOreDeposits","maps"),("earthNature","1318"),("earthBiomes","earth"),("earthMountainSprings","streams"),("earthSurfacePonds","off")})t.SetString(k,v);
-            var full=Freeze(t,new EarthMapConfig(),data);
-            // GroundData is the ground download's, set at the world's first start (EarthGeology); VanillaBiomes 1 is the "vanilla" choice
-            var notFreezes=new HashSet<string>{"GroundData","VanillaBiomes"};
+            foreach(var (k,v) in new[]{("earthRocks","groundcolumns"),("earthOreDeposits","maps"),("earthNature","1318"),("earthBiomes","earth"),("earthMountainSprings","streams"),("earthSurfacePonds","off"),("earthSoil","realistic")})t.SetString(k,v);
+            var full=Freeze(t,new EarthMapConfig {ExperimentalGroundColumns=true,ExperimentalOreMaps=true},data);
+            // GroundData is the ground download's, set at the world's first start (EarthGeology); VanillaBiomes 1 is the "vanilla" choice;
+            // StreamRules only at 1:25 and finer (EA-0131, checked below at 1:10)
+            // DepositDepthRules belongs to vanilla ores, not the ore maps chosen here (decision 0097; checked per choice above)
+            // VanillaStrataRules belongs to vanilla rocks, not the ground columns chosen here (decision 0099)
+            // SoilRules 4 and Topsoil belong to worlds whose soil vanilla's block layers lay, not the ground columns chosen here
+            // (decision 0105; checked per choice below)
+            // RockSet is the rock map's download, decided at the world's first start like GroundData (EarthGeology, decision 0106)
+            var notFreezes=new HashSet<string>{"GroundData","RockSet","VanillaBiomes","StreamRules","DepositDepthRules","VanillaStrataRules","SoilRules","Topsoil"};
             var behind=full.RulesAgainstBuild().Where(r=>!notFreezes.Contains(r.Name)&&r.Saved!=r.Newest).Select(r=>r.Name+" "+r.Saved+" (newest "+r.Newest+")").ToList();
             Check(behind.Count==0,"EA-0084: a new world with every choice on gets the newest of every rule, as RulesAgainstBuild names it: "+string.Join(", ",behind));
+            Check(full.Topsoil==Topsoil.ClimateOnly&&full.SoilRules==SoilFertility.RulesVersion,"Decision 0105: a ground-column world keeps its own soil whatever the Soil choice (Topsoil "+full.Topsoil+", soil rules "+full.SoilRules+")");
+            // (decision 0105) the Soil choice in worlds whose soil vanilla's layers lay: Earth soil saves soil rules 4 and its tier set;
+            // climate only keeps soil rules 3 and no Topsoil, as every world before. Realistic tiers is the tab's default from rc.13
+            // (the author, 21 November 2026), and a world config without the key or with another value gets it too
+            foreach(var (rocks,soil,wantSoil) in new[]{("regional","realistic",Topsoil.RealisticTiers),("vanilla","vanilla",Topsoil.VanillaTiers),("vanilla","climate",Topsoil.ClimateOnly),("regional",null,Topsoil.RealisticTiers),("vanilla","bad",Topsoil.RealisticTiers)})
+            {
+                var s=new TreeAttribute();s.SetString(EarthWorldOptions.ElevationKey,"glo90");s.SetString("earthRocks",rocks);if(soil!=null)s.SetString("earthSoil",soil);
+                var sp=Freeze(s,new EarthMapConfig(),data);
+                Check(sp.Topsoil==wantSoil&&sp.SoilRules==(wantSoil==Topsoil.ClimateOnly?SoilFertility.RulesVersion:Topsoil.RulesVersion)&&sp.RulesNewerThanBuild().Count==0,
+                    "Decision 0105: rocks "+rocks+", soil "+(soil??"(no key)")+" saves Topsoil "+wantSoil+" (got "+sp.Topsoil+", soil rules "+sp.SoilRules+")");
+            }
+            // EA-0131 (decision 0061): the streams layer in a new world at 1:25 and finer on full GLO-90 whose streams are "all", not at 1:100,
+            // not on the included heights, not with earth.json's StreamsLayer false or its streams "ends"
+            Check(full.StreamRules==0,"EA-0131: no streams layer at 1:100 (StreamRules "+full.StreamRules+")");
+            // EA-0200 (decision 0098): Smallest stream at 1:25 and finer is the streams layer's smallest: 0 (every stream, as
+            // before) at the play styles' 1, less or no number; up to the courses' 20; at 1:50 and coarser no layer, nothing saved
+            foreach(var (value,sc,expect) in new (string,string,double)[]{(null,"10",0),("1","10",0),("0","10",0),("lots","10",0),("5","10",5),("12","25",12),("20","10",20),("60","10",20),("5","50",0),("60","100",0)})
+            {
+                var ts=new TreeAttribute();ts.SetString(EarthWorldOptions.ElevationKey,"glo90");if(value!=null)ts.SetString(EarthWorldOptions.SmallestStreamKey,value);
+                var pl=RoundTrip(ParamsBuilderChecks.NewParams(ts,new EarthMapConfig(),data,sc=="10"||sc=="25"?1024:384,sc));
+                Check(pl.StreamLayerMinDischarge==expect&&(sc is "50" or "100" || pl.StreamMinDischarge==20),
+                    "EA-0200: Smallest stream "+(value??"(no key)")+" at 1:"+sc+" saves the streams layer's smallest "+expect+" (got "+pl.StreamLayerMinDischarge+"), the courses' streams from 20");
+            }
+            {
+                var ti=new TreeAttribute();ti.SetString(EarthWorldOptions.ElevationKey,"glo90");ti.SetInt(EarthWorldOptions.SmallestStreamKey,8);
+                Check(ParamsBuilderChecks.NewParams(ti,new EarthMapConfig(),data,1024,"10").StreamLayerMinDischarge==8,"EA-0200: Smallest stream as the slider's int (8) saves 8 at 1:10");
+            }
+            var ten=ParamsBuilderChecks.NewParams(t,new EarthMapConfig(),data,1024,"10");
+            Check(ten.StreamRules==Newest("StreamRules")&&ten.StreamMode=="all","EA-0131: a new 1:10 world on GLO-90 gets the streams layer (StreamRules "+ten.StreamRules+", streams "+ten.StreamMode+")");
+            var t25=ParamsBuilderChecks.NewParams(t,new EarthMapConfig(),data,1024,"25");
+            Check(t25.StreamRules==Newest("StreamRules"),"EA-0131: a new 1:25 world on GLO-90 gets the streams layer (StreamRules "+t25.StreamRules+")");
+            var tc=new TreeAttribute();tc.SetString(EarthWorldOptions.ElevationKey,"glo90coarse");
+            // EA-0179 (decision 0098): coarse river rules in new worlds at 1:50 and coarser, not at 1:25 or 1:10: "all" streams
+            // from the play style's Smallest stream (one block wide), rivers from 100 m³/s
+            foreach(var (sc,wantRules,wantMode,wantQ) in new[]{("10",0,"all",20.0),("25",0,"all",20.0),("50",Newest("CoarseRiverRules"),"all",40.0),("100",Newest("CoarseRiverRules"),"all",100.0),("200",Newest("CoarseRiverRules"),"all",100.0)}){
+                var tp=ParamsBuilderChecks.NewParams(t,new EarthMapConfig(),data,384,sc);
+                Check(tp.CoarseRiverRules==wantRules&&tp.StreamMode==wantMode&&tp.StreamMinDischarge==wantQ&&tp.RiverMinDischarge==100,
+                    "EA-0179: at 1:"+sc+" coarse river rules "+tp.CoarseRiverRules+" ("+wantRules+"), streams "+tp.StreamMode+" from "+tp.StreamMinDischarge+" ("+wantQ+")");
+            }
+            Check(ParamsBuilderChecks.NewParams(tc,new EarthMapConfig(),data,384,"100").CoarseRiverRules==Newest("CoarseRiverRules"),"EA-0179: the coarse river rules on the included heights too");
+            Check(ParamsBuilderChecks.NewParams(t,new EarthMapConfig{Streams="none"},data,384,"100").CoarseRiverRules==0,"EA-0179: earth.json's Streams none keeps the old rules");
+            Check(RiverNetwork.CoarseRulesVersion==2&&Newest("CoarseRiverRules")==2,
+                "EA-0179: new worlds record coarse river rules 2 (rivers to their end, head streams, the steep streams' lag)");
+            Check(ParamsBuilderChecks.NewParams(t,new EarthMapConfig(),data,1024,"10").RiverDeltas==2&&ParamsBuilderChecks.NewParams(t,new EarthMapConfig(),data,384,"100").RiverDeltas==2,
+                "EA-0179: new worlds at every scale get delta rules 2 (the Atchafalaya)");
+            Check(ParamsBuilderChecks.NewParams(tc,new EarthMapConfig(),data,1024,"10").StreamRules==0,"EA-0131: no streams layer on the included heights");
+            Check(ParamsBuilderChecks.NewParams(t,new EarthMapConfig{StreamsLayer=false},data,1024,"10").StreamRules==0,"EA-0131: earth.json's StreamsLayer false leaves it out");
+            Check(ParamsBuilderChecks.NewParams(t,new EarthMapConfig{Streams="ends"},data,1024,"10").StreamRules==0,"EA-0131: streams \"ends\" leaves it out");
         }
     }
     // a world at this build's newest everywhere passes; one step above in any field is named
@@ -638,5 +771,14 @@ partial class Program
 206 LastSavedWith String
 209 WeatherGroundSignature String
 210 SeasonRules Int32
-212 Climate1318 Int32";
+212 Climate1318 Int32
+215 StreamRules Int32
+216 CoarseRiverRules Int32
+217 RiverWidthMultiplier Double
+218 DepositDepthRules Int32
+219 VanillaStrataRules Int32
+220 LakeRules Int32
+221 Topsoil Int32
+222 StreamLayerMinDischarge Double
+223 RockSet Int32";
 }

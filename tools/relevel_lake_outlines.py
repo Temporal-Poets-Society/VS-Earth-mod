@@ -29,6 +29,10 @@ outlines a tile (one cell of the neighbours' lakes around it, clipped to the squ
 is the neighbours' facing cells of the same lake level and flags, so two bodies at different levels meet where their cells
 do and each keeps its own shore there.
 
+EA-0148 (decision 0092, lake outlines rules 5): run on recontour_lake_outlines.py's lakes-glo90-3p.bin (GLO-90's
+pixel-is-point grid, 4,800 units a degree) it writes lakes-glo90-5.bin: version 4's lakes, levels and flags with every
+outline on the heights' grid (the tests that judge a lake keep version 4's boxes, so the lakes are the same ones).
+
 Usage: python -I tools/relevel_lake_outlines.py V2_FILE V3_FILE OUTDIR [workers] [tile filters, e.g. N62_00_E029,N54_00_W098]
 Needs EARTH_RAW (or rawdata/) with copernicus-glo90, copernicus-glo90-wbm, hydrolakes, global-dam-watch and ne_lakes.
 Writes OUTDIR/lakes-glo90-4.bin, lakes-glo90-4.json and report.txt; OUTDIR/work holds scratch (delete it after).
@@ -46,8 +50,9 @@ from scipy.sparse.csgraph import connected_components
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import bake_lake_outlines as bl  # noqa: E402
 import recontour_lake_outlines as rc  # noqa: E402
+import glo90grid as gg  # noqa: E402
 
-VERSION = 4
+VERSION = 5 if gg.POINT else 4
 FLAT_MIN = 30          # cells: a height a label holds this many cells of is one of its flats (about 0.1-0.3 km²)
 SPLIT_M = 2.0          # m: flats this far apart are separate water bodies (a label is cut; no link across an edge)
 FLAT_SHARE = 0.5       # a body is flat (GLO-90 flattened it) when one height covers this share of its cells
@@ -371,20 +376,26 @@ def pass_b(job):
     bc = codes[body]
     sp = np.array(sorted(special), np.int64)
     keep_n = (bc > 0) & ~np.isin(bc, sp)
-    mg = {s: (margins[s] > 0).astype(np.float32) for s in ("top", "bottom", "left", "right")}
-    mg["corners"] = tuple(float(c > 0) for c in margins["corners"])
+    # (a lake below 0 m has a negative code: any code but 0 is a lake; before EA-0148 "> 0" left those out of the margin)
+    lake = (lambda c: c != 0) if gg.POINT else (lambda c: c > 0)
+    mg = {s: lake(margins[s]).astype(np.float32) for s in ("top", "bottom", "left", "right")}
+    mg["corners"] = tuple(float(lake(c)) for c in margins["corners"])
     mn = mg if (any(mg[s].any() for s in ("top", "bottom", "left", "right")) or any(mg["corners"])) else None
     ow = [o if (o is not None and code(o) not in special) else None for o in own]
-    recs, _, _ = rc.outline(keep_n, body, ow, mn)
+    cn = {s: np.where(np.isin(margins[s], sp), 0, margins[s]) for s in ("top", "bottom", "left", "right")}
+    cn["corners"] = tuple(0 if c in special else c for c in margins["corners"])
+    recs, _, _ = rc.outline(keep_n, body, ow, mn, codes=cn)
     for v in sp:
         keep_v = bc == v
         mg = {s: (margins[s] == v).astype(np.float32) for s in ("top", "bottom", "left", "right")}
         mg["corners"] = tuple(float(c == v) for c in margins["corners"])
         mv = mg if (any(mg[s].any() for s in ("top", "bottom", "left", "right")) or any(mg["corners"])) else None
         ow = [o if (o is not None and code(o) == v) else None for o in own]
-        r, _, _ = rc.outline(keep_v, body, ow, mv)
+        cv = {s: np.where(margins[s] == v, v, 0) for s in ("top", "bottom", "left", "right")}
+        cv["corners"] = tuple(c if c == v else 0 for c in margins["corners"])
+        r, _, _ = rc.outline(keep_v, body, ow, mv, codes=cv)
         recs += r
-    if t in A["idx3"]:
+    if t in A["idx3"] and not gg.POINT:
         o3, n3 = A["idx3"][t]
         old = rc.decode(A["v3"][o3:o3 + n3])
         if rc.canon(recs) == rc.canon(old):
@@ -412,6 +423,7 @@ def main():
     assert ver3 == 3 and set(idx2) == set(idx3), "version 3 must be version 2's lakes outlined again"
     log(f"{v2} and {v3}: {len(idx3)} tiles with lakes")
     tiles = sorted(idx2)
+    want = []
     if filt:
         want = sorted(t for t in idx2 if any(f in os.path.basename(rc.wbm_path(t // 360 - 90, t % 360 - 180)) for f in filt.split(",")))
         ring = set()
@@ -448,6 +460,18 @@ def main():
                     changed_t.add(t)
         owners[t] = oc
     redo = set()
+    if gg.POINT:
+        # every tile is outlined on the pixel-is-point grid with its neighbours' lakes (a filtered run: the tiles asked
+        # for and their neighbours, whose own neighbours were read)
+        base = set(want) if filt else set(stats)
+        for t in base:
+            lat, lon = t // 360 - 90, t % 360 - 180
+            for dr in (-1, 0, 1):
+                for dc in (-1, 0, 1):
+                    if -90 <= lat + dr <= 89:
+                        n = rc.tile_key(lat + dr, (lon + dc + 180) % 360 - 180)
+                        if n in stats:
+                            redo.add(n)
     for t in changed_t:
         lat, lon = t // 360 - 90, t % 360 - 180
         for dr in (-1, 0, 1):
@@ -463,7 +487,7 @@ def main():
         v = np.array(owners[t], np.int64)[borders[t][s]]
         if len(v) == n:
             return v
-        return v[np.minimum(((np.arange(n) + 0.5) * len(v) / n).astype(np.int64), len(v) - 1)]
+        return v[rc.resample_index(n, len(v))]
 
     def corner(t, which):
         if t not in borders:
@@ -516,7 +540,7 @@ def main():
         if t not in blobs and new_states[t] == 1:
             o, n = idx3[t]
             blobs[t] = b3[o:o + n]
-    head = struct.pack("<4siiiii", b"EMLO", VERSION, bl.UNIT, 1, 360, 180)
+    head = struct.pack("<4siiiii", b"EMLO", VERSION, rc.OUT_UNIT, 1, 360, 180)
     index, body = bytearray(), bytearray()
     o = len(head) + len(new_states) + 8 * len(blobs)
     for t in sorted(blobs):

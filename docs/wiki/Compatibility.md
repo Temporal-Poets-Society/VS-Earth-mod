@@ -28,11 +28,11 @@ Without Astra Terra the sky keeps vanilla's single clock: the sun is at the same
 
 | Mod | What happens with Earth |
 | --- | --- |
-| **Hydrate or Diedrate** | With Earth's own rocks and ground (Rocks and ground: Ground columns or Regional, and Biomes: Earth), Earth gives it the aquifers of its real water table. With vanilla rocks (the default) or vanilla biomes, it makes its own as without Earth. Only land made while it is installed gets Earth's aquifers, and only with a Hydrate or Diedrate that uses aquifer data version 2 (2.5.8 does); otherwise it makes its own, with a warning in the log. See [Water](Water). |
+| **Hydrate or Diedrate** | With Earth's own rocks and ground (Rocks and ground: Regional, or ground columns in a world that has them, and Biomes: Earth), Earth gives it the aquifers of its real water table. With vanilla rocks (the default) or vanilla biomes, it makes its own as without Earth. Only land made while it is installed gets Earth's aquifers, and only with a Hydrate or Diedrate that uses aquifer data version 2 (2.5.8 does); otherwise it makes its own, with a warning in the log. See [Water](Water). |
 | **Floral Zones** packs | Their ground plants grow only in their native ranges, and their trees too, with Plants and animals: As around 1318. See [Plants and animals](Plants-and-animals). |
 | **Wildcraft Trees** (with Herbarium) | Its trees grow only in their native ranges, with Plants and animals: As around 1318. |
 | **Fauna of the Stone Age** | With Plants and animals: As around 1318, its animals spawn only within their ranges and habitats. With Include extinct animals, the ones that died out before 1318 too. |
-| **Geology Additions** | With Rocks and ground: Ground columns or Regional (not the default), its rocks and materials are used where the real ground has them. Earth's bog iron needs it. |
+| **Geology Additions** | With Rocks and ground: Regional (not the default), or ground columns in a world that has them, its rocks and materials are used where the real ground has them. Earth's bog iron needs it. |
 
 Vanilla's own plants and animals work without any of these. Plant and animal mods that Earth doesn't know keep their
 own spawning rules.
@@ -44,7 +44,9 @@ own spawning rules.
 - **Biomes:** its own geographic rules can stop animals that Earth's ranges allow. Earth warns in the log; leave it out
   of an Earth world.
 - **Other world generators** that replace the standard world's terrain (continents, heights, rock layers) fight Earth
-  for the same land. Earth's terrain only works in its own play styles.
+  for the same land. Earth's terrain only works in its own play styles. A mod that keeps Earth's terrain out stops an
+  Earth world with "Earth cannot generate this world ... without Earth's terrain", naming the mod (see
+  [Troubleshooting](Troubleshooting)). A mod that only previews far terrain on chunks of its own doesn't stop it.
 
 Mods for other things (crafting, food, tools, buildings, decoration) work as they do anywhere. This list is what has
 been checked; a mod not named here may still work.
@@ -53,7 +55,8 @@ been checked; a mod not named here may still work.
 
 - **Worlds made with Earth 2.0.0 or newer** keep working with later Earth versions. A world remembers every choice it
   was made with, so updating Earth doesn't change its terrain and rocks in land still to be generated; fixes to tree,
-  plant, animal and ore rules do reach new land.
+  plant, animal and ore rules do reach new land. An older Earth refuses a world a newer one made ("saved by a newer
+  Earth") and leaves it unchanged: a world made with 2.2.0 needs 2.2.0 or newer.
 - **Worlds from older Earth versions** (0.x, 1.x and the 2.0.0 test builds) are **not supported**: start a new world.
 - If a part of a world's generation is missing at a start (a game update changed something Earth relies on, a mod the
   world's blocks came from was removed, a data file is missing), the server stops before it makes new land and names

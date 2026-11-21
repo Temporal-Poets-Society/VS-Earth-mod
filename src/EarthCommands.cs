@@ -625,7 +625,7 @@ namespace EarthMap
                 // ER-30: where this world reads GLO-90 and the square's tile isn't here yet, the main thread would take the
                 // built-in heights (the player lands in the ground or in the air): fetch it first, then teleport
                 var fetch = Elevation?.FetchSquareAt(lat, lon);
-                if (fetch == null) return TextCommandResult.Success(TeleportTo(entity, x, z, false, ""));
+                if (fetch == null) return TextCommandResult.Success(TeleportWhenLoaded(entity, x, z, false, "", args.Caller.Player as IServerPlayer));
                 var wait = new System.Threading.CancellationTokenSource();
                 waterSearches[entity.EntityId] = wait;
                 var asker = args.Caller.Player as IServerPlayer;
@@ -650,7 +650,7 @@ namespace EarthMap
                     var (go, message) = TeleportWait.After(fetch, lacks, why, square, place, limit);
                     try
                     {
-                        if (go) message = TeleportTo(entity, x, z, false, "");
+                        if (go) message = TeleportWhenLoaded(entity, x, z, false, "", asker);
                         else logger.Warning("Earth tp: {0} not teleported to {1}: {2}", who, square, message);
                     }
                     catch (Exception e)
@@ -686,7 +686,7 @@ namespace EarthMap
                     {
                         if (entity == null || !entity.Alive) return;
                         double moved = Math.Sqrt((wx - x) * (wx - x) + (wz - z) * (wz - z));
-                        msg = TeleportTo(entity, wx, wz, true, moved > 1 ? string.Format(CultureInfo.InvariantCulture, " Nearest open water, {0:0} blocks from the spot.", moved) : "");
+                        msg = TeleportWhenLoaded(entity, wx, wz, true, moved > 1 ? string.Format(CultureInfo.InvariantCulture, " Nearest open water, {0:0} blocks from the spot.", moved) : "", player);
                     }
                     player?.SendMessage(GlobalConstants.GeneralChatGroup, msg, EnumChatType.CommandSuccess);
                 }, "earth-tp");
@@ -698,13 +698,189 @@ namespace EarthMap
         /// result that arrives after it was superseded is dropped. Teleports that wait for nothing leave no entry.</summary>
         readonly System.Collections.Generic.Dictionary<long, System.Threading.CancellationTokenSource> waterSearches = new();
 
-        /// <summary>Teleports on the water surface (a boat or ship floats there) or just above the ground; the message to show.</summary>
-        string TeleportTo(Vintagestory.API.Common.Entities.Entity entity, double x, double z, bool water, string note)
+        /// <summary>
+        /// SU-0010 (19 November 2026): teleports once the destination's chunk column is loaded; returns the message to show now.
+        /// Vanilla's teleport loads a column that isn't loaded through its blocking queue (<c>LoadChunkColumnPriority</c>,
+        /// <c>loadChunkAreaBlocking</c>), which the chunk thread works through inside one tick, each load sweeping every column
+        /// players are waiting for: 6-10 s apiece with 30-60 players exploring at 1:10. Sixty teleports in two minutes kept the
+        /// chunk thread there for minutes, the autosave could not pause it, and after 20 failed tries vanilla stopped the server
+        /// ("Server autosave failure").
+        /// <para>So the teleporting player waits instead. The column is asked for the way a player's view asks (the ordinary
+        /// request queue, again every <see cref="TeleportWait.LandAskEvery"/>: an autosave drops every request in progress,
+        /// repeats are merged), and the player goes as soon as it is loaded. Meanwhile the teleport waits in Earth's line:
+        /// one teleport at a time may use vanilla's blocking load, and the next only <see cref="TeleportWait.LineGap"/> after
+        /// it landed, so the chunk thread comes back between them and the autosave can pause it. Only the waiting players
+        /// wait; a later /earth tp takes the place of a wait.</para>
+        /// </summary>
+        string TeleportWhenLoaded(Vintagestory.API.Common.Entities.Entity entity, double x, double z, bool water, string note, IServerPlayer asker)
+        {
+            int cx = (int)Math.Floor(x / GlobalConstants.ChunkSize), cz = (int)Math.Floor(z / GlobalConstants.ChunkSize);
+            if (ColumnLoaded(cx, cz)) return TeleportTo(entity, x, z, water, note);
+            var geo = Model.Geometry.ToGeo(x, z);
+            var w = new LandWait
+            {
+                Entity = entity, X = x, Z = z, Water = water, Note = note, Asker = asker, Cx = cx, Cz = cz,
+                Key = ((long)cx << 32) | (uint)cz, Who = asker?.PlayerName ?? "entity " + entity.EntityId,
+                Place = FormatLatLon(geo.Lat, geo.Lon), Token = new System.Threading.CancellationTokenSource(),
+            };
+            waterSearches[entity.EntityId] = w.Token;   // a later /earth tp supersedes this one, as it does a search or a fetch
+            if (!columnWaits.TryGetValue(w.Key, out var same)) columnWaits[w.Key] = same = new System.Collections.Generic.List<LandWait>();
+            same.Add(w);
+            if (!columnEventHooked)
+            {
+                sapi.Event.ChunkColumnLoaded += OnColumnLoaded;
+                columnEventHooked = true;
+            }
+            int ahead = line.Count + (lineBusy != null ? 1 : 0);
+            line.Add(w);
+            void Ask(float _)
+            {
+                if (w.State != LandWait.Waiting) return;
+                if (Stale(w)) { Drop(w, "a later /earth tp took its place, or the player left"); return; }
+                if (ColumnLoaded(w.Cx, w.Cz)) { Arrive(w, "its land was loaded"); return; }
+                sapi.WorldManager.LoadChunkColumn(w.Cx, w.Cz);
+                Pump();
+                sapi.Event.RegisterCallback(Ask, (int)TeleportWait.LandAskEvery.TotalMilliseconds);
+            }
+            Ask(0);
+            logger.Notification("Earth tp: {0} waits for the land at {1} (chunk column {2},{3}; {4} teleports ahead).", w.Who, w.Place, cx, cz, ahead);
+            return "Making the land at " + w.Place + " ready; you are teleported when it is" +
+                (ahead == 1 ? " (1 other teleport waiting)." : ahead > 1 ? string.Format(CultureInfo.InvariantCulture, " ({0} other teleports waiting).", ahead) : ".");
+        }
+
+        /// <summary>A teleport waiting for its land (<see cref="TeleportWhenLoaded"/>); main thread only.</summary>
+        sealed class LandWait
+        {
+            public const int Waiting = 0, Blocking = 1, Done = 2;
+            public Vintagestory.API.Common.Entities.Entity Entity;
+            public double X, Z;
+            public bool Water;
+            public string Note, Who, Place, Message;
+            public IServerPlayer Asker;
+            public int Cx, Cz, State;
+            public long Key;
+            public System.Threading.CancellationTokenSource Token;
+            public readonly System.Diagnostics.Stopwatch Clock = System.Diagnostics.Stopwatch.StartNew();
+        }
+
+        /// <summary>Waits by destination column, Earth's line in order, the one teleport in vanilla's blocking load (main thread only).</summary>
+        readonly System.Collections.Generic.Dictionary<long, System.Collections.Generic.List<LandWait>> columnWaits = new();
+        readonly System.Collections.Generic.List<LandWait> line = new();
+        LandWait lineBusy;
+        readonly System.Diagnostics.Stopwatch lineClock = System.Diagnostics.Stopwatch.StartNew();
+        TimeSpan lineFreeAt, lineBusySince;
+        bool columnEventHooked, pumpScheduled;
+
+        bool ColumnLoaded(int cx, int cz) => sapi.WorldManager.GetChunk(cx, 0, cz) != null;
+
+        bool Stale(LandWait w) => !waterSearches.TryGetValue(w.Entity.EntityId, out var current) || current != w.Token || !w.Entity.Alive ||
+            (w.Asker != null && w.Asker.ConnectionState != EnumClientState.Playing);
+
+        void Forget(LandWait w)
+        {
+            w.State = LandWait.Done;
+            line.Remove(w);
+            if (columnWaits.TryGetValue(w.Key, out var same) && same.Remove(w) && same.Count == 0) columnWaits.Remove(w.Key);
+            if (waterSearches.TryGetValue(w.Entity.EntityId, out var current) && current == w.Token) waterSearches.Remove(w.Entity.EntityId);
+        }
+
+        void Drop(LandWait w, string why)
+        {
+            Forget(w);
+            logger.Notification("Earth tp: {0} not teleported to {1}: {2}.", w.Who, w.Place, why);
+        }
+
+        /// <summary>The land came through the ordinary queue: teleport now (vanilla's teleport finds the column loaded).</summary>
+        void Arrive(LandWait w, string how)
+        {
+            if (w.State != LandWait.Waiting) return;
+            if (Stale(w)) { Drop(w, "a later /earth tp took its place, or the player left"); return; }
+            Forget(w);
+            w.Token.Cancel();
+            string message;
+            try { message = TeleportTo(w.Entity, w.X, w.Z, w.Water, w.Note); }
+            catch (Exception e)
+            {
+                logger.Error("Earth tp: teleporting {0} to {1} failed: {2}", w.Who, w.Place, e);
+                message = "The teleport failed: " + e.Message;
+            }
+            logger.Notification("Earth tp: {0} teleported to {1} after {2:0.0} s ({3}).", w.Who, w.Place, w.Clock.Elapsed.TotalSeconds, how);
+            w.Asker?.SendMessage(GlobalConstants.GeneralChatGroup, message, EnumChatType.CommandSuccess);
+        }
+
+        void OnColumnLoaded(Vec2i coord, IWorldChunk[] chunks)
+        {
+            if (columnWaits.Count == 0 || !columnWaits.TryGetValue(((long)coord.X << 32) | (uint)coord.Y, out var same)) return;
+            // the event comes just before the column counts as loaded (vanilla's mainThreadLoadChunkColumn): go on after it
+            foreach (var w in same.ToArray())
+                if (w.State == LandWait.Waiting) sapi.Event.EnqueueMainThreadTask(() => Arrive(w, "its land is loaded"), "earth-tp");
+        }
+
+        /// <summary>Earth's line: the next waiting teleport takes vanilla's blocking load once the last one has landed and the gap passed.</summary>
+        void Pump()
+        {
+            var now = lineClock.Elapsed;
+            if (lineBusy != null)
+            {
+                if (now - lineBusySince < TeleportWait.LineBusyLimit) return;
+                logger.Warning("Earth tp: {0}'s teleport to {1} has not landed after {2:0} s; the line goes on.", lineBusy.Who, lineBusy.Place, (now - lineBusySince).TotalSeconds);
+                lineBusy = null;
+                lineFreeAt = now;
+            }
+            if (now < lineFreeAt)
+            {
+                if (!pumpScheduled)
+                {
+                    pumpScheduled = true;
+                    sapi.Event.RegisterCallback(_ => { pumpScheduled = false; Pump(); }, Math.Max(1, (int)(lineFreeAt - now).TotalMilliseconds));
+                }
+                return;
+            }
+            while (line.Count > 0)
+            {
+                var w = line[0];
+                if (w.State != LandWait.Waiting) { line.RemoveAt(0); continue; }
+                if (Stale(w)) { Drop(w, "a later /earth tp took its place, or the player left"); continue; }
+                if (ColumnLoaded(w.Cx, w.Cz)) { Arrive(w, "its land was loaded"); continue; }
+                line.RemoveAt(0);
+                w.State = LandWait.Blocking;
+                lineBusy = w;
+                lineBusySince = now;
+                try { w.Message = TeleportTo(w.Entity, w.X, w.Z, w.Water, w.Note, () => Landed(w)); }
+                catch (Exception e)
+                {
+                    logger.Error("Earth tp: teleporting {0} to {1} failed: {2}", w.Who, w.Place, e);
+                    w.Message = "The teleport failed: " + e.Message;
+                    Landed(w);
+                }
+                return;
+            }
+        }
+
+        /// <summary>Vanilla's blocking teleport landed (its callback can come twice for a mounted player).</summary>
+        void Landed(LandWait w)
+        {
+            if (w.State == LandWait.Done) return;
+            Forget(w);
+            w.Token.Cancel();
+            logger.Notification("Earth tp: {0} teleported to {1} after {2:0.0} s (its turn in the line: vanilla's load).", w.Who, w.Place, w.Clock.Elapsed.TotalSeconds);
+            w.Asker?.SendMessage(GlobalConstants.GeneralChatGroup, w.Message, EnumChatType.CommandSuccess);
+            if (lineBusy == w)
+            {
+                lineBusy = null;
+                lineFreeAt = lineClock.Elapsed + TeleportWait.LineGap;
+                Pump();
+            }
+        }
+
+        /// <summary>Teleports on the water surface (a boat or ship floats there) or just above the ground; the message to show.
+        /// <paramref name="onTeleported"/> runs when vanilla's teleport has landed.</summary>
+        string TeleportTo(Vintagestory.API.Common.Entities.Entity entity, double x, double z, bool water, string note, Action onTeleported = null)
         {
             int missed = FineElevation.MissedReads;
             var c = Model.GetColumn(x, z);
             int y = water ? c.WaterTop + 1 : Math.Max(c.Top, c.WaterTop) + 2;
-            entity.TeleportToDouble(Math.Floor(x) + 0.5, y, Math.Floor(z) + 0.5);
+            entity.TeleportToDouble(Math.Floor(x) + 0.5, y, Math.Floor(z) + 0.5, onTeleported);
             var g = Model.Geometry.ToGeo(x, z);
             return string.Format(CultureInfo.InvariantCulture, "Teleported to {0} (x={1:0} z={2:0}, y={3}).{4}{5}", FormatLatLon(g.Lat, g.Lon), x, z, y, note,
                 FineElevation.MissedReads != missed ? Approximate : "");

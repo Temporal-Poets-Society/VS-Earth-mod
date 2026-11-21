@@ -1,0 +1,16 @@
+[
+ {"Name":"troodos","Kind":"ophiolite","Lat":34.93,"Lon":32.95,"Radius":2},
+ {"Name":"oman","Kind":"ophiolite","Lat":23.4,"Lon":57.6,"Radius":2},
+ {"Name":"kempirsai","Kind":"ophiolite","Lat":50.4,"Lon":57.8,"Radius":2},
+ {"Name":"bushveld","Kind":"intrusion","Lat":-25.6,"Lon":27.5,"Radius":2},
+ {"Name":"greatdyke","Kind":"intrusion","Lat":-18.5,"Lon":30.28,"Radius":2},
+ {"Name":"sudbury","Kind":"intrusion","Lat":46.6,"Lon":-81.05,"Radius":2},
+ {"Name":"dartmoor","Kind":"granite","Lat":50.58,"Lon":-3.93,"Radius":2},
+ {"Name":"iceland","Kind":"oceanic","Lat":64.9,"Lon":-19.0,"Radius":2},
+ {"Name":"deccan","Kind":"flood-basalt","Lat":19.0,"Lon":75.0,"Radius":2},
+ {"Name":"westsiberia","Kind":"cover","Lat":61.0,"Lon":75.0,"Radius":2},
+ {"Name":"amazon","Kind":"cover","Lat":-3.0,"Lon":-62.0,"Radius":2},
+ {"Name":"addis","Kind":"highland","Lat":9.03,"Lon":38.74,"Radius":2},
+ {"Name":"vienna","Kind":"lowland","Lat":48.17,"Lon":16.9,"Radius":2},
+ {"Name":"riga","Kind":"lowland","Lat":56.95,"Lon":24.1,"Radius":2}
+]

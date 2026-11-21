@@ -59,8 +59,37 @@ namespace EarthMap.Core
         readonly Dictionary<int, (DemTiles.Tile tile, long used)> cache = new();
         readonly HashSet<int> notHere = new();
         long clock;
-        /// <summary>Decoded tiles kept in memory (about 2–3 MB each at full width).</summary>
+        /// <summary>Decoded tiles kept in memory to begin with (about 2–3 MB each at full width); the cache grows past it
+        /// while it thrashes (<see cref="CapacityNow"/>).</summary>
         public int Capacity = 24;
+
+        /// <summary>
+        /// EA-0193: the most tiles the cache grows to. A tile read again soon after the cache dropped it (within as many loads
+        /// as the cache may grow to) makes room for one more, so the cache grows to the squares in use at once and no further: a
+        /// server with players in 30 squares read every chunk's tile anew from disk with 24 (16 ms and 6 MB a chunk, the
+        /// places taken in turn as their requests are; tileprobe, 19 November 2026), and now holds 32; players in 12 squares
+        /// or fewer leave it at 24. 128 tiles are at most about 380 MB.
+        /// </summary>
+        public int MaxCapacity = 128;
+        int grown;
+        /// <summary>When each recently dropped tile was dropped (by load count), to tell a thrash from a tile not used for long.</summary>
+        readonly Dictionary<int, long> dropped = new();
+
+        /// <summary>The tiles the cache holds at most now: <see cref="Capacity"/> and what thrashing added.</summary>
+        public int CapacityNow { get { lock (gate) return Limit; } }
+        int Limit => Math.Max(4, Math.Max(Capacity, Math.Min(Capacity + grown, MaxCapacity)));
+
+        /// <summary>Tiles read again soon after the cache dropped them (each made the cache one tile larger, up to the most).</summary>
+        public long Reloads;
+
+        /// <summary>One line for the log: tiles read, how many again soon after being dropped, the cache's size.</summary>
+        public string Report()
+        {
+            lock (gate)
+                return string.Format(System.Globalization.CultureInfo.InvariantCulture,
+                    "{0:n0} tiles read from disk, {1:n0} of them again soon after the cache dropped them; the cache holds {2} of at most {3} tiles (began at {4}, grows to {5})",
+                    Loads, Reloads, cache.Count, Limit, Math.Max(4, Capacity), Math.Max(Capacity, MaxCapacity));
+        }
 
         /// <summary>
         /// Downloads and converts a square's tile (latS, lonW) if it can, blocking; true when the tile is on this machine
@@ -312,6 +341,9 @@ namespace EarthMap.Core
         public long Loads, Absent;
         readonly ThreadLocal<System.Runtime.CompilerServices.StrongBox<long>> lookups = new(() => new System.Runtime.CompilerServices.StrongBox<long>(), true);
         long arrivals;
+        /// <summary>Tiles written to the folder this session (<see cref="TileArrived"/>): a reader that went without one can tell
+        /// whether trying again may now read it (StreamLayer).</summary>
+        public long Arrivals { get { lock (gate) return arrivals; } }
 
         /// <param name="tileList">The 360 × 180 bitmap of squares the source has (DemTiles.SquareIndex, bit 7 first).</param>
         public FineElevation(string folder, byte[] tileList)
@@ -651,13 +683,25 @@ namespace EarthMap.Core
                     return null;
                 }
                 Loads++;
+                // (EA-0193) dropped no more loads ago than the cache may grow to: the squares in use don't fit, so one more
+                // may stay (a window of only the current size missed a cycle of more than twice it: 60 squares at 24)
+                if (dropped.Remove(key, out long at) && Loads - at <= Math.Max(Limit, MaxCapacity))
+                {
+                    Reloads++;
+                    if (Capacity + grown < MaxCapacity) grown++;
+                }
                 cache[key] = (t, ++clock);
-                while (cache.Count > Math.Max(4, Capacity))
+                while (cache.Count > Limit)
                 {
                     int oldest = -1; long min = long.MaxValue;
                     foreach (var kv in cache) if (kv.Value.used < min) { min = kv.Value.used; oldest = kv.Key; }
                     cache.Remove(oldest);
+                    dropped[oldest] = Loads;
                 }
+                // the drop record only needs the window's drops: older ones are not thrashing
+                if (dropped.Count > 4 * Math.Max(Limit, MaxCapacity))
+                    foreach (var kv in new List<KeyValuePair<int, long>>(dropped))
+                        if (Loads - kv.Value > Math.Max(Limit, MaxCapacity)) dropped.Remove(kv.Key);
                 return t;
             }
         }

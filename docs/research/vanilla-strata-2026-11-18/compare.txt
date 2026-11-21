@@ -1,0 +1,116 @@
+
+=== 1:10: rock types >= 3% within 120 blocks, depth rules only -> + vanilla strata rules; ore per chunk column
+vienna        ground 122-125
+   before: sandstone 100%
+   after:  andesite 52%, sandstone 28%, granite 12%, bauxite 9%
+   ores:   coal 0>0; copper 14>8; lead/zinc 118>109; gold+silver 3>2
+riga          ground 102-112
+   before: shale 96%
+   after:  andesite 34%, granite 31%, shale 25%, phyllite 7%
+   ores:   iron 105>0; coal 669>356; copper 31>31; tin 0>23; lead/zinc 45>45; sulfur 14>0; halite 1056>1057
+pannonia      ground 108-120
+   before: chalk 51%, peridotite 44%, andesite 5%
+   after:  peridotite 55%, granite 32%, chalk 12%
+   ores:   iron 31>31; coal 859>131; copper 528>529; lead/zinc 17>17; gold+silver 2>2; halite 30>0
+deadsea       ground 81-87
+   before: granite 100%
+   after:  granite 100%
+   ores:   tin 5>5; lead/zinc 3>3
+zermatt       ground 262-326
+   before: granite 100%
+   after:  granite 78%, andesite 19%, peridotite 4%
+   ores:   copper 3>3; tin 71>71; gold+silver 0>0
+addis         ground 348-364
+   before: granite 62%, sandstone 15%, peridotite 10%, shale 8%, chalk 5%
+   after:  sandstone 30%, peridotite 28%, andesite 22%, granite 20%
+   ores:   coal 156>171; copper 4>4; tin 35>30; lead/zinc 1>1; sulfur 12>12; gold+silver 2>2; halite 1180>1180
+nairobi       ground 264-286
+   before: sandstone 47%, slate 27%, andesite 25%
+   after:  andesite 50%, sandstone 29%, granite 12%, slate 8%
+   ores:   copper 696>696; lead/zinc 50>50; sulfur 2>1; halite 2802>2721
+mexico        ground 339-341
+   before: granite 70%, bauxite 30%
+   after:  granite 93%, bauxite 7%
+   ores:   copper 372>372; tin 24>32; lead/zinc 24>31; gold+silver 19>24
+lapaz         ground 490-530
+   before: granite 100%
+   after:  granite 100%
+   ores:   iron 75>75; copper 59>59; tin 3>3; lead/zinc 11>11; gold+silver 0>0
+lhasa         ground 478-487
+   before: granite 70%, slate 29%
+   after:  granite 62%, chert 29%, slate 8%
+   ores:   coal 0>242; copper 2>2; tin 147>113; lead/zinc 0>1; gold+silver 24>23; halite 0>2644
+tehran        ground 215-233
+   before: granite 100%
+   after:  granite 84%, peridotite 16%
+   ores:   copper 678>681; tin 0>0; lead/zinc 61>61; gold+silver 6>6
+johannesburg  ground 286-293
+   before: peridotite 74%, granite 26%
+   after:  peridotite 51%, granite 49%
+   ores:   copper 48>48; tin 48>48; gold+silver 15>15
+brasilia      ground 218-225
+   before: andesite 59%, peridotite 41%
+   after:  peridotite 52%, andesite 38%, granite 10%
+   ores:   iron 19>53; copper 170>168; tin 3>3; lead/zinc 64>64; gold+silver 4>4
+atacama       ground 250-266
+   before: claystone 55%, sandstone 28%, chalk 11%, conglomerate 5%
+   after:  granite 37%, claystone 29%, peridotite 26%, slate 9%
+   ores:   copper 0>0; tin 0>0; lead/zinc 118>117; gold+silver 3>3
+
+=== 1:100: rock types >= 3% within 120 blocks, depth rules only -> + vanilla strata rules; ore per chunk column
+vienna        ground 112-156
+   before: peridotite 89%, slate 10%
+   after:  peridotite 80%, granite 11%, slate 7%
+   ores:   copper 3>3; tin 100>100; gold+silver 4>4
+riga          ground 102-113
+   before: granite 84%, phyllite 14%
+   after:  granite 90%, phyllite 9%
+   ores:   iron 120>120; coal 25>6; copper 468>468; tin 64>64; lead/zinc 29>21; gold+silver 4>4
+pannonia      ground 115-124
+   before: peridotite 44%, claystone 38%, slate 11%, chalk 5%
+   after:  peridotite 52%, claystone 28%, granite 10%, slate 8%
+   ores:   iron 21>23; coal 361>159; copper 21>21; tin 18>37; lead/zinc 7>7; sulfur 62>48; gold+silver 26>29; halite 2648>1576
+deadsea       ground 82-151
+   before: andesite 52%, shale 41%, conglomerate 7%
+   after:  andesite 59%, shale 30%, granite 11%
+   ores:   coal 227>121; copper 94>94; tin 7>12; lead/zinc 151>93; gold+silver 5>5; halite 953>694
+zermatt       ground 215-306
+   before: granite 78%, andesite 19%, slate 3%
+   after:  andesite 83%, granite 15%
+   ores:   iron 92>19; copper 1554>1555; tin 0>0; gold+silver 2>2
+addis         ground 226-275
+   before: granite 73%, andesite 27%
+   after:  andesite 91%, granite 9%
+   ores:   iron 0>57; copper 136>136; lead/zinc 6>6; gold+silver 0>0
+nairobi       ground 221-233
+   before: granite 100%
+   after:  granite 100%
+   ores:   iron 59>59; copper 2>2; lead/zinc 82>82; gold+silver 32>32
+mexico        ground 243-255
+   before: peridotite 100%
+   after:  peridotite 72%, granite 16%, limestone 12%
+   ores:   coal 0>35; copper 3>0; lead/zinc 3>3; sulfur 0>32
+lapaz         ground 280-311
+   before: granite 100%
+   after:  granite 100%
+   ores:   iron 1>1; copper 392>391; tin 50>50; lead/zinc 2>2; gold+silver 4>4
+lhasa         ground 285-329
+   before: granite 100%
+   after:  granite 69%, conglomerate 22%, phyllite 9%
+   ores:   coal 0>17; copper 132>132; tin 5>4; lead/zinc 81>101; sulfur 0>17; halite 0>840
+tehran        ground 192-217
+   before: peridotite 41%, andesite 30%, granite 26%
+   after:  andesite 61%, granite 21%, claystone 12%, slate 4%
+   ores:   iron 79>0; copper 44>44; tin 8>8; lead/zinc 3>3; gold+silver 4>4
+johannesburg  ground 214-232
+   before: granite 91%, bauxite 9%
+   after:  granite 66%, shale 13%, sandstone 12%, bauxite 9%
+   ores:   iron 1>1; copper 37>38; tin 1>0; lead/zinc 0>21; sulfur 0>61; gold+silver 1>0
+brasilia      ground 188-202
+   before: andesite 69%, peridotite 26%, basalt 5%
+   after:  andesite 75%, claystone 13%, granite 9%
+   ores:   coal 0>51; copper 1>1; tin 69>69; lead/zinc 0>1; gold+silver 5>5
+atacama       ground 213-224
+   before: granite 97%, peridotite 3%
+   after:  granite 50%, peridotite 28%, andesite 23%
+   ores:   iron 48>45; copper 1276>1271; tin 1>1; lead/zinc 96>96; gold+silver 9>9

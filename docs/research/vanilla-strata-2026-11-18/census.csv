@@ -1,0 +1,504 @@
+run,what,site,kind,groundMin,groundMax,family,blocks,perChunkColumn,meanDepth,rocksWithin120
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",vienna,lowland,122,125,azurite,1655,66.2,22.5,andesite 1484951; sandstone 798794; granite 332137; bauxite 256000; suevite 333
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",vienna,lowland,122,125,bauxite,256000,10240.0,41.5,andesite 1484951; sandstone 798794; granite 332137; bauxite 256000; suevite 333
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",vienna,lowland,122,125,cerussite,380,15.2,10.9,andesite 1484951; sandstone 798794; granite 332137; bauxite 256000; suevite 333
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",vienna,lowland,122,125,cinnabar,102,4.1,66.8,andesite 1484951; sandstone 798794; granite 332137; bauxite 256000; suevite 333
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",vienna,lowland,122,125,clay-red,1155,46.2,1.2,andesite 1484951; sandstone 798794; granite 332137; bauxite 256000; suevite 333
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",vienna,lowland,122,125,flint,228,9.1,5.4,andesite 1484951; sandstone 798794; granite 332137; bauxite 256000; suevite 333
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",vienna,lowland,122,125,lignite,7,0.3,22.1,andesite 1484951; sandstone 798794; granite 332137; bauxite 256000; suevite 333
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",vienna,lowland,122,125,nativecopper,196,7.8,61.6,andesite 1484951; sandstone 798794; granite 332137; bauxite 256000; suevite 333
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",vienna,lowland,122,125,olivine,91,3.6,24.3,andesite 1484951; sandstone 798794; granite 332137; bauxite 256000; suevite 333
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",vienna,lowland,122,125,quartz,8455,338.2,70.4,andesite 1484951; sandstone 798794; granite 332137; bauxite 256000; suevite 333
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",vienna,lowland,122,125,quartz_nativesilver,61,2.4,79.0,andesite 1484951; sandstone 798794; granite 332137; bauxite 256000; suevite 333
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",vienna,lowland,122,125,saltpeter,135,5.4,56.0,andesite 1484951; sandstone 798794; granite 332137; bauxite 256000; suevite 333
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",vienna,lowland,122,125,smithsonite,487,19.5,16.6,andesite 1484951; sandstone 798794; granite 332137; bauxite 256000; suevite 333
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",vienna,lowland,122,125,sphalerite,2717,108.7,65.1,andesite 1484951; sandstone 798794; granite 332137; bauxite 256000; suevite 333
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,beryl,19,0.8,48.1,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,bismuthinite,670,26.8,64.7,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,borax,396,15.8,15.8,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,cassiterite,580,23.2,63.7,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,emerald,18,0.7,102.1,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,flint,108,4.3,1.7,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,garnet,9,0.4,43.3,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,halite,26413,1056.5,66.9,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,lignite,8909,356.4,18.3,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,loose:lignite,3,0.1,0,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,nativecopper,764,30.6,78.9,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,pentlandite,6298,251.9,81.0,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,pyrite,1030,41.2,48.4,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,quartz,4886,195.4,37.4,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,rhodochrosite,131,5.2,99.5,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,sphalerite,1131,45.2,56.8,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,sylvite,375,15.0,60.1,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,tetrahedrite,540,21.6,55.2,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,topaz,39,1.6,42.2,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",riga,lowland,102,112,tourmaline,46,1.8,43.5,andesite 387828; granite 348686; shale 285564; phyllite 75129; halite 26413; redmarble 1665; basalt 46
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,beryl,81,3.2,30.7,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,chalcopyrite,220,8.8,35.0,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,cinnabar,393,15.7,88.5,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,flint,134,5.4,5.4,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,garnet,43,1.7,55.8,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,hematite,784,31.4,92.3,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,lignite,3281,131.2,10.7,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,loose:lignite,5,0.2,0,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,nativecopper,13220,528.8,72.8,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,olivine,8372,334.9,73.7,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,pentlandite,3557,142.3,83.8,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,pyrite,237,9.5,40.2,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,quartz,11906,476.2,55.9,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,quartz_nativesilver,39,1.6,94.3,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,saltpeter,82,3.3,34.5,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,sperrylite,1568,62.7,65.3,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,sphalerite,414,16.6,47.8,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,spinel,12,0.5,56,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,topaz,39,1.6,28.4,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",pannonia,lowland,108,120,tourmaline,68,2.7,29.4,peridotite 1541300; granite 906093; chalk 324988; andesite 30436
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",deadsea,below-sea,81,87,beryl,213,8.5,37.0,granite 1510215; basalt 2625
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",deadsea,below-sea,81,87,bismuthinite,2345,93.8,49.3,granite 1510215; basalt 2625
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",deadsea,below-sea,81,87,cassiterite,120,4.8,53.8,granite 1510215; basalt 2625
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",deadsea,below-sea,81,87,chromite,256,10.2,66.9,granite 1510215; basalt 2625
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",deadsea,below-sea,81,87,garnet,99,4.0,51.2,granite 1510215; basalt 2625
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",deadsea,below-sea,81,87,pyrite,252,10.1,18.6,granite 1510215; basalt 2625
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",deadsea,below-sea,81,87,quartz,21438,857.5,35.6,granite 1510215; basalt 2625
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",deadsea,below-sea,81,87,sphalerite,86,3.4,44.5,granite 1510215; basalt 2625
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",deadsea,below-sea,81,87,topaz,1,0.0,50,granite 1510215; basalt 2625
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",deadsea,below-sea,81,87,tourmaline,80,3.2,38.7,granite 1510215; basalt 2625
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,beryl,75,3.0,44.0,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,bismuthinite,1754,70.2,64.6,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,cassiterite,1782,71.3,55.3,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,chalcopyrite,1170,46.8,51.9,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,garnet,84,3.4,56.7,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,ilmenite,76,3.0,40,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,loose:nativecopper,7,0.3,0,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,nativecopper,78,3.1,5.8,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,olivine,482,19.3,33.9,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,olivine_peridot,24,1.0,33.6,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,peat,3,0.1,0,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,pentlandite,4890,195.6,86.5,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,pyrite,750,30.0,53.5,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,quartz,8296,331.8,32.0,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,quartz_nativesilver,11,0.4,22.6,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,saltpeter,141,5.6,44.2,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,topaz,2,0.1,50,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,tourmaline,4,0.2,41,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",zermatt,mountain,262,326,wolframite,48,1.9,72.3,granite 2241166; andesite 533931; peridotite 109435
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,azurite,11,0.4,13.4,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,beryl,5,0.2,42.6,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,bismuthinite,921,36.8,72.9,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,bituminouscoal,4114,164.6,26.9,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,cassiterite,760,30.4,49.2,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,chalcopyrite,84,3.4,48.3,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,chromite,95,3.8,83,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,cinnabar,362,14.5,92.9,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,clay-fire,236,9.4,24.0,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,clay-red,488,19.5,0,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,emerald,6,0.2,93.8,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,flint,589,23.6,4.8,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,garnet,29,1.2,56.4,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,halite,29492,1179.7,171.3,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,hemimorphite,82,3.3,28.4,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,lignite,167,6.7,36,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,loose:nativecopper,16,0.6,0,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,nativecopper,101,4.0,4.7,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,olivine,7973,318.9,60.8,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,peat,20,0.8,0,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,pentlandite,29,1.2,102,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,pyrite,734,29.4,43.1,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,quartz,13957,558.3,69.4,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,quartz_nativegold,10,0.4,39.6,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,quartz_nativesilver,40,1.6,70.8,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,saltpeter,15,0.6,80.1,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,smithsonite,376,15.0,25.0,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,sperrylite,195,7.8,58.5,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,sphalerite,16,0.6,24.6,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,spinel,46,1.8,58.0,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,sulfur,292,11.7,25.6,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,sylvite,39,1.6,90.9,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,tetrahedrite,307,12.3,45.5,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,topaz,20,0.8,44.1,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,tourmaline,66,2.6,44.0,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,vanadinite,138,5.5,16.3,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",addis,highland,348,364,wulfenite,1069,42.8,14.8,sandstone 879259; peridotite 819702; andesite 656521; granite 575602; halite 11547; shale 2472
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,borax,1031,41.2,17.5,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,cerussite,1574,63.0,14.5,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,chalcopyrite,256,10.2,73.8,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,cinnabar,127,5.1,87.5,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,clay-red,1236,49.4,0.8,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,flint,383,15.3,5.4,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,graphite,5,0.2,43.8,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,halite,68026,2721.0,139.9,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,hemimorphite,841,33.6,14.9,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,loose:borax,2,0.1,0,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,loose:nativecopper,13,0.5,0,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,nativecopper,17404,696.2,76.3,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,olivine,42,1.7,70.8,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,pyrite,2214,88.6,41.4,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,quartz,14233,569.3,39.6,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,saltpeter,150,6.0,105.1,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,sphalerite,1257,50.3,61.2,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,sulfur,22,0.9,34.6,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,sylvite,405,16.2,77.6,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,vanadinite,168,6.7,21.5,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",nairobi,highland,264,286,wulfenite,286,11.4,20.8,andesite 1405152; sandstone 811825; granite 344970; slate 215131; halite 31677; phyllite 28750; whitemarble 106
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",mexico,highland,339,341,bauxite,204788,8191.5,5.5,granite 2700020; bauxite 204788
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",mexico,highland,339,341,beryl,27,1.1,39.7,granite 2700020; bauxite 204788
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",mexico,highland,339,341,cassiterite,793,31.7,41.2,granite 2700020; bauxite 204788
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",mexico,highland,339,341,chalcopyrite,16881,675.2,47.2,granite 2700020; bauxite 204788
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",mexico,highland,339,341,chromite,666,26.6,84.1,granite 2700020; bauxite 204788
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",mexico,highland,339,341,cinnabar,15,0.6,71.9,granite 2700020; bauxite 204788
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",mexico,highland,339,341,garnet,89,3.6,55.9,granite 2700020; bauxite 204788
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",mexico,highland,339,341,nativecopper,9305,372.2,71.7,granite 2700020; bauxite 204788
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",mexico,highland,339,341,pyrite,808,32.3,38.4,granite 2700020; bauxite 204788
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",mexico,highland,339,341,quartz,19376,775.0,51.6,granite 2700020; bauxite 204788
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",mexico,highland,339,341,quartz_nativesilver,602,24.1,47.2,granite 2700020; bauxite 204788
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",mexico,highland,339,341,sphalerite,783,31.3,57.6,granite 2700020; bauxite 204788
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",mexico,highland,339,341,tetrahedrite,1309,52.4,45.7,granite 2700020; bauxite 204788
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",mexico,highland,339,341,topaz,69,2.8,39,granite 2700020; bauxite 204788
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",mexico,highland,339,341,tourmaline,13,0.5,37.5,granite 2700020; bauxite 204788
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,beryl,8,0.3,35.5,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,cassiterite,79,3.2,49.1,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,chalcopyrite,1917,76.7,45.7,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,garnet,49,2.0,49.8,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,hematite,1885,75.4,52.9,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,ilmenite,776,31.0,65.5,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,loose:nativecopper,9,0.4,0,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,nativecopper,1468,58.7,68.5,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,peat,294,11.8,0,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,quartz,13715,548.6,41.0,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,quartz_nativesilver,2,0.1,34,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,sphalerite,269,10.8,62.2,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,tetrahedrite,786,31.4,37.7,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,topaz,14,0.6,45.7,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,tourmaline,20,0.8,42.1,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lapaz,highland,490,530,wolframite,85,3.4,78.1,granite 2943930
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,beryl,47,1.9,52.3,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,bituminouscoal,6045,241.8,25.1,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,borax,1832,73.3,17.8,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,cassiterite,2834,113.4,52.7,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,chalcopyrite,230,9.2,47.4,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,clay-fire,524,21.0,23.3,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,clay-red,11,0.4,0,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,galena,10,0.4,31.9,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,garnet,5,0.2,58.4,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,halite,66100,2644.0,215.4,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,loose:borax,2,0.1,0,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,loose:nativecopper,5,0.2,0,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,nativecopper,53,2.1,6.1,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,pyrite,3852,154.1,51.9,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,quartz,17911,716.4,95.3,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,quartz_nativegold,72,2.9,94.5,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,quartz_nativesilver,506,20.2,96.4,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,sphalerite,6,0.2,1,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,sylvite,204,8.2,59.9,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,topaz,21,0.8,55.9,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,tourmaline,32,1.3,53.3,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",lhasa,highland,478,487,wolframite,73,2.9,82.4,granite 1663744; chert 787038; slate 215773; halite 23418; andesite 7034
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,beryl,113,4.5,33.2,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,bismuthinite,185,7.4,70.7,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,cassiterite,7,0.3,7,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,chalcopyrite,8705,348.2,40.1,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,garnet,21,0.8,53.3,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,loose:cassiterite,1,0.0,0,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,loose:nativecopper,7,0.3,0,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,nativecopper,17026,681.0,78.0,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,olivine,108,4.3,54.1,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,quartz,20847,833.9,58.7,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,quartz_nativesilver,151,6.0,37.5,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,saltpeter,187,7.5,81.3,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,sphalerite,1517,60.7,62.3,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,spinel,59,2.4,60.6,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,topaz,89,3.6,32.3,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,tourmaline,11,0.4,36.9,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",tehran,highland,215,233,wolframite,24,1.0,72,granite 2377891; peridotite 466117
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",johannesburg,highland,286,293,bismuthinite,91,3.6,67.8,peridotite 1462830; granite 1390619
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",johannesburg,highland,286,293,cassiterite,1198,47.9,63.4,peridotite 1462830; granite 1390619
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",johannesburg,highland,286,293,chalcopyrite,5251,210.0,39.1,peridotite 1462830; granite 1390619
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",johannesburg,highland,286,293,emerald,468,18.7,94.9,peridotite 1462830; granite 1390619
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",johannesburg,highland,286,293,garnet,24,1.0,61.5,peridotite 1462830; granite 1390619
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",johannesburg,highland,286,293,loose:cassiterite,1,0.0,0,peridotite 1462830; granite 1390619
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",johannesburg,highland,286,293,loose:nativecopper,4,0.2,0,peridotite 1462830; granite 1390619
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",johannesburg,highland,286,293,nativecopper,1190,47.6,74.7,peridotite 1462830; granite 1390619
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",johannesburg,highland,286,293,olivine,6885,275.4,70.9,peridotite 1462830; granite 1390619
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",johannesburg,highland,286,293,quartz,28458,1138.3,78.7,peridotite 1462830; granite 1390619
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",johannesburg,highland,286,293,quartz_nativegold,365,14.6,78.7,peridotite 1462830; granite 1390619
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",johannesburg,highland,286,293,sperrylite,39,1.6,70.4,peridotite 1462830; granite 1390619
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",johannesburg,highland,286,293,spinel,2,0.1,64,peridotite 1462830; granite 1390619
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",johannesburg,highland,286,293,topaz,177,7.1,37.3,peridotite 1462830; granite 1390619
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",johannesburg,highland,286,293,tourmaline,13,0.5,32,peridotite 1462830; granite 1390619
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",brasilia,highland,218,225,beryl,4,0.2,16,peridotite 1495756; andesite 1078476; granite 278124; suevite 44
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",brasilia,highland,218,225,bismuthinite,5542,221.7,57.7,peridotite 1495756; andesite 1078476; granite 278124; suevite 44
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",brasilia,highland,218,225,cassiterite,72,2.9,37.4,peridotite 1495756; andesite 1078476; granite 278124; suevite 44
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",brasilia,highland,218,225,cinnabar,390,15.6,89.1,peridotite 1495756; andesite 1078476; granite 278124; suevite 44
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",brasilia,highland,218,225,garnet,8,0.3,50.9,peridotite 1495756; andesite 1078476; granite 278124; suevite 44
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",brasilia,highland,218,225,hematite,1328,53.1,24.2,peridotite 1495756; andesite 1078476; granite 278124; suevite 44
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",brasilia,highland,218,225,loose:nativecopper,4,0.2,0,peridotite 1495756; andesite 1078476; granite 278124; suevite 44
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",brasilia,highland,218,225,nativecopper,4211,168.4,77.2,peridotite 1495756; andesite 1078476; granite 278124; suevite 44
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",brasilia,highland,218,225,olivine,18953,758.1,32.0,peridotite 1495756; andesite 1078476; granite 278124; suevite 44
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",brasilia,highland,218,225,olivine_peridot,30,1.2,58.6,peridotite 1495756; andesite 1078476; granite 278124; suevite 44
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",brasilia,highland,218,225,quartz,11627,465.1,58.3,peridotite 1495756; andesite 1078476; granite 278124; suevite 44
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",brasilia,highland,218,225,quartz_nativegold,97,3.9,55.7,peridotite 1495756; andesite 1078476; granite 278124; suevite 44
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",brasilia,highland,218,225,sphalerite,1607,64.3,53.5,peridotite 1495756; andesite 1078476; granite 278124; suevite 44
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",brasilia,highland,218,225,spinel,247,9.9,41.6,peridotite 1495756; andesite 1078476; granite 278124; suevite 44
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",brasilia,highland,218,225,tetrahedrite,82,3.3,16,peridotite 1495756; andesite 1078476; granite 278124; suevite 44
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,beryl,4,0.2,54.2,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,bismuthinite,47,1.9,79.7,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,cassiterite,2,0.1,50,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,chalcopyrite,234,9.4,54.2,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,emerald,27,1.1,94.3,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,flint,17,0.7,4.3,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,garnet,28,1.1,61.6,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,ilmenite,57,2.3,45.8,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,nativecopper,5,0.2,49.2,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,olivine,17180,687.2,82.5,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,pyrite,12093,483.7,52.4,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,quartz,12466,498.6,54.3,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,quartz_nativegold,1,0.0,107,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,quartz_nativesilver,86,3.4,46.0,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,saltpeter,88,3.5,103.9,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,sperrylite,294,11.8,78.6,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,sphalerite,2930,117.2,57.1,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,topaz,61,2.4,57.4,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,tourmaline,19,0.8,52.7,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-10,"deposit depth + vanilla strata rules 1, 1:10",atacama,highland,250,266,wolframite,1512,60.5,53.8,granite 1046898; claystone 820730; peridotite 752238; slate 244747
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,bismuthinite,394,15.8,69.9,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,borax,130,5.2,1.9,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,cassiterite,2503,100.1,52.2,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,emerald,30,1.2,93.7,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,flint,203,8.1,4.5,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,garnet,1,0.0,56,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,graphite,178,7.1,15.2,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,loose:cassiterite,1,0.0,0,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,loose:nativecopper,5,0.2,0,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,nativecopper,77,3.1,5.8,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,olivine,6062,242.5,61.3,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,pyrite,334,13.4,12.8,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,quartz,26149,1046.0,71.4,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,quartz_nativesilver,109,4.4,87.4,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,saltpeter,232,9.3,62.0,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,sperrylite,870,34.8,63.8,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",vienna,lowland,112,156,spinel,9,0.4,51.3,peridotite 1879204; granite 261212; slate 168143; claystone 42413; redmarble 407
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,beryl,45,1.8,39.8,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,bismuthinite,1020,40.8,52.2,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,cassiterite,1599,64.0,44.7,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,chalcopyrite,1992,79.7,45.2,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,flint,13,0.5,2.8,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,galena,283,11.3,5.1,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,garnet,65,2.6,53.9,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,hematite,3011,120.4,37.3,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,lignite,161,6.4,10.1,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,loose:galena,1,0.0,0,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,nativecopper,11696,467.8,72.7,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,olivine,91,3.6,83.6,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,peat,645,25.8,1.5,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,quartz,22553,902.1,39.7,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,quartz_nativegold,104,4.2,49.7,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,saltpeter,394,15.8,56.5,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,smithsonite,202,8.1,7.5,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,sphalerite,248,9.9,33.3,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,topaz,76,3.0,41.9,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",riga,lowland,102,113,tourmaline,11,0.4,46.1,granite 1582053; phyllite 150054; limestone 15944; peridotite 3917; whitemarble 1171
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,anthracite,866,34.6,32.9,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,bismuthinite,123,4.9,71.4,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,bituminouscoal,3119,124.8,29.4,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,cassiterite,932,37.3,59.2,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,cinnabar,105,4.2,97.8,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,clay-fire,633,25.3,29.9,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,clay-red,1183,47.3,0.8,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,emerald,16,0.6,95.3,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,flint,66,2.6,7.4,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,galena,17,0.7,22.2,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,garnet,122,4.9,64.2,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,graphite,200,8.0,43.4,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,halite,39388,1575.5,62.0,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,hematite,563,22.5,83.7,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,loose:nativecopper,2,0.1,0,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,nativecopper,532,21.3,83.7,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,olivine,4053,162.1,67.7,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,quartz,14103,564.1,48.6,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,quartz_nativesilver,723,28.9,48.1,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,saltpeter,603,24.1,74.4,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,sphalerite,158,6.3,77.0,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,spinel,2,0.1,54,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,sulfur,1189,47.6,25.0,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",pannonia,lowland,115,124,sylvite,306,12.2,56.8,peridotite 1482890; claystone 782587; granite 291699; slate 229763; halite 39374
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,anthracite,206,8.2,28.8,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,borax,3451,138.0,21.0,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,cassiterite,300,12.0,55.4,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,chalcopyrite,50,2.0,37,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,cinnabar,1003,40.1,77.8,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,clay-fire,13,0.5,30.2,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,flint,629,25.2,9.0,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,galena,2332,93.3,22.2,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,garnet,4,0.2,78.8,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,halite,17362,694.5,52.2,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,lignite,2813,112.5,25.9,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,loose:borax,6,0.2,0,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,loose:galena,2,0.1,0,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,loose:nativecopper,9,0.4,0,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,nativecopper,2340,93.6,73.9,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,pyrite,849,34.0,23.8,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,quartz,17440,697.6,64.7,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,quartz_nativesilver,128,5.1,53.5,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,saltpeter,51,2.0,49.7,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",deadsea,below-sea,82,151,sylvite,19,0.8,78.4,andesite 762527; shale 384309; granite 138648; conglomerate 15587
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",zermatt,mountain,215,306,bismuthinite,173,6.9,73.3,andesite 2374702; granite 416414; slate 60125; whitemarble 89
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",zermatt,mountain,215,306,cassiterite,7,0.3,1,andesite 2374702; granite 416414; slate 60125; whitemarble 89
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",zermatt,mountain,215,306,clay-red,73,2.9,0,andesite 2374702; granite 416414; slate 60125; whitemarble 89
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",zermatt,mountain,215,306,hematite,466,18.6,17.5,andesite 2374702; granite 416414; slate 60125; whitemarble 89
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",zermatt,mountain,215,306,loose:cassiterite,3,0.1,0,andesite 2374702; granite 416414; slate 60125; whitemarble 89
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",zermatt,mountain,215,306,loose:nativecopper,6,0.2,0,andesite 2374702; granite 416414; slate 60125; whitemarble 89
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",zermatt,mountain,215,306,loose:quartz,23,0.9,0,andesite 2374702; granite 416414; slate 60125; whitemarble 89
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",zermatt,mountain,215,306,nativecopper,38865,1554.6,77.4,andesite 2374702; granite 416414; slate 60125; whitemarble 89
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",zermatt,mountain,215,306,olivine,91,3.6,207.5,andesite 2374702; granite 416414; slate 60125; whitemarble 89
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",zermatt,mountain,215,306,quartz,26023,1040.9,49.2,andesite 2374702; granite 416414; slate 60125; whitemarble 89
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",zermatt,mountain,215,306,quartz_nativegold,21,0.8,14,andesite 2374702; granite 416414; slate 60125; whitemarble 89
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",zermatt,mountain,215,306,quartz_nativesilver,21,0.8,34.9,andesite 2374702; granite 416414; slate 60125; whitemarble 89
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",zermatt,mountain,215,306,tetrahedrite,4,0.2,19.2,andesite 2374702; granite 416414; slate 60125; whitemarble 89
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",zermatt,mountain,215,306,topaz,1,0.0,16,andesite 2374702; granite 416414; slate 60125; whitemarble 89
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",addis,highland,226,275,clay-red,714,28.6,0.9,andesite 2566677; granite 240678; phyllite 18215; sandstone 2002
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",addis,highland,226,275,emerald,1,0.0,104,andesite 2566677; granite 240678; phyllite 18215; sandstone 2002
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",addis,highland,226,275,flint,9,0.4,3,andesite 2566677; granite 240678; phyllite 18215; sandstone 2002
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",addis,highland,226,275,ilmenite,2065,82.6,57.2,andesite 2566677; granite 240678; phyllite 18215; sandstone 2002
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",addis,highland,226,275,magnetite,1415,56.6,57.4,andesite 2566677; granite 240678; phyllite 18215; sandstone 2002
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",addis,highland,226,275,nativecopper,3411,136.4,71.9,andesite 2566677; granite 240678; phyllite 18215; sandstone 2002
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",addis,highland,226,275,peat,373,14.9,0.9,andesite 2566677; granite 240678; phyllite 18215; sandstone 2002
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",addis,highland,226,275,quartz,29740,1189.6,26.6,andesite 2566677; granite 240678; phyllite 18215; sandstone 2002
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",addis,highland,226,275,quartz_nativegold,4,0.2,6.8,andesite 2566677; granite 240678; phyllite 18215; sandstone 2002
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",addis,highland,226,275,sphalerite,158,6.3,65.5,andesite 2566677; granite 240678; phyllite 18215; sandstone 2002
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",nairobi,highland,221,233,beryl,26,1.0,36.6,granite 2832282
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",nairobi,highland,221,233,bismuthinite,1014,40.6,60.5,granite 2832282
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",nairobi,highland,221,233,chalcopyrite,720,28.8,57.8,granite 2832282
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",nairobi,highland,221,233,garnet,9,0.4,63.8,granite 2832282
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",nairobi,highland,221,233,hematite,1470,58.8,58.2,granite 2832282
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",nairobi,highland,221,233,nativecopper,42,1.7,10.7,granite 2832282
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",nairobi,highland,221,233,quartz,28315,1132.6,63.9,granite 2832282
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",nairobi,highland,221,233,quartz_nativesilver,803,32.1,61.9,granite 2832282
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",nairobi,highland,221,233,sphalerite,2042,81.7,55.8,granite 2832282
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",nairobi,highland,221,233,tetrahedrite,387,15.5,52.3,granite 2832282
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",nairobi,highland,221,233,topaz,1,0.0,29,granite 2832282
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",nairobi,highland,221,233,tourmaline,25,1.0,36.7,granite 2832282
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",mexico,highland,243,255,bituminouscoal,142,5.7,8.6,peridotite 2050477; granite 468417; limestone 340667
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",mexico,highland,243,255,emerald,30,1.2,89.5,peridotite 2050477; granite 468417; limestone 340667
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",mexico,highland,243,255,flint,590,23.6,6.1,peridotite 2050477; granite 468417; limestone 340667
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",mexico,highland,243,255,garnet,10,0.4,55.2,peridotite 2050477; granite 468417; limestone 340667
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",mexico,highland,243,255,hemimorphite,1540,61.6,11.1,peridotite 2050477; granite 468417; limestone 340667
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",mexico,highland,243,255,lignite,728,29.1,14.6,peridotite 2050477; granite 468417; limestone 340667
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",mexico,highland,243,255,loose:sulfur,2,0.1,0,peridotite 2050477; granite 468417; limestone 340667
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",mexico,highland,243,255,olivine,19603,784.1,78.6,peridotite 2050477; granite 468417; limestone 340667
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",mexico,highland,243,255,olivine_peridot,713,28.5,81.5,peridotite 2050477; granite 468417; limestone 340667
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",mexico,highland,243,255,quartz,14336,573.4,70.7,peridotite 2050477; granite 468417; limestone 340667
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",mexico,highland,243,255,sperrylite,167,6.7,66.3,peridotite 2050477; granite 468417; limestone 340667
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",mexico,highland,243,255,sphalerite,74,3.0,34.1,peridotite 2050477; granite 468417; limestone 340667
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",mexico,highland,243,255,sulfur,810,32.4,12.3,peridotite 2050477; granite 468417; limestone 340667
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",mexico,highland,243,255,wulfenite,683,27.3,10.7,peridotite 2050477; granite 468417; limestone 340667
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,beryl,14,0.6,36.1,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,cassiterite,1251,50.0,46.5,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,chalcopyrite,19590,783.6,43.3,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,clay-red,237,9.5,0,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,garnet,34,1.4,56.7,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,hematite,30,1.2,91.0,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,loose:nativecopper,2,0.1,0,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,nativecopper,9787,391.5,76.5,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,olivine,154,6.2,56.2,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,peat,138,5.5,0.5,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,quartz,35892,1435.7,74.5,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,quartz_nativegold,95,3.8,79.2,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,sphalerite,49,2.0,61.6,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,tetrahedrite,384,15.4,55.9,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,topaz,2,0.1,42.5,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lapaz,highland,280,311,tourmaline,19,0.8,40.4,granite 2909517
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,beryl,8,0.3,43.2,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,bismuthinite,3341,133.6,66.4,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,bituminouscoal,417,16.7,20.4,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,cassiterite,107,4.3,47.7,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,chalcopyrite,622,24.9,57.1,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,cinnabar,215,8.6,96.3,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,clay-fire,10,0.4,20,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,clay-red,94,3.8,0.3,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,galena,500,20.0,11.7,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,garnet,25,1.0,54.2,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,graphite,122,4.9,88.2,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,halite,21010,840.4,85.6,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,loose:galena,4,0.2,0,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,loose:nativecopper,5,0.2,0,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,nativecopper,3289,131.6,73.0,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,peat,147,5.9,0.6,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,quartz,14192,567.7,30.2,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,rhodochrosite,73,2.9,94.9,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,sphalerite,2023,80.9,60.7,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,sulfur,416,16.6,22.0,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,sylvite,129,5.2,119.2,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,tourmaline,90,3.6,42.6,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",lhasa,highland,285,329,wolframite,417,16.7,44.7,granite 1801350; conglomerate 579923; phyllite 223180; halite 7998
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",tehran,highland,192,217,bauxite,69,2.8,15.3,andesite 1744761; granite 608612; claystone 355427; slate 119488; peridotite 32220; whitemarble 1441; bauxite 69
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",tehran,highland,192,217,bismuthinite,24,1.0,68.7,andesite 1744761; granite 608612; claystone 355427; slate 119488; peridotite 32220; whitemarble 1441; bauxite 69
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",tehran,highland,192,217,cassiterite,209,8.4,53.2,andesite 1744761; granite 608612; claystone 355427; slate 119488; peridotite 32220; whitemarble 1441; bauxite 69
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",tehran,highland,192,217,chalcopyrite,724,29.0,59.1,andesite 1744761; granite 608612; claystone 355427; slate 119488; peridotite 32220; whitemarble 1441; bauxite 69
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",tehran,highland,192,217,flint,499,20.0,5.2,andesite 1744761; granite 608612; claystone 355427; slate 119488; peridotite 32220; whitemarble 1441; bauxite 69
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",tehran,highland,192,217,garnet,2,0.1,28,andesite 1744761; granite 608612; claystone 355427; slate 119488; peridotite 32220; whitemarble 1441; bauxite 69
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",tehran,highland,192,217,loose:nativecopper,1,0.0,0,andesite 1744761; granite 608612; claystone 355427; slate 119488; peridotite 32220; whitemarble 1441; bauxite 69
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",tehran,highland,192,217,nativecopper,1103,44.1,80.6,andesite 1744761; granite 608612; claystone 355427; slate 119488; peridotite 32220; whitemarble 1441; bauxite 69
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",tehran,highland,192,217,quartz,8565,342.6,17.2,andesite 1744761; granite 608612; claystone 355427; slate 119488; peridotite 32220; whitemarble 1441; bauxite 69
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",tehran,highland,192,217,quartz_nativegold,110,4.4,18.8,andesite 1744761; granite 608612; claystone 355427; slate 119488; peridotite 32220; whitemarble 1441; bauxite 69
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",tehran,highland,192,217,saltpeter,134,5.4,105.1,andesite 1744761; granite 608612; claystone 355427; slate 119488; peridotite 32220; whitemarble 1441; bauxite 69
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",tehran,highland,192,217,sphalerite,64,2.6,62.1,andesite 1744761; granite 608612; claystone 355427; slate 119488; peridotite 32220; whitemarble 1441; bauxite 69
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",tehran,highland,192,217,spinel,1,0.0,23,andesite 1744761; granite 608612; claystone 355427; slate 119488; peridotite 32220; whitemarble 1441; bauxite 69
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,azurite,775,31.0,14.0,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,bauxite,253249,10130.0,37.2,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,beryl,11,0.4,49.8,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,bismuthinite,327,13.1,75.8,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,borax,1142,45.7,14.1,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,cerussite,830,33.2,10.7,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,chromite,130,5.2,106.7,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,flint,103,4.1,5.5,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,galena,537,21.5,18.7,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,garnet,20,0.8,59.6,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,hematite,26,1.0,49.5,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,hemimorphite,227,9.1,14.5,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,loose:borax,6,0.2,0,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,loose:galena,2,0.1,0,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,loose:nativecopper,5,0.2,0,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,nativecopper,949,38.0,84.9,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,olivine,91,3.6,72.6,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,quartz,11178,447.1,64.5,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,smithsonite,42,1.7,14.0,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,sulfur,1527,61.1,22.6,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,tetrahedrite,716,28.6,62.9,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,topaz,8,0.3,57.8,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",johannesburg,highland,214,232,tourmaline,2,0.1,48.5,granite 1891591; shale 361679; sandstone 343245; bauxite 252807
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,bismuthinite,4096,163.8,61.9,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,bituminouscoal,588,23.5,18.8,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,borax,21,0.8,21,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,cassiterite,1718,68.7,44.3,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,chalcopyrite,1200,48.0,49.2,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,clay-fire,479,19.2,18.5,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,clay-red,31,1.2,0.5,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,flint,75,3.0,4.6,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,galena,17,0.7,17,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,lignite,693,27.7,13.1,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,loose:quartz,23,0.9,0,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,nativecopper,18,0.7,6,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,olivine,89,3.6,122.4,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,quartz,17115,684.6,42.7,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,quartz_nativegold,9,0.4,18.9,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,quartz_nativesilver,118,4.7,20.2,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",brasilia,highland,188,202,saltpeter,172,6.9,109.6,andesite 2102654; claystone 376633; granite 254144; basalt 77573; obsidian 621
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,bismuthinite,64,2.6,51.9,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,cassiterite,18,0.7,6,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,chalcopyrite,166,6.6,46.8,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,cinnabar,46,1.8,82.2,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,emerald,1,0.0,93,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,garnet,45,1.8,48.2,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,hematite,1136,45.4,67.8,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,loose:cassiterite,2,0.1,0,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,loose:nativecopper,9,0.4,0,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,nativecopper,31777,1271.1,76.1,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,olivine,1926,77.0,56.4,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,olivine_peridot,26,1.0,64.4,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,quartz,14510,580.4,55.5,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,quartz_nativegold,90,3.6,45.3,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,quartz_nativesilver,129,5.2,57.9,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,sphalerite,2401,96.0,60.7,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,tetrahedrite,282,11.3,35.8,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,topaz,16,0.6,33,granite 1428949; peridotite 793859; andesite 647802; suevite 170
+strata-100,"deposit depth + vanilla strata rules 1, 1:100",atacama,highland,213,224,tourmaline,40,1.6,34.6,granite 1428949; peridotite 793859; andesite 647802; suevite 170

@@ -85,7 +85,7 @@ namespace EarthMap
                 MapHeight = pass.sapi.WorldManager.MapSizeY;
                 var g = model.TerrainGeoAt(Cx + 16, Cz + 16);
                 Climate = model.Data.SampleClimate(g.Lat, g.Lon);
-                flags = pass.handoff.TakeFlags(request.ChunkX, request.ChunkZ);
+                flags = pass.handoff.TakeFlags(request.Chunks, request.ChunkX, request.ChunkZ);
                 ColdCoast = Climate.TMean < 0;
                 // decision 0075: vanilla biomes draw no altitude zones (turf, fell-field, scree); bare rock on steep and
                 // cold ground and snow in the nival zone stay (the terrain's rock exposure, below)

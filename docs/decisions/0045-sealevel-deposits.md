@@ -46,6 +46,12 @@ Graphical client (2 November, VS 1.22.7 Linux client and server in WSL2, off-scr
 
 Source: `src/SealevelDeposits.cs`, `src/EarthVerticalBootstrap.cs`, `src/EarthOres.cs`, `src/SelfTest.cs`, `modinfo.json`.
 
+## Later: deposit depth rules (18 November 2026)
+
+This decision puts the sea-level deposits back at Earth's sea level. Under Earth's plateaus that sea level lies far below
+the ground, so new worlds with vanilla ores also move every vanilla deposit to its depth below the local ground
+([0097](0097-vanilla-deposits-below-the-local-ground.md), EA-0170); the rescale here stays the base those depths start from.
+
 ## Status before 15 November 2026
 
 The status line as it stood before the 2.0.0 check of the decisions' status (EA-0092 D1):

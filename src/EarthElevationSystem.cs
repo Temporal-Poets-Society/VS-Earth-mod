@@ -158,13 +158,14 @@ namespace EarthMap
             if (dams != null) AttachDams(p);
             if (p.LakeOutlines >= 1) AttachLakeOutlines(terrain, p);
             if (p.RiverOutlines >= 1) AttachRiverOutlines(terrain, p);
+            if (p.StreamRules >= 1) AttachStreams(terrain, p);
             if (flow != null && p.FlowRules >= 1)
             {
                 terrain.Flow = flow;
                 terrain.FlowRules = Math.Min(p.FlowRules, RiverFlowData.FileVersion);
                 Used(FlowUse);
                 Mod.Logger.Notification("Earth river flow: the water mask's rivers flow as solved on them ({0}, decision 0069): still water {1}, " +
-                    "the river's depth across its whole width.", RiverFlowData.FileName,
+                    "the river's depth across its whole width.", RiverFlowData.FileNameFor(p.FlowRules),
                     p.ChannelRules >= TerrainModel.FlowChannelRules ? "where it carries none of the river's flow or its reaches are slower than " + TerrainModel.ReachFlowingSpeed + " m/s (channel rules 4, decision 0073)"
                         : "where slower than " + TerrainModel.StillBelow + " m/s");
             }
@@ -198,23 +199,49 @@ namespace EarthMap
         public const string DamsOffKey = "earth-dams-off";
         /// <summary>Save data: this world has generated with the dams taken out.</summary>
         public const string DamsOnKey = "earth-dams-on";
+        /// <summary>Save data: this world goes without the streams layer for good (EA-0131: its file couldn't be had the first
+        /// time the world needed it), so its chunks match each other. Like the other off keys, set by builds before 2.2.0-rc.9
+        /// only (EA-0191, decision 0103: a world that can't have a file now stops instead); read for the worlds they marked.</summary>
+        public const string StreamsOffKey = "earth-streams-off";
+        /// <summary>Save data: this world has generated with the streams layer.</summary>
+        public const string StreamsOnKey = "earth-streams-on";
 
+        /// <summary>(EA-0191) The way round a GLO-90 water file a new world can't have, for the stop message.</summary>
+        const string BuiltInHeights = "A new world on the Earth tab's built-in heights doesn't read it.";
         static readonly ReleaseFileUse LakeOutlinesUse = new("Earth lakes", LakeOutlinesOnKey, LakeOutlinesOffKey,
-            "this world's lakes come from the water mask's outlines", "the grid's lakes");
+            "this world's lakes come from the water mask's outlines", "the grid's lakes")
+        { Instead = BuiltInHeights };
         static readonly ReleaseFileUse RiverOutlinesUse = new("Earth rivers", RiverOutlinesOnKey, RiverOutlinesOffKey,
-            "this world's rivers come from the water mask's outlines", "the river courses' channels");
+            "this world's rivers come from the water mask's outlines", "the river courses' channels")
+        { Instead = BuiltInHeights };
         /// <summary>Save data: this world keeps the courses' blended river flow for good (decision 0069: the flow file couldn't
         /// be had the first time the world needed it), so its chunks match each other.</summary>
         public const string FlowOffKey = "earth-flow-off";
         /// <summary>Save data: this world has generated with the river flow file.</summary>
         public const string FlowOnKey = "earth-flow-on";
         static readonly ReleaseFileUse FlowUse = new("Earth river flow", FlowOnKey, FlowOffKey,
-            "this world's rivers flow as solved on the water mask", "the courses' blended flow");
+            "this world's rivers flow as solved on the water mask", "the courses' blended flow")
+        { Instead = BuiltInHeights };
+        static readonly ReleaseFileUse StreamsUse = new("Earth streams", StreamsOnKey, StreamsOffKey,
+            "this world draws the streams from 1 m³/s", "only the rivers from 20 m³/s")
+        { Instead = "To make this world without the streams instead, set StreamsLayer to false in ModConfig/earth.json before you start it again." };
         static readonly ReleaseFileUse DamsUse = new("Earth dams", DamsOnKey, DamsOffKey,
-            "this world has the modern dams taken out", "GLO-90's modern dams and reservoir floors");
+            "this world has the modern dams taken out", "GLO-90's modern dams and reservoir floors")
+        { Instead = BuiltInHeights };
 
-        /// <summary>Whether this world goes without the file for good (logged).</summary>
-        bool KeptWithout(ReleaseFileUse use, string name) => Files.KeptWithout(use, name);
+        /// <summary>Whether this world goes without the file for good (logged; EA-0191: and told in game, OnNowPlaying).</summary>
+        bool KeptWithout(ReleaseFileUse use, string name)
+        {
+            if (!Files.KeptWithout(use, name, out string said)) return false;
+            lock (withoutNotices) withoutNotices.Add(said);
+            return true;
+        }
+
+        /// <summary>(EA-0191) This session's sentences on the files this world goes without for good (an earlier build marked
+        /// it so), told once a session to each player who can act on them (the single player; a server's admins).</summary>
+        readonly List<string> withoutNotices = new();
+        /// <summary>The players told them this session.</summary>
+        readonly HashSet<string> toldWithout = new();
 
         /// <summary>A release file from the GLO-90 folder, fetched from Earth's data release when it is missing or not the one this
         /// build reads (ReleaseFiles.Obtain); null, with the reason, when it can't be had.</summary>
@@ -222,13 +249,14 @@ namespace EarthMap
             => Files.Obtain(use, name, bytes, sha256, check, out why, out lacking);
 
         /// <summary>
-        /// The file can't be had or used: the world goes without it for good, or the server stops, nothing saved (review A3;
-        /// ReleaseFiles.Unavailable says which).
+        /// The file can't be had or used: the server stops, nothing saved (review A3; EA-0191, decision 0103: whatever the
+        /// reason, ReleaseFiles.Unavailable words it). Called in WorldReady, before any chunk: the error line is what a single
+        /// player reads on the world's loading screen ("It begins...", which lists the server's error lines), and the
+        /// exception ends the WorldReady steps after this one, as RequiredMods.Enforce and EarthWorldGen.Refuse do.
         /// </summary>
         void Unavailable(ReleaseFileUse use, string name, string why, bool lacking)
         {
             string stop = Files.Unavailable(use, name, why, lacking, Downloader?.Repo ?? DemDownloader.Glo90Repo);
-            if (stop == null) return;
             Mod.Logger.Error("{0}", stop);
             sapi.Server.ShutDown();
             throw new InvalidOperationException(stop);
@@ -251,6 +279,14 @@ namespace EarthMap
                 (byte[] f, out string w) => LakeOutlineData.IsExpected(version, f, out w), out string why, out bool lacking);
             if (file == null) { Unavailable(LakeOutlinesUse, name, why, lacking); return; }
             terrain.LakeOutlines = new LakeOutlineLayer(LakeOutlineData.Read(file), terrain.Geometry);
+            // lake rules 1 (decision 0100): the lakes' real depths, made for this lakes file (the mod's own lake-depths-1.bin;
+            // WorldParamsBuilder gives the rules only where it is)
+            if (p.LakeRules >= 1)
+            {
+                terrain.LakeDepths = terrain.Data.LakeDepthsFor(version);
+                if (terrain.LakeDepths == null)
+                    Mod.Logger.Warning("Earth lakes: this world's lake rules read {0}, which this Earth build lacks or made for another lakes file; its lakes keep the old depths.", LakeDepthData.FileName);
+            }
             Used(LakeOutlinesUse);
             Mod.Logger.Notification("Earth lakes: the water mask's lakes from their outlines ({0}, decision 0053 item 17), wherever this world reads GLO-90; " +
                 "shores measured {1} blocks out.", name, terrain.LakeOutlines.Reach);
@@ -273,11 +309,37 @@ namespace EarthMap
             // (0063 channel rules 1: without the narrow pieces along the courses where they draw every stream down to 20 m³/s)
             // (0073 channel rules 4: and with the narrow pieces the river's flow passes through; the flow file is read lazily, when
             // a tile is decoded, after AttachServer has attached it)
+            // (EA-0179, decision 0098: at 1:50 and coarser, the pieces along a drawn river or stream only)
             terrain.RiverOutlines = RiverOutlineData.Layer(RiverOutlineData.Read(file), terrain.Geometry, p.DropsNarrowRiverPieces, terrain.CourseDrawsAt,
-                p.ChannelRules >= TerrainModel.FlowChannelRules ? terrain.FlowCarriesAt : null);
+                p.ChannelRules >= TerrainModel.FlowChannelRules ? terrain.FlowCarriesAt : null, p.CoarseRiverRules >= 1);
             Used(RiverOutlinesUse);
             Mod.Logger.Notification("Earth rivers: the water mask's rivers from their outlines ({0}, decision 0053 item 18{1}), wherever this world reads GLO-90; " +
-                "shores measured {2} blocks out.", name, version >= 2 ? ", through the reservoirs of item 19" : "", terrain.RiverOutlines.Reach);
+                "shores measured {2} blocks out{3}.", name, version >= 2 ? ", through the reservoirs of item 19" : "", terrain.RiverOutlines.Reach,
+                terrain.RiverOutlines.CourseOnlyAt != null ? "; only along the drawn rivers and streams (decision 0098)" : "");
+        }
+
+        /// <summary>
+        /// EA-0131 (decision 0061): the streams layer for a world that has it (EarthParams.StreamRules), loaded by area as chunks
+        /// generate (Core.StreamLayer). Without the file the world goes on with its rivers from 20 m³/s alone (ReleaseFileUse).
+        /// </summary>
+        void AttachStreams(TerrainModel terrain, EarthParams p)
+        {
+            if (terrain.Rivers == null) return;
+            string name = StreamData.FileName;
+            if (KeptWithout(StreamsUse, name)) return;
+            byte[] file = ReleaseFile(StreamsUse, name, StreamData.FileBytes, StreamData.FileSha256, StreamData.IsExpected, out string why, out bool lacking);
+            if (file == null) { Unavailable(StreamsUse, name, why, lacking); return; }
+            // (checked against the release and still unreadable: a property of the file, not a failure that may pass)
+            StreamData data;
+            try { data = StreamData.Read(file); }
+            catch (Exception e) { Unavailable(StreamsUse, name, e.Message, true); return; }
+            // (EA-0200, decision 0098) the Earth tab's Smallest stream: 0 (1 or less, every world made before) keeps every stream
+            double smallest = double.IsFinite(p.StreamLayerMinDischarge) ? Math.Clamp(p.StreamLayerMinDischarge, 0, EarthWorldOptions.CoarseStreamMin) : 0;
+            terrain.Streams = new StreamLayer(data, terrain, p.RiverOptions(terrain.Data, terrain.Geometry)) { SmallestQ = smallest };
+            Used(StreamsUse);
+            Mod.Logger.Notification("Earth streams: the streams from {0} m³/s up to the rivers' 20 m³/s ({1}, EA-0131, decision 0061{2}), loaded by area as " +
+                "chunks generate.", smallest > 1 ? smallest.ToString("0.#", System.Globalization.CultureInfo.InvariantCulture) : "1", name,
+                smallest > 1 ? "; the Earth tab's Smallest stream, decision 0098" : "");
         }
 
         DamRemovalData dams;
@@ -323,9 +385,12 @@ namespace EarthMap
             flow = null;
             if (p.FlowRules < 1 || p.FineElevation < 1 || sapi == null) return null;
             Ensure();
-            string name = RiverFlowData.FileName;
+            // flow rules 1 read rivers-flow-glo90-1.bin, 2 (decision 0092) rivers-flow-glo90-2.bin
+            int rules = Math.Min(p.FlowRules, RiverFlowData.FileVersion);
+            string name = RiverFlowData.FileNameFor(rules);
             if (KeptWithout(FlowUse, name)) return null;
-            byte[] file = ReleaseFile(FlowUse, name, RiverFlowData.FileBytes, RiverFlowData.FileSha256, RiverFlowData.IsExpected, out string why, out bool lacking);
+            byte[] file = ReleaseFile(FlowUse, name, RiverFlowData.FileBytesFor(rules), RiverFlowData.FileSha256For(rules),
+                (byte[] f, out string w) => RiverFlowData.IsExpected(rules, f, out w), out string why, out bool lacking);
             if (file == null) { Unavailable(FlowUse, name, why, lacking); return null; }
             // (checked against the release and still unreadable: a property of the file, not a failure that may pass)
             try { flow = RiverFlowData.Read(file); }
@@ -765,6 +830,11 @@ namespace EarthMap
         void OnNowPlaying(IServerPlayer player)
         {
             if (!player.HasPrivilege(Privilege.controlserver)) return;
+            // (EA-0191) a file this world goes without for good was said only in the server log
+            string[] without;
+            lock (withoutNotices) without = withoutNotices.Count > 0 && toldWithout.Add(player.PlayerUID) ? withoutNotices.ToArray() : null;
+            if (without != null)
+                foreach (string said in without) player.SendMessage(GlobalConstants.GeneralChatGroup, said, EnumChatType.Notification);
             // (Fable's overview low 6, 14 November 2026) a download all the Earth tab asked for and this opening refused (no
             // room beyond the reserve, no source set) was said only in the server log, at every opening: whoever can act on it
             // is told in chat and gets the dialog, unless a download was started by hand since
@@ -844,6 +914,8 @@ namespace EarthMap
 
         public override void Dispose()
         {
+            // (EA-0193) how the GLO-90 tile cache fared this session
+            if (Fine != null && Fine.Loads > 0) Mod.Logger.Notification("Earth GLO-90 tiles this session: {0}.", Fine.Report());
             Downloader?.Dispose();
             base.Dispose();
         }

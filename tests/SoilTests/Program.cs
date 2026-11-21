@@ -2,6 +2,15 @@ using EarthMap.Core;
 
 // Earth's soil fertility floor (decision 0048): land that isn't arid by the real aridity index has soil.
 string root = args.Length > 0 ? Path.GetFullPath(args[0]) : Directory.GetCurrentDirectory();
+// soil rules 4 offline census (decision 0105): SoilTests <root> census <ModData/earth> [step in degrees]
+// every input along a line: SoilTests <root> probe <ModData/earth> lat0 lon0 lat1 lon1 steps
+if (args.Length > 7 && args[1] == "probe")
+{
+    double A(int i) => double.Parse(args[i], System.Globalization.CultureInfo.InvariantCulture);
+    return Probe.Run(root, args[2], A(3), A(4), A(5), A(6), int.Parse(args[7]));
+}
+if (args.Length > 2 && args[1] == "census")
+    return Census.Run(root, args[2], args.Length > 3 ? double.Parse(args[3], System.Globalization.CultureInfo.InvariantCulture) : .25);
 int passed = 0;
 void Check(bool ok, string msg) { if (!ok) throw new Exception("FAIL: " + msg); passed++; }
 bool Near(double a, double b) => Math.Abs(a - b) < 1e-9;
@@ -141,4 +150,79 @@ double open = CoverShare(.15, 90), wood = CoverShare(.9, 90);
 Console.WriteLine($"Grass sprouts on {open:P0} of open prairie columns, {wood:P0} under forest");
 Check(open > .7 && wood < .35 && open > 2 * wood, "Grass sprouts again mostly on open land, sparsely under forest");
 Check(CoverShare(.15, 0) == 0, "No grass sprouts on soil vanilla gives no fertility");
+// ---------------------------------------------------------------- soil rules 4: Earth soil (decision 0105, EA-0199)
+{
+    string rules4 = File.ReadAllText(Path.Combine(root, "assets/earth/config/soil-rules-v4.json"));
+    var ts = new Topsoil(rules4, null, 1);
+    const int V = Topsoil.VanillaTiers, R = Topsoil.RealisticTiers;
+    Topsoil.Tier D(int tiers, string cls, bool arid = false, bool flood = false, double temp = 10, double wet = 0, bool dune = false, double warm = 20)
+        => ts.Decide(tiers, new Topsoil.Place { Class = cls, Arid = arid, Flood = flood, Temperature = temp, Dune = dune, WarmestMonth = warm });
+    Check(ts.Version == Topsoil.RulesVersion && Topsoil.RulesVersion > SoilFertility.RulesVersion, "Soil rules 4 follow rules 3");
+    // the class table of section 4.1 (graded with the author, 19 November 2026)
+    Check(D(R, "Chernozems") == Topsoil.Tier.BlackEarth && D(V, "Chernozems") == Topsoil.Tier.High, "Chernozems: black earth (realistic), high (vanilla tiers)");
+    Check(D(R, "Phaeozems") == Topsoil.Tier.High && D(V, "Phaeozems") == Topsoil.Tier.High, "Phaeozems high in both");
+    Check(D(R, "Nitisols") == Topsoil.Tier.High && D(V, "Nitisols") == Topsoil.Tier.Medium && D(R, "Andosols") == Topsoil.Tier.High && D(V, "Andosols") == Topsoil.Tier.Medium,
+        "Nitisols and Andosols high (realistic), medium (vanilla tiers)");
+    foreach (var c in new[] { "Cambisols", "Luvisols", "Kastanozems", "Vertisols", "Umbrisols", "Fluvisols" })
+        Check(D(R, c) == Topsoil.Tier.Medium && D(V, c) == Topsoil.Tier.Medium, c + " medium in both");
+    // Podzols low in both: poor, but farmed for centuries with manure (the author's rc.14 look near Riga, 21 November 2026)
+    foreach (var c in new[] { "Acrisols", "Cryosols", "Regosols", "Calcisols", "Albeluvisols", "Gleysols", "Lixisols", "Alisols", "Planosols", "Solonetz", "Stagnosols", "Podzols" })
+        Check(D(R, c) == Topsoil.Tier.Low && D(V, c) == Topsoil.Tier.Low, c + " low in both");
+    foreach (var c in new[] { "Ferralsols", "Arenosols", "Leptosols", "Plinthosols", "Durisols", "Histosols" })
+        Check(D(R, c) == Topsoil.Tier.Barren && D(V, c) == Topsoil.Tier.Low, c + " barren (realistic), low (vanilla tiers)");
+    Check(D(R, "Gypsisols") == Topsoil.Tier.Barren && D(V, "Solonchaks") == Topsoil.Tier.Barren, "Gypsum and salt soils barren in both");
+    // vanilla tiers: barren only on inhospitable land
+    // vanilla tiers: barren only on inhospitable land; polar and alpine ground (beyond the tree line) barren in both sets
+    foreach (var c in new[] { "Cambisols", "Leptosols", "Andosols", "Cryosols", "Chernozems" })
+        Check(D(V, c, warm: ts.TundraWarmestBelow - .5) == Topsoil.Tier.Barren && D(R, c, warm: ts.TundraWarmestBelow - .5) == Topsoil.Tier.Barren, c + " beyond the tree line barren");
+    Check(D(V, "Leptosols", warm: ts.TundraWarmestBelow + .5) == Topsoil.Tier.Low && D(V, "Cryosols", warm: 16) == Topsoil.Tier.Low && D(V, "Andosols", warm: 12) == Topsoil.Tier.Medium,
+        "Below the tree line thin soils and permafrost soils keep their class's tier (vanilla tiers)");
+    Check(D(V, "Cambisols", warm: double.NaN) == Topsoil.Tier.Medium, "An unknown warmest month never makes barren ground");
+    Check(D(V, "Arenosols", dune: true) == Topsoil.Tier.Barren && D(V, "Arenosols") == Topsoil.Tier.Low && D(V, "Cambisols", dune: true) == Topsoil.Tier.Medium,
+        "Dune sand barren, other sands low; a mapped dune unit does not touch other classes");
+    // deserts, floods and oases
+    foreach (var c in new[] { "Calcisols", "Cambisols", "Chernozems", "Leptosols" })
+        Check(D(R, c, arid: true) == Topsoil.Tier.None && D(V, c, arid: true) == Topsoil.Tier.None, "Arid " + c + ": no topsoil");
+    Check(D(R, "Fluvisols", arid: true, flood: true) == Topsoil.Tier.High && D(V, "Fluvisols", arid: true, flood: true) == Topsoil.Tier.High, "River silt in a flood high");
+    foreach (var c in new[] { "Leptosols", "Arenosols", "Calcisols", "Regosols", "Podzols" })
+        Check(D(R, c, arid: true, flood: true) == Topsoil.Tier.Medium && D(V, c, arid: true, flood: true) == Topsoil.Tier.Medium, "Fresh river silt at least medium over " + c);
+    Check(D(R, "Solonchaks", arid: true, flood: true) == Topsoil.Tier.Low && D(V, "Gypsisols", arid: true, flood: true) == Topsoil.Tier.Low, "Salty silt low");
+    Check(D(R, "Chernozems", flood: true) == Topsoil.Tier.BlackEarth && D(R, "Cambisols", flood: true) == Topsoil.Tier.Medium, "A flood never lowers a tier");
+    Check(D(R, "Calcisols", arid: true, wet: 1) == Topsoil.Tier.None && D(V, "Fluvisols", arid: true, wet: 1) == Topsoil.Tier.None,
+        "Arid ground outside a flood has none, whatever wetland GLWD's 0.1° cell holds (rc.12's oasis rule drew straight edges)");
+    // where the rule says nothing: vanilla's rule (soil rules 3)
+    Check(D(R, "Cambisols", temp: SoilFertility.MinTemperature - .5) == Topsoil.Tier.Vanilla && D(R, null) == Topsoil.Tier.Vanilla && D(Topsoil.ClimateOnly, "Chernozems") == Topsoil.Tier.Vanilla,
+        "Colder than vanilla's grassed topsoil, unmapped or climate only: vanilla's rule");
+    Check(D(V, "Nonexistentsols") == Topsoil.Tier.Low && D(R, "Nonexistentsols") == Topsoil.Tier.Low, "An unknown class takes the default");
+    // every class SoilGrids maps has its own rule, and vanilla tiers never reach black earth
+    var wrb = new[] { "Acrisols", "Albeluvisols", "Alisols", "Andosols", "Arenosols", "Calcisols", "Cambisols", "Chernozems", "Cryosols", "Durisols", "Ferralsols", "Fluvisols",
+        "Gleysols", "Gypsisols", "Histosols", "Kastanozems", "Leptosols", "Lixisols", "Luvisols", "Nitisols", "Phaeozems", "Planosols", "Plinthosols", "Podzols", "Regosols",
+        "Solonchaks", "Solonetz", "Stagnosols", "Umbrisols", "Vertisols" };
+    string unknown = null;
+    ts.UnknownClass += n => unknown = n;
+    foreach (var c in wrb)
+        foreach (bool arid in new[] { false, true }) foreach (bool flood in new[] { false, true }) foreach (bool dune in new[] { false, true }) foreach (double t in new[] { -9.0, -6.0, 0.5, 10.0 }) foreach (double warm in new[] { 5.0, 20.0 })
+        {
+            var v = D(V, c, arid, flood, t, 0, dune, warm);
+            Check(v != Topsoil.Tier.BlackEarth && v != Topsoil.Tier.Vanilla, c + ": vanilla tiers stay within barren to high");
+        }
+    Check(unknown == null, "Every SoilGrids class has a rule (" + unknown + " has none)");
+    // the layers' fertility against vanilla's blocklayers.json (1.22.7): low topsoil from 0.25, low subsoil 0.3, medium topsoil 0.5,
+    // medium subsoil 0.6; no soil layer below 0.22
+    int F(Topsoil.Tier t) => ts.LayerFertility(t, 0);
+    Check(F(Topsoil.Tier.Barren) >= 77 && F(Topsoil.Tier.Barren) < 128 && F(Topsoil.Tier.Low) >= 77 && F(Topsoil.Tier.Low) < 128, "Barren and low are laid as low topsoil over low subsoil");
+    Check(F(Topsoil.Tier.Medium) >= 153, "Medium is laid as medium topsoil over medium subsoil (a forest floor lies on medium soil)");
+    Check(F(Topsoil.Tier.High) >= 153 && F(Topsoil.Tier.BlackEarth) >= 153, "High and black earth are laid as medium over medium subsoil");
+    Check(ts.LayerFertility(Topsoil.Tier.None, 200) < 56 && ts.LayerFertility(Topsoil.Tier.None, 20) == 20 && ts.LayerFertility(Topsoil.Tier.Vanilla, 123) == 123,
+        "No topsoil lies below vanilla's soil layer; vanilla's rule passes through");
+    Check(Topsoil.Swapped(Topsoil.Tier.Barren) && Topsoil.Swapped(Topsoil.Tier.High) && Topsoil.Swapped(Topsoil.Tier.BlackEarth)
+        && !Topsoil.Swapped(Topsoil.Tier.Low) && !Topsoil.Swapped(Topsoil.Tier.Medium) && !Topsoil.Swapped(Topsoil.Tier.None) && !Topsoil.Swapped(Topsoil.Tier.Vanilla),
+        "The pass swaps only the tiers vanilla's layers never lay");
+    Check(string.Join(",", Topsoil.BlockCodes) == "verylow,low,medium,compost,high", "Tiers in the soil blocks' fertility codes, poorest first");
+    Check(ts.FloodRain >= .12 && ts.FloodRain < .33, "A flood's rain lays grassed soil (vanilla's 0.12) without passing for a wet climate (0.33)");
+    // the 2' maps and the dune unit come from the data store; the 30" set is optional
+    var tiles = Topsoil.TileList(rules4);
+    Check(tiles.Count(x => x.File != null) == 1 && tiles.Single(x => x.File != null).Optional && tiles.Where(x => x.Asset != null).All(x => !x.Optional), "Only the 30\" set is optional");
+}
 Console.WriteLine($"SoilTests: {passed} checks passed");
+return 0;

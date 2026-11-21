@@ -42,7 +42,7 @@ Nothing in the geology system throws during startup. Each of these logs a clear 
 
 **Materials.** The saved signature also records which block each canonical material used (`dolostone=game:rock-limestone`, …). A saved world keeps those blocks whenever they still exist, so adding or updating Geology Additions never changes an existing world's rocks. If a saved provider block has disappeared (provider removed), the vanilla proxy is used with a warning; the contact with older chunks will then be visible, and the provider's already-placed blocks still need their own migration. New worlds use a provider asset when the provider is enabled and the block exists, otherwise the vanilla proxy with a warning.
 
-**Geology Additions child grades.** The adapter that clamps GA child-deposit grade lists (it prevents a native crash) now runs whenever GA is installed, whether or not Earth geology is active, for any GA version (1.4.8 was reviewed), and again after `/wgen regen` reloads deposits. It never throws.
+**Geology Additions child grades.** The adapter that clamps GA child-deposit grade lists (it prevents a native crash) runs in Earth worlds with regional geology whenever GA is installed (not in vanilla-rock Earth worlds or other worlds, whose GA generators are left as they are; corrected 18 November 2026, audit R14), for any GA version (1.4.8 was reviewed), and again after `/wgen regen` reloads deposits. It never throws.
 
 ## What the datasets provide
 
@@ -62,7 +62,7 @@ The strata pass runs after vanilla `GenRockStrataNew` and replaces existing `roc
 
 **v1** (frozen): bed i ends at depth Σ max(2, round(fraction × max(24, top) × (1 + fold))) below the column's own top, with a ±12 % fold from latitude/longitude. Every column therefore shows its profile's first bed at the surface, and beds thicken under mountains. The code now computes these boundaries once per column (identical results; checked against the per-block original on 797,433 synthetic blocks and against the golden file).
 
-**v2**: bed boundaries hang at fixed thicknesses below a **reference surface**: the terrain's bedrock elevation (below ice sheets) averaged over ~0.6 cell (19-point stencil; sea floor clamped at −150 m), converted to block height, plus a gentle undulation of up to ±0.3 × the thickness scale over ~1.6 cells. The thickness scale is 0.6 × sea level (99 blocks at height 384; it follows world height, not local column height), varied ±15 %. Values live on a 64-block lattice and are interpolated bilinearly, so chunk borders match. Effects measured on the h384 user layout:
+**v2**: bed boundaries hang at fixed thicknesses below a **reference surface**: the terrain's bedrock elevation (below ice sheets) averaged over ~0.6 cell (19-point stencil; sea floor clamped at −150 m), converted to block height, plus a gentle undulation of up to ±0.3 × the thickness scale over ~1.6 cells. The thickness scale is 0.6 × sea level, varied ±15 %. When v2 was written the sea level followed world height (99 blocks at height 384); since decision 0031 it is 110 at every height, so the scale is 66 blocks at 256, 384 and 1024 alike while the land's metres per block change, and bed exposure differs with world height (corrected 18 November 2026; [audit](research/rocks-ground-ores-audit-2026-11-18.md) R1, EA-0173). Values live on a 64-block lattice and are interpolated bilinearly, so chunk borders match. Effects measured on the h384 user layout:
 
 - valleys, canyons, cliffs and coasts cut into lower beds: across the Grand Canyon transect the surface shows sandstone/shale/conglomerate (siliciclastic) and dolostone/shale/limestone/chert (carbonate); v1 shows one bed per sequence;
 - 14.4 % of regional land columns expose a bed below the first (0.1 % basement); v1: 0 %;
@@ -70,7 +70,7 @@ The strata pass runs after vanilla `GenRockStrataNew` and replaces existing `roc
 
 New v2 profiles and envelopes (rules file `geology-rules-v2.json`):
 
-- **pyroclastic** for GLiM `py` (Andes, Japan, Kamchatka, Taupō, Sierra Madre Occidental): andesite, tuff, andesite, tuff, basalt, diorite over granite. Vanilla tuff has no sand/gravel variant, so it is never the top bed.
+- **pyroclastic** for GLiM `py` (Andes, Japan, Kamchatka, Taupō, Sierra Madre Occidental): andesite, tuff, andesite, tuff, basalt, diorite over granite. Vanilla tuff has no sand/gravel variant, so it is never the first bed; valleys and slopes that cut below the first bed can still bring it to the surface, where vanilla's sand and gravel layers then skip it (corrected 18 November 2026, audit R6).
 - **chalk-cretaceous** (chalk with flint/chert bands over Gault-like claystone, greensand, Jurassic limestone and shale): author-drawn envelopes for southern England, the Paris Basin ring, Denmark/Scania/Rügen, the Austin Chalk band and the Selma/Black Belt chalk. They override only sedimentary or unconsolidated GLiM cells. Tertiary basin fills (London, Paris) are simplified to chalk at the top. These polygons are not survey contacts.
 - chert bands in the carbonate sequence; tuff in the felsic-volcanic sequence.
 - kimberlite and suevite (the vanilla diamond hosts) are never replaced, so vanilla kimberlite pipes and their diamonds survive in regional bedrock. In v1 worlds they remain replaced (changing it would break v1 bit-identity).

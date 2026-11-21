@@ -191,9 +191,9 @@ namespace EarthMap
 
         bool ApplyRiverEnds(EarthParams p)
         {
-            if (p.Rivers && p.RiverEnds < Core.RiverEnds.Version)
+            if (p.Rivers && p.RiverEnds < Core.RiverEnds.UpgradeVersion)
             {
-                p.RiverEnds = Core.RiverEnds.Version;
+                p.RiverEnds = Core.RiverEnds.UpgradeVersion;
                 log.Warning("UpgradeExistingWorldRiverEnds: rivers continue to their real end, into the terminal lakes (the Aral Sea, Lop Nur, ...) " +
                     "or the sea, or fade out in dry basins, in chunks generated from now on. Chunks already generated keep their land and rivers and may " +
                     "meet the new lakes and courses with a step. The flag is reset once the world is saved.");
@@ -209,7 +209,8 @@ namespace EarthMap
             if (p.Rivers && p.RiverEnds > 0 && p.RiverDeltas < Core.RiverDeltas.Version)
             {
                 p.RiverDeltas = Core.RiverDeltas.Version;
-                log.Warning("UpgradeExistingWorldRiverDeltas: delta branches share their river's water (the Mekong's Tiền and Bassac) in chunks " +
+                log.Warning("UpgradeExistingWorldRiverDeltas: delta branches share their river's water (the Mekong's Tiền and Bassac, the " +
+                    "Mississippi's Atchafalaya) in chunks " +
                     "generated from now on. Chunks already generated keep their rivers and may meet the new widths with a step. The flag is reset once the world is saved.");
                 return true;
             }
@@ -414,7 +415,13 @@ namespace EarthMap
 
         bool ApplyOreRules(EarthParams p)
         {
-            p.RegionalOres = Config.RegionalOres;
+            // (EA-0197, decision 0104) Earth's ore maps are off the world creation screen in 2.2: this one-shot keeps or turns off a
+            // world's ore maps, and turns them on only under earth.json's ExperimentalOreMaps (RegionalOres is true in every
+            // earth.json written before, so it alone must not)
+            if (Config.RegionalOres && !p.RegionalOres && !Config.ExperimentalOreMaps)
+                log.Warning("UpgradeExistingWorldOreRules: Earth's ore maps stay off in this world; they are off the world creation screen in Earth 2.2 " +
+                    "(decision 0104), and turning them on takes ExperimentalOreMaps in earth.json (experimental, for development).");
+            p.RegionalOres = Config.RegionalOres && (p.RegionalOres || Config.ExperimentalOreMaps);
             if (p.RegionalOres)
             {
                 p.OreRulesVersion = RegionalOreCatalog.Version;

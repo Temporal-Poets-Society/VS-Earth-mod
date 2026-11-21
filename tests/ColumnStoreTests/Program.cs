@@ -76,6 +76,13 @@ namespace EarthMap.Tests
             Threads(Sealed(new TerrainModel(data, geo, vertical, 290142474)), chunks[0]);
             Glo90Threads(Sealed(new TerrainModel(data, geo, vertical, 290142474)), chunks[1]);
             MissedReads();
+            TileCacheGrows();
+            // a new world's shore rules (WorldParamsBuilder): beaches of the coast's material
+            var shores = new TerrainModel(data, geo, vertical, 290142474)
+            {
+                ShoreZoneRules = ShoreZones.RulesVersion, ShoreRules = ShoreMaterial.RulesVersion, ShoreData = data.ShoreMaterial,
+            };
+            ShoreStripBits(Sealed(shores), geo);
 
             Console.WriteLine("{0} checks, {1}; {2:0.0} s", checks, failures == 0 ? "all passed" : failures + " failed", clock.Elapsed.TotalSeconds);
             return failures == 0 ? 0 : 1;
@@ -138,6 +145,103 @@ namespace EarthMap.Tests
                 FineElevation.BuiltInOnly = true;
                 Check(!fine.TryHeight(45.5, -30.5, out _) && FineElevation.MissedReads == m + 2, "a sweep thread's read counts");
             });
+        }
+
+        /// <summary>
+        /// EA-0193: the shore strip asked of the store (OnShoreStrip) is the test of the model's own column, from the chunk's
+        /// columns while held and from its kept bits once they are dropped (no chunk built again), on sandy coasts with strip
+        /// columns and without.
+        /// </summary>
+        static void ShoreStripBits(TerrainModel m, EarthGeometry geo)
+        {
+            Console.WriteLine("shore-strip bits");
+            var s = ColumnStore.Attach(m, 1);
+            // the Dutch, the Landes and the Gold Coast beaches, then an inland chunk
+            var coast = new List<(int X, int Z)>();
+            foreach (var (lat, lon) in new[] { (52.37, 4.53), (52.10, 4.27), (44.66, -1.25), (-28.0, 153.43), (48.2, 16.37) })
+            {
+                geo.FromGeo(lat, lon, out double x, out double z);
+                int cx = (int)Math.Floor(x) >> 5, cz = (int)Math.Floor(z) >> 5;
+                for (int dz = -1; dz <= 1; dz++) for (int dx = -1; dx <= 1; dx++) coast.Add((cx + dx, cz + dz));
+            }
+            int strip = 0, wrongHeld = 0, wrongKept = 0;
+            foreach (var chunk in coast)
+            {
+                var fresh = Fresh(m, chunk);
+                ColumnStore.At(m, chunk.X * 32, chunk.Z * 32);   // built whole and held
+                for (int i = 0; i < 1024; i++)
+                {
+                    bool expected = ColumnStore.ShoreStrip(fresh[i]);
+                    if (expected) strip++;
+                    if (ColumnStore.OnShoreStrip(m, chunk.X * 32 + (i & 31), chunk.Z * 32 + (i >> 5)) != expected) wrongHeld++;
+                }
+            }
+            // a store of one chunk: every chunk but the last has dropped its columns and keeps its bits
+            long filled = s.Counts.Filled, kept = s.StripServed;
+            foreach (var chunk in coast)
+            {
+                var fresh = Fresh(m, chunk);
+                for (int i = 0; i < 1024; i++)
+                    if (ColumnStore.OnShoreStrip(m, chunk.X * 32 + (i & 31), chunk.Z * 32 + (i >> 5)) != ColumnStore.ShoreStrip(fresh[i])) wrongKept++;
+            }
+            Check(strip > 0, $"the coasts have shore-strip columns ({strip} of {coast.Count * 1024})");
+            Check(wrongHeld == 0, $"from held columns: {wrongHeld} wrong");
+            Check(wrongKept == 0, $"from kept bits: {wrongKept} wrong");
+            Check(s.Counts.Filled == filled, $"no chunk built again for the strip ({s.Counts.Filled - filled} built)");
+            Check(s.StripServed - kept >= (coast.Count - 1) * 1024, $"the dropped chunks answered from their bits ({s.StripServed - kept})");
+            Console.WriteLine("  " + s.Report());
+            ColumnStore.Detach(m);
+        }
+
+        /// <summary>
+        /// EA-0193: the GLO-90 tile cache grows while the squares in use don't fit (a tile read again soon after it was
+        /// dropped), to the squares in use and no further than its most; squares that fit never grow it; every height read is
+        /// its tile's. Synthetic tiles of one height each (the square's longitude), read in turn as a server's players'
+        /// requests are.
+        /// </summary>
+        static void TileCacheGrows()
+        {
+            Console.WriteLine("GLO-90 tile cache");
+            string folder = Path.Combine(Path.GetTempPath(), "earth-tilecache-" + Guid.NewGuid().ToString("N"));
+            Directory.CreateDirectory(folder);
+            var list = new byte[360 * 180 / 8];
+            const int lat = 10, squares = 40;
+            for (int lon = 0; lon < squares; lon++)
+            {
+                int i = DemTiles.SquareIndex(lat, lon);
+                list[i >> 3] |= (byte)(0x80 >> (i & 7));
+                int cols = DemTiles.Glo90Cols(lat), rows = DemTiles.Glo90Rows;
+                var t = new DemTiles.Tile { LatS = lat, LonW = lon, Cols = cols, Rows = rows, Heights = new short[cols * rows] };
+                Array.Fill(t.Heights, (short)(100 + lon));
+                t.Min = t.Max = (short)(100 + lon);
+                File.WriteAllBytes(Path.Combine(folder, DemTiles.ShortName(lat, lon) + ".egl"), DemTiles.Encode(t));
+            }
+            try
+            {
+                // reads round the first n squares, rounds times; true when every height was its square's
+                bool Rounds(FineElevation fine, int n, int rounds)
+                {
+                    bool right = true;
+                    for (int r = 0; r < rounds; r++)
+                        for (int lon = 0; lon < n; lon++)
+                            right &= fine.TryHeight(lat + 0.5, lon + 0.5, out double h) && h == 100 + lon;
+                    return right;
+                }
+                var few = new FineElevation(folder, list);
+                Check(Rounds(few, 12, 6), "12 squares in turn: every height its tile's");
+                Check(few.CapacityNow == few.Capacity && few.Reloads == 0 && few.Loads == 12, $"12 squares fit: no growth ({few.Report()})");
+
+                var many = new FineElevation(folder, list);
+                Check(Rounds(many, 30, 2), "30 squares in turn: every height its tile's");
+                long loads = many.Loads;
+                Check(Rounds(many, 30, 4) && many.Loads == loads, $"30 squares: after two rounds no tile is read again ({many.Loads - loads} reads)");
+                Check(many.CapacityNow >= 30 && many.CapacityNow <= 32 && many.Reloads <= 8, $"30 squares: the cache grew to them ({many.Report()})");
+
+                var capped = new FineElevation(folder, list) { MaxCapacity = 28 };
+                Check(Rounds(capped, 40, 3), "40 squares, at most 28 tiles: every height its tile's");
+                Check(capped.CapacityNow == 28, $"40 squares: no further than the most ({capped.Report()})");
+            }
+            finally { try { Directory.Delete(folder, true); } catch (IOException) { } }
         }
 
         /// <summary>The companions' plan sealed, as EarthWorldGen does before it attaches the store.</summary>

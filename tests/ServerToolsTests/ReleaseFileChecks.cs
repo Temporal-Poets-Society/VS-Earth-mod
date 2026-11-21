@@ -2,9 +2,9 @@ using EarthMap.Core;
 
 /// <summary>
 /// (EA-0088) EarthElevationSystem's start-up policy for the release files (Core.ReleaseFiles): a file used as it is, fetched
-/// again when it isn't the one this build reads, gone without for good only when the source answers that it lacks it and the
-/// world never generated with it, the server stopped otherwise; and EA-0099's wait before a square that couldn't be had is
-/// tried again (Core.UnavailableSquares).
+/// again when it isn't the one this build reads, the server stopped whenever it can't be had (EA-0191, decision 0103: also
+/// when the source answers that it lacks it), a world an earlier build marked as going without it kept so and told; and
+/// EA-0099's wait before a square that couldn't be had is tried again (Core.UnavailableSquares).
 /// </summary>
 static class ReleaseFileChecks
 {
@@ -19,7 +19,8 @@ static class ReleaseFileChecks
 
     static void Files(string folder, Action<bool, string> check)
     {
-        var use = new ReleaseFileUse("Earth lakes", "lakes-on", "lakes-off", "this world's lakes come from the outlines", "the grid's lakes");
+        var use = new ReleaseFileUse("Earth lakes", "lakes-on", "lakes-off", "this world's lakes come from the outlines", "the grid's lakes")
+        { Instead = "Or make it without the lakes." };
         var save = new Dictionary<string, byte[]>();
         var notes = new List<string>();
         var warnings = new List<string>();
@@ -52,17 +53,30 @@ static class ReleaseFileChecks
         got = With(Fails(false)).Obtain(use, "e.bin", 3, "", Good, out why, out lacking);
         check(got == null && !lacking && why == "the network is down", "release files: a network error is not lacking (it may pass)");
         got = With(Writes(new byte[4])).Obtain(use, "f.bin", 3, "", Good, out why, out lacking);
-        check(got == null && lacking, "release files: a fetched file that still isn't this build's is lacking for good");
+        check(got == null && lacking && why.Contains("the release's copy isn't the one this Earth reads"), "release files: a fetched file that still isn't this build's is lacking for good");
+        // (EA-0191) an earlier bake of the same name here, and a release without the file: both said
+        File.WriteAllBytes(Path.Combine(folder, "s.bin"), new byte[5]);
+        got = With(Fails(true)).Obtain(use, "s.bin", 3, "", Good, out why, out lacking);
+        check(got == null && lacking && why.StartsWith("not in the release") && why.Contains("the copy in " + folder) && why.Contains("not this build's"),
+            "release files: a copy here that isn't this build's is named beside the release's answer");
 
         var files = With(Fails(false));
         check(!files.KeptWithout(use, "g.bin"), "release files: a world without the off key isn't kept without the file");
         string stop = files.Unavailable(use, "g.bin", "the network is down", false, repo);
         check(stop != null && stop.Contains("could not be fetched") && !save.ContainsKey("lakes-off"), "release files: a failure that may pass stops the server, nothing saved");
+        check(stop.Contains("Or make it without the lakes."), "release files: the stop says how to make the world without the file");
+        // (EA-0191, decision 0103) the source's answer that it lacks the file no longer marks a new world without it for good
         stop = files.Unavailable(use, "g.bin", "not in the release", true, repo);
-        check(stop == null && save.TryGetValue("lakes-off", out var off) && System.Text.Encoding.UTF8.GetString(off) == "not in the release"
-            && warnings.Any(w => w.Contains("for good")), "release files: a world that never used the file goes without it for good when the source lacks it");
+        check(stop != null && !save.ContainsKey("lakes-off") && stop.Contains("this world needs g.bin") && stop.Contains("not in the release")
+            && stop.Contains("nothing is lost") && stop.Contains(folder) && stop.Contains(repo) && stop.Contains("Or make it without the lakes."),
+            "release files: a world that never used the file stops when the source lacks it, nothing saved (EA-0191)");
+        stop = files.Unavailable(use, "g.bin", "no data release set (ElevationRepo)", true, repo);
+        check(stop != null && !save.ContainsKey("lakes-off") && stop.Contains("ElevationRepo"), "release files: and when no release is set");
+        // a world an earlier build marked: kept without it, said in the log and given for the players
+        save["lakes-off"] = System.Text.Encoding.UTF8.GetBytes("not in the release");
         notes.Clear();
-        check(files.KeptWithout(use, "g.bin") && notes.Any(n => n.Contains("the grid's lakes")), "release files: from then on the world is kept without it, said");
+        check(files.KeptWithout(use, "g.bin", out string said) && notes.Any(n => n.Contains("the grid's lakes")) && said == notes.Last()
+            && said.Contains("for good") && said.Contains("g.bin"), "release files: a world marked by an earlier build is kept without it, said");
 
         save.Clear();
         files.Used(use);

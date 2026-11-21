@@ -16,6 +16,7 @@ import tifffile
 from PIL import Image, ImageDraw
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import glo90grid as gg  # noqa: E402
 import water_atlas as wa
 
 CARDS = os.path.join(wa.OUTDIR, "cards")
@@ -33,7 +34,8 @@ PLACES = [  # places the author reported (5-6 November 2026)
 
 
 def mosaic_wbm(la0, lo0, la1, lo1):
-    """WBM classes over a box on a uniform 3" grid (narrow high-latitude tiles repeated across), 255 where no tile (sea)."""
+    """WBM classes over a box on a uniform 3" grid (narrow high-latitude tiles on it by glo90grid.columns), 1 (sea) where
+    no tile. Row y lies on la1 - y/1200 and column x on lo0 + x/1200 (a pixel's area: glo90grid)."""
     r = 1200
     H_ = int(round((la1 - la0) * r))
     W_ = int(round((lo1 - lo0) * r))
@@ -45,7 +47,12 @@ def mosaic_wbm(la0, lo0, la1, lo1):
             if not os.path.exists(p):
                 continue
             t = tifffile.imread(p)
-            t = t[:, (np.arange(r) * t.shape[1]) // r]
+            east = None
+            if (gg.column_index(r, t.shape[1]) >= t.shape[1]).any():
+                te = ((tc + 1 + 180) % 360) - 180
+                ep = os.path.join(wa.WBM, f"Copernicus_DSM_COG_30_{'N' if tl >= 0 else 'S'}{abs(tl):02d}_00_{'E' if te >= 0 else 'W'}{abs(te):03d}_00_WBM.tif")
+                east = tifffile.imread(ep) if os.path.exists(ep) else np.full((t.shape[0], 1), 1, t.dtype)
+            t = gg.columns(t, r, east)
             # rows/cols of this tile in the box
             y0 = int(round((la1 - (tl + 1)) * r)); x0 = int(round((tc - lo0) * r))
             ys, xs = max(y0, 0), max(x0, 0)

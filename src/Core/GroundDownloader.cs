@@ -33,6 +33,17 @@ namespace EarthMap.Core
             new("global-permafrost-30s.egts", 16_496_922, "ff9117624a5bdb6ce415832fd9634deeae1ce21ccaab2ed6dc0036dbae741739"),
         };
 
+        /// <summary>
+        /// (EA-0198, decision 0106) Geology rules 4's 30″ rock set: full-resolution GLiM with Macrostrat's national maps
+        /// (tools/ground/bake_rock_30s.py), in the same release folder. Not one of <see cref="Sets"/>: ground columns don't read
+        /// it, and a rules 4 world fetches only it (EarthGeology). EarthParams.RockSet of a world that reads it.
+        /// </summary>
+        public const int RockSetVersion = 1;
+        public static readonly Set[] RockSets =
+        {
+            new("global-rock-30s-1.egts", 45_399_312, "725e75a74ad385fa0d7e1c16a0ab4ce33794b06be400ee4dbecb31741c1dcc98"),
+        };
+
         public static long TotalBytes(IEnumerable<Set> sets = null) => (sets ?? Sets).Sum(s => s.Bytes);
 
         public static string PathOf(string dataFolder, Set s) => Path.Combine(dataFolder, Subfolder, s.Name);

@@ -112,10 +112,31 @@ namespace EarthMap.Core
     /// 4 million block ring, half a block with a 200 000 block one), with their distance to the coast for any point.
     /// Works in the world's own block metric, where x follows longitude (BlocksPerDegreeX, the same at every latitude) and
     /// z latitude, so outlines keep the shape they get in the world. Thread-safe; an island's edge index is built the first
-    /// time something comes near it.
+    /// time something comes near it, and the least recently used are let go when all of them together pass a budget
+    /// (EA-0194).
     /// </summary>
     public sealed class IslandLayer
     {
+        /// <summary>
+        /// EA-0194: the most the islands' edge indexes may hold together (bytes, as <see cref="Edges.Bytes"/> counts them).
+        /// Past it the least recently used are let go, down to three quarters of it; one is built again, the same from the
+        /// same outline, when a query next comes near it. Before, every index stayed for the session: a sweep of the whole
+        /// world (World Map's chart, the map picture) built them all, about 1 GB at 1:10, and a server kept them until it
+        /// stopped. Play near a few islands holds a few megabytes.
+        /// </summary>
+        public const long DefaultEdgeBudgetBytes = 64L << 20;
+        /// <summary>This layer's budget (<see cref="DefaultEdgeBudgetBytes"/>; tests set others).</summary>
+        internal long EdgeBudgetBytes = DefaultEdgeBudgetBytes;
+        // the shapes whose edges are held, under heldLock; their bytes; edge sets built in all
+        readonly List<Shape> held = new List<Shape>();
+        readonly object heldLock = new object();
+        long edgeBytes, edgesBuilt;
+        /// <summary>The bytes the held edge indexes count (<see cref="Edges.Bytes"/>).</summary>
+        internal long EdgeBytes { get { lock (heldLock) return edgeBytes; } }
+        /// <summary>How many islands' edge indexes are held.</summary>
+        internal int BuiltEdges { get { lock (heldLock) return held.Count; } }
+        /// <summary>Edge indexes built since the layer was made, rebuilt ones included.</summary>
+        internal long EdgesBuilt { get { lock (heldLock) return edgesBuilt; } }
         /// <summary>How far out (blocks) the sea floor rises to an island's shore.</summary>
         public const double ApronBlocks = 24;
         /// <summary>The island rules a world is frozen with (EarthParams.Islands). 1: the outlines as GSHHG has them (0.14.0).
@@ -149,8 +170,15 @@ namespace EarthMap.Core
             public double LonRef, LatRef;
             public double MinX, MaxX, MinZ, MaxZ;
             public double Height, ProfileBlocks;
+            /// <summary>Null until a query comes near, and again once the budget lets it go (EA-0194).</summary>
             public Edges Edges;
+            /// <summary>When a query last came near (<see cref="UseClock"/>), for the budget's least recently used.</summary>
+            public long LastUse;
         }
+
+        /// <summary>A coarse clock for <see cref="Shape.LastUse"/>: 16 ms steps, so that a shape is written at most that often
+        /// however many threads query it.</summary>
+        static long UseClock => Environment.TickCount64 >> 4;
 
         sealed class Edges
         {
@@ -166,6 +194,9 @@ namespace EarthMap.Core
             public int[] EmptyRings;
             public int CellsX, CellsZ;
             public double CellSize, GridX0, GridZ0;
+            /// <summary>EA-0194: about what the index holds in memory (its arrays with their 24-byte headers, 8 bytes a
+            /// reference), for the budget.</summary>
+            public long Bytes;
         }
 
         public struct Hit
@@ -249,7 +280,9 @@ namespace EarthMap.Core
                 var sh = shapes[id];
                 double px = Geo.Wrap180(lon - sh.LonRef) * bpdX, pz = (lat - sh.LatRef) * bpdZ;
                 if (px < sh.MinX - ApronBlocks || px > sh.MaxX + ApronBlocks || pz < sh.MinZ - ApronBlocks || pz > sh.MaxZ + ApronBlocks) continue;
-                var e = sh.Edges ?? BuildEdges(sh);
+                long now = UseClock;
+                if (sh.LastUse != now) sh.LastUse = now;
+                var e = Volatile.Read(ref sh.Edges) ?? BuildEdges(sh, now);
                 bool inside = px >= sh.MinX && px <= sh.MaxX && pz >= sh.MinZ && pz <= sh.MaxZ && Inside(e, px, pz);
                 double cap = inside ? sh.ProfileBlocks : ApronBlocks;
                 double d = inside ? DistanceInside(e, px, pz, cap, Rules >= SeamlessMeridianRules) : Distance(e, px, pz, cap, Rules >= SeamlessMeridianRules);
@@ -267,7 +300,7 @@ namespace EarthMap.Core
         /// <summary>Is the point on one of the world's islands?</summary>
         public bool IsLand(double lat, double lon) => Query(lat, lon, out var hit) && hit.Inside;
 
-        Edges BuildEdges(Shape sh)
+        Edges BuildEdges(Shape sh, long now)
         {
             var isl = sh.Src;
             double[] lon = isl.Lon, lat = isl.Lat;
@@ -299,8 +332,54 @@ namespace EarthMap.Core
             e.Strips = new int[k][];
             for (int i = 0; i < k; i++) e.Strips[i] = strips[i].ToArray();
             BuildCells(e);
-            Interlocked.CompareExchange(ref sh.Edges, e, null);
-            return sh.Edges;
+            e.Bytes = CountBytes(e);
+            // the first thread to finish keeps its index; one that lost the race uses the winner's (or its own, if the budget
+            // let the winner's go meanwhile: the two are the same)
+            var other = Interlocked.CompareExchange(ref sh.Edges, e, null);
+            if (other != null) return other;
+            Hold(sh, e, now);
+            return e;
+        }
+
+        /// <summary>EA-0194: an index is held; past the budget the least recently used others are let go, to three quarters of
+        /// it. A thread still using one it read keeps it alive until it is done; the next query near that island builds it
+        /// again from the same outline, so every answer stays the same.</summary>
+        void Hold(Shape sh, Edges e, long now)
+        {
+            lock (heldLock)
+            {
+                held.Add(sh);
+                edgeBytes += e.Bytes;
+                edgesBuilt++;
+                if (edgeBytes <= EdgeBudgetBytes) return;
+                // (the new one counts as used now, whatever its stamp, and goes last)
+                var order = held.ToArray();
+                var uses = new long[order.Length];
+                for (int i = 0; i < order.Length; i++) uses[i] = ReferenceEquals(order[i], sh) ? long.MaxValue : Volatile.Read(ref order[i].LastUse);
+                Array.Sort(uses, order);
+                long target = EdgeBudgetBytes / 4 * 3;
+                var keep = new HashSet<Shape>();
+                int n = 0;
+                for (; n < order.Length && edgeBytes > target; n++)
+                {
+                    if (ReferenceEquals(order[n], sh)) break;
+                    var old = Interlocked.Exchange(ref order[n].Edges, null);
+                    if (old != null) edgeBytes -= old.Bytes;
+                }
+                for (int i = n; i < order.Length; i++) keep.Add(order[i]);
+                held.RemoveAll(s => !keep.Contains(s));
+            }
+        }
+
+        static long CountBytes(Edges e)
+        {
+            const long header = 24, reference = 8;
+            long b = 2 * (header + 4L * e.X.Length) + (e.OnMeridian != null ? header + e.OnMeridian.Length : 0);
+            b += header + reference * e.Strips.Length;
+            foreach (var s in e.Strips) b += header + 4L * s.Length;
+            b += header + reference * e.Cells.Length + header + 4L * e.EmptyRings.Length;
+            foreach (var c in e.Cells) if (c.Length > 0) b += header + 4L * c.Length;
+            return b + 128;   // the Edges object itself
         }
 
         /// <summary>

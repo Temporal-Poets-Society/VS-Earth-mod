@@ -1,0 +1,119 @@
+3551 deposits, 337 areas
+curve 1:200 (384, 'log1000'): top 8.41 m/blk, d0 400 m, 100 m -> 10.6 blk, 1000 m -> 59.6 blk, 2000 m -> 85.2, floor 160 blk = 11182 m
+curve 1:100 (384, 'log1000'): top 8.41 m/blk, d0 400 m, 100 m -> 10.6 blk, 1000 m -> 59.6 blk, 2000 m -> 85.2, floor 160 blk = 11182 m
+curve 1:10 (1024, 'linear'): top 9.70 m/blk, d0 506 m, 100 m -> 9.4 blk, 1000 m -> 56.9 blk, 2000 m -> 83.4, floor 160 blk = 10384 m
+curve 1:5 (1024, 'linear'): top 9.70 m/blk, d0 506 m, 100 m -> 9.4 blk, 1000 m -> 56.9 blk, 2000 m -> 83.4, floor 160 blk = 10384 m
+curve 1:25 (512, 'linear'): top 22.12 m/blk, d0 2929 m, 100 m -> 4.4 blk, 1000 m -> 38.9 blk, 2000 m -> 68.9, floor 160 blk = 6879 m
+curve 1:100/256 (256, 'log1000'): top 15.88 m/blk, d0 1275 m, 100 m -> 6.1 blk, 1000 m -> 46.5 blk, 2000 m -> 75.7, floor 160 blk = 8080 m
+
+Sub-block and compact bodies (target < 1 -> compact cluster; blankets with compact depth 0 lose their centre layer)
+ 1:200: sub-block {'lens': 1224, 'veins': 27, 'stock': 4} of {'veins': 211, 'stock': 687, 'lens': 2364, 'blanket': 249, 'dome': 40}; sub-block blankets with compact depth 0 by layer {} (their expected blocks 0.0)
+ 1:100: sub-block {'lens': 993, 'veins': 12, 'stock': 2} of {'veins': 211, 'stock': 687, 'lens': 2364, 'blanket': 249, 'dome': 40}; sub-block blankets with compact depth 0 by layer {} (their expected blocks 0.0)
+ 1:10: sub-block {'lens': 548} of {'veins': 211, 'stock': 687, 'lens': 2364, 'blanket': 249, 'dome': 40}; sub-block blankets with compact depth 0 by layer {} (their expected blocks 0.0)
+ 1:5: sub-block {'lens': 429} of {'veins': 211, 'stock': 687, 'lens': 2364, 'blanket': 249, 'dome': 40}; sub-block blankets with compact depth 0 by layer {} (their expected blocks 0.0)
+
+Per layer: deposits, total target blocks at each scale, median target, and catalogue blocks per land chunk on average
+ Cu          1244 dep, Mt     395413 | 1:200 sum      328662 med      18.5 | 1:100 sum     1314646 med      73.9 | 1:10 sum   122621253 med    6943.7 | 1:5 sum   490485011 med   27774.7
+ Cr           876 dep, Mt       1721 | 1:200 sum        1060 med       0.0 | 1:100 sum        4240 med       0.0 | 1:10 sum      401043 med       0.3 | 1:5 sum     1604170 med       1.2
+ Zn           451 dep, Mt      10964 | 1:200 sum        9633 med       5.1 | 1:100 sum       38532 med      20.4 | 1:10 sum     3563225 med    1846.2 | 1:5 sum    14252898 med    7384.7
+ Au           151 dep, Mt      47767 | 1:200 sum       61940 med     112.3 | 1:100 sum      247761 med     449.1 | 1:10 sum    22328057 med   42368.7 | 1:5 sum    89312226 med  169474.8
+ Ni           142 dep, Mt      31024 | 1:200 sum       45809 med     118.0 | 1:100 sum      183237 med     472.1 | 1:10 sum    16276760 med   41961.7 | 1:5 sum    65107038 med  167847.0
+ Fe           116 dep, Mt     208854 | 1:200 sum      126533 med     589.7 | 1:100 sum      506132 med    2358.8 | 1:10 sum    47087262 med  214229.2 | 1:5 sum   188349048 med  856916.6
+ Ag            56 dep, Mt       1583 | 1:200 sum        1070 med       5.1 | 1:100 sum        4281 med      20.4 | 1:10 sum      405540 med    1928.5 | 1:5 sum     1622162 med    7713.8
+ Sn            56 dep, Mt      35868 | 1:200 sum       52489 med      40.2 | 1:100 sum      209955 med     161.0 | 1:10 sum    18372168 med   14958.2 | 1:5 sum    73488672 med   59833.0
+ Pb            48 dep, Mt       1522 | 1:200 sum        1280 med      14.9 | 1:100 sum        5122 med      59.5 | 1:10 sum      477470 med    5525.8 | 1:5 sum     1909880 med   22103.1
+ Al            43 dep, Mt      33835 | 1:200 sum       50228 med     450.6 | 1:100 sum      200911 med    1802.2 | 1:10 sum    17488164 med  156483.2 | 1:5 sum    69952658 med  625932.6
+ diamond       41 dep, Mt      14882 | 1:200 sum       17732 med     244.3 | 1:100 sum       70928 med     977.2 | 1:10 sum     6348290 med   90810.3 | 1:5 sum    25393161 med  363241.1
+ NaCl          39 dep, Mt    1003565 | 1:200 sum      431420 med    4853.1 | 1:100 sum     1725681 med   19412.4 | 1:10 sum   173081198 med 1940789.1 | 1:5 sum   692324791 med 7763156.3
+ U             30 dep, Mt       4628 | 1:200 sum        4736 med      35.0 | 1:100 sum       18944 med     139.9 | 1:10 sum     1781236 med   13441.8 | 1:5 sum     7124945 med   53767.2
+ W             26 dep, Mt       2725 | 1:200 sum        2014 med      19.7 | 1:100 sum        8056 med      78.8 | 1:10 sum      759951 med    7317.7 | 1:5 sum     3039806 med   29270.6
+ Mo            23 dep, Mt      20865 | 1:200 sum       18311 med     611.5 | 1:100 sum       73245 med    2446.1 | 1:10 sum     6894288 med  230456.7 | 1:5 sum    27577153 med  921826.6
+ Ti            22 dep, Mt      26595 | 1:200 sum       35265 med     558.8 | 1:100 sum      141060 med    2235.3 | 1:10 sum    12467113 med  211105.1 | 1:5 sum    49868451 med  844420.5
+ Hg            17 dep, Mt         79 | 1:200 sum          72 med       3.8 | 1:100 sum         286 med      15.2 | 1:10 sum       26452 med    1409.5 | 1:5 sum      105809 med    5638.1
+ Mn            17 dep, Mt       6988 | 1:200 sum        5506 med      93.6 | 1:100 sum       22024 med     374.4 | 1:10 sum     2022612 med   34162.1 | 1:5 sum     8090449 med  136648.2
+ corundum      13 dep, Mt       1932 | 1:200 sum        2645 med      11.1 | 1:100 sum       10582 med      44.2 | 1:10 sum      926112 med    4310.7 | 1:5 sum     3704449 med   17242.8
+ F             13 dep, Mt        443 | 1:200 sum         319 med      15.9 | 1:100 sum        1277 med      63.5 | 1:10 sum      118786 med    5793.3 | 1:5 sum      475145 med   23173.2
+ B             12 dep, Mt       3310 | 1:200 sum        5431 med      86.7 | 1:100 sum       21722 med     346.8 | 1:10 sum     1964312 med   30070.8 | 1:5 sum     7857247 med  120283.3
+ alum          12 dep, Mt        667 | 1:200 sum         844 med      62.8 | 1:100 sum        3374 med     251.2 | 1:10 sum      302237 med   22454.6 | 1:5 sum     1208948 med   89818.2
+ C_graphite    12 dep, Mt       1942 | 1:200 sum        1371 med      30.9 | 1:100 sum        5485 med     123.6 | 1:10 sum      512686 med   11050.9 | 1:5 sum     2050745 med   44203.5
+ emerald       11 dep, Mt         37 | 1:200 sum          34 med       1.5 | 1:100 sum         136 med       6.1 | 1:10 sum       12567 med     563.0 | 1:5 sum       50267 med    2251.9
+ Pt             9 dep, Mt       1145 | 1:200 sum        1760 med     138.1 | 1:100 sum        7042 med     552.3 | 1:10 sum      642142 med   53056.3 | 1:5 sum     2568569 med  212225.3
+ Sb             8 dep, Mt        115 | 1:200 sum          80 med       5.6 | 1:100 sum         320 med      22.4 | 1:10 sum       29982 med    2089.8 | 1:5 sum      119927 med    8359.3
+ S              8 dep, Mt     215802 | 1:200 sum       65416 med    4869.2 | 1:100 sum      261664 med   19476.9 | 1:10 sum    26686908 med 2008889.4 | 1:5 sum   106747633 med 8035557.7
+ SiO2           8 dep, Mt        217 | 1:200 sum         225 med       3.8 | 1:100 sum         902 med      15.0 | 1:10 sum       82000 med    1314.8 | 1:5 sum      327998 med    5259.0
+ V              7 dep, Mt       9851 | 1:200 sum        9120 med     166.9 | 1:100 sum       36479 med     667.4 | 1:10 sum     3446420 med   60897.8 | 1:5 sum    13785679 med  243591.1
+ tourmaline     7 dep, Mt         23 | 1:200 sum          21 med       0.7 | 1:100 sum          85 med       2.7 | 1:10 sum        7718 med     242.2 | 1:5 sum       30873 med     968.7
+ garnet         6 dep, Mt         81 | 1:200 sum         146 med       0.7 | 1:100 sum         582 med       2.7 | 1:10 sum       51130 med     255.4 | 1:5 sum      204521 med    1021.7
+ topaz          6 dep, Mt          5 | 1:200 sum           6 med       0.9 | 1:100 sum          25 med       3.8 | 1:10 sum        2237 med     341.8 | 1:5 sum        8950 med    1367.4
+ olivine        5 dep, Mt       2006 | 1:200 sum        2490 med       0.4 | 1:100 sum        9961 med       1.8 | 1:10 sum      925434 med     160.6 | 1:5 sum     3701736 med     642.3
+ Bi             4 dep, Mt         53 | 1:200 sum          82 med       3.0 | 1:100 sum         327 med      12.0 | 1:10 sum       29882 med    1127.9 | 1:5 sum      119527 med    4511.7
+ gypsum         4 dep, Mt       1800 | 1:200 sum        1978 med     674.1 | 1:100 sum        7910 med    2696.4 | 1:10 sum      719105 med  237069.1 | 1:5 sum     2876418 med  948276.4
+ lapis          3 dep, Mt          1 | 1:200 sum           1 med       0.4 | 1:100 sum           5 med       1.7 | 1:10 sum         420 med     151.7 | 1:5 sum        1679 med     607.0
+ beryl          3 dep, Mt          2 | 1:200 sum           2 med       0.5 | 1:100 sum           8 med       2.2 | 1:10 sum         734 med     196.6 | 1:5 sum        2936 med     786.3
+ P              1 dep, Mt        500 | 1:200 sum         398 med     398.2 | 1:100 sum        1593 med    1592.9 | 1:10 sum      148338 med  148337.9 | 1:5 sum      593352 med  593351.6
+ spinel         1 dep, Mt          0 | 1:200 sum           0 med       0.2 | 1:100 sum           1 med       0.9 | 1:10 sum          77 med      77.3 | 1:5 sum         309 med     309.4
+
+Count, mean spacing sqrt(land/N), and nearest catalogue entry from the 36 spawn cities (km; blocks at 1:100 / 1:10 on the cylinder): median, 75th pct, max
+ copper (Cu)            N= 1244 spacing    346 km | nearest km med   363 p75   763 max  2353 | 1:100 blk med    4187 max    26081 | 1:10 blk med    41875 max    260806
+ tin (Sn)               N=   66 spacing   1503 km | nearest km med   964 p75  1669 max  4130 | 1:100 blk med   10647 max    46078 | 1:10 blk med   106467 max    460778
+ iron (Fe)              N=  116 spacing   1133 km | nearest km med   511 p75  1095 max  2574 | 1:100 blk med    5679 max    25730 | 1:10 blk med    56786 max    257298
+ gold (Au)              N=  961 spacing    394 km | nearest km med   363 p75   576 max  1058 | 1:100 blk med    3926 max    15568 | 1:10 blk med    39258 max    155680
+ silver (Ag)            N=  761 spacing    442 km | nearest km med   447 p75   777 max  2949 | 1:100 blk med    4662 max    30128 | 1:10 blk med    46625 max    301275
+ lead/zinc              N=  499 spacing    546 km | nearest km med   318 p75  1003 max  2938 | 1:100 blk med    4029 max    29368 | 1:10 blk med    40286 max    293676
+ sulfur (S)             N=    8 spacing   4316 km | nearest km med  3818 p75  5261 max 11791 | 1:100 blk med   42039 max   122908 | 1:10 blk med   420387 max   1229085
+ borax (B)              N=   12 spacing   3524 km | nearest km med  2516 p75  3842 max 10257 | 1:100 blk med   26926 max   113214 | 1:10 blk med   269256 max   1132136
+ bauxite (Al)           N=   43 spacing   1861 km | nearest km med  1189 p75  1866 max  4485 | 1:100 blk med   13584 max    48301 | 1:10 blk med   135839 max    483015
+ salt (NaCl)            N=   39 spacing   1955 km | nearest km med  2045 p75  6363 max 12065 | 1:100 blk med   23112 max   126662 | 1:10 blk med   231121 max   1266616
+ coal (basins)          N=  119 areas | nearest edge vertex km med   491 p75   897 max  2797
+ salt/potash (basins)   N=   54 areas | nearest edge vertex km med   496 p75  1288 max  3610
+ copper (areas)         N=   94 areas | nearest edge vertex km med  3024 p75  8414 max 12932
+ iron (areas)           N=   11 areas | nearest edge vertex km med  1936 p75  3505 max  7265
+ gypsum (areas)         N=   14 areas | nearest edge vertex km med  1733 p75  6701 max 13876
+ phosphorite (areas)    N=   26 areas | nearest edge vertex km med  1057 p75  1930 max  4571
+ sulfur (areas)         N=    3 areas | nearest edge vertex km med  3968 p75  8610 max 17565
+
+Per spawn: nearest catalogue entry (km) for copper, tin, iron, coal basin, salt basin, gold
+ london      copper=297 tin=287 iron=112 coal=138 salt/potash=156 gold=928 sulfur=3818 borax=2559 bauxite=939
+ paris       copper=104 tin=490 iron=194 coal=177 salt/potash=284 gold=615 sulfur=3599 borax=2296 bauxite=599
+ madrid      copper=381 tin=345 iron=189 coal=335 salt/potash=295 gold=342 sulfur=4088 borax=2703 bauxite=793
+ rome        copper=182 tin=949 iron=198 coal=674 salt/potash=761 gold=576 sulfur=2728 borax=1346 bauxite=539
+ berlin      copper=571 tin=197 iron=213 coal=87 salt/potash=5 gold=302 sulfur=2971 borax=1824 bauxite=672
+ vienna      copper=188 tin=330 iron=134 coal=212 salt/potash=344 gold=188 sulfur=2583 borax=1350 bauxite=151
+ warsaw      copper=444 tin=524 iron=682 coal=137 salt/potash=10 gold=419 sulfur=2514 borax=1488 bauxite=622
+ athens      copper=277 tin=1613 iron=1181 coal=304 salt/potash=738 gold=277 sulfur=1749 borax=413 bauxite=128
+ stockholm   copper=197 tin=990 iron=98 coal=854 salt/potash=496 gold=197 sulfur=3168 borax=2280 bauxite=1360
+ riga        copper=363 tin=964 iron=511 coal=600 salt/potash=261 gold=363 sulfur=2733 borax=1918 bauxite=1182
+ kyiv        copper=711 tin=1174 iron=257 coal=405 salt/potash=85 gold=711 sulfur=1905 borax=1171 bauxite=1019
+ moscow      copper=861 tin=1669 iron=792 coal=118 salt/potash=590 gold=964 sulfur=2239 borax=1869 bauxite=1198
+ rabat       copper=269 tin=687 iron=486 coal=1014 salt/potash=2 gold=392 sulfur=4521 borax=3154 bauxite=1475
+ cairo       copper=362 tin=2712 iron=295 coal=1041 salt/potash=377 gold=561 sulfur=1304 borax=1031 bauxite=1242
+ abuja       copper=2353 tin=174 iron=1095 coal=264 salt/potash=1211 gold=1005 sulfur=4702 borax=3950 bauxite=638
+ niamey      copper=2297 tin=847 iron=1325 coal=947 salt/potash=1186 gold=255 sulfur=4800 borax=3842 bauxite=896
+ addisababa  copper=1071 tin=1544 iron=2375 coal=2797 salt/potash=576 gold=355 sulfur=3034 borax=3464 bauxite=2137
+ nairobi     copper=1598 tin=753 iron=2574 coal=1630 salt/potash=1737 gold=253 sulfur=4200 borax=4558 bauxite=2820
+ pretoria    copper=763 tin=1451 iron=152 coal=41 salt/potash=2801 gold=270 sulfur=7046 borax=7237 bauxite=4005
+ baghdad     copper=561 tin=3138 iron=875 coal=834 salt/potash=113 gold=561 sulfur=314 borax=1405 bauxite=636
+ tehran      copper=185 tin=3419 iron=571 coal=533 salt/potash=9 gold=185 sulfur=730 borax=1879 bauxite=1139
+ newdelhi    copper=151 tin=2299 iron=1097 coal=662 salt/potash=262 gold=814 sulfur=1454 borax=729 bauxite=1189
+ bangkok     copper=629 tin=233 iron=1097 coal=505 salt/potash=206 gold=629 sulfur=4322 borax=2580 bauxite=790
+ beijing     copper=225 tin=1604 iron=196 coal=11 salt/potash=1555 gold=416 sulfur=4309 borax=3052 bauxite=647
+ seoul       copper=539 tin=750 iron=518 coal=179 salt/potash=2219 gold=539 sulfur=5261 borax=3957 bauxite=1292
+ tokyo       copper=75 tin=443 iron=1156 coal=823 salt/potash=2916 gold=136 sulfur=6383 borax=5105 bauxite=2416
+ jakarta     copper=834 tin=389 iron=1933 coal=334 salt/potash=2330 gold=59 sulfur=6461 borax=4831 bauxite=605
+ canberra    copper=49 tin=751 iron=771 coal=92 salt/potash=1288 gold=45 sulfur=11791 borax=10053 bauxite=2586
+ wellington  copper=2300 tin=2430 iron=346 coal=237 salt/potash=3610 gold=443 sulfur=11354 borax=10257 bauxite=4485
+ ottawa      copper=264 tin=693 iron=227 coal=404 salt/potash=275 gold=264 sulfur=2175 borax=3547 bauxite=1866
+ washington  copper=677 tin=1100 iron=161 coal=166 salt/potash=194 gold=208 sulfur=1587 borax=3476 bauxite=1460
+ mexicocity  copper=144 tin=4130 iron=351 coal=897 salt/potash=200 gold=90 sulfur=491 borax=2516 bauxite=1807
+ lima        copper=86 tin=768 iron=409 coal=2407 salt/potash=1293 gold=474 sulfur=3861 borax=1142 bauxite=2365
+ brasilia    copper=234 tin=1797 iron=652 coal=1601 salt/potash=1257 gold=190 sulfur=6358 borax=2100 bauxite=682
+ buenosaires copper=1020 tin=1695 iron=989 coal=491 salt/potash=832 gold=1058 sulfur=6995 borax=1331 bauxite=1832
+ santiago    copper=47 tin=1465 iron=415 coal=1549 salt/potash=170 gold=176 sulfur=6262 borax=975 bauxite=2695
+
+Global endowment -> average blocks per land chunk (catalogue spread over land), v at the top of each curve
+ Cu ore        395.4 Gt in deposits (areas excluded) -> mean 0.983 mm over land -> 1:200: 0.120 blk/chunk, 1:100: 0.120 blk/chunk, 1:10: 0.104 blk/chunk, 1:5: 0.104 blk/chunk
+ Fe ore        208.9 Gt in deposits (areas excluded) -> mean 0.400 mm over land -> 1:200: 0.049 blk/chunk, 1:100: 0.049 blk/chunk, 1:10: 0.042 blk/chunk, 1:5: 0.042 blk/chunk
+ Au ore         47.8 Gt in deposits (areas excluded) -> mean 0.119 mm over land -> 1:200: 0.014 blk/chunk, 1:100: 0.014 blk/chunk, 1:10: 0.013 blk/chunk, 1:5: 0.013 blk/chunk
+ Sn ore         35.9 Gt in deposits (areas excluded) -> mean 0.096 mm over land -> 1:200: 0.012 blk/chunk, 1:100: 0.012 blk/chunk, 1:10: 0.010 blk/chunk, 1:5: 0.010 blk/chunk
+ Zn+Pb ore      12.5 Gt in deposits (areas excluded) -> mean 0.028 mm over land -> 1:200: 0.003 blk/chunk, 1:100: 0.003 blk/chunk, 1:10: 0.003 blk/chunk, 1:5: 0.003 blk/chunk
+ area tonnage by layer (Mt, from the files' mt): {'Cu': 12219, 'C_coal': 13931500, 'K': 290050, 'S': 2900, 'P': 111400, 'Fe': 240600, 'Mn': 16200, 'Cr': 13600, 'Pt': 23500, 'V': 1000, 'Au': 9018}

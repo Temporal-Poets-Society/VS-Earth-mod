@@ -1,0 +1,102 @@
+
+== Sites: 20 x 20 km at 200 m, relief from GLO-90; valley floor = relief < -10 m; 1:10 curve
+
+Klondike (Bonanza Ck) (63.98, -139.3): unit Rx, soil Cambisols, Q 6 m (global-shangguan-30s -140 +70), glaciation? no, era Precambrian-Phanerozoic
+   land 10000: thin 41%, residual 41%, lake 16%; columns with raw clay 16%
+   valley floors 4591 (45% of land): residual 69%, lake 29%, thin 0%; steep (slope>=0.45) 0%; alluvial/outwash layer 0%
+   same floors if a river valley (NearRiver): alluvium 69%, lake 29%, thin 0%; alluvial/outwash layer 69%
+
+Iss/Tura placers, Urals (58.6, 59.7): unit Ca, soil Cambisols, Q 15 m (global-shangguan-30s +50 +60), glaciation? no, era Paleozoic
+   land 10000: colluvium 81%, thin 16%, till 1%; columns with raw clay 0%
+   valley floors 2150 (21% of land): colluvium 97%, till 2%; steep (slope>=0.45) 0%; alluvial/outwash layer 0%
+   same floors if a river valley (NearRiver): alluvium 97%, till 2%; alluvial/outwash layer 97%
+
+Nizhny Tagil (57.9, 59.95): unit Ca, soil Cambisols, Q 15 m (global-shangguan-30s +50 +60), glaciation? no, era Paleozoic
+   land 10000: colluvium 86%, thin 13%; columns with raw clay 0%
+   valley floors 1824 (18% of land): colluvium 100%; steep (slope>=0.45) 0%; alluvial/outwash layer 0%
+   same floors if a river valley (NearRiver): alluvium 100%; alluvial/outwash layer 100%
+
+Kondyor (57.6, 134.65): unit Ca, soil Cryosols, Q 1.1 m (global-shangguan-30s +130 +60), glaciation? no, era Mesoproterozoic
+   land 10000: colluvium 54%, thin 38%, alluvium 6%; columns with raw clay 2%
+   valley floors 4569 (45% of land): colluvium 88%, alluvium 8%, thin 2%; steep (slope>=0.45) 2%; alluvial/outwash layer 8%
+   same floors if a river valley (NearRiver): alluvium 97%, thin 2%; alluvial/outwash layer 91%
+
+Bodaybo (Lena gold) (57.85, 114.2): unit Cu, soil Cryosols, Q 15 m (global-shangguan-30s +110 +60), glaciation? no, era Paleoproterozoic
+   land 10000: colluvium 62%, thin 37%; columns with raw clay 0%
+   valley floors 4114 (41% of land): colluvium 99%, thin 0%; steep (slope>=0.45) 0%; alluvial/outwash layer 0%
+   same floors if a river valley (NearRiver): alluvium 99%, thin 0%; alluvial/outwash layer 99%
+
+Kolyma (Susuman) (62.78, 148.15): unit Gu, soil Histosols, Q 16.1 m (global-shangguan-30s +140 +70), glaciation? older, era Mesozoic
+   land 10000: peat-on-till 61%, peat 37%, knob-till 0%, thin 0%; columns with raw clay 9%
+   valley floors 4376 (43% of land): peat-on-till 59%, peat 40%; steep (slope>=0.45) 0%; alluvial/outwash layer 0%
+   same floors if a river valley (NearRiver): peat-on-till 59%, peat 40%; alluvial/outwash layer 0%
+
+Ballarat (-37.55, 143.85): unit Rx, soil Luvisols, Q 20 m (global-shangguan-30s +140 -30), glaciation? no, era Paleozoic
+   land 10000: residual 87%, thin 9%, laterite 2%, tephra 0%; columns with raw clay 0%
+   valley floors 1065 (10% of land): residual 93%, laterite 6%; steep (slope>=0.45) 0%; alluvial/outwash layer 0%
+   same floors if a river valley (NearRiver): alluvium 100%; alluvial/outwash layer 100%
+
+Mother Lode (Coloma) (38.8, -120.89): unit Rx, soil Luvisols, Q 3.4 m (global-shangguan-30s -130 +40), glaciation? no, era Mesozoic
+   land 10000: residual 63%, thin 35%, saprolite 0%; columns with raw clay 0%
+   valley floors 3863 (38% of land): residual 98%, thin 1%, saprolite 0%; steep (slope>=0.45) 1%; alluvial/outwash layer 0%
+   same floors if a river valley (NearRiver): alluvium 98%, thin 1%; alluvial/outwash layer 98%
+
+Otago (Clutha) (-45.2, 169.3): unit Rx, soil Cambisols, Q 13.4 m (global-shangguan-30s +160 -40), glaciation? no, era Paleozoic-Mesozoic
+   land 10000: residual 67%, thin 32%; columns with raw clay 0%
+   valley floors 3592 (35% of land): residual 98%, thin 1%; steep (slope>=0.45) 1%; alluvial/outwash layer 0%
+   same floors if a river valley (NearRiver): alluvium 98%, thin 1%; alluvial/outwash layer 98%
+
+Choco (Condoto) (5.1, -76.65): unit At, soil Cambisols, Q 27 m (global-shangguan-30s -80 +10), glaciation? no, era Cenozoic
+   land 10000: alluvium 83%, thin 16%; columns with raw clay 80%
+   valley floors 2513 (25% of land): alluvium 100%; steep (slope>=0.45) 0%; alluvial/outwash layer 100%
+   same floors if a river valley (NearRiver): alluvium 100%; alluvial/outwash layer 100%
+
+Cornwall (Carnon) (50.23, -5.1): unit Rx, soil Cambisols, Q 9.1 m (global-shangguan-30s -10 +60), glaciation? no, era Paleozoic
+   land 10000: residual 74%, thin 25%; columns with raw clay 0%
+   valley floors 2693 (26% of land): residual 100%; steep (slope>=0.45) 0%; alluvial/outwash layer 0%
+   same floors if a river valley (NearRiver): alluvium 100%; alluvial/outwash layer 100%
+
+Lemmenjoki, Lapland (68.7, 25.8): unit Au, soil Cambisols, Q 13.1 m (global-shangguan-30s +20 +70), glaciation? lgm, era Archean-Paleoproterozoic
+   land 10000: alluvium-on-till 58%, knob-till 31%, peat-on-till 7%, till 2%; columns with raw clay 0%
+   valley floors 3253 (32% of land): alluvium-on-till 92%, peat-on-till 5%, till 2%, knob-till 0%; steep (slope>=0.45) 0%; alluvial/outwash layer 92%
+   same floors if a river valley (NearRiver): alluvium-on-till 92%, peat-on-till 5%, till 2%, knob-till 0%; alluvial/outwash layer 92%
+
+Rhine at Strasbourg (48.58, 7.75): unit Au, soil Cambisols, Q 27.4 m (global-shangguan-30s +0 +50), glaciation? no, era Cenozoic
+   land 10000: loess 51%, alluvium 48%, thin 0%; columns with raw clay 47%
+   valley floors 143 (1% of land): loess 82%, alluvium 17%; steep (slope>=0.45) 0%; alluvial/outwash layer 17%
+   same floors if a river valley (NearRiver): alluvium 100%; alluvial/outwash layer 100%
+
+Daugava at Plavinas (56.62, 25.72): unit Gt, soil Luvisols, Q 18 m (latvia-quaternary), glaciation? lgm, era Paleozoic
+   land 10000: till 76%, knob-till 14%, peat-on-till 8%; columns with raw clay 99%
+   valley floors 683 (6% of land): till 93%, peat-on-till 6%; steep (slope>=0.45) 0%; alluvial/outwash layer 0%
+   same floors if a river valley (NearRiver): till 93%, peat-on-till 6%; alluvial/outwash layer 0%
+
+Vistula at Warsaw (52.23, 21.03): unit Eu, soil Chernozems, Q 30.8 m (global-shangguan-30s +20 +60), glaciation? older, era Cenozoic
+   land 10000: dune-on-till 80%, outwash 15%, loess-on-till 3%, knob-till 0%; columns with raw clay 0%
+   valley floors 87 (0% of land): dune-on-till 95%, loess-on-till 4%; steep (slope>=0.45) 0%; alluvial/outwash layer 0%
+   same floors if a river valley (NearRiver): dune-on-till 100%; alluvial/outwash layer 0%
+
+Ganges plain (Patna) (25.6, 85.1): unit Us, soil Fluvisols, Q 50.9 m (global-shangguan-30s +80 +30), glaciation? no, era Cenozoic
+   land 10000: sediment 91%, alluvium 4%, saprolite 3%; columns with raw clay 96%
+   valley floors 2 (0% of land): sediment 100%; steep (slope>=0.45) 0%; alluvial/outwash layer 0%
+   same floors if a river valley (NearRiver): alluvium 100%; alluvial/outwash layer 100%
+
+Mississippi (Memphis) (35.15, -90.05): unit Au, soil Luvisols, Q 36.5 m (global-shangguan-30s -100 +40), glaciation? no, era Cenozoic
+   land 10000: alluvium 97%, thin 2%; columns with raw clay 96%
+   valley floors 169 (1% of land): alluvium 100%; steep (slope>=0.45) 0%; alluvial/outwash layer 100%
+   same floors if a river valley (NearRiver): alluvium 100%; alluvial/outwash layer 100%
+
+Bangka tin (-2.1, 106.1): unit Us, soil Histosols, Q 31.5 m (global-shangguan-30s +100 +0), glaciation? no, era Mesozoic
+   land 10000: peat 94%, saprolite 4%, coastal 0%, thin 0%; columns with raw clay 92%
+   valley floors 391 (3% of land): peat 69%, saprolite 27%, coastal 3%; steep (slope>=0.45) 0%; alluvial/outwash layer 0%
+   same floors if a river valley (NearRiver): peat 69%, alluvium 27%, coastal 3%; alluvial/outwash layer 27%
+
+Kinta valley tin (4.6, 101.1): unit Rx, soil Acrisols, Q 46.3 m (global-shangguan-30s +100 +10), glaciation? no, era Mesozoic
+   land 10000: saprolite 81%, thin 18%; columns with raw clay 0%
+   valley floors 2828 (28% of land): saprolite 98%, thin 1%; steep (slope>=0.45) 1%; alluvial/outwash layer 0%
+   same floors if a river valley (NearRiver): alluvium 98%, thin 1%; alluvial/outwash layer 98%
+
+Guiana shield (Suriname) (4, -55.5): unit Rx, soil Ferralsols, Q 30.7 m (global-shangguan-30s -60 +10), glaciation? no, era Paleoproterozoic
+   land 10000: saprolite 92%, thin 8%; columns with raw clay 0%
+   valley floors 1147 (11% of land): saprolite 100%; steep (slope>=0.45) 0%; alluvial/outwash layer 0%
+   same floors if a river valley (NearRiver): alluvium 100%; alluvial/outwash layer 100%

@@ -1,6 +1,6 @@
 # 0014: River widths — the standard world's widths as a floor in blocks, real widths where wider
 
-Status: Agreed, implemented (0.14.7), offline checks only, not played yet | Date: 2026-10-20 | Decided by: the user ("go on
+Status: Agreed, implemented (0.14.7), offline checks only, not played yet; since [0095](0095-river-width-option.md) (EA-0159) the River width of 100 % at 1:10 (and 2.1's multipliers elsewhere) | Date: 2026-10-20 | Decided by: the user ("go on
 with the proposed rule"; on narrower rivers in mid-sized worlds: "not a real trade-off, it would be more correct scale")
 
 ## Context

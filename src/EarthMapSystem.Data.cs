@@ -128,7 +128,8 @@ namespace EarthMap
             One(p.Islands > 0 || p.Coasts > 0 || p.SeaReferee >= 1, "islands.bin");
             One(p.Coasts > 0 || p.SeaReferee >= 1, "coasts.bin");
             One(p.SeaReferee >= 1, "sea-referee.bin");
-            One(p.RiverEnds > 0, "lakes.bin");
+            // (river ends rules 3 read lakes-2.bin, which is in the mod)
+            One(p.RiverEnds is > 0 and < Core.RiverEnds.Lakes1318, "lakes.bin");
             One(p.LakeShores > 0, "shores.bin");
             // decision 0070's beaches by OSM's material (TerrainModel.ShoreData)
             One(ShoreMaterialFacts.Strip(p.ShoreRules), ShoreMaterialData.FileName);
@@ -141,11 +142,15 @@ namespace EarthMap
             One(p.RiverCourses >= 1, RiverSourceRepository.Glo90RiversFile);
             One(p.RiverCourses >= RiverNetwork.Glo90SnapCourses, "rivers-glo90-snap.bin");
             One(p.RiverCourses >= RiverNetwork.Glo90ArmsCourses, "rivers-glo90-arms.bin");
-            If(p.RiverCourses >= RiverNetwork.Glo90WidthCourses, new[] { "rivers-glo90-snap-2.bin", "rivers-glo90-arms-2.bin" });
+            // (rules 4 reads the -2 pair, rules 5 the -3 pair in its place: RiverSourceRepository.RiverReaches)
+            If(p.RiverCourses == RiverNetwork.Glo90WidthCourses, new[] { "rivers-glo90-snap-2.bin", "rivers-glo90-arms-2.bin" });
+            If(p.RiverCourses >= RiverNetwork.Glo90PointCourses, new[] { "rivers-glo90-snap-3.bin", "rivers-glo90-arms-3.bin" });
             One(p.SpringRules >= EarthParams.SpringRulesStreams, StreamHeads.FileName);
             // the ground columns' 2' sets (ground-rules-v1.json), the floodplains they read, the ice sheets' ground
             If(GroundColumnFacts.Columns(p.GroundColumns), EarthDataStore.Files.Select(f => f.Name).Where(n => n.EndsWith(".egt", StringComparison.Ordinal) || n.EndsWith(".egts", StringComparison.Ordinal)));
             One(GroundColumnFacts.Columns(p.GroundColumns) && p.SoilRules >= SoilFertility.FloodplainRules, "floodplains.bin");
+            // (decision 0105) Earth soil: the 2' soil maps, the dunes' surface unit and the floodplains (soil-rules-v4.json)
+            If(Topsoil.On(p.Topsoil), new[] { "global-soilgrids.egts", "baltic-soilgrids.egt", "global-gum.egt", "floodplains.bin" });
             One(AlpineSurfaceFacts.IceSheetGround(p.AlpineSurfaceRules), "global-glaciation.egts");
             return files;
         }
@@ -174,9 +179,10 @@ namespace EarthMap
             else if (p.SeaReferee >= 1 && p.SeaReferee < SeaRefereeData.FileVersion)
                 Mod.Logger.Warning("This world's sea was refereed by an earlier test build (sea referee {0}); this build's data (sea referee {1}) also moves the coastline to the water mask's where GSHHG's differs, so chunks generated now may meet older ones with a step there.",
                     p.SeaReferee, SeaRefereeData.FileVersion);
-            if (p.Works1318 >= 1 && Data.Works1318 == null)
-                Mod.Logger.Warning("This world's coasts and waters are as of 1318 (decision 0064), but this Earth build has no {0}; chunks generated now have today's and may meet the older ones with a step.", Works1318Data.FileName);
-            if (p.PerennialRules >= 1 && p.AridRiverRules >= 1 && Data.NonPerennial == null)
+            if (p.Works1318 >= 1 && Data.Works1318For(p.Works1318) == null)
+                Mod.Logger.Warning("This world's coasts and waters are as of 1318 (decision 0064), but this Earth build has no {0}; chunks generated now have today's and may meet the older ones with a step.",
+                    Works1318Data.FileNameFor(p.Works1318));
+            if (p.PerennialRules >= 1 && p.AridRiverRules >= 1 && !Data.HasNonPerennial)
                 Mod.Logger.Warning("This world's dry rivers follow GIRES' non-perennial rivers (decision 0069), but this Earth build has no {0}; " +
                     "chunks generated now dry rivers by their catchments' rainfall and may meet the older ones with a step.", NonPerennialData.FileName);
         }

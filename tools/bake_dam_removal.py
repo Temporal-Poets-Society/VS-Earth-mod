@@ -78,10 +78,12 @@ from scipy import ndimage as ndi
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from bake_lake_outlines import RAW, DEM, WBM, SOUTH, varints  # noqa: E402
 from bake_river_outlines import tile_name, RES_SEED, RES_SEED_KM2, RES_WIDE  # noqa: E402
+import glo90grid as gg  # noqa: E402
 
 # dam rules 2 (0063 rule 3); 3 (0069 rule 9, EARTH_GDW=1): the same rules with Global Dam Watch's reservoirs HydroLAKES
-# lacks. The file's header and name (dams-glo90-2.bin, dams-glo90-3.bin)
-VERSION = 3 if os.environ.get("EARTH_GDW", "0") == "1" else 2
+# lacks; 4 (decision 0092, EA-0148): rules 3 on GLO-90's pixel-is-point grid (tools/glo90grid.py) and on courses rules 5's
+# list. The file's header and name (dams-glo90-2.bin, dams-glo90-3.bin, dams-glo90-4.bin)
+VERSION = (4 if gg.POINT else 3) if os.environ.get("EARTH_GDW", "0") == "1" else 2
 PX = 1200                          # mosaic pixels per degree, both ways (columns resampled), as bake_river_outlines
 RES_RISE = 6                        # half-metre steps of bake_river_outlines (3 m)
 RISE_MAX = 60                       # and on, while the reservoir has less than its HydroLAKES area (30 m)
@@ -226,14 +228,24 @@ def mosaic(lat_s, lat_n, lon_w, lon_e, rivers=False):
                 continue
             w = tifffile.imread(p)
             hp, wp = w.shape
-            cols = np.arange(PX) * wp // PX
             d = tifffile.imread(os.path.join(DEM, name.replace("_WBM.tif", "_DEM.tif")))
+            # on PX columns a degree (glo90grid.columns: on the pixel-is-point grid each takes the nearest cell, a tile's
+            # last column or two the next square's first)
+            we = de = None
+            if (gg.column_index(PX, wp) >= wp).any():
+                en = tile_name(lat, ((lon + 1 + 180) % 360) - 180)
+                if os.path.exists(os.path.join(WBM, en)):
+                    we = tifffile.imread(os.path.join(WBM, en))
+                    de = tifffile.imread(os.path.join(DEM, en.replace("_WBM.tif", "_DEM.tif")))
+                else:
+                    we, de = np.ones((hp, 1), w.dtype), np.zeros((hp, 1), d.dtype)
+            wc, dc = gg.columns(w, PX, we), gg.columns(d, PX, de)
             blk = (slice(i * PX, (i + 1) * PX), slice(j * PX, (j + 1) * PX))
-            water[blk] = ((w == 2) | (w == 3))[:, cols]
+            water[blk] = (wc == 2) | (wc == 3)
             if rivers:
-                river[blk] = (w == 3)[:, cols]
-                notg[blk] = (w == 1)[:, cols]
-            h[blk] = d[:, cols]
+                river[blk] = wc == 3
+                notg[blk] = wc == 1
+            h[blk] = dc
             tiles.append((name, i, j, wp, lat, lon))
     return (water, h, tiles, river, notg) if rivers else (water, h, tiles)
 
@@ -241,7 +253,9 @@ def mosaic(lat_s, lat_n, lon_w, lon_e, rivers=False):
 # ------------------------------------------------------------------------------------------- reservoirs
 
 def grow(dam, water, q, px_km2, lat_n, lon_w):
-    """bake_river_outlines.reservoir's region on this mosaic, rising on to RISE_MAX while short of the area: (stats, region)."""
+    """bake_river_outlines.reservoir's region on this mosaic, rising on to RISE_MAX while short of the area: (stats, region).
+    lat_n, lon_w: the north-west corner of pixel (0, 0)'s area (glo90grid: half a pixel north-west of the squares' corner
+    on the pixel-is-point grid)."""
     hid, lon, lat, area, elev = dam
     n_r, n_c = water.shape
     coslat = max(math.cos(math.radians(lat)), 0.05)
@@ -337,7 +351,10 @@ def area(name, lat_s, lat_n, lon_w, lon_e, dams, C, out, only=None, regions=None
     water, h, tiles, river_m, notg = mosaic(lat_s, lat_n, lon_w, lon_e, rivers=True)
     h0 = h.copy()
     n_r, n_c = water.shape
-    rows_lat = lat_n - (np.arange(n_r) + 0.5) / PX
+    # pixel (r, c)'s area runs from (top_ - r/PX, left_ + c/PX): half a pixel north-west of the squares' corner on GLO-90's
+    # pixel-is-point grid (glo90grid), where a pixel's centre is its cell's
+    top_, left_ = gg.top(lat_n, PX), gg.left(lon_w, PX)
+    rows_lat = top_ - (np.arange(n_r) + 0.5) / PX
     px_km2 = (111.32 / PX) ** 2 * np.cos(np.radians(rows_lat))
     lat_mid = (lat_s + lat_n) / 2
     dy = 111320.0 / PX
@@ -349,14 +366,14 @@ def area(name, lat_s, lat_n, lon_w, lon_e, dams, C, out, only=None, regions=None
     res = []
     for d in dams[sel]:
         if regions is None:
-            st, reg = grow_local(d, water, q, px_km2, lat_n, lon_w)
+            st, reg = grow_local(d, water, q, px_km2, top_, left_)
         else:
             st, greg = regions[int(d[0])]
             st = dict(st)
             reg = None
             if greg is not None:
                 reg = (greg[0] - round((90 - lat_n) * PX), greg[1] - round((lon_w + 180) * PX), greg[2])
-                st["pr"], st["pc"] = int((lat_n - d[2]) * PX), int((d[1] - lon_w) * PX)
+                st["pr"], st["pc"] = int((top_ - d[2]) * PX), int((d[1] - left_) * PX)
         st.update(hid=int(d[0]), lon=d[1], lat=d[2], area=d[3], elev=d[4])
         res.append((st, reg))
     del q
@@ -452,8 +469,8 @@ def area(name, lat_s, lat_n, lon_w, lon_e, dams, C, out, only=None, regions=None
             ext = np.abs(ua).max() + 400
             for k_, sgn in (("0", -1), ("1", 1)):
                 ex, ey = cx + sgn * ext * ax_[0], cy + sgn * ext * ax_[1]
-                st["dam_lat" + k_] = lat_n + ey / dy / PX
-                st["dam_lon" + k_] = lon_w + ex / dx / PX
+                st["dam_lat" + k_] = top_ + ey / dy / PX
+                st["dam_lon" + k_] = left_ + ex / dx / PX
         dam_px[box] |= D
         if D.any():
             # dam rules 2: the tailrace's banks (ground below the dam by its wall) may be the river's corridor
@@ -465,8 +482,8 @@ def area(name, lat_s, lat_n, lon_w, lon_e, dams, C, out, only=None, regions=None
     lon, lat = C["lon"], C["lat"]
     inbox = (lat >= lat_s) & (lat < lat_n) & (lon >= lon_w) & (lon < lon_e)
     sidx = np.flatnonzero(inbox)
-    srow = np.clip(((lat_n - lat[sidx]) * PX).astype(np.int64), 0, n_r - 1)
-    scol = np.clip(((lon[sidx] - lon_w) * PX).astype(np.int64), 0, n_c - 1)
+    srow = np.clip(np.floor((top_ - lat[sidx]) * PX).astype(np.int64), 0, n_r - 1)
+    scol = np.clip(np.floor((lon[sidx] - left_) * PX).astype(np.int64), 0, n_c - 1)
     in_u = np.zeros(len(lon), bool)
     in_u[sidx] = U[srow, scol]
     lab_of = np.full(len(lon), -2, np.int64)          # -2 outside, -1 a dam wall, else the reservoir
@@ -551,7 +568,7 @@ def area(name, lat_s, lat_n, lon_w, lon_e, dams, C, out, only=None, regions=None
         either: Kakhovka's 1.3 km); None where the river has no water there."""
         vals, run_ = [], 0.0
         while s_ >= 0 and not in_u[s_] and run_ <= skip + WIDTH_REACH:
-            r_, c_ = int((lat_n - lat[s_]) * PX), int((lon[s_] - lon_w) * PX)
+            r_, c_ = int((top_ - lat[s_]) * PX), int((lon[s_] - left_) * PX)
             if not (0 <= r_ < n_r and 0 <= c_ < n_c):
                 break
             if run_ >= skip:
@@ -586,7 +603,7 @@ def area(name, lat_s, lat_n, lon_w, lon_e, dams, C, out, only=None, regions=None
         oy, ox = np.ogrid[-ry:ry + 1, -rx:rx + 1]
         disc = (oy * dy) ** 2 + (ox * dx) ** 2 <= R_ ** 2
         for s in chain:
-            r_, c_ = int((lat_n - lat[s]) * PX), int((lon[s] - lon_w) * PX)
+            r_, c_ = int((top_ - lat[s]) * PX), int((lon[s] - left_) * PX)
             a0, a1, b0, b1 = max(r_ - ry, 0), min(r_ + ry + 1, n_r), max(c_ - rx, 0), min(c_ + rx + 1, n_c)
             m_ = disc[a0 - r_ + ry:a1 - r_ + ry, b0 - c_ + rx:b1 - c_ + rx] & ground[a0:a1, b0:b1]
             if m_.any():
@@ -768,8 +785,8 @@ def area(name, lat_s, lat_n, lon_w, lon_e, dams, C, out, only=None, regions=None
             continue
         u = down(s)
         b = u if u >= 0 else s
-        r0, c0 = (lat_n - lat[s]) * PX, (lon[s] - lon_w) * PX
-        r1, c1 = (lat_n - lat[b]) * PX, (lon[b] - lon_w) * PX
+        r0, c0 = (top_ - lat[s]) * PX, (lon[s] - left_) * PX
+        r1, c1 = (top_ - lat[b]) * PX, (lon[b] - left_) * PX
         m = max(2, int(2 * max(abs(r1 - r0), abs(c1 - c0))) + 1)
         t = np.linspace(0, 1, m)
         rr = np.clip((r0 + (r1 - r0) * t).astype(np.int64), 0, n_r - 1)
@@ -822,8 +839,8 @@ def area(name, lat_s, lat_n, lon_w, lon_e, dams, C, out, only=None, regions=None
         rr_l, cc_l, lv_l = [], [], []
         for j in range(len(sts) - 1):
             a, b = sts[j], sts[j + 1]
-            r0, c0 = (lat_n - lat[a]) * PX, (lon[a] - lon_w) * PX
-            r1, c1 = (lat_n - lat[b]) * PX, (lon[b] - lon_w) * PX
+            r0, c0 = (top_ - lat[a]) * PX, (lon[a] - left_) * PX
+            r1, c1 = (top_ - lat[b]) * PX, (lon[b] - left_) * PX
             m = max(2, int(2 * max(abs(r1 - r0), abs(c1 - c0))) + 1)
             t = np.linspace(0, 1, m)
             rr_l.append(np.clip((r0 + (r1 - r0) * t).astype(np.int64), 0, n_r - 1))
@@ -1004,8 +1021,12 @@ def area(name, lat_s, lat_n, lon_w, lon_e, dams, C, out, only=None, regions=None
         u = Uf[blk]
         if not u.any():
             continue
+        colmap = gg.column_index(PX, wp)
+        u = u & (colmap < wp)[None, :]
+        if not u.any():
+            continue
         r_, c_ = np.nonzero(u)
-        nat = r_ * wp + c_ * wp // PX
+        nat = r_ * wp + colmap[c_]
         sums = np.bincount(nat, weights=h[blk][u].astype(np.float64), minlength=1200 * wp)
         cnt = np.bincount(nat, minlength=1200 * wp)
         dem = tifffile.imread(os.path.join(DEM, tname.replace("_WBM.tif", "_DEM.tif")))
@@ -1018,15 +1039,17 @@ def area(name, lat_s, lat_n, lon_w, lon_e, dams, C, out, only=None, regions=None
         # the regions' river pixels, for the river outlines (as bake_river_outlines' reservoirs.npz), and the corridors
         w = tifffile.imread(os.path.join(WBM, tname))
         z = zone[blk]
-        starts_ = np.searchsorted(np.arange(PX) * wp // PX, np.arange(wp))
+        own_ = colmap < wp
+        starts_ = np.searchsorted(colmap[own_], np.arange(wp))
+        z = z[:, own_]
         if z.any():
             orig_z = np.add.reduceat(z.astype(np.uint8), starts_, axis=1) > 0
             rp = np.flatnonzero(orig_z & (w == 3)).astype(np.int32)
             if len(rp):
                 river_px[tname] = rp
-        cz = cor[blk]
+        cz = cor[blk][:, own_]
         if cz.any():
-            lvz = np.minimum.reduceat(np.where(cz, corl[blk], np.inf), starts_, axis=1).ravel()
+            lvz = np.minimum.reduceat(np.where(cz, corl[blk][:, own_], np.inf), starts_, axis=1).ravel()
             ci = np.flatnonzero(np.isfinite(lvz) & (w.ravel() != 1)).astype(np.int32)
             if len(ci):
                 corridors[tname] = (ci, np.floor(lvz[ci]).astype(np.int16))
@@ -1066,9 +1089,10 @@ def find_group(dams_):
                 cache[r] = (water, q)
             water, q = cache[r]
             lat_n, lon_w = lat0 + r + 1, lon0 - r
-            rows_lat = lat_n - (np.arange(water.shape[0]) + 0.5) / PX
+            top_, left_ = gg.top(lat_n, PX), gg.left(lon_w, PX)
+            rows_lat = top_ - (np.arange(water.shape[0]) + 0.5) / PX
             px_km2 = (111.32 / PX) ** 2 * np.cos(np.radians(rows_lat))
-            st, reg = grow_local(d, water, q, px_km2, lat_n, lon_w)
+            st, reg = grow_local(d, water, q, px_km2, top_, left_)
             if reg is None or not st["edge"] or r == MOSAIC_R[-1]:
                 break
         st = {k: v for k, v in st.items() if k not in ("pr", "pc")}

@@ -1,0 +1,119 @@
+Soil maps missing: none (30" set read)
+
+Regions (share of land: vanilla tiers | realistic tiers; main soil classes):
+  ok   Poltava steppe (want high (vanilla tiers), black earth or high (realistic) on most of it):
+         vanilla tiers   low 4% medium 2% high 94%
+         realistic tiers low 4% medium 2% black earth 94%
+         classes         Chernozems 94%, Albeluvisols 3%, Cambisols 1%, Luvisols 1%, Fluvisols 0%
+  ok   Zemgale plain (want medium on most of it):
+         vanilla tiers   low 30% medium 68% high 2%
+         realistic tiers barren 6% low 24% medium 68% high 2%
+         classes         Luvisols 53%, Gleysols 14%, Cambisols 10%, Podzols 9%, Histosols 5%
+  ok   Central Europe (want medium on most of it):
+         vanilla tiers   low 5% medium 93% high 2%
+         realistic tiers barren 2% low 3% medium 93% black earth 2%
+         classes         Cambisols 76%, Luvisols 16%, Podzols 3%, Chernozems 2%, Arenosols 2%
+  ok   Boreal Finland (want podzols low in both tier sets (barren beyond the tree line); other classes by the table):
+         vanilla tiers   low 88% medium 12%
+         realistic tiers low 88% medium 12%
+         classes         Podzols 81%, Cambisols 11%, Albeluvisols 5%, Gleysols 2%, Luvisols 0%
+  ok   Karelia and Arkhangelsk (want podzols low in both tier sets (barren beyond the tree line); other classes by the table):
+         vanilla tiers   low 99% medium 1%
+         realistic tiers barren 2% low 97% medium 1%
+         classes         Albeluvisols 77%, Podzols 20%, Histosols 2%, Cambisols 1%, Gleysols 0%
+  ok   Canadian shield (want podzols low in both tier sets (barren beyond the tree line); other classes by the table):
+         vanilla tiers   low 38% medium 62%
+         realistic tiers barren 4% low 34% medium 62%
+         classes         Cambisols 62%, Podzols 34%, Histosols 4%, Luvisols 0%, Gleysols 0%
+  ok   Amazon (want low or barren):
+         vanilla tiers   low 97% medium 3%
+         realistic tiers barren 22% low 76% medium 3%
+         classes         Acrisols 75%, Ferralsols 21%, Fluvisols 3%, Histosols 0%, Arenosols 0%
+  ok   Sahara (want none):
+         vanilla tiers   none 100%
+         realistic tiers none 100%
+         classes         Arenosols 52%, Leptosols 47%, Regosols 0%, Calcisols 0%, Solonchaks 0%
+
+Named places (class, yearly and warmest month at height, flags; vanilla tiers / realistic tiers):
+  Poltava              Chernozems     8.2 /  21.2 °C    124 m  high / black earth
+  Jelgava              Leptosols      6.9 /  17.9 °C     15 m  low / barren
+  Bauska               Luvisols       6.9 /  17.9 °C     15 m  medium / medium
+  Goettingen           Luvisols       9.0 /  18.0 °C    155 m  medium / medium
+  Kolin                Chernozems     9.8 /  19.8 °C    192 m  high / black earth
+  Dijon                Cambisols     10.9 /  20.4 °C    249 m  medium / medium
+  Kuopio               Cambisols      3.3 /  17.3 °C    108 m  medium / medium
+  Manaus               Acrisols      26.1 /  26.6 °C     58 m  low / low
+  Iowa, Corn Belt      Phaeozems      9.6 /  23.6 °C    291 m  high / high
+  Pampas               Phaeozems     16.0 /  23.0 °C     71 m dune  high / high
+  Iceland interior     Cambisols     -0.3 /   7.7 °C    822 m  barren / barren
+  Reykjavik lowland    Podzols        3.1 /  10.6 °C    286 m  low / low
+  Alps, 2700 m         Cambisols     -4.0 /   6.5 °C   2691 m  barren / barren
+  Yakutsk taiga        Cryosols      -8.7 /  19.3 °C    103 m  low / low
+  Red River delta      Cambisols     24.0 /  30.0 °C      2 m  medium / medium
+  Ganges plain         Cambisols     25.4 /  32.4 °C     99 m  medium / medium
+  Jyvaskyla            Podzols        3.8 /  16.8 °C    106 m  low / low
+  Luxor, valley        Fluvisols     25.5 /  33.5 °C     78 m arid flood  high / high
+  Luxor, desert        Leptosols     25.0 /  33.4 °C    152 m arid  none / none
+  Baghdad              Fluvisols     24.8 /  37.8 °C     36 m arid flood  high / high
+  Sahara               Arenosols     22.2 /  30.7 °C    350 m arid  none / none
+
+Nile at Luxor, along 25.70 N (realistic tiers; vanilla tiers the same except where noted):
+  32.450-32.575 E  dry, Leptosols: none
+  32.580-32.580 E  flood, Regosols: medium
+  32.585-32.585 E  dry, Leptosols: none
+  32.590-32.615 E  flood, Leptosols: medium
+  32.620-32.620 E  flood, Fluvisols: high
+  32.625-32.640 E  flood, Leptosols: medium
+  32.645-32.650 E  dry, Leptosols: none
+  32.655-32.660 E  flood, Leptosols: medium
+  32.665-32.670 E  flood, Fluvisols: high
+  32.675-32.675 E  flood, Cambisols: medium
+  32.680-32.680 E  flood, Fluvisols: high
+  32.685-32.690 E  flood, Leptosols: medium
+  32.695-32.695 E  flood, Fluvisols: high
+  32.700-32.705 E  flood, Leptosols: medium
+  32.710-32.850 E  dry, Leptosols: none
+  ok: 23 of 81 points have soil; soil outside the flood 0, flooded points without soil 0
+
+Euphrates and Tigris at Baghdad, along 33.30 N (realistic tiers; vanilla tiers the same except where noted):
+  43.400-43.400 E  flood, Cambisols: medium
+  43.420-43.460 E  flood, Gleysols: medium
+  43.480-43.500 E  flood, Solonchaks: low
+  43.520-43.540 E  flood, Gypsisols: low
+  43.560-43.580 E  flood, Regosols: medium
+  43.600-43.660 E  dry, Solonchaks: none
+  43.680-43.680 E  dry, Fluvisols: none
+  43.700-43.820 E  flood, Fluvisols: high
+  43.840-43.880 E  flood, Solonchaks: low
+  43.900-43.900 E  flood, Fluvisols: high
+  43.920-43.960 E  flood, Solonchaks: low
+  43.980-44.020 E  flood, Fluvisols: high
+  44.040-44.040 E  flood, Solonchaks: low
+  44.060-44.180 E  flood, Fluvisols: high
+  44.200-44.200 E  flood, Solonchaks: low
+  44.220-44.260 E  flood, Fluvisols: high
+  44.280-44.280 E  dry, Fluvisols: none
+  44.300-44.300 E  flood, Fluvisols: high
+  44.320-44.320 E  dry, Fluvisols: none
+  44.340-44.400 E  flood, Fluvisols: high
+  44.420-44.440 E  dry, Fluvisols: none
+  44.460-44.460 E  flood, Fluvisols: high
+  44.480-44.480 E  dry, Solonchaks: none
+  44.500-44.500 E  dry, Fluvisols: none
+  44.520-44.520 E  dry, Solonchaks: none
+  44.540-44.540 E  dry, Fluvisols: none
+  44.560-44.560 E  flood, Fluvisols: high
+  44.580-44.640 E  dry, Fluvisols: none
+  44.660-44.660 E  flood, Fluvisols: high
+  44.680-44.700 E  dry, Fluvisols: none
+  44.720-45.200 E  dry, Solonchaks: none
+  ok: 47 of 91 points have soil; soil outside the flood 0, flooded points without soil 0
+
+Shares of mapped land every 0.25° (84 N to 60 S, by area):
+  set          vanilla's rule   none   | barren   low   medium   high   black earth  (of land with topsoil)
+  vanilla             5.2%    15.6%  |    5.9%   49.0%    39.6%    5.4%      0.0%
+                                     |     10%     48%      37%      5%        0%   (section 4.1's estimate)
+  realistic           5.2%    15.6%  |   25.1%   29.8%    38.1%    3.9%      3.1%
+                                     |     30%     27%      35%      5%        3%   (section 4.1's estimate)
+
+Census: every named place and transect as expected.

@@ -13,23 +13,29 @@ Earth Map data sources (all free to use and redistribute):
 - GSHHG 2.3.7, A Global Self-consistent, Hierarchical, High-resolution Geography Database (full-resolution shorelines,
   for the small islands in islands.bin). Wessel, P., and W. H. F. Smith (1996), J. Geophys. Res., 101(B4), 8741-8743.
   www.soest.hawaii.edu/pwessel/gshhg. Distributed under the GNU Lesser General Public License, version 3 or later.
-- HydroRIVERS v1.0 (large rivers; and the heads of its perennial streams, for stream-heads-1.bin). Lehner, B.,
+- HydroRIVERS v1.0 (large rivers; the heads of its perennial streams, for stream-heads-1.bin; and its streams from 1 m3/s up
+  to 20 m3/s, snapped onto the Copernicus GLO-90 valley floors with their levels from GLO-90, for streams-glo90-1.bin,
+  which comes with the GLO-90 heights). Lehner, B.,
   Grill G. (2013): Global river hydrography and network routing: baseline data and new approaches to study the world's
   large river systems. Hydrological Processes, 27(15): 2171-2186. Data is available at www.hydrosheds.org. Used under
   the HydroSHEDS license (free for scientific, educational and commercial use, with attribution).
-- HydroLAKES v1.0 (reservoir pour points, to leave modern dams out). Messager, M.L., Lehner, B., Grill, G., Nedeva, I.,
-  Schmitt, O. (2016): Estimating the volume and age of water stored in global lakes using a geo-statistical approach.
-  Nature Communications, 7: 13603. Data is available at www.hydrosheds.org. Used under the HydroSHEDS license.
+- HydroLAKES v1.0 (reservoir pour points, to leave modern dams out; and for lake-depths-1.bin, in the mod: each lake's
+  mean depth, Depth_avg, measured for the largest lakes and modelled for the rest, from 1 km2, matched by its pour point
+  to the water mask's lakes, decision 0100). Messager, M.L.,
+  Lehner, B., Grill, G., Nedeva, I., Schmitt, O. (2016): Estimating the volume and age of water stored in global lakes
+  using a geo-statistical approach. Nature Communications, 7: 13603. Data is available at www.hydrosheds.org. Used under
+  the HydroSHEDS license (CC BY 4.0 for HydroLAKES).
 - GIRES v1.0, Global prevalence of non-perennial rivers and streams (for rivers-nonperennial-2.bin: which rivers the
-  arid rule may dry). Messager, M.L., Lehner, B., Cockburn, C., Lamouroux, N., Pella, H., Snelder, T., Tockner, K.,
+  arid rule may dry; and for streams-glo90-1.bin: which streams are left out, those GIRES has without flow 30 days a year
+  or more where the coldest month is above -10 C). Messager, M.L., Lehner, B., Cockburn, C., Lamouroux, N., Pella, H., Snelder, T., Tockner, K.,
   Trautmann, T., Watt, C., Datry, T. (2021): Global prevalence of non-perennial rivers and streams. Nature 594, 391-397.
   https://doi.org/10.1038/s41586-021-03565-5. Data: Messager, M.L., Lehner, B. (2021), figshare,
   https://doi.org/10.6084/m9.figshare.14633022. Licensed under CC BY-SA 4.0
   (https://creativecommons.org/licenses/by-sa/4.0/); changed: each of Earth's river reaches matched to the GIRES reach
   nearest in discharge and place, keeping its class (all year, 1-29, or 30 and more days without flow).
-  rivers-nonperennial-2.bin is distributed under the same licence.
-- Global Dam Watch v1.0 (the reservoirs HydroLAKES lacks, for dams-glo90-3.bin, lakes-glo90-2.bin and
-  rivers-outline-glo90-4.bin: modern dams left out). Lehner, B., Beames, P., Mulligan, M., Zarfl, C., De Felice, L., van
+  rivers-nonperennial-2.bin and streams-glo90-1.bin are distributed under the same licence.
+- Global Dam Watch v1.0 (the reservoirs HydroLAKES lacks, for dams-glo90-3.bin and -4.bin, lakes-glo90-2.bin to -5.bin
+  and rivers-outline-glo90-4.bin and -5.bin: modern dams left out). Lehner, B., Beames, P., Mulligan, M., Zarfl, C., De Felice, L., van
   Soesbergen, A., Thieme, M., Garcia de Leaniz, C., Anand, M., Belletti, B., et al. (2024): The Global Dam Watch database
   of river barrier and reservoir information for large-scale applications. Scientific Data 11, 1069.
   https://doi.org/10.1038/s41597-024-03752-9. Licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/);
@@ -41,6 +47,23 @@ Earth Map data sources (all free to use and redistribute):
   Overpass API on 12 November 2026, the Corinth, White Sea-Baltic and Ismailia canals through QLever's OSM planet
   endpoint, University of Freiburg, on 13 November 2026), buffered and cut to the Copernicus GLO-90 water mask's river
   pixels. The canal areas of works-1318-2.bin are a derived database under ODbL.
+- OpenHistoricalMap (the lakes of 1318 drained later, for works-1318-4.bin): the outlines of Lago de Texcoco, Lago de
+  Xochimilco, Lago de Chalco (before 1635), Lago de Xaltocan (before 1750), Lago de Zumpango (before 1700), Lake Hula
+  (before 1958), Lagoa de Antela (before 1958), Stretham Mere (before 1804) and Ogura-ike (before 1933), fetched through
+  the OpenHistoricalMap Overpass API on 21 November 2026. OpenHistoricalMap contributors, www.openhistoricalmap.org,
+  CC0 1.0; changed: Texcoco's islands west of 99.10 W (Tenochtitlan's, from 1325) filled, outlines simplified to 12 m.
+- OpenStreetMap (Whittlesey Mere, drained 1851, for works-1318-4.bin). (c) OpenStreetMap contributors,
+  https://www.openstreetmap.org/copyright. Available under the Open Database License (ODbL) 1.0
+  (https://opendatacommons.org/licenses/odbl/1-0/); changed: the outline of way 1567216446 (historic=yes) of
+  21 November 2026, simplified to 12 m. That area of works-1318-4.bin is a derived database under ODbL.
+- The other lakes of 1318 in works-1318-4.bin (the Aral at 29 m, Fucino at 660 m, Copais at 97 m, Karla at 48 m, Amik at
+  79 m, Hachirogata at sea level) and the Salton Sea's dry basin are contoured from Copernicus GLO-90 (see below) at
+  levels from: Krivonogov, S. K., et al. (2014): The fluctuating Aral Sea: a multidisciplinary-based history of the last
+  two thousand years. Gondwana Research 26, 284-300 (the Aral of the 12th-15th centuries); Giraudi, C. (1989/1990) (the
+  Fucine Lake before its drainage of 1855-1878); Mamassis, N., et al., after Constantinidis (1984) (Copais); the Greek
+  survey of 1921 (Karla); DSI's records of 1949-1953 (Amik); Rockwell, T. K., et al. (2022), Bulletin of the
+  Seismological Society of America (Lake Cahuilla's high stands, none in 1318). lakes-2.bin is lakes.bin with the Aral's
+  2' grid cells below 29 m joined to its western basin (ETOPO 2022, as lakes.bin).
 - OpenStreetMap (beaches, for shores-osm-1.bin: what a shore is made of). (c) OpenStreetMap contributors,
   https://www.openstreetmap.org/copyright. Available under the Open Database License (ODbL) 1.0
   (https://opendatacommons.org/licenses/odbl/1-0/); changed: natural=beach and natural=shingle of 12 November 2026 (through
@@ -48,7 +71,8 @@ Earth Map data sources (all free to use and redistribute):
   rasterised to 6 arc-second cells by their surface tag. shores-osm-1.bin is a derived database under ODbL.
 - Wikidata (which Natural Earth lakes are reservoirs). CC0. www.wikidata.org
 - CHELSA V2.1 climatologies 1981-2010, monthly mean near-surface air temperature (tas) and CHELSA's orography (for
-  temperature.bin, worlds with climate rules v2). Karger, D.N., Conrad, O., Böhner, J., Kawohl, T., Kreft, H.,
+  temperature.bin, worlds with climate rules v2; and January's and July's tas for streams-glo90-1.bin: whether frost or
+  dryness stops a stream GIRES has without flow). Karger, D.N., Conrad, O., Böhner, J., Kawohl, T., Kreft, H.,
   Soria-Auza, R.W., Zimmermann, N.E., Linder, H.P., Kessler, M. (2017): Climatologies at high resolution for the earth's
   land surface areas. Scientific Data 4, 170122. https://doi.org/10.1038/sdata.2017.122 -- and Karger, D.N. et al. (2021):
   Climatologies at high resolution for the earth's land surface areas, Version 2.1. EnviDat.

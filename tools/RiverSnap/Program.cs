@@ -26,6 +26,7 @@ int smoothIters = 60;
 bool selfTest = true;
 string fit = "l1";
 string dumpPath = null;
+int frozenFrom = int.MaxValue;
 var variants = new List<(double Tol, double Vtol, double MaxSeg, double Quant)>();
 var boxes = new List<(double La0, double La1, double Lo0, double Lo1)>();
 foreach (var a in args.Skip(5))
@@ -82,6 +83,8 @@ foreach (var a in args.Skip(5))
         case "floormin": P.FloorMin = D(); break;
         case "floorhalfwidth": P.FloorHalfWidth = D(); break;
         case "openk": P.OpenK = (int)D(); break;
+        // (EA-0131) reaches from this index on are rivers already laid out: held where they are, the rest end on them
+        case "frozenfrom": frozenFrom = (int)D(); break;
         case "box":
             var b = kv[1].Split(',').Select(x => double.Parse(x, CultureInfo.InvariantCulture)).ToArray();
             boxes.Add((b[0], b[1], b[2], b[3]));
@@ -98,7 +101,8 @@ Log($"parameters: ds {P.Ds}; passes {string.Join(", ", P.Passes)} (H max {P.HMax
 var reaches = RiverFile.Read(args[0]);
 long vin = reaches.Sum(r => (long)r.Lon.Length);
 Log($"{args[0]}: {reaches.Count} reaches, {vin} vertices, {new FileInfo(args[0]).Length / 1e6:F2} MB");
-var net = new Network(reaches);
+var net = new Network(reaches, frozenFrom);
+if (frozenFrom < reaches.Count) Log($"reaches from {frozenFrom} on frozen ({reaches.Count - frozenFrom})");
 Log($"{net.Chains.Count} chains, deepest tributary level {net.MaxDepth}");
 
 var fine = new FineElevation(args[2], File.ReadAllBytes(args[1])) { Capacity = 8 };
@@ -131,7 +135,7 @@ if (selfTest)
 var chains = net.Chains;
 bool InBoxes(Chain c)
 {
-    if (boxes.Count == 0) return true;
+    if (boxes.Count == 0 || c.Frozen) return true;
     foreach (int r in c.Reaches)
     {
         var re = reaches[r];
@@ -254,7 +258,7 @@ Parallel.For(0, reaches.Count, new ParallelOptions { MaxDegreeOfParallelism = th
 {
     var re = reaches[r];
     var c = chains[net.ChainOf[r]];
-    if (!c.Processed) { outReaches[r] = re; return local; }
+    if (!c.Processed || c.Frozen) { outReaches[r] = re; return local; }
     int m = net.PosInChain[r];
     int a = c.StationStart + c.ReachStart[m];
     int b = m + 1 < c.Reaches.Length ? c.StationStart + c.ReachStart[m + 1] : c.StationStart + c.StationCount - 1;

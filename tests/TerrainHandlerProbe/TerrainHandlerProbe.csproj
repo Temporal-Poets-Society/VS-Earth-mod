@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- (EA-0162) Test-only server mod: another mod's ways with the terrain pass's handlers, for a headless Earth world
+       (tools/run_selftest.sh with EXTRA_MODS). Never for a player's game. Build: dotnet build -c Release, then zip modinfo.json
+       and bin/Release/net8.0/TerrainHandlerProbe.dll. The mode is the environment variable EARTH_TERRAIN_PROBE (Probe.cs). -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework><LangVersion>12</LangVersion><NoWarn>CA1416</NoWarn><Nullable>disable</Nullable>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences><UseSharedCompilation>false</UseSharedCompilation>
+    <NetCoreRuntimeDir>$([System.IO.Directory]::GetDirectories('$(NetCoreRoot)shared\Microsoft.NETCore.App', '10.*')[0])</NetCoreRuntimeDir>
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(VINTAGE_STORY)</VintageStoryPath>
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(APPDATA)\Vintagestory</VintageStoryPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(NetCoreRuntimeDir)\System.*.dll" Exclude="$(NetCoreRuntimeDir)\System.Private.*.dll;$(NetCoreRuntimeDir)\System.IO.Compression.Native.dll" Private="false" />
+    <Reference Include="$(NetCoreRuntimeDir)\System.Private.CoreLib.dll;$(NetCoreRuntimeDir)\netstandard.dll;$(NetCoreRuntimeDir)\mscorlib.dll" Private="false" />
+    <Reference Include="VintagestoryAPI"><HintPath>$(VintageStoryPath)/VintagestoryAPI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="VintagestoryLib"><HintPath>$(VintageStoryPath)/VintagestoryLib.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="VSEssentials"><HintPath>$(VintageStoryPath)/Mods/VSEssentials.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

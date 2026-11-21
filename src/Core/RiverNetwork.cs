@@ -265,6 +265,28 @@ namespace EarthMap.Core
         /// <summary>Pool layout 2: the highest drop laid out as a chute, the distance between its steps (blocks), how far above a
         /// curtain its shallow lip reaches, and the plunge pool's greatest extra depth.</summary>
         public const int ChuteMaxDrop = 4, LipLength = 8, MaxPlunge = 8;
+        /// <summary>
+        /// How far (blocks) this network's water may lag above its valley before it goes down at once, and the highest drop
+        /// laid out as a chute: ChuteMaxDrop for a world's rivers; StreamMaxLag for a streams layer's (EA-0131,
+        /// RiverBuildOptions.KeepAll). Steps come no closer than ChuteSpacing, so on a valley falling faster than a block in 3 a
+        /// river lags up to ChuteMaxDrop and then falls; a one-block stream that did so stood on banks built up to 5 blocks
+        /// above the slope (the first bench, the Dolomites). A stream falls as soon as it lags 2: a short curtain with its lip
+        /// and plunge pool, the cascades of a mountain brook.
+        /// </summary>
+        public readonly int MaxLag;
+        readonly bool steepStreams;
+        /// <summary>
+        /// The lag a reach's pools may have above its valley before it falls (RiverPoolPlanner): MaxLag, but StreamMaxLag for a
+        /// one-block stream of a network with coarse river rules 2 (RiverBuildOptions.SteepStreams, EA-0179). A coarse world's
+        /// streams were laid out with a river's ChuteMaxDrop: in a valley falling faster than a block in 3 such a stream stood
+        /// on banks built up to 5 blocks above the slope, or, its pools held under its levels to reach the ones downstream, in
+        /// a trench (the Dudh Kosi, high Andean streams, the Passer at Meran with a smaller Smallest stream). Only the lag: the
+        /// backward bound still holds their pools under their own levels where it must (a streams layer's network, its levels
+        /// fitted to the land first, lets them stand at their levels; a coarse world's levels are not fitted, and its water
+        /// rose with them above the land drawn at 1:50 in Greenland and the Himalaya, EA-0179).
+        /// </summary>
+        internal int LagOf(int reach) => steepStreams && reach >= 0 && reach < Reaches.Count && Reaches[reach].Q < MinQ ? StreamMaxLag : MaxLag;
+        public const int StreamMaxLag = 1;
         public const double ChuteSpacing = 3;
         /// <summary>Pool layout 3: how far the bed eases from the river's depth to a chute's or lip's shallow depth, and out of a
         /// plunge pool (blocks).</summary>
@@ -340,13 +362,13 @@ namespace EarthMap.Core
             string streamMode = "none", double streamMinQ = 20, double sizeScale = 1, double straighten = 0, double smoothWidths = 0, int minPool = 32,
             IReadOnlyList<RiverFall> falls = null, Func<double, double, double, double, bool> seaLevelPiece = null,
             bool continueDownstream = false, bool[] fadeEnds = null, bool geometrySeams = false, int widthRules = 0, int poolLayout = 0, bool rapids = true,
-            int courses = 0, double landCellMetres = 0, int channelRules = 0)
+            int courses = 0, double landCellMetres = 0, int channelRules = 0, bool[] seaEnds = null)
             : this(reaches, geo, waterTop, new RiverBuildOptions(minQ, widthScale)
             {
                 StreamMode = streamMode, StreamMinQ = streamMinQ, SizeScale = sizeScale, Straighten = straighten, SmoothWidths = smoothWidths,
                 MinPool = minPool, Falls = falls, SeaLevelPiece = seaLevelPiece, ContinueDownstream = continueDownstream, FadeEnds = fadeEnds,
                 GeometrySeams = geometrySeams, WidthRules = widthRules, PoolLayout = poolLayout, Rapids = rapids, Courses = courses,
-                LandCellMetres = landCellMetres, ChannelRules = channelRules,
+                LandCellMetres = landCellMetres, ChannelRules = channelRules, SeaEnds = seaEnds,
             })
         {
         }
@@ -380,6 +402,10 @@ namespace EarthMap.Core
             WidthRules = options.WidthRules;
             WidthFloorScale = WidthRules >= 1 ? Math.Min(SizeScale, 1) : SizeScale;
             MetresPerBlock = WidthRules >= 1 && geo != null && geo.BlocksPerDegreeZ > 0 ? Geo.MetresPerDegree / geo.BlocksPerDegreeZ : 0;
+            // (EA-0159) the river width multiplier measures in metres per block: with width rules 1 only
+            WidthMultiplier = MetresPerBlock > 0 && options.WidthMultiplier > 0 && double.IsFinite(options.WidthMultiplier) ? options.WidthMultiplier : 0;
+            FloorFactor = WidthMultiplier > 0 ? FloorFactorFor(WidthMultiplier, geo.RingLength) : 1;
+            MaskWeight = WidthMultiplier > 0 ? MaskWeightFor(FloorFactor) : 1;
             // Group complete legacy cells rather than changing their boundaries.
             // Large worlds otherwise replicate every widened segment into O(scale²)
             // tiny grid buckets, consuming gigabytes before world generation starts.
@@ -388,6 +414,19 @@ namespace EarthMap.Core
             StreamMode = options.StreamMode ?? "none";
             StreamMinQ = Math.Min(options.StreamMinQ, options.MinQ);
             MinPool = Math.Max(RampLength, (int)Math.Round(options.MinPool * SizeScale));
+            // (EA-0131: a streams layer's one-block streams fall as soon as they lag 2 blocks: MaxLag)
+            MaxLag = options.KeepAll ? StreamMaxLag : ChuteMaxDrop;
+            steepStreams = options.SteepStreams && options.OneBlockStreams && !options.KeepAll;
+            // (EA-0179) coarse river rules: rivers and one-block streams, nothing between
+            OneBlockStreams = options.OneBlockStreams;
+            // (EA-0179) coarse river rules 2: rivers to their end, head streams (copies of the reaches they change)
+            var coarse = CoarseRivers.Apply(reaches, options, StreamMinQ, StreamMode);
+            reaches = coarse.Reaches;
+            Reaches = reaches;
+            HeadStreams = coarse.HeadStreams;
+            RiversToTheirEnd = coarse.Raised;
+            HeadStreamCount = coarse.Heads;
+            HeadStreamKm = coarse.HeadKm;
 
             // the courses as laid out: the reaches this world shows, in world coordinates, straightened, measured
             var prepared = RiverCoursePreparer.Prepare(this, geo, reaches, options, blockMetres);
@@ -410,7 +449,7 @@ namespace EarthMap.Core
             reachValley = planner.ReachValley;
             reachQ = planner.ReachQ;
             // the pieces the queries look up, and their index
-            var pieces = new RiverSegmentBuilder(this, geo, prepared, pools, options.FadeEnds, geometrySeams, ChannelRules);
+            var pieces = new RiverSegmentBuilder(this, geo, prepared, pools, options.FadeEnds, geometrySeams, ChannelRules, options.SeaEnds);
             segs = pieces.Segs;
             fades = pieces.Fades;
             segFirst = pieces.SegFirst;
@@ -423,12 +462,77 @@ namespace EarthMap.Core
         internal int Bucket(int cell) => cell / indexSpan - (cell < 0 && cell % indexSpan != 0 ? 1 : 0);
         static bool InCell(in Seg s, int cx, int cz) => cx >= s.CellX0 && cx <= s.CellX1 && cz >= s.CellZ0 && cz <= s.CellZ1;
 
-        /// <summary>Half the water width (blocks).</summary>
+        /// <summary>Half the water width (blocks): the gameplay floor (times FloorFactor in a world with a river width
+        /// multiplier), or the real width where wider; streams narrow towards the smallest, which a multiplied world never goes
+        /// under.</summary>
         public double HalfWidth(double q)
         {
             double nav = 0.5 * Math.Clamp(2.0 * Math.Pow(Math.Max(q, MinQ), 0.3), 5, 48) * WidthScale * WidthFloorScale;
+            if (WidthMultiplier > 0) nav *= FloorFactor;
             if (MetresPerBlock > 0) nav = Math.Max(nav, 0.5 * RealWidthMetres(Math.Max(q, MinQ)) / MetresPerBlock);
-            return StreamHalfWidth(q, nav);
+            double hw = StreamHalfWidth(q, nav);
+            return WidthMultiplier > 0 ? Math.Max(MinHalfWidth, hw) : hw;
+        }
+
+        /// <summary>
+        /// EA-0159 (decision 0095): the world's river width multiplier (EarthParams.RiverWidthMultiplier, the Earth tab's "River
+        /// width"; ×1 = the widths of 1:10, where width rules 1 were tuned). The gameplay floor, a width in blocks the same at every
+        /// scale, is drawn that many times as wide in metres as at 1:10: times FloorFactor, multiplier × ReferenceScale / N in
+        /// blocks at 1:N (never more than the multiplier: finer than 1:10 keeps 1:10's blocks). The real width (8·√Q, or the
+        /// water mask's measure) is never multiplied. The mask's ratio to the usual width for the flow (0.5-3) moves the floor
+        /// only as far as MaskWeight says (MeasuredHalfWidth): fully where the floor is 1:10's in blocks or more, not at all where
+        /// it is half that or less (1:100's ×5), fading between. Its narrowing and widening of the real width always count. A
+        /// river is never narrower than the smallest stream (MinHalfWidth), and its channel no deeper than its half width
+        /// (Depth). The ships' least width of exit channels shrinks with the floor (ShipFloorFactor).
+        /// 0 (every world made before, and a new one whose multiplier gives exactly 1:10's floor in blocks, ×1 at 1:10 or ×2.5 at
+        /// 1:25): 2.1's widths, the code paths as they were. Side arms are reaches of their own and take the same rule; so do a
+        /// streams layer's networks (StreamLayer takes the world's RiverBuildOptions).
+        /// </summary>
+        public readonly double WidthMultiplier;
+        /// <summary>The scale whose widths are ×1: 1:10, where width rules 1's floor is about the real width.</summary>
+        public const double ReferenceScale = 10;
+        /// <summary>What the gameplay floor in blocks is multiplied by (FloorFactorFor); 1 without a multiplier.</summary>
+        public readonly double FloorFactor;
+        /// <summary>How far the water mask's ratio moves the floor (MaskWeightFor); 1 without a multiplier (channel rules 2).</summary>
+        public readonly double MaskWeight;
+        /// <summary>The floor factor at and under which the mask's ratio leaves the floor alone (MaskWeightFor).</summary>
+        public const double MaskFadeFrom = 0.5;
+        /// <summary>The share of the ship channels' least width (SeaChannels) a world keeps: FloorFactor, 1 without a multiplier.</summary>
+        public double ShipFloorFactor => FloorFactor;
+
+        /// <summary>The scale 1:N of a world with this Cylinder World ring: the Equator over the ring, to the nearest whole
+        /// number (1:25's ring gives 25.007), at least 1; ReferenceScale without a ring.</summary>
+        public static double ScaleOf(double ringLength) =>
+            ringLength > 0 ? Math.Max(1, Math.Round(SpawnSearch.EquatorMetres / ringLength)) : ReferenceScale;
+
+        /// <summary>The floor factor of a river width multiplier on a ring: multiplier × ReferenceScale / N, at most the
+        /// multiplier (×1 at 1:10 gives 1; ×2.5 at 1:25 gives 1; ×5 at 1:100 gives 0.5).</summary>
+        public static double FloorFactorFor(double multiplier, double ringLength) => multiplier * Math.Min(1, ReferenceScale / ScaleOf(ringLength));
+
+        /// <summary>How far the mask's ratio moves the floor at a floor factor: 0 up to MaskFadeFrom, 1 from 1, linear between.</summary>
+        public static double MaskWeightFor(double floorFactor) => Math.Clamp((floorFactor - MaskFadeFrom) / (1 - MaskFadeFrom), 0, 1);
+
+        /// <summary>The gameplay floor alone, times FloorFactor, narrowed for streams as HalfWidth narrows them.</summary>
+        double FloorHalfWidth(double q) =>
+            StreamHalfWidth(q, 0.5 * Math.Clamp(2.0 * Math.Pow(Math.Max(q, MinQ), 0.3), 5, 48) * WidthScale * WidthFloorScale * FloorFactor);
+
+        /// <summary>The real width alone (8·√Q, from the smallest navigable river's for streams), narrowed for streams as
+        /// HalfWidth narrows them: the part of HalfWidth no multiplier changes.</summary>
+        double RealPartHalfWidth(double q) => StreamHalfWidth(q, 0.5 * RealWidthMetres(Math.Max(q, MinQ)) / MetresPerBlock);
+
+        /// <summary>
+        /// A multiplied world (EA-0159): the half width (blocks) at which a river of discharge q whose water mask measured
+        /// measuredMetres (the mask's half width) is drawn. The ratio of the measure to the usual half width for the flow
+        /// (RealWidthMetres), bounded to MinWidthShare-MaxWiden as channel rules 2 bound it, scales the real part fully and the
+        /// floor to the power MaskWeight; the wider of the two, at least the smallest stream's. With the weight 1 this is
+        /// channel rules 2's rule (the ratio times HalfWidth); with 0 the floor stands as it is and only the real width follows
+        /// the mask, so a broad lowland river can't triple an exaggerated floor (the Daugava at Riga was 45 blocks at 1:100).
+        /// </summary>
+        internal double MeasuredHalfWidth(double q, double measuredMetres)
+        {
+            double ratio = Math.Clamp(measuredMetres / Math.Max(1, 0.5 * RealWidthMetres(q)), MinWidthShare, MaxWiden);
+            double floor = FloorHalfWidth(q) * (MaskWeight >= 1 ? ratio : MaskWeight <= 0 ? 1 : Math.Pow(ratio, MaskWeight));
+            return Math.Max(MinHalfWidth, Math.Max(floor, RealPartHalfWidth(q) * ratio));
         }
         /// <summary>The half width the courses are straightened and smoothed for: before width rules 1 the water's, from then on
         /// still that of rules 0 (it grows with the world), so the centre lines are the same with either rules.</summary>
@@ -449,9 +553,10 @@ namespace EarthMap.Core
         /// wider than the flow's too, up to MaxWiden times it (MaskWidthHalfWidth).</summary>
         double MaskedHalfWidth(double flowHalfWidth, float m1, float m2, double t)
         {
-            bool widen = ChannelRules >= MaskWidthChannelRules;
-            double a = m1 > 0 ? (widen ? MaskWidthHalfWidth(flowHalfWidth, m1) : CappedHalfWidth(flowHalfWidth, m1)) : flowHalfWidth;
-            double b = m2 > 0 ? (widen ? MaskWidthHalfWidth(flowHalfWidth, m2) : CappedHalfWidth(flowHalfWidth, m2)) : flowHalfWidth;
+            // (EA-0159) a multiplied world: the measured half widths are already drawn widths (MeasuredHalfWidth)
+            bool widen = ChannelRules >= MaskWidthChannelRules, drawn = WidthMultiplier > 0;
+            double a = m1 > 0 ? (drawn ? m1 : widen ? MaskWidthHalfWidth(flowHalfWidth, m1) : CappedHalfWidth(flowHalfWidth, m1)) : flowHalfWidth;
+            double b = m2 > 0 ? (drawn ? m2 : widen ? MaskWidthHalfWidth(flowHalfWidth, m2) : CappedHalfWidth(flowHalfWidth, m2)) : flowHalfWidth;
             return a + (b - a) * t;
         }
 
@@ -479,6 +584,13 @@ namespace EarthMap.Core
         /// <summary>Channel depth at the centre (blocks): a block more for wider rivers (bigger ships); streams shallower.</summary>
         public double Depth(double q)
         {
+            // (EA-0159) a multiplied world: a channel no deeper than its half width (the gameplay depth made a 4-block-wide
+            // river a slot 7 deep)
+            if (WidthMultiplier > 0) return Math.Min(GameplayDepth(q), Math.Max(1, HalfWidth(q)));
+            return GameplayDepth(q);
+        }
+        double GameplayDepth(double q)
+        {
             double nav = Math.Clamp(2 + 0.6 * Math.Log(Math.Max(q, MinQ)), 4, 9) + Math.Max(0, WidthScale - 1) * 2;
             if (q >= MinQ) return nav;
             return 1 + (nav - 1) * Math.Pow(StreamT(q), 1.5);
@@ -502,9 +614,11 @@ namespace EarthMap.Core
         /// 14, tall.14): the same with the reaches the water atlas moved into the water mask's rivers (rivers-glo90-snap.bin,
         /// Glo90SnapCourses). 3 (item 16, tall.16): and the side arms round the islands the water mask shows in the rivers
         /// (rivers-glo90-arms.bin, Glo90ArmsCourses). 4 (0063): every reach from 20 m³/s moved onto the mask's water,
-        /// smoothed, with the mask's half width at each vertex, and the arms built on those (Glo90WidthCourses). A world gets
-        /// less when the installed data can't give it the newest (EarthData.Glo90RiverCourses).</summary>
-        public const int Glo90CoursesVersion = 4;
+        /// smoothed, with the mask's half width at each vertex, and the arms built on those (Glo90WidthCourses). 5 (decision
+        /// 0092, EA-0148): rules 4's on GLO-90's pixel-is-point grid (rivers-glo90-snap-3.bin, rivers-glo90-arms-3.bin,
+        /// Glo90PointCourses): rules 4 put the mask's cells half a cell south-east of the heights. A world gets less when
+        /// the installed data can't give it the newest (EarthData.Glo90RiverCourses).</summary>
+        public const int Glo90CoursesVersion = 5;
         /// <summary>The first courses rules with rivers-glo90-snap.bin applied.</summary>
         public const int Glo90SnapCourses = 2;
         /// <summary>The first courses rules with rivers-glo90-arms.bin applied (after the snap).</summary>
@@ -512,6 +626,9 @@ namespace EarthMap.Core
         /// <summary>0063: the courses rules with every reach from 20 m³/s moved onto the mask's river (rivers-glo90-snap-2.bin,
         /// rivers-glo90-arms-2.bin) and the mask's half width at each vertex (RiverReach.Width).</summary>
         public const int Glo90WidthCourses = 4;
+        /// <summary>Decision 0092 (EA-0148): courses rules 4's on GLO-90's pixel-is-point grid (rivers-glo90-snap-3.bin,
+        /// rivers-glo90-arms-3.bin).</summary>
+        public const int Glo90PointCourses = 5;
         /// <summary>The bank's width per unit (m) on GLO-90 rivers: a block at 1:15 and smaller scales, more at larger ones.</summary>
         public const double BankMetres = 15;
         /// <summary>This network's courses rules (0: rivers.bin; Glo90CoursesVersion: the rivers on GLO-90).</summary>
@@ -565,7 +682,29 @@ namespace EarthMap.Core
         readonly double landCellBlocks, bankUnit;
         internal double LandCellBlocks => landCellBlocks;
         /// <summary>0 at the smallest stream, 1 from the navigable size on (by the logarithm of the discharge).</summary>
-        public double StreamT(double q) => q >= MinQ ? 1 : Math.Clamp(Math.Log(Math.Max(q, 1e-3) / StreamMinQ) / Math.Log(MinQ / StreamMinQ), 0, 1);
+        public double StreamT(double q) => q >= MinQ ? 1 : OneBlockStreams ? 0 : Math.Clamp(Math.Log(Math.Max(q, 1e-3) / StreamMinQ) / Math.Log(MinQ / StreamMinQ), 0, 1);
+        /// <summary>
+        /// EA-0179 (decision 0098): the coarse river rules of a world at 1:50 and coarser (EarthParams.CoarseRiverRules). A reach
+        /// from MinQ is a river (the River width rule); one from StreamMinQ to MinQ a stream as the smallest is (StreamT 0: one block
+        /// wide, MinHalfWidth, a block deep, the smallest bank and valley), the way the streams layer draws its one-block streams;
+        /// under StreamMinQ nothing (SelectReaches). Before (and at 1:25 and finer) a stream narrowed from MinQ's width down to
+        /// the smallest at StreamMinQ.
+        /// </summary>
+        public readonly bool OneBlockStreams;
+        /// <summary>(EA-0179, coarse river rules 2) The reaches kept as head streams above a river (CoarseRivers), null without;
+        /// RiverCoursePreparer keeps them whatever their discharge.</summary>
+        internal readonly bool[] HeadStreams;
+        /// <summary>(EA-0179) What coarse river rules 2 did: reaches below a river drawn as a river, rivers given a head stream
+        /// and its km (the world's log line).</summary>
+        public readonly int RiversToTheirEnd, HeadStreamCount;
+        public readonly double HeadStreamKm;
+        /// <summary>The coarse river rules this build makes (EarthParams.CoarseRiverRules): 1 rivers, one-block streams, nothing
+        /// smaller; 2 also rivers to their end (a reach below a river is a river), head streams (a river whose biggest inflow is
+        /// not drawn starts from that inflow's last HeadStreamKmRule as a one-block stream; CoarseRivers) and the steep
+        /// streams' lag (LagOf).</summary>
+        public const int CoarseRulesVersion = 2;
+        /// <summary>Coarse river rules 2: a head stream's length (km of the data's course above the river it feeds).</summary>
+        public const double HeadStreamKmRule = 10;
 
         /// <summary>How long (blocks) a river ending in a dry basin takes to fade to a stream.</summary>
         internal double FadeLength(double q) => 64 * SizeScale + 16 * HalfWidth(q);

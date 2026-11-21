@@ -11,10 +11,11 @@ namespace EarthMap.Core
     /// </summary>
     public readonly record struct EarthDataChoice(int ClimateFix, bool FineTemperatures, bool FineRain, bool PenmanAridity,
         bool Summits, bool Glaciers, bool SeaReferee, bool IslandOverlay, bool LakeOverlay, bool ShoreOverlay,
-        bool ReservoirExclusions, bool OutletOverlay, bool Paleo1318 = false)
+        bool ReservoirExclusions, bool OutletOverlay, bool Paleo1318 = false, int TerminalLakeFile = 0)
     {
         /// <summary>Whether two choices read the terrain grid with the same overlays.</summary>
         public bool SameTerrain(in EarthDataChoice o) => SeaReferee == o.SeaReferee && IslandOverlay == o.IslandOverlay && LakeOverlay == o.LakeOverlay
+            && TerminalLakeFile == o.TerminalLakeFile
             && ShoreOverlay == o.ShoreOverlay && ReservoirExclusions == o.ReservoirExclusions && OutletOverlay == o.OutletOverlay;
 
         /// <summary>Whether two choices read the same climate.</summary>
@@ -82,7 +83,8 @@ namespace EarthMap.Core
                 // each overlay only where its file is there (the referee only where it fits the files)
                 SeaReferee = requested.SeaReferee && d.RefereeState() == 1,
                 IslandOverlay = requested.IslandOverlay && d.HasIslands,
-                LakeOverlay = requested.LakeOverlay && d.TerminalLakes != null,
+                LakeOverlay = requested.LakeOverlay && d.TerminalLakesOf(requested.TerminalLakeFile) != null,
+                TerminalLakeFile = requested.LakeOverlay && d.TerminalLakesOf(requested.TerminalLakeFile) != null ? requested.TerminalLakeFile : 0,
                 ShoreOverlay = requested.ShoreOverlay && d.Shores != null,
                 OutletOverlay = requested.OutletOverlay && d.Outlets != null,
             };

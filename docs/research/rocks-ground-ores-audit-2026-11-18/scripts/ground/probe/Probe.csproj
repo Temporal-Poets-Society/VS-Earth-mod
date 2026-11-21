@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>12</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Optimize>true</Optimize>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <NoWarn>$(NoWarn);CS1591;CA1416;CS0162;CS0168;CS0219;CS8632</NoWarn>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="C:\VS mods\Earth\src\Core\*.cs" Link="Core\%(Filename)%(Extension)" />
+    <Compile Include="Program.cs" />
+    <EmbeddedResource Include="C:\VS mods\Earth\data\geothermal-sites.bin" LogicalName="EarthMap.geothermal-sites.bin" />
+    <EmbeddedResource Include="C:\VS mods\Earth\data\geothermal-osm.bin" LogicalName="EarthMap.geothermal-osm.bin" />
+  </ItemGroup>
+</Project>

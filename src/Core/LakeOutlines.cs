@@ -25,8 +25,13 @@ namespace EarthMap.Core
         /// joined everything the mask connects into one lake at its largest piece's level, so a reservoir or a lake the mask
         /// joins to a bigger one at another level was drawn metres above or below its own water (the Pielisjoki's Kuurna
         /// reservoir at Pielinen's level, 10 m up, held by rims with the river in a trench below; Cross Lake at Lake
-        /// Winnipeg's), and the reservoirs among them now left out.</summary>
-        public const int FileVersion = 4;
+        /// Winnipeg's), and the reservoirs among them now left out. 5 (decision 0092, EA-0148): version 4's lakes, levels and
+        /// flags on GLO-90's own grid: the mask is pixel-is-point (cell (r, c) centred on (lat0 + 1 - r/1200, lon0 + c/cols),
+        /// as FineElevation reads the heights), and versions 1-4 drew each cell half a cell south and east of that, so every
+        /// shore lay 4.6 blocks south and 4.6-14 east of the heights' flat water at 1:10. Units 4,800 a degree (half a cell
+        /// a whole number at every column count); each tile outlined with its neighbours' cells and clipped to it
+        /// (tools/recontour_lake_outlines.py, tools/relevel_lake_outlines.py).</summary>
+        public const int FileVersion = 5;
         /// <summary>Version 1's file name in the GLO-90 folder and on Earth's data release; a new version gets a new name.</summary>
         public const string FileName = "lakes-glo90-1.bin";
         /// <summary>The version 1 file this build reads (from the bake of 7 November 2026); any other is refused.</summary>
@@ -44,9 +49,13 @@ namespace EarthMap.Core
         public const string FileName4 = "lakes-glo90-4.bin";
         public const long FileBytes4 = 56_791_888;
         public const string FileSha2564 = "269f85a763de2b3c443657f18f7bbbc5a01939462bef08a584ec2372d87c9795";
-        public static string FileNameFor(int version) => version >= 4 ? FileName4 : version >= 3 ? FileName3 : version >= 2 ? FileName2 : FileName;
-        public static long FileBytesFor(int version) => version >= 4 ? FileBytes4 : version >= 3 ? FileBytes3 : version >= 2 ? FileBytes2 : FileBytes;
-        public static string FileSha256For(int version) => version >= 4 ? FileSha2564 : version >= 3 ? FileSha2563 : version >= 2 ? FileSha2562 : FileSha256;
+        /// <summary>Version 5's file (EA-0148, version 4 on GLO-90's pixel-is-point grid, 17 November 2026).</summary>
+        public const string FileName5 = "lakes-glo90-5.bin";
+        public const long FileBytes5 = 57_108_482;
+        public const string FileSha2565 = "d877a5393b3862eb3767e57cfefb33ec59850ab323acbfde00ad77b7e39722e0";
+        public static string FileNameFor(int version) => version >= 5 ? FileName5 : version >= 4 ? FileName4 : version >= 3 ? FileName3 : version >= 2 ? FileName2 : FileName;
+        public static long FileBytesFor(int version) => version >= 5 ? FileBytes5 : version >= 4 ? FileBytes4 : version >= 3 ? FileBytes3 : version >= 2 ? FileBytes2 : FileBytes;
+        public static string FileSha256For(int version) => version >= 5 ? FileSha2565 : version >= 4 ? FileSha2564 : version >= 3 ? FileSha2563 : version >= 2 ? FileSha2562 : FileSha256;
         /// <summary>Whether these bytes are this version's file this build reads (size and SHA-256).</summary>
         public static bool IsExpected(int version, byte[] bytes, out string why) => Matches(bytes, FileBytesFor(version), FileSha256For(version), out why);
         public const byte NoData = 255, NoLakes = 0, HasLakes = 1;
@@ -277,14 +286,28 @@ namespace EarthMap.Core
         /// </summary>
         public readonly bool UnionShores;
 
+        /// <summary>
+        /// (EA-0179, decision 0098) With CourseOnlyAt: a piece narrower than CourseOnlyWideBlocks (its mean width: twice its area
+        /// over its shore, the tile's cut sides left out) stays only along a drawn course: where half or more of the points sampled
+        /// along its rings are by one (CourseOnlyAt, TerrainModel.CourseDrawsAt). Every other such piece is left out, whatever its
+        /// flags (Thinned): at 1:50 and coarser the water mask's rivers that no course draws were loose dashes of water (the
+        /// Aiviekste). Wider pieces stay wherever they are: real channels, side arms and backwaters that the river data has no
+        /// course for, continuous at these scales (Riga's Buļļupe and Sarkandaugava, the old arm round Doles sala). Null: as before.
+        /// </summary>
+        public readonly Func<double, double, bool> CourseOnlyAt;
+        /// <summary>With CourseOnlyAt: how wide (blocks) a piece away from the courses must be to stay.</summary>
+        public const double CourseOnlyWideBlocks = 2;
+
         /// <summary>The lakes (reach: ReachFor), or with another reach and a smallest index cell (the rivers: RiverOutlineData).</summary>
         public LakeOutlineLayer(LakeOutlineData data, EarthGeometry geo, double reach = 0, double minCell = 16, byte skipFlags = 0, bool unionShores = false,
-            Func<double, double, bool> skipOnlyWhere = null, Func<double, double, bool> keepWhere = null)
+            Func<double, double, bool> skipOnlyWhere = null, Func<double, double, bool> keepWhere = null,
+            Func<double, double, bool> courseOnlyAt = null)
         {
             Data = data;
             SkipFlags = skipFlags;
             SkipOnlyWhere = skipOnlyWhere;
             KeepWhere = keepWhere;
+            CourseOnlyAt = courseOnlyAt;
             UnionShores = unionShores;
             bpdX = geo.BlocksPerDegreeX;
             bpdZ = geo.BlocksPerDegreeZ;
@@ -516,7 +539,55 @@ namespace EarthMap.Core
         {
             Data.Decode(key, out float[] level, out byte[] flags, out int[] ringLake, out int[] ringLength, out int[] vx, out int[] vy);
             bool[] skip = SkipFlags != 0 ? Skipped(key, level, flags, ringLake, ringLength, vx, vy) : null;
+            if (CourseOnlyAt != null) skip = Thinned(key, level, ringLake, ringLength, vx, vy, skip);
             return Assemble(level, flags, ringLake, ringLength, vx, vy, skip, UnionShores);
+        }
+
+        /// <summary>
+        /// CourseOnlyAt (EA-0179): the pieces of a tile left out besides those already skipped (null: none yet): narrower than
+        /// CourseOnlyWideBlocks and not along a drawn course (fewer than half their sampled points by one). The width is the mean
+        /// width from the decoded rings before smoothing: twice the area over the shore, the tile's cut sides not counting as
+        /// shore (a strip w wide gives w; a round pond its radius).
+        /// </summary>
+        bool[] Thinned(int key, float[] level, int[] ringLake, int[] ringLength, int[] vx, int[] vy, bool[] skip)
+        {
+            int lakes = level.Length, full = Data.Unit * Data.TileDeg;
+            double sx = bpdX / Data.Unit, sz = bpdZ / Data.Unit;
+            var area = new double[lakes];
+            var shore = new double[lakes];
+            var near = new int[lakes];
+            var seen = new int[lakes];
+            double lon0 = key % Data.TilesX * Data.TileDeg - 180, lat0 = key / Data.TilesX * Data.TileDeg - 90, unit = Data.Unit;
+            for (int ring = 0, v = 0; ring < ringLength.Length; v += ringLength[ring++])
+            {
+                int lake = ringLake[ring], n = ringLength[ring];
+                if (skip != null && skip[lake]) continue;
+                double twice = 0;
+                for (int j = 0; j < n; j++)
+                {
+                    int a = v + j, b = v + (j + 1) % n;
+                    double ax = vx[a] * sx, az = vy[a] * sz, bx = vx[b] * sx, bz = vy[b] * sz;
+                    twice += ax * bz - bx * az;
+                    bool cut = vx[a] == vx[b] && (vx[a] == 0 || vx[a] == full) || vy[a] == vy[b] && (vy[a] == 0 || vy[a] == full);
+                    if (!cut) shore[lake] += Math.Sqrt((bx - ax) * (bx - ax) + (bz - az) * (bz - az));
+                }
+                // signed: a piece's islands wind the other way round from its outer ring
+                area[lake] += 0.5 * twice;
+                int stride = Math.Max(1, n / 64);
+                for (int j = 0; j < n; j += stride)
+                {
+                    seen[lake]++;
+                    if (CourseOnlyAt(lat0 + vy[v + j] / unit, lon0 + vx[v + j] / unit)) near[lake]++;
+                }
+            }
+            for (int k = 0; k < lakes; k++)
+            {
+                if (skip != null && skip[k] || seen[k] == 0) continue;
+                if (2 * near[k] >= seen[k]) continue;
+                if (shore[k] <= 0 || 2 * Math.Abs(area[k]) / shore[k] >= CourseOnlyWideBlocks) continue;
+                (skip ??= new bool[lakes])[k] = true;
+            }
+            return skip;
         }
 
         /// <summary>A tile from its decoded pieces, but those skipped: the rings in blocks, the edge index and the lake at each

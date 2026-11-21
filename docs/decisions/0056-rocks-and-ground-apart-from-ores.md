@@ -1,6 +1,9 @@
 # 0056: Rocks and ground apart from Ores; the ground pack required
 
 Status: built, in Earth 2.0.0 (two choices, ground columns by default; vanilla rocks by default from 2.0.1, [0084](0084-world-screen-2-0-1.md)), merged with the author's "Yes, merge" (7 November); the required ground data pack is replaced by 0066's download. New worlds only.
+Replaced on the screen by [0104](0104-ground-columns-and-ore-maps-off-the-screen.md) (2.2): ground columns, Ground
+depth and Ores are off the world creation screen, behind experimental switches in earth.json; worlds made with them keep
+them.
 Date: 2026-11-07.
 
 ## What the author asked

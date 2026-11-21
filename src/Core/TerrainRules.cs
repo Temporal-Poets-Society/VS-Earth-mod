@@ -35,6 +35,8 @@ namespace EarthMap.Core
         public int Flow { get; init; }
         /// <summary>Geothermal rules (EarthParams.GeothermalRules).</summary>
         public int Geothermal { get; init; }
+        /// <summary>Lake rules (EarthParams.LakeRules, decision 0100).</summary>
+        public int Lake { get; init; }
 
         // ---------------------------------------------------------------- channel rules (0063, 0071, 0073, 0074)
 
@@ -86,6 +88,8 @@ namespace EarthMap.Core
         public bool SeaOf1318 => Works >= 3;
         /// <summary>Works rules 4 (EA-0053): the islands' outlines inside a SEA or LAND area of 1318 as the works decide.</summary>
         public bool IslandsOf1318 => Works >= 4;
+        /// <summary>Works rules 6 (decision 0107): land beside a LAKE area of 1318 is held at its water top (OutlineShore).</summary>
+        public bool ShoresOf1318 => Works >= Works1318Data.LakeRules;
 
         // ---------------------------------------------------------------- shores (0070)
 
@@ -124,6 +128,15 @@ namespace EarthMap.Core
         /// <summary>Geothermal rules 1: the climate map's geologic activity is Earth's (Geothermal.Activity).</summary>
         public bool GeothermalActivity => GeothermalFacts.Activity(Geothermal);
 
-        public override string ToString() => $"terrain rules: channel {Channel}, genfix {GenFix}, works {Works}, shore {Shore}, fine {Fine}, summit {Summit}, detail {Detail}, coarse {Coarse}, climate {Climate}, arid {Arid}, flow {Flow}, geothermal {Geothermal}";
+        // ---------------------------------------------------------------- lakes (decision 0100)
+
+        /// <summary>Lake rules 1 (EA-0183): a river course whose line lies well inside a lake at its level draws nothing there
+        /// (TerrainModel.CourseInLake): no channel in the lake's bed, no bank or valley on its shores.</summary>
+        public bool CoursesOffLakes => Lake >= 1;
+        /// <summary>Lake rules 1 (EA-0184): an outline lake's bed from its real depth (lake-depths-1.bin: HydroLAKES), the 2′ grid's
+        /// bathymetry where ETOPO holds the lake's bed (TerrainModel.LakeDepthAt).</summary>
+        public bool RealLakeDepths => Lake >= 1;
+
+        public override string ToString() => $"terrain rules: channel {Channel}, genfix {GenFix}, works {Works}, shore {Shore}, fine {Fine}, summit {Summit}, detail {Detail}, coarse {Coarse}, climate {Climate}, arid {Arid}, flow {Flow}, geothermal {Geothermal}, lake {Lake}";
     }
 }

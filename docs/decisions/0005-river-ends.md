@@ -1,6 +1,6 @@
 # 0005: River ends — continued rivers, revived terminal lakes, faded wadis
 
-Status: Agreed; built in 0.14.1 (in Earth 1.0.0); in Earth 2.0.0. Exit channels since changed by 0071 and desert river ends by 0034; the Aral's level is to give way to 1318's under 0064 step 3 (not built). No in-game check recorded | Date: 2026-10-16 | Decided by: the user
+Status: Agreed; built in 0.14.1 (in Earth 1.0.0); in Earth 2.0.0. Exit channels since changed by 0071 and desert river ends by 0034; new worlds of river ends rules 3 ([0107](0107-lakes-of-1318.md), on `claude/lakes-1318` for 2.2) have the Aral at its level of 1318 (29 m, lakes-2.bin) instead of 1960's. No in-game check recorded | Date: 2026-10-16 | Decided by: the user
 
 ## Context
 

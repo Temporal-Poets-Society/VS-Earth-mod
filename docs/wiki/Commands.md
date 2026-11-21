@@ -21,8 +21,8 @@ Each prints what Earth knows about the place you stand on.
 | `/earth plants` | The native range of ground plants from plant packs (Floral Zones) here. |
 | `/earth placement` | Plants as around 1318 here: the region, the climate, and the crops and plants that belong. |
 | `/earth fauna` | The animals that can spawn here and their ranges. |
-| `/earth geology` | The regional rocks and surface materials here. Only in worlds with Earth's rocks. |
-| `/earth ores` | The ore evidence here (with Earth's ore maps). Evidence doesn't promise ore: you still have to prospect. |
+| `/earth geology` | The regional rocks and surface materials here. Only in worlds with Earth's rocks (regional rock, or ground columns). |
+| `/earth ores` | The ore evidence here. Only in worlds with Earth's ore maps, which are experimental and not on the world creation screen. Evidence doesn't promise ore: you still have to prospect. |
 | `/earth water` | The water table: how deep the ground water is here, and the aquifers Hydrate or Diedrate gets. |
 | `/earth site` | What the place is like for plants: warmth, light by slope, water, soil, wetness. |
 | `/earth volcano` | The nearest volcano: its name, distance, summit and crater, lava lake and how far its ash reaches. |
@@ -40,6 +40,11 @@ ground.
 - `/earth tp -33.86 151.21`: Sydney.
 - `/earth tp 59.9 10.7 water`: the nearest open water to Oslo, within 3000 blocks, on the surface. In a boat or on a
   ship, Earth looks for water by itself.
+
+If the land there isn't loaded yet, Earth asks the game for it through its ordinary loading queue, the way your view
+does, and teleports you as soon as it is ready. Teleports take their turn one at a time, so that a busy server isn't
+stalled by many at once; the reply says how many are ahead of yours, for example "Making the land at ... ready; you are
+teleported when it is (1 other teleport waiting)." Only the teleporting player waits.
 
 If the land heights for that 1° square aren't on the server yet, Earth downloads them first and says so, then teleports
 you when they are here. It waits at most **2 minutes**: if they haven't arrived by then, you are **not** teleported (you
@@ -124,7 +129,7 @@ world.
 | Command | What it does |
 | --- | --- |
 | `/earth propick [radius] [old]` | For ores that lie inside another ore (silver in galena, gold in quartz, sylvite in halite, peridot in olivine): each one's ore map value and its parent ore in your column, or around it. Works after a prospecting pick has been used once since the server started. |
-| `/earth orelayers [radius]` | Counts ore blocks by ground layer in the loaded chunks around you (worlds with ground columns). |
+| `/earth orelayers [radius]` | Counts ore blocks by ground layer in the loaded chunks around you (worlds with ground columns, which are experimental and not on the world creation screen). |
 | `/earth woods [radius \| trace]` | Counts trees by wood around you, with their mean height; `trace` counts the trees generation picks from then on (run it again to report). |
 | `/earth census [radius]` | Counts plants, crops, berry bushes, fruit trees and animals in the loaded chunks around you. |
 | `/earth siterules [rules] [anyway]` | Shows or changes the plant site rules for chunks generated from now on, until the server stops. Outside creative a change needs `anyway`, because chunks generated meanwhile keep it. |

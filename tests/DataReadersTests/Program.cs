@@ -9,6 +9,7 @@ using EarthMap.Tests;
 //   cell's own value; columns wrap; each tile decodes to its full size.
 // - The water overlays: the rivers' snap and arms files fit the installed rivers-glo90.bin and each other, and nothing
 //   else; the sea referee reads against the terrain's grid.
+// - The ledger of human works undone (docs/works-1318-ledger.md): its facts are the files' and the code's (LedgerChecks).
 // usage: DataReadersTests <repo root>. The data store: EARTH_STORE, else the player's or the AgentBridge bench's
 // ModData\earth; without one only TiledGrid is checked (exit 3, a partial pass).
 var t = new TestChecks("Data readers");
@@ -49,6 +50,20 @@ var missing = new List<string>();   // named on the last line, which Run-All sho
         if (len != grid.CellsPerTile * 7) wrong++;
     }
     t.Check(full > 0 && wrong == 0, $"TiledGrid: each of the {full} tiles with data decodes to {grid.CellsPerTile} cells of 7 bytes ({wrong} do not)");
+}
+
+{
+    // ------------------------------------------------------------ LakeDepthData (decision 0100, in the mod)
+    byte[] bytes = File.ReadAllBytes(Path.Combine(root, "earthdata", LakeDepthData.FileName));
+    bool expected = LakeDepthData.IsExpected(bytes, out string why);
+    var depths = LakeDepthData.Read(bytes);
+    // Lake Geneva: the piece of tile 46N 6E its outlet lies on (lake 41 of that tile in lakes-glo90-5.bin)
+    bool geneva = depths.TryGet((46 + 90) * 360 + 6 + 180, 41, out var g);
+    t.Check(expected && depths.Fits(5) && !depths.Fits(4) && depths.Count > 50_000 && geneva && g.FloorMetres > 150 && g.FloorMetres < 320
+        && g.SizeMetres > 1000 && !g.Bathymetry,
+        $"LakeDepthData: {LakeDepthData.FileName} is the pinned file ({why}), made for lake outlines 5 alone, {depths.Count:N0} pieces; Lake Geneva's floor {g.FloorMetres} m, size {g.SizeMetres} m");
+    bytes[bytes.Length / 2] ^= 0x40;
+    t.Check(!LakeDepthData.IsExpected(bytes, out _), "LakeDepthData: a changed byte is not the pinned file");
 }
 
 if (store == null)
@@ -95,6 +110,9 @@ else
     var ds = EarthDataset.Load(name => File.Exists(F(name)) ? File.OpenRead(F(name)) : null, true);
     t.Check(ds.SeaReferee != null && ds.TerrainW > 0, $"SeaRefereeData: the sea referee reads against the terrain's grid ({ds.TerrainW} cells across)");
 }
+
+// ---------------------------------------------------------------- the ledger of human works undone (decision 0064)
+LedgerChecks.Run(root, t);
 
 int code = t.Summary();
 if (skipped) Console.WriteLine("Part skipped, not on this machine: " + string.Join(", ", missing));

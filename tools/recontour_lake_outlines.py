@@ -18,8 +18,17 @@ and the polygons are clipped to the tile's square. The cells either side of an e
 so the two pieces' cuts end at the same points. Each piece keeps its label's lake (level and flags) from version 2;
 the rest is version 2's simplification (half a cell, vertices on the tile's edge kept) and file layout, header version 3.
 
+EA-0148 (decision 0092): on GLO-90's pixel-is-point grid (tools/glo90grid.py; EARTH_GLO90_GRID=cell for the old placement)
+cell (r, c) is centred on (lat0 + 1 - r/1200, lon0 + c/cols), not half a cell south-east of it: the contour's padded
+coordinate x maps to (x - 1) units of a column and the tile's square is x, y in 1 .. wp + 1, hp + 1 (the south
+neighbour's first row and the east neighbour's first column give the strip between this tile's last row or column and
+its edge; what reaches over the north and west edges is clipped off: those neighbours draw it). Every tile is outlined
+anew and clipped, at OUT_UNIT (4,800) units a degree, where half a cell is a whole number at every column count. Version
+2's tiles are still recovered and checked in their own placement. The file is the intermediate lakes-glo90-3p.bin
+(header version 3), which tools/relevel_lake_outlines.py turns into lakes-glo90-5.bin.
+
 Usage: python -I tools/recontour_lake_outlines.py OLD_FILE OUTDIR [workers] [tile filters, e.g. N57_00_E02,N61_00_E02]
-Needs EARTH_RAW (or rawdata/) with copernicus-glo90-wbm. Writes OUTDIR/lakes-glo90-3.bin, lakes-glo90-3.json, report.
+Needs EARTH_RAW (or rawdata/) with copernicus-glo90-wbm. Writes OUTDIR/lakes-glo90-3.bin (3p.bin), its .json, report.
 """
 import glob, hashlib, json, os, struct, sys, time
 from multiprocessing import Pool
@@ -33,6 +42,12 @@ from scipy import ndimage as ndi
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import bake_lake_outlines as bl  # noqa: E402  (simplify_ring, lake_bytes, varints, constants)
+import glo90grid as gg  # noqa: E402
+
+# the outlines written: on GLO-90's pixel-is-point grid (EA-0148) the tile's sides lie at padded 1 and wp + 1, and units
+# are 4,800 a degree; the old placement: 0.5 and wp + 0.5, 2,400 (bake_lake_outlines.UNIT)
+EDGE = 1.0 if gg.POINT else 0.5
+OUT_UNIT = 4800 if gg.POINT else bl.UNIT
 
 VERSION = 3
 T0 = time.time()
@@ -54,7 +69,7 @@ def read_index(path):
     b = open(path, "rb").read()
     assert b[:4] == b"EMLO"
     version, unit, tile_deg, tx, ty = struct.unpack_from("<5i", b, 4)
-    assert unit == bl.UNIT and tile_deg == 1 and (tx, ty) == (360, 180), (unit, tile_deg, tx, ty)
+    assert unit in (bl.UNIT, OUT_UNIT) and tile_deg == 1 and (tx, ty) == (360, 180), (unit, tile_deg, tx, ty)
     states = np.frombuffer(b, np.uint8, tx * ty, 24).copy()
     idx = {}
     o = 24 + tx * ty
@@ -156,17 +171,26 @@ def drawn(lat, lon):
 
 # ------------------------------------------------------------------------------------------- outlines
 
-def outline(keep, lab, owner, margin):
+def outline(keep, lab, owner, margin, old=False, codes=None):
     """The tile's lakes as lake_bytes records: keep contoured with the given one-cell margin around it (None: land, as
-    version 2), clipped to the tile's square. Also counts (pieces without a cell, pieces over two labels)."""
+    version 2), clipped to the tile's square. Also counts (pieces without a cell, pieces over two labels). old: in
+    version 2's placement and units, as bake_lake_outlines.py drew it (pass A's check). codes: the margin's lakes as
+    relevel_lake_outlines.code gives them (its layout): on the pixel-is-point grid the south neighbour's first row and the
+    east neighbour's first column lie on the tile's edges, and their water reaches half a cell into the tile; a piece
+    with no cell of the tile's own is that lake's."""
     hp, wp = keep.shape
+    edge, unit = (0.5, bl.UNIT) if old else (EDGE, OUT_UNIT)
+    if margin is None and edge != 0.5:
+        # on the pixel-is-point grid a tile's cells reach half a cell over its north and west edges: always clipped
+        margin = {"top": np.zeros(wp + 2), "bottom": np.zeros(wp + 2), "left": np.zeros(hp + 2), "right": np.zeros(hp + 2),
+                  "corners": (0.0, 0.0, 0.0, 0.0)}
     z = np.zeros((hp + 2, wp + 2), np.float32)
     z[1:-1, 1:-1] = keep
     if margin is not None:
         z[0, :], z[-1, :], z[:, 0], z[:, -1] = margin["top"], margin["bottom"], margin["left"], margin["right"]
         z[0, 0], z[0, -1], z[-1, 0], z[-1, -1] = margin["corners"]
     polys, offs = contourpy.contour_generator(z=z, name="serial", fill_type="OuterOffset", corner_mask=False).filled(0.5, 1.5)
-    box = shapely.box(0.5, 0.5, wp + 0.5, hp + 0.5)
+    box = shapely.box(edge, edge, wp + edge, hp + edge)
     recs, empty, mixed = [], 0, 0
     kr, kc = np.nonzero(keep)
     for pts, off in zip(polys, offs):
@@ -174,8 +198,13 @@ def outline(keep, lab, owner, margin):
         if margin is None:
             parts = [(rings, None)]
         else:
-            # whole polygons inside the square stay exactly as contoured; the others are clipped to it
-            if pts[:, 0].min() >= 0.5 and pts[:, 0].max() <= wp + 0.5 and pts[:, 1].min() >= 0.5 and pts[:, 1].max() <= hp + 0.5:
+            # whole polygons inside the square stay exactly as contoured; the others are clipped to it (on the
+            # pixel-is-point grid also those that reach the square's side: the margin's cells lie on it, and a piece of
+            # the neighbours' alone ends there)
+            inside = (pts[:, 0].min() >= edge and pts[:, 0].max() <= wp + edge and pts[:, 1].min() >= edge and pts[:, 1].max() <= hp + edge)
+            if edge != 0.5:
+                inside = (pts[:, 0].min() > edge and pts[:, 0].max() < wp + edge and pts[:, 1].min() > edge and pts[:, 1].max() < hp + edge)
+            if inside:
                 parts = [(rings, None)]
             else:
                 g = shapely.Polygon(rings[0], rings[1:])
@@ -185,20 +214,23 @@ def outline(keep, lab, owner, margin):
                 parts = []
                 for p in shapely.get_parts(g):
                     if p.geom_type == "Polygon" and p.area > 1e-9:
-                        parts.append(([snap(np.asarray(p.exterior.coords), wp, hp)] + [snap(np.asarray(h.coords), wp, hp) for h in p.interiors], p))
+                        parts.append(([snap(np.asarray(p.exterior.coords), wp, hp, edge)] + [snap(np.asarray(h.coords), wp, hp, edge) for h in p.interiors], p))
                     elif p.geom_type == "MultiPolygon":
                         for q in p.geoms:
                             if q.area > 1e-9:
-                                parts.append(([snap(np.asarray(q.exterior.coords), wp, hp)] + [snap(np.asarray(h.coords), wp, hp) for h in q.interiors], q))
+                                parts.append(([snap(np.asarray(q.exterior.coords), wp, hp, edge)] + [snap(np.asarray(h.coords), wp, hp, edge) for h in q.interiors], q))
         for prings, geom in parts:
+            lvfl = None
             if geom is None:
                 own = first_owner(prings[0], keep, lab, hp, wp)
             else:
-                own = area_owner(geom, kr, kc, lab)
+                own = area_owner(geom, kr, kc, lab, on_edge=not old)
                 if own == -2:
                     mixed += 1
-                    own = area_owner(geom, kr, kc, lab, majority=True)
-            if own is None or own <= 0 or owner[own] is None:
+                    own = area_owner(geom, kr, kc, lab, majority=True, on_edge=not old)
+                if (own is None or own <= 0 or owner[own] is None) and codes is not None and not old:
+                    lvfl = margin_owner(geom, codes, hp, wp)
+            if lvfl is None and (own is None or own <= 0 or owner[own] is None):
                 if geom is not None:
                     empty += 1
                 continue
@@ -206,24 +238,47 @@ def outline(keep, lab, owner, margin):
                 prings = orient(prings)
             out = []
             for i, ring in enumerate(prings):
-                ring = bl.simplify_ring(ring, wp, hp)
+                ring = bl.simplify_ring(ring, wp, hp, edge=edge)
                 if ring is None:
                     if i == 0:
                         break
                     continue
-                X = np.round((ring[:, 0] - 0.5) * bl.UNIT / wp).astype(np.int64)
-                Y = np.round((hp - (ring[:, 1] - 0.5)) * bl.UNIT / hp).astype(np.int64)
+                X = np.round((ring[:, 0] - edge) * unit / wp).astype(np.int64)
+                Y = np.round((hp - (ring[:, 1] - edge)) * unit / hp).astype(np.int64)
                 out.append(np.column_stack([X, Y]))
             if out:
-                lv, fl = owner[own]
+                lv, fl = lvfl if lvfl is not None else owner[own]
                 recs.append((int(lv), int(fl), out))
     return recs, empty, mixed
 
 
-def snap(c, wp, hp):
+def margin_owner(geom, codes, hp, wp):
+    """The lake (level, flags) of the south and east neighbours' cells a clipped piece holds (on its south or east side,
+    where they lie on the pixel-is-point grid), the most of them; None where it holds none."""
+    bottom, right = np.asarray(codes["bottom"]), np.asarray(codes["right"])
+    xs = np.r_[np.arange(1, wp + 1), np.full(hp, wp + 1), wp + 1].astype(np.float64)
+    ys = np.r_[np.full(wp, hp + 1), np.arange(1, hp + 1), hp + 1].astype(np.float64)
+    cs = np.r_[bottom[1:wp + 1], right[1:hp + 1], codes["corners"][3]].astype(np.int64)
+    m = cs != 0
+    if not m.any():
+        return None
+    x0, y0, x1, y1 = geom.bounds
+    m &= (xs >= x0) & (xs <= x1) & (ys >= y0) & (ys <= y1)
+    if not m.any():
+        return None
+    s = np.nonzero(m)[0]
+    s = s[shapely.intersects_xy(geom, xs[s], ys[s])]
+    if not len(s):
+        return None
+    u, n = np.unique(cs[s], return_counts=True)
+    c = int(u[np.argmax(n)])
+    return c >> 8, (c & 0xFF) - 1
+
+
+def snap(c, wp, hp, edge=0.5):
     """Ring coordinates on the square's sides set exactly on them (the clip's arithmetic leaves the last bits)."""
     c = c.copy()
-    for col, lo, hi in ((0, 0.5, wp + 0.5), (1, 0.5, hp + 0.5)):
+    for col, lo, hi in ((0, edge, wp + edge), (1, edge, hp + edge)):
         c[np.abs(c[:, col] - lo) < 1e-6, col] = lo
         c[np.abs(c[:, col] - hi) < 1e-6, col] = hi
     return c
@@ -253,14 +308,16 @@ def first_owner(ring, keep, lab, hp, wp):
     return 0
 
 
-def area_owner(geom, kr, kc, lab, majority=False):
+def area_owner(geom, kr, kc, lab, majority=False, on_edge=False):
     """The label of the drawn cells whose centres a clipped piece holds; -2 where they belong to several (majority: the
-    most), None where it holds none."""
+    most), None where it holds none. on_edge: centres on the piece's boundary count (on the pixel-is-point grid the
+    first row's and column's centres lie on the tile's edge; inside a tile no centre lies on a contour)."""
     x0, y0, x1, y1 = geom.bounds
     s = np.nonzero((kc + 1 >= x0) & (kc + 1 <= x1) & (kr + 1 >= y0) & (kr + 1 <= y1))[0]
     if not len(s):
         return None
-    inside = s[shapely.contains_xy(geom, kc[s] + 1.0, kr[s] + 1.0)]
+    test = shapely.intersects_xy if on_edge else shapely.contains_xy
+    inside = s[test(geom, kc[s] + 1.0, kr[s] + 1.0)]
     if not len(inside):
         return None
     ls = lab[kr[inside], kc[inside]]
@@ -313,7 +370,7 @@ def pass_a(t):
     if d is None:
         return t, None, None, 0
     keep, lab, owner, lakes = d
-    recs, _, _ = outline(keep, lab, owner, None)
+    recs, _, _ = outline(keep, lab, owner, None, old=True)
     o, n = W["idx"][t]
     same = raw_bytes(recs) == brotli.decompress(W["old"][o:o + n]) or canon(recs) == canon(lakes)
     np.save(owner_path(t), np.array([(0, 0, 0) if v is None else (1, v[0], v[1]) for v in owner], np.int64))
@@ -332,7 +389,16 @@ def border(t, side, n):
     v = np.unpackbits(br[side])[:m].astype(np.float32)
     if m == n:
         return v
-    return v[np.minimum(((np.arange(n) + 0.5) * m / n).astype(np.int64), m - 1)]
+    return v[resample_index(n, m)]
+
+
+def resample_index(n, m):
+    """For n cells along a side, the neighbour's cell (of m) each takes across a parallel where GLO-90's column count
+    changes: the nearest on the pixel-is-point grid (cell i lies on i/n of the degree), else the one holding the cell's
+    centre."""
+    if gg.POINT:
+        return np.minimum(np.floor(np.arange(n) * m / n + 0.5).astype(np.int64), m - 1)
+    return np.minimum(((np.arange(n) + 0.5) * m / n).astype(np.int64), m - 1)
 
 
 def corner(t, which):
@@ -367,7 +433,7 @@ def pass_b(t):
     """The tile outlined with its margin: (tile, lakes, brotli bytes or None for version 2's own, vertices, raw bytes,
     pieces without a cell, pieces over two labels, changed)."""
     m = margin(t)
-    if m is None:
+    if m is None and not gg.POINT:
         return t, -1, None, 0, 0, 0, 0, False
     lat, lon = t // 360 - 90, t % 360 - 180
     lab, k = labels(lat, lon)
@@ -379,7 +445,7 @@ def pass_b(t):
     recs, empty, mixed = outline(keep, lab, owner, m)
     raw = raw_bytes(recs)
     o, n = W["idx"][t]
-    changed = raw != brotli.decompress(W["old"][o:o + n])
+    changed = gg.POINT or raw != brotli.decompress(W["old"][o:o + n])
     if not changed:
         return t, -1, None, 0, 0, empty, mixed, False
     nv = sum(len(r) for _, _, rings in recs for r in rings)
@@ -395,7 +461,7 @@ def main():
     work = os.path.join(out, "owners")
     os.makedirs(work, exist_ok=True)
     b, version, states, idx = read_index(old)
-    log(f"{old}: version {version}, {len(idx)} tiles with lakes")
+    log(f"{old}: version {version}, {len(idx)} tiles with lakes; writing on {gg.describe()}")
     tiles = sorted(t for t in idx if any(f in os.path.basename(wbm_path(t // 360 - 90, t % 360 - 180)) for f in filt.split(",")))
     # pass A: every tile with lakes (the neighbours of a filtered set too)
     need = set(tiles)
@@ -441,7 +507,7 @@ def main():
         if t not in blobs and new_states[t] == 1:
             o, n = idx[t]
             blobs[t] = b[o:o + n]
-    head = struct.pack("<4siiiii", b"EMLO", VERSION, bl.UNIT, 1, 360, 180)
+    head = struct.pack("<4siiiii", b"EMLO", VERSION, OUT_UNIT, 1, 360, 180)
     index = bytearray()
     o = len(head) + len(new_states) + 8 * len(blobs)
     body = bytearray()
@@ -449,14 +515,14 @@ def main():
         index += struct.pack("<ii", o + len(body), len(blobs[t]))
         body += blobs[t]
     data = head + new_states.tobytes() + bytes(index) + bytes(body)
-    name = "lakes-glo90-3.bin"
+    name = "lakes-glo90-3p.bin" if gg.POINT else "lakes-glo90-3.bin"
     with open(os.path.join(out, name), "wb") as f:
         f.write(data)
     info = {"file": name, "from": os.path.basename(old), "from_sha256": hashlib.sha256(b).hexdigest(), "bytes": len(data),
             "sha256": hashlib.sha256(data).hexdigest(), "tiles_checked": len(tiles), "tiles_changed": changed,
             "tiles_with_lakes": len(blobs), "lakes_in_changed_tiles": nl, "vertices_in_changed_tiles": nv,
             "pieces_without_a_cell": empty, "pieces_over_two_labels": mixed, "pass_a_back": back, "pass_a_not_back": len(notback)}
-    with open(os.path.join(out, "lakes-glo90-3.json"), "w", encoding="utf8") as f:
+    with open(os.path.join(out, name.replace(".bin", ".json")), "w", encoding="utf8") as f:
         json.dump(info, f, indent=1)
     log(json.dumps(info))
 

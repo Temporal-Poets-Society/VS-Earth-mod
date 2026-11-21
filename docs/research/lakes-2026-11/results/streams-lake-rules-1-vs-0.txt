@@ -1,0 +1,22 @@
+== lake rules 1
+  lauterbrunnen: digest of all columns f412cc07f6398554, of the 2811 stream columns d720bb16134f8bd0
+lauterbrunnen (46.595, 7.905), 1024 x 1024 blocks: stream water 2811 columns, columns changed 6535; leaks: stream 0, rivers 0; stream steps 1: 46, 2-4: 0, 5+: 0 (largest 1)
+  eidfjord: digest of all columns d671aca77626513a, of the 1185 stream columns d932abbf5bedd5f8
+eidfjord (60.440, 7.100), 1024 x 1024 blocks: stream water 1185 columns, columns changed 3068; leaks: stream 0, rivers 0; stream steps 1: 36, 2-4: 23, 5+: 0 (largest 3)
+  brienz: digest of all columns ad3df5ccfd4d61e5, of the 0 stream columns e3b0c44298fc1c14
+brienz (46.730, 7.980), 1024 x 1024 blocks: stream water 0 columns, columns changed 0; leaks: stream 0, rivers 0; stream steps 1: 0, 2-4: 0, 5+: 0 (largest 0)
+  lavaux: digest of all columns 6c0ba3b333347104, of the 0 stream columns e3b0c44298fc1c14
+lavaux (46.490, 6.720), 1024 x 1024 blocks: stream water 0 columns, columns changed 0; leaks: stream 0, rivers 0; stream steps 1: 0, 2-4: 0, 5+: 0 (largest 0)
+  thun: digest of all columns 9ead3427126d5752, of the 634 stream columns 452fa51ad742a1e8
+thun (46.680, 7.720), 1024 x 1024 blocks: stream water 634 columns, columns changed 1170; leaks: stream 0, rivers 0; stream steps 1: 7, 2-4: 0, 5+: 0 (largest 1)
+== lake rules 0
+  lauterbrunnen: digest of all columns f412cc07f6398554, of the 2811 stream columns d720bb16134f8bd0
+lauterbrunnen (46.595, 7.905), 1024 x 1024 blocks: stream water 2811 columns, columns changed 6535; leaks: stream 0, rivers 0; stream steps 1: 46, 2-4: 0, 5+: 0 (largest 1)
+  eidfjord: digest of all columns 8532e4d644726ce2, of the 1185 stream columns d932abbf5bedd5f8
+eidfjord (60.440, 7.100), 1024 x 1024 blocks: stream water 1185 columns, columns changed 3068; leaks: stream 0, rivers 0; stream steps 1: 36, 2-4: 23, 5+: 0 (largest 3)
+  brienz: digest of all columns b4d46fd4f38d2dda, of the 0 stream columns e3b0c44298fc1c14
+brienz (46.730, 7.980), 1024 x 1024 blocks: stream water 0 columns, columns changed 0; leaks: stream 0, rivers 0; stream steps 1: 0, 2-4: 0, 5+: 0 (largest 0)
+  lavaux: digest of all columns 5848913a720b3479, of the 0 stream columns e3b0c44298fc1c14
+lavaux (46.490, 6.720), 1024 x 1024 blocks: stream water 0 columns, columns changed 0; leaks: stream 0, rivers 0; stream steps 1: 0, 2-4: 0, 5+: 0 (largest 0)
+  thun: digest of all columns 345d4ca1ec7e9126, of the 634 stream columns 452fa51ad742a1e8
+thun (46.680, 7.720), 1024 x 1024 blocks: stream water 634 columns, columns changed 1170; leaks: stream 0, rivers 0; stream steps 1: 7, 2-4: 0, 5+: 0 (largest 1)

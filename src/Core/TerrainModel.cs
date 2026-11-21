@@ -27,6 +27,11 @@ namespace EarthMap.Core
         /// <summary>The world's geothermal rules (EarthParams.GeothermalRules); from 1 the climate map's geologic activity is
         /// Earth's (Core.Geothermal.Activity) instead of the vanilla noise passed in.</summary>
         public int GeothermalRules { get => rules.Geothermal; set => rules = rules with { Geothermal = value }; }
+        /// <summary>The world's lake rules (EarthParams.LakeRules, decision 0100): from 1 a river course draws nothing well
+        /// inside a lake (CourseInLake), and the outline lakes have their real depths (LakeDepthAt).</summary>
+        public int LakeRules { get => rules.Lake; set => rules = rules with { Lake = value }; }
+        /// <summary>The newest lake rules (decision 0100).</summary>
+        public const int LakeRulesVersion = 1;
         public const int RealLapseRules = 2;
         /// <summary>From these rules (decision 0031's test profiles only) the climate map also stores the real rainfall and vanilla's
         /// altitude rain adjustment is off (ClimateLapse); the vanilla-lapse pixel for other readers keeps vanilla's rain.</summary>
@@ -404,7 +409,7 @@ namespace EarthMap.Core
             return ColumnForExpansion(expansion.Contains(x, z) ? expansion : ExpansionAt(x, z), x, z);
         }
 
-        Column ColumnForExpansion(TerrainExpansion expansion, double x, double z)
+        Column ColumnForExpansion(TerrainExpansion expansion, double x, double z, bool mainOnly = false)
         {
             double sourceX = x, sourceZ = z;
             expansion?.Project(x, z, out sourceX, out sourceZ);
@@ -416,6 +421,8 @@ namespace EarthMap.Core
             if (Islands != null && !c.Gutter) ApplyIslands(sourceX, sourceZ, ref c, ref work);
             if (Rivers != null && !c.Gutter) ApplyRiver(sourceX, sourceZ, ref c);
             if (Rivers != null && !c.Gutter && Rules.MouthBed && c.Water == WaterSea) ApplyMouth(sourceX, sourceZ, ref c, ref work);
+            // EA-0131: the streams layer, on the water and land the world's own rivers left (not for MainColumn)
+            if (Streams != null && !c.Gutter && !mainOnly) ApplyStream(sourceX, sourceZ, ref c);
             DryFans?.Apply(sourceX,sourceZ,ref c);
             Channels?.Apply(this, sourceX, sourceZ, ref c);
             Straits?.Apply(SeaLevel, sourceX, sourceZ, ref c);

@@ -12,16 +12,33 @@ namespace EarthMap.Core
     /// while its water reached the sea elsewhere: the Lielupe at 23.85° E, the Daugava at Vecāķi). Solved on one course
     /// list (CourseKey); a world on another list reads no reroutes from it. Travels with the GLO-90 heights, on the data
     /// release beside the outlines.
+    ///
+    /// rivers-flow-glo90-2.bin (decision 0092, EA-0148; EarthParams.FlowRules 2): the same solve on GLO-90's pixel-is-point
+    /// grid and courses rules 5's list. Pixel (i, j) of a tile is the mask's cell centred on (lat0 + 1 - i/H, lon0 + j/W),
+    /// as the heights are; version 1's pixels are read half a pixel south-east of that, where the bake that solved them put
+    /// the mask's cells (and the river outlines of versions 1-4 drew them).
     /// </summary>
     public sealed class RiverFlowData
     {
-        public const int FileVersion = 1;
+        /// <summary>The newest file version this build reads.</summary>
+        public const int FileVersion = 2;
+        /// <summary>Version 1's file (flow rules 1).</summary>
         public const string FileName = "rivers-flow-glo90-1.bin";
         public const string Magic = "EMFL";
-        /// <summary>The file this build reads (from the global bake): any other is refused (EarthElevationSystem fetches it
-        /// again).</summary>
+        /// <summary>The version 1 file this build reads (from the global bake): any other is refused (EarthElevationSystem
+        /// fetches it again).</summary>
         public const long FileBytes = 93_803_882;
         public const string FileSha256 = "d6cb96dd8d7c60e11b11ea9c97dbdd666fbef25c5db583f94f11a32f0f4f1954";
+        /// <summary>Version 2's file (flow rules 2, EA-0148; global bake of 17 November 2026).</summary>
+        public const string FileName2 = "rivers-flow-glo90-2.bin";
+        public const long FileBytes2 = 93_894_092;
+        public const string FileSha2562 = "0b2585b50f1d1f0c9513b107a40ac14e546d986e981e0fedb7b27e280f08081c";
+        /// <summary>The file a world with these flow rules reads.</summary>
+        public static string FileNameFor(int rules) => rules >= 2 ? FileName2 : FileName;
+        public static long FileBytesFor(int rules) => rules >= 2 ? FileBytes2 : FileBytes;
+        public static string FileSha256For(int rules) => rules >= 2 ? FileSha2562 : FileSha256;
+        /// <summary>The file's version (2: its pixels on GLO-90's pixel-is-point grid).</summary>
+        public int Version { get; private set; }
         public const byte NoData = 255, NoFlow = 0, HasFlow = 1;
 
         /// <summary>The course list (DamRemovalData.KeyOf) the flow was solved on.</summary>
@@ -37,12 +54,15 @@ namespace EarthMap.Core
         sealed class Tile { public int H, W; public byte[] Speed, Dir; }
 
         public static bool IsExpected(byte[] bytes, out string why) => LakeOutlineData.Matches(bytes, FileBytes, FileSha256, out why);
+        /// <summary>Whether these bytes are the file this build reads for these flow rules (size and SHA-256).</summary>
+        public static bool IsExpected(int rules, byte[] bytes, out string why) => LakeOutlineData.Matches(bytes, FileBytesFor(rules), FileSha256For(rules), out why);
 
         RiverFlowData(byte[] file)
         {
             this.file = file;
             EarthBinary.Expect(file, Magic, 36, FileName);
-            if (BitConverter.ToInt32(file, 4) != FileVersion) throw new InvalidDataException(FileName + ": version " + BitConverter.ToInt32(file, 4));
+            Version = BitConverter.ToInt32(file, 4);
+            if (Version < 1 || Version > FileVersion) throw new InvalidDataException(FileName + ": version " + Version);
             int deg = BitConverter.ToInt32(file, 8), tx = BitConverter.ToInt32(file, 12), ty = BitConverter.ToInt32(file, 16);
             if (deg != 1 || tx != 360 || ty != 180) throw new InvalidDataException(FileName + ": layout");
             CourseKey = BitConverter.ToUInt64(file, 20);
@@ -130,7 +150,27 @@ namespace EarthMap.Core
         }
 
         /// <summary>Whether the file has this place's tile (with flow or none: NoFlow is still water everywhere in it).</summary>
-        public bool Covers(double lat, double lon) => State(lat, lon, out _, out _, out _) != NoData;
+        public bool Covers(double lat, double lon)
+        {
+            OnGrid(ref lat, ref lon);
+            return State(lat, lon, out _, out _, out _) != NoData;
+        }
+
+        /// <summary>
+        /// Version 2 (EA-0148): its pixel (i, j) lies on (lat0 + 1 - i/H, lon0 + j/W), half a pixel north-west of where the
+        /// reading below (version 1's) puts a pixel's centre; the place is moved half a pixel south-east instead, which reads
+        /// the same pixels on their own centres (and across a tile's south and east edges, its neighbours' first row and
+        /// column, whose cells lie on those edges).
+        /// </summary>
+        void OnGrid(ref double lat, ref double lon)
+        {
+            if (Version < 2) return;
+            // half of the tile's own pixel (the mask's cell: 1200 rows, GLO-90's columns at that latitude)
+            double h = DemTiles.Glo90Rows, w = DemTiles.Glo90Cols((int)Math.Floor(lat));
+            if (State(lat, lon, out int t, out _, out _) == HasFlow) { var tile = tiles.Get(t); h = tile.H; w = tile.W; }
+            lat -= 0.5 / h;
+            lon += 0.5 / w;
+        }
 
         byte State(double lat, double lon, out int t, out int lat0, out int lon0)
         {
@@ -158,6 +198,7 @@ namespace EarthMap.Core
         public bool At(double lat, double lon, bool acrossTiles, out double east, out double north)
         {
             east = north = 0;
+            OnGrid(ref lat, ref lon);
             byte st = State(lat, lon, out int t, out int lat0, out int lon0);
             if (st == NoData) return false;
             if (st == NoFlow) return true;

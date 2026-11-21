@@ -1,0 +1,27 @@
+Guiana shield|2|7|-62|-53|crystalline
+Arabian-Nubian shield (Hijaz)|18|27|38|44|crystalline
+Ukrainian shield|47|50|28|35|crystalline (thin cover)
+Tanzania craton|-6|-2|32|36|crystalline
+Zimbabwe craton|-21|-17|28|32|crystalline+greenstone
+Superior craton (Ontario)|48|52|-92|-80|crystalline
+Slave craton|62|66|-115|-108|crystalline
+Yilgarn craton|-32|-26|116|123|crystalline (regolith)
+Gawler craton|-33|-29|133|137|crystalline (cover)
+Aravalli/Bundelkhand|24|26|78|81|crystalline
+Sino-Korean (Shanxi)|37|41|111|115|mixed
+Urals (main)|52|62|57|61|ophiolite/metamorphic
+Oman mountains|22.5|24.5|56|59|ophiolite+carbonate
+Troodos|34.6|35.2|32.4|33.4|ophiolite
+Philippines (Zambales-Luzon)|14.5|17|119.8|121|ophiolite/arc
+New Caledonia|-22.7|-20|164|167.2|peridotite nappe
+Kamchatka|51|60|155|163|volcanic
+Andes central (Bolivia/Peru)|-20|-14|-71|-66|volcanic/sedimentary
+Japan Honshu|34|41|132|142|arc volcanic/granite
+Iceland|63.3|66.5|-24|-13.5|basalt
+Ethiopian plateau|7|14|36|40|basalt
+Cornwall|49.9|50.8|-5.8|-4.0|granite+slate
+Brittany|47.5|48.8|-4.8|-1.5|granite+schist
+Scottish Highlands|56|58.5|-6|-3|metamorphic/granite
+Alps (central)|45.8|47|7|11|metamorphic/carbonate
+Sierra Nevada|36|39|-120.5|-118|granite
+Bushveld complex|-26|-24|27|30|mafic/felsic intrusion

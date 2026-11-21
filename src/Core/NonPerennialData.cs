@@ -20,6 +20,8 @@ namespace EarthMap.Core
         /// <summary>The newest rules, which new worlds record (EarthParams.PerennialRules); 0: the rainfall estimate.</summary>
         public const int RulesVersion = 1;
         public const string FileName = "rivers-nonperennial-2.bin";
+        /// <summary>Decision 0092: the same classes matched to courses rules 5's list (tools/bake_nonperennial.py on it).</summary>
+        public const string FileName3 = "rivers-nonperennial-3.bin";
         public const string Magic = "EMNP";
         /// <summary>A reach's class: flowing all year (or no match), its flow stopping 1-29 days a year, 30 days or more.</summary>
         public const byte Perennial = 0, SomeDaysDry = 1, OftenDry = 2;
@@ -39,7 +41,7 @@ namespace EarthMap.Core
         {
             EarthBinary.Expect(file, Magic, 20, FileName);
             int version = BitConverter.ToInt32(file, 4);
-            if (version != 2) throw new InvalidOperationException($"{FileName}: version {version}, this build reads 2");
+            if (version != 2 && version != 3) throw new InvalidOperationException($"{FileName}: version {version}, this build reads 2 and 3");
             ulong key = BitConverter.ToUInt64(file, 8);
             int n = BitConverter.ToInt32(file, 16);
             if (n < 0) throw new InvalidOperationException($"{FileName}: {n} reaches");

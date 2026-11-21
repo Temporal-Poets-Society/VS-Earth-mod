@@ -264,6 +264,37 @@ var sw=Stopwatch.StartNew();
 Parallel.For(0,100000,i=>{if(!RegionalFaunaCatalog.Allows(rhino,kenya,true))throw new Exception("Unsafe concurrent lookup");});
 Console.WriteLine($"100,000 parallel rule checks {sw.ElapsedMilliseconds} ms; {all.Rules.Count} taxa, {all.Rules.Count(r=>r.Quarantined)} held, {all.Rules.Count(r=>r.Extinct&&!r.Quarantined)} enabled extinct.");
 
+// ---------------------------------------------------------------- EA-0178: water creatures' height band below their water's surface
+{
+    const int sea=110, height=384;
+    // vanilla's bands: freshwater fish, catfish, perch and trout, coelacanths, groupers, river dolphins (Iniidae), sea turtles
+    var bands=new (float min,float max)[]{(.8f,1f),(.7f,.9f),(.9f,1f),(.3f,.6f),(.8f,.95f),(.1f,.99f),(.5f,.98f)};
+    bool same=true;
+    foreach(var (min,max) in bands) for(int y=1;y<sea;y++)
+    {
+        double rel=WaterDepthBand.RelativeY(y,sea,height);
+        same&=WaterDepthBand.Allows(min,max,y,sea,sea,height)==(min<=rel && rel<=max);
+    }
+    Check(same,"water at sea level (vanilla's seas and lakes: first block above the water = sea level) gets exactly vanilla's height test");
+    Check(Math.Abs(WaterDepthBand.RelativeY(sea+10,sea,height)-(1+10.0/(height-sea)))<1e-12 && WaterDepthBand.RelativeY(55,sea,height)==.5,
+        "vanilla's relative height: y/sea at or below the sea, 1 + share of the sky above it");
+    // a lake whose surface is 20 blocks above the sea (Lake Pielinen at 1:100): vanilla's own test leaves it no fish at all
+    int lake=sea+20;
+    Check(WaterDepthBand.RelativeY(lake-1,sea,height)>1 && WaterDepthBand.Allows(.8f,1f,lake-1,lake,sea,height),
+        "a freshwater fish just under a lake's surface above the sea: refused by vanilla's test, kept by its depth");
+    bool sameDepths=true;
+    foreach(var (min,max) in bands) for(int d=1;d<lake;d++)
+        sameDepths&=WaterDepthBand.Allows(min,max,lake-d,lake,sea,height)==WaterDepthBand.Allows(min,max,sea-d,sea,sea,height);
+    Check(sameDepths,"a lake above the sea has the sea's depth bands, block for block");
+    Check(WaterDepthBand.Allows(.8f,1f,lake-21,lake,sea,height) && !WaterDepthBand.Allows(.8f,1f,lake-23,lake,sea,height),
+        "the freshwater band ends about 22 blocks below the lake's surface, as below the sea's (0.8 of 110 = 88; vanilla's 0.8f is a hair above)");
+    Check(!WaterDepthBand.Allows(.7f,.9f,lake-5,lake,sea,height) && WaterDepthBand.Allows(.7f,.9f,lake-15,lake,sea,height),
+        "catfish (0.7..0.9) keep to a lake's deep water: not 5 below its surface, yes 15 below");
+    // water below sea level (the Caspian): measured from its own surface too
+    Check(WaterDepthBand.Allows(.8f,1f,sea-5,sea-4,sea,height) && !WaterDepthBand.Allows(.8f,1f,sea-30,sea-4,sea,height),
+        "water whose surface is below the sea: a fish 1 below it kept, 26 below refused");
+}
+
 // ---------------------------------------------------------------- real terrain (the user's world layout)
 if(terrain)
 {

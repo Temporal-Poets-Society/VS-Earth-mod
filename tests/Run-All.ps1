@@ -76,11 +76,13 @@ $table = @(
     @{ P = 'RiverWaterTests';         A = @('{root}');                 N = @();        M = 0.1 }
     @{ P = 'SavedWorldDigestTests';   A = @('{root}');                 N = @('game');  M = 1.0 }
     @{ P = 'SeasonDataTests';         A = @('{root}');                 N = @();        M = 0.1 }
+    @{ P = 'SweepMemoryTests';        A = @('{root}');                 N = @('game');  M = 3.5; Slow = $true }
     @{ P = 'ServerToolsTests';        A = @();                         N = @();        M = 0.2 }
     @{ P = 'SiteDriversTests';        A = @();                         N = @();        M = 0.1 }
     @{ P = 'SkyLongitudeTests';       A = @('{root}');                 N = @('game');  M = 0.1 }
     @{ P = 'SoilTests';               A = @('{root}');                 N = @();        M = 0.1 }
     @{ P = 'SpawnDistributionTests';  A = @('{root}');                 N = @();        M = 12.5; Slow = $true }
+    @{ P = 'StreamsTests';            A = @('{root}');                 N = @('game');  M = 0.1 }
     @{ P = 'TerrainExpansionTests';   A = @('{root}');                 N = @();        M = 0.3 }
     @{ P = 'TerrainRulesTests';       A = @();                         N = @();        M = 0.1 }
     @{ P = 'VerticalProfileTests';    A = @('{root}');                 N = @();        M = 0.1 }
@@ -91,8 +93,9 @@ $table = @(
     @{ P = 'WetlandTests';            A = @('{root}');                 N = @();        M = 0.1 }
     @{ P = 'ZoneTests';               A = @('{root}');                 N = @();        M = 0.2 }
 )
-# folders under tests\ that are not test projects of their own
-$notProjects = @('fixtures', 'out', 'RawElevationSurvey', 'RequiredModsServerProbe', 'Earth.Core.Tests.Common')
+# folders under tests\ that are not test projects of their own (DataReleaseCheck asks the data releases over the network,
+# EA-0191: run by hand before a release, Earth's AGENTS.md)
+$notProjects = @('fixtures', 'out', 'RawElevationSurvey', 'RequiredModsServerProbe', 'TerrainHandlerProbe', 'Earth.Core.Tests.Common', 'DataReleaseCheck')
 
 $listed = $table | ForEach-Object { $_.P }
 $folders = Get-ChildItem (Join-Path $root 'tests') -Directory | Where-Object { Test-Path (Join-Path $_.FullName "$($_.Name).csproj") } | ForEach-Object Name

@@ -13,6 +13,21 @@ namespace EarthMap.Core
         /// <summary>How long /earth tp waits for a square's tile before it gives up and says so.</summary>
         public static readonly TimeSpan Limit = TimeSpan.FromMinutes(2);
 
+        /// <summary>SU-0010: how often a teleport waiting for its land asks for the column again (an autosave drops every request in
+        /// progress; repeats are merged).</summary>
+        public static readonly TimeSpan LandAskEvery = TimeSpan.FromSeconds(5);
+
+        /// <summary>
+        /// SU-0010: the pause after one of Earth's teleports landed through vanilla's blocking load before the next may use it.
+        /// One blocking load took 6-10 s with 30-60 players exploring at 1:10; the autosave tries to pause the chunk thread
+        /// every few seconds and waits 3 s each time, so it gets in between two loads instead of failing until vanilla stops.
+        /// </summary>
+        public static readonly TimeSpan LineGap = TimeSpan.FromSeconds(3);
+
+        /// <summary>SU-0010: when a teleport in vanilla's blocking load hasn't landed after this long, Earth's line goes on without it
+        /// (the longest load seen was 31 s).</summary>
+        public static readonly TimeSpan LineBusyLimit = TimeSpan.FromMinutes(2);
+
         /// <summary>
         /// Once the wait for <paramref name="fetch"/> has ended (the fetch ended, or <paramref name="waited"/> ran out): teleport
         /// when the tile is here, or when the sources answered that they don't have the square (<paramref name="lacks"/>: it

@@ -13,7 +13,7 @@ Earth in memory (1.3 to 1.8 GB more than vanilla), and generates new land about 
 
 ## Installing
 
-Install three mods on the server and on every player's game: Earth 2.1.4, Cylinder World (1.1.0 or newer) and
+Install three mods on the server and on every player's game: Earth 2.2.0, Cylinder World (1.1.0 or newer) and
 Hydrology (0.6.2 or newer). Sea is recommended. Then make a new world with one of the Earth play styles (Earth · 1:100
 is the default). Earth 2.0 is one mod: the data-pack mods of Earth 1.0 (Earth Terrain Data, Earth Water Data) are no
 longer needed. If they are still installed, Earth copies its files from them instead of downloading them again.
@@ -30,16 +30,26 @@ used.
 
 | What | Size | When | Folder |
 |---|---|---|---|
-| Earth's data files (terrain, water, ground, ecology) | 289 MB | the first time the server starts any Earth world, before the first chunk | `data` |
-| Ground sets (soil types, depth to bedrock, permafrost) | 172 MB | only for a world with **Rocks and ground: Ground columns**, before its first chunk | `ground` |
+| Earth's data files (terrain, water, ground, ecology) | 296 MB | the first time the server starts any Earth world, before the first chunk | `data` |
+| Soil map (`global-soilgroup-30s.egts`) | 21 MB | for a new world with Earth soil (**Terrain · Soil**, the default), before its first chunk | `ground` |
+| Rock map (`global-rock-30s-1.egts`) | 45 MB | for a new world with **Rocks and ground: Regional rock regions only**, before its first chunk | `ground` |
+| Ground sets (soil types, depth to bedrock, permafrost; the soil map is one of them) | 172 MB | only for a world with ground columns (experimental, not on the world creation screen), before its first chunk | `ground` |
 | Monthly temperatures (`seasons-1.bin`: each place's months, day-night range and day-to-day spread) | 58.2 MB | the first start of a world made with Earth 2.1.0 or later (or a 2.0 world opted in with `UpgradeExistingWorldSeasons`); without it that session plays with 2.0's temperatures and fetches it at a later start | `data` |
 | Lake outlines, river outlines, river flow, dams | 193 MB | when a new world on GLO-90 heights first starts | `glo90` |
+| Streams (`streams-glo90-1.bin`: every stream from 1 m³/s) | 65 MB | when a new world at 1:25 or finer on GLO-90 heights first starts | `glo90` |
 | GLO-90 land heights | 8.6 GB in all (26,475 squares of 1° × 1°, about 0.3 MB each) | by the world's choice below | `glo90` |
 | The world's model cache | under 1 MB a world | at the world's first start | `cache` |
 
 While the data files download at the first start, their progress shows on the game's loading screen (the "Earth data:"
 lines). The data is shared: a second world, or a later Earth version, uses what is already there. A world made with an
 older version keeps finding the files it was made from, since a changed file always gets a new name.
+
+A new world that can't have a file it needs (the release lacks it, the copy on the computer is an older one, or no
+source is set) stops before it makes anything, with a message naming the file, why, where to put it and how to make the
+world without it where there is a way. Nothing is saved, and the world is made as new once the file is there. See
+[Troubleshooting](Troubleshooting). The soil map and the rock map are the exception: if the release doesn't have one
+(or `GroundRepo` is empty), the new world uses Earth's coarser soil or rock map from its data files instead, for good,
+and says so in the log; any other failure stops the start in the same way.
 
 ## The GLO-90 land heights: four choices
 
@@ -88,15 +98,19 @@ each other. A square that can't be had for another reason (no network, a timeout
 
 | What | Space |
 |---|---|
-| Data files | 289 MB |
-| Ground sets (worlds with ground columns only) | 172 MB |
+| Data files | 296 MB |
+| Soil map (worlds with Earth soil) | 21 MB |
+| Rock map (worlds with regional rock) | 45 MB |
+| Ground sets (worlds with ground columns only; the soil map among them) | 172 MB |
 | Monthly temperatures (worlds made with 2.1.0 or later) | 58.2 MB |
 | GLO-90 land heights, all of them | 8.6 GB |
 | Lake, river and dam files beside them | 193 MB |
+| Streams beside them (worlds at 1:25 and finer) | 65 MB |
 | Free space a download all leaves on that disk | 1 GB (a single square fetched for new land needs 100 MB left free) |
 
-So a computer with full heights needs about **9.2 GB** for Earth's data, 9.4 GB with ground columns, plus the worlds'
-own saves, which grow as players explore (more at finer scales). The Copernicus choice converts square by square and
+So a computer with full heights needs about **9.2 GB** for Earth's data, 9.3 GB with the soil map, the rock map and the
+streams, 9.4 GB with ground columns too, plus the worlds' own saves, which grow as players explore (more at finer
+scales). The Copernicus choice converts square by square and
 keeps only the result: it needs the same 8.6 GB, not 71 GB.
 
 A download all that wouldn't leave 1 GB free on the disk doesn't start, and says so in chat and in the window. A
@@ -122,6 +136,7 @@ start and after generating a 17 × 17-chunk area (Earth 2.0.0 with its default s
 - Memory grows with the chunks players keep loaded, as in vanilla.
 - A world with the monthly temperatures keeps the decoded parts around its players in memory: about 5 MB, a little
   more for each player (at most about 100 MB). Each player's game holds only the land around it.
+- With World Map, a server that has charted the whole world holds about 51 MB more for it.
 - In single player your computer runs the server and the game together: count the game's own memory on top. As a
   rough guide (not measured at every scale), 16 GB of RAM is comfortable at 1:100; take 1:10 and 1:5 only with RAM to
   spare.
@@ -130,8 +145,8 @@ start and after generating a 17 × 17-chunk area (Earth 2.0.0 with its default s
 
 ## Start-up time
 
-- **The first start on a computer** first downloads the 289 MB of data files (and the ground sets, for ground columns)
-  before the world is built: a few seconds to a few minutes, by connection.
+- **The first start on a computer** first downloads the 296 MB of data files (and the soil map, the rock map or the
+  ground sets, for the worlds that use them) before the world is built: a few seconds to a few minutes, by connection.
 - **Building the world's model** of rivers, coasts and straits: well under a minute (29 s at 1:5). The slowest
   parts are cached in `ModData/earth/cache` and read back at the world's later starts. They are used only by exactly
   the same Earth version, data and world settings; the world is the same either way.
@@ -141,7 +156,8 @@ start and after generating a 17 × 17-chunk area (Earth 2.0.0 with its default s
   opened again.
 - **New land while playing:** Earth generates chunks more slowly than vanilla. On the dedicated test server (Earth 2.0.0,
   ground columns) the 289 columns of a 17 × 17-chunk area took 27 s at 1:100 and 28 s at 1:10, against 5 s for vanilla. Flying fast over new
-  land shows the edge of the generated world sooner than in vanilla.
+  land shows the edge of the generated world sooner than in vanilla. When players explore many places at once, Earth
+  keeps more of the land heights it has read in memory, so new land doesn't wait while they are read from disk again.
 
 ## Server settings
 
@@ -151,7 +167,7 @@ writes the file with its defaults at the first start; edit it while the server i
 | Setting | Default | What it does |
 |---|---|---|
 | `DataRepo` | `https://github.com/Temporal-Poets-Society/earth-data/releases/download/ed-v1/` | where the data files come from. A mirror's address or a local folder holding the release's files also works. Empty: never fetched (files already there are still used) |
-| `GroundRepo` | `https://github.com/Temporal-Poets-Society/earth-ground/releases/download/egts-v1/` | where the ground sets come from (for worlds with ground columns). A local folder holding the three `.egts` files also works; empty: never fetched |
+| `GroundRepo` | `https://github.com/Temporal-Poets-Society/earth-ground/releases/download/egts-v1/` | where the soil map (for Earth soil), the rock map (for regional rock) and the ground sets (for ground columns) come from. A local folder holding the release's `.egts` files also works; empty: never fetched |
 | `ElevationRepo` | `https://github.com/Temporal-Poets-Society/earth-glo90/releases/download/egl-v1/` | where the GLO-90 squares come from first: Earth's release, already converted. A local folder holding the release's manifest and parts also works; empty: none |
 | `ElevationSource` | `https://copernicus-dem-90m.s3.amazonaws.com/` | Copernicus's originals: for squares the release can't supply, and for the Copernicus download all. A local folder holding the original `.tif` files also works; empty: none |
 | `ElevationDownloads` | `3` | GLO-90 squares fetched at the same time (1 to 8) |
@@ -165,9 +181,10 @@ A malformed address or path is reported once in the server log, naming the setti
 Download the release files on another computer and either put them in place or point the settings at them:
 - **Data files:** all the files of the `ed-v1` release of `earth-data` into `ModData/earth/data`, or into any folder
   that `DataRepo` names.
-- **Ground sets** (only for ground columns): the three `.egts` files of `egts-v1` of `earth-ground` into
-  `ModData/earth/ground`, or a folder that `GroundRepo` names.
-- **GLO-90 heights, lake, river and dam files:** the whole `egl-v1` release of `earth-glo90` (its manifest and its
+- **Soil map, rock map and ground sets:** the `.egts` files of `egts-v1` of `earth-ground` (the soil map for Earth soil,
+  the rock map for regional rock, the three ground sets only for ground columns) into `ModData/earth/ground`, or a
+  folder that `GroundRepo` names.
+- **GLO-90 heights, lake, river, dam and stream files:** the whole `egl-v1` release of `earth-glo90` (its manifest and its
   parts) into a folder, with `ElevationRepo` set to that folder. Earth then reads the squares from it as if it were
   GitHub.
 

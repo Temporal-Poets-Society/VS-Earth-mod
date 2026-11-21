@@ -1,7 +1,14 @@
 # 0064: Coasts and waters as of 1318 ("works after 1318")
 
-Status: **agreed**; step 1 (the Netherlands), the canals (with 0069) and works rules 3 (EA-0042) and 4 (EA-0053, EA-0057) built, in Earth 2.0.0, new worlds only. Steps 2 and 4 and the rest of step 3 (the drained lakes, the Aral as of 1318, the Bitter Lakes) not built. Date: 2026-11-08. The survey, probe tables
+Status: **agreed**; step 1 (the Netherlands), the canals (with 0069) and works rules 3 (EA-0042) and 4 (EA-0053, EA-0057) built, in Earth 2.0.0, new worlds only. Step 3's lakes (the Valley of Mexico, Fucino, Copais, the Fens' meres and others, the Aral at 29 m, the Salton Sea dry) built on `claude/lakes-1318` for 2.2 as works rules 6 and river ends rules 3 ([0107](0107-lakes-of-1318.md)); the Bitter Lakes dry since channel rules 1. Steps 2 and 4, and the rest of step 3's list, not built. Date: 2026-11-08. The survey, probe tables
 and sources are in [the research note](../research/coasts-1318-2026-11-08.md).
+
+**The ledger** ([`docs/works-1318-ledger.md`](../works-1318-ledger.md); the author, 21 November 2026: "if we do
+modifications to data to change any manmade then we should have some ledger listing changes and how"): every change
+Earth makes to its data to undo a human work, and every human work it leaves on purpose, with the work and its date, what
+Earth does, the source and licence, the confidence, the rules that turn it on and the decision. Written by
+`tools/works_ledger.py` from its entries and the shipped files; `tests/DataReadersTests` checks its facts against the
+data and the code. A new change of this kind comes with its ledger entry in the same commit.
 
 ## What the author asked
 

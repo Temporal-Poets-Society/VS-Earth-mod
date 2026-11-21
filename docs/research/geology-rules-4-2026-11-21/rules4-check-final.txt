@@ -1,0 +1,33 @@
+809 carbonate-hosted places: carbonate beds in the profile, rules 3   43 % -> rules 4   61 %; carbonate top bed   19 % ->   30 %
+  Africa     n=  77  any   23 % ->   26 %   top   21 % ->   22 %
+  Americas   n= 340  any   46 % ->   66 %   top   14 % ->   26 %
+  Asia       n= 184  any   45 % ->   64 %   top   17 % ->   33 %
+  Australia  n=  51  any   18 % ->   75 %   top    4 % ->   20 %
+  Europe     n= 157  any   52 % ->   59 %   top   32 % ->   43 %
+
+Districts: rules 3 profile -> rules 4 code (bedrock under cover) profile
+  Mednorudyansk, Urals (skarn copper in limestone/marble) metamorphic            -> scshvr carbonate-shaly
+  Tsumeb, Namibia (dolomite)                              carbonate              -> mt____ metamorphic
+  Burra, South Australia (dolomite)                       basin-fill             -> smmx__ mixed-sedimentary
+  Bisbee, Arizona (limestone)                             siliciclastic          -> ssmx__>scmx__ / scmx__ carbonate
+  Kitwe, Zambian Copperbelt (dolomitic shale)             metamorphic            -> mt____ metamorphic
+  Kolwezi, Katanga (dolomite)                             basin-fill             -> mt____ metamorphic
+  Chuquicamata, Chile (porphyry)                          basin-fill             -> pa__vr felsic-plutonic
+  Carrara, Italy (marble)                                 carbonate              -> scssch>scpu__ / scpu__ carbonate-pure
+  Mount Isa, Queensland (dolomitic shale)                 felsic-plutonic        -> smmx__ mixed-sedimentary
+  Broken Hill, NSW (gneiss)                               metamorphic            -> mtam__ mafic-metamorphic
+  Kiruna, Sweden (volcanics, iron ore)                    mafic-volcanic         -> va____>va____ / va____ felsic-volcanic
+  Hamersley, Pilbara (banded iron)                        basin-fill             -> sumx__>sumx__ / ssmxfe iron-formation
+  Witwatersrand, Johannesburg (conglomerate, quartzite)   siliciclastic          -> mt__sr metamorphic
+  Kalgoorlie (greenstone)                                 evaporitic             -> sumx__>sumx__ / pb____ mafic-plutonic
+  Dartmoor (granite)                                      siliciclastic          -> pa____ felsic-plutonic
+  Peak District, Derbyshire (limestone)                   carbonate              -> scmx__>scss__ / scss__ carbonate-sandy
+  Pine Point, NWT (dolomite, MVT)                         mixed-sedimentary      -> smmxmt>scpu__ / scpu__ carbonate-pure
+  Viburnum Trend, Missouri (dolomite, MVT)                carbonate              -> scpuch>smmx__ / smmx__ mixed-sedimentary
+  Silesia, Olkusz (dolomite, MVT)                         basin-fill             -> sumx__>sumx__ / sssh__ siliciclastic-fine
+  Ruhr (coal measures)                                    carbonate              -> smmx__>sumx__ / smmx__ mixed-sedimentary
+  Donbas (coal measures)                                  mixed-sedimentary      -> smmxcl coal-measures
+  Stassfurt (salt)                                        basin-fill             -> suss__>sumx__ / ssss__ siliciclastic-coarse
+  Sudbury (layered intrusion)                             felsic-plutonic        -> ssmx__>ssmx__ / ssmx__ siliciclastic
+  Kyiv                                                    mixed-sedimentary      -> ssmx__ siliciclastic
+  Riga                                                    mixed-sedimentary      -> smmx__ mixed-sedimentary

@@ -14,12 +14,15 @@ static class SummitChecks
             Serializer.Serialize(stream, p); stream.Position = 0;
             return Serializer.Deserialize<EarthParams>(stream);
         }
+        // (EA-0204, decision 0039) off the Earth tab from 2.2.0-rc.13: no attribute, and no play style sets it, so a new world from
+        // the menu takes 3000 m; a world config's value still works (servers, tests)
         using var menu = JsonDocument.Parse(File.ReadAllText(Path.Combine(root, "worldconfig.json")));
-        var option = menu.RootElement.GetProperty("worldConfigAttributes").EnumerateArray()
-            .Single(a => a.GetProperty("code").GetString() == EarthWorldOptions.SummitKey);
+        check(!menu.RootElement.GetProperty("worldConfigAttributes").EnumerateArray().Any(a => a.GetProperty("code").GetString() == EarthWorldOptions.SummitKey)
+            && !menu.RootElement.GetProperty("playStyles").EnumerateArray().Any(st => st.GetProperty("worldConfig").TryGetProperty(EarthWorldOptions.SummitKey, out _)),
+            "Summit height correction is off the world creation screen and no play style sets it (EA-0204)");
+        check(ParamsBuilderChecks.NewParams(new TreeAttribute(), new EarthMapConfig()).SummitMinElevation == EarthWorldOptions.DefaultSummitMinElevation
+            && EarthWorldOptions.DefaultSummitMinElevation == 3000, "A new world without the key corrects summits from 3000 m, as the menu's default did");
         string[] choices = { "off", "1000", "2000", "3000", "4000", "5000", "6000", "7000", "8000" };
-        check(option.GetProperty("values").EnumerateArray().Select(v => v.GetString()).SequenceEqual(choices), "Summit menu: Off then 1 km steps");
-        check(option.GetProperty("default").GetString() == "3000", "Summit menu defaults to 3000 m");
         foreach (string choice in choices)
         {
             var wc = new TreeAttribute(); wc.SetString(EarthWorldOptions.SummitKey, choice);

@@ -1,0 +1,90 @@
+Top block of land columns (share of land columns; other kinds such as crops, loose stones and plants left out):
+
+poltava:
+  audit-100-realistic    black earth 98%
+  audit-100-vanilla      high 98%
+  audit-10-realistic     black earth 92%, gravel 5%
+  audit-10-vanilla       high 92%, gravel 5%
+
+zemgale-bauska:
+  audit-100-realistic    medium 62%, low 4%, forest floor 26%, gravel 4%
+                         under the forest floor: soil-medium-none 93%, soil-low-none 5%, soil-verylow-none 2%, air 0%
+                         forest floor drops (first 31): soil-medium-none (on soil-medium-none) x10, soil-verylow-none (on soil-verylow-none) x10, soil-low-none (on soil-low-none) x10, soil-low-none (on air) x1
+  audit-100-vanilla      medium 62%, low 4%, forest floor 26%, gravel 4%
+                         under the forest floor: soil-medium-none 93%, soil-low-none 7%, air 0%
+                         forest floor drops (first 21): soil-medium-none (on soil-medium-none) x10, soil-low-none (on soil-low-none) x10, soil-low-none (on air) x1
+  audit-10-realistic     medium 92%, sand 4%
+  audit-10-vanilla       medium 92%, sand 4%
+
+goettingen:
+  audit-100-realistic    medium 45%, forest floor 49%, gravel 3%
+                         under the forest floor: soil-medium-none 92%, peat-none 7%, rawclay-red-none 2%
+                         forest floor drops (first 30): soil-medium-none (on soil-medium-none) x10, soil-verylow-none (on peat-none) x10, soil-low-none (on rawclay-red-none) x10
+  audit-100-vanilla      medium 45%, forest floor 49%, gravel 3%
+                         under the forest floor: soil-medium-none 92%, peat-none 7%, rawclay-red-none 2%
+                         forest floor drops (first 30): soil-medium-none (on soil-medium-none) x10, soil-verylow-none (on peat-none) x10, soil-low-none (on rawclay-red-none) x10
+  audit-10-realistic     medium 90%, rock 2%
+                         under the forest floor: soil-medium-none 96%, air 4%
+                         forest floor drops (first 12): soil-medium-none (on soil-medium-none) x10, soil-low-none (on air) x2
+  audit-10-vanilla       medium 90%, rock 2%
+                         under the forest floor: soil-medium-none 96%, air 4%
+                         forest floor drops (first 12): soil-medium-none (on soil-medium-none) x10, soil-low-none (on air) x2
+
+finland-jyvaskyla:
+  audit-100-realistic    medium 11%, barren 70%, forest floor 12%, sand 5%
+                         under the forest floor: soil-verylow-none 99%, air 1%, soil-medium-none 0%
+                         forest floor drops (first 21): soil-verylow-none (on soil-verylow-none) x10, soil-low-none (on air) x8, soil-medium-none (on soil-medium-none) x3
+  audit-100-vanilla      medium 11%, low 70%, forest floor 12%, sand 5%
+                         under the forest floor: soil-low-none 99%, air 1%, soil-medium-none 0%
+                         forest floor drops (first 21): soil-low-none (on soil-low-none) x10, soil-low-none (on air) x8, soil-medium-none (on soil-medium-none) x3
+  audit-10-realistic     barren 99%
+  audit-10-vanilla       low 99%
+
+amazon-manaus:
+  audit-100-realistic    forest floor 53%
+                         under the forest floor: soil-low-none 99%, soil-medium-none 1%, air 0%
+                         forest floor drops (first 22): soil-low-none (on soil-low-none) x10, soil-medium-none (on soil-medium-none) x10, soil-low-none (on air) x2
+  audit-100-vanilla      forest floor 53%
+                         under the forest floor: soil-low-none 99%, soil-medium-none 1%, air 0%
+                         forest floor drops (first 21): soil-low-none (on soil-low-none) x10, soil-medium-none (on soil-medium-none) x10, soil-low-none (on air) x1
+  audit-10-realistic     low 12%, forest floor 50%
+                         under the forest floor: soil-low-none 100%
+                         forest floor drops (first 10): soil-low-none (on soil-low-none) x10
+  audit-10-vanilla       low 10%, forest floor 52%
+                         under the forest floor: soil-low-none 100%
+                         forest floor drops (first 10): soil-low-none (on soil-low-none) x10
+
+nile-luxor-valley:
+  audit-100-realistic    high 21%, medium 59%, barren 11%, sand 6%
+  audit-100-vanilla      high 21%, medium 59%, low 11%, sand 6%
+  audit-10-realistic     high 18%, medium 77%, barren 2%
+  audit-10-vanilla       high 18%, medium 77%, low 2%
+
+nile-luxor-desert:
+  audit-100-realistic    barren 12%, sand 86%
+  audit-100-vanilla      low 12%, sand 86%
+  audit-10-realistic     sand 96%, rock 2%
+  audit-10-vanilla       sand 96%, rock 2%
+
+baghdad:
+  audit-100-realistic    high 86%
+  audit-100-vanilla      high 86%
+  audit-10-realistic     high 98%
+  audit-10-vanilla       high 98%
+
+sahara:
+  audit-100-realistic    sand 98%
+  audit-100-vanilla      sand 98%
+  audit-10-realistic     sand 98%
+  audit-10-vanilla       sand 98%
+
+alps-2700m:
+  audit-100-realistic    barren 71%, gravel 15%, rock 7%, snow/ice 6%
+  audit-100-vanilla      low 11%, barren 60%, gravel 15%, rock 7%, snow/ice 6%
+  audit-10-realistic     barren 55%, gravel 29%, rock 14%
+  audit-10-vanilla       barren 55%, gravel 29%, rock 14%
+
+digest 1:10: missing (False, False)
+digest 1:25: missing (False, False)
+
+digest 1:10 and 1:25 climate only against rc.11: identical (rounds 1 and 2; see README)

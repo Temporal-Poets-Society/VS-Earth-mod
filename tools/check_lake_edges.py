@@ -58,7 +58,7 @@ def inter(u, v):
 
 def check(path):
     b = open(path, "rb").read()
-    assert b[:4] == b"EMLO"
+    assert b[:4] in (b"EMLO", b"EMRO")   # (EA-0148: river outlines have the same layout)
     version, unit, tile_deg, tx, ty = struct.unpack_from("<5i", b, 4)
     states = b[24:24 + tx * ty]
     off = 24 + tx * ty

@@ -40,7 +40,7 @@ namespace EarthMap
                 if (flow != null)
                     Mod.Logger.Notification(p.FlowReroutes >= 0
                         ? "Earth rivers: the flow of the water mask's rivers from {0} (decision 0069); {1} mouth reaches rerouted through their own water."
-                        : "Earth rivers: {0} was solved on another course list; its flow is used, its rerouted mouths are not.", RiverFlowData.FileName, p.FlowReroutes);
+                        : "Earth rivers: {0} was solved on another course list; its flow is used, its rerouted mouths are not.", RiverFlowData.FileNameFor(p.FlowRules), p.FlowReroutes);
             }
             catch (Exception e) when (DataProblem(e) is Exception data)
             {
@@ -110,6 +110,8 @@ namespace EarthMap
             copy.GroundData = 0;
             copy.CreatedWith = copy.LastSavedWith = null;
             copy.DepositSet = 0;
+            copy.DepositDepthRules = 0;
+            copy.VanillaStrataRules = 0;
             using var ms = new MemoryStream();
             using (var w = new BinaryWriter(ms))
             {

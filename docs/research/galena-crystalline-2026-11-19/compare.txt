@@ -1,0 +1,72 @@
+
+=== 1:10 regional rock, vanilla ores: main -> galena in crystalline rock
+kongsberg    granite 76%, gneiss 21%
+             galena 0.0 > 31.2; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 5.0 > 5.0
+freiberg     granite 58%, schist 22%, gneiss 20%
+             galena 0.0 > 0.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 22.2 > 22.2
+brokenhill   granite 57%, schist 23%, gneiss 20%
+             galena 0.0 > 56.3; silver 0.0 > 0.0; loose galena 0.0 > 0.1; zinc 0.0 > 0.0
+sala         gneiss 53%, granite 43%, kimberlite 4%
+             galena 0.0 > 21.7; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 35.5 > 35.5
+harz         granite 42%, shale 26%, sandstone 14%, limestone 11%, claystone 6%
+             galena 0.0 > 0.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 38.1 > 38.1
+pribram      granite 68%, sandstone 11%, shale 9%, slate 6%
+             galena 0.0 > 0.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 10.9 > 10.9
+linares      granite 63%, bauxite 31%
+             galena 4.1 > 29.9; silver 0.0 > 0.0; loose galena 0.1 > 0.1; zinc 25.6 > 25.6
+dartmoor     granite 57%, gneiss 43%
+             galena 0.0 > 0.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 11.8 > 11.8
+coeurdalene  granite 90%, slate 5%
+             galena 0.0 > 13.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 4.1 > 4.1
+riga         gneiss 47%, sandstone 21%, dolostone 13%, limestone 9%, claystone 8%
+             galena 0.0 > 0.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 45.2 > 45.2
+vienna       granite 65%, sandstone 14%, shale 10%, slate 8%
+             galena 0.0 > 0.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 118.2 > 118.2
+
+=== 1:100 regional rock, vanilla ores: main -> galena in crystalline rock
+kongsberg    granite 63%, gneiss 19%, schist 17%
+             galena 0.0 > 9.8; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 156.6 > 155.8
+freiberg     granite 64%, gneiss 19%, bauxite 12%, schist 6%
+             galena 0.0 > 90.8; silver 0.0 > 0.2; loose galena 0.0 > 0.1; zinc 14.2 > 14.2
+brokenhill   granite 71%, sandstone 8%, bauxite 8%, claystone 5%, gneiss 4%
+             galena 0.0 > 0.4; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 62.3 > 62.3
+sala         gneiss 62%, granite 38%
+             galena 0.0 > 127.3; silver 0.0 > 0.1; loose galena 0.0 > 0.1; zinc 82.6 > 82.6
+harz         granite 52%, shale 22%, sandstone 11%, limestone 9%, claystone 5%
+             galena 27.5 > 48.8; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 0.0 > 0.0
+pribram      granite 52%, sandstone 26%, shale 11%, slate 7%
+             galena 0.0 > 0.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 0.0 > 0.0
+linares      granite 67%, sandstone 11%, limestone 9%, shale 7%, claystone 5%
+             galena 5.4 > 19.8; silver 0.1 > 0.1; loose galena 0.0 > 0.0; zinc 0.0 > 0.0
+dartmoor     granite 52%, gneiss 38%, sandstone 7%
+             galena 0.0 > 0.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 23.8 > 23.8
+coeurdalene  granite 68%, sandstone 15%, shale 7%, slate 6%
+             galena 108.6 > 351.1; silver 0.0 > 0.0; loose galena 0.4 > 0.4; zinc 2.0 > 2.0
+riga         gneiss 41%, sandstone 22%, dolostone 18%, limestone 10%, claystone 9%
+             galena 330.1 > 550.1; silver 0.0 > 0.0; loose galena 0.4 > 0.4; zinc 9.9 > 9.9
+vienna       granite 74%, sandstone 11%, slate 6%, shale 5%
+             galena 0.4 > 10.1; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 0.0 > 0.0
+
+=== 1:100 vanilla rock (must not change), vanilla ores: main -> galena in crystalline rock
+kongsberg    granite 57%, peridotite 43%
+             galena 0.0 > 0.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 156.6 > 156.6
+freiberg     peridotite 53%, claystone 27%, granite 11%, bauxite 8%
+             galena 41.1 > 41.1; silver 0.1 > 0.1; loose galena 0.1 > 0.1; zinc 15.6 > 15.6
+brokenhill   granite 73%, andesite 23%, bauxite 4%
+             galena 0.0 > 0.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 62.3 > 62.3
+sala         granite 49%, chert 36%, slate 12%
+             galena 45.0 > 45.0; silver 0.1 > 0.1; loose galena 0.1 > 0.1; zinc 80.5 > 80.5
+harz         andesite 82%, slate 9%, claystone 6%
+             galena 4.7 > 4.7; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 0.0 > 0.0
+pribram      andesite 35%, peridotite 33%, sandstone 26%, granite 5%
+             galena 0.0 > 0.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 0.0 > 0.0
+linares      peridotite 84%, granite 16%
+             galena 0.0 > 0.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 0.0 > 0.0
+dartmoor     granite 69%, peridotite 31%
+             galena 0.0 > 0.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 23.8 > 23.8
+coeurdalene  andesite 81%, granite 19%
+             galena 0.0 > 0.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 2.0 > 2.0
+riga         granite 90%, phyllite 9%
+             galena 11.3 > 11.3; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 9.9 > 9.9
+vienna       peridotite 80%, granite 11%, slate 7%
+             galena 0.0 > 0.0; silver 0.0 > 0.0; loose galena 0.0 > 0.0; zinc 0.0 > 0.0

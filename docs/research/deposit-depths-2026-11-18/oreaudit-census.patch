@@ -1,0 +1,47 @@
+--- "docs/research/ore-ingame-validation-2026-10-15/oreaudit/src/OreAudit.cs"	2026-11-18 19:34:45.819927100 +0200
++++ src/OreAudit.cs	2026-11-18 20:06:42.924215700 +0200
+@@ -34,7 +34,7 @@
+         bool[] looseById;
+         bool[] solidRock;
+         static readonly HashSet<string> Grades = new() { "poor", "medium", "rich", "bountiful", "low", "high", "*" };
+-        static readonly int[] Bins = { 0, 5, 10, 20, 40, 80, 160, 100000 };
++        static readonly int[] Bins = { 0, 5, 10, 20, 40, 80, 160, 320, 640, 100000 };
+         object earthCore, earthOres, earthSession, geometry, catalog;
+         bool selfTestDone;
+ 
+@@ -186,7 +186,8 @@
+         {
+             int H = api.WorldManager.MapSizeY, sea = api.World.SeaLevel;
+             var fams = new Dictionary<string, Fam>();
+-            long columns = 0, landCols = 0, seaCols = 0, sumTop = 0, rock = 0, missing = 0, sumTopLand = 0;
++            var rocks = new Dictionary<string, long>(); // rock in the top 120 blocks of land columns (census of host rock within reach)
++            long columns = 0, landCols = 0, seaCols = 0, sumTop = 0, rock = 0, missing = 0, sumTopLand = 0; int minTop = int.MaxValue, maxTop = int.MinValue;
+             for (int cx = cx0; cx <= cx1; cx++)
+                 for (int cz = cz0; cz <= cz1; cz++)
+                 {
+@@ -199,7 +200,7 @@
+                         for (int lx = 0; lx < 32; lx++)
+                         {
+                             int top = Math.Min(H - 1, (int)mc.WorldGenTerrainHeightMap[lz * 32 + lx]);
+-                            columns++; sumTop += top;
++                            columns++; sumTop += top; minTop = Math.Min(minTop, top); maxTop = Math.Max(maxTop, top);
+                             // water over the terrain surface = sea/lake column
+                             int ti = (((top + 1) % 32) * 32 + lz) * 32 + lx;
+                             bool wet = top + 1 < H && chunks[(top + 1) / 32].Data.GetFluid(ti) != 0;
+@@ -211,6 +212,7 @@
+                                 int id = d.GetBlockIdUnsafe(idx);
+                                 if (id <= 0 || id >= famById.Length) continue;
+                                 if (y <= top && solidRock[id]) rock++;
++                                if (!wet && y <= top && top - y < 120) { var bc = api.World.Blocks[id]?.Code; if (bc != null && bc.Path.StartsWith("rock-")) { string rk = bc.Path.Substring(5); rocks[rk] = rocks.TryGetValue(rk, out long rv) ? rv + 1 : 1; } }
+                                 string f = famById[id];
+                                 if (f == null) continue;
+                                 if (!fams.TryGetValue(f, out var a)) fams[f] = a = new Fam();
+@@ -289,7 +291,7 @@
+             catch (Exception e) { Mod.Logger.Error("OREAUDIT propick {0}: {1}", s.Name, e); }
+             Append(new
+             {
+-                site = s.Name, kind = s.Kind, lat, lon, x, z, r = s.Radius, secs, loaded, total, missing, columns, landCols, seaCols, sumTop, sumTopLand, rock,
++                rocks = rocks.OrderByDescending(r => r.Value).Take(8).ToDictionary(r => r.Key, r => r.Value), site = s.Name, kind = s.Kind, lat, lon, x, z, r = s.Radius, secs, loaded, total, missing, columns, landCols, seaCols, sumTop, sumTopLand, rock, minTop, maxTop, seaLevel = sea, height = H,
+                 families = fams.OrderBy(p => p.Key).ToDictionary(p => p.Key, p => new { p.Value.n, p.Value.land, p.Value.sea, p.Value.above, p.Value.exposed, p.Value.inFluid, p.Value.depth, minY = p.Value.n > 0 ? p.Value.minY : -1, maxY = p.Value.n > 0 ? p.Value.maxY : -1, meanDepth = p.Value.n > 0 ? p.Value.sumDepth / (double)p.Value.n : -1 }),
+                 factors, earthRatio, evidence, propick
+             });

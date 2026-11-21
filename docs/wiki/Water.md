@@ -69,9 +69,10 @@ others, and salty in some.
 
 - **With Rocks and ground set to Vanilla** (the default) or **Biomes set to Vanilla**, HoD works exactly as it does
   without Earth, with its own aquifers.
-- **With Earth's own rocks and ground** (Ground columns or Regional, and Earth biomes), Earth gives HoD its aquifers from
-  a real water table: the ground water lies close under the surface near rivers, lakes and wetlands, and deeper under
-  hills and in dry land. How much water a place holds comes from the real ground there: sand, gravel, karst and
+- **With Earth's own rocks and ground** (Regional, or ground columns in a world that has them, and Earth biomes), Earth
+  gives HoD its aquifers from a real water table: the ground water lies close under the surface near rivers, lakes and
+  wetlands, and deeper under hills and in dry land. How much water a place holds comes from the real ground there:
+  sand, gravel, karst and
   fractured rock hold a lot, clay and unbroken granite little. Water is salty under salt flats and salt lakes, under the sea floor and near
   the coast below the fresh water, and everywhere deeper than about 500 m.
 - This needs a HoD that uses aquifer data version 2 (2.5.8 does); with another, HoD makes its own aquifers and the log

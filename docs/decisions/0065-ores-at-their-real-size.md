@@ -54,8 +54,8 @@ deposit at its true place as an ore body of its true size at the world's scale. 
 ### 3. Quality from the real grade
 
 Graded ores (poor, medium, rich, bountiful) take their tier from the deposit's real grade through per-resource grade
-bands in the catalogue (for example copper: medium from 0.6 % Cu, rich from 1.5 %, bountiful from 4 %), with spread
-inside the body. Ungraded ores ignore the grade. Background deposits keep the heat-driven quality of 0006.
+bands in the catalogue (for example copper as built: medium from 0.4 % Cu, rich from 1.2 %, bountiful from 3.0 %; this
+text first said 0.6, 1.5 and 4 %, corrected 18 November 2026 from `base-metals.json`), with spread inside the body. Ungraded ores ignore the grade. Background deposits keep the heat-driven quality of 0006.
 
 ### 4. In their layer
 
@@ -303,3 +303,18 @@ Iss and Tura stays short because the ground data has little alluvium there. That
 the ore code. `OreDepositsTests` checks the search with a made-up valley: it moves 8 km, places 371 of 393 only in the
 alluvium, and repeats. With no search (v4) it places nothing; a footprint that has its layer stays; with no layer in
 reach it does not move.
+
+### Audit of 18 November 2026
+
+The [rocks, ground and ores audit](../research/rocks-ground-ores-audit-2026-11-18.md) found the scale formula of
+section 2 right, and two things this decision does not say:
+
+- **"Real volume" holds only for the catalogue.** The known deposits come to about 0.12 copper blocks a chunk on the
+  world average against about 378 from the background at 1:100, so in practice the ore maps are vanilla × 0.35-0.69
+  in host rock plus the known deposits at real size.
+- **The background's amounts do not hold at fine scales and in tall worlds.** Vanilla rounds a fractional attempt up
+  to a whole percent and multiplies attempts by world height / 256, so the 1:10 play style is 3-8 times richer than
+  section 5 intends (EA-0169). Background quality still follows the heat (EA-0171).
+
+A proposal for the next ore model takes both up: [2026-11-18-ores-next-model.md](../proposals/2026-11-18-ores-next-model.md).
+Nothing in this decision changes until that is decided.

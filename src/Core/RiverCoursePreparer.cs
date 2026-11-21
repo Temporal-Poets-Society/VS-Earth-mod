@@ -42,7 +42,12 @@ namespace EarthMap.Core
             int channelRules = options.ChannelRules;
             double landCellBlocks = net.LandCellBlocks;
             int nr = reaches.Count;
-            var keep = SelectReaches(reaches, options.MinQ, net.StreamMode, net.StreamMinQ, options.ContinueDownstream);
+            // (EA-0131: a streams layer's network shows every reach it is given, below the world's smallest stream too)
+            var keep = options.KeepAll ? System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Repeat(true, reaches.Count))
+                : SelectReaches(reaches, options.MinQ, net.StreamMode, net.StreamMinQ, options.ContinueDownstream);
+            // (EA-0179, coarse river rules 2) the head streams above rivers, whatever their discharge
+            if (net.HeadStreams != null)
+                for (int r = 0; r < nr; r++) keep[r] |= net.HeadStreams[r];
             // world positions, levels and lake/sea flags per reach
             var xs = new double[nr][];
             var zs = new double[nr][];
@@ -75,13 +80,18 @@ namespace EarthMap.Core
                 {
                     var w = reaches[r].Width;
                     if (!keep[r] || w == null || w.Length != xs[r].Length) continue;
+                    // (EA-0179) coarse river rules: a stream is one block wide, whatever the mask measured
+                    if (net.OneBlockStreams && reaches[r].Q < net.MinQ) continue;
                     var m = new double[w.Length];
                     bool any = false;
                     double q = reaches[r].Q, perMetre = net.HalfWidth(q) / Math.Max(1, 0.5 * RiverNetwork.RealWidthMetres(q));
+                    // (EA-0159) a world with a river width multiplier: the measure as drawn (RiverNetwork.MeasuredHalfWidth)
+                    bool drawn = net.WidthMultiplier > 0;
                     for (int k = 0; k < w.Length; k++)
                     {
                         if (w[k] == 0 || w[k] == 255) continue;
-                        m[k] = Math.Max(RiverNetwork.MinHalfWidth, w[k] * RiverReach.WidthUnit * perMetre);
+                        m[k] = drawn ? net.MeasuredHalfWidth(q, w[k] * RiverReach.WidthUnit)
+                            : Math.Max(RiverNetwork.MinHalfWidth, w[k] * RiverReach.WidthUnit * perMetre);
                         any = true;
                     }
                     if (any) (mw ??= new double[nr][])[r] = m;

@@ -28,7 +28,8 @@ What the scale means for you:
 - **Distances.** At 1:100, London to Paris is about 4,000 blocks; at 1:10 it's ten times that. Coarse scales make a
   world you can cross; fine scales make every valley and village-sized island real, but a continent is a long journey.
 - **Detail.** The finer the scale, the more of the real land shows: small islands (any island at least 4 blocks wide is
-  there), narrow fjords, small rivers. At 1:25 and finer, Earth also draws small streams down to about 20 m³/s.
+  there), narrow fjords, small rivers. At 1:25 and finer, Earth also draws the streams down to the smallest brooks,
+  1 m³/s (**Terrain · Smallest stream**); at 1:100 and 1:200 the play styles draw rivers only.
 - **Cost.** Finer scales need more disk and memory and take longer to start. See
   [Data and performance](Data-and-performance).
 
@@ -49,8 +50,7 @@ Above sea level, the real height of the land is mapped into the blocks left:
   Everest stands near the top of the world.
 - **Map · Mountain heights** and **Map · World height** on the Earth tab change this. See [Settings](Settings).
 
-Real summits are lifted to their surveyed heights where the height data rounds them off (**Terrain · Summit height
-correction**, peaks of 3,000 m and more by default).
+Real summits of 3,000 m and more are lifted to their surveyed heights where the height data rounds them off.
 
 ## Latitude and the ring
 

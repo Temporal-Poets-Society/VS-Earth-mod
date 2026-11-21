@@ -1,0 +1,16 @@
+[
+ {"Name":"vienna","Kind":"lowland","Lat":48.17,"Lon":16.9,"Radius":2},
+ {"Name":"riga","Kind":"lowland","Lat":56.95,"Lon":24.1,"Radius":2},
+ {"Name":"pannonia","Kind":"lowland","Lat":47.2,"Lon":19.8,"Radius":2},
+ {"Name":"deadsea","Kind":"below-sea","Lat":31.45,"Lon":35.4,"Radius":2},
+ {"Name":"zermatt","Kind":"mountain","Lat":46.02,"Lon":7.75,"Radius":2},
+ {"Name":"addis","Kind":"highland","Lat":9.03,"Lon":38.74,"Radius":2},
+ {"Name":"nairobi","Kind":"highland","Lat":-1.29,"Lon":36.82,"Radius":2},
+ {"Name":"mexico","Kind":"highland","Lat":19.43,"Lon":-99.13,"Radius":2},
+ {"Name":"lapaz","Kind":"highland","Lat":-16.5,"Lon":-68.15,"Radius":2},
+ {"Name":"lhasa","Kind":"highland","Lat":29.65,"Lon":91.1,"Radius":2},
+ {"Name":"tehran","Kind":"highland","Lat":35.69,"Lon":51.39,"Radius":2},
+ {"Name":"johannesburg","Kind":"highland","Lat":-26.2,"Lon":28.05,"Radius":2},
+ {"Name":"brasilia","Kind":"highland","Lat":-15.79,"Lon":-47.88,"Radius":2},
+ {"Name":"atacama","Kind":"highland","Lat":-23.0,"Lon":-69.5,"Radius":2}
+]

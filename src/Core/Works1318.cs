@@ -16,13 +16,29 @@ namespace EarthMap.Core
         /// 2.0.0-rc.10): the sea beside and over a SEA area measures its coast to the land of 1318, not to today's land inside
         /// the area (TerrainModel.CoastDistanceAt): no shallow ridges along Rotterdam's moles in the sea of 1318. 4 (EA-0053,
         /// EA-0057, 2.0.0-rc.11): and the areas file version 3 adds (<see cref="Late"/>): Maasvlakte 2 (2008-2013) is sea, and
-        /// the Corinth, White Sea-Baltic and Ismailia canals, which OpenStreetMap names otherwise, are land.</summary>
-        public const int RulesVersion = 4;
+        /// the Corinth, White Sea-Baltic and Ismailia canals, which OpenStreetMap names otherwise, are land. 6: see
+        /// <see cref="LakeRules"/>.</summary>
+        public const int RulesVersion = 6;
+        /// <summary>Works rules 6 (decision 0107, EA-0124): works-1318-4.bin, rules 5's areas and then the lakes of 1318 people
+        /// drained later (the Valley of Mexico's five, Fucino, Copais, the Aral at its 14th-century low, ...) and water made
+        /// later over land of 1318 (the Salton Sea), from tools/lakes-1318.json; and land beside an inland LAKE area is held
+        /// at its water top as beside the water mask's lakes (TerrainModel.OutlineShore), so a lake of 1318 over ground that
+        /// has sunk since (Mexico City, the Fens) stands in its own shores.</summary>
+        public const int LakeRules = 6;
+        /// <summary>Works rules 5 (decision 0092, EA-0148): rules 4's areas from works-1318-3.bin, whose canals' and late
+        /// areas are the water mask's cells on GLO-90's pixel-is-point grid (as rivers-outline-glo90-5.bin draws that
+        /// water), 4,800 units a degree; the RCE areas are the same.</summary>
+        public const int PointRules = 5;
         /// <summary>The file in the mod (earthdata), version 3: version 2's areas byte for byte and in their order, then works
         /// rules 4's with <see cref="Late"/>. works-1318.bin (versions 1 and 2) is gone: this one serves every world, each
         /// skipping what its rules lack (<see cref="SkipFor"/>). A later bake that moves areas a saved world has needs a new
         /// version and name again.</summary>
         public const string FileName = "works-1318-2.bin";
+        /// <summary>Works rules 5's file (file version 4).</summary>
+        public const string FileName3 = "works-1318-3.bin";
+        /// <summary>Works rules 6's file (file version 5, tools/bake_lakes_1318.py): works-1318-3.bin's areas byte for byte and
+        /// in their order in every tile, then the lakes of 1318 and the LAND of the Salton Sea.</summary>
+        public const string FileName4 = "works-1318-4.bin";
         public const string Magic = "EMWK";
         /// <summary>The area kinds (flags): sea in 1318 over today's land, a lake at its level, land over today's water,
         /// fen at about sea level over today's land below it (not drawn yet).</summary>
@@ -39,8 +55,11 @@ namespace EarthMap.Core
         public static LakeOutlineData Read(byte[] file)
         {
             int v = file != null && file.Length >= 8 ? System.BitConverter.ToInt32(file, 4) : 0;
-            return LakeOutlineData.Read(file, FileName, Magic, v is 1 or 2 or 3 ? v : 3);
+            return LakeOutlineData.Read(file, v >= 5 ? FileName4 : v >= 4 ? FileName3 : FileName, Magic, v is >= 1 and <= 5 ? v : 5);
         }
+
+        /// <summary>The file a world of these works rules reads.</summary>
+        public static string FileNameFor(int rules) => rules >= LakeRules ? FileName4 : rules >= PointRules ? FileName3 : FileName;
 
         /// <summary>The flags a world of these works rules leaves out: the canals before rules 2, works rules 4's areas before
         /// rules 4.</summary>
@@ -115,6 +134,14 @@ namespace EarthMap.Core
         /// <summary>A LAKE area of 1318 as a lake (its level, distance from the shore and flags; its whole area its own
         /// layer's). Only where <see cref="Works1318Data.IsLake(in WorksHit)"/>.</summary>
         public LakeOutlineLayer.Hit LakeOf1318 => Works1318Data.IsLake(hit) ? hit : throw new System.InvalidOperationException("not a LAKE area of 1318");
+
+        /// <summary>Works rules 6: the LAKE area of 1318 whose shore this place is beside (outside every area, a LAKE area the
+        /// nearest within the layer's reach, with a level), for TerrainModel.OutlineShore.</summary>
+        public bool BesideLake1318(out LakeOutlineLayer.Hit lake)
+        {
+            lake = hit;
+            return hit.Covered && !hit.Inside && !Enclosed && (hit.Flags & Works1318Data.Lake) != 0 && !double.IsNaN(hit.Level);
+        }
 
         /// <summary>The layer's hit, for Works1318Data's tests alone.</summary>
         internal LakeOutlineLayer.Hit Raw => hit;

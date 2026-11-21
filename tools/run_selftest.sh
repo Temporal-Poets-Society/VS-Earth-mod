@@ -14,6 +14,7 @@
 # TESTSERVER (default <this checkout>/testserver) holds the server's data; PORT overrides its config's port.
 # SELFTEST='{"Digest": true, "DigestPasses": ["Terrain"], "MeasureStorage": true}' adds self-test settings (EarthMapConfig
 # SelfTestConfig) to the run's earth.json: a digest of every generated chunk column to compare two builds, the memory.
+# EARTH_CONFIG='{"StreamsLayer": false}' adds other earth.json settings to the run's config.
 # Earth's data store, ModData/earth, is set up once from EARTH_DATA (default the player's
 # VintagestoryData/ModData/earth): data/, ground/ and cache/ are copied, glo90/ (8.5 GB of heights) is linked as a
 # directory junction. Earth's download addresses are switched off, so a missing file fails the run instead of
@@ -133,6 +134,8 @@ c = {"ConfigVersion": 5, "SelfTest": {"Enabled": True, "Shutdown": True}, "DataR
 if places:
     c["SelfTest"]["Places"] = places.split(";")
 c["SelfTest"].update(selftest)
+# EARTH_CONFIG='{"StreamsLayer": false}': more earth.json settings for the run (EA-0131's with/without comparison)
+c.update(json.loads(os.environ.get("EARTH_CONFIG") or "{}"))
 json.dump(c, open(cfg, "w", encoding="utf-8"), indent=2)
 print("play style", style, "world", w, "x", l, "height", h, "seed", seed, "size", world.get("earthWorldSize"))
 EOF

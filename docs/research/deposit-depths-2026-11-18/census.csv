@@ -1,0 +1,1378 @@
+run,what,site,kind,groundMin,groundMax,family,blocks,perChunkColumn,meanDepth,rocksWithin120
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,azurite,1698,67.9,22.5,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,cerussite,457,18.3,9.8,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,flint,1037,41.5,5.5,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,fluorite,501,20.0,74.8,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,halite,75289,3011.6,77.4,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,kernite,4805,192.2,84.3,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,lignite,7,0.3,26.1,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,loose:nativecopper,7,0.3,0,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,nativecopper,1376,55.0,85.9,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,olivine,91,3.6,24.3,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,quartz,15238,609.5,75.4,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,quartz_nativesilver,118,4.7,74.8,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,rhodochrosite,6004,240.2,105.4,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,saltpeter,77,3.1,57.4,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,smithsonite,487,19.5,16.6,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,sphalerite,11915,476.6,62.9,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,sulfur,414,16.6,60.8,
+base-10,"2.1.4, 1:10",vienna,lowland,122,125,sylvite,735,29.4,71.8,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,bismuthinite,28,1.1,96.7,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,bituminouscoal,1640,65.6,65.4,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,borax,7748,309.9,35.7,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,clay-fire,10,0.4,26.4,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,emerald,440,17.6,93.5,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,flint,517,20.7,1.9,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,kernite,776,31.0,70.9,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,lignite,66131,2645.2,27.6,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,limonite,12250,490.0,63.9,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,loose:borax,2,0.1,0,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,loose:lignite,34,1.4,0,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,nativecopper,1179,47.2,60.6,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,peat,4795,191.8,1.2,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,pyrite,1111,44.4,48.0,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,quartz,18607,744.3,61.8,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,rhodochrosite,3159,126.4,86.9,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,sphalerite,4850,194.0,58.7,
+base-10,"2.1.4, 1:10",riga,lowland,102,112,sulfur,1062,42.5,51.3,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,bituminouscoal,15789,631.6,44.3,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,cinnabar,1797,71.9,100.3,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,clay-fire,459,18.4,36.5,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,clay-red,1551,62.0,1.5,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,flint,554,22.2,4.8,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,fluorite,109,4.4,65.0,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,garnet,16,0.6,77.4,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,halite,324722,12988.9,75.7,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,hematite,4774,191.0,88.6,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,lignite,56157,2246.3,31.6,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,loose:lignite,29,1.2,0,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,loose:nativecopper,1,0.0,0,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,nativecopper,40338,1613.5,81.6,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,olivine,10362,414.5,86.7,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,pentlandite,10166,406.6,93.6,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,quartz,22913,916.5,73.7,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,quartz_nativesilver,96,3.8,52.0,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,saltpeter,403,16.1,45.0,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,sperrylite,522,20.9,77.4,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,sphalerite,1549,62.0,53.3,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,spinel,4,0.2,64,
+base-10,"2.1.4, 1:10",pannonia,lowland,108,120,sylvite,3230,129.2,81.4,
+base-10,"2.1.4, 1:10",deadsea,below-sea,81,87,beryl,214,8.6,37.0,
+base-10,"2.1.4, 1:10",deadsea,below-sea,81,87,bismuthinite,12314,492.6,45.3,
+base-10,"2.1.4, 1:10",deadsea,below-sea,81,87,cassiterite,316,12.6,35.8,
+base-10,"2.1.4, 1:10",deadsea,below-sea,81,87,chromite,291,11.6,55.9,
+base-10,"2.1.4, 1:10",deadsea,below-sea,81,87,emerald,5,0.2,76.4,
+base-10,"2.1.4, 1:10",deadsea,below-sea,81,87,garnet,97,3.9,51.3,
+base-10,"2.1.4, 1:10",deadsea,below-sea,81,87,nativecopper,36,1.4,6.1,
+base-10,"2.1.4, 1:10",deadsea,below-sea,81,87,pyrite,311,12.4,18.8,
+base-10,"2.1.4, 1:10",deadsea,below-sea,81,87,quartz,17317,692.7,66.5,
+base-10,"2.1.4, 1:10",deadsea,below-sea,81,87,saltpeter,1028,41.1,2.3,
+base-10,"2.1.4, 1:10",deadsea,below-sea,81,87,sphalerite,699,28.0,46.5,
+base-10,"2.1.4, 1:10",deadsea,below-sea,81,87,topaz,1,0.0,50,
+base-10,"2.1.4, 1:10",deadsea,below-sea,81,87,tourmaline,76,3.0,38.4,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,beryl,131,5.2,37.0,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,bismuthinite,4156,166.2,104.0,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,cassiterite,5073,202.9,112.9,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,chalcopyrite,1170,46.8,51.9,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,clay-red,607,24.3,0.5,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,garnet,106,4.2,50.6,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,loose:nativecopper,1,0.0,0,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,loose:quartz,34,1.4,0,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,nativecopper,89,3.6,37.5,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,olivine,1153,46.1,152.0,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,olivine_peridot,1,0.0,147,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,peat,2681,107.2,0.8,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,pyrite,1206,48.2,46.3,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,quartz,28265,1130.6,54.6,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,quartz_nativesilver,152,6.1,66.3,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,topaz,3,0.1,39.7,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,tourmaline,10,0.4,31.8,
+base-10,"2.1.4, 1:10",zermatt,mountain,262,326,wolframite,49,2.0,72.3,
+base-10,"2.1.4, 1:10",addis,highland,348,364,beryl,10,0.4,43.7,
+base-10,"2.1.4, 1:10",addis,highland,348,364,bismuthinite,2007,80.3,108.7,
+base-10,"2.1.4, 1:10",addis,highland,348,364,cassiterite,2135,85.4,126.4,
+base-10,"2.1.4, 1:10",addis,highland,348,364,chalcopyrite,84,3.4,48.3,
+base-10,"2.1.4, 1:10",addis,highland,348,364,clay-red,1269,50.8,0.0,
+base-10,"2.1.4, 1:10",addis,highland,348,364,flint,2980,119.2,11.1,
+base-10,"2.1.4, 1:10",addis,highland,348,364,garnet,37,1.5,58.3,
+base-10,"2.1.4, 1:10",addis,highland,348,364,nativecopper,38,1.5,14.3,
+base-10,"2.1.4, 1:10",addis,highland,348,364,olivine,7691,307.6,146.3,
+base-10,"2.1.4, 1:10",addis,highland,348,364,peat,1210,48.4,0.0,
+base-10,"2.1.4, 1:10",addis,highland,348,364,pyrite,3456,138.2,46.7,
+base-10,"2.1.4, 1:10",addis,highland,348,364,quartz,12407,496.3,98.8,
+base-10,"2.1.4, 1:10",addis,highland,348,364,quartz_nativegold,8,0.3,70,
+base-10,"2.1.4, 1:10",addis,highland,348,364,quartz_nativesilver,53,2.1,98.5,
+base-10,"2.1.4, 1:10",addis,highland,348,364,smithsonite,31,1.2,18.4,
+base-10,"2.1.4, 1:10",addis,highland,348,364,sphalerite,47,1.9,118.1,
+base-10,"2.1.4, 1:10",addis,highland,348,364,tetrahedrite,380,15.2,45.4,
+base-10,"2.1.4, 1:10",addis,highland,348,364,topaz,110,4.4,51.0,
+base-10,"2.1.4, 1:10",addis,highland,348,364,tourmaline,201,8.0,45.6,
+base-10,"2.1.4, 1:10",addis,highland,348,364,vanadinite,58,2.3,11.3,
+base-10,"2.1.4, 1:10",addis,highland,348,364,wulfenite,661,26.4,10.6,
+base-10,"2.1.4, 1:10",nairobi,highland,264,286,cerussite,1574,63.0,14.5,
+base-10,"2.1.4, 1:10",nairobi,highland,264,286,clay-red,1725,69.0,0.6,
+base-10,"2.1.4, 1:10",nairobi,highland,264,286,flint,2454,98.2,10.5,
+base-10,"2.1.4, 1:10",nairobi,highland,264,286,hemimorphite,871,34.8,15.2,
+base-10,"2.1.4, 1:10",nairobi,highland,264,286,nativecopper,21667,866.7,137.5,
+base-10,"2.1.4, 1:10",nairobi,highland,264,286,olivine,42,1.7,70.8,
+base-10,"2.1.4, 1:10",nairobi,highland,264,286,pyrite,2364,94.6,62.9,
+base-10,"2.1.4, 1:10",nairobi,highland,264,286,quartz,31675,1267.0,38.7,
+base-10,"2.1.4, 1:10",nairobi,highland,264,286,sphalerite,2146,85.8,91.0,
+base-10,"2.1.4, 1:10",nairobi,highland,264,286,vanadinite,168,6.7,21.5,
+base-10,"2.1.4, 1:10",nairobi,highland,264,286,wolframite,68,2.7,59,
+base-10,"2.1.4, 1:10",nairobi,highland,264,286,wulfenite,279,11.2,21.2,
+base-10,"2.1.4, 1:10",mexico,highland,339,341,bauxite,895026,35801.0,19.0,
+base-10,"2.1.4, 1:10",mexico,highland,339,341,beryl,16,0.6,49.5,
+base-10,"2.1.4, 1:10",mexico,highland,339,341,cassiterite,1051,42.0,112.6,
+base-10,"2.1.4, 1:10",mexico,highland,339,341,chalcopyrite,11400,456.0,57.1,
+base-10,"2.1.4, 1:10",mexico,highland,339,341,clay-red,1230,49.2,0.4,
+base-10,"2.1.4, 1:10",mexico,highland,339,341,garnet,64,2.6,66.7,
+base-10,"2.1.4, 1:10",mexico,highland,339,341,nativecopper,6181,247.2,146.4,
+base-10,"2.1.4, 1:10",mexico,highland,339,341,pyrite,362,14.5,48.0,
+base-10,"2.1.4, 1:10",mexico,highland,339,341,quartz,23585,943.4,104.9,
+base-10,"2.1.4, 1:10",mexico,highland,339,341,quartz_nativesilver,604,24.2,111.5,
+base-10,"2.1.4, 1:10",mexico,highland,339,341,sphalerite,1101,44.0,100.0,
+base-10,"2.1.4, 1:10",mexico,highland,339,341,tetrahedrite,1057,42.3,54.8,
+base-10,"2.1.4, 1:10",mexico,highland,339,341,topaz,39,1.6,48.9,
+base-10,"2.1.4, 1:10",mexico,highland,339,341,tourmaline,8,0.3,45.9,
+base-10,"2.1.4, 1:10",lapaz,highland,490,530,beryl,8,0.3,35.5,
+base-10,"2.1.4, 1:10",lapaz,highland,490,530,cassiterite,8,0.3,29,
+base-10,"2.1.4, 1:10",lapaz,highland,490,530,chalcopyrite,2049,82.0,43.8,
+base-10,"2.1.4, 1:10",lapaz,highland,490,530,clay-red,542,21.7,0,
+base-10,"2.1.4, 1:10",lapaz,highland,490,530,garnet,49,2.0,49.8,
+base-10,"2.1.4, 1:10",lapaz,highland,490,530,nativecopper,51,2.0,25.0,
+base-10,"2.1.4, 1:10",lapaz,highland,490,530,peat,1005,40.2,0,
+base-10,"2.1.4, 1:10",lapaz,highland,490,530,quartz,19101,764.0,72.6,
+base-10,"2.1.4, 1:10",lapaz,highland,490,530,quartz_nativesilver,5,0.2,100,
+base-10,"2.1.4, 1:10",lapaz,highland,490,530,sphalerite,261,10.4,89.0,
+base-10,"2.1.4, 1:10",lapaz,highland,490,530,tetrahedrite,786,31.4,37.7,
+base-10,"2.1.4, 1:10",lapaz,highland,490,530,topaz,14,0.6,45.7,
+base-10,"2.1.4, 1:10",lapaz,highland,490,530,tourmaline,21,0.8,42.5,
+base-10,"2.1.4, 1:10",lapaz,highland,490,530,wolframite,85,3.4,78.1,
+base-10,"2.1.4, 1:10",lhasa,highland,478,487,beryl,84,3.4,47.5,
+base-10,"2.1.4, 1:10",lhasa,highland,478,487,cassiterite,3734,149.4,143.2,
+base-10,"2.1.4, 1:10",lhasa,highland,478,487,chalcopyrite,235,9.4,47.3,
+base-10,"2.1.4, 1:10",lhasa,highland,478,487,clay-red,40,1.6,0,
+base-10,"2.1.4, 1:10",lhasa,highland,478,487,garnet,5,0.2,58.4,
+base-10,"2.1.4, 1:10",lhasa,highland,478,487,loose:quartz_nativesilver,2,0.1,0,
+base-10,"2.1.4, 1:10",lhasa,highland,478,487,olivine,91,3.6,48.3,
+base-10,"2.1.4, 1:10",lhasa,highland,478,487,pyrite,6730,269.2,39.1,
+base-10,"2.1.4, 1:10",lhasa,highland,478,487,quartz,40750,1630.0,110.7,
+base-10,"2.1.4, 1:10",lhasa,highland,478,487,quartz_nativegold,122,4.9,140.4,
+base-10,"2.1.4, 1:10",lhasa,highland,478,487,quartz_nativesilver,1031,41.2,118.2,
+base-10,"2.1.4, 1:10",lhasa,highland,478,487,sphalerite,19,0.8,43.3,
+base-10,"2.1.4, 1:10",lhasa,highland,478,487,topaz,27,1.1,53.2,
+base-10,"2.1.4, 1:10",lhasa,highland,478,487,tourmaline,61,2.4,48.1,
+base-10,"2.1.4, 1:10",lhasa,highland,478,487,wolframite,73,2.9,82.4,
+base-10,"2.1.4, 1:10",tehran,highland,215,233,beryl,133,5.3,36.7,
+base-10,"2.1.4, 1:10",tehran,highland,215,233,bismuthinite,562,22.5,112.2,
+base-10,"2.1.4, 1:10",tehran,highland,215,233,cassiterite,14,0.6,17.1,
+base-10,"2.1.4, 1:10",tehran,highland,215,233,chalcopyrite,11724,469.0,45.3,
+base-10,"2.1.4, 1:10",tehran,highland,215,233,garnet,21,0.8,53.3,
+base-10,"2.1.4, 1:10",tehran,highland,215,233,loose:nativecopper,8,0.3,0,
+base-10,"2.1.4, 1:10",tehran,highland,215,233,nativecopper,33692,1347.7,125.4,
+base-10,"2.1.4, 1:10",tehran,highland,215,233,olivine,2034,81.4,138.9,
+base-10,"2.1.4, 1:10",tehran,highland,215,233,quartz,21362,854.5,84.5,
+base-10,"2.1.4, 1:10",tehran,highland,215,233,quartz_nativesilver,75,3.0,76.5,
+base-10,"2.1.4, 1:10",tehran,highland,215,233,saltpeter,67,2.7,156.8,
+base-10,"2.1.4, 1:10",tehran,highland,215,233,sphalerite,4785,191.4,81.1,
+base-10,"2.1.4, 1:10",tehran,highland,215,233,topaz,127,5.1,40.9,
+base-10,"2.1.4, 1:10",tehran,highland,215,233,tourmaline,12,0.5,38.7,
+base-10,"2.1.4, 1:10",tehran,highland,215,233,wolframite,101,4.0,72.4,
+base-10,"2.1.4, 1:10",johannesburg,highland,286,293,bismuthinite,146,5.8,97.4,
+base-10,"2.1.4, 1:10",johannesburg,highland,286,293,cassiterite,3113,124.5,115.4,
+base-10,"2.1.4, 1:10",johannesburg,highland,286,293,chalcopyrite,1905,76.2,25.3,
+base-10,"2.1.4, 1:10",johannesburg,highland,286,293,clay-red,1632,65.3,0.8,
+base-10,"2.1.4, 1:10",johannesburg,highland,286,293,garnet,24,1.0,61.5,
+base-10,"2.1.4, 1:10",johannesburg,highland,286,293,loose:nativecopper,4,0.2,0,
+base-10,"2.1.4, 1:10",johannesburg,highland,286,293,nativecopper,1665,66.6,133.8,
+base-10,"2.1.4, 1:10",johannesburg,highland,286,293,olivine,20084,803.4,97.2,
+base-10,"2.1.4, 1:10",johannesburg,highland,286,293,quartz,3953,158.1,56.7,
+base-10,"2.1.4, 1:10",johannesburg,highland,286,293,quartz_nativegold,11,0.4,65.7,
+base-10,"2.1.4, 1:10",johannesburg,highland,286,293,sperrylite,39,1.6,70.4,
+base-10,"2.1.4, 1:10",johannesburg,highland,286,293,spinel,8,0.3,46.9,
+base-10,"2.1.4, 1:10",johannesburg,highland,286,293,topaz,74,3.0,23.2,
+base-10,"2.1.4, 1:10",johannesburg,highland,286,293,tourmaline,6,0.2,19.3,
+base-10,"2.1.4, 1:10",brasilia,highland,218,225,bismuthinite,14700,588.0,95.8,
+base-10,"2.1.4, 1:10",brasilia,highland,218,225,cassiterite,211,8.4,87.0,
+base-10,"2.1.4, 1:10",brasilia,highland,218,225,clay-red,2327,93.1,0.8,
+base-10,"2.1.4, 1:10",brasilia,highland,218,225,garnet,3,0.1,36.7,
+base-10,"2.1.4, 1:10",brasilia,highland,218,225,loose:nativecopper,1,0.0,0,
+base-10,"2.1.4, 1:10",brasilia,highland,218,225,loose:olivine,2,0.1,0,
+base-10,"2.1.4, 1:10",brasilia,highland,218,225,loose:quartz,6,0.2,0,
+base-10,"2.1.4, 1:10",brasilia,highland,218,225,nativecopper,8297,331.9,125.9,
+base-10,"2.1.4, 1:10",brasilia,highland,218,225,olivine,5325,213.0,30.8,
+base-10,"2.1.4, 1:10",brasilia,highland,218,225,olivine_peridot,32,1.3,14.9,
+base-10,"2.1.4, 1:10",brasilia,highland,218,225,quartz,26818,1072.7,68.2,
+base-10,"2.1.4, 1:10",brasilia,highland,218,225,quartz_nativegold,119,4.8,52.4,
+base-10,"2.1.4, 1:10",brasilia,highland,218,225,saltpeter,64,2.6,148.4,
+base-10,"2.1.4, 1:10",brasilia,highland,218,225,sphalerite,3896,155.8,86.6,
+base-10,"2.1.4, 1:10",brasilia,highland,218,225,spinel,97,3.9,38.7,
+base-10,"2.1.4, 1:10",atacama,highland,250,266,bismuthinite,5,0.2,134.2,
+base-10,"2.1.4, 1:10",atacama,highland,250,266,cassiterite,318,12.7,140.9,
+base-10,"2.1.4, 1:10",atacama,highland,250,266,flint,1569,62.8,7.4,
+base-10,"2.1.4, 1:10",atacama,highland,250,266,loose:nativecopper,4,0.2,0,
+base-10,"2.1.4, 1:10",atacama,highland,250,266,nativecopper,89,3.6,78.5,
+base-10,"2.1.4, 1:10",atacama,highland,250,266,olivine,91,3.6,41.3,
+base-10,"2.1.4, 1:10",atacama,highland,250,266,quartz,16437,657.5,44.7,
+base-10,"2.1.4, 1:10",atacama,highland,250,266,quartz_nativesilver,169,6.8,34.4,
+base-10,"2.1.4, 1:10",atacama,highland,250,266,sphalerite,6813,272.5,82.7,
+new2-10,"rules 1, 1:10",vienna,lowland,122,125,azurite,1655,66.2,22.5,
+new2-10,"rules 1, 1:10",vienna,lowland,122,125,cerussite,380,15.2,10.9,
+new2-10,"rules 1, 1:10",vienna,lowland,122,125,clay-red,1155,46.2,1.2,
+new2-10,"rules 1, 1:10",vienna,lowland,122,125,flint,228,9.1,5.4,
+new2-10,"rules 1, 1:10",vienna,lowland,122,125,kernite,944,37.8,62.5,
+new2-10,"rules 1, 1:10",vienna,lowland,122,125,lignite,7,0.3,22.1,
+new2-10,"rules 1, 1:10",vienna,lowland,122,125,nativecopper,359,14.4,52.2,
+new2-10,"rules 1, 1:10",vienna,lowland,122,125,olivine,91,3.6,24.3,
+new2-10,"rules 1, 1:10",vienna,lowland,122,125,quartz,9619,384.8,66.8,
+new2-10,"rules 1, 1:10",vienna,lowland,122,125,quartz_nativesilver,66,2.6,76.3,
+new2-10,"rules 1, 1:10",vienna,lowland,122,125,rhodochrosite,1561,62.4,93.7,
+new2-10,"rules 1, 1:10",vienna,lowland,122,125,saltpeter,135,5.4,56.0,
+new2-10,"rules 1, 1:10",vienna,lowland,122,125,smithsonite,487,19.5,16.6,
+new2-10,"rules 1, 1:10",vienna,lowland,122,125,sphalerite,2955,118.2,63.3,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,bituminouscoal,326,13.0,49.0,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,borax,2046,81.8,43.3,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,emerald,76,3.0,94.8,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,flint,108,4.3,1.7,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,halite,26413,1056.5,66.9,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,kernite,376,15.0,65.8,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,lignite,16390,655.6,27.8,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,limonite,2633,105.3,67.9,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,loose:lignite,3,0.1,0,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,nativecopper,764,30.6,78.9,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,pyrite,1042,41.7,48.5,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,quartz,4857,194.3,37.4,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,rhodochrosite,853,34.1,87.8,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,sphalerite,1131,45.2,56.8,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,sulfur,358,14.3,45.0,
+new2-10,"rules 1, 1:10",riga,lowland,102,112,sylvite,375,15.0,60.1,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,bituminouscoal,7363,294.5,39.2,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,cinnabar,393,15.7,88.5,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,clay-fire,107,4.3,45.0,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,flint,134,5.4,5.4,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,garnet,18,0.7,77,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,halite,738,29.5,77.5,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,hematite,777,31.1,92.5,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,lignite,14108,564.3,29.3,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,loose:lignite,5,0.2,0,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,nativecopper,13212,528.5,72.7,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,olivine,6232,249.3,86.4,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,pentlandite,3460,138.4,84.3,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,quartz,11713,468.5,56.3,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,quartz_nativesilver,41,1.6,91.2,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,rhodochrosite,48,1.9,72.2,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,saltpeter,82,3.3,34.5,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,sperrylite,690,27.6,78.0,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,sphalerite,430,17.2,47.1,
+new2-10,"rules 1, 1:10",pannonia,lowland,108,120,spinel,5,0.2,64.6,
+new2-10,"rules 1, 1:10",deadsea,below-sea,81,87,beryl,213,8.5,37.0,
+new2-10,"rules 1, 1:10",deadsea,below-sea,81,87,bismuthinite,2345,93.8,49.3,
+new2-10,"rules 1, 1:10",deadsea,below-sea,81,87,cassiterite,120,4.8,53.8,
+new2-10,"rules 1, 1:10",deadsea,below-sea,81,87,chromite,256,10.2,66.9,
+new2-10,"rules 1, 1:10",deadsea,below-sea,81,87,garnet,99,4.0,51.2,
+new2-10,"rules 1, 1:10",deadsea,below-sea,81,87,pyrite,252,10.1,18.6,
+new2-10,"rules 1, 1:10",deadsea,below-sea,81,87,quartz,21438,857.5,35.6,
+new2-10,"rules 1, 1:10",deadsea,below-sea,81,87,sphalerite,86,3.4,44.5,
+new2-10,"rules 1, 1:10",deadsea,below-sea,81,87,topaz,1,0.0,50,
+new2-10,"rules 1, 1:10",deadsea,below-sea,81,87,tourmaline,80,3.2,38.7,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,beryl,132,5.3,37.2,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,bismuthinite,1754,70.2,64.6,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,cassiterite,1782,71.3,55.3,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,chalcopyrite,1170,46.8,51.9,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,garnet,110,4.4,50.8,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,ilmenite,76,3.0,40,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,loose:nativecopper,7,0.3,0,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,nativecopper,78,3.1,5.8,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,peat,3,0.1,0,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,pentlandite,4890,195.6,86.5,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,pyrite,1288,51.5,46.2,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,quartz,8292,331.7,32.0,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,quartz_nativesilver,8,0.3,22.6,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,saltpeter,141,5.6,44.2,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,topaz,2,0.1,50,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,tourmaline,10,0.4,31.8,
+new2-10,"rules 1, 1:10",zermatt,mountain,262,326,wolframite,49,2.0,72.3,
+new2-10,"rules 1, 1:10",addis,highland,348,364,beryl,10,0.4,43.7,
+new2-10,"rules 1, 1:10",addis,highland,348,364,bismuthinite,983,39.3,70.5,
+new2-10,"rules 1, 1:10",addis,highland,348,364,bituminouscoal,3720,148.8,26.2,
+new2-10,"rules 1, 1:10",addis,highland,348,364,cassiterite,866,34.6,48.7,
+new2-10,"rules 1, 1:10",addis,highland,348,364,chalcopyrite,84,3.4,48.3,
+new2-10,"rules 1, 1:10",addis,highland,348,364,chromite,95,3.8,83,
+new2-10,"rules 1, 1:10",addis,highland,348,364,cinnabar,362,14.5,92.9,
+new2-10,"rules 1, 1:10",addis,highland,348,364,clay-fire,214,8.6,23.1,
+new2-10,"rules 1, 1:10",addis,highland,348,364,clay-red,488,19.5,0,
+new2-10,"rules 1, 1:10",addis,highland,348,364,emerald,10,0.4,94.3,
+new2-10,"rules 1, 1:10",addis,highland,348,364,flint,589,23.6,4.8,
+new2-10,"rules 1, 1:10",addis,highland,348,364,garnet,38,1.5,57.9,
+new2-10,"rules 1, 1:10",addis,highland,348,364,halite,29492,1179.7,171.3,
+new2-10,"rules 1, 1:10",addis,highland,348,364,lignite,180,7.2,36.2,
+new2-10,"rules 1, 1:10",addis,highland,348,364,loose:nativecopper,16,0.6,0,
+new2-10,"rules 1, 1:10",addis,highland,348,364,nativecopper,101,4.0,4.7,
+new2-10,"rules 1, 1:10",addis,highland,348,364,olivine,7,0.3,106,
+new2-10,"rules 1, 1:10",addis,highland,348,364,peat,20,0.8,0,
+new2-10,"rules 1, 1:10",addis,highland,348,364,pentlandite,29,1.2,102,
+new2-10,"rules 1, 1:10",addis,highland,348,364,pyrite,3464,138.6,46.7,
+new2-10,"rules 1, 1:10",addis,highland,348,364,quartz,14139,565.6,69.3,
+new2-10,"rules 1, 1:10",addis,highland,348,364,quartz_nativegold,10,0.4,39.6,
+new2-10,"rules 1, 1:10",addis,highland,348,364,quartz_nativesilver,40,1.6,70.8,
+new2-10,"rules 1, 1:10",addis,highland,348,364,saltpeter,15,0.6,80.1,
+new2-10,"rules 1, 1:10",addis,highland,348,364,smithsonite,31,1.2,18.4,
+new2-10,"rules 1, 1:10",addis,highland,348,364,sphalerite,16,0.6,24.6,
+new2-10,"rules 1, 1:10",addis,highland,348,364,sulfur,292,11.7,25.6,
+new2-10,"rules 1, 1:10",addis,highland,348,364,sylvite,39,1.6,90.9,
+new2-10,"rules 1, 1:10",addis,highland,348,364,tetrahedrite,372,14.9,45.2,
+new2-10,"rules 1, 1:10",addis,highland,348,364,topaz,111,4.4,51.2,
+new2-10,"rules 1, 1:10",addis,highland,348,364,tourmaline,197,7.9,45.3,
+new2-10,"rules 1, 1:10",addis,highland,348,364,vanadinite,58,2.3,11.3,
+new2-10,"rules 1, 1:10",addis,highland,348,364,wulfenite,661,26.4,10.6,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,borax,2008,80.3,32.1,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,cerussite,1574,63.0,14.5,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,cinnabar,127,5.1,87.5,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,clay-red,1236,49.4,0.8,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,emerald,3,0.1,89,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,flint,383,15.3,5.4,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,graphite,71,2.8,88.2,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,halite,70047,2801.9,140.7,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,hemimorphite,841,33.6,14.9,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,kernite,102,4.1,39.1,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,loose:borax,2,0.1,0,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,loose:nativecopper,13,0.5,0,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,nativecopper,17398,695.9,76.3,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,olivine,42,1.7,70.8,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,pyrite,2042,81.7,63.2,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,quartz,14231,569.2,39.6,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,saltpeter,150,6.0,105.1,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,sphalerite,1257,50.3,61.2,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,sulfur,39,1.6,35.7,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,sylvite,405,16.2,77.6,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,vanadinite,168,6.7,21.5,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,wolframite,68,2.7,59,
+new2-10,"rules 1, 1:10",nairobi,highland,264,286,wulfenite,286,11.4,20.8,
+new2-10,"rules 1, 1:10",mexico,highland,339,341,bauxite,895207,35808.3,19.0,
+new2-10,"rules 1, 1:10",mexico,highland,339,341,beryl,16,0.6,49.5,
+new2-10,"rules 1, 1:10",mexico,highland,339,341,cassiterite,597,23.9,44.7,
+new2-10,"rules 1, 1:10",mexico,highland,339,341,chalcopyrite,11392,455.7,57.1,
+new2-10,"rules 1, 1:10",mexico,highland,339,341,chromite,666,26.6,84.1,
+new2-10,"rules 1, 1:10",mexico,highland,339,341,cinnabar,15,0.6,71.9,
+new2-10,"rules 1, 1:10",mexico,highland,339,341,garnet,64,2.6,66.7,
+new2-10,"rules 1, 1:10",mexico,highland,339,341,nativecopper,9305,372.2,71.7,
+new2-10,"rules 1, 1:10",mexico,highland,339,341,pyrite,362,14.5,48.0,
+new2-10,"rules 1, 1:10",mexico,highland,339,341,quartz,16697,667.9,57.2,
+new2-10,"rules 1, 1:10",mexico,highland,339,341,quartz_nativesilver,471,18.8,55.7,
+new2-10,"rules 1, 1:10",mexico,highland,339,341,sphalerite,602,24.1,66.9,
+new2-10,"rules 1, 1:10",mexico,highland,339,341,tetrahedrite,966,38.6,53.6,
+new2-10,"rules 1, 1:10",mexico,highland,339,341,topaz,39,1.6,48.9,
+new2-10,"rules 1, 1:10",mexico,highland,339,341,tourmaline,8,0.3,45.9,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,beryl,8,0.3,35.5,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,cassiterite,79,3.2,49.1,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,chalcopyrite,1917,76.7,45.7,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,garnet,49,2.0,49.8,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,hematite,1885,75.4,52.9,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,ilmenite,776,31.0,65.5,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,loose:nativecopper,9,0.4,0,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,nativecopper,1468,58.7,68.5,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,peat,294,11.8,0,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,quartz,13715,548.6,41.0,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,quartz_nativesilver,2,0.1,34,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,sphalerite,269,10.8,62.2,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,tetrahedrite,786,31.4,37.7,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,topaz,14,0.6,45.7,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,tourmaline,20,0.8,42.1,
+new2-10,"rules 1, 1:10",lapaz,highland,490,530,wolframite,85,3.4,78.1,
+new2-10,"rules 1, 1:10",lhasa,highland,478,487,beryl,86,3.4,47.4,
+new2-10,"rules 1, 1:10",lhasa,highland,478,487,cassiterite,3682,147.3,47.9,
+new2-10,"rules 1, 1:10",lhasa,highland,478,487,chalcopyrite,235,9.4,47.3,
+new2-10,"rules 1, 1:10",lhasa,highland,478,487,clay-red,11,0.4,0,
+new2-10,"rules 1, 1:10",lhasa,highland,478,487,garnet,5,0.2,58.4,
+new2-10,"rules 1, 1:10",lhasa,highland,478,487,loose:nativecopper,5,0.2,0,
+new2-10,"rules 1, 1:10",lhasa,highland,478,487,nativecopper,53,2.1,6.1,
+new2-10,"rules 1, 1:10",lhasa,highland,478,487,pyrite,6784,271.4,39.1,
+new2-10,"rules 1, 1:10",lhasa,highland,478,487,quartz,17914,716.6,95.3,
+new2-10,"rules 1, 1:10",lhasa,highland,478,487,quartz_nativegold,62,2.5,93.0,
+new2-10,"rules 1, 1:10",lhasa,highland,478,487,quartz_nativesilver,530,21.2,96.7,
+new2-10,"rules 1, 1:10",lhasa,highland,478,487,sphalerite,6,0.2,1,
+new2-10,"rules 1, 1:10",lhasa,highland,478,487,topaz,26,1.0,52.9,
+new2-10,"rules 1, 1:10",lhasa,highland,478,487,tourmaline,59,2.4,48.2,
+new2-10,"rules 1, 1:10",lhasa,highland,478,487,wolframite,73,2.9,82.4,
+new2-10,"rules 1, 1:10",tehran,highland,215,233,beryl,135,5.4,36.7,
+new2-10,"rules 1, 1:10",tehran,highland,215,233,bismuthinite,185,7.4,70.7,
+new2-10,"rules 1, 1:10",tehran,highland,215,233,cassiterite,7,0.3,7,
+new2-10,"rules 1, 1:10",tehran,highland,215,233,chalcopyrite,11690,467.6,45.3,
+new2-10,"rules 1, 1:10",tehran,highland,215,233,garnet,21,0.8,53.3,
+new2-10,"rules 1, 1:10",tehran,highland,215,233,loose:cassiterite,1,0.0,0,
+new2-10,"rules 1, 1:10",tehran,highland,215,233,loose:nativecopper,7,0.3,0,
+new2-10,"rules 1, 1:10",tehran,highland,215,233,nativecopper,16959,678.4,78.1,
+new2-10,"rules 1, 1:10",tehran,highland,215,233,quartz,20847,833.9,58.7,
+new2-10,"rules 1, 1:10",tehran,highland,215,233,quartz_nativesilver,151,6.0,37.5,
+new2-10,"rules 1, 1:10",tehran,highland,215,233,saltpeter,187,7.5,81.3,
+new2-10,"rules 1, 1:10",tehran,highland,215,233,sphalerite,1517,60.7,62.3,
+new2-10,"rules 1, 1:10",tehran,highland,215,233,topaz,128,5.1,41.1,
+new2-10,"rules 1, 1:10",tehran,highland,215,233,tourmaline,12,0.5,38.7,
+new2-10,"rules 1, 1:10",tehran,highland,215,233,wolframite,24,1.0,72,
+new2-10,"rules 1, 1:10",johannesburg,highland,286,293,bismuthinite,91,3.6,67.8,
+new2-10,"rules 1, 1:10",johannesburg,highland,286,293,cassiterite,1198,47.9,63.4,
+new2-10,"rules 1, 1:10",johannesburg,highland,286,293,chalcopyrite,1793,71.7,25.0,
+new2-10,"rules 1, 1:10",johannesburg,highland,286,293,emerald,468,18.7,94.9,
+new2-10,"rules 1, 1:10",johannesburg,highland,286,293,garnet,24,1.0,61.5,
+new2-10,"rules 1, 1:10",johannesburg,highland,286,293,loose:cassiterite,1,0.0,0,
+new2-10,"rules 1, 1:10",johannesburg,highland,286,293,loose:nativecopper,4,0.2,0,
+new2-10,"rules 1, 1:10",johannesburg,highland,286,293,nativecopper,1190,47.6,74.7,
+new2-10,"rules 1, 1:10",johannesburg,highland,286,293,olivine,15699,628.0,55.9,
+new2-10,"rules 1, 1:10",johannesburg,highland,286,293,quartz,28458,1138.3,78.7,
+new2-10,"rules 1, 1:10",johannesburg,highland,286,293,quartz_nativegold,365,14.6,78.7,
+new2-10,"rules 1, 1:10",johannesburg,highland,286,293,sperrylite,39,1.6,70.4,
+new2-10,"rules 1, 1:10",johannesburg,highland,286,293,spinel,7,0.3,48.9,
+new2-10,"rules 1, 1:10",johannesburg,highland,286,293,topaz,72,2.9,23.0,
+new2-10,"rules 1, 1:10",johannesburg,highland,286,293,tourmaline,6,0.2,19.3,
+new2-10,"rules 1, 1:10",brasilia,highland,218,225,bismuthinite,5542,221.7,57.7,
+new2-10,"rules 1, 1:10",brasilia,highland,218,225,cassiterite,72,2.9,37.4,
+new2-10,"rules 1, 1:10",brasilia,highland,218,225,cinnabar,390,15.6,89.1,
+new2-10,"rules 1, 1:10",brasilia,highland,218,225,garnet,3,0.1,36.7,
+new2-10,"rules 1, 1:10",brasilia,highland,218,225,hematite,469,18.8,24.1,
+new2-10,"rules 1, 1:10",brasilia,highland,218,225,loose:nativecopper,4,0.2,0,
+new2-10,"rules 1, 1:10",brasilia,highland,218,225,nativecopper,4238,169.5,77.1,
+new2-10,"rules 1, 1:10",brasilia,highland,218,225,olivine,15173,606.9,19.4,
+new2-10,"rules 1, 1:10",brasilia,highland,218,225,quartz,11627,465.1,58.3,
+new2-10,"rules 1, 1:10",brasilia,highland,218,225,quartz_nativegold,97,3.9,55.7,
+new2-10,"rules 1, 1:10",brasilia,highland,218,225,sphalerite,1607,64.3,53.5,
+new2-10,"rules 1, 1:10",brasilia,highland,218,225,spinel,100,4.0,38.6,
+new2-10,"rules 1, 1:10",atacama,highland,250,266,flint,17,0.7,4.3,
+new2-10,"rules 1, 1:10",atacama,highland,250,266,nativecopper,5,0.2,49.2,
+new2-10,"rules 1, 1:10",atacama,highland,250,266,olivine,91,3.6,41.3,
+new2-10,"rules 1, 1:10",atacama,highland,250,266,phosphorite,728,29.1,67.8,
+new2-10,"rules 1, 1:10",atacama,highland,250,266,quartz,12506,500.2,54.4,
+new2-10,"rules 1, 1:10",atacama,highland,250,266,quartz_nativegold,1,0.0,107,
+new2-10,"rules 1, 1:10",atacama,highland,250,266,quartz_nativesilver,77,3.1,46.5,
+new2-10,"rules 1, 1:10",atacama,highland,250,266,saltpeter,88,3.5,103.9,
+new2-10,"rules 1, 1:10",atacama,highland,250,266,sphalerite,2940,117.6,57.1,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,bismuthinite,607,24.3,67.0,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,borax,257,10.3,7.7,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,cassiterite,4198,167.9,56.3,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,clay-red,743,29.7,0.8,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,emerald,54,2.2,110.9,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,flint,190,7.6,4.3,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,galena,2,0.1,4,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,garnet,1,0.0,56,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,loose:cassiterite,1,0.0,0,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,loose:nativecopper,6,0.2,0,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,nativecopper,115,4.6,4.4,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,olivine,16808,672.3,59.5,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,pyrite,425,17.0,12.3,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,quartz,31059,1242.4,43.4,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,quartz_nativegold,12,0.5,60.8,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,quartz_nativesilver,52,2.1,59.0,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,saltpeter,466,18.6,72.9,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,sperrylite,869,34.8,62.8,
+base-100,"2.1.4, 1:100",vienna,lowland,112,156,spinel,9,0.4,51.3,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,beryl,45,1.8,39.9,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,bismuthinite,1520,60.8,55.9,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,cassiterite,3329,133.2,51.0,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,chalcopyrite,2116,84.6,45.7,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,emerald,1,0.0,98,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,flint,169,6.8,3.5,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,galena,728,29.1,6.8,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,garnet,67,2.7,54.7,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,lignite,517,20.7,12.0,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,loose:galena,7,0.3,0,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,loose:nativecopper,1,0.0,0,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,nativecopper,19831,793.2,75.9,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,olivine,257,10.3,90.2,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,peat,800,32.0,1.0,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,quartz,5183,207.3,59.6,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,quartz_nativegold,10,0.4,53,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,saltpeter,764,30.6,49.0,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,smithsonite,268,10.7,7.7,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,sphalerite,353,14.1,46.3,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,topaz,76,3.0,42.3,
+base-100,"2.1.4, 1:100",riga,lowland,102,113,tourmaline,11,0.4,46.1,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,anthracite,1934,77.4,46.4,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,bismuthinite,206,8.2,79.6,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,bituminouscoal,7086,283.4,43.3,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,cassiterite,1119,44.8,69.1,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,cinnabar,183,7.3,101.6,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,clay-fire,2781,111.2,47.1,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,clay-red,1409,56.4,1.1,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,emerald,22,0.9,107.9,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,flint,140,5.6,6.1,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,galena,53,2.1,23.1,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,garnet,46,1.8,78.5,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,graphite,211,8.4,59.1,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,halite,607,24.3,86.1,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,hematite,1946,77.8,87.6,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,loose:nativecopper,1,0.0,0,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,loose:quartz_nativesilver,1,0.0,0,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,nativecopper,567,22.7,71.8,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,olivine,3632,145.3,84.9,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,quartz,20275,811.0,65.1,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,quartz_nativesilver,1095,43.8,70.1,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,saltpeter,1131,45.2,79.5,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,sphalerite,161,6.4,75.6,
+base-100,"2.1.4, 1:100",pannonia,lowland,115,124,sulfur,1810,72.4,39.7,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,anthracite,931,37.2,32.6,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,borax,3126,125.0,23.6,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,cassiterite,177,7.1,86.4,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,cinnabar,1128,45.1,75.4,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,clay-fire,127,5.1,27.7,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,flint,1188,47.5,9.6,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,fluorite,193,7.7,33.4,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,galena,5425,217.0,29.0,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,galena_nativesilver,1,0.0,37,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,halite,18425,737.0,56.5,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,lignite,6986,279.4,33.1,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,loose:borax,1,0.0,0,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,loose:galena,3,0.1,0,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,magnetite,2,0.1,57.5,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,nativecopper,2729,109.2,76.7,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,pyrite,1520,60.8,35.0,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,quartz,7124,285.0,35.7,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,quartz_nativesilver,18,0.7,15.3,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,rhodochrosite,1290,51.6,45.3,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,saltpeter,289,11.6,53.6,
+base-100,"2.1.4, 1:100",deadsea,below-sea,82,151,sylvite,201,8.0,59.3,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,beryl,5,0.2,42.8,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,bismuthinite,137,5.5,136.9,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,cassiterite,9,0.4,3.8,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,clay-red,30,1.2,0,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,garnet,14,0.6,61.4,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,loose:cassiterite,3,0.1,0,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,loose:nativecopper,4,0.2,0,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,loose:quartz,15,0.6,0,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,nativecopper,66300,2652.0,185.5,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,olivine,91,3.6,207.5,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,peat,335,13.4,0.8,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,quartz,48428,1937.1,140.4,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,quartz_nativegold,13,0.5,243.4,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,quartz_nativesilver,70,2.8,183.2,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,saltpeter,123,4.9,185.4,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,tetrahedrite,642,25.7,46.2,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,topaz,15,0.6,42.5,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,tourmaline,1,0.0,24,
+base-100,"2.1.4, 1:100",zermatt,mountain,215,306,wolframite,458,18.3,69.2,
+base-100,"2.1.4, 1:100",addis,highland,226,275,bismuthinite,18,0.7,240.9,
+base-100,"2.1.4, 1:100",addis,highland,226,275,cassiterite,24,1.0,143.9,
+base-100,"2.1.4, 1:100",addis,highland,226,275,cinnabar,107,4.3,235.3,
+base-100,"2.1.4, 1:100",addis,highland,226,275,emerald,2,0.1,249,
+base-100,"2.1.4, 1:100",addis,highland,226,275,garnet,24,1.0,56,
+base-100,"2.1.4, 1:100",addis,highland,226,275,ilmenite,3890,155.6,206.7,
+base-100,"2.1.4, 1:100",addis,highland,226,275,loose:nativecopper,4,0.2,0,
+base-100,"2.1.4, 1:100",addis,highland,226,275,loose:quartz,27,1.1,0,
+base-100,"2.1.4, 1:100",addis,highland,226,275,magnetite,542,21.7,252.5,
+base-100,"2.1.4, 1:100",addis,highland,226,275,nativecopper,3695,147.8,176.7,
+base-100,"2.1.4, 1:100",addis,highland,226,275,peat,2906,116.2,1.0,
+base-100,"2.1.4, 1:100",addis,highland,226,275,pyrite,5577,223.1,47.4,
+base-100,"2.1.4, 1:100",addis,highland,226,275,quartz,44470,1778.8,79.5,
+base-100,"2.1.4, 1:100",addis,highland,226,275,saltpeter,1208,48.3,212.9,
+base-100,"2.1.4, 1:100",addis,highland,226,275,sphalerite,323,12.9,140.4,
+base-100,"2.1.4, 1:100",addis,highland,226,275,topaz,80,3.2,41.4,
+base-100,"2.1.4, 1:100",addis,highland,226,275,tourmaline,22,0.9,38.6,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,beryl,26,1.0,36.6,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,bismuthinite,1279,51.2,132.2,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,cassiterite,8,0.3,16.8,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,chalcopyrite,720,28.8,57.8,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,clay-red,1112,44.5,1.0,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,emerald,2,0.1,222.5,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,garnet,9,0.4,63.8,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,hematite,1871,74.8,163.7,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,nativecopper,24,1.0,10.2,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,quartz,36086,1443.4,102.2,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,quartz_nativesilver,1064,42.6,104.7,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,saltpeter,338,13.5,164.4,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,sphalerite,2799,112.0,120.7,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,tetrahedrite,387,15.5,52.3,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,topaz,1,0.0,29,
+base-100,"2.1.4, 1:100",nairobi,highland,221,233,tourmaline,25,1.0,36.7,
+base-100,"2.1.4, 1:100",mexico,highland,243,255,emerald,48,1.9,230.2,
+base-100,"2.1.4, 1:100",mexico,highland,243,255,garnet,10,0.4,55.2,
+base-100,"2.1.4, 1:100",mexico,highland,243,255,loose:nativecopper,1,0.0,0,
+base-100,"2.1.4, 1:100",mexico,highland,243,255,nativecopper,48,1.9,13.1,
+base-100,"2.1.4, 1:100",mexico,highland,243,255,olivine,42042,1681.7,104.0,
+base-100,"2.1.4, 1:100",mexico,highland,243,255,olivine_peridot,1626,65.0,137.1,
+base-100,"2.1.4, 1:100",mexico,highland,243,255,quartz,46591,1863.6,160.9,
+base-100,"2.1.4, 1:100",mexico,highland,243,255,saltpeter,1006,40.2,198.8,
+base-100,"2.1.4, 1:100",mexico,highland,243,255,sperrylite,115,4.6,81.7,
+base-100,"2.1.4, 1:100",mexico,highland,243,255,sphalerite,63,2.5,118.4,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,beryl,14,0.6,36.1,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,cassiterite,2360,94.4,140.1,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,chalcopyrite,19609,784.4,43.4,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,clay-red,192,7.7,0,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,garnet,34,1.4,56.7,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,hematite,430,17.2,251.1,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,loose:quartz,7,0.3,0,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,nativecopper,15387,615.5,206.1,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,olivine,154,6.2,56.2,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,peat,1249,50.0,0.0,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,quartz,53272,2130.9,151.4,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,quartz_nativegold,31,1.2,135.6,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,saltpeter,1458,58.3,246.0,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,sphalerite,35,1.4,168.4,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,tetrahedrite,384,15.4,55.9,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,topaz,2,0.1,42.5,
+base-100,"2.1.4, 1:100",lapaz,highland,280,311,tourmaline,19,0.8,40.4,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,beryl,13,0.5,34.2,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,bismuthinite,6097,243.9,164.4,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,cassiterite,219,8.8,110.6,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,chalcopyrite,1365,54.6,37.9,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,cinnabar,584,23.4,275.3,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,clay-red,677,27.1,0.5,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,emerald,1,0.0,315,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,garnet,35,1.4,51.9,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,graphite,129,5.2,284.4,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,hematite,1285,51.4,249.2,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,loose:nativecopper,1,0.0,0,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,loose:quartz,5,0.2,0,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,nativecopper,5821,232.8,215.8,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,peat,877,35.1,0.5,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,quartz,31671,1266.8,162.6,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,rhodochrosite,259,10.4,286.6,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,saltpeter,1393,55.7,243.9,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,sphalerite,3296,131.8,162.1,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,topaz,1,0.0,32,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,tourmaline,139,5.6,35.4,
+base-100,"2.1.4, 1:100",lhasa,highland,285,329,wolframite,417,16.7,44.7,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,bauxite,5,0.2,4,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,cassiterite,131,5.2,92.8,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,chalcopyrite,327,13.1,64.5,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,garnet,22,0.9,48.2,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,loose:nativecopper,1,0.0,0,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,nativecopper,2089,83.6,132.2,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,olivine,9595,383.8,46.1,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,olivine_peridot,127,5.1,38.1,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,quartz,30545,1221.8,103.5,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,quartz_nativegold,326,13.0,94.2,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,saltpeter,582,23.3,146.4,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,sperrylite,117,4.7,80.1,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,sphalerite,219,8.8,92.3,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,spinel,35,1.4,45.1,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,tetrahedrite,654,26.2,41.1,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,topaz,45,1.8,38.4,
+base-100,"2.1.4, 1:100",tehran,highland,192,217,tourmaline,100,4.0,31.6,
+base-100,"2.1.4, 1:100",johannesburg,highland,214,232,bauxite,251611,10064.4,8.5,
+base-100,"2.1.4, 1:100",johannesburg,highland,214,232,beryl,36,1.4,35,
+base-100,"2.1.4, 1:100",johannesburg,highland,214,232,bismuthinite,580,23.2,119.9,
+base-100,"2.1.4, 1:100",johannesburg,highland,214,232,chromite,205,8.2,198.6,
+base-100,"2.1.4, 1:100",johannesburg,highland,214,232,clay-red,492,19.7,1.2,
+base-100,"2.1.4, 1:100",johannesburg,highland,214,232,garnet,32,1.3,48.5,
+base-100,"2.1.4, 1:100",johannesburg,highland,214,232,nativecopper,1178,47.1,149.7,
+base-100,"2.1.4, 1:100",johannesburg,highland,214,232,olivine,91,3.6,72.6,
+base-100,"2.1.4, 1:100",johannesburg,highland,214,232,quartz,21759,870.4,126.9,
+base-100,"2.1.4, 1:100",johannesburg,highland,214,232,quartz_nativegold,26,1.0,147.3,
+base-100,"2.1.4, 1:100",johannesburg,highland,214,232,saltpeter,342,13.7,157.2,
+base-100,"2.1.4, 1:100",johannesburg,highland,214,232,tetrahedrite,1867,74.7,42.8,
+base-100,"2.1.4, 1:100",johannesburg,highland,214,232,topaz,9,0.4,53.3,
+base-100,"2.1.4, 1:100",johannesburg,highland,214,232,tourmaline,8,0.3,36.1,
+base-100,"2.1.4, 1:100",brasilia,highland,188,202,bismuthinite,6283,251.3,104.6,
+base-100,"2.1.4, 1:100",brasilia,highland,188,202,cassiterite,2571,102.8,80.8,
+base-100,"2.1.4, 1:100",brasilia,highland,188,202,chalcopyrite,1066,42.6,52.8,
+base-100,"2.1.4, 1:100",brasilia,highland,188,202,garnet,23,0.9,33.7,
+base-100,"2.1.4, 1:100",brasilia,highland,188,202,magnetite,156,6.2,166.7,
+base-100,"2.1.4, 1:100",brasilia,highland,188,202,olivine,5506,220.2,31.8,
+base-100,"2.1.4, 1:100",brasilia,highland,188,202,pyrite,44,1.8,16,
+base-100,"2.1.4, 1:100",brasilia,highland,188,202,quartz,35890,1435.6,122.0,
+base-100,"2.1.4, 1:100",brasilia,highland,188,202,quartz_nativegold,6,0.2,65.7,
+base-100,"2.1.4, 1:100",brasilia,highland,188,202,quartz_nativesilver,309,12.4,117.8,
+base-100,"2.1.4, 1:100",brasilia,highland,188,202,saltpeter,1030,41.2,134.8,
+base-100,"2.1.4, 1:100",brasilia,highland,188,202,sperrylite,263,10.5,40.7,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,bismuthinite,83,3.3,136.4,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,chalcopyrite,304,12.2,55.7,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,emerald,1,0.0,205,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,garnet,52,2.1,53.3,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,hematite,109,4.4,197.7,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,nativecopper,46822,1872.9,151.9,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,olivine,9486,379.4,141.0,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,olivine_peridot,61,2.4,147,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,quartz,33462,1338.5,111.9,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,quartz_nativegold,383,15.3,110.3,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,quartz_nativesilver,201,8.0,127.4,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,saltpeter,250,10.0,170.7,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,sphalerite,3606,144.2,113.6,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,tetrahedrite,518,20.7,43.9,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,topaz,20,0.8,39.0,
+base-100,"2.1.4, 1:100",atacama,highland,213,224,tourmaline,61,2.4,40.3,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,bismuthinite,394,15.8,69.9,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,borax,130,5.2,1.9,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,cassiterite,2503,100.1,52.2,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,emerald,32,1.3,94.5,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,flint,104,4.2,4.7,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,garnet,1,0.0,56,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,graphite,164,6.6,19.7,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,loose:cassiterite,1,0.0,0,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,loose:nativecopper,5,0.2,0,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,nativecopper,77,3.1,5.8,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,olivine,6062,242.5,61.3,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,pyrite,426,17.0,12.3,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,quartz,26149,1046.0,71.4,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,quartz_nativesilver,109,4.4,87.4,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,saltpeter,232,9.3,62.0,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,sperrylite,870,34.8,63.8,
+new2-100,"rules 1, 1:100",vienna,lowland,112,156,spinel,9,0.4,51.3,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,beryl,45,1.8,39.8,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,bismuthinite,984,39.4,53.5,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,cassiterite,1599,64.0,44.7,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,chalcopyrite,1992,79.7,45.2,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,emerald,1,0.0,98,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,flint,107,4.3,6.3,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,galena,482,19.3,7.2,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,garnet,65,2.6,53.9,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,hematite,3011,120.4,37.3,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,lignite,628,25.1,11.8,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,loose:galena,3,0.1,0,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,nativecopper,11696,467.8,72.7,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,olivine,91,3.6,83.6,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,peat,645,25.8,1.5,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,quartz,22553,902.1,39.7,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,quartz_nativegold,104,4.2,49.7,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,saltpeter,394,15.8,56.5,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,smithsonite,268,10.7,7.7,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,sphalerite,248,9.9,33.3,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,topaz,76,3.0,41.9,
+new2-100,"rules 1, 1:100",riga,lowland,102,113,tourmaline,11,0.4,46.1,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,anthracite,2219,88.8,39.6,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,bismuthinite,117,4.7,73.1,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,bituminouscoal,6801,272.0,38.3,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,cassiterite,459,18.4,72.4,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,cinnabar,105,4.2,97.8,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,clay-fire,3235,129.4,41.9,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,clay-red,1183,47.3,0.8,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,emerald,17,0.7,96.1,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,flint,66,2.6,7.4,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,galena,17,0.7,22.2,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,garnet,44,1.8,78.2,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,halite,66204,2648.2,70.0,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,hematite,527,21.1,85.9,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,loose:nativecopper,2,0.1,0,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,nativecopper,532,21.3,83.7,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,olivine,1414,56.6,94.0,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,phosphorite,425,17.0,48.9,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,quartz,13324,533.0,47.5,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,quartz_nativesilver,661,26.4,46.6,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,saltpeter,603,24.1,74.4,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,sphalerite,158,6.3,77.0,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,sulfur,1546,61.8,29.2,
+new2-100,"rules 1, 1:100",pannonia,lowland,115,124,sylvite,632,25.3,75.2,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,anthracite,840,33.6,39.7,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,borax,4526,181.0,26.1,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,cassiterite,165,6.6,65.0,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,cinnabar,1003,40.1,77.8,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,clay-fire,59,2.4,37.0,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,flint,629,25.2,9.0,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,fluorite,124,5.0,47.8,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,galena,3784,151.4,31.0,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,galena_nativesilver,1,0.0,43,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,halite,23836,953.4,54.2,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,lignite,4845,193.8,34.8,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,loose:borax,6,0.2,0,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,loose:galena,2,0.1,0,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,loose:nativecopper,9,0.4,0,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,nativecopper,2337,93.5,73.9,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,pyrite,1604,64.2,35.3,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,quartz,17440,697.6,64.7,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,quartz_nativesilver,128,5.1,53.5,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,saltpeter,51,2.0,49.7,
+new2-100,"rules 1, 1:100",deadsea,below-sea,82,151,sylvite,49,2.0,65.9,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,beryl,5,0.2,42.8,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,bismuthinite,173,6.9,73.3,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,cassiterite,7,0.3,1,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,clay-red,73,2.9,0,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,garnet,13,0.5,61.4,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,hematite,2288,91.5,20.2,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,loose:cassiterite,3,0.1,0,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,loose:nativecopper,6,0.2,0,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,loose:quartz,23,0.9,0,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,nativecopper,38844,1553.8,77.4,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,olivine,91,3.6,207.5,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,quartz,26023,1040.9,49.2,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,quartz_nativegold,21,0.8,14,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,quartz_nativesilver,21,0.8,34.9,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,tetrahedrite,667,26.7,46.7,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,topaz,15,0.6,42.5,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,tourmaline,1,0.0,24,
+new2-100,"rules 1, 1:100",zermatt,mountain,215,306,wolframite,467,18.7,69.3,
+new2-100,"rules 1, 1:100",addis,highland,226,275,clay-red,714,28.6,0.9,
+new2-100,"rules 1, 1:100",addis,highland,226,275,garnet,24,1.0,56,
+new2-100,"rules 1, 1:100",addis,highland,226,275,ilmenite,2065,82.6,57.2,
+new2-100,"rules 1, 1:100",addis,highland,226,275,nativecopper,3411,136.4,71.9,
+new2-100,"rules 1, 1:100",addis,highland,226,275,peat,373,14.9,0.9,
+new2-100,"rules 1, 1:100",addis,highland,226,275,pyrite,5607,224.3,47.9,
+new2-100,"rules 1, 1:100",addis,highland,226,275,quartz,29740,1189.6,26.6,
+new2-100,"rules 1, 1:100",addis,highland,226,275,quartz_nativegold,4,0.2,6.8,
+new2-100,"rules 1, 1:100",addis,highland,226,275,sphalerite,158,6.3,65.5,
+new2-100,"rules 1, 1:100",addis,highland,226,275,topaz,77,3.1,41.4,
+new2-100,"rules 1, 1:100",addis,highland,226,275,tourmaline,22,0.9,38.6,
+new2-100,"rules 1, 1:100",nairobi,highland,221,233,beryl,26,1.0,36.6,
+new2-100,"rules 1, 1:100",nairobi,highland,221,233,bismuthinite,1014,40.6,60.5,
+new2-100,"rules 1, 1:100",nairobi,highland,221,233,chalcopyrite,720,28.8,57.8,
+new2-100,"rules 1, 1:100",nairobi,highland,221,233,garnet,9,0.4,63.8,
+new2-100,"rules 1, 1:100",nairobi,highland,221,233,hematite,1470,58.8,58.2,
+new2-100,"rules 1, 1:100",nairobi,highland,221,233,nativecopper,42,1.7,10.7,
+new2-100,"rules 1, 1:100",nairobi,highland,221,233,quartz,28315,1132.6,63.9,
+new2-100,"rules 1, 1:100",nairobi,highland,221,233,quartz_nativesilver,803,32.1,61.9,
+new2-100,"rules 1, 1:100",nairobi,highland,221,233,sphalerite,2042,81.7,55.8,
+new2-100,"rules 1, 1:100",nairobi,highland,221,233,tetrahedrite,387,15.5,52.3,
+new2-100,"rules 1, 1:100",nairobi,highland,221,233,topaz,1,0.0,29,
+new2-100,"rules 1, 1:100",nairobi,highland,221,233,tourmaline,25,1.0,36.7,
+new2-100,"rules 1, 1:100",mexico,highland,243,255,emerald,33,1.3,90.6,
+new2-100,"rules 1, 1:100",mexico,highland,243,255,garnet,10,0.4,55.2,
+new2-100,"rules 1, 1:100",mexico,highland,243,255,loose:nativecopper,2,0.1,0,
+new2-100,"rules 1, 1:100",mexico,highland,243,255,nativecopper,85,3.4,8.2,
+new2-100,"rules 1, 1:100",mexico,highland,243,255,olivine,22324,893.0,80.6,
+new2-100,"rules 1, 1:100",mexico,highland,243,255,olivine_peridot,855,34.2,84.8,
+new2-100,"rules 1, 1:100",mexico,highland,243,255,quartz,14418,576.7,70.4,
+new2-100,"rules 1, 1:100",mexico,highland,243,255,sperrylite,167,6.7,66.3,
+new2-100,"rules 1, 1:100",mexico,highland,243,255,sphalerite,74,3.0,34.1,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,beryl,14,0.6,36.1,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,cassiterite,1251,50.0,46.5,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,chalcopyrite,19590,783.6,43.3,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,clay-red,237,9.5,0,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,garnet,34,1.4,56.7,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,hematite,30,1.2,91.0,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,loose:nativecopper,2,0.1,0,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,nativecopper,9787,391.5,76.5,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,olivine,154,6.2,56.2,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,peat,138,5.5,0.5,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,quartz,35892,1435.7,74.5,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,quartz_nativegold,95,3.8,79.2,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,sphalerite,49,2.0,61.6,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,tetrahedrite,384,15.4,55.9,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,topaz,2,0.1,42.5,
+new2-100,"rules 1, 1:100",lapaz,highland,280,311,tourmaline,19,0.8,40.4,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,beryl,13,0.5,34.2,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,bismuthinite,4039,161.6,58.4,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,cassiterite,124,5.0,41.7,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,chalcopyrite,1365,54.6,37.9,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,cinnabar,215,8.6,96.3,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,clay-red,94,3.8,0.3,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,garnet,35,1.4,51.9,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,loose:cassiterite,1,0.0,0,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,loose:nativecopper,5,0.2,0,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,nativecopper,3289,131.6,73.0,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,peat,147,5.9,0.6,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,quartz,14258,570.3,30.1,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,sphalerite,2025,81.0,60.7,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,topaz,1,0.0,32,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,tourmaline,138,5.5,35.4,
+new2-100,"rules 1, 1:100",lhasa,highland,285,329,wolframite,417,16.7,44.7,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,bauxite,5,0.2,4,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,bismuthinite,24,1.0,68.7,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,cassiterite,209,8.4,53.2,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,chalcopyrite,327,13.1,64.5,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,garnet,24,1.0,46.7,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,hematite,1978,79.1,34.4,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,loose:nativecopper,1,0.0,0,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,nativecopper,1100,44.0,80.6,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,olivine,13220,528.8,60.2,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,olivine_peridot,243,9.7,61.3,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,quartz,8565,342.6,17.2,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,quartz_nativegold,110,4.4,18.8,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,saltpeter,134,5.4,105.1,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,sperrylite,117,4.7,80.1,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,sphalerite,64,2.6,62.1,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,spinel,35,1.4,45.1,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,tetrahedrite,654,26.2,41.1,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,topaz,45,1.8,38.4,
+new2-100,"rules 1, 1:100",tehran,highland,192,217,tourmaline,102,4.1,31.4,
+new2-100,"rules 1, 1:100",johannesburg,highland,214,232,bauxite,251684,10067.4,8.5,
+new2-100,"rules 1, 1:100",johannesburg,highland,214,232,beryl,36,1.4,35,
+new2-100,"rules 1, 1:100",johannesburg,highland,214,232,bismuthinite,333,13.3,74.8,
+new2-100,"rules 1, 1:100",johannesburg,highland,214,232,cassiterite,29,1.2,41.1,
+new2-100,"rules 1, 1:100",johannesburg,highland,214,232,chromite,130,5.2,106.7,
+new2-100,"rules 1, 1:100",johannesburg,highland,214,232,garnet,30,1.2,48.5,
+new2-100,"rules 1, 1:100",johannesburg,highland,214,232,hematite,26,1.0,49.5,
+new2-100,"rules 1, 1:100",johannesburg,highland,214,232,nativecopper,923,36.9,87.1,
+new2-100,"rules 1, 1:100",johannesburg,highland,214,232,olivine,91,3.6,72.6,
+new2-100,"rules 1, 1:100",johannesburg,highland,214,232,quartz,13086,523.4,61.0,
+new2-100,"rules 1, 1:100",johannesburg,highland,214,232,quartz_nativegold,21,0.8,41.4,
+new2-100,"rules 1, 1:100",johannesburg,highland,214,232,tetrahedrite,1819,72.8,42.8,
+new2-100,"rules 1, 1:100",johannesburg,highland,214,232,topaz,9,0.4,53.3,
+new2-100,"rules 1, 1:100",johannesburg,highland,214,232,tourmaline,8,0.3,36.1,
+new2-100,"rules 1, 1:100",brasilia,highland,188,202,bismuthinite,4408,176.3,58.9,
+new2-100,"rules 1, 1:100",brasilia,highland,188,202,cassiterite,1724,69.0,44.2,
+new2-100,"rules 1, 1:100",brasilia,highland,188,202,chalcopyrite,1067,42.7,52.8,
+new2-100,"rules 1, 1:100",brasilia,highland,188,202,clay-red,31,1.2,0.5,
+new2-100,"rules 1, 1:100",brasilia,highland,188,202,garnet,23,0.9,33.7,
+new2-100,"rules 1, 1:100",brasilia,highland,188,202,loose:nativecopper,1,0.0,0,
+new2-100,"rules 1, 1:100",brasilia,highland,188,202,loose:quartz,23,0.9,0,
+new2-100,"rules 1, 1:100",brasilia,highland,188,202,nativecopper,18,0.7,6,
+new2-100,"rules 1, 1:100",brasilia,highland,188,202,olivine,3222,128.9,21.0,
+new2-100,"rules 1, 1:100",brasilia,highland,188,202,pyrite,44,1.8,16,
+new2-100,"rules 1, 1:100",brasilia,highland,188,202,quartz,17115,684.6,42.7,
+new2-100,"rules 1, 1:100",brasilia,highland,188,202,quartz_nativegold,9,0.4,18.9,
+new2-100,"rules 1, 1:100",brasilia,highland,188,202,quartz_nativesilver,118,4.7,20.2,
+new2-100,"rules 1, 1:100",brasilia,highland,188,202,saltpeter,172,6.9,109.6,
+new2-100,"rules 1, 1:100",brasilia,highland,188,202,sperrylite,263,10.5,40.7,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,bismuthinite,64,2.6,51.9,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,cassiterite,18,0.7,6,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,chalcopyrite,304,12.2,55.7,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,cinnabar,46,1.8,82.2,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,garnet,52,2.1,53.3,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,hematite,1187,47.5,67.9,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,loose:cassiterite,2,0.1,0,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,loose:nativecopper,9,0.4,0,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,nativecopper,31908,1276.3,76.0,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,olivine,91,3.6,94.3,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,olivine_peridot,7,0.3,102.7,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,quartz,14510,580.4,55.5,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,quartz_nativegold,90,3.6,45.3,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,quartz_nativesilver,129,5.2,57.9,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,sphalerite,2401,96.0,60.7,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,tetrahedrite,518,20.7,43.9,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,topaz,21,0.8,38.6,
+new2-100,"rules 1, 1:100",atacama,highland,213,224,tourmaline,61,2.4,40.3,
+rock-10,"rules 1, 1:10 (rock census)",vienna,lowland,122,125,azurite,1655,66.2,22.5,sandstone 2862980; suevite 333
+rock-10,"rules 1, 1:10 (rock census)",vienna,lowland,122,125,cerussite,380,15.2,10.9,sandstone 2862980; suevite 333
+rock-10,"rules 1, 1:10 (rock census)",vienna,lowland,122,125,clay-red,1155,46.2,1.2,sandstone 2862980; suevite 333
+rock-10,"rules 1, 1:10 (rock census)",vienna,lowland,122,125,flint,228,9.1,5.4,sandstone 2862980; suevite 333
+rock-10,"rules 1, 1:10 (rock census)",vienna,lowland,122,125,kernite,944,37.8,62.5,sandstone 2862980; suevite 333
+rock-10,"rules 1, 1:10 (rock census)",vienna,lowland,122,125,lignite,7,0.3,22.1,sandstone 2862980; suevite 333
+rock-10,"rules 1, 1:10 (rock census)",vienna,lowland,122,125,nativecopper,359,14.4,52.2,sandstone 2862980; suevite 333
+rock-10,"rules 1, 1:10 (rock census)",vienna,lowland,122,125,olivine,91,3.6,24.3,sandstone 2862980; suevite 333
+rock-10,"rules 1, 1:10 (rock census)",vienna,lowland,122,125,quartz,9619,384.8,66.8,sandstone 2862980; suevite 333
+rock-10,"rules 1, 1:10 (rock census)",vienna,lowland,122,125,quartz_nativesilver,66,2.6,76.3,sandstone 2862980; suevite 333
+rock-10,"rules 1, 1:10 (rock census)",vienna,lowland,122,125,rhodochrosite,1561,62.4,93.7,sandstone 2862980; suevite 333
+rock-10,"rules 1, 1:10 (rock census)",vienna,lowland,122,125,saltpeter,135,5.4,56.0,sandstone 2862980; suevite 333
+rock-10,"rules 1, 1:10 (rock census)",vienna,lowland,122,125,smithsonite,487,19.5,16.6,sandstone 2862980; suevite 333
+rock-10,"rules 1, 1:10 (rock census)",vienna,lowland,122,125,sphalerite,2955,118.2,63.3,sandstone 2862980; suevite 333
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,bituminouscoal,326,13.0,49.0,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,borax,2046,81.8,43.3,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,emerald,76,3.0,94.8,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,flint,108,4.3,1.7,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,halite,26413,1056.5,66.9,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,kernite,376,15.0,65.8,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,lignite,16390,655.6,27.8,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,limonite,2633,105.3,67.9,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,loose:lignite,3,0.1,0,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,nativecopper,764,30.6,78.9,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,pyrite,1042,41.7,48.5,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,quartz,4857,194.3,37.4,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,rhodochrosite,853,34.1,87.8,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,sphalerite,1131,45.2,56.8,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,sulfur,358,14.3,45.0,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",riga,lowland,102,112,sylvite,375,15.0,60.1,shale 1083810; halite 26413; phyllite 15370; basalt 46
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,bituminouscoal,7363,294.5,39.2,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,cinnabar,393,15.7,88.5,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,clay-fire,107,4.3,45.0,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,flint,134,5.4,5.4,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,garnet,18,0.7,77,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,halite,738,29.5,77.5,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,hematite,777,31.1,92.5,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,lignite,14108,564.3,29.3,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,loose:lignite,5,0.2,0,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,nativecopper,13212,528.5,72.7,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,olivine,6232,249.3,86.4,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,pentlandite,3460,138.4,84.3,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,quartz,11713,468.5,56.3,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,quartz_nativesilver,41,1.6,91.2,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,rhodochrosite,48,1.9,72.2,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,saltpeter,82,3.3,34.5,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,sperrylite,690,27.6,78.0,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,sphalerite,430,17.2,47.1,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",pannonia,lowland,108,120,spinel,5,0.2,64.6,chalk 1412704; peridotite 1239662; andesite 135417; basalt 761; halite 738; obsidian 3
+rock-10,"rules 1, 1:10 (rock census)",deadsea,below-sea,81,87,beryl,213,8.5,37.0,granite 1510215; basalt 2625
+rock-10,"rules 1, 1:10 (rock census)",deadsea,below-sea,81,87,bismuthinite,2345,93.8,49.3,granite 1510215; basalt 2625
+rock-10,"rules 1, 1:10 (rock census)",deadsea,below-sea,81,87,cassiterite,120,4.8,53.8,granite 1510215; basalt 2625
+rock-10,"rules 1, 1:10 (rock census)",deadsea,below-sea,81,87,chromite,256,10.2,66.9,granite 1510215; basalt 2625
+rock-10,"rules 1, 1:10 (rock census)",deadsea,below-sea,81,87,garnet,99,4.0,51.2,granite 1510215; basalt 2625
+rock-10,"rules 1, 1:10 (rock census)",deadsea,below-sea,81,87,pyrite,252,10.1,18.6,granite 1510215; basalt 2625
+rock-10,"rules 1, 1:10 (rock census)",deadsea,below-sea,81,87,quartz,21438,857.5,35.6,granite 1510215; basalt 2625
+rock-10,"rules 1, 1:10 (rock census)",deadsea,below-sea,81,87,sphalerite,86,3.4,44.5,granite 1510215; basalt 2625
+rock-10,"rules 1, 1:10 (rock census)",deadsea,below-sea,81,87,topaz,1,0.0,50,granite 1510215; basalt 2625
+rock-10,"rules 1, 1:10 (rock census)",deadsea,below-sea,81,87,tourmaline,80,3.2,38.7,granite 1510215; basalt 2625
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,beryl,132,5.3,37.2,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,bismuthinite,1754,70.2,64.6,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,cassiterite,1782,71.3,55.3,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,chalcopyrite,1170,46.8,51.9,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,garnet,110,4.4,50.8,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,ilmenite,76,3.0,40,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,loose:nativecopper,7,0.3,0,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,nativecopper,78,3.1,5.8,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,peat,3,0.1,0,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,pentlandite,4890,195.6,86.5,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,pyrite,1288,51.5,46.2,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,quartz,8292,331.7,32.0,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,quartz_nativesilver,8,0.3,22.6,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,saltpeter,141,5.6,44.2,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,topaz,2,0.1,50,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,tourmaline,10,0.4,31.8,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",zermatt,mountain,262,326,wolframite,49,2.0,72.3,granite 2884418
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,beryl,10,0.4,43.7,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,bismuthinite,983,39.3,70.5,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,bituminouscoal,3720,148.8,26.2,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,cassiterite,866,34.6,48.7,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,chalcopyrite,84,3.4,48.3,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,chromite,95,3.8,83,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,cinnabar,362,14.5,92.9,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,clay-fire,214,8.6,23.1,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,clay-red,488,19.5,0,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,emerald,10,0.4,94.3,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,flint,589,23.6,4.8,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,garnet,38,1.5,57.9,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,halite,29492,1179.7,171.3,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,lignite,180,7.2,36.2,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,loose:nativecopper,16,0.6,0,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,nativecopper,101,4.0,4.7,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,olivine,7,0.3,106,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,peat,20,0.8,0,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,pentlandite,29,1.2,102,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,pyrite,3464,138.6,46.7,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,quartz,14139,565.6,69.3,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,quartz_nativegold,10,0.4,39.6,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,quartz_nativesilver,40,1.6,70.8,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,saltpeter,15,0.6,80.1,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,smithsonite,31,1.2,18.4,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,sphalerite,16,0.6,24.6,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,sulfur,292,11.7,25.6,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,sylvite,39,1.6,90.9,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,tetrahedrite,372,14.9,45.2,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,topaz,111,4.4,51.2,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,tourmaline,197,7.9,45.3,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,vanadinite,58,2.3,11.3,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",addis,highland,348,364,wulfenite,661,26.4,10.6,granite 1843290; sandstone 453325; peridotite 283098; shale 224570; chalk 135434; halite 11547
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,borax,2008,80.3,32.1,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,cerussite,1574,63.0,14.5,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,cinnabar,127,5.1,87.5,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,clay-red,1236,49.4,0.8,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,emerald,3,0.1,89,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,flint,383,15.3,5.4,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,graphite,71,2.8,88.2,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,halite,70047,2801.9,140.7,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,hemimorphite,841,33.6,14.9,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,kernite,102,4.1,39.1,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,loose:borax,2,0.1,0,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,loose:nativecopper,13,0.5,0,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,nativecopper,17398,695.9,76.3,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,olivine,42,1.7,70.8,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,pyrite,2042,81.7,63.2,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,quartz,14231,569.2,39.6,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,saltpeter,150,6.0,105.1,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,sphalerite,1257,50.3,61.2,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,sulfur,39,1.6,35.7,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,sylvite,405,16.2,77.6,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,vanadinite,168,6.7,21.5,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,wolframite,68,2.7,59,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",nairobi,highland,264,286,wulfenite,286,11.4,20.8,sandstone 1339836; slate 769119; andesite 695872; halite 32244
+rock-10,"rules 1, 1:10 (rock census)",mexico,highland,339,341,bauxite,895207,35808.3,19.0,granite 2047988; bauxite 895207
+rock-10,"rules 1, 1:10 (rock census)",mexico,highland,339,341,beryl,16,0.6,49.5,granite 2047988; bauxite 895207
+rock-10,"rules 1, 1:10 (rock census)",mexico,highland,339,341,cassiterite,597,23.9,44.7,granite 2047988; bauxite 895207
+rock-10,"rules 1, 1:10 (rock census)",mexico,highland,339,341,chalcopyrite,11392,455.7,57.1,granite 2047988; bauxite 895207
+rock-10,"rules 1, 1:10 (rock census)",mexico,highland,339,341,chromite,666,26.6,84.1,granite 2047988; bauxite 895207
+rock-10,"rules 1, 1:10 (rock census)",mexico,highland,339,341,cinnabar,15,0.6,71.9,granite 2047988; bauxite 895207
+rock-10,"rules 1, 1:10 (rock census)",mexico,highland,339,341,garnet,64,2.6,66.7,granite 2047988; bauxite 895207
+rock-10,"rules 1, 1:10 (rock census)",mexico,highland,339,341,nativecopper,9305,372.2,71.7,granite 2047988; bauxite 895207
+rock-10,"rules 1, 1:10 (rock census)",mexico,highland,339,341,pyrite,362,14.5,48.0,granite 2047988; bauxite 895207
+rock-10,"rules 1, 1:10 (rock census)",mexico,highland,339,341,quartz,16697,667.9,57.2,granite 2047988; bauxite 895207
+rock-10,"rules 1, 1:10 (rock census)",mexico,highland,339,341,quartz_nativesilver,471,18.8,55.7,granite 2047988; bauxite 895207
+rock-10,"rules 1, 1:10 (rock census)",mexico,highland,339,341,sphalerite,602,24.1,66.9,granite 2047988; bauxite 895207
+rock-10,"rules 1, 1:10 (rock census)",mexico,highland,339,341,tetrahedrite,966,38.6,53.6,granite 2047988; bauxite 895207
+rock-10,"rules 1, 1:10 (rock census)",mexico,highland,339,341,topaz,39,1.6,48.9,granite 2047988; bauxite 895207
+rock-10,"rules 1, 1:10 (rock census)",mexico,highland,339,341,tourmaline,8,0.3,45.9,granite 2047988; bauxite 895207
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,beryl,8,0.3,35.5,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,cassiterite,79,3.2,49.1,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,chalcopyrite,1917,76.7,45.7,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,garnet,49,2.0,49.8,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,hematite,1885,75.4,52.9,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,ilmenite,776,31.0,65.5,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,loose:nativecopper,9,0.4,0,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,nativecopper,1468,58.7,68.5,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,peat,294,11.8,0,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,quartz,13715,548.6,41.0,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,quartz_nativesilver,2,0.1,34,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,sphalerite,269,10.8,62.2,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,tetrahedrite,786,31.4,37.7,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,topaz,14,0.6,45.7,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,tourmaline,20,0.8,42.1,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lapaz,highland,490,530,wolframite,85,3.4,78.1,granite 2943930
+rock-10,"rules 1, 1:10 (rock census)",lhasa,highland,478,487,beryl,86,3.4,47.4,granite 1901217; slate 795901; redmarble 4737
+rock-10,"rules 1, 1:10 (rock census)",lhasa,highland,478,487,cassiterite,3682,147.3,47.9,granite 1901217; slate 795901; redmarble 4737
+rock-10,"rules 1, 1:10 (rock census)",lhasa,highland,478,487,chalcopyrite,235,9.4,47.3,granite 1901217; slate 795901; redmarble 4737
+rock-10,"rules 1, 1:10 (rock census)",lhasa,highland,478,487,clay-red,11,0.4,0,granite 1901217; slate 795901; redmarble 4737
+rock-10,"rules 1, 1:10 (rock census)",lhasa,highland,478,487,garnet,5,0.2,58.4,granite 1901217; slate 795901; redmarble 4737
+rock-10,"rules 1, 1:10 (rock census)",lhasa,highland,478,487,loose:nativecopper,5,0.2,0,granite 1901217; slate 795901; redmarble 4737
+rock-10,"rules 1, 1:10 (rock census)",lhasa,highland,478,487,nativecopper,53,2.1,6.1,granite 1901217; slate 795901; redmarble 4737
+rock-10,"rules 1, 1:10 (rock census)",lhasa,highland,478,487,pyrite,6784,271.4,39.1,granite 1901217; slate 795901; redmarble 4737
+rock-10,"rules 1, 1:10 (rock census)",lhasa,highland,478,487,quartz,17914,716.6,95.3,granite 1901217; slate 795901; redmarble 4737
+rock-10,"rules 1, 1:10 (rock census)",lhasa,highland,478,487,quartz_nativegold,62,2.5,93.0,granite 1901217; slate 795901; redmarble 4737
+rock-10,"rules 1, 1:10 (rock census)",lhasa,highland,478,487,quartz_nativesilver,530,21.2,96.7,granite 1901217; slate 795901; redmarble 4737
+rock-10,"rules 1, 1:10 (rock census)",lhasa,highland,478,487,sphalerite,6,0.2,1,granite 1901217; slate 795901; redmarble 4737
+rock-10,"rules 1, 1:10 (rock census)",lhasa,highland,478,487,topaz,26,1.0,52.9,granite 1901217; slate 795901; redmarble 4737
+rock-10,"rules 1, 1:10 (rock census)",lhasa,highland,478,487,tourmaline,59,2.4,48.2,granite 1901217; slate 795901; redmarble 4737
+rock-10,"rules 1, 1:10 (rock census)",lhasa,highland,478,487,wolframite,73,2.9,82.4,granite 1901217; slate 795901; redmarble 4737
+rock-10,"rules 1, 1:10 (rock census)",tehran,highland,215,233,beryl,135,5.4,36.7,granite 2841196
+rock-10,"rules 1, 1:10 (rock census)",tehran,highland,215,233,bismuthinite,185,7.4,70.7,granite 2841196
+rock-10,"rules 1, 1:10 (rock census)",tehran,highland,215,233,cassiterite,7,0.3,7,granite 2841196
+rock-10,"rules 1, 1:10 (rock census)",tehran,highland,215,233,chalcopyrite,11690,467.6,45.3,granite 2841196
+rock-10,"rules 1, 1:10 (rock census)",tehran,highland,215,233,garnet,21,0.8,53.3,granite 2841196
+rock-10,"rules 1, 1:10 (rock census)",tehran,highland,215,233,loose:cassiterite,1,0.0,0,granite 2841196
+rock-10,"rules 1, 1:10 (rock census)",tehran,highland,215,233,loose:nativecopper,7,0.3,0,granite 2841196
+rock-10,"rules 1, 1:10 (rock census)",tehran,highland,215,233,nativecopper,16959,678.4,78.1,granite 2841196
+rock-10,"rules 1, 1:10 (rock census)",tehran,highland,215,233,quartz,20847,833.9,58.7,granite 2841196
+rock-10,"rules 1, 1:10 (rock census)",tehran,highland,215,233,quartz_nativesilver,151,6.0,37.5,granite 2841196
+rock-10,"rules 1, 1:10 (rock census)",tehran,highland,215,233,saltpeter,187,7.5,81.3,granite 2841196
+rock-10,"rules 1, 1:10 (rock census)",tehran,highland,215,233,sphalerite,1517,60.7,62.3,granite 2841196
+rock-10,"rules 1, 1:10 (rock census)",tehran,highland,215,233,topaz,128,5.1,41.1,granite 2841196
+rock-10,"rules 1, 1:10 (rock census)",tehran,highland,215,233,tourmaline,12,0.5,38.7,granite 2841196
+rock-10,"rules 1, 1:10 (rock census)",tehran,highland,215,233,wolframite,24,1.0,72,granite 2841196
+rock-10,"rules 1, 1:10 (rock census)",johannesburg,highland,286,293,bismuthinite,91,3.6,67.8,peridotite 2102199; granite 745505
+rock-10,"rules 1, 1:10 (rock census)",johannesburg,highland,286,293,cassiterite,1198,47.9,63.4,peridotite 2102199; granite 745505
+rock-10,"rules 1, 1:10 (rock census)",johannesburg,highland,286,293,chalcopyrite,1793,71.7,25.0,peridotite 2102199; granite 745505
+rock-10,"rules 1, 1:10 (rock census)",johannesburg,highland,286,293,emerald,468,18.7,94.9,peridotite 2102199; granite 745505
+rock-10,"rules 1, 1:10 (rock census)",johannesburg,highland,286,293,garnet,24,1.0,61.5,peridotite 2102199; granite 745505
+rock-10,"rules 1, 1:10 (rock census)",johannesburg,highland,286,293,loose:cassiterite,1,0.0,0,peridotite 2102199; granite 745505
+rock-10,"rules 1, 1:10 (rock census)",johannesburg,highland,286,293,loose:nativecopper,4,0.2,0,peridotite 2102199; granite 745505
+rock-10,"rules 1, 1:10 (rock census)",johannesburg,highland,286,293,nativecopper,1190,47.6,74.7,peridotite 2102199; granite 745505
+rock-10,"rules 1, 1:10 (rock census)",johannesburg,highland,286,293,olivine,15699,628.0,55.9,peridotite 2102199; granite 745505
+rock-10,"rules 1, 1:10 (rock census)",johannesburg,highland,286,293,quartz,28458,1138.3,78.7,peridotite 2102199; granite 745505
+rock-10,"rules 1, 1:10 (rock census)",johannesburg,highland,286,293,quartz_nativegold,365,14.6,78.7,peridotite 2102199; granite 745505
+rock-10,"rules 1, 1:10 (rock census)",johannesburg,highland,286,293,sperrylite,39,1.6,70.4,peridotite 2102199; granite 745505
+rock-10,"rules 1, 1:10 (rock census)",johannesburg,highland,286,293,spinel,7,0.3,48.9,peridotite 2102199; granite 745505
+rock-10,"rules 1, 1:10 (rock census)",johannesburg,highland,286,293,topaz,72,2.9,23.0,peridotite 2102199; granite 745505
+rock-10,"rules 1, 1:10 (rock census)",johannesburg,highland,286,293,tourmaline,6,0.2,19.3,peridotite 2102199; granite 745505
+rock-10,"rules 1, 1:10 (rock census)",brasilia,highland,218,225,bismuthinite,5542,221.7,57.7,andesite 1694376; peridotite 1163243; suevite 44
+rock-10,"rules 1, 1:10 (rock census)",brasilia,highland,218,225,cassiterite,72,2.9,37.4,andesite 1694376; peridotite 1163243; suevite 44
+rock-10,"rules 1, 1:10 (rock census)",brasilia,highland,218,225,cinnabar,390,15.6,89.1,andesite 1694376; peridotite 1163243; suevite 44
+rock-10,"rules 1, 1:10 (rock census)",brasilia,highland,218,225,garnet,3,0.1,36.7,andesite 1694376; peridotite 1163243; suevite 44
+rock-10,"rules 1, 1:10 (rock census)",brasilia,highland,218,225,hematite,469,18.8,24.1,andesite 1694376; peridotite 1163243; suevite 44
+rock-10,"rules 1, 1:10 (rock census)",brasilia,highland,218,225,loose:nativecopper,4,0.2,0,andesite 1694376; peridotite 1163243; suevite 44
+rock-10,"rules 1, 1:10 (rock census)",brasilia,highland,218,225,nativecopper,4238,169.5,77.1,andesite 1694376; peridotite 1163243; suevite 44
+rock-10,"rules 1, 1:10 (rock census)",brasilia,highland,218,225,olivine,15173,606.9,19.4,andesite 1694376; peridotite 1163243; suevite 44
+rock-10,"rules 1, 1:10 (rock census)",brasilia,highland,218,225,quartz,11627,465.1,58.3,andesite 1694376; peridotite 1163243; suevite 44
+rock-10,"rules 1, 1:10 (rock census)",brasilia,highland,218,225,quartz_nativegold,97,3.9,55.7,andesite 1694376; peridotite 1163243; suevite 44
+rock-10,"rules 1, 1:10 (rock census)",brasilia,highland,218,225,sphalerite,1607,64.3,53.5,andesite 1694376; peridotite 1163243; suevite 44
+rock-10,"rules 1, 1:10 (rock census)",brasilia,highland,218,225,spinel,100,4.0,38.6,andesite 1694376; peridotite 1163243; suevite 44
+rock-10,"rules 1, 1:10 (rock census)",atacama,highland,250,266,flint,17,0.7,4.3,claystone 1585092; sandstone 813445; chalk 320996; conglomerate 139405; slate 36120
+rock-10,"rules 1, 1:10 (rock census)",atacama,highland,250,266,nativecopper,5,0.2,49.2,claystone 1585092; sandstone 813445; chalk 320996; conglomerate 139405; slate 36120
+rock-10,"rules 1, 1:10 (rock census)",atacama,highland,250,266,olivine,91,3.6,41.3,claystone 1585092; sandstone 813445; chalk 320996; conglomerate 139405; slate 36120
+rock-10,"rules 1, 1:10 (rock census)",atacama,highland,250,266,phosphorite,728,29.1,67.8,claystone 1585092; sandstone 813445; chalk 320996; conglomerate 139405; slate 36120
+rock-10,"rules 1, 1:10 (rock census)",atacama,highland,250,266,quartz,12506,500.2,54.4,claystone 1585092; sandstone 813445; chalk 320996; conglomerate 139405; slate 36120
+rock-10,"rules 1, 1:10 (rock census)",atacama,highland,250,266,quartz_nativegold,1,0.0,107,claystone 1585092; sandstone 813445; chalk 320996; conglomerate 139405; slate 36120
+rock-10,"rules 1, 1:10 (rock census)",atacama,highland,250,266,quartz_nativesilver,77,3.1,46.5,claystone 1585092; sandstone 813445; chalk 320996; conglomerate 139405; slate 36120
+rock-10,"rules 1, 1:10 (rock census)",atacama,highland,250,266,saltpeter,88,3.5,103.9,claystone 1585092; sandstone 813445; chalk 320996; conglomerate 139405; slate 36120
+rock-10,"rules 1, 1:10 (rock census)",atacama,highland,250,266,sphalerite,2940,117.6,57.1,claystone 1585092; sandstone 813445; chalk 320996; conglomerate 139405; slate 36120
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,bismuthinite,394,15.8,69.9,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,borax,130,5.2,1.9,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,cassiterite,2503,100.1,52.2,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,emerald,32,1.3,94.5,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,flint,104,4.2,4.7,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,garnet,1,0.0,56,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,graphite,164,6.6,19.7,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,loose:cassiterite,1,0.0,0,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,loose:nativecopper,5,0.2,0,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,nativecopper,77,3.1,5.8,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,olivine,6062,242.5,61.3,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,pyrite,426,17.0,12.3,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,quartz,26149,1046.0,71.4,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,quartz_nativesilver,109,4.4,87.4,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,saltpeter,232,9.3,62.0,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,sperrylite,870,34.8,63.8,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",vienna,lowland,112,156,spinel,9,0.4,51.3,peridotite 2099923; slate 229554; claystone 21566; redmarble 407
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,beryl,45,1.8,39.8,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,bismuthinite,984,39.4,53.5,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,cassiterite,1599,64.0,44.7,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,chalcopyrite,1992,79.7,45.2,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,emerald,1,0.0,98,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,flint,107,4.3,6.3,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,galena,482,19.3,7.2,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,garnet,65,2.6,53.9,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,hematite,3011,120.4,37.3,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,lignite,628,25.1,11.8,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,loose:galena,3,0.1,0,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,nativecopper,11696,467.8,72.7,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,olivine,91,3.6,83.6,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,peat,645,25.8,1.5,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,quartz,22553,902.1,39.7,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,quartz_nativegold,104,4.2,49.7,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,saltpeter,394,15.8,56.5,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,smithsonite,268,10.7,7.7,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,sphalerite,248,9.9,33.3,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,topaz,76,3.0,41.9,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",riga,lowland,102,113,tourmaline,11,0.4,46.1,granite 1474000; phyllite 237468; limestone 31426; peridotite 8807; whitemarble 1205; travertine 81
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,anthracite,2219,88.8,39.6,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,bismuthinite,117,4.7,73.1,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,bituminouscoal,6801,272.0,38.3,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,cassiterite,459,18.4,72.4,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,cinnabar,105,4.2,97.8,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,clay-fire,3235,129.4,41.9,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,clay-red,1183,47.3,0.8,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,emerald,17,0.7,96.1,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,flint,66,2.6,7.4,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,galena,17,0.7,22.2,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,garnet,44,1.8,78.2,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,halite,66204,2648.2,70.0,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,hematite,527,21.1,85.9,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,loose:nativecopper,2,0.1,0,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,nativecopper,532,21.3,83.7,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,olivine,1414,56.6,94.0,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,phosphorite,425,17.0,48.9,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,quartz,13324,533.0,47.5,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,quartz_nativesilver,661,26.4,46.6,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,saltpeter,603,24.1,74.4,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,sphalerite,158,6.3,77.0,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,sulfur,1546,61.8,29.2,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",pannonia,lowland,115,124,sylvite,632,25.3,75.2,peridotite 1230407; claystone 1070807; slate 318956; chalk 136319; halite 65958
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,anthracite,840,33.6,39.7,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,borax,4526,181.0,26.1,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,cassiterite,165,6.6,65.0,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,cinnabar,1003,40.1,77.8,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,clay-fire,59,2.4,37.0,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,flint,629,25.2,9.0,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,fluorite,124,5.0,47.8,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,galena,3784,151.4,31.0,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,galena_nativesilver,1,0.0,43,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,halite,23836,953.4,54.2,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,lignite,4845,193.8,34.8,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,loose:borax,6,0.2,0,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,loose:galena,2,0.1,0,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,loose:nativecopper,9,0.4,0,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,nativecopper,2337,93.5,73.9,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,pyrite,1604,64.2,35.3,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,quartz,17440,697.6,64.7,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,quartz_nativesilver,128,5.1,53.5,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,saltpeter,51,2.0,49.7,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",deadsea,below-sea,82,151,sylvite,49,2.0,65.9,andesite 679053; shale 526101; conglomerate 92314
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,beryl,5,0.2,42.8,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,bismuthinite,173,6.9,73.3,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,cassiterite,7,0.3,1,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,clay-red,73,2.9,0,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,garnet,13,0.5,61.4,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,hematite,2288,91.5,20.2,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,loose:cassiterite,3,0.1,0,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,loose:nativecopper,6,0.2,0,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,loose:quartz,23,0.9,0,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,nativecopper,38844,1553.8,77.4,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,olivine,91,3.6,207.5,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,quartz,26023,1040.9,49.2,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,quartz_nativegold,21,0.8,14,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,quartz_nativesilver,21,0.8,34.9,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,tetrahedrite,667,26.7,46.7,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,topaz,15,0.6,42.5,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,tourmaline,1,0.0,24,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",zermatt,mountain,215,306,wolframite,467,18.7,69.3,granite 2222601; andesite 528169; slate 97590; whitemarble 89
+rock-100,"rules 1, 1:100 (rock census)",addis,highland,226,275,clay-red,714,28.6,0.9,granite 2066608; andesite 756777
+rock-100,"rules 1, 1:100 (rock census)",addis,highland,226,275,garnet,24,1.0,56,granite 2066608; andesite 756777
+rock-100,"rules 1, 1:100 (rock census)",addis,highland,226,275,ilmenite,2065,82.6,57.2,granite 2066608; andesite 756777
+rock-100,"rules 1, 1:100 (rock census)",addis,highland,226,275,nativecopper,3411,136.4,71.9,granite 2066608; andesite 756777
+rock-100,"rules 1, 1:100 (rock census)",addis,highland,226,275,peat,373,14.9,0.9,granite 2066608; andesite 756777
+rock-100,"rules 1, 1:100 (rock census)",addis,highland,226,275,pyrite,5607,224.3,47.9,granite 2066608; andesite 756777
+rock-100,"rules 1, 1:100 (rock census)",addis,highland,226,275,quartz,29740,1189.6,26.6,granite 2066608; andesite 756777
+rock-100,"rules 1, 1:100 (rock census)",addis,highland,226,275,quartz_nativegold,4,0.2,6.8,granite 2066608; andesite 756777
+rock-100,"rules 1, 1:100 (rock census)",addis,highland,226,275,sphalerite,158,6.3,65.5,granite 2066608; andesite 756777
+rock-100,"rules 1, 1:100 (rock census)",addis,highland,226,275,topaz,77,3.1,41.4,granite 2066608; andesite 756777
+rock-100,"rules 1, 1:100 (rock census)",addis,highland,226,275,tourmaline,22,0.9,38.6,granite 2066608; andesite 756777
+rock-100,"rules 1, 1:100 (rock census)",nairobi,highland,221,233,beryl,26,1.0,36.6,granite 2832282
+rock-100,"rules 1, 1:100 (rock census)",nairobi,highland,221,233,bismuthinite,1014,40.6,60.5,granite 2832282
+rock-100,"rules 1, 1:100 (rock census)",nairobi,highland,221,233,chalcopyrite,720,28.8,57.8,granite 2832282
+rock-100,"rules 1, 1:100 (rock census)",nairobi,highland,221,233,garnet,9,0.4,63.8,granite 2832282
+rock-100,"rules 1, 1:100 (rock census)",nairobi,highland,221,233,hematite,1470,58.8,58.2,granite 2832282
+rock-100,"rules 1, 1:100 (rock census)",nairobi,highland,221,233,nativecopper,42,1.7,10.7,granite 2832282
+rock-100,"rules 1, 1:100 (rock census)",nairobi,highland,221,233,quartz,28315,1132.6,63.9,granite 2832282
+rock-100,"rules 1, 1:100 (rock census)",nairobi,highland,221,233,quartz_nativesilver,803,32.1,61.9,granite 2832282
+rock-100,"rules 1, 1:100 (rock census)",nairobi,highland,221,233,sphalerite,2042,81.7,55.8,granite 2832282
+rock-100,"rules 1, 1:100 (rock census)",nairobi,highland,221,233,tetrahedrite,387,15.5,52.3,granite 2832282
+rock-100,"rules 1, 1:100 (rock census)",nairobi,highland,221,233,topaz,1,0.0,29,granite 2832282
+rock-100,"rules 1, 1:100 (rock census)",nairobi,highland,221,233,tourmaline,25,1.0,36.7,granite 2832282
+rock-100,"rules 1, 1:100 (rock census)",mexico,highland,243,255,emerald,33,1.3,90.6,peridotite 2860872
+rock-100,"rules 1, 1:100 (rock census)",mexico,highland,243,255,garnet,10,0.4,55.2,peridotite 2860872
+rock-100,"rules 1, 1:100 (rock census)",mexico,highland,243,255,loose:nativecopper,2,0.1,0,peridotite 2860872
+rock-100,"rules 1, 1:100 (rock census)",mexico,highland,243,255,nativecopper,85,3.4,8.2,peridotite 2860872
+rock-100,"rules 1, 1:100 (rock census)",mexico,highland,243,255,olivine,22324,893.0,80.6,peridotite 2860872
+rock-100,"rules 1, 1:100 (rock census)",mexico,highland,243,255,olivine_peridot,855,34.2,84.8,peridotite 2860872
+rock-100,"rules 1, 1:100 (rock census)",mexico,highland,243,255,quartz,14418,576.7,70.4,peridotite 2860872
+rock-100,"rules 1, 1:100 (rock census)",mexico,highland,243,255,sperrylite,167,6.7,66.3,peridotite 2860872
+rock-100,"rules 1, 1:100 (rock census)",mexico,highland,243,255,sphalerite,74,3.0,34.1,peridotite 2860872
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,beryl,14,0.6,36.1,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,cassiterite,1251,50.0,46.5,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,chalcopyrite,19590,783.6,43.3,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,clay-red,237,9.5,0,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,garnet,34,1.4,56.7,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,hematite,30,1.2,91.0,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,loose:nativecopper,2,0.1,0,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,nativecopper,9787,391.5,76.5,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,olivine,154,6.2,56.2,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,peat,138,5.5,0.5,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,quartz,35892,1435.7,74.5,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,quartz_nativegold,95,3.8,79.2,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,sphalerite,49,2.0,61.6,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,tetrahedrite,384,15.4,55.9,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,topaz,2,0.1,42.5,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lapaz,highland,280,311,tourmaline,19,0.8,40.4,granite 2909517
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,beryl,13,0.5,34.2,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,bismuthinite,4039,161.6,58.4,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,cassiterite,124,5.0,41.7,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,chalcopyrite,1365,54.6,37.9,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,cinnabar,215,8.6,96.3,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,clay-red,94,3.8,0.3,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,garnet,35,1.4,51.9,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,loose:cassiterite,1,0.0,0,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,loose:nativecopper,5,0.2,0,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,nativecopper,3289,131.6,73.0,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,peat,147,5.9,0.6,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,quartz,14258,570.3,30.1,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,sphalerite,2025,81.0,60.7,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,topaz,1,0.0,32,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,tourmaline,138,5.5,35.4,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",lhasa,highland,285,329,wolframite,417,16.7,44.7,granite 2612641
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,bauxite,5,0.2,4,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,bismuthinite,24,1.0,68.7,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,cassiterite,209,8.4,53.2,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,chalcopyrite,327,13.1,64.5,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,garnet,24,1.0,46.7,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,hematite,1978,79.1,34.4,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,loose:nativecopper,1,0.0,0,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,nativecopper,1100,44.0,80.6,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,olivine,13220,528.8,60.2,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,olivine_peridot,243,9.7,61.3,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,quartz,8565,342.6,17.2,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,quartz_nativegold,110,4.4,18.8,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,saltpeter,134,5.4,105.1,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,sperrylite,117,4.7,80.1,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,sphalerite,64,2.6,62.1,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,spinel,35,1.4,45.1,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,tetrahedrite,654,26.2,41.1,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,topaz,45,1.8,38.4,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",tehran,highland,192,217,tourmaline,102,4.1,31.4,peridotite 1167314; andesite 842156; granite 754068; slate 83305; bauxite 5
+rock-100,"rules 1, 1:100 (rock census)",johannesburg,highland,214,232,bauxite,251684,10067.4,8.5,granite 2601863; bauxite 250852
+rock-100,"rules 1, 1:100 (rock census)",johannesburg,highland,214,232,beryl,36,1.4,35,granite 2601863; bauxite 250852
+rock-100,"rules 1, 1:100 (rock census)",johannesburg,highland,214,232,bismuthinite,333,13.3,74.8,granite 2601863; bauxite 250852
+rock-100,"rules 1, 1:100 (rock census)",johannesburg,highland,214,232,cassiterite,29,1.2,41.1,granite 2601863; bauxite 250852
+rock-100,"rules 1, 1:100 (rock census)",johannesburg,highland,214,232,chromite,130,5.2,106.7,granite 2601863; bauxite 250852
+rock-100,"rules 1, 1:100 (rock census)",johannesburg,highland,214,232,garnet,30,1.2,48.5,granite 2601863; bauxite 250852
+rock-100,"rules 1, 1:100 (rock census)",johannesburg,highland,214,232,hematite,26,1.0,49.5,granite 2601863; bauxite 250852
+rock-100,"rules 1, 1:100 (rock census)",johannesburg,highland,214,232,nativecopper,923,36.9,87.1,granite 2601863; bauxite 250852
+rock-100,"rules 1, 1:100 (rock census)",johannesburg,highland,214,232,olivine,91,3.6,72.6,granite 2601863; bauxite 250852
+rock-100,"rules 1, 1:100 (rock census)",johannesburg,highland,214,232,quartz,13086,523.4,61.0,granite 2601863; bauxite 250852
+rock-100,"rules 1, 1:100 (rock census)",johannesburg,highland,214,232,quartz_nativegold,21,0.8,41.4,granite 2601863; bauxite 250852
+rock-100,"rules 1, 1:100 (rock census)",johannesburg,highland,214,232,tetrahedrite,1819,72.8,42.8,granite 2601863; bauxite 250852
+rock-100,"rules 1, 1:100 (rock census)",johannesburg,highland,214,232,topaz,9,0.4,53.3,granite 2601863; bauxite 250852
+rock-100,"rules 1, 1:100 (rock census)",johannesburg,highland,214,232,tourmaline,8,0.3,36.1,granite 2601863; bauxite 250852
+rock-100,"rules 1, 1:100 (rock census)",brasilia,highland,188,202,bismuthinite,4408,176.3,58.9,andesite 1939901; peridotite 724216; basalt 143676; obsidian 1326
+rock-100,"rules 1, 1:100 (rock census)",brasilia,highland,188,202,cassiterite,1724,69.0,44.2,andesite 1939901; peridotite 724216; basalt 143676; obsidian 1326
+rock-100,"rules 1, 1:100 (rock census)",brasilia,highland,188,202,chalcopyrite,1067,42.7,52.8,andesite 1939901; peridotite 724216; basalt 143676; obsidian 1326
+rock-100,"rules 1, 1:100 (rock census)",brasilia,highland,188,202,clay-red,31,1.2,0.5,andesite 1939901; peridotite 724216; basalt 143676; obsidian 1326
+rock-100,"rules 1, 1:100 (rock census)",brasilia,highland,188,202,garnet,23,0.9,33.7,andesite 1939901; peridotite 724216; basalt 143676; obsidian 1326
+rock-100,"rules 1, 1:100 (rock census)",brasilia,highland,188,202,loose:nativecopper,1,0.0,0,andesite 1939901; peridotite 724216; basalt 143676; obsidian 1326
+rock-100,"rules 1, 1:100 (rock census)",brasilia,highland,188,202,loose:quartz,23,0.9,0,andesite 1939901; peridotite 724216; basalt 143676; obsidian 1326
+rock-100,"rules 1, 1:100 (rock census)",brasilia,highland,188,202,nativecopper,18,0.7,6,andesite 1939901; peridotite 724216; basalt 143676; obsidian 1326
+rock-100,"rules 1, 1:100 (rock census)",brasilia,highland,188,202,olivine,3222,128.9,21.0,andesite 1939901; peridotite 724216; basalt 143676; obsidian 1326
+rock-100,"rules 1, 1:100 (rock census)",brasilia,highland,188,202,pyrite,44,1.8,16,andesite 1939901; peridotite 724216; basalt 143676; obsidian 1326
+rock-100,"rules 1, 1:100 (rock census)",brasilia,highland,188,202,quartz,17115,684.6,42.7,andesite 1939901; peridotite 724216; basalt 143676; obsidian 1326
+rock-100,"rules 1, 1:100 (rock census)",brasilia,highland,188,202,quartz_nativegold,9,0.4,18.9,andesite 1939901; peridotite 724216; basalt 143676; obsidian 1326
+rock-100,"rules 1, 1:100 (rock census)",brasilia,highland,188,202,quartz_nativesilver,118,4.7,20.2,andesite 1939901; peridotite 724216; basalt 143676; obsidian 1326
+rock-100,"rules 1, 1:100 (rock census)",brasilia,highland,188,202,saltpeter,172,6.9,109.6,andesite 1939901; peridotite 724216; basalt 143676; obsidian 1326
+rock-100,"rules 1, 1:100 (rock census)",brasilia,highland,188,202,sperrylite,263,10.5,40.7,andesite 1939901; peridotite 724216; basalt 143676; obsidian 1326
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,bismuthinite,64,2.6,51.9,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,cassiterite,18,0.7,6,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,chalcopyrite,304,12.2,55.7,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,cinnabar,46,1.8,82.2,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,garnet,52,2.1,53.3,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,hematite,1187,47.5,67.9,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,loose:cassiterite,2,0.1,0,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,loose:nativecopper,9,0.4,0,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,nativecopper,31908,1276.3,76.0,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,olivine,91,3.6,94.3,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,olivine_peridot,7,0.3,102.7,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,quartz,14510,580.4,55.5,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,quartz_nativegold,90,3.6,45.3,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,quartz_nativesilver,129,5.2,57.9,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,sphalerite,2401,96.0,60.7,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,tetrahedrite,518,20.7,43.9,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,topaz,21,0.8,38.6,granite 2776546; peridotite 95330; suevite 170
+rock-100,"rules 1, 1:100 (rock census)",atacama,highland,213,224,tourmaline,61,2.4,40.3,granite 2776546; peridotite 95330; suevite 170

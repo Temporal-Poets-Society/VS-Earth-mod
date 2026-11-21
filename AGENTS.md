@@ -57,9 +57,20 @@ Current state: the card `C:\VS mods\overview\mods\earth.md`. Open issues: `tools
   -- <root> --make <version>` (with `-p:VintageStoryPath`), check the params against a real new world's, then
   `--write <version>`, and commit both files. The hashes are taken on Windows x64 with .NET 10 (Math.Log/Exp/Pow may
   differ in their last bits elsewhere); without the data store its GLO-90 worlds are skipped (exit 3, a partial pass). The Mod DB upload and any install or push wait for the author's word.
+- Release check (EA-0191, uses the network, so not in `Run-All.ps1`): `dotnet run -c Release --project
+  tests\DataReleaseCheck` asks ed-v1, egts-v1 and egl-v1 for every data file this build pins and fails (exit 1) on one
+  that is missing or has another size. A pinned file its release lacks makes every new world that needs it stop at
+  creation (decision 0103), so it must pass before a release goes out.
+- Human works undone (decision 0064; the author, 21 November 2026): every change to Earth's data that undoes a human work
+  after 1318, or leaves one on purpose, gets its entry in `tools/works_ledger.py`, and `docs/works-1318-ledger.md` is written
+  again by it, in the same commit. `tests/DataReadersTests` checks the page's facts (the files, their areas and levels,
+  the rules versions) against the data and the code and fails until they match.
 - Data: new or changed data files go up under a new file name (or a new tag), each upload only with the author's
-  yes; release assets are never replaced or deleted. The data-store file list is compiled into
-  `src\Core\EarthDataStore.cs`; credit every source in `ATTRIBUTION` and the data repo's README.
+  yes; release assets are never replaced or deleted. A file baked again gets a new name even when the earlier bake
+  was never uploaded: copies of the earlier bake live on in stores (benches, testers), and a store's file of a pinned
+  name that isn't the pinned bytes stops new worlds until the release has the right one (EA-0191). The data-store
+  file list is compiled into `src\Core\EarthDataStore.cs`; credit every source in `ATTRIBUTION` and the data repo's
+  README.
 
 ## Gotchas
 - Mixed line endings: about 50 C# files (e.g. `src\Core\TerrainModel.cs`) are CRLF in Git. Git Bash `sed -i`

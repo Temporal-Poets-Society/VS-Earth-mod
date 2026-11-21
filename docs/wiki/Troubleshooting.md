@@ -8,8 +8,9 @@ downloaded and how big it is, see [Data and performance](Data-and-performance).
 
 - **The server log:** `VintagestoryData/Logs/server-main.log` (in single player too; on a dedicated server, the `Logs`
   folder of its data folder). Earth's lines start with `[earth]`. The ones about data say `Earth data:` (the data
-  files), `Earth elevation:` (the GLO-90 land heights), `Earth lakes:`, `Earth rivers:`, `Earth river flow:` and
-  `Earth dams:` (the files beside the heights). Errors are marked `[Error]`.
+  files), `Earth elevation:` (the GLO-90 land heights), `Earth lakes:`, `Earth rivers:`, `Earth river flow:`,
+  `Earth streams:` and `Earth dams:` (the files beside the heights), `Earth soil:` and `Earth geology:` (the soil and rock
+  maps). Errors are marked `[Error]`.
 - **The game's own log:** `VintagestoryData/Logs/client-main.log`, for problems on a player's side.
 - **The loading screen** of a single-player world shows Earth's data downloads and anything that stops the start.
 - **In game:** `/earth elevation` (or the `.earthelevation` window) shows how many GLO-90 squares are on the server,
@@ -21,7 +22,7 @@ When you report a problem, attach `server-main.log` and name the Earth, Cylinder
 
 ### The server stops at its first start: "Earth's data files ... are missing ... and could not be had"
 
-The data files (289 MB) are fetched before any world is built, and the server doesn't build a world without them. The
+The data files (296 MB) are fetched before any world is built, and the server doesn't build a world without them. The
 message names the missing files and why: the network, a full disk, or no source set.
 - **No network, or GitHub blocked:** let the server reach GitHub and start again, or download the files elsewhere and
   put them in place (see "Without internet" on [Data and performance](Data-and-performance)).
@@ -31,10 +32,23 @@ message names the missing files and why: the network, a full disk, or no source 
 
 ### The server stops while the world starts: "... could not be fetched while the world starts"
 
-The world's first chunks, or the lake, river and dam files beside the heights, couldn't be downloaded while the world
-was starting. The server stops on purpose, with nothing saved, so that a short failure doesn't leave the world with
-coarser heights or without its lakes and rivers for good. Start again once the network works. If the release itself
-doesn't have a file, the world goes on without it for good and the log says so (a warning, not a stop).
+The world's first chunks, or the lake, river, stream and dam files beside the heights, couldn't be downloaded while the
+world was starting. The server stops on purpose, with nothing saved, so that a short failure doesn't leave the world
+with coarser heights or without its lakes and rivers for good. Start again once the network works.
+
+### A new world stops: "... this world needs ..., and it can't be had"
+
+A new world that needs a data file it can't have stops before it generates anything: the release doesn't have the
+file, the copy on the computer is an older one than this Earth reads, or no source is set in `earth.json`. In single
+player the message is on the world's loading screen; on a server, in the log. It names the file and why, the folder to
+put it in and the release it comes from, and how to make the world without it where there is a way (for the streams:
+set `StreamsLayer` to `false` in `earth.json`).
+- Nothing is saved. The world stays in the world list; start it again once the file is there, and it is made as new,
+  with the same settings.
+- A world an earlier Earth version had already marked as going without a file keeps working without it, so that its
+  chunks match, and says so in chat when it opens.
+- The soil map and the rock map are the exception: if the release doesn't have them, a new world uses Earth's coarser
+  soil or rock map for good and the log says so (`Earth soil:`, `Earth geology:`).
 
 ### The download is slow, or stopped
 
@@ -56,7 +70,7 @@ A world made with full land heights needs each GLO-90 square of land the first t
 - **Download them all first:** with all squares on the computer, the world never needs the network again. The Earth
   tab's default downloads them all while you play; **Download all before the world starts** does it before the first
   chunk; on an existing world, `.earthelevation` or `/earth elevation download all`.
-- **The data files** (289 MB) are needed at every start, but only downloaded once.
+- **The data files** (296 MB) are needed at every start, but only downloaded once.
 - **Offline at the world's first start:** the server stops (see above) instead of making the spawn area without its
   heights.
 
@@ -93,9 +107,9 @@ be had, you are not teleported (you would land over a hole), and the reply says 
 - **A download that fills the disk** stops and says so in the window and the log; free space and start it again.
 - The game itself also stops a server whose disk is nearly full, to protect the save (vanilla's `DieBelowDiskSpaceMb`
   in `serverconfig.json`).
-- Earth's data lives in `VintagestoryData/ModData/earth`. Deleting the `glo90` folder frees up to 8.8 GB, but every
-  world with full heights then downloads its squares and its lake, river and dam files again; deleting `data` makes
-  the next start download 289 MB again.
+- Earth's data lives in `VintagestoryData/ModData/earth`. Deleting the `glo90` folder frees up to 8.9 GB, but every
+  world with full heights then downloads its squares and its lake, river, stream and dam files again; deleting `data`
+  makes the next start download 296 MB again.
 
 ## Memory and speed
 
@@ -120,7 +134,18 @@ stops before making any chunk, and the log names each part with its reason. Noth
   can set `AcceptMissingFeatures` to `true` in `earth.json`. It applies to every Earth world on that server or
   computer, so set it back to `false` once the cause is fixed.
 
+## The server stops: "Earth cannot generate this world ... without Earth's terrain"
+
+The game made a chunk without Earth's land, because another mod replaced or wrapped the step of world generation that
+Earth's terrain runs in. With the game, Earth and its required mods alone this doesn't happen. Earth stops rather than
+make a world of broken land, and the message names the mod and what it put in that step (the line before it in the log
+lists the whole step). Remove that mod, or keep it out of Earth worlds. A mod that only previews far terrain on chunks of
+its own doesn't stop an Earth world: Earth leaves those chunks alone and says so once in the log.
+
 ## Worlds from older Earth versions
 
 Worlds made with Earth before 2.0.0 (0.x, 1.x and the 2.0.0 test builds) are not supported by Earth 2.0: start a new
 world. Worlds made with 2.0.0 or later keep working in later versions.
+
+The other way round, an older Earth refuses a world a newer one made: "this world was saved by a newer Earth", naming
+the version, and the world is left unchanged. A world made with Earth 2.2.0 needs 2.2.0 or newer. See [Saves](Saves).

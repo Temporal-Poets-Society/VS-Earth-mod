@@ -41,11 +41,28 @@ namespace EarthMap
 
         /// <summary>Regional rock sequences and surface materials in NEW Earth worlds.</summary>
         public bool RegionalGeology = true;
-        /// <summary>Ground columns for NEW Earth worlds with regional geology (soil by soil type, Quaternary cover, bedrock to the
-        /// basement, in metres on a log depth curve) where the ground data reaches. Worlds made from the menu choose them in the
-        /// Earth tab ("Rocks and ground": ground columns, the default); this flag only decides for worlds made without that
-        /// option, and is off for them.</summary>
+        /// <summary>No longer read (EA-0197, decision 0104): <see cref="ExperimentalGroundColumns"/> replaces it, so a value left in an
+        /// earth.json from an earlier Earth never turns ground columns on; a true value is said in the log when a new world is
+        /// made. Kept so such a file still reads.</summary>
         public bool GroundColumnsPrototype = false;
+        /// <summary>
+        /// EXPERIMENTAL, for development only (EA-0197, decision 0104): ground columns in NEW Earth worlds (soil by soil type,
+        /// Quaternary cover, bedrock to the basement where the ground data reaches). They are off the world creation screen in
+        /// Earth 2.2: they need more work (ground columns 3). On: a new world whose rock is regional (the Earth tab's "Regional
+        /// rock regions only", or "groundcolumns" from a world config) gets ground columns, with the world config's
+        /// earthGroundDepth or the default depth curve; said in the log. Off (the default): no new world gets them, whatever its
+        /// world config says. Worlds that have them keep them.
+        /// </summary>
+        public bool ExperimentalGroundColumns = false;
+        /// <summary>
+        /// EXPERIMENTAL, for development only (EA-0197, decision 0104): Earth's ore maps in NEW Earth worlds instead of vanilla's
+        /// deposits (plus Earth's gems and ores). They are off the world creation screen in Earth 2.2, whose Ores offers vanilla
+        /// deposits only: they need more work (the next ore model, EA-0177). On: every new world gets the ore maps (its world
+        /// config's Ores, always vanilla, isn't read); said in the log. Off (the default): no new world gets them, whatever its
+        /// world config says, and
+        /// UpgradeExistingWorldOreRules can't turn them on. Worlds that have them keep them.
+        /// </summary>
+        public bool ExperimentalOreMaps = false;
         /// <summary>One-shot: the next Earth world started adopts RegionalGeology (on or off), the current rock-layer rules and
         /// GeologyTransitionBlocks for new chunks, then this resets to false. Rock layers in new chunks may not line up with
         /// already generated ones. Resource-eligibility fixes reach regional-geology saves without this.</summary>
@@ -53,7 +70,10 @@ namespace EarthMap
         /// <summary>World-coordinate transition zone half-width. 0 retains sharp source-grid contacts; range 0..512.</summary>
         public double GeologyTransitionBlocks = 96;
 
-        /// <summary>Evidence-based resources in NEW worlds. Existing worlds retain their saved ore rules.</summary>
+        /// <summary>What <see cref="UpgradeExistingWorldOreRules"/> gives an existing world: its ore maps kept (true) or turned off
+        /// (false). It no longer decides for NEW worlds (EA-0197, decision 0104: <see cref="ExperimentalOreMaps"/> does), and it
+        /// turns the ore maps on in a world without them only with ExperimentalOreMaps on. Existing worlds retain their saved
+        /// ore rules.</summary>
         public bool RegionalOres = true;
         /// <summary>One-shot: the next Earth world started adopts RegionalOres (on or off) and the Ores tuning below for new
         /// generation, then this resets to false. Rule fixes and new evidence data reach regional-ore saves without this.</summary>
@@ -197,6 +217,10 @@ namespace EarthMap
         public string Streams = "auto";
         /// <summary>Smallest stream (m³/s), where it is one block wide. The data holds rivers down to 20.</summary>
         public double StreamMinDischarge = 20;
+        /// <summary>(EA-0131, decision 0061) The streams layer in new worlds at 1:25 and finer on full GLO-90 whose streams are "all":
+        /// the streams from 1 m³/s up to the large rivers' 20 (streams-glo90-1.bin, fetched with the GLO-90 heights). False:
+        /// new worlds go without it. Worlds keep what they were made with.</summary>
+        public bool StreamsLayer = true;
         /// <summary>
         /// 0..1: loop cut-offs for the rivers' exaggerated width. Where a tight bend would make the river touch itself
         /// (slivers of land, steps between its arms) the loop is cut off like a meander neck, earlier the higher this is.

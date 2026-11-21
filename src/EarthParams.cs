@@ -135,7 +135,10 @@ namespace EarthMap
         /// <summary>Version of the river end rules (Core.RiverEnds.Version): rivers continue downstream to their end, end in the
         /// terminal lakes (lakes.bin: the revived Aral Sea, Lop Nur, ... and the natural salt lakes), are led on to a sea or lake
         /// they stop short of, and fade out in dry basins; their seam crossings are found by the ring's geometry
-        /// (RiverNetwork.geometrySeams). 0: none (saves before 0.14.1, which opt in with UpgradeExistingWorldRiverEnds).</summary>
+        /// (RiverNetwork.geometrySeams). 2 (decision 0093, EA-0160): and a river ends where it reaches the sea, before land of
+        /// 5 m or more beyond (by this world's coast), with no mouth prolongation there. 3 (decision 0107): the terminal lakes of
+        /// lakes-2.bin, with the Aral at its level of 1318 (29 m) instead of 1960's. 0: none (saves before 0.14.1, which opt in
+        /// with UpgradeExistingWorldRiverEnds, to rules 2).</summary>
         [ProtoMember(57)] public int RiverEnds;
         /// <summary>Version of the world-generation temperature correction in Earth's climate hook
         /// (TerrainModel.ClimateCorrection): 1 = the real temperature less vanilla's reading with both its cuts to -20..40 °C
@@ -159,9 +162,9 @@ namespace EarthMap
         /// 350 000 block ring) and that have the islands (they come from the same outlines). 0: none (saves before 0.14, smaller
         /// worlds; opt in with UpgradeExistingWorldCoasts).</summary>
         [ProtoMember(61)] public int Coasts;
-        /// <summary>Version of the delta branches (Core.RiverDeltas.Version): where a river splits (the Mekong at Vàm Nao), its
-        /// branches share its discharge instead of one branch taking all of it. Needs RiverEnds. 0: none (saves before 0.14.7,
-        /// which opt in with UpgradeExistingWorldRiverDeltas).</summary>
+        /// <summary>Version of the delta branches (Core.RiverDeltas.Version): where a river splits (the Mekong at Vàm Nao; from 2,
+        /// EA-0179, the Mississippi's Atchafalaya at Old River), its branches share its discharge instead of one branch taking all
+        /// of it. Needs RiverEnds. 0: none (saves before 0.14.7, which opt in with UpgradeExistingWorldRiverDeltas).</summary>
         [ProtoMember(62)] public int RiverDeltas;
         /// <summary>Version of the river width rules (RiverNetwork.WidthRulesVersion): 1 = the standard world's gameplay widths
         /// as a floor in blocks on any bigger map, a river's real width where that is wider (new worlds from 0.14.7; worlds up
@@ -264,7 +267,7 @@ namespace EarthMap
         /// <summary>0048: soil fertility floor in vanilla's block layers (Core.SoilFertility.RulesVersion): land that isn't
         /// arid by the real aridity index has soil, not sand or gravel. 0: vanilla fertility (older saves). 2: ground columns
         /// leave arid land without topsoil, river belts excepted. 3: arid land in a river's natural flood (FloodplainGrid)
-        /// keeps its topsoil too.</summary>
+        /// keeps its topsoil too. 4 (decision 0105): Earth soil (Topsoil, soil-rules-v4.json), worlds whose Earth tab chose it.</summary>
         [ProtoMember(92)] public int SoilRules;
         /// <summary>Ground columns (Core.GroundColumns.RulesVersion): soil, Quaternary cover and bedrock in metres from the
         /// ground tiles, mapped to blocks by the depth curve below. New worlds take the Earth tab's "Rocks and ground" (ground
@@ -277,7 +280,9 @@ namespace EarthMap
         /// <summary>Which ground sets a ground-columns world reads (Core.GroundDownloader, global-design section 9): 2 = the 30″
         /// sets of release egts-v1, fetched before the world's first chunk; 1 = the ground pack's 2′ sets only (the 30″ sets
         /// could not be had when the world was made, and are never read in it later, so its cover stays one kind). 0: worlds
-        /// made before this (they read whatever 30″ sets the machine has, as before). 192: next to the other ground fields.</summary>
+        /// made before this (they read whatever 30″ sets the machine has, as before). 192: next to the other ground fields. A world with
+        /// Earth soil and no ground columns (decision 0105) records the same way whether it reads the 30″ soil-group set, the only
+        /// one it needs.</summary>
         [ProtoMember(192)] public int GroundData;
         /// <summary>0060: ores, gems and deposits in their ground layer whatever the ore choice (Core.OreLayers.RulesVersion):
         /// the layer pass after the deposits, the ore maps' layer gate and Earth's layer deposits, in ground-column worlds.
@@ -324,7 +329,10 @@ namespace EarthMap
         /// into the water mask's rivers (rivers-glo90-snap.bin). 3 (item 16, tall.16): and the side arms round the islands the
         /// mask shows in them (rivers-glo90-arms.bin). 4 (0063): every reach from 20 m³/s moved onto the mask's water and
         /// smoothed, the mask's half width at each vertex (RiverReach.Width), arms rebuilt on them (rivers-glo90-snap-2.bin,
-        /// rivers-glo90-arms-2.bin). 0: rivers.bin's courses and levels (older saves).</summary>
+        /// rivers-glo90-arms-2.bin). 5 (decision 0092, EA-0148): rules 4's on GLO-90's pixel-is-point grid (rivers-glo90-snap-3.bin,
+        /// rivers-glo90-arms-3.bin; rules 4 snapped to the mask's cells half a cell south-east of the heights); new worlds
+        /// get it with DamRules 4, RiverOutlines 5, LakeOutlines 5, FlowRules 2 and Works1318 5, or none of those.
+        /// 0: rivers.bin's courses and levels (older saves).</summary>
         [ProtoMember(97)] public int RiverCourses;
         /// <summary>0053: the detail noise's rules (TerrainModel.DetailRulesVersion). 1: wavelengths in metres below the
         /// land data's own cell, amplitude from the data's relief (smaller), smooth between cells, rotated octaves. 0: the
@@ -349,7 +357,9 @@ namespace EarthMap
         /// the grid's lakes for good (EarthElevationSystem.LakeOutlinesOffKey). 0: the grid's lakes (older saves). 2: Global
         /// Dam Watch's reservoirs left out too (0069 rule 9). 3 (decision 0088, EA-0147): the same lakes outlined across the
         /// 1° tiles' edges, so a lake's pieces meet where its shore crosses a whole degree. 4 (decision 0090, EA-0150): each
-        /// water body at its own level, and the reservoirs the mask joined to a natural lake left out.</summary>
+        /// water body at its own level, and the reservoirs the mask joined to a natural lake left out. 5 (decision 0092,
+        /// EA-0148): 4's lakes on GLO-90's pixel-is-point grid (versions 1-4 lay half a mask cell south-east of the heights'
+        /// flat water: 4.6 blocks south and 4.6-14 east at 1:10); only with RiverCourses 5.</summary>
         [ProtoMember(102)] public int LakeOutlines;
         /// <summary>0053 item 18: the rivers of GLO-90's water mask from their outlines (Core.RiverOutlineData.FileVersion,
         /// rivers-outline-glo90-1.bin, which comes with the GLO-90 heights): wherever this world reads GLO-90, dry land in them
@@ -358,7 +368,9 @@ namespace EarthMap
         /// file couldn't be had when it first needed it keeps the courses' channels for good
         /// (EarthElevationSystem.RiverOutlinesOffKey). 2: rivers-outline-glo90-2.bin, the rivers through the old reservoirs of
         /// item 19 (DamRules) and across the bridges the mask has as land; a world that keeps the dams for good
-        /// (EarthElevationSystem.DamsOffKey) reads 1's. 0: the courses' channels (older saves).</summary>
+        /// (EarthElevationSystem.DamsOffKey) reads 1's. 3 (0063 rule 2) and 4 (0069 rule 9): see RiverOutlineData. 5
+        /// (decision 0092, EA-0148): 4's rules on GLO-90's pixel-is-point grid, with dam rules 4. 0: the courses' channels
+        /// (older saves).</summary>
         [ProtoMember(103)] public int RiverOutlines;
         /// <summary>Geothermal rules (Core.Geothermal.RulesVersion, decision 0057): the climate map's geologic activity is heat
         /// under the GVP's Holocene volcanoes (0 elsewhere, never enough for vanilla's random hot springs), not vanilla's
@@ -371,7 +383,9 @@ namespace EarthMap
         /// get it, with RiverOutlines 2. A world whose file couldn't be had (or didn't fit its courses) when it first needed
         /// it keeps the dams for good (EarthElevationSystem.DamsOffKey). 2 (0063 rule 3, dams-glo90-2.bin keyed to courses rules
         /// 4's list; new worlds on courses rules 4 get it, EarthWorldOptions.Freeze): the corridor keeps the river's full width
-        /// across a wall and the tailrace, no level above the ground beside it. 0: GLO-90 and the courses as they are (older saves).</summary>
+        /// across a wall and the tailrace, no level above the ground beside it. 3 (0069 rule 9, dams-glo90-3.bin): and Global
+        /// Dam Watch's reservoirs. 4 (decision 0092, dams-glo90-4.bin keyed to courses rules 5's list): 3's on GLO-90's
+        /// pixel-is-point grid. 0: GLO-90 and the courses as they are (older saves).</summary>
         [ProtoMember(105)] public int DamRules;
         /// <summary>Not saved: course stations BuildModel lowered by the dam file, -1 when it refused it
         /// (<see cref="DamCourseError"/>).</summary>
@@ -381,7 +395,11 @@ namespace EarthMap
         /// people changed them after 1318 the sea, lakes and land of 1318 come back (step 1: the Netherlands, from the RCE
         /// maps of 1250, 1500 and 2000 AD: the Zuiderzee and the IJ over the polders, the drained lakes, land over the
         /// peat-digging lakes), and natural change after 1318 stays. Only where the coasts come from their outlines (Coasts).
-        /// 0: today's coasts and waters (older saves). 106 was free on every branch on 8 November 2026.</summary>
+        /// 0: today's coasts and waters (older saves). 106 was free on every branch on 8 November 2026. 5 (decision 0092):
+        /// rules 4's areas from works-1318-3.bin, whose canals are the mask's cells on GLO-90's pixel-is-point grid (as
+        /// RiverOutlines 5 draws that water). 6 (decision 0107): works-1318-4.bin, and the lakes of 1318 drained later (the
+        /// Valley of Mexico, Fucino, Copais, the Aral at its 14th-century low, ...) and the Salton Sea dry, with land beside them
+        /// held at their water top.</summary>
         [ProtoMember(106)] public int Works1318;
         /// <summary>Decision 0069 rule 8 (Core.NonPerennialData.RulesVersion, earthdata/rivers-nonperennial-2.bin): the arid
         /// rule dries only rivers GIRES v1.0 has as stopping 30 days a year or more (each reach's wet-source flow is none or
@@ -391,7 +409,9 @@ namespace EarthMap
         /// <summary>Decision 0069 rules 1-4 (Core.RiverFlowData.FileVersion, rivers-flow-glo90-1.bin in the GLO-90 folder): the
         /// water mask's river water takes its flow, still water and depth from the flow solved on it, and the mouth reaches
         /// that went to the sea across land are rerouted through their own water. Only with river outlines 4, whose water
-        /// it was solved on. 0: the courses' blended flow (older saves). 197 was free on every branch on 12 November 2026.</summary>
+        /// it was solved on. 0: the courses' blended flow (older saves). 197 was free on every branch on 12 November 2026.
+        /// 2 (decision 0092): rivers-flow-glo90-2.bin, solved on GLO-90's pixel-is-point grid and courses rules 5's list
+        /// (with river outlines 5), its pixels read on their own grid points.</summary>
         [ProtoMember(197)] public int FlowRules;
         /// <summary>Decision 0069 rule 7 (Core.ShoreZones.RulesVersion): no trees or shrubs on beaches, the open belts of
         /// low sea coasts, rivers' low banks and lakes' sedge shores, and no tall grass on beaches. 0: the forest to the
@@ -472,6 +492,68 @@ namespace EarthMap
         /// 212 (free on every branch on 16 November 2026).</summary>
         [ProtoMember(212)] public int Climate1318;
         public const int Climate1318Version = 1;
+        /// <summary>(EA-0131, decision 0061) The streams layer: 1 = the streams of streams-glo90-1.bin (HydroRIVERS from 1 m³/s up
+        /// to the large rivers' 20, the summer-dry ones left out) drawn on the land the world's rivers leave, loaded by area
+        /// (Core.StreamLayer, TerrainModel.ApplyStream). New worlds on full GLO-90 at 1:25 and finer whose streams are "all";
+        /// a new world that can't have the file stops at creation (decision 0103; worlds an earlier build marked go on without
+        /// the layer, EarthElevationSystem.AttachStreams). 0 = no layer (every world made before, and coarser ones). 213 and 214 are EA-0148's (17 November 2026).</summary>
+        [ProtoMember(215)] public int StreamRules;
+        /// <summary>(EA-0179, decision 0098) Coarse river rules (RiverNetwork.CoarseRulesVersion), new worlds at 1:50 and coarser:
+        /// 1 = rivers from RiverMinDischarge by the River width rule, one-block streams from StreamMinDischarge (the Earth tab's
+        /// Smallest stream, each play style its own) up to it (RiverNetwork.OneBlockStreams; StreamMode "all"), nothing under; and
+        /// the water mask's narrow river water only along a drawn river or stream (RiverOutlineData.Layer courseOnly). 2 = also
+        /// rivers to their end (a reach below a river is drawn as a river when its flow drops under RiverMinDischarge: losing
+        /// rivers), head streams (a river whose biggest inflow is not drawn starts from that inflow's last 10 km as a one-block
+        /// stream; both CoarseRivers) and the steep streams' lag (RiverNetwork.LagOf). 0 = every world made before, and those at 1:25 and finer (their streams narrow to 20 m³/s, and the streams layer goes
+        /// on below). 216 had been kept in reserve (the coordinator, 18 November 2026).</summary>
+        [ProtoMember(216)] public int CoarseRiverRules;
+        /// <summary>(EA-0159, decision 0095) The Earth tab's "River width" (earthRiverWidth, in %) as a multiplier: ×1 draws
+        /// rivers as at 1:10, and a world at a coarser scale draws the gameplay floor that many times as wide in metres
+        /// (RiverNetwork.WidthMultiplier); each Earth size's play style sets its recommended value. 0: 2.1's widths, every world made
+        /// before and a new one whose multiplier gives exactly 1:10's floor in blocks (×1 at 1:10, ×2.5 at 1:25), so their params
+        /// are as before. Never released as anything else (217 was a width style on the unmerged branch, 18 November 2026); 216
+        /// is kept in reserve.</summary>
+        [ProtoMember(217)] public double RiverWidthMultiplier;
+        /// <summary>(Decision 0097, EA-0170) Vanilla's deposits at their depth below the local ground (EarthDepositDepths):
+        /// 1 = every vanilla disc deposit lies as deep below its column's ground as below a column at sea level in vanilla's
+        /// standard world, so plateaus keep their iron, coal and the rest within reach, and height-scaled attempts lose the
+        /// world-height factor. New Earth worlds with vanilla ores (any rock choice). 0 = vanilla's heights (every world made
+        /// before, and worlds with Earth's ore maps, which place their own). 218 was free on every branch on 18 November 2026
+        /// (207-208 claude/landuse-1318, 211 the data side, 213-214 EA-0148, 215 the streams layer, 216 kept, 217 river width).</summary>
+        [ProtoMember(218)] public int DepositDepthRules;
+        public const int DepositDepthRulesVersion = 1;
+        /// <summary>(Decision 0099, EA-0181) Vanilla's rock layers under the local ground (EarthVanillaStrata): 1 = each column's
+        /// layers are those vanilla's standard world gives a column standing at sea level plus the column's relief (its height
+        /// above the regional surface), with the standard world's thicknesses, laid with their top at the real ground; so
+        /// plateaus keep their sediments and lower layers within reach, and tall worlds have vanilla's standard layer
+        /// thickness. New Earth worlds with vanilla rocks. 0 = vanilla's layers (every world made before, and worlds with Earth's
+        /// regional rock). 219 was free on every branch on 18 November 2026.</summary>
+        [ProtoMember(219)] public int VanillaStrataRules;
+        public const int VanillaStrataRulesVersion = 1;
+        /// <summary>(EA-0183, EA-0184, decision 0100) Lake rules: 1 = a river course draws nothing well inside a lake at its
+        /// level (no channel cut into the lake's bed, no bank or valley on its shores; TerrainModel.CourseInLake), and the
+        /// water mask's lakes have their real depths (lake-depths-1.bin: HydroLAKES' mean depth per lake, the 2' grid's
+        /// bathymetry where ETOPO holds the bed; TerrainModel.LakeDepthAt). New worlds with lake outlines 5 and that file.
+        /// 0: every world made before (courses cut their channel through lakes; outline lakes 25-45 m deep whatever the
+        /// lake). 220 was free on every branch on 18 November 2026 (218 and 219 are the deposits' and rock layers', 216 the
+        /// river cut-off's).</summary>
+        [ProtoMember(220)] public int LakeRules;
+        /// <summary>(EA-0199, decision 0105) The Earth tab's "Soil" (earthSoil): Core.Topsoil.VanillaTiers or RealisticTiers,
+        /// topsoil from the real soil map (soil-rules-v4.json; SoilRules 4) in worlds whose soil vanilla's block layers lay.
+        /// 0 (Topsoil.ClimateOnly, the tab's default, and every world made before): vanilla's rain and warmth formula with soil
+        /// rule 0048's floor, as before. 221 was free on main and on terrain-2.2 on 20 November 2026.</summary>
+        [ProtoMember(221)] public int Topsoil;
+        /// <summary>(EA-0200, decision 0098) The streams layer's smallest stream (m³/s), the Earth tab's Smallest stream in a world
+        /// with the layer (StreamRules; 1:25 and finer): the layer leaves out its streams below it, and a stream below it that a
+        /// kept one flows into stays, so every stream left reaches its outlet (StreamLayer.SmallestQ). At most 20, the courses'
+        /// streams' smallest: 20 leaves out the whole layer. 0: every stream of the layer, as every world made before and every
+        /// new one at the play styles' 1. 221 is the soil branch's (claude/soil-rules-4, 20 November 2026).</summary>
+        [ProtoMember(222)] public double StreamLayerMinDischarge;
+        /// <summary>(EA-0198, decision 0106) The 30″ rock set a geology rules 4 world reads (GroundDownloader.RockSetVersion,
+        /// global-rock-30s-1.egts). 0: not decided yet (a new world before its first start's geology set-up) and every world
+        /// with rules 3 or older. A new rules 4 world whose source lacks the set is saved with rules 3 for good instead, so its
+        /// rock never mixes the two maps. 223 was free on terrain-2.2 on 21 November 2026.</summary>
+        [ProtoMember(223)] public int RockSet;
 
         /// <summary>
         /// ER-05 (code review 14 November 2026): every saved rules number with the newest this build makes and reads, for the
@@ -511,15 +593,17 @@ namespace EarthMap
             yield return (nameof(ReservoirRules), ReservoirRules, ReservoirRulesVersion);
             yield return (nameof(CreationOptionsVersion), CreationOptionsVersion, 1);
             yield return (nameof(PlacementRules), PlacementRules, PlacementCatalogue.RulesVersion);
-            yield return (nameof(SoilRules), SoilRules, SoilFertility.RulesVersion);
+            yield return (nameof(SoilRules), SoilRules, System.Math.Max(SoilFertility.RulesVersion, Core.Topsoil.RulesVersion));
+            yield return (nameof(Topsoil), Topsoil, Core.Topsoil.RealisticTiers);
             yield return (nameof(GroundColumns), GroundColumns, Core.GroundColumns.RulesVersion);
             yield return (nameof(GroundData), GroundData, GroundDownloader.SetsVersion);
+            yield return (nameof(RockSet), RockSet, GroundDownloader.RockSetVersion);
             yield return (nameof(OreLayers), OreLayers, Core.OreLayers.RulesVersion);
             yield return (nameof(WaterTableRules), WaterTableRules, WaterTable.RulesVersion);
             yield return (nameof(OreRules), OreRules, OreBackground.CurrentRules);
             yield return (nameof(FineElevation), FineElevation, Core.FineElevation.Version);
             yield return (nameof(CoarseElevation), CoarseElevation, Core.CoarseElevation.Version);
-            yield return (nameof(RiverCourses), RiverCourses, System.Math.Max(RiverNetwork.Glo90WidthCourses, DamRemovalData.CourseRules2));
+            yield return (nameof(RiverCourses), RiverCourses, System.Math.Max(RiverNetwork.Glo90CoursesVersion, DamRemovalData.CourseRules4));
             yield return (nameof(DetailRules), DetailRules, TerrainModel.DetailRulesVersion);
             yield return (nameof(LakeOutlets), LakeOutlets, OutletData.FileVersion);
             yield return (nameof(SeaReferee), SeaReferee, SeaRefereeData.FileVersion);
@@ -539,7 +623,12 @@ namespace EarthMap
             yield return (nameof(SiteRules), SiteRules, SiteNiche.RulesVersion);
             yield return (nameof(SeasonRules), SeasonRules, SeasonRulesVersion);
             yield return (nameof(Climate1318), Climate1318, Climate1318Version);
+            yield return (nameof(StreamRules), StreamRules, Core.StreamLayer.RulesVersion);
+            yield return (nameof(CoarseRiverRules), CoarseRiverRules, RiverNetwork.CoarseRulesVersion);
+            yield return (nameof(LakeRules), LakeRules, TerrainModel.LakeRulesVersion);
             yield return (nameof(DepositSet), DepositSet, EarthDepositSet.Version);
+            yield return (nameof(DepositDepthRules), DepositDepthRules, DepositDepthRulesVersion);
+            yield return (nameof(VanillaStrataRules), VanillaStrataRules, VanillaStrataRulesVersion);
             yield return (nameof(GroundCoverRules), GroundCoverRules, GroundCover.RulesVersion);
             yield return (nameof(ZoneRules), ZoneRules, ClimateZones.RulesVersion);
             yield return (nameof(MoistureRules), MoistureRules, GroundMoisture.RulesVersion);

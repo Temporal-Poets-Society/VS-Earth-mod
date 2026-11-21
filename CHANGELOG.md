@@ -2,6 +2,129 @@
 
 What each version changed. What the current version needs and does is in [README.md](README.md).
 
+## 2.2.0 (21 November 2026)
+
+New worlds get their lakes and rivers on GLO-90's own grid, streams at 1:25 and 1:10, lakes at their real depths and
+the lakes of 1318, soil from the real soil map, the game's rocks and ores below the real ground, and a finer map for
+regional rock. Fish come to lakes and rivers above sea level, and `/earth tp` waits its turn, in every world. Worlds made
+with 2.0 and 2.1 keep their terrain; a world made with 2.2.0 needs 2.2.0 or newer (older versions refuse it, "saved by a
+newer Earth", and leave it unchanged). Tested as 2.2.0-rc.1 to rc.16.
+
+Water, for new worlds:
+
+- **Water on GLO-90's own grid** (EA-0148, [decision 0092](docs/decisions/0092-water-on-glo90s-own-grid.md)): lake and
+  river shores no longer sit half a height cell (5-14 blocks at 1:10) south-east of the land they belong to. The water
+  files are baked again on GLO-90's grid: `lakes-glo90-5.bin`, `rivers-outline-glo90-5.bin`, `rivers-flow-glo90-2.bin`
+  and `dams-glo90-4.bin` beside the GLO-90 heights, `rivers-glo90-snap-3.bin` and `rivers-glo90-arms-3.bin` in the data
+  store.
+- **Rivers end at the sea** (EA-0160, [decision 0093](docs/decisions/0093-rivers-end-at-the-sea.md)): no more straight
+  walled trenches where a river's course ran on over the headlands of a fjord coast.
+- **Streams at 1:25 and 1:10** (EA-0131, [decision 0061](docs/decisions/0061-small-streams-at-fine-scales.md)): the
+  streams from 1 m³/s up to the rivers' 20 m³/s, one block wide, in their real valleys, stepping down in single steps
+  and small falls with a plunge pool, joining the rivers, lakes and the sea. A stream leaving a lake starts at the lake's
+  level; two streams join where they first meet; very steep ones come down their cliffs in falls instead of trenches.
+  Summer-dry streams are left out, frozen northern ones kept, and banks keep the land's own grass or soil. The streams
+  layer (`streams-glo90-1.bin`, 65 MB) is fetched with the GLO-90 heights; `StreamsLayer` in `earth.json` turns it off.
+- **Smallest stream** on the Earth tab, 1 to 100 m³/s (EA-0179, EA-0200,
+  [decision 0098](docs/decisions/0098-rivers-and-streams-by-scale.md)). At 1:25 and finer the play styles set 1, every
+  stream down to the smallest brooks; a higher value leaves out the smaller headwaters (every stream left still reaches
+  its river), 20 or more the whole streams layer. At 1:50 and coarser it is the smallest river drawn, as a one-block
+  stream up to 100 m³/s (values under 20 act as 20): the play styles set 40 at 1:50 and 100 at 1:100 and 1:200, rivers
+  only.
+- **River width** on the Earth tab (EA-0159, [decision 0095](docs/decisions/0095-river-width-option.md)), 50 to 1000 %
+  of the rivers' width at 1:10. The play styles set 100 % at 1:10, 200 % at 1:25, 300 % at 1:50, 500 % at 1:100 and
+  700 % at 1:200. At 1:10 rivers are as in 2.1; coarser maps draw broad rivers much narrower than 2.1 did (the Daugava
+  at Riga at 1:25: 46 → 27 blocks).
+- **Rivers and streams by scale at 1:50 and coarser** (EA-0179, decision 0098): a river from 100 m³/s, a one-block
+  stream from Smallest stream up to that, nothing smaller; the water mask's thin loose water only along a drawn river
+  or stream, so small tributaries no longer show as broken dashes. A river losing water to dry land (the Darling below
+  Wilcannia) stays a river to its end; a river starts from a one-block head stream, the last 10 km of its biggest
+  inflow, instead of out of nothing at full width; a one-block stream in a steep valley steps down instead of standing
+  on built-up banks.
+- **The Atchafalaya** ([decision 0013](docs/decisions/0013-estuary-islands-and-delta-branches.md), delta rules 2): at Old
+  River it takes 30 % of the Mississippi's and the Red River's water (about 6,500 m³/s) to Atchafalaya Bay. Before, it
+  was a small stream.
+- **Lakes at their real depths, without river trenches in their beds** (EA-0183, EA-0184,
+  [decision 0100](docs/decisions/0100-lakes-their-own-beds-at-real-depths.md)): a river no longer cuts its channel into
+  the bed of a lake it flows through (Lake Geneva had a walled trench forking in a Y near Lausanne), and each lake takes
+  its real mean depth from HydroLAKES, a small file inside the mod. Before, nearly every lake was 25-45 m deep, 3 blocks
+  at 1:10; Lake Geneva now averages 162 m (real 156), 15 blocks at 1:10, Constance 96 m (94), Ladoga 54 m (48), Peipus
+  8 m (7) and Pielinen 10 m (10). Baikal and the Great Lakes keep ETOPO's measured beds. Water plants are the game's own,
+  so in a deep lake they keep to the shallow shelf.
+- **The lakes of 1318** (EA-0124, [decision 0107](docs/decisions/0107-lakes-of-1318.md)): lakes people drained or
+  emptied after 1318 are back: Texcoco and the Valley of Mexico's other lakes at their old levels (Tenochtitlan's island
+  as lake), Fucino, Copais, Karla, Amik, Hachirōgata, Antela, Hula and Ogura-ike, and the Fens' Whittlesey and Stretham
+  meres. The Aral Sea stands at 29 m, its 14th-century low, the western basin full and a lagoon in the eastern basin,
+  which the Amu Darya reaches (before, the whole Aral at its 1960 level). The Salton Sea, filled in 1905, is dry. Every
+  human work Earth undoes or keeps is listed, with its source, in [the ledger](docs/works-1318-ledger.md).
+
+Every world:
+
+- **Fish in lakes and rivers above sea level** (EA-0178,
+  [decision 0096](docs/decisions/0096-water-animals-by-depth-below-their-surface.md)): vanilla lets a fish spawn only at
+  or below sea level, which left Earth's real lakes and rivers without fish (none in Lakes Geneva, Pielinen, Great Bear
+  or Baikal, the Danube at Vienna or the Daugava at Daugavpils). Fish and other water animals (Fauna of the Stone Age's
+  river dolphins and sirenians too) now spawn by their depth below their own water's surface, with vanilla's depth
+  bands. The sea and water at sea level are unchanged. Saved worlds too: new chunks get fish when they are made, the
+  rest as fish spawn.
+- **`/earth tp` waits for its land through the game's ordinary loading queue** (SU-0010), one teleport at a time, and
+  says when others are waiting ahead ("1 other teleport waiting"). A busy 1:10 server no longer stops with "Server
+  autosave failure" while players teleport.
+- **"Earth cannot generate this world … without Earth's terrain" names the mod** (EA-0162,
+  [decision 0094](docs/decisions/0094-chunks-without-earths-terrain.md)) that keeps Earth's terrain out, and the handler
+  it put in the terrain pass. A mod that previews far terrain on chunks of its own no longer stops an Earth world; Earth
+  leaves those chunks alone and says so once.
+- **Faster and leaner at 1:10** (EA-0193, EA-0194): the GLO-90 tile cache grows when it is too small (the log's last
+  line counts the tiles read), and after World Map charts the whole world the server holds about 51 MB more instead of
+  about 1 GB.
+
+Ground, for new worlds:
+
+- **Terrain · Soil** (EA-0199, [decision 0105](docs/decisions/0105-earth-soil-over-vanilla-layers.md)), three choices.
+  **Earth soil, realistic tiers** (the default): the real soil class of each place (SoilGrids) in five tiers, from barren
+  on the poorest soils (thin soil on rock, sands, peat, salt and gypsum soils, tropical laterites) to black earth on the
+  steppes' Chernozems; podzols are low. **Earth soil, vanilla tiers**: the same map in the game's barren, low, medium and
+  high fertility soils. **Climate only**: the soil from rain and warmth, as 2.1 made it. With either Earth soil, desert
+  land has topsoil only where a river floods it (the Nile, Mesopotamia), ground above the tree line is barren, and the
+  forest floor drops the soil beneath it. A world with Earth soil fetches the 21 MB soil map once. The rocks underneath
+  don't change.
+- **The game's rocks and ores follow the real ground** (the default rock layers; decisions
+  [0097](docs/decisions/0097-vanilla-deposits-below-the-local-ground.md) and
+  [0099](docs/decisions/0099-vanilla-rock-layers-under-the-local-ground.md)): vanilla's rock layers and ore deposits lie
+  below the local ground instead of sea level, so a plateau has a lowland's layers and ores within reach (iron, coal and
+  the rest under Addis Ababa, Mexico City or Lhasa) and sediments on top instead of bare deep rock. Tall worlds get
+  vanilla's layer thicknesses and ore amounts, no longer stretched with the world's height.
+- **Regional rock** (Rocks and ground: "Regional rock regions only"): geology rules 3
+  ([decision 0101](docs/decisions/0101-geology-rules-3.md)) give ophiolites, layered intrusions, ocean islands and
+  granite districts their real rock, flood basalts on granite, the rock beneath sediment-covered land, and gypsum and
+  rock salt in evaporite regions; geology rules 4 ([decision 0106](docs/decisions/0106-geology-rules-4-fine-rock-map.md))
+  take the rock type from a 30″ map (about 0.9 km) of full-resolution GLiM and Macrostrat's national maps instead of
+  0.5° cells, with 18 new rock recipes (pure limestone and dolomite, marble in schist, coal measures, iron formations
+  among them) and drawn outlines for the Copperbelt, Tsumeb and Carrara. The map (45 MB) is fetched when such a world
+  starts. **Galena and its silver in crystalline rock** ([decision 0102](docs/decisions/0102-galena-in-crystalline-rock.md)):
+  lead and silver in granite, slate, phyllite, gneiss and schist, as at Freiberg, Kongsberg, the Harz and Cornwall.
+- **Ground columns and Earth's ore maps are off the world creation screen** (EA-0197,
+  [decision 0104](docs/decisions/0104-ground-columns-and-ore-maps-off-the-screen.md); they need more work): Rocks and
+  ground offers the game's rock layers (the default) and the real rock regions; Ground depth is gone; Ores has one
+  value, the game's deposits below the real ground plus Earth's gems and ores. A world config's `groundcolumns`, `maps`
+  or old `earthOres` key gives its rock choice only. For development, `earth.json`'s `ExperimentalGroundColumns` and
+  `ExperimentalOreMaps` (off) still give them; `GroundColumnsPrototype` is no longer read. Worlds made with ground
+  columns or ore maps keep them.
+- **Summit height correction is off the Earth tab** (EA-0204,
+  [decision 0039](docs/decisions/0039-summit-correction-cutoff.md)): new worlds correct listed peaks from 3,000 m as
+  before; a world configuration's value still counts.
+
+Data:
+
+- **A new world stops when a data file it needs can't be had** (EA-0191,
+  [decision 0103](docs/decisions/0103-new-worlds-stop-without-a-needed-file.md)): missing from the release, an older copy
+  in the store, no data release set. Before, the world went without it for good with a line in the log; now it stops
+  before generating anything with a message naming the file, why, where to put it and how to make the world without it.
+  A world an earlier version already marked as going without a file keeps working and says so in chat when it opens.
+- **New data files:** `streams-glo90-1.bin` and the GLO-90 water files above on `egl-v1`, `rivers-glo90-snap-3.bin` and
+  `rivers-glo90-arms-3.bin` on `ed-v1`, the soil and rock maps on `egts-v1`. The first start's data store is about
+  300 MB (was 290).
+
 ## 2.1.4 (17 November 2026)
 
 Earth knows the current versions of the Fauna of the Stone Age and Floral Zones packs, and Moschidae's musk deer

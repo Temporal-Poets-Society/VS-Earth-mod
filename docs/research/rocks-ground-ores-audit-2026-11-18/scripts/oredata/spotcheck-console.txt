@@ -1,0 +1,530 @@
+== Chuquicamata (-22.29, -68.9) ['Cu']
+   NAME Cu      deposit Chuquicamata                                                 -22.275,-68.9 d=1.7km mt=21277.0 g=0.592% top=0.0 base=287 len=11.942 wid=2.985 area= shape=stock q=A est=strikeDeg src=usgs-gcra-pcu
+   NEAR Cu      deposit Mansa Mina                                                   -22.3806,-68.9125 d=10.2km mt=1000.0 g=1.3% q=A src=usgs-gcra-pcu
+   NEAR Cu      deposit Toki                                                         -22.4167,-68.95 d=15.0km mt=2550.0 g=0.47% q=A src=usgs-gcra-pcu
+== Escondida (-24.27, -69.07) ['Cu']
+   NAME Cu      deposit Escondida                                                    -24.265,-69.0717 d=0.6km mt=11158.0 g=0.769% top=100 base=839 len=4.518 wid=1.606 area= shape=stock q=A est=strikeDeg;topM src=usgs-gcra-pcu
+   NEAR Cu      deposit Chimborazo                                                   -24.1333,-69.0833 d=15.3km mt=236.0 g=0.6% q=A src=usgs-gcra-pcu
+   NEAR Cu      deposit Gaby                                                         -23.4108,-68.8189 d=98.9km mt=3421.0 g=0.35% q=A src=usgs-gcra-pcu
+== El Teniente (-34.09, -70.35) ['Cu']
+   NAME Cu      deposit El Teniente                                                  -34.0886,-70.4625 d=10.4km mt=20731.0 g=0.62% top=100 base=1900 len=2.733 wid=2.025 area= shape=stock q=A est=strikeDeg;topM src=usgs-gcra-pcu
+   NEAR Cu      deposit Los Sulfatos                                                 -33.2,-70.2558 d=99.3km mt=1200.0 g=1.46% q=A src=usgs-gcra-pcu
+   NEAR Cu      deposit Los Bronces/Rio Blanco                                       -33.1333,-70.2667 d=106.7km mt=16816.0 g=0.601% q=A src=usgs-gcra-pcu
+== Bingham Canyon (40.52, -112.15) ['Cu']
+   NAME Cu      deposit Bingham                                                      40.5292,-112.1539 d=1.1km mt=3230.0 g=0.882% top=0.0 base=508 len=2.375 wid=1.287 area= shape=stock q=A est=strikeDeg;topM src=usgs-gcra-pcu
+   NAME Cu      deposit Binghampton                                                  34.4561,-112.1933 d=674.3km mt=0.36 g=3.0% top=0.0 base=79 len=0.172 wid=0.086 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;widKm src=usgs-vms-2009
+   NEAR Cu      deposit Southwest Tintic                                             39.8581,-112.125 d=73.6km mt=559.0 g=0.28% q=A src=usgs-gcra-pcu
+   NEAR Cu      deposit OK                                                           38.4806,-113.2997 d=247.3km mt=10.0 g=0.5% q=A src=usgs-gcra-pcu
+== Grasberg-Ertsberg (-4.06, 137.11) ['Cu', 'Au']
+   NAME Cu      deposit Grasberg                                                     -4.0461,137.1144 d=1.6km mt=4000.0 g=0.6% top=0.0 base=605 len=2.032 wid=1.563 area= shape=stock q=A est=baseM;lenKm;strikeDeg;widKm src=usgs-gcra-pcu
+   NEAR Cu      deposit Ok Tedi                                                      -5.2,141.1333 d=463.6km mt=854.0 g=0.64% q=A src=usgs-gcra-pcu
+   NEAR Cu      deposit Star Mount Nong River                                        -5.0167,141.2167 d=467.5km mt=60.0 g=0.5% q=A src=usgs-gcra-pcu
+== Olympic Dam (-30.44, 136.88) ['Cu', 'U', 'Au']
+   NAME Cu      deposit Olympic Dam                                                  -30.44,136.88 d=0.0km mt=10800.0 g=0.6% top=330 base=2000 len=6.0 wid=3.0 area= shape=stock q=B est=baseM;dipDeg;lenKm;strikeDeg;widKm src=earth-named-2026
+   NEAR Cu      deposit Carrapateena                                                 -31.2,137.495 d=102.9km mt=970.0 g=0.46% q=B src=earth-named-2026
+   NEAR Cu      deposit Prominent Hill                                               -29.712,135.565 d=150.2km mt=230.0 g=0.95% q=B src=earth-named-2026
+== Oyu Tolgoi (43.0, 106.85) ['Cu']
+   NAME Cu      deposit Oyu Tolgoi                                                   43.0136,106.8535 d=1.5km mt=3754.56 g=0.98% top=100 base=557 len=4.866 wid=0.811 area= shape=stock q=A est=strikeDeg;topM src=usgs-gcra-pcu
+   NEAR Cu      deposit Tsagaan-Suvarga                                              43.8605,108.3441 d=154.0km mt=240.0 g=0.53% q=A src=usgs-gcra-pcu
+   NEAR Cu      deposit Bieluwutu                                                    42.35,113.4333 d=542.9km mt=7.8 g=0.64% q=A src=usgs-vms-2009
+== Kolwezi / Katanga Copperbelt (-10.72, 25.47) ['Cu']
+   NAME Cu      deposit Vlaykov Vruh                                                 42.353,24.2138 d=5902.8km mt=9.8 g=0.46% top=0.0 base=150 len=0.202 wid=0.155 area= shape=stock q=A est=baseM;lenKm;strikeDeg;widKm src=usgs-gcra-pcu
+   NAME Zn      deposit Starkovskoe                                                  50.4194,83.8183 d=8821.1km mt=5.1 g=3.6% top=0.0 base=191 len=0.416 wid=0.208 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;widKm src=usgs-vms-2009
+   NAME Cu      area    Kolwezi (Copperbelt)                                         -10.7259,25.4581 d=1.5km mt=20.0 g=6.0% top=0 base= len= wid= area=0.7 shape=area q=B est=geometry;topM;thickM src=usgs-gcra-sedcu
+   NAME Cu      area    Tenke (Copperbelt)                                           -10.6015,26.1372 d=74.1km mt=122.25 g=2.06% top=0 base= len= wid= area=4.0 shape=area q=B est=geometry;topM;thickM src=usgs-gcra-sedcu
+   NAME Cu      area    Kamoto-KOV-Musonie-Mupine (Copperbelt)                       -10.7108,25.4194 d=5.6km mt=416.25 g=4.49% top=0 base= len= wid= area=14.0 shape=area q=B est=geometry;topM;thickM src=usgs-gcra-sedcu
+   NAME Fe      deposit Kovdor                                                       67.56,30.46 d=8713.6km mt=1000.0 g=26.0% top=0.0 base=1200.0 len=0.634 wid=0.375 area= shape=stock q=C est=lenKm;widKm;dipDeg src=published-endowment
+   NEAR Cu      area    Dilala East (Copperbelt)                                     -10.695,25.47 d=2.8km mt=38.2 g=2.92% q=B src=usgs-gcra-sedcu
+   NEAR Cu      area    Kananga (Copperbelt)                                         -10.6892,25.4588 d=3.6km mt=8.1 g=1.8% q=B src=usgs-gcra-sedcu
+== Zambian Copperbelt (Nchanga) (-12.52, 27.85) ['Cu']
+   NAME Cu      area    Mufulira (Copperbelt)                                        -12.5198,28.2285 d=41.1km mt=332.59 g=2.66% top=20 base= len= wid= area=11.1 shape=area q=B est=geometry;topM;thickM src=usgs-gcra-sedcu
+   NAME Cu      area    Mindola-Nkana N-S (Copperbelt)                               -12.8233,28.1908 d=50.0km mt=701.79 g=2.17% top=20 base= len= wid= area=30.4 shape=area q=B est=geometry;topM;thickM src=usgs-gcra-sedcu
+   NAME Cu      area    Chingola-Nchanga (Copperbelt)                                -12.523,27.8467 d=0.5km mt=567.12 g=2.8% top=20 base= len= wid= area=24.7 shape=area q=B est=geometry;topM;thickM src=usgs-gcra-sedcu
+   NAME Cu      area    Konkola-Musoshi (Copperbelt)                                 -12.3453,27.7985 d=20.2km mt=774.77 g=2.9% top=200 base= len= wid= area=33.9 shape=area q=B est=geometry;topM;thickM src=usgs-gcra-sedcu
+   NEAR Cu      deposit Samba                                                        -12.6072,27.8819 d=10.3km mt=50.0 g=0.5% q=A src=usgs-gcra-pcu
+   NEAR Cu      area    Mimbula (Copperbelt)                                         -12.6266,27.8611 d=11.9km mt=46.85 g=1.2% q=B src=usgs-gcra-sedcu
+== Kupferschiefer Lubin (51.45, 16.15) ['Cu']
+   NAME Cu      deposit Rudna Glava                                                  44.33,22.098 d=906.8km mt=0.05 g=1.0% top=0.0 base=40 len=0.3 wid=0.2 area= shape=stock q=C est=age;baseM;dipDeg;grade;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NAME Cu      area    Konrad-Grodziec-Wartowice (Kupferschiefer)                   51.217,15.685 d=41.4km mt=131.17 g=1.25% top=500 base= len= wid= area=46.2 shape=area q=B est=geometry;topM;thickM src=usgs-gcra-sedcu
+   NAME Cu      area    Lena-Nowy Kosciól (Kupferschiefer)                           51.0795,15.9135 d=44.4km mt=31.97 g=0.68% top=250 base= len= wid= area=11.0 shape=area q=B est=geometry;topM;thickM src=usgs-gcra-sedcu
+   NAME Cu      area    Lubin-Sieroszowice (Kupferschiefer)                          51.528,16.091 d=9.6km mt=3612.5 g=1.99% top=600 base= len= wid= area=640.1 shape=area q=B est=geometry;topM;thickM src=usgs-gcra-sedcu
+   NAME Cu      area    Richelsdorf (Kupferschiefer)                                 51.027,9.937 d=434.9km mt=42.0 g=0.99% top=60 base= len= wid= area=44.6 shape=area q=B est=geometry;topM;thickM src=usgs-gcra-sedcu
+   NAME Cu      area    Tiefscholle Osterhausen (Kupferschiefer)                     51.45,11.4807 d=323.5km mt=6.6 g=1.89% top=700 base= len= wid= area=3.3 shape=area q=B est=geometry;topM;thickM src=usgs-gcra-sedcu
+== Udokan (56.6, 118.45) ['Cu']
+   NAME Cu      deposit Udokan                                                       56.589,118.507 d=3.7km mt=2700.0 g=1.0% top=0.0 base=1500 len=6.0 wid=3.0 area= shape=lens q=B est=baseM;dipDeg;lenKm;strikeDeg;topM;widKm src=earth-named-2026
+   NEAR Cu      deposit Bystrinskoe                                                  51.48,118.57 d=569.4km mt=349.0 g=0.7% q=A src=usgs-gcra-pcu
+   NEAR Cu      deposit Shaktama                                                     51.283,117.883 d=592.4km mt=1100.0 g=0.26% q=A src=usgs-gcra-pcu
+== Norilsk-Talnakh (69.45, 88.3) ['Ni', 'Cu', 'Pt']
+   NAME Cu      deposit 50 Let Oktyabrya                                             50.4856,59.1081 d=2608.4km mt=46.0 g=1.82% top=0.0 base=397 len=0.867 wid=0.433 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;widKm src=usgs-vms-2009
+   NAME Cu      deposit Oktyabrskoe                                                  52.0222,58.255 d=2482.0km mt=11.2 g=4.05% top=10 base=258 len=0.541 wid=0.271 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;widKm src=usgs-vms-2009
+   NAME Ni      deposit Talnakh-Oktyabrsky-Kharaelakh                                69.5,88.4 d=6.8km mt=2200.0 g=1.0% top=500.0 base=1500.0 len=15.0 wid=1.0 area= shape=lens q=B est= src=published-endowment
+   NAME Pt      deposit Norilsk-1 disseminated ore                                   69.3,88.1 d=18.4km mt=250.0 g=4.7g/t top=0.0 base=600.0 len=2.653 wid=0.04 area= shape=lens q=C est=lenKm;widKm;strikeDeg;dipDeg src=published-endowment
+   NAME Al      deposit Krasnooktyabrsk                                              52.65,63.7 d=2255.4km mt=200.0 g=40.0% top=20.0 base=70.0 len=2.132 wid=0.853 area= shape=blanket q=C est=lenKm;widKm;dipDeg src=published-endowment
+   NEAR Cu      deposit Lekyn-Talbeiskaya                                            68.1085,66.8302 d=872.2km mt=47.0 g=0.54% q=A src=usgs-gcra-pcu
+== Sudbury (46.6, -81.0) ['Ni', 'Cu']
+   NAME Ni      deposit Sudbury South Range West (Creighton-Copper Cliff)            46.47,-81.12 d=17.1km mt=500.0 g=1.4% top=0.0 base=3000.0 len=15.0 wid=0.15 area= shape=lens q=C est= src=published-endowment
+   NAME Ni      deposit Sudbury Frood-Stobie                                         46.53,-80.99 d=7.8km mt=350.0 g=1.1% top=0.0 base=1500.0 len=4.0 wid=0.15 area= shape=lens q=C est= src=published-endowment
+   NAME Ni      deposit Sudbury Garson-Falconbridge                                  46.58,-80.85 d=11.7km mt=250.0 g=1.4% top=0.0 base=2000.0 len=12.0 wid=0.15 area= shape=lens q=C est= src=published-endowment
+   NAME Ni      deposit Sudbury North Range (Levack-Coleman-Strathcona)              46.64,-81.37 d=28.6km mt=400.0 g=1.2% top=0.0 base=2000.0 len=15.0 wid=0.15 area= shape=lens q=C est= src=published-endowment
+   NAME Ni      deposit Sudbury East Range (Nickel Rim-Victor)                       46.67,-80.78 d=18.5km mt=150.0 g=1.5% top=500.0 base=2000.0 len=8.0 wid=0.15 area= shape=lens q=C est= src=published-endowment
+== Bushveld Merensky/UG2 (-25.0, 27.5) ['Pt', 'Cr']
+   NAME Cr      area    Bushveld Critical Zone chromitites (LG6, MG1-MG4)            -25.2,27.2082 d=36.8km mt=8600 g=% top=20 base= len= wid= area=8248.0 shape=area q=C est= src=published-endowment
+   NAME Pt      area    Bushveld Merensky Reef and UG2 chromitite                    -25.2,27.2082 d=36.8km mt=15000 g=g/t top=50 base= len= wid= area=8248.0 shape=area q=C est= src=published-endowment
+   NAME Pt      area    Platreef (Bushveld northern limb)                            -24.075,28.9975 d=183.1km mt=6000 g=g/t top=0 base= len= wid= area=1086.5 shape=area q=C est= src=published-endowment
+   NAME V       area    Bushveld Main Magnetite Layer (Upper Zone)                   -25.485,27.7 d=57.6km mt=1000 g=% top=0 base= len= wid= area=1646.3 shape=area q=C est= src=published-endowment
+== Great Dyke (-18.5, 30.3) ['Pt', 'Cr']
+   NAME Cr      area    Great Dyke chromitite seams                                  -18.35,30.39 d=19.2km mt=5000 g=% top=0 base= len= wid= area=5281.0 shape=area q=C est= src=published-endowment
+   NAME Pt      area    Great Dyke Main Sulphide Zone                                -18.35,30.39 d=19.2km mt=2500 g=g/t top=50 base= len= wid= area=5281.0 shape=area q=C est= src=published-endowment
+   NEAR Cr      deposit Shurugwi (Selukwe)                                           -19.67,30.0 d=133.9km mt=40.0 g=48.0% q=C src=published-endowment
+== Kempirsai (50.2, 57.9) ['Cr']
+   NAME Cr      deposit Kempirsai (Donskoye: Molodezhnoye-40 Years KazSSR-Millionnoy 50.25,58.43 d=38.1km mt=800.0 g=48.0% top=100.0 base=1200.0 len=20.0 wid=0.1 area= shape=lens q=C est= src=published-endowment
+   NAME Ni      deposit Kempirsai                                                    50.3367,58.2803 d=31.0km mt=179.7 g=1.14% top=0.0 base=30.0 len=3.059 wid=1.224 area= shape=blanket q=B est=lenKm;widKm src=usgs-laterite-2011
+   NEAR Cr      deposit Saranovskoye                                                 58.52,58.83 d=927.1km mt=50.0 g=35.0% q=C src=published-endowment
+   NEAR Cr      deposit Musa Danisman                                                40.0139,40.5392 d=1764.2km mt=0.003 g=55.0% q=B src=usgs-podchrome-2012
+== Kiruna (67.835, 20.195) ['Fe']
+   NAME Fe      deposit Kiirunavaara (Kiruna)                                        67.835,20.195 d=0.0km mt=2800.0 g=63.0% top=0.0 base=2000.0 len=4.0 wid=0.08 area= shape=lens q=C est= src=published-endowment
+   NEAR Fe      deposit Svappavaara (Leveaniemi-Gruvberget)                          67.64,21.05 d=42.0km mt=450.0 g=50.0% q=C src=published-endowment
+   NEAR Fe      deposit Malmberget                                                   67.18,20.7 d=75.9km mt=1200.0 g=55.0% q=C src=published-endowment
+== Carajas N4/S11D (-6.2, -50.2) ['Fe']
+   NAME Cu      deposit Cacarajicara                                                 22.81,-83.28 d=4831.2km mt=0.62 g=1.2% top=0.0 base=94 len=0.206 wid=0.103 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-vms-2009
+   NAME Fe      deposit Carajas Serra Norte (N4-N5)                                  -6.06,-50.17 d=15.9km mt=3500.0 g=66.0% top=0.0 base=400.0 len=12.0 wid=1.5 area= shape=lens q=C est= src=published-endowment
+   NAME Mn      deposit Azul (Carajas)                                               -6.05,-50.3 d=20.0km mt=60.0 g=40.0% top=0.0 base=150.0 len=2.624 wid=0.04 area= shape=lens q=C est=lenKm;widKm;strikeDeg;dipDeg src=published-endowment
+   NAME Fe      area    Carajas iron formation (Grao Para Group jaspilites)          -6.395,-50.36 d=28.0km mt=5000 g=% top=0 base= len= wid= area=2181.0 shape=area q=C est= src=published-endowment
+   NEAR Fe      deposit S11D (Serra Sul)                                             -6.4,-50.35 d=27.7km mt=10000.0 g=66.5% q=C src=published-endowment
+== Quadrilatero Ferrifero (-20.2, -43.8) ['Fe']
+   NAME Fe      deposit Itabira (Caue-Conceicao)                                     -19.62,-43.22 d=88.5km mt=3000.0 g=50.0% top=0.0 base=500.0 len=34.185 wid=0.04 area= shape=lens q=C est=lenKm;widKm;strikeDeg;dipDeg src=published-endowment
+   NAME Fe      area    Quadrilatero Ferrifero itabirites (Caue Formation)           -19.95,-43.9877 d=34.0km mt=25000 g=% top=0 base= len= wid= area=3089.2 shape=area q=C est= src=published-endowment
+   NEAR Fe      deposit Urucum-Corumba                                               -19.2,-57.6 d=1448.5km mt=5000.0 g=55.0% q=C src=published-endowment
+== Hamersley (-22.7, 118.0) ['Fe']
+   NAME Fe      area    Hamersley iron province (Brockman and Marra Mamba iron forma -22.64,117.6947 d=32.0km mt=55000 g=% top=0 base= len= wid= area=14221.6 shape=area q=C est= src=published-endowment
+   NEAR Fe      deposit Mount Tom Price                                              -22.7,117.78 d=22.6km mt=1000.0 g=63.0% q=C src=published-endowment
+   NEAR Fe      deposit Solomon (Firetail-Kings)                                     -22.15,117.95 d=61.4km mt=2500.0 g=57.0% q=C src=published-endowment
+== Mesabi Range (47.5, -92.6) ['Fe']
+   NAME Fe      deposit Mesabi Range natural ores                                    47.495,-92.65 d=3.8km mt=2500.0 g=55.0% top=0.0 base=100.0 len=170.0 wid=1.0 area= shape=lens q=C est= src=published-endowment
+   NAME Fe      area    Mesabi Range taconite (Biwabik Iron Formation)               47.475,-92.7492 d=11.6km mt=40000 g=% top=0 base= len= wid= area=762.6 shape=area q=C est= src=published-endowment
+   NEAR Fe      deposit Marquette Range (Empire-Tilden)                              46.45,-87.65 d=393.2km mt=2500.0 g=35.0% q=C src=published-endowment
+== Kryvyi Rih (47.9, 33.4) ['Fe']
+   NAME Fe      area    Kryvyi Rih iron basin (Saksagan suite)                       47.835,33.3817 d=7.4km mt=20500 g=% top=0 base= len= wid= area=775.6 shape=area q=C est= src=published-endowment
+   NAME U       deposit Zhovti Vody (Kryvyi Rih-Kremenchuk belt)                     48.35,33.5 d=50.6km mt=30.0 g=0.12% top=0.0 base=1200.0 len=6.0 wid=1.0 area= shape=veins q=C est=mt;grade;lenKm;widKm src=iaea-geology-2018
+   NEAR Fe      deposit Bilozerka                                                    47.35,34.95 d=131.3km mt=300.0 g=58.0% q=C src=published-endowment
+   NEAR Fe      deposit Kremenchuk (Horishni Plavni)                                 49.1,33.43 d=133.5km mt=4000.0 g=33.0% q=C src=published-endowment
+== KMA (Kursk) (51.2, 37.5) ['Fe']
+   NAME Cu      deposit Rendall-Jackman                                              49.5631,-56.1811 d=6166.1km mt=0.01 g=3.45% top=0.0 base=26 len=0.123 wid=0.029 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-vms-2009
+   NAME Zn      deposit Anayatak-Cakmakkaya                                          41.2414,41.5783 d=1150.5km mt=83.14 g=4.0% top=0.0 base=627 len=1.0 wid=0.7 area= shape=lens q=A est=dipDeg;strikeDeg src=usgs-vms-2009
+   NAME Zn      deposit Chekmar'                                                     50.6439,83.6178 d=3179.5km mt=11.0 g=2.15% top=0.0 base=246 len=0.538 wid=0.269 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;widKm src=usgs-vms-2009
+   NAME Mn      deposit Bolshoi Tokmak                                               47.25,35.7 d=458.2km mt=2500.0 g=22.0% top=50.0 base=150.0 len=35.0 wid=15.0 area= shape=lens q=C est= src=published-endowment
+   NAME Fe      area    Hamersley iron province (Brockman and Marra Mamba iron forma -22.64,117.6947 d=11300.2km mt=55000 g=% top=0 base= len= wid= area=14221.6 shape=area q=C est= src=published-endowment
+   NAME Fe      area    Kursk Magnetic Anomaly (Belgorod-Stary Oskol and Mikhailovsk 50.735,36.5483 d=84.3km mt=55000 g=% top=80 base= len= wid= area=3993.3 shape=area q=C est= src=published-endowment
+   NEAR Fe      deposit Kremenchuk (Horishni Plavni)                                 49.1,33.43 d=372.2km mt=4000.0 g=33.0% q=C src=published-endowment
+   NEAR Fe      deposit Bilozerka                                                    47.35,34.95 d=466.3km mt=300.0 g=58.0% q=C src=published-endowment
+== Lorraine minette (49.3, 6.0) ['Fe']
+   NAME Cu      deposit Lorraine                                                     7.9833,117.0333 d=10815.5km mt=0.45 g=4.5% top=3.0 base=53 len=0.121 wid=0.037 area= shape=lens q=A est=dipDeg;strikeDeg src=usgs-vms-2009
+   NAME C_coal  area    Lorraine coal basin (concealed continuation of the Saar)     49.17,6.6875 d=52.0km mt=4000 g= top=300 base= len= wid= area=477.5 shape=area q=C est=cover;geometry src=lit
+   NAME NaCl    area    Lorraine Keuper salt (Dieuze, Vic, Varangeville)             48.75,6.61 d=75.6km mt= g= top=60 base= len= wid= area=1396.1 shape=area q=C est=geometry src=lit
+   NAME Fe      area    Lorraine-Luxembourg minette (Aalenian oolitic ironstone)     49.15,5.94 d=17.2km mt=6000 g=% top=80 base= len= wid= area=3032.7 shape=area q=C est= src=published-endowment
+   NEAR Fe      deposit Lahn-Dill hematite                                           50.55,8.3 d=215.5km mt=150.0 g=40.0% q=C src=published-endowment
+   NEAR Fe      deposit Siegerland siderite veins                                    50.87,8.02 d=226.4km mt=200.0 g=35.0% q=C src=published-endowment
+== Simandou (8.6, -8.9) ['Fe']
+   NAME Fe      deposit Simandou (blocks 1-4)                                        8.6,-8.95 d=5.5km mt=4600.0 g=65.0% top=0.0 base=400.0 len=100.0 wid=1.0 area= shape=lens q=C est= src=published-endowment
+   NEAR Fe      deposit Nimba                                                        7.62,-8.48 d=118.4km mt=1000.0 g=62.0% q=C src=published-endowment
+   NEAR Fe      deposit Bong                                                         6.83,-10.3 d=250.1km mt=1000.0 g=38.0% q=C src=published-endowment
+== Witwatersrand (-26.2, 27.9) ['Au']
+   NAME Ag      deposit Zacatecas (Veta Grande)                                      22.79,-102.57 d=15018.6km mt=100.0 g=250.0g/t top=0.0 base=600 len=10.0 wid=5.0 area= shape=veins q=C est=baseM;dipDeg;grade;grades;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NAME Cu      deposit Casa Grande West                                             32.8973,-111.8805 d=16078.0km mt=1450.0 g=0.588% top=100 base=546 len=1.425 wid=1.096 area= shape=stock q=A est=baseM;lenKm;strikeDeg;topM;widKm src=usgs-gcra-pcu
+   NAME Cu      deposit Tambo Grande                                                 -4.9342,-80.3381 d=11563.4km mt=174.2 g=1.07% top=0.0 base=479 len=1.52 wid=0.507 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-vms-2009
+   NAME Cu      deposit Granduc                                                      56.2111,-130.345 d=16249.9km mt=25.0 g=1.79% top=0.0 base=223 len=1.2 wid=0.24 area= shape=lens q=A est=dipDeg;strikeDeg src=usgs-vms-2009
+   NAME Cu      deposit Gaby-Papa Grande                                             -3.05,-79.6833 d=11598.8km mt=165.9 g=0.12% top=0.0 base=894 len=0.731 wid=0.122 area= shape=stock q=A est=strikeDeg src=usgs-gcra-pcu
+   NAME Zn      deposit Crandon                                                      45.4806,-88.9231 d=14096.8km mt=68.0 g=5.0% top=30 base=479 len=1.524 wid=0.5 area= shape=lens q=A est=dipDeg;strikeDeg src=usgs-vms-2009
+== Muruntau (41.52, 64.57) ['Au']
+   NAME Au      deposit Muruntau                                                     41.508,64.578 d=1.5km mt=1760.0 g=3.0g/t top=0.0 base=1500.0 len=4.0 wid=3.0 area= shape=veins q=B est=baseM src=lit-wall-2004
+   NEAR Au      deposit Kumtor                                                       41.865,78.19 d=1130.4km mt=180.0 g=3.5g/t q=B src=lit-goldfarb-2005
+   NEAR Au      deposit Vasilkovskoye                                                53.27,69.16 d=1350.7km mt=150.0 g=2.5g/t q=C src=lit-goldfarb-2005
+== Kalgoorlie Golden Mile (-30.77, 121.5) ['Au']
+   NAME Au      deposit Golden Mile (Kalgoorlie Super Pit and Mt Charlotte)          -30.773,121.505 d=0.6km mt=480.0 g=4.5g/t top=0.0 base=1500.0 len=5.0 wid=1.5 area= shape=veins q=B est=widKm;baseM src=lit-goldfarb-2005
+   NEAR Au      deposit St Ives (Kambalda)                                           -31.2,121.7 d=51.5km mt=120.0 g=4.0g/t q=C src=co-goldfields
+   NEAR Au      deposit Norseman                                                     -32.2,121.78 d=161.2km mt=13.0 g=14.0g/t q=C src=lit-goldfarb-2005
+== Carlin trend (40.85, -116.3) ['Au']
+   NAME Au      deposit Goldstrike (Betze-Post-Meikle)                               40.98,-116.36 d=15.3km mt=400.0 g=4.5g/t top=0.0 base=1200.0 len=4.0 wid=2.0 area= shape=lens q=B est=lenKm;widKm src=co-barrick
+   NAME Au      deposit Gold Quarry (Maggie Creek)                                   40.825,-116.225 d=6.9km mt=350.0 g=1.8g/t top=0.0 base=700.0 len=3.0 wid=2.0 area= shape=lens q=C est=lenKm;widKm src=co-newmont
+   NAME Au      deposit Carlin (Carlin-Hardie)                                       40.912,-116.32 d=7.1km mt=40.0 g=3.0g/t top=0.0 base=400.0 len=2.0 wid=1.0 area= shape=lens q=C est=mt;lenKm;widKm src=lit-berger-2014
+   NAME Au      deposit Shuiyindong (Guizhou Carlin-type)                            25.53,105.85 d=11447.8km mt=45.0 g=6.0g/t top=0.0 base=600.0 len=5.0 wid=1.0 area= shape=lens q=C est=lat;lon;mt;grade;lenKm;widKm src=lit-goldfarb-2005
+== Obuasi (6.2, -1.67) ['Au']
+   NAME Au      deposit Obuasi                                                       6.195,-1.665 d=0.8km mt=280.0 g=7.0g/t top=0.0 base=1600.0 len=8.0 wid=0.6 area= shape=veins q=B est=widKm src=co-anglogold
+   NEAR Au      deposit Akan placers (Pra-Ofin-Birim)                                6.0,-1.8 d=26.5km mt=500.0 g=1.0g/t q=C src=lit-west-africa-gold
+   NEAR Au      deposit Prestea-Bogoso                                               5.45,-2.14 d=98.3km mt=80.0 g=5.0g/t q=C src=lit-goldfarb-2005
+== Sukhoi Log (58.6, 115.2) ['Au']
+   NAME Ag      deposit Galena-Coeur (Silver Belt east)                              47.476,-115.955 d=7328.7km mt=10.0 g=750.0g/t top=0.0 base=1700 len=3.0 wid=1.0 area= shape=veins q=C est=dipDeg;grade;grades;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NAME Cu      area    Lena-Nowy Kosciól (Kupferschiefer)                           51.0795,15.9135 d=5817.7km mt=31.97 g=0.68% top=250 base= len= wid= area=11.0 shape=area q=B est=geometry;topM;thickM src=usgs-gcra-sedcu
+   NAME C_coal  area    Lena coal basin                                              68.0,119.5 d=1066.4km mt=1600000 g= top=50 base= len= wid= area=708659.1 shape=area q=C est=cover;geometry src=lit
+   NAME NaCl    area    East Siberian Cambrian salt (Angara-Lena, Nepa)              60.4051,105.3938 d=588.0km mt= g= top=800 base= len= wid= area=1847481.1 shape=area q=C est= src=usgs-potash-2014
+   NAME Au      deposit Sukhoi Log                                                   58.73,115.17 d=14.6km mt=900.0 g=2.0g/t top=0.0 base=800.0 len=3.0 wid=1.5 area= shape=lens q=B est=baseM src=co-polyus
+   NAME Au      deposit Lena goldfields (Bodaibo)                                    58.1,114.6 d=65.7km mt=1500.0 g=1.0g/t top=10.0 base=40.0 len=120.0 wid=2.0 area= shape=blanket q=C est=grade;lenKm;widKm;topM;baseM src=lit-lena
+   NEAR Au      deposit Aldan placers                                                58.6,125.4 d=590.4km mt=600.0 g=1.0g/t q=C src=lit-placer-general
+== Kolar (12.95, 78.27) ['Au']
+   NAME Au      deposit Kolar Gold Fields                                            12.955,78.265 d=0.8km mt=50.0 g=16.0g/t top=0.0 base=3200.0 len=8.0 wid=0.5 area= shape=veins q=B est=widKm src=lit-goldfarb-2005
+   NEAR Au      deposit Hutti                                                        16.2,76.65 d=401.2km mt=15.0 g=6.0g/t q=C src=lit-goldfarb-2005
+   NEAR Au      deposit Martabe                                                      1.52,99.05 d=2617.3km mt=140.0 g=1.8g/t q=C src=lit-indonesia-gold
+== Las Medulas (42.47, -6.77) ['Au']
+   NAME Au      deposit Las Medulas                                                  42.46,-6.77 d=1.1km mt=180.0 g=0.03g/t top=0.0 base=100.0 len=3.0 wid=2.0 area= shape=blanket q=C est=grade;lenKm;widKm src=lit-placer-general
+   NEAR Au      deposit Salsigne                                                     43.33,2.36 d=749.4km mt=10.0 g=12.0g/t q=C src=lit-goldfarb-2005
+   NEAR Au      deposit Tauern gold (Gastein-Rauris)                                 47.07,13.05 d=1640.8km mt=4.0 g=10.0g/t q=C src=lit-tauern
+== Broken Hill NSW (-31.96, 141.46) ['Pb', 'Zn', 'Ag']
+   NAME Pb      deposit Broken Hill                                                  -29.23,18.78 d=10910.7km mt=85.0 g=3.57% top=0.0 base=613 len=1.398 wid=0.839 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-sedexmvt-2009
+   NAME Zn      deposit Broken Hill                                                  -31.97,141.47 d=1.5km mt=280.0 g=8.5% top=0.0 base=912 len=2.08 wid=1.248 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-sedexmvt-2009
+   NEAR Ag      deposit Pinnacles                                                    -32.09,141.39 d=15.9km mt=0.8 g=400.0g/t q=A src=usgs-sedexmvt-2009
+   NEAR Pb      deposit Ediacara                                                     -30.8,138.13 d=341.4km mt=29.0 g=1.07% q=A src=usgs-sedexmvt-2009
+== Red Dog (68.07, -162.85) ['Zn', 'Pb']
+   NAME Cu      deposit Red Dog                                                      50.7106,-127.9722 d=2693.2km mt=45.0 g=0.35% top=0.0 base=157 len=0.423 wid=0.325 area= shape=stock q=A est=baseM;lenKm;strikeDeg;topM;widKm src=usgs-gcra-pcu
+   NAME Zn      deposit Red Dog                                                      68.07,-162.8 d=2.1km mt=165.0 g=16.6% top=0.0 base=764 len=1.744 wid=1.046 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-sedexmvt-2009
+   NAME Cr      deposit Red Dog                                                      42.3956,-123.7558 d=3659.5km mt=6.1e-05 g=47.0% top=0.0 base=20.0 len=0.001 wid=0.001 area= shape=lens q=B est=baseM;dipDeg;lenKm;strikeDeg;widKm src=usgs-podchrome-2012
+   NEAR Zn      deposit Anarraaq                                                     68.16,-162.96 d=11.0km mt=18.0 g=18.0% q=A src=usgs-sedexmvt-2009
+   NEAR Zn      deposit Su (Lik south)                                               68.16,-163.21 d=18.0km mt=20.08 g=7.9% q=A src=usgs-sedexmvt-2009
+== Mount Isa (-20.73, 139.48) ['Pb', 'Zn', 'Cu', 'Ag']
+   NAME Zn      deposit Mount Isa                                                    -20.73,139.48 d=0.0km mt=150.0 g=7.0% top=0.0 base=741 len=1.69 wid=1.014 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-sedexmvt-2009
+   NEAR Zn      deposit Hilton-George Fisher                                         -20.57,139.47 d=17.8km mt=227.0 g=11.31% q=A src=usgs-sedexmvt-2009
+   NEAR Zn      deposit Dugald River                                                 -20.25,140.15 d=87.9km mt=53.8 g=12.7% q=A src=usgs-sedexmvt-2009
+== Rammelsberg (51.89, 10.42) ['Zn', 'Pb', 'Cu', 'Ag']
+   NAME Zn      deposit Rammelsberg                                                  51.88,10.42 d=1.1km mt=30.0 g=14.0% top=0.0 base=433 len=0.988 wid=0.593 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-sedexmvt-2009
+   NEAR Pb      deposit Upper Harz (Clausthal-Zellerfeld)                            51.805,10.335 d=11.1km mt=20.0 g=6.0% q=C src=earth-named-2026
+   NEAR Zn      deposit Bad Grund (Erzbergwerk Grund)                                51.812,10.255 d=14.3km mt=15.0 g=9.0% q=C src=earth-named-2026
+== Falun (60.6, 15.62) ['Cu', 'Zn']
+   NAME Cu      deposit Falun (Stora Kopparberg)                                     60.6,15.613 d=0.4km mt=28.0 g=2.0% top=0.0 base=600 len=0.6 wid=0.4 area= shape=stock q=C est=baseM;dipDeg;grade;grades;lenKm;strikeDeg;widKm src=earth-named-2026
+   NEAR Cu      deposit Sylarna                                                      62.9667,12.3667 d=313.8km mt=4.0 g=0.4% q=A src=usgs-vms-2009
+   NEAR Cu      deposit Hersjo                                                       62.6225,11.3478 d=318.6km mt=3.2 g=1.4% q=A src=usgs-vms-2009
+== Rio Tinto (Iberian Pyrite Belt) (37.7, -6.58) ['Cu', 'Zn']
+   NAME Cu      deposit Rio Tinto                                                    37.7042,-6.5844 d=0.6km mt=434.3 g=0.39% top=0.0 base=802 len=3.81 wid=0.9 area= shape=lens q=A est=dipDeg;strikeDeg src=usgs-vms-2009
+   NEAR Cu      deposit San Antonio                                                  37.7058,-6.5628 d=1.6km mt=27.0 g=1.6% q=A src=usgs-vms-2009
+   NEAR Cu      deposit Valle                                                        37.6956,-6.5981 d=1.7km mt=0.19 g=2.09% q=A src=usgs-vms-2009
+== Potosi Cerro Rico (-19.62, -65.75) ['Ag', 'Sn']
+   NAME Ag      deposit Cerro Rico de Potosí                                         -19.619,-65.749 d=0.2km mt=300.0 g=200.0g/t top=0.0 base=1100 len=1.8 wid=1.5 area= shape=stock q=B est=baseM;dipDeg;grade;grades;mt;strikeDeg src=earth-named-2026
+   NAME Cr      deposit Potosi                                                       20.5522,-74.7664 d=4573.5km mt=0.45 g=38.0% top=0.0 base=100.0 len=0.116 wid=0.008 area= shape=lens q=A est=baseM;dipDeg;lenKm;strikeDeg;widKm src=usgs-podchrome-2012
+   NEAR Sn      deposit Chorolque                                                    -20.933,-66.03 d=148.9km mt=10.0 g=0.8% q=C src=earth-named-2026
+   NEAR Sn      deposit Llallagua (Siglo XX, Catavi)                                 -18.428,-66.575 d=158.4km mt=150.0 g=0.7% q=C src=earth-named-2026
+== Llallagua-Catavi (-18.42, -66.58) ['Sn']
+   NAME Sn      deposit Llallagua (Siglo XX, Catavi)                                 -18.428,-66.575 d=1.0km mt=150.0 g=0.7% top=0.0 base=800 len=2.5 wid=1.5 area= shape=veins q=C est=baseM;dipDeg;grade;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NEAR Sn      deposit Huanuni (Posokoni)                                           -18.29,-66.83 d=30.1km mt=30.0 g=1.5% q=C src=earth-named-2026
+   NEAR Sn      deposit San Jose (Oruro)                                             -17.957,-67.122 d=77.0km mt=10.0 g=0.6% q=C src=earth-named-2026
+== Huanuni (-18.28, -66.83) ['Sn']
+   NAME Sn      deposit Huanuni (Posokoni)                                           -18.29,-66.83 d=1.1km mt=30.0 g=1.5% top=0.0 base=800 len=3.0 wid=1.5 area= shape=veins q=C est=baseM;dipDeg;grade;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NEAR Sn      deposit Llallagua (Siglo XX, Catavi)                                 -18.428,-66.575 d=31.5km mt=150.0 g=0.7% q=C src=earth-named-2026
+   NEAR Sn      deposit San Jose (Oruro)                                             -17.957,-67.122 d=47.4km mt=10.0 g=0.6% q=C src=earth-named-2026
+== Cornwall Camborne-Redruth (50.22, -5.25) ['Sn']
+   NAME Sn      deposit Camborne-Redruth (Dolcoath, South Crofty, Carn Brea, East Po 50.224,-5.282 d=2.3km mt=25.0 g=1.2% top=0.0 base=1100 len=5.0 wid=2.0 area= shape=veins q=C est=dipDeg;grade;grades;lenKm;mt;widKm src=earth-named-2026
+   NAME Fe      deposit Cornwall (Pennsylvania)                                      40.27,-76.41 d=5462.5km mt=100.0 g=40.0% top=0.0 base=500.0 len=1.11 wid=0.04 area= shape=lens q=C est=lenKm;widKm;strikeDeg;dipDeg src=published-endowment
+   NEAR Sn      deposit Wheal Jane and Baldhu (Wheal Jane, Mount Wellington, Nangile 50.237,-5.125 d=9.1km mt=8.0 g=0.9% q=C src=earth-named-2026
+   NEAR Sn      deposit Carnon valley tin stream                                     50.221,-5.112 d=9.8km mt=10.0 g=0.3% q=C src=earth-named-2026
+== Bangka (-2.1, 106.1) ['Sn']
+   NAME Sn      deposit Bangka onshore placers                                       -2.15,106.05 d=7.9km mt=6000.0 g=0.03% top=0.0 base=25 len=150.0 wid=40.0 area= shape=blanket q=C est=baseM;grade;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NAME Sn      deposit Bangka offshore placers                                      -1.9,106.3 d=31.4km mt=3000.0 g=0.03% top=2.0 base=30 len=60.0 wid=15.0 area= shape=blanket q=C est=baseM;grade;lenKm;mt;strikeDeg;topM;widKm src=earth-named-2026
+   NEAR Sn      deposit Belitung onshore placers                                     -2.87,107.9 d=217.5km mt=2500.0 g=0.03% q=C src=earth-named-2026
+== Belitung (-2.85, 107.9) ['Sn']
+   NAME Sn      deposit Belitung onshore placers                                     -2.87,107.9 d=2.2km mt=2500.0 g=0.03% top=0.0 base=20 len=60.0 wid=40.0 area= shape=blanket q=C est=baseM;grade;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NEAR Sn      deposit Bangka offshore placers                                      -1.9,106.3 d=206.8km mt=3000.0 g=0.03% q=C src=earth-named-2026
+   NEAR Sn      deposit Bangka onshore placers                                       -2.15,106.05 d=219.8km mt=6000.0 g=0.03% q=C src=earth-named-2026
+== Kinta Valley (4.6, 101.1) ['Sn']
+   NAME Sn      deposit Kinta Valley placers (Ipoh-Kampar)                           4.47,101.1 d=14.5km mt=10000.0 g=0.02% top=0.0 base=30 len=50.0 wid=15.0 area= shape=blanket q=C est=baseM;grade;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NEAR Sn      deposit Larut placers (Taiping)                                      4.87,100.74 d=49.9km mt=1500.0 g=0.02% q=C src=earth-named-2026
+   NEAR Sn      deposit Kuala Lumpur placers (Klang valley)                          3.13,101.7 d=176.5km mt=4000.0 g=0.02% q=C src=earth-named-2026
+== Gejiu (23.36, 103.15) ['Sn']
+   NAME Sn      deposit Gejiu (Malage, Songshujiao, Gaosong, Laochang, Kafang)       23.3,103.22 d=9.8km mt=300.0 g=1.0% top=0.0 base=1200 len=25.0 wid=10.0 area= shape=lens q=B est=baseM;dipDeg;grades;lenKm;strikeDeg;widKm src=earth-named-2026
+   NEAR Sn      deposit Dulong                                                       22.88,104.54 d=151.8km mt=100.0 g=0.4% q=C src=earth-named-2026
+   NEAR Sn      deposit Man Maw (Wa State)                                           22.4,99.1 d=428.4km mt=10.0 g=2.0% q=C src=earth-named-2026
+== Erzgebirge Sn (Altenberg/Cinovec) (50.73, 13.77) ['Sn']
+   NAME Sn      deposit Cinovec-Zinnwald                                             50.734,13.798 d=2.0km mt=745.0 g=0.05% top=0.0 base=500 len=1.5 wid=1.0 area= shape=stock q=B est=baseM;lenKm;widKm src=earth-named-2026
+   NAME Sn      deposit Altenberg (Zwitterstock, Pinge)                              50.765,13.765 d=3.9km mt=60.0 g=0.3% top=0.0 base=300 len=0.5 wid=0.4 area= shape=stock q=C est=baseM;grade;grades;mt src=earth-named-2026
+   NAME Sn      deposit Ehrenfriedersdorf (Sauberg)                                  50.646,12.975 d=56.8km mt=10.0 g=0.4% top=0.0 base=300 len=2.0 wid=1.0 area= shape=veins q=C est=baseM;dipDeg;grade;grades;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NEAR Sn      deposit Krupka (Knotel, Preisselberg)                                50.69,13.865 d=8.0km mt=10.0 g=0.3% q=C src=earth-named-2026
+== Panasqueira (40.155, -7.755) ['W']
+   NAME W       deposit Panasqueira                                                  40.155,-7.755 d=0.0km mt=50.0 g=0.3% top=0.0 base=600 len=2.5 wid=1.5 area= shape=veins q=C est=baseM;grade;grades;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NEAR W       deposit Los Santos                                                   40.551,-5.79 d=172.2km mt=6.0 g=0.3% q=C src=earth-named-2026
+   NEAR W       deposit Hemerdon (Drakelands)                                        50.416,-4.01 d=1177.6km mt=333.0 g=0.12% q=B src=earth-named-2026
+== Almaden (38.775, -4.84) ['Hg']
+   NAME Hg      deposit Almadén (main mine)                                          38.776,-4.84 d=0.1km mt=5.2 g=5.0% top=0.0 base=700 len=0.5 wid=0.15 area= shape=lens q=B est=dipDeg;grade;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NAME Hg      deposit New Almaden                                                  37.175,-121.83 d=9391.8km mt=1.4 g=2.5% top=0.0 base=700 len=3.0 wid=1.5 area= shape=veins q=C est=baseM;dipDeg;grade;lenKm;mt;strikeDeg;topM;widKm src=earth-named-2026
+   NEAR Hg      deposit Las Cuevas                                                   38.735,-4.725 d=10.9km mt=0.3 g=2.0% q=C src=earth-named-2026
+   NEAR Hg      deposit El Entredicho                                                38.69,-4.665 d=17.9km mt=0.8 g=1.5% q=B src=earth-named-2026
+== Idrija (46.0, 14.03) ['Hg']
+   NAME Hg      deposit Idrija                                                       46.003,14.028 d=0.4km mt=13.0 g=1.1% top=0.0 base=400 len=1.5 wid=0.6 area= shape=lens q=B est=dipDeg;grade;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NEAR Hg      deposit Monte Amiata - Abbadia San Salvatore                         42.882,11.677 d=393.8km mt=8.5 g=0.7% q=C src=earth-named-2026
+   NEAR Hg      deposit Monte Amiata south (Siele, Cornacchino, Morone, Selvena)     42.785,11.705 d=402.4km mt=4.3 g=0.7% q=C src=earth-named-2026
+== Huancavelica (-12.79, -74.98) ['Hg']
+   NAME Hg      deposit Huancavelica (Santa Bárbara)                                 -12.81,-74.985 d=2.3km mt=6.0 g=1.0% top=0.0 base=300 len=1.0 wid=0.5 area= shape=lens q=C est=baseM;dipDeg;grade;lat;lenKm;lon;mt;strikeDeg;topM;widKm src=earth-named-2026
+   NEAR Hg      deposit Terlingua district (Chisos mine area)                        29.32,-103.61 d=5600.3km mt=0.35 g=1.5% q=C src=earth-named-2026
+   NEAR Hg      deposit New Idria                                                    36.418,-120.674 d=7269.2km mt=1.7 g=1.0% q=C src=earth-named-2026
+== Kimberley (-28.738, 24.758) ['diamond']
+   NAME diamond deposit Kimberley (Big Hole)                                         -28.738,24.758 d=0.0km mt=22.5 g=0.64ct/t top=0.0 base=1100.0 len=0.46 wid=0.46 area= shape=stock q=A est= src=lit-kimberley
+   NAME diamond deposit Kimberley pipes (De Beers, Dutoitspan, Bultfontein, Wesselto -28.755,24.795 d=4.1km mt=300.0 g=0.3ct/t top=0.0 base=1000.0 len=0.8 wid=0.8 area= shape=stock q=C est=mt;grade;lenKm;widKm src=co-debeers
+   NEAR diamond deposit Vaal River alluvial diamonds (Barkly West-Windsorton)        -28.45,24.55 d=37.9km mt=1000.0 g=0.02ct/t q=C src=lit-kp-2023
+== Mir pipe (62.53, 113.99) ['diamond']
+   NAME diamond deposit Mir                                                          62.528,113.993 d=0.3km mt=70.0 g=2.5ct/t top=0.0 base=1200.0 len=0.45 wid=0.45 area= shape=stock q=C est=mt;grade src=co-alrosa
+   NEAR diamond deposit Internatsionalnaya                                           62.555,113.95 d=3.5km mt=25.0 g=7.0ct/t q=C src=co-alrosa
+   NEAR diamond deposit Nyurba and Botuobinskaya (Nakyn field)                       64.5,117.3 d=273.7km mt=50.0 g=2.6ct/t q=C src=co-alrosa
+== Udachnaya (66.43, 112.32) ['diamond']
+   NAME diamond deposit Udachnaya                                                    66.43,112.32 d=0.0km mt=400.0 g=1.0ct/t top=0.0 base=1400.0 len=1.0 wid=0.8 area= shape=stock q=C est=mt;grade src=co-alrosa
+   NEAR diamond deposit Aikhal and Yubileynaya                                       66.0,111.9 d=51.4km mt=350.0 g=0.9ct/t q=C src=co-alrosa
+   NEAR diamond deposit Nyurba and Botuobinskaya (Nakyn field)                       64.5,117.3 d=314.4km mt=50.0 g=2.6ct/t q=C src=co-alrosa
+== Jwaneng (-24.53, 24.7) ['diamond']
+   NAME diamond deposit Jwaneng                                                      -24.53,24.7 d=0.0km mt=540.0 g=1.3ct/t top=40.0 base=1300.0 len=1.2 wid=0.6 area= shape=stock q=B est=topM src=co-debeers
+   NEAR diamond deposit Karowe (AK6)                                                 -21.5,25.48 d=346.2km mt=60.0 g=0.15ct/t q=C src=co-lucara
+   NEAR diamond deposit Orapa (AK1)                                                  -21.31,25.37 d=364.6km mt=900.0 g=0.9ct/t q=C src=co-debeers
+== Orapa (-21.31, 25.37) ['diamond']
+   NAME diamond deposit Orapa (AK1)                                                  -21.31,25.37 d=0.0km mt=900.0 g=0.9ct/t top=0.0 base=1000.0 len=1.6 wid=0.8 area= shape=stock q=C est=mt src=co-debeers
+   NEAR diamond deposit Karowe (AK6)                                                 -21.5,25.48 d=24.0km mt=60.0 g=0.15ct/t q=C src=co-lucara
+   NEAR diamond deposit Jwaneng                                                      -24.53,24.7 d=364.6km mt=540.0 g=1.3ct/t q=B src=co-debeers
+== Catoca (-9.41, 20.3) ['diamond']
+   NAME diamond deposit Catoca                                                       -9.41,20.3 d=0.0km mt=800.0 g=0.7ct/t top=0.0 base=1000.0 len=0.9 wid=0.9 area= shape=stock q=C est=mt src=lit-catoca
+   NEAR diamond deposit Lunda Norte alluvial diamonds (Lucapa-Chitotolo)             -8.42,20.74 d=120.2km mt=750.0 g=0.2ct/t q=C src=lit-kp-2023
+   NEAR diamond deposit Cuango valley alluvial diamonds (Cafunfo)                    -8.75,17.98 d=265.1km mt=500.0 g=0.1ct/t q=C src=lit-kp-2023
+== Argyle (-16.72, 128.39) ['diamond']
+   NAME diamond deposit Argyle (AK1 lamproite)                                       -16.714,128.384 d=0.9km mt=290.0 g=3.0ct/t top=0.0 base=800.0 len=1.6 wid=0.5 area= shape=stock q=B est= src=co-riotinto
+   NEAR diamond deposit Golconda diamonds (Kollur and the Krishna gravels)           16.7,80.05 d=6470.6km mt=200.0 g=0.05ct/t q=C src=lit-golconda
+   NEAR diamond deposit Banganapalle conglomerate (Kurnool)                          15.32,78.23 d=6555.2km mt=50.0 g=0.05ct/t q=C src=lit-golconda
+== Golconda / Kollur (16.7, 80.0) ['diamond']
+   NAME Cr      deposit Golconda Fraction                                            39.5886,-120.8425 d=13392.8km mt=0.00013 g=39.0% top=0.0 base=20.0 len=0.002 wid=0.001 area= shape=lens q=B est=baseM;dipDeg;lenKm;strikeDeg;widKm src=usgs-podchrome-2012
+   NAME diamond deposit Golconda diamonds (Kollur and the Krishna gravels)           16.7,80.05 d=5.3km mt=200.0 g=0.05ct/t top=3.0 base=10.0 len=60.0 wid=2.0 area= shape=blanket q=C est=mt;grade;lat;lon;lenKm;widKm src=lit-golconda
+   NEAR diamond deposit Banganapalle conglomerate (Kurnool)                          15.32,78.23 d=243.6km mt=50.0 g=0.05ct/t q=C src=lit-golconda
+   NEAR diamond deposit Majhgawan (Panna)                                            24.73,80.04 d=892.9km mt=20.0 g=0.1ct/t q=C src=lit-panna
+== Cigar Lake / McArthur River (58.07, -104.5) ['U']
+   NAME Cr      deposit Gen. McArthur                                                11.355,125.6081 d=11066.5km mt=3.323 g=48.0% top=0.0 base=194.0 len=0.227 wid=0.016 area= shape=lens q=A est=baseM;dipDeg;lenKm;strikeDeg;widKm src=usgs-podchrome-2012
+   NAME U       deposit McArthur River                                               57.762,-105.05 d=47.2km mt=3.4 g=10.0% top=500.0 base=640.0 len=1.7 wid=0.1 area= shape=lens q=B est=density;widKm;dipDeg src=cameco-2024
+   NAME U       deposit Cigar Lake                                                   58.068,-104.538 d=2.2km mt=0.9 g=15.0% top=410.0 base=450.0 len=1.95 wid=0.06 area= shape=lens q=B est=density src=cameco-2024
+   NEAR U       deposit Rabbit Lake (Rabbit Lake + Collins Bay + Eagle Point)        58.2,-103.7 d=49.1km mt=10.0 g=0.9% q=C src=cameco-2024
+== Inkai / Chu-Sarysu (45.3, 67.7) ['U']
+   NAME U       deposit Inkai (Chu-Sarysu)                                           45.33,67.4 d=23.7km mt=500.0 g=0.075% top=350.0 base=530.0 len=60.0 wid=1.0 area= shape=lens q=C est=mt;lenKm;widKm;strikeDeg src=kazatomprom-2023
+   NAME U       deposit Budenovskoye and Mynkuduk (Chu-Sarysu north)                 45.45,66.7 d=79.9km mt=700.0 g=0.07% top=300.0 base=600.0 len=80.0 wid=1.5 area= shape=lens q=C est=lat;lon;mt;grade;lenKm;widKm src=kazatomprom-2023
+   NEAR U       deposit Uchkuduk                                                     42.15,63.55 d=483.5km mt=100.0 g=0.06% q=C src=iaea-redbook-2022
+== Ruhr coalfield (51.5, 7.2) ['C_coal']
+   NAME C_coal  area    Southern Ruhr (outcrop coal of the Ruhr valley)              51.39,7.2717 d=13.2km mt=3000 g= top=0 base= len= wid= area=532.4 shape=area q=C est=cover;geometry src=lit
+   NAME C_coal  area    Ruhr coalfield under the Cretaceous (to 2000 m)              51.6142,7.1137 d=14.0km mt=45000 g= top=600 base= len= wid= area=6452.1 shape=area q=C est=cover src=lit
+   NEAR C_coal  area    Rhenish lignite (Ville, Garzweiler, Hambach, Inden)          50.9887,6.3111 d=84.0km mt=55000 g= q=B src=lit
+== Upper Silesia coal (50.2, 19.0) ['C_coal']
+   NAME Zn      deposit Olkusz-Zawiercie (Upper Silesia-Krakow district)             50.28,19.56 d=40.8km mt=300.0 g=4.0% top=20 base=250 len=25.0 wid=8.0 area= shape=lens q=C est=baseM;dipDeg;lenKm;mt;strikeDeg;topM;widKm src=earth-named-2026
+   NAME Zn      deposit Bytom (Upper Silesia)                                        50.35,18.92 d=17.6km mt=200.0 g=4.5% top=30 base=250 len=15.0 wid=6.0 area= shape=lens q=C est=baseM;dipDeg;lenKm;mt;strikeDeg;topM;widKm src=earth-named-2026
+   NAME C_coal  area    Upper Silesian coal basin, Polish part                       50.0829,18.9872 d=13.1km mt=55000 g= top=100 base= len= wid= area=3400.3 shape=area q=B est=cover src=lit
+   NAME C_coal  area    Upper Silesian coal basin, Czech part (Ostrava-Karvina)      49.8205,18.3971 d=60.3km mt=15000 g= top=50 base= len= wid= area=783.5 shape=area q=C est=cover;geometry src=lit
+   NAME C_coal  area    Lower Silesian coal basin (Walbrzych, Nowa Ruda)             50.7541,16.2446 d=204.5km mt=1000 g= top=0 base= len= wid= area=130.4 shape=area q=C est=cover src=lit
+   NEAR C_coal  area    Belchatow lignite (central Poland)                           51.25,19.35 d=119.3km mt=2000 g= q=C src=lit
+== Donbas (48.0, 38.0) ['C_coal']
+   NAME C_coal  area    Donets basin (Donbas), bituminous part                       48.275,37.25 d=63.5km mt=100000 g= top=0 base= len= wid= area=23339.3 shape=area q=C est=cover;geometry src=lit
+   NAME C_coal  area    Donets basin (Donbas), eastern anthracite part               48.525,39.8 d=145.5km mt=40000 g= top=0 base= len= wid= area=18824.5 shape=area q=C est=cover;geometry src=lit
+   NAME NaCl    area    Dnieper-Donets salt (Soledar, Artemivsk)                     50.0895,34.1459 d=364.5km mt= g= top=200 base= len= wid= area=63362.2 shape=area q=C est= src=usgs-potash-2014
+   NEAR C_coal  area    Moscow brown-coal basin (Tula, Kaluga, Ryazan)               54.1,37.4313 d=679.4km mt=20000 g= q=C src=lit
+== Kuzbass (54.0, 87.0) ['C_coal']
+   NAME C_coal  area    Kuznetsk basin (Kuzbass)                                     54.7,86.5944 d=82.2km mt=640000 g= top=0 base= len= wid= area=24131.6 shape=area q=C est=cover;geometry src=lit
+   NEAR C_coal  area    Kansk-Achinsk lignite basin                                  56.1,93.75 d=489.0km mt=600000 g= q=C src=lit
+   NEAR C_coal  area    Ekibastuz coalfield                                          51.725,75.275 d=825.6km mt=12000 g= q=B src=lit
+== Pechora (67.5, 64.0) ['C_coal']
+   NAME C_coal  area    Pechora coal basin (Vorkuta, Inta)                           66.65,61.6929 d=137.5km mt=340000 g= top=50 base= len= wid= area=30653.0 shape=area q=C est=cover;geometry src=lit
+   NEAR C_coal  area    Tunguska coal basin                                          64.0,98.3 d=1591.5km mt=2000000 g= q=C src=lit
+   NEAR C_coal  area    Turgai brown-coal basin (Priozernoye, Kushmurun, Orlovka)    53.0,64.55 d=1612.6km mt=60000 g= q=C src=lit
+== Karaganda (49.8, 73.1) ['C_coal']
+   NAME C_coal  area    Karaganda coal basin                                         49.775,73.1969 d=7.5km mt=50000 g= top=0 base= len= wid= area=3932.5 shape=area q=C est=cover;geometry src=lit
+   NEAR C_coal  area    Ekibastuz coalfield                                          51.725,75.275 d=263.1km mt=12000 g= q=B src=lit
+   NEAR C_coal  area    Turgai brown-coal basin (Priozernoye, Kushmurun, Orlovka)    53.0,64.55 d=691.0km mt=60000 g= q=C src=lit
+== Shanxi / Ordos (37.8, 112.5) ['C_coal']
+   NAME Cu      deposit Datongchang                                                  26.5044,102.226 d=1582.9km mt=14.811 g=1.2% top=0.0 base=203 len=1.527 wid=0.763 area= shape=lens q=B est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-gcra-sedcu
+   NAME C_coal  area    Shanxi coal province (Datong, Ningwu, Xishan, Hedong)        37.8671,112.4661 d=8.0km mt=220000 g= top=0 base= len= wid= area=24700.1 shape=area q=B est=cover src=lit
+   NAME C_coal  area    Ordos basin Jurassic coal (Shendong, Shenfu-Dongsheng)       37.8483,106.7065 d=508.8km mt=220000 g= top=50 base= len= wid= area=11841.2 shape=area q=C est=cover src=lit
+   NEAR C_coal  area    Qinshui anthracite (Jincheng, Yangquan)                      35.7874,112.8035 d=225.4km mt=50000 g= q=C src=lit
+   NEAR C_coal  area    Western Hills of Beijing (Mentougou)                         39.843,115.8341 d=367.4km mt=2000 g= q=C src=lit
+== Bowen Basin (-22.5, 148.5) ['C_coal']
+   NAME C_coal  area    Bowen basin                                                  -25.0969,148.9554 d=292.5km mt=50000 g= top=30 base= len= wid= area=157639.1 shape=area q=C est=cover src=lit
+   NEAR C_coal  area    Galilee basin                                                -23.6531,145.6872 d=315.0km mt=30000 g= q=C src=lit
+   NEAR C_coal  area    Surat basin (Walloon Coal Measures)                          -28.7376,149.3762 d=699.1km mt=25000 g= q=C src=lit
+== Sydney Basin (-33.0, 151.0) ['C_coal']
+   NAME Cu      deposit Hunter                                                       48.5517,-79.1344 d=15547.9km mt=0.44 g=1.28% top=0.0 base=84 len=0.184 wid=0.092 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-vms-2009
+   NAME C_coal  area    Sydney and Gunnedah basin coalfields (Hunter, Newcastle, Wes -32.4994,150.5499 d=69.8km mt=70000 g= top=50 base= len= wid= area=69477.0 shape=area q=C est=cover src=lit
+   NAME C_coal  area    Sydney coalfield (Cape Breton)                               46.185,-60.1635 d=16996.6km mt=2000 g= top=0 base= len= wid= area=639.9 shape=area q=C est=cover;geometry src=lit
+   NEAR C_coal  area    Surat basin (Walloon Coal Measures)                          -28.7376,149.3762 d=498.6km mt=25000 g= q=C src=lit
+   NEAR C_coal  area    Latrobe Valley brown coal (Morwell, Yallourn, Loy Yang)      -38.2405,146.5927 d=705.7km mt=65000 g= q=B src=lit
+== Witbank / Highveld (-26.0, 29.2) ['C_coal']
+   NAME C_coal  area    Witbank and Highveld coalfields                              -26.15,29.3125 d=20.1km mt=35000 g= top=20 base= len= wid= area=17092.1 shape=area q=C est=cover;geometry src=lit
+   NEAR C_coal  area    KwaZulu-Natal coalfields (Vryheid, Utrecht, Klip River)      -27.7,30.51 d=229.4km mt=8000 g= q=C src=lit
+   NEAR C_coal  area    Waterberg coalfield                                          -23.6,27.6 d=311.9km mt=75000 g= q=C src=lit
+== Powder River Basin (44.5, -105.5) ['C_coal']
+   NAME C_coal  area    Powder River basin (Fort Union, Wyodak)                      44.5546,-105.973 d=38.0km mt=970000 g= top=30 base= len= wid= area=52345.1 shape=area q=B est=cover src=usgs-pp1809
+   NAME U       deposit Smith Ranch-Highland (Powder River basin)                    43.05,-105.7 d=162.0km mt=30.0 g=0.1% top=150.0 base=300.0 len=25.0 wid=5.0 area= shape=lens q=C est=mt;grade;lenKm;widKm src=wsgs-uranium
+   NEAR C_coal  area    Fort Union lignite region (Williston basin)                  47.0033,-102.2603 d=375.0km mt=300000 g= q=C src=lit
+   NEAR C_coal  area    Green River, Hams Fork and Hanna coal regions                41.8157,-108.7787 d=399.7km mt=100000 g= q=C src=lit
+== Appalachian basin (39.0, -81.0) ['C_coal']
+   NAME C_coal  area    Northern Appalachian coal region (Pittsburgh, Upper Freeport 40.3621,-80.4792 d=157.9km mt=120000 g= top=0 base= len= wid= area=90553.9 shape=area q=C est=cover src=lit
+   NAME C_coal  area    Central Appalachian coal region                              37.4413,-82.7056 d=228.6km mt=110000 g= top=0 base= len= wid= area=59733.9 shape=area q=C est=cover src=lit
+   NAME C_coal  area    Southern Appalachian coal region (Warrior, Cahaba, Coosa, Te 33.9616,-87.531 d=808.8km mt=40000 g= top=0 base= len= wid= area=33428.6 shape=area q=C est=cover src=lit
+   NAME NaCl    area    Michigan and Appalachian basins, Salina salt (Detroit, Goder 40.9216,-79.9692 d=231.0km mt= g= top=400 base= len= wid= area=167026.0 shape=area q=C est= src=usgs-potash-2014
+   NEAR C_coal  area    Pennsylvania anthracite region                               40.9604,-76.0395 d=475.5km mt=21000 g= q=B src=lit
+== Damodar (Jharia/Raniganj) (23.75, 86.4) ['C_coal']
+   NAME C_coal  area    Damodar valley coalfields (Raniganj, Jharia, Bokaro, Karanpu 23.6623,87.0813 d=70.0km mt=100000 g= top=0 base= len= wid= area=4677.5 shape=area q=B est=cover src=lit
+   NEAR C_coal  area    Mahanadi coalfields (Talcher, Ib River)                      22.1827,83.2826 d=363.6km mt=80000 g= q=B src=lit
+   NEAR C_coal  area    Son and Hasdeo coalfields (Singrauli, Korba, Mand-Raigarh, H 23.3157,81.8591 d=465.4km mt=110000 g= q=C src=lit
+== Kalimantan coal (-1.0, 116.5) ['C_coal']
+   NAME C_coal  area    Kutai basin coal (East Kalimantan)                           -0.1,117.2083 d=127.3km mt=50000 g= top=0 base= len= wid= area=32147.2 shape=area q=C est=cover;geometry src=lit
+   NAME C_coal  area    Barito basin coal (South Kalimantan)                         -3.15,115.3469 d=271.2km mt=30000 g= top=0 base= len= wid= area=29999.9 shape=area q=C est=cover;geometry src=lit
+   NAME Ni      deposit S.E. Kalimantan                                              -3.1719,115.2864 d=276.6km mt=56.0 g=1.5% top=0.0 base=20.0 len=9.354 wid=3.742 area= shape=blanket q=B est=baseM src=usgs-laterite-2011
+   NEAR C_coal  area    South Sumatra basin lignite (Muara Enim)                     -3.7,103.8125 d=1441.1km mt=50000 g= q=C src=lit
+== Zechstein (52.5, 11.0) ['K', 'NaCl']
+   NAME K       area    Zechstein basin, bedded salt and potash (Germany, Netherland 54.0447,19.2268 d=573.0km mt=20000 g= top=500 base= len= wid= area=124075.6 shape=area q=C est=cover src=usgs-potash-2014
+   NAME NaCl    area    Zechstein salt structures (North German and Polish salt dome 53.4439,14.5895 d=262.2km mt= g= top=300 base= len= wid= area=32337.9 shape=area q=C est= src=usgs-potash-2014
+   NAME K       area    Zechstein of North Yorkshire (Boulby potash and polyhalite,  54.2,-0.4499 d=782.2km mt=1500 g= top=1000 base= len= wid= area=1538.7 shape=area q=C est=cover src=usgs-potash-2014
+   NAME gypsum  area    Southern Harz Zechstein gypsum belt (Nordhausen to Sangerhau 51.505,10.9835 d=110.6km mt= g= top=0 base= len= wid= area=709.6 shape=area q=B est=geometry src=lit
+   NEAR NaCl    deposit Asse salt anticline                                          52.13,10.66 d=47.2km mt=12893 g= q=C src=lit
+   NEAR NaCl    deposit Gorleben-Rambow salt dome                                    53.02,11.36 d=62.7km mt=88216 g= q=C src=lit
+   NEAR NaCl    deposit Stassfurt salt saddle                                        51.855,11.58 d=81.9km mt=28246 g= q=C src=lit
+== Stassfurt (51.86, 11.58) ['K', 'NaCl']
+   NAME NaCl    deposit Stassfurt salt saddle                                        51.855,11.58 d=0.6km mt=28246 g= top=150 base=2000 len=3.0 wid=3.0 area= shape=dome q=C est=topM;baseM;lenKm;widKm src=lit
+   NEAR NaCl    deposit Bernburg salt dome                                           51.8,11.74 d=12.9km mt=8143 g= q=C src=lit
+   NEAR NaCl    deposit Asse salt anticline                                          52.13,10.66 d=69.8km mt=12893 g= q=C src=lit
+== Wieliczka-Bochnia (49.98, 20.06) ['NaCl']
+   NAME NaCl    deposit Wieliczka salt deposit                                       49.983,20.055 d=0.5km mt=4000 g= top=60 base=330 len=10.0 wid=1.0 area= shape=lens q=C est=topM;baseM;lenKm;widKm src=lit
+   NAME NaCl    deposit Bochnia salt deposit                                         49.97,20.43 d=26.5km mt=1000 g= top=30 base=470 len=4.0 wid=0.2 area= shape=lens q=C est=topM;baseM;lenKm;widKm src=lit
+   NEAR NaCl    deposit Klodawa salt dome                                            52.25,18.92 d=264.7km mt=32911 g= q=C src=lit
+== Hallstatt (47.56, 13.64) ['NaCl']
+   NAME NaCl    deposit Hallstatt salt body (Haselgebirge)                           47.565,13.63 d=0.9km mt=2290 g= top=0 base=600 len=1.5 wid=1.5 area= shape=dome q=C est=topM;baseM;lenKm;widKm src=lit
+   NEAR NaCl    deposit Altaussee salt body (Haselgebirge)                           47.645,13.78 d=14.1km mt=2290 g= q=C src=lit
+   NEAR NaCl    deposit Bad Ischl salt body (Haselgebirge)                           47.715,13.63 d=17.3km mt=1018 g= q=C src=lit
+== Khewra (Salt Range) (32.65, 73.0) ['NaCl']
+   NAME NaCl    area    Salt Range (Khewra, Warcha, Kalabagh)                        32.8,72.4359 d=55.3km mt= g= top=0 base= len= wid= area=6077.3 shape=area q=C est=geometry src=lit
+   NEAR NaCl    area    Sambhar Lake                                                 26.95,75.0897 d=665.1km mt= g= q=C src=lit
+   NEAR NaCl    area    Qom and Great Kavir salt (Lower and Upper Red Formations)    35.4968,55.9774 d=1597.3km mt= g= q=C src=usgs-potash-2014
+== Saskatchewan potash (Prairie Evaporite) (52.0, -106.0) ['K']
+   NAME Zn      deposit Prairie Creek                                                61.58,-124.83 d=1554.7km mt=11.9 g=12.5% top=50 base=99 len=1.093 wid=0.437 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-sedexmvt-2009
+   NAME K       area    Elk Point basin, Prairie Evaporite potash (Saskatchewan)     50.5923,-103.2483 d=247.2km mt=150000 g= top=900 base= len= wid= area=184833.3 shape=area q=C est=cover src=usgs-potash-2014
+   NEAR K       area    Bonneville Salt Flats and Great Salt Lake Desert             40.75,-113.7804 d=1384.2km mt=50 g= q=C src=lit
+   NEAR K       area    Paradox basin salt and potash (Moab)                         38.1158,-109.0922 d=1562.5km mt=5000 g= q=C src=usgs-potash-2014
+== Upper Kama (Berezniki-Solikamsk) (59.4, 56.8) ['K']
+   NAME Cu      area    Kamatanda (Copperbelt)                                       -10.951,26.7727 d=8271.2km mt=0.4 g=4.9% top=0 base= len= wid= area=0.3 shape=area q=B est=geometry;topM;thickM src=usgs-gcra-sedcu
+   NAME K       area    Upper Kama potash basin (Verkhnekamskoye; Solikamsk, Berezni 59.6361,56.8914 d=26.8km mt=20000 g= top=250 base= len= wid= area=3853.7 shape=area q=C est=cover src=usgs-potash-2014
+   NEAR K       area    Pripyat trough potash (Soligorsk, Starobin)                  52.2951,28.7963 d=1899.8km mt=15000 g= q=C src=usgs-potash-2014
+   NEAR K       area    Zechstein basin, bedded salt and potash (Germany, Netherland 54.0447,19.2268 d=2334.1km mt=20000 g= q=C src=usgs-potash-2014
+== Starobin (Pripyat) (52.8, 27.5) ['K']
+   NAME K       area    Pripyat trough potash (Soligorsk, Starobin)                  52.2951,28.7963 d=104.1km mt=15000 g= top=400 base= len= wid= area=15158.3 shape=area q=C est=cover src=usgs-potash-2014
+   NEAR K       area    Zechstein basin, bedded salt and potash (Germany, Netherland 54.0447,19.2268 d=565.0km mt=20000 g= q=C src=usgs-potash-2014
+   NEAR K       area    Carpathian foredeep salt and potash (Kalush, Stebnyk)        47.2268,26.2304 d=626.3km mt=2500 g= q=C src=usgs-potash-2014
+== Dead Sea (31.2, 35.4) ['K', 'NaCl']
+   NAME K       area    Dead Sea basin (Sedom Formation; Dead Sea brines)            30.9901,35.3877 d=23.4km mt=2000 g= top=0 base= len= wid= area=2519.4 shape=area q=C est=cover src=usgs-potash-2014
+   NEAR NaCl    deposit Mount Sodom salt diapir                                      31.07,35.39 d=14.5km mt=33929 g= q=C src=lit
+   NEAR NaCl    area    Tuz Golu (Lake Tuz)                                          38.75,33.3792 d=859.4km mt= g= q=C src=lit
+== Chilean nitrates (-21.5, -69.6) ['N']
+   NAME K       area    Salar de Atacama                                             -23.6,-68.2183 d=273.2km mt=500 g= top=0 base= len= wid= area=3342.4 shape=area q=C est=cover;geometry src=lit
+== Sicily sulfur (37.45, 14.05) ['S']
+   NAME S       area    Sicilian Messinian evaporite basin: sulfur, gypsum and salt  37.4455,13.8136 d=20.9km mt=300 g= top=0 base= len= wid= area=6688.5 shape=area q=C est=cover src=lit
+   NEAR S       area    Tarnobrzeg sulfur district (Machow, Jeziorko, Osiek, Grzybow 50.515,21.475 d=1567.6km mt=2000 g= q=C src=lit
+   NEAR S       area    Yavoriv and Rozdil sulfur (Carpathian foredeep)              49.975,23.425 d=1580.6km mt=600 g= q=C src=lit
+== Tarnobrzeg sulfur (50.55, 21.7) ['S']
+   NAME S       area    Tarnobrzeg sulfur district (Machow, Jeziorko, Osiek, Grzybow 50.515,21.475 d=16.4km mt=2000 g= top=25 base= len= wid= area=1232.4 shape=area q=C est=cover;geometry src=lit
+   NEAR S       area    Yavoriv and Rozdil sulfur (Carpathian foredeep)              49.975,23.425 d=138.3km mt=600 g= q=C src=lit
+   NEAR S       area    Sicilian Messinian evaporite basin: sulfur, gypsum and salt  37.4455,13.8136 d=1585.7km mt=300 g= q=C src=lit
+== Khouribga (Ouled Abdoun) (32.9, -6.9) ['P']
+   NAME P       area    Ouled Abdoun phosphate basin (Khouribga)                     32.8,-6.6881 d=22.7km mt=26000 g=31% top=10 base= len= wid= area=5404.4 shape=area q=C est=cover;geometry src=lit
+   NEAR P       area    Gantour phosphate basin (Youssoufia, Benguerir)              32.175,-8.1 d=138.4km mt=20000 g=30% q=C src=lit
+   NEAR P       area    Meskala phosphate basin                                      31.35,-8.9 d=255.3km mt=4000 g=28% q=C src=lit
+== Bou Craa (26.3, -12.85) ['P']
+   NAME P       area    Bou Craa phosphate                                           26.35,-12.775 d=9.3km mt=1000 g=34% top=10 base= len= wid= area=775.6 shape=area q=C est=cover;geometry src=lit
+   NEAR P       area    Meskala phosphate basin                                      31.35,-8.9 d=680.6km mt=4000 g=28% q=C src=lit
+   NEAR P       area    Gantour phosphate basin (Youssoufia, Benguerir)              32.175,-8.1 d=799.2km mt=20000 g=30% q=C src=lit
+== Phosphoria / Florida (27.8, -81.9) ['P']
+   NAME Cu      deposit La Florida                                                   30.379,-109.7254 d=2712.1km mt=135.0 g=0.33% top=0.0 base=219 len=0.621 wid=0.477 area= shape=stock q=A est=baseM;lenKm;strikeDeg;widKm src=usgs-gcra-pcu
+   NAME P       area    Phosphoria Formation (Idaho, Utah, Wyoming, Montana)         43.6,-111.5976 d=3178.9km mt=10000 g=24% top=0 base= len= wid= area=52022.1 shape=area q=C est=cover;geometry src=lit
+   NAME P       area    Central Florida phosphate district (Bone Valley, Peace River 27.8,-81.95 d=4.9km mt=8000 g=10% top=5 base= len= wid= area=6124.9 shape=area q=C est=cover;geometry src=lit
+   NEAR P       area    Aurora phosphate (Pungo River Formation, North Carolina)     35.375,-76.8 d=970.6km mt=3000 g=13% q=C src=lit
+   NEAR P       deposit San Juan de la Costa phosphorite                             24.39,-110.69 d=2893.2km mt=500 g=18% q=C src=lit
+== Weipa (-12.65, 141.9) ['Al']
+   NAME Al      deposit Weipa (Andoom-East Weipa)                                    -12.65,141.9 d=0.0km mt=3000.0 g=52.0% top=1.0 base=8.0 len=23.146 wid=9.258 area= shape=blanket q=C est=lenKm;widKm;dipDeg src=published-endowment
+   NEAR Al      deposit Amrun (South of Embley)                                      -13.0,141.75 d=42.2km mt=1400.0 g=52.0% q=C src=published-endowment
+   NEAR Al      deposit Gove                                                         -12.25,136.85 d=550.1km mt=300.0 g=50.0% q=C src=published-endowment
+== Boke / Sangaredi (11.08, -13.79) ['Al']
+   NAME C_coal  area    Damodar valley coalfields (Raniganj, Jharia, Bokaro, Karanpu 23.6623,87.0813 d=10597.0km mt=100000 g= top=0 base= len= wid= area=4677.5 shape=area q=B est=cover src=lit
+   NAME Al      deposit Sangaredi (CBG)                                              11.13,-13.83 d=7.1km mt=1500.0 g=52.0% top=1.0 base=12.0 len=12.741 wid=5.096 area= shape=blanket q=C est=lenKm;widKm;dipDeg src=published-endowment
+   NAME Al      deposit Boke SMB plateaux (Katougouma)                               10.9,-14.15 d=44.1km mt=3000.0 g=47.0% top=1.0 base=10.0 len=19.92 wid=7.968 area= shape=blanket q=C est=lenKm;widKm;dipDeg src=published-endowment
+   NEAR Al      deposit Dian-Dian                                                    10.75,-13.6 d=42.2km mt=1000.0 g=45.0% q=C src=published-endowment
+== Kalahari Mn (-27.2, 22.95) ['Mn']
+   NAME Mn      area    Kalahari manganese field (Hotazel Formation)                 -27.125,22.9213 d=8.8km mt=13600 g=% top=80 base= len= wid= area=1568.1 shape=area q=C est= src=published-endowment
+   NEAR Mn      deposit Moanda (Bangombe)                                            -1.53,13.2 d=3037.8km mt=450.0 g=46.0% q=C src=published-endowment
+   NEAR Mn      deposit Nsuta                                                        5.28,-1.98 d=4497.0km mt=100.0 g=35.0% q=C src=published-endowment
+== Nikopol Mn (47.6, 34.4) ['Mn']
+   NAME Mn      area    Nikopol manganese basin (Marhanets-Pokrov)                   47.66,34.4643 d=8.2km mt=2200 g=% top=50 base= len= wid= area=1240.8 shape=area q=C est= src=published-endowment
+   NEAR Mn      deposit Bolshoi Tokmak                                               47.25,35.7 d=105.3km mt=2500.0 g=22.0% q=C src=published-endowment
+   NEAR Mn      area    Chiatura manganese (Oligocene)                               42.3,43.3095 d=914.9km mt=400 g=% q=C src=published-endowment
+== Chiatura Mn (42.29, 43.28) ['Mn']
+   NAME Mn      area    Chiatura manganese (Oligocene)                               42.3,43.3095 d=2.7km mt=400 g=% top=20 base= len= wid= area=193.0 shape=area q=C est= src=published-endowment
+   NEAR Mn      deposit Bolshoi Tokmak                                               47.25,35.7 d=813.1km mt=2500.0 g=22.0% q=C src=published-endowment
+   NEAR Mn      area    Nikopol manganese basin (Marhanets-Pokrov)                   47.66,34.4643 d=914.1km mt=2200 g=% q=C src=published-endowment
+== Moanda Mn (-1.55, 13.2) ['Mn']
+   NAME Mn      deposit Moanda (Bangombe)                                            -1.53,13.2 d=2.2km mt=450.0 g=46.0% top=5.0 base=15.0 len=15.0 wid=10.0 area= shape=lens q=C est= src=published-endowment
+   NEAR Mn      deposit Nsuta                                                        5.28,-1.98 d=1849.2km mt=100.0 g=35.0% q=C src=published-endowment
+   NEAR Mn      area    Kalahari manganese field (Hotazel Formation)                 -27.125,22.9213 d=3026.9km mt=13600 g=% q=C src=published-endowment
+== Groote Eylandt Mn (-13.97, 136.45) ['Mn']
+   NAME Mn      deposit Groote Eylandt                                               -14.0,136.45 d=3.3km mt=400.0 g=45.0% top=3.0 base=15.0 len=20.0 wid=8.0 area= shape=lens q=C est= src=published-endowment
+   NEAR Mn      deposit Woodie Woodie                                                -21.65,121.2 d=1824.6km mt=50.0 g=40.0% q=C src=published-endowment
+   NEAR Mn      deposit Daxin                                                        22.83,107.2 d=5185.2km mt=100.0 g=22.0% q=C src=published-endowment
+== Mogok (22.92, 96.5) ['corundum', 'spinel']
+   NAME corundum deposit Mogok marble rubies                                          22.92,96.51 d=1.0km mt=50.0 g=0.5ct/t top=0.0 base=500.0 len=25.0 wid=8.0 area= shape=lens q=C est=mt;grade;lenKm;widKm src=lit-mogok
+   NAME corundum deposit Mogok gem gravels (byon)                                     22.92,96.51 d=1.0km mt=300.0 g=0.3ct/t top=2.0 base=8.0 len=25.0 wid=6.0 area= shape=blanket q=C est=mt;grade;lenKm;widKm;topM;baseM src=lit-mogok
+   NEAR corundum deposit Mong Hsu                                                     21.9,98.1 d=199.8km mt=5.0 g=0.5ct/t q=C src=lit-mogok
+== Muzo / Chivor (5.53, -74.1) ['emerald']
+   NAME emerald deposit Muzo                                                         5.55,-74.11 d=2.5km mt=5.0 g=5.0ct/t top=0.0 base=600.0 len=3.0 wid=1.0 area= shape=veins q=C est=mt;grade;lenKm;widKm src=lit-colombia-emerald
+   NAME emerald deposit Coscuez                                                      5.65,-74.2 d=17.3km mt=2.0 g=4.0ct/t top=0.0 base=400.0 len=2.0 wid=1.0 area= shape=veins q=C est=mt;grade;lenKm;widKm src=lit-colombia-emerald
+   NAME emerald deposit Chivor                                                       4.88,-73.37 d=108.4km mt=2.0 g=3.0ct/t top=0.0 base=400.0 len=2.0 wid=1.0 area= shape=veins q=C est=mt;grade;lenKm;widKm src=lit-colombia-emerald
+== Sar-e-Sang (36.2, 70.8) ['lapis']
+   NAME lapis   deposit Sar-e-Sang                                                   36.2,70.79 d=0.9km mt=0.5 g= top=0.0 base=200.0 len=1.0 wid=0.1 area= shape=lens q=C est=mt;lenKm;widKm src=lit-sar-e-sang
+   NAME spinel  deposit Kuh-i-Lal (Badakhshan balas rubies)                          36.98,71.58 d=111.2km mt=0.2 g=5.0ct/t top=0.0 base=200.0 len=1.0 wid=0.1 area= shape=lens q=C est=mt;grade;lenKm;widKm src=lit-kuh-i-lal
+   NEAR lapis   deposit Malaya Bystraya                                              51.55,103.65 d=3098.0km mt=0.3 g= q=C src=lit-sar-e-sang
+   NEAR lapis   deposit Flor de los Andes (Ovalle)                                   -30.65,-70.55 d=16399.7km mt=0.2 g= q=C src=lit-sar-e-sang
+== Bayan Obo (41.8, 109.97) ['Fe']
+   NAME Fe      deposit Bayan Obo                                                    41.78,109.97 d=2.2km mt=1500.0 g=35.0% top=0.0 base=800.0 len=18.0 wid=1.5 area= shape=lens q=C est= src=published-endowment
+   NEAR Fe      deposit Qian'an (eastern Hebei BIF)                                  40.0,118.7 d=760.2km mt=3000.0 g=30.0% q=C src=published-endowment
+   NEAR Fe      deposit Anshan-Benxi BIF                                             41.07,123.0 d=1088.2km mt=10000.0 g=31.0% q=C src=published-endowment
+== Bisie / Kivu tin (-1.0, 28.0) ['Sn']
+   NAME Sn      deposit Bisie (Mpama North and South)                                -1.033,27.733 d=29.9km mt=11.0 g=3.3% top=0.0 base=600 len=2.0 wid=0.3 area= shape=veins q=B est=baseM;dipDeg;lenKm;strikeDeg;widKm src=earth-named-2026
+   NEAR Sn      deposit Rutongo                                                      -1.83,30.06 d=246.9km mt=3.0 g=0.7% q=C src=earth-named-2026
+   NEAR Sn      deposit Manono-Kitotolo (Roche Dure)                                 -7.3,27.43 d=703.4km mt=420.0 g=0.07% q=B src=earth-named-2026
+== San Rafael (Peru tin) (-14.23, -70.32) ['Sn']
+   NAME Sn      deposit San Rafael                                                   -14.235,-70.318 d=0.6km mt=25.0 g=4.5% top=0.0 base=1300 len=3.0 wid=0.5 area= shape=veins q=B est=baseM;grades;lenKm;mt;widKm src=earth-named-2026
+   NEAR Sn      deposit Caracoles (Quimsa Cruz)                                      -16.967,-67.317 d=442.8km mt=5.0 g=1.0% q=C src=earth-named-2026
+   NEAR Sn      deposit Colquiri                                                     -17.392,-67.128 d=490.1km mt=12.0 g=1.2% q=C src=earth-named-2026
+== Rondonia tin (-10.0, -63.0) ['Sn']
+   NAME Sn      deposit Pitinga (Madeira albite granite)                             -0.76,-60.09 d=1076.7km mt=164.0 g=0.14% top=0.0 base=400 len=2.0 wid=1.5 area= shape=stock q=B est=baseM;lenKm;widKm src=earth-named-2026
+   NAME Sn      deposit Bom Futuro                                                   -9.57,-63.45 d=68.7km mt=300.0 g=0.05% top=0.0 base=20 len=8.0 wid=4.0 area= shape=blanket q=C est=baseM;grade;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NAME Sn      deposit Massangana and Ariquemes placers                             -9.77,-63.27 d=39.1km mt=150.0 g=0.05% top=0.0 base=15 len=15.0 wid=6.0 area= shape=blanket q=C est=baseM;grade;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NAME Zn      deposit LaRonde-Dumagami                                             48.2508,-78.4397 d=6653.0km mt=50.44 g=2.76% top=0.0 base=148 len=1.782 wid=0.125 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;widKm src=usgs-vms-2009
+   NAME Fe      deposit Adirondack magnetite (Mineville)                             44.1,-73.5 d=6108.3km mt=150.0 g=40.0% top=0.0 base=700.0 len=1.16 wid=0.04 area= shape=lens q=C est=lenKm;widKm;strikeDeg;dipDeg src=published-endowment
+   NEAR Sn      deposit Caracoles (Quimsa Cruz)                                      -16.967,-67.317 d=904.3km mt=5.0 g=1.0% q=C src=earth-named-2026
+== Khaidarkan Hg-Sb (39.95, 71.35) ['Hg', 'Sb']
+   NAME Hg      deposit Khaidarkan                                                   39.947,71.34 d=0.9km mt=13.0 g=0.35% top=0.0 base=700 len=3.0 wid=1.0 area= shape=lens q=C est=baseM;dipDeg;grade;grades;lenKm;mt;strikeDeg;topM;widKm src=earth-named-2026
+   NEAR Sb      deposit Kadamjay                                                     40.13,71.73 d=38.0km mt=7.0 g=2.6% q=C src=earth-named-2026
+   NEAR Hg      deposit Nikitovka (Mykytivka)                                        48.315,38.06 d=2789.0km mt=11.0 g=0.5% q=C src=earth-named-2026
+== Xikuangshan Sb (27.75, 111.45) ['Sb']
+   NAME Sb      deposit Xikuangshan                                                  27.77,111.47 d=3.0km mt=75.0 g=2.8% top=0.0 base=600 len=9.0 wid=2.0 area= shape=lens q=B est=baseM;dipDeg;grade;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NEAR Sb      deposit Woxi                                                         28.42,110.75 d=101.3km mt=6.0 g=4.4% q=C src=earth-named-2026
+   NEAR Sb      deposit Kadamjay                                                     40.13,71.73 d=3876.1km mt=7.0 g=2.6% q=C src=earth-named-2026
+== Freiberg (50.92, 13.35) ['Ag', 'Pb', 'Zn']
+   NAME Ag      deposit Freiberg district                                            50.905,13.35 d=1.7km mt=20.0 g=285.0g/t top=0.0 base=750 len=15.0 wid=8.0 area= shape=veins q=B est=dipDeg;grades;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NEAR Ag      deposit Příbram (Březové Hory)                                       49.684,13.99 d=144.8km mt=19.0 g=200.0g/t q=C src=earth-named-2026
+   NEAR Ag      deposit Kutná Hora                                                   49.95,15.27 d=173.6km mt=5.0 g=500.0g/t q=C src=earth-named-2026
+== Kutna Hora (49.95, 15.27) ['Ag', 'Zn', 'Pb']
+   NAME Ag      deposit Kutná Hora                                                   49.95,15.27 d=0.0km mt=5.0 g=500.0g/t top=0.0 base=600 len=6.0 wid=3.0 area= shape=veins q=C est=dipDeg;grade;grades;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NEAR Ag      deposit Jihlava                                                      49.4,15.59 d=65.3km mt=0.3 g=500.0g/t q=C src=earth-named-2026
+   NEAR Ag      deposit Příbram (Březové Hory)                                       49.684,13.99 d=96.5km mt=19.0 g=200.0g/t q=C src=earth-named-2026
+== Cerro de Pasco (-10.68, -76.26) ['Zn', 'Pb', 'Ag', 'Cu']
+   NAME Zn      deposit Cerro de Pasco                                               -10.685,-76.26 d=0.6km mt=200.0 g=6.0% top=0.0 base=700 len=2.5 wid=1.8 area= shape=stock q=B est=baseM;grade;grades;mt src=earth-named-2026
+   NEAR Cu      deposit Toromocho                                                    -11.6,-76.1333 d=103.2km mt=2152.0 g=0.461% q=A src=usgs-gcra-pcu
+   NEAR Zn      deposit Morococha (veins and mantos)                                 -11.605,-76.14 d=103.7km mt=60.0 g=4.0% q=C src=earth-named-2026
+== Navan (Tara) (53.66, -6.72) ['Zn', 'Pb']
+   NAME Bi      deposit Ustarasai                                                    41.5,70.1 d=5624.7km mt=3.0 g=0.5% top=0.0 base=500 len=2.0 wid=1.0 area= shape=veins q=C est=baseM;dipDeg;grade;grades;lenKm;mt;strikeDeg;widKm src=earth-named-2026
+   NAME Cu      deposit Kettara                                                      31.8842,-8.1883 d=2424.2km mt=23.0 g=0.6% top=120 base=435 len=0.688 wid=0.344 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;widKm src=usgs-vms-2009
+   NAME Cu      deposit Kotarak Dere                                                 40.8747,40.1147 d=3727.6km mt=0.9 g=1.0% top=0.0 base=107 len=0.234 wid=0.117 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-vms-2009
+   NAME Zn      deposit Navan                                                        53.66,-6.68 d=2.6km mt=95.3 g=8.3% top=50 base=148 len=2.187 wid=0.875 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-sedexmvt-2009
+   NAME Cu      area    Taratara (Copperbelt)                                        -10.7245,26.3667 d=7811.4km mt=0.17 g=1.83% top=0 base= len= wid= area=0.3 shape=area q=B est=geometry;topM;thickM src=usgs-gcra-sedcu
+   NAME Ni      deposit Konawe Utara laterites                                       -3.4,122.2 d=12764.8km mt=2500.0 g=1.5% top=0.0 base=25.0 len=12.5 wid=5.0 area= shape=blanket q=C est=lenKm;widKm;dipDeg src=published-endowment
+   NEAR Zn      deposit Tatestown                                                    53.69,-6.74 d=3.6km mt=3.6 g=5.3% q=A src=usgs-sedexmvt-2009
+   NEAR Zn      deposit Rickardstown                                                 53.9,-6.82 d=27.5km mt=3.5 g=2.2% q=A src=usgs-sedexmvt-2009
+== Sullivan (49.71, -116.0) ['Zn', 'Pb']
+   NAME Cu      deposit East Sullivan                                                48.0686,-77.7314 d=2773.4km mt=16.0 g=1.7% top=0.0 base=279 len=0.609 wid=0.305 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-vms-2009
+   NAME Cu      deposit Sullivan                                                     38.78,-117.95 d=1225.1km mt=23.1 g=0.33% top=0.0 base=150 len=0.31 wid=0.239 area= shape=stock q=A est=baseM;lenKm;strikeDeg;widKm src=usgs-gcra-pcu
+   NAME Zn      deposit Sullivan                                                     49.71,-116.01 d=0.7km mt=161.97 g=5.86% top=0.0 base=760 len=1.733 wid=1.04 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-sedexmvt-2009
+   NAME Cr      deposit Sullivan and Kahl Lease                                      37.9061,-120.4919 d=1360.5km mt=0.000102 g=40.0% top=0.0 base=20.0 len=0.002 wid=0.001 area= shape=lens q=B est=baseM;dipDeg;lenKm;strikeDeg;widKm src=usgs-podchrome-2012
+   NEAR Zn      deposit Kootenay King                                                49.74,-115.61 d=28.2km mt=0.01 g=15.6% q=A src=usgs-sedexmvt-2009
+   NEAR Zn      deposit Duncan                                                       50.37,-116.95 d=99.9km mt=2.76 g=3.1% q=A src=usgs-sedexmvt-2009
+== Rampura Agucha (25.83, 74.73) ['Zn', 'Pb']
+   NAME Zn      deposit Rampura-Agucha                                               25.83,74.73 d=0.0km mt=107.4 g=13.944% top=0.0 base=663 len=1.511 wid=0.907 area= shape=lens q=A est=dipDeg;lenKm;strikeDeg;topM;widKm src=usgs-sedexmvt-2009
+   NEAR Zn      deposit Devpura                                                      25.45,74.63 d=43.4km mt=17.49 g=1.84% q=A src=usgs-sedexmvt-2009
+   NEAR Pb      deposit Sawar                                                        25.75,75.22 d=49.9km mt=0.9 g=2.54% q=A src=usgs-sedexmvt-2009

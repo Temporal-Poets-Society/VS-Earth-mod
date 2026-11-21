@@ -256,6 +256,15 @@ namespace EarthMap
             Log("deposit sea agreement: {0}; {1} sea-level deposit generator(s), {2} not scaled for sea level {3}; Init hook {4}",
                 mismatched == 0 && SealevelDeposits.Hooked ? "PASS" : "FAIL", deposits, mismatched, Vintagestory.ServerMods.TerraGenConfig.seaLevel,
                 SealevelDeposits.Hooked ? "on" : "off");
+            // decision 0097: vanilla's deposits at their depth below the local ground, where the world's rules use it
+            int scaled = 0;
+            foreach (var v in sapi.ModLoader.GetModSystem<Vintagestory.ServerMods.GenDeposits>()?.Deposits ?? Array.Empty<Vintagestory.ServerMods.DepositVariant>())
+                if (v?.ScaleWithWorldheight == true) scaled++;
+            Log("deposit depths: {0}; rules {1}, {2}, {3} deposit(s) still height-scaled", p.DepositDepthRules < 1 ? "PASS" : DepositDepth.Active && scaled == 0 ? "PASS" : "FAIL",
+                p.DepositDepthRules, DepositDepth.Active ? "active" : "inactive", scaled);
+            // decision 0099: vanilla's rock layers under the local ground, where the world's rules use it
+            Log("vanilla rock layers: {0}; rules {1}, {2}", p.VanillaStrataRules < 1 || EarthVanillaStrata.Active ? "PASS" : "FAIL",
+                p.VanillaStrataRules, EarthVanillaStrata.Active ? "active" : "inactive");
             // rules 2 has its own check above; the test profiles' rules 3 also read the real rain back unadjusted
             if (p.ClimateRules < TerrainModel.RealRainRules) return;
             bool climateOk = true;
@@ -1437,6 +1446,10 @@ namespace EarthMap
             {
                 Mod.Logger.Error("SELFTEST river check failed: {0}", e);
             }
+            // EA-0131: the streams layer's tiles as this session built them
+            if (core.Model?.Streams is { } streams)
+                Log("streams layer: {0} home tiles built, {1} reaches, {2:0} ms building ({3:0} ms fitting to the land: {4} vertices lowered, {5} reaches cut at a ridge; {6:0} ms joining)",
+                    streams.TilesBuilt, streams.ReachesBuilt, streams.BuildMs, streams.FitMs, streams.VerticesLowered, streams.RidgeCuts, streams.JoinMs);
             try
             {
                 if (core.RegionalTrees != null) Log("{0}", EarthTrees.SelectionReport());

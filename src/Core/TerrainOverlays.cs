@@ -35,7 +35,7 @@ namespace EarthMap.Core
             else { Islands = data.Islands; Coasts = data.Coasts; }
             // the island overlay's grid patches follow the islands
             if (IslandOverlay) IslandTilePatches = tables.IslandTilePatches(Islands);
-            if (LakeOverlay) tables.TerminalLakes(out LakeTilePatches, out LakePatchCells, out LakeShoreWeight);
+            if (LakeOverlay) tables.TerminalLakes(c.TerminalLakeFile, out LakeTilePatches, out LakePatchCells, out LakeShoreWeight);
             if (ShoreOverlay) tables.Shores(out ShoreTilePatches, out ShoreTileNear);
             if (ReservoirExclusions) ReservoirCells = data.ReservoirCells();
             if (OutletOverlay) tables.Outlets(out OutletTilePatches, out OutletLandCells);
@@ -55,9 +55,8 @@ namespace EarthMap.Core
         CoastData refereeCoasts;
         // the islands' patches by tile, for the islands as the file has them and as the referee left them
         Dictionary<int, IslandData.Patch[]> baseIslandTilePatches, refereeIslandTilePatches;
-        Dictionary<int, IslandData.Patch[]> lakeTilePatches;
-        HashSet<long> lakePatchCells;
-        Dictionary<long, float> lakeShoreWeight;
+        // the terminal lakes' tables by file (EarthDataChoice.TerminalLakeFile: 0 lakes.bin, 2 lakes-2.bin)
+        readonly Dictionary<int, (Dictionary<int, IslandData.Patch[]> Patches, HashSet<long> Cells, Dictionary<long, float> Shore)> terminalLakes = new();
         Dictionary<int, IslandData.Patch[]> shoreTilePatches;
         Dictionary<int, (int Index, byte Near)[]> shoreTileNear;
         Dictionary<int, IslandData.Patch[]> outletTilePatches;
@@ -104,20 +103,18 @@ namespace EarthMap.Core
         }
 
         /// <summary>lakes.bin's patches by tile, the cells that are lake only through them, and the green of their shores.</summary>
-        public void TerminalLakes(out Dictionary<int, IslandData.Patch[]> tilePatches, out HashSet<long> lakeCells, out Dictionary<long, float> shoreWeight)
+        public void TerminalLakes(int file, out Dictionary<int, IslandData.Patch[]> tilePatches, out HashSet<long> lakeCells, out Dictionary<long, float> shoreWeight)
         {
-            if (lakeTilePatches == null)
+            if (!terminalLakes.TryGetValue(file, out var t))
             {
-                var lakes = data.TerminalLakes;
-                lakeTilePatches = ByTile(lakes.Patches);
+                var lakes = data.TerminalLakesOf(file);
                 var cells = new HashSet<long>();
                 foreach (var p in lakes.Patches) if ((p.Flags & EarthData.FlagLake) != 0) cells.Add((long)p.Row * TerrainW + p.Col);
-                lakePatchCells = cells;
-                lakeShoreWeight = ShoreWeights(cells);
+                terminalLakes[file] = t = (ByTile(lakes.Patches), cells, ShoreWeights(lakes, cells));
             }
-            tilePatches = lakeTilePatches;
-            lakeCells = lakePatchCells;
-            shoreWeight = lakeShoreWeight;
+            tilePatches = t.Patches;
+            lakeCells = t.Cells;
+            shoreWeight = t.Shore;
         }
 
         /// <summary>shores.bin's patches by tile, and its nearness values by tile as (index in the tile, nearness).</summary>
@@ -162,11 +159,11 @@ namespace EarthMap.Core
         /// shores and deltas, Lake Chad's margins), 1 on the lake, easing out over the lake's shore width. Each lake is its
         /// patched lake cells connected to its seed.
         /// </summary>
-        Dictionary<long, float> ShoreWeights(HashSet<long> lakeCells)
+        Dictionary<long, float> ShoreWeights(LakeData lakes, HashSet<long> lakeCells)
         {
             var weight = new Dictionary<long, float>();
             double kmRow = 111.32 / TerrainRes;
-            foreach (var lake in data.TerminalLakes.Lakes)
+            foreach (var lake in lakes.Lakes)
             {
                 if (lake.ShoreKm <= 0) continue;
                 int r0 = (int)Math.Floor((90 - lake.Lat) * TerrainRes), c0 = (int)Math.Floor((lake.Lon + 180) * TerrainRes);

@@ -1,0 +1,111 @@
+land cells 1568707 glaciated share 0.17383027558321915
+raw clay top 4 blk (interfluve):
+  world: present 19.9%, >100 km 20.3%, >200 km 5.9%, >1000 km 0.05%
+  glaciated: present 7.5%, >100 km 31.7%, >200 km 10.1%, >1000 km 0.00%
+  not glaciated: present 22.5%, >100 km 17.9%, >200 km 5.1%, >1000 km 0.06%
+  Europe (35-72N,-10-40E): present 13.5%, >100 km 19.4%, >200 km 2.6%, >1000 km 0.00%
+  N America (25-72N,-170..-50): present 14.5%, >100 km 24.2%, >200 km 5.1%, >1000 km 0.00%
+  Africa: present 20.4%, >100 km 30.7%, >200 km 11.8%, >1000 km 0.00%
+  S America: present 22.5%, >100 km 19.6%, >200 km 4.3%, >1000 km 0.05%
+  Asia (E of 40E, N of 5N): present 21.2%, >100 km 11.9%, >200 km 2.0%, >1000 km 0.00%
+  Australia: present 30.7%, >100 km 4.1%, >200 km 0.0%, >1000 km 0.00%
+raw clay any depth (interfluve):
+  world: present 20.8%, >100 km 19.7%, >200 km 5.8%, >1000 km 0.05%
+  glaciated: present 8.3%, >100 km 31.3%, >200 km 10.1%, >1000 km 0.00%
+  not glaciated: present 23.4%, >100 km 17.3%, >200 km 4.9%, >1000 km 0.06%
+  Europe (35-72N,-10-40E): present 14.9%, >100 km 18.5%, >200 km 2.6%, >1000 km 0.00%
+  N America (25-72N,-170..-50): present 14.6%, >100 km 24.2%, >200 km 5.1%, >1000 km 0.00%
+  Africa: present 21.9%, >100 km 29.8%, >200 km 11.5%, >1000 km 0.00%
+  S America: present 22.7%, >100 km 19.6%, >200 km 4.3%, >1000 km 0.05%
+  Asia (E of 40E, N of 5N): present 23.2%, >100 km 11.0%, >200 km 1.7%, >1000 km 0.00%
+  Australia: present 31.0%, >100 km 4.1%, >200 km 0.0%, >1000 km 0.00%
+alluvial/outwash (interfluve):
+  world: present 14.2%, >100 km 33.2%, >200 km 13.4%, >1000 km 0.49%
+  glaciated: present 7.9%, >100 km 40.3%, >200 km 19.2%, >1000 km 2.09%
+  not glaciated: present 15.5%, >100 km 31.7%, >200 km 12.2%, >1000 km 0.16%
+  Europe (35-72N,-10-40E): present 14.4%, >100 km 21.7%, >200 km 4.9%, >1000 km 0.00%
+  N America (25-72N,-170..-50): present 9.2%, >100 km 43.1%, >200 km 17.3%, >1000 km 0.44%
+  Africa: present 17.3%, >100 km 37.3%, >200 km 16.6%, >1000 km 0.00%
+  S America: present 18.0%, >100 km 33.6%, >200 km 10.7%, >1000 km 0.05%
+  Asia (E of 40E, N of 5N): present 14.6%, >100 km 23.2%, >200 km 7.6%, >1000 km 0.00%
+  Australia: present 13.2%, >100 km 28.7%, >200 km 8.8%, >1000 km 0.00%
+valley alluvial/outwash (if a river):
+  world: present 76.3%, >100 km 6.7%, >200 km 3.2%, >1000 km 0.36%
+  glaciated: present 7.9%, >100 km 37.8%, >200 km 18.2%, >1000 km 2.09%
+  not glaciated: present 90.7%, >100 km 0.2%, >200 km 0.0%, >1000 km 0.00%
+  Europe (35-72N,-10-40E): present 60.9%, >100 km 8.2%, >200 km 1.0%, >1000 km 0.00%
+  N America (25-72N,-170..-50): present 32.8%, >100 km 33.6%, >200 km 15.0%, >1000 km 0.44%
+  Africa: present 94.8%, >100 km 0.0%, >200 km 0.0%, >1000 km 0.00%
+  S America: present 93.6%, >100 km 0.1%, >200 km 0.0%, >1000 km 0.00%
+  Asia (E of 40E, N of 5N): present 79.5%, >100 km 0.8%, >200 km 0.2%, >1000 km 0.00%
+  Australia: present 92.4%, >100 km 0.0%, >200 km 0.0%, >1000 km 0.00%
+valley raw clay (if a river):
+  world: present 76.7%, >100 km 5.0%, >200 km 1.7%, >1000 km 0.00%
+  glaciated: present 8.4%, >100 km 28.8%, >200 km 9.6%, >1000 km 0.00%
+  not glaciated: present 91.1%, >100 km 0.0%, >200 km 0.0%, >1000 km 0.00%
+  Europe (35-72N,-10-40E): present 57.6%, >100 km 12.4%, >200 km 1.8%, >1000 km 0.00%
+  N America (25-72N,-170..-50): present 35.6%, >100 km 18.2%, >200 km 4.5%, >1000 km 0.00%
+  Africa: present 97.5%, >100 km 0.0%, >200 km 0.0%, >1000 km 0.00%
+  S America: present 94.4%, >100 km 0.1%, >200 km 0.0%, >1000 km 0.00%
+  Asia (E of 40E, N of 5N): present 78.3%, >100 km 1.6%, >200 km 0.2%, >1000 km 0.00%
+  Australia: present 89.8%, >100 km 0.0%, >200 km 0.0%, >1000 km 0.00%
+laterite (bauxite):
+  world: present 19.4%, >100 km 48.6%, >200 km 34.9%, >1000 km 9.64%
+  glaciated: present 0.0%, >100 km 97.2%, >200 km 92.9%, >1000 km 50.21%
+  not glaciated: present 23.5%, >100 km 38.4%, >200 km 22.6%, >1000 km 1.10%
+  Europe (35-72N,-10-40E): present 9.8%, >100 km 50.9%, >200 km 40.9%, >1000 km 15.59%
+  N America (25-72N,-170..-50): present 3.5%, >100 km 80.0%, >200 km 69.2%, >1000 km 30.55%
+  Africa: present 27.7%, >100 km 34.9%, >200 km 17.0%, >1000 km 0.00%
+  S America: present 46.4%, >100 km 16.6%, >200 km 6.6%, >1000 km 0.05%
+  Asia (E of 40E, N of 5N): present 10.2%, >100 km 58.7%, >200 km 43.5%, >1000 km 9.53%
+  Australia: present 8.7%, >100 km 58.0%, >200 km 34.3%, >1000 km 0.00%
+saprolite (kaolin):
+  world: present 28.0%, >100 km 35.6%, >200 km 25.2%, >1000 km 5.25%
+  glaciated: present 0.0%, >100 km 91.9%, >200 km 83.2%, >1000 km 30.23%
+  not glaciated: present 33.9%, >100 km 23.7%, >200 km 12.9%, >1000 km 0.00%
+  Europe (35-72N,-10-40E): present 21.0%, >100 km 46.3%, >200 km 40.2%, >1000 km 14.32%
+  N America (25-72N,-170..-50): present 7.8%, >100 km 62.8%, >200 km 53.4%, >1000 km 22.12%
+  Africa: present 33.6%, >100 km 36.1%, >200 km 24.7%, >1000 km 0.00%
+  S America: present 56.8%, >100 km 7.3%, >200 km 2.5%, >1000 km 0.00%
+  Asia (E of 40E, N of 5N): present 21.1%, >100 km 36.3%, >200 km 22.3%, >1000 km 0.60%
+  Australia: present 22.0%, >100 km 19.5%, >200 km 4.4%, >1000 km 0.00%
+peat (bog iron):
+  world: present 3.3%, >100 km 81.6%, >200 km 73.6%, >1000 km 39.03%
+  glaciated: present 9.8%, >100 km 46.2%, >200 km 29.7%, >1000 km 0.35%
+  not glaciated: present 1.9%, >100 km 89.1%, >200 km 82.8%, >1000 km 47.17%
+  Europe (35-72N,-10-40E): present 4.2%, >100 km 63.3%, >200 km 45.0%, >1000 km 5.44%
+  N America (25-72N,-170..-50): present 3.8%, >100 km 71.0%, >200 km 56.5%, >1000 km 11.90%
+  Africa: present 0.6%, >100 km 97.3%, >200 km 94.3%, >1000 km 63.47%
+  S America: present 0.7%, >100 km 92.5%, >200 km 84.8%, >1000 km 37.06%
+  Asia (E of 40E, N of 5N): present 5.0%, >100 km 77.2%, >200 km 70.1%, >1000 km 41.27%
+  Australia: present 0.0%, >100 km 99.7%, >200 km 99.5%, >1000 km 91.65%
+sand/gravel top 3 blk (panning flint):
+  world: present 23.2%, >100 km 20.5%, >200 km 8.8%, >1000 km 0.03%
+  glaciated: present 34.8%, >100 km 2.5%, >200 km 1.0%, >1000 km 0.00%
+  not glaciated: present 20.8%, >100 km 24.3%, >200 km 10.4%, >1000 km 0.03%
+  Europe (35-72N,-10-40E): present 34.6%, >100 km 7.7%, >200 km 1.1%, >1000 km 0.00%
+  N America (25-72N,-170..-50): present 29.0%, >100 km 4.5%, >200 km 1.0%, >1000 km 0.00%
+  Africa: present 27.6%, >100 km 31.4%, >200 km 15.4%, >1000 km 0.00%
+  S America: present 8.8%, >100 km 41.1%, >200 km 17.7%, >1000 km 0.00%
+  Asia (E of 40E, N of 5N): present 19.1%, >100 km 18.8%, >200 km 7.5%, >1000 km 0.00%
+  Australia: present 39.3%, >100 km 3.9%, >200 km 0.4%, >1000 km 0.00%
+playa (salt flats):
+  world: present 1.0%, >100 km 90.1%, >200 km 82.1%, >1000 km 42.45%
+  glaciated: present 0.0%, >100 km 99.7%, >200 km 99.1%, >1000 km 89.31%
+  not glaciated: present 1.2%, >100 km 88.1%, >200 km 78.5%, >1000 km 32.59%
+  Europe (35-72N,-10-40E): present 0.2%, >100 km 96.3%, >200 km 92.5%, >1000 km 64.35%
+  N America (25-72N,-170..-50): present 0.2%, >100 km 96.5%, >200 km 91.9%, >1000 km 67.65%
+  Africa: present 2.2%, >100 km 83.9%, >200 km 70.7%, >1000 km 16.93%
+  S America: present 0.4%, >100 km 94.6%, >200 km 89.2%, >1000 km 52.46%
+  Asia (E of 40E, N of 5N): present 1.8%, >100 km 82.5%, >200 km 72.7%, >1000 km 35.69%
+  Australia: present 0.4%, >100 km 94.2%, >200 km 86.2%, >1000 km 23.09%
+gravel top 3 blk:
+  world: present 1.0%, >100 km 79.0%, >200 km 64.2%, >1000 km 23.40%
+  glaciated: present 4.2%, >100 km 44.6%, >200 km 16.9%, >1000 km 0.00%
+  not glaciated: present 0.4%, >100 km 86.3%, >200 km 74.1%, >1000 km 28.32%
+  Europe (35-72N,-10-40E): present 4.8%, >100 km 59.3%, >200 km 36.6%, >1000 km 0.00%
+  N America (25-72N,-170..-50): present 1.7%, >100 km 59.0%, >200 km 32.0%, >1000 km 0.00%
+  Africa: present 0.0%, >100 km 97.9%, >200 km 94.2%, >1000 km 51.41%
+  S America: present 0.2%, >100 km 97.3%, >200 km 92.8%, >1000 km 55.22%
+  Asia (E of 40E, N of 5N): present 1.0%, >100 km 74.1%, >200 km 57.1%, >1000 km 7.02%
+  Australia: present 0.2%, >100 km 77.9%, >200 km 47.5%, >1000 km 0.55%

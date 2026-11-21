@@ -1,0 +1,4 @@
+{
+  "type": "code", "modid": "earthterrainprobe", "name": "Earth terrain-pass test probe",
+  "version": "0.0.2", "side": "Server", "dependencies": { "game": "1.22.0" }
+}

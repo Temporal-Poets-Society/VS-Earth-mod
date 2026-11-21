@@ -212,6 +212,10 @@ namespace EarthMap.Core
         }
         /// <summary>The terminal lakes and their grid patches (lakes.bin), or null when the file isn't there or wasn't requested.</summary>
         public LakeData TerminalLakes { get; private set; }
+        /// <summary>River ends rules 3 (decision 0107): lakes.bin with the Aral at its level of 1318 (lakes-2.bin), or null.</summary>
+        public LakeData TerminalLakes2 { get; private set; }
+        /// <summary>The terminal lakes of a file (EarthDataChoice.TerminalLakeFile: 2 lakes-2.bin, else lakes.bin), or null.</summary>
+        public LakeData TerminalLakesOf(int file) => file >= 2 ? TerminalLakes2 : TerminalLakes;
         /// <summary>The land around lakes eased below their level (shores.bin), or null when the file isn't there or wasn't requested.</summary>
         public ShoreData Shores { get; private set; }
         /// <summary>The lakes' tongues past their outlet as land (outlets.bin), or null when the file isn't there or wasn't requested.</summary>
@@ -221,9 +225,17 @@ namespace EarthMap.Core
         /// <summary>Decision 0064: the areas where coasts and waters go back to 1318 (works-1318-2.bin, Works1318Data), or null
         /// when the file isn't there or wasn't requested.</summary>
         public LakeOutlineData Works1318 { get; private set; }
+        /// <summary>Decision 0092: works rules 5's areas (works-1318-3.bin), or null.</summary>
+        public LakeOutlineData Works1318Point { get; private set; }
+        /// <summary>Decision 0107: works rules 6's areas (works-1318-4.bin: rules 5's and the lakes of 1318), or null.</summary>
+        public LakeOutlineData Works1318Lakes { get; private set; }
         /// <summary>Decision 0069 rule 8: the rivers GIRES has as non-perennial (rivers-nonperennial-2.bin, NonPerennialData),
         /// or null when the file isn't there or wasn't requested.</summary>
         public NonPerennialData NonPerennial { get; private set; }
+        /// <summary>Decision 0092: the same for courses rules 5's list (rivers-nonperennial-3.bin), or null.</summary>
+        public NonPerennialData NonPerennial3 { get; private set; }
+        /// <summary>Decision 0100: each lake's real depth for lakes-glo90-5.bin (lake-depths-1.bin, in the mod), or null.</summary>
+        public LakeDepthData LakeDepths { get; private set; }
         /// <summary>Decision 0070: OpenStreetMap's beaches by material (shores-osm-1.bin, ShoreMaterialData), or null when the
         /// file isn't there or wasn't requested.</summary>
         public ShoreMaterialData ShoreMaterial { get; private set; }
@@ -508,6 +520,8 @@ namespace EarthMap.Core
                 }
                 using var lk = open("lakes.bin");
                 if (lk != null) d.TerminalLakes = LakeData.Read(lk, d.TerrainW);
+                using var lk2 = open(LakeData.FileName2);
+                if (lk2 != null) d.TerminalLakes2 = LakeData.Read(lk2, d.TerrainW);
                 using var sh = open("shores.bin");
                 if (sh != null) d.Shores = ShoreData.Read(sh, d.TerrainW);
                 using var ot = open("outlets.bin");
@@ -519,8 +533,21 @@ namespace EarthMap.Core
                 d.RiverSources.ReadOverlays(open);
                 using var works = open(Works1318Data.FileName);
                 if (works != null) d.Works1318 = Works1318Data.Read(ReadAll(works));
+                using var works3 = open(Works1318Data.FileName3);
+                if (works3 != null) d.Works1318Point = Works1318Data.Read(ReadAll(works3));
+                using var works4 = open(Works1318Data.FileName4);
+                if (works4 != null) d.Works1318Lakes = Works1318Data.Read(ReadAll(works4));
                 using var nonPerennial = open(NonPerennialData.FileName);
                 if (nonPerennial != null) d.NonPerennial = NonPerennialData.Read(ReadAll(nonPerennial));
+                using var nonPerennial3 = open(NonPerennialData.FileName3);
+                if (nonPerennial3 != null) d.NonPerennial3 = NonPerennialData.Read(ReadAll(nonPerennial3));
+                using var lakeDepths = open(LakeDepthData.FileName);
+                if (lakeDepths != null)
+                {
+                    // (only the pinned file: another is no lake's depth, and new worlds then go without lake rules)
+                    byte[] depthBytes = ReadAll(lakeDepths);
+                    if (LakeDepthData.IsExpected(depthBytes, out _)) d.LakeDepths = LakeDepthData.Read(depthBytes);
+                }
                 using var shoreMaterial = open(ShoreMaterialData.FileName);
                 if (shoreMaterial != null) d.ShoreMaterial = ShoreMaterialData.Read(ReadAll(shoreMaterial));
             }

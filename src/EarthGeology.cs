@@ -97,6 +97,10 @@ namespace EarthMap
                 Active=false;
                 Mod.Logger.Error("Earth regional geology is off for this session after an unexpected error; new chunks use vanilla rock strata. {0}",e);
             }
+            // 0102: galena and its silver in crystalline rock, with vanilla ores and the rules that include them
+            if(Active && CrystallineGalena.For(p,ActiveRulesVersion))
+                try{CrystallineGalena.Start(api,Mod.Logger);}
+                catch(Exception e){Mod.Logger.Warning("Earth geology: galena in crystalline rock was not added; vanilla's galena hosts stay: {0}",e.Message);}
         }
 
         bool TryInit(EarthParams p)
@@ -134,6 +138,12 @@ namespace EarthMap
                 Mod.Logger.Error("Earth geology: the saved contact width {0} is invalid; regional geology is off for this session.",p.GeologyTransitionBlocks);
                 return false;
             }
+            RockMap rockMap=null;
+            if(GeologyFacts.FineRock(version))
+            {
+                rockMap=RockSet(p,ref version,out bool stop);
+                if(stop)return false;
+            }
             string grid=api.Assets.TryGet(new AssetLocation(RegionalGeologyCatalog.GridAsset))?.ToText();
             string rulesText=api.Assets.TryGet(new AssetLocation(RegionalGeologyCatalog.RulesAsset(version)))?.ToText();
             if(grid==null || rulesText==null)
@@ -153,6 +163,7 @@ namespace EarthMap
                 Mod.Logger.Error("Earth geology: {0} declares rules v{1}, expected v{2}; regional geology is off for this session.",RegionalGeologyCatalog.RulesAsset(version),catalog.Version,version);
                 return false;
             }
+            if(rockMap!=null)catalog.AttachRocks(rockMap);
             if(!ResolveMaterials(p,catalog,grid,rulesText))return false;
             Catalog=catalog;
             BuildBlockTables(catalog);
@@ -189,9 +200,10 @@ namespace EarthMap
             if(!soilHook)Mod.Logger.Warning("Earth geology: the soil-layer hook is unavailable; surface sand/gravel cover and top-rock repair are skipped.");
             if(!depositHook)Mod.Logger.Warning("Earth geology: the deposit hook is unavailable; clay, peat and salt use vanilla placement rules.");
             if(GeologyFacts.GravelLenses(version) && !depositColumnHook)Mod.Logger.Warning("Earth geology: the deposit-column hook is unavailable; gravel lenses may remain under clay/peat patches.");
-            Mod.Logger.Notification("Earth geology v{0}: GLiM + GUM 0.5-degree categories, {1} reviewed regional envelope(s){2}. Subsurface thicknesses are synthesized; unknown bedrock preserves vanilla. Proxies: {3}",
-                version,catalog.Provinces.Count,GeologyFacts.SmoothedBeds(version)?string.Format(CultureInfo.InvariantCulture,", bed boundaries below a smoothed reference surface (thickness scale {0:0} blocks), preserved {1}",reference.ThicknessScale,string.Join("/",catalog.Preserve)):"",mappingDescription);
-            Mod.Logger.Notification("Earth geology: ore geography is {0}. GA mudstone is not selected because its crushing recipe yields bauxite. Contact half-width {1} blocks.",p.RegionalOres ? "handled by regional ore rules" : "legacy native",p.GeologyTransitionBlocks);
+            Mod.Logger.Notification("Earth geology v{0}: {4}, {1} reviewed regional envelope(s){2}. Subsurface thicknesses are synthesized; unknown bedrock preserves vanilla. Proxies: {3}",
+                version,catalog.Provinces.Count,GeologyFacts.SmoothedBeds(version)?string.Format(CultureInfo.InvariantCulture,", bed boundaries below a smoothed reference surface (thickness scale {0:0} blocks), preserved {1}",reference.ThicknessScale,string.Join("/",catalog.Preserve)):"",mappingDescription,
+                catalog.Rocks!=null?"the 30\" rock map "+catalog.Rocks.Name+" (full-resolution GLiM with Macrostrat's national maps; GUM's 0.5-degree cover classes)":"GLiM + GUM 0.5-degree categories");
+            Mod.Logger.Notification("Earth geology: ore geography is {0}. GA mudstone is not selected because its crushing recipe yields bauxite. Contact half-width {1:0} blocks.",p.RegionalOres ? "handled by regional ore rules" : "legacy native",RegionalGeologyWorld.ContactWidth(catalog,width,cellBlocks));
             Mod.Logger.Notification("Earth geology: clay/peat use frequency multipliers (relief in metres, wetness index); missing salt evidence is unknown, positive surface-salt evidence is favoured.");
             return true;
         }
@@ -232,6 +244,59 @@ namespace EarthMap
         /// SaveGame.IsNew: a new world whose first start stopped (its data could not be had) is created on its second start,
         /// when the game no longer calls it new (adversarial review A1).
         /// </summary>
+        /// <summary>
+        /// (EA-0198, decision 0106) The 30″ rock set of a geology rules 4 world, fetched into ModData/earth/ground before the
+        /// first chunk. A new world (RockSet 0) whose source lacks the set (none set, or not there) is saved with rules 3 for
+        /// good, so its rock never mixes the two maps; any other failure stops the start (nothing is saved, the next start
+        /// tries again). A rules 4 world whose set went missing or damaged fetches it again, and stops if it can't.
+        /// <paramref name="stop"/>: the server is stopping; geology stays off.
+        /// </summary>
+        RockMap RockSet(EarthParams p,ref int version,out bool stop)
+        {
+            stop=false;
+            string folder=EarthGround.DataFolder,repo=core.Config?.GroundRepo;
+            var sets=GroundDownloader.RockSets;
+            GroundDownloader.Result got;
+            string error=null;
+            try
+            {
+                got=GroundDownloader.Missing(folder,true,sets).Count==0?GroundDownloader.Result.Here
+                    :GroundDownloader.Get(folder,repo,s=>{Mod.Logger.Notification("Earth rock map: "+s);Mod.Logger.StoryEvent("Earth rock map: "+s);},core?.Stopping??default,sets);
+            }
+            catch(Exception e) when (e is System.IO.IOException or UnauthorizedAccessException or OperationCanceledException or System.Net.Http.HttpRequestException or AggregateException)
+            {
+                error=e.Message;
+                got=GroundDownloader.Result.Failed;
+                if(e is OperationCanceledException && core?.Stopping.IsCancellationRequested==true){stop=true;return null;}
+            }
+            string where=System.IO.Path.Combine(folder,GroundDownloader.Subfolder);
+            if(p.RockSet==0 && got==GroundDownloader.Result.Lacking)
+            {
+                Mod.Logger.Warning("Earth geology: the 30\" rock map can't be had ({0}); this new world uses geology rules v3 (GLiM's 0.5-degree map) for good. New worlds try again.",
+                    string.IsNullOrWhiteSpace(repo)?"GroundRepo in earth.json is empty":"the source doesn't have it, see above");
+                p.GeologyRulesVersion=version=3;
+                core.SaveParams();
+                return null;
+            }
+            if(got!=GroundDownloader.Result.Here)
+            {
+                Mod.Logger.Error("Earth geology: {0}; the server stops before the game runs (nothing is saved).",p.RockSet==0
+                    ?"the 30\" rock map could not be fetched into "+where+" ("+(error??"see above")+"). Start again once the server reaches "+(string.IsNullOrWhiteSpace(repo)?GroundDownloader.Release:repo)+", or put "+sets[0].Name+" from "+GroundDownloader.Release+" there"
+                    :"this world was made with the 30\" rock map, but "+sets[0].Name+" is missing from "+where+" and could not be had ("+(error??"see above")+"); put it there from "+GroundDownloader.Release+", or let Earth fetch it (GroundRepo in earth.json), and start again");
+                api.Server.ShutDown();
+                stop=true;
+                return null;
+            }
+            var map=new RockMap(sets[0].Name,GroundTile.ReadAllFromFile(GroundDownloader.PathOf(folder,sets[0])));
+            if(p.RockSet==0)
+            {
+                p.RockSet=GroundDownloader.RockSetVersion;
+                core.SaveParams();
+                Mod.Logger.Notification("Earth geology: this new world reads the 30\" rock map {0} ({1} tiles) in {2}.",sets[0].Name,map.Count,where);
+            }
+            return map;
+        }
+
         bool GroundSets(EarthParams p)
         {
             string folder=EarthGround.DataFolder,repo=core.Config?.GroundRepo;
@@ -476,6 +541,10 @@ namespace EarthMap
             self.layers?.Unbind(); // 0060: the deposit blocks are bound again at the next chunk
             try{self.NormalizeGeologyAdditionsChildGrades(__instance);}
             catch(Exception e){self.Mod.Logger.Warning("Earth GA child-grade compatibility adapter was not re-applied after a deposit reload: {0}",e.Message);}
+            // 0102: the reload made vanilla's generators again, without the crystalline hosts (the pick keeps its own)
+            if(self.Active && CrystallineGalena.For(self.core.Params,self.ActiveRulesVersion))
+                try{CrystallineGalena.AddTo(self.api,__instance,self.Mod.Logger);}
+                catch(Exception e){self.Mod.Logger.Warning("Earth geology: galena in crystalline rock was not added again after a deposit reload: {0}",e.Message);}
         }
         void NormalizeGeologyAdditionsChildGrades(GenDeposits generator=null)
         {
@@ -607,8 +676,7 @@ namespace EarthMap
                 if(v1)st.Beds[k]=RegionalGeologyCatalog.ColumnV1(profile,top,cols.Lat[k],cols.Lon[k],seed,bounds);
                 else
                 {
-                    reference.At(cx+x,cz+z,out double datum,out double thickness);
-                    st.Beds[k]=RegionalGeologyCatalog.ColumnV2(profile,datum,thickness,bounds);
+                    st.Beds[k]=SmoothedColumn(profile,cx+x,cz+z,bounds);
                 }
                 st.Top[k]=top;st.Profile[k]=profile;st.Bed[k]=0;st.TopFound[k]=false;
                 floor=Math.Min(floor,top);
@@ -689,6 +757,14 @@ namespace EarthMap
         /// ice contiguously from the model's IceBottom to the top, so scanning the ice blocks equals IceBottom-1
         /// without recomputing the terrain column.
         /// </summary>
+        /// <summary>Rules 2 and later: a column's bed boundaries below the reference surface, in blocks per block of sea level
+        /// (rules 3 keeps them: beds in metres through the depth curve were measured and left out, decision 0101).</summary>
+        int SmoothedColumn(RegionalGeologyCatalog.Profile profile,double x,double z,Span<int> bounds)
+        {
+            reference.At(x,z,out double datum,out double thickness);
+            return RegionalGeologyCatalog.ColumnV2(profile,datum,thickness,bounds);
+        }
+
         int StrataTop(IServerChunk[] chunks,int heightmap,int x,int z,double wx,double wz,int maxY)
         {
             int top=Math.Min(heightmap,maxY);
@@ -1054,8 +1130,7 @@ namespace EarthMap
                     if(!GeologyFacts.SmoothedBeds(rules))c.Beds=RegionalGeologyCatalog.ColumnV1(s.Profile,strataTop,geo.Lat,geo.Lon,seed,c.Bounds);
                     else
                     {
-                        reference.At(x,z,out double datum,out double thickness);
-                        c.Beds=RegionalGeologyCatalog.ColumnV2(s.Profile,datum,thickness,c.Bounds);
+                        c.Beds=SmoothedColumn(s.Profile,x,z,c.Bounds);
                     }
                 }
             }
@@ -1063,7 +1138,8 @@ namespace EarthMap
             return c;
         }
 
-        RegionalGeologyCatalog.Site Habitat(double x,double z,out TerrainModel.Column center)=>RegionalGeologyWorld.SiteAt(core.Model,x,z,out center);
+        RegionalGeologyCatalog.Site Habitat(double x,double z,out TerrainModel.Column center)
+            =>RegionalGeologyWorld.SiteAt(core.Model,x,z,out center,GeologyFacts.ReliefInMetres(rules)?RegionalGeologyWorld.FootprintBlocks(core.Model.Geometry):12);
 
         internal static bool BeforeDeposit(GenDeposits __instance,IServerChunk[] chunks,int chunkX,int chunkZ,BlockPos depoCenterPos,DepositVariant variant,
             IBlockAccessor ___blockAccessor,ref Dictionary<BlockPos,DepositVariant> ___subDepositsToPlace)
@@ -1165,7 +1241,7 @@ namespace EarthMap
             return string.Format(CultureInfo.InvariantCulture,
                 "Geology v{0}: {1}; GLiM={2}, GUM={3}{12}; province={4}. Source: {5}. Top regional rock={13}; {14}. Peat factor={6:0.00}; clay: {7}; slope={15:0} m/km, wetness={16:0.00}; mapped surface salt={8}; buried salt occurrence kernel={10}; contact half-width={11} blocks. Missing salt evidence means unknown. Depths are synthesized, not borehole data. Ore behavior follows the saved RegionalOres setting. Rock proxies: {9}",
                 rules,s.Profile.Label,s.Lithology,s.Sediment,s.Province??"global coarse categories",s.Source,
-                RegionalGeologyCatalog.PeatFactor(s,site),RegionalGeologyCatalog.ClayInterpretation(s,site),s.MappedSalt,mappingDescription,Catalog.SaltOccurrence(geo.Lat,geo.Lon)?.Id??"none",core.Params.GeologyTransitionBlocks,
+                RegionalGeologyCatalog.PeatFactor(s,site),RegionalGeologyCatalog.ClayInterpretation(s,site),s.MappedSalt,mappingDescription,Catalog.SaltOccurrence(geo.Lat,geo.Lon)?.Id??"none",Math.Round(RegionalGeologyWorld.ContactWidth(Catalog,width,cellBlocks)),
                 s.Filled?" (borrowed from the nearest mapped cell)":"",surfaceRock,strata,site.Slope,site.Wetness);
         }
         public override void Dispose()

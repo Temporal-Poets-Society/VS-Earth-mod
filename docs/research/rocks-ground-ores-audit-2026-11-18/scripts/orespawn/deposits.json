@@ -1,0 +1,3787 @@
+[
+ {
+  "src": "game:coal.json",
+  "code": "lignite",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 8,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 10,
+   "var": 5
+  },
+  "thick": {
+   "dist": "stronginvexp",
+   "avg": 2,
+   "var": 1.8
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.7,
+   "var": 0.22
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "limestone",
+   "chert",
+   "conglomerate"
+  ],
+  "climate": false,
+  "place": "ore-lignite-{rock}"
+ },
+ {
+  "src": "game:coal.json",
+  "code": "bituminouscoal",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 7,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 10,
+   "var": 5
+  },
+  "thick": {
+   "dist": "stronginvexp",
+   "avg": 2,
+   "var": 1.3
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.5,
+   "var": 0.4
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "limestone",
+   "chert",
+   "conglomerate"
+  ],
+  "climate": false,
+  "place": "ore-bituminouscoal-{rock}"
+ },
+ {
+  "src": "game:coal.json",
+  "code": "anthracite",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 6,
+  "map": true,
+  "mapScale": 1.5,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 8,
+   "var": 5
+  },
+  "thick": {
+   "dist": "stronginvexp",
+   "avg": 1.5,
+   "var": 0.6
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.4,
+   "var": 0.4
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "limestone",
+   "chert",
+   "conglomerate"
+  ],
+  "climate": false,
+  "place": "ore-anthracite-{rock}"
+ },
+ {
+  "src": "game:gem\\diamond.json",
+  "code": "diamond",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 18,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 2,
+   "var": 1
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.5,
+   "var": 0.4
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "kimberlite",
+   "suevite"
+  ],
+  "climate": false,
+  "place": "ore-*-diamond-{rock}"
+ },
+ {
+  "src": "game:gem\\emerald.json",
+  "code": "emerald",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 64,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 1,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.13,
+   "var": 0.13
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "basalt",
+   "peridotite",
+   "shale",
+   "limestone",
+   "phyllite",
+   "slate"
+  ],
+  "climate": false,
+  "place": "ore-*-emerald-{rock}"
+ },
+ {
+  "src": "game:gem\\peridot.json",
+  "code": "peridot",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 64,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 1,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.13,
+   "var": 0.13
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "rock-peridotite"
+  ],
+  "climate": false,
+  "place": "ore-*-olivine_peridot-peridotite"
+ },
+ {
+  "src": "game:metalore\\bismuthinite.json",
+  "code": "bismuthinite",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 16,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "triangle",
+   "avg": 4,
+   "var": 3
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.45,
+   "var": 0.4
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "andesite",
+   "granite",
+   "basalt",
+   "peridotite",
+   "phyllite",
+   "slate"
+  ],
+  "climate": false,
+  "place": "ore-*-bismuthinite-{rock}"
+ },
+ {
+  "src": "game:metalore\\cassiterite.json",
+  "code": "surfacecassiterite",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 0.007,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 3,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.95,
+   "var": 0.03
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "andesite",
+   "granite",
+   "basalt",
+   "peridotite",
+   "phyllite",
+   "slate"
+  ],
+  "climate": false,
+  "place": "ore-poor-cassiterite-{rock}"
+ },
+ {
+  "src": "game:metalore\\cassiterite.json",
+  "code": "cassiterite",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 7,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 5,
+   "var": 3
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.575,
+   "var": 0.175
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "andesite",
+   "granite",
+   "basalt",
+   "peridotite",
+   "phyllite",
+   "slate"
+  ],
+  "climate": false,
+  "place": "ore-*-cassiterite-{rock}"
+ },
+ {
+  "src": "game:metalore\\cassiterite.json",
+  "code": "cassiterite",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 0.1,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 12,
+   "var": 3
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.3,
+   "var": 0.3
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "andesite",
+   "granite",
+   "basalt",
+   "peridotite",
+   "phyllite",
+   "slate"
+  ],
+  "climate": false,
+  "place": "ore-*-cassiterite-{rock}"
+ },
+ {
+  "src": "game:metalore\\chromite.json",
+  "code": "chromite",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 3,
+  "map": true,
+  "mapScale": 1.5,
+  "swh": true,
+  "radius": {
+   "dist": "invexp",
+   "avg": 5,
+   "var": 10
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.2,
+   "var": 0.2
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "andesite",
+   "granite",
+   "basalt",
+   "peridotite",
+   "kimberlite"
+  ],
+  "climate": false,
+  "place": "ore-*-chromite-{rock}"
+ },
+ {
+  "src": "game:metalore\\galena.json",
+  "code": "galena",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 40,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 4,
+   "var": 4
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.5,
+   "var": 0.5
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "limestone",
+   "chert",
+   "conglomerate"
+  ],
+  "climate": false,
+  "place": "ore-*-galena-{rock}"
+ },
+ {
+  "src": "game:metalore\\galena.json",
+  "code": "silver",
+  "parent": "galena",
+  "gen": "childdeposit-pointcloud",
+  "tries": 4,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 2,
+   "var": 2
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 1.2,
+   "var": 3
+  },
+  "ypos": null,
+  "depth": null,
+  "tries_child": {
+   "avg": 10
+  },
+  "hosts": [
+   null
+  ],
+  "climate": false,
+  "place": "ore-*-galena_nativesilver-{rock}"
+ },
+ {
+  "src": "game:metalore\\ilmenite.json",
+  "code": "ilmenite",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 2,
+  "map": true,
+  "mapScale": 1.5,
+  "swh": true,
+  "radius": {
+   "dist": "invexp",
+   "avg": 6,
+   "var": 10
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.45,
+   "var": 0.4
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "andesite",
+   "granite",
+   "basalt",
+   "peridotite",
+   "phyllite",
+   "slate"
+  ],
+  "climate": false,
+  "place": "ore-*-ilmenite-{rock}"
+ },
+ {
+  "src": "game:metalore\\iron.json",
+  "code": "limonite",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 0.8,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 26,
+   "var": 10
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.45,
+   "var": 0.4
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "basalt",
+   "shale",
+   "chert"
+  ],
+  "climate": false,
+  "place": "ore-*-limonite-{rock}"
+ },
+ {
+  "src": "game:metalore\\iron.json",
+  "code": "hematite",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 0.5,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 26,
+   "var": 10
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.45,
+   "var": 0.4
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "granite",
+   "peridotite",
+   "limestone",
+   "phyllite"
+  ],
+  "climate": false,
+  "place": "ore-*-hematite-{rock}"
+ },
+ {
+  "src": "game:metalore\\iron.json",
+  "code": "magnetite",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 0.3,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 26,
+   "var": 10
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.45,
+   "var": 0.4
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "andesite",
+   "claystone",
+   "chalk",
+   "conglomerate",
+   "slate"
+  ],
+  "climate": false,
+  "place": "ore-*-magnetite-{rock}"
+ },
+ {
+  "src": "game:metalore\\malachite.json",
+  "code": "malachite",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 10,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 7,
+   "var": 3
+  },
+  "thick": {
+   "dist": "stronginvexp",
+   "avg": 1,
+   "var": 2
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.46,
+   "var": 0.48
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "limestone",
+   "redmarble",
+   "greenmarble",
+   "whitemarble"
+  ],
+  "climate": false,
+  "place": "ore-*-malachite-{rock}"
+ },
+ {
+  "src": "game:metalore\\nativecopper.json",
+  "code": "surfacecopper",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 0.2,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 4.25,
+   "var": 1
+  },
+  "thick": {
+   "dist": "stronginvexp",
+   "avg": 1,
+   "var": 1
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.965,
+   "var": 0.03
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "andesite",
+   "granite",
+   "basalt",
+   "peridotite",
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "chert",
+   "conglomerate",
+   "phyllite",
+   "slate"
+  ],
+  "climate": false,
+  "place": "ore-*-nativecopper-{rock}"
+ },
+ {
+  "src": "game:metalore\\nativecopper.json",
+  "code": "nativecopper",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 25,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 7,
+   "var": 3
+  },
+  "thick": {
+   "dist": "stronginvexp",
+   "avg": 1,
+   "var": 2
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.3,
+   "var": 0.3
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "andesite",
+   "granite",
+   "basalt",
+   "peridotite",
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "chert",
+   "conglomerate",
+   "phyllite",
+   "slate"
+  ],
+  "climate": false,
+  "place": "ore-*-nativecopper-{rock}"
+ },
+ {
+  "src": "game:metalore\\pentlandite.json",
+  "code": "pentlandite",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 5,
+  "map": true,
+  "mapScale": 1.5,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 9,
+   "var": 3
+  },
+  "thick": {
+   "dist": "stronginvexp",
+   "avg": 1,
+   "var": 2
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.2,
+   "var": 0.2
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "andesite",
+   "granite",
+   "basalt",
+   "peridotite"
+  ],
+  "climate": false,
+  "place": "ore-*-pentlandite-{rock}"
+ },
+ {
+  "src": "game:metalore\\rhodochrosite.json",
+  "code": "rhodochrosite",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 5,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "invexp",
+   "avg": 3,
+   "var": 10
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.2,
+   "var": 0.2
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "limestone",
+   "chert",
+   "conglomerate",
+   "phyllite",
+   "slate"
+  ],
+  "climate": false,
+  "place": "ore-*-rhodochrosite-{rock}"
+ },
+ {
+  "src": "game:metalore\\sphalerite.json",
+  "code": "sphalerite",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 12.5,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 4,
+   "var": 3
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.45,
+   "var": 0.5
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "andesite",
+   "granite",
+   "basalt",
+   "peridotite",
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "limestone",
+   "chert",
+   "conglomerate",
+   "phyllite",
+   "slate"
+  ],
+  "climate": false,
+  "place": "ore-*-sphalerite-{rock}"
+ },
+ {
+  "src": "game:mineralore\\alum.json",
+  "code": "alum",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.2,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 10,
+   "var": 8
+  },
+  "thick": {
+   "avg": 3.3,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 3,
+   "var": 1
+  },
+  "tries_child": null,
+  "hosts": [
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "limestone",
+   "chert",
+   "conglomerate"
+  ],
+  "climate": true,
+  "place": "ore-alum-{rock}"
+ },
+ {
+  "src": "game:mineralore\\borax.json",
+  "code": "borax",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 6,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 8,
+   "var": 2
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.7,
+   "var": 0.3
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "limestone",
+   "chert",
+   "conglomerate"
+  ],
+  "climate": false,
+  "place": "ore-borax-{rock}"
+ },
+ {
+  "src": "game:mineralore\\cinnabar.json",
+  "code": "cinnabar",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 1,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 8,
+   "var": 2
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.2,
+   "var": 0.2
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "andesite",
+   "granite",
+   "basalt",
+   "peridotite",
+   "phyllite",
+   "slate"
+  ],
+  "climate": false,
+  "place": "ore-cinnabar-{rock}"
+ },
+ {
+  "src": "game:mineralore\\fluorite.json",
+  "code": "fluorite",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 2,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 8,
+   "var": 2
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.4,
+   "var": 0.2
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "limestone",
+   "chert",
+   "conglomerate"
+  ],
+  "climate": false,
+  "place": "ore-fluorite-{rock}"
+ },
+ {
+  "src": "game:mineralore\\graphite.json",
+  "code": "graphite",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 6,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 8,
+   "var": 2
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.45,
+   "var": 0.4
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "phyllite",
+   "slate",
+   "whitemarble",
+   "redmarble",
+   "greenmarble"
+  ],
+  "climate": false,
+  "place": "ore-graphite-{rock}"
+ },
+ {
+  "src": "game:mineralore\\halite.json",
+  "code": "halite",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 0.3,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 10,
+   "var": 8
+  },
+  "thick": {
+   "avg": 150,
+   "var": 1
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.65,
+   "var": 0.2
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "limestone",
+   "chert",
+   "conglomerate"
+  ],
+  "climate": false,
+  "place": "rock-halite"
+ },
+ {
+  "src": "game:mineralore\\halite.json",
+  "code": "sylvite",
+  "parent": "halite",
+  "gen": "childdeposit-pointcloud",
+  "tries": 0.3,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 2,
+   "var": 0
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": null,
+  "tries_child": {
+   "avg": 40,
+   "var": 5
+  },
+  "hosts": [
+   null
+  ],
+  "climate": false,
+  "place": "ore-sylvite-halite"
+ },
+ {
+  "src": "game:mineralore\\halite.json",
+  "code": "halite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.07,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 28,
+   "var": 3
+  },
+  "thick": {
+   "avg": 3.3,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "tries_child": null,
+  "hosts": [
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "limestone",
+   "chert",
+   "conglomerate"
+  ],
+  "climate": true,
+  "place": "rock-halite"
+ },
+ {
+  "src": "game:mineralore\\halite.json",
+  "code": "sylvite",
+  "parent": "halite",
+  "gen": "childdeposit-pointcloud",
+  "tries": 1,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 3,
+   "var": 2
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": null,
+  "tries_child": {
+   "avg": 20
+  },
+  "hosts": [
+   null
+  ],
+  "climate": false,
+  "place": "ore-sylvite-halite"
+ },
+ {
+  "src": "game:mineralore\\kernite.json",
+  "code": "kernite",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 2,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 8,
+   "var": 2
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.4,
+   "var": 0.2
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "limestone",
+   "chert",
+   "conglomerate"
+  ],
+  "climate": false,
+  "place": "ore-kernite-{rock}"
+ },
+ {
+  "src": "game:mineralore\\lapis.json",
+  "code": "lapis",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 5,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "invexp",
+   "avg": 2,
+   "var": 10
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.45,
+   "var": 0.4
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "limestone",
+   "whitemarble",
+   "redmarble",
+   "greenmarble"
+  ],
+  "climate": false,
+  "place": "ore-lapislazuli-{rock}"
+ },
+ {
+  "src": "game:mineralore\\olivine.json",
+  "code": "olivine",
+  "parent": null,
+  "gen": "disc-anywhere",
+  "tries": 0.5,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 32,
+   "var": 32
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 1.2,
+   "var": 3
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.5,
+   "var": 0.5
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "peridotite"
+  ],
+  "climate": false,
+  "place": "ore-olivine-{rock}"
+ },
+ {
+  "src": "game:mineralore\\olivine.json",
+  "code": "peridot",
+  "parent": "olivine",
+  "gen": "childdeposit-pointcloud",
+  "tries": 10,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 2,
+   "var": 2
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 1.2,
+   "var": 3
+  },
+  "ypos": null,
+  "depth": null,
+  "tries_child": {
+   "avg": 20
+  },
+  "hosts": [
+   null
+  ],
+  "climate": false,
+  "place": "ore-*-olivine_peridot-{rock}"
+ },
+ {
+  "src": "game:mineralore\\phosphorite.json",
+  "code": "phosphorite",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 2,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 8,
+   "var": 2
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.4,
+   "var": 0.2
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "limestone",
+   "chert",
+   "conglomerate"
+  ],
+  "climate": false,
+  "place": "ore-phosphorite-{rock}"
+ },
+ {
+  "src": "game:mineralore\\quartz.json",
+  "code": "quartz",
+  "parent": null,
+  "gen": "disc-anywhere",
+  "tries": 0.5,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 32,
+   "var": 32
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 1.2,
+   "var": 3
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.5,
+   "var": 0.5
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "andesite",
+   "chalk",
+   "chert",
+   "conglomerate",
+   "limestone",
+   "claystone",
+   "granite",
+   "sandstone",
+   "shale",
+   "basalt",
+   "peridotite",
+   "phyllite",
+   "slate"
+  ],
+  "climate": false,
+  "place": "ore-quartz-{rock}"
+ },
+ {
+  "src": "game:mineralore\\quartz.json",
+  "code": "gold",
+  "parent": "quartz",
+  "gen": "childdeposit-pointcloud",
+  "tries": 6,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 2,
+   "var": 2
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": null,
+  "tries_child": {
+   "avg": 20
+  },
+  "hosts": [
+   null
+  ],
+  "climate": false,
+  "place": "ore-*-quartz_nativegold-{rock}"
+ },
+ {
+  "src": "game:mineralore\\quartz.json",
+  "code": "silver",
+  "parent": "quartz",
+  "gen": "childdeposit-pointcloud",
+  "tries": 20,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 2,
+   "var": 2
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": null,
+  "tries_child": {
+   "avg": 20
+  },
+  "hosts": [
+   null
+  ],
+  "climate": false,
+  "place": "ore-*-quartz_nativesilver-{rock}"
+ },
+ {
+  "src": "game:mineralore\\saltpeter.json",
+  "code": "saltpeter",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 7,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 10,
+   "var": 10
+  },
+  "thick": {
+   "avg": 7,
+   "var": 3
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0,
+   "var": 0.8
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "air"
+  ],
+  "climate": false,
+  "place": "saltpeter-d"
+ },
+ {
+  "src": "game:mineralore\\sulfur.json",
+  "code": "sulfur",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 15,
+  "map": true,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 8,
+   "var": 2
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.6,
+   "var": 0.3
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "claystone",
+   "sandstone",
+   "shale",
+   "chalk",
+   "limestone",
+   "chert",
+   "conglomerate"
+  ],
+  "climate": false,
+  "place": "ore-sulfur-{rock}"
+ },
+ {
+  "src": "game:rock\\cracked.json",
+  "code": "crackedrock",
+  "parent": null,
+  "gen": "disc-anywhere",
+  "tries": 1,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 32,
+   "var": 32
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 1.3,
+   "var": 3
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.5,
+   "var": 0.5
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "andesite",
+   "chalk",
+   "chert",
+   "conglomerate",
+   "limestone",
+   "claystone",
+   "granite",
+   "sandstone",
+   "shale",
+   "basalt",
+   "peridotite",
+   "phyllite",
+   "slate"
+  ],
+  "climate": false,
+  "place": "crackedrock-{rock}"
+ },
+ {
+  "src": "game:rock\\cracked.json",
+  "code": "crackedrock",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 0.5,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 32,
+   "var": 32
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 1.3,
+   "var": 3
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.5,
+   "var": 0.5
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "andesite",
+   "chalk",
+   "chert",
+   "conglomerate",
+   "limestone",
+   "claystone",
+   "granite",
+   "sandstone",
+   "shale",
+   "basalt",
+   "peridotite",
+   "phyllite",
+   "slate"
+  ],
+  "climate": false,
+  "place": "crackedrock-{rock}"
+ },
+ {
+  "src": "game:rock\\flint.json",
+  "code": "flint",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 1.5,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 3.5,
+   "var": 2
+  },
+  "thick": {
+   "dist": "stronginvexp",
+   "avg": 1,
+   "var": 1
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.97,
+   "var": 0.03
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "sandstone",
+   "shale",
+   "claystone",
+   "chalk",
+   "limestone"
+  ],
+  "climate": false,
+  "place": "ore-flint-{rock}"
+ },
+ {
+  "src": "game:rock\\flint.json",
+  "code": "flint",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 0.05,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 7,
+   "var": 3
+  },
+  "thick": {
+   "dist": "stronginvexp",
+   "avg": 1,
+   "var": 1
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.97,
+   "var": 0.03
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "chalk",
+   "limestone"
+  ],
+  "climate": false,
+  "place": "ore-flint-{rock}"
+ },
+ {
+  "src": "game:rock\\marble.json",
+  "code": "whitemarble",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 0.1,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 24,
+   "var": 12
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 2.5,
+   "var": 6
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.4,
+   "var": 0.8
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "rock-phyllite"
+  ],
+  "climate": false,
+  "place": "rock-whitemarble"
+ },
+ {
+  "src": "game:rock\\marble.json",
+  "code": "whitemarble",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 0.06,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 24,
+   "var": 12
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 2.5,
+   "var": 6
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.4,
+   "var": 0.8
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "rock-slate"
+  ],
+  "climate": false,
+  "place": "rock-whitemarble"
+ },
+ {
+  "src": "game:rock\\marble.json",
+  "code": "redmarble",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 0.03,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 24,
+   "var": 12
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 2.5,
+   "var": 6
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.4,
+   "var": 0.8
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "slate",
+   "phyllite"
+  ],
+  "climate": false,
+  "place": "rock-redmarble"
+ },
+ {
+  "src": "game:rock\\marble.json",
+  "code": "greenmarble",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 0.02,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 24,
+   "var": 12
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 2.5,
+   "var": 6
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.4,
+   "var": 0.8
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "rock-slate"
+  ],
+  "climate": false,
+  "place": "rock-greenmarble"
+ },
+ {
+  "src": "game:rock\\marble.json",
+  "code": "greenmarble",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 0.01,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 24,
+   "var": 12
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 2.5,
+   "var": 6
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.4,
+   "var": 0.8
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "rock-phyllite"
+  ],
+  "climate": false,
+  "place": "rock-greenmarble"
+ },
+ {
+  "src": "game:rock\\obsidian.json",
+  "code": "rock-obsidian",
+  "parent": null,
+  "gen": "disc-followsealevel",
+  "tries": 12,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 5,
+   "var": 2
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.8,
+   "var": 0.25
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "rock-basalt"
+  ],
+  "climate": false,
+  "place": "rock-obsidian"
+ },
+ {
+  "src": "game:rock\\travertine.json",
+  "code": "travertine",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 0.04,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 24,
+   "var": 12
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 2.5,
+   "var": 6
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.4,
+   "var": 0.8
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "rock-limestone"
+  ],
+  "climate": false,
+  "place": "rock-travertine"
+ },
+ {
+  "src": "game:rock\\travertine.json",
+  "code": "travertine",
+  "parent": null,
+  "gen": "disc-followsurface",
+  "tries": 0.01,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 12,
+   "var": 6
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": {
+   "dist": "uniform",
+   "avg": 0.4,
+   "var": 0.8
+  },
+  "depth": null,
+  "tries_child": null,
+  "hosts": [
+   "slate",
+   "phyllite",
+   "limestone"
+  ],
+  "climate": false,
+  "place": "rock-travertine"
+ },
+ {
+  "src": "game:soil\\clay.json",
+  "code": "clay",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.019,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 13,
+   "var": 6
+  },
+  "thick": {
+   "avg": 3.3,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 0,
+   "var": 0
+  },
+  "tries_child": null,
+  "hosts": [
+   "low-none",
+   "medium-none",
+   "low-verysparse",
+   "medium-verysparse",
+   "low-sparse",
+   "medium-sparse",
+   "low-normal",
+   "medium-normal"
+  ],
+  "climate": true,
+  "place": "rawclay-red-*"
+ },
+ {
+  "src": "game:soil\\clay.json",
+  "code": "clay",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.004,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 13,
+   "var": 6
+  },
+  "thick": {
+   "avg": 3.3,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 0,
+   "var": 0
+  },
+  "tries_child": null,
+  "hosts": [
+   "low-none",
+   "medium-none",
+   "low-verysparse",
+   "medium-verysparse",
+   "low-sparse",
+   "medium-sparse",
+   "low-normal",
+   "medium-normal"
+  ],
+  "climate": true,
+  "place": "rawclay-blue-*"
+ },
+ {
+  "src": "game:soil\\clay.json",
+  "code": "fireclay",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.004,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 4,
+   "var": 2
+  },
+  "thick": {
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 0,
+   "var": 0
+  },
+  "tries_child": null,
+  "hosts": [
+   "sand",
+   "gravel"
+  ],
+  "climate": true,
+  "place": "rawclay-fire-verysparse"
+ },
+ {
+  "src": "game:soil\\clay.json",
+  "code": "fireclay",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.0002,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 12,
+   "var": 5
+  },
+  "thick": {
+   "avg": 3.3,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 0,
+   "var": 0
+  },
+  "tries_child": null,
+  "hosts": [
+   "sand",
+   "gravel"
+  ],
+  "climate": true,
+  "place": "rawclay-fire-verysparse"
+ },
+ {
+  "src": "game:soil\\clay.json",
+  "code": "redclay",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.01,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 4,
+   "var": 2
+  },
+  "thick": {
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 0,
+   "var": 0
+  },
+  "tries_child": null,
+  "hosts": [
+   "gravel-*"
+  ],
+  "climate": true,
+  "place": "rawclay-red-verysparse"
+ },
+ {
+  "src": "game:soil\\clay.json",
+  "code": "redclay",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.01,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 4,
+   "var": 2
+  },
+  "thick": {
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 0,
+   "var": 0
+  },
+  "tries_child": null,
+  "hosts": [
+   "soil-*"
+  ],
+  "climate": true,
+  "place": "rawclay-red-verysparse"
+ },
+ {
+  "src": "game:soil\\gravel.json",
+  "code": "gravel",
+  "parent": null,
+  "gen": "disc-alluvialdeposit",
+  "tries": 0.03,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 15,
+   "var": 5
+  },
+  "thick": {
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 0,
+   "var": 0
+  },
+  "tries_child": null,
+  "hosts": [
+   null
+  ],
+  "climate": true,
+  "place": null
+ },
+ {
+  "src": "game:soil\\peat.json",
+  "code": "peat",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.05,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "uniform",
+   "avg": 13,
+   "var": 6
+  },
+  "thick": {
+   "avg": 3.3,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 0,
+   "var": 0
+  },
+  "tries_child": null,
+  "hosts": [
+   "low-none",
+   "medium-none",
+   "low-verysparse",
+   "medium-verysparse",
+   "low-sparse",
+   "medium-sparse",
+   "low-normal",
+   "medium-normal"
+  ],
+  "climate": true,
+  "place": "peat-*"
+ },
+ {
+  "src": "game:soil\\soil.json",
+  "code": "soil",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.025,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 5,
+   "var": 3
+  },
+  "thick": {
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 0,
+   "var": 0
+  },
+  "tries_child": null,
+  "hosts": [
+   "low-none",
+   "medium-none",
+   "low-verysparse",
+   "medium-verysparse",
+   "low-sparse",
+   "medium-sparse",
+   "low-normal",
+   "medium-normal"
+  ],
+  "climate": true,
+  "place": "soil-compost-*"
+ },
+ {
+  "src": "earth:earth-aluminosilicates.json",
+  "code": "earth-kyanite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.6,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 9,
+   "var": 3
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 3,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 20,
+   "var": 16
+  },
+  "tries_child": null,
+  "hosts": [
+   "schist",
+   "gneiss",
+   "quartzite"
+  ],
+  "climate": false,
+  "place": "earth:ore-kyanite-{rock}"
+ },
+ {
+  "src": "earth:earth-aluminosilicates.json",
+  "code": "earth-sillimanite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.4,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 9,
+   "var": 3
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 3,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 20,
+   "var": 16
+  },
+  "tries_child": null,
+  "hosts": [
+   "gneiss",
+   "schist"
+  ],
+  "climate": false,
+  "place": "earth:ore-sillimanite-{rock}"
+ },
+ {
+  "src": "earth:earth-aluminosilicates.json",
+  "code": "earth-andalusite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.5,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 9,
+   "var": 3
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 3,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 20,
+   "var": 16
+  },
+  "tries_child": null,
+  "hosts": [
+   "slate",
+   "phyllite",
+   "schist"
+  ],
+  "climate": false,
+  "place": "earth:ore-andalusite-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "topazamber",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 10.67,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 42.5,
+   "var": 27.5
+  },
+  "tries_child": null,
+  "hosts": [
+   "granite"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-topaz-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "topazblue",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 10.67,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 42.5,
+   "var": 27.5
+  },
+  "tries_child": null,
+  "hosts": [
+   "granite"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-topaz-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "topazpink",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 10.67,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 42.5,
+   "var": 27.5
+  },
+  "tries_child": null,
+  "hosts": [
+   "granite"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-topaz-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "tourmalinerubellite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 8.0,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 37.5,
+   "var": 22.5
+  },
+  "tries_child": null,
+  "hosts": [
+   "granite",
+   "schist",
+   "gneiss"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-tourmaline-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "tourmalineschorl",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 8.0,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 37.5,
+   "var": 22.5
+  },
+  "tries_child": null,
+  "hosts": [
+   "granite",
+   "schist",
+   "gneiss"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-tourmaline-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "tourmalineverdelite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 8.0,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 37.5,
+   "var": 22.5
+  },
+  "tries_child": null,
+  "hosts": [
+   "granite",
+   "schist",
+   "gneiss"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-tourmaline-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "tourmalinewatermelon",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 8.0,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 37.5,
+   "var": 22.5
+  },
+  "tries_child": null,
+  "hosts": [
+   "granite",
+   "schist",
+   "gneiss"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-tourmaline-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "berylaquamarine",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 16.01,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 37.5,
+   "var": 22.5
+  },
+  "tries_child": null,
+  "hosts": [
+   "granite",
+   "schist"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-beryl-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "berylbixbite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 16.01,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 37.5,
+   "var": 22.5
+  },
+  "tries_child": null,
+  "hosts": [
+   "granite",
+   "schist"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-beryl-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "spinelred",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 32.02,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 45.0,
+   "var": 25.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "limestone",
+   "dolostone",
+   "peridotite"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-spinel-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "garnetalmandine",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 5.34,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 55.0,
+   "var": 35.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "schist",
+   "gneiss",
+   "peridotite",
+   "granite"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-garnet-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "garnetandradite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 5.34,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 55.0,
+   "var": 35.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "schist",
+   "gneiss",
+   "peridotite",
+   "granite"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-garnet-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "garnetgrossular",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 5.34,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 55.0,
+   "var": 35.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "schist",
+   "gneiss",
+   "peridotite",
+   "granite"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-garnet-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "garnetpyrope",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 5.34,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 55.0,
+   "var": 35.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "schist",
+   "gneiss",
+   "peridotite",
+   "granite"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-garnet-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "garnetspessartine",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 5.34,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 55.0,
+   "var": 35.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "schist",
+   "gneiss",
+   "peridotite",
+   "granite"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-garnet-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "garnetuvarovite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 5.34,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 55.0,
+   "var": 35.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "schist",
+   "gneiss",
+   "peridotite",
+   "granite"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-garnet-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "corundumruby",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 32.02,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 57.5,
+   "var": 32.5
+  },
+  "tries_child": null,
+  "hosts": [
+   "limestone",
+   "dolostone",
+   "gneiss"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-ruby-{rock}"
+ },
+ {
+  "src": "earth:earth-gems.json",
+  "code": "corundumsapphire",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 32.02,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 0
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 60.0,
+   "var": 30.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "basalt",
+   "gneiss"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-sapphire-{rock}"
+ },
+ {
+  "src": "earth:earth-layers.json",
+  "code": "earth-placergold",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.4,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 7,
+   "var": 3
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 8,
+   "var": 7
+  },
+  "tries_child": null,
+  "hosts": [
+   "game:gravel-granite"
+  ],
+  "climate": false,
+  "place": "earth:placer-gravel-gold"
+ },
+ {
+  "src": "earth:earth-layers.json",
+  "code": "earth-placergold",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.25,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 7,
+   "var": 3
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 8,
+   "var": 7
+  },
+  "tries_child": null,
+  "hosts": [
+   "game:sand-sandstone"
+  ],
+  "climate": false,
+  "place": "earth:placer-sand-gold"
+ },
+ {
+  "src": "earth:earth-layers.json",
+  "code": "earth-placertin",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.4,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 8,
+   "var": 3
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 8,
+   "var": 7
+  },
+  "tries_child": null,
+  "hosts": [
+   "game:gravel-granite"
+  ],
+  "climate": false,
+  "place": "earth:placer-gravel-tin"
+ },
+ {
+  "src": "earth:earth-layers.json",
+  "code": "earth-placertin",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.25,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 8,
+   "var": 3
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 8,
+   "var": 7
+  },
+  "tries_child": null,
+  "hosts": [
+   "game:sand-sandstone"
+  ],
+  "climate": false,
+  "place": "earth:placer-sand-tin"
+ },
+ {
+  "src": "earth:earth-layers.json",
+  "code": "earth-placerplatinum",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.008,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 7,
+   "var": 3
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 8,
+   "var": 7
+  },
+  "tries_child": null,
+  "hosts": [
+   "game:gravel-granite"
+  ],
+  "climate": false,
+  "place": "earth:placer-gravel-platinum"
+ },
+ {
+  "src": "earth:earth-layers.json",
+  "code": "earth-placerplatinum",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.005,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 7,
+   "var": 3
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 8,
+   "var": 7
+  },
+  "tries_child": null,
+  "hosts": [
+   "game:sand-sandstone"
+  ],
+  "climate": false,
+  "place": "earth:placer-sand-platinum"
+ },
+ {
+  "src": "earth:earth-layers.json",
+  "code": "earth-saltflat",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 2.0,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 14,
+   "var": 4
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "tries_child": null,
+  "hosts": [
+   "earth:silt"
+  ],
+  "climate": false,
+  "place": "game:rock-halite"
+ },
+ {
+  "src": "earth:earth-layers.json",
+  "code": "earth-saltflat-sylvite",
+  "parent": "earth-saltflat",
+  "gen": "childdeposit-pointcloud",
+  "tries": 1,
+  "map": false,
+  "mapScale": null,
+  "swh": true,
+  "radius": {
+   "dist": "gaussian",
+   "avg": 3,
+   "var": 2
+  },
+  "thick": {
+   "dist": "invexp",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": null,
+  "tries_child": {
+   "avg": 20
+  },
+  "hosts": [
+   null
+  ],
+  "climate": false,
+  "place": "game:ore-sylvite-halite"
+ },
+ {
+  "src": "earth:earth-layers.json",
+  "code": "earth-saltflat",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 1.0,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 14,
+   "var": 4
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 4,
+   "var": 2
+  },
+  "tries_child": null,
+  "hosts": [
+   "game:rawclay-blue-none"
+  ],
+  "climate": false,
+  "place": "game:rock-halite"
+ },
+ {
+  "src": "earth:earth-layers.json",
+  "code": "earth-bogiron",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 2.0,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 4,
+   "var": 2
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 1,
+   "var": 1
+  },
+  "tries_child": null,
+  "hosts": [
+   "game:peat-none"
+  ],
+  "climate": false,
+  "place": "earth:bogpeat"
+ },
+ {
+  "src": "earth:earth-layers.json",
+  "code": "earth-bauxite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 1.5,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 10,
+   "var": 4
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 3,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 4,
+   "var": 3
+  },
+  "tries_child": null,
+  "hosts": [
+   "mottled",
+   "hard"
+  ],
+  "climate": false,
+  "place": "game:rock-bauxite"
+ },
+ {
+  "src": "earth:earth-layers.json",
+  "code": "earth-bauxite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 1.5,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 8,
+   "var": 3
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 1.5,
+   "var": 0.5
+  },
+  "tries_child": null,
+  "hosts": [
+   "earth:terrarossa"
+  ],
+  "climate": false,
+  "place": "game:rock-bauxite"
+ },
+ {
+  "src": "earth:earth-layers.json",
+  "code": "earth-kaolin",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 1.0,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 6,
+   "var": 2
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 6,
+   "var": 5
+  },
+  "tries_child": null,
+  "hosts": [
+   "felsic",
+   "mafic"
+  ],
+  "climate": false,
+  "place": "game:rawclay-fire-none"
+ },
+ {
+  "src": "earth:earth-layers.json",
+  "code": "earth-gypsum",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.6,
+  "map": false,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 10,
+   "var": 4
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 3,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 30,
+   "var": 25
+  },
+  "tries_child": null,
+  "hosts": [
+   "limestone",
+   "dolostone",
+   "claystone",
+   "shale"
+  ],
+  "climate": false,
+  "place": "game:rock-gypsum"
+ },
+ {
+  "src": "earth:earth-ores.json",
+  "code": "cerussite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 9.01,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 6,
+   "var": 1.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 17.0,
+   "var": 13.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "limestone",
+   "dolostone",
+   "sandstone"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-cerussite-{rock}"
+ },
+ {
+  "src": "earth:earth-ores.json",
+  "code": "vanadinite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 4.51,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 4,
+   "var": 1.0
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 17.0,
+   "var": 13.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "limestone",
+   "dolostone",
+   "sandstone"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-vanadinite-{rock}"
+ },
+ {
+  "src": "earth:earth-ores.json",
+  "code": "wulfenite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 4.51,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 4,
+   "var": 1.0
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 17.0,
+   "var": 13.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "limestone",
+   "dolostone",
+   "sandstone"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-wulfenite-{rock}"
+ },
+ {
+  "src": "earth:earth-ores.json",
+  "code": "smithsonite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 2.67,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 6,
+   "var": 1.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 17.0,
+   "var": 13.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "limestone",
+   "dolostone",
+   "sandstone"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-smithsonite-{rock}"
+ },
+ {
+  "src": "earth:earth-ores.json",
+  "code": "hemimorphite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 2.67,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 6,
+   "var": 1.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 17.0,
+   "var": 13.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "limestone",
+   "dolostone",
+   "sandstone"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-hemimorphite-{rock}"
+ },
+ {
+  "src": "earth:earth-ores.json",
+  "code": "chalcopyrite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 4.92,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 8,
+   "var": 2.0
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 47.5,
+   "var": 32.5
+  },
+  "tries_child": null,
+  "hosts": [
+   "granite",
+   "andesite",
+   "basalt",
+   "schist",
+   "gneiss"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-chalcopyrite-{rock}"
+ },
+ {
+  "src": "earth:earth-ores.json",
+  "code": "azurite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 3.69,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 6,
+   "var": 1.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 20.0,
+   "var": 15.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "limestone",
+   "sandstone",
+   "andesite"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-azurite-{rock}"
+ },
+ {
+  "src": "earth:earth-ores.json",
+  "code": "tetrahedrite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 3.69,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 6,
+   "var": 1.5
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 42.5,
+   "var": 27.5
+  },
+  "tries_child": null,
+  "hosts": [
+   "granite",
+   "slate",
+   "phyllite",
+   "schist"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-tetrahedrite-{rock}"
+ },
+ {
+  "src": "earth:earth-ores.json",
+  "code": "sperrylite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 6.52,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 4,
+   "var": 1.0
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 60.0,
+   "var": 30.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "peridotite",
+   "basalt"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-sperrylite-{rock}"
+ },
+ {
+  "src": "earth:earth-ores.json",
+  "code": "pyrite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 7.42,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 8,
+   "var": 2.0
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 39.0,
+   "var": 31.0
+  },
+  "tries_child": null,
+  "hosts": [
+   "shale",
+   "slate",
+   "granite",
+   "basalt",
+   "schist"
+  ],
+  "climate": false,
+  "place": "earth:ore-pyrite-{rock}"
+ },
+ {
+  "src": "earth:earth-ores.json",
+  "code": "wolframite",
+  "parent": null,
+  "gen": "disc-followsurfacebelow",
+  "tries": 0.43,
+  "map": true,
+  "mapScale": null,
+  "swh": false,
+  "radius": {
+   "dist": "uniform",
+   "avg": 7,
+   "var": 1.75
+  },
+  "thick": {
+   "dist": "uniform",
+   "avg": 2,
+   "var": 1
+  },
+  "ypos": null,
+  "depth": {
+   "dist": "uniform",
+   "avg": 57.5,
+   "var": 27.5
+  },
+  "tries_child": null,
+  "hosts": [
+   "granite",
+   "gneiss",
+   "schist",
+   "phyllite",
+   "slate",
+   "limestone",
+   "dolostone"
+  ],
+  "climate": false,
+  "place": "earth:ore-*-wolframite-{rock}"
+ }
+]

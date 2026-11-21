@@ -6,15 +6,21 @@ namespace EarthMap.Core
 {
     /// <summary>
     /// How a world uses one of the release files that come with the GLO-90 heights (0053 items 17-19, decision 0069): its save
-    /// keys and what it has without the file. A world whose source answered that it lacks the file when the world first needed
-    /// it goes without it for good (OffKey), so its chunks match each other; any other failure, or a world that has generated
-    /// with it (OnKey), stops the server (review A3, <see cref="ReleaseFiles.Unavailable"/>).
+    /// keys and what it has without the file. A world that can't have the file stops the server, nothing saved, whatever the
+    /// reason (EA-0191, decision 0103; before, a world whose source answered that it lacks the file when the world first
+    /// needed it went without it for good). A world marked OffKey by an earlier build goes on without it, so its chunks match
+    /// each other (<see cref="ReleaseFiles.Unavailable"/>).
     /// </summary>
-    public sealed record ReleaseFileUse(string Label, string OnKey, string OffKey, string With, string Without);
+    public sealed record ReleaseFileUse(string Label, string OnKey, string OffKey, string With, string Without)
+    {
+        /// <summary>(EA-0191) How a player can make the world without the file instead, for the stop message (null: none).</summary>
+        public string Instead { get; init; }
+    }
 
     /// <summary>
     /// The start-up policy for the release files (EarthElevationSystem; EA-0088, D-R5 of the 14 November 2026 code review's
-    /// Fable pass): whether a world uses a file, goes without it for good, or must stop, and fetching it when it is missing or
+    /// Fable pass): whether a world uses a file, goes without it for good (marked so by an earlier build; EA-0191 marks no
+    /// world any more), or must stop, and fetching it when it is missing or
     /// not the one this build reads. Off the game API: the save's data, the fetch and the log lines are given to it, so
     /// tests/ServerToolsTests runs every branch.
     /// </summary>
@@ -43,11 +49,18 @@ namespace EarthMap.Core
             this.notify = notify; this.warn = warn;
         }
 
-        /// <summary>Whether this world goes without the file for good (said).</summary>
-        public bool KeptWithout(ReleaseFileUse use, string name)
+        /// <summary>Whether this world goes without the file for good (said in the log).</summary>
+        public bool KeptWithout(ReleaseFileUse use, string name) => KeptWithout(use, name, out _);
+
+        /// <summary>Whether this world goes without the file for good (said in the log); <paramref name="said"/>: the sentence,
+        /// for the players who can act on it (EA-0191: the server tells them in game).</summary>
+        public bool KeptWithout(ReleaseFileUse use, string name, out string said)
         {
+            said = null;
             if (getData(use.OffKey) == null) return false;
-            notify(string.Format("{0}: this world keeps {1} ({2} couldn't be used when it first needed it).", use.Label, use.Without, name));
+            said = string.Format("{0}: this world keeps {1} for good ({2} couldn't be used when it first needed it, so all its chunks " +
+                "match); new worlds get it once the file is here.", use.Label, use.Without, name);
+            notify(said);
             return true;
         }
 
@@ -64,41 +77,58 @@ namespace EarthMap.Core
             byte[] file = null;
             try { if (File.Exists(path)) file = File.ReadAllBytes(path); } catch (Exception e) { warn(string.Format("{0}: {1}: {2}", use.Label, path, e.Message)); }
             if (check(file, out why)) return file;
-            if (file != null) warn(string.Format("{0}: {1} isn't the file this build reads ({2}); fetching it again.", use.Label, path, why));
+            // (EA-0191) a copy here that isn't this build's is named in the reason too: a store with an earlier bake of the same name
+            string here = null;
+            if (file != null)
+            {
+                here = string.Format("the copy in {0} isn't the one this Earth reads: {1}", folder, why);
+                warn(string.Format("{0}: {1} isn't the file this build reads ({2}); fetching it again.", use.Label, path, why));
+            }
+            string Also(string reason) => here == null ? reason : reason + "; " + here;
             string from = repo();
-            if (from == null) { why = "no data release set (ElevationRepo)"; lacking = true; return null; }
+            if (from == null) { why = Also("no data release set (ElevationRepo)"); lacking = true; return null; }
             notify(string.Format("{0}: fetching {1} ({2:F1} MB) from {3}.", use.Label, name, bytes / 1e6, from));
-            if (!fetch(name, path, bytes, sha256, out string error, out lacking)) { why = error; return null; }
+            if (!fetch(name, path, bytes, sha256, out string error, out lacking)) { why = Also(Unnamed(error, name)); return null; }
             try { file = File.ReadAllBytes(path); }
             catch (Exception e) when (e is IOException or UnauthorizedAccessException) { why = e.Message; return null; }
             if (check(file, out why)) return file;
+            why = "the release's copy isn't the one this Earth reads: " + why;
             lacking = true;   // fetched and checked against the release, yet not a file this build reads
             return null;
         }
 
+        /// <summary>The fetch's reason without the file's name in front (the download names it, once or twice), since the
+        /// message names the file itself.</summary>
+        static string Unnamed(string error, string name)
+        {
+            string prefix = name + ": ";
+            while (error != null && error.StartsWith(prefix, StringComparison.Ordinal)) error = error.Substring(prefix.Length);
+            return error;
+        }
+
         /// <summary>
-        /// The file can't be had or used. A world that never generated with it goes without it for good only when that is the
-        /// source's answer (<paramref name="lacking"/>; its chunks then all match): stored, said, and null returned. Otherwise
-        /// the message the server stops with (the caller stops it, nothing saved): a failure that may pass (the network) must
-        /// not become the world's choice for good, and a world that has generated with the file must not go on without it
-        /// (its new chunks would differ from the rest).
+        /// The file can't be had or used: the message the server stops with (the caller stops it before any chunk, nothing
+        /// saved). (EA-0191, decision 0103) Whatever the reason, also for a world that never generated with the file and whose
+        /// source answers that it lacks it (<paramref name="lacking"/>: the release doesn't have it, it has another file, or
+        /// no release is set). Before, such a world went without the file for good (OffKey) with a line in the log only, and a
+        /// store holding an earlier bake of a file not yet uploaded made every new world there without it. The world loses
+        /// nothing by the stop: its first start resumes as new once the file is here. A world that has generated with the file
+        /// must not go on without it either (its new chunks would differ from the rest). Never null; nothing is stored.
         /// </summary>
         /// <param name="repoName">The release named in the message.</param>
         public string Unavailable(ReleaseFileUse use, string name, string why, bool lacking, string repoName)
         {
-            bool used = getData(use.OnKey) != null;
-            if (!used && lacking)
-            {
-                storeData(use.OffKey, System.Text.Encoding.UTF8.GetBytes(why ?? "missing"));
-                warn(string.Format("{0}: {1} can't be used ({2}); this world keeps {3} for good, so its chunks match.", use.Label, name, why, use.Without));
-                return null;
-            }
-            return used
-                ? string.Format("{0}: {1}, but {2} can't be had now ({3}). The server stops, so that no chunk of this world gets {4}; put the file in {5} " +
-                    "(from {6}), or let the server reach it, and start again.", use.Label, use.With, name, why, use.Without, folder, repoName)
-                : string.Format("{0}: {1} could not be fetched ({2}) while the world starts. The server stops (nothing is saved), so that a failure " +
-                    "that may pass doesn't leave this world with {3} for good; start again once the server reaches {4}, or put the file in {5}.",
-                    use.Label, name, why, use.Without, repoName, folder);
+            if (getData(use.OnKey) != null)
+                return string.Format("{0}: {1}, but {2} can't be had now ({3}). The server stops, so that no chunk of this world gets {4}; put the file in {5} " +
+                    "(from {6}), or let the server reach it, and start again.", use.Label, use.With, name, why, use.Without, folder, repoName);
+            string instead = use.Instead != null ? " " + use.Instead : "";
+            return lacking
+                ? string.Format("{0}: this world needs {1}, and it can't be had ({2}). The server stops before generating anything, so " +
+                    "nothing is lost. Put the file from {3} in {4}, or start again once the release has it.{5}",
+                    use.Label, name, why, repoName, folder, instead)
+                : string.Format("{0}: {1} could not be fetched ({2}) while the world starts. The server stops before generating anything " +
+                    "(nothing is saved), so that a failure that may pass doesn't leave this world with {3}; start again once the server reaches {4}, " +
+                    "or put the file in {5}.{6}", use.Label, name, why, use.Without, repoName, folder, instead);
         }
 
         /// <summary>The world generates with the file from now on.</summary>

@@ -85,7 +85,12 @@ animals spawn by their own rules, whatever the switch says.
 ## In every Earth world
 
 Whatever the Nature choices:
-- **Fish** live in rivers as well as lakes.
+- **Fish** live in rivers as well as lakes, at every height. Vanilla lets a fish spawn only at or below sea level, which
+  would leave Earth's lakes and rivers above the sea without fish; Earth measures a fish's depth from its own water's
+  surface instead, with vanilla's depth bands, so a mountain lake has its fish at the same depths as water at sea
+  level. Other mods' water animals spawn the same way (Fauna of the Stone Age's river dolphins and sirenians). The sea
+  and water at sea level are as in vanilla. Saved worlds have this too: new land gets fish when it is made, land made
+  before as fish spawn.
 - **Coral** grows only in warm seas, not in warm lakes or salt lakes.
 
 ## Checking where you are

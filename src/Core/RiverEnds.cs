@@ -13,12 +13,39 @@ namespace EarthMap.Core
     ///  - a river with no water within reach ends in a dry basin (a wadi in the sand, the Chu and the Talas in the Moyynkum):
     ///    it fades out (RiverNetwork, fadeEnds) instead of ending at full width.
     /// With it the network also shows every reach below a shown one (RiverNetwork, continueDownstream).
+    ///
+    /// Rules 2 (EA-0160, decision 0093): a river ends where it reaches the sea. HydroRIVERS' rivers and those led on to
+    /// the sea above go on over the 2' grid's land where the coast is finer: down narrow fjords the grid fills (Sandsfjorden:
+    /// a river led from the head of Hylsfjorden 40 km down the fjords at sea level, in 2' steps), and over the headlands and
+    /// shores between, where the course's channel cut a straight walled trench at sea level. A reach that comes to the sea
+    /// (SeaDeepMetres into it by the world's coast) and then onto land that reaches LandMetres or more before the sea comes
+    /// again is cut where that stretch in the sea began; a reach whose first point begins it is left out (no flow, nothing
+    /// drawn) and the reaches running into it end in the sea. Land lower than that all the way only ends a stretch in the
+    /// sea, without a cut: the Grand Rhône's estuary is sea in patches (GLO-90's mask), with the river's own low banks
+    /// between them, and its course goes on to the mouth. A course that only runs on in the sea, or over low land, is as
+    /// before.
     /// </summary>
     public static class RiverEnds
     {
         /// <summary>Version of these rules, stored per world (EarthParams.RiverEnds; 0: none). Worlds with them also find the
-        /// rivers' seam crossings by the ring's geometry (RiverNetwork.geometrySeams).</summary>
-        public const int Version = 1;
+        /// rivers' seam crossings by the ring's geometry (RiverNetwork.geometrySeams). 2: rivers end at the sea (above). 3 (decision
+        /// 0107, EA-0124): the terminal lakes of lakes-2.bin (<see cref="LakeData.FileName2"/>): the Aral at its level of 1318.</summary>
+        public const int Version = 3;
+        /// <summary>River ends rules 3: the terminal lakes from lakes-2.bin.</summary>
+        public const int Lakes1318 = 3;
+        /// <summary>What UpgradeExistingWorldRiverEnds gives a world that asks for it (rules 2, as before rules 3): an upgrade
+        /// never moves a world's Aral.</summary>
+        public const int UpgradeVersion = 2;
+        /// <summary>Rules 2: how far into the sea or onto land (m) a course must be for it to count (and at least 2 blocks).</summary>
+        public const double SeaDeepMetres = 60;
+        /// <summary>Rules 2: the course is looked at every this many metres, where its level is at most SeaLevelMetres (a
+        /// course higher than that is not at the sea).</summary>
+        const double SeaStepMetres = 40, SeaLevelMetres = 20;
+        /// <summary>Rules 2: a stretch of land (by the world's coast) that reaches this height (m, the 2' grid's land alone
+        /// near the sea, TerrainSample.LandElev, so a fjord's wall rises like the land beside it) ends a river that came to the
+        /// sea before it; lower land all the way (a delta, a spit, a river's banks between the sea patches of its estuary)
+        /// only ends that stretch in the sea.</summary>
+        public const double LandMetres = 5;
         /// <summary>How far (2' grid cells, ~3.7 km north-south) a river end is led on to water.</summary>
         const int SearchCells = 16;
         /// <summary>How much higher than the river's end (m) the ground on the way may be (a valley's floor between its walls);
@@ -28,19 +55,36 @@ namespace EarthMap.Core
         /// <summary>Rivers smaller than this (m³/s) are left as they are: no world shows them.</summary>
         const double MinQ = 5;
 
-        public enum End { Water, IntoLake, Led, Faded, Antimeridian }
+        public enum End { Water, IntoLake, Led, Faded, Antimeridian, AtSea, PastMouth }
 
         public sealed class Result
         {
             public List<RiverReach> Reaches;
             /// <summary>Per reach: ends in a dry basin and fades out.</summary>
             public bool[] Fade;
+            /// <summary>Rules 2, per reach: ends in the sea already (cut there, or running into a reach left out past a mouth),
+            /// so it gets no mouth prolongation (RiverSegmentBuilder.Mouth), which would run on along its last direction over
+            /// the land beyond; null under rules 1.</summary>
+            public bool[] SeaEnd;
             /// <summary>Reaches whose course was changed or classified, and how they end.</summary>
             public readonly Dictionary<int, End> Ends = new Dictionary<int, End>();
             public int LakeVertices;
         }
 
-        public static Result Prepare(EarthData data, List<RiverReach> reaches)
+        /// <summary>Rules 1: <see cref="Prepare(EarthData, List{RiverReach}, Func{double, double, int})"/> without the sea.</summary>
+        public static Result Prepare(EarthData data, List<RiverReach> reaches) => Prepare(data, reaches, null);
+
+        /// <summary>The reaches with their ends prepared. sideAt (rules 2): -1 where a place is in the sea, +1 on land, 0 where
+        /// it can't be told, each SeaDeepMetres from the coast or more (TerrainModel.CoastSign); null: rules 1.</summary>
+        public static Result Prepare(EarthData data, List<RiverReach> reaches, Func<double, double, int> sideAt) => Prepare(data, reaches, sideAt, null);
+
+        /// <summary>
+        /// As above, and with lakeOf1318 (works rules 6, decision 0107: the level in m of the lake of 1318 a place lies in, NaN
+        /// where none) the lakes of 1318 count as terminal lakes do: a course's vertices inside one are at its level, the river
+        /// above never lower and below never higher. Their courses were levelled on today's drained ground, a block or two below
+        /// the lake, and met its water with a step.
+        /// </summary>
+        public static Result Prepare(EarthData data, List<RiverReach> reaches, Func<double, double, int> sideAt, Func<double, double, double> lakeOf1318)
         {
             var res = new Result { Reaches = new List<RiverReach>(reaches), Fade = new bool[reaches.Count] };
             var list = res.Reaches;
@@ -60,10 +104,11 @@ namespace EarthMap.Core
             var minEnd = new double[nr];
             var search = new SearchBuffers();
             Array.Fill(minEnd, double.NegativeInfinity);
-            if (data.LakeOverlay)
+            if (data.LakeOverlay || lakeOf1318 != null)
             {
                 var boxes = new List<(int r0, int r1, int c0, int c1)>();
-                foreach (var lake in data.TerminalLakes.Lakes)
+                if (data.LakeOverlay)
+                    foreach (var lake in data.TerminalLakes.Lakes)
                 {
                     var (lr, lc) = Cell(lake.Lat, lake.Lon);
                     boxes.Add((lr - 3 * cpd, lr + 3 * cpd, lc - 4 * cpd, lc + 4 * cpd));
@@ -78,8 +123,14 @@ namespace EarthMap.Core
                         var (row, col) = Cell(re.Lat[k], re.Lon[k]);
                         bool inBox = false;
                         foreach (var b in boxes) if (row >= b.r0 && row <= b.r1 && col >= b.c0 && col <= b.c1) { inBox = true; break; }
-                        if (!inBox || !data.IsTerminalLakeCell(row, col)) continue;
-                        short level = data.GetCell(row, col).Level;
+                        short level;
+                        if (inBox && data.IsTerminalLakeCell(row, col)) level = data.GetCell(row, col).Level;
+                        else
+                        {
+                            double l1318 = lakeOf1318 == null ? double.NaN : lakeOf1318(re.Lat[k], re.Lon[k]);
+                            if (double.IsNaN(l1318)) continue;
+                            level = (short)Math.Round(l1318);
+                        }
                         var own = Own(r);
                         if (first < 0)
                         {
@@ -151,7 +202,105 @@ namespace EarthMap.Core
                 own.Fixed = fix.ToArray();
                 res.Ends[r] = End.Led;
             }
+
+            // 3. rules 2: a river ends where it reaches the sea
+            if (sideAt != null) EndAtSea(data, list, res, sideAt, Own);
             return res;
+        }
+
+        /// <summary>
+        /// Rules 2: each reach looked at along its course (where it is at most SeaLevelMetres high): one that comes to the sea
+        /// and then onto land reaching LandMetres before the sea comes again is cut where that stretch in the sea began, a
+        /// fixed point (step 2 won't lead it on); one whose first point begins it is left out (Q 0, no next reach), and the
+        /// reaches into it end there. Lower land all the way, and a course higher than SeaLevelMetres, end a stretch in the
+        /// sea without a cut.
+        /// </summary>
+        static void EndAtSea(EarthData data, List<RiverReach> list, Result res, Func<double, double, int> sideAt, Func<int, RiverReach> own)
+        {
+            int nr = list.Count;
+            res.SeaEnd = new bool[nr];
+            var cutAt = new (int seg, double t)[nr];
+            var past = new bool[nr];
+            ParallelWork.For(nr, r =>
+            {
+                cutAt[r] = (-1, 0);
+                var re = list[r];
+                if (re.Lon == null || re.Lon.Length < 2 || re.Q <= 0) return;
+                int n = re.Lon.Length;
+                int seaSeg = -1;                 // where the stretch in the sea began (segment, t), -1: not in the sea
+                double seaT = 0;
+                bool ashore = false;             // on land after that stretch, none of it LandMetres high yet
+                bool land = false;
+                for (int k = 0; k < n - 1 && !land; k++)
+                {
+                    if (Math.Min(re.Level[k], re.Level[k + 1]) > SeaLevelMetres) { seaSeg = -1; ashore = false; continue; }
+                    double la0 = re.Lat[k], lo0 = re.Lon[k], la1 = re.Lat[k + 1], lo1 = re.Lon[k + 1];
+                    double len = Math.Sqrt(Math.Pow((la1 - la0) * Geo.MetresPerDegree, 2) + Math.Pow((lo1 - lo0) * Geo.MetresPerDegree * Math.Cos(la0 * Math.PI / 180), 2));
+                    int m = Math.Max(1, (int)Math.Ceiling(len / SeaStepMetres));
+                    for (int i = (k == 0 ? 0 : 1); i <= m; i++)
+                    {
+                        double t = (double)i / m;
+                        double la = la0 + (la1 - la0) * t, lo = lo0 + (lo1 - lo0) * t;
+                        int side = sideAt(la, lo);
+                        if (side < 0)
+                        {
+                            // the sea again after low land only: a new stretch in the sea begins here
+                            if (seaSeg < 0 || ashore) { seaSeg = k; seaT = t; ashore = false; }
+                        }
+                        else if (side > 0 && seaSeg >= 0)
+                        {
+                            ashore = true;
+                            var s = data.SampleTerrain(la, lo, true);
+                            if ((double.IsNaN(s.LandElev) ? s.Elev : s.LandElev) >= LandMetres) { land = true; break; }
+                        }
+                    }
+                }
+                if (seaSeg < 0 || !land) return;
+                // in the sea from its first point on: past a mouth upstream of it
+                if (seaSeg == 0 && seaT == 0) past[r] = true;
+                else cutAt[r] = (seaSeg, seaT);
+            }, chunk: 1024);
+            for (int r = 0; r < nr; r++)
+            {
+                if (past[r])
+                {
+                    var o = own(r);
+                    o.Q = 0;
+                    o.Next = -1;
+                    res.Ends[r] = End.PastMouth;
+                    continue;
+                }
+                var (seg, t) = cutAt[r];
+                if (seg < 0) continue;
+                var c = own(r);
+                int keep = seg + 1;              // the vertices up to the segment's start, then the point in the sea
+                var lat = new float[keep + 1];
+                var lon = new float[keep + 1];
+                var lev = new short[keep + 1];
+                var fix = new bool[keep + 1];
+                Array.Copy(c.Lat, lat, keep); Array.Copy(c.Lon, lon, keep); Array.Copy(c.Level, lev, keep); Array.Copy(c.Fixed, fix, keep);
+                lat[keep] = (float)(c.Lat[seg] + (c.Lat[seg + 1] - c.Lat[seg]) * t);
+                lon[keep] = (float)(c.Lon[seg] + (c.Lon[seg + 1] - c.Lon[seg]) * t);
+                lev[keep] = (short)Math.Min(Math.Round(c.Level[seg] + (c.Level[seg + 1] - c.Level[seg]) * t), 0);
+                fix[keep] = true;
+                if (c.Width != null && c.Width.Length == c.Lat.Length)
+                {
+                    var w = new byte[keep + 1];
+                    Array.Copy(c.Width, w, keep);
+                    w[keep] = c.Width[seg];
+                    c.Width = w;
+                }
+                c.Lat = lat; c.Lon = lon; c.Level = lev; c.Fixed = fix;
+                c.Next = -1;
+                res.Ends[r] = End.AtSea;
+                res.SeaEnd[r] = true;
+            }
+            // the reaches into a left-out reach end in the sea there
+            for (int r = 0; r < nr; r++)
+            {
+                int nx = list[r].Next;
+                if (nx >= 0 && nx < nr && past[nx]) { own(r).Next = -1; res.SeaEnd[r] = true; }
+            }
         }
 
         static bool IsWater(in EarthData.Cell c) => (c.Flags & (EarthData.FlagOcean | EarthData.FlagLake)) != 0;

@@ -9,9 +9,10 @@
     <ServerGarbageCollection>true</ServerGarbageCollection><ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
   </PropertyGroup>
   <ItemGroup>
-    <!-- the mod's own GLO-90 store and tile code, linked rather than copied (EarthData.cs's Geo is replaced by GeoShim.cs) -->
-    <Compile Include="../../src/Core/FineElevation.cs" Link="Core/FineElevation.cs" />
-    <Compile Include="../../src/Core/DemTiles.cs" Link="Core/DemTiles.cs" />
+    <!-- the mod's own GLO-90 store and tile code: src/Core compiled once (tests/Earth.Core.Tests.Common), as the tests read it
+         (EA-0131: linking FineElevation.cs alone broke when it came to read the dam file) -->
+    <ProjectReference Include="../../tests/Earth.Core.Tests.Common/Earth.Core.Tests.Common.csproj" />
+    <Compile Remove="GeoShim.cs" />
   </ItemGroup>
   <ItemGroup>
     <!-- stay well inside the 64 GB machine: tiles are evicted before this is reached -->

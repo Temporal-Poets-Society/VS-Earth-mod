@@ -36,6 +36,12 @@ every area of version 2 as it was.
 Big rivers are inland water in all three maps, so they stay. Holland's sunken peat polders need nothing: in 1318 they
 were drained peat land at about sea level, and the game holds land below the sea at the sea's level.
 
+Version 4 (works rules 5; decision 0092, EA-0148; works-1318-3.bin): version 3's areas with the canals' and works rules 4's
+areas taken from the water mask's cells on GLO-90's pixel-is-point grid (tools/glo90grid.py: cell (r, c) centred on
+(lat0 + 1 - r/rows, lon0 + c/cols), its area half a cell either way; before, half a cell south-east of that), as the river
+outlines of rivers-outline-glo90-5.bin are; 4,800 units a degree. The RCE areas are the same. Run with
+EARTH_GLO90_GRID=point (the default) and --canals ... --post2000; EARTH_GLO90_GRID=cell gives version 3's.
+
     .venv/Scripts/python -I tools/bake_works_1318.py --rce DIR --out FILE [--report FILE.json]
 
 DIR holds paleogeografie1250nc.geojson, paleogeografie1500nc.geojson and paleogeografie2000nc.geojson as RCE's WFS serves them (EPSG:4326).
@@ -50,7 +56,9 @@ from shapely.geometry import shape
 TOOLS = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, TOOLS)
 
-UNIT = 2400                 # vertex units per degree, as the lake outlines
+import glo90grid as gg  # noqa: E402
+
+UNIT = 4800 if gg.POINT else 2400   # vertex units per degree (version 4: as lakes-glo90-5.bin)
 VERSION = 1                 # 2 with the canals (--canals): the same areas, and the canals' with the CANAL flag;
                             # 3 with --post2000: and works rules 4's areas, with the LATE flag
 MAGIC = b"EMWK"
@@ -298,20 +306,23 @@ def canal_areas(canals_dir, wbm_dir, report=None):
                     continue
                 w = tifffile.imread(tp)
                 hp, wp = w.shape
-                r0 = max(0, int((lat0 + 1 - y1) * hp) - 1)
-                r1 = min(hp, int((lat0 + 1 - y0) * hp) + 2)
-                c0 = max(0, int((x0 - lon0) * wp) - 1)
-                c1 = min(wp, int((x1 - lon0) * wp) + 2)
+                # a cell's area runs from (top - r/hp, left + c/wp): glo90grid (half a cell north-west of the tile's
+                # corner on the pixel-is-point grid)
+                top, left = gg.top(lat0 + 1, hp), gg.left(lon0, wp)
+                r0 = max(0, int((top - y1) * hp) - 1)
+                r1 = min(hp, int((top - y0) * hp) + 2)
+                c0 = max(0, int((x0 - left) * wp) - 1)
+                c1 = min(wp, int((x1 - left) * wp) + 2)
                 if r0 >= r1 or c0 >= c1:
                     continue
                 rr, cc = np.mgrid[r0:r1, c0:c1]
-                lat = lat0 + 1 - (rr + 0.5) / hp
-                lon = lon0 + (cc + 0.5) / wp
+                lat = top - (rr + 0.5) / hp
+                lon = left + (cc + 0.5) / wp
                 inside = shapely.contains_xy(corr, lon, lat) & (w[r0:r1, c0:c1] == 3)
                 if not inside.any():
                     continue
                 ii, jj = np.nonzero(inside)
-                boxes = [shapely.box(lon0 + (c0 + j) / wp, lat0 + 1 - (r0 + i + 1) / hp, lon0 + (c0 + j + 1) / wp, lat0 + 1 - (r0 + i) / hp)
+                boxes = [shapely.box(left + (c0 + j) / wp, top - (r0 + i + 1) / hp, left + (c0 + j + 1) / wp, top - (r0 + i) / hp)
                          for i, j in zip(ii, jj)]
                 # (three quarters of a pixel more all round: the river outlines are contoured smooth from the mask, so a
                 # LAND area cut to the pixels left slivers of their water along its edges)
@@ -347,10 +358,11 @@ def post2000_areas(rce_dir, wbm_dir, report=None):
                     continue
                 w = tifffile.imread(tp)
                 hp, wp = w.shape
+                top, left = gg.top(lat0 + 1, hp), gg.left(lon0, wp)
                 rr, cc = np.mgrid[0:hp, 0:wp]
-                ins = (w == 0) & shapely.contains_xy(o, lon0 + (cc + 0.5) / wp, lat0 + 1 - (rr + 0.5) / hp)
+                ins = (w == 0) & shapely.contains_xy(o, left + (cc + 0.5) / wp, top - (rr + 0.5) / hp)
                 ii, jj = np.nonzero(ins)
-                boxes += [shapely.box(lon0 + j / wp, lat0 + 1 - (i + 1) / hp, lon0 + (j + 1) / wp, lat0 + 1 - i / hp)
+                boxes += [shapely.box(left + j / wp, top - (i + 1) / hp, left + (j + 1) / wp, top - i / hp)
                           for i, j in zip(ii, jj)]
         if not boxes:
             log(f"post-2000 {key}: no mask land on the sea of 1318")
@@ -393,7 +405,7 @@ def main():
         VERSION = 2
         areas += canal_areas(a.canals, a.wbm, rep)
     if a.post2000:
-        VERSION = 3
+        VERSION = 4 if gg.POINT else 3
         areas += post2000_areas(a.rce, a.wbm, rep)
     # works rules 4's areas after all older ones: each tile keeps version 2's pieces first and in their order
     areas = [x for x in areas if not x[0] & LATE] + [x for x in areas if x[0] & LATE]

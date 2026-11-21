@@ -15,6 +15,14 @@ namespace EarthMap
     {
         /// <summary>Soil rules (decision 0048), as saved.</summary>
         public int SoilRules { get; private set; }
+        /// <summary>(Decision 0105) Earth soil, in worlds that chose it (EarthParams.Topsoil), else null; and its tier set.</summary>
+        public Topsoil Topsoil { get; private set; }
+        public int TopsoilTiers { get; private set; }
+        /// <summary>The soil blocks of Earth soil: [tier, grass] (Topsoil.BlockCodes x Core.Topsoil.GrassCodes), and each soil block's
+        /// tier and grass (-1 for other blocks); null without Earth soil.</summary>
+        public int[,] TopsoilBlocks { get; private set; }
+        public sbyte[] SoilTierOf { get; private set; }
+        public sbyte[] SoilGrassOf { get; private set; }
         /// <summary>Habitats step 1: the vegetation zones in worlds saved with zone rules, else null.</summary>
         public ClimateZones Zones { get; private set; }
         /// <summary>Ranges step 5a: dry land keeps a share of vanilla's tall grass (Core.GroundCover, ground-cover.json).</summary>
@@ -41,7 +49,8 @@ namespace EarthMap
         public static WorldGenRules Begin(ICoreServerAPI sapi, ILogger logger, EarthParams p)
         {
             var rules = new WorldGenRules(sapi, logger) { SoilRules = p.SoilRules };
-            if (rules.SoilRules >= 1 && BlockLayerAdjustments.SoilFertilityPatched)
+            // (decision 0105) Earth soil says its own line when its rules are loaded (LoadTopsoil)
+            if (rules.SoilRules >= 1 && BlockLayerAdjustments.SoilFertilityPatched && !Topsoil.On(p.Topsoil))
                 logger.Notification("Earth soil rules v{0}: land with a real aridity index of at least {1} has soil (block-layer fertility at least {2}/255); deserts keep sand and gravel.",
                     rules.SoilRules, SoilFertility.DryLandAridity, SoilFertility.Floor);
             return rules;
@@ -121,9 +130,11 @@ namespace EarthMap
             model.Wetlands = LoadGrid(WetlandGrid.Asset, WetlandGrid.Read, "the wetland grid (" + WetlandGrid.Asset + ")",
                 "trees ignore them and bogs and marshes keep the zones' forest");
             model.Floodplains = null;
-            if (p.SoilRules >= SoilFertility.FloodplainRules && GroundColumnFacts.Columns(p.GroundColumns))   // only ground columns read it (EarthGeology.GroundAt)
+            // ground columns (EarthGeology.GroundAt) and Earth soil (decision 0105, BlockLayerAdjustments) read it
+            if (p.SoilRules >= SoilFertility.FloodplainRules && (GroundColumnFacts.Columns(p.GroundColumns) || Topsoil.On(p.Topsoil)))
                 model.Floodplains = LoadGrid(FloodplainGrid.Asset, FloodplainGrid.Read, "the floodplain grid (" + FloodplainGrid.Asset + ")",
                     "arid floodplains outside the river belts have no topsoil");
+            LoadTopsoil(model, p);
             model.OpenWetlands = p.WetlandRules >= 1 && model.Zones != null && model.Wetlands != null;
             if (model.OpenWetlands)
                 logger.Notification("Earth wetland rules v{0}: open bog, marsh and saltmarsh (GLWD v2) stand without forest.", p.WetlandRules);
@@ -180,5 +191,55 @@ namespace EarthMap
                 }, "fauna-vanilla.json", "vanilla animals spawn outside their natural ranges and above their altitude limits");
             }
         }
-    }
+    
+        /// <summary>
+        /// (Decision 0105) Earth soil: soil-rules-v4.json and the soil maps it lists (the world's 30″ set where it fetched it when
+        /// it was made, EarthParams.GroundData, else the 2′ maps of the data store), and the soil blocks' table. A world whose
+        /// rules or maps can't be read is refused before its first chunk (Missing), as for any other rule data.
+        /// </summary>
+        void LoadTopsoil(TerrainModel model, EarthParams p)
+        {
+            Topsoil = null; TopsoilBlocks = null; SoilTierOf = null; SoilGrassOf = null;
+            TopsoilTiers = p.Topsoil;
+            if (!Topsoil.On(p.Topsoil)) return;
+            string without = "the world's soil keeps vanilla's rain and warmth formula";
+            bool thirty = p.GroundData == GroundDownloader.SetsVersion;
+            var soil = LoadAsset(Core.Topsoil.RulesAsset, a => Core.Topsoil.Load(a.ToText(),
+                asset => sapi.Assets.TryGet(new AssetLocation(asset))?.Data ?? EarthDataStore.Bytes(EarthGround.DataFolder, System.IO.Path.GetFileName(new AssetLocation(asset).Path)),
+                p.NoiseSeed, file => thirty ? System.IO.Path.Combine(EarthGround.DataFolder, file) : null), "the soil rules (soil-rules-v4.json)", without);
+            if (soil == null) return;
+            if (thirty && soil.MissingTiles.Count > 0)
+            {
+                logger.Error("Earth soil: this world was made with the 30\" soil map, but {0} is missing from {1}; {2}.", string.Join(", ", soil.MissingTiles),
+                    System.IO.Path.Combine(EarthGround.DataFolder, GroundDownloader.Subfolder), "its soil would follow the 2' map");
+                Missing.Add("the 30\" soil map (missing: its soil would follow the 2' map)");
+                return;
+            }
+            soil.UnknownClass += name => logger.Warning("Earth soil: no rule for soil class {0}; the default tier is used.", name);
+            int Id(string code) { try { return sapi.World.GetBlock(new AssetLocation(code))?.Id ?? 0; } catch (Exception) { return 0; } }
+            var blocks = new int[Core.Topsoil.BlockCodes.Length, Core.Topsoil.GrassCodes.Length];
+            int count = sapi.World.Blocks.Count;
+            var tierOf = new sbyte[count]; var grassOf = new sbyte[count];
+            Array.Fill(tierOf, (sbyte)-1); Array.Fill(grassOf, (sbyte)-1);
+            for (int f = 0; f < Core.Topsoil.BlockCodes.Length; f++)
+                for (int g = 0; g < Core.Topsoil.GrassCodes.Length; g++)
+                {
+                    string code = "game:soil-" + Core.Topsoil.BlockCodes[f] + "-" + Core.Topsoil.GrassCodes[g];
+                    int id = Id(code);
+                    if (id <= 0)
+                    {
+                        logger.Error("Earth soil: {0} does not exist; {1}.", code, without);
+                        Missing.Add("the soil block " + code + " (missing: " + without + ")");
+                        return;
+                    }
+                    blocks[f, g] = id;
+                    if (id < count) { tierOf[id] = (sbyte)f; grassOf[id] = (sbyte)g; }
+                }
+            Topsoil = soil; TopsoilBlocks = blocks; SoilTierOf = tierOf; SoilGrassOf = grassOf;
+            logger.Notification("Earth soil rules v{0} ({1}): topsoil from the real soil map ({2}), {3}; deserts have none except in a river's flood (the floodplain grid{4}) and at oases.",
+                p.SoilRules, p.Topsoil == Core.Topsoil.RealisticTiers ? "realistic tiers: barren to black earth" : "vanilla tiers: barren to high",
+                thirty ? "SoilGrids 30\"" : "SoilGrids 2'", p.Topsoil == Core.Topsoil.RealisticTiers ? "black earth (Terra preta) on the Chernozems" : "high on the black earths and river silt",
+                model.Floodplains != null ? "" : ", missing");
+        }
+}
 }

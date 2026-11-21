@@ -1,0 +1,1 @@
+{ "type": "code", "modid": "soilaudit", "name": "Soil audit (test only)", "version": "0.0.1", "side": "Server", "requiredOnClient": false, "dependencies": { "game": "" } }

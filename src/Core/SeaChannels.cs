@@ -325,7 +325,8 @@ namespace EarthMap.Core
                 int depth = version >= 2 ? Math.Max(ships ? ShipDepth : 2, (int)Math.Round(rivers.Depth(q)))
                     : ships ? ShipDepth : Math.Max(2, (int)Math.Round(rivers.Depth(q)));
                 double hw = rivers.HalfWidth(q);
-                if (ships) hw = Math.Max(hw, 12 * rivers.WidthFloorScale);
+                // (EA-0159) the ships' least width shrinks with the world's river width floor (RiverNetwork.ShipFloorFactor)
+                if (ships) hw = Math.Max(hw, 12 * rivers.WidthFloorScale * rivers.ShipFloorFactor);
                 int radius = ships ? ShipSearchCells : SearchCells;
                 exits.Add(new Exit(r, ex, ez, q, ships, depth, hw, row, col, radius));
             }

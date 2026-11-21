@@ -92,7 +92,7 @@ if (Directory.Exists(Root))
        floodplains) is in the server's data store, fetched from the earth-data release (src/Core/EarthDataStore.cs). -->
   <ItemGroup>
     <None Include="earthdata\earth.json;earthdata\climate.bin;earthdata\climatefix.bin;earthdata\climatefix2.bin;earthdata\climatefix3.bin;earthdata\climatefix4.bin;earthdata\temperature.bin;earthdata\rain.bin;earthdata\weather.bin;earthdata\weatherground.bin;earthdata\aridity.bin;earthdata\temperature-1318.bin;earthdata\ATTRIBUTION.txt" CopyToOutputDirectory="PreserveNewest" />
-    <None Include="earthdata\reservoirs-v1.json;earthdata\outlets.bin;earthdata\works-1318-2.bin;earthdata\rivers-nonperennial-2.bin" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="earthdata\reservoirs-v1.json;earthdata\outlets.bin;earthdata\works-1318-2.bin;earthdata\works-1318-3.bin;earthdata\works-1318-4.bin;earthdata\lakes-2.bin;earthdata\rivers-nonperennial-2.bin;earthdata\rivers-nonperennial-3.bin;earthdata\lake-depths-1.bin" CopyToOutputDirectory="PreserveNewest" />
     <None Include="modinfo.json" CopyToOutputDirectory="PreserveNewest" />
     <None Include="LICENSE" CopyToOutputDirectory="PreserveNewest" />
     <None Include="worldconfig.json" CopyToOutputDirectory="PreserveNewest" />

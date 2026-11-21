@@ -14,6 +14,23 @@ namespace EarthMap.Core
         }
 
         /// <summary>
+        /// Works rules 6 (decision 0107): the river level (whole m) whose water top (RiverWaterTop) is a lake's at this level
+        /// (WaterTopY): the level RiverEnds gives a course's vertices inside a lake of 1318, so the river and the lake meet at
+        /// one water top (rivers follow RiverRelief of the relief, so the same metres round to another block); the nearest
+        /// such level to the lake's, else the lake's own.
+        /// </summary>
+        public double RiverLevelOfLake(double level)
+        {
+            int top = WaterTopY(level), l0 = (int)Math.Round(level);
+            for (int d = 0; d <= 400; d++)
+            {
+                if (RiverWaterTop(l0 + d) == top) return l0 + d;
+                if (d > 0 && RiverWaterTop(l0 - d) == top) return l0 - d;
+            }
+            return level;
+        }
+
+        /// <summary>
         /// Carve a river into a land column: a channel with a flat bed across its middle shelving to 2 blocks at the edges
         /// (the same depth all along the river), a bank strip flush with the water (it also holds the water in where the
         /// land beside it is lower), then a valley easing into the natural terrain. The water surface is a staircase of
@@ -186,6 +203,11 @@ namespace EarthMap.Core
                 return;
             }
             double hw = hit.HalfWidth, bank = hit.BankWidth, valley = hit.ValleyWidth;
+            // lake rules 1 (EA-0183, decision 0100): where the course's line lies well inside a lake at its level, the course
+            // draws nothing: the lake's own bed and shores (HydroRIVERS draws a lake's through-flow as a line; its channel was
+            // cut into the lake's bed, a walled trench, and its banks and valley into the shores)
+            if (Rules.CoursesOffLakes && !c.River && (c.Water == WaterLake || c.Water == WaterSaltLake || c.Water == WaterNone && c.NearLakeTop >= 0)
+                && CourseInLake(in hit, hw + bank)) return;
             // pool layout 4: a lake well above the river gives way to its channel and banks, with a rim (ApplyRiver)
             if (Rivers.PoolLayout >= 4 && (c.Water == WaterLake || c.Water == WaterSaltLake) && !c.River && !hit.Mouth
                 && c.WaterTop > hit.WaterTop + 3 && hit.Dist <= hw + bank + RiverNetwork.LakeRim)
@@ -994,6 +1016,33 @@ namespace EarthMap.Core
         /// <summary>Channel rules 0 (0053 item 18): the nearest course's channel depth at its centre, or the lone depth.</summary>
         int OutlineDepthRules0(in Column c, bool found, in RiverNetwork.Hit hit) =>
             (int)Math.Round(Math.Min(1 + OutlineRiverSlope * c.RiverOutlineDist, found ? ChannelDepth(in hit, 0) : OutlineRiverLoneDepth));
+
+        /// <summary>
+        /// Lake rules 1 (EA-0183, decision 0100): whether the nearest point of the course's line (hit.CentreX, CentreZ) lies in
+        /// a lake of this world at the course's level (within a block), at least <paramref name="margin"/> blocks from that
+        /// lake's shore (and no more than a block short of the outlines' reach, past which their distance stops). Within the
+        /// margin of the shore, where a river comes into a lake or leaves it, the course draws as before, so its channel meets
+        /// the lake. A lake of 1318 counts, none inside a SEA or LAND area of 1318 (as NaturalColumn decides, WorksAt); a pond
+        /// the river's water joins is the river's (JoinsRiver); a lake well above or below the course keeps pool layout 4's
+        /// rim and gorge (the Niagara case).
+        /// </summary>
+        bool CourseInLake(in RiverNetwork.Hit hit, double margin)
+        {
+            if (LakeOutlines == null) return false;
+            var g = Geometry.ToGeo(hit.CentreX, hit.CentreZ);
+            if (g.InGutter) return false;
+            margin = Math.Min(margin, LakeOutlines.Reach - 1);
+            var wk = WorksAt(g.Lat, g.Lon);
+            LakeOutlineLayer.Hit lk;
+            if (Works1318Data.IsLake(wk)) lk = wk.Raw;
+            else
+            {
+                if (Works1318Data.Undoes(wk) || !OutlinesDecide(g.Lat, g.Lon)) return false;
+                lk = LakeOutlines.At(g.Lat, g.Lon);
+                if (!lk.Inside || JoinsRiver(in lk, g.Lat, g.Lon, out _)) return false;
+            }
+            return lk.Inside && lk.Dist >= margin && !double.IsNaN(lk.Level) && Math.Abs(WaterTopY(lk.Level) - hit.WaterTop) <= 1;
+        }
 
         /// <summary>
         /// Pool layout 9: the water top of the lake data at a position (as a column there would have it in NearLakeTop), -1

@@ -19,13 +19,18 @@ the differences in the main mod, read only by worlds that save the new versions:
       version 3), the moved ones' inner vertices as steps on a 1/65536 degree grid, and the widths alone of the reaches
       it left where they were.
   earthdata/rivers-glo90-arms-2.bin (EMRA version 2, RiverCourses 4): river_arms.py on those, the arms' records version 3.
+
+  earthdata/rivers-glo90-snap-3.bin and rivers-glo90-arms-3.bin (RiverCourses 5; decision 0092, EA-0148): the same
+      layouts (EMRP version 2, EMRA version 2) from snap_rivers_channel.py and river_arms.py run on GLO-90's
+      pixel-is-point grid (tools/glo90grid.py): the snapped courses lie on the mask's water where the heights have it.
 Each file names its base files and its results by the first 8 bytes of their SHA-256, so the game applies it only to the
 data it was made from (and knows when the data already has it). The arms' base is the snapped file.
 
   python -I tools/water_overlays.py --base <dir with the 1.0.2 terrain/islands/coasts and rivers-glo90.bin>
       [--referee <dir with the refereed terrain/islands/coasts (tools/sea_ocean.py --write --out)>]
       [--snapped <snapped rivers-glo90.bin> [--armed <river_arms.py's output on it>]]
-      [--snapped2 <snap_rivers_channel.py's output> [--armed2 <river_arms.py's output on it>]] --out earthdata
+      [--snapped2 <snap_rivers_channel.py's output> [--armed2 <river_arms.py's output on it>]]
+      [--snapped3 <the same on the pixel-is-point grid> [--armed3 <river_arms.py's output on it>]] --out earthdata
   python -I tools/water_overlays.py ... --verify      (rebuild the targets from base + overlays and compare)
 """
 import argparse, hashlib, json, math, os, struct, sys
@@ -771,11 +776,14 @@ def main():
     ap.add_argument("--armed", help="river_arms.py's output on the snapped rivers (its .json beside it gives the arms' count)")
     ap.add_argument("--snapped2", help="tools/snap_rivers_channel.py's output on rivers-glo90.bin (courses rules 4)")
     ap.add_argument("--armed2", help="river_arms.py's output on --snapped2")
+    ap.add_argument("--snapped3", help="tools/snap_rivers_channel.py's output on rivers-glo90.bin on the pixel-is-point grid (courses rules 5)")
+    ap.add_argument("--armed3", help="river_arms.py's output on --snapped3")
     ap.add_argument("--out", required=True)
     ap.add_argument("--verify", action="store_true")
     a = ap.parse_args()
     assert not a.armed or a.snapped, "--armed needs --snapped (the arms' base)"
     assert not a.armed2 or a.snapped2, "--armed2 needs --snapped2 (the arms' base)"
+    assert not a.armed3 or a.snapped3, "--armed3 needs --snapped3 (the arms' base)"
     blobs = []
     if a.referee:
         ref, rfiles = build_referee(a.base, a.referee)
@@ -806,6 +814,18 @@ def main():
         if a.verify:
             verify_arms(arms, afiles, "rivers-glo90-arms-2.bin")
         blobs.append(("rivers-glo90-arms-2.bin", arms))
+    if a.snapped3:
+        snap, sfiles = build_snap2(os.path.join(a.base, "rivers-glo90.bin"), a.snapped3)
+        if a.verify:
+            verify_snap2(snap, sfiles)
+        blobs.append(("rivers-glo90-snap-3.bin", snap))
+    if a.armed3:
+        with open(a.armed3 + ".json", encoding="utf8") as f:
+            n_arms = json.load(f)["arms"]
+        arms, afiles = build_arms(a.snapped3, a.armed3, n_arms, "rivers-glo90-arms-3.bin")
+        if a.verify:
+            verify_arms(arms, afiles, "rivers-glo90-arms-3.bin")
+        blobs.append(("rivers-glo90-arms-3.bin", arms))
     for name, blob in blobs:
         path = os.path.join(a.out, name)
         with open(path, "wb") as f:

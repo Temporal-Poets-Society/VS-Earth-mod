@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 // Regional geology tests on the real shipped data and real Earth terrain.
 //   dotnet run -c Release -- [repoRoot] [quick]
 // "quick" skips the terrain-model sections (golden v1 output, eligibility rates, exposure, anti-grid).
-static class Program
+static partial class Program
 {
     static int passed, failed;
     static void Check(bool ok, string msg)
@@ -20,8 +20,8 @@ static class Program
     }
     static void Info(string s) => Console.WriteLine("  " + s);
     static string root;
-    static RegionalGeologyCatalog cat1, cat2;
-    static string gridText, rules1Text, rules2Text;
+    static RegionalGeologyCatalog cat1, cat2, cat3, cat4;
+    static string gridText, rules1Text, rules2Text, rules3Text, rules4Text;
     static EarthData data;
 
     static int Main(string[] args)
@@ -32,18 +32,25 @@ static class Program
         gridText = File.ReadAllText(Path.Combine(config, "geology-grids-v1.json"));
         rules1Text = File.ReadAllText(Path.Combine(config, "geology-rules-v1.json"));
         rules2Text = File.ReadAllText(Path.Combine(config, "geology-rules-v2.json"));
+        rules3Text = File.ReadAllText(Path.Combine(config, "geology-rules-v3.json"));
         cat1 = new RegionalGeologyCatalog(gridText, rules1Text);
         cat2 = new RegionalGeologyCatalog(gridText, rules2Text);
+        cat3 = new RegionalGeologyCatalog(gridText, rules3Text);
+        rules4Text = File.ReadAllText(Path.Combine(config, "geology-rules-v4.json"));
+        cat4 = new RegionalGeologyCatalog(gridText, rules4Text);
         var sw = Stopwatch.StartNew();
         Section("Data, versions and save safety", DataAndSaveSafety);
         Section("Material codes against installed vanilla blocks", VanillaMaterials);
         Section("Rules v2 categories (coastal fill, pyroclastics, chalk, preserved rocks)", V2Categories);
         Section("Surface resource rules (unit)", ResourceUnits);
         Section("v1 strata/cover per-column equivalence (synthetic)", V1ColumnEquivalence);
+        Section("Rules v3 categories (envelopes, covered fill, basements, rock salt)", V3Categories);
+        Section("Rules v4: GLiM's codes to profiles, the 30\" rock set (EA-0198)", V4Rocks);
         if (!quick)
         {
             data = EarthData.LoadFromFolder(root, true);
             Section("v1 golden output against 0.12.2 baseline", V1Golden);
+            Section("v2 golden output (pinned 18 November 2026, EA-0166)", V2Golden);
             Section("Clay/peat eligibility on real terrain", Eligibility);
             Section("v2 strata exposure and reference surface", V2Exposure);
             Section("v2 anti-grid and warp continuity", AntiGrid);
@@ -70,7 +77,7 @@ static class Program
 
     static void DataAndSaveSafety()
     {
-        Check(cat1.Version == 1 && cat2.Version == 2 && RegionalGeologyCatalog.RulesVersion == 2, "v1 and v2 rule files load as their own versions; new worlds get v2");
+        Check(cat1.Version == 1 && cat2.Version == 2 && cat3.Version == 3 && cat4.Version == 4 && RegionalGeologyCatalog.RulesVersion == 4, "v1 to v4 rule files load as their own versions; new worlds get v4");
         // 0.12 saves fingerprint SHA-256(grid text + v1 rules text): keep the v1 files byte-identical so it is recognised.
         string legacy = Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(gridText + rules1Text)));
         Check(legacy == "18D3663E10314B0A73CF0BFAB59283034A6DA9494DE89859AF98E9CD4169F300", "v1 grid+rules files are byte-identical to 0.12 (legacy save fingerprint " + legacy.Substring(0, 8) + ")");
@@ -90,7 +97,7 @@ static class Program
         Check(Throws(() => new RegionalGeologyCatalog(gridText, rules2Text.Replace("[[22.5,56.2],[24.0,55.9],[27.8,56.1],[28.2,57.4],[26.0,57.9],[24.1,57.6],[22.5,56.2]]", "[[22.5,56.2],[24.0,55.9]]"))), "Degenerate province polygon rejected");
         Check(Throws(() => new RegionalGeologyCatalog(gridText, "{not json")), "Corrupt rules rejected as ArgumentException-family");
         Check(Throws(() => new RegionalGeologyCatalog(gridText.Substring(0, gridText.Length / 2), rules1Text)), "Truncated grid rejected");
-        Check(RegionalGeologyCatalog.IsSupportedRulesVersion(1) && RegionalGeologyCatalog.IsSupportedRulesVersion(2) && !RegionalGeologyCatalog.IsSupportedRulesVersion(0) && !RegionalGeologyCatalog.IsSupportedRulesVersion(3), "Supported rules versions are exactly 1..2");
+        Check(RegionalGeologyCatalog.IsSupportedRulesVersion(1) && RegionalGeologyCatalog.IsSupportedRulesVersion(2) && RegionalGeologyCatalog.IsSupportedRulesVersion(3) && RegionalGeologyCatalog.IsSupportedRulesVersion(4) && !RegionalGeologyCatalog.IsSupportedRulesVersion(0) && !RegionalGeologyCatalog.IsSupportedRulesVersion(5), "Supported rules versions are exactly 1..4");
         Check(GeologyTransitions.IsValidWidth(96) && !GeologyTransitions.IsValidWidth(double.NaN) && !GeologyTransitions.IsValidWidth(600), "Contact width validation");
         // GA child-grade adapter helper
         Check(RegionalGeologyCompatibility.PadChildGrades<string>(null, 3).Length == 0 && RegionalGeologyCompatibility.PadChildGrades(new[] { "poor", "medium" }, 3).SequenceEqual(new[] { "poor", "medium", "medium" }), "Child grades clamp like the native parent generator");
@@ -104,6 +111,46 @@ static class Program
         try { a(); return false; } catch (ArgumentException) { return true; }
     }
 
+    /// <summary>EA-0198, decision 0106: the litho table, and with the baked set (EARTH_ROCK_SET, else ModData/earth/ground)
+    /// the districts the rebuild set out to fix.</summary>
+    static void V4Rocks()
+    {
+        foreach (var (code, want) in new[] { ("mtpu__", "marble"), ("mtam__", "mafic-metamorphic"), ("mtgr__", "greenstone-belt"), ("ssmxfe", "iron-formation"),
+            ("scpuch", "carbonate-pure"), ("scshvr", "carbonate-shaly"), ("scssch", "carbonate-sandy"), ("scmxev", "carbonate-evaporite"), ("scmx__", "carbonate"),
+            ("smmxmt", "mixed-sedimentary"), ("ssmxmt", "siliciclastic"), ("smmxev", "mixed-evaporite"), ("smmxcl", "coal-measures"), ("sssh__", "siliciclastic-fine"),
+            ("ssss__", "siliciclastic-coarse"), ("sspy__", "volcaniclastic"), ("sumx__", "basin-fill"), ("pa____", "felsic-plutonic"), ("ig____", "unknown"), ("wb____", "unknown") })
+            Check(cat4.ProfileOfCode(code).Id == want, $"v4 code {code} -> {want} (got {cat4.ProfileOfCode(code).Id})");
+        Check(Throws(() => new RegionalGeologyCatalog(gridText, rules4Text.Replace("\"litho\"", "\"lithoX\""))), "v4 rules without a litho table rejected");
+        bool refused = false;
+        try { cat3.AttachRocks(null); } catch (InvalidOperationException) { refused = true; }
+        Check(refused, "only v4 catalogues take a rock set");
+        // a v4 catalogue without its set answers as v3 (tools only; the game never generates v4 without it)
+        Check(cat4.At(51.5, -0.1).Profile.Id == cat3.At(51.5, -0.1).Profile.Id && cat4.Fingerprint != cat3.Fingerprint, "v4 without a set answers from the 0.5-degree grid; its fingerprint is its own");
+        string set = Environment.GetEnvironmentVariable("EARTH_ROCK_SET");
+        if (string.IsNullOrEmpty(set))
+            set = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "VintagestoryData", "ModData", "earth", "ground", "global-rock-30s-1.egts");
+        if (!File.Exists(set)) { Info("no rock set at " + set + "; the districts are skipped"); return; }
+        var c = new RegionalGeologyCatalog(gridText, rules4Text);
+        string before = c.Fingerprint;
+        c.AttachRocks(new RockMap(Path.GetFileName(set), GroundTile.ReadAllFromFile(set)));
+        Check(c.Fingerprint != before, "the rock set joins the fingerprint");
+        foreach (var (name, lat, lon, want) in new[] {
+            ("Mednorudyansk, Urals", 57.93, 60.03, "+carbonate"), ("Dartmoor", 50.57, -3.92, "felsic-plutonic"), ("Viburnum Trend", 37.6, -91.1, "+carbonate"),
+            ("Bisbee", 31.44, -109.91, "+carbonate"), ("Hamersley", -22.6, 118.0, "iron-formation"), ("Donbas", 48.0, 38.0, "coal-measures"),
+            ("Peak District", 53.25, -1.75, "+carbonate"), ("Pine Point", 60.85, -114.45, "+carbonate"), ("Burra", -33.68, 138.93, "+carbonate"),
+            ("Broken Hill", -31.96, 141.47, "mafic-metamorphic"), ("Kitwe, Copperbelt", -12.80, 28.21, "copperbelt-roan"), ("Kolwezi", -10.72, 25.47, "copperbelt-roan"),
+            ("Tsumeb", -19.24, 17.71, "otavi-dolomite"), ("Carrara", 44.08, 10.13, "marble") })
+        {
+            var s = c.At(lat, lon);
+            // "+carbonate": any profile with carbonate beds (limestone, dolostone, marble or chalk), the deposit test's measure
+            bool ok = want == "+carbonate" ? s.Profile.Beds.Any(b => b.Material is "limestone" or "dolostone" or "marble" or "chalk") : s.Profile.Id == want;
+            Check(ok, $"{name}: {s.Profile.Id} ({s.Source})");
+        }
+        var sw = Stopwatch.StartNew(); int n = 0;
+        for (double lat = 40; lat < 50; lat += .01) for (double lon = 0; lon < 1; lon += .1) { c.At(lat, lon); n++; }
+        Info($"{n} lookups in {sw.Elapsed.TotalMilliseconds:0} ms with a cold tile");
+    }
+
     static void VanillaMaterials()
     {
         string assets = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Vintagestory", "assets", "survival", "worldproperties", "block");
@@ -111,7 +158,7 @@ static class Program
         if (!File.Exists(withDeposit) || !File.Exists(plain)) { Info("installed game assets not found; skipped"); return; }
         var rockCodes = Regex.Matches(File.ReadAllText(withDeposit), "\"?[Cc]ode\"?\\s*:\\s*\"([a-z]+)\"").Select(m => "game:rock-" + m.Groups[1].Value).ToHashSet();
         var looseCodes = Regex.Matches(File.ReadAllText(plain), "\"?[Cc]ode\"?\\s*:\\s*\"([a-z]+)\"").Select(m => m.Groups[1].Value).ToHashSet();
-        foreach (var cat in new[] { cat1, cat2 })
+        foreach (var cat in new[] { cat1, cat2, cat3, cat4 })
             foreach (var m in cat.Materials)
                 Check(rockCodes.Contains(m.Vanilla), $"v{cat.Version} {m.Id} -> {m.Vanilla} exists in the installed game");
         foreach (string p in cat2.Preserve) Check(rockCodes.Contains("game:" + p), "preserved " + p + " is a real rock block");

@@ -40,6 +40,11 @@ namespace EarthMap
         public static int Coasts(EarthMapConfig cfg, EarthGeometry geo, bool islands) =>
             cfg.Coasts && islands && CoastLayer.CellBlocks(geo) >= cfg.CoastMinCellBlocks ? CoastData.FileVersion : 0;
 
+        /// <summary>(Decision 0105) The topsoil a new world saves (EarthParams.Topsoil): the tab's "Soil", except in a ground-column
+        /// world, whose columns lay their own soil (climate only there).</summary>
+        public static int TopsoilOf(EarthWorldOptions.EarthTab tab, int groundColumns) =>
+            GroundColumnFacts.Columns(groundColumns) ? Topsoil.ClimateOnly : tab.Topsoil;
+
         /// <summary>
         /// The Earth's layout on Cylinder World's ring: the real seam where Cylinder World keeps Earth's terrain in its seam
         /// band and earth.json doesn't ask for the gutter (decision 0030), else the gutter of open sea; <paramref name="gutterSeabed"/>
@@ -93,6 +98,16 @@ namespace EarthMap
             int glaciers = terrain.Experimental && DataHas(data, d => { d.SetGlaciers(true); return d.HasGlaciers; }, d => d.GlaciersError, log) ? 1 : 0;
             // ------------------------------------------------------------------ the Earth tab, else earth.json, else the default
             var tab = EarthWorldOptions.ReadTab(wc, cfg, data, H);
+            // (EA-0197, decision 0104) ground columns and Earth's ore maps are off the world creation screen in 2.2; earth.json's
+            // experimental switches still give them, for development, and say so
+            if (cfg.ExperimentalGroundColumns || cfg.ExperimentalOreMaps)
+                log.Warning("{0}: {1} on (EXPERIMENTAL, for development; off the world creation screen in Earth 2.2, decision 0104): this new world gets {2} and {3}.",
+                    ConfigFile, cfg.ExperimentalGroundColumns && cfg.ExperimentalOreMaps ? "ExperimentalGroundColumns and ExperimentalOreMaps are"
+                        : cfg.ExperimentalGroundColumns ? "ExperimentalGroundColumns is" : "ExperimentalOreMaps is",
+                    tab.GroundColumns ? "ground columns" : tab.RegionalGeology ? "regional rock without ground columns" : "vanilla's rock layers (no ground columns: its rock isn't regional)",
+                    tab.RegionalOres ? "Earth's ore maps" : "vanilla's deposits");
+            if (cfg.GroundColumnsPrototype)
+                log.Notification("{0}: GroundColumnsPrototype is no longer read (decision 0104); ExperimentalGroundColumns, off, replaces it.", ConfigFile);
             int geologyRules = tab.RegionalGeology ? RegionalGeologyCatalog.RulesVersion : 0;
             int groundColumns = tab.GroundColumns && tab.RegionalGeology ? GroundColumns.RulesVersion : 0;
             int oreLayers = GroundColumnFacts.Columns(groundColumns) ? OreLayers.RulesVersion : 0;
@@ -107,19 +122,27 @@ namespace EarthMap
             // rivers on GLO-90 with either GLO-90 choice (their valleys are in the land then)
             // (2: with the reaches the water atlas moved, 3: and the side arms, where the installed data allows; 0053 items 14, 16)
             int riverCourses = tab.Elevation != "builtin" && data != null ? data.Glo90RiverCourses : 0;
-            // modern dams taken out (no dams in 1318: 0053 item 19), on the courses the dam file was made for: the newest dam
-            // rules (DamRemovalData.NewestRules) on courses rules 4, rules 1 on courses rules 3 (ER-28: the comment named rules 2)
+            // modern dams taken out (no dams in 1318: 0053 item 19), on the courses the dam file was made for: dam rules 4 on
+            // courses rules 5 (decision 0092, GLO-90's pixel-is-point grid), 3 on courses rules 4, rules 1 on courses rules 3
+            // (ER-28: the comment named rules 2)
             int damRules = tab.Elevation != "glo90" ? 0
-                : riverCourses == DamRemovalData.CourseRules2 ? DamRemovalData.NewestRules
+                : riverCourses == DamRemovalData.CourseRules4 ? DamRemovalData.Rules4
+                : riverCourses == DamRemovalData.CourseRules2 ? DamRemovalData.Rules3
                 : riverCourses == DamRemovalData.CourseRules ? DamRemovalData.RulesVersion : 0;
             // and its rivers, at the river courses' levels (0053 item 18), through the old reservoirs with the dams out: the
             // outlines baked with that dam file's corridors (dam rules 2: version 3, 0063; rules 1: version 2)
             // (dam rules 3, decision 0069: version 4, on its reservoirs and corridors; a new outline version is a new arm here,
             // RiverOutlineData.FileVersion and EarthParams.RulesAgainstBuild name the newest)
-            int riverOutlines = tab.Elevation == "glo90" ? (damRules >= DamRemovalData.Rules3 ? 4 : damRules >= DamRemovalData.Rules2 ? 3 : damRules >= 1 ? 2 : 1) : 0;
+            // (dam rules 4, decision 0092: version 5, on GLO-90's pixel-is-point grid with its reservoirs and corridors)
+            int riverOutlines = tab.Elevation == "glo90" ? (damRules >= DamRemovalData.Rules4 ? 5 : damRules >= DamRemovalData.Rules3 ? 4 : damRules >= DamRemovalData.Rules2 ? 3 : damRules >= 1 ? 2 : 1) : 0;
+            // decision 0092 (EA-0148): the water mask's lakes, rivers, canals and flow on GLO-90's pixel-is-point grid go
+            // together (the courses rules 5 bundle); a world whose installed data lacks the new courses keeps them all as before
+            bool pointGrid = riverOutlines >= 5;
             // the channel rules with them (0063 channel rules 1, "dredging": the course's channel everywhere, at the flow's width
             // or the river's measured one where narrower)
             int channelRules = riverOutlines >= 1 && riverCourses >= 1 ? TerrainModel.ChannelRulesVersion : 0;
+            // EA-0179 (decision 0098): the coarse river rules in new worlds at 1:50 and coarser (Streams "auto" draws "ends" there)
+            bool coarse = cfg.Rivers && !EarthWorldOptions.FineScale(geo.RingLength) && EarthWorldOptions.StreamsFor(cfg.Streams, geo.RingLength) == "ends";
             var p = new EarthParams
             {
                 Version = EarthParams.CurrentVersion,
@@ -164,9 +187,12 @@ namespace EarthMap
                 Rivers = cfg.Rivers,
                 RiverFalls = cfg.Rivers ? RiverFalls.Version : 0,
                 RiverChannels = cfg.Rivers ? SeaChannels.Version : 0,
-                RiverEnds = cfg.Rivers ? Core.RiverEnds.Version : 0,
+                // (decision 0107: rules 3 read lakes-2.bin, in the mod)
+                RiverEnds = !cfg.Rivers ? 0 : data == null || data.HasTerminalLakes(2) ? Core.RiverEnds.Version : 2,
                 RiverDeltas = cfg.Rivers ? Core.RiverDeltas.Version : 0,
                 RiverWidths = cfg.Rivers ? RiverNetwork.WidthRulesVersion : 0,
+                // EA-0159 (decision 0095): the Earth tab's River width as a multiplier of 1:10's widths (0: 2.1's, as ×1 at 1:10)
+                RiverWidthMultiplier = cfg.Rivers ? EarthWorldOptions.RiverWidthMultiplier(tab.RiverWidth, geo.RingLength) : 0,
                 // pool layout 8 (steps without sills) only with a Hydrology that reads the river flow query (decision 0027): without
                 // it, sill-less steps are not safe from its communicating vessels. Pool layouts 9 and 10 (flow-labelled rapid
                 // sources) only with one that reads RiverFlowAt and keeps those labels when the water updates (its query version 2).
@@ -176,20 +202,32 @@ namespace EarthMap
                 RiverPoolLayout = !cfg.Rivers ? 0 : w.HydrologyQuery >= 3 ? RiverNetwork.PoolLayoutVersion : Math.Min(10, RiverNetwork.PoolLayoutVersion),
                 RiverMinDischarge = cfg.RiverMinDischarge,
                 RiverWidthScale = cfg.RiverWidthScale,
-                StreamMode = EarthWorldOptions.StreamsFor(cfg.Streams, geo.RingLength),
-                StreamMinDischarge = cfg.StreamMinDischarge,
+                // (EA-0179: at 1:50 and coarser every stream from the Earth tab's Smallest stream, one block wide)
+                StreamMode = coarse && EarthWorldOptions.StreamsFor(cfg.Streams, geo.RingLength) == "ends" ? "all" : EarthWorldOptions.StreamsFor(cfg.Streams, geo.RingLength),
+                // EA-0131 (decision 0061): the streams layer below 20 m³/s, on full GLO-90 at 1:25 and finer where the streams are "all"
+                StreamRules = cfg.Rivers && cfg.StreamsLayer && fineElevation >= 1 && riverCourses >= 1 && channelRules >= 1
+                    && EarthWorldOptions.StreamsFor(cfg.Streams, geo.RingLength) == "all" && EarthWorldOptions.FineScale(geo.RingLength) ? StreamLayer.RulesVersion : 0,
+                StreamMinDischarge = coarse ? EarthWorldOptions.SmallestStream(tab.SmallestStream, geo.RingLength, cfg.RiverMinDischarge) : cfg.StreamMinDischarge,
                 RiverStraighten = cfg.RiverStraighten,
                 RiverSmoothWidths = cfg.RiverSmoothWidths,
                 RiverRelief = cfg.RiverRelief,
                 NoRiverRapids = tab.NoRiverRapids,
                 RiverCourses = riverCourses,
                 // the water mask's lakes from their outlines with full GLO-90 (their levels are its heights'; 0053 item 17)
-                LakeOutlines = tab.Elevation == "glo90" ? LakeOutlineData.FileVersion : 0,
+                LakeOutlines = tab.Elevation == "glo90" ? (pointGrid ? LakeOutlineData.FileVersion : 4) : 0,
+                // (decision 0100) courses draw nothing inside lakes, and the lakes' real depths: with lake outlines 5 and the
+                // depths made for them (lake-depths-1.bin, in the mod)
+                LakeRules = tab.Elevation == "glo90" && pointGrid && data?.LakeDepthsFor(LakeOutlineData.FileVersion) != null ? TerrainModel.LakeRulesVersion : 0,
                 DamRules = damRules,
                 RiverOutlines = riverOutlines,
+                // EA-0179 (decision 0098): at 1:50 and coarser, rivers and one-block streams by discharge, the mask's river water
+                // only along them
+                CoarseRiverRules = coarse ? RiverNetwork.CoarseRulesVersion : 0,
                 ChannelRules = channelRules,
                 // decision 0069: the flow solved on river outlines 4's water, with its rerouted mouths (on courses rules 4's list)
-                FlowRules = riverOutlines >= 4 && channelRules >= 1 && riverCourses == DamRemovalData.CourseRules2 ? RiverFlowData.FileVersion : 0,
+                // (flow rules 2, decision 0092: on GLO-90's pixel-is-point grid, on courses rules 5's list)
+                FlowRules = riverOutlines >= 5 && channelRules >= 1 && riverCourses == DamRemovalData.CourseRules4 ? 2
+                    : riverOutlines >= 4 && channelRules >= 1 && riverCourses == DamRemovalData.CourseRules2 ? 1 : 0,
                 MinSeaDepth = TerrainModel.ShipSeaDepth,
                 LakeShores = ShoreData.FileVersion,
                 AridRiverRules = AridHydrology.Version,
@@ -198,8 +236,11 @@ namespace EarthMap
                 LakeOutlets = data?.Outlets != null ? OutletData.FileVersion : 0,
                 SeaReferee = data?.SeaRefereeAvailable ?? 0,
                 // decision 0064: coasts and waters as of 1318 where people changed them later
-                Works1318 = data?.Works1318 != null ? Works1318Data.RulesVersion : 0,
-                PerennialRules = data?.NonPerennial != null ? NonPerennialData.RulesVersion : 0,
+                // (decision 0107: works rules 6 add the lakes of 1318, works-1318-4.bin)
+                Works1318 = pointGrid && data?.Works1318For(Works1318Data.LakeRules) != null ? Works1318Data.LakeRules
+                    : pointGrid && data?.Works1318For(Works1318Data.PointRules) != null ? Works1318Data.PointRules
+                    : data?.Works1318 != null ? 4 : 0,
+                PerennialRules = data?.HasNonPerennial == true ? NonPerennialData.RulesVersion : 0,
                 Canals = EarthWorldOptions.CanalCodes(wc),
                 Islands = cfg.Islands ? IslandLayer.RulesVersion : 0,
                 Coasts = Coasts(cfg, geo, cfg.Islands),
@@ -226,7 +267,14 @@ namespace EarthMap
                 // decision 0077: Earth's crafting rules wherever Earth decides where bauxite lies
                 CraftingRules = EarthCrafting.RulesFor(groundColumns, tab.RegionalOres),
                 DepositSet = EarthDepositSet.Version,
-                SoilRules = SoilFertility.RulesVersion,
+                // decision 0097: vanilla's deposits at their depth below the local ground (the ore maps place their own)
+                DepositDepthRules = tab.RegionalOres ? 0 : EarthParams.DepositDepthRulesVersion,
+                // decision 0099: vanilla's rock layers under the local ground (Earth's regional rock lays its own)
+                VanillaStrataRules = tab.RegionalGeology ? 0 : EarthParams.VanillaStrataRulesVersion,
+                // (decision 0105) "Soil": Earth soil wherever vanilla's block layers lay the soil (ground columns lay their own);
+                // climate only keeps soil rules 3, so such a world's params are as before
+                SoilRules = TopsoilOf(tab, groundColumns) > 0 ? Topsoil.RulesVersion : SoilFertility.RulesVersion,
+                Topsoil = TopsoilOf(tab, groundColumns),
                 // ---------------------------------------------------------------- plants and animals ("Nature", "Biomes")
                 RegionalTrees = regionalTrees,
                 TreeRulesVersion = regionalTrees ? RegionalTreeCatalog.RulesVersion : 0,
@@ -261,6 +309,9 @@ namespace EarthMap
                 RainFrequency = tab.RainFrequency,
                 StormFrequency = tab.StormFrequency,
             };
+            // (EA-0200, decision 0098) the Earth tab's Smallest stream at 1:25 and finer: the streams layer's smallest (0 at the play
+            // styles' 1, every stream of the layer, so such a world's params are as before)
+            if (p.StreamRules >= 1) p.StreamLayerMinDischarge = EarthWorldOptions.SmallestLayerStream(tab.SmallestStream);
             badSettings = p.RepairSettings(new EarthMapConfig());
             return p;
         }

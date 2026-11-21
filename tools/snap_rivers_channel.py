@@ -55,6 +55,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import water_atlas as wa
 import snap_rivers_wbm as v1
 import water_overlays as wo
+import glo90grid as gg
 
 MIN_Q = 20.0                # m³/s: Streams' floor; rivers-glo90.bin has nothing smaller
 PX_M = 111320.0 / 1200      # a 3" pixel north-south (m)
@@ -114,17 +115,28 @@ def tile(kind, tl, tc):
     if key in TILES:
         TILES.move_to_end(key)
         return TILES[key]
-    name = f"Copernicus_DSM_COG_30_{'N' if tl >= 0 else 'S'}{abs(tl):02d}_00_{'E' if tc >= 0 else 'W'}{abs(tc):03d}_00_{kind}.tif"
-    p = os.path.join(wa.WBM if kind == "WBM" else wa.DEM, name)
-    t = None
-    if os.path.exists(p):
-        t = tifffile.imread(p)
-        t = t[:, (np.arange(1200) * t.shape[1]) // 1200]   # narrow high-latitude tiles repeated across
+    t = raw_tile(kind, tl, tc)
+    if t is not None:
+        # narrow high-latitude tiles on the uniform 3" grid (glo90grid.columns; on the pixel-is-point grid a tile's last
+        # column or two take the next tile's first)
+        east = None
+        if (gg.column_index(1200, t.shape[1]) >= t.shape[1]).any():
+            east = raw_tile(kind, tl, ((tc + 1 + 180) % 360) - 180)
+            if east is None:
+                east = np.full((t.shape[0], 1), 1 if kind == "WBM" else 0, t.dtype)
+        t = gg.columns(t, 1200, east)
         t = np.ascontiguousarray(t if kind == "WBM" else t.astype(np.float32))
     TILES[key] = t
     while len(TILES) > 24:
         TILES.popitem(last=False)
     return t
+
+
+def raw_tile(kind, tl, tc):
+    """A GLO-90 tile as stored, or None where there is none (open sea)."""
+    name = f"Copernicus_DSM_COG_30_{'N' if tl >= 0 else 'S'}{abs(tl):02d}_00_{'E' if tc >= 0 else 'W'}{abs(tc):03d}_00_{kind}.tif"
+    p = os.path.join(wa.WBM if kind == "WBM" else wa.DEM, name)
+    return tifffile.imread(p) if os.path.exists(p) else None
 
 
 def mosaic(kind, la0, lo0, la1, lo1):
@@ -159,14 +171,17 @@ def half_widths(river, dy, dx):
 
 
 class Window:
-    """The rasters of a box on the 3" grid (NW corner la1/lo0)."""
+    """The rasters of a box on the 3" grid (its first row on la1, its first column on lo0). A pixel's area is (oy - r/1200
+    .. oy - (r + 1)/1200, ox + c/1200 .. ox + (c + 1)/1200): oy, ox from glo90grid (half a pixel north and west of
+    la1, lo0 on the pixel-is-point grid)."""
 
     def __init__(self, la0, lo0, la1, lo1, full=True):
         self.la0, self.lo0, self.la1, self.lo1 = la0, lo0, la1, lo1
+        self.oy, self.ox = gg.top(la1), gg.left(lo0, 1200)
         self.dx = PX_M * max(math.cos(math.radians(0.5 * (la0 + la1))), 0.02)
         self.samp = (PX_M, self.dx)
         W = mosaic("WBM", la0, lo0, la1, lo1)
-        W[v1.island_land(W, la1, lo0)] = 0
+        W[v1.island_land(W, self.oy, self.ox)] = 0
         self.shape = W.shape
         self.water = W > 0
         self.river = W == 3
@@ -180,7 +195,7 @@ class Window:
 
     def frac(self, lat, lon):
         """Fractional row and column (pixel (r, c) spans r..r+1, c..c+1)."""
-        return (self.la1 - lat) * 1200, (lon - self.lo0) * 1200
+        return (self.oy - lat) * 1200, (lon - self.ox) * 1200
 
     @property
     def relief(self):
@@ -481,10 +496,10 @@ def snap_one(i, win, near, Dn, claim_q, claim_id):
     dx = win.dx
     rlat, rlon = R_ / 111320, R_ / (111320 * max(math.cos(math.radians(float(lat.mean()))), 0.05))
     H, W = win.shape
-    r0 = max(int((win.la1 - (lat.max() + rlat)) * 1200), 0)
-    r1 = min(int(math.ceil((win.la1 - (lat.min() - rlat)) * 1200)), H)
-    c0 = max(int((lon.min() - rlon - win.lo0) * 1200), 0)
-    c1 = min(int(math.ceil((lon.max() + rlon - win.lo0) * 1200)), W)
+    r0 = max(int((win.oy - (lat.max() + rlat)) * 1200), 0)
+    r1 = min(int(math.ceil((win.oy - (lat.min() - rlat)) * 1200)), H)
+    c0 = max(int((lon.min() - rlon - win.ox) * 1200), 0)
+    c1 = min(int(math.ceil((lon.max() + rlon - win.ox) * 1200)), W)
     if r1 - r0 < 3 or c1 - c0 < 3:
         return None, "edge"
     sl = (slice(r0, r1), slice(c0, c1))
@@ -553,8 +568,8 @@ def snap_one(i, win, near, Dn, claim_q, claim_id):
         return None, "longer"
     k = v1.rdp(X, SIMPLIFY_PX * math.sqrt(PX_M * dx))
     X = X[k]
-    nlat = wo.on_grid(win.la1 - (X[:, 0] / PX_M + r0) / 1200)
-    nlon = wo.on_grid(win.lo0 + (X[:, 1] / dx + c0) / 1200)
+    nlat = wo.on_grid(win.oy - (X[:, 0] / PX_M + r0) / 1200)
+    nlon = wo.on_grid(win.ox + (X[:, 1] / dx + c0) / 1200)
     nlat[0], nlon[0], nlat[-1], nlon[-1] = lat[0], lon[0], lat[-1], lon[-1]
     return (nlat, nlon, old_share, new_share, L_old, L_new), "moved"
 

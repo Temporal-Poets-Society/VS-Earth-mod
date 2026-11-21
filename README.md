@@ -1,6 +1,6 @@
-# Earth 2.1.4 — Vintage Story 1.22
+# Earth 2.2.0 — Vintage Story 1.22
 
-**2.1.4 (17 November 2026).** Earth 2.0 is one mod and makes new worlds. Worlds from older Earth versions (0.x, 1.x and
+**2.2.0 (21 November 2026).** Earth 2.0 is one mod and makes new worlds. Worlds from older Earth versions (0.x, 1.x and
 the 2.0.0 release candidates) are not supported: start a new world. From 2.0.0 on, saves are kept working. 2.0.1 makes
 vanilla rocks the Earth tab's default, takes rain and storm frequency off the world screen, joins the two canal switches,
 reads start coordinates pasted from Google Maps, adds downloading the GLO-90 heights before a world starts, and lets
@@ -11,7 +11,12 @@ read Earth's world options (the World height slider runs 256 to 1024); 2.1.3 kee
 colour map instead of 7 and has them step aside past the game's limit of 40 (the crash on joining with many plant
 mods), and new worlds draw each lake at its own level; 2.1.4 knows the current Fauna of the Stone Age and Floral
 Zones versions, supports Moschidae's musk deer, and gives the steppe bison (with the extinct animals) and the domestic
-dog their ranges. What it brings over 1.0.x,
+dog their ranges; 2.2.0 gives new worlds lakes and rivers on GLO-90's own grid, rivers that end at the sea, streams at 1:25
+and 1:10, River width and Smallest stream on the Earth tab, lakes at their real depths and the lakes of 1318 (Texcoco, the
+Aral at its 14th-century low, the Salton Sea dry), soil from the real soil map (realistic tiers by default), the game's
+rock layers and ores below the real ground and a finer map for regional rock, brings fish to lakes and rivers above sea
+level in every world, takes ground columns and Earth's ore maps off the world screen, and stops a new world that can't
+have a data file it needs instead of making it without. What it brings over 1.0.x,
 and every earlier version, is in
 [CHANGELOG.md](CHANGELOG.md).
 
@@ -26,9 +31,11 @@ its walls), at a scale from 1:200 to 1:5.
   source spilled into the sea make the sea climb and flood the map), on the server and every client. Sea is
   recommended.
 - **Data:** the first start of a server (or a single-player game) downloads Earth's data from GitHub once per computer:
-  about 290 MB, 170 MB more of ground data for worlds with ground columns, and the GLO-90 land heights with about
-  190 MB of lake, river and dam files beside them (see [Quick start](#quick-start)), and about 58 MB of monthly
-  temperatures for worlds made with 2.1.0 (or opted in). A game client downloads nothing.
+  about 300 MB, and the GLO-90 land heights with about 190 MB of lake, river and dam files beside them and 65 MB of
+  streams for 1:25 and 1:10 worlds (see [Quick start](#quick-start)), about 58 MB of monthly temperatures for worlds made
+  with 2.1.0 (or opted in), 21 MB of soil for worlds with Earth soil (the default from 2.2.0) and 45 MB of rock map for
+  worlds with regional rock (170 MB more of ground data only for experimental ground columns). A game client downloads
+  nothing.
 - **New worlds only:** worlds from Earth versions before 2.0.0 (0.x, 1.x, the release candidates) are not supported:
   start a new world (the author, 15 November 2026). Worlds made with 2.0.0 and later are kept working.
 - **Memory and start:** a 1:10 server peaks at about 5.5 GB while it starts, then holds 4.5 to 4.8 GB; 1:5 peaks at
@@ -62,7 +69,8 @@ layers stay as they were unless you opt in once (see `UpgradeExistingWorld*` bel
 
 Everything comes from free public data (see `earthdata/ATTRIBUTION.txt` and the data releases' READMEs): ETOPO 2022
 (NOAA, public domain), University of Delaware / NCEP / GPCP climate normals (NOAA PSL), Natural Earth lakes (public
-domain), GSHHG shorelines (LGPL), HydroRIVERS (www.hydrosheds.org, free with attribution), and among others
+domain), GSHHG shorelines (LGPL), HydroRIVERS (www.hydrosheds.org, free with attribution), HydroLAKES' lake depths
+(`Depth_avg`, measured for the largest lakes and modelled for the rest; Messager et al. 2016, CC BY 4.0), and among others
 Copernicus GLO-90 land heights (its required notice is also on the Earth tab), OpenStreetMap beaches and canal outlines
 (ODbL), GIRES river intermittence (Messager et al. 2021, CC BY-SA) and Global Dam Watch reservoirs.
 
@@ -83,19 +91,25 @@ Copernicus GLO-90 land heights (its required notice is also on the Earth tab), O
    before 2.0.0 are not supported.
 3. **First start downloads Earth's data** (the server, or the single-player game; a game client downloads nothing), once
    per computer into `VintagestoryData/ModData/earth`, shared by every world and every later Earth version:
-   - about 290 MB of data files from the release `ed-v1` of
+   - about 300 MB of data files from the release `ed-v1` of
      [earth-data](https://github.com/Temporal-Poets-Society/earth-data) into `ModData/earth/data`, before the first
      chunk, each checked against its size and SHA-256;
-   - about 170 MB of 30″ ground sets from the release `egts-v1` of
-     [earth-ground](https://github.com/Temporal-Poets-Society/earth-ground) for worlds with ground columns;
+   - 30″ sets from the release `egts-v1` of
+     [earth-ground](https://github.com/Temporal-Poets-Society/earth-ground) into `ModData/earth/ground`, before a new
+     world's first chunk: the soil map (`global-soilgroup-30s.egts`, 21 MB) for worlds with Earth soil (the default), the
+     rock map (`global-rock-30s-1.egts`, 45 MB) for worlds with regional rock, and about 170 MB of ground sets for worlds
+     with ground columns (experimental, not on the world creation screen in 2.2,
+     [decision 0104](docs/decisions/0104-ground-columns-and-ore-maps-off-the-screen.md));
    - the GLO-90 land heights from the release `egl-v1` of
      [earth-glo90](https://github.com/Temporal-Poets-Society/earth-glo90) into `ModData/earth/glo90`: all of it (8.6 GB)
      by default, starting when the world opens, with its progress in a window (`.earthelevation`); or, on the Earth tab,
      all of it before a new single-player world starts (on its loading screen), each square as the world reaches it, or
      Copernicus's originals (about 71 GB, converted on the machine). Beside the
      heights a new world fetches the release's lake and river outlines, river flow and dam files (about 190 MB:
-     `lakes-glo90-4.bin`, `rivers-outline-glo90-4.bin`, `rivers-flow-glo90-1.bin`, `dams-glo90-3.bin`; worlds made before
-     2.1.1 read `lakes-glo90-2.bin` instead, worlds made with 2.1.1 and 2.1.2 `lakes-glo90-3.bin`).
+     `lakes-glo90-5.bin`, `rivers-outline-glo90-5.bin`, `rivers-flow-glo90-2.bin`, `dams-glo90-4.bin`), and a world at 1:25
+     or 1:10 the streams layer (`streams-glo90-1.bin`, 65 MB). Worlds made before 2.2.0 read the files they were made with:
+     `lakes-glo90-4.bin`, `rivers-outline-glo90-4.bin`, `rivers-flow-glo90-1.bin` and `dams-glo90-3.bin` (before 2.1.1
+     `lakes-glo90-2.bin`, with 2.1.1 and 2.1.2 `lakes-glo90-3.bin`).
 
    Without internet, put the releases' files into those folders by hand (or set `DataRepo` in `earth.json` to a mirror
    or a local folder). A server that can't get the files a world needs stops and says which are missing, rather than
@@ -176,6 +190,10 @@ reach ~85 % of Everest's height, the deep ocean and the Mariana Trench differ li
   ([0054](docs/decisions/0054-animals-as-around-1318.md)). `FaunaRangeProfile` can instead pick natural ranges without
   human impact (PHYLACINE present-natural: lions in Greece, leopards in Latvia) or present-day ranges. Taxa without
   usable evidence are held from natural spawning, and coverage gaps are documented. Unrelated fauna keeps its rules.
+- **Fish**: vanilla's fish (and other mods' water animals) spawn by their depth below their own water's surface, so
+  lakes and rivers above sea level have them; vanilla's rule, written for its lakes at sea level, put them only at or
+  below the sea ([0096](docs/decisions/0096-water-animals-by-depth-below-their-surface.md)). Freshwater fish also spawn in
+  flowing river water and rapids, not only in still water.
 - **Ground plants**: Floral Zones' ground-plant patches are limited to their species' native botanical regions
   (or the pack's floristic region where the species can't be identified); wild crops stay climate-only.
 - **Sea**: salt water down to the real depth; the continental shelves are shallow, the abyss 50–70 blocks deep.
@@ -522,14 +540,16 @@ Dedicated servers set `WorldConfig.PlayStyle` to one of the codes above and put 
 | Sea level | `earthVerticalBudget` | 110 | `110`, `128` or `160` blocks below sea (at most half the world height), independent of world height |
 | GLO-90 land heights | `earthGlo90Download` | release | `release` or `copernicus`: every GLO-90 square is downloaded when the new world first opens (Earth's data release, 8.6 GB, or Copernicus's originals, about 71 GB converted here), squares already on the machine skipped; `needed`: each square as the world reaches it. A world without the key downloads as needed |
 | Mountain heights | `earthHeightCurve` | log1000 | `log1000`, `log250`, `log500`, `log2000` or `linear`. Smaller log values exaggerate lowlands and compress high mountains; linear preserves proportions |
-| Summit height correction | `earthSummitCorrection` | 3000 | `off` or minimum surveyed elevations `1000` through `8000` in 1,000 m steps. Corrects listed peaks at or above that real elevation; excluded peaks do not narrow qualifying peaks' correction footprints. The finer terrain-detail layer stays active. Saved at creation; older saves keep all previously eligible peaks |
+| Summit height correction | `earthSummitCorrection` | 3000 | not on the tab from 2.2.0 (EA-0204, [decision 0039](docs/decisions/0039-summit-correction-cutoff.md)): new worlds take 3000, a world config's value still counts. `off` or minimum surveyed elevations `1000` through `8000` in 1,000 m steps. Corrects listed peaks at or above that real elevation; excluded peaks do not narrow qualifying peaks' correction footprints. The finer terrain-detail layer stays active. Saved at creation; older saves keep all previously eligible peaks |
 | Land heights | `earthElevation` | auto | not on the tab ([decisions 0051, 0053](docs/decisions/0051-glo90-elevation-on-demand.md)): `auto` (as `glo90`) takes dry land's heights from Copernicus GLO-90 (3″, about 90 m), per 1° square as chunks need them, kept in `VintagestoryData/ModData/earth/glo90` for every world on the machine, with the included coarser GLO-90 grid where a square can't be had; rivers, lakes and dams follow GLO-90 too. `glo90coarse`: the included grid; `builtin` (and any other value): the older 2′ heights. Listed peaks at or above the summit cutoff get a narrow lift at GLO-90's own top to their surveyed height (never lowered). `.earthelevation` opens the download dialog |
 | Rock floor | `earthRockFloor` | auto | how far below the lowest ground of each 32 × 32 column the ground turns to plain rock (no caves, ores or lava; mantle only in the bottom layer): `off`, `96`, `128`, `160`, `192` or `256` blocks; `auto` is 160 in worlds taller than 512, none otherwise |
-| Rocks and ground | `earthRocks` | vanilla | `vanilla` (the default from 2.0.1, [decision 0084](docs/decisions/0084-world-screen-2-0-1.md)): the game's rock layers, and Hydrate or Diedrate keeps its own aquifers ([decision 0059](docs/decisions/0059-water-table-and-hod-aquifers.md)); `groundcolumns`: regional rock regions and ground built from real data (soil, sediments in metres, sea-floor sediment; bedrock layers in the Baltic); the first such world on a machine fetches the 30″ ground data (about 172 MB, [earth-ground](https://github.com/Temporal-Poets-Society/earth-ground)); `regional`: rock regions only (`RegionalGeology`) |
-| Ground depth | `earthGroundDepth` | log4000 | ground columns only: how real depth becomes blocks (`log4000`, `log2000`, `terrain`, `linear2000`) |
-| Ores | `earthOreDeposits` | vanilla | `vanilla`: the game's ore deposits, plus Earth's gems (beryl, corundum, garnet, spinel, topaz, tourmaline) and added ores (`earth-gems.json`, `earth-ores.json`, by the game's deposit rules; the author, 15 November 2026: keep them); `maps`: Earth's ore maps (`RegionalOres`, experimental, being reworked). Worlds set up with the earlier single key `earthOres` keep its meaning: `vanilla` is vanilla rocks and ores, `regional` and `groundcolumns` are that rock choice with the ore maps |
+| Rocks and ground | `earthRocks` | vanilla | `vanilla` (the default from 2.0.1, [decision 0084](docs/decisions/0084-world-screen-2-0-1.md)): the game's rock layers, and Hydrate or Diedrate keeps its own aquifers ([decision 0059](docs/decisions/0059-water-table-and-hod-aquifers.md)); `regional`: rock regions only (`RegionalGeology`). Ground columns and their ground depth (`earthGroundDepth`) are off the screen in 2.2: they need more work ([decision 0104](docs/decisions/0104-ground-columns-and-ore-maps-off-the-screen.md)). A world config's `groundcolumns` or the earlier single key `earthOres` gives its rock choice only, unless earth.json's `ExperimentalGroundColumns` is on (below); worlds made with them keep them |
+| Soil | `earthSoil` | realistic | the topsoil ([decision 0105](docs/decisions/0105-earth-soil-over-vanilla-layers.md)). `climate`: the game's own soil from rain and warmth, as every world had before 2.2.0. `vanilla` (Earth soil, vanilla tiers): the real soil map (SoilGrids' 30″ soil groups, `global-soilgroup-30s.egts`, 21 MB, fetched once) in the game's barren, low, medium and high fertility soils. `realistic` (the default, Earth soil, realistic tiers): the same map in five tiers, from barren on the poorest soils (thin soil on rock, sands, peat, salt soils, tropical laterites) to black earth on the steppes' Chernozems. With either Earth soil, desert land has topsoil only where a river floods it, ground above the tree line is barren, and the forest floor drops the soil beneath it. The rocks don't change. Worlds made before keep their soil |
+| Ores | `earthOreDeposits` | vanilla | one value in 2.2, `vanilla`: the game's ore deposits, below the real ground ([decision 0097](docs/decisions/0097-vanilla-deposits-below-the-local-ground.md)), plus Earth's gems (beryl, corundum, garnet, spinel, topaz, tourmaline) and added ores (`earth-gems.json`, `earth-ores.json`, by the game's deposit rules; the author, 15 November 2026: keep them). Earth's ore maps are off the screen ([decision 0104](docs/decisions/0104-ground-columns-and-ore-maps-off-the-screen.md)): a world config's `maps` is no longer read, and only earth.json's `ExperimentalOreMaps` gives them; worlds made with them keep them |
 | Plants and animals | `earthNature` | 1318 | `1318`: plants and animals where they lived around 1318 ([decisions 0049, 0047](docs/decisions/0047-placement-catalogue-and-audit.md)): fruit trees, wild crops and berry bushes by their 1318 range and Earth climate, regional trees, real animal ranges. `vanilla`: placement by climate alone (no regional trees, plant gates or animal ranges). Worlds made before this option read the old `earthAnimals` key; older saves keep vanilla fruit, crop and berry placement |
 | Biomes | `earthBiomes` | earth | `earth`: Earth's biome rules (vegetation zones from the real climate, wetlands, fire openings, ground cover, ground moisture, winter grass, alpine surfaces); `vanilla`: the game's own forest and shrub maps (fed by Earth's climate) and tall grass ([decision 0075](docs/decisions/0075-biomes-back-to-vanilla.md)). Terrain, rivers, coasts, rocks and ores stay Earth's; works with either Plants and animals choice |
+| Smallest stream | `earthSmallestStream` | 1 | the smallest stream drawn, 1 to 100 m³/s ([decision 0098](docs/decisions/0098-rivers-and-streams-by-scale.md)). At 1:25 and finer the streams layer's smallest: 1 (the play styles') draws every stream down to the smallest brooks; a higher value leaves out the smaller headwaters (every stream left still reaches its river), 20 and more the whole layer, leaving the rivers' own streams from 20. At 1:50 and coarser the smallest river drawn, as a one-block stream up to 100 m³/s, never under the river data's 20 (lower values act as 20); the play styles set 40 at 1:50 and 100 at 1:100 and 1:200 (rivers only) |
+| River width | `earthRiverWidth` | 500 | how wide rivers are drawn, as a share of their width at 1:10, 50 to 1000 % in steps of 25 ([decision 0095](docs/decisions/0095-river-width-option.md)). 100 % draws rivers as at 1:10: at least as wide as boats need (a river of 100 m³/s 12 blocks) and as wide as the real river where that is wider; at a coarser scale a higher value draws them that many times as wide in metres. The play styles set 100 % at 1:10, 200 % at 1:25, 300 % at 1:50, 500 % at 1:100 and 700 % at 1:200; changing the Earth size on the tab doesn't move the slider. Worlds made before 2.2.0 keep their rivers |
 | River rapids | `earthRiverRapids` | steep | `steep`: white water at the drops of rivers whose real fall is strong for their size ([decision 0046](docs/decisions/0046-calm-rivers.md)); `off`: no rapids reaches, waterfalls stay |
 | Mountain springs and streams | `earthMountainSprings` | caves | `caves`: vanilla's springs in cave walls only, none in open cliff faces and no mountain-side streams; `streams`: as `caves`, plus a spring at the head of each perennial stream (HydroRIVERS) and seeps where the ground water meets a slope in wet climates; `vanilla`: all of them as the game makes them |
 | Surface ponds | `earthSurfacePonds` | off | `off`: none of vanilla's surface ponds; `wetlands`: only in the mapped bogs, marshes and swamps (GLWD v2), by their share of the ground; `vanilla`: wherever the game digs them. Ponds in caves are the game's in every case |
@@ -574,7 +594,9 @@ Everything that shapes terrain is frozen into the savegame at world creation (`e
 | `RegionalPlants` | true | native ranges for regional ground plants (Floral Zones) in worlds with regional trees; applied at every start |
 | `RegionalGeology` | true | regional rocks and surface-resource eligibility for new worlds; frozen in the save |
 | `GeologyTransitionBlocks` | 96 | half-width of the rock-contact transition zone (0..512); frozen in the save |
-| `RegionalOres` | true | Earth-like ores (rules v3: deposits where the evidence is, coal measures under the coal basins, copper near every start); false: vanilla ore generation on Earth's rocks (clay, peat and salt still follow `RegionalGeology`). Both follow the world's ore settings. Frozen in the save |
+| `RegionalOres` | true | only what `UpgradeExistingWorldOreRules` gives an existing world: its ore maps kept (true) or turned off (false); it turns them on in a world without them only with `ExperimentalOreMaps`. New worlds no longer read it ([decision 0104](docs/decisions/0104-ground-columns-and-ore-maps-off-the-screen.md)) |
+| `ExperimentalOreMaps` | false | EXPERIMENTAL, for development: Earth's ore maps (rules v3: deposits where the evidence is, coal measures under the coal basins, copper near every start) in every new world instead of the game's deposits (the world config's Ores, always `vanilla`, isn't read); said in the server log. Off the world creation screen in 2.2 ([decision 0104](docs/decisions/0104-ground-columns-and-ore-maps-off-the-screen.md)) |
+| `ExperimentalGroundColumns` | false | EXPERIMENTAL, for development: ground columns (soil, sediments in metres, sea-floor sediment; bedrock layers in the Baltic; the 30″ ground data, about 172 MB, fetched once) in new worlds whose rock is regional (the tab's `regional`, or `groundcolumns` in a world config), with the world config's `earthGroundDepth` (`log4000`, `log2000`, `terrain`, `linear2000`); said in the server log. Replaces `GroundColumnsPrototype`, no longer read. Off the world creation screen in 2.2 |
 | `Ores` | see [ores](docs/regional-ores-implementation.md) | ore tuning (background/hotspot chance, frequency, size, depth, the weights of the background and real-data maps, ore-body ramps and richness, per-resource overrides); frozen in the save; invalid values fall back to the defaults with an error in the log |
 | `RegionalFauna` | true | range checks for supported optional fauna in new worlds; frozen in the save |
 | `FaunaRangeProfile` | natural | `natural` (ranges without human impact) or `current` (present-day ranges where known); frozen in each world from 0.17.0-pre.12 on, applied on restart in older saves |
@@ -781,8 +803,9 @@ Every version's changes are in [CHANGELOG.md](CHANGELOG.md).
   "HD" terrain file for bigger worlds, or boost the relief detail (`DetailScale`).
 - **Mountain glaciers** outside Greenland and Antarctica (Alps, Himalaya, Alaska) aren't in ETOPO's ice data; the
   snow line from the climate covers them with snow, but there are no glacier tongues reaching down the valleys.
-- **Regional data is coarse**: rocks come from 0.5° cells (~280 blocks at 198 m per block) with a reviewed profile only
-  for the Baltic interior and a few chalk areas; plant ranges are whole botanical countries (a US state, a Chinese
+- **Regional data is coarse**: rocks come from 0.5° cells (~280 blocks at 198 m per block) with reviewed profiles for the
+  Baltic interior, a few chalk areas and, from geology rules 3, 38 drawn envelopes (ophiolites, layered intrusions,
+  oceanic islands, granite districts; [decision 0101](docs/decisions/0101-geology-rules-3.md)); plant ranges are whole botanical countries (a US state, a Chinese
   province); animal ranges are ~96 km cells. Ore evidence is still densest where national surveys are open (USA,
   Europe, Australia); elsewhere an authored best-guess layer of 480 well-known districts (positions from general
   knowledge, ±10–30 km), the host-rock background and geological priors carry the supply. The USGS mineral-industry

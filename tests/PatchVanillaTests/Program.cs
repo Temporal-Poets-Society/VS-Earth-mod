@@ -34,7 +34,7 @@ static partial class Checks
     static int checks, run;
     static void Check(bool ok, string message) { checks++; if (!ok) throw new Exception("FAILED: " + message); }
     /// <summary>World generation's nine tables and the runtime ones.</summary>
-    static int Tables => 9 + RuntimeTables.Length;
+    static int Tables => 11 + RuntimeTables.Length;
 
     static (PatchVanilla Pv, Harmony Harmony, List<string> Lines) Bind(IEnumerable<Spec> table)
     {
@@ -323,7 +323,8 @@ static partial class Checks
         story.Pv.Release();
         story.Harmony.UnpatchAll(story.Harmony.Id);
         var tables = new (string Name, System.Func<Spec[]> Table)[] { ("plants", PatchVanilla.PlantsTable), ("placement", PatchVanilla.PlacementTable),
-            ("sea-level deposits", PatchVanilla.SealevelTable), ("lapse", PatchVanilla.ClimateLapseTable), ("fauna", PatchVanilla.FaunaTable), ("dungeons", PatchVanilla.DungeonTable) };
+            ("sea-level deposits", PatchVanilla.SealevelTable), ("lapse", PatchVanilla.ClimateLapseTable), ("fauna", PatchVanilla.FaunaTable), ("dungeons", PatchVanilla.DungeonTable),
+            ("deposit depths", PatchVanilla.DepositDepthsTable) };
         foreach (var (name, table) in tables)
         {
             var bound = Bind(table());
@@ -333,6 +334,10 @@ static partial class Checks
         }
         Check(EarthPlants.TreeCallSites > 0, "the forest floor's suitability calls are found");
         Check(SealevelDeposits.Hooked, "the sea-level deposits' levels are recorded");
+        DepositDepthChecks();
+        VanillaStrataChecks();
+        CrystallineGalenaChecks();
+        ForestFloorChecks();
         Check(EarthFaunaSystem.RuntimeClimateMethod?.Name == "GetSuitableClimateTemperatureRainfall" && EarthFaunaSystem.RuntimeTmpPos?.FieldType == typeof(Vintagestory.API.MathTools.BlockPos),
             "the fauna probe gets the runtime climate helper and its position field");
         Check(EarthMap.DungeonMapSize.GeneratorRef != null && EarthMap.DungeonMapSize.SizeRef != null, "the tiled dungeons' generator and map size are bound");
@@ -376,6 +381,8 @@ static partial class Checks
         RunRuntime();
         // the colour map budget (ColorMapChecks.cs, EA-0154)
         RunColorMaps();
+        // a chunk without Earth's terrain: the handoff and the refusal's names (TerrainPassChecks.cs, EA-0162)
+        RunTerrainPass();
 
         Console.WriteLine($"PatchVanilla checks: {checks} passed ({Enum.GetValues<Feature>().Length} features in {Tables} tables).");
     }
@@ -398,4 +405,69 @@ sealed class Request : IChunkColumnGenerateRequest
     public ITreeAttribute ChunkGenParams => null;
     public ushort[][] NeighbourTerrainHeight => null;
     public bool RequiresChunkBorderSmoothing => false;
+}
+
+static partial class Checks
+{
+    /// <summary>Decision 0097: the depth rules' arithmetic and the attempts without the world-height factor.</summary>
+    static void DepositDepthChecks()
+    {
+        // a column standing at sea level keeps vanilla's heights exactly; a plateau lifts them by its height above the sea
+        Check(DepositDepth.Sealevel(50, 110, 110) == 50 && DepositDepth.Sealevel(50, 410, 110) == 350 && DepositDepth.Sealevel(50, 80, 110) == 20,
+            "a sea-level deposit lies as deep below the column's ground as below a column at sea level");
+        Check(DepositDepth.Surface((int)(0.6f * 110f), 0.6f, 110, 110) == (int)(0.6f * 110f), "a surface-following deposit at a sea-level column keeps vanilla's height");
+        Check(DepositDepth.Surface((int)(0.6f * 400f), 0.6f, 400, 110) == 356, "on a plateau 400 high it lies 0.4 x 110 below the ground, not 0.4 x 400");
+        Check(DepositDepth.Surface((int)(0.6f * 400f) - 7, 0.6f, 400, 110) == 349, "vanilla's distortion is kept");
+        Check(DepositDepth.Anywhere(512, 512, 110, 110, 1024) == 128 && DepositDepth.Anywhere(512 + 5, 512, 410, 110, 1024) == 433,
+            "an anywhere deposit takes its share of the standard world's 256, lifted, with its distortion");
+        Check(DepositDepth.Anywhere(64, 64, 110, 110, 256) == 64, "a 256-high world at sea level 110 is the standard world");
+        Check(DepositDepth.Sealevel(-30, 400, 110) == -30 && DepositDepth.Sealevel(1, 400, 110) == 1 && DepositDepth.Sealevel(2, 400, 110) == 292,
+            "a height below the standard world's bottom stays there (vanilla skips it there, so here too: saltpeter's band below y 0)");
+        Check(DepositDepth.Anywhere(4, 8, 400, 110, 1024) == -2, "an anywhere deposit whose standard height is below the bottom stays out");
+        Check(Math.Abs(DepositDepth.StandardHeight(160) - 160 * 256.0 / 110) < 1e-9, "the standard world of another sea level");
+        // the attempts: height-scaled variants lose the factor (times sea level / 110), others and a second pass keep theirs
+        var gen = new GenDeposits();
+        var scaled = new DepositVariant { Code = "iron", TriesPerChunk = 2, ScaleWithWorldheight = true };
+        var perArea = new DepositVariant { Code = "surfacecopper", TriesPerChunk = 0.12f, ScaleWithWorldheight = false };
+        gen.Deposits = new[] { scaled, perArea };
+        Check(DepositDepth.TakeOutHeightFactor(gen, 110) == 1 && !scaled.ScaleWithWorldheight && scaled.TriesPerChunk == 2 && perArea.TriesPerChunk == 0.12f,
+            "at sea level 110 a height-scaled deposit keeps its attempts and loses the factor; a per-area one is left alone");
+        Check(DepositDepth.TakeOutHeightFactor(gen, 110) == 0 && scaled.TriesPerChunk == 2, "a second pass changes nothing");
+        var tall = new DepositVariant { Code = "coal", TriesPerChunk = 2.2f, ScaleWithWorldheight = true };
+        gen.Deposits = new[] { tall };
+        Check(DepositDepth.TakeOutHeightFactor(gen, 160) == 1 && Math.Abs(tall.TriesPerChunk - 2.2 * 160 / 110) < 1e-5, "at sea level 160 the attempts follow the thicker bands");
+        Console.WriteLine("  deposit depths: arithmetic and attempts checked");
+    }
+}
+
+static partial class Checks
+{
+    static void FakeStrata(GenRockStrataNew self, IChunkColumnGenerateRequest request) { }
+
+    /// <summary>Decision 0099: the table binds (vanilla's rock layer handler wrapped, its height map field, the region hook) and
+    /// the scratch column's arithmetic.</summary>
+    static void VanillaStrataChecks()
+    {
+        var h = new FakeHandlers();
+        var terrain = h.OnChunkColumnGen[(int)EnumWorldGenPass.Terrain];
+        var strata = System.Runtime.CompilerServices.RuntimeHelpers.GetUninitializedObject(typeof(GenRockStrataNew));
+        terrain.Add(Handler(new object(), nameof(FakeOther)));
+        terrain.Add(Handler(strata, nameof(FakeStrata)));
+        bool wrapped = false;
+        var bound = Bind(PatchVanilla.VanillaStrataTable(h, vanilla => request => { wrapped = true; vanilla(request); }));
+        Check(bound.Lines.Count == 0 && bound.Pv.On(Feature.VanillaStrata), "the vanilla strata table binds without a line: " + string.Join(" | ", bound.Lines));
+        Check(EarthVanillaStrata.HeightMapRef != null, "vanilla's rock layer height map is bound");
+        Check(terrain[1].Target != strata, "vanilla's rock layer handler is replaced in the terrain pass");
+        terrain[1](new Request(0, 0));
+        Check(wrapped, "Earth's handler runs in its place and calls through");
+        bound.Pv.Release();
+        bound.Harmony.UnpatchAll(bound.Harmony.Id);
+        Check(terrain[1].Target == strata, "released, vanilla's handler is back");
+        // the scratch column: sea level plus the relief above the regional surface, within the world
+        Check(VanillaStrataMath.ScratchTop(120, 118, 110, 384) == 112, "a lowland a little above its surroundings stands a little above sea level");
+        Check(VanillaStrataMath.ScratchTop(350, 345, 110, 1024) == 115, "a plateau of ground 350 stands 5 above sea level (its relief), not 240");
+        Check(VanillaStrataMath.ScratchTop(600, 400, 110, 1024) == 310, "a ridge 200 above its surroundings is thinned as a vanilla mountain 200 high");
+        Check(VanillaStrataMath.ScratchTop(40, 300, 110, 384) == 2 && VanillaStrataMath.ScratchTop(1000, 0, 110, 1024) == 1022, "within the world");
+        Console.WriteLine("  vanilla strata: table and arithmetic checked");
+    }
 }

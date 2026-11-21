@@ -234,6 +234,11 @@ namespace EarthMap.Core
         public RiverSnapData RiverSnap2 => riverSources.RiverSnap2;
         /// <summary>0063 (courses rules 4): the side arms on those (rivers-glo90-arms-2.bin), or null.</summary>
         public RiverArmsData RiverArms2 => riverSources.RiverArms2;
+        /// <summary>Decision 0092 (courses rules 5): rules 4's reaches moved on GLO-90's pixel-is-point grid
+        /// (rivers-glo90-snap-3.bin), or null.</summary>
+        public RiverSnapData RiverSnap3 => riverSources.RiverSnap3;
+        /// <summary>Decision 0092 (courses rules 5): the side arms on those (rivers-glo90-arms-3.bin), or null.</summary>
+        public RiverArmsData RiverArms3 => riverSources.RiverArms3;
 
         // ------------------------------------------------------------------------------------------ terrain overlays
 
@@ -244,7 +249,9 @@ namespace EarthMap.Core
         /// isn't there or wasn't requested.</summary>
         public CoastData Coasts => view.Terrain.Overlays.Coasts;
         /// <summary>The terminal lakes and their grid patches (lakes.bin), or null when the file isn't there or wasn't requested.</summary>
-        public LakeData TerminalLakes => dataset.TerminalLakes;
+        public LakeData TerminalLakes => dataset.TerminalLakesOf(view.Choice.TerminalLakeFile);
+        /// <summary>Whether this build has a terminal lakes file (1 lakes.bin, 2 lakes-2.bin).</summary>
+        public bool HasTerminalLakes(int file) => dataset.TerminalLakesOf(file) != null;
         /// <summary>The land around lakes eased below their level (shores.bin), or null when the file isn't there or wasn't requested.</summary>
         public ShoreData Shores => dataset.Shores;
         /// <summary>The lakes' tongues past their outlet as land (outlets.bin), or null when the file isn't there or wasn't requested.</summary>
@@ -254,8 +261,22 @@ namespace EarthMap.Core
         /// <summary>Decision 0064: the areas where coasts and waters go back to 1318 (works-1318-2.bin, Works1318Data), or null
         /// when the file isn't there or wasn't requested.</summary>
         public LakeOutlineData Works1318 => dataset.Works1318;
+        /// <summary>The works of 1318's areas a world of these works rules reads: works-1318-3.bin from works rules 5 (decision
+        /// 0092: the canals' areas on GLO-90's pixel-is-point grid), else works-1318-2.bin; null when that file isn't there.</summary>
+        public LakeOutlineData Works1318For(int rules) => rules >= Works1318Data.LakeRules ? dataset.Works1318Lakes
+            : rules >= Works1318Data.PointRules ? dataset.Works1318Point : dataset.Works1318;
+        /// <summary>Decision 0100: each lake's real depth for lake outlines <paramref name="lakeOutlines"/> (lake-depths-1.bin,
+        /// made for lakes-glo90-5.bin), or null when the mod lacks it or it was made for another lakes file.</summary>
+        public LakeDepthData LakeDepthsFor(int lakeOutlines) => dataset.LakeDepths != null && dataset.LakeDepths.Fits(lakeOutlines) ? dataset.LakeDepths : null;
         /// <summary>Decision 0069 rule 8: the rivers GIRES has as non-perennial (NonPerennialData), or null.</summary>
         public NonPerennialData NonPerennial => dataset.NonPerennial;
+        /// <summary>The non-perennial classes made for this course list (DamRemovalData.KeyOf): rivers-nonperennial-2.bin for
+        /// courses rules 4's, rivers-nonperennial-3.bin for rules 5's (decision 0092); null when neither is.</summary>
+        public NonPerennialData NonPerennialFor(ulong courseKey) =>
+            dataset.NonPerennial != null && dataset.NonPerennial.CourseKey == courseKey ? dataset.NonPerennial
+            : dataset.NonPerennial3 != null && dataset.NonPerennial3.CourseKey == courseKey ? dataset.NonPerennial3 : null;
+        /// <summary>Whether any non-perennial classes are installed.</summary>
+        public bool HasNonPerennial => dataset.NonPerennial != null || dataset.NonPerennial3 != null;
         /// <summary>Decision 0070: OpenStreetMap's beaches by material (ShoreMaterialData), or null.</summary>
         public ShoreMaterialData ShoreMaterial => dataset.ShoreMaterial;
 
@@ -294,7 +315,11 @@ namespace EarthMap.Core
         /// Worlds with river ends (EarthParams.RiverEnds) see the grid with the terminal lakes filled (lakes.bin): the revived
         /// Aral Sea, Lop Nur, ... and the natural salt lakes at a filled level.
         /// </summary>
-        public void SetLakeOverlay(bool on) => Select(c => c with { LakeOverlay = on });
+        public void SetLakeOverlay(bool on) => SetLakeOverlay(on, 0);
+
+        /// <summary>The terminal lakes overlay from a file: 2 lakes-2.bin (river ends rules 3, decision 0107: the Aral of 1318),
+        /// else lakes.bin.</summary>
+        public void SetLakeOverlay(bool on, int file) => Select(c => c with { LakeOverlay = on, TerminalLakeFile = file >= 2 ? 2 : 0 });
 
         /// <summary>
         /// Worlds with eased lake shores (EarthParams.LakeShores) see the grid with the shores.bin patches: land around a lake

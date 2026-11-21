@@ -145,9 +145,9 @@ namespace EarthMap
                 }
             }
             mapChunk.YMax = (ushort)yMax;
-            // always an entry: the surface pass tells "nothing flagged" from "terrain made in an earlier session"
-            handoff.PutFlags(cx, cz, flags);
-            if (ramp != null && frozen != true) handoff.PutRamps(cx, cz, ramp);
+            // always an entry, for this column's own chunks (EA-0162): the surface pass tells "nothing flagged" from "not made by
+            // Earth's terrain writer"; a frozen lake's chunk draws no ramps
+            handoff.Put(chunks, cx, cz, flags, frozen != true ? ramp : null);
         }
     }
 }

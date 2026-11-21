@@ -2,10 +2,11 @@
 
 What's easier or harder than in vanilla on Earth, and where to look for what you need.
 
-With the defaults (vanilla rock layers and vanilla ores), the materials you need are where vanilla would put them, and
-progression is vanilla's. What changes is the world around you: real climate, real distances, and plants and animals
-by region. With ground columns or the ore maps, materials lie where the real geology puts them, and Earth adds recipes
-so that every region can make tier-1 refractory bricks.
+With the defaults (vanilla rock layers and vanilla ores), the materials you need are where vanilla would put them,
+below the real ground, and progression is vanilla's. What changes is the world around you: real climate, real
+distances, real soil, and plants and animals by region. Ground columns and Earth's ore maps are experimental and not on
+the world creation screen (see [Settings](Settings)); in worlds that have them, materials lie where the real geology
+puts them, and Earth adds recipes so that every region can make tier-1 refractory bricks.
 
 ## The world itself
 
@@ -18,8 +19,14 @@ so that every region can make tier-1 refractory bricks.
 - **Seeds and animals are regional.** A wild crop grows only where it grew around 1318, so a European start finds spelt,
   rye, flax and turnips but no cassava, peanuts or sunflowers. With **Nature · Chickens everywhere** off, the Americas
   and Australia have no chickens to give feathers. See [Plants and animals](Plants-and-animals).
-- **Soil in dry lands.** Semi-arid land, the Mediterranean and the steppes keep farmable soil instead of turning to sand.
-  True deserts are sand and gravel.
+- **Soil is real.** With Earth soil, realistic tiers (the default), farmland follows the real soil map: black earth on
+  the steppes, medium soil over most of central Europe, poor soil on the podzols of the northern forests, barren ground
+  on thin soil over rock, sands, peat and tropical laterites. Deserts are bare except where a river floods them (the
+  Nile, Mesopotamia).
+  With **Terrain · Soil: Climate only**, semi-arid land, the Mediterranean and the steppes keep farmable soil instead of
+  turning to sand, and true deserts are sand and gravel. See [Rocks, soil and ores](Rocks-soil-and-ores#soil).
+- **Ore under highlands.** Vanilla's rock layers and deposits lie as deep below a plateau as below a lowland, so a
+  highland start has a lowland's ores within reach (under Addis Ababa, Mexico City or Lhasa too).
 
 ## Flint
 
@@ -35,10 +42,11 @@ gravel gives flint as in vanilla, everywhere.
 **Vanilla:** refractory bricks, which you need for the coke oven and the cementation furnace, take crushed bauxite at
 every tier. Vanilla places bauxite in many places.
 
-**Earth:** with **ground columns** or **Earth ore maps**, bauxite lies only where it really forms. With ground columns
-that is tropical laterite and the red terra rossa on warm limestone (a yearly mean of 12 °C or more); with the ore maps
-on vanilla or regional rock, shallow lenses in the real bauxite districts. Most of the world has none. So those worlds
-get extra recipes, with real historical substitutes:
+**Earth:** in worlds with **ground columns** or **Earth's ore maps** (both experimental, off the world creation
+screen), bauxite lies only where it really forms. With ground columns that is tropical laterite and the red terra
+rossa on warm limestone (a yearly mean of 12 °C or more); with the ore maps on vanilla or regional rock, shallow lenses
+in the real bauxite districts. Most of the world has none. So those worlds get extra recipes, with real historical
+substitutes:
 
 | Recipe | Ingredients | Gives |
 |---|---|---|
@@ -61,8 +69,8 @@ get extra recipes, with real historical substitutes:
   still mean a journey.
 - Vanilla's own recipes, bauxite's included, work in every world.
 
-In worlds with vanilla or regional rocks and vanilla ores, the extra recipes aren't there: bauxite is where vanilla puts
-it.
+In worlds with vanilla or regional rocks and vanilla ores, which is every world the world creation screen makes, the
+extra recipes aren't there: bauxite is where vanilla puts it.
 
 ## Volcanic-ash mortar
 
@@ -77,10 +85,12 @@ laterite. Vanilla's fire clay under coal seams is there as in any world.
 
 ## Ores
 
-- **Vanilla ore deposits, plus Earth's gems and ores** (the default): vanilla's deposits, plus Earth's copper, lead,
-  zinc and platinum ores, wolframite, pyrite and gems. See [Rocks, soil and ores](Rocks-soil-and-ores).
-- **Earth ore maps (experimental):** ores are richest in their real districts; copper, tin, iron and coal also occur,
-  more thinly, in suitable rock everywhere. This choice is being reworked.
+- **Vanilla ore deposits, plus Earth's gems and ores** (the Earth tab's only Ores value): vanilla's deposits at their
+  depth below the real ground, plus Earth's copper, lead, zinc and platinum ores, wolframite, pyrite and gems. With
+  regional rock, galena and its silver also lie in granite, slate, phyllite, gneiss and schist. See
+  [Rocks, soil and ores](Rocks-soil-and-ores).
+- **Earth's ore maps** (experimental, not on the world creation screen): ores are richest in their real districts;
+  copper, tin, iron and coal also occur, more thinly, in suitable rock everywhere. They are being reworked.
 
 ## Where to look
 

@@ -1,0 +1,371 @@
+
+== Global land sample at 0.1 deg (84 N .. 56 S), weights cos(lat); missing optional tiles: none
+sampled in 164 s; land weight 1126085, sea/no-soil weight 2635277
+
+-- glaciated valley (NearRiver): recipe (share of glaciated land)
+    42.52 %  till
+    24.10 %  thin-till
+    11.32 %  peat-on-till
+     4.69 %  lakeclay
+     4.41 %  alluvium-on-till
+     3.80 %  outwash
+     2.84 %  lake
+     2.11 %  dune-on-till
+     1.77 %  ice
+     1.40 %  loess-on-till
+     0.98 %  marine-on-till
+     0.02 %  alluvium
+     0.02 %  tephra
+     0.01 %  playa
+
+-- land: alluvial recipe but NO alluvial-class block (sub-layers < 0.5 m) (share of land)
+     0.23 %  alluvium
+     0.04 %  alluvium-on-till
+     0.00 %  delta
+     0.00 %  fan
+
+-- land: alluvial recipes (share of land)
+    12.69 %  alluvium
+     0.77 %  alluvium-on-till
+     0.08 %  delta
+     0.04 %  fan
+
+-- land: basement source (share of land)
+    99.75 %  global-crust1
+     0.25 %  baltic-basement
+
+-- land: bedrock era (Chorlton) (share of land)
+    34.28 %  Cenozoic
+    18.89 %  Mesozoic
+    15.94 %  Paleozoic
+     6.62 %  Archean
+     4.91 %  Paleoproterozoic
+     4.36 %  (none)
+     2.93 %  Neoproterozoic
+     2.07 %  Mesoproterozoic
+     1.77 %  Mesozoic-Cenozoic
+     1.43 %  Precambrian-Phanerozoic
+     1.35 %  Precambrian
+     1.33 %  Paleozoic-Mesozoic
+     1.23 %  Paleoproterozoic-Mesoproterozoic
+     1.21 %  Archean-Paleoproterozoic
+     1.05 %  Mesoproterozoic-Neoproterozoic
+     0.57 %  Proterozoic
+     0.07 %  Phanerozoic
+     0.00 %  Eoarchean
+
+-- land: column holds (1:10 curve, interfluve) (share of land)
+    28.02 %  saprolite class (kaolin/fire clay)
+    23.22 %  sand or gravel within top 3 blocks (panning flint)
+    20.82 %  raw clay (any depth in ground column)
+    19.86 %  raw clay within top 4 blocks
+    19.42 %  laterite class (bauxite)
+    13.31 %  alluvial class (placers)
+     3.30 %  no loose cover block at all (soil straight on rock/hand-off)
+     3.26 %  peat class (bog iron)
+     1.04 %  gravel within top 3 blocks
+     0.96 %  playa class (salt flats)
+     0.84 %  outwash class (placers)
+
+-- land: cover unit source (share of land)
+    48.63 %  GUM sediment unit (mapped cell)
+    43.81 %  R* (no sediment mapped; GLiM rock class)
+     3.48 %  GUM unit borrowed (GLiM su, nearest GUM)
+     2.98 %  GUM unit (other fill)
+     0.95 %  GLiM-derived special (Wu/Iy/Pu/Du)
+     0.15 %  none
+
+-- land: era -> age class (share of land)
+    34.28 %  Cenozoic
+    21.92 %  Precambrian
+    18.89 %  Mesozoic
+    15.94 %  Paleozoic
+     4.61 %  Unknown
+     4.36 %  no era
+
+-- land: frozen cover (permafrost >= 50 %) (share of land)
+    10.19 %  frozen
+
+-- land: glaciation (share of land)
+    82.62 %  never (or S. Hemisphere)
+    11.87 %  lgm
+     5.51 %  older
+
+-- land: province (Hasterok) (share of land)
+    26.11 %  orogenic belt
+    19.98 %  volcanic arc
+    18.67 %  shield
+    11.52 %  craton
+     7.31 %  accretionary complex
+     3.40 %  passive margin
+     2.83 %  wide rift
+     2.51 %  narrow rift
+     2.14 %  back-arc basin
+     1.87 %  magmatic province
+     1.62 %  basin
+     0.92 %  ophiolite complex
+     0.88 %  foredeep basin
+     0.18 %  oceanic crust
+     0.06 %  (none)
+     0.01 %  oceanic back-arc basin
+
+-- land: recipe (share of land)
+    12.69 %  alluvium
+    12.36 %  saprolite
+    11.01 %  residual
+     7.79 %  till
+     6.63 %  loess
+     5.27 %  dune
+     5.17 %  colluvium
+     4.76 %  thin
+     4.46 %  residual-karst
+     4.19 %  thin-till
+     2.86 %  sediment
+     2.14 %  sand-sheet
+     2.11 %  lake
+     2.08 %  calcrete
+     2.04 %  residual-mafic
+     1.97 %  peat-on-till
+     1.58 %  peat
+     1.15 %  tephra
+     1.07 %  laterite
+     1.01 %  saprolite-mafic
+     0.96 %  playa
+     0.94 %  sand-on-saprolite
+     0.92 %  coastal
+     0.87 %  outwash
+     0.86 %  lakeclay
+     0.79 %  gypcrete
+     0.77 %  alluvium-on-till
+     0.54 %  loess-on-till
+     0.36 %  ice
+     0.29 %  marine
+     0.17 %  marine-on-till
+     0.08 %  delta
+     0.07 %  dune-on-till
+     0.04 %  fan
+
+-- land: recipe decided by (share of land)
+    59.21 %  unit map (GUM/R* code)
+    40.79 %  region rule (soil group / glaciation / place)
+
+-- land: region-rule recipe (from unit-map recipe) (share of land)
+    10.64 %  saprolite (unit map: residual)
+     3.35 %  thin (unit map: residual)
+     2.61 %  thin-till (unit map: residual)
+     2.26 %  loess (unit map: dune)
+     1.53 %  loess (unit map: residual)
+     1.45 %  sand-sheet (unit map: residual)
+     1.32 %  saprolite (unit map: sediment)
+     1.07 %  calcrete (unit map: residual)
+     1.02 %  thin-till (unit map: colluvium)
+     1.01 %  saprolite-mafic (unit map: residual-mafic)
+     0.94 %  sand-on-saprolite (unit map: dune)
+     0.94 %  laterite (unit map: residual)
+     0.82 %  peat-on-till (unit map: till)
+     0.77 %  alluvium-on-till (unit map: alluvium)
+     0.68 %  sand-sheet (unit map: sediment)
+     0.55 %  thin (unit map: residual-mafic)
+     0.49 %  thin (unit map: colluvium)
+     0.44 %  gypcrete (unit map: residual)
+     0.44 %  loess (unit map: colluvium)
+     0.42 %  tephra (unit map: residual)
+     0.40 %  calcrete (unit map: sediment)
+     0.36 %  thin (unit map: sediment)
+     0.35 %  thin-till (unit map: residual-mafic)
+     0.32 %  saprolite (unit map: colluvium)
+     0.32 %  peat-on-till (unit map: peat)
+     0.31 %  calcrete (unit map: residual-karst)
+     0.30 %  loess-on-till (unit map: dune)
+     0.29 %  alluvium (unit map: residual)
+     0.28 %  loess (unit map: residual-mafic)
+     0.28 %  peat (unit map: sediment)
+     0.27 %  peat (unit map: alluvium)
+     0.27 %  alluvium (unit map: sediment)
+     0.26 %  loess (unit map: sediment)
+     0.24 %  loess-on-till (unit map: loess)
+     0.23 %  peat-on-till (unit map: alluvium)
+     0.22 %  gypcrete (unit map: sediment)
+     0.21 %  peat (unit map: residual)
+     0.20 %  thin-till (unit map: residual-karst)
+     0.20 %  calcrete (unit map: colluvium)
+     0.20 %  peat-on-till (unit map: colluvium)
+
+-- land: regional geology (share of land)
+    71.87 %  maps rock (hand-off below cover)
+    28.13 %  unknown/covered (province template, CRUST1 + Chorlton)
+
+-- land: soil group (share of land)
+    18.03 %  Cambisols
+     8.87 %  Acrisols
+     8.77 %  Ferralsols
+     8.75 %  Arenosols
+     8.62 %  Luvisols
+     7.73 %  Leptosols
+     5.61 %  Cryosols
+     3.62 %  Podzols
+     3.33 %  Regosols
+     3.14 %  Kastanozems
+     3.01 %  Calcisols
+     2.97 %  Histosols
+     2.82 %  Vertisols
+     2.36 %  Chernozems
+     1.91 %  Albeluvisols
+     1.72 %  Phaeozems
+     1.69 %  Fluvisols
+     1.35 %  Gleysols
+     1.20 %  Lixisols
+     1.05 %  Gypsisols
+     0.87 %  Andosols
+     0.76 %  Solonetz
+     0.61 %  Solonchaks
+     0.48 %  Nitisols
+     0.33 %  Alisols
+     0.27 %  Planosols
+     0.12 %  Plinthosols
+     0.00 %  Durisols
+     0.00 %  Umbrisols
+
+-- land: soil source (share of land)
+    99.53 %  30" SoilGrids
+     0.25 %  Baltic 0.01 deg
+     0.22 %  2' SoilGrids
+
+-- land: thickness capped at recipe maxMetres (share of land)
+     5.07 %  residual (20 m)
+     4.43 %  thin (2 m)
+     3.80 %  residual-karst (4 m)
+     3.79 %  dune (60 m)
+     3.43 %  alluvium (80 m)
+     2.29 %  colluvium (15 m)
+     2.07 %  saprolite (60 m)
+     1.73 %  sand-sheet (30 m)
+     1.69 %  calcrete (10 m)
+     1.59 %  thin-till (8 m)
+     0.84 %  residual-mafic (25 m)
+     0.75 %  gypcrete (10 m)
+     0.53 %  laterite (50 m)
+     0.24 %  sediment (80 m)
+     0.14 %  tephra (40 m)
+     0.09 %  saprolite-mafic (60 m)
+     0.07 %  sand-on-saprolite (60 m)
+     0.03 %  ice (20 m)
+
+-- land: thickness rule applied (share of land)
+     5.22 %  sand-sea
+     5.17 %  shield-cover
+
+-- land: thickness source (share of land)
+    94.86 %  30" Shangguan
+     4.77 %  typicalMetres (rule)
+     0.32 %  2' Shangguan
+     0.05 %  Latvia 250 m (national)
+
+-- sea/no-soil: cover unit (share of sea/no-soil)
+    88.43 %  none (beyond fill)
+     5.96 %  R* rock code
+     1.11 %  GUM unit alluvium
+     0.90 %  GUM unit sediment
+     0.65 %  GUM unit coastal
+     0.63 %  GUM unit ice
+     0.55 %  GUM unit till
+     0.49 %  GUM unit colluvium
+     0.38 %  GUM unit lake
+     0.26 %  GUM unit dune
+     0.23 %  GUM unit marine
+     0.08 %  GUM unit loess
+     0.08 %  GUM unit tephra
+     0.07 %  GUM unit peat
+     0.05 %  GUM unit playa
+     0.05 %  GUM unit outwash
+     0.04 %  GUM unit delta
+     0.01 %  GUM unit lakeclay
+     0.00 %  GUM unit fan
+
+-- tropics (|lat|<23.5): recipe (share of tropical land)
+    29.10 %  saprolite
+    17.01 %  alluvium
+    10.89 %  residual
+     7.78 %  dune
+     4.85 %  thin
+     4.25 %  residual-karst
+     3.26 %  sand-sheet
+     2.63 %  laterite
+     2.58 %  residual-mafic
+     2.37 %  sand-on-saprolite
+     2.33 %  sediment
+     2.13 %  peat
+     1.95 %  saprolite-mafic
+     1.90 %  lake
+     1.52 %  colluvium
+     1.42 %  tephra
+     1.25 %  coastal
+     1.23 %  loess
+     0.88 %  playa
+     0.46 %  calcrete
+     0.12 %  delta
+     0.05 %  marine
+     0.01 %  till
+     0.00 %  fan
+     0.00 %  gypcrete
+
+-- valley (NearRiver): column holds (share of land)
+    76.72 %  raw clay
+    76.31 %  alluvial/outwash class
+
+-- valley (NearRiver): recipe (share of land)
+    76.24 %  alluvium
+     7.79 %  till
+     4.19 %  thin-till
+     2.04 %  lake
+     1.97 %  peat-on-till
+     1.58 %  peat
+     0.92 %  coastal
+     0.87 %  outwash
+     0.86 %  lakeclay
+     0.77 %  alluvium-on-till
+     0.65 %  playa
+     0.58 %  tephra
+     0.37 %  dune-on-till
+     0.36 %  ice
+     0.29 %  marine
+     0.24 %  loess-on-till
+     0.17 %  marine-on-till
+     0.08 %  delta
+     0.04 %  fan
+
+-- cover thickness (m) by recipe: weighted p10 / median / p90 / max, share of land
+   alluvium              12.5    36.3    80.0     80.0   12.69 %
+   saprolite             11.3    26.3    60.0     60.0   12.36 %
+   residual               3.5    18.3    20.0     20.0   11.01 %
+   till                   1.8    11.7    37.2    233.7   7.79 %
+   loess                 12.9    28.2    51.6    431.1   6.63 %
+   dune                  26.5    60.0    60.0     60.0   5.27 %
+   colluvium              2.4    13.1    15.0     15.0   5.17 %
+   thin                   2.0     2.0     2.0      2.0   4.76 %
+   residual-karst         1.5     4.0     4.0      4.0   4.46 %
+   thin-till              0.7     5.3     8.0      8.0   4.19 %
+   sediment              10.5    28.2    71.3     80.0   2.86 %
+   sand-sheet            19.6    30.0    30.0     30.0   2.14 %
+   lake                   5.5    23.7    92.5    571.5   2.11 %
+   calcrete               4.8    10.0    10.0     10.0   2.08 %
+   residual-mafic         4.0    20.1    25.0     25.0   2.04 %
+   peat-on-till           1.4    15.3    51.6    196.8   1.97 %
+   peat                   6.0    22.0    40.2    159.0   1.58 %
+   tephra                 0.7    10.3    40.0     40.0   1.15 %
+   laterite              16.1    49.3    50.0     50.0   1.07 %
+   saprolite-mafic        7.9    15.0    55.0     60.0   1.01 %
+   playa                 15.0    77.5   147.4    491.7   0.96 %
+   sand-on-saprolite     25.1    36.3    55.7     60.0   0.94 %
+   coastal               10.0    24.8    80.5    299.7   0.92 %
+   outwash                5.3    20.0    36.8    180.3   0.87 %
+   lakeclay               2.7    18.8    45.1    124.2   0.86 %
+   gypcrete              10.0    10.0    10.0     10.0   0.79 %
+   alluvium-on-till       4.2    21.8    42.1    220.4   0.77 %
+   loess-on-till         12.5    26.6    51.9    143.7   0.54 %
+   ice                    2.3     4.0    17.3     20.0   0.36 %
+   marine                15.0    41.0   117.5    178.0   0.29 %
+   marine-on-till         7.5    12.5    58.2    152.1   0.17 %
+   delta                  4.8    30.0    83.6    113.6   0.08 %
+   dune-on-till          10.7    17.2    32.7     86.8   0.07 %
+   fan                    7.5    17.6    29.5     73.2   0.04 %

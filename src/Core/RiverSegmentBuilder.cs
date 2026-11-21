@@ -17,6 +17,8 @@ namespace EarthMap.Core
         readonly RiverCourses courses;
         readonly Pools[] pools;
         readonly bool[] fadeEnds;
+        /// <summary>Per reach: ends in the sea already, no mouth prolongation (river ends rules 2), or null.</summary>
+        readonly bool[] seaEnds;
         readonly bool geometrySeams;
         /// <summary>Per reach on the last stretch of a river ending in a dry basin: the fade's length and how far below this
         /// reach's end the river ends (null: no such river).</summary>
@@ -30,8 +32,10 @@ namespace EarthMap.Core
         public int[] SegFirst { get; }
         public int[] SegLast { get; }
 
-        public RiverSegmentBuilder(RiverNetwork net, EarthGeometry geo, RiverCourses courses, Pools[] pools, bool[] fadeEnds, bool geometrySeams, int channelRules)
+        public RiverSegmentBuilder(RiverNetwork net, EarthGeometry geo, RiverCourses courses, Pools[] pools, bool[] fadeEnds, bool geometrySeams, int channelRules,
+            bool[] seaEnds = null)
         {
+            this.seaEnds = seaEnds;
             this.net = net;
             this.geo = geo;
             this.courses = courses;
@@ -145,13 +149,16 @@ namespace EarthMap.Core
         /// River mouths: HydroRIVERS lines can end a few km short of the coast in ETOPO (the Daugava stops ~15 blocks before
         /// the Gulf of Riga), so every river ending in the sea or a lake gets prolonged along its last direction (over its last
         /// 24 blocks or more); the terrain only lets it cut through low ground. False for a kept reach with no mouth: one
-        /// flowing on, fading out in a dry basin, ending above sea level outside a lake, or too short or across the seam.
+        /// flowing on, fading out in a dry basin, ending above sea level outside a lake, or too short or across the seam; and
+        /// under river ends rules 2 one that ends in the sea already (its last direction can lead over the land beyond: in a
+        /// trial, the Grand Rhône cut in its estuary ran on 5 km over the delta at 1:100; decision 0093).
         /// </summary>
         bool Mouth(int r, out Seg mouth)
         {
             mouth = default;
             if (pools[r].Next >= 0) return false;
             if (fadeEnds != null && r < fadeEnds.Length && fadeEnds[r]) return false;
+            if (seaEnds != null && r < seaEnds.Length && seaEnds[r]) return false;
             var re = courses.Reaches[r];
             var xs = courses.X[r];
             var zs = courses.Z[r];

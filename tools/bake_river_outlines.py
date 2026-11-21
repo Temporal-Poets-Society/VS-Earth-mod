@@ -51,8 +51,19 @@ Version 3 (Earth 0063 rule 2, rivers-outline-glo90-3.bin). The mask's rivers are
    number of units at every tile width), so the smooth outlines keep their shape.
 Levels, bridges, reservoirs and dam corridors as version 2.
 
+Version 5 (decision 0092, EA-0148, rivers-outline-glo90-5.bin): version 3's rules on GLO-90's pixel-is-point grid
+(tools/glo90grid.py). The mask's cell (r, c) is centred on (lat0 + 1 - r/1200, lon0 + c/cols), not half a cell south-east
+of it, so a tile's first row and column lie on its north and west edges and the strip between its last row (column) and
+its south (east) edge is the south (east) neighbour's first row's (column's). Pass A works out every tile's water as
+version 3 does and keeps its first row and column (the wide and narrow water's contour masks and their pieces' levels) in
+OUTDIR/edges; pass B contours each tile with the south neighbour's first row, the east neighbour's first column and the
+south-east one's first cell beyond its own, the blur fading in from the square's sides (where the pixels' own values
+lie, the same in both tiles), and clips to the square: what reaches over the north and west edges is those neighbours'.
+A piece of the neighbours' cells alone takes their level. The courses, reservoirs and corridors are courses rules 5's
+(dam rules 4). Run with EARTH_GLO90_GRID=point (the default) and --version 5.
+
 Usage: python -I tools/bake_river_outlines.py OUTDIR [workers] [tile-name-filter[,filter...]] [--reservoirs NPZ]
-       [--corridors NPZ] [--version 1|2|3]
+       [--corridors NPZ] [--version 1|2|3|4|5]
 The reservoirs are found first and kept in OUTDIR/reservoirs.npz (delete it to find them again); a filter still finds
 them all. tools/bake_dam_removal.py writes the river pixels of its own reservoirs (reservoirs-dams.npz) in that layout.
 With its corridors.npz beside them (0053 item 19), the corridors are river at their levels (version 2: for worlds with
@@ -73,6 +84,7 @@ from scipy import ndimage as ndi
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from bake_lake_outlines import RAW, DEM, WBM, SOUTH, UNIT, TOL, tile_origin, simplify_ring, lake_bytes, varints  # noqa: E402
+import glo90grid as gg  # noqa: E402
 
 VERSION = 3                         # the newest file (0063 rule 2); 1 without the dam bake's corridors
 UNIT3 = 24000                       # version 3: vertex units per degree (a twentieth of a pixel north-south)
@@ -257,7 +269,7 @@ def init_worker(res, cor, version):
     # version 4 (0069 rule 5): the courses, to trim the river water's short bulges (EARTH_COURSES_NPZ: the flow bake's
     # courses.npz, tools/bake_river_flow.py)
     G["v4"] = version >= 4
-    if G["v4"]:
+    if G["v4"] and os.environ.get("EARTH_TRIM_BULGES") == "1":
         z = np.load(os.environ["EARTH_COURSES_NPZ"])
         for k in ("reach", "lat", "lon", "order", "tsorted"):
             G["c_" + k] = z[k]
@@ -386,6 +398,8 @@ def bridges(wbm, river):
 def tile(path):
     """One mask tile's outlines: a dict with name, n (pieces), blob (brotli), nv (vertices), raw (bytes before brotli),
     px (river pixels), br (bridge pixels, pieces) and, for version 3, the wide and narrow water's counts (stats)."""
+    if G["version"] >= 5:
+        return tile_v5(path)
     return tile_v3(path) if G["version"] >= 3 else tile_v2(path)
 
 
@@ -810,6 +824,254 @@ def tile_v3(path):
                 px=int(river.sum()), br=nbr, stats=st)
 
 
+# ------------------------------------------------------------------------------------------- version 5 (EA-0148)
+
+NONE = -(1 << 30)                   # no level (a cell without water in that mask)
+
+
+def contour_masks(m):
+    """Version 3's contour masks of a tile's water (masks_v3's m) and their pieces' levels: (wk, wide labels, wide levels,
+    nk, narrow labels, narrow levels). wk: the wide water with a pixel of the lakes and sea it touches, corners joined;
+    nk: the narrow water with a pixel of the lakes, sea and wide water it touches, corners joined."""
+    dem, own, river, wide, nar, lakesea = (m[k] for k in ("dem", "own", "river", "wide", "nar", "lakesea"))
+    water = np.where(river | lakesea, -1e9, dem)
+    wk = nk = None
+    wl = nl = None
+    lvw = lvn = None
+    if wide.any():
+        wk, _ = join_corners(wide | (ndi.binary_dilation(wide, structure=EIGHT) & lakesea), water)
+        wl, nw = ndi.label(wk, structure=EIGHT)
+        lvw = levels(wl, nw, own & wide, dem)
+    if nar.any():
+        nk, _ = join_corners(nar | (ndi.binary_dilation(nar, structure=EIGHT) & (lakesea | wide)), water)
+        nl, nn = ndi.label(nar, structure=EIGHT)
+        lvn = levels(nl, nn, own & nar, dem)
+    return wk, wl, lvw, nk, nl, lvn
+
+
+def edge_levels(mask, lab, lv, near):
+    """Per cell of a mask: its piece's level (the nearest piece's, near: a nearest_label map), NONE off the mask."""
+    out = np.full(mask.shape, NONE, np.int64)
+    if mask is None or lab is None:
+        return out
+    out[mask] = lv[near[mask]]
+    return out
+
+
+def pass_a_v5(path):
+    """Pass A: a tile's first row and first column (and their cell (0, 0)) of the wide and narrow contour masks, each cell
+    with its piece's level (decimetres; NONE without water), saved for its north, west and north-west neighbours."""
+    name = os.path.basename(path)
+    lat0, lon0 = tile_origin(path)
+    if lat0 < SOUTH:
+        return name, False
+    m = masks_v3(path)
+    if m is None:
+        return name, False
+    wk, wl, lvw, nk, nl, lvn = contour_masks(m)
+    hp, wp = m["wbm"].shape
+    wlev = np.full((hp, wp), NONE, np.int64)
+    nlev = np.full((hp, wp), NONE, np.int64)
+    if wk is not None:
+        wlev[wk] = lvw[wl[wk]]
+    if nk is not None:
+        nlev[nk] = lvn[nearest_label(nl)[nk]]
+    np.savez_compressed(os.path.join(G["edges"], name.replace(".tif", ".npz")),
+                        w_top=wlev[0], w_left=wlev[:, 0], n_top=nlev[0], n_left=nlev[:, 0])
+    return name, True
+
+
+def neighbour_edge(lat0, lon0, which, key, n):
+    """A neighbour's saved edge (its first row for which="top", first column for "left"), on n cells: by the nearest grid
+    point where its column count differs (across 50, 60, 70, 80, 85°); all NONE where it has no water (or no tile)."""
+    p = os.path.join(G["edges"], tile_name(lat0, lon0).replace(".tif", ".npz"))
+    if lat0 < SOUTH or lat0 > 89 or not os.path.exists(p):
+        return np.full(n, NONE, np.int64)
+    v = np.load(p)[f"{key}_{which}"]
+    if len(v) == n:
+        return v
+    return v[np.minimum(np.floor(np.arange(n) * len(v) / n + 0.5).astype(np.int64), len(v) - 1)]
+
+
+def extended(own_lev, lat0, lon0, key):
+    """A tile's level grid (hp x wp, NONE off the water) with one more row and column: the south neighbour's first row,
+    the east neighbour's first column and the south-east neighbour's first cell (on GLO-90's pixel-is-point grid those lie
+    on the tile's south and east edges)."""
+    hp, wp = own_lev.shape
+    ext = np.full((hp + 1, wp + 1), NONE, np.int64)
+    ext[:hp, :wp] = own_lev
+    ext[hp, :wp] = neighbour_edge(lat0 - 1, lon0, "top", key, wp)
+    ext[:hp, wp] = neighbour_edge(lat0, lon0 + 1, "left", key, hp)
+    ext[hp, wp] = neighbour_edge(lat0 - 1, lon0 + 1, "top", key, 1)[0]
+    return ext
+
+
+def field_v5(mask):
+    """wide_field on the extended grid: the blur fades in over EDGE_TAPER pixels from the square's sides (its first row and
+    column, and the neighbours' row and column beyond), where the field is the pixels' own."""
+    hp1, wp1 = mask.shape
+    f = mask.astype(np.float32)
+    p = int(4 * SIGMA) + 2
+    b = ndi.gaussian_filter(np.pad(f, p, mode="edge"), SIGMA, truncate=4.0)[p:-p, p:-p]
+    iy = np.minimum(np.arange(hp1), np.arange(hp1)[::-1])
+    ix = np.minimum(np.arange(wp1), np.arange(wp1)[::-1])
+    t = np.clip(np.minimum(iy[:, None], ix[None, :]) / EDGE_TAPER, 0, 1).astype(np.float32)
+    return f + t * (b - f)
+
+
+def contour_clip(field, wp, hp, tol):
+    """The 0.5 contour of a tile's extended field (hp + 1 x wp + 1, zero beyond), clipped to the tile's square (padded
+    coordinates 1 .. wp + 1, 1 .. hp + 1: GLO-90's grid points of the tile and of the neighbours' first row and column),
+    then simplified by tol with the vertices on the square's sides (and those next to them) kept: shapely polygons."""
+    z = np.zeros((hp + 3, wp + 3), np.float32)
+    z[1:-1, 1:-1] = field
+    polys, offs = contourpy.contour_generator(z=z, name="serial", fill_type="OuterOffset", corner_mask=False).filled(0.5, 1.5)
+    box = shapely.box(1, 1, wp + 1, hp + 1)
+    out = []
+    for pts, off in zip(polys, offs):
+        g = shapely.Polygon(pts[off[0]:off[1]], [pts[off[i]:off[i + 1]] for i in range(1, len(off) - 1)])
+        if not g.is_valid:
+            g = shapely.make_valid(g)
+        g = shapely.intersection(g, box)
+        for q in shapely.get_parts(g):
+            if q.geom_type != "Polygon" or q.area <= 1e-9:
+                continue
+            rings = []
+            for i, r in enumerate([np.asarray(q.exterior.coords)] + [np.asarray(h.coords) for h in q.interiors]):
+                r = r.copy()
+                for col, hi in ((0, wp + 1), (1, hp + 1)):
+                    r[np.abs(r[:, col] - 1) < 1e-6, col] = 1
+                    r[np.abs(r[:, col] - hi) < 1e-6, col] = hi
+                rr = simplify_ring(r, wp, hp, tol, edge=1.0)
+                if rr is None:
+                    if i == 0:
+                        break
+                    continue
+                rings.append(rr)
+            if rings:
+                pg = shapely.Polygon(rings[0], rings[1:])
+                out.append(pg if pg.is_valid else shapely.make_valid(pg))
+    return [g for q in out for g in shapely.get_parts(q) if g.geom_type == "Polygon" and g.area > 1e-9]
+
+
+def to_units_v5(ring, wp, hp):
+    """A ring in padded coordinates on the pixel-is-point grid as UNIT3 units from the tile's south-west corner."""
+    X = np.round((ring[:, 0] - 1) * UNIT3 / wp).astype(np.int64)
+    Y = np.round((hp + 1 - ring[:, 1]) * UNIT3 / hp).astype(np.int64)
+    q = np.column_stack([X, Y])
+    q = q[np.any(q != np.roll(q, 1, axis=0), axis=1)]
+    return q if len(q) >= 3 else None
+
+
+def level_of(g, lev, wp, hp, cells):
+    """The level of the water a polygon holds: the most common level among the extended grid's water cells it holds
+    (a point on its surface's nearest water cell when it holds none); None without any. cells: (rows, columns) of the
+    grid's water cells."""
+    x0, y0, x1, y1 = g.bounds
+    c0, c1 = max(int(math.floor(x0)) - 1, 0), min(int(math.ceil(x1)) - 1, wp)
+    r0, r1 = max(int(math.floor(y0)) - 1, 0), min(int(math.ceil(y1)) - 1, hp)
+    sub = lev[r0:r1 + 1, c0:c1 + 1]
+    rr, cc = np.nonzero(sub != NONE)
+    if len(rr):
+        inside = shapely.intersects_xy(g, cc + c0 + 1.0, rr + r0 + 1.0)
+        if inside.any():
+            u, n = np.unique(sub[rr[inside], cc[inside]], return_counts=True)
+            return int(u[np.argmax(n)])
+    pt = shapely.point_on_surface(g)
+    if pt.is_empty:
+        return None
+    ar, ac = cells
+    if not len(ar):
+        return None
+    k = int(np.argmin((ar + 1 - pt.y) ** 2 + (ac + 1 - pt.x) ** 2))
+    return int(lev[ar[k], ac[k]])
+
+
+def tile_v5(path):
+    """Version 5 (EA-0148): version 3's pieces on GLO-90's pixel-is-point grid, contoured with the south and east
+    neighbours' first row and column (pass A's edges) and clipped to the tile's square."""
+    name = os.path.basename(path)
+    lat0, lon0 = tile_origin(path)
+    if lat0 < SOUTH:
+        return None
+    m = masks_v3(path)
+    hp, wp = (m["wbm"].shape if m is not None else tifffile.imread(path).shape)
+    own_w = np.full((hp, wp), NONE, np.int64)
+    own_n = np.full((hp, wp), NONE, np.int64)
+    st = dict(wide_px=0, narrow_px=0, joined_px=0, fringe_px=0, pool_px=0, wide_km2=0.0, narrow_km2=0.0, wide_pieces=0,
+              narrow_pieces=0, wide_polys=0, narrow_polys=0, wide_nv=0, narrow_nv=0, margin_pieces=0)
+    nbr, px = (0, 0), 0
+    if m is not None:
+        wk, wl, lvw, nk, nl, lvn = contour_masks(m)
+        if wk is not None:
+            own_w[wk] = lvw[wl[wk]]
+        if nk is not None:
+            own_n[nk] = lvn[nearest_label(nl)[nk]]
+        wide, nar, br, river = m["wide"], m["nar"], m["br"], m["river"]
+        rows_lat = lat0 + 1 - np.arange(hp) / hp
+        px_km2 = (111.32 / hp) * (111.32 / wp) * np.cos(np.radians(rows_lat))
+        st.update(wide_px=int(wide.sum()), narrow_px=int(nar.sum()), joined_px=m["joined"], fringe_px=m["fringe"],
+                  pool_px=m["pool"], wide_km2=float(wide.sum(axis=1) @ px_km2), narrow_km2=float(nar.sum(axis=1) @ px_km2),
+                  wide_pieces=int(wl.max()) if wl is not None else 0, narrow_pieces=int(nl.max()) if nl is not None else 0)
+        nbr = (int(br.sum()), int(ndi.label(br, structure=EIGHT)[1])) if br.any() else (0, 0)
+        px = int(river.sum())
+    wlev = extended(own_w, lat0, lon0, "w")
+    nlev = extended(own_n, lat0, lon0, "n")
+    pieces = []
+    inner = None
+    wmask = wlev != NONE
+    if wmask.any():
+        polys = contour_clip(field_v5(wmask), wp, hp, WIDE_TOL)
+        cells = np.nonzero(wmask)
+        own_levels = set(np.unique(own_w[own_w != NONE]).tolist())
+        for g in polys:
+            lv = level_of(g, wlev, wp, hp, cells)
+            rings = [q for q in (to_units_v5(r, wp, hp) for r in poly_rings(g)) if q is not None]
+            if not rings or lv is None:
+                continue
+            if lv not in own_levels:
+                st["margin_pieces"] += 1
+            st["wide_polys"] += 1
+            st["wide_nv"] += sum(len(r) for r in rings)
+            pieces.append(lake_bytes(int(lv), 0, rings))
+        if polys:
+            u = shapely.union_all(np.array(polys, dtype=object))
+            inner = u.buffer(-OVERLAP)
+            if inner.is_empty:
+                inner = None
+            else:
+                shapely.prepare(inner)
+    nmask = nlev != NONE
+    if nmask.any():
+        out = []
+        for g in contour_clip(nmask.astype(np.float32), wp, hp, TOL):
+            if inner is not None and inner.intersects(g):
+                d = g.difference(inner)
+                out.extend(q for q in getattr(d, "geoms", [d]) if q.geom_type == "Polygon" and q.area > 0.02)
+            else:
+                out.append(g)
+        cells = np.nonzero(nmask)
+        for g in out:
+            lv = level_of(g, nlev, wp, hp, cells)
+            rings = [q for q in (to_units_v5(r, wp, hp) for r in poly_rings(g)) if q is not None]
+            if not rings or lv is None:
+                continue
+            st["narrow_polys"] += 1
+            st["narrow_nv"] += sum(len(r) for r in rings)
+            pieces.append(lake_bytes(int(lv), FLAG_NARROW, rings))
+    nv = st["wide_nv"] + st["narrow_nv"]
+    if not pieces:
+        return dict(name=name, n=0, blob=b"", nv=0, raw=0, px=px, br=nbr, stats=st)
+    raw = varints([len(pieces)]) + b"".join(pieces)
+    return dict(name=name, n=len(pieces), blob=brotli.compress(raw, quality=11, lgwin=22), nv=nv, raw=len(raw), px=px,
+                br=nbr, stats=st)
+
+
+def init_worker_v5(res, cor, version, edges):
+    init_worker(res, cor, version)
+    G["edges"] = edges
+
+
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
     pos, opt = [], {}
@@ -834,14 +1096,38 @@ def main():
     # with corner contacts joined, wide water smooth and narrow pieces flagged
     version = int(opt.get("version", VERSION if cor else 1))
     unit = UNIT3 if version >= 3 else UNIT
+    if (version >= 5) != gg.POINT:
+        raise SystemExit(f"version {version} is for {'the pixel-is-point grid' if version >= 5 else 'the old placement'}: "
+                         f"set EARTH_GLO90_GRID={'point' if version >= 5 else 'cell'}")
     tiles = sorted(p for p in glob.glob(os.path.join(WBM, "*_WBM.tif")) if any(f in os.path.basename(p) for f in filt.split(",")))
     log(f"version {version}: {len(tiles)} tiles, {workers} workers; reservoirs {res}; corridors {cor}")
+    worker_init, worker_args = init_worker, (res, cor, version)
+    if version >= 5:
+        # pass A: every tile's first row and column (a filtered run: the tiles and their neighbours to the south and east)
+        edges = os.path.join(out, "edges")
+        os.makedirs(edges, exist_ok=True)
+        need = set(tiles)
+        if filt:
+            for p_ in tiles:
+                la, lo = tile_origin(p_)
+                for dla, dlo in ((-1, 0), (0, 1), (-1, 1)):
+                    q_ = os.path.join(WBM, tile_name(la + dla, lo + dlo))
+                    if os.path.exists(q_):
+                        need.add(q_)
+        worker_init, worker_args = init_worker_v5, (res, cor, version, edges)
+        n_e = 0
+        with Pool(workers, initializer=worker_init, initargs=worker_args) as pool:
+            for i, (nm, ok) in enumerate(pool.imap_unordered(pass_a_v5, sorted(need), chunksize=4), 1):
+                n_e += ok
+                if i % 2000 == 0:
+                    log(f"pass A: {i}/{len(need)} tiles")
+        log(f"pass A: {n_e} tiles with river water")
     TX, TY = 360, 180
     states = np.full(TX * TY, 255, np.uint8)
     blobs = {}
     npc = nv = nraw = npx = nbp = nbn = 0
     tot = {}
-    with Pool(workers, initializer=init_worker, initargs=(res, cor, version)) as pool:
+    with Pool(workers, initializer=worker_init, initargs=worker_args) as pool:
         for i, r in enumerate(pool.imap_unordered(tile, tiles, chunksize=4), 1):
             if i % 2000 == 0:
                 log(f"{i}/{len(tiles)} tiles")

@@ -19,9 +19,10 @@ reaches, rivers-glo90-arms-2.bin's count) take the class of the first reach down
 Version 1 (all GIRES reaches by position, matched when a world starts) was 9.2 MB; this one is about 20 kB, in the mod.
 
     python -I tools/bake_nonperennial.py rawdata/gires/extract/gires-reaches.npz COURSES.npz earthdata/rivers-nonperennial-2.bin
+    (decision 0092: EARTH_NONPERENNIAL_VERSION=3 with courses rules 5's COURSES.npz gives earthdata/rivers-nonperennial-3.bin)
 COURSES.npz: tools/bake_river_flow.py's courses.npz (the course list's stations, reaches, discharges, key and arms).
 """
-import site, struct, sys
+import os, site, struct, sys
 sys.path.append(site.getusersitepackages())
 import brotli
 import numpy as np
@@ -29,7 +30,8 @@ from scipy.spatial import cKDTree
 
 MIN_Q = 15.0
 MATCH_SHARE, MATCH_KM = 0.02, 8.0
-VERSION = 2
+VERSION = int(os.environ.get("EARTH_NONPERENNIAL_VERSION", "2"))   # 3: rivers-nonperennial-3.bin, on courses rules 5's
+                                                                  # list (decision 0092; the same layout)
 
 
 def xyz(lat, lon):

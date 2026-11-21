@@ -43,6 +43,20 @@ namespace EarthMap.Core
         readonly long id = Interlocked.Increment(ref lastId);
         readonly ConcurrentDictionary<long, Entry> entries = new();
         readonly object evictGate = new();
+
+        /// <summary>
+        /// EA-0193: chunks whose shore-strip bits (<see cref="ShoreStrip(in TerrainModel.Column)"/>, one bit a column, 128
+        /// bytes a chunk) are kept after their columns are dropped: 2 MB of bits, more chunks than a busy server's generation
+        /// front holds between its terrain pass and its last pass. The vegetation and the last pass ask only this of a chunk's
+        /// columns (decision 0070's shore strip); before, a chunk whose columns had been dropped (the queue of a server with
+        /// players exploring holds thousands of columns, the store 256 chunks) was built whole again for it, twice: at 1:10
+        /// 4,434 chunk builds for 1,160 chunks, 6.8 of 39 s on the generation thread.
+        /// </summary>
+        public const int StripCapacity = 16384;
+        readonly ConcurrentDictionary<long, ulong[]> strips = new();
+        readonly ConcurrentQueue<long> stripOrder = new();
+        int stripCount;
+        readonly StripedCounter stripServed = new();
         /// <summary>Entries held, counted here: ConcurrentDictionary.Count takes every lock.</summary>
         int count, peak;
         long clock, evicted, buildTicks;
@@ -111,6 +125,44 @@ namespace EarthMap.Core
         public static TerrainModel.Column Near(TerrainModel model, double x, double z)
             => OnGrid(x, z, out int ix, out int iz) && Of(model) is { } s ? s.Near(ix, iz) : model.GetColumn(x, z);
 
+        /// <summary>Decision 0070's shore strip: a column of the sea's or a big lake's beach with the coast's class, dry
+        /// (no tall grass or land plants grow there). The one test of it, for the column store's bits and its callers.</summary>
+        public static bool ShoreStrip(in TerrainModel.Column c) => c.Beach && c.Shore != ShoreMaterial.None && c.Water == TerrainModel.WaterNone;
+
+        /// <summary>
+        /// <see cref="ShoreStrip(in TerrainModel.Column)"/> of the column <see cref="At(TerrainModel, double, double)"/> gives
+        /// at (x, z), the same answer: from the chunk's columns when stored, else from the chunk's shore-strip bits, kept when
+        /// its columns were built here (<see cref="StripCapacity"/>), else as At does it (the chunk built whole).
+        /// </summary>
+        public static bool OnShoreStrip(TerrainModel model, double x, double z)
+            => OnGrid(x, z, out int ix, out int iz) && Of(model) is { } s ? s.OnShoreStrip(ix, iz) : ShoreStrip(model.GetColumn(x, z));
+
+        /// <summary><see cref="OnShoreStrip(TerrainModel, double, double)"/> at a block position.</summary>
+        public bool OnShoreStrip(int x, int z)
+        {
+            // the bits come from the store's columns, which a sweep thread never reads (Lookup)
+            if ((model.Fine == null || !FineElevation.BuiltInOnly) && strips.TryGetValue(Key(x >> 5, z >> 5), out var bits))
+            {
+                stripServed.Increment();
+                int i = (z & (Side - 1)) * Side + (x & (Side - 1));
+                return (bits[i >> 6] >> (i & 63) & 1) != 0;
+            }
+            return ShoreStrip(At(x, z));
+        }
+
+        /// <summary>Keeps a chunk's shore-strip bits, once; past <see cref="StripCapacity"/> the oldest chunks' go.</summary>
+        void KeepStrip(long key, TerrainModel.Column[] columns)
+        {
+            var bits = new ulong[Area / 64];
+            for (int i = 0; i < Area; i++)
+                if (ShoreStrip(columns[i])) bits[i >> 6] |= 1UL << (i & 63);
+            if (!strips.TryAdd(key, bits)) return;
+            stripOrder.Enqueue(key);
+            if (Interlocked.Increment(ref stripCount) <= StripCapacity) return;
+            while (Volatile.Read(ref stripCount) > StripCapacity && stripOrder.TryDequeue(out long old))
+                if (strips.TryRemove(old, out _)) Interlocked.Decrement(ref stripCount);
+        }
+
         /// <summary>Whether (x, z) is a whole block position, the very number the int converts back to (not -0.0, NaN or out of range).</summary>
         static bool OnGrid(double x, double z, out int ix, out int iz)
         {
@@ -162,6 +214,7 @@ namespace EarthMap.Core
             if (kept == e)
             {
                 filled.Increment();
+                KeepStrip(key, columns);
                 if (Interlocked.Increment(ref count) > Capacity) Evict();
                 // (with several threads adding at once, briefly a few more than the capacity)
                 InterlockedMax(ref peak, Volatile.Read(ref count));
@@ -258,7 +311,12 @@ namespace EarthMap.Core
                 "{11:0.00} µs a column, so the columns not built again saved about {12:0.0} s",
                 asked, asked > 0 ? 100.0 * c.Served / asked : 0, built, c.Direct, c.Filled,
                 c.Failed > 0 ? ", " + c.Failed + " chunk builds failed" : "", c.Evicted, c.Peak, Capacity, c.Peak * ChunkBytes / 1e6,
-                BuildSeconds, perColumn * 1e6, (asked - built) * perColumn);
+                BuildSeconds, perColumn * 1e6, (asked - built) * perColumn)
+                + string.Format(System.Globalization.CultureInfo.InvariantCulture, "; {0:n0} shore-strip answers from the kept bits ({1:n0} chunks' kept)",
+                    stripServed.Value, Volatile.Read(ref stripCount));
         }
+
+        /// <summary>Shore-strip answers given from the kept bits (for tests).</summary>
+        public long StripServed => stripServed.Value;
     }
 }

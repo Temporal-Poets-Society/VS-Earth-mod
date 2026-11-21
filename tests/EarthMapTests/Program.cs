@@ -484,6 +484,65 @@ namespace EarthMap.Tests
                 byte got = h.Inside ? h.Flags : (byte)0;
                 Check(got == kind, $"{name}: {(got == sea ? "sea" : got == land ? "land" : got == Works1318Data.Lake ? "lake" : "as today")} in 1318");
             }
+            CheckLakes1318(geo);
+        }
+
+        /// <summary>
+        /// Decision 0107 (works rules 6, river ends rules 3): works-1318-4.bin answers as works-1318-3.bin wherever rules 5 had an
+        /// area, and adds the lakes of 1318 at their levels (salt where they were) and the Salton Sea as land; lakes-2.bin is
+        /// lakes.bin with the Aral at 29 m, every other lake's patches and record the same.
+        /// </summary>
+        static void CheckLakes1318(EarthGeometry geo)
+        {
+            string root = FindRoot();
+            string p3 = Path.Combine(root, "earthdata", Works1318Data.FileName3), p4 = Path.Combine(root, "earthdata", Works1318Data.FileName4);
+            if (!File.Exists(p3) || !File.Exists(p4)) { Check(false, p4 + " or " + p3 + " is missing"); return; }
+            var l5 = new LakeOutlineLayer(Works1318Data.Read(File.ReadAllBytes(p3)), geo, 16, skipFlags: Works1318Data.SkipFor(Works1318Data.PointRules));
+            var l6 = new LakeOutlineLayer(Works1318Data.Read(File.ReadAllBytes(p4)), geo, 16, skipFlags: Works1318Data.SkipFor(Works1318Data.LakeRules));
+            bool same = true;
+            int n = 0;
+            for (double lat = 51.0; lat <= 53.6; lat += 0.01)
+                for (double lon = 3.4; lon <= 7.2; lon += 0.01)
+                {
+                    var a = l5.At(lat, lon);
+                    if (!a.Inside) continue;
+                    var b = l6.At(lat, lon);
+                    same &= b.Inside && b.Flags == a.Flags && b.Level.Equals(a.Level);
+                    n++;
+                }
+            Check(same && n > 1000, $"works rules 6's file answers as rules 5's inside every area of rules 5 ({n} places in the Netherlands)");
+            const byte lake = Works1318Data.Lake, salt = LakeOutlineData.FlagSalt;
+            foreach (var (name, lat, lon, flags, level) in new (string, double, double, byte, double)[]
+            {
+                ("Lake Texcoco", 19.45, -99.05, lake | salt, 2237), ("Tenochtitlan's island (founded 1325)", 19.4326, -99.1332, lake | salt, 2237),
+                ("Lake Chalco", 19.24, -98.95, lake, 2240), ("Lake Fucino", 42.0, 13.55, lake, 660), ("Lake Copais", 38.46, 23.1, lake, 97),
+                ("the Aral's western basin", 44.9, 58.4, lake | salt, 29), ("Whittlesey Mere", 52.495, -0.2, lake, 1),
+                ("Hachirogata", 39.98, 140.0, lake | salt, 0), ("the Salton Sea", 33.3, -115.8, Works1318Data.Land, 0),
+                ("the Penon de los Banos (a natural island)", 19.4414, -99.0857, 0, 0), ("Muynak, a port of the 1960 Aral", 43.77, 59.03, 0, 0),
+                ("Rome", 41.9, 12.5, 0, 0),
+            })
+            {
+                var h = l6.At(lat, lon);
+                byte got = h.Inside ? h.Flags : (byte)0;
+                Check(got == flags && (flags == 0 || (flags & lake) == 0 || h.Level == level),
+                    $"{name}: {(got == 0 ? "as today" : (got & lake) != 0 ? $"a lake of 1318 at {h.Level} m{((got & salt) != 0 ? ", salt" : "")}" : "land")} in a world of works rules 6");
+                Check(!l5.At(lat, lon).Inside, $"{name}: as today in a world of works rules 5");
+            }
+            string k1 = Path.Combine(root, "earthdata", "lakes.bin"), k2 = Path.Combine(root, "earthdata", LakeData.FileName2);
+            if (!File.Exists(k1) || !File.Exists(k2)) { Check(false, k2 + " or " + k1 + " is missing"); return; }
+            const int w = 360 * 30;
+            LakeData a1, a2;
+            using (var s1 = File.OpenRead(k1)) a1 = LakeData.Read(s1, w);
+            using (var s2 = File.OpenRead(k2)) a2 = LakeData.Read(s2, w);
+            static bool InAral(IslandData.Patch p) => p.Row >= (90 - 47.6) * 30 && p.Row <= (90 - 43.0) * 30 && p.Col >= (180 + 57.8) * 30 && p.Col <= (180 + 62.5) * 30;
+            var rest1 = a1.Patches.Where(p => !InAral(p)).Select(p => (p.Row, p.Col, p.ElevCode, p.Level, p.Flags)).ToList();
+            var rest2 = a2.Patches.Where(p => !InAral(p)).Select(p => (p.Row, p.Col, p.ElevCode, p.Level, p.Flags)).ToList();
+            var aral2 = a2.Lakes.Single(l => l.Name == "Aral Sea");
+            var aralCells = a2.Patches.Count(p => InAral(p) && (p.Flags & EarthData.FlagLake) != 0 && p.Level == 29);
+            Check(rest1.SequenceEqual(rest2), $"lakes-2.bin: the patches away from the Aral as lakes.bin's ({rest2.Count})");
+            Check(a1.Lakes.Length == a2.Lakes.Length && a1.Lakes.Zip(a2.Lakes).All(t => t.First.Name == "Aral Sea" || (t.First.Name == t.Second.Name && t.First.Level == t.Second.Level)),
+                "lakes-2.bin: the same lakes, every one but the Aral at its level");
+            Check(aral2.Level == 29 && aralCells > 300 && aralCells < 600, $"lakes-2.bin: the Aral at {aral2.Level} m, {aralCells} cells of the 2' grid (the western basin)");
         }
 
         /// <summary>
@@ -649,6 +708,20 @@ namespace EarthMap.Tests
                 bool r1 = rules1.At(50 + y / 24000.0, 10 + x / 24000.0).Inside;
                 Check(all && !none && r1 == kept, $"{what}: water with every piece {all}, with no narrow piece {none}, with channel rules 1 {r1} ({kept})");
             }
+            // EA-0179 (decision 0098): coarse river rules (1:50 and coarser) keep a piece under 2 blocks wide only along a drawn
+            // course (the river along it stays; the 1.8-block channel between the wide waters and the canal go, whatever their
+            // flags); wider water stays wherever it is
+            var only = RiverOutlineData.Layer(RiverOutlineData.Read(joins), geo, false, Course, null, true);
+            Check(only.CourseOnlyAt != null && keepAll.CourseOnlyAt == null, "coarse river rules: the course-only rule; none without them");
+            foreach (var (y, x, what, kept) in new[] { (1020, 3000, "the channel between them", false), (1520, 2500, "the canal", false), (520, 3000, "the river along a course", true), (1000, 1000, "the wide water", true) })
+            {
+                bool o = only.At(50 + y / 24000.0, 10 + x / 24000.0).Inside;
+                Check(o == kept, $"coarse river rules: {what} {o} ({kept})");
+            }
+            static bool NoCourse(double lat, double lon) => false;
+            var noCourse = RiverOutlineData.Layer(RiverOutlineData.Read(joins), geo, false, NoCourse, null, true);
+            Check(noCourse.At(50 + 1000 / 24000.0, 10 + 1000 / 24000.0).Inside && !noCourse.At(50 + 520 / 24000.0, 10 + 3000 / 24000.0).Inside,
+                "coarse river rules: with no drawn course, the wide water stays and the narrow river goes");
         }
 
         /// <summary>

@@ -1,0 +1,11 @@
+{
+  "type": "code",
+  "modid": "fishprobe",
+  "name": "Fish probe (Earth test tool)",
+  "description": "Counts fish after world generation around configured places and replays vanilla's worldgen and runtime spawn tests stage by stage (EA-0178). Server only; reads ModConfig/fishprobe.json and stops the server when done. Not for release.",
+  "version": "0.1.0",
+  "side": "Server",
+  "requiredOnClient": false,
+  "requiredOnServer": false,
+  "dependencies": { "game": "" }
+}

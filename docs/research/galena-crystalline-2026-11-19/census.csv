@@ -1,0 +1,67 @@
+run,site,kind,galena per chunk column,galena_nativesilver per chunk column,loose:galena per chunk column,sphalerite per chunk column,rocks within 120 blocks
+main-10,kongsberg,silver-gneiss,0.0,0.0,0.0,5.04,granite 76%; gneiss 21%; schist 3%
+main-10,freiberg,pb-ag-gneiss,0.0,0.0,0.0,22.24,granite 58%; schist 22%; gneiss 20%
+main-10,brokenhill,pb-zn-ag-gneiss,0.0,0.0,0.0,0.0,granite 57%; schist 23%; gneiss 20%
+main-10,sala,pb-ag-marble,0.0,0.0,0.0,35.52,gneiss 53%; granite 43%; kimberlite 4%
+main-10,harz,pb-ag-slate,0.0,0.0,0.0,38.12,granite 42%; shale 26%; sandstone 14%; limestone 11%; claystone 6%
+main-10,pribram,pb-ag-veins,0.0,0.0,0.0,10.88,granite 68%; sandstone 11%; shale 9%; slate 6%; conglomerate 3%; halite 3%
+main-10,linares,pb-granite,4.12,0.0,0.08,25.6,granite 63%; bauxite 31%; sandstone 3%; claystone 2%
+main-10,dartmoor,granite,0.0,0.0,0.0,11.8,granite 57%; gneiss 43%
+main-10,coeurdalene,pb-ag-metasediment,0.0,0.0,0.0,4.08,granite 90%; slate 5%; sandstone 3%
+main-10,riga,control-sediment,0.0,0.0,0.0,45.24,gneiss 47%; sandstone 21%; dolostone 13%; limestone 9%; claystone 8%; halite 2%
+main-10,vienna,control-lowland,0.0,0.0,0.0,118.2,granite 65%; sandstone 14%; shale 10%; slate 8%; conglomerate 4%
+gal-10,kongsberg,silver-gneiss,31.2,0.0,0.0,5.04,granite 76%; gneiss 21%; schist 3%
+gal-10,freiberg,pb-ag-gneiss,0.0,0.0,0.0,22.24,granite 58%; schist 22%; gneiss 20%
+gal-10,brokenhill,pb-zn-ag-gneiss,56.32,0.0,0.12,0.0,granite 57%; schist 23%; gneiss 20%
+gal-10,sala,pb-ag-marble,21.72,0.0,0.0,35.52,gneiss 53%; granite 43%; kimberlite 4%
+gal-10,harz,pb-ag-slate,0.0,0.0,0.0,38.12,granite 42%; shale 26%; sandstone 14%; limestone 11%; claystone 6%
+gal-10,pribram,pb-ag-veins,0.0,0.0,0.0,10.88,granite 68%; sandstone 11%; shale 9%; slate 6%; conglomerate 3%; halite 3%
+gal-10,linares,pb-granite,29.92,0.0,0.08,25.6,granite 63%; bauxite 31%; sandstone 3%; claystone 2%
+gal-10,dartmoor,granite,0.0,0.0,0.0,11.8,granite 57%; gneiss 43%
+gal-10,coeurdalene,pb-ag-metasediment,13.04,0.0,0.0,4.08,granite 90%; slate 5%; sandstone 3%
+gal-10,riga,control-sediment,0.0,0.0,0.0,45.24,gneiss 47%; sandstone 21%; dolostone 13%; limestone 9%; claystone 8%; halite 2%
+gal-10,vienna,control-lowland,0.0,0.0,0.0,118.2,granite 65%; sandstone 14%; shale 10%; slate 8%; conglomerate 4%
+main-100,kongsberg,silver-gneiss,0.0,0.0,0.0,156.64,granite 63%; gneiss 19%; schist 17%
+main-100,freiberg,pb-ag-gneiss,0.0,0.0,0.0,14.2,granite 64%; gneiss 19%; bauxite 12%; schist 6%
+main-100,brokenhill,pb-zn-ag-gneiss,0.0,0.0,0.0,62.28,granite 71%; sandstone 8%; bauxite 8%; claystone 5%; gneiss 4%; limestone 4%
+main-100,sala,pb-ag-marble,0.0,0.0,0.0,82.56,gneiss 62%; granite 38%
+main-100,harz,pb-ag-slate,27.48,0.0,0.0,0.0,granite 52%; shale 22%; sandstone 11%; limestone 9%; claystone 5%
+main-100,pribram,pb-ag-veins,0.0,0.0,0.0,0.0,granite 52%; sandstone 26%; shale 11%; slate 7%; conglomerate 4%
+main-100,linares,pb-granite,5.44,0.08,0.0,0.0,granite 67%; sandstone 11%; limestone 9%; shale 7%; claystone 5%
+main-100,dartmoor,granite,0.0,0.0,0.0,23.84,granite 52%; gneiss 38%; sandstone 7%
+main-100,coeurdalene,pb-ag-metasediment,108.64,0.0,0.44,2.0,granite 68%; sandstone 15%; shale 7%; slate 6%; conglomerate 3%
+main-100,riga,control-sediment,330.12,0.0,0.4,9.92,gneiss 41%; sandstone 22%; dolostone 18%; limestone 10%; claystone 9%
+main-100,vienna,control-lowland,0.36,0.0,0.0,0.0,granite 74%; sandstone 11%; slate 6%; shale 5%; conglomerate 3%
+gal-100,kongsberg,silver-gneiss,9.8,0.0,0.0,155.8,granite 63%; gneiss 19%; schist 17%
+gal-100,freiberg,pb-ag-gneiss,90.84,0.16,0.08,14.2,granite 64%; gneiss 19%; bauxite 12%; schist 6%
+gal-100,brokenhill,pb-zn-ag-gneiss,0.44,0.0,0.0,62.28,granite 71%; sandstone 8%; bauxite 8%; claystone 5%; gneiss 4%; limestone 4%
+gal-100,sala,pb-ag-marble,127.32,0.12,0.08,82.56,gneiss 62%; granite 38%
+gal-100,harz,pb-ag-slate,48.84,0.0,0.0,0.0,granite 52%; shale 22%; sandstone 11%; limestone 9%; claystone 5%
+gal-100,pribram,pb-ag-veins,0.0,0.0,0.0,0.0,granite 52%; sandstone 26%; shale 11%; slate 7%; conglomerate 4%
+gal-100,linares,pb-granite,19.84,0.08,0.0,0.0,granite 67%; sandstone 11%; limestone 9%; shale 7%; claystone 5%
+gal-100,dartmoor,granite,0.0,0.0,0.0,23.84,granite 52%; gneiss 38%; sandstone 7%
+gal-100,coeurdalene,pb-ag-metasediment,351.08,0.0,0.44,2.0,granite 68%; sandstone 15%; shale 7%; slate 6%; conglomerate 3%
+gal-100,riga,control-sediment,550.08,0.0,0.4,9.92,gneiss 41%; sandstone 22%; dolostone 18%; limestone 10%; claystone 9%
+gal-100,vienna,control-lowland,10.08,0.0,0.0,0.0,granite 74%; sandstone 11%; slate 6%; shale 5%; conglomerate 3%
+vr-main-100,kongsberg,silver-gneiss,0.0,0.0,0.0,156.64,granite 57%; peridotite 43%
+vr-main-100,freiberg,pb-ag-gneiss,41.08,0.08,0.08,15.64,peridotite 53%; claystone 27%; granite 11%; bauxite 8%
+vr-main-100,brokenhill,pb-zn-ag-gneiss,0.0,0.0,0.0,62.28,granite 73%; andesite 23%; bauxite 4%
+vr-main-100,sala,pb-ag-marble,45.0,0.08,0.08,80.48,granite 49%; chert 36%; slate 12%; halite 2%
+vr-main-100,harz,pb-ag-slate,4.68,0.0,0.0,0.0,andesite 82%; slate 9%; claystone 6%; chert 3%
+vr-main-100,pribram,pb-ag-veins,0.0,0.0,0.0,0.0,andesite 35%; peridotite 33%; sandstone 26%; granite 5%
+vr-main-100,linares,pb-granite,0.0,0.0,0.0,0.0,peridotite 84%; granite 16%
+vr-main-100,dartmoor,granite,0.0,0.0,0.0,23.84,granite 69%; peridotite 31%
+vr-main-100,coeurdalene,pb-ag-metasediment,0.0,0.0,0.0,2.0,andesite 81%; granite 19%
+vr-main-100,riga,control-sediment,11.32,0.0,0.04,9.92,granite 90%; phyllite 9%
+vr-main-100,vienna,control-lowland,0.0,0.0,0.0,0.0,peridotite 80%; granite 11%; slate 7%
+vr-gal-100,kongsberg,silver-gneiss,0.0,0.0,0.0,156.64,granite 57%; peridotite 43%
+vr-gal-100,freiberg,pb-ag-gneiss,41.08,0.08,0.08,15.64,peridotite 53%; claystone 27%; granite 11%; bauxite 8%
+vr-gal-100,brokenhill,pb-zn-ag-gneiss,0.0,0.0,0.0,62.28,granite 73%; andesite 23%; bauxite 4%
+vr-gal-100,sala,pb-ag-marble,45.0,0.08,0.08,80.48,granite 49%; chert 36%; slate 12%; halite 2%
+vr-gal-100,harz,pb-ag-slate,4.68,0.0,0.0,0.0,andesite 82%; slate 9%; claystone 6%; chert 3%
+vr-gal-100,pribram,pb-ag-veins,0.0,0.0,0.0,0.0,andesite 35%; peridotite 33%; sandstone 26%; granite 5%
+vr-gal-100,linares,pb-granite,0.0,0.0,0.0,0.0,peridotite 84%; granite 16%
+vr-gal-100,dartmoor,granite,0.0,0.0,0.0,23.84,granite 69%; peridotite 31%
+vr-gal-100,coeurdalene,pb-ag-metasediment,0.0,0.0,0.0,2.0,andesite 81%; granite 19%
+vr-gal-100,riga,control-sediment,11.32,0.0,0.04,9.92,granite 90%; phyllite 9%
+vr-gal-100,vienna,control-lowland,0.0,0.0,0.0,0.0,peridotite 80%; granite 11%; slate 7%

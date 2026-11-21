@@ -268,20 +268,27 @@ def classify(M):
     return cls, flags
 
 
-def simplify_ring(c, wp, hp, tol=TOL):
+def simplify_ring(c, wp, hp, tol=TOL, edge=0.5):
     """A closed ring (z-index coordinates, first == last) simplified by tol (pixels), with its vertices on the tile's edge
-    kept (and those in the middle of a straight run along the edge dropped). None when it collapses."""
+    kept (and those in the middle of a straight run along the edge dropped). None when it collapses. The tile's sides lie
+    at edge and wp + edge (hp + edge): 0.5 as this bake contours (a cell's area from its corner), 1 on GLO-90's
+    pixel-is-point grid (tools/glo90grid.py, recontour_lake_outlines.py). There the first row's and column's cells lie on
+    the sides, so a shore between them and the next lies exactly tol from the side, and a ring of edge cells alone is tol
+    wide: the vertices next to each vertex on the side are kept too, or the simplification would fold the shore onto the
+    side (water drawn over land along the tile's edge) and drop such rings."""
     c = c[:-1]
     e = 1e-9
 
     def sides(p):
-        return np.column_stack([np.abs(p[:, 0] - 0.5) < e, np.abs(p[:, 0] - (wp + 0.5)) < e,
-                                np.abs(p[:, 1] - 0.5) < e, np.abs(p[:, 1] - (hp + 0.5)) < e])
+        return np.column_stack([np.abs(p[:, 0] - edge) < e, np.abs(p[:, 0] - (wp + edge)) < e,
+                                np.abs(p[:, 1] - edge) < e, np.abs(p[:, 1] - (hp + edge)) < e])
     onb = sides(c).any(axis=1)
     if not onb.any():
         g = shapely.simplify(shapely.LinearRing(c), tol)
         out = np.asarray(g.coords)[:-1] if not g.is_empty else np.zeros((0, 2))
     else:
+        if edge != 0.5:
+            onb = onb | np.roll(onb, 1) | np.roll(onb, -1)
         s0 = int(np.nonzero(onb)[0][0])
         c = np.roll(c, -s0, axis=0)
         onb = np.roll(onb, -s0)

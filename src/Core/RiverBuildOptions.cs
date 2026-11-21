@@ -31,10 +31,17 @@ namespace EarthMap.Core
         public bool ContinueDownstream { get; init; }
         /// <summary>Per reach: the river ends in a dry basin and fades to a stream (RiverEnds), null for none.</summary>
         public bool[] FadeEnds { get; init; }
+        /// <summary>Per reach: the river ends in the sea already, with no mouth prolongation (river ends rules 2,
+        /// RiverEnds.Result.SeaEnd), null for none.</summary>
+        public bool[] SeaEnds { get; init; }
         /// <summary>Seam crossings by the ring's geometry (river end rules) instead of "a piece longer than 4000 blocks".</summary>
         public bool GeometrySeams { get; init; }
         /// <summary>EarthParams.RiverWidths (RiverNetwork.WidthRulesVersion).</summary>
         public int WidthRules { get; init; }
+        /// <summary>(EA-0159, decision 0095) EarthParams.RiverWidthMultiplier, the Earth tab's "River width" (×1 = 1:10's widths
+        /// in metres): 0 for 2.1's widths (every world made before, and a new one whose multiplier gives exactly those). A streams
+        /// layer's networks take the world's.</summary>
+        public double WidthMultiplier { get; init; }
         /// <summary>EarthParams.RiverPoolLayout (RiverNetwork.PoolLayoutVersion).</summary>
         public int PoolLayout { get; init; }
         /// <summary>Whether the world has rapids reaches at all (the world option earthRiverRapids, pool layout 11).</summary>
@@ -45,5 +52,24 @@ namespace EarthMap.Core
         public double LandCellMetres { get; init; }
         /// <summary>EarthParams.ChannelRules (TerrainModel.ChannelRulesVersion).</summary>
         public int ChannelRules { get; init; }
+        /// <summary>(EA-0131) Every reach given is shown, whatever its discharge: a streams layer's network (StreamLayer), whose
+        /// streams below StreamMinQ take the smallest stream's width, depth, bank and valley, as the world's network draws its
+        /// smallest streams. False for a world's own network.</summary>
+        public bool KeepAll { get; init; }
+        /// <summary>(EA-0179, decision 0098) Coarse river rules: every stream under MinQ is the smallest stream, one block wide and
+        /// shallow (RiverNetwork.StreamT 0), instead of narrowing from MinQ's width to it: rivers from MinQ, one-block streams
+        /// from StreamMinQ (EarthParams.CoarseRiverRules, worlds at 1:50 and coarser).</summary>
+        public bool OneBlockStreams { get; init; }
+        /// <summary>(EA-0179, coarse river rules 2) A reach below a river whose flow drops under MinQ (a losing river, the lower
+        /// Darling) is drawn as a river, not a one-block stream: CoarseRivers.Apply.</summary>
+        public bool RiversToTheirEnd { get; init; }
+        /// <summary>(EA-0179, coarse river rules 2) Above each river whose biggest inflow is not drawn, that inflow's own upper
+        /// main branch is a one-block stream for this many km of the data (0: none), so no river starts out of nothing:
+        /// CoarseRivers.Apply.</summary>
+        public double HeadStreamKm { get; init; }
+        /// <summary>(EA-0179, coarse river rules 2) The one-block streams (OneBlockStreams, under MinQ) come down a steep valley
+        /// as a streams layer's do (decision 0061): they fall as soon as they lag StreamMaxLag (RiverNetwork.LagOf). The rivers
+        /// keep ChuteMaxDrop.</summary>
+        public bool SteepStreams { get; init; }
     }
 }

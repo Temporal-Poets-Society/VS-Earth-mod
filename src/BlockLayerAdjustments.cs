@@ -89,31 +89,154 @@ namespace EarthMap
             int vanilla = Climate.GetFertilityFromUnscaledTemp(rain, unscaledTemp, posYRel);
             var w = WorldGenerationContext.Current;
             if (w == null || w.Rules.SoilRules < 1 || pos == null) return vanilla;
-            if (!soilKnown || soilModel != w.Model.CacheId || soilX != pos.X || soilZ != pos.Z)
-            {
-                var g = w.Model.TerrainGeoAt(pos.X, pos.Z);
-                soilX = pos.X; soilZ = pos.Z; soilKnown = true; soilModel = w.Model.CacheId;
-                if (g.InGutter || g.BeyondPole) soilRain = soilDry = double.NaN;
-                else
-                {
-                    var climate = w.Model.Data.SampleClimate(g.Lat, g.Lon);
-                    soilRain = climate.Rain;
-                    soilDry = climate.DrySummer;
-                    soilPenman = climate.PenmanFactor;
-                }
-            }
-            return double.IsNaN(soilRain) ? vanilla : SoilFertility.Apply(vanilla, soilRain, soilDry, temperature, soilPenman);
+            SampleColumn(w, pos.X, pos.Z, temperature);
+            if (double.IsNaN(soilRain)) return vanilla;
+            int rules3 = SoilFertility.Apply(vanilla, soilRain, soilDry, temperature, soilPenman);
+            // (decision 0105) Earth soil: the column's tier, as the layers' fertility; Vanilla where the rule says nothing
+            var topsoil = w.Rules.Topsoil;
+            return topsoil == null ? rules3 : topsoil.LayerFertility(soilTier, rules3);
         }
+
+        /// <summary>
+        /// The column's climate (and, with Earth soil, its topsoil tier) into this thread's cache, once per column: vanilla's
+        /// layers ask for a column's fertility several times, the flood rain asks first, the tall grass share right after.
+        /// <paramref name="temperature"/>: the layers' temperature at the column's surface (the first ask is at the surface).
+        /// </summary>
+        static void SampleColumn(WorldGenerationContext w, int x, int z, double temperature)
+        {
+            if (soilKnown && soilModel == w.Model.CacheId && soilX == x && soilZ == z) return;
+            var g = w.Model.TerrainGeoAt(x, z);
+            soilX = x; soilZ = z; soilKnown = true; soilModel = w.Model.CacheId;
+            soilTier = Topsoil.Tier.Vanilla; soilArid = false;
+            if (g.InGutter || g.BeyondPole) { soilRain = soilDry = double.NaN; return; }
+            var climate = w.Model.Data.SampleClimate(g.Lat, g.Lon);
+            soilRain = climate.Rain;
+            soilDry = climate.DrySummer;
+            soilPenman = climate.PenmanFactor;
+            var topsoil = w.Rules.Topsoil;
+            if (topsoil == null || double.IsNaN(soilRain)) return;
+            soilTier = TopsoilTier(w, topsoil, x, z, g.Lat, g.Lon, climate, temperature, out soilArid);
+            RecordTier(x, z, soilTier);
+        }
+
+        /// <summary>(Decision 0105) A column's Earth soil (Core.Topsoil.Decide) from what the world knows about the place: the
+        /// shore strip keeps soil rules 3 (its beach is the shore pass's); arid by the ambient rain and the river's green belt
+        /// as ground columns' soil rules 2; in a river's flood by the floodplain grid at the column's real height; fresh
+        /// wetland in the 0.1° cell for oases; GUM's wind-blown sand; the warmest month for polar and alpine ground.</summary>
+        internal static Topsoil.Tier TopsoilTier(WorldGenerationContext w, Topsoil topsoil, int x, int z, double lat, double lon,
+            in EarthData.ClimateSample climate, double temperature, out bool arid)
+        {
+            arid = false;
+            if (OnShoreStrip(w, x, z)) return Topsoil.Tier.Vanilla;
+            // the warmest month at the column's height: the climate's, lapsed as vanilla's layers lapse the yearly mean
+            var place = new Topsoil.Place { Class = topsoil.ClassAt(lat, lon), Temperature = temperature,
+                WarmestMonth = double.IsNaN(climate.TWarm) || double.IsNaN(climate.TMean) ? double.NaN : climate.TWarm + (temperature - climate.TMean) };
+            if (place.Class == null || temperature < SoilFertility.MinTemperature) return Topsoil.Tier.Vanilla;
+            arid = SoilFertility.AridGround(climate.Rain, climate.DrySummer, climate.PenmanFactor)
+                && SoilFertility.AridGround(w.Model.RiparianRain(x, z, climate.Rain), climate.DrySummer, climate.PenmanFactor);
+            place.Arid = arid;
+            var floods = w.Model.Floodplains;
+            if (floods != null && !double.IsNaN(floods.Level(lat, lon)))
+                place.Flood = floods.Floods(lat, lon, ColumnStore.At(w.Model, x, z).Elev);
+            place.Dune = topsoil.DuneAt(lat, lon);
+            return topsoil.Decide(w.Rules.TopsoilTiers, place);
+        }
+
         /// <summary>
         /// The soil rule's last climate sample on this thread: vanilla's block layers ask for a column's fertility several
         /// times, and the tall grass share asks right after for the same column. Owned by the world's model (Codex item 5:
         /// keyed by TerrainModel.CacheId as well as the position; a number, so a thread never keeps an unloaded world alive), so
         /// a thread that sampled another world (a singleplayer relaunch, tests) never answers from that world's sample.
+        /// With Earth soil it also holds the column's tier and whether it is arid.
         /// </summary>
         [ThreadStatic] static int soilX, soilZ;
         [ThreadStatic] static long soilModel;
-        [ThreadStatic] static bool soilKnown;
+        [ThreadStatic] static bool soilKnown, soilArid;
         [ThreadStatic] static double soilRain, soilDry, soilPenman;
+        [ThreadStatic] static Topsoil.Tier soilTier;
+
+        // ---- decision 0105: Earth soil's top blocks, swapped in after vanilla's layers of a chunk
+        [ThreadStatic] static sbyte[] chunkTiers;
+        [ThreadStatic] static int tiersChunkX, tiersChunkZ;
+        [ThreadStatic] static bool tiersChunkKnown;
+
+        static void RecordTier(int x, int z, Topsoil.Tier tier)
+        {
+            if (!tiersChunkKnown || x >> 5 != tiersChunkX || z >> 5 != tiersChunkZ) return;
+            chunkTiers[(z & 31) * 32 + (x & 31)] = (sbyte)tier;
+        }
+
+        /// <summary>(Decision 0105) Vanilla's layers lay no soil where their rain is below 0.08, nor grassed soil below 0.12, so a
+        /// column of an arid river's flood gets Topsoil.FloodRain in vanilla's layers
+        /// (not in the climate map, the grass or anything else). Harmony prefix on GenBlockLayers.LoadBlockLayers.</summary>
+        internal static void FloodRainPrefix(ref float rainRel, float temperature, BlockPos pos)
+        {
+            using var fetch = Core.FineElevation.Generating();
+            var w = WorldGenerationContext.Current;
+            var topsoil = w?.Rules.Topsoil;
+            if (topsoil == null || pos == null) return;
+            SampleColumn(w, pos.X, pos.Z, temperature);
+            if (soilArid && soilTier >= Topsoil.Tier.Barren && rainRel < topsoil.FloodRain) rainRel = (float)topsoil.FloodRain;
+        }
+
+        /// <summary>(Decision 0105) The chunk whose layers the tiers are recorded for: every column starts at the tier that swaps
+        /// nothing. Harmony prefix on GenBlockLayers.OnChunkColumnGeneration.</summary>
+        internal static void TopsoilChunkPrefix([HarmonyArgument(0)] IChunkColumnGenerateRequest request)
+        {
+            var w = WorldGenerationContext.Current;
+            if (w?.Rules.Topsoil == null || request == null) { tiersChunkKnown = false; return; }
+            chunkTiers ??= new sbyte[32 * 32];
+            Array.Fill(chunkTiers, (sbyte)Topsoil.Tier.Vanilla);
+            tiersChunkX = request.ChunkX; tiersChunkZ = request.ChunkZ; tiersChunkKnown = true;
+        }
+
+        /// <summary>
+        /// (Decision 0105) After vanilla's layers of a chunk: the tiers vanilla never lays go in on the top soil block, with its
+        /// grass, and on the bare soil block under it: barren (laid as low) becomes soil-verylow, high and black earth (laid as
+        /// medium over medium subsoil) become soil-compost and soil-high. So vanilla's forest floor, laid later on the top
+        /// block, lies on the column's grade (EarthForestFloorSoil drops it). A top block of another kind or grade (snow, sand, a
+        /// grade vanilla's rain or cold chose) is left as it is. Harmony postfix on GenBlockLayers.OnChunkColumnGeneration.
+        /// </summary>
+        internal static void TopsoilChunkPostfix([HarmonyArgument(0)] IChunkColumnGenerateRequest request)
+        {
+            var rules = WorldGenerationContext.Current?.Rules;
+            if (rules?.Topsoil == null || request == null || !tiersChunkKnown || tiersChunkX != request.ChunkX || tiersChunkZ != request.ChunkZ) return;
+            tiersChunkKnown = false;
+            var chunks = request.Chunks;
+            var heights = chunks[0].MapChunk.RainHeightMap;
+            var blocks = rules.TopsoilBlocks; var tierOf = rules.SoilTierOf; var grassOf = rules.SoilGrassOf;
+            for (int k = 0; k < 1024; k++)
+            {
+                var tier = (Topsoil.Tier)chunkTiers[k];
+                if (!Topsoil.Swapped(tier)) continue;
+                int laid = tier == Topsoil.Tier.Barren ? (int)Topsoil.Tier.Low : (int)Topsoil.Tier.Medium;
+                int lx = k & 31, lz = k >> 5;
+                for (int y = heights[k], low = Math.Max(0, heights[k] - 2); y >= low; y--)
+                {
+                    int cy = y / 32;
+                    if (cy >= chunks.Length) continue;
+                    int index3d = (32 * (y % 32) + lz) * 32 + lx;
+                    var data = chunks[cy].Data;
+                    int id = data.GetBlockIdUnsafe(index3d);
+                    if (id <= 0 || id >= tierOf.Length || tierOf[id] < 0) continue;
+                    if (tierOf[id] == laid)
+                    {
+                        data.SetBlockUnsafe(index3d, blocks[(int)tier, grassOf[id]]);
+                        // the block under it too (bare), so the forest floor vanilla lays later lies on the column's grade
+                        // and gives it when broken (EarthForestFloorSoil)
+                        int below = y - 1;
+                        if (below > 0)
+                        {
+                            int bi = (32 * (below % 32) + lz) * 32 + lx;
+                            var bd = chunks[below / 32].Data;
+                            int bid = bd.GetBlockIdUnsafe(bi);
+                            if (bid > 0 && bid < tierOf.Length && tierOf[bid] == laid && grassOf[bid] == 0) bd.SetBlockUnsafe(bi, blocks[(int)tier, 0]);
+                        }
+                    }
+                    break;
+                }
+            }
+        }
 
         // ---- ranges step 5a: dry land keeps a share of vanilla's tall grass (Core.GroundCover, ground-cover.json)
         [ThreadStatic] static int layersChunkX, layersChunkZ;
@@ -189,8 +312,8 @@ namespace EarthMap
         {
             using var fetch = Core.FineElevation.Generating();
             if (w?.Model == null || !w.Model.Rules.ShoreStrip) return false;
-            var c = ColumnStore.At(w.Model, wx, wz);
-            return c.Beach && c.Shore != ShoreMaterial.None && c.Water == TerrainModel.WaterNone;
+            // (EA-0193) from the chunk's kept shore-strip bits when its columns are no longer stored
+            return ColumnStore.OnShoreStrip(w.Model, wx, wz);
         }
 
         /// <summary>The share (0..1) of vanilla's tall grass kept at a block column; NaN where the rule doesn't apply (the

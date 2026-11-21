@@ -16,14 +16,14 @@ var table = new (string Fact, string Family, int From)[]
     ("RiparianEnvelopes", "GenFix", 1), ("CornerColumns", "GenFix", 1), ("ScatteredBedGravel", "GenFix", 1),
     ("ConduitUnderTop", "GenFix", 4), ("WholeGroundColumn", "GenFix", 4), ("FlowAcrossTiles", "GenFix", 5), ("WholeLakeArea", "GenFix", 5),
     ("SeamNoiseInRing", "GenFix", 5), ("KeptLakeLevels", "GenFix", 5),
-    ("SeaOf1318", "Works", 3), ("IslandsOf1318", "Works", 4),
+    ("SeaOf1318", "Works", 3), ("IslandsOf1318", "Works", 4), ("ShoresOf1318", "Works", 6),
     ("ShoreStrip", "Shore", 1), ("ShoreAtWater", "Shore", 2),
     ("FineSummitLift", "Fine", 2), ("FineSmooth", "Fine", 3), ("FineFootprintMean", "Fine", 4), ("FineBounded", "Fine", 5),
     ("SummitRestore", "Summit", 2), ("CellDetail", "Detail", 1), ("CoarseHeights", "Coarse", 1),
     ("RealLapse", "Climate", 2), ("RealRain", "Climate", 3), ("AridRivers", "Arid", 1), ("SolvedFlow", "Flow", 1),
-    ("GeothermalActivity", "Geothermal", 1),
+    ("GeothermalActivity", "Geothermal", 1), ("CoursesOffLakes", "Lake", 1), ("RealLakeDepths", "Lake", 1),
 };
-string[] families = { "Channel", "GenFix", "Works", "Shore", "Fine", "Summit", "Detail", "Coarse", "Climate", "Arid", "Flow", "Geothermal" };
+string[] families = { "Channel", "GenFix", "Works", "Shore", "Fine", "Summit", "Detail", "Coarse", "Climate", "Arid", "Flow", "Geothermal", "Lake" };
 TerrainRules Make(string family, int version, int others)
 {
     object r = new TerrainRules();
@@ -57,7 +57,7 @@ var pairs = new (string Property, string Family)[]
 {
     ("ChannelRules", "Channel"), ("GenFixRules", "GenFix"), ("WorksRules", "Works"), ("ShoreRules", "Shore"), ("FineRules", "Fine"),
     ("SummitRules", "Summit"), ("DetailRules", "Detail"), ("CoarseRules", "Coarse"), ("ClimateRules", "Climate"),
-    ("AridRiverRules", "Arid"), ("FlowRules", "Flow"), ("GeothermalRules", "Geothermal"),
+    ("AridRiverRules", "Arid"), ("FlowRules", "Flow"), ("GeothermalRules", "Geothermal"), ("LakeRules", "Lake"),
 };
 int n = 1;
 foreach (var (prop, family) in pairs) typeof(TerrainModel).GetProperty(prop).SetValue(model, n++);
@@ -80,7 +80,7 @@ var byNumber = new (Type Family, string Fact, int From)[]
     (typeof(GeothermalFacts), "Activity", 1), (typeof(GeothermalFacts), "VolcanoBodies", 2), (typeof(GeothermalFacts), "VolcanoInteriors", 3),
     (typeof(ShoreMaterialFacts), "Strip", 1), (typeof(ShoreMaterialFacts), "AtWater", 2), (typeof(ShoreMaterialFacts), "ScouredTill", 3),
     (typeof(GeologyFacts), "GenerationBlock", 2), (typeof(GeologyFacts), "CellContacts", 2), (typeof(GeologyFacts), "SmoothedBeds", 2),
-    (typeof(GeologyFacts), "GravelLenses", 2),
+    (typeof(GeologyFacts), "GravelLenses", 2), (typeof(GeologyFacts), "CoveredFill", 3), (typeof(GeologyFacts), "ReliefInMetres", 3), (typeof(GeologyFacts), "CrystallineGalena", 3), (typeof(GeologyFacts), "FineRock", 4),
     (typeof(GroundColumnFacts), "Columns", 1), (typeof(GroundColumnFacts), "WarmKarst", 2), (typeof(GroundColumnFacts), "NoBauxiteStrata", 2),
     (typeof(OreLayerFacts), "Layers", 1), (typeof(OreLayerFacts), "Under", 2), (typeof(OreLayerFacts), "Surface", 3),
     (typeof(OreLayerFacts), "Aluminosilicates", 4),
@@ -96,7 +96,7 @@ foreach (var (family, fact, from) in byNumber)
 for (int v = 0; v <= 14; v++)
     Check(PoolLayoutFacts.RiverQueryVersion(v) == (v >= 11 ? 3 : v >= 9 ? 2 : v >= 8 ? 1 : 0), $"PoolLayoutFacts.RiverQueryVersion({v}), as EarthMapSystem answered");
 Check(RiverNetwork.PoolLayoutVersion == 11 && MountainEcology.SurfaceVersion == 2 && ShoreZones.RulesVersion == 2 && ClimateZones.RulesVersion == 2 && Geothermal.RulesVersion == 3
-    && ShoreMaterial.RulesVersion == 3 && RegionalGeologyCatalog.RulesVersion == 2 && GroundColumns.RulesVersion == 2 && OreLayers.RulesVersion == 4
+    && ShoreMaterial.RulesVersion == 3 && RegionalGeologyCatalog.RulesVersion == 4 && GroundColumns.RulesVersion == 2 && OreLayers.RulesVersion == 4
     && OreLayers.AluminosilicateVersion == 4,
     "each family's newest is its last fact's version");
 

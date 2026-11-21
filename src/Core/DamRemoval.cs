@@ -26,8 +26,8 @@ namespace EarthMap.Core
     /// </summary>
     public sealed class DamRemovalData
     {
-        /// <summary>The newest file version this build reads (versions 1, 2 and 3 have the same layout).</summary>
-        public const int FileVersion = 3;
+        /// <summary>The newest file version this build reads (versions 1 to 4 have the same layout).</summary>
+        public const int FileVersion = 4;
         /// <summary>The rules new worlds record (EarthParams.DamRules): 1 = the heights and course levels of dams-glo90-1.bin,
         /// with RiverOutlineData version 2's rivers through the reservoirs.</summary>
         public const int RulesVersion = 1;
@@ -38,13 +38,18 @@ namespace EarthMap.Core
         /// HydroLAKES lacks taken out too (tools/reservoir_list.py: the Seimare Dam of 2013 among them), on the same course
         /// list.</summary>
         public const int Rules3 = 3;
+        /// <summary>Dam rules 4 (decision 0092, EA-0148): dams-glo90-4.bin, rules 3 on GLO-90's pixel-is-point grid (the mask's
+        /// cell centred on its grid point, as the heights are) and on courses rules 5's list (CourseRules4).</summary>
+        public const int Rules4 = 4;
         /// <summary>The newest dam rules this build can read.</summary>
-        public const int NewestRules = Rules3;
+        public const int NewestRules = Rules4;
         /// <summary>The course rules (EarthParams.RiverCourses) whose list dam rules 1's levels were made for (courses rules
         /// 3, key 9573d2e3e5bfbb59).</summary>
         public const int CourseRules = 3;
         /// <summary>The course rules whose list dam rules 2's levels are made for (0063: courses rules 4).</summary>
         public const int CourseRules2 = 4;
+        /// <summary>The course rules whose list dam rules 4's levels are made for (decision 0092: courses rules 5).</summary>
+        public const int CourseRules4 = 5;
         /// <summary>Dam rules 1's file name in the GLO-90 folder and on Earth's data release; a new version gets a new name.</summary>
         public const string FileName = "dams-glo90-1.bin";
         /// <summary>The rules 1 file this build reads (from the global bake of 8 November 2026); any other is refused.</summary>
@@ -61,11 +66,17 @@ namespace EarthMap.Core
         public const long FileBytes3 = 6_207_627;
         public const string FileSha2563 = "dcc997859742959470eae7dd99993c390fc301e350c2a2d8e6df9e3f06df7299";
 
-        /// <summary>The file a world with these dam rules reads (rules 1: dams-glo90-1.bin, 2: dams-glo90-2.bin, 3 and later:
-        /// dams-glo90-3.bin).</summary>
-        public static string FileNameFor(int rules) => rules >= Rules3 ? FileName3 : rules >= Rules2 ? FileName2 : FileName;
-        public static long FileBytesFor(int rules) => rules >= Rules3 ? FileBytes3 : rules >= Rules2 ? FileBytes2 : FileBytes;
-        public static string FileSha256For(int rules) => rules >= Rules3 ? FileSha2563 : rules >= Rules2 ? FileSha2562 : FileSha256;
+        /// <summary>Dam rules 4's file (tools/bake_dam_removal.py with EARTH_GDW=1 on GLO-90's pixel-is-point grid, on courses
+        /// rules 5's list; global bake of 17 November 2026).</summary>
+        public const string FileName4 = "dams-glo90-4.bin";
+        public const long FileBytes4 = 6_390_099;
+        public const string FileSha2564 = "7fa16caf2ab023603b30efe7cad753b073b15008c622d392642253c3892b1402";
+
+        /// <summary>The file a world with these dam rules reads (rules 1: dams-glo90-1.bin, 2: dams-glo90-2.bin, 3:
+        /// dams-glo90-3.bin, 4 and later: dams-glo90-4.bin).</summary>
+        public static string FileNameFor(int rules) => rules >= Rules4 ? FileName4 : rules >= Rules3 ? FileName3 : rules >= Rules2 ? FileName2 : FileName;
+        public static long FileBytesFor(int rules) => rules >= Rules4 ? FileBytes4 : rules >= Rules3 ? FileBytes3 : rules >= Rules2 ? FileBytes2 : FileBytes;
+        public static string FileSha256For(int rules) => rules >= Rules4 ? FileSha2564 : rules >= Rules3 ? FileSha2563 : rules >= Rules2 ? FileSha2562 : FileSha256;
 
         /// <summary>Whether these bytes are dam rules 1's file this build was made for (size and SHA-256).</summary>
         public static bool IsExpected(byte[] bytes, out string why) => IsExpected(bytes, RulesVersion, out why);

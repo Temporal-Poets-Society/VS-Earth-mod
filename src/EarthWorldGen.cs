@@ -69,6 +69,14 @@ namespace EarthMap
         RiverBlockPass rivers;
         AlpineSurfacePass surface;
         RockFloorPass rockFloor;
+        /// <summary>(EA-0162) Earth's terrain handler as put in the terrain pass's list (<see cref="InPlaceOfGenTerraHere"/>); null
+        /// where Earth's terrain runs as a prefix on vanilla's generator instead (<see cref="GenTerraPrefix"/>).</summary>
+        ChunkColumnGenerationDelegate terrainHandler;
+        /// <summary>(EA-0162) The surface pass's handler as registered: the terrain pass's handlers before it are the ones that
+        /// should have made the chunk with Earth's terrain.</summary>
+        ChunkColumnGenerationDelegate surfaceHandler;
+        /// <summary>(EA-0162) Chunks of other mods' own generation that reached the surface pass without Earth's terrain.</summary>
+        int previewsWithoutTerrain;
 
         /// <summary>Habitats step 1: the vegetation zones in worlds saved with zone rules, else null.</summary>
         internal ClimateZones Zones => rules?.Zones;
@@ -106,7 +114,7 @@ namespace EarthMap
             api.Event.ServerRunPhase(EnumServerRunPhase.RunGame, CheckTerrainBeforeRunning);
             api.Event.MapRegionGeneration(OnMapRegionGen, "standard");
             // after vanilla's block layers (GenBlockLayers, 0.4) in the same pass, before any vegetation
-            api.Event.ChunkColumnGeneration(Guarded("surface pass", BareRock), EnumWorldGenPass.Terrain, "standard");
+            api.Event.ChunkColumnGeneration(surfaceHandler = Guarded("surface pass", BareRock), EnumWorldGenPass.Terrain, "standard");
             // after vanilla's caves (0.3), which mark their hot springs in the same pass, before GenHotSprings (TerrainFeatures)
             api.Event.ChunkColumnGeneration(Guarded("known hot springs", KnownHotSprings), EnumWorldGenPass.Terrain, "standard");
             // (FP-13) a terrain pass cut short before the surface pass
@@ -556,12 +564,30 @@ namespace EarthMap
         void CheckTerrain()
         {
             if (patches.StillInPlace(EarthMap.PatchVanilla.Feature.Terrain) is string cause) Refuse(cause);
-            if (!saidUnverified && patches.Unverified(EarthMap.PatchVanilla.Feature.Terrain) is string note)
+            if (saidUnverified) return;
+            // (EA-0162) also where Earth's terrain runs inside vanilla's generator: a mod replaced vanilla's handler before Earth started
+            string unverified = patches.Unverified(EarthMap.PatchVanilla.Feature.Terrain)
+                ?? (terrainHandler == null && patches.On(EarthMap.PatchVanilla.Feature.Terrain) ? "Earth's terrain runs inside vanilla's terrain generator (GenTerra), whose handler another mod replaced or wrapped before Earth started" : null);
+            if (unverified != null)
             {
                 saidUnverified = true;
                 Mod.Logger.Warning("Earth's terrain: {0}. Earth can't tell from here whether that mod still calls Earth's terrain writer, so every " +
-                    "chunk is checked as it generates: the first one made without it stops the server before Earth's other passes run on it.", note);
+                    "chunk is checked as it generates: the first one made without it stops the server before Earth's other passes run on it. Earth: {1}.",
+                    unverified, TerrainPassListing());
             }
+        }
+
+        /// <summary>(EA-0162) The terrain pass's handlers in order, each named by its mod, for the log.</summary>
+        string TerrainPassListing()
+        {
+            try
+            {
+                var mods = ModsByAssembly();
+                var list = sapi.Event.GetRegisteredWorldGenHandlers(sapi.WorldManager.SaveGame.WorldType)?.OnChunkColumnGen?[(int)EnumWorldGenPass.Terrain]?.ToArray()
+                    ?? Array.Empty<ChunkColumnGenerationDelegate>();
+                return TerrainPassReport.Listing(TerrainPassReport.Read(list, terrainHandler, a => ModName(mods, a)), terrainHandler == null, list.Any(d => d?.Target is GenTerra));
+            }
+            catch (Exception e) { return "the terrain pass's handlers could not be read (" + e.Message + ")"; }
         }
 
         /// <summary>Vanilla's terrain pass handler (GenTerra's), wrapped in the terrain pass's handler list by PatchVanilla: in an
@@ -580,7 +606,7 @@ namespace EarthMap
         /// thread the game could not pause before it disposed the mods still asks it. Through <see cref="Instance"/>, which
         /// Dispose clears, that thread got vanilla's terrain; this generator, closed by Dispose, notes the chunk and throws.
         /// </summary>
-        ChunkColumnGenerationDelegate InPlaceOfGenTerraHere(ChunkColumnGenerationDelegate genTerra) => request =>
+        ChunkColumnGenerationDelegate InPlaceOfGenTerraHere(ChunkColumnGenerationDelegate genTerra) => terrainHandler = request =>
         {
             ThrowIfRefused(request);
             if (!Active) genTerra(request);
@@ -645,6 +671,8 @@ namespace EarthMap
             mods.GetModSystem<EarthPlacement>()?.FeaturesOff(p, off);
             mods.GetModSystem<EarthPlants>()?.FeaturesOff(off);
             mods.GetModSystem<EarthVolcanoes>()?.FeaturesOff(p, off);
+            mods.GetModSystem<EarthDepositDepths>()?.FeaturesOff(p, off);
+            mods.GetModSystem<EarthVanillaStrata>()?.FeaturesOff(p, off);
             if (!climateMaps) off.Add("Earth's climate and ocean maps (vanilla's GenMaps was not found)");
             if (rules != null) off.AddRange(rules.Missing);
             // Earth's guards on vanilla's generation that change blocks (not: the animal range guards, whose animals move and
@@ -653,6 +681,7 @@ namespace EarthMap
             {
                 (EarthMap.PatchVanilla.Feature.AridBasins, true),
                 (EarthMap.PatchVanilla.Feature.SoilFertility, p.SoilRules >= 1),
+                (EarthMap.PatchVanilla.Feature.Topsoil, Topsoil.On(p.Topsoil)),
                 (EarthMap.PatchVanilla.Feature.TallGrass, p.GroundCoverRules >= 1),
                 (EarthMap.PatchVanilla.Feature.TallGrassAroundStructures, p.GroundCoverRules >= 1),
                 (EarthMap.PatchVanilla.Feature.TreeSpecies, p.RegionalTrees),
@@ -678,21 +707,115 @@ namespace EarthMap
 
         // ------------------------------------------------------------------------------------------ the passes, in order
 
-        /// <summary>The surface pass, after vanilla's block layers in the terrain pass: the river ramps, then each surface
-        /// column by what it is.</summary>
+        /// <summary>
+        /// The surface pass, after vanilla's block layers in the terrain pass: the river ramps, then each surface column by what
+        /// it is. This chunk's terrain pass is running now: without the terrain writer's handoff for its chunks, Earth's terrain
+        /// did not make it. The game alone always runs the writer first (TerrainPassReport), so another mod keeps Earth's terrain
+        /// out: the world is refused, the mod named (EA-0162). Except for a chunk of another mod's own generation (its own request
+        /// and its own map chunk, as a far-terrain preview runs the pass's handlers): nothing of it is saved, so it is left alone
+        /// and said once.
+        /// </summary>
         void BareRock(IChunkColumnGenerateRequest request)
         {
             if (!Active || surface == null) return;
             var s = surface.Begin(request);
-            // this chunk's terrain pass is running now: without the terrain pass's handoff, Earth's terrain did not make it
             if (!s.MadeByEarth)
             {
+                if (RequestSource(request, null) != null && IsPeek(request.Chunks, request.ChunkX, request.ChunkZ))
+                {
+                    if (System.Threading.Interlocked.Increment(ref previewsWithoutTerrain) == 1)
+                    {
+                        var f = TerrainPassFindings(request);
+                        Mod.Logger.Warning("Earth: chunk {0},{1} of {2} reached Earth's surface pass without Earth's terrain. It is not the world's " +
+                            "chunk (nothing of it is saved), so Earth leaves it and later ones alone; what that mod shows of them is not Earth's terrain. " +
+                            "Earth: {3}.", request.ChunkX, request.ChunkZ, RequestSource(request, f.Mods), f.Listing);
+                    }
+                    return;
+                }
+                var found = TerrainPassFindings(request);
+                Mod.Logger.Error("Earth: {0}.", found.Listing);
                 // the game saves this chunk anyway (past the pass that threw): noted, it is deleted at the next start (CR-G2)
                 NoteChunk(request.Chunks, request.ChunkX, request.ChunkZ, passFailed: false);
-                Refuse("vanilla's terrain pass made chunk " + request.ChunkX + "," + request.ChunkZ + " without Earth's terrain (a mod replaced Earth's terrain handler)");
+                Refuse(found.Cause, found.Advice);
             }
             rivers.PlaceRamps(request.Chunks, request.ChunkX, request.ChunkZ);
             surface.Columns(s);
+        }
+
+        /// <summary>
+        /// (EA-0162) Why a chunk reached the surface pass without Earth's terrain, named by mod (<see cref="TerrainPassReport"/>):
+        /// the terrain pass's handlers before the surface pass, how Earth's terrain is bound, where the chunk came from and other
+        /// mods' Harmony patches on vanilla's terrain generator or Earth's code. Never throws (a failure to read is said instead).
+        /// </summary>
+        (string Cause, string Advice, string Listing, Dictionary<System.Reflection.Assembly, Mod> Mods) TerrainPassFindings(IChunkColumnGenerateRequest request)
+        {
+            int cx = request.ChunkX, cz = request.ChunkZ;
+            try
+            {
+                var mods = ModsByAssembly();
+                string ModOf(System.Reflection.Assembly a) => ModName(mods, a);
+                var list = sapi.Event.GetRegisteredWorldGenHandlers(sapi.WorldManager.SaveGame.WorldType)?.OnChunkColumnGen?[(int)EnumWorldGenPass.Terrain]?.ToArray()
+                    ?? Array.Empty<ChunkColumnGenerationDelegate>();
+                var all = TerrainPassReport.Read(list, terrainHandler, ModOf);
+                int surfaceAt = surfaceHandler == null ? -1 : Array.IndexOf(list, surfaceHandler);
+                var before = TerrainPassReport.Read(surfaceAt >= 0 ? list.Take(surfaceAt) : list, terrainHandler, ModOf);
+                bool viaGenTerra = terrainHandler == null, genTerraIn = list.Any(d => d?.Target is GenTerra);
+                var (cause, advice) = TerrainPassReport.Cause(cx, cz, before, viaGenTerra, genTerraIn, RequestSource(request, mods), PatchesOnTerrain());
+                return (cause, advice, TerrainPassReport.Listing(all, viaGenTerra, genTerraIn), mods);
+            }
+            catch (Exception e)
+            {
+                return ("the terrain pass made chunk " + cx + "," + cz + " without Earth's terrain (a mod keeps Earth's terrain out; the pass's handlers could not be read: " + e.Message + ")",
+                    "Earth's terrain must replace vanilla's in an Earth world: remove the mod that wraps or replaces vanilla's terrain generator, then restart.",
+                    "the terrain pass's handlers could not be read (" + e.Message + ")", null);
+            }
+        }
+
+        /// <summary>(EA-0162) Each loaded mod by the assemblies of its mod systems.</summary>
+        Dictionary<System.Reflection.Assembly, Mod> ModsByAssembly()
+        {
+            var mods = new Dictionary<System.Reflection.Assembly, Mod>();
+            foreach (var mod in sapi.ModLoader.Mods)
+                foreach (var system in mod.Systems ?? (IReadOnlyCollection<ModSystem>)Array.Empty<ModSystem>())
+                    if (system != null) mods.TryAdd(system.GetType().Assembly, mod);
+            return mods;
+        }
+
+        static string ModName(Dictionary<System.Reflection.Assembly, Mod> mods, System.Reflection.Assembly assembly)
+        {
+            if (mods != null && mods.TryGetValue(assembly, out var mod))
+                return (mod.Info?.Name ?? mod.FileName) + " (" + mod.Info?.ModID + " " + mod.Info?.Version + ")";
+            return "the assembly " + assembly.GetName().Name;
+        }
+
+        /// <summary>(EA-0162) Where a request comes from when it is not the game's own generation (the server's
+        /// ChunkColumnLoadRequest, a peek's too): another mod's request type, named by its mod. Null for the game's.</summary>
+        static string RequestSource(IChunkColumnGenerateRequest request, Dictionary<System.Reflection.Assembly, Mod> mods)
+        {
+            var t = request?.GetType();
+            if (t == null || t.FullName == "Vintagestory.Server.ChunkColumnLoadRequest") return null;
+            return ModName(mods, t.Assembly) + "'s own generation (request type " + t.FullName + ")";
+        }
+
+        /// <summary>(EA-0162) Other mods' Harmony patches on vanilla's terrain generator (GenTerra) or on Earth's own code, by
+        /// Harmony id and method: a prefix there can keep Earth's terrain from running.</summary>
+        static List<string> PatchesOnTerrain()
+        {
+            var found = new SortedSet<string>(StringComparer.Ordinal);
+            try
+            {
+                var earth = typeof(EarthWorldGen).Assembly;
+                foreach (var m in Harmony.GetAllPatchedMethods())
+                {
+                    var t = m?.DeclaringType;
+                    if (t == null || !(t == typeof(GenTerra) || t.Assembly == earth)) continue;
+                    var info = Harmony.GetPatchInfo(m);
+                    foreach (var owner in info?.Owners ?? Enumerable.Empty<string>())
+                        if (owner != EarthMap.PatchVanilla.HarmonyId) found.Add(owner + " on " + t.Name + "." + m.Name);
+                }
+            }
+            catch (Exception) { }
+            return found.ToList();
         }
 
         /// <summary>
@@ -704,8 +827,8 @@ namespace EarthMap
         /// </summary>
         void SurfacePassRan(IChunkColumnGenerateRequest request)
         {
-            if (!Active || handoff == null || !handoff.Untaken(request.ChunkX, request.ChunkZ)) return;
-            handoff.Drop(request.ChunkX, request.ChunkZ);
+            if (!Active || handoff == null || !handoff.Untaken(request.Chunks, request.ChunkX, request.ChunkZ)) return;
+            handoff.Drop(request.Chunks);
             if (IsPeek(request.Chunks, request.ChunkX, request.ChunkZ)) return;
             throw new InvalidOperationException("the terrain pass of chunk " + request.ChunkX + "," + request.ChunkZ + " ended before Earth's surface pass (a handler between them threw; the worldgen log has its error)");
         }
@@ -747,8 +870,8 @@ namespace EarthMap
                     if (id <= 0 || id >= all.Count || all[id]?.BlockMaterial != EnumBlockMaterial.Plant) continue;
                     // reeds (cattails, cooper's reed, papyrus) keep the water's edge
                     if (all[id].Code?.Path.StartsWith("tallplant-", StringComparison.Ordinal) == true) continue;
-                    var c = ColumnStore.At(model, cx + lx, cz + lz);
-                    if (!c.Beach || c.Shore == ShoreMaterial.None || c.Water != TerrainModel.WaterNone) continue;
+                    // (EA-0193) from the chunk's kept shore-strip bits when its columns are no longer stored
+                    if (!ColumnStore.OnShoreStrip(model, cx + lx, cz + lz)) continue;
                     // (W-L2) a plant with a block entity (a wild fruiting bush) takes its entity with it, as vanilla's GenRivulets does
                     if (all[id].EntityClass != null) chunks[y >> 5].RemoveBlockEntity(new BlockPos(cx + lx, y, cz + lz, 0));
                     data.SetBlockUnsafe(idx, 0);
@@ -852,6 +975,8 @@ namespace EarthMap
                 Mod?.Logger.Notification("Earth column store this session: {0}.", columns.Report());
                 ColumnStore.Detach(model);
             }
+            if (Instance == this && WaterSpawnDepth.Report() is string water) Mod?.Logger.Notification("Earth water depth this session: {0}.", water);
+            WaterSpawnDepth.Restore();
             harmony?.UnpatchAll(EarthMap.PatchVanilla.HarmonyId);
             WorldGenerationContext.Withdraw(context);
             // (C-R2) the statics that outlived the world: the tree pickers (its catalogue) and /earth cost's switch
@@ -878,6 +1003,7 @@ namespace EarthMap
             featuresChecked = 0;
             WorldGenerationContext.Withdraw(context);
             context = null;
+            WaterSpawnDepth.Restore();
             var p = core.Params;
             // CR-L1: Earth's own start-up may have ended before this world's params were read (the game's mod loader logs a
             // StartServerSide exception and goes on): in an Earth world that would leave every new chunk to vanilla's terrain
@@ -892,6 +1018,10 @@ namespace EarthMap
                 ReadRetriedChunks();
                 WorldGenerationContext.Publish(context);
                 Active = true;
+                // EA-0178: water creatures' height bands below their water's surface, for the sides whose patch is bound
+                int water = WaterSpawnDepth.Widen(sapi, patches.On(EarthMap.PatchVanilla.Feature.WorldgenWaterDepth),
+                    patches.On(EarthMap.PatchVanilla.Feature.RuntimeWaterDepth));
+                if (water > 0) Mod.Logger.Notification("Earth water depth: {0} water creature types spawn by their depth below their water's surface, not their height above the sea.", water);
             }
             catch (Exception e)
             {
@@ -908,6 +1038,7 @@ namespace EarthMap
             var worldRules = WorldGenRules.Begin(sapi, Mod.Logger, p);
             rules = worldRules;
             LoadGlobalConfig(sapi);
+            TopsoilSet(p);
             worldRules.Load(model, p);
             var blocks = new WorldGenBlocks(sapi.World, gcfg);
             // (kept across a later set-up of the same world, /wgen regen. Nothing is pending in it then: the terrain writer and the
@@ -925,6 +1056,56 @@ namespace EarthMap
             PlaceStories(p);
             PlanTerrain(p);
             context = new WorldGenerationContext(sapi, model, p, worldRules);
+        }
+
+        /// <summary>
+        /// (Decision 0105) Whether a world with Earth soil reads the 30″ soil map (EarthParams.GroundData, as for ground columns,
+        /// which decide it themselves): a new world decides once, before its first chunk. The soil-group set of release egts-v1
+        /// (21 MB) is fetched from GroundRepo; a source that answers it hasn't the set (none set, or not there) leaves the world
+        /// on the 2′ map for good, so its soil never mixes the two; any other failure stops the start (nothing is saved, the
+        /// next start tries again). A 30″ world whose set went missing or damaged fetches it again, and stops if it can't.
+        /// </summary>
+        void TopsoilSet(EarthParams p)
+        {
+            if (!Topsoil.On(p.Topsoil) || GroundColumnFacts.Columns(p.GroundColumns)) return;
+            if (p.GroundData == GroundDownloader.TwoMinuteOnly)
+            {
+                Mod.Logger.Notification("Earth soil: this world was made with the 2' soil map and keeps it; the 30\" soil map is not read.");
+                return;
+            }
+            string folder = EarthGround.DataFolder, repo = core.Config?.GroundRepo;
+            var sets = GroundDownloader.Sets.Where(s => s.Name == "global-soilgroup-30s.egts").ToArray();
+            GroundDownloader.Result got;
+            string error = null;
+            try
+            {
+                got = GroundDownloader.Missing(folder, true, sets).Count == 0 ? GroundDownloader.Result.Here
+                    : GroundDownloader.Get(folder, repo, s => { Mod.Logger.Notification("Earth soil map: " + s); Mod.Logger.StoryEvent("Earth soil map: " + s); }, core.Stopping, sets);
+            }
+            catch (Exception e) when (e is System.IO.IOException or UnauthorizedAccessException or OperationCanceledException or System.Net.Http.HttpRequestException or AggregateException)
+            {
+                if (e is OperationCanceledException && core.Stopping.IsCancellationRequested)
+                    throw new InvalidOperationException("the 30\" soil map's download stopped with the server; it resumes at the next start (nothing is saved)", e);
+                error = e.Message;
+                got = GroundDownloader.Result.Failed;
+            }
+            string where = System.IO.Path.Combine(folder, GroundDownloader.Subfolder);
+            if (p.GroundData == 0 && got != GroundDownloader.Result.Failed)
+            {
+                bool ok = got == GroundDownloader.Result.Here;
+                p.GroundData = ok ? GroundDownloader.SetsVersion : GroundDownloader.TwoMinuteOnly;
+                core.SaveParams();
+                if (ok) Mod.Logger.Notification("Earth soil: this new world reads the 30\" soil map (release egts-v1) in {0}.", where);
+                else Mod.Logger.Warning("Earth soil: the 30\" soil map can't be had ({0}); this new world uses the 2' map for good. New worlds try again.",
+                    string.IsNullOrWhiteSpace(repo) ? "GroundRepo in earth.json is empty" : "the source doesn't have it, see above");
+                return;
+            }
+            if (got == GroundDownloader.Result.Here) return;
+            throw new InvalidOperationException(p.GroundData == 0
+                ? "the 30\" soil map could not be fetched into " + where + " (" + (error ?? "see above") + "). Nothing is saved; start again once the server reaches "
+                  + (string.IsNullOrWhiteSpace(repo) ? GroundDownloader.Release : repo) + ", or put global-soilgroup-30s.egts from " + GroundDownloader.Release + " there"
+                : "this world was made with the 30\" soil map, but it is missing from " + where + " and could not be had (" + (error ?? "see above") + "); put global-soilgroup-30s.egts from "
+                  + GroundDownloader.Release + " there, or let Earth fetch it (GroundRepo in earth.json), and start again");
         }
 
         /// <summary>

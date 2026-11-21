@@ -1,0 +1,63 @@
+22:08:03 14756 tiles in C:\VS mods\work\ea-0148\store\glo90\lakes-glo90-5.bin
+22:10:01 5449463 pieces
+22:10:06 41246 joins across tile sides; 5408465 whole lakes
+22:10:17 185181 HydroLAKES lakes from 1.0 km2
+22:11:56 outlets looked up
+22:11:57 84800 of 185181 HydroLAKES lakes matched to 81028 whole lakes; 173 of those covered under 10% by them
+22:11:57   HydroLAKES lakes 1-10 km2: 76172 of 168492 matched
+22:11:57   HydroLAKES lakes 10-100 km2: 7757 of 14981 matched
+22:11:57   HydroLAKES lakes 100-1000 km2: 791 of 1530 matched
+22:11:57   HydroLAKES lakes 1000-1e+09 km2: 80 of 178 matched
+22:11:57   unmatched: Hylak 1 377002 km2 at 45.592,47.718
+22:11:57   unmatched: Hylak 3 26734 km2 at 61.312,-117.617
+22:11:57   unmatched: Hylak 13 23866 km2 at 44.906,59.715
+22:11:57   unmatched: Hylak 15 18752 km2 at 13.077,14.527
+22:11:57   unmatched: Hylak 14 18667 km2 at 41.057,52.913
+22:11:57   unmatched: Hylak 12 16718 km2 at 46.385,74.602
+22:11:57   unmatched: Hylak 100 9962 km2 at 60.920,34.161
+22:11:57   unmatched: Hylak 175 8027 km2 at -28.427,137.206
+22:11:57   unmatched: Hylak 158 7473 km2 at 3.373,36.144
+22:11:57   unmatched: Hylak 67 6479 km2 at 41.410,-112.831
+22:11:57   unmatched: Hylak 136 6196 km2 at 42.485,77.427
+22:11:57   unmatched: Hylak 85 6133 km2 at -30.844,-62.252
+22:11:57   unmatched: Hylak 156 6045 km2 at 6.303,0.060
+22:11:57   unmatched: Hylak 49 5814 km2 at 53.649,-64.261
+22:11:57   unmatched: Hylak 159 5527 km2 at 2.761,31.410
+22:11:57   unmatched: Hylak 152 5385 km2 at 23.967,32.886
+22:11:57   unmatched: Hylak 172 5277 km2 at -16.523,28.760
+22:11:57   unmatched: Hylak 116 5060 km2 at 53.458,49.496
+22:11:57   unmatched: Hylak 142 4933 km2 at 37.706,45.373
+22:11:57   unmatched: Hylak 91 4909 km2 at 75.221,100.090
+22:11:57   unmatched: Hylak 20 4873 km2 at 66.564,-71.413
+22:11:57   unmatched: Hylak 110 4811 km2 at 56.284,101.785
+22:11:57   unmatched: Hylak 143 4267 km2 at 36.923,100.198
+22:11:57   unmatched: Hylak 122 4194 km2 at 49.656,83.348
+22:11:57   unmatched: Hylak 107 4042 km2 at 58.102,38.702
+22:11:57 reading ETOPO surface
+22:11:59 22 whole lakes with ETOPO's bathymetry (1 of them not matched in HydroLAKES)
+22:11:59 80856 whole lakes get a depth
+22:11:59 16053 of 80856 lakes' floors from their own distances to the shore
+22:11:59      116948 km2: mean   71.8 m, floor   92.0 m (HydroLAKES), size 10.59 km
+22:11:59       82135 km2: mean  146.6 m, floor  191.3 m (HydroLAKES, ETOPO bed), size 15.35 km
+22:11:59       67286 km2: mean   41.1 m, floor   55.3 m (HydroLAKES), size 9.28 km
+22:11:59       32934 km2: mean  577.0 m, floor  886.2 m (HydroLAKES), size 15.47 km
+22:11:59       31991 km2: mean  738.6 m, floor 1071.8 m (HydroLAKES, ETOPO bed), size 12.01 km
+22:11:59       30590 km2: mean   72.1 m, floor   94.6 m (HydroLAKES), size 6.54 km
+22:11:59       29675 km2: mean  261.3 m, floor  410.7 m (HydroLAKES), size 16.94 km
+22:11:59       25730 km2: mean   19.4 m, floor   28.2 m (HydroLAKES, ETOPO bed), size 16.53 km
+22:11:59       24345 km2: mean   10.9 m, floor   15.3 m (HydroLAKES), size 7.59 km
+22:11:59       19391 km2: mean   84.8 m, floor  107.2 m (HydroLAKES), size 7.80 km
+22:11:59       17485 km2: mean   47.9 m, floor   59.6 m (HydroLAKES), size 7.03 km
+22:11:59        7903 km2: mean   13.3 m, floor   19.7 m (HydroLAKES), size 9.31 km
+22:11:59        7702 km2: mean  111.6 m, floor  150.9 m (HydroLAKES), size 4.32 km
+22:11:59        7526 km2: mean   20.6 m, floor   27.0 m (HydroLAKES), size 3.75 km
+22:11:59        5638 km2: mean    3.5 m, floor    5.2 m (HydroLAKES), size 9.26 km
+22:11:59        5456 km2: mean   16.9 m, floor   22.6 m (HydroLAKES), size 0.70 km
+22:11:59        5391 km2: mean   27.9 m, floor   35.6 m (HydroLAKES), size 2.68 km
+22:11:59        5157 km2: mean    3.2 m, floor    4.7 m (HydroLAKES), size 2.60 km
+22:11:59        5052 km2: mean    7.6 m, floor   10.7 m (HydroLAKES), size 8.45 km
+22:11:59        4855 km2: mean    3.6 m, floor    4.9 m (HydroLAKES), size 2.71 km
+22:12:00 wrote C:\VS mods\work\lakes-2.2\depths\lake-depths-1.bin: 252261 bytes, 91740 pieces in 7865 tiles (80856 lakes)
+22:12:00 HydroLAKES median depth 1-10 km2: 4.2 m (168492 lakes)
+22:12:00 HydroLAKES median depth 10-100 km2: 7.0 m (14981 lakes)
+22:12:00 HydroLAKES median depth 100-1e+09 km2: 12.9 m (1708 lakes)

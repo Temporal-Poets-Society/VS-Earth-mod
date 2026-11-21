@@ -63,6 +63,8 @@ namespace EarthMap
         {
             if (pos == null || blockColumn == null) return;
             int top = Top(pos.X, pos.Z);
+            // decision 0099: with vanilla rocks, the layers as the world pass laid them under the local ground
+            if (EarthVanillaStrata.PickColumn(pos, blockColumn.Length) is int[] laid) blockColumn = laid;
             // 0060: in ore-layer worlds the column is Earth's own blocks in the layers this deposit may use
             EarthWorldGen.Instance?.Api?.ModLoader.GetModSystem<EarthGeology>()?.Layers?.Reading(__instance, pos, top, ref blockColumn);
             if (top <= 0) return;

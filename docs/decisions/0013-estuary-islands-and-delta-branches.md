@@ -1,7 +1,9 @@
 # 0013: Estuary islands stay whole; delta branches share their river's water
 
 Status: Agreed, implemented (0.14.7), offline renders only, not played yet | Date: 2026-10-20 | Decided by: the user
-("Island stays whole", "Delta split list", while play-testing the 0.14.5 world `earth 0145`)
+("Island stays whole", "Delta split list", while play-testing the 0.14.5 world `earth 0145`). Delta rules 2 (the
+Atchafalaya): built on `claude/river-cutoff-2`, 18 November 2026, the coordinator (D72), merged into `claude/terrain-2.2` for the
+author's in-game test (2.2.0-rc.8, 19 November 2026); offline checks only.
 
 ## Context
 
@@ -33,6 +35,24 @@ Two things the user saw on the Wmap in a 204 800-ring world:
 - Existing worlds keep their terrain; they opt in with `UpgradeExistingWorldIslands` and
   `UpgradeExistingWorldRiverDeltas` ([0002](0002-save-compatibility.md)).
 
+**Delta rules 2: the Atchafalaya** (`RiverDeltas.Version` 2, EA-0179, 18 November 2026).
+
+- **The split:** the Mississippi at Old River, where the river data's Red River joins it (30.985° N 91.660° W, 21,591 m³/s with
+  the Red).
+- **The branch:** the Atchafalaya to Atchafalaya Bay (29.480° N 91.286° W), share 0.3. That is the share the Old River Control
+  Structure keeps since 1963. Around 1318 it took less (a raft of logs blocked it until the 1830s), but the river data is
+  today's.
+- **Why:** the river data, a tree, gives all the water to the Mississippi. It has the Atchafalaya only as a 20-240 m³/s
+  stream from Simmesport, so at 1:50 to 1:200 it was left out or a one-block stream.
+- **How it is drawn:** the branch's head is led to the split across the Old River's 13 km at the split's level.
+- **Versions:**
+  - Each delta names the version that added it (`Delta.Since`). A world applies the deltas of its own version and before
+    (`RiverDeltas.Apply`'s version), so worlds of version 1 keep the Mekong alone.
+  - New worlds at every scale get version 2.
+  - An existing world that opts in with `UpgradeExistingWorldRiverDeltas` gets both.
+- **The Damietta branch of the Nile is not in the river data at all:** there is no chain for a branch to take. It needs course
+  data, a later item.
+
 ## Alternatives
 
 - *Keep cutting islands, with eased edges.* Smaller change, but the islands stay split.
@@ -41,8 +61,9 @@ Two things the user saw on the Wmap in a 204 800-ring world:
 
 ## Open
 
-- More deltas for the list (the Ganges–Brahmaputra, Nile, Rhine, Danube, Niger, Irrawaddy, Volga, Lena, Mississippi,
-  and the Mekong's own Hàm Luông and Mỹ Tho), each checked against the river data (`EarthMapTests ... mouths2`).
+- More deltas for the list (the Ganges–Brahmaputra, Nile (its Damietta branch needs course data first), Rhine, Danube,
+  Niger, Irrawaddy, Volga, Lena, and the Mekong's own Hàm Luông and Mỹ Tho), each checked against the river data
+  (`EarthMapTests ... mouths2`).
 - Widths themselves: decided the same day in [0014](0014-river-widths.md).
 
 ## Implementation

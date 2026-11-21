@@ -397,6 +397,14 @@ namespace EarthMap.Core
                     b = waterTop(lev[r][k]);
                     hold = margin;
                 }
+                // (EA-0165) a streams layer's network comes down in short falls as soon as it lags (MaxLag): its pools are never
+                // held under their own level to reach the levels downstream a step every RampLength blocks. A stream falling
+                // faster than that for long (1 in 3.5 from a lake at 28.37° N 84.78° E) had its pools laid out up to 120 blocks
+                // under its levels from the bottom up: a trench below the lake. Not at a reach's end, where its confluence's cap
+                // holds.
+                // (EA-0179: not a coarse world's one-block streams, whose levels are not fitted to the land: their water would
+                // rise to a level the land drawn at 1:50 can lie under)
+                else if (net.MaxLag < RiverNetwork.ChuteMaxDrop && k < n - 1) b = Math.Max(b, waterTop(lev[r][k]));
                 bd[k] = b;
             }
             holdAtStart[r] = hold;
@@ -586,7 +594,7 @@ namespace EarthMap.Core
             if (forced) w.GorgeLeft = 0;
             to = ValleyLevel(r, k, f, valley, aboveFall, inRun, in w, to);
             bool gorge = rules.Sections && !forced && StartSection(r, k, u, s, nextFall, inRun, ref w, ref to, wk);
-            if (to < w.P) LayDrop(to, inRun, gorge, s, reachLength, ref w, wk);
+            if (to < w.P) LayDrop(to, inRun, gorge, s, reachLength, net.LagOf(r), ref w, wk);
             // a run ends where the valley no longer falls a block within WhiteWaterSpacing of the last step
             else if (inRun && w.Dsd > WhiteWaterSpacing) w.Run = false;
         }
@@ -604,12 +612,12 @@ namespace EarthMap.Core
                 double ahead = lead[r][k - 1] + (lead[r][k] - lead[r][k - 1]) * f;
                 int target = double.IsInfinity(ahead) ? valley : Math.Max(valley - StepLead, Math.Min(valley, (int)Math.Floor(ahead)));
                 if (!aboveFall && P > target && dsd >= StepGap(Math.Max(1, P - valley))) to = Math.Min(to, P - 1);
-                if (!aboveFall && P - valley > ChuteMaxDrop && dsd >= ChuteSpacing) to = Math.Min(to, valley);
+                if (!aboveFall && P - valley > net.LagOf(r) && dsd >= ChuteSpacing) to = Math.Min(to, valley);
             }
             else if (rules.StepByStep)
             {
                 if (!aboveFall && P > valley && dsd >= StepGap(P - valley)) to = Math.Min(to, P - 1);
-                if (!aboveFall && P - valley > ChuteMaxDrop && dsd >= ChuteSpacing) to = Math.Min(to, valley);
+                if (!aboveFall && P - valley > net.LagOf(r) && dsd >= ChuteSpacing) to = Math.Min(to, valley);
             }
             else if (!aboveFall && P > valley && dsd >= (inRun ? WhiteWaterSpacing : MinPool)) to = Math.Min(to, valley);
             return to;
@@ -662,11 +670,11 @@ namespace EarthMap.Core
         /// <summary>Takes the water down to level to here. A 1-block step (inside a rapids run or a section: a chute's step,
         /// rapid); from pool layout 2 a drop of 2–4 blocks a chute of 1-block steps ChuteGap apart (squeezed before the
         /// reach's end, a short curtain where there is no room; the next drop waits for its end), 5 or more a curtain.</summary>
-        void LayDrop(int to, bool inRun, bool gorge, double s, double reachLength, ref Water w, Worker wk)
+        void LayDrop(int to, bool inRun, bool gorge, double s, double reachLength, int maxLag, ref Water w, Worker wk)
         {
             int h = w.P - to;
-            double spacing = rules.Chutes && h >= 2 && h <= ChuteMaxDrop ? Math.Min(net.ChuteGap, (reachLength - s) / (h - 1)) : 0;
-            byte shape = h == 1 ? (inRun || gorge ? ShapeChute : ShapeStep) : !rules.Chutes ? ShapeStep : spacing >= 1 ? ShapeChute : h > ChuteMaxDrop ? ShapeCurtain : ShapeShortCurtain;
+            double spacing = rules.Chutes && h >= 2 && h <= maxLag ? Math.Min(net.ChuteGap, (reachLength - s) / (h - 1)) : 0;
+            byte shape = h == 1 ? (inRun || gorge ? ShapeChute : ShapeStep) : !rules.Chutes ? ShapeStep : spacing >= 1 ? ShapeChute : h > maxLag ? ShapeCurtain : ShapeShortCurtain;
             for (int i = 0; w.P > to; w.P--, i++)
             {
                 wk.Drops.Add((float)(s + (shape == ShapeChute ? i * spacing : 0)));

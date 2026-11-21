@@ -57,11 +57,11 @@ static class ParamsBuilderChecks
     }
 
     /// <summary>A new world's params from the Earth tab <paramref name="wc"/> (null: none) and <paramref name="cfg"/>, on a
-    /// 1:100 ring <paramref name="height"/> blocks high, without data unless given: how the other checks make one (they
-    /// called EarthWorldOptions.Freeze on bare params before EA-0089 C).</summary>
-    public static EarthParams NewParams(ITreeAttribute wc, EarthMapConfig cfg, EarthData data = null, int height = 384)
+    /// 1:100 ring (or <paramref name="scale"/>'s) <paramref name="height"/> blocks high, without data unless given: how the
+    /// other checks make one (they called EarthWorldOptions.Freeze on bare params before EA-0089 C).</summary>
+    public static EarthParams NewParams(ITreeAttribute wc, EarthMapConfig cfg, EarthData data = null, int height = 384, string scale = "100")
     {
-        SpawnSearch.SizeFor("100", out int W, out int L, out _);
+        SpawnSearch.SizeFor(scale, out int W, out int L, out _);
         var w = new NewWorld
         {
             MapSizeX = W, MapSizeY = height, SeaLevel = height * 110 / 384, Seed = 386217, WorldConfig = wc, HydrologyQuery = 3,
@@ -93,6 +93,16 @@ static class ParamsBuilderChecks
             yield return T("elevation " + elevation, t => t.SetString("earthElevation", elevation));
         yield return T("springs streams, ponds wetlands", t => { t.SetString("earthMountainSprings", "streams"); t.SetString("earthSurfacePonds", "wetlands"); });
         yield return T("springs and ponds vanilla, rapids off", t => { t.SetString("earthMountainSprings", "vanilla"); t.SetString("earthSurfacePonds", "vanilla"); t.SetString("earthRiverRapids", "off"); });
+        // EA-0199 (decision 0105): Soil, Earth soil's two tier sets (climate only is every style's own value)
+        yield return T("soil vanilla tiers", t => t.SetString("earthSoil", "vanilla"));
+        yield return T("soil realistic tiers", t => t.SetString("earthSoil", "realistic"));
+        yield return T("soil climate only", t => t.SetString("earthSoil", "climate"));
+        // EA-0159 (decision 0095): River width in % of 1:10's (each style sets its recommended value)
+        foreach (int width in new[] { 50, 200, 1000 })
+            yield return T("river width " + width + " %", t => t.SetInt("earthRiverWidth", width));
+        // EA-0179 (decision 0098): Smallest stream (each style sets its recommended value; no effect at 1:25 and finer)
+        foreach (int q in new[] { 20, 60 })
+            yield return T("smallest stream " + q, t => t.SetInt("earthSmallestStream", q));
         yield return T("extinct animals, chickens by range", t => { t.SetBool("earthIncludeExtinctAnimals", true); t.SetBool("earthChickensEverywhere", false); });
         yield return T("curve log250", t => t.SetString("earthHeightCurve", "log250"));
         yield return T("curve linear", t => t.SetString("earthHeightCurve", "linear"));

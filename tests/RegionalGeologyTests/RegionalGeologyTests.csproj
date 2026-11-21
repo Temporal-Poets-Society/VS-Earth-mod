@@ -4,6 +4,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="GoldenWorlds.cs" />
+    <Compile Include="V2Golden.cs" />
+    <Compile Include="V3Checks.cs" />
     <ProjectReference Include="..\Earth.Core.Tests.Common\Earth.Core.Tests.Common.csproj" />
   </ItemGroup>
 </Project>

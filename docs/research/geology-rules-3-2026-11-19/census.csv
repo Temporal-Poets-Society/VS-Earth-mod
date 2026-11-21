@@ -1,0 +1,1120 @@
+run,site,kind,groundMin,groundMax,family,blocks,perChunkColumn,meanDepth,rocksWithin120
+main-10,troodos,ophiolite,211,250,azurite,323,12.9,14.6,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,bauxite,685307,27412.3,64.2,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,clay-red,831,33.2,0.8,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,emerald,5,0.2,101,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,flint,499,20.0,6.0,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,fluorite,277,11.1,63.4,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,galena,1091,43.6,37.1,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,halite,69394,2775.8,122.7,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,kernite,540,21.6,69.7,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,lignite,364,14.6,37.9,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,limonite,239,9.6,99.4,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,loose:galena,1,0.0,0,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,nativecopper,434,17.4,68.1,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,olivine,59,2.4,33.3,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,quartz,8754,350.2,85.6,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,rhodochrosite,279,11.2,90.9,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,saltpeter,2,0.1,36.5,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,smithsonite,818,32.7,12.1,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,sphalerite,26,1.0,40,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,sulfur,1918,76.7,48.9,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,troodos,ophiolite,211,250,sylvite,459,18.4,97.5,sandstone 1701777; bauxite 685307; shale 231173; conglomerate 92484; slate 88802; granite 44039; halite 36659
+main-10,oman,ophiolite,145,171,bauxite,90597,3623.9,155.7,conglomerate 2748112; halite 104775
+main-10,oman,ophiolite,145,171,fluorite,120,4.8,68.7,conglomerate 2748112; halite 104775
+main-10,oman,ophiolite,145,171,galena,142,5.7,49.0,conglomerate 2748112; halite 104775
+main-10,oman,ophiolite,145,171,halite,143063,5722.5,94.9,conglomerate 2748112; halite 104775
+main-10,oman,ophiolite,145,171,kernite,539,21.6,61.3,conglomerate 2748112; halite 104775
+main-10,oman,ophiolite,145,171,lignite,1671,66.8,29.7,conglomerate 2748112; halite 104775
+main-10,oman,ophiolite,145,171,loose:nativecopper,14,0.6,0,conglomerate 2748112; halite 104775
+main-10,oman,ophiolite,145,171,nativecopper,115,4.6,6.6,conglomerate 2748112; halite 104775
+main-10,oman,ophiolite,145,171,olivine,273,10.9,86.4,conglomerate 2748112; halite 104775
+main-10,oman,ophiolite,145,171,quartz,4250,170.0,87.5,conglomerate 2748112; halite 104775
+main-10,oman,ophiolite,145,171,quartz_nativegold,9,0.4,104.8,conglomerate 2748112; halite 104775
+main-10,oman,ophiolite,145,171,quartz_nativesilver,197,7.9,92.2,conglomerate 2748112; halite 104775
+main-10,oman,ophiolite,145,171,saltpeter,325,13.0,59.6,conglomerate 2748112; halite 104775
+main-10,oman,ophiolite,145,171,sulfur,7508,300.3,42.8,conglomerate 2748112; halite 104775
+main-10,oman,ophiolite,145,171,sylvite,772,30.9,100.6,conglomerate 2748112; halite 104775
+main-10,kempirsai,ophiolite,150,155,beryl,3,0.1,58,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,bituminouscoal,3424,137.0,31.6,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,cerussite,119,4.8,6.6,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,clay-fire,926,37.0,30.8,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,flint,305,12.2,6.3,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,fluorite,12,0.5,48,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,garnet,11,0.4,75.2,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,halite,35978,1439.1,87.7,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,hemimorphite,4070,162.8,14.1,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,lapislazuli,15,0.6,23.8,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,lignite,4031,161.2,26.6,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,loose:nativecopper,2,0.1,0,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,nativecopper,90,3.6,49.6,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,olivine,42,1.7,45.0,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,peat,1856,74.2,1.3,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,quartz,14846,593.8,44.6,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,quartz_nativegold,26,1.0,93.7,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,quartz_nativesilver,41,1.6,36.8,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,saltpeter,110,4.4,40.8,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,sphalerite,306,12.2,41.4,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,sulfur,692,27.7,31.7,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,sylvite,360,14.4,100.3,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,topaz,16,0.6,64.2,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,tourmaline,2,0.1,59,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,vanadinite,29,1.2,5.1,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,kempirsai,ophiolite,150,155,wolframite,654,26.2,74.7,granite 1522085; sandstone 678191; shale 299761; slate 206217; conglomerate 108715; halite 28195; limestone 2642; claystone 1586
+main-10,bushveld,intrusion,217,224,bauxite,1963619,78544.8,182.9,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,beryl,32,1.3,46.6,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,bismuthinite,1263,50.5,62.4,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,bituminouscoal,1050,42.0,18.2,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,cerussite,1118,44.7,19.2,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,chalcopyrite,767,30.7,53.7,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,chromite,34,1.4,82.8,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,clay-fire,95,3.8,26,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,clay-red,520,20.8,0.8,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,flint,97,3.9,4.5,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,galena,2531,101.2,16.8,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,garnet,96,3.8,64.6,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,hematite,87,3.5,47.0,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,ilmenite,3025,121.0,66.3,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,lignite,4532,181.3,20.9,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,loose:galena,7,0.3,0,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,loose:nativecopper,1,0.0,0,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,nativecopper,8325,333.0,72.8,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,quartz,29305,1172.2,59.3,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,sphalerite,137,5.5,70.1,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,sulfur,283,11.3,17.5,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,tetrahedrite,2110,84.4,56.2,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,tourmaline,25,1.0,46.9,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,bushveld,intrusion,217,224,vanadinite,207,8.3,20.8,granite 2070631; sandstone 286300; shale 219068; slate 178146; conglomerate 88457; suevite 237
+main-10,greatdyke,intrusion,230,232,bauxite,941693,37667.7,103.6,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,beryl,23,0.9,40.7,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,bismuthinite,33,1.3,65,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,chalcopyrite,1851,74.0,30.3,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,clay-red,1945,77.8,1.2,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,garnet,122,4.9,53.4,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,loose:nativecopper,1,0.0,0,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,nativecopper,7787,311.5,59.6,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,olivine,91,3.6,67.3,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,pyrite,2277,91.1,34.7,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,quartz,20892,835.7,44.8,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,quartz_nativesilver,228,9.1,50.4,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,ruby,23,0.9,34.1,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,saltpeter,124,5.0,110.1,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,sapphire,13,0.5,38.5,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,sphalerite,2270,90.8,45.0,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,tetrahedrite,151,6.0,56.8,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,topaz,18,0.7,59.1,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,tourmaline,13,0.5,36.1,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,greatdyke,intrusion,230,232,wolframite,712,28.5,64.4,granite 895431; bauxite 874176; gneiss 637399; schist 462195; suevite 133
+main-10,sudbury,intrusion,138,143,beryl,89,3.6,26.7,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,bismuthinite,1107,44.3,60.5,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,cassiterite,655,26.2,52.7,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,chalcopyrite,224,9.0,32.4,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,clay-red,90,3.6,1.5,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,emerald,236,9.4,96.2,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,garnet,41,1.6,52.1,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,graphite,3567,142.7,70.2,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,loose:nativecopper,2,0.1,0,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,nativecopper,28,1.1,6.3,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,olivine,68,2.7,19.4,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,quartz,7407,296.3,69.5,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,quartz_nativegold,14,0.6,93.9,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,quartz_nativesilver,5,0.2,94.2,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,ruby,14,0.6,63.4,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,saltpeter,9,0.4,26.6,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,sapphire,1,0.0,64,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,sphalerite,52,2.1,41.4,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,topaz,11,0.4,26.5,gneiss 2020651; granite 853036; suevite 20
+main-10,sudbury,intrusion,138,143,tourmaline,78,3.1,40.5,gneiss 2020651; granite 853036; suevite 20
+main-10,dartmoor,granite,143,152,azurite,904,36.2,21.5,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,bismuthinite,742,29.7,81.3,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,cerussite,445,17.8,12.0,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,chalcopyrite,136,5.4,79.9,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,cinnabar,80,3.2,74.5,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,clay-red,425,17.0,0.4,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,flint,477,19.1,6.7,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,fluorite,878,35.1,57.2,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,garnet,40,1.6,80.5,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,hemimorphite,2112,84.5,15.8,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,lignite,263,10.5,46.5,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,loose:nativecopper,3,0.1,0,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,nativecopper,67,2.7,11.1,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,olivine,182,7.3,113.7,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,peat,227,9.1,1.0,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,phosphorite,104,4.2,46,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,pyrite,1570,62.8,57.3,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,quartz,17013,680.5,31.2,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,saltpeter,175,7.0,42.0,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,smithsonite,3436,137.4,16.9,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,sphalerite,295,11.8,75.9,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,sulfur,2796,111.8,36.6,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,wolframite,115,4.6,73.4,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,dartmoor,granite,143,152,wulfenite,3189,127.6,16.7,granite 1173750; sandstone 1078256; shale 298978; slate 201541; conglomerate 107129; suevite 112
+main-10,iceland,oceanic,202,218,bauxite,1515511,60620.4,161.5,peridotite 1857726; basalt 861241; bauxite 82540; obsidian 6639
+main-10,iceland,oceanic,202,218,bismuthinite,75,3.0,64.5,peridotite 1857726; basalt 861241; bauxite 82540; obsidian 6639
+main-10,iceland,oceanic,202,218,chalcopyrite,616,24.6,23.8,peridotite 1857726; basalt 861241; bauxite 82540; obsidian 6639
+main-10,iceland,oceanic,202,218,emerald,17,0.7,98.4,peridotite 1857726; basalt 861241; bauxite 82540; obsidian 6639
+main-10,iceland,oceanic,202,218,garnet,1,0.0,83,peridotite 1857726; basalt 861241; bauxite 82540; obsidian 6639
+main-10,iceland,oceanic,202,218,loose:quartz,3,0.1,0,peridotite 1857726; basalt 861241; bauxite 82540; obsidian 6639
+main-10,iceland,oceanic,202,218,nativecopper,2273,90.9,70.8,peridotite 1857726; basalt 861241; bauxite 82540; obsidian 6639
+main-10,iceland,oceanic,202,218,olivine,13655,546.2,77.0,peridotite 1857726; basalt 861241; bauxite 82540; obsidian 6639
+main-10,iceland,oceanic,202,218,olivine_peridot,385,15.4,85.6,peridotite 1857726; basalt 861241; bauxite 82540; obsidian 6639
+main-10,iceland,oceanic,202,218,pyrite,1006,40.2,28.2,peridotite 1857726; basalt 861241; bauxite 82540; obsidian 6639
+main-10,iceland,oceanic,202,218,quartz,23886,955.4,60.2,peridotite 1857726; basalt 861241; bauxite 82540; obsidian 6639
+main-10,iceland,oceanic,202,218,saltpeter,152,6.1,88.2,peridotite 1857726; basalt 861241; bauxite 82540; obsidian 6639
+main-10,iceland,oceanic,202,218,sapphire,1,0.0,39,peridotite 1857726; basalt 861241; bauxite 82540; obsidian 6639
+main-10,iceland,oceanic,202,218,sperrylite,54,2.2,61.4,peridotite 1857726; basalt 861241; bauxite 82540; obsidian 6639
+main-10,iceland,oceanic,202,218,sphalerite,259,10.4,63.1,peridotite 1857726; basalt 861241; bauxite 82540; obsidian 6639
+main-10,deccan,flood-basalt,178,185,chalcopyrite,359,14.4,18.9,peridotite 2122677; basalt 688444; obsidian 5464
+main-10,deccan,flood-basalt,178,185,clay-red,130,5.2,0.8,peridotite 2122677; basalt 688444; obsidian 5464
+main-10,deccan,flood-basalt,178,185,garnet,113,4.5,60.5,peridotite 2122677; basalt 688444; obsidian 5464
+main-10,deccan,flood-basalt,178,185,loose:nativecopper,3,0.1,0,peridotite 2122677; basalt 688444; obsidian 5464
+main-10,deccan,flood-basalt,178,185,loose:quartz,20,0.8,0,peridotite 2122677; basalt 688444; obsidian 5464
+main-10,deccan,flood-basalt,178,185,nativecopper,3356,134.2,74.9,peridotite 2122677; basalt 688444; obsidian 5464
+main-10,deccan,flood-basalt,178,185,olivine,11355,454.2,61.7,peridotite 2122677; basalt 688444; obsidian 5464
+main-10,deccan,flood-basalt,178,185,pyrite,2941,117.6,20.5,peridotite 2122677; basalt 688444; obsidian 5464
+main-10,deccan,flood-basalt,178,185,quartz,18493,739.7,64.2,peridotite 2122677; basalt 688444; obsidian 5464
+main-10,deccan,flood-basalt,178,185,saltpeter,3,0.1,65,peridotite 2122677; basalt 688444; obsidian 5464
+main-10,deccan,flood-basalt,178,185,sapphire,2,0.1,34,peridotite 2122677; basalt 688444; obsidian 5464
+main-10,deccan,flood-basalt,178,185,sperrylite,214,8.6,65.6,peridotite 2122677; basalt 688444; obsidian 5464
+main-10,deccan,flood-basalt,178,185,sphalerite,224,9.0,62.5,peridotite 2122677; basalt 688444; obsidian 5464
+main-10,deccan,flood-basalt,178,185,spinel,73,2.9,52.7,peridotite 2122677; basalt 688444; obsidian 5464
+main-10,westsiberia,cover,115,117,azurite,59,2.4,10.4,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,beryl,10,0.4,56,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,bituminouscoal,896,35.8,36.1,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,borax,79,3.2,39.7,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,cerussite,261,10.4,16.5,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,flint,369,14.8,4.7,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,garnet,45,1.8,72.2,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,graphite,71,2.8,46.1,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,hematite,3069,122.8,77.2,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,kernite,118,4.7,43.5,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,limonite,659,26.4,23.5,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,loose:nativecopper,3,0.1,0,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,nativecopper,6499,260.0,75.0,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,olivine,91,3.6,15.3,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,pyrite,1308,52.3,59.3,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,quartz,15650,626.0,72.8,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,quartz_nativegold,8,0.3,19.5,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,quartz_nativesilver,64,2.6,98.7,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,saltpeter,38,1.5,25.8,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,sulfur,1644,65.8,26.8,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,topaz,19,0.8,60.6,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,tourmaline,4,0.2,57.2,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,vanadinite,1307,52.3,17.2,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,westsiberia,cover,115,117,wulfenite,54,2.2,25.8,granite 1518820; sandstone 709546; shale 262289; slate 179589; conglomerate 93762; suevite 29
+main-10,amazon,cover,113,115,bismuthinite,5983,239.3,61.5,andesite 2725142; basalt 1180; suevite 100
+main-10,amazon,cover,113,115,chromite,92,3.7,86.6,andesite 2725142; basalt 1180; suevite 100
+main-10,amazon,cover,113,115,loose:nativecopper,1,0.0,0,andesite 2725142; basalt 1180; suevite 100
+main-10,amazon,cover,113,115,nativecopper,35,1.4,4.4,andesite 2725142; basalt 1180; suevite 100
+main-10,amazon,cover,113,115,pentlandite,2681,107.2,88.0,andesite 2725142; basalt 1180; suevite 100
+main-10,amazon,cover,113,115,quartz,8159,326.4,53.0,andesite 2725142; basalt 1180; suevite 100
+main-10,amazon,cover,113,115,quartz_nativegold,2,0.1,77,andesite 2725142; basalt 1180; suevite 100
+main-10,amazon,cover,113,115,quartz_nativesilver,26,1.0,40.5,andesite 2725142; basalt 1180; suevite 100
+main-10,amazon,cover,113,115,saltpeter,217,8.7,35.9,andesite 2725142; basalt 1180; suevite 100
+main-10,addis,highland,348,364,bismuthinite,1302,52.1,61.4,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,cassiterite,1070,42.8,43.8,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,chromite,95,3.8,83,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,cinnabar,427,17.1,94.4,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,clay-red,488,19.5,0,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,emerald,45,1.8,95.2,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,garnet,31,1.2,62.9,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,limonite,90,3.6,37.0,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,loose:cassiterite,1,0.0,0,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,loose:nativecopper,16,0.6,0,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,nativecopper,101,4.0,4.7,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,olivine,9143,365.7,59.4,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,pentlandite,29,1.2,102,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,pyrite,2793,111.7,27.5,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,quartz,13930,557.2,69.5,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,quartz_nativegold,10,0.4,39.6,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,quartz_nativesilver,40,1.6,70.8,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,saltpeter,15,0.6,80.1,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,sapphire,31,1.2,36.6,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,sperrylite,262,10.5,61.8,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,sphalerite,16,0.6,24.6,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,addis,highland,348,364,spinel,68,2.7,54.3,peridotite 1976886; basalt 963286; obsidian 7737
+main-10,vienna,lowland,122,125,azurite,1655,66.2,22.5,sandstone 2862980; suevite 333
+main-10,vienna,lowland,122,125,cerussite,380,15.2,10.9,sandstone 2862980; suevite 333
+main-10,vienna,lowland,122,125,clay-red,1155,46.2,1.2,sandstone 2862980; suevite 333
+main-10,vienna,lowland,122,125,flint,228,9.1,5.4,sandstone 2862980; suevite 333
+main-10,vienna,lowland,122,125,kernite,944,37.8,62.5,sandstone 2862980; suevite 333
+main-10,vienna,lowland,122,125,lignite,7,0.3,22.1,sandstone 2862980; suevite 333
+main-10,vienna,lowland,122,125,nativecopper,359,14.4,52.2,sandstone 2862980; suevite 333
+main-10,vienna,lowland,122,125,olivine,91,3.6,24.3,sandstone 2862980; suevite 333
+main-10,vienna,lowland,122,125,quartz,9619,384.8,66.8,sandstone 2862980; suevite 333
+main-10,vienna,lowland,122,125,quartz_nativesilver,66,2.6,76.3,sandstone 2862980; suevite 333
+main-10,vienna,lowland,122,125,rhodochrosite,1561,62.4,93.7,sandstone 2862980; suevite 333
+main-10,vienna,lowland,122,125,saltpeter,135,5.4,56.0,sandstone 2862980; suevite 333
+main-10,vienna,lowland,122,125,smithsonite,487,19.5,16.6,sandstone 2862980; suevite 333
+main-10,vienna,lowland,122,125,sphalerite,2955,118.2,63.3,sandstone 2862980; suevite 333
+main-10,riga,lowland,102,112,azurite,1788,71.5,23.1,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,bismuthinite,410,16.4,78.5,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,bituminouscoal,326,13.0,49.0,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,borax,1328,53.1,34.4,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,cassiterite,285,11.4,90.1,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,emerald,76,3.0,94.8,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,flint,434,17.4,2.1,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,garnet,16,0.6,71.4,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,halite,26413,1056.5,66.9,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,kernite,193,7.7,51.4,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,lapislazuli,73,2.9,37.1,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,lignite,15922,636.9,27.2,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,loose:lignite,3,0.1,0,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,nativecopper,763,30.5,78.9,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,quartz,4857,194.3,37.4,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,rhodochrosite,853,34.1,87.8,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,ruby,5,0.2,56.6,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,sapphire,232,9.3,72.0,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,smithsonite,43,1.7,12,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,sphalerite,1131,45.2,56.8,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,sulfur,252,10.1,36.2,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,sylvite,375,15.0,60.1,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,tourmaline,8,0.3,56.9,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,vanadinite,40,1.6,27.5,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-10,riga,lowland,102,112,wulfenite,114,4.6,23.1,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,troodos,ophiolite,211,250,bauxite,685421,27416.8,64.2,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,cassiterite,1050,42.0,49.7,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,chalcopyrite,1205,48.2,50.3,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,chromite,41,1.6,82.4,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,clay-red,831,33.2,0.8,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,emerald,16,0.6,102,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,halite,68889,2755.6,123.1,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,kernite,7,0.3,73.4,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,limonite,1744,69.8,94.2,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,nativecopper,434,17.4,68.1,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,olivine,59,2.4,33.3,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,olivine_peridot,38,1.5,103.5,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,pyrite,417,16.7,53.8,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,quartz,8767,350.7,85.6,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,saltpeter,2,0.1,36.5,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,sperrylite,595,23.8,45.8,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,sphalerite,26,1.0,40,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,sulfur,21,0.8,75,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,troodos,ophiolite,211,250,sylvite,460,18.4,95.8,basalt 1919923; bauxite 685421; peridotite 199954; halite 36232; chert 32609; obsidian 7274
+geo3-10,oman,ophiolite,145,171,bauxite,94553,3782.1,155.8,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,bismuthinite,1128,45.1,59.2,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,cassiterite,1755,70.2,49.4,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,cinnabar,190,7.6,89.7,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,emerald,183,7.3,94.4,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,garnet,168,6.7,56.0,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,hematite,1542,61.7,80.5,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,loose:nativecopper,14,0.6,0,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,nativecopper,115,4.6,6.6,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,olivine,15285,611.4,59.2,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,olivine_peridot,12,0.5,100,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,pyrite,1166,46.6,12.9,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,quartz,4365,174.6,87.7,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,quartz_nativegold,9,0.4,104.8,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,quartz_nativesilver,210,8.4,92.5,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,saltpeter,325,13.0,59.6,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,sperrylite,711,28.4,59.1,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,oman,ophiolite,145,171,spinel,103,4.1,42.9,peridotite 2563014; basalt 274388; obsidian 2050; chert 52
+geo3-10,kempirsai,ophiolite,150,155,bituminouscoal,122,4.9,14.1,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,kempirsai,ophiolite,150,155,emerald,115,4.6,95.2,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,kempirsai,ophiolite,150,155,garnet,14,0.6,70.1,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,kempirsai,ophiolite,150,155,lignite,273,10.9,15.2,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,kempirsai,ophiolite,150,155,loose:nativecopper,2,0.1,0,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,kempirsai,ophiolite,150,155,nativecopper,90,3.6,49.6,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,kempirsai,ophiolite,150,155,olivine,17083,683.3,84.1,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,kempirsai,ophiolite,150,155,olivine_peridot,89,3.6,85.2,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,kempirsai,ophiolite,150,155,peat,1856,74.2,1.3,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,kempirsai,ophiolite,150,155,quartz,14791,591.6,44.6,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,kempirsai,ophiolite,150,155,quartz_nativegold,23,0.9,93.8,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,kempirsai,ophiolite,150,155,quartz_nativesilver,39,1.6,34.1,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,kempirsai,ophiolite,150,155,saltpeter,110,4.4,40.8,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,kempirsai,ophiolite,150,155,sapphire,14,0.6,37.1,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,kempirsai,ophiolite,150,155,sphalerite,341,13.6,43.6,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,kempirsai,ophiolite,150,155,spinel,81,3.2,56.6,peridotite 1835337; basalt 948364; chert 50144; obsidian 6766; suevite 100
+geo3-10,bushveld,intrusion,217,224,bauxite,1963619,78544.8,182.9,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,beryl,38,1.5,44.4,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,bismuthinite,1542,61.7,54.7,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,chalcopyrite,2048,81.9,35.8,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,chromite,34,1.4,82.8,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,clay-red,520,20.8,0.8,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,garnet,111,4.4,59.9,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,hematite,87,3.5,47.0,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,ilmenite,3243,129.7,63.4,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,loose:nativecopper,1,0.0,0,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,nativecopper,8325,333.0,72.8,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,olivine,2829,113.2,10.8,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,quartz,29305,1172.2,59.3,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,sphalerite,137,5.5,70.1,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,spinel,7,0.3,26.9,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,tetrahedrite,2110,84.4,56.2,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,bushveld,intrusion,217,224,tourmaline,34,1.4,43.0,granite 2204328; basalt 428707; peridotite 211071; obsidian 3722; suevite 237
+geo3-10,greatdyke,intrusion,230,232,bauxite,941692,37667.7,103.6,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,beryl,19,0.8,51.9,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,bismuthinite,33,1.3,65,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,chalcopyrite,1741,69.6,31.0,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,clay-red,1945,77.8,1.2,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,garnet,94,3.8,59.4,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,limonite,14,0.6,36.1,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,loose:nativecopper,1,0.0,0,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,nativecopper,7786,311.4,59.6,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,olivine,1756,70.2,43.6,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,peat,934,37.4,1.2,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,pyrite,4045,161.8,34.6,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,quartz,20954,838.2,44.8,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,quartz_nativesilver,228,9.1,50.4,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,saltpeter,123,4.9,110.1,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,sapphire,6,0.2,33.5,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,sperrylite,254,10.2,34.3,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,sphalerite,2259,90.4,45.2,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,spinel,1,0.0,21,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,tetrahedrite,151,6.0,56.8,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,topaz,22,0.9,56.6,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,tourmaline,4,0.2,54.2,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,greatdyke,intrusion,230,232,wolframite,712,28.5,64.4,granite 1008001; bauxite 874175; basalt 733578; peridotite 244397; obsidian 5692; suevite 133
+geo3-10,sudbury,intrusion,138,143,beryl,97,3.9,45.6,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,bismuthinite,1107,44.3,60.5,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,cassiterite,655,26.2,52.7,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,chalcopyrite,36,1.4,33,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,chromite,1682,67.3,94.0,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,clay-red,90,3.6,1.5,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,garnet,34,1.4,57.7,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,loose:nativecopper,2,0.1,0,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,nativecopper,28,1.1,6.3,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,olivine,80,3.2,20.2,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,peat,238,9.5,1.8,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,pyrite,246,9.8,51.4,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,quartz,7407,296.3,69.5,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,quartz_nativegold,14,0.6,93.9,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,quartz_nativesilver,5,0.2,94.2,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,saltpeter,9,0.4,26.6,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,sphalerite,52,2.1,41.4,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,topaz,15,0.6,47.3,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,sudbury,intrusion,138,143,tourmaline,51,2.0,48.8,granite 2122444; basalt 510636; peridotite 238794; obsidian 3921; suevite 20
+geo3-10,dartmoor,granite,143,152,beryl,15,0.6,33.1,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,bismuthinite,1327,53.1,66.2,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,cassiterite,3,0.1,9.3,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,chalcopyrite,6206,248.2,44.0,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,cinnabar,80,3.2,74.5,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,clay-red,425,17.0,0.4,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,emerald,29,1.2,96.4,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,garnet,132,5.3,57.2,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,hematite,40,1.6,35.2,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,loose:nativecopper,3,0.1,0,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,nativecopper,67,2.7,11.1,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,olivine,182,7.3,113.7,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,peat,227,9.1,1.0,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,pyrite,5252,210.1,43.9,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,quartz,16958,678.3,31.2,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,saltpeter,175,7.0,42.0,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,sphalerite,295,11.8,75.9,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,topaz,62,2.5,45.4,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,tourmaline,112,4.5,40.0,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,dartmoor,granite,143,152,wolframite,115,4.6,73.4,granite 1637858; gneiss 1225642; suevite 112
+geo3-10,iceland,oceanic,202,218,bauxite,1515511,60620.4,161.5,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,iceland,oceanic,202,218,bismuthinite,75,3.0,64.5,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,iceland,oceanic,202,218,chalcopyrite,881,35.2,31.3,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,iceland,oceanic,202,218,emerald,17,0.7,98.4,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,iceland,oceanic,202,218,garnet,1,0.0,83,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,iceland,oceanic,202,218,limonite,919,36.8,43.5,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,iceland,oceanic,202,218,loose:quartz,3,0.1,0,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,iceland,oceanic,202,218,nativecopper,2273,90.9,70.8,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,iceland,oceanic,202,218,olivine,11240,449.6,83.3,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,iceland,oceanic,202,218,olivine_peridot,332,13.3,91.6,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,iceland,oceanic,202,218,pyrite,1093,43.7,29.4,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,iceland,oceanic,202,218,quartz,23896,955.8,60.2,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,iceland,oceanic,202,218,saltpeter,152,6.1,88.2,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,iceland,oceanic,202,218,sapphire,1,0.0,39,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,iceland,oceanic,202,218,sperrylite,54,2.2,61.4,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,iceland,oceanic,202,218,sphalerite,259,10.4,63.1,peridotite 1700056; basalt 1018895; bauxite 82540; obsidian 7912
+geo3-10,deccan,flood-basalt,178,185,beryl,110,4.4,46.2,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,chalcopyrite,2579,103.2,57.4,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,clay-red,130,5.2,0.8,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,garnet,113,4.5,60.5,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,loose:nativecopper,3,0.1,0,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,loose:quartz,20,0.8,0,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,nativecopper,3394,135.8,74.9,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,olivine,168,6.7,104.5,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,pyrite,5179,207.2,37.2,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,quartz,18493,739.7,64.2,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,saltpeter,3,0.1,65,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,sapphire,2,0.1,34,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,sphalerite,224,9.0,62.5,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,tetrahedrite,64,2.6,31.4,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,topaz,88,3.5,52.5,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,tourmaline,7,0.3,43.9,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,deccan,flood-basalt,178,185,wolframite,144,5.8,81.4,granite 2129498; basalt 688444; obsidian 5464
+geo3-10,westsiberia,cover,115,117,azurite,59,2.4,10.4,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,beryl,10,0.4,56,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,bituminouscoal,896,35.8,36.1,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,borax,79,3.2,39.7,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,cerussite,261,10.4,16.5,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,flint,369,14.8,4.7,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,garnet,45,1.8,72.2,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,graphite,71,2.8,46.1,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,hematite,3069,122.8,77.2,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,kernite,118,4.7,43.5,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,limonite,659,26.4,23.5,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,loose:nativecopper,3,0.1,0,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,nativecopper,6499,260.0,75.0,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,olivine,91,3.6,15.3,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,peat,1391,55.6,0.8,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,pyrite,1308,52.3,59.3,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,quartz,15650,626.0,72.8,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,quartz_nativegold,8,0.3,19.5,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,quartz_nativesilver,64,2.6,98.7,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,saltpeter,38,1.5,25.8,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,sulfur,1644,65.8,26.8,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,topaz,19,0.8,60.6,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,tourmaline,4,0.2,57.2,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,vanadinite,1307,52.3,17.2,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,westsiberia,cover,115,117,wulfenite,54,2.2,25.8,granite 1518820; sandstone 709297; shale 262289; slate 179589; conglomerate 93762; suevite 29
+geo3-10,amazon,cover,113,115,bismuthinite,5510,220.4,64.5,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,borax,146,5.8,17.2,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,chromite,92,3.7,86.6,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,flint,205,8.2,5.3,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,garnet,23,0.9,53.2,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,halite,33223,1328.9,64.0,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,hemimorphite,515,20.6,18.1,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,loose:nativecopper,1,0.0,0,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,nativecopper,35,1.4,4.4,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,pentlandite,2568,102.7,87.7,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,pyrite,408,16.3,38.0,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,quartz,8145,325.8,53.0,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,quartz_nativegold,2,0.1,77,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,quartz_nativesilver,26,1.0,40.5,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,saltpeter,217,8.7,35.9,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,sulfur,4387,175.5,20.2,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,sylvite,216,8.6,78.2,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,tetrahedrite,1852,74.1,49.7,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,topaz,60,2.4,46.4,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,tourmaline,47,1.9,41.3,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,vanadinite,141,5.6,19.3,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,amazon,cover,113,115,wulfenite,189,7.6,17.8,granite 2123490; shale 309532; sandstone 182249; conglomerate 71649; halite 33223; basalt 1180; suevite 100
+geo3-10,addis,highland,348,364,beryl,6,0.2,48.7,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,bismuthinite,1300,52.0,61.4,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,cassiterite,1117,44.7,44.4,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,chalcopyrite,84,3.4,48.3,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,chromite,95,3.8,83,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,cinnabar,427,17.1,94.4,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,clay-red,488,19.5,0,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,garnet,31,1.2,62.9,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,limonite,90,3.6,37.0,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,loose:cassiterite,1,0.0,0,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,loose:nativecopper,16,0.6,0,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,nativecopper,101,4.0,4.7,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,peat,20,0.8,0,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,pentlandite,29,1.2,102,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,pyrite,4999,200.0,40.4,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,quartz,14139,565.6,69.3,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,quartz_nativegold,10,0.4,39.6,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,quartz_nativesilver,40,1.6,70.8,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,saltpeter,15,0.6,80.1,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,sapphire,31,1.2,36.6,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,sphalerite,16,0.6,24.6,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,tetrahedrite,186,7.4,51.6,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,topaz,87,3.5,55.1,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,addis,highland,348,364,tourmaline,140,5.6,49.3,granite 1983439; basalt 963243; obsidian 7737
+geo3-10,vienna,lowland,122,125,azurite,869,34.8,25.9,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,beryl,2,0.1,52,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,cerussite,241,9.6,8.5,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,cinnabar,102,4.1,66.8,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,clay-red,1155,46.2,1.2,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,flint,228,9.1,5.4,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,garnet,18,0.7,60.9,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,lignite,7,0.3,22.1,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,nativecopper,359,14.4,52.2,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,olivine,91,3.6,24.3,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,pyrite,1005,40.2,48.3,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,quartz,9619,384.8,66.8,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,quartz_nativesilver,66,2.6,76.3,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,saltpeter,135,5.4,56.0,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,smithsonite,200,8.0,15.1,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,sphalerite,2955,118.2,63.3,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,vienna,lowland,122,125,tourmaline,27,1.1,50.9,granite 1849642; sandstone 398965; shale 294515; slate 217337; conglomerate 105069; suevite 333
+geo3-10,riga,lowland,102,112,azurite,1788,71.5,23.1,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,bismuthinite,410,16.4,78.5,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,bituminouscoal,326,13.0,49.0,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,borax,1328,53.1,34.4,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,cassiterite,285,11.4,90.1,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,emerald,76,3.0,94.8,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,flint,434,17.4,2.1,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,garnet,16,0.6,71.4,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,halite,26413,1056.5,66.9,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,kernite,193,7.7,51.4,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,lapislazuli,73,2.9,37.1,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,lignite,15922,636.9,27.2,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,loose:lignite,3,0.1,0,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,nativecopper,763,30.5,78.9,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,quartz,4857,194.3,37.4,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,rhodochrosite,853,34.1,87.8,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,ruby,5,0.2,56.6,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,sapphire,232,9.3,72.0,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,smithsonite,43,1.7,12,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,sphalerite,1131,45.2,56.8,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,sulfur,252,10.1,36.2,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,sylvite,375,15.0,60.1,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,tourmaline,8,0.3,56.9,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,vanadinite,40,1.6,27.5,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+geo3-10,riga,lowland,102,112,wulfenite,114,4.6,23.1,gneiss 527147; sandstone 234203; dolostone 143119; limestone 98217; claystone 94618; halite 26413; redmarble 1665; granite 71
+main-100,troodos,ophiolite,160,231,azurite,716,28.6,23.7,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,bauxite,60816,2432.6,17.0,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,bismuthinite,74,3.0,98.1,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,bituminouscoal,667,26.7,34.2,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,cassiterite,1,0.0,65,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,cerussite,309,12.4,13.7,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,chromite,513,20.5,95.7,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,clay-fire,315,12.6,46.1,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,flint,105,4.2,4.4,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,fluorite,936,37.4,73.3,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,galena,166,6.6,54.1,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,hemimorphite,43,1.7,11.5,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,magnetite,617,24.7,95.5,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,nativecopper,188,7.5,44.2,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,olivine,91,3.6,163.1,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,quartz,30785,1231.4,49.7,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,quartz_nativesilver,432,17.3,61.1,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,saltpeter,319,12.8,99.8,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,vanadinite,1382,55.3,18.7,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,troodos,ophiolite,160,231,wolframite,24,1.0,69.8,sandstone 1590436; granite 640048; shale 264391; slate 184165; conglomerate 91187; bauxite 60782; greenmarble 68
+main-100,oman,ophiolite,124,187,beryl,11,0.4,39.7,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,bismuthinite,650,26.0,63.0,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,bituminouscoal,1405,56.2,17.8,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,borax,54,2.2,8.0,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,cerussite,154,6.2,9.1,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,chalcopyrite,6802,272.1,54.6,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,cinnabar,737,29.5,87.1,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,flint,119,4.8,8.7,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,garnet,47,1.9,52.5,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,lignite,504,20.2,21.4,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,loose:nativecopper,7,0.3,0,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,nativecopper,145,5.8,11.1,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,olivine,91,3.6,77.7,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,pyrite,14328,573.1,37.6,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,quartz,27446,1097.8,46.4,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,quartz_nativegold,166,6.6,50.5,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,saltpeter,916,36.6,81.6,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,topaz,86,3.4,40.1,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,tourmaline,57,2.3,37.6,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,vanadinite,200,8.0,12.5,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,wolframite,249,10.0,76.4,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,oman,ophiolite,124,187,wulfenite,2,0.1,23,granite 2689363; sandstone 34837; dolostone 22968; limestone 20018; chert 7636; shale 7471; slate 5911; conglomerate 2323
+main-100,kempirsai,ophiolite,139,153,azurite,283,11.3,28.9,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,bauxite,253174,10127.0,8.5,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,bismuthinite,4438,177.5,75.4,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,bituminouscoal,3621,144.8,37.3,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,borax,1535,61.4,36.3,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,cinnabar,279,11.2,89.9,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,clay-fire,1285,51.4,37.1,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,fluorite,53,2.1,49.1,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,garnet,4,0.2,76,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,halite,37714,1508.6,93.3,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,hematite,991,39.6,93.6,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,hemimorphite,292,11.7,22.5,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,lapislazuli,83,3.3,26.4,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,malachite,244,9.8,38.1,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,nativecopper,2796,111.8,71.6,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,olivine,182,7.3,114.6,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,pyrite,813,32.5,61.2,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,quartz,15760,630.4,78.1,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,quartz_nativesilver,53,2.1,99.3,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,saltpeter,103,4.1,92.2,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,sphalerite,1770,70.8,54.9,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,spinel,17,0.7,36.8,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,sulfur,6650,266.0,36.1,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,sylvite,98,3.9,76.6,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,topaz,6,0.2,60.8,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,kempirsai,ophiolite,139,153,tourmaline,2,0.1,57.5,granite 1438594; sandstone 478439; bauxite 253174; shale 250510; limestone 123888; slate 115640; claystone 73645; conglomerate 58500
+main-100,bushveld,intrusion,149,207,beryl,4,0.2,48.2,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,bismuthinite,588,23.5,66.6,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,borax,1052,42.1,20.9,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,cassiterite,517,20.7,53.3,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,cerussite,2919,116.8,19.8,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,clay-red,1905,76.2,1.3,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,flint,101,4.0,4.3,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,galena,192,7.7,18.1,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,garnet,21,0.8,63.4,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,hematite,129,5.2,88.1,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,lignite,549,22.0,11.4,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,loose:nativecopper,7,0.3,0,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,nativecopper,62,2.5,5.4,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,olivine,182,7.3,122.5,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,peat,159,6.4,0.4,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,pyrite,2076,83.0,46.5,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,quartz,11503,460.1,34.9,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,quartz_nativegold,9,0.4,19.3,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,saltpeter,29,1.2,108.2,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,sphalerite,316,12.6,46.5,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,topaz,53,2.1,53.1,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,tourmaline,40,1.6,47.7,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,vanadinite,209,8.4,22.3,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,bushveld,intrusion,149,207,wulfenite,62,2.5,27.1,granite 2042760; sandstone 294183; shale 235116; slate 172657; conglomerate 82022; suevite 359
+main-100,greatdyke,intrusion,197,206,beryl,127,5.1,44.5,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,bismuthinite,3732,149.3,59.4,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,cassiterite,228,9.1,42.5,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,chalcopyrite,3751,150.0,36.1,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,cinnabar,39,1.6,83.1,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,garnet,122,4.9,56.4,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,graphite,272,10.9,29.1,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,hematite,4562,182.5,48.7,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,nativecopper,7805,312.2,79.4,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,olivine,182,7.3,71.3,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,pyrite,1790,71.6,49.7,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,quartz,16214,648.6,27.2,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,ruby,65,2.6,32.7,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,saltpeter,93,3.7,103.4,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,sapphire,40,1.6,34,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,tetrahedrite,1426,57.0,50.4,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,topaz,9,0.4,53.4,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,tourmaline,4,0.2,35,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,greatdyke,intrusion,197,206,wolframite,727,29.1,64.2,granite 1956331; gneiss 552112; schist 325114; redmarble 579
+main-100,sudbury,intrusion,105,145,anthracite,133,5.3,31.1,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,beryl,1,0.0,35,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,bismuthinite,4032,161.3,66.2,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,borax,33,1.3,31.3,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,cassiterite,302,12.1,54.7,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,cerussite,391,15.6,20.2,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,chalcopyrite,7065,282.6,40.3,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,cinnabar,196,7.8,81.8,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,emerald,8,0.3,89.9,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,flint,24,1.0,14.9,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,galena,8,0.3,18,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,garnet,49,2.0,54.4,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,graphite,279,11.2,63.3,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,hemimorphite,162,6.5,14.4,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,loose:nativecopper,6,0.2,0,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,nativecopper,75,3.0,6.9,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,peat,1074,43.0,1.4,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,quartz,4486,179.4,70.4,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,quartz_nativesilver,33,1.3,42.5,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,saltpeter,1266,50.6,78.6,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,sapphire,11,0.4,64.7,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,sphalerite,310,12.4,55.7,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,topaz,12,0.5,28.8,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,tourmaline,210,8.4,36.6,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,sudbury,intrusion,105,145,wolframite,18,0.7,81.1,gneiss 1752701; granite 949208; sandstone 26731; limestone 20238; claystone 12388; redmarble 3355; shale 2772; travertine 1130
+main-100,dartmoor,granite,113,165,anthracite,281,11.2,50.5,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,bismuthinite,768,30.7,82.1,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,bituminouscoal,1928,77.1,37.1,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,borax,5962,238.5,28.3,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,cerussite,3049,122.0,19.2,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,cinnabar,80,3.2,88,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,clay-fire,519,20.8,32.4,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,clay-red,208,8.3,1.6,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,flint,633,25.3,6.1,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,hematite,5000,200.0,87.0,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,hemimorphite,830,33.2,19.0,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,lignite,193,7.7,38.9,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,loose:bituminouscoal,1,0.0,0,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,loose:borax,2,0.1,0,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,loose:nativecopper,5,0.2,0,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,nativecopper,267,10.7,58.4,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,olivine,92,3.7,98.7,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,quartz,16851,674.0,46.6,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,quartz_nativesilver,63,2.5,50.5,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,rhodochrosite,48,1.9,63.0,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,saltpeter,947,37.9,77.8,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,smithsonite,229,9.2,21.5,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,sphalerite,596,23.8,53.3,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,topaz,10,0.4,63.8,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,tourmaline,1,0.0,59,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,vanadinite,568,22.7,15,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,dartmoor,granite,113,165,wulfenite,282,11.3,16.4,granite 1367266; sandstone 943379; shale 246321; slate 176496; conglomerate 85710
+main-100,iceland,oceanic,179,229,beryl,15,0.6,38.9,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,bismuthinite,3991,159.6,55.5,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,cinnabar,83,3.3,93,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,flint,5,0.2,41.4,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,garnet,25,1.0,60.6,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,hematite,4554,182.2,74.9,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,loose:nativecopper,8,0.3,0,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,loose:quartz,37,1.5,0,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,nativecopper,39,1.6,3.8,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,olivine,2398,95.9,74.3,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,olivine_peridot,9,0.4,98.8,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,peat,126,5.0,0.5,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,quartz,7534,301.4,14.7,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,saltpeter,55,2.2,105.1,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,sapphire,2,0.1,38,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,spinel,1,0.0,65,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,tetrahedrite,424,17.0,49.4,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,iceland,oceanic,179,229,tourmaline,110,4.4,36.3,granite 1712270; peridotite 751866; basalt 339869; tuff 56721; obsidian 2463
+main-100,deccan,flood-basalt,165,185,chromite,590,23.6,96.1,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,deccan,flood-basalt,165,185,clay-red,208,8.3,0.8,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,deccan,flood-basalt,165,185,flint,5,0.2,105.2,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,deccan,flood-basalt,165,185,garnet,7,0.3,69.7,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,deccan,flood-basalt,165,185,loose:nativecopper,3,0.1,0,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,deccan,flood-basalt,165,185,nativecopper,683,27.3,67.0,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,deccan,flood-basalt,165,185,olivine,8300,332.0,76.3,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,deccan,flood-basalt,165,185,olivine_peridot,25,1.0,73.5,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,deccan,flood-basalt,165,185,peat,373,14.9,0.8,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,deccan,flood-basalt,165,185,pentlandite,408,16.3,72.6,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,deccan,flood-basalt,165,185,pyrite,2796,111.8,25.2,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,deccan,flood-basalt,165,185,quartz,16569,662.8,56.7,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,deccan,flood-basalt,165,185,quartz_nativesilver,6,0.2,41.3,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,deccan,flood-basalt,165,185,saltpeter,684,27.4,91.6,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,deccan,flood-basalt,165,185,sperrylite,436,17.4,49.0,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,deccan,flood-basalt,165,185,sphalerite,455,18.2,53.5,peridotite 1746554; basalt 1095264; obsidian 8488
+main-100,westsiberia,cover,112,118,bismuthinite,38,1.5,51.8,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,bituminouscoal,8277,331.1,26.5,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,chalcopyrite,242,9.7,64.9,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,chromite,108,4.3,84.5,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,clay-fire,1399,56.0,25.1,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,clay-red,102,4.1,0.7,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,emerald,1,0.0,77,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,flint,436,17.4,8.4,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,galena,92,3.7,15.8,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,garnet,40,1.6,63.8,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,graphite,19,0.8,50.1,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,hemimorphite,59,2.4,4,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,loose:bituminouscoal,3,0.1,0,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,loose:nativecopper,6,0.2,0,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,loose:quartz,19,0.8,0,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,nativecopper,120,4.8,6.8,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,olivine,659,26.4,56.4,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,olivine_peridot,8,0.3,45.8,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,peat,1845,73.8,0.8,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,quartz,25087,1003.5,67.1,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,quartz_nativegold,24,1.0,87.4,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,quartz_nativesilver,881,35.2,61.5,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,saltpeter,277,11.1,65.7,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,sperrylite,37,1.5,39.4,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,westsiberia,cover,112,118,topaz,3,0.1,34.3,granite 934277; peridotite 702562; andesite 541972; sandstone 277902; shale 145768; slate 103841; conglomerate 51172; basalt 4597
+main-100,amazon,cover,105,117,bismuthinite,22,0.9,63.5,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,borax,252,10.1,29.8,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,emerald,152,6.1,91.2,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,flint,458,18.3,7.9,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,garnet,13,0.5,71,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,graphite,2,0.1,101,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,hematite,253,10.1,77.6,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,nativecopper,3930,157.2,75.9,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,olivine,13000,520.0,82.9,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,peat,1690,67.6,1.7,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,phosphorite,4,0.2,47,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,quartz,29645,1185.8,61.2,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,quartz_nativegold,29,1.2,59.9,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,rhodochrosite,59,2.4,103.4,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,saltpeter,532,21.3,58.4,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,sperrylite,1012,40.5,70.4,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,sphalerite,426,17.0,51.0,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,amazon,cover,105,117,sulfur,292,11.7,39.0,claystone 1042863; peridotite 969419; phyllite 312277; sandstone 46240; basalt 306; suevite 288
+main-100,addis,highland,226,275,clay-red,921,36.8,1.4,peridotite 2127338; basalt 679430; obsidian 6014
+main-100,addis,highland,226,275,emerald,204,8.2,95.8,peridotite 2127338; basalt 679430; obsidian 6014
+main-100,addis,highland,226,275,garnet,20,0.8,65.0,peridotite 2127338; basalt 679430; obsidian 6014
+main-100,addis,highland,226,275,ilmenite,2065,82.6,57.2,peridotite 2127338; basalt 679430; obsidian 6014
+main-100,addis,highland,226,275,nativecopper,3410,136.4,71.9,peridotite 2127338; basalt 679430; obsidian 6014
+main-100,addis,highland,226,275,olivine,16120,644.8,55.2,peridotite 2127338; basalt 679430; obsidian 6014
+main-100,addis,highland,226,275,pyrite,1266,50.6,17.7,peridotite 2127338; basalt 679430; obsidian 6014
+main-100,addis,highland,226,275,quartz,29673,1186.9,26.6,peridotite 2127338; basalt 679430; obsidian 6014
+main-100,addis,highland,226,275,quartz_nativegold,4,0.2,6.8,peridotite 2127338; basalt 679430; obsidian 6014
+main-100,addis,highland,226,275,sphalerite,158,6.3,65.5,peridotite 2127338; basalt 679430; obsidian 6014
+main-100,vienna,lowland,112,156,azurite,74,3.0,19.4,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,bismuthinite,394,15.8,69.9,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,borax,230,9.2,3.8,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,cassiterite,2502,100.1,52.2,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,cerussite,892,35.7,12.1,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,emerald,32,1.3,94.5,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,flint,117,4.7,4.6,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,garnet,1,0.0,56,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,graphite,164,6.6,19.7,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,loose:cassiterite,1,0.0,0,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,loose:nativecopper,5,0.2,0,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,nativecopper,77,3.1,5.8,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,olivine,6032,241.3,61.4,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,pyrite,862,34.5,23.8,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,quartz,26149,1046.0,71.4,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,quartz_nativesilver,109,4.4,87.4,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,saltpeter,232,9.3,62.0,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,sperrylite,845,33.8,64.3,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,spinel,9,0.4,51.3,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,topaz,6,0.2,47,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,vienna,lowland,112,156,wulfenite,155,6.2,20.8,peridotite 1991520; slate 218772; granite 91200; claystone 29008; sandstone 13683; limestone 6095; redmarble 407
+main-100,riga,lowland,102,113,azurite,708,28.3,29.6,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,bismuthinite,303,12.1,87.5,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,cassiterite,7,0.3,62,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,chalcopyrite,303,12.1,73.8,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,emerald,1,0.0,98,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,flint,572,22.9,7.4,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,galena,8253,330.1,33.9,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,garnet,29,1.2,73.2,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,hematite,2532,101.3,36.2,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,hemimorphite,88,3.5,6.4,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,kernite,504,20.2,49.9,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,lignite,10032,401.3,34.7,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,loose:galena,10,0.4,0,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,nativecopper,9554,382.2,77.4,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,olivine,91,3.6,83.6,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,peat,768,30.7,1.3,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,quartz,22445,897.8,39.8,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,quartz_nativegold,104,4.2,49.7,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,saltpeter,396,15.8,56.4,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,sapphire,3,0.1,78,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,smithsonite,1651,66.0,15.2,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,sphalerite,248,9.9,33.3,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+main-100,riga,lowland,102,113,sulfur,74,3.0,44.2,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,troodos,ophiolite,160,231,bauxite,60816,2432.6,17.0,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,bismuthinite,74,3.0,98.1,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,cassiterite,1580,63.2,43.6,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,cerussite,135,5.4,23.1,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,chalcopyrite,197,7.9,59.4,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,chromite,1184,47.4,90.6,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,fluorite,51,2.0,85.5,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,galena,20,0.8,72.0,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,nativecopper,188,7.5,44.2,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,olivine,2787,111.5,84.4,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,quartz,30837,1233.5,49.7,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,quartz_nativesilver,433,17.3,61.0,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,saltpeter,320,12.8,99.8,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,sapphire,12,0.5,55.3,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,sperrylite,903,36.1,68.1,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,vanadinite,195,7.8,16.7,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,troodos,ophiolite,160,231,wolframite,24,1.0,69.8,basalt 1585465; peridotite 758915; sandstone 185149; granite 117137; bauxite 60782; chert 41826; shale 35305; slate 26467
+geo3-100,oman,ophiolite,124,187,bismuthinite,650,26.0,63.0,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,bituminouscoal,15,0.6,6.1,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,borax,4,0.2,8,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,chalcopyrite,51,2.0,20.2,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,cinnabar,737,29.5,87.1,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,emerald,11,0.4,91.6,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,garnet,46,1.8,53.2,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,limonite,139,5.6,19.7,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,loose:nativecopper,8,0.3,0,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,loose:olivine,6,0.2,0,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,nativecopper,163,6.5,10.6,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,olivine,20084,803.4,79.1,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,olivine_peridot,23,0.9,90.4,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,pyrite,1548,61.9,14.5,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,quartz,27661,1106.4,46.3,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,quartz_nativegold,170,6.8,50.2,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,saltpeter,915,36.6,81.6,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,sperrylite,2638,105.5,63.3,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,oman,ophiolite,124,187,spinel,29,1.2,47,peridotite 2536611; basalt 235951; chert 2234; obsidian 1932
+geo3-100,kempirsai,ophiolite,139,153,bauxite,253174,10127.0,8.5,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,bismuthinite,7415,296.6,59.7,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,borax,80,3.2,19,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,cinnabar,279,11.2,89.9,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,emerald,142,5.7,97.2,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,garnet,7,0.3,67.4,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,hematite,991,39.6,93.6,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,nativecopper,2801,112.0,71.6,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,olivine,14073,562.9,79.2,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,olivine_peridot,5,0.2,96.4,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,pyrite,701,28.0,36.1,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,quartz,16289,651.6,79.7,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,quartz_nativesilver,65,2.6,102.9,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,saltpeter,103,4.1,92.2,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,sapphire,2,0.1,40.5,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,sphalerite,1744,69.8,54.0,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,spinel,76,3.0,59.0,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,kempirsai,ophiolite,139,153,sulfur,344,13.8,21.7,peridotite 1701164; basalt 807781; bauxite 253174; chert 48195; obsidian 5620
+geo3-100,bushveld,intrusion,149,207,beryl,5,0.2,45.2,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,bismuthinite,820,32.8,53.5,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,cassiterite,591,23.6,49.8,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,clay-red,1905,76.2,1.3,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,garnet,24,1.0,59.3,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,hematite,129,5.2,88.1,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,loose:nativecopper,7,0.3,0,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,nativecopper,62,2.5,5.4,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,olivine,182,7.3,122.5,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,peat,159,6.4,0.4,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,pyrite,1991,79.6,46.9,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,quartz,11465,458.6,34.9,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,quartz_nativegold,9,0.4,19.3,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,saltpeter,29,1.2,108.2,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,sphalerite,316,12.6,46.5,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,topaz,67,2.7,49.0,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,bushveld,intrusion,149,207,tourmaline,47,1.9,45.4,granite 2173178; basalt 454480; peridotite 200315; obsidian 3567; suevite 359
+geo3-100,greatdyke,intrusion,197,206,beryl,132,5.3,45.1,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,bismuthinite,3732,149.3,59.4,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,cassiterite,228,9.1,42.5,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,chalcopyrite,3245,129.8,36.5,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,cinnabar,39,1.6,83.1,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,garnet,109,4.4,60.0,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,hematite,4666,186.6,48.0,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,nativecopper,7805,312.2,79.4,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,olivine,182,7.3,71.3,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,pyrite,2275,91.0,43.9,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,quartz,16211,648.4,27.2,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,ruby,23,0.9,33.8,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,saltpeter,93,3.7,103.4,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,sapphire,25,1.0,33.2,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,tetrahedrite,1185,47.4,57.3,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,topaz,9,0.4,53.4,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,tourmaline,4,0.2,35,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,greatdyke,intrusion,197,206,wolframite,727,29.1,64.2,granite 2001687; gneiss 294951; basalt 255679; schist 174883; peridotite 104530; obsidian 2345; redmarble 579
+geo3-100,sudbury,intrusion,105,145,beryl,4,0.2,46,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,bismuthinite,4122,164.9,65.5,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,cassiterite,302,12.1,54.7,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,chalcopyrite,5715,228.6,43.1,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,cinnabar,196,7.8,81.8,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,flint,5,0.2,55.4,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,garnet,43,1.7,59.1,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,limonite,302,12.1,18.4,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,loose:nativecopper,6,0.2,0,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,nativecopper,75,3.0,6.9,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,olivine,2888,115.5,35.8,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,peat,1074,43.0,1.4,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,quartz,4527,181.1,70.4,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,quartz_nativesilver,33,1.3,42.5,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,saltpeter,1266,50.6,78.6,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,sphalerite,310,12.4,55.7,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,topaz,17,0.7,48.4,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,tourmaline,114,4.6,47.1,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,sudbury,intrusion,105,145,wolframite,18,0.7,81.1,granite 2000709; basalt 543423; peridotite 219002; obsidian 3839
+geo3-100,dartmoor,granite,113,165,anthracite,273,10.9,50.4,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,beryl,41,1.6,37.3,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,bismuthinite,1208,48.3,66.1,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,bituminouscoal,541,21.6,39.0,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,borax,732,29.3,24.6,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,cerussite,1356,54.2,17.8,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,cinnabar,80,3.2,88,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,clay-fire,66,2.6,35.6,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,clay-red,208,8.3,1.6,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,emerald,1,0.0,85,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,flint,107,4.3,6.2,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,garnet,3,0.1,50.7,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,hematite,6531,261.2,43.5,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,hemimorphite,187,7.5,20.2,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,loose:nativecopper,5,0.2,0,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,nativecopper,267,10.7,58.4,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,olivine,92,3.7,98.7,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,pyrite,640,25.6,22.4,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,quartz,16882,675.3,46.4,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,quartz_nativesilver,67,2.7,49.2,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,rhodochrosite,90,3.6,65.7,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,ruby,2,0.1,80,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,saltpeter,947,37.9,77.8,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,smithsonite,138,5.5,21.5,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,sphalerite,596,23.8,53.3,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,topaz,26,1.0,41.5,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,tourmaline,35,1.4,37.6,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,dartmoor,granite,113,165,vanadinite,268,10.7,13.4,granite 1457521; gneiss 1060277; sandstone 192867; shale 55333; slate 41519; conglomerate 19522
+geo3-100,iceland,oceanic,179,229,bismuthinite,4153,166.1,54.5,peridotite 1641438; basalt 1208817; obsidian 8499
+geo3-100,iceland,oceanic,179,229,cinnabar,83,3.3,93,peridotite 1641438; basalt 1208817; obsidian 8499
+geo3-100,iceland,oceanic,179,229,flint,5,0.2,41.4,peridotite 1641438; basalt 1208817; obsidian 8499
+geo3-100,iceland,oceanic,179,229,garnet,11,0.4,76,peridotite 1641438; basalt 1208817; obsidian 8499
+geo3-100,iceland,oceanic,179,229,hematite,3738,149.5,86.0,peridotite 1641438; basalt 1208817; obsidian 8499
+geo3-100,iceland,oceanic,179,229,loose:nativecopper,8,0.3,0,peridotite 1641438; basalt 1208817; obsidian 8499
+geo3-100,iceland,oceanic,179,229,loose:quartz,40,1.6,0,peridotite 1641438; basalt 1208817; obsidian 8499
+geo3-100,iceland,oceanic,179,229,nativecopper,39,1.6,3.8,peridotite 1641438; basalt 1208817; obsidian 8499
+geo3-100,iceland,oceanic,179,229,olivine,6175,247.0,85.8,peridotite 1641438; basalt 1208817; obsidian 8499
+geo3-100,iceland,oceanic,179,229,olivine_peridot,66,2.6,97.2,peridotite 1641438; basalt 1208817; obsidian 8499
+geo3-100,iceland,oceanic,179,229,peat,126,5.0,0.5,peridotite 1641438; basalt 1208817; obsidian 8499
+geo3-100,iceland,oceanic,179,229,quartz,7929,317.2,14.4,peridotite 1641438; basalt 1208817; obsidian 8499
+geo3-100,iceland,oceanic,179,229,saltpeter,55,2.2,105.1,peridotite 1641438; basalt 1208817; obsidian 8499
+geo3-100,iceland,oceanic,179,229,sapphire,4,0.2,38,peridotite 1641438; basalt 1208817; obsidian 8499
+geo3-100,iceland,oceanic,179,229,spinel,1,0.0,65,peridotite 1641438; basalt 1208817; obsidian 8499
+geo3-100,deccan,flood-basalt,165,185,chromite,590,23.6,96.1,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,clay-red,208,8.3,0.8,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,flint,5,0.2,105.2,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,garnet,7,0.3,69.7,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,loose:nativecopper,3,0.1,0,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,nativecopper,683,27.3,67.0,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,olivine,91,3.6,119.9,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,peat,373,14.9,0.8,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,pentlandite,408,16.3,72.6,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,pyrite,4632,185.3,38.7,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,quartz,16445,657.8,56.7,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,quartz_nativesilver,6,0.2,41.3,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,saltpeter,684,27.4,91.6,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,sperrylite,270,10.8,34,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,sphalerite,455,18.2,53.5,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,tetrahedrite,2315,92.6,58.8,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,topaz,14,0.6,55.3,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,tourmaline,21,0.8,53.6,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,deccan,flood-basalt,165,185,wolframite,172,6.9,63.9,granite 1750538; basalt 1095264; obsidian 8488
+geo3-100,westsiberia,cover,112,118,azurite,145,5.8,21.9,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,beryl,1,0.0,56,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,bismuthinite,18,0.7,74.8,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,bituminouscoal,16173,646.9,23.4,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,chalcopyrite,242,9.7,64.9,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,chromite,108,4.3,84.5,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,clay-fire,2247,89.9,23.5,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,clay-red,102,4.1,0.7,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,flint,688,27.5,7.8,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,galena,110,4.4,19.7,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,garnet,41,1.6,72.1,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,graphite,19,0.8,50.1,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,hemimorphite,59,2.4,4,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,loose:bituminouscoal,17,0.7,0,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,loose:nativecopper,6,0.2,0,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,loose:quartz,20,0.8,0,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,nativecopper,120,4.8,6.8,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,olivine,131,5.2,52.5,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,peat,1845,73.8,0.8,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,quartz,25069,1002.8,67.2,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,quartz_nativegold,24,1.0,87.4,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,quartz_nativesilver,899,36.0,60.4,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,saltpeter,277,11.1,65.7,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,sulfur,369,14.8,23.9,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,topaz,2,0.1,58.5,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,westsiberia,cover,112,118,wulfenite,88,3.5,16.4,granite 1623766; sandstone 529102; shale 287343; slate 206843; conglomerate 102330; basalt 4597; suevite 169
+geo3-100,amazon,cover,105,117,beryl,38,1.5,53.7,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,bismuthinite,22,0.9,63.5,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,borax,146,5.8,14.3,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,chalcopyrite,6425,257.0,62.0,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,flint,458,18.3,7.9,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,garnet,15,0.6,68.2,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,hematite,253,10.1,77.6,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,hemimorphite,1426,57.0,15.2,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,limonite,776,31.0,26.0,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,nativecopper,3941,157.6,75.9,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,peat,1690,67.6,1.7,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,quartz,29536,1181.4,61.2,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,quartz_nativegold,29,1.2,59.9,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,saltpeter,532,21.3,58.4,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,smithsonite,998,39.9,15.2,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,sphalerite,425,17.0,51.0,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,sulfur,202,8.1,33.3,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,tetrahedrite,456,18.2,59.0,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,topaz,3,0.1,62.3,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,tourmaline,4,0.2,53,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,vanadinite,42,1.7,6.9,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,amazon,cover,105,117,wulfenite,865,34.6,17.4,granite 1398685; sandstone 473736; shale 249860; slate 127977; conglomerate 79266; claystone 44250; whitemarble 671; basalt 306
+geo3-100,addis,highland,226,275,clay-red,921,36.8,1.4,granite 2138102; basalt 679430; obsidian 6014
+geo3-100,addis,highland,226,275,garnet,20,0.8,65.0,granite 2138102; basalt 679430; obsidian 6014
+geo3-100,addis,highland,226,275,ilmenite,2065,82.6,57.2,granite 2138102; basalt 679430; obsidian 6014
+geo3-100,addis,highland,226,275,nativecopper,3411,136.4,71.9,granite 2138102; basalt 679430; obsidian 6014
+geo3-100,addis,highland,226,275,pyrite,5601,224.0,48.0,granite 2138102; basalt 679430; obsidian 6014
+geo3-100,addis,highland,226,275,quartz,29673,1186.9,26.6,granite 2138102; basalt 679430; obsidian 6014
+geo3-100,addis,highland,226,275,quartz_nativegold,4,0.2,6.8,granite 2138102; basalt 679430; obsidian 6014
+geo3-100,addis,highland,226,275,sphalerite,158,6.3,65.5,granite 2138102; basalt 679430; obsidian 6014
+geo3-100,addis,highland,226,275,topaz,57,2.3,48.2,granite 2138102; basalt 679430; obsidian 6014
+geo3-100,addis,highland,226,275,tourmaline,13,0.5,46,granite 2138102; basalt 679430; obsidian 6014
+geo3-100,vienna,lowland,112,156,azurite,74,3.0,19.4,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,beryl,3,0.1,46.7,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,bismuthinite,353,14.1,75.8,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,borax,1955,78.2,18.0,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,cassiterite,2445,97.8,52.7,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,cerussite,5300,212.0,16.3,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,chalcopyrite,1283,51.3,53.0,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,flint,305,12.2,4.7,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,galena,9,0.4,31.9,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,garnet,1,0.0,56,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,graphite,662,26.5,32.9,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,loose:nativecopper,5,0.2,0,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,nativecopper,77,3.1,5.8,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,olivine,8,0.3,79.8,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,pyrite,1983,79.3,41.2,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,quartz,26057,1042.3,71.5,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,quartz_nativesilver,107,4.3,88.6,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,saltpeter,232,9.3,62.0,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,sulfur,183,7.3,20.2,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,topaz,24,1.0,50,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,tourmaline,28,1.1,46.6,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,vanadinite,44,1.8,23.5,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,vienna,lowland,112,156,wulfenite,727,29.1,18.0,granite 1727054; sandstone 254221; slate 151924; shale 120071; conglomerate 80857; claystone 7452; limestone 6095; whitemarble 7
+geo3-100,riga,lowland,102,113,azurite,708,28.3,29.6,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,bismuthinite,303,12.1,87.5,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,cassiterite,7,0.3,62,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,chalcopyrite,303,12.1,73.8,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,emerald,1,0.0,98,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,flint,572,22.9,7.4,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,galena,8253,330.1,33.9,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,garnet,29,1.2,73.2,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,hematite,2532,101.3,36.2,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,hemimorphite,88,3.5,6.4,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,kernite,504,20.2,49.9,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,lignite,10032,401.3,34.7,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,loose:galena,10,0.4,0,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,nativecopper,9554,382.2,77.4,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,olivine,91,3.6,83.6,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,peat,768,30.7,1.3,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,quartz,22445,897.8,39.8,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,quartz_nativegold,104,4.2,49.7,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,saltpeter,396,15.8,56.4,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,sapphire,3,0.1,78,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,smithsonite,1651,66.0,15.2,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,sphalerite,248,9.9,33.3,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090
+geo3-100,riga,lowland,102,113,sulfur,74,3.0,44.2,gneiss 714348; sandstone 382468; dolostone 312496; limestone 174280; claystone 158238; granite 1090

@@ -16,7 +16,7 @@ namespace EarthMap.Core
     public sealed class RegionalGeologyCatalog
     {
         /// <summary>Rules version stamped into new worlds.</summary>
-        public const int RulesVersion = 2;
+        public const int RulesVersion = 4;
         /// <summary>Oldest rules version this code still reproduces exactly.</summary>
         public const int OldestRulesVersion = 1;
         public static bool IsSupportedRulesVersion(int version) => version >= OldestRulesVersion && version <= RulesVersion;
@@ -86,11 +86,26 @@ namespace EarthMap.Core
             /// <summary>Gentle regional dip/undulation of the beds as a share of the thickness scale.</summary>
             public double DatumUndulation { get; set; } = 0.3;
             public double ThicknessVariation { get; set; } = 0.15;
+            /// <summary>v3 (decision 0101): GLiM's unconsolidated cover (class 1, no bedrock mapped) takes the bedrock class of
+            /// the nearest mapped bedrock cell within this radius (cells; 0 = off, as in v1 and v2, where it kept vanilla's strata);
+            /// cover farther from any bedrock keeps class 1, which v3 maps to a sedimentary basin profile.</summary>
+            public double CoveredFillRadiusCells { get; set; } = 0;
             /// <summary>Share of coarse-sediment ground (GUM class) carrying a gravel lens.</summary>
             public Dictionary<string, double> GravelCoverage { get; set; } = new() { ["2"] = 0.5, ["15"] = 0.45, ["19"] = 0.25 };
         }
+        /// <summary>v4 (EA-0198): GLiM's 6-letter codes, as the 30″ rock set holds them, to profiles. The first pattern that
+        /// matches wins ('?' any letter); other codes take their first two letters' profile from Classes.</summary>
+        public sealed class LithoRules
+        {
+            public string Note { get; set; }
+            public string[][] Patterns { get; set; }
+            public Dictionary<string,string> Classes { get; set; }
+            /// <summary>First levels that are not bedrock (cover, water, ice, no data): the set's bedrock field answers under them.</summary>
+            public string[] NotBedrock { get; set; }
+        }
         public sealed class RuleFile
         {
+            public LithoRules Litho { get; set; }
             public int Version { get; set; }
             public Material[] Materials { get; set; }
             public Profile[] Profiles { get; set; }
@@ -166,7 +181,7 @@ namespace EarthMap.Core
         public IReadOnlyList<string> Preserve { get; }
         public GenerationSettings Generation { get; }
         /// <summary>SHA-256 of generation-relevant content only (grid bytes, parsed rules; not notes, URLs, labels or whitespace).</summary>
-        public string Fingerprint { get; }
+        public string Fingerprint { get; private set; }
         public int MaterialIndex(string id) { for (int i = 0; i < Materials.Count; i++) if (Materials[i].Id == id) return i; return -1; }
         // for the tests: profiles by id, and all of them
         public Profile ProfileById(string id)=>profiles.TryGetValue(id??"",out var p)?p:null;
@@ -217,19 +232,96 @@ namespace EarthMap.Core
                 Generation=rules.Generation ?? new GenerationSettings();
                 var gs=Generation;
                 if(!(gs.FillRadiusCells>=0 && gs.FillRadiusCells<=6) || !(gs.VoronoiJitter>=0 && gs.VoronoiJitter<.5) || !(gs.WarpLowWavelengthCells>0) || !(gs.WarpLowAmplitudeCells>=0 && gs.WarpLowAmplitudeCells<=1)
-                   || !(gs.StrataThicknessPerSeaLevel>0 && gs.StrataThicknessPerSeaLevel<=2) || !(gs.DatumRadiusCells>0 && gs.DatumRadiusCells<=3) || !(Math.Abs(gs.DatumUndulation)<=1) || !(gs.ThicknessVariation>=0 && gs.ThicknessVariation<.9))
+                   || !(gs.StrataThicknessPerSeaLevel>0 && gs.StrataThicknessPerSeaLevel<=2) || !(gs.CoveredFillRadiusCells>=0 && gs.CoveredFillRadiusCells<=6) || !(gs.DatumRadiusCells>0 && gs.DatumRadiusCells<=3) || !(Math.Abs(gs.DatumUndulation)<=1) || !(gs.ThicknessVariation>=0 && gs.ThicknessVariation<.9))
                     throw new ArgumentException("Invalid v2 geology generation settings");
                 (lithology,sediment,filled)=Fill(grid.Lithology,grid.Sediment,gs.FillRadiusCells,gs.FillLithology??Array.Empty<int>());
+                if(GeologyFacts.CoveredFill(Version) && gs.CoveredFillRadiusCells>0)FillCovered(lithology,filled,gs.CoveredFillRadiusCells);
                 foreach(var s in gs.GravelCoverage?.Keys ?? Enumerable.Empty<string>())
                     if(!byte.TryParse(s,NumberStyles.None,CultureInfo.InvariantCulture,out byte b)||b>=gravelCoverage.Length)throw new ArgumentException("Invalid gravel coverage class");
                     else gravelCoverage[b]=Math.Clamp(gs.GravelCoverage[s],0,1);
             }
             else {lithology=grid.Lithology;sediment=grid.Sediment;filled=null;}
+            if(GeologyFacts.FineRock(Version))
+            {
+                var l=rules.Litho ?? throw new ArgumentException("v4 rules need a litho table");
+                if(l.Patterns==null || l.Classes==null)throw new ArgumentException("Incomplete litho table");
+                foreach(var pat in l.Patterns)
+                    if(pat==null || pat.Length!=2 || pat[0]?.Length!=6 || !profiles.ContainsKey(pat[1]??""))
+                        throw new ArgumentException("Invalid litho pattern: "+(pat==null?"(null)":string.Join(" ",pat)));
+                foreach(var kv in l.Classes)
+                    if(kv.Key.Length!=2 || !ClassNumber.ContainsKey(kv.Key) || !profiles.ContainsKey(kv.Value??""))
+                        throw new ArgumentException("Invalid litho class: "+kv.Key);
+                litho=l;
+            }
+            this.rules=rules;
             Fingerprint=ComputeFingerprint(rules);
+        }
+        readonly RuleFile rules;
+        LithoRules litho;
+        RockMap rockMap;
+        readonly System.Collections.Concurrent.ConcurrentDictionary<string,Profile> codeProfile=new(StringComparer.Ordinal);
+
+        /// <summary>GLiM's first-level letters and the 0.5° grid's class numbers (provinces filter by these).</summary>
+        public static readonly IReadOnlyDictionary<string,byte> ClassNumber=new Dictionary<string,byte>(StringComparer.Ordinal)
+        {
+            ["su"]=1,["vb"]=2,["ss"]=3,["pb"]=4,["sm"]=5,["sc"]=6,["va"]=7,["mt"]=8,["pa"]=9,["vi"]=10,["wb"]=11,["py"]=12,["pi"]=13,["ev"]=14,["nd"]=15,["ig"]=16,
+        };
+
+        /// <summary>v4: the 30″ rock set this world reads (EarthGeology attaches it before the first chunk). It joins the
+        /// fingerprint. Without one, a v4 catalogue answers from the 0.5° grid as v3 does (tools only; the game never
+        /// generates v4 without its set).</summary>
+        public void AttachRocks(RockMap map)
+        {
+            if(!GeologyFacts.FineRock(Version))throw new InvalidOperationException("rules v"+Version+" read no rock set");
+            rockMap=map ?? throw new ArgumentNullException(nameof(map));
+            Fingerprint=ComputeFingerprint(rules);
+        }
+        public RockMap Rocks=>rockMap;
+
+        /// <summary>v4: the profile of a GLiM-style code (first matching pattern, else its class).</summary>
+        public Profile ProfileOfCode(string code)
+        {
+            if(code==null || code.Length<2 || litho==null)return unknown;
+            return codeProfile.GetOrAdd(code,c=>
+            {
+                foreach(var pat in litho.Patterns)
+                {
+                    string s=pat[0];bool ok=c.Length==6;
+                    for(int k=0;ok && k<6;k++)ok=s[k]=='?' || s[k]==c[k];
+                    if(ok)return profiles[pat[1]];
+                }
+                return litho.Classes.TryGetValue(c.Substring(0,2),out var id)?profiles[id]:unknown;
+            });
         }
         readonly double[] gravelCoverage=new double[64];
         /// <summary>v2: share of ground carrying a discontinuous gravel lens for a GUM class (0 for others).</summary>
         public double GravelCoverage(byte sedimentClass)=>sedimentClass<gravelCoverage.Length?gravelCoverage[sedimentClass]:0;
+
+        /// <summary>v3: cells of unconsolidated cover (GLiM 1) take the lithology of the nearest bedrock cell (not cover, water,
+        /// ice or no data) within <paramref name="radius"/> cells, nearest first in the coastal fill's tie order; their sediment
+        /// class (GUM) stays their own. Marked filled.</summary>
+        static void FillCovered(byte[] lith,bool[] filled,double radius)
+        {
+            var src=(byte[])lith.Clone();
+            static bool Bedrock(byte c)=>c is not (0 or 1 or 11 or 15 or 16);
+            int r=(int)Math.Floor(radius);
+            var offsets=new List<(int dx,int dz,double d)>();
+            for(int dz=-r;dz<=r;dz++)for(int dx=-r;dx<=r;dx++){double d=Math.Sqrt(dx*dx+dz*dz);if(d>0&&d<=radius+1e-9)offsets.Add((dx,dz,d));}
+            offsets.Sort((a,b)=>a.d!=b.d?a.d.CompareTo(b.d):a.dz!=b.dz?a.dz.CompareTo(b.dz):a.dx.CompareTo(b.dx));
+            for(int z=0;z<360;z++)for(int x=0;x<720;x++)
+            {
+                int i=z*720+x;
+                if(src[i]!=1)continue;
+                foreach(var o in offsets)
+                {
+                    int zz=z+o.dz;if(zz<0||zz>=360)continue;
+                    int j=zz*720+((x+o.dx)%720+720)%720;
+                    if(!Bedrock(src[j]))continue;
+                    lith[i]=src[j];filled[i]=true;
+                    break;
+                }
+            }
+        }
 
         static (byte[],byte[],bool[]) Fill(byte[] lith,byte[] sed,double radius,int[] fillCodes)
         {
@@ -289,6 +381,15 @@ namespace EarthMap.Core
                   .Append(N(g.DatumRadiusCells)).Append('|').Append(N(g.DatumUndulation)).Append('|').Append(N(g.ThicknessVariation)).Append('|');
                 foreach(var kv in (g.GravelCoverage??new()).OrderBy(k=>k.Key,StringComparer.Ordinal))sb.Append(kv.Key).Append(':').Append(N(kv.Value)).Append(',');
                 sb.Append('\n');
+                // v3 only, so v2's fingerprint stays as pinned (golden-v2.json)
+                if(GeologyFacts.CoveredFill(rules.Version))sb.Append("gc=").Append(N(g.CoveredFillRadiusCells)).Append('\n');
+            }
+            if(GeologyFacts.FineRock(rules.Version) && rules.Litho!=null)
+            {
+                foreach(var pat in rules.Litho.Patterns)sb.Append("lp=").Append(pat[0]).Append(':').Append(pat[1]).Append('\n');
+                foreach(var kv in rules.Litho.Classes.OrderBy(k=>k.Key,StringComparer.Ordinal))sb.Append("lc=").Append(kv.Key).Append(':').Append(kv.Value).Append('\n');
+                sb.Append("lnb=").Append(string.Join(",",rules.Litho.NotBedrock??Array.Empty<string>())).Append('\n');
+                sb.Append("rocks=").Append(rockMap?.Name ?? "-").Append('\n');
             }
             return Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(sb.ToString())));
         }
@@ -306,6 +407,7 @@ namespace EarthMap.Core
                 z=Math.Clamp((int)Math.Floor((90-lat)*2),0,359);
             }
             int i=z*720+x;
+            if(rockMap!=null)return AtFine(lat,lon,sediment[i]);
             byte rock=lithology[i],cover=sediment[i];
             bool borrowed=filled!=null && filled[i];
             foreach(var p in provinces)
@@ -418,6 +520,22 @@ namespace EarthMap.Core
         }
 
         // ------------------------------------------------------------------ surface resources (all rules versions)
+
+        /// <summary>v4: the rock from the 30″ set's cell; the cover class (clay, peat, gravel lenses) stays GUM's 0.5° class.
+        /// Off the set (sea beyond its fill), the profile is unknown, as an unmapped 0.5° cell's.</summary>
+        Sample AtFine(double lat,double lon,byte cover)
+        {
+            var c=rockMap.At(lat,lon);
+            if(!c.Mapped)return new Sample(0,cover,unknown,null,"30\" rock set: no rock mapped here; subsurface synthesized");
+            string code=c.Rock ?? c.Surface;
+            byte rock=ClassNumber.TryGetValue(code.Substring(0,2),out byte b)?b:(byte)0;
+            string from=c.Source=="glim"?"GLiM full resolution (Hartmann & Moosdorf 2012)":c.Source!=null && c.Source.StartsWith("macrostrat",StringComparison.Ordinal)?"Macrostrat "+c.Source.Substring("macrostrat".Length).TrimStart('-')+" (CC BY 4.0)":c.Source;
+            string what=c.Borrowed?$"{c.Surface ?? "-"}, bedrock {code} from the nearest mapped rock":code;
+            foreach(var p in provinces)
+                if((p.Lithology==null || Array.IndexOf(p.Lithology,(int)rock)>=0) && Contains(p.Polygon,lon,lat))
+                    return new Sample(rock,cover,profiles[p.Profile],p.Id,p.Source,false,c.Borrowed);
+            return new Sample(rock,cover,ProfileOfCode(code),null,$"30\" rock set, {from}: {what}; subsurface synthesized",false,c.Borrowed);
+        }
 
         static double Ramp(double v,double lo,double hi)=>v<=lo?0:v>=hi?1:(v-lo)/(hi-lo);
 

@@ -1,0 +1,24 @@
+material                   vanilla H384 vanilla H1024      1:200/384      1:100/384      1:10/1024       1:5/1024       1:10/384      1:100/256
+copper                            536.2        1231.7          372.3          378.4         1154.4         1189.2          674.4          282.8
+tin                                36.5          97.3           25.9           30.7          182.0          226.9          154.5           22.8
+iron                              208.3         555.6          139.5          178.7          429.2          429.1          242.3          142.5
+coal                              668.8        1783.5          414.3          424.1         1314.6         1314.4          626.6          287.0
+lead/zinc                         254.5         544.4           87.6           89.5          355.3          356.0          275.3           69.9
+sulfur                            294.9         589.7          103.7          107.7          333.1          332.5          239.3           87.2
+saltpeter                       14067.0       37512.0         4867.8         4881.5        13175.2        13174.5         5068.8         3260.4
+borax/kernite                      94.3         251.4           33.5           35.6          177.3          177.3          144.9           24.6
+halite (domes+crust)             1467.0        3912.0          540.8         1044.8         8177.2         8204.9         8051.6          939.7
+quartz (gold/silver host)        2889.5        7705.3         2861.6         2875.9         7672.2         7672.2         2910.6         1923.7
+flint                              69.1         184.3           24.2           25.2          151.1          143.3          127.2           17.2
+
+Main variant: radius (blocks) / blocks per deposit / spacing between deposits in blocks (with rounding) / same in real km
+ copper          | 1:200: R 6, 77 blk/dep, 20 blk (3.9 km) | 1:100: R 11, 306 blk/dep, 39 blk (3.9 km) | 1:10: R 57, 7657 blk/dep, 115 blk (1.2 km) | 1:5: R 57, 7653 blk/dep, 115 blk (0.6 km) | vanilla H384: R 7, 113 blk/dep, 20 blk
+ surface copper  | 1:200: R 2, 11 blk/dep, 39 blk (7.7 km) | 1:100: R 4, 36 blk/dep, 71 blk (7.1 km) | 1:10: R 42, 3556 blk/dep, 320 blk (3.2 km) | 1:5: R 60, 7101 blk/dep, 320 blk (1.6 km) | vanilla H384: R 4, 36 blk/dep, 72 blk
+ tin             | 1:200: R 4, 31 blk/dep, 37 blk (7.5 km) | 1:100: R 8, 122 blk/dep, 73 blk (7.3 km) | 1:10: R 59, 6449 blk/dep, 262 blk (2.6 km) | 1:5: R 59, 6451 blk/dep, 262 blk (1.3 km) | vanilla H384: R 5, 45 blk/dep, 37 blk
+ iron            | 1:200: R 21, 832 blk/dep, 112 blk (22.5 km) | 1:100: R 42, 3330 blk/dep, 209 blk (20.9 km) | 1:10: R 58, 6256 blk/dep, 180 blk (1.8 km) | 1:5: R 58, 6253 blk/dep, 180 blk (0.9 km) | vanilla H384: R 26, 1231 blk/dep, 110 blk
+ coal            | 1:200: R 8, 261 blk/dep, 39 blk (7.8 km) | 1:100: R 16, 1049 blk/dep, 77 blk (7.7 km) | 1:10: R 60, 14250 blk/dep, 164 blk (1.6 km) | 1:5: R 60, 14266 blk/dep, 164 blk (0.8 km) | vanilla H384: R 10, 385 blk/dep, 37 blk
+ lead            | 1:200: R 3, 22 blk/dep, 22 blk (4.5 km) | 1:100: R 6, 83 blk/dep, 43 blk (4.3 km) | 1:10: R 55, 5865 blk/dep, 202 blk (2.0 km) | 1:5: R 55, 5900 blk/dep, 203 blk (1.0 km) | vanilla H384: R 4, 32 blk/dep, 16 blk
+ sulfur          | 1:200: R 6, 75 blk/dep, 35 blk (7.1 km) | 1:100: R 13, 303 blk/dep, 70 blk (7.0 km) | 1:10: R 62, 7036 blk/dep, 193 blk (1.9 km) | 1:5: R 62, 7044 blk/dep, 193 blk (1.0 km) | vanilla H384: R 8, 112 blk/dep, 25 blk
+ borax           | 1:200: R 6, 76 blk/dep, 56 blk (11.2 km) | 1:100: R 13, 303 blk/dep, 109 blk (10.9 km) | 1:10: R 62, 7036 blk/dep, 263 blk (2.6 km) | 1:5: R 62, 7029 blk/dep, 263 blk (1.3 km) | vanilla H384: R 8, 111 blk/dep, 40 blk
+ quartz          | 1:200: R 16, 952 blk/dep, 18 blk (3.7 km) | 1:100: R 32, 3820 blk/dep, 37 blk (3.7 km) | 1:10: R 55, 10806 blk/dep, 38 blk (0.4 km) | 1:5: R 55, 10777 blk/dep, 38 blk (0.2 km) | vanilla H384: R 32, 3853 blk/dep, 37 blk
+ saltpeter       | 1:200: R 8, 908 blk/dep, 14 blk (2.8 km) | 1:100: R 16, 3644 blk/dep, 28 blk (2.8 km) | 1:10: R 55, 41364 blk/dep, 57 blk (0.6 km) | 1:5: R 55, 41291 blk/dep, 57 blk (0.3 km) | vanilla H384: R 10, 1340 blk/dep, 10 blk

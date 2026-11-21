@@ -60,6 +60,9 @@ namespace RiverSnap
         public long Morton;
         /// <summary>The original last vertex (a tributary's junction with its parent).</summary>
         public float EndLon, EndLat;
+        /// <summary>(EA-0131) A river already laid out (frozenfrom=): its stations are its vertices, at their given places and
+        /// levels, never moved; the streams snapped onto it end on it.</summary>
+        public bool Frozen;
     }
 
     /// <summary>The snapped network, one entry per station, numbered in flow order (a station's downstream neighbour always
@@ -92,17 +95,23 @@ namespace RiverSnap
 
         public static long CellKey(int cx, int cy) => ((long)cx << 32) | (uint)cy;
 
-        public Network(List<Reach> reaches)
+        /// <summary>(EA-0131) Reaches from this index on are frozen (Chain.Frozen); int.MaxValue: none.</summary>
+        public readonly int FrozenFrom;
+        public bool IsFrozen(int reach) => reach >= FrozenFrom;
+
+        public Network(List<Reach> reaches, int frozenFrom = int.MaxValue)
         {
             R = reaches;
+            FrozenFrom = frozenFrom;
             int nr = R.Count;
             MainIn = new int[nr];
             Array.Fill(MainIn, -1);
-            // the biggest inflow (the first of equals, as bake_rivers' prev_main)
+            // the biggest inflow (the first of equals, as bake_rivers' prev_main); a frozen river never continues up a stream
             for (int r = 0; r < nr; r++)
             {
                 int nx = R[r].Next;
                 if (nx < 0 || nx >= nr) continue;
+                if (IsFrozen(r) != IsFrozen(nx)) continue;
                 if (MainIn[nx] < 0 || R[r].Q > R[MainIn[nx]].Q) MainIn[nx] = r;
             }
             ChainOf = new int[nr];
@@ -121,7 +130,7 @@ namespace RiverSnap
                     if (nx < 0 || nx >= nr || MainIn[nx] != c) break;
                     c = nx;
                 }
-                var ch = new Chain { Index = Chains.Count, Reaches = list.ToArray() };
+                var ch = new Chain { Index = Chains.Count, Reaches = list.ToArray(), Frozen = IsFrozen(list[0]) };
                 for (int i = 0; i < ch.Reaches.Length; i++) { ChainOf[ch.Reaches[i]] = ch.Index; PosInChain[ch.Reaches[i]] = i; }
                 var lr = R[ch.Reaches[^1]];
                 ch.EndLon = lr.Lon[^1]; ch.EndLat = lr.Lat[^1];
@@ -251,11 +260,14 @@ namespace RiverSnap
             }
         }
 
-        int SegCount(int k) => Math.Max(1, (int)Math.Ceiling(SegMetres(vLon[k], vLat[k], vLon[k + 1], vLat[k + 1]) / P.Ds));
+        int SegCount(int k) => frozen ? 1 : Math.Max(1, (int)Math.Ceiling(SegMetres(vLon[k], vLat[k], vLon[k + 1], vLat[k + 1]) / P.Ds));
+        /// <summary>The chain being laid out is frozen: a station per vertex.</summary>
+        bool frozen;
 
         /// <summary>Station count and each reach's first station, without building the stations.</summary>
         public void Layout(Chain c)
         {
+            frozen = c.Frozen;
             Gather(c);
             var rs = new int[c.Reaches.Length];
             int count = 0, m = 0;
@@ -461,8 +473,14 @@ namespace RiverSnap
 
         public void Process(Chain c)
         {
+            frozen = c.Frozen;
             Gather(c);
             Densify(c);
+            if (frozen)
+            {
+                ProcessFrozen(c);
+                return;
+            }
             Grow(ref cons, n); Grow(ref consOff, n); Grow(ref refLon, n); Grow(ref refLat, n); Grow(ref hHalf, n);
             Grow(ref wgt, n); Grow(ref lam, n); Grow(ref off, n); Grow(ref pLon, n); Grow(ref pLat, n); Grow(ref floor, n);
             Grow(ref tA, n); Grow(ref tB, n); Grow(ref J, n); Grow(ref pStart, n + 1); Grow(ref path, n);
@@ -591,6 +609,34 @@ namespace RiverSnap
                 G.Next[g] = jGlobal;
             }
             else if (tributary) G.Floor[g0 + n - 1] = (float)floor[n - 1];
+            StationsDone += n;
+        }
+
+        /// <summary>
+        /// (EA-0131) A frozen chain: a station at each vertex, where it is, at its given level (fixed, so the level rules keep
+        /// it); a frozen tributary still ends at its parent's junction station.
+        /// </summary>
+        void ProcessFrozen(Chain c)
+        {
+            int g0 = c.StationStart;
+            for (int i = 0; i < n; i++)
+            {
+                int g = g0 + i;
+                G.Lon[g] = Wrap180(r0Lon[i]);
+                G.Lat[g] = r0Lat[i];
+                G.Floor[g] = (float)oLev[i];
+                G.OrigLev[g] = (float)oLev[i];
+                G.Fixed[g] = true;
+                G.Q[g] = (float)q[i];
+                G.Next[g] = i < n - 1 ? g + 1 : -1;
+                G.Shift[g] = 0;
+                G.Anchor[g] = true;
+            }
+            if (c.Parent >= 0 && net.Chains[c.Parent].Processed)
+            {
+                var parent = net.Chains[c.Parent];
+                G.Next[g0 + n - 1] = parent.StationStart + parent.ReachStart[net.PosInChain[c.JunctionReach]];
+            }
             StationsDone += n;
         }
 

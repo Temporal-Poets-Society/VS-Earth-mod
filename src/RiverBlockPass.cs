@@ -36,7 +36,7 @@ namespace EarthMap
         /// </summary>
         public void PlaceRamps(IServerChunk[] chunks, int chunkX, int chunkZ)
         {
-            if (!handoff.TakeRamps(chunkX, chunkZ, out uint[] ramp)) return;
+            if (!handoff.TakeRamps(chunks, chunkX, chunkZ, out uint[] ramp)) return;
             int[] edgeIds = blocks.Edge, rapidEdgeIds = blocks.RapidEdge, flowIds = blocks.Flow, rapidIds = blocks.Rapid, rapidFallIds = blocks.RapidFall;
             int rapidSourceId = blocks.RapidSource, fallId = blocks.Fall;
             var mc = chunks[0].MapChunk;

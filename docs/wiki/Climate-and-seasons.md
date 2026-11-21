@@ -19,8 +19,10 @@ What it means for you:
   You can plan a journey with a real atlas.
 - Places with dry summers (southern Italy, Greece, Spain, California, central Chile) count as drier than their yearly
   rain alone would make them, so their vegetation is sparser.
-- Soil follows the dryness too. Land that isn't truly arid gets at least poor soil instead of sand or gravel. The
-  Mediterranean, the steppes and the dry savannas have soil, while the real deserts keep their sand.
+- Soil follows the dryness too. With Earth soil (the default) deserts have no topsoil except where a river floods them,
+  as along the Nile. With **Terrain · Soil: Climate only**, land that isn't truly arid gets at least poor soil instead
+  of sand or gravel: the Mediterranean, the steppes and the dry savannas have soil, while the real deserts keep their
+  sand. See [Rocks, soil and ores](Rocks-soil-and-ores#soil).
 - Forests grow where the real climate allows trees. That means the warmest month is above about 10 °C (below the polar
   and alpine tree line) and the place is moist enough. Steppe, desert and tundra stay open.
 

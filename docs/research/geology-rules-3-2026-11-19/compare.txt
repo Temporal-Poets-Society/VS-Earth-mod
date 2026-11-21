@@ -1,0 +1,88 @@
+
+=== 1:10 regional rock, vanilla ores: rules 2 -> rules 3
+troodos      before: sandstone 59%, bauxite 24%, shale 8%
+             after:  basalt 67%, bauxite 24%, peridotite 7%
+             ores:   iron 10>70; chromite 0>2; copper 17>66; tin 0>42; lead/zinc 77>1; coal 15>0; halite 2776>2756; olivine 2>2
+oman         before: conglomerate 96%
+             after:  peridotite 90%, basalt 10%
+             ores:   iron 0>62; copper 5>5; tin 0>70; lead/zinc 6>0; coal 67>0; halite 5723>0; olivine 11>611
+kempirsai    before: granite 53%, sandstone 24%, shale 11%, slate 7%
+             after:  peridotite 65%, basalt 33%
+             ores:   copper 4>4; lead/zinc 17>14; coal 298>16; halite 1439>0; olivine 2>683
+bushveld     before: granite 73%, sandstone 10%, shale 8%, slate 6%
+             after:  granite 77%, basalt 15%, peridotite 7%
+             ores:   iron 3>3; chromite 1>1; copper 364>415; lead/zinc 151>5; coal 223>0; olivine 0>113
+greatdyke    before: granite 31%, bauxite 30%, gneiss 22%, schist 16%
+             after:  granite 35%, bauxite 31%, basalt 26%, peridotite 9%
+             ores:   iron 0>1; copper 386>381; lead/zinc 91>90; olivine 4>70
+sudbury      before: gneiss 70%, granite 30%
+             after:  granite 74%, basalt 18%, peridotite 8%
+             ores:   chromite 0>67; copper 10>3; tin 26>26; lead/zinc 2>2; olivine 3>3
+dartmoor     before: granite 41%, sandstone 38%, shale 10%, slate 7%
+             after:  granite 57%, gneiss 43%
+             ores:   iron 0>2; copper 8>251; tin 0>0; lead/zinc 167>12; coal 11>0; olivine 7>7
+iceland      before: peridotite 66%, basalt 31%
+             after:  peridotite 61%, basalt 36%
+             ores:   iron 0>37; copper 116>126; lead/zinc 10>10; olivine 546>450
+deccan       before: peridotite 75%, basalt 24%
+             after:  granite 75%, basalt 24%
+             ores:   copper 149>239; lead/zinc 9>9; olivine 454>7
+westsiberia  before: granite 55%, sandstone 26%, shale 9%, slate 6%
+             after:  granite 55%, sandstone 26%, shale 9%, slate 6%
+             ores:   iron 149>149; copper 260>260; lead/zinc 10>10; coal 36>36; olivine 4>4
+amazon       before: andesite 100%
+             after:  granite 78%, shale 11%, sandstone 7%
+             ores:   chromite 4>4; nickel 107>103; copper 1>1; halite 0>1329
+addis        before: peridotite 67%, basalt 33%
+             after:  granite 67%, basalt 33%
+             ores:   iron 4>4; chromite 4>4; nickel 1>1; copper 4>7; tin 43>45; lead/zinc 1>1; olivine 366>0
+vienna       before: sandstone 100%
+             after:  granite 65%, sandstone 14%, shale 10%, slate 8%
+             ores:   copper 14>14; lead/zinc 153>136; coal 0>0; olivine 4>4
+riga         before: gneiss 47%, sandstone 21%, dolostone 13%, limestone 9%, claystone 8%
+             after:  gneiss 47%, sandstone 21%, dolostone 13%, limestone 9%, claystone 8%
+             ores:   copper 31>31; tin 11>11; lead/zinc 47>47; coal 650>650; halite 1057>1057
+
+=== 1:100 regional rock, vanilla ores: rules 2 -> rules 3
+troodos      before: sandstone 56%, granite 23%, shale 9%, slate 7%
+             after:  basalt 56%, peridotite 27%, sandstone 7%, granite 4%
+             ores:   iron 25>0; chromite 21>47; copper 8>15; tin 0>63; lead/zinc 19>6; coal 27>0; olivine 4>111
+oman         before: granite 96%
+             after:  peridotite 91%, basalt 8%
+             ores:   iron 0>6; copper 278>9; lead/zinc 6>0; coal 76>1; olivine 4>803
+kempirsai    before: granite 52%, sandstone 17%, bauxite 9%, shale 9%, limestone 4%, slate 4%
+             after:  peridotite 60%, basalt 29%, bauxite 9%
+             ores:   iron 40>40; copper 122>112; lead/zinc 71>70; coal 145>0; halite 1509>0; olivine 7>563
+bushveld     before: granite 72%, sandstone 10%, shale 8%, slate 6%
+             after:  granite 77%, basalt 16%, peridotite 7%
+             ores:   iron 5>5; copper 2>2; tin 21>24; lead/zinc 137>13; coal 22>0; olivine 7>7
+greatdyke    before: granite 69%, gneiss 19%, schist 11%
+             after:  granite 71%, gneiss 10%, basalt 9%, schist 6%
+             ores:   iron 182>187; copper 462>442; tin 9>9; olivine 7>7
+sudbury      before: gneiss 63%, granite 34%
+             after:  granite 72%, basalt 20%, peridotite 8%
+             ores:   iron 0>12; copper 286>232; tin 12>12; lead/zinc 28>12; coal 5>0; olivine 0>116
+dartmoor     before: granite 48%, sandstone 33%, shale 9%, slate 6%
+             after:  granite 52%, gneiss 38%, sandstone 7%
+             ores:   iron 200>261; copper 11>11; lead/zinc 155>84; coal 96>33; olivine 4>4
+iceland      before: granite 60%, peridotite 26%, basalt 12%
+             after:  peridotite 57%, basalt 42%
+             ores:   iron 182>150; copper 2>2; olivine 96>247
+deccan       before: peridotite 61%, basalt 38%
+             after:  granite 61%, basalt 38%
+             ores:   chromite 24>24; nickel 16>16; copper 27>27; lead/zinc 18>18; olivine 332>4
+westsiberia  before: granite 34%, peridotite 25%, andesite 20%, sandstone 10%, shale 5%
+             after:  granite 59%, sandstone 19%, shale 10%, slate 8%
+             ores:   chromite 4>4; copper 14>14; lead/zinc 4>4; coal 331>647; olivine 26>5
+amazon       before: claystone 44%, peridotite 41%, phyllite 13%
+             after:  granite 59%, sandstone 20%, shale 11%, slate 5%
+             ores:   iron 10>41; copper 157>415; lead/zinc 17>57; olivine 520>0
+addis        before: peridotite 76%, basalt 24%
+             after:  granite 76%, basalt 24%
+             ores:   copper 136>136; lead/zinc 6>6; olivine 645>0
+vienna       before: peridotite 85%, slate 9%
+             after:  granite 74%, sandstone 11%, slate 6%, shale 5%
+             ores:   copper 3>54; tin 100>98; lead/zinc 36>212; olivine 241>0
+riga         before: gneiss 41%, sandstone 22%, dolostone 18%, limestone 10%, claystone 9%
+             after:  gneiss 41%, sandstone 22%, dolostone 18%, limestone 10%, claystone 9%
+             ores:   iron 101>101; copper 394>394; tin 0>0; lead/zinc 406>406; coal 401>401; olivine 4>4

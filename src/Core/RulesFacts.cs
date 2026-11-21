@@ -95,6 +95,18 @@ namespace EarthMap.Core
         /// <summary>2: discontinuous gravel lenses on coarse sediment, cleared again under vanilla's clay and peat patches
         /// (the deposit-column hook).</summary>
         public static bool GravelLenses(int rules) => rules >= 2;
+        /// <summary>3 (decision 0101): unconsolidated cover (GLiM class 1) takes the nearest mapped bedrock within the rules'
+        /// radius, else a sedimentary basin profile, instead of keeping vanilla's strata.</summary>
+        public static bool CoveredFill(int rules) => rules >= 3;
+        /// <summary>4 (EA-0198, decision 0106): the rock comes from the 30″ rock set (full-resolution GLiM, with Macrostrat's
+        /// national maps where they exist) through the rules' litho table, and contacts bend at the scale of its cells.</summary>
+        public static bool FineRock(int rules) => rules >= 4;
+        /// <summary>3 (decision 0101): clay and peat read a deposit's relief over neighbours 1.2 km away at any scale
+        /// (<see cref="RegionalGeologyWorld.FootprintMetres"/>), not 12 blocks.</summary>
+        public static bool ReliefInMetres(int rules) => rules >= 3;
+        /// <summary>3 (decision 0102): with vanilla ores, vanilla's galena and its silver also form in granite, slate, phyllite,
+        /// gneiss and schist (CrystallineGalena adds them to its hosts while the game runs).</summary>
+        public static bool CrystallineGalena(int rules) => rules >= 3;
     }
 
     /// <summary>Ground column rules (EarthParams.GroundColumns, GroundColumns.RulesVersion; decision 0076). One rules file

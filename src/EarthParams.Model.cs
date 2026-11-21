@@ -91,7 +91,7 @@ namespace EarthMap
             // referee first of all (it is the grid, the islands and the coasts this world starts from)
             data.SetSeaReferee(SeaReferee >= 1);
             data.SetIslandOverlay(Islands > 0);
-            data.SetLakeOverlay(RiverEnds > 0);
+            data.SetLakeOverlay(RiverEnds > 0, RiverEnds >= Core.RiverEnds.Lakes1318 ? 2 : 0);
             data.SetShoreOverlay(LakeShores > 0);
             data.SetReservoirExclusions(ReservoirRules >= 1);
             data.SetOutletOverlay(LakeOutlets >= 1);
@@ -117,6 +117,7 @@ namespace EarthMap
                 ClimateRules = ClimateRules,
                 GeothermalRules = GeothermalRules,
                 ChannelRules = ChannelRules,
+                LakeRules = LakeRules,
                 ShoreZoneRules = ShoreZoneRules,
                 ShoreRules = ShoreRules,
                 ShoreData = ShoreMaterialFacts.Strip(ShoreRules) ? data.ShoreMaterial : null,
@@ -133,9 +134,9 @@ namespace EarthMap
             if (data.IslandOverlay) model.Islands = new IslandLayer(data.Islands, geo, MinIslandBlocks > 0 ? MinIslandBlocks : 4, Islands);
             if (Coasts > 0 && data.Coasts != null && data.IslandOverlay) model.Coasts = new CoastLayer(data.Coasts, geo, MinIslandBlocks > 0 ? MinIslandBlocks : 4);
             // decision 0064: the sea, lakes and land of 1318, before the river exits (SeaChannels) read the coast
-            if (Works1318 >= 1 && model.Coasts != null && data.Works1318 != null)
+            if (Works1318 >= 1 && model.Coasts != null && data.Works1318For(Works1318) != null)
             {
-                model.Works = new LakeOutlineLayer(data.Works1318, geo, model.Coasts.Reach, skipFlags: Works1318Data.SkipFor(Works1318));
+                model.Works = new LakeOutlineLayer(data.Works1318For(Works1318), geo, model.Coasts.Reach, skipFlags: Works1318Data.SkipFor(Works1318));
                 model.WorksRules = Works1318;
             }
             // the straits' courses and the sea channels' ways are the slow parts: kept between starts (ModelCache)
@@ -147,8 +148,8 @@ namespace EarthMap
             if (model.Rivers != null && AridRiverRules >= 1)
             {
                 // decision 0069 rule 8: the wet-source flow from GIRES' non-perennial rivers where the world has them
-                model.WetSourceFlow = PerennialRules >= 1 && data.NonPerennial != null && courseKey == data.NonPerennial.CourseKey
-                    ? data.NonPerennial.WetSourceFlow(model.Rivers.Reaches)
+                model.WetSourceFlow = PerennialRules >= 1 && data.NonPerennialFor(courseKey) != null
+                    ? data.NonPerennialFor(courseKey).WetSourceFlow(model.Rivers.Reaches)
                     : AridHydrology.WetSourceFlow(data, model.Rivers.Reaches);
                 model.DryFans = new WadiFans(model);
             }
@@ -189,7 +190,7 @@ namespace EarthMap
             damError = null;
             reroutes = 0;
             var source = Rivers ? data.RiverReaches(RiverCourses) : null;
-            courseKey = source != null && (flow != null || (PerennialRules >= 1 && data.NonPerennial != null)) ? DamRemovalData.KeyOf(source) : 0;
+            courseKey = source != null && (flow != null || (PerennialRules >= 1 && data.HasNonPerennial)) ? DamRemovalData.KeyOf(source) : 0;
             bool flowFits = source != null && flow != null && courseKey == flow.CourseKey;
             if (source != null && DamRules >= 1 && dams != null && RiverCourses >= 1)
                 damLevels = dams.LowerCourses(source, out damError);
@@ -206,26 +207,62 @@ namespace EarthMap
         {
             var geo = model.Geometry;
             var canals = string.IsNullOrWhiteSpace(Canals) ? null : Canals.Split(',');
-            // widths grow with the world: the reference is the standard 256k world (Cylinder World ring 204 800)
-            double sizeScale = geo.RingLength > 0 ? geo.RingLength / 204800.0 : 1;
             var reaches = OutletData.ReleaseRiverPoints(data, source);
-            bool[] fade = null;
+            bool[] fade = null, seaEnds = null;
             if (RiverEnds > 0)
             {
-                var ends = Core.RiverEnds.Prepare(data, reaches);
+                // (river ends rules 2, EA-0160: a river ends where it reaches the sea, by this world's coast)
+                // (works rules 6, decision 0107: and into the lakes of 1318, as into the terminal lakes)
+                var works = Works1318 >= Works1318Data.LakeRules ? model.Works : null;
+                System.Func<double, double, double> lakeOf1318 = works == null ? null : (la, lo) =>
+                {
+                    var h = works.At(la, lo);
+                    return Works1318Data.IsLake(h) ? model.RiverLevelOfLake(h.Level) : double.NaN;
+                };
+                var ends = Core.RiverEnds.Prepare(data, reaches, RiverEnds >= 2 && model.Coasts != null ? model.CoastSign : null, lakeOf1318);
                 reaches = ends.Reaches;
                 fade = ends.Fade;
-                if (RiverDeltas > 0) reaches = Core.RiverDeltas.Apply(reaches).Reaches;
+                seaEnds = ends.SeaEnd;
+                if (RiverDeltas > 0) reaches = Core.RiverDeltas.Apply(reaches, RiverDeltas).Reaches;
             }
-            return new RiverNetwork(reaches, geo, RiverMinDischarge, RiverWidthScale > 0 ? RiverWidthScale : 1, model.RiverWaterTop,
-                string.IsNullOrEmpty(StreamMode) ? "none" : StreamMode, StreamMinDischarge > 0 ? StreamMinDischarge : 20,
-                StreamMode == null ? 1 : sizeScale, RiverStraighten, RiverSmoothWidths, falls: RiverFalls > 0 ? Core.RiverFalls.All : null,
-                seaLevelPiece: SeaChannels.CanalCrossing(SeaChannels.CanalCourses(geo, canals)),
-                continueDownstream: RiverEnds > 0, fadeEnds: fade, geometrySeams: RiverEnds > 0, widthRules: RiverWidths,
-                poolLayout: RiverPoolLayout, rapids: !NoRiverRapids,
-                courses: RiverCourses, landCellMetres: RiverCourses < 1 ? 0 : FineElevation >= 1 ? Core.FineElevation.CellMetres
+            return new RiverNetwork(reaches, geo, model.RiverWaterTop, RiverOptions(data, geo) with
+            {
+                Falls = RiverFalls > 0 ? Core.RiverFalls.All : null,
+                SeaLevelPiece = SeaChannels.CanalCrossing(SeaChannels.CanalCourses(geo, canals)),
+                ContinueDownstream = RiverEnds > 0, FadeEnds = fade, SeaEnds = seaEnds,
+            });
+        }
+
+        /// <summary>
+        /// This world's river settings and rules as one record (BuildRivers adds the falls, the canals' crossings and the river
+        /// ends' continuation, fades and sea ends, all per reach of the world's own courses); EA-0131's streams layer builds its
+        /// networks with these (StreamLayer).
+        /// </summary>
+        public RiverBuildOptions RiverOptions(EarthData data, EarthGeometry geo)
+        {
+            // widths grow with the world: the reference is the standard 256k world (Cylinder World ring 204 800)
+            double sizeScale = geo.RingLength > 0 ? geo.RingLength / 204800.0 : 1;
+            return new RiverBuildOptions(RiverMinDischarge, RiverWidthScale > 0 ? RiverWidthScale : 1)
+            {
+                StreamMode = string.IsNullOrEmpty(StreamMode) ? "none" : StreamMode,
+                StreamMinQ = StreamMinDischarge > 0 ? StreamMinDischarge : 20,
+                SizeScale = StreamMode == null ? 1 : sizeScale,
+                Straighten = RiverStraighten,
+                SmoothWidths = RiverSmoothWidths,
+                GeometrySeams = RiverEnds > 0,
+                WidthRules = RiverWidths,
+                WidthMultiplier = RiverWidthMultiplier,
+                OneBlockStreams = CoarseRiverRules >= 1,
+                RiversToTheirEnd = CoarseRiverRules >= 2,
+                SteepStreams = CoarseRiverRules >= 2,
+                HeadStreamKm = CoarseRiverRules >= 2 ? RiverNetwork.HeadStreamKmRule : 0,
+                PoolLayout = RiverPoolLayout,
+                Rapids = !NoRiverRapids,
+                Courses = RiverCourses,
+                LandCellMetres = RiverCourses < 1 ? 0 : FineElevation >= 1 ? Core.FineElevation.CellMetres
                     : CoarseElevation >= 1 && data.Coarse != null ? data.Coarse.CellMetres : 0,
-                channelRules: ChannelRules);
+                ChannelRules = ChannelRules,
+            };
         }
     }
 }

@@ -2,6 +2,11 @@
 
 Date: 31 October 2026. Status: built in 0.17.0-pre.14; in Earth 1.0.0 and 2.0.0. Not inspected in game; land heights have since changed with GLO-90 (0051, 0053).
 
+Off the world creation screen from 2.2.0-rc.13 (EA-0204, the author, 21 November 2026: "if we still use [it] we may take
+[it] off the GUI"), on `claude/terrain-2.2`. A new world takes the 3,000 m default; a world configuration's
+`earthSummitCorrection` still counts (servers, tests). It still matters on the built-in and included heights, and gives
+a small lift at listed peaks on GLO-90. Saves keep theirs.
+
 ## User direction
 
 The author reported conspicuous small hills near 35.3932 S, 149.1185 E (Canberra) and asked to inspect the existing rules first. Installed pre.12 contains 155,318 GeoNames peaks, with no minimum elevation. Local examples are Mount Wanniassa (890 m), Mount Taylor (856 m) and Tuggeranong Hill (855 m). The author wants recognizable mountains with substantial bases preserved, including Fuji, then selected a concrete control: correction only from 3 km by default, configurable in Earth's customization screen, starting with Off, 1 km and subsequent height steps.

@@ -1,0 +1,12 @@
+[
+ {"Name":"poltava","Lat":49.60,"Lon":34.55,"Radius":1},
+ {"Name":"zemgale-bauska","Lat":56.40,"Lon":24.20,"Radius":1},
+ {"Name":"goettingen","Lat":51.53,"Lon":9.93,"Radius":1},
+ {"Name":"finland-jyvaskyla","Lat":62.30,"Lon":25.70,"Radius":1},
+ {"Name":"amazon-manaus","Lat":-3.50,"Lon":-62.00,"Radius":1},
+ {"Name":"nile-luxor-valley","Lat":25.70,"Lon":32.62,"Radius":1},
+ {"Name":"nile-luxor-desert","Lat":25.70,"Lon":32.80,"Radius":1},
+ {"Name":"baghdad","Lat":33.30,"Lon":44.10,"Radius":1},
+ {"Name":"sahara","Lat":25.00,"Lon":28.00,"Radius":1},
+ {"Name":"alps-2700m","Lat":46.55,"Lon":8.40,"Radius":1}
+]

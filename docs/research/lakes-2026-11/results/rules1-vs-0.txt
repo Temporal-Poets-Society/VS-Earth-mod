@@ -1,0 +1,21 @@
+lake       scale lake cols beds differ deeper in base-lake0 mean +bl max +bl land differs     depth base   depth base-lake0
+baikal       100    431437           0                  0      0.0       0            0          34.58              34.58
+baikal        10    431434           0                  0      0.0       0            0          36.94              36.94
+baikal        25    431434         130                130      1.2       2            0          19.30              19.30
+constance    100     77383        2881               2881      1.0       1           51           2.81               2.84
+constance     10     77367        1050               1050      2.7       4            0           2.98               3.01
+constance     25     77367        2096               2096      2.6       4            3           2.94               3.01
+geneva       100     84278        3167               3167      1.0       1            0           2.87               2.90
+geneva        10     84310         994                994      2.6       3            0           2.99               3.02
+geneva        25     84297        2001               2001      2.4       3            0           2.97               3.02
+ladoga       100   3069465           0                  0      0.0       0           59          10.25              10.25
+ladoga        10   3069478          64                 64      1.8       4            0          10.03              10.03
+ladoga        25   3069478         480                480      1.7       4            1          10.26              10.26
+peipus       100    512371           0                  0      0.0       0            0           7.78               7.78
+peipus        10    512383         515                515      1.8       3            0           5.93               5.93
+peipus        25    512374         532                532      1.4       3            0           5.92               5.93
+pielinen     100    141292           0                  0      0.0       0            0           2.78               2.78
+pielinen      10    141297           0                  0      0.0       0            0           2.95               2.95
+pielinen      25    141297           0                  0      0.0       0            0           2.88               2.88
+lake       scale lake cols beds differ deeper in base-lake0 mean +bl max +bl land differs     depth base   depth base-lake0
+lausanne      10     29882        2479               2479      2.4       3            0           3.00               3.20

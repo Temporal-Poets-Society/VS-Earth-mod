@@ -68,7 +68,7 @@ namespace EarthMap
             Terrain, AridBasins, SoilFertility, TallGrass, TallGrassAroundStructures, TreeSpecies, TreeAdapterReport, CoralSalinity,
             PatchReservations, StructuresWherePeopleLived, VillagesWherePeopleLived, SurfaceRuinsOutOfWater, SurfaceStructuresOutOfWater,
             ShallowWaterStructures, UndergroundStructures, VillageBuildings, StructureSizes, Ponds, Springs, WorldgenSpawnRanges,
-            RuntimeSpawnRanges, Prospecting,
+            RuntimeSpawnRanges, WorldgenWaterDepth, RuntimeWaterDepth, Prospecting,
             // regional geology (GeologyTable) and the ore layer (OreTable)
             GeologyStrata, GeologySoil, GeologyDeposits, GeologyDepositColumns, GeologyDepositReload, OreMapFactor, OreReload, OreStrata,
             // the story locations (Table); regional plants (PlantsTable), plants as around 1318 (PlacementTable), the sea-level
@@ -76,6 +76,12 @@ namespace EarthMap
             // size (DungeonTable)
             StorySchematics, RegionalPlants, RegionalPlantsOnTrees, Placement1318, SealevelDeposits, ClimateLapseTemperature, ClimateLapseRain,
             RegionalFauna, DungeonMapSize,
+            // vanilla's deposits at their depth below the local ground (DepositDepthsTable)
+            DepositDepths, DepositDepthsReload,
+            // vanilla's rock layers under the local ground (VanillaStrataTable)
+            VanillaStrata,
+            // Earth soil's flood rain and top blocks around vanilla's block layers (decision 0105)
+            Topsoil,
             // the running game's and the client's features (the runtime tables, at the end of this file)
             GrassWinter, GroundMoisture, GrassSeason, SeasonTint, Thunder, CreativeDate, SnowMeltLight, GrassSeasonShader,
         }
@@ -447,6 +453,15 @@ namespace EarthMap
             {
                 new PatchMethod(typeof(GenBlockLayers), "LoadBlockLayers", transpiler: P(typeof(BlockLayerAdjustments), nameof(BlockLayerAdjustments.SoilFertilityTranspiler))),
             }) { Before = () => BlockLayerAdjustments.SoilFertilityPatched = false, Rewrote = () => BlockLayerAdjustments.SoilFertilityPatched },
+            // (decision 0105) Earth soil: the flood rain goes into vanilla's private LoadBlockLayers; the top blocks are swapped after
+            // vanilla's private chunk method, which records each column's tier through the fertility hook above
+            new Spec(Feature.Topsoil, "Earth soil's river floods and top blocks (decision 0105)", "arid floodplains keep vanilla's sand, and barren, high and black earth soil are laid as low and medium", () => new Bind[]
+            {
+                new PatchMethod(typeof(GenBlockLayers), "LoadBlockLayers", prefix: P(typeof(BlockLayerAdjustments), nameof(BlockLayerAdjustments.FloodRainPrefix))),
+                new PatchMethod(typeof(GenBlockLayers), "OnChunkColumnGeneration", new[] { typeof(IChunkColumnGenerateRequest) },
+                    prefix: P(typeof(BlockLayerAdjustments), nameof(BlockLayerAdjustments.TopsoilChunkPrefix)),
+                    postfix: P(typeof(BlockLayerAdjustments), nameof(BlockLayerAdjustments.TopsoilChunkPostfix))),
+            }) { Needs = Feature.SoilFertility },
             // vanilla decides each tuft inside PlaceTallGrass (no event); it gets local x, z only, so the block layers' chunk is
             // noted around vanilla's block layer handler (wrapped through the public handler list)
             new Spec(Feature.TallGrass, "the tall grass share of dry land (ranges step 5a), scoped through vanilla's handler list", "the chunk scope is a Harmony prefix on GenBlockLayers' own method instead", () => new Bind[]
@@ -574,6 +589,18 @@ namespace EarthMap
                 new PatchMethod(AccessTools.TypeByName("Vintagestory.Server.ServerSystemEntitySpawner"), "CanSpawnAt_offthread",
                     prefix: P(typeof(SpawnRangeGuards), nameof(SpawnRangeGuards.RuntimeSpawnRangeGuard)), typeName: "ServerSystemEntitySpawner"),
             }),
+            // a water creature's height band is tested against sea level inside vanilla's spawn checks (GenCreatures, protected;
+            // the runtime spawner inline, in the server's own assembly): Earth widens it and tests it below the water's own
+            // surface after the position checks (WaterSpawnDepth, EA-0178)
+            new Spec(Feature.WorldgenWaterDepth, "the water depth of fish placed at world generation", "fish and other water animals are placed only in water at or below sea level, none in the lakes and rivers above it", () => new Bind[]
+            {
+                new PatchMethod(typeof(GenCreatures), "CanSpawnAtPosition", postfix: P(typeof(WaterSpawnDepth), nameof(WaterSpawnDepth.WorldgenPostfix))),
+            }),
+            new Spec(Feature.RuntimeWaterDepth, "the water depth of spawning fish", "fish and other water animals spawn only in water at or below sea level, none in the lakes and rivers above it", () => new Bind[]
+            {
+                new PatchMethod(AccessTools.TypeByName("Vintagestory.Server.ServerSystemEntitySpawner"), "CanSpawnAt_offthread",
+                    postfix: P(typeof(WaterSpawnDepth), nameof(WaterSpawnDepth.RuntimePostfix)), typeName: "ServerSystemEntitySpawner"),
+            }),
             // the story structures' schematics are internal: the story locations are moved by their buildings' size and given
             // their heights from them (StoryPlacer)
             new Spec(Feature.StorySchematics, "the story locations' placement", "story buildings keep vanilla's sites in new worlds and vanilla's heights in every world", () => new Bind[]
@@ -683,6 +710,42 @@ namespace EarthMap
             {
                 new PatchMethod(typeof(FollowSealevelDiscGenerator), nameof(FollowSealevelDiscGenerator.Init), postfix: P(typeof(SealevelDeposits), nameof(SealevelDeposits.InitPostfix))),
             }) { Bound = () => SealevelDeposits.Hooked = true },
+        };
+
+        /// <summary>Vanilla's deposits at their depth below the local ground (EarthDepositDepths, decision 0097; bound at
+        /// WorldReady in worlds with deposit depth rules, with its own Harmony id): the height each of vanilla's three disc
+        /// generators gives a column (a protected override per generator, no event) and the height range the prospecting
+        /// pick reads, together; and the /wgen regen hook that takes the world-height factor out of the new variants.</summary>
+        /// <summary>Vanilla's rock layers under the local ground (EarthVanillaStrata, decision 0099; bound at WorldReady in worlds
+        /// with vanilla strata rules, with its own Harmony id): vanilla's rock layer handler in the terrain pass, wrapped through the
+        /// game's public handler list (Earth's runs vanilla's own column code on a scratch column); the private height map that
+        /// code reads (set to the scratch column's tops while it runs); and the region's layer thickness maps, scaled as vanilla
+        /// makes them (a private map region handler, no event to change its result).</summary>
+        internal static Spec[] VanillaStrataTable(IWorldGenHandler handlers, System.Func<ChunkColumnGenerationDelegate, ChunkColumnGenerationDelegate> wrap) => new[]
+        {
+            new Spec(Feature.VanillaStrata, "vanilla's rock layers under the local ground", "vanilla's own layers (granite under the plateaus, one thick layer in tall worlds)", () => new Bind[]
+            {
+                new ReadField<GenRockStrataNew, ushort[]>("heightMap", r => EarthVanillaStrata.HeightMapRef = r),
+                new PatchMethod(typeof(GenRockStrataNew), "OnMapRegionGen", returns: typeof(void), postfix: P(typeof(EarthVanillaStrata), nameof(EarthVanillaStrata.RegionPostfix))),
+                new ReplaceHandler(handlers, EnumWorldGenPass.Terrain, typeof(GenRockStrataNew), wrap),
+            }),
+        };
+
+        internal static Spec[] DepositDepthsTable() => new[]
+        {
+            new Spec(Feature.DepositDepths, "vanilla deposits at their depth below the local ground", "vanilla's deposit heights (none within reach under highlands)", () => new Bind[]
+            {
+                new PatchMethod(typeof(FollowSealevelDiscGenerator), "loadYPosAndThickness", declared: true, returns: typeof(void), postfix: P(typeof(DepositDepth), nameof(DepositDepth.SealevelColumn))),
+                new PatchMethod(typeof(AnywhereDiscGenerator), "loadYPosAndThickness", declared: true, returns: typeof(void), postfix: P(typeof(DepositDepth), nameof(DepositDepth.AnywhereColumn))),
+                new PatchMethod(typeof(FollowSurfaceDiscGenerator), "loadYPosAndThickness", declared: true, returns: typeof(void), postfix: P(typeof(DepositDepth), nameof(DepositDepth.SurfaceColumn))),
+                new PatchMethod(typeof(FollowSealevelDiscGenerator), nameof(FollowSealevelDiscGenerator.GetYMinMax), declared: true, postfix: P(typeof(DepositDepth), nameof(DepositDepth.SealevelRange))),
+                new PatchMethod(typeof(AnywhereDiscGenerator), nameof(AnywhereDiscGenerator.GetYMinMax), declared: true, postfix: P(typeof(DepositDepth), nameof(DepositDepth.AnywhereRange))),
+                new PatchMethod(typeof(FollowSurfaceDiscGenerator), nameof(FollowSurfaceDiscGenerator.GetYMinMax), declared: true, postfix: P(typeof(DepositDepth), nameof(DepositDepth.SurfaceRange))),
+            }),
+            new Spec(Feature.DepositDepthsReload, "vanilla deposits' attempts after /wgen regen", "after a world-generator reload vanilla's deposits get the world-height factor back until restart", () => new Bind[]
+            {
+                new PatchMethod(typeof(GenDeposits), nameof(GenDeposits.reloadWorldGen), Type.EmptyTypes, returns: typeof(void), postfix: P(typeof(EarthDepositDepths), nameof(EarthDepositDepths.AfterReload))),
+            }) { Needs = Feature.DepositDepths },
         };
 
         /// <summary>The real lapse (ClimateLapse, bound once per process at EarthMapSystem.Start, on both sides, with its own Harmony

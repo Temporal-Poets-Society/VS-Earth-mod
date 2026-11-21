@@ -26,6 +26,12 @@ a 256th of a turn, 0 east, counter-clockwise: 64 north). At the reroutes' offset
 (by index): int32 reach, int32 the vertex after which its new end starts, int32 points, float32 latitude and longitude
 per point (the body's water to its own mouth).
 
+Version 2 (decision 0092, EA-0148, rivers-flow-glo90-2.bin): the same solve on GLO-90's pixel-is-point grid
+(tools/glo90grid.py; EARTH_GLO90_GRID=cell gives version 1's placement): pixel (i, j) of a tile is the mask's cell
+centred on (lat0 + 1 - i/hp, lon0 + j/wp), the courses (courses rules 5) are put on pixels by that, and the reroutes'
+points lie on those centres. The layout is version 1's; RiverFlowData reads a version 2 file's pixels on those centres
+(a version 1 file's half a pixel south-east of them, as it was solved).
+
     python -I tools/bake_river_flow.py OUT COURSES.bin --reservoirs DAMS/reservoirs-dams.npz --corridors DAMS/corridors.npz
            [--canals rawdata/osm-canals] [--workers 16] [--tiles N56E023,N57E024]
 """
@@ -41,9 +47,10 @@ from scipy.sparse.linalg import spsolve
 TOOLS = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, TOOLS)
 import bake_river_outlines as bro          # noqa: E402  masks_v3, init_worker, the WBM folder
+import glo90grid as gg                     # noqa: E402
 from bake_dam_removal import read_courses  # noqa: E402
 
-VERSION = 1
+VERSION = 2 if gg.POINT else 1
 DEEP_PX = 4            # the depth grows from the shore over this many pixels (about 370 m)
 DEPTH_C, DEPTH_F = 0.27, 0.39   # mean depth d = c Q^f (m), Leopold & Maddock's at-a-station form
 SPEED_CAP = 255        # cm/s
@@ -82,9 +89,15 @@ def course_arrays(courses_path, out, key=None):
     up = np.zeros(len(C["q"]), bool)
     nx = C["next"]
     up[nx[nx >= 0]] = True
-    # the side arms RiverArmsData puts first (their flow is a share of their river's, which already counts it)
-    arms_file = os.path.join(os.path.dirname(TOOLS), "earthdata", "rivers-glo90-arms-2.bin")
-    arms = struct.unpack_from("<i", open(arms_file, "rb").read(16), 12)[0] if os.path.exists(arms_file) else 0
+    # the side arms RiverArmsData puts first (their flow is a share of their river's, which already counts it): from
+    # river_arms.py's report beside the list (EA-0148: courses rules 5's list has its own), else rivers-glo90-arms-2.bin's
+    import json
+    report = courses_path + ".json"
+    if os.path.exists(report) and "arms" in json.load(open(report, encoding="utf8")):
+        arms = int(json.load(open(report, encoding="utf8"))["arms"])
+    else:
+        arms_file = os.path.join(os.path.dirname(TOOLS), "earthdata", "rivers-glo90-arms-2.bin")
+        arms = struct.unpack_from("<i", open(arms_file, "rb").read(16), 12)[0] if os.path.exists(arms_file) else 0
     np.savez(path, reach=C["reach"], lat=C["lat"], lon=C["lon"], start=C["start"], q=C["q"], next=nx, up=up,
              order=order, tsorted=t[order], key=np.array([C["key"]], np.uint64), arms=np.array([arms]))
     return path
@@ -246,8 +259,9 @@ def prep(path):
         import shapely
         rr, cc = np.nonzero(water)
         if len(rr):
-            la = lat0 + 1 - (rr + 0.5) / hp
-            lo = lon0 + (cc + 0.5) / wp
+            # the cells' centres (glo90grid: on the pixel-is-point grid a cell's area runs from half a cell north-west)
+            la = gg.top(lat0 + 1, hp) - (rr + 0.5) / hp
+            lo = gg.left(lon0, wp) + (cc + 0.5) / wp
             dig = np.zeros(len(rr), bool)
             for g in G["canals"]:
                 x0, y0, x1, y1 = g.bounds
@@ -306,7 +320,11 @@ def window(lat0, lon0):
                 continue
             nh, nw = m[0].shape
             rows = ((np.arange(r0c, r1c) - r0) * nh) // hp
-            cols = ((np.arange(c0c, c1c) - c0) * nw) // wp
+            if gg.POINT:
+                # across a parallel where GLO-90's column count changes: the nearest cell
+                cols = np.minimum(np.floor((np.arange(c0c, c1c) - c0) * nw / wp + 0.5).astype(np.int64), nw - 1)
+            else:
+                cols = ((np.arange(c0c, c1c) - c0) * nw) // wp
             for k in range(3):
                 out[k][r0c:r1c, c0c:c1c] = m[k][np.ix_(rows, cols)]
     return out[0], out[1], out[2], hp, wp, mr, mc
@@ -316,7 +334,9 @@ def tile(name):
     lat0, lon0 = bro.tile_origin(name)
     water, sea, lake, hp_t, wp_t, mr, mc = window(lat0, lon0)
     H, W = water.shape
-    top, left = lat0 + 1 + mr / hp_t, lon0 - mc / wp_t
+    # the north-west corner of the window's pixel (0, 0)'s area (glo90grid: half a pixel north-west on the
+    # pixel-is-point grid)
+    top, left = gg.top(lat0 + 1 + mr / hp_t, hp_t), gg.left(lon0 - mc / wp_t, wp_t)
     hp, wp = H, W         # (the solve below works on the window)
     lab, nb = ndi.label(water)          # 4-connected: the solve couples 4 neighbours
     if nb == 0:

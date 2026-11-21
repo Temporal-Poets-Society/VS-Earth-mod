@@ -24,11 +24,17 @@ namespace EarthMap.Core
     /// are the pixels' own as before, so neighbouring tiles meet. Its unit is 24,000 a degree (a twentieth of a pixel
     /// north-south; versions 1 and 2: 2,400), so the smooth outlines keep their shape. Reservoirs, corridors and bridges
     /// as version 2.
+    ///
+    /// rivers-outline-glo90-5.bin (decision 0092, EA-0148): version 4's rules on GLO-90's own grid. The mask is
+    /// pixel-is-point (cell (r, c) centred on (lat0 + 1 - r/1200, lon0 + c/cols), as FineElevation reads the heights);
+    /// versions 1-4 drew each cell half a cell south and east of that. Each tile is contoured with its south and east
+    /// neighbours' first row and column, whose cells lie on its edges on that grid, and clipped to its square; the
+    /// reservoirs and corridors are dam rules 4's, on courses rules 5's list.
     /// </summary>
     public static class RiverOutlineData
     {
         /// <summary>The newest version, which new worlds with the dams taken out record (EarthParams.RiverOutlines).</summary>
-        public const int FileVersion = 4;
+        public const int FileVersion = 5;
 
         /// <summary>Version 3 (0063): a piece of river water under three mask pixels across (the courses draw those rivers
         /// where the world draws streams down to 20 m³/s; channel rules 1 leave such pieces out there). Wide water has no
@@ -44,13 +50,14 @@ namespace EarthMap.Core
         /// <summary>The files this build reads (version 1 from the bake of 7 November 2026, 2 from 8 November's, 3 from 8
         /// November's 0063 bake on dam rules 2's reservoirs and corridors, 4 (decision 0069) version 3's rules on dam rules
         /// 3's, with Global Dam Watch's reservoirs, from 12 November's); any other is refused.</summary>
-        public static long FileBytes(int version) => version switch { 1 => 30_314_258, 2 => 30_630_118, 3 => 35_782_184, 4 => 35_694_389, _ => -1 };
+        public static long FileBytes(int version) => version switch { 1 => 30_314_258, 2 => 30_630_118, 3 => 35_782_184, 4 => 35_694_389, 5 => 35_947_613, _ => -1 };
         public static string FileSha256(int version) => version switch
         {
             1 => "52a0c79ebc7925ac086a271a1817b144b472b08f34aa28bd8547b1d549f3807b",
             2 => "6e10438fa0cdd68f679c2bcc3a443f7d5bdc43b3194cc8627a2ce6a8b820aaf1",
             3 => "ed4bb2d57db40175a9cc76731136a62321fa85a6d755fb10e7d27e324bd37e28",
             4 => "83b5da9a9f364d5795fcec05bffed761430aa02c4de00c17a7b3b9081b9e1235",
+            5 => "b83cef11376d21f9eb50f9f5679066d922b1862fca6510c48da8e4d3517ee0c9",
             _ => "",
         };
 
@@ -78,10 +85,13 @@ namespace EarthMap.Core
         /// the side arms and channels between wide waters no course runs in; one that only leaves the wide water (a canal)
         /// still goes. From version 3 on, pieces that overlap (a narrow piece's end in the wide water) are one water
         /// (LakeOutlineLayer.UnionShores): no shore where they meet. Given keepWhere (channel rules 4, TerrainModel.FlowCarriesAt),
-        /// a narrow piece away from the courses that the river's flow passes through stays too (LakeOutlineLayer.KeepWhere).</summary>
+        /// a narrow piece away from the courses that the river's flow passes through stays too (LakeOutlineLayer.KeepWhere).
+        /// (EA-0179, decision 0098) With courseOnly (EarthParams.CoarseRiverRules, 1:50 and coarser): a piece under 2 blocks wide
+        /// stays only along a drawn course (courseAt; LakeOutlineLayer.CourseOnlyAt): no loose dashes.</summary>
         public static LakeOutlineLayer Layer(LakeOutlineData data, EarthGeometry geo, bool dropNarrow, System.Func<double, double, bool> courseAt = null,
-            System.Func<double, double, bool> keepWhere = null) =>
+            System.Func<double, double, bool> keepWhere = null, bool courseOnly = false) =>
             new LakeOutlineLayer(data, geo, ReachFor(geo), 32, dropNarrow ? FlagNarrow : (byte)0, data.Version >= 3, dropNarrow ? courseAt : null,
-                dropNarrow && courseAt != null ? keepWhere : null);
+                dropNarrow && courseAt != null ? keepWhere : null, courseOnly ? courseAt : null);
+
     }
 }

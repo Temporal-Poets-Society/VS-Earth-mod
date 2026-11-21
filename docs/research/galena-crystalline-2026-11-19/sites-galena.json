@@ -1,0 +1,13 @@
+[
+ {"Name":"kongsberg","Kind":"silver-gneiss","Lat":59.67,"Lon":9.65,"Radius":2},
+ {"Name":"freiberg","Kind":"pb-ag-gneiss","Lat":50.92,"Lon":13.34,"Radius":2},
+ {"Name":"brokenhill","Kind":"pb-zn-ag-gneiss","Lat":-31.95,"Lon":141.45,"Radius":2},
+ {"Name":"sala","Kind":"pb-ag-marble","Lat":59.92,"Lon":16.6,"Radius":2},
+ {"Name":"harz","Kind":"pb-ag-slate","Lat":51.8,"Lon":10.33,"Radius":2},
+ {"Name":"pribram","Kind":"pb-ag-veins","Lat":49.69,"Lon":14.01,"Radius":2},
+ {"Name":"linares","Kind":"pb-granite","Lat":38.09,"Lon":-3.63,"Radius":2},
+ {"Name":"dartmoor","Kind":"granite","Lat":50.58,"Lon":-3.93,"Radius":2},
+ {"Name":"coeurdalene","Kind":"pb-ag-metasediment","Lat":47.5,"Lon":-115.9,"Radius":2},
+ {"Name":"riga","Kind":"control-sediment","Lat":56.95,"Lon":24.1,"Radius":2},
+ {"Name":"vienna","Kind":"control-lowland","Lat":48.17,"Lon":16.9,"Radius":2}
+]

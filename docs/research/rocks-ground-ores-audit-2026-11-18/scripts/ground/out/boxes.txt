@@ -1,0 +1,15 @@
+Sahel 8-18N 20W-40E: alluvium 29%, dune 16%, residual 14%, saprolite 12%, sand-sheet 9%, thin 8%, loess 3%, residual-karst 2%
+Sahara 18-32N 15W-35E: dune 33%, thin 26%, alluvium 15%, residual-karst 11%, sand-sheet 11%
+China Loess Plateau 34-40N 100-114E: loess 36%, residual 17%, alluvium 13%, dune 7%, thin 7%, residual-karst 6%, calcrete 6%, colluvium 3%
+Ukraine-S Russia 45-52N 25-45E: loess 48%, alluvium 13%, alluvium-on-till 10%, till 10%, residual 5%, loess-on-till 4%, coastal 3%, thin-till 3%, outwash 2%, residual-karst 2%
+US Great Plains 35-48N 105-95W: loess 49%, till 18%, loess-on-till 8%, alluvium 7%, residual 6%, calcrete 3%, lake 2%
+Pampas 38-30S 65-58W: loess 77%, alluvium 9%, colluvium 5%, residual 2%
+Amazon 10S-2N 70-50W: saprolite 54%, alluvium 39%, saprolite-mafic 2%
+Congo 5S-5N 15-30E: saprolite 44%, sand-on-saprolite 31%, alluvium 11%, peat 9%, lake 3%
+India Deccan 15-23N 73-80E: residual-mafic 49%, residual 35%, thin 9%, sediment 6%
+SE Asia 10-25N 95-110E: saprolite 42%, lake 15%, residual 15%, residual-karst 12%, alluvium 11%, saprolite-mafic 3%
+Australia arid 30-20S 120-140E: loess 22%, dune 20%, sediment 19%, colluvium 10%, sand-sheet 9%, alluvium 7%, residual 5%, thin 4%
+Fennoscandia 60-70N 10-30E: till 52%, thin-till 25%, peat-on-till 11%, lake 5%, outwash 4%
+Canadian Shield 50-60N 100-75W: till 38%, peat-on-till 33%, lakeclay 14%, thin-till 8%, lake 6%
+Western Europe 45-55N 5W-15E: residual 28%, residual-karst 17%, till 12%, alluvium 10%, loess 6%, thin-till 5%, outwash 4%, sediment 4%, alluvium-on-till 3%, marine-on-till 2%, peat-on-till 2%
+Mediterranean 36-44N 10W-30E: residual 45%, residual-karst 22%, alluvium 8%, sediment 5%, colluvium 3%, residual-mafic 3%, calcrete 3%, saprolite 2%, lake 2%, loess 2%

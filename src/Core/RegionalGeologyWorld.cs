@@ -16,6 +16,11 @@ namespace EarthMap.Core
         {
             original=geometry.ToGeo(x,z);
             if(original.InGutter||original.BeyondPole)return catalog.At(original.Lat,original.Lon,true);
+            if(GeologyFacts.FineRock(catalog.Version) && catalog.Rocks!=null)
+            {
+                width=ContactWidth(catalog,width,cellBlocks);
+                cellBlocks/=60;
+            }
             var w=catalog.Version>=2
                 ? GeologyTransitions.WarpV2(x,z,seed,width,cellBlocks,catalog.Generation.WarpLowWavelengthCells,catalog.Generation.WarpLowAmplitudeCells)
                 : GeologyTransitions.Warp(x,z,seed,width);
@@ -25,10 +30,29 @@ namespace EarthMap.Core
         }
 
         /// <summary>
+        /// The contact half-width (blocks) generation uses: the saved width, but in v4 (EA-0198) at most one of the rock set's
+        /// 30″ cells, 1/60 of <paramref name="cellBlocks"/> (the 0.5° cell), so contacts keep the finer map's detail at every
+        /// scale (96 blocks would smear 10 cells at 1:100).
+        /// </summary>
+        public static double ContactWidth(RegionalGeologyCatalog catalog,double width,double cellBlocks)
+            =>GeologyFacts.FineRock(catalog.Version) && catalog.Rocks!=null ? Math.Min(width,cellBlocks/60) : width;
+
+        /// <summary>
         /// Physical setting of a deposit centre: the centre column plus four columns 12 blocks away. Relief uses the
         /// water surface where there is water (river/lake depth is not relief) and is converted to real metres.
         /// </summary>
-        public static RegionalGeologyCatalog.Site SiteAt(TerrainModel model,double x,double z,out TerrainModel.Column center)
+        public static RegionalGeologyCatalog.Site SiteAt(TerrainModel model,double x,double z,out TerrainModel.Column center)=>SiteAt(model,x,z,out center,12);
+
+        /// <summary>Rules 3 (decision 0101): the four neighbours this many metres away at any scale (12 blocks at 1:100);
+        /// rules 1 and 2 took 12 blocks at every scale, 120 m at 1:10, where one block of relief read as a steep slope.</summary>
+        public const double FootprintMetres=1200;
+        /// <summary>The neighbours' distance in blocks for <see cref="FootprintMetres"/> in this world.</summary>
+        public static int FootprintBlocks(EarthGeometry geometry)=>FootprintBlocks(geometry.BlocksPerDegreeZ);
+        public static int FootprintBlocks(double blocksPerDegreeZ)
+            =>(int)Math.Clamp(Math.Round(FootprintMetres/(111195/Math.Max(1e-6,blocksPerDegreeZ))),6,256);
+
+        /// <summary>The physical setting with the four neighbours <paramref name="offset"/> blocks away.</summary>
+        public static RegionalGeologyCatalog.Site SiteAt(TerrainModel model,double x,double z,out TerrainModel.Column center,int offset)
         {
             var c=center=model.GetColumn(x,z);
             var climate=model.Data.SampleClimate(c.Lat,c.Lon);
@@ -36,13 +60,13 @@ namespace EarthMap.Core
             int low=Math.Max(c.Top,c.WaterTop),high=low;
             for(int i=0;i<4;i++)
             {
-                var n=model.GetColumn(x+(i==0?-12:i==1?12:0),z+(i==2?-12:i==3?12:0));
+                var n=model.GetColumn(x+(i==0?-offset:i==1?offset:0),z+(i==2?-offset:i==3?offset:0));
                 int surface=Math.Max(n.Top,n.WaterTop);
                 low=Math.Min(low,surface);high=Math.Max(high,surface);
                 fresh|=n.River || n.Water==TerrainModel.WaterLake;
             }
             double reliefMetres=Math.Max(0,model.Vertical.Elevation(high)-model.Vertical.Elevation(low));
-            double spanKm=24*111.195/Math.Max(1e-6,model.Geometry.BlocksPerDegreeZ);
+            double spanKm=2*offset*111.195/Math.Max(1e-6,model.Geometry.BlocksPerDegreeZ);
             return new RegionalGeologyCatalog.Site(c.Water==TerrainModel.WaterSea,c.Water==TerrainModel.WaterSaltLake,c.IceBottom<=c.Top,c.WaterTop>c.Top,fresh,
                 climate.TMean-.0065*Math.Max(0,c.Elev),climate.Precip,high-low,reliefMetres,spanKm,Math.Clamp(climate.Rain/255.0,0,1));
         }

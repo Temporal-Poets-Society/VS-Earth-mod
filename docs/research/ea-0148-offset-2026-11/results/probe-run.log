@@ -1,0 +1,132 @@
+store: C:\Users\andri\AppData\Roaming\VintagestoryData-agentbridge\ModData\earth
+GLO-90 tiles in the store: 26475
+  params for earth-10: 4040704 x 2003968, height 1024
+1:10: FineElevation 5, LakeOutlines 4, RiverOutlines 4, DamRules 3, FlowRules 1, ChannelRules 5, GenFixRules 5, RiverCourses 4, DropsNarrow True
+  base: model built in 12 s; dams-glo90-3.bin, rivers-flow-glo90-1.bin, lakes-glo90-4.bin, rivers-outline-glo90-4.bin; FineRules 5, fine GLO-90 store
+    nasijarvi-62n: 445 x 557 in 0 s, built-in height reads 0
+    nasijarvi-south: 445 x 557 in 0 s, built-in height reads 0
+    kuurna: 445 x 557 in 0 s, built-in height reads 0
+    pielinen: 445 x 557 in 0 s, built-in height reads 0
+    tamula-27e: 445 x 557 in 0 s, built-in height reads 0
+    mikkeli-27e: 445 x 557 in 0 s, built-in height reads 0
+    daugava-riga: 445 x 557 in 0 s, built-in height reads 0
+    brienz: 445 x 557 in 0 s, built-in height reads 0
+    titicaca-puno: 445 x 557 in 0 s, built-in height reads 0
+    wakatipu: 445 x 557 in 0 s, built-in height reads 0
+    tahoe-south: 445 x 557 in 0 s, built-in height reads 0
+    mississippi-natchez: 445 x 557 in 0 s, built-in height reads 0
+    amazon-manaus: 445 x 557 in 0 s, built-in height reads 0
+    victoria-kampala: 445 x 557 in 0 s, built-in height reads 0
+    rhine-cologne: 445 x 557 in 0 s, built-in height reads 0
+    danube-budapest: 445 x 557 in 0 s, built-in height reads 0
+    lena-kyusyur: 445 x 557 in 0 s, built-in height reads 0
+    balaton-siofok: 445 x 557 in 0 s, built-in height reads 0
+    bergen-coast: 445 x 557 in 0 s, built-in height reads 0
+    kiel-canal: 445 x 557 in 0 s, built-in height reads 0
+  shift: model built in 10 s; dams-glo90-3.bin, rivers-flow-glo90-1.bin, lakes-glo90-4.bin, rivers-outline-glo90-4.bin; FineRules 5, fine GLO-90 store
+    nasijarvi-62n: 445 x 557 in 0 s, built-in height reads 0
+    nasijarvi-south: 445 x 557 in 0 s, built-in height reads 0
+    kuurna: 445 x 557 in 0 s, built-in height reads 0
+    pielinen: 445 x 557 in 0 s, built-in height reads 0
+    tamula-27e: 445 x 557 in 0 s, built-in height reads 0
+    mikkeli-27e: 445 x 557 in 0 s, built-in height reads 0
+    daugava-riga: 445 x 557 in 0 s, built-in height reads 0
+    brienz: 445 x 557 in 0 s, built-in height reads 0
+    titicaca-puno: 445 x 557 in 0 s, built-in height reads 0
+    wakatipu: 445 x 557 in 0 s, built-in height reads 0
+    tahoe-south: 445 x 557 in 0 s, built-in height reads 0
+    mississippi-natchez: 445 x 557 in 0 s, built-in height reads 0
+    amazon-manaus: 445 x 557 in 0 s, built-in height reads 0
+    victoria-kampala: 445 x 557 in 0 s, built-in height reads 0
+    rhine-cologne: 445 x 557 in 0 s, built-in height reads 0
+    danube-budapest: 445 x 557 in 0 s, built-in height reads 0
+    lena-kyusyur: 445 x 557 in 0 s, built-in height reads 0
+    balaton-siofok: 445 x 557 in 0 s, built-in height reads 0
+    bergen-coast: 445 x 557 in 0 s, built-in height reads 0
+    kiel-canal: 445 x 557 in 0 s, built-in height reads 0
+  shiftall: model built in 10 s; dams-glo90-3.bin, rivers-flow-glo90-1.bin, lakes-glo90-4.bin, rivers-outline-glo90-4.bin, works-1318-2.bin (canals moved); FineRules 5, fine GLO-90 store
+    nasijarvi-62n: 445 x 557 in 0 s, built-in height reads 0
+    nasijarvi-south: 445 x 557 in 0 s, built-in height reads 0
+    kuurna: 445 x 557 in 0 s, built-in height reads 0
+    pielinen: 445 x 557 in 0 s, built-in height reads 0
+    tamula-27e: 445 x 557 in 0 s, built-in height reads 0
+    mikkeli-27e: 445 x 557 in 0 s, built-in height reads 0
+    daugava-riga: 445 x 557 in 0 s, built-in height reads 0
+    brienz: 445 x 557 in 0 s, built-in height reads 0
+    titicaca-puno: 445 x 557 in 0 s, built-in height reads 0
+    wakatipu: 445 x 557 in 0 s, built-in height reads 0
+    tahoe-south: 445 x 557 in 0 s, built-in height reads 0
+    mississippi-natchez: 445 x 557 in 0 s, built-in height reads 0
+    amazon-manaus: 445 x 557 in 0 s, built-in height reads 0
+    victoria-kampala: 445 x 557 in 0 s, built-in height reads 0
+    rhine-cologne: 445 x 557 in 0 s, built-in height reads 0
+    danube-budapest: 445 x 557 in 0 s, built-in height reads 0
+    lena-kyusyur: 445 x 557 in 1 s, built-in height reads 0
+    balaton-siofok: 445 x 557 in 0 s, built-in height reads 0
+    bergen-coast: 445 x 557 in 0 s, built-in height reads 0
+    kiel-canal: 445 x 557 in 0 s, built-in height reads 0
+  params for earth: 433152 x 200192, height 384
+1:100: FineElevation 5, LakeOutlines 4, RiverOutlines 4, DamRules 3, FlowRules 1, ChannelRules 5, GenFixRules 5, RiverCourses 4, DropsNarrow False
+  base: model built in 3 s; dams-glo90-3.bin, rivers-flow-glo90-1.bin, lakes-glo90-4.bin, rivers-outline-glo90-4.bin; FineRules 5, fine GLO-90 store
+    nasijarvi-62n: 445 x 557 in 0 s, built-in height reads 0
+    nasijarvi-south: 445 x 557 in 0 s, built-in height reads 0
+    kuurna: 445 x 557 in 0 s, built-in height reads 0
+    pielinen: 445 x 557 in 0 s, built-in height reads 0
+    tamula-27e: 445 x 557 in 0 s, built-in height reads 0
+    mikkeli-27e: 445 x 557 in 0 s, built-in height reads 0
+    daugava-riga: 445 x 557 in 0 s, built-in height reads 0
+    brienz: 445 x 557 in 0 s, built-in height reads 0
+    titicaca-puno: 445 x 557 in 0 s, built-in height reads 0
+    wakatipu: 445 x 557 in 0 s, built-in height reads 0
+    tahoe-south: 445 x 557 in 0 s, built-in height reads 0
+    mississippi-natchez: 445 x 557 in 0 s, built-in height reads 0
+    amazon-manaus: 445 x 557 in 0 s, built-in height reads 0
+    victoria-kampala: 445 x 557 in 0 s, built-in height reads 0
+    rhine-cologne: 445 x 557 in 0 s, built-in height reads 0
+    danube-budapest: 445 x 557 in 0 s, built-in height reads 0
+    lena-kyusyur: 445 x 557 in 0 s, built-in height reads 0
+    balaton-siofok: 445 x 557 in 0 s, built-in height reads 0
+    bergen-coast: 445 x 557 in 0 s, built-in height reads 0
+    kiel-canal: 445 x 557 in 0 s, built-in height reads 0
+  shift: model built in 3 s; dams-glo90-3.bin, rivers-flow-glo90-1.bin, lakes-glo90-4.bin, rivers-outline-glo90-4.bin; FineRules 5, fine GLO-90 store
+    nasijarvi-62n: 445 x 557 in 0 s, built-in height reads 0
+    nasijarvi-south: 445 x 557 in 0 s, built-in height reads 0
+    kuurna: 445 x 557 in 0 s, built-in height reads 0
+    pielinen: 445 x 557 in 0 s, built-in height reads 0
+    tamula-27e: 445 x 557 in 0 s, built-in height reads 0
+    mikkeli-27e: 445 x 557 in 0 s, built-in height reads 0
+    daugava-riga: 445 x 557 in 0 s, built-in height reads 0
+    brienz: 445 x 557 in 0 s, built-in height reads 0
+    titicaca-puno: 445 x 557 in 0 s, built-in height reads 0
+    wakatipu: 445 x 557 in 0 s, built-in height reads 0
+    tahoe-south: 445 x 557 in 0 s, built-in height reads 0
+    mississippi-natchez: 445 x 557 in 0 s, built-in height reads 0
+    amazon-manaus: 445 x 557 in 0 s, built-in height reads 0
+    victoria-kampala: 445 x 557 in 0 s, built-in height reads 0
+    rhine-cologne: 445 x 557 in 0 s, built-in height reads 0
+    danube-budapest: 445 x 557 in 0 s, built-in height reads 0
+    lena-kyusyur: 445 x 557 in 0 s, built-in height reads 0
+    balaton-siofok: 445 x 557 in 0 s, built-in height reads 0
+    bergen-coast: 445 x 557 in 0 s, built-in height reads 0
+    kiel-canal: 445 x 557 in 0 s, built-in height reads 0
+  shiftall: model built in 3 s; dams-glo90-3.bin, rivers-flow-glo90-1.bin, lakes-glo90-4.bin, rivers-outline-glo90-4.bin, works-1318-2.bin (canals moved); FineRules 5, fine GLO-90 store
+    nasijarvi-62n: 445 x 557 in 0 s, built-in height reads 0
+    nasijarvi-south: 445 x 557 in 0 s, built-in height reads 0
+    kuurna: 445 x 557 in 0 s, built-in height reads 0
+    pielinen: 445 x 557 in 0 s, built-in height reads 0
+    tamula-27e: 445 x 557 in 0 s, built-in height reads 0
+    mikkeli-27e: 445 x 557 in 0 s, built-in height reads 0
+    daugava-riga: 445 x 557 in 0 s, built-in height reads 0
+    brienz: 445 x 557 in 0 s, built-in height reads 0
+    titicaca-puno: 445 x 557 in 0 s, built-in height reads 0
+    wakatipu: 445 x 557 in 0 s, built-in height reads 0
+    tahoe-south: 445 x 557 in 0 s, built-in height reads 0
+    mississippi-natchez: 445 x 557 in 0 s, built-in height reads 0
+    amazon-manaus: 445 x 557 in 0 s, built-in height reads 0
+    victoria-kampala: 445 x 557 in 0 s, built-in height reads 0
+    rhine-cologne: 445 x 557 in 0 s, built-in height reads 0
+    danube-budapest: 445 x 557 in 0 s, built-in height reads 0
+    lena-kyusyur: 445 x 557 in 0 s, built-in height reads 0
+    balaton-siofok: 445 x 557 in 0 s, built-in height reads 0
+    bergen-coast: 445 x 557 in 0 s, built-in height reads 0
+    kiel-canal: 445 x 557 in 0 s, built-in height reads 0

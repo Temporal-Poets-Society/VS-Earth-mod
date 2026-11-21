@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Decision 0107 (EA-0124, 21 November 2026): probe of the lakes of 1318 in a new world, from the EA-0148 probe
+       grid, with the outlines as shipped and shifted half a mask cell in memory. Not a test (Run-All doesn't run it); the
+       project file is SavedWorldDigestTests' with the paths four folders up. See ../README.md. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><LangVersion>12</LangVersion><Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings><RollForward>LatestMajor</RollForward><NoWarn>CA1416</NoWarn><UseAppHost>false</UseAppHost>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <NetCoreRuntimeDir>$([System.IO.Directory]::GetDirectories('$(NetCoreRoot)shared\Microsoft.NETCore.App', '10.*')[0])</NetCoreRuntimeDir>
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(VINTAGE_STORY)</VintageStoryPath>
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == '' and Exists('$(MSBuildProjectDirectory)\..\..\..\..\.local\vs\VintagestoryAPI.dll')">$(MSBuildProjectDirectory)\..\..\..\..\.local\vs</VintageStoryPath>
+    <VintageStoryPath Condition="'$(VintageStoryPath)' == ''">$(APPDATA)\Vintagestory</VintageStoryPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\tests\Earth.Core.Tests.Common\Earth.Core.Tests.Common.csproj" />
+    <Compile Include="../../../../src/EarthParams.cs;../../../../src/EarthParams.Model.cs;../../../../src/EarthMapConfig.cs;../../../../src/EarthCrafting.cs;../../../../src/EarthWorldOptions.cs;../../../../src/EarthConfigStore.cs;../../../../src/WorldParamsBuilder.cs" />
+    <Reference Include="$(NetCoreRuntimeDir)\System.*.dll" Exclude="$(NetCoreRuntimeDir)\System.Private.*.dll;$(NetCoreRuntimeDir)\System.IO.Compression.Native.dll" Private="false" />
+    <Reference Include="$(NetCoreRuntimeDir)\System.Private.CoreLib.dll" Private="false" />
+    <Reference Include="$(NetCoreRuntimeDir)\System.Private.Xml.dll" Private="false" />
+    <Reference Include="$(NetCoreRuntimeDir)\System.Private.Uri.dll" Private="false" />
+    <Reference Include="$(NetCoreRuntimeDir)\netstandard.dll;$(NetCoreRuntimeDir)\mscorlib.dll" Private="false" />
+    <Reference Include="VintagestoryAPI"><HintPath>$(VintageStoryPath)\VintagestoryAPI.dll</HintPath></Reference>
+    <Reference Include="protobuf-net"><HintPath>$(VintageStoryPath)\Lib\protobuf-net.dll</HintPath></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>$(VintageStoryPath)\Lib\Newtonsoft.Json.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>

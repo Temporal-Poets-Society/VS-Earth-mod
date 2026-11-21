@@ -43,12 +43,13 @@ catch (InvalidOperationException e)
     Check(events.SequenceEqual(new[] { "log", "stop" }), "Stop request precedes the exception swallowed by the game loader");
     Check(e.Message.Contains("Hydrology capability missing") && e.Message.Contains("restart"), "Actionable failure reaches the loader");
 }
-// review A5: a saved world needs the data store files its rules read, not all 38. An Earth 1.0.x world reads only what
+// review A5: a saved world needs the data store files its rules read, not all 40. An Earth 1.0.x world reads only what
 // its two Mod DB packs carry (tools/package-publication.py at v1.0.2) plus the soil sites and wetlands 2.0 reads for
-// every world; a world with every rule reads them all
+// every world; a world with every rule reads them all but one courses pair (rules 4 reads snap-2/arms-2, rules 5
+// snap-3/arms-3 in their place, decision 0092)
 var store = EarthMap.Core.EarthDataStore.Files.Select(f => f.Name).ToHashSet();
 var packs = new[] { "terrain.bin", "summits.bin", "peaks.json", "glaciers.bin", "rivers.bin", "islands.bin", "coasts.bin", "lakes.bin", "shores.bin" };
-Check(packs.All(store.Contains) && store.Count == 38, "the 1.0.2 packs' 9 files are store files, of 38");
+Check(packs.All(store.Contains) && store.Count == 40, "the 1.0.2 packs' 9 files are store files, of 40");
 var v10 = new EarthParams { Enabled = true, Cylinder = true, Rivers = true, Islands = 1, Coasts = 2, RiverEnds = 1, LakeShores = 1, Summits = 2, Glaciers = 1, AlpineSurfaceRules = 1 };
 var v10Files = EarthMapSystem.StoreFilesRead(v10);
 Check(v10Files.SetEquals(packs.Append("soil-site.bin").Append("wetlands.bin")),
@@ -56,9 +57,14 @@ Check(v10Files.SetEquals(packs.Append("soil-site.bin").Append("wetlands.bin")),
 var bare = EarthMapSystem.StoreFilesRead(new EarthParams { Enabled = true, Cylinder = true });
 Check(bare.SetEquals(new[] { "terrain.bin", "rivers.bin", "soil-site.bin", "wetlands.bin" }), "A5: every world reads the grid, rivers.bin, the soil sites and wetlands");
 var all = new EarthParams { Enabled = true, Cylinder = true, Rivers = true, Islands = 1, Coasts = 2, RiverEnds = 1, LakeShores = 1, Summits = 2, Glaciers = 1,
-    AlpineSurfaceRules = 2, SeaReferee = 2, CoarseElevation = 1, RiverCourses = 4, SpringRules = EarthParams.SpringRulesStreams, GroundColumns = 1, SoilRules = 3, ShoreRules = 1 };
+    AlpineSurfaceRules = 2, SeaReferee = 2, CoarseElevation = 1, RiverCourses = 5, SpringRules = EarthParams.SpringRulesStreams, GroundColumns = 1, SoilRules = 3, ShoreRules = 1 };
 var allFiles = EarthMapSystem.StoreFilesRead(all);
-Check(allFiles.SetEquals(store), "A5: a world with every rule reads all 38 (missing: " + string.Join(", ", store.Except(allFiles)) + ")");
+var pair4 = new[] { "rivers-glo90-snap-2.bin", "rivers-glo90-arms-2.bin" };
+var pair5 = new[] { "rivers-glo90-snap-3.bin", "rivers-glo90-arms-3.bin" };
+Check(allFiles.SetEquals(store.Except(pair4)), "A5: a world with every rule reads all 40 but courses rules 4's pair (missing: " + string.Join(", ", store.Except(pair4).Except(allFiles)) + ")");
+var courses4 = EarthMapSystem.StoreFilesRead(new EarthParams { Enabled = true, RiverCourses = 4 });
+Check(pair4.All(courses4.Contains) && !pair5.Any(courses4.Contains) && pair5.All(allFiles.Contains),
+    "A5: courses rules 4 reads snap-2/arms-2 and rules 5 snap-3/arms-3, not both pairs");
 Check(EarthMapSystem.StoreFilesRead(new EarthParams { Enabled = true, RiverCourses = 1 }).Contains("rivers-glo90.bin")
     && !EarthMapSystem.StoreFilesRead(new EarthParams { Enabled = true, RiverCourses = 1 }).Contains("rivers-glo90-snap.bin")
     && EarthMapSystem.StoreFilesRead(new EarthParams { Enabled = true, GroundColumns = 1, SoilRules = 2 }).Count(n => n.EndsWith(".egt") || n.EndsWith(".egts")) == 13

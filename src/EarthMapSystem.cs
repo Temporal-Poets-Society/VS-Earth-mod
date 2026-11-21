@@ -178,6 +178,13 @@ namespace EarthMap
             if (!c.River) return false;
             // (the river query at the terrain's own source position: a companion's terrain expansion moves it)
             model.ProjectTerrain(x, z, out double sx, out double sz);
+            // (EA-0131: a stream of the streams layer answers with its own reach's slope and discharge)
+            if (model.Streams != null && model.StreamWaterAt(sx, sz, out var streamHit, out var streams))
+            {
+                slope = streams.ReachSlope(streamHit.Reach);
+                discharge = streamHit.Q;
+                return true;
+            }
             if (!model.Rivers.Nearest(sx, sz, out var hit)) return true;
             slope = model.Rivers.ReachSlope(hit.Reach);
             discharge = hit.Q;
@@ -409,8 +416,17 @@ namespace EarthMap
             if (!BuildAndAttachModel(p, out long modelMs)) return;
             upgrades.Regional(p);
             LoadRegionalTrees(p);
-            if (Model.Rivers != null) Mod.Logger.Notification("Earth Map: {0} river segments (navigable from {1} m³/s, streams: {2} down to {3} m³/s) indexed in {4} ms",
-                Model.Rivers.SegmentCount, Model.Rivers.MinQ, Model.Rivers.StreamMode, Model.Rivers.StreamMinQ, modelMs);
+            if (Model.Rivers != null) Mod.Logger.Notification("Earth Map: {0} river segments (navigable from {1} m³/s, streams: {2} down to {3} m³/s; river width {5}) indexed in {4} ms",
+                Model.Rivers.SegmentCount, Model.Rivers.MinQ, Model.Rivers.StreamMode, Model.Rivers.StreamMinQ, modelMs,
+                Model.Rivers.WidthMultiplier > 0
+                    ? "×" + Model.Rivers.WidthMultiplier.ToString("0.##", CultureInfo.InvariantCulture) + " of 1:10's, the floor ×"
+                        + Model.Rivers.FloorFactor.ToString("0.00", CultureInfo.InvariantCulture) + " in blocks (decision 0095)"
+                    : "as 1:10's in blocks (2.1's widths)");
+            if (Model.Rivers != null && p.CoarseRiverRules >= 1)
+                Mod.Logger.Notification("Earth rivers: coarse river rules {0} (decision 0098): rivers from {1} m³/s, one-block streams from {2}{3}{4}.",
+                    p.CoarseRiverRules, Model.Rivers.MinQ, Model.Rivers.StreamMinQ,
+                    p.CoarseRiverRules >= 2 ? $"; {Model.Rivers.RiversToTheirEnd} reaches below a river drawn as a river" : "",
+                    p.CoarseRiverRules >= 2 ? $"; {Model.Rivers.HeadStreamCount} rivers with a head stream, {Model.Rivers.HeadStreamKm.ToString("0", CultureInfo.InvariantCulture)} km" : "");
             if (Model.Rivers?.UnconvergedBasins > 0)
                 Mod.Logger.Warning("Earth rivers: the pool layout of {0} river basin(s) had not settled when its rounds ran out; a tributary may stand above its main river at a confluence there (CR-R7).",
                     Model.Rivers.UnconvergedBasins);

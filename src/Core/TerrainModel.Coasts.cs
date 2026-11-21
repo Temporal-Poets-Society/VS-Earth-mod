@@ -209,6 +209,22 @@ namespace EarthMap.Core
             return decides;
         }
 
+        /// <summary>
+        /// River ends rules 2 (EA-0160): whether a place is in the sea (-1) or on land (+1) at least SeaDeepMetres (and 2 blocks)
+        /// from the coast, by the coast's outline where it decides (CoastSideAt), else by the land grid where it is all sea
+        /// or all land around; 0 where that can't be told (near the coast, a lake, no data).
+        /// </summary>
+        public int CoastSign(double lat, double lon)
+        {
+            double deep = Math.Max(2, RiverEnds.SeaDeepMetres * Geometry.BlocksPerDegreeZ / Geo.MetresPerDegree);
+            if (CoastSideAt(lat, lon, out double side))
+                return side <= -deep ? -1 : side >= deep ? 1 : 0;
+            var s = Data.SampleTerrain(lat, lon);
+            if (s.Ocean >= 1 && s.SeaNear >= 1) return -1;
+            if (s.Ocean <= 0 && s.Lake <= 0 && s.SeaNear <= 0) return 1;
+            return 0;
+        }
+
         /// <summary>The outline's land/sea decision at a place as a signed distance (blocks, + land, ±Reach; CoastSide), where it
         /// decides more than the grid; false where the grid decides or there are no outlines (SeaChannels rules 4).</summary>
         public bool CoastSideAt(double lat, double lon, out double side)

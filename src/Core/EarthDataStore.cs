@@ -66,6 +66,9 @@ namespace EarthMap.Core
             new("rivers-glo90-arms-2.bin", 223_228, "e7f7f4408c9bb027b5e61ff1f522beadcda46ead3471986ba3baebb70b753bf7"),
             new("rivers-glo90-snap.bin", 4_510_852, "022a374374a662bdd0e015d9f37965d9a985b3fba7114000f8f949bdf375475f"),
             new("rivers-glo90-snap-2.bin", 8_235_212, "fa87c5895b6a0ff6df1def67f7908c994747d6effd51de4549b1f9a0c39c9dc1"),
+            // decision 0092 (EA-0148): courses rules 5, on GLO-90's pixel-is-point grid
+            new("rivers-glo90-snap-3.bin", 6_791_105, "6e4339b652a6764b310ba71920b8c3e65620258a19a6bab5078ac2b38fe9c160"),
+            new("rivers-glo90-arms-3.bin", 218_049, "bcd502a70140f3929bfc4dd550f4e4a50e5ad651a085a3251bc4fd9911b56e8d"),
             new("sea-referee.bin", 6_262_394, "3d823a2e280fa6c12504f07f87069f81ecc8721109c89b33eab4f6d8ff1c7fe7"),
             new("shores.bin", 126_401, "691673039f64ee8a85207ec8acad84ebd35b8b7b261ef99a23970b2c035cc8ce"),
             // decision 0070: OpenStreetMap's beaches by material (ODbL)

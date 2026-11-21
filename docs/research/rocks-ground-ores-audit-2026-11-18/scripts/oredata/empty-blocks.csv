@@ -1,0 +1,76 @@
+code,area_km2,cells,lat,lon,countries,sedimentary_%,crystalline_%,lith_top
+Cu,28872369,9907,10.1,20.4,Algeria 8%; Democratic Republic of the Congo 7%; Sudan 6%; Libya 6%,73,27,su:40% mt:26% ss:16%
+Cu,13783728,8511,55.0,75.7,Russia 74%; Kazakhstan 6%; China 5%; Ukraine 3%,91,7,sm:36% ss:23% su:19%
+Cu,12445252,4202,-11.0,-58.5,Brazil 57%; Argentina 13%; Bolivia 6%; Colombia 6%,75,24,su:32% ss:30% mt:13%
+Cu,9523903,5508,51.3,-97.5,Canada 69%; United States of America 28%; ? 2%; Mexico 1%,70,28,sm:27% ss:23% mt:20%
+Cu,5101355,1830,-24.8,133.3,Australia 99%; ? 1%,98,2,su:76% ss:12% sm:5%
+Cu,3288279,1178,24.7,79.5,India 55%; Pakistan 22%; Myanmar 6%; China 4%,73,26,su:45% mt:20% sm:14%
+Cu,1138612,518,44.4,4.8,France 29%; Spain 28%; Italy 16%; Germany 6%,87,12,sc:37% sm:20% su:18%
+Cu,635879,233,27.8,107.9,China 96%; Vietnam 4%,97,3,sc:36% sm:29% ss:22%
+Cu,635417,211,9.3,100.3,Myanmar 33%; Indonesia 31%; Thailand 26%; Malaysia 6%,81,17,sm:36% su:31% sc:10%
+Cu,520813,179,-19.4,46.6,Madagascar 98%; ? 2%,44,55,mt:41% ss:18% sm:14%
+Cu,496765,202,37.2,110.7,China 100%,98,1,su:69% ss:20% sm:6%
+Cu,261397,501,80.0,-79.3,Canada 89%; ? 7%; Greenland 4%,95,2,sm:80% ss:14% 0:3%
+Cu,251581,82,-6.9,140.9,Indonesia 55%; Papua New Guinea 44%; ? 1%,94,2,su:79% sc:9% ss:6%
+Cu,250869,231,69.3,149.9,Russia 97%; ? 3%,87,1,su:75% ss:12% 0:12%
+Cu,231258,79,18.7,-90.0,Mexico 81%; Guatemala 15%; Belize 4%,100,0,sc:67% su:27% ss:6%
+Sn,75678037,33639,30.1,60.0,Russia 31%; China 11%; Kazakhstan 4%; India 3%,72,27,su:26% sm:19% ss:17%
+Sn,75579698,33560,30.0,59.8,Russia 31%; China 11%; Kazakhstan 4%; India 3%,72,26,su:26% sm:19% ss:17%
+Sn,37109951,16659,19.4,-87.8,Canada 36%; United States of America 23%; Brazil 16%; Argentina 7%,63,35,ss:24% su:17% sm:17%
+Sn,6842031,2467,-25.2,133.0,Australia 99%; ? 1%,93,6,su:71% ss:12% sm:6%
+Sn,796475,259,-5.3,140.8,Papua New Guinea 49%; Indonesia 49%; ? 2%,85,13,su:44% sc:21% ss:12%
+Sn,722541,234,1.0,114.2,Indonesia 71%; Malaysia 26%; ? 1%; Brunei 1%,87,13,sm:36% ss:28% su:23%
+Sn,588136,202,-19.3,46.7,Madagascar 98%; ? 2%,40,59,mt:41% ss:16% sm:13%
+Sn,413653,134,-0.5,101.5,Indonesia 97%; ? 3%,67,33,sm:37% su:28% vi:24%
+Sn,261787,502,80.0,-79.3,Canada 89%; ? 7%; Greenland 4%,94,2,sm:79% ss:14% 0:3%
+Sn,204828,113,54.0,-2.5,United Kingdom 98%; ? 2%,78,20,sc:27% ss:26% sm:21%
+Sn,179900,73,37.0,139.1,Japan 96%; ? 4%,70,27,su:51% ss:18% pa:11%
+Sn,153548,69,-43.9,170.5,New Zealand 96%; ? 4%,62,33,su:25% mt:23% ss:17%
+Sn,136789,152,72.7,-24.2,Greenland 86%; ? 14%,27,49,mt:36% ss:24% ig:19%
+Sn,135780,44,-3.1,120.8,Indonesia 98%; ? 2%,57,43,sm:30% pb:14% vi:14%
+Sn,131823,43,-7.3,110.1,Indonesia 98%; ? 2%,53,47,vi:47% su:30% sm:12%
+Fe,68011973,30292,29.7,63.7,Russia 34%; China 10%; Kazakhstan 4%; India 3%,74,24,su:28% sm:20% ss:17%
+Fe,67894859,30197,29.6,63.5,Russia 34%; China 10%; Kazakhstan 4%; India 3%,75,24,su:28% sm:20% ss:17%
+Fe,14935173,5180,-13.5,-61.1,Brazil 47%; Argentina 18%; Peru 7%; Colombia 6%,70,29,su:28% ss:28% sm:12%
+Fe,14342813,8157,49.6,-105.8,Canada 62%; United States of America 30%; Mexico 5%; ? 2%,64,34,sm:24% ss:22% mt:17%
+Fe,5829623,2094,-24.8,136.6,Australia 100%; ? 0%,93,7,su:68% ss:14% sm:7%
+Fe,722860,235,-5.2,140.3,Indonesia 52%; Papua New Guinea 46%; ? 2%,84,14,su:47% sc:18% ss:13%
+Fe,670184,217,0.9,114.1,Indonesia 74%; Malaysia 24%; ? 1%; Brunei 1%,87,13,sm:34% ss:29% su:23%
+Fe,595290,193,0.9,101.5,Indonesia 71%; Malaysia 17%; Thailand 7%; ? 6%,63,35,sm:30% su:27% vi:17%
+Fe,494769,170,-19.3,46.5,Madagascar 98%; ? 2%,45,53,mt:35% ss:19% sm:15%
+Fe,357384,132,-28.5,116.2,Australia 100%,87,13,su:73% pa:10% sm:4%
+Fe,283243,215,64.4,18.5,Sweden 47%; Norway 28%; Finland 21%; Russia 2%,21,79,mt:40% pa:25% sm:16%
+Fe,250476,481,80.0,-79.0,Canada 89%; ? 7%; Greenland 4%,94,2,sm:81% ss:12% 0:3%
+Fe,159142,75,46.6,-65.6,Canada 93%; ? 5%; United States of America 1%,67,31,sm:31% ss:29% pa:15%
+Fe,136789,152,72.7,-24.2,Greenland 86%; ? 14%,27,49,mt:36% ss:24% ig:19%
+Fe,124393,56,-44.0,170.6,New Zealand 100%,70,30,su:27% mt:25% sm:21%
+Au,48926512,22576,36.8,65.6,Russia 36%; China 12%; Kazakhstan 4%; Algeria 3%,88,10,su:32% sm:25% ss:19%
+Au,10484452,3645,-14.3,-60.9,Brazil 47%; Argentina 22%; Colombia 7%; Bolivia 6%,83,16,su:36% ss:33% sm:13%
+Au,8079835,4000,43.9,-105.9,United States of America 52%; Canada 41%; Mexico 6%; Guatemala 1%,94,3,ss:36% sm:25% su:19%
+Au,5104058,1826,-24.4,134.5,Australia 99%; ? 1%,97,2,su:74% ss:13% sm:6%
+Au,4940383,1689,-15.2,22.3,Democratic Republic of the Congo 23%; Angola 17%; South Africa 17%; Namibia 12%,93,6,su:62% ss:26% vb:3%
+Au,573378,326,55.0,-90.0,Canada 99%; ? 1%,55,45,pa:41% sm:29% sc:24%
+Au,565139,183,0.8,114.0,Indonesia 72%; Malaysia 27%; Brunei 1%; ? 1%,94,6,sm:37% ss:31% su:26%
+Au,473791,154,-5.0,138.9,Indonesia 69%; Papua New Guinea 27%; ? 3%,92,5,su:55% sc:17% ss:16%
+Au,346455,114,-10.3,36.9,United Republic of Tanzania 61%; Mozambique 28%; Malawi 11%,70,18,su:39% ss:26% pa:17%
+Au,298826,304,71.3,-113.0,Canada 96%; ? 4%,96,0,sm:96% 0:3% ev:0%
+Au,294054,101,-19.3,45.9,Madagascar 96%; ? 4%,76,21,ss:32% sm:24% su:20%
+Au,256028,492,80.0,-79.2,Canada 89%; ? 7%; Greenland 4%,96,0,sm:81% ss:14% 0:3%
+Au,228531,74,-1.6,103.2,Indonesia 93%; ? 7%,96,3,sm:50% su:45% 0:1%
+Au,191889,105,53.7,-62.0,Canada 93%; ? 7%,15,81,pa:61% pb:17% ss:9%
+Au,157724,85,53.0,-1.9,United Kingdom 96%; ? 4%,95,1,ss:31% sc:31% sm:28%
+C_coal,66209381,28641,27.6,53.9,Russia 28%; China 7%; Kazakhstan 4%; Algeria 3%,71,27,su:28% sm:19% mt:15%
+C_coal,66092266,28546,27.5,53.7,Russia 28%; China 7%; Kazakhstan 4%; Algeria 3%,71,27,su:28% sm:19% mt:15%
+C_coal,16104489,5571,-13.8,-60.1,Brazil 49%; Argentina 18%; Bolivia 6%; Colombia 5%,65,34,su:27% ss:26% mt:13%
+C_coal,15341258,8498,48.9,-102.3,Canada 62%; United States of America 28%; Mexico 7%; ? 2%,52,45,mt:21% sm:20% ss:16%
+C_coal,4679791,1658,-23.2,130.5,Australia 100%; ? 0%,91,9,su:73% ss:10% sm:4%
+C_coal,796475,259,-5.3,140.8,Papua New Guinea 49%; Indonesia 49%; ? 2%,85,13,su:44% sc:21% ss:12%
+C_coal,582478,200,-19.3,46.7,Madagascar 98%; ? 2%,39,60,mt:41% ss:16% pa:12%
+C_coal,580418,188,1.4,113.7,Indonesia 64%; Malaysia 33%; ? 2%; Brunei 1%,84,15,sm:40% ss:23% su:21%
+C_coal,246114,99,36.4,137.7,Japan 95%; ? 5%,63,35,su:40% ss:20% pa:18%
+C_coal,162091,60,28.8,119.7,China 95%; ? 5%,45,50,su:30% va:17% pa:15%
+C_coal,135780,44,-3.1,120.8,Indonesia 98%; ? 2%,57,43,sm:30% pb:14% vi:14%
+C_coal,135189,150,72.7,-24.2,Greenland 86%; ? 14%,26,49,mt:36% ss:24% ig:19%
+C_coal,131823,43,-7.3,110.1,Indonesia 98%; ? 2%,53,47,vi:47% su:30% sm:12%
+C_coal,121503,243,80.4,-76.4,Canada 92%; ? 8%,92,5,sm:92% mt:4% 0:3%
+C_coal,117115,95,66.5,-175.8,Russia 93%; ? 7%,39,58,vi:27% sm:26% pa:12%

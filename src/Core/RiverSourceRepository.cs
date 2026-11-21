@@ -60,6 +60,11 @@ namespace EarthMap.Core
         public RiverSnapData RiverSnap2 { get; private set; }
         /// <summary>0063 (courses rules 4): the side arms on those (rivers-glo90-arms-2.bin), or null.</summary>
         public RiverArmsData RiverArms2 { get; private set; }
+        /// <summary>Decision 0092 (courses rules 5): rules 4's reaches moved on GLO-90's pixel-is-point grid
+        /// (rivers-glo90-snap-3.bin), or null.</summary>
+        public RiverSnapData RiverSnap3 { get; private set; }
+        /// <summary>Decision 0092 (courses rules 5): the side arms on those (rivers-glo90-arms-3.bin), or null.</summary>
+        public RiverArmsData RiverArms3 { get; private set; }
 
         /// <summary>rivers.bin, when it is there, read at the first ask of <see cref="Rivers"/> (EarthDataset.Load with terrain).</summary>
         internal void WantRivers() => riversWanted = true;
@@ -75,6 +80,10 @@ namespace EarthMap.Core
             if (snap2 != null) RiverSnap2 = RiverSnapData.Read(snap2);
             using var arms2 = open("rivers-glo90-arms-2.bin");
             if (arms2 != null) RiverArms2 = RiverArmsData.Read(arms2);
+            using var snap3 = open("rivers-glo90-snap-3.bin");
+            if (snap3 != null) RiverSnap3 = RiverSnapData.Read(snap3);
+            using var arms3 = open("rivers-glo90-arms-3.bin");
+            if (arms3 != null) RiverArms3 = RiverArmsData.Read(arms3);
         }
 
         /// <summary>
@@ -117,6 +126,16 @@ namespace EarthMap.Core
             byte[] file;
             using (var s = openSource?.Invoke(Glo90RiversFile) ?? throw new FileNotFoundException("earthdata/" + Glo90RiversFile)) file = EarthBinary.ReadAll(s);
             var list = RiverData.Read(file, Glo90RiversFile);
+            // courses rules 5 (decision 0092): rules 4's on GLO-90's pixel-is-point grid (rivers-glo90-snap-3.bin,
+            // rivers-glo90-arms-3.bin)
+            if (courses >= RiverNetwork.Glo90PointCourses)
+            {
+                var snap3 = RiverSnap3 ?? throw new FileNotFoundException("earthdata/rivers-glo90-snap-3.bin");
+                snap3.ApplyTo(list, Glo90Hash(file));
+                var arms3 = RiverArms3 ?? throw new FileNotFoundException("earthdata/rivers-glo90-arms-3.bin");
+                if (!arms3.Fits(snap3)) throw new InvalidDataException("rivers-glo90-arms-3.bin was made for another rivers-glo90-snap-3.bin");
+                return arms3.ApplyTo(list);
+            }
             // courses rules 4 (0063): every reach from 20 m³/s on the mask's water, smoothed, with the mask's widths, and
             // the side arms built on those (rivers-glo90-snap-2.bin, rivers-glo90-arms-2.bin)
             if (courses >= RiverNetwork.Glo90WidthCourses)
@@ -140,7 +159,8 @@ namespace EarthMap.Core
             return list;
         }
 
-        /// <summary>The river courses rules a new world on GLO-90 gets: 4 with rivers-glo90-snap-2.bin made for the installed
+        /// <summary>The river courses rules a new world on GLO-90 gets: 5 with rivers-glo90-snap-3.bin made for the installed
+        /// rivers-glo90.bin and rivers-glo90-arms-3.bin made for its result; else 4 with rivers-glo90-snap-2.bin made for the installed
         /// rivers-glo90.bin and rivers-glo90-arms-2.bin made for its result; else 3 with rivers-glo90-snap.bin made for the
         /// installed rivers-glo90.bin (or that file already snapped) and rivers-glo90-arms.bin made for the snapped rivers, 2
         /// with the snap alone, 1 with rivers-glo90.bin alone, 0 without it. Reads the file once; a file that can't be read
@@ -160,7 +180,8 @@ namespace EarthMap.Core
                         ulong hash = EarthBinary.Sha8(bytes);
                         // (EA-0092 A6) kept for RiverReaches, which reads the same file again: one hash of it a start
                         glo90Hash = hash; glo90HashLength = bytes.LongLength;
-                        v = RiverSnap2 != null && RiverSnap2.Fits(hash) && RiverArms2 != null && RiverArms2.Fits(RiverSnap2) ? RiverNetwork.Glo90WidthCourses
+                        v = RiverSnap3 != null && RiverSnap3.Fits(hash) && RiverArms3 != null && RiverArms3.Fits(RiverSnap3) ? RiverNetwork.Glo90PointCourses
+                            : RiverSnap2 != null && RiverSnap2.Fits(hash) && RiverArms2 != null && RiverArms2.Fits(RiverSnap2) ? RiverNetwork.Glo90WidthCourses
                             : RiverSnap == null || !RiverSnap.Fits(hash) ? 1
                             : RiverArms != null && RiverArms.Fits(RiverSnap) ? RiverNetwork.Glo90ArmsCourses : RiverNetwork.Glo90SnapCourses;
                     }

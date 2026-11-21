@@ -3,6 +3,8 @@
 Status: built, in Earth 2.0.1 (EA-0134; items 4 and 5 EA-0136). New worlds only: saved worlds keep the choices their params froze.
 Item 2 is replaced by [0085](0085-start-on-the-spawn-tab.md) (2.0.3): Start and Start coordinates are on the game's
 Player spawn and death tab.
+Item 1's dropdown loses ground columns in 2.2, and Ground depth and Ores leave the screen
+([0104](0104-ground-columns-and-ore-maps-off-the-screen.md)).
 Date: 2026-11-15.
 
 ## What the author asked

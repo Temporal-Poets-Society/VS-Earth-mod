@@ -12,6 +12,12 @@ Writes assets/earth/patches/ground-rocks-ores.json (ore, loose ore and crystalli
 ground-rocks-deposits.json (each vanilla deposit whose host list names the stand-in also names the rock, with the
 same grades). Deposits that name a single host rock (marble in slate) are left alone.
 
+Also writes galena-crystalline-ores.json: galena and its silver in crystalline rock, which vanilla's galena never names
+as a host (EA-0174, decision 0102). Granite, slate, phyllite, gneiss and schist get galena's ore, loose-ore and item
+variants, copied from shale's, with the grades vanilla gives sphalerite, galena's companion ore, in the same rock (gneiss
+and schist: their stand-ins'); its silver keeps vanilla's two grades. Only the blocks and items: the deposit hosts are
+added while the game runs, in the worlds whose rules say so (src/CrystallineGalena.cs).
+
     python -P tools/make_rock_ore_patches.py [vanilla assets dir]   (default %APPDATA%/Vintagestory/assets)
 """
 import json, os, sys, glob
@@ -27,6 +33,10 @@ GUARD = {
 EXCLUDE = {"quartzite": ("coal", "lignite", "anthracite")}
 ORE_FILES = ["blocktypes/stone/ore-graded.json", "blocktypes/stone/ore-ungraded.json", "blocktypes/stone/ore-gem.json",
              "blocktypes/stone/looseores.json", "itemtypes/resource/ore-graded.json", "itemtypes/resource/crystalizedore-graded.json"]
+# galena in crystalline rock (decision 0102); the order is CrystallineGalena.Rocks'
+GALENA_ROCKS = ["granite", "slate", "phyllite", "gneiss", "schist"]
+GALENA_TEMPLATE = "shale"
+GRADES = ["poor", "medium", "rich", "bountiful"]
 
 
 def guard(rock):
@@ -91,7 +101,29 @@ def main():
             out.write("[\n" + ",\n".join("  " + json.dumps(p, ensure_ascii=False) for p in items) + "\n]\n")
     write("ground-rocks-ores.json", ores)
     write("ground-rocks-deposits.json", deposits)
+
+    # galena and its silver in crystalline rock: shale's variants, galena's grades from sphalerite in the same rock
+    sphal = json5.load(open(os.path.join(survival, "worldgen", "deposits", "metalore", "sphalerite.json"), encoding="utf-8"))
+    sphal_grades = sphal[0]["attributes"]["placeblock"]["allowedVariantsByInBlock"]
+    galena = []
+    for rock in GALENA_ROCKS:
+        grades = sphal_grades["rock-" + ROCKS.get(rock, rock)]
+        for f in ORE_FILES:
+            allowed = json5.load(open(os.path.join(survival, f), encoding="utf-8"))["allowedVariants"]
+            for code in allowed:
+                parts = code.split("-")
+                if GALENA_TEMPLATE not in parts or not ({"galena", "galena_nativesilver"} & set(parts)):
+                    continue
+                if "galena" in parts and any(g in parts for g in GRADES) and not any(g in parts for g in grades):
+                    continue
+                new = swap(code, GALENA_TEMPLATE, rock)
+                if new in allowed:
+                    sys.exit(f"vanilla already has {new}: decision 0102 needs a look")
+                galena.append({"op": "add", "file": "game:" + f, "path": "/allowedVariants/-", "value": new, "dependsOn": guard(rock)})
+    write("galena-crystalline-ores.json", galena)
     print(f"ore variants: {len(ores)}; deposit hosts: {len(deposits)} ({', '.join(f'{r} {sum(1 for p in deposits if p['value'] == r or p['path'].endswith(r))}' for r in ROCKS)})")
+    per_rock = {r: sum(1 for p in galena if r in p["value"].split("-")) for r in GALENA_ROCKS}
+    print("galena in crystalline rock:", len(galena), "variants", per_rock)
     for s in skipped:
         print("left alone:", s)
 

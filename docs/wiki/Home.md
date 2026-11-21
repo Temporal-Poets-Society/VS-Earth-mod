@@ -1,8 +1,8 @@
 # Earth
 
 Earth turns a new Vintage Story world into the real Earth: its land and sea floor, coasts, islands, rivers and lakes,
-the Greenland and Antarctic ice sheets, the real climate and weather of every place, and, if you choose, real rocks
-and ground. Trees, plants and animals live where they lived around the year 1318. You can sail from Riga to Lisbon,
+the Greenland and Antarctic ice sheets, the real climate and weather of every place, its real soil and, if you choose,
+its real rock. Trees, plants and animals live where they lived around the year 1318. You can sail from Riga to Lisbon,
 climb the Alps, cross the Sahara or winter in Siberia, and find each place where it is on a real map.
 
 The world wraps east to west: walk far enough west and you come back from the east. The seam runs through the Bering
@@ -27,8 +27,10 @@ and **Geology Additions**. See [Compatibility](Compatibility).
 ## Install
 
 1. Put the Earth zip, Cylinder World and Hydrology in the `Mods` folder of the server and of every player.
-2. Start the game or the server. The first time, Earth downloads its data from GitHub: about 290 MB, 58 MB more of monthly temperatures for a new world, then all the real land
-   heights (8.6 GB by default; the download starts when your first world opens, and you can play meanwhile). Only the server or the single-player game downloads; a
+2. Start the game or the server. The first time, Earth downloads its data from GitHub: about 300 MB; for a new world
+   58 MB of monthly temperatures, 21 MB of soil map (with Earth soil, the default), about 190 MB of lake, river and dam
+   files (65 MB more of streams at 1:25 and 1:10); then all the real land heights (8.6 GB by default; the download starts
+   when your first world opens, and you can play meanwhile). Only the server or the single-player game downloads; a
    client joining a server downloads nothing. Details, disk space and memory are on
    [Data and performance](Data-and-performance).
 
@@ -37,7 +39,7 @@ and **Geology Additions**. See [Compatibility](Compatibility).
 1. **Create a world** and choose one of the **Earth** play styles. There is one for each scale: **Earth · 1:200**,
    **Earth · 1:100** (a good first world), **Earth · 1:50**, **Earth · 1:25** and **Earth · 1:10**. A smaller number is a
    bigger world: at 1:100 a block is about 100 m, at 1:10 about 10 m. See [The world](The-world).
-2. Open **Customize** to see the **Earth** tab (rocks, ores, plants and animals, rivers). Where you begin (a random
+2. Open **Customize** to see the **Earth** tab (rocks, soil, plants and animals, rivers). Where you begin (a random
    place, a capital city, or coordinates pasted from Google Maps) is on the **Player spawn and death** tab, below
    Starting climate. The defaults are a good
    start. Every choice is explained on [Settings](Settings).
@@ -63,7 +65,7 @@ water.
 
 ## Version and problems
 
-This wiki describes **Earth 2.1.4**, with Cylinder World 1.1.1, Hydrology 0.6.2, Sea 0.6.1 and World Map 0.5.4. Earth 2.0
+This wiki describes **Earth 2.2.0**, with Cylinder World 1.1.1, Hydrology 0.6.2, Sea 0.6.4 and World Map 0.5.5. Earth 2.0
 makes new worlds only: worlds made with an Earth older than 2.0.0 aren't supported (see [Saves](Saves)).
 
 Report problems on Earth's Mod DB page. Say which Earth version you run, the world's scale and settings, where in the

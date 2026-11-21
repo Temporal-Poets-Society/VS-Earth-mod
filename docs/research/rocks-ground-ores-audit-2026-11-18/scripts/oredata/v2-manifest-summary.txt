@@ -1,0 +1,367 @@
+dict_keys(['settings', 'runtimeSha256', 'inputs', 'excluded', 'geometryRepairs', 'coordinateCorrectionsApplied', 'outsideCountryDropped', 'outsideCountryRepaired', 'outsideCountryLog', 'mrdsSurveyRecords', 'registry', 'resources', 'caveats'])
+earth-resource-evidence-2026-11-08-v4
+Fe obs 10390 pot 0 deep 0 prior 0 pts 25333 US 0.809
+     23033 Fe-occurrences.csv.gz
+     1674 Fe-specialist.geojson
+     206 ga-aimr-metals.geojson
+     148 usgs-minfac-mines.geojson
+     122 additional-evidence.geojson
+     116 iron-ferro catalogue
+     34 best-guess-districts.geojson
+     11 iron-ferro catalogue areas
+Au obs 13744 pot 9927 deep 0 prior 13362 pts 88141 US 0.849
+     81612 Au-occurrences.csv.gz
+     4485 Au-specialist.geojson
+     1386 ga-aimr-metals.geojson
+     312 usgs-minfac-mines.geojson
+     165 precious-gems-catalogue
+     95 additional-evidence.geojson
+     69 best-guess-districts.geojson
+     24 precious-gems-districts
+Ag obs 9501 pot 2151 deep 22 prior 2052 pts 51856 US 0.825
+     48357 Ag-occurrences.csv.gz
+     2715 Ag-specialist.geojson
+     413 base-metals catalogue
+     277 ga-aimr-metals.geojson
+     80 usgs-minfac-mines.geojson
+     11 additional-evidence.geojson
+     11 best-guess carried (base-metals)
+     1 base-metals Sn-W provinces
+Pb obs 9319 pot 4765 deep 12 prior 4765 pts 40169 US 0.811
+     37598 Pb-occurrences.csv.gz
+     1744 Pb-specialist.geojson
+     396 base-metals catalogue
+     192 ga-aimr-metals.geojson
+     114 additional-evidence.geojson
+     112 usgs-minfac-mines.geojson
+     13 best-guess carried (base-metals)
+Zn obs 9609 pot 4765 deep 29 prior 4765 pts 30997 US 0.759
+     27595 Zn-occurrences.csv.gz
+     2204 Zn-specialist.geojson
+     728 base-metals catalogue
+     192 ga-aimr-metals.geojson
+     160 usgs-minfac-mines.geojson
+     103 additional-evidence.geojson
+     15 best-guess carried (base-metals)
+Bi obs 892 pot 191 deep 0 prior 0 pts 607 US 0.499
+     408 base-metals mrds capped
+     167 Bi-specialist.geojson
+     17 additional-evidence.geojson
+     8 base-metals catalogue
+     4 usgs-minfac-mines.geojson
+     3 best-guess carried (base-metals)
+     2 base-metals Sn-W provinces
+Ni obs 2234 pot 480 deep 0 prior 480 pts 1906 US 0.067
+     1403 usgs nicrpge primary (iron-ferro re-add)
+     184 ga-aimr-metals.geojson
+     142 iron-ferro catalogue
+     101 usgs major deposits (iron-ferro re-add)
+     68 usgs-minfac-mines.geojson
+     6 best-guess-districts.geojson
+     2 additional-evidence.geojson
+Cr obs 995 pot 480 deep 0 prior 480 pts 2005 US 0.503
+     935 usgs nicrpge primary (iron-ferro re-add)
+     876 iron-ferro catalogue
+     108 usgs major deposits (iron-ferro re-add)
+     70 usgs-minfac-mines.geojson
+     13 additional-evidence.geojson
+     3 best-guess-districts.geojson
+     2 iron-ferro catalogue areas
+Ti obs 3656 pot 480 deep 0 prior 480 pts 2965 US 0.599
+     2272 Ti-occurrences.csv.gz
+     320 Ti-specialist.geojson
+     176 ga-aimr-metals.geojson
+     121 pp1802-global.geojson
+     45 usgs-minfac-mines.geojson
+     22 iron-ferro catalogue
+     7 best-guess-districts.geojson
+     2 additional-evidence.geojson
+Mn obs 3939 pot 0 deep 0 prior 0 pts 10299 US 0.804
+     9916 Mn-occurrences.csv.gz
+     221 Mn-specialist.geojson
+     49 usgs-minfac-mines.geojson
+     48 ga-aimr-metals.geojson
+     38 pp1802-global.geojson
+     17 iron-ferro catalogue
+     6 best-guess-districts.geojson
+     4 additional-evidence.geojson
+     3 iron-ferro catalogue areas
+Hg obs 993 pot 0 deep 0 prior 0 pts 886 US 0.623
+     682 base-metals mrds capped
+     148 Hg-specialist.geojson
+     31 additional-evidence.geojson
+     17 base-metals catalogue
+     6 usgs-minfac-mines.geojson
+     2 best-guess carried (base-metals)
+W obs 2006 pot 2416 deep 5 prior 0 pts 1518 US 0.513
+     1161 base-metals mrds capped
+     202 W-specialist.geojson
+     51 additional-evidence.geojson
+     33 usgs-minfac-mines.geojson
+     32 ga-aimr-metals.geojson
+     32 base-metals catalogue
+     22 base-metals Sn-W provinces
+     7 best-guess carried (base-metals)
+U obs 2356 pot 3934 deep 0 prior 3934 pts 15334 US 0.942
+     14867 U-occurrences.csv.gz
+     277 U-specialist.geojson
+     95 ga-aimr-metals.geojson
+     30 best-guess-districts.geojson
+     30 precious-gems-catalogue
+     22 usgs-minfac-mines.geojson
+     10 precious-gems-districts
+     3 additional-evidence.geojson
+Pt obs 985 pot 480 deep 0 prior 480 pts 686 US 0.039
+     315 usgs nicrpge primary (iron-ferro re-add)
+     157 usgs major deposits (iron-ferro re-add)
+     153 pp1802-global.geojson
+     28 ga-aimr-metals.geojson
+     21 usgs-minfac-mines.geojson
+     9 iron-ferro catalogue
+     3 best-guess-districts.geojson
+     3 iron-ferro catalogue areas
+V obs 2082 pot 480 deep 0 prior 480 pts 4988 US 0.889
+     4651 V-occurrences.csv.gz
+     207 V-specialist.geojson
+     81 pp1802-global.geojson
+     33 ga-aimr-metals.geojson
+     7 usgs-minfac-mines.geojson
+     7 iron-ferro catalogue
+     2 best-guess-districts.geojson
+     1 iron-ferro catalogue areas
+Mo obs 2294 pot 6400 deep 13 prior 5986 pts 1733 US 0.515
+     1245 base-metals mrds capped
+     307 Mo-specialist.geojson
+     118 base-metals catalogue
+     35 ga-aimr-metals.geojson
+     17 usgs-minfac-mines.geojson
+     6 best-guess carried (base-metals)
+     5 additional-evidence.geojson
+     5 base-metals Sn-W provinces
+Sb obs 2902 pot 0 deep 0 prior 0 pts 1558 US 0.435
+     1040 base-metals mrds capped
+     448 Sb-specialist.geojson
+     38 pp1802-global.geojson
+     16 usgs-minfac-mines.geojson
+     8 ga-aimr-metals.geojson
+     8 base-metals catalogue
+     2 additional-evidence.geojson
+     2 best-guess carried (base-metals)
+B obs 584 pot 0 deep 0 prior 0 pts 690 US 0.436
+     611 B-occurrences.csv.gz
+     43 B-specialist.geojson
+     12 coal-evaporites catalogue
+     11 usgs-minfac-mines.geojson
+     11 best-guess-districts.geojson
+     1 additional-evidence.geojson
+     1 coal-evaporites evidence
+P obs 3989 pot 0 deep 0 prior 0 pts 3963 US 0.501
+     2784 P-occurrences.csv.gz
+     1076 usgs-phosphate-sedimentary
+     56 usgs-minfac-mines.geojson
+     40 additional-evidence.geojson
+     27 coal-evaporites catalogue
+     5 best-guess-districts.geojson
+     1 poland-minerals.geojson
+N obs 103 pot 0 deep 0 prior 0 pts 125 US 0.24
+     110 N-occurrences.csv.gz
+     12 N-specialist.geojson
+     2 best-guess-districts.geojson
+     1 usgs-minfac-mines.geojson
+     1 coal-evaporites evidence
+K obs 2136 pot 5457 deep 937 prior 160 pts 1446 US 0.23
+     979 PotashDeps.geojson
+     355 K-occurrences.csv.gz
+     84 usgs-potash-tracts-ranked
+     70 K-specialist.geojson
+     25 coal-evaporites catalogue
+     17 usgs-minfac-mines.geojson
+     15 additional-evidence.geojson
+     5 poland-minerals.geojson
+     5 best-guess-districts.geojson
+NaCl obs 3476 pot 5457 deep 3559 prior 160 pts 1193 US 0.505
+     912 NaCl-occurrences.csv.gz
+     99 coal-evaporites catalogue
+     98 NaCl-specialist.geojson
+     84 usgs-potash-tracts-ranked
+     75 usgs-minfac-mines.geojson
+     25 poland-minerals.geojson
+     23 best-guess-districts.geojson
+     14 additional-evidence.geojson
+     4 nrw-halite.geojson
+     1 mirrored from K layer
+S obs 297 pot 0 deep 10 prior 0 pts 190 US 0.084
+     100 native-sulfur-from-mrds
+     35 S-specialist.geojson
+     20 poland-minerals.geojson
+     11 coal-evaporites catalogue
+     10 best-guess-districts.geojson
+     4 coal-evaporites evidence
+C_graphite obs 1188 pot 7875 deep 0 prior 11310 pts 1011 US 0.506
+     757 C_graphite-occurrences.csv.gz
+     110 pp1802-global.geojson
+     60 C_graphite-specialist.geojson
+     29 additional-evidence.geojson
+     29 usgs-minfac-mines.geojson
+     12 precious-gems-catalogue
+     8 precious-gems-districts
+     6 best-guess-districts.geojson
+C_coal obs 9966 pot 1595 deep 92 prior 0 pts 1699 US 0.12
+     3918 coal-polygons.geojson
+     729 coal-context-polygons.geojson
+     509 coal-supplement-points.geojson
+     446 fsu-coal-points.geojson
+     355 usgs-minfac-mines.geojson
+     239 C_coal-occurrences.csv.gz
+     119 coal-evaporites catalogue
+     100 best-guess-districts.geojson
+     44 additional-evidence.geojson
+     6 C_coal-specialist.geojson
+F obs 2032 pot 8699 deep 0 prior 8699 pts 4370 US 0.781
+     4059 F-occurrences.csv.gz
+     113 F-specialist.geojson
+     106 pp1802-global.geojson
+     43 usgs-minfac-mines.geojson
+     17 additional-evidence.geojson
+     13 precious-gems-catalogue
+     9 precious-gems-districts
+     8 best-guess-districts.geojson
+     2 poland-minerals.geojson
+SiO2 obs 2793 pot 0 deep 0 prior 0 pts 3853 US 0.791
+     3594 SiO2-occurrences.csv.gz
+     94 poland-minerals.geojson
+     86 SiO2-specialist.geojson
+     44 additional-evidence.geojson
+     8 precious-gems-catalogue
+     4 usgs-minfac-mines.geojson
+     2 best-guess-districts.geojson
+Al obs 2908 pot 4663 deep 0 prior 4663 pts 3198 US 0.601
+     2891 Al-occurrences.csv.gz
+     129 Al-specialist.geojson
+     69 usgs-minfac-mines.geojson
+     43 iron-ferro catalogue
+     40 ga-aimr-metals.geojson
+     20 best-guess-districts.geojson
+     6 additional-evidence.geojson
+gypsum obs 1725 pot 5488 deep 0 prior 160 pts 2589 US 0.583
+     27659 gypsum-permissive-formations.geojson.gz
+     1938 gypsum-occurrences.csv.gz
+     525 gypsum-reviewed.geojson
+     84 PotashTracts.geojson (prior)
+     46 usgs-minfac-mines.geojson
+     43 gypsum-specialist.geojson
+     25 additional-evidence.geojson
+     19 coal-evaporites catalogue
+     3 best-guess-districts.geojson
+diamond obs 1252 pot 0 deep 0 prior 0 pts 705 US 0.07
+     480 diamond-occurrences.csv.gz
+     88 diamond-specialist.geojson
+     65 usgs-minfac-mines.geojson
+     41 precious-gems-catalogue
+     15 best-guess-districts.geojson
+     9 precious-gems-districts
+     7 additional-evidence.geojson
+corundum obs 351 pot 0 deep 0 prior 0 pts 296 US 0.713
+     229 corundum-occurrences.csv.gz
+     19 best-guess-districts.geojson
+     17 corundum-specialist.geojson
+     13 precious-gems-catalogue
+     10 precious-gems-districts
+     7 usgs-minfac-mines.geojson
+     1 additional-evidence.geojson
+emerald obs 118 pot 0 deep 0 prior 0 pts 61 US 0.098
+     15 emerald-occurrences.csv.gz
+     11 precious-gems-catalogue
+     9 emerald-specialist.geojson
+     9 best-guess-districts.geojson
+     8 additional-evidence.geojson
+     7 usgs-minfac-mines.geojson
+     2 precious-gems-districts
+olivine obs 118 pot 0 deep 0 prior 0 pts 82 US 0.72
+     45 olivine-occurrences.csv.gz
+     23 olivine-specialist.geojson
+     5 best-guess-districts.geojson
+     5 precious-gems-catalogue
+     3 usgs-minfac-mines.geojson
+     1 additional-evidence.geojson
+garnet obs 590 pot 0 deep 0 prior 0 pts 620 US 0.837
+     563 garnet-occurrences.csv.gz
+     17 garnet-specialist.geojson
+     16 additional-evidence.geojson
+     10 best-guess-districts.geojson
+     7 precious-gems-catalogue
+     5 precious-gems-districts
+     2 usgs-minfac-mines.geojson
+lapis obs 26 pot 0 deep 0 prior 0 pts 12 US 0.0
+     3 best-guess-districts.geojson
+     3 precious-gems-catalogue
+     2 lapis-occurrences.csv.gz
+     2 additional-evidence.geojson
+     1 lapis-specialist.geojson
+     1 precious-gems-districts
+alum obs 165 pot 0 deep 0 prior 0 pts 169 US 0.822
+     149 alum-occurrences.csv.gz
+     12 coal-evaporites catalogue
+     6 best-guess-districts.geojson
+     1 alum-specialist.geojson
+     1 usgs-minfac-mines.geojson
+topaz obs 140 pot 0 deep 0 prior 0 pts 68 US 0.471
+     34 topaz-occurrences.csv.gz
+     17 best-guess-districts.geojson
+     10 precious-gems-catalogue
+     3 precious-gems-districts
+     2 topaz-specialist.geojson
+     2 additional-evidence.geojson
+tourmaline obs 186 pot 0 deep 0 prior 0 pts 128 US 0.398
+     68 tourmaline-occurrences.csv.gz
+     27 additional-evidence.geojson
+     15 best-guess-districts.geojson
+     10 precious-gems-catalogue
+     4 precious-gems-districts
+     3 tourmaline-specialist.geojson
+     1 usgs-minfac-mines.geojson
+beryl obs 396 pot 0 deep 0 prior 0 pts 663 US 0.713
+     582 beryl-occurrences.csv.gz
+     36 additional-evidence.geojson
+     20 best-guess-districts.geojson
+     14 precious-gems-catalogue
+     6 precious-gems-districts
+     4 beryl-specialist.geojson
+     1 usgs-minfac-mines.geojson
+spinel obs 64 pot 0 deep 0 prior 0 pts 33 US 0.364
+     16 spinel-occurrences.csv.gz
+     8 best-guess-districts.geojson
+     5 precious-gems-catalogue
+     3 precious-gems-districts
+     1 spinel-specialist.geojson
+Cu obs 14619 pot 17209 deep 49 prior 4411 pts 56315 US 0.632
+     43424 mrds-copper-tin-occurrences.csv
+     7069 Cu-specialist.geojson
+     3420 global-copper-assessment-occurrences.csv
+     1616 base-metals catalogue
+     406 ga-aimr-metals.geojson
+     245 additional-evidence.geojson
+     215 usgs-minfac-mines.geojson
+     192 pCu_tracts.geojson
+     48 sedCu_tracts.geojson
+     14 best-guess carried (base-metals)
+Sn obs 1868 pot 2254 deep 0 prior 0 pts 1409 US 0.288
+     823 base-metals mrds capped
+     212 Sn-specialist.geojson
+     113 pp1802-global.geojson
+     75 additional-evidence.geojson
+     61 usgs-minfac-mines.geojson
+     61 base-metals catalogue
+     59 ga-aimr-metals.geojson
+     23 base-metals Sn-W provinces
+     5 best-guess carried (base-metals)
+peat obs 12794 pot 6169 deep 0 prior 6169 pts 167 US 0.0
+     12672 peatmap-fraction-0p5deg.npz (cells)
+     451 GUM organic sediment classes (cells)
+     111 latvia-lvgmc-commodities.geojson
+     4 usgs-minfac-mines.geojson
+clay obs 618 pot 5084 deep 0 prior 0 pts 153 US 0.078
+     5084 GUM fine-sediment classes (cells, potential plane)
+     85 usgs-minfac-mines.geojson
+     62 clay-specialist.geojson
+     6 latvia-lvgmc-commodities.geojson

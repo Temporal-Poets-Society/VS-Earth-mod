@@ -15,8 +15,9 @@ namespace EarthMap.Core
     /// </summary>
     public static class RiverDeltas
     {
-        /// <summary>Version of these rules, stored per world (EarthParams.RiverDeltas; 0: none).</summary>
-        public const int Version = 1;
+        /// <summary>Version of these rules, stored per world (EarthParams.RiverDeltas; 0: none): 1 the Mekong; 2 also the
+        /// Mississippi's Atchafalaya (EA-0179). A world applies the deltas of its version and before (Delta.Since).</summary>
+        public const int Version = 2;
         /// <summary>How far (degrees) the split point and a branch's mouth may be from the river data.</summary>
         const double SplitReach = 0.05, MouthReach = 0.08;
 
@@ -35,6 +36,8 @@ namespace EarthMap.Core
             public string Name;
             public double SplitLat, SplitLon;
             public Branch[] Branches;
+            /// <summary>The delta rules version that added it: a world of an older version leaves it out.</summary>
+            public int Since = 1;
         }
 
         /// <summary>The deltas, applied in this order (a later split can be on a branch of an earlier one).</summary>
@@ -47,6 +50,15 @@ namespace EarthMap.Core
                 Name = "Mekong", SplitLat = 10.573, SplitLon = 105.365,
                 Branches = new[] { new Branch { Name = "Tiền (Cổ Chiên)", MouthLat = 9.852, MouthLon = 106.496, Share = 0.5 } },
             },
+            // (EA-0179, version 2) Old River: the Atchafalaya takes 30 % of the Mississippi's and the Red River's water together
+            // (the share the Old River Control Structure keeps since 1963; the river data, a tree, gives all of it to the
+            // Mississippi, whose Red River joins at 30.985 N, and has the Atchafalaya as a 20-240 m³/s stream from Simmesport
+            // to Atchafalaya Bay). Its head is led to the split across the Old River's 13 km at the split's level.
+            new Delta
+            {
+                Name = "Mississippi", SplitLat = 30.985, SplitLon = -91.660, Since = 2,
+                Branches = new[] { new Branch { Name = "Atchafalaya", MouthLat = 29.480, MouthLon = -91.286, Share = 0.3 } },
+            },
         };
 
         public sealed class Result
@@ -55,7 +67,8 @@ namespace EarthMap.Core
             public readonly List<string> Report = new List<string>();
         }
 
-        public static Result Apply(List<RiverReach> reaches, Delta[] deltas = null)
+        /// <param name="version">The world's delta rules (EarthParams.RiverDeltas): the deltas added by then.</param>
+        public static Result Apply(List<RiverReach> reaches, int version = Version, Delta[] deltas = null)
         {
             var res = new Result { Reaches = new List<RiverReach>(reaches) };
             var list = res.Reaches;
@@ -78,6 +91,7 @@ namespace EarthMap.Core
 
             foreach (var d in deltas ?? All)
             {
+                if (d.Since > version) continue;
                 // the main stem at the split: the biggest river there
                 int r0 = -1, k0 = -1;
                 double bestQ = 0, bestD = double.MaxValue;

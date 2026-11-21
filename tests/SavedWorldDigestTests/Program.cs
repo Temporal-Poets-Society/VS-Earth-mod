@@ -109,7 +109,7 @@ static class Digest
         if (p.FineElevation < 1) return stores.FirstOrDefault();
         var need = new List<string>();
         if (p.DamRules >= 1) need.Add(DamRemovalData.FileNameFor(Math.Min(p.DamRules, DamRemovalData.NewestRules)));
-        if (p.FlowRules >= 1) need.Add(RiverFlowData.FileName);
+        if (p.FlowRules >= 1) need.Add(RiverFlowData.FileNameFor(Math.Min(p.FlowRules, RiverFlowData.FileVersion)));
         if (p.LakeOutlines >= 1) need.Add(LakeOutlineData.FileNameFor(Math.Clamp(p.LakeOutlines, 1, LakeOutlineData.FileVersion)));
         if (p.RiverOutlines >= 1) need.Add(RiverOutlineData.FileName(RiverOutlineData.Usable(p.RiverOutlines)));
         return stores.FirstOrDefault(s => need.All(f => File.Exists(Path.Combine(s, "glo90", f))));
@@ -170,7 +170,7 @@ static class Digest
         if (p.FineElevation < 1) return p.BuildModel(data);
         string g = Path.Combine(store, "glo90");
         var dams = p.DamRules >= 1 ? DamRemovalData.Read(File.ReadAllBytes(Path.Combine(g, DamRemovalData.FileNameFor(Math.Min(p.DamRules, DamRemovalData.NewestRules))))) : null;
-        var flow = p.FlowRules >= 1 ? RiverFlowData.Read(File.ReadAllBytes(Path.Combine(g, RiverFlowData.FileName))) : null;
+        var flow = p.FlowRules >= 1 ? RiverFlowData.Read(File.ReadAllBytes(Path.Combine(g, RiverFlowData.FileNameFor(Math.Min(p.FlowRules, RiverFlowData.FileVersion))))) : null;
         var model = p.BuildModel(data, dams, null, flow);
         var fine = new FineElevation(g, File.ReadAllBytes(Path.Combine(root, "data", "glo90-tiles.bin")));
         fine.SetFallback(Array.Empty<int>());
@@ -183,7 +183,7 @@ static class Digest
         {
             int v = RiverOutlineData.Usable(p.RiverOutlines);
             model.RiverOutlines = RiverOutlineData.Layer(RiverOutlineData.Read(File.ReadAllBytes(Path.Combine(g, RiverOutlineData.FileName(v)))), model.Geometry, p.DropsNarrowRiverPieces, model.CourseDrawsAt,
-                p.ChannelRules >= TerrainModel.FlowChannelRules ? model.FlowCarriesAt : null);
+                p.ChannelRules >= TerrainModel.FlowChannelRules ? model.FlowCarriesAt : null, p.CoarseRiverRules >= 1);
         }
         if (flow != null) { model.Flow = flow; model.FlowRules = Math.Min(p.FlowRules, RiverFlowData.FileVersion); }
         return model;
